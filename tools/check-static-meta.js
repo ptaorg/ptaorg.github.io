@@ -5,6 +5,7 @@
 
   この検査は、SNSクローラー向けメタタグをHTML本体に直接追加する対象4ページに限定する。
   documents.html は旧URL互換ページで site.js を読まないため、ここでは対象外にする。
+  2026-06-06: workflow再実行用に対象4ページ限定で固定。
 */
 const fs = require('fs');
 const path = require('path');
