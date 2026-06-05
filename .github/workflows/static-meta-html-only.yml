@@ -1,0 +1,42 @@
+name: Apply static meta fixes html only
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - fix/static-meta-html-only-20260606
+    paths:
+      - '.github/workflows/static-meta-html-only.yml'
+      - 'tools/apply-static-meta-fix.js'
+      - 'tools/check-static-meta.js'
+
+permissions:
+  contents: write
+
+jobs:
+  apply-static-meta:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/fix/static-meta-html-only-20260606'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Apply static meta fixes
+        run: node tools/apply-static-meta-fix.js
+
+      - name: Check static meta
+        run: node tools/check-static-meta.js
+
+      - name: Commit HTML changes if needed
+        run: |
+          if git diff --quiet; then
+            echo "No HTML changes needed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add timeline.html shizuoka-incident.html guideline.html compliance.html
+          git commit -m "Apply static meta tags to HTML pages"
+          git push
