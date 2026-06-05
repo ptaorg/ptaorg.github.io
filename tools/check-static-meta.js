@@ -2,6 +2,9 @@
 /*
   静的HTMLメタタグ検査スクリプト
   使い方: node tools/check-static-meta.js
+
+  この検査は、SNSクローラー向けメタタグをHTML本体に直接追加する対象4ページに限定する。
+  documents.html は旧URL互換ページで site.js を読まないため、ここでは対象外にする。
 */
 const fs = require('fs');
 const path = require('path');
@@ -10,10 +13,7 @@ const targets = [
   'timeline.html',
   'shizuoka-incident.html',
   'guideline.html',
-  'compliance.html',
-  'documents.html',
-  'contact.html',
-  'board-responses.html'
+  'compliance.html'
 ];
 
 function count(re, text){
