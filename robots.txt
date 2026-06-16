@@ -1,6 +1,5 @@
 User-agent: *
 Disallow: /tools/
-Disallow: /PTA%23U904b%23U55b6%23U9069%23U6b63%23U5316%23U30ac%23U30a4%23U30c9%23U30d6%23U30c3%23U30af_%23U7b2c4%23U7248_%23U6539%23U8a02%23U672c%23U6587.html
 Allow: /
 
 Sitemap: https://ptaorg.com/sitemap.xml

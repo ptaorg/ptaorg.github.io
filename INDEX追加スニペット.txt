@@ -1,5 +1,0 @@
-<!-- index.html の </head> 直前に追加 -->
-<link rel="stylesheet" href="css/home-enhance.css">
-
-<!-- index.html の </body> 直前に追加 -->
-<script defer src="js/home-enhance.js"></script>
