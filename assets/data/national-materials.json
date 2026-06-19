@@ -1,0 +1,56 @@
+{
+  "updated": "2026-06-20",
+  "rootFolder": {
+    "title": "全国PTA資料フォルダ",
+    "url": "https://drive.google.com/drive/folders/1tbfpjRNJIhwQypk1vsAOaE7_qwW-lrm5",
+    "note": "自治体・学校別の原本資料を保管するGoogle Driveフォルダ。公開前の要約・引用は原本確認を前提とする。"
+  },
+  "policy": {
+    "status": "初期目録",
+    "description": "Google Drive上の自治体別フォルダを、PTAの任意加入、学校とPTAの分離、個人情報、会費徴収、役員選出、教職員関与などの論点に接続するための目録。",
+    "cautions": [
+      "OCR抽出結果は誤字・文字化けを含むため、本文化・断定評価の前に原本PDFを確認する。",
+      "個人名、電話番号、QRコード、口座情報、非公開前提の内部情報が含まれる可能性がある資料は、公開方法を個別に確認する。",
+      "本目録はDrive原本への導線であり、各資料の適法性を機械的に断定するものではない。"
+    ]
+  },
+  "issueAxes": [
+    {"key": "membership", "label": "入会手続", "description": "加入届、入会申込書、任意加入説明、オプトアウト方式の有無。"},
+    {"key": "privacy", "label": "個人情報", "description": "学校名簿、児童・保護者情報、第三者提供、連絡ツール利用。"},
+    {"key": "fee", "label": "会費徴収", "description": "PTA会費、学校徴収金、口座引落し、非会員実費徴収。"},
+    {"key": "roles", "label": "役員・当番", "description": "役員選出、抽選、免除条件、交通当番、地区委員。"},
+    {"key": "school", "label": "学校関与", "description": "学校施設、学校配布、教職員関与、学校行事・授業支援との接続。"}
+  ],
+  "municipalFolders": [
+    {"name": "長久手市", "prefecture": "愛知県", "folderUrl": "https://drive.google.com/drive/folders/1fsUM9ft7T5L4Q8F_Dbcqz6Gtz-yEBknq", "observed": "PDF1件を確認", "primaryIssues": ["入会手続", "役員選出", "学校関与"]},
+    {"name": "広島市", "prefecture": "広島県", "folderUrl": "https://drive.google.com/drive/folders/1TEpOD7gEgPev3v55lnpgk_2Wb2As5fLG", "observed": "学校別PDF40件を確認", "primaryIssues": ["入会手続", "会費徴収", "役員・当番", "学校関与"]},
+    {"name": "滋賀県甲賀市", "prefecture": "滋賀県", "folderUrl": "https://drive.google.com/drive/folders/1sq0od02Bf0OcWXxY-oOEdcDGVwmsOXXx", "observed": "自治体別フォルダを確認", "primaryIssues": ["入会手続", "会費徴収"]},
+    {"name": "いわき市", "prefecture": "福島県", "folderUrl": "https://drive.google.com/drive/folders/1h_RDXwmAAcbIdMOEXapT68yzYPCyFGbv", "observed": "自治体別フォルダを確認", "primaryIssues": ["入会手続", "学校関与"]},
+    {"name": "厚木市", "prefecture": "神奈川県", "folderUrl": "https://drive.google.com/drive/folders/181biyLcBt4iqh6h-dP8RcDQRld0KghF0", "observed": "自治体別フォルダを確認", "primaryIssues": ["入会手続", "会費徴収", "学校関与"]},
+    {"name": "茨木市", "prefecture": "大阪府", "folderUrl": "https://drive.google.com/drive/folders/1-SkbJV8EJrZfYjujquYi54XFQ8yjIur7", "observed": "自治体別フォルダを確認", "primaryIssues": ["入会手続"]},
+    {"name": "滋賀県全校", "prefecture": "滋賀県", "folderUrl": "https://drive.google.com/drive/folders/1J60wUTVNy4Hx2iBV93e9wh9yhJ4eYo_Y", "observed": "広域フォルダを確認", "primaryIssues": ["会費徴収", "学校関与"]},
+    {"name": "大東市", "prefecture": "大阪府", "folderUrl": "https://drive.google.com/drive/folders/14wFrcz-V4IzyNAlXmDvZQ3TKo5MH68bU", "observed": "自治体別フォルダを確認", "primaryIssues": ["入会手続"]},
+    {"name": "川口市", "prefecture": "埼玉県", "folderUrl": "https://drive.google.com/drive/folders/17SAZUYX6HqDBVmUmOplBWha1nbjNf1sq", "observed": "自治体別フォルダを確認", "primaryIssues": ["入会手続", "個人情報"]},
+    {"name": "神奈川県", "prefecture": "神奈川県", "folderUrl": "https://drive.google.com/drive/folders/1aySZ1Apku8NJni2zRX0R0Oh26ubmDowg", "observed": "県立高校別のPDF・Googleドキュメント混在を確認", "primaryIssues": ["入会手続", "会費徴収", "学校徴収金"]},
+    {"name": "彦根市", "prefecture": "滋賀県", "folderUrl": "https://drive.google.com/drive/folders/14reYe8MzLudXIiNRTRDD8q3BD08GWt4q", "observed": "自治体別フォルダを確認", "primaryIssues": ["入会手続"]},
+    {"name": "久喜市", "prefecture": "埼玉県", "folderUrl": "https://drive.google.com/drive/folders/1CIrU8d-VVss8D-A7J-Gz6a7R-Losxs9R", "observed": "自治体別フォルダを確認", "primaryIssues": ["入会手続", "役員・当番"]},
+    {"name": "埼玉県", "prefecture": "埼玉県", "folderUrl": "https://drive.google.com/drive/folders/1tBkWaC4-cI4tNloXaT6TKCrTnebhs0re", "observed": "広域フォルダを確認", "primaryIssues": ["入会手続", "会費徴収"]},
+    {"name": "射水市", "prefecture": "富山県", "folderUrl": "https://drive.google.com/drive/folders/1wgrV4z-Kl09hylYoR74ymz1ZwL48XlGZ", "observed": "自治体別フォルダを確認", "primaryIssues": ["入会手続"]},
+    {"name": "亀岡市", "prefecture": "京都府", "folderUrl": "https://drive.google.com/drive/folders/11Yzp9-Yzl930evcg7KxOHuw_jt0H-G8v", "observed": "自治体別フォルダを確認", "primaryIssues": ["入会手続"]},
+    {"name": "大田区", "prefecture": "東京都", "folderUrl": "https://drive.google.com/drive/folders/1NAR9WS0eVSUpVa9VVRYz-rRRyWq-Coyh", "observed": "自治体別フォルダを確認", "primaryIssues": ["入会手続", "学校関与"]},
+    {"name": "鹿児島市", "prefecture": "鹿児島県", "folderUrl": "https://drive.google.com/drive/folders/1GU8Vrc-JadTr-5M-xlU6OIDZaow51IDc", "observed": "自治体別フォルダを確認", "primaryIssues": ["入会手続"]},
+    {"name": "豊橋市", "prefecture": "愛知県", "folderUrl": "https://drive.google.com/drive/folders/1t0BgWKwp6JzonMx5Yw8jizpNFgYRZPFw", "observed": "自治体別フォルダを確認", "primaryIssues": ["入会手続", "会費徴収"]},
+    {"name": "扶桑町", "prefecture": "愛知県", "folderUrl": "https://drive.google.com/drive/folders/10AxRiidAdSMyNQyUAcdZdNsE8VZ1lHoS", "observed": "自治体別フォルダを確認", "primaryIssues": ["入会手続"]},
+    {"name": "相模原", "prefecture": "神奈川県", "folderUrl": "https://drive.google.com/drive/folders/1S5IgDlxkZOdzN4GMclSYxBHIjV18vORF", "observed": "自治体別フォルダを確認", "primaryIssues": ["入会手続", "学校関与"]},
+    {"name": "仙台市", "prefecture": "宮城県", "folderUrl": "https://drive.google.com/drive/folders/1C_XUl1swUoyv6DIM1tedy7GhWkBwKKnS", "observed": "自治体別フォルダを確認", "primaryIssues": ["入会手続", "個人情報", "学校関与"]}
+  ],
+  "selectedMaterials": [
+    {"municipality": "広島市", "school": "江波小学校", "title": "江波小学校_01.pdf", "sourceUrl": "https://drive.google.com/file/d/1dC1W7D0P7hwnlASH6DPZvJmL6TWhpMVG", "type": "PTA案内・Q&A", "summary": "PTAの愛称、完全ボランティア制、授業サポーター、会費、交通当番を説明する資料。授業支援とPTA加入の関係整理に使う。", "issues": ["任意加入", "学校関与", "会費", "交通当番"]},
+    {"municipality": "広島市", "school": "舟入小学校", "title": "舟入小学校_01.pdf", "sourceUrl": "https://drive.google.com/file/d/15GER30H72pOdVyAiC4ochmb3HMocffdV", "type": "学校別PTA資料", "summary": "広島市フォルダ内の学校別PDF。役員・会費・学校関与の確認対象。", "issues": ["役員・当番", "学校関与"]},
+    {"municipality": "広島市", "school": "祇園小学校", "title": "祇園小学校_01.pdf", "sourceUrl": "https://drive.google.com/file/d/1Unjl4NPAGx4JSiwpW0TljXyzGlVgK1sa", "type": "学校別PTA資料", "summary": "広島市フォルダ内の学校別PDF。入会手続・役員選出・保護者負担の確認対象。", "issues": ["入会手続", "役員・当番"]},
+    {"municipality": "長久手市", "school": "長久手市", "title": "長久手市.pdf", "sourceUrl": "https://drive.google.com/file/d/1ZmO8Ga4W5E16xDJnqJqrSItfOFyJOqjE", "type": "複数校・PTA資料", "summary": "PTA組織、委員定数、学年委員選出、任意加入説明等が含まれるPDF。役員選出と任意加入説明を横断的に確認する資料。", "issues": ["入会手続", "役員・当番", "学校関与"]},
+    {"municipality": "神奈川県", "school": "平塚江南高等学校", "title": "081.平塚江南", "sourceUrl": "https://docs.google.com/document/d/1g7zOuKdK8I1AhP8gSh6_DQqWhGPIcwhGrUZjH2J9-58", "type": "入会案内・入会申込書", "summary": "PTA入会案内、入会申込書、PTA会費と諸費用の口座引落し説明を含む資料。県立高校の入会手続と学校徴収金の関係を確認する。", "issues": ["入会手続", "会費徴収", "学校徴収金"]},
+    {"municipality": "神奈川県", "school": "横須賀工業高等学校", "title": "074.横須賀工業.pdf", "sourceUrl": "https://drive.google.com/file/d/1J53kXjX3uyivBOHXs59jfJkzROuur6Cc", "type": "県立高校別PDF", "summary": "神奈川県フォルダ内の県立高校別PDF。入会案内・会費徴収関係の確認対象。", "issues": ["入会手続", "会費徴収"]},
+    {"municipality": "神奈川県", "school": "神奈川工業高等学校", "title": "004.神奈川工業.pdf", "sourceUrl": "https://drive.google.com/file/d/1XX0uMcwl9TCOPu3ECIW2ybgBOF7MdS8i", "type": "県立高校別PDF", "summary": "神奈川県フォルダ内の県立高校別PDF。学校徴収金との関係を含めて確認する資料。", "issues": ["入会手続", "会費徴収", "学校徴収金"]}
+  ]
+}
