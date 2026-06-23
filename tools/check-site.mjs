@@ -156,7 +156,30 @@ function checkInternalRefs() {
     errors.push(`内部参照先が見つかりません: ${ref} (${[...files].slice(0, 4).join(", ")})`);
   }
   for (const [ref, files] of caseMismatches) {
-    errors.push(`内部参照の大文字小文字が一致しません: ${ref} (${[...files].slice(0, 4).join(", ")})`);
+    errors.push(`内部参照の大文字小文字が一致しません: ${ref} -> ${exact} (${[...files].slice(0, 4).join(", ")})`);
+  }
+}
+
+function looksLikePng(buf) {
+  return buf.length >= 8 && buf[0] === 0x89 && buf[1] === 0x50 && buf[2] === 0x4e && buf[3] === 0x47;
+}
+
+function looksLikeJpeg(buf) {
+  return buf.length >= 3 && buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff;
+}
+
+function looksLikePdf(buf) {
+  return buf.length >= 4 && buf.subarray(0, 4).toString("ascii") === "%PDF";
+}
+
+function checkAssetSignatures() {
+  for (const file of walk()) {
+    if (!/\.(png|jpe?g|pdf)$/i.test(file)) continue;
+    const buf = fs.readFileSync(path.join(root, file));
+    const lower = file.toLowerCase();
+    if (lower.endsWith(".png") && !looksLikePng(buf)) warnings.push(`PNG拡張子ですがPNG実体ではありません: ${file}`);
+    if ((lower.endsWith(".jpg") || lower.endsWith(".jpeg")) && !looksLikeJpeg(buf)) warnings.push(`JPEG拡張子ですがJPEG実体ではありません: ${file}`);
+    if (lower.endsWith(".pdf") && !looksLikePdf(buf)) warnings.push(`PDF拡張子ですがPDF実体ではありません: ${file}`);
   }
 }
 
@@ -171,6 +194,7 @@ function checkGoogleSitesLinks() {
 checkRequiredFiles();
 checkSitemap();
 checkInternalRefs();
+checkAssetSignatures();
 checkGoogleSitesLinks();
 
 if (warnings.length) {
