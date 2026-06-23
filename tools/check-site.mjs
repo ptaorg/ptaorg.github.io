@@ -156,7 +156,7 @@ function checkInternalRefs() {
     errors.push(`内部参照先が見つかりません: ${ref} (${[...files].slice(0, 4).join(", ")})`);
   }
   for (const [ref, files] of caseMismatches) {
-    errors.push(`内部参照の大文字小文字が一致しません: ${ref} -> ${exact} (${[...files].slice(0, 4).join(", ")})`);
+    errors.push(`内部参照の大文字小文字が一致しません: ${ref} (${[...files].slice(0, 4).join(", ")})`);
   }
 }
 
