@@ -4,7 +4,7 @@ const { ROOT, SITE_ORIGIN, listSchoolData, writeFileIfChanged } = require("./arc
 
 const SKIP_DIRS = new Set([".git", ".claude", "#U30db#U30fc#U30e0", "assets", "css", "data", "js", "scripts", "tools", "ホーム"]);
 const SKIP_FILES = new Set(["404.html", "PTA#U904b#U55b6#U9069#U6b63#U5316#U30ac#U30a4#U30c9#U30d6#U30c3#U30af_#U7b2c4#U7248_#U6539#U8a02#U672c#U6587.html"]);
-const LASTMOD = "2026-06-02";
+const LASTMOD = new Date().toISOString().slice(0, 10);
 
 function isPublishableHtml(filePath) {
   const html = fs.readFileSync(filePath, "utf8");
