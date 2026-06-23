@@ -39,6 +39,9 @@ h2,h3,.section-title{font-weight:700;letter-spacing:.005em}.section-kicker{font-
 /* Navigation tightening and priority cues */
 .desktop-nav{gap:.48rem}
 .nav-link{font-size:.86rem;padding:7px 9px}
+.desktop-nav>a.nav-link[href$="proper-management.html"],
+.desktop-nav>a.nav-link[href$="edu-board-separation.html"],
+.desktop-nav>a.btn-gold[href$="audit/index.html"]{display:none!important}
 .btn-gold{background:var(--color-donate);color:#fff;box-shadow:0 6px 18px rgba(249,115,22,.22)}
 .btn-gold:hover{box-shadow:0 10px 24px rgba(249,115,22,.34)}
 .support-nav-link{color:var(--color-donate-deep)!important;background:#fff7ed!important;border:1px solid #fed7aa;font-weight:900}
