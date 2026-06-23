@@ -1,5 +1,36 @@
 /* refine.css reset */
-:root{--shadow-sm:0 3px 12px rgba(5,17,31,.06);--shadow-md:0 8px 26px rgba(5,17,31,.09);--shadow-lg:0 18px 46px rgba(5,17,31,.13)}
+:root{
+  --color-primary:#1e3a5f;
+  --color-primary-strong:#0a192f;
+  --color-accent:#d4af37;
+  --color-accent-soft:#f4e7a6;
+  --color-bg:#f4f6f9;
+  --color-surface:#ffffff;
+  --color-text-main:#1a1a1a;
+  --color-text-muted:#4b5563;
+  --color-border:#e5e7eb;
+  --color-danger:#b91c1c;
+  --color-warning:#c2410c;
+  --color-success:#15803d;
+
+  --navy:var(--color-primary);
+  --navy-2:var(--color-primary);
+  --gold:var(--color-accent);
+  --gold-lt:var(--color-accent-soft);
+  --cream:#f8f5ee;
+  --red:var(--color-danger);
+  --orange:var(--color-warning);
+  --green:var(--color-success);
+  --text:var(--color-text-main);
+  --text-soft:var(--color-text-muted);
+  --line:var(--color-border);
+  --bg:var(--color-bg);
+  --surface:var(--color-surface);
+
+  --shadow-sm:0 3px 12px rgba(5,17,31,.06);
+  --shadow-md:0 8px 26px rgba(5,17,31,.09);
+  --shadow-lg:0 18px 46px rgba(5,17,31,.13);
+}
 h2,h3,.section-title{font-weight:700;letter-spacing:.005em}.section-kicker{font-weight:700;letter-spacing:.08em}.article-body,.plain-prose-block,.chapter-content,.officer-prose{line-height:1.95}.thesis-section,.thesis-lead-section{max-width:100%}
 [id="ed-resource-set"]{max-width:920px;margin-left:auto;margin-right:auto}
 
