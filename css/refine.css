@@ -34,6 +34,45 @@
 h2,h3,.section-title{font-weight:700;letter-spacing:.005em}.section-kicker{font-weight:700;letter-spacing:.08em}.article-body,.plain-prose-block,.chapter-content,.officer-prose{line-height:1.95}.thesis-section,.thesis-lead-section{max-width:100%}
 [id="ed-resource-set"]{max-width:920px;margin-left:auto;margin-right:auto}
 
+/* Summary-first utilities: existing pages are unaffected until these classes are used. */
+.conclusion-box,.key-takeaway,.summary-first{
+  margin:24px 0 30px;
+  padding:22px 24px;
+  background:linear-gradient(135deg,rgba(30,58,95,.06),rgba(212,175,55,.08));
+  border:1px solid rgba(30,58,95,.16);
+  border-left:5px solid var(--color-accent);
+  border-radius:14px;
+  box-shadow:var(--shadow-sm);
+}
+.conclusion-box .label,.key-takeaway .label,.summary-first .label{
+  display:inline-flex;
+  align-items:center;
+  margin:0 0 8px;
+  padding:3px 10px;
+  border-radius:999px;
+  background:var(--color-primary);
+  color:#fff;
+  font-size:.74rem;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+.conclusion-box h2,.conclusion-box h3,.key-takeaway h2,.key-takeaway h3,.summary-first h2,.summary-first h3{
+  margin:0 0 10px;
+  color:var(--color-primary);
+  line-height:1.55;
+}
+.conclusion-box p:last-child,.key-takeaway p:last-child,.summary-first p:last-child{margin-bottom:0}
+.diagram-note,.diagram-summary{
+  margin-top:10px;
+  color:var(--color-text-muted);
+  font-size:.88rem;
+  line-height:1.8;
+}
+@media(max-width:640px){
+  .conclusion-box,.key-takeaway,.summary-first{padding:18px 18px;margin:18px 0 24px;border-radius:12px}
+  .diagram-note,.diagram-summary{font-size:.84rem}
+}
+
 /* guide-board.html：横並び図解のカード内スクロールを解消 */
 body.guide-board-direct-fixed .gbv-two{
   display:grid!important;
