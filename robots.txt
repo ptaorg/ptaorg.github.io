@@ -3,3 +3,4 @@ Disallow: /tools/
 Allow: /
 
 Sitemap: https://ptaorg.com/sitemap.xml
+Sitemap: https://ptaorg.com/sitemap-research.xml
