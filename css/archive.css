@@ -245,3 +245,59 @@ body::before {
 .eval-good .archive-value {
   color: #ffffff !important;
 }
+
+@media print {
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  body::before,
+  .archive-back,
+  .archive-print-save-section,
+  .archive-print-actions,
+  .archive-print-button,
+  .archive-download {
+    display: none !important;
+  }
+
+  .archive-school-page {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+  }
+
+  .archive-school-page::before,
+  .archive-hero,
+  .archive-section {
+    box-shadow: none !important;
+  }
+
+  .archive-hero {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 2px solid #0b2a4a;
+    border-radius: 0;
+    padding: 20px 22px;
+  }
+
+  .archive-hero p,
+  .archive-kicker {
+    color: #000000 !important;
+  }
+
+  .archive-section {
+    border-radius: 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .archive-section img {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: "";
+  }
+}
