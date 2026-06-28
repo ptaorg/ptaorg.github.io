@@ -18,12 +18,14 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
+      - name: Install dependencies if package metadata is present
         run: |
           if [ -f package-lock.json ]; then
             npm ci
-          else
+          elif [ -f package.json ]; then
             npm install
+          else
+            echo "No package.json found; skipping dependency install."
           fi
 
       - name: Run site checks
