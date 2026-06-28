@@ -29,4 +29,4 @@ jobs:
           fi
 
       - name: Run site checks
-        run: npm run check:all
+        run: npm test
