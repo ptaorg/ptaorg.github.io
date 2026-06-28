@@ -8,10 +8,22 @@ body {
   line-height: 1.85;
 }
 
+body::before {
+  content: "PTA適正化推進委員会";
+  display: block;
+  padding: 14px 24px;
+  background: linear-gradient(90deg, #0a192f 0%, #1e3a5f 58%, #2d5a8e 100%);
+  color: #ffffff;
+  border-bottom: 3px solid #d4af37;
+  font-weight: 900;
+  letter-spacing: .04em;
+  box-shadow: 0 4px 18px rgba(5,17,31,.18);
+}
+
 .archive-school-page {
   width: min(100% - 32px, 1080px);
   margin: 0 auto;
-  padding: 40px 0 72px;
+  padding: 32px 0 72px;
   color: #0f2742;
 }
 
