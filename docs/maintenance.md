@@ -79,3 +79,5 @@ npm run maintenance:bump-site-js -- 89
 - `data/site-search-index.js` は検索用の生成ファイルとして扱う。
 - 大きなHTMLの置換は、本文変更とキャッシュ更新を分けて行う。
 - 一回限りの置換スクリプトは `scripts/legacy/` などへ分け、構造説明Markdownに混在させない。
+
+最終更新: 2026-06-29
