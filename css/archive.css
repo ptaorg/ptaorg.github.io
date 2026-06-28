@@ -8,7 +8,7 @@ body {
   line-height: 1.85;
 }
 
-body::before {
+body:has(.archive-school-page)::before {
   content: "PTA適正化推進委員会";
   display: block;
   padding: 14px 24px;
@@ -252,7 +252,7 @@ body::before {
     color: #000000;
   }
 
-  body::before,
+  body:has(.archive-school-page)::before,
   .archive-back,
   .archive-print-save-section,
   .archive-print-actions,
