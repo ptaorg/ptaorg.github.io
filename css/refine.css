@@ -36,6 +36,52 @@
 h2,h3,.section-title{font-weight:700;letter-spacing:.005em}.section-kicker{font-weight:700;letter-spacing:.08em}.article-body,.plain-prose-block,.chapter-content,.officer-prose{line-height:1.95}.thesis-section,.thesis-lead-section{max-width:100%}
 [id="ed-resource-set"]{max-width:920px;margin-left:auto;margin-right:auto}
 
+/* Header color unification: keep all modern pages on the navy header. */
+.site-header{
+  background:linear-gradient(90deg,var(--color-primary-strong) 0%,var(--color-primary) 58%,#2d5a8e 100%)!important;
+  border-bottom:3px solid var(--color-accent)!important;
+  box-shadow:0 4px 18px rgba(5,17,31,.18)!important;
+}
+.site-header .logo,
+.site-header .logo span,
+.site-header .nav-link{
+  color:#fff!important;
+}
+.site-header .nav-link:hover,
+.site-header .nav-link.active{
+  color:#fff2a8!important;
+  background:rgba(255,255,255,.10)!important;
+}
+.site-header .support-nav-link{
+  color:#fff!important;
+  background:rgba(249,115,22,.92)!important;
+  border:1px solid rgba(255,255,255,.24)!important;
+}
+.site-header .support-nav-link:hover{
+  background:#ea580c!important;
+  color:#fff!important;
+}
+.site-header .btn-gold{
+  color:#fff!important;
+}
+.site-header .header-search input{
+  background:rgba(255,255,255,.96)!important;
+  border-color:rgba(255,255,255,.42)!important;
+}
+.site-header .header-search svg{stroke:var(--color-primary)!important}
+.site-header .hamburger{
+  background:rgba(255,255,255,.12)!important;
+  border-color:rgba(255,255,255,.32)!important;
+}
+.site-header .hamburger span{background:#fff!important}
+.site-header .mega-menu{
+  background:#fff!important;
+  color:var(--color-text-main)!important;
+}
+.site-header .mega-col h4{color:var(--color-primary)!important}
+.site-header .mega-col a{color:var(--color-text-muted)!important}
+.site-header .mega-col a:hover{color:var(--color-primary)!important}
+
 /* Navigation tightening and priority cues */
 .desktop-nav{gap:.48rem}
 .nav-link{font-size:.86rem;padding:7px 9px}
