@@ -75,6 +75,7 @@ npm run maintenance:bump-site-js -- 89
 - 重要本文を JavaScript で差し替えない。
 - トップページや主要解説ページの本文は HTML に置く。
 - 教育委員会回答ページの重要な比較説明は HTML に置く。
+- JavaScriptで同じ静的本文を二重表示させない。
 - `data/site-search-index.js` は検索用の生成ファイルとして扱う。
 - 大きなHTMLの置換は、本文変更とキャッシュ更新を分けて行う。
 - 一回限りの置換スクリプトは `scripts/legacy/` などへ分け、構造説明Markdownに混在させない。
