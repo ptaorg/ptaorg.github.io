@@ -66,3 +66,5 @@ JavaScriptは、検索、ナビゲーション開閉、地図、補助表示な�
 一回限りの置換スクリプトや過去の修正スクリプトは、Markdown文書に直接置かず、`scripts/legacy/` などへ分けて保管します。
 
 旧 `SITE_STRUCTURE.md` に誤って置かれていたフッター連絡先置換スクリプトは、履歴保全のため `scripts/legacy/fix-footer-contact.py` に移しました。
+
+最終更新: 2026-06-29
