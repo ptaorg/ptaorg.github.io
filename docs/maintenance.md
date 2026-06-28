@@ -62,7 +62,7 @@ npm run check:generated
 
 ## 自動チェック
 
-Pull Request と `main` への push では、GitHub Actions の `Site checks` が `npm run check:all` を実行します。
+Pull Request と `main` への push では、GitHub Actions の `Site checks` が `npm run check:all` を実行します。ローカルでは `npm test` でも同じ確認を実行できます。
 
 ## `site.js` のキャッシュ更新
 
