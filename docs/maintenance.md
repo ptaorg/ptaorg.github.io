@@ -60,6 +60,10 @@ npm run generate:all
 npm run check:generated
 ```
 
+## 自動チェック
+
+Pull Request と `main` への push では、GitHub Actions の `Site checks` が `npm run check:all` を実行します。
+
 ## `site.js` のキャッシュ更新
 
 `js/site.js` を更新した場合、HTML側の読み込み指定も更新します。
