@@ -1,38 +1,65 @@
-#!/usr/bin/env python3
-import re
-import glob
+# ptaorg.com サイト構造メモ
 
-# 修正対象のHTMLファイル
-html_files = glob.glob('*.html')
-html_files.remove('post-template.html') if 'post-template.html' in html_files else None
+このファイルは、`ptaorg/ptaorg.github.io` で公開している `ptaorg.com` の構造と編集方針を確認するためのメモです。
 
-# 検索パターン
-old_pattern = r'(<h3>PTA適正化推進委員会</h3>\s*)<p>全国調査、教育委員会回答、学校文書、法制度整理をもとに、PTAをめぐる制度と実務を研究・整理するための公開サイトです。</p>\s*(<a href="https://yokomusubi\.city\.yokohama\.lg\.jp/.*?</a>)'
+## 基本方針
 
-# 置換後のテキスト
-new_text = r'''\1\2
-                <div class="footer-contact">
-                    <p>横浜市磯子区岡村8-17-5-301</p>
-                    <p>070-9012-7772</p>
-                    <p><a href="mailto:info@ptaorg.com">info@ptaorg.com</a></p>
-                </div>'''
+このサイトは、PTAの任意加入、学校とPTAの公私分離、個人情報保護、会費徴収、教職員関与、学校施設利用などを、本文の流れで説明する資料サイト・論考サイトです。
 
-for html_file in html_files:
-    try:
-        with open(html_file, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # パターンマッチと置換
-        new_content = re.sub(old_pattern, new_text, content, flags=re.DOTALL)
-        
-        # ファイルに書き戻し
-        if new_content != content:
-            with open(html_file, 'w', encoding='utf-8') as f:
-                f.write(new_content)
-            print(f'✓ {html_file} を修正しました')
-        else:
-            print(f'- {html_file} は変更不要です')
-    except Exception as e:
-        print(f'✗ {html_file} でエラー: {e}')
+トップページや主要解説ページは、カード型ポータルやリンク集を本文の代替にしません。カード、タグ、一覧リンクは、本文後の補助導線として使います。
 
-print('\n完了')
+## 主要ページ
+
+| 役割 | ファイル | 内容 |
+|---|---|---|
+| トップ | `index.html` | サイト全体の問題意識と主要論点への入口 |
+| 保護者向け | `guide-parent.html` | 入会、会費、個人情報、退会・確認の実務 |
+| PTA役員向け | `guide-pta.html` | 引き継いだ運営を適正化する手順 |
+| 学校・教育委員会向け | `guide-board.html` | 学校関与、公私分離、教委の確認事項 |
+| 研究者・記者向け | `guide-research.html` | 一次資料の読み方、資料区分、取材質問 |
+| 教育委員会回答 | `board-responses.html` | 自治体別・論点別の回答本文と索引 |
+| 全国資料館 | `national-archive.html` | 学校別・自治体別の実物資料アーカイブ |
+| 行政資料 | `administrative-materials.html` | 通知、公的PDF、公式資料の入口 |
+| 法制度 | `law-map.html` | 論点別の関連法令整理 |
+| 論考 | `journal.html` | 個別テーマの調査・分析記事 |
+
+## 主要論点ページ
+
+| 論点 | ファイル | 編集上の注意 |
+|---|---|---|
+| 入会手続 | `membership.html` | みなし加入・オプトアウトを、契約成立、意思表示、消費者契約法、個人情報と接続する |
+| 個人情報 | `privacy.html` | 学校保有情報とPTA直接取得情報を分ける。非会員情報をPTAが把握する前提にしない |
+| 会費徴収 | `fee-collection.html` | 学校徴収金、委任、抱合せ徴収、請求主体、返還論点を分ける |
+| 教職員関与 | `personnel.html` | 校務、渉外、PTA事務、職専免、兼職兼業を混同しない |
+| 施設利用 | `facilities.html` | 学校教育法137条、教育上の支障、使用条件、停止条件まで扱う |
+
+## 生成ファイルとデータ
+
+| 種別 | パス | 備考 |
+|---|---|---|
+| サイトマップ | `sitemap.xml` | `npm run generate:sitemap` で生成 |
+| 研究系サイトマップ | `sitemap-research.xml` | 研究系ページ用 |
+| 検索インデックス | `data/site-search-index.js` | `npm run generate:search` で生成 |
+| 学校別データ | `data/schools/` | 学校別ページ生成の元データ |
+| 学校別ページ | `archive/` | 原則、生成・確認フローを通す |
+
+## JavaScriptの扱い
+
+JavaScriptは、検索、ナビゲーション開閉、地図、補助表示などに限定します。重要本文、比較基準、法的整理、行政回答の解説は、可能な限りHTML本文として置きます。
+
+特に `board-responses.html` の「参考になる回答例」のように、検索流入・引用・行政説明で使う文章は、JavaScriptによる後付けではなく、静的HTMLに置く方針です。
+
+## 編集時の原則
+
+- 既存本文を短くしない。
+- 重要な論理説明をカードやリンク一覧へ置き換えない。
+- 法令、通知、判例、行政回答は、確認できる資料に基づいて書く。
+- URL構造を不用意に変更しない。
+- 生成ファイルを手で直す場合は、生成スクリプトとの差分を確認する。
+- `js/site.js` を更新した場合は、HTML側の読み込みバージョンも確認する。
+
+## 保守用スクリプト
+
+一回限りの置換スクリプトや過去の修正スクリプトは、Markdown文書に直接置かず、`scripts/legacy/` などへ分けて保管します。
+
+旧 `SITE_STRUCTURE.md` に誤って置かれていたフッター連絡先置換スクリプトは、履歴保全のため `scripts/legacy/fix-footer-contact.py` に移しました。
