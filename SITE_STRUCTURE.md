@@ -60,6 +60,7 @@ JavaScriptは、検索、ナビゲーション開閉、地図、補助表示な�
 - 生成ファイルを手で直す場合は、生成スクリプトとの差分を確認する。
 - `js/site.js` を更新した場合は、HTML側の読み込みバージョンも確認する。
 - HTMLへ移した本文と同じ内容を、JavaScript側で二重生成しない。
+- Pull Request では GitHub Actions の `Site checks` で `npm run check:all` を確認する。
 
 ## 保守用スクリプト
 
