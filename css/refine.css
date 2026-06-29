@@ -111,6 +111,25 @@ body:has(.yk-notice-section) .site-header .nav-link{
 .site-header .mega-col a{color:var(--color-text-muted)!important}
 .site-header .mega-col a:hover{color:var(--color-primary)!important}
 
+.support-strip{
+  background:linear-gradient(90deg,var(--color-primary-strong) 0%,var(--color-primary) 58%,#2d5a8e 100%)!important;
+  color:#fff!important;
+  border-bottom:1px solid rgba(212,175,55,.42)!important;
+}
+.support-strip-inner{color:#fff!important}
+.support-strip-label{
+  background:rgba(212,175,55,.16)!important;
+  color:var(--color-accent-soft)!important;
+  border:1px solid rgba(212,175,55,.38)!important;
+}
+.support-strip-text{color:rgba(255,255,255,.9)!important}
+.support-strip-link{
+  background:#f97316!important;
+  color:#fff!important;
+  border:1px solid rgba(255,255,255,.24)!important;
+}
+.support-strip-link:hover{background:#ea580c!important;color:#fff!important}
+
 /* Navigation tightening and priority cues */
 .desktop-nav{gap:.48rem}
 .nav-link{font-size:.86rem;padding:7px 9px}
