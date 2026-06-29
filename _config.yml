@@ -1,0 +1,13 @@
+# GitHub Pages build settings
+# Public HTML/CSS/JS assets remain available. Internal notes, scripts, and work files are excluded from the published site.
+exclude:
+  - docs/
+  - source-candidates/
+  - scripts/
+  - tests/
+  - tools/
+  - node_modules/
+  - package-lock.json
+  - package.json
+  - README.md
+  - SITE_STRUCTURE.md
