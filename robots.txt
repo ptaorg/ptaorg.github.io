@@ -1,5 +1,11 @@
 User-agent: *
 Disallow: /tools/
+Disallow: /docs/
+Disallow: /source-candidates/
+Disallow: /scripts/
+Disallow: /tests/
+Disallow: /data/
+Disallow: /.github/
 Allow: /
 
 Sitemap: https://ptaorg.com/sitemap.xml
