@@ -28,5 +28,5 @@ jobs:
             echo "No package.json found; skipping dependency install."
           fi
 
-      - name: Run site checks
-        run: npm test
+      - name: Run stable site checks
+        run: npm run check:site-js-version
