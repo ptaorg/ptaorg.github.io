@@ -1,0 +1,158 @@
+/* PTA sitewide visual consistency — 2026-07-11 */
+:root{
+  --site-prose-width:1040px;
+  --site-reading-width:920px;
+  --site-mobile-gutter:15px;
+}
+
+html{font-size:16px}
+body{min-width:320px}
+main{min-width:0}
+main :where(p,li,td,th,dd,blockquote){overflow-wrap:anywhere}
+main :where(img,svg,video,iframe){max-width:100%}
+main :where(pre,code){white-space:pre-wrap;overflow-wrap:anywhere}
+
+/* Common reading widths. Keep maps and data dashboards wider. */
+body.guideline-editorial .gl-wrap,
+body.guideline-editorial main>section>.wrap{
+  width:min(calc(100% - 48px),var(--site-prose-width))!important;
+  max-width:var(--site-prose-width)!important;
+  margin-inline:auto!important;
+  padding-left:0!important;
+  padding-right:0!important;
+}
+.issue-content,
+.issue-hero-inner,
+.edu-article,
+.journal-layout{
+  max-width:960px!important;
+}
+
+/* Tables, source ledgers and long templates remain usable without widening the page. */
+:where(.table-wrap,.edu-table-wrap,.responsive-table,.source-table-wrap,.archive-table-wrap,.gl-table-wrap,.comparison-table-wrap){
+  max-width:100%!important;
+  overflow-x:auto!important;
+  overscroll-behavior-inline:contain;
+  -webkit-overflow-scrolling:touch;
+}
+:where(.gl-tpl-pre,pre,.code-block){max-width:100%!important;overflow:auto!important}
+
+/* Guideline: remove the isolated white-card / grey-gutter appearance. */
+body.guideline-editorial main>section{
+  width:100%!important;
+  margin:0!important;
+  background:#fff!important;
+  border-bottom:1px solid #dbe4ee!important;
+}
+body.guideline-editorial main>section:nth-of-type(even){background:#f7f9fc!important}
+body.guideline-editorial .gl-wrap{
+  padding-top:56px!important;
+  padding-bottom:62px!important;
+  background:transparent!important;
+}
+body.guideline-editorial .gl-problem-grid,
+body.guideline-editorial .gl-principle-grid,
+body.guideline-editorial .gl-pack-grid{
+  margin-top:26px!important;
+  border-top:2px solid #1e3a5f!important;
+}
+body.guideline-editorial .gl-problem-card,
+body.guideline-editorial .gl-principle-card,
+body.guideline-editorial .gl-box,
+body.guideline-editorial .gl-ng-box,
+body.guideline-editorial .gl-notice,
+body.guideline-editorial .gl-request-item,
+body.guideline-editorial .gl-pack-card{
+  background:transparent!important;
+  padding:22px 0!important;
+}
+body.guideline-editorial .gl-problem-title,
+body.guideline-editorial .gl-principle-title,
+body.guideline-editorial .gl-panel-heading,
+body.guideline-editorial .gl-box h4{
+  font-size:1.08rem!important;
+  line-height:1.55!important;
+}
+body.guideline-editorial .gl-problem-desc,
+body.guideline-editorial .gl-principle-desc,
+body.guideline-editorial .gl-box p,
+body.guideline-editorial .gl-box li,
+body.guideline-editorial .gl-request-body p{
+  font-size:.98rem!important;
+  line-height:1.9!important;
+}
+body.guideline-editorial .gl-principle-num,
+body.guideline-editorial .gl-law-cite,
+body.guideline-editorial .gl-pack-basis li{
+  font-size:.84rem!important;
+}
+body.guideline-editorial .page-banner{min-height:286px!important}
+body.guideline-editorial .page-banner-content{padding:58px 0!important}
+
+/* A compact, consistent support strip on all small screens. */
+@media(max-width:760px){
+  .support-strip{min-height:44px!important}
+  .support-strip-inner{
+    width:min(calc(100% - 24px),1120px)!important;
+    min-height:44px!important;
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto!important;
+    align-items:center!important;
+    gap:10px!important;
+    padding:6px 0!important;
+  }
+  .support-strip-label{display:none!important}
+  .support-strip-text{
+    min-width:0!important;
+    margin:0!important;
+    font-size:0!important;
+    line-height:1.35!important;
+  }
+  .support-strip-text::after{
+    content:'調査・資料公開へのご支援をお願いします。';
+    font-size:12.8px!important;
+    line-height:1.35!important;
+    font-weight:700!important;
+  }
+  .support-strip-link{
+    margin:0!important;
+    padding:7px 11px!important;
+    border-radius:999px!important;
+    font-size:11.8px!important;
+    line-height:1.2!important;
+    white-space:nowrap!important;
+  }
+  .nav-container{min-height:68px!important;width:min(calc(100% - 24px),1240px)!important}
+  .logo{gap:8px!important;font-size:.9rem!important}
+  .logo img{width:40px!important;height:40px!important}
+
+  main :where(p,li,dd,blockquote){
+    font-size:15px!important;
+    line-height:1.85!important;
+  }
+  main :where(td,th){font-size:13.5px!important;line-height:1.65!important}
+  main :where(figcaption,.caption,.source-note,.meta,.ac-date){font-size:13px!important;line-height:1.65!important}
+
+  body.guideline-editorial .page-banner{min-height:230px!important}
+  body.guideline-editorial .page-banner-content{
+    width:min(calc(100% - 30px),1120px)!important;
+    padding:44px 0!important;
+  }
+  body.guideline-editorial .gl-wrap,
+  body.guideline-editorial main>section>.wrap{
+    width:min(calc(100% - 30px),var(--site-prose-width))!important;
+    max-width:none!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+  body.guideline-editorial .gl-wrap{padding-top:42px!important;padding-bottom:48px!important}
+  body.guideline-editorial .section-title{font-size:1.55rem!important;line-height:1.45!important}
+  body.guideline-editorial .gl-problem-title,
+  body.guideline-editorial .gl-principle-title,
+  body.guideline-editorial .gl-panel-heading,
+  body.guideline-editorial .gl-box h4{font-size:1.02rem!important}
+
+  :where(.table-wrap,.edu-table-wrap,.responsive-table,.source-table-wrap,.archive-table-wrap,.gl-table-wrap,.comparison-table-wrap){
+    scrollbar-width:thin;
+  }
+}
