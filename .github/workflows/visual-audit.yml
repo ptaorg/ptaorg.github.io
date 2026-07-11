@@ -2,53 +2,21 @@ name: Full-site visual audit
 
 on:
   pull_request:
-  workflow_dispatch:
-
-permissions:
-  contents: write
+    branches:
+      - main
 
 jobs:
   visual-audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.ref || github.ref }}
-          fetch-depth: 0
-
-      - name: Apply visual consistency stylesheet
-        if: github.event_name == 'pull_request' && github.head_ref == 'visual-audit-20260711'
-        run: |
-          python3 tools/apply-site-consistency-import-20260711.py
-          python3 tools/apply-site-consistency-links-20260711.py
-
-      - name: Commit visual consistency stylesheet links
-        if: github.event_name == 'pull_request' && github.head_ref == 'visual-audit-20260711'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "4189826+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then
-            echo "Consistency stylesheet already applied"
-          else
-            git commit -m "Apply sitewide visual consistency stylesheet"
-            git push origin HEAD:${{ github.head_ref }}
-          fi
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
-      - name: Install project dependencies
-        run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          elif [ -f package.json ]; then
-            npm install
-          fi
 
       - name: Install Playwright Chromium
         run: |
@@ -58,7 +26,6 @@ jobs:
       - name: Start local site
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/pta-visual-server.log 2>&1 &
-          echo $! > /tmp/pta-visual-server.pid
           sleep 2
           curl --fail http://127.0.0.1:4173/index.html >/dev/null
 
@@ -66,8 +33,34 @@ jobs:
         continue-on-error: true
         run: npm test
 
-      - name: Run Chromium audit
-        run: node scripts/visual-audit.mjs
+      - name: Run Chromium full-site audit
+        run: node tools/visual-audit.mjs
+
+      - name: Create contact sheets
+        run: |
+          python3 -m pip install pillow
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageDraw
+          root=Path('visual-audit-output')
+          for mode in ('desktop','mobile'):
+              files=sorted((root/mode).glob('*.jpg'))
+              thumbs=[]
+              for f in files:
+                  im=Image.open(f).convert('RGB')
+                  top=im.crop((0,0,im.width,min(im.height,1800)))
+                  top.thumbnail((260,300))
+                  canvas=Image.new('RGB',(280,340),'white')
+                  canvas.paste(top,((280-top.width)//2,8))
+                  ImageDraw.Draw(canvas).text((10,316),f.stem.replace('__','/')[:44],fill='black')
+                  thumbs.append(canvas)
+              cols=4
+              rows=(len(thumbs)+cols-1)//cols
+              sheet=Image.new('RGB',(cols*280,rows*340),(235,238,242))
+              for i,t in enumerate(thumbs):
+                  sheet.paste(t,((i%cols)*280,(i//cols)*340))
+              sheet.save(root/f'contact-sheet-{mode}.jpg',quality=82)
+          PY
 
       - name: Upload visual audit
         if: always()
