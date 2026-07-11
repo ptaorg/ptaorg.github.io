@@ -17,11 +17,12 @@ main :where(pre,code){white-space:pre-wrap;overflow-wrap:anywhere}
 :where(.table-wrap,.edu-table-wrap,.responsive-table,.source-table-wrap,.archive-table-wrap,.gl-table-wrap,.comparison-table-wrap){max-width:100%!important;overflow-x:auto!important;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
 :where(.gl-tpl-pre,pre,.code-block){max-width:100%!important;overflow:auto!important}
 
-body.site-reviewed main :where(p,li){font-size:max(.96rem,15px);line-height:1.9}
-body.site-reviewed main :where(h2){line-height:1.45}
-body.site-reviewed main :where(h3){line-height:1.55}
+/* Shared reading baseline. Page-specific headings and lead text may remain larger. */
+main :where(p,li,dd,blockquote){line-height:1.9}
+main :where(h2){line-height:1.45}
+main :where(h3){line-height:1.55}
 
-/* Guideline: a single continuous document width and one visual grammar. */
+/* Guideline: one continuous document width and one visual grammar. */
 body.guideline-editorial{background:#fff!important}
 body.guideline-editorial main{background:#fff!important}
 body.guideline-editorial main>section{width:100%!important;margin:0!important;padding:0!important;background:#fff!important;border-top:1px solid var(--site-line)!important;border-bottom:0!important}
@@ -36,6 +37,7 @@ body.guideline-editorial main>.wrap{
   background:transparent!important;
 }
 body.guideline-editorial main>.wrap:first-child{padding:26px 0 30px!important}
+body.guideline-editorial main>.wrap:first-child>div{border-radius:0!important;box-shadow:none!important}
 body.guideline-editorial .page-banner{margin:0!important;min-height:250px!important;border-radius:0!important}
 body.guideline-editorial .page-banner-content{width:min(calc(100% - 48px),var(--site-prose-width))!important;margin-inline:auto!important;padding:54px 0!important}
 body.guideline-editorial .section-kicker,
@@ -47,7 +49,15 @@ body.guideline-editorial .gl-pack-grid{display:block!important;margin-top:28px!i
 body.guideline-editorial .gl-problem-card,
 body.guideline-editorial .gl-principle-card,
 body.guideline-editorial .gl-pack-card{
-  display:block!important;margin:0!important;padding:22px 0!important;color:var(--site-ink)!important;background:transparent!important;border:0!important;border-bottom:1px solid var(--site-line)!important;border-radius:0!important;box-shadow:none!important
+  display:block!important;
+  margin:0!important;
+  padding:22px 0!important;
+  color:var(--site-ink)!important;
+  background:transparent!important;
+  border:0!important;
+  border-bottom:1px solid var(--site-line)!important;
+  border-radius:0!important;
+  box-shadow:none!important;
 }
 body.guideline-editorial .gl-problem-icon,
 body.guideline-editorial .gl-principle-icon{display:none!important}
@@ -79,49 +89,53 @@ body.guideline-editorial .gl-law-cite,
 body.guideline-editorial .gl-pack-basis li{font-size:.84rem!important}
 
 /* Education-board separation guide: readable type and fewer dashboard cards. */
-body.edu-board-separation-page{background:#fff!important}
-body.edu-board-separation-page .edu-page{padding:0!important;background:#fff!important}
-body.edu-board-separation-page .edu-layout{width:min(calc(100% - 48px),var(--site-prose-width))!important;max-width:var(--site-prose-width)!important;margin-inline:auto!important}
-body.edu-board-separation-page .edu-toc{display:none!important}
-body.edu-board-separation-page .edu-article{max-width:var(--site-reading-width)!important;margin-inline:auto!important}
-body.edu-board-separation-page .edu-article section{margin:0!important;padding:48px 0!important;border-bottom:1px solid var(--site-line)!important}
-body.edu-board-separation-page .edu-article :where(p,li,td,th){font-size:.98rem!important;line-height:1.9!important}
-body.edu-board-separation-page .edu-core,
-body.edu-board-separation-page .notice-model,
-body.edu-board-separation-page .transition-item,
-body.edu-board-separation-page .flow-item,
-body.edu-board-separation-page .script-box,
-body.edu-board-separation-page .law-explain-item,
-body.edu-board-separation-page .edu-voices-card,
-body.edu-board-separation-page .edu-final,
-body.edu-board-separation-page .reference-list a,
-body.edu-board-separation-page .separation{border-radius:0!important;box-shadow:none!important}
-body.edu-board-separation-page .transition-list,
-body.edu-board-separation-page .flow-list,
-body.edu-board-separation-page .law-explain,
-body.edu-board-separation-page .edu-voices-summary{gap:0!important}
-body.edu-board-separation-page .transition-item,
-body.edu-board-separation-page .flow-item,
-body.edu-board-separation-page .law-explain-item,
-body.edu-board-separation-page .edu-voices-card{background:transparent!important;border:0!important;border-bottom:1px solid var(--site-line)!important;padding:18px 0!important}
-body.edu-board-separation-page .reference-list a{background:transparent!important;border:0!important;border-bottom:1px solid var(--site-line)!important;padding:13px 0!important}
-body.edu-board-separation-page .edu-voices-terms,
-body.edu-board-separation-page .edu-voices-note{font-size:.88rem!important}
+.edu-page{padding:0!important;background:#fff!important}
+.edu-layout{width:min(calc(100% - 48px),var(--site-prose-width))!important;max-width:var(--site-prose-width)!important;margin-inline:auto!important}
+.edu-toc{display:none!important}
+.edu-article{max-width:var(--site-reading-width)!important;margin-inline:auto!important;border-radius:0!important;box-shadow:none!important}
+.edu-article section{margin:0!important;padding:48px 0!important;border-bottom:1px solid var(--site-line)!important}
+.edu-article :where(p,li,td,th){font-size:.98rem!important;line-height:1.9!important}
+.edu-core,
+.notice-model,
+.transition-item,
+.flow-item,
+.script-box,
+.law-explain-item,
+.edu-voices-card,
+.edu-final,
+.reference-list a,
+.separation{border-radius:0!important;box-shadow:none!important}
+.transition-list,
+.flow-list,
+.law-explain,
+.edu-voices-summary{gap:0!important}
+.transition-item,
+.flow-item,
+.law-explain-item,
+.edu-voices-card{background:transparent!important;border:0!important;border-bottom:1px solid var(--site-line)!important;padding:18px 0!important}
+.reference-list a{background:transparent!important;border:0!important;border-bottom:1px solid var(--site-line)!important;padding:13px 0!important}
+.edu-voices-terms,
+.edu-voices-note{font-size:.88rem!important}
+.edu-table-wrap,
+.edu-voices-table-wrap{max-width:100%!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch}
 
 /* Fourth-edition long-form guidebook: remove print-page narrowness on screen. */
-body.guidebook-page{width:auto!important;max-width:none!important;margin:0!important;padding:0!important;color:var(--site-ink)!important;background:#f5f8fb!important;font-size:16px!important}
-body.guidebook-page>*{width:min(calc(100% - 48px),var(--site-reading-width));margin-left:auto;margin-right:auto}
-body.guidebook-page .cover{margin-top:48px!important;background:#fff!important}
-body.guidebook-page :where(p,li,.toc-text,.toc-sub,.law-cite,.risk-item,.case-item,.check-item,.qa-a,.form-example,.rule-box,.ref-box){font-size:.96rem!important;line-height:1.9!important}
-body.guidebook-page h2{margin-top:48px!important;background:transparent!important;border-left:0!important;border-bottom:2px solid #1a4a8a!important;padding:0 0 10px!important}
-body.guidebook-page :where(.principle-box,.risk-box,.case-box,.social-box,.mext-box,.judgment-box,.paradox-box,.ppc-box,.check-box,.notice-box,.info-box,.division-box,.flow-box,.form-example,.rule-box,.ref-box){border-radius:0!important;box-shadow:none!important}
+body.guidebook-editorial{width:auto!important;max-width:none!important;margin:0!important;padding:0!important;color:var(--site-ink)!important;background:#f5f8fb!important;font-size:16px!important}
+body.guidebook-editorial>*{width:min(calc(100% - 48px),var(--site-reading-width));margin-left:auto;margin-right:auto}
+body.guidebook-editorial .cover{margin-top:48px!important;background:#fff!important}
+body.guidebook-editorial :where(p,li,.toc-text,.toc-sub,.law-cite,.risk-item,.case-item,.check-item,.qa-a,.form-example,.rule-box,.ref-box){font-size:.96rem!important;line-height:1.9!important}
+body.guidebook-editorial h2{margin-top:48px!important;background:transparent!important;border-left:0!important;border-bottom:2px solid #1a4a8a!important;padding:0 0 10px!important}
+body.guidebook-editorial :where(.principle-box,.risk-box,.case-box,.social-box,.mext-box,.judgment-box,.paradox-box,.ppc-box,.check-box,.notice-box,.info-box,.division-box,.flow-box,.form-example,.rule-box,.ref-box){border-radius:0!important;box-shadow:none!important}
 
 /* Education-board responsibility essay: list, not dashboard. */
-body.education-board-responsibility-page .thesis-grid{display:block!important;max-width:var(--site-reading-width)!important;margin:28px auto 0!important;border-top:2px solid #1e3a5f!important}
-body.education-board-responsibility-page .thesis-card{display:grid!important;grid-template-columns:52px minmax(0,1fr)!important;gap:0 18px!important;padding:22px 0!important;background:transparent!important;border:0!important;border-bottom:1px solid var(--site-line)!important;border-radius:0!important;box-shadow:none!important}
-body.education-board-responsibility-page .thesis-card>span{grid-row:1/span 2!important}
-body.education-board-responsibility-page .thesis-callout,
-body.education-board-responsibility-page .editorial-bluebar{border-radius:0!important;box-shadow:none!important}
+body.thesis-page .thesis-grid{display:block!important;max-width:var(--site-reading-width)!important;margin:28px auto 0!important;border-top:2px solid #1e3a5f!important}
+body.thesis-page .thesis-card{display:grid!important;grid-template-columns:52px minmax(0,1fr)!important;gap:0 18px!important;padding:22px 0!important;background:transparent!important;border:0!important;border-bottom:1px solid var(--site-line)!important;border-radius:0!important;box-shadow:none!important}
+body.thesis-page .thesis-card>span{grid-row:1/span 2!important}
+body.thesis-page .thesis-callout,
+body.thesis-page .editorial-bluebar{border-radius:0!important;box-shadow:none!important}
+
+/* Remove avoidable hover motion and card lift on reading pages. */
+body :where(.article-card,.doc-item,.thesis-card,.gl-problem-card,.gl-principle-card,.gl-pack-card):hover{transform:none!important}
 
 /* Small-screen header and reading baseline. */
 @media(max-width:760px){
@@ -141,12 +155,19 @@ body.education-board-responsibility-page .editorial-bluebar{border-radius:0!impo
   body.guideline-editorial main>section>.wrap,
   body.guideline-editorial main>.wrap,
   body.guideline-editorial .page-banner-content,
-  body.edu-board-separation-page .edu-layout,
-  body.guidebook-page>*{width:min(calc(100% - 28px),var(--site-prose-width))!important;max-width:none!important}
+  .edu-layout,
+  body.guidebook-editorial>*{width:min(calc(100% - 28px),var(--site-prose-width))!important;max-width:none!important}
   body.guideline-editorial .gl-wrap,
   body.guideline-editorial main>section>.wrap{padding:40px 0!important}
   body.guideline-editorial .page-banner{min-height:220px!important}
   body.guideline-editorial .page-banner-content{padding:42px 0!important}
   body.guideline-editorial .section-title{font-size:1.55rem!important;line-height:1.45!important}
-  body.education-board-responsibility-page .thesis-card{grid-template-columns:38px minmax(0,1fr)!important;gap:0 12px!important}
+  .edu-article{padding-left:0!important;padding-right:0!important}
+  .edu-article section{padding:38px 0!important}
+  body.guidebook-editorial{font-size:15px!important}
+  body.guidebook-editorial .cover{margin-top:24px!important;padding:32px 18px!important}
+  body.guidebook-editorial .cover-title{font-size:1.5rem!important}
+  body.guidebook-editorial .division-box{display:block!important}
+  body.guidebook-editorial .division-col:first-child{border-right:0!important;border-bottom:1px solid var(--site-line)!important}
+  body.thesis-page .thesis-card{grid-template-columns:38px minmax(0,1fr)!important;gap:0 12px!important}
 }
