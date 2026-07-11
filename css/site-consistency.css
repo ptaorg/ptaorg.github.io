@@ -1,158 +1,152 @@
-/* PTA sitewide visual consistency — 2026-07-11 */
+/* PTA site visual consistency — Chromium audit revision 2026-07-11 */
 :root{
   --site-prose-width:1040px;
   --site-reading-width:920px;
-  --site-mobile-gutter:15px;
+  --site-line:#d7e0e9;
+  --site-soft:#f5f8fb;
+  --site-ink:#172033;
+  --site-muted:#526174;
 }
 
 html{font-size:16px}
 body{min-width:320px}
 main{min-width:0}
 main :where(p,li,td,th,dd,blockquote){overflow-wrap:anywhere}
-main :where(img,svg,video,iframe){max-width:100%}
+main :where(img,svg,video,iframe){max-width:100%;height:auto}
 main :where(pre,code){white-space:pre-wrap;overflow-wrap:anywhere}
+:where(.table-wrap,.edu-table-wrap,.responsive-table,.source-table-wrap,.archive-table-wrap,.gl-table-wrap,.comparison-table-wrap){max-width:100%!important;overflow-x:auto!important;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+:where(.gl-tpl-pre,pre,.code-block){max-width:100%!important;overflow:auto!important}
 
-/* Common reading widths. Keep maps and data dashboards wider. */
+body.site-reviewed main :where(p,li){font-size:max(.96rem,15px);line-height:1.9}
+body.site-reviewed main :where(h2){line-height:1.45}
+body.site-reviewed main :where(h3){line-height:1.55}
+
+/* Guideline: a single continuous document width and one visual grammar. */
+body.guideline-editorial{background:#fff!important}
+body.guideline-editorial main{background:#fff!important}
+body.guideline-editorial main>section{width:100%!important;margin:0!important;padding:0!important;background:#fff!important;border-top:1px solid var(--site-line)!important;border-bottom:0!important}
+body.guideline-editorial main>section:first-of-type{border-top:0!important}
 body.guideline-editorial .gl-wrap,
-body.guideline-editorial main>section>.wrap{
+body.guideline-editorial main>section>.wrap,
+body.guideline-editorial main>.wrap{
   width:min(calc(100% - 48px),var(--site-prose-width))!important;
   max-width:var(--site-prose-width)!important;
   margin-inline:auto!important;
-  padding-left:0!important;
-  padding-right:0!important;
-}
-.issue-content,
-.issue-hero-inner,
-.edu-article,
-.journal-layout{
-  max-width:960px!important;
-}
-
-/* Tables, source ledgers and long templates remain usable without widening the page. */
-:where(.table-wrap,.edu-table-wrap,.responsive-table,.source-table-wrap,.archive-table-wrap,.gl-table-wrap,.comparison-table-wrap){
-  max-width:100%!important;
-  overflow-x:auto!important;
-  overscroll-behavior-inline:contain;
-  -webkit-overflow-scrolling:touch;
-}
-:where(.gl-tpl-pre,pre,.code-block){max-width:100%!important;overflow:auto!important}
-
-/* Guideline: remove the isolated white-card / grey-gutter appearance. */
-body.guideline-editorial main>section{
-  width:100%!important;
-  margin:0!important;
-  background:#fff!important;
-  border-bottom:1px solid #dbe4ee!important;
-}
-body.guideline-editorial main>section:nth-of-type(even){background:#f7f9fc!important}
-body.guideline-editorial .gl-wrap{
-  padding-top:56px!important;
-  padding-bottom:62px!important;
+  padding:56px 0!important;
   background:transparent!important;
 }
+body.guideline-editorial main>.wrap:first-child{padding:26px 0 30px!important}
+body.guideline-editorial .page-banner{margin:0!important;min-height:250px!important;border-radius:0!important}
+body.guideline-editorial .page-banner-content{width:min(calc(100% - 48px),var(--site-prose-width))!important;margin-inline:auto!important;padding:54px 0!important}
+body.guideline-editorial .section-kicker,
+body.guideline-editorial .page-banner-kicker,
+body.guideline-editorial .gl-principle-num{text-transform:none!important;letter-spacing:.04em!important}
 body.guideline-editorial .gl-problem-grid,
 body.guideline-editorial .gl-principle-grid,
-body.guideline-editorial .gl-pack-grid{
-  margin-top:26px!important;
-  border-top:2px solid #1e3a5f!important;
-}
+body.guideline-editorial .gl-pack-grid{display:block!important;margin-top:28px!important;border-top:2px solid #1e3a5f!important}
 body.guideline-editorial .gl-problem-card,
 body.guideline-editorial .gl-principle-card,
-body.guideline-editorial .gl-box,
-body.guideline-editorial .gl-ng-box,
-body.guideline-editorial .gl-notice,
-body.guideline-editorial .gl-request-item,
 body.guideline-editorial .gl-pack-card{
-  background:transparent!important;
-  padding:22px 0!important;
+  display:block!important;margin:0!important;padding:22px 0!important;color:var(--site-ink)!important;background:transparent!important;border:0!important;border-bottom:1px solid var(--site-line)!important;border-radius:0!important;box-shadow:none!important
 }
-body.guideline-editorial .gl-problem-title,
+body.guideline-editorial .gl-problem-icon,
+body.guideline-editorial .gl-principle-icon{display:none!important}
 body.guideline-editorial .gl-principle-title,
-body.guideline-editorial .gl-panel-heading,
-body.guideline-editorial .gl-box h4{
-  font-size:1.08rem!important;
-  line-height:1.55!important;
-}
-body.guideline-editorial .gl-problem-desc,
 body.guideline-editorial .gl-principle-desc,
+body.guideline-editorial .gl-principle-law{color:var(--site-ink)!important}
+body.guideline-editorial .gl-principle-title,
+body.guideline-editorial .gl-problem-title,
+body.guideline-editorial .gl-panel-heading,
+body.guideline-editorial .gl-box h4{font-size:1.08rem!important;line-height:1.55!important}
+body.guideline-editorial .gl-principle-desc,
+body.guideline-editorial .gl-problem-desc,
 body.guideline-editorial .gl-box p,
 body.guideline-editorial .gl-box li,
-body.guideline-editorial .gl-request-body p{
-  font-size:.98rem!important;
-  line-height:1.9!important;
-}
-body.guideline-editorial .gl-principle-num,
+body.guideline-editorial .gl-request-body p,
+body.guideline-editorial .gl-pack-card p{font-size:.98rem!important;line-height:1.9!important}
+body.guideline-editorial .gl-box,
+body.guideline-editorial .gl-request-item,
+body.guideline-editorial .gl-pack-lead,
+body.guideline-editorial .gl-notice,
+body.guideline-editorial .gl-ng-box{border-radius:0!important;box-shadow:none!important}
+body.guideline-editorial .gl-box{padding:20px 0 20px 20px!important;background:#f8fafc!important;border:0!important;border-left:4px solid #d4af37!important}
+body.guideline-editorial .gl-request-list{gap:0!important}
+body.guideline-editorial .gl-request-item{padding:20px 0!important;background:transparent!important;border:0!important;border-bottom:1px solid var(--site-line)!important}
+body.guideline-editorial .gl-tpl-item{margin:0!important;border:0!important;border-bottom:1px solid var(--site-line)!important;border-radius:0!important}
+body.guideline-editorial .gl-tpl-btn{padding:18px 0!important;background:transparent!important}
+body.guideline-editorial .gl-tpl-body{padding:0 0 22px!important}
 body.guideline-editorial .gl-law-cite,
-body.guideline-editorial .gl-pack-basis li{
-  font-size:.84rem!important;
-}
-body.guideline-editorial .page-banner{min-height:286px!important}
-body.guideline-editorial .page-banner-content{padding:58px 0!important}
+body.guideline-editorial .gl-pack-basis li{font-size:.84rem!important}
 
-/* A compact, consistent support strip on all small screens. */
+/* Education-board separation guide: readable type and fewer dashboard cards. */
+body.edu-board-separation-page{background:#fff!important}
+body.edu-board-separation-page .edu-page{padding:0!important;background:#fff!important}
+body.edu-board-separation-page .edu-layout{width:min(calc(100% - 48px),var(--site-prose-width))!important;max-width:var(--site-prose-width)!important;margin-inline:auto!important}
+body.edu-board-separation-page .edu-toc{display:none!important}
+body.edu-board-separation-page .edu-article{max-width:var(--site-reading-width)!important;margin-inline:auto!important}
+body.edu-board-separation-page .edu-article section{margin:0!important;padding:48px 0!important;border-bottom:1px solid var(--site-line)!important}
+body.edu-board-separation-page .edu-article :where(p,li,td,th){font-size:.98rem!important;line-height:1.9!important}
+body.edu-board-separation-page .edu-core,
+body.edu-board-separation-page .notice-model,
+body.edu-board-separation-page .transition-item,
+body.edu-board-separation-page .flow-item,
+body.edu-board-separation-page .script-box,
+body.edu-board-separation-page .law-explain-item,
+body.edu-board-separation-page .edu-voices-card,
+body.edu-board-separation-page .edu-final,
+body.edu-board-separation-page .reference-list a,
+body.edu-board-separation-page .separation{border-radius:0!important;box-shadow:none!important}
+body.edu-board-separation-page .transition-list,
+body.edu-board-separation-page .flow-list,
+body.edu-board-separation-page .law-explain,
+body.edu-board-separation-page .edu-voices-summary{gap:0!important}
+body.edu-board-separation-page .transition-item,
+body.edu-board-separation-page .flow-item,
+body.edu-board-separation-page .law-explain-item,
+body.edu-board-separation-page .edu-voices-card{background:transparent!important;border:0!important;border-bottom:1px solid var(--site-line)!important;padding:18px 0!important}
+body.edu-board-separation-page .reference-list a{background:transparent!important;border:0!important;border-bottom:1px solid var(--site-line)!important;padding:13px 0!important}
+body.edu-board-separation-page .edu-voices-terms,
+body.edu-board-separation-page .edu-voices-note{font-size:.88rem!important}
+
+/* Fourth-edition long-form guidebook: remove print-page narrowness on screen. */
+body.guidebook-page{width:auto!important;max-width:none!important;margin:0!important;padding:0!important;color:var(--site-ink)!important;background:#f5f8fb!important;font-size:16px!important}
+body.guidebook-page>*{width:min(calc(100% - 48px),var(--site-reading-width));margin-left:auto;margin-right:auto}
+body.guidebook-page .cover{margin-top:48px!important;background:#fff!important}
+body.guidebook-page :where(p,li,.toc-text,.toc-sub,.law-cite,.risk-item,.case-item,.check-item,.qa-a,.form-example,.rule-box,.ref-box){font-size:.96rem!important;line-height:1.9!important}
+body.guidebook-page h2{margin-top:48px!important;background:transparent!important;border-left:0!important;border-bottom:2px solid #1a4a8a!important;padding:0 0 10px!important}
+body.guidebook-page :where(.principle-box,.risk-box,.case-box,.social-box,.mext-box,.judgment-box,.paradox-box,.ppc-box,.check-box,.notice-box,.info-box,.division-box,.flow-box,.form-example,.rule-box,.ref-box){border-radius:0!important;box-shadow:none!important}
+
+/* Education-board responsibility essay: list, not dashboard. */
+body.education-board-responsibility-page .thesis-grid{display:block!important;max-width:var(--site-reading-width)!important;margin:28px auto 0!important;border-top:2px solid #1e3a5f!important}
+body.education-board-responsibility-page .thesis-card{display:grid!important;grid-template-columns:52px minmax(0,1fr)!important;gap:0 18px!important;padding:22px 0!important;background:transparent!important;border:0!important;border-bottom:1px solid var(--site-line)!important;border-radius:0!important;box-shadow:none!important}
+body.education-board-responsibility-page .thesis-card>span{grid-row:1/span 2!important}
+body.education-board-responsibility-page .thesis-callout,
+body.education-board-responsibility-page .editorial-bluebar{border-radius:0!important;box-shadow:none!important}
+
+/* Small-screen header and reading baseline. */
 @media(max-width:760px){
   .support-strip{min-height:44px!important}
-  .support-strip-inner{
-    width:min(calc(100% - 24px),1120px)!important;
-    min-height:44px!important;
-    display:grid!important;
-    grid-template-columns:minmax(0,1fr) auto!important;
-    align-items:center!important;
-    gap:10px!important;
-    padding:6px 0!important;
-  }
+  .support-strip-inner{width:min(calc(100% - 24px),1120px)!important;min-height:44px!important;display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important;gap:10px!important;padding:6px 0!important}
   .support-strip-label{display:none!important}
-  .support-strip-text{
-    min-width:0!important;
-    margin:0!important;
-    font-size:0!important;
-    line-height:1.35!important;
-  }
-  .support-strip-text::after{
-    content:'調査・資料公開へのご支援をお願いします。';
-    font-size:12.8px!important;
-    line-height:1.35!important;
-    font-weight:700!important;
-  }
-  .support-strip-link{
-    margin:0!important;
-    padding:7px 11px!important;
-    border-radius:999px!important;
-    font-size:11.8px!important;
-    line-height:1.2!important;
-    white-space:nowrap!important;
-  }
+  .support-strip-text{min-width:0!important;margin:0!important;font-size:0!important;line-height:1.35!important}
+  .support-strip-text::after{content:'調査・資料公開へのご支援をお願いします。';font-size:12.8px!important;line-height:1.35!important;font-weight:700!important}
+  .support-strip-link{margin:0!important;padding:7px 11px!important;border-radius:999px!important;font-size:11.8px!important;line-height:1.2!important;white-space:nowrap!important}
   .nav-container{min-height:68px!important;width:min(calc(100% - 24px),1240px)!important}
   .logo{gap:8px!important;font-size:.9rem!important}
   .logo img{width:40px!important;height:40px!important}
-
-  main :where(p,li,dd,blockquote){
-    font-size:15px!important;
-    line-height:1.85!important;
-  }
+  main :where(p,li,dd,blockquote){font-size:15px!important;line-height:1.85!important}
   main :where(td,th){font-size:13.5px!important;line-height:1.65!important}
   main :where(figcaption,.caption,.source-note,.meta,.ac-date){font-size:13px!important;line-height:1.65!important}
-
-  body.guideline-editorial .page-banner{min-height:230px!important}
-  body.guideline-editorial .page-banner-content{
-    width:min(calc(100% - 30px),1120px)!important;
-    padding:44px 0!important;
-  }
   body.guideline-editorial .gl-wrap,
-  body.guideline-editorial main>section>.wrap{
-    width:min(calc(100% - 30px),var(--site-prose-width))!important;
-    max-width:none!important;
-    padding-left:0!important;
-    padding-right:0!important;
-  }
-  body.guideline-editorial .gl-wrap{padding-top:42px!important;padding-bottom:48px!important}
+  body.guideline-editorial main>section>.wrap,
+  body.guideline-editorial main>.wrap,
+  body.guideline-editorial .page-banner-content,
+  body.edu-board-separation-page .edu-layout,
+  body.guidebook-page>*{width:min(calc(100% - 28px),var(--site-prose-width))!important;max-width:none!important}
+  body.guideline-editorial .gl-wrap,
+  body.guideline-editorial main>section>.wrap{padding:40px 0!important}
+  body.guideline-editorial .page-banner{min-height:220px!important}
+  body.guideline-editorial .page-banner-content{padding:42px 0!important}
   body.guideline-editorial .section-title{font-size:1.55rem!important;line-height:1.45!important}
-  body.guideline-editorial .gl-problem-title,
-  body.guideline-editorial .gl-principle-title,
-  body.guideline-editorial .gl-panel-heading,
-  body.guideline-editorial .gl-box h4{font-size:1.02rem!important}
-
-  :where(.table-wrap,.edu-table-wrap,.responsive-table,.source-table-wrap,.archive-table-wrap,.gl-table-wrap,.comparison-table-wrap){
-    scrollbar-width:thin;
-  }
+  body.education-board-responsibility-page .thesis-card{grid-template-columns:38px minmax(0,1fr)!important;gap:0 12px!important}
 }
