@@ -1,20 +1,21 @@
 name: Assemble Kanagawa Stage2 package
 
 on:
-  push:
+  pull_request:
     branches:
-      - stage2-package-20260717
+      - main
 
 permissions:
   contents: write
 
 jobs:
   assemble:
-    if: github.actor != 'github-actions[bot]'
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'stage2-package-20260717'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: stage2-package-20260717
           fetch-depth: 0
 
       - name: Reconstruct and verify archives
@@ -29,14 +30,12 @@ jobs:
           unzip -t "$target/kanagawa_stage2_batch04_sato_review_pack_v2_1_20260707.zip"
           unzip -t "$target/kanagawa_stage2_batch06_outputs_v2_1_20260707_timeboxed.zip"
 
-      - name: Replace temporary build files with verified package
+      - name: Commit verified batch04 archive
         shell: bash
         run: |
           set -euo pipefail
-          rm -rf .stage2-build
-          rm -f .github/workflows/assemble-kanagawa-stage2.yml
           git config user.name 'github-actions[bot]'
           git config user.email '4189826+github-actions[bot]@users.noreply.github.com'
-          git add -A
-          git commit -m 'Finalize Kanagawa Stage2 packages'
+          git add data/research/kanagawa-stage2/packages/kanagawa_stage2_batch04_sato_review_pack_v2_1_20260707.zip
+          git commit -m 'Assemble verified Kanagawa Stage2 batch04 package'
           git push origin HEAD:stage2-package-20260717
