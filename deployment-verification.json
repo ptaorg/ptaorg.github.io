@@ -1,0 +1,9 @@
+{
+  "commit": "b4830f22526d29e37bbfde741c8f6457dd1c42de",
+  "verified_at": "2026-07-16T04:37:51.534830+00:00",
+  "public_page": "https://ptaorg.com/support.html",
+  "probe_url": "https://ptaorg.com/support.html?deployment=b4830f22526d29e37bbfde741c8f6457dd1c42de&attempt=1&ts=1784176671",
+  "expected_paypay_url": "https://qr.paypay.ne.jp/p2p01_AvAPJAge0mPnf33l",
+  "detected_paypay_url": "https://qr.paypay.ne.jp/p2p01_AvAPJAge0mPnf33l",
+  "verified": true
+}
