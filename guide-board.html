@@ -1518,8 +1518,66 @@ body.guide-board-editorial #principal-liability{
   .principal-liability-full-evidence{margin:26px auto 30px}
 }
 </style>
+
+<style id="guide-board-text-first-20260717">
+body.guide-board-text-first .page-hero--photo{
+  min-height:0!important;
+  padding:58px 0 52px!important;
+  background:linear-gradient(135deg,#12345a 0%,#1d527e 72%,#28678e 100%)!important;
+}
+body.guide-board-text-first .page-hero--photo::before,
+body.guide-board-text-first .page-hero--photo::after{opacity:.28!important}
+body.guide-board-text-first .page-hero-bg-img{display:none!important}
+body.guide-board-text-first #principal-liability{padding-top:54px!important}
+body.guide-board-text-first #board-executive-brief{padding-top:54px!important}
+body.guide-board-text-first .gbv-head{margin-bottom:18px!important}
+body.guide-board-text-first .principal-liability-explanation{margin-top:28px!important}
+body.guide-board-text-first .principal-liability-meaning{margin-top:34px!important}
+body.guide-board-text-first .principal-liability-full-evidence{margin-top:25px!important}
+.board-visual-details{
+  margin:28px 0 34px;
+  border-top:1px solid #cbd5e1;
+  border-bottom:1px solid #cbd5e1;
+  background:#fff;
+}
+.board-visual-details>summary{
+  position:relative;
+  padding:17px 44px 17px 0;
+  color:#17345c;
+  font-size:.94rem;
+  font-weight:900;
+  line-height:1.65;
+  cursor:pointer;
+  list-style:none;
+}
+.board-visual-details>summary::-webkit-details-marker{display:none}
+.board-visual-details>summary::after{
+  content:"＋";
+  position:absolute;
+  top:50%;
+  right:4px;
+  transform:translateY(-50%);
+  color:#9a6c00;
+  font-size:1.35rem;
+  font-weight:700;
+}
+.board-visual-details[open]>summary::after{content:"－"}
+.board-visual-details[open]>summary{border-bottom:1px solid #e2e8f0}
+.board-visual-details__body{padding:24px 0 8px}
+.board-visual-details--compact{max-width:56rem;margin-top:32px}
+.board-visual-details--compact .board-visual-details__body{padding:18px 0 4px}
+body.guide-board-text-first .gbv-source{margin-top:32px!important}
+@media(max-width:720px){
+  body.guide-board-text-first .page-hero--photo{padding:44px 0 40px!important}
+  body.guide-board-text-first #principal-liability,
+  body.guide-board-text-first #board-executive-brief{padding-top:44px!important}
+  .board-visual-details>summary{font-size:.9rem;padding-right:38px}
+  .board-visual-details__body{padding-top:18px}
+}
+</style>
+
 </head>
-<body class="guide-board-direct-fixed guide-board-editorial">
+<body class="guide-board-direct-fixed guide-board-editorial guide-board-text-first">
 <div aria-label="活動支援のお願い" class="support-strip" role="complementary">
 <div class="support-strip-inner">
 <span class="support-strip-label">応援のお願い</span>
@@ -1657,9 +1715,6 @@ body.guide-board-editorial #principal-liability{
 </div>
 <nav aria-label="パンくず" class="breadcrumb-bar"><div class="breadcrumb-inner"><a href="index.html">トップ</a><span>›</span><span>立場別</span><span>›</span><span class="current">教育委員会・学校向けガイド</span></div></nav>
 <section class="page-hero page-hero--photo">
-<div aria-hidden="true" class="page-hero-bg-img">
-<img alt="" aria-hidden="true" loading="eager" src="assets/slides/1.jpg"/>
-</div>
 <div class="page-hero-inner">
 <div class="page-hero-kicker">教育委員会・学校管理職向け資料</div>
 <h1>学校とPTAの境界を<br/><em>学校管理の問題として点検する</em></h1>
@@ -1675,28 +1730,7 @@ body.guide-board-editorial #principal-liability{
     <h2 id="principal-liability-title">学校保有情報の扱いは、校長の管理責任に直結する</h2>
     <p class="principal-liability-lead">公立学校が児童・保護者情報を収集し、保有し、利用する場面では、その管理主体は学校と教育委員会です。PTAが学校とは別の任意団体である以上、学校の情報をPTAの会員管理、役員選出、会費徴収、地区班編成、連絡等へ使うときは、「PTA活動への協力」という説明だけで済ませることはできません。</p>
 
-    <div class="principal-liability-flow" aria-label="学校保有情報がPTA目的に利用される場合の責任の流れ">
-      <div class="principal-liability-flow-item"><strong>学校保有情報</strong><span>氏名、住所、連絡先、学年、学級、兄弟姉妹情報等</span></div>
-      <div class="principal-liability-flow-arrow" aria-hidden="true">→</div>
-      <div class="principal-liability-flow-item"><strong>PTA目的で利用・提供</strong><span>会員名簿、役員候補、会費、地区班、非会員把握等</span></div>
-      <div class="principal-liability-flow-arrow" aria-hidden="true">→</div>
-      <div class="principal-liability-flow-item"><strong>学校側の管理問題</strong><span>利用目的、本人同意、提供記録、服務・守秘義務</span></div>
-    </div>
-
-    <div class="principal-liability-meaning">
-      <h3>この新聞資料が示すこと</h3>
-      <p>2021年6月、大分市内の小学校長が、児童の個人情報を本人の意思に反してPTA等へ提供した疑いで、地方公務員法上の守秘義務違反として書類送検されたと報じられました。この事案の重要点は、PTA内部の運営が問題にされたというより、学校が保有する情報を学校側がどう扱ったかが、校長の服務と管理責任に結び付いたことです。</p>
-      <p>したがって教育委員会は、「PTAは任意団体なので関与できない」として終えるのではなく、学校が情報を取得・保有・利用・提供した部分を自らの監督対象として確認する必要があります。</p>
-    </div>
-
-    <figure class="principal-liability-full-evidence" id="principal-liability-evidence">
-      <a href="assets/guide-board/principal-liability-news.png" target="_blank" rel="noopener" aria-label="新聞切り抜きの原寸画像を開く">
-        <img src="assets/guide-board/principal-liability-news.png" alt="学校がPTA等に児童の個人情報を無断提供した疑いで校長が書類送検されたと報じる新聞記事の切り抜き" loading="eager">
-      </a>
-      <figcaption>提供資料。大分合同新聞2021年6月26日付「学校PTAに情報無断提供　守秘義務違反の疑いで　校長を書類送検」。<a href="https://www.oita-press.co.jp/1010000000/2021/06/26/JD0060372709" target="_blank" rel="noopener">掲載記事</a>。書類送検は有罪確定を意味しません。<a href="https://news.allabout.co.jp/articles/o/73578/?page=2" target="_blank" rel="noopener">後の二次報道</a>では不起訴とされています。本資料は個別事件の有罪・違法を断定するためではなく、学校保有情報の利用根拠、同意、記録を学校側が確認すべきことを示す参考資料として掲載しています。</figcaption>
-    </figure>
-
-    <div class="principal-liability-explanation">
+<div class="principal-liability-explanation">
       <h3>教育委員会が確認すべきなのは、PTAの自治ではなく、学校側の情報利用です</h3>
       <p>PTAが必要とする会員情報は、本来、PTAが入会申込時に会員本人から直接取得します。学校在籍情報からPTA会員関係は生じません。入会申込記録がないまま学校名簿を基礎に会員名簿を作成したり、学校の口座振替情報を使ってPTA会費を徴収したり、非会員を学校情報との照合で抽出したりする運用は、学校保有情報の利用目的と学校の所掌事務から点検しなければなりません。</p>
       <p>本人同意があると説明する場合も、同意書の有無だけでは足りません。何の情報を、誰に、何の目的で提供するのかが明示され、不同意を自由に選べ、不同意者の情報が確実に除外され、提供記録が残っているかを確認する必要があります。</p>
@@ -1710,6 +1744,40 @@ body.guide-board-editorial #principal-liability{
       </ul>
       <p class="principal-liability-caution">確認対象はPTAの議決や役員人事そのものではありません。学校が管理する個人情報、職員、施設、徴収システム、連絡手段がPTA内部事務に使われている部分です。ここは教育委員会と校長の権限・責任の範囲内です。</p>
     </div>
+
+<div class="principal-liability-meaning">
+      <h3>この新聞資料が示すこと</h3>
+      <p>2021年6月、大分市内の小学校長が、児童の個人情報を本人の意思に反してPTA等へ提供した疑いで、地方公務員法上の守秘義務違反として書類送検されたと報じられました。この事案の重要点は、PTA内部の運営が問題にされたというより、学校が保有する情報を学校側がどう扱ったかが、校長の服務と管理責任に結び付いたことです。</p>
+      <p>したがって教育委員会は、「PTAは任意団体なので関与できない」として終えるのではなく、学校が情報を取得・保有・利用・提供した部分を自らの監督対象として確認する必要があります。</p>
+    </div>
+
+<figure class="principal-liability-full-evidence" id="principal-liability-evidence">
+      <a href="assets/guide-board/principal-liability-news.png" target="_blank" rel="noopener" aria-label="新聞切り抜きの原寸画像を開く">
+        <img src="assets/guide-board/principal-liability-news.png" alt="学校がPTA等に児童の個人情報を無断提供した疑いで校長が書類送検されたと報じる新聞記事の切り抜き" loading="eager">
+      </a>
+      <figcaption>提供資料。大分合同新聞2021年6月26日付「学校PTAに情報無断提供　守秘義務違反の疑いで　校長を書類送検」。<a href="https://www.oita-press.co.jp/1010000000/2021/06/26/JD0060372709" target="_blank" rel="noopener">掲載記事</a>。書類送検は有罪確定を意味しません。<a href="https://news.allabout.co.jp/articles/o/73578/?page=2" target="_blank" rel="noopener">後の二次報道</a>では不起訴とされています。本資料は個別事件の有罪・違法を断定するためではなく、学校保有情報の利用根拠、同意、記録を学校側が確認すべきことを示す参考資料として掲載しています。</figcaption>
+    </figure>
+<details class="board-visual-details board-visual-details--compact">
+  <summary>学校保有情報がPTA目的へ流れる構造を図で確認する</summary>
+  <div class="board-visual-details__body">
+<div class="principal-liability-flow" aria-label="学校保有情報がPTA目的に利用される場合の責任の流れ">
+      <div class="principal-liability-flow-item"><strong>学校保有情報</strong><span>氏名、住所、連絡先、学年、学級、兄弟姉妹情報等</span></div>
+      <div class="principal-liability-flow-arrow" aria-hidden="true">→</div>
+      <div class="principal-liability-flow-item"><strong>PTA目的で利用・提供</strong><span>会員名簿、役員候補、会費、地区班、非会員把握等</span></div>
+      <div class="principal-liability-flow-arrow" aria-hidden="true">→</div>
+      <div class="principal-liability-flow-item"><strong>学校側の管理問題</strong><span>利用目的、本人同意、提供記録、服務・守秘義務</span></div>
+    </div>
+  </div>
+</details>
+
+
+    
+
+    
+
+    
+
+    
   </div>
 </section>
 <section id="board-executive-brief" aria-labelledby="board-executive-brief-title">
@@ -1722,6 +1790,9 @@ body.guide-board-editorial #principal-liability{
 <div class="gbv-principle">「任意団体だから関与しない」では足りません。学校が動いた部分は、学校管理と服務管理の問題として残ります。</div>
 </div>
 <div class="gbv-stack">
+<details class="board-visual-details">
+  <summary>境界図・5領域の連鎖・相談対応フローを開く</summary>
+  <div class="board-visual-details__body">
 <figure class="gbv-figure">
 <div class="gbv-scroll">
 <svg role="img" aria-labelledby="gbv-map-title gbv-map-desc" viewBox="0 0 920 380">
@@ -1979,6 +2050,8 @@ body.guide-board-editorial #principal-liability{
 <div><strong>個人情報。</strong>学校保有情報をPTA目的に流す場合は、利用目的、本人同意、提供記録、提供先管理を確認します。</div>
 </div>
 </div>
+  </div>
+</details>
 <div class="gbv-source">
 <div>
 <h3>根拠資料は、本文の中で必要な順に読む。</h3>
@@ -1991,9 +2064,12 @@ body.guide-board-editorial #principal-liability{
 <li><a href="assets/documents/mext-school-collection-public-accounting-20250430.pdf">学校徴収金の公会計化等に関する通知</a><span>学校会計とPTA会費を混ぜないための前提資料。</span></li>
 </ul>
 </div>
+
 </div>
 </div>
 </section>
+
+
 <section id="board-jp-guideline" class="board-jp-integrated" aria-labelledby="board-jp-guideline-title">
 <div class="board-jp-shell">
 <div class="board-jp-intro">
@@ -4231,7 +4307,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   bluf.insertAdjacentElement('afterend', fact);
   var principal = document.getElementById('principal-liability');
-  if (principal && fact.nextElementSibling !== principal) {
+  if (!document.body.classList.contains('guide-board-text-first') && principal && fact.nextElementSibling !== principal) {
     fact.insertAdjacentElement('afterend', principal);
   }
 
