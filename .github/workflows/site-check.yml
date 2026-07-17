@@ -40,8 +40,10 @@ jobs:
       - name: Run site checks
         run: npm test
 
-      - name: Install Chromium
-        run: npx playwright install --with-deps chromium
+      - name: Install Playwright and Chromium for verification
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
 
       - name: Verify complete newspaper image in real browsers
         shell: bash
