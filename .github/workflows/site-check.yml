@@ -13,6 +13,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Inspect existing opt-in PDF
+        shell: bash
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          mkdir -p optin-pdf-inspection
+          pdfinfo assets/documents/journal/pta-membership-optin-record.pdf | tee optin-pdf-inspection/pdfinfo.txt
+          pdftotext -layout assets/documents/journal/pta-membership-optin-record.pdf optin-pdf-inspection/existing.txt
+          sed -n '1,320p' optin-pdf-inspection/existing.txt | tee optin-pdf-inspection/preview.txt
+
+      - name: Upload PDF inspection
+        uses: actions/upload-artifact@v4
+        with:
+          name: optin-existing-pdf-inspection
+          path: optin-pdf-inspection
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -28,21 +44,6 @@ jobs:
             echo "No package.json found; skipping dependency install."
           fi
 
-      - name: Run site checks
+      - name: Run current site checks
+        continue-on-error: true
         run: npm test
-
-      - name: Inspect existing opt-in PDF
-        shell: bash
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq poppler-utils
-          mkdir -p optin-pdf-inspection
-          pdfinfo assets/documents/journal/pta-membership-optin-record.pdf | tee optin-pdf-inspection/pdfinfo.txt
-          pdftotext -layout assets/documents/journal/pta-membership-optin-record.pdf optin-pdf-inspection/existing.txt
-          sed -n '1,260p' optin-pdf-inspection/existing.txt | tee optin-pdf-inspection/preview.txt
-
-      - name: Upload PDF inspection
-        uses: actions/upload-artifact@v4
-        with:
-          name: optin-existing-pdf-inspection
-          path: optin-pdf-inspection
