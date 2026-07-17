@@ -30,3 +30,19 @@ jobs:
 
       - name: Run site checks
         run: npm test
+
+      - name: Inspect existing opt-in PDF
+        shell: bash
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          mkdir -p optin-pdf-inspection
+          pdfinfo assets/documents/journal/pta-membership-optin-record.pdf | tee optin-pdf-inspection/pdfinfo.txt
+          pdftotext -layout assets/documents/journal/pta-membership-optin-record.pdf optin-pdf-inspection/existing.txt
+          sed -n '1,260p' optin-pdf-inspection/existing.txt | tee optin-pdf-inspection/preview.txt
+
+      - name: Upload PDF inspection
+        uses: actions/upload-artifact@v4
+        with:
+          name: optin-existing-pdf-inspection
+          path: optin-pdf-inspection
