@@ -56,6 +56,12 @@ jobs:
           sleep 2
           node scripts/check-guide-board-text-first.mjs
 
+      - name: Preserve generated HTML for diagnostics
+        if: always()
+        run: |
+          mkdir -p guide-board-text-first-audit
+          cp guide-board.html guide-board-text-first-audit/generated-guide-board.html
+
       - name: Upload browser audit
         if: always()
         uses: actions/upload-artifact@v4
