@@ -390,3 +390,543 @@ a.btn-dl:hover{
 .mega-col a:hover::before{
   color:var(--hover-orange-deep)!important;
 }
+
+/* ===== OPEN EDITORIAL LAYOUT 20260717 =====
+   Applies only to personnel.html, facilities.html and fee-collection.html.
+   Converts repeated card surfaces into an open administrative-paper layout. */
+body.personnel-editorial,
+body.facilities-editorial,
+body.fee-editorial{
+  --editorial-rule:#d6dee8;
+  --editorial-rule-strong:#9aa9bb;
+  --editorial-ink:#1c304a;
+  --editorial-muted:#526276;
+  background:#fff!important;
+}
+
+/* Hero: retain the image, remove badge-like framing and reduce visual weight. */
+body.personnel-editorial .page-hero--photo,
+body.facilities-editorial .page-hero--photo,
+body.fee-editorial .page-hero--photo{
+  min-height:300px!important;
+}
+body.personnel-editorial .page-hero--photo .page-hero-bg-img img,
+body.facilities-editorial .page-hero--photo .page-hero-bg-img img,
+body.fee-editorial .page-hero--photo .page-hero-bg-img img{
+  min-height:300px!important;
+}
+body.personnel-editorial .page-hero--photo .page-hero-inner,
+body.facilities-editorial .page-hero--photo .page-hero-inner,
+body.fee-editorial .page-hero--photo .page-hero-inner{
+  width:min(calc(100% - 48px),980px)!important;
+  max-width:980px!important;
+  padding-top:54px!important;
+  padding-bottom:60px!important;
+}
+body.personnel-editorial .page-hero-kicker,
+body.facilities-editorial .page-hero-kicker,
+body.fee-editorial .page-hero-kicker,
+body.fee-editorial .issue-hero-eyebrow{
+  display:inline-block!important;
+  margin:0 0 18px!important;
+  padding:0 0 8px!important;
+  background:transparent!important;
+  border:0!important;
+  border-bottom:1px solid rgba(244,231,166,.72)!important;
+  border-radius:0!important;
+  color:#f4e7a6!important;
+  letter-spacing:.08em!important;
+  text-transform:none!important;
+}
+body.personnel-editorial .page-hero h1,
+body.facilities-editorial .page-hero h1,
+body.fee-editorial .page-hero h1{
+  max-width:780px!important;
+  margin-bottom:20px!important;
+}
+body.personnel-editorial .page-hero p,
+body.facilities-editorial .page-hero p,
+body.fee-editorial .page-hero p{
+  max-width:790px!important;
+  line-height:1.9!important;
+}
+
+/* One readable article column. */
+body.personnel-editorial .pg-main,
+body.facilities-editorial .pg,
+body.fee-editorial .issue-content{
+  width:min(calc(100% - 48px),980px)!important;
+  max-width:980px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding:72px 0 104px!important;
+  display:block!important;
+}
+body.fee-editorial .issue-main{
+  width:100%!important;
+  max-width:none!important;
+}
+body.fee-editorial .issue-sidebar,
+body.fee-editorial .issue-hero-toc,
+body.fee-editorial .related-links-section,
+body.personnel-editorial .page-banner,
+body.facilities-editorial .page-banner{
+  display:none!important;
+}
+
+/* Sections are separated by whitespace and a fine rule, not containers. */
+body.personnel-editorial .pg-main>section,
+body.facilities-editorial .pg>section,
+body.fee-editorial .issue-main>section{
+  margin:0!important;
+  padding:0 0 70px!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+body.personnel-editorial .pg-main>section+section,
+body.facilities-editorial .pg>section+section,
+body.fee-editorial .issue-main>section+section{
+  padding-top:64px!important;
+  border-top:1px solid var(--editorial-rule)!important;
+}
+body.personnel-editorial .pg-main>section:last-child,
+body.facilities-editorial .pg>section:last-child,
+body.fee-editorial .issue-main>section:last-child{
+  padding-bottom:0!important;
+}
+
+/* White-paper headings: no boxed underline; a restrained gold left rule. */
+body.personnel-editorial .pg-main h2,
+body.facilities-editorial .pg h2,
+body.fee-editorial .issue-main h2{
+  position:relative!important;
+  margin:0 0 24px!important;
+  padding:0 0 0 19px!important;
+  border:0!important;
+  color:var(--editorial-ink)!important;
+  line-height:1.48!important;
+}
+body.personnel-editorial .pg-main h2::before,
+body.facilities-editorial .pg h2::before,
+body.fee-editorial .issue-main h2::before{
+  content:""!important;
+  position:absolute!important;
+  left:0!important;
+  top:.18em!important;
+  bottom:.18em!important;
+  width:4px!important;
+  background:var(--color-accent)!important;
+}
+body.personnel-editorial .pg-main h3,
+body.facilities-editorial .pg h3,
+body.fee-editorial .issue-main h3{
+  margin:36px 0 14px!important;
+  padding-left:15px!important;
+  border-left:3px solid #9aa9bb!important;
+  color:var(--editorial-ink)!important;
+}
+body.personnel-editorial .pg-main p,
+body.facilities-editorial .pg p,
+body.fee-editorial .issue-main p{
+  line-height:2!important;
+}
+body.personnel-editorial .pg-main>section>p,
+body.facilities-editorial .pg>section>p,
+body.fee-editorial .issue-main>section>p{
+  max-width:54rem!important;
+}
+body.personnel-editorial .section-kicker,
+body.facilities-editorial .section-kicker,
+body.fee-editorial .section-kicker,
+body.fee-editorial .section-eyebrow,
+body.personnel-editorial .editorial-brief-band,
+body.fee-editorial .editorial-brief-band{
+  display:none!important;
+}
+
+/* Opening summaries become numbered reading lines. */
+body.personnel-editorial .editorial-brief,
+body.facilities-editorial .editorial-brief,
+body.fee-editorial .editorial-brief,
+body.personnel-editorial .editorial-panel,
+body.facilities-editorial .editorial-panel,
+body.fee-editorial .editorial-panel{
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+body.personnel-editorial .editorial-brief-body,
+body.facilities-editorial .editorial-brief-body,
+body.fee-editorial .editorial-brief-body{
+  padding:0!important;
+}
+body.personnel-editorial .editorial-brief-grid,
+body.facilities-editorial .editorial-brief-grid,
+body.fee-editorial .editorial-brief-grid{
+  display:block!important;
+  margin-top:26px!important;
+  border-top:1px solid var(--editorial-rule)!important;
+}
+body.personnel-editorial .editorial-brief-point,
+body.facilities-editorial .editorial-brief-point,
+body.fee-editorial .editorial-brief-point{
+  display:grid!important;
+  grid-template-columns:42px minmax(0,1fr)!important;
+  column-gap:18px!important;
+  margin:0!important;
+  padding:22px 0!important;
+  background:transparent!important;
+  border:0!important;
+  border-bottom:1px solid var(--editorial-rule)!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+body.personnel-editorial .editorial-brief-point>span,
+body.facilities-editorial .editorial-brief-point>span,
+body.fee-editorial .editorial-brief-point>span{
+  display:block!important;
+  grid-row:1 / span 2!important;
+  font-family:'Noto Serif JP',serif!important;
+  font-size:1.45rem!important;
+  line-height:1.2!important;
+  color:#a68118!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+}
+body.personnel-editorial .editorial-brief-point>strong,
+body.facilities-editorial .editorial-brief-point>strong,
+body.fee-editorial .editorial-brief-point>strong{
+  color:var(--editorial-ink)!important;
+  font-size:1rem!important;
+}
+body.personnel-editorial .editorial-brief-point>p,
+body.facilities-editorial .editorial-brief-point>p,
+body.fee-editorial .editorial-brief-point>p{
+  grid-column:2!important;
+  margin:5px 0 0!important;
+}
+
+/* Definition rows and source rows. */
+body.personnel-editorial .editorial-matrix,
+body.personnel-editorial .ed-resource-list,
+body.facilities-editorial .ed-resource-list,
+body.personnel-editorial .source-lens-grid,
+body.facilities-editorial .source-lens-grid,
+body.fee-editorial .source-lens-grid{
+  display:block!important;
+  margin:26px 0 0!important;
+  border-top:1px solid var(--editorial-rule)!important;
+}
+body.personnel-editorial .editorial-matrix-row,
+body.personnel-editorial .ed-resource-list>div,
+body.facilities-editorial .ed-resource-list>div,
+body.personnel-editorial .source-lens-item,
+body.facilities-editorial .source-lens-item,
+body.fee-editorial .source-lens-item{
+  display:grid!important;
+  grid-template-columns:minmax(150px,220px) minmax(0,1fr)!important;
+  gap:28px!important;
+  margin:0!important;
+  padding:20px 0!important;
+  background:transparent!important;
+  border:0!important;
+  border-bottom:1px solid var(--editorial-rule)!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+body.personnel-editorial .editorial-matrix-term,
+body.personnel-editorial .ed-resource-list strong,
+body.facilities-editorial .ed-resource-list strong{
+  color:var(--editorial-ink)!important;
+  font-weight:800!important;
+}
+body.personnel-editorial .editorial-matrix-desc,
+body.personnel-editorial .ed-resource-list span,
+body.facilities-editorial .ed-resource-list span{
+  color:var(--editorial-muted)!important;
+  line-height:1.85!important;
+}
+
+/* Comparisons remain comparative, but open into columns with rules instead of cards. */
+body.personnel-editorial .scope-grid,
+body.facilities-editorial .safes,
+body.fee-editorial .transition-options{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:0!important;
+  margin:28px 0!important;
+  border-top:1px solid var(--editorial-rule)!important;
+  border-bottom:1px solid var(--editorial-rule)!important;
+}
+body.fee-editorial .triple-problem{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:0!important;
+  margin:28px 0!important;
+  border-top:1px solid var(--editorial-rule)!important;
+  border-bottom:1px solid var(--editorial-rule)!important;
+}
+body.personnel-editorial .scope-ok,
+body.personnel-editorial .scope-ng,
+body.facilities-editorial .safe-box,
+body.fee-editorial .trans-card,
+body.fee-editorial .triple-card{
+  margin:0!important;
+  padding:25px 28px!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  transform:none!important;
+}
+body.personnel-editorial .scope-grid>*+*,
+body.facilities-editorial .safes>*+*,
+body.fee-editorial .transition-options>*+*,
+body.fee-editorial .triple-problem>*+*{
+  border-left:1px solid var(--editorial-rule)!important;
+}
+body.fee-editorial .triple-card::before{
+  display:none!important;
+}
+
+/* Steps become a document sequence, not stacked cards. */
+body.fee-editorial .requirements,
+body.fee-editorial .req-steps,
+body.personnel-editorial .steps,
+body.facilities-editorial .steps{
+  margin:26px 0!important;
+  border-top:1px solid var(--editorial-rule)!important;
+}
+body.fee-editorial .req-step,
+body.personnel-editorial .step-r,
+body.facilities-editorial .step-r{
+  margin:0!important;
+  padding:22px 0!important;
+  background:transparent!important;
+  border:0!important;
+  border-bottom:1px solid var(--editorial-rule)!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  transform:none!important;
+}
+body.fee-editorial .req-step-num,
+body.personnel-editorial .step-num,
+body.facilities-editorial .step-num{
+  border-radius:2px!important;
+  box-shadow:none!important;
+}
+
+/* Notes and quotations keep emphasis through a left rule only. */
+body.personnel-editorial .alert,
+body.facilities-editorial .alert,
+body.personnel-editorial .law-quote,
+body.facilities-editorial .law-quote,
+body.fee-editorial .alert-block,
+body.fee-editorial .law-quote-block,
+body.fee-editorial .mext-quote,
+body.facilities-editorial .wall,
+body.fee-editorial .double-commission{
+  margin:28px 0!important;
+  padding:21px 24px!important;
+  background:#f7f9fc!important;
+  border:0!important;
+  border-left:4px solid #57708f!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  text-align:left!important;
+  transform:none!important;
+}
+body.fee-editorial .alert-block.danger,
+body.personnel-editorial .alert-danger,
+body.facilities-editorial .wall{
+  background:#fffafa!important;
+  border-left-color:#a94442!important;
+}
+body.fee-editorial .alert-block.warning{
+  background:#fffdf5!important;
+  border-left-color:#aa7414!important;
+}
+body.fee-editorial .alert-block.success{
+  background:#f8fcf8!important;
+  border-left-color:#3f7e52!important;
+}
+body.fee-editorial .alert-block.info,
+body.fee-editorial .law-quote-block,
+body.fee-editorial .mext-quote{
+  border-left-color:#496b96!important;
+}
+
+/* Labels are document labels, not pills. */
+body.personnel-editorial .scope-label,
+body.facilities-editorial .badge,
+body.facilities-editorial .wall-label,
+body.fee-editorial .triple-law,
+body.fee-editorial .trans-label,
+body.fee-editorial .req-law,
+body.fee-editorial .lq-label{
+  display:block!important;
+  width:auto!important;
+  height:auto!important;
+  margin:0 0 10px!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  color:var(--editorial-ink)!important;
+  letter-spacing:.04em!important;
+  text-transform:none!important;
+}
+
+/* Tables read as administrative tables, not coloured panels. */
+body.facilities-editorial .check-table{
+  margin:28px 0!important;
+  border-top:2px solid var(--editorial-ink)!important;
+  border-bottom:1px solid var(--editorial-rule-strong)!important;
+}
+body.facilities-editorial .check-table th{
+  padding:13px 14px!important;
+  background:#f4f7fa!important;
+  color:var(--editorial-ink)!important;
+  border-bottom:1px solid var(--editorial-rule-strong)!important;
+}
+body.facilities-editorial .check-table td{
+  padding:14px!important;
+  background:transparent!important;
+  border-bottom:1px solid var(--editorial-rule)!important;
+}
+body.facilities-editorial .check-table .badge{
+  display:inline!important;
+  color:var(--editorial-ink)!important;
+}
+
+/* FAQ and figures: simple rules and full-width evidence. */
+body.personnel-editorial .faq-list,
+body.facilities-editorial .faq-list,
+body.fee-editorial .faq-list{
+  gap:0!important;
+  border-top:1px solid var(--editorial-rule)!important;
+}
+body.personnel-editorial .faq-item,
+body.facilities-editorial .faq-item,
+body.fee-editorial .faq-item{
+  border:0!important;
+  border-bottom:1px solid var(--editorial-rule)!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  background:transparent!important;
+}
+body.personnel-editorial .faq-q,
+body.facilities-editorial .faq-q,
+body.fee-editorial .faq-q{
+  padding:20px 0!important;
+}
+body.personnel-editorial .faq-a,
+body.facilities-editorial .faq-a,
+body.fee-editorial .faq-a{
+  padding-left:0!important;
+  padding-right:0!important;
+}
+body.personnel-editorial main figure,
+body.facilities-editorial main figure,
+body.fee-editorial main figure{
+  margin:34px auto!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+body.personnel-editorial main figure img,
+body.facilities-editorial main figure img,
+body.fee-editorial main figure img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+body.personnel-editorial main a:hover,
+body.facilities-editorial main a:hover,
+body.fee-editorial main a:hover{
+  transform:none!important;
+  box-shadow:none!important;
+}
+
+@media(max-width:760px){
+  body.personnel-editorial .page-hero--photo,
+  body.facilities-editorial .page-hero--photo,
+  body.fee-editorial .page-hero--photo,
+  body.personnel-editorial .page-hero--photo .page-hero-bg-img img,
+  body.facilities-editorial .page-hero--photo .page-hero-bg-img img,
+  body.fee-editorial .page-hero--photo .page-hero-bg-img img{
+    min-height:280px!important;
+  }
+  body.personnel-editorial .page-hero--photo .page-hero-inner,
+  body.facilities-editorial .page-hero--photo .page-hero-inner,
+  body.fee-editorial .page-hero--photo .page-hero-inner{
+    width:min(calc(100% - 30px),980px)!important;
+    padding-top:42px!important;
+    padding-bottom:48px!important;
+  }
+  body.personnel-editorial .pg-main,
+  body.facilities-editorial .pg,
+  body.fee-editorial .issue-content{
+    width:min(calc(100% - 30px),980px)!important;
+    padding-top:54px!important;
+    padding-bottom:82px!important;
+  }
+  body.personnel-editorial .pg-main>section,
+  body.facilities-editorial .pg>section,
+  body.fee-editorial .issue-main>section{
+    padding-bottom:54px!important;
+  }
+  body.personnel-editorial .pg-main>section+section,
+  body.facilities-editorial .pg>section+section,
+  body.fee-editorial .issue-main>section+section{
+    padding-top:48px!important;
+  }
+  body.personnel-editorial .scope-grid,
+  body.facilities-editorial .safes,
+  body.fee-editorial .transition-options,
+  body.fee-editorial .triple-problem{
+    grid-template-columns:1fr!important;
+  }
+  body.personnel-editorial .scope-grid>*+*,
+  body.facilities-editorial .safes>*+*,
+  body.fee-editorial .transition-options>*+*,
+  body.fee-editorial .triple-problem>*+*{
+    border-left:0!important;
+    border-top:1px solid var(--editorial-rule)!important;
+  }
+  body.personnel-editorial .scope-ok,
+  body.personnel-editorial .scope-ng,
+  body.facilities-editorial .safe-box,
+  body.fee-editorial .trans-card,
+  body.fee-editorial .triple-card{
+    padding:22px 0!important;
+  }
+  body.personnel-editorial .editorial-matrix-row,
+  body.personnel-editorial .ed-resource-list>div,
+  body.facilities-editorial .ed-resource-list>div,
+  body.personnel-editorial .source-lens-item,
+  body.facilities-editorial .source-lens-item,
+  body.fee-editorial .source-lens-item{
+    grid-template-columns:1fr!important;
+    gap:7px!important;
+  }
+  body.personnel-editorial .editorial-brief-point,
+  body.facilities-editorial .editorial-brief-point,
+  body.fee-editorial .editorial-brief-point{
+    grid-template-columns:34px minmax(0,1fr)!important;
+    column-gap:13px!important;
+  }
+  body.facilities-editorial .check-table{
+    display:block!important;
+    overflow-x:auto!important;
+    -webkit-overflow-scrolling:touch!important;
+  }
+}
