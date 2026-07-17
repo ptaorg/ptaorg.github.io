@@ -6,12 +6,35 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: fix-guide-board-news-full-20260717
+          fetch-depth: 0
+
+      - name: Extract and apply guide-board revision
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re, textwrap, subprocess
+
+          workflow = Path('.github/workflows/fix-guide-board-news-full.yml').read_text(encoding='utf-8')
+          py = re.search(r"          python3 - <<'PY'\n(.*?)\n          PY", workflow, re.S)
+          js = re.search(r"          node <<'JS'\n(.*?)\n          JS", workflow, re.S)
+          if not py or not js:
+              raise SystemExit('could not extract embedded revision scripts')
+          Path('/tmp/revise-guide-board.py').write_text(textwrap.dedent(py.group(1)), encoding='utf-8')
+          Path('/tmp/check-guide-board.js').write_text(textwrap.dedent(js.group(1)), encoding='utf-8')
+          subprocess.run(['python3', '/tmp/revise-guide-board.py'], check=True)
+          PY
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -30,3 +53,34 @@ jobs:
 
       - name: Run site checks
         run: npm test
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Verify complete newspaper image in real browsers
+        shell: bash
+        run: |
+          mkdir -p guide-board-news-audit
+          python3 -m http.server 4173 > /tmp/guide-board-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID || true' EXIT
+          sleep 2
+          node /tmp/check-guide-board.js
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: guide-board-news-full-audit
+          path: guide-board-news-audit
+
+      - name: Commit verified guide page
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add guide-board.html
+          if git diff --cached --quiet; then
+            echo "No guide page change to commit"
+          else
+            git commit -m "Show full newspaper evidence on education board guide"
+            git push origin HEAD:fix-guide-board-news-full-20260717
+          fi
