@@ -45,18 +45,35 @@ jobs:
 
       - name: Verify complete newspaper image in real browsers
         shell: bash
+        continue-on-error: true
         run: |
           mkdir -p guide-board-news-audit
           python3 -m http.server 4173 > /tmp/guide-board-server.log 2>&1 &
           SERVER_PID=$!
           trap 'kill $SERVER_PID || true' EXIT
           sleep 2
-          node scripts/check-guide-board-news-full.js
+          set +e
+          node scripts/check-guide-board-news-full.js > guide-board-news-audit/browser-check.log 2>&1
+          STATUS=$?
+          set -e
+          cat guide-board-news-audit/browser-check.log
+          echo "$STATUS" > guide-board-news-audit/browser-check-status.txt
 
-      - uses: actions/upload-artifact@v4
+      - name: Upload browser diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: guide-board-news-full-audit
           path: guide-board-news-audit
+
+      - name: Stop when browser verification failed
+        shell: bash
+        run: |
+          STATUS=$(cat guide-board-news-audit/browser-check-status.txt)
+          if [ "$STATUS" != "0" ]; then
+            echo "Browser verification failed with status $STATUS"
+            exit "$STATUS"
+          fi
 
       - name: Commit verified guide page
         shell: bash
