@@ -19,8 +19,53 @@ jobs:
           ref: fix-guide-board-news-full-20260717
           fetch-depth: 0
 
-      - name: Apply guide-board revision
-        run: python3 scripts/fix-guide-board-news-full.py
+      - name: Diagnose and attempt guide-board revision
+        shell: bash
+        continue-on-error: true
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          text = Path('guide-board.html').read_text(encoding='utf-8')
+          diagnostic = {
+            'bytes': len(text.encode('utf-8')),
+            'style_marker_count': text.count('guide-board-principal-evidence-20260717'),
+            'principal_id_count': text.count('id="principal-liability"'),
+            'principal_single_quote_id_count': text.count("id='principal-liability'"),
+            'head_close_count': text.count('</head>'),
+            'main_exact_count': text.count('<main>'),
+            'main_newline_count': text.count('<main>\n'),
+            'executive_anchor_count': text.count('<section id="board-executive-brief"'),
+          }
+          Path('guide-board-revision-diagnostic.json').write_text(json.dumps(diagnostic, ensure_ascii=False, indent=2), encoding='utf-8')
+          print(json.dumps(diagnostic, ensure_ascii=False, indent=2))
+          PY
+          set +e
+          python3 scripts/fix-guide-board-news-full.py > guide-board-revision.log 2>&1
+          STATUS=$?
+          set -e
+          cat guide-board-revision.log
+          echo "$STATUS" > guide-board-revision-status.txt
+          exit "$STATUS"
+
+      - name: Upload revision diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: guide-board-revision-diagnostics
+          path: |
+            guide-board-revision-diagnostic.json
+            guide-board-revision.log
+            guide-board-revision-status.txt
+
+      - name: Stop when revision failed
+        shell: bash
+        run: |
+          STATUS=$(cat guide-board-revision-status.txt)
+          if [ "$STATUS" != "0" ]; then
+            echo "Guide-board revision failed with status $STATUS"
+            exit "$STATUS"
+          fi
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -29,44 +74,7 @@ jobs:
 
       - name: Install dependencies if package metadata is present
         run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          elif [ -f package.json ]; then
-            npm install
-          else
-            echo "No package.json found; skipping dependency install."
-          fi
+          if [ -f package-lock.json ]; then npm ci; elif [ -f package.json ]; then npm install; fi
 
       - name: Run site checks
         run: npm test
-
-      - name: Install Chromium
-        run: npx playwright install --with-deps chromium
-
-      - name: Verify complete newspaper image in real browsers
-        shell: bash
-        run: |
-          mkdir -p guide-board-news-audit
-          python3 -m http.server 4173 > /tmp/guide-board-server.log 2>&1 &
-          SERVER_PID=$!
-          trap 'kill $SERVER_PID || true' EXIT
-          sleep 2
-          node scripts/check-guide-board-news-full.js
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: guide-board-news-full-audit
-          path: guide-board-news-audit
-
-      - name: Commit verified guide page
-        shell: bash
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add guide-board.html
-          if git diff --cached --quiet; then
-            echo "No guide page change to commit"
-          else
-            git commit -m "Show full newspaper evidence on education board guide"
-            git push origin HEAD:fix-guide-board-news-full-20260717
-          fi
