@@ -6,81 +6,27 @@ on:
     branches:
       - main
 
-permissions:
-  contents: write
-
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout feature branch
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          ref: feature/pta-optin-priority-20260717
-          fetch-depth: 0
-
-      - name: Install PDF and image tools
-        shell: bash
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq poppler-utils fonts-noto-cjk
-          python3 -m pip install --quiet pillow
-
-      - name: Generate annotated evidence and routes
-        run: python3 scripts/build-optin-priority.py
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Install repository dependencies
+      - name: Install dependencies if package metadata is present
         run: |
           if [ -f package-lock.json ]; then
             npm ci
           elif [ -f package.json ]; then
             npm install
-          fi
-
-      - name: Run repository checks
-        run: npm test
-
-      - name: Install Playwright and Chromium
-        run: |
-          npm install --no-save playwright@1.55.0
-          npx playwright install --with-deps chromium
-
-      - name: Run real-browser verification
-        shell: bash
-        run: |
-          python3 -m http.server 4173 > /tmp/optin-server.log 2>&1 &
-          SERVER_PID=$!
-          trap 'kill $SERVER_PID || true' EXIT
-          sleep 2
-          node scripts/check-optin-page.js
-
-      - name: Upload browser audit
-        uses: actions/upload-artifact@v4
-        with:
-          name: optin-priority-browser-audit
-          path: optin-priority-audit
-
-      - name: Commit verified generated files
-        shell: bash
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add \
-            assets/optin \
-            pta-membership-optin.html \
-            index.html guide-parent.html guide-pta.html guide-board.html guide-research.html \
-            membership.html privacy.html fee-collection.html research-index.html documents.html \
-            submission-kit.html key-materials.html journal.html \
-            journal/pta-membership-optin-record.html journal/optout-invalidity.html \
-            data/site-search-index.js js/site.js sitemap.xml
-          if git diff --cached --quiet; then
-            echo "No generated changes to commit."
           else
-            git commit -m "Add priority PTA opt-in guide and routes"
-            git push origin HEAD:feature/pta-optin-priority-20260717
+            echo "No package.json found; skipping dependency install."
           fi
+
+      - name: Run site checks
+        run: npm test
