@@ -19,22 +19,8 @@ jobs:
           ref: fix-guide-board-news-full-20260717
           fetch-depth: 0
 
-      - name: Extract and apply guide-board revision
-        shell: bash
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import re, textwrap, subprocess
-
-          workflow = Path('.github/workflows/fix-guide-board-news-full.yml').read_text(encoding='utf-8')
-          py = re.search(r"          python3 - <<'PY'\n(.*?)\n          PY", workflow, re.S)
-          js = re.search(r"          node <<'JS'\n(.*?)\n          JS", workflow, re.S)
-          if not py or not js:
-              raise SystemExit('could not extract embedded revision scripts')
-          Path('/tmp/revise-guide-board.py').write_text(textwrap.dedent(py.group(1)), encoding='utf-8')
-          Path('/tmp/check-guide-board.js').write_text(textwrap.dedent(js.group(1)), encoding='utf-8')
-          subprocess.run(['python3', '/tmp/revise-guide-board.py'], check=True)
-          PY
+      - name: Apply guide-board revision
+        run: python3 scripts/fix-guide-board-news-full.py
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -65,7 +51,7 @@ jobs:
           SERVER_PID=$!
           trap 'kill $SERVER_PID || true' EXIT
           sleep 2
-          node /tmp/check-guide-board.js
+          node scripts/check-guide-board-news-full.js
 
       - uses: actions/upload-artifact@v4
         with:
