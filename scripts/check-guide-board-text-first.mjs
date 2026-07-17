@@ -61,8 +61,11 @@ for (const item of [
   if (closedSvgVisible) failures.push('executive SVG visible while closed');
   if (data.executiveContainsPrincipal) failures.push('principal section nested inside executive section');
   if (data.principalParentTag !== 'MAIN') failures.push(`principal parent=${data.principalParentTag}#${data.principalParentId}.${data.principalParentClass}`);
-  if (!data.directSections.includes('principal-liability') || !data.directSections.includes('board-executive-brief') || !data.directSections.includes('board-jp-guideline')) failures.push(`direct sections=${data.directSections.join(',')}`);
-  if (!(data.principalTop < data.boardJpTop)) failures.push('principal text does not precede long article');
+  const requiredOrder = ['principal-liability', 'board-executive-brief', 'board-jp-guideline'];
+  for (let i = 0; i < requiredOrder.length; i += 1) {
+    if (data.directSections[i] !== requiredOrder[i]) failures.push(`section ${i + 1}=${data.directSections[i] || '(none)'}`);
+  }
+  if (!(data.principalTop < data.executiveTop && data.executiveTop < data.boardJpTop)) failures.push('visible section order is incorrect');
   if (!data.newspaperVisible) failures.push('newspaper not visible');
   if (data.newspaperNaturalWidth !== 320 || data.newspaperNaturalHeight !== 539) failures.push(`newspaper natural=${data.newspaperNaturalWidth}x${data.newspaperNaturalHeight}`);
   const naturalRatio = 320 / 539;
