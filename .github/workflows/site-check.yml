@@ -46,6 +46,8 @@ jobs:
           npx playwright install --with-deps chromium
 
       - name: Verify text-first education board page in real browsers
+        id: browser_verify
+        continue-on-error: true
         shell: bash
         run: |
           python3 -m http.server 4173 > /tmp/guide-board-text-first-server.log 2>&1 &
@@ -55,10 +57,15 @@ jobs:
           node scripts/check-guide-board-text-first.mjs
 
       - name: Upload browser audit
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: guide-board-text-first-audit
           path: guide-board-text-first-audit
+
+      - name: Stop when browser verification failed
+        if: steps.browser_verify.outcome == 'failure'
+        run: exit 1
 
       - name: Commit verified page
         if: github.event_name == 'pull_request'
