@@ -27,7 +27,7 @@ const fs = require('fs');
         width: img.getBoundingClientRect().width,
         height: img.getBoundingClientRect().height,
       }));
-      const pdf = document.querySelector('a[href$="pta-membership-optin-only-board-school-20260710.pdf"]');
+      const pdf = document.querySelector('a[href$="pta-membership-optin-record.pdf"]');
       return {
         title: document.title,
         h1: document.querySelectorAll('h1').length,
@@ -45,7 +45,7 @@ const fs = require('fs');
     if (data.overflow > 1) failures.push(`${profile.name}: horizontal overflow=${data.overflow}`);
     if (data.figures !== 4) failures.push(`${profile.name}: figures=${data.figures}`);
     data.images.forEach((img, i) => {
-      if (!img.complete || img.naturalWidth < 850 || img.naturalHeight < 750) failures.push(`${profile.name}: image ${i+1} incomplete ${JSON.stringify(img)}`);
+      if (!img.complete || img.naturalWidth < 1700 || img.naturalHeight < 1500) failures.push(`${profile.name}: image ${i+1} incomplete ${JSON.stringify(img)}`);
       const naturalRatio = img.naturalWidth / img.naturalHeight;
       const renderedRatio = img.width / img.height;
       if (Math.abs(naturalRatio - renderedRatio) > 0.02) failures.push(`${profile.name}: image ${i+1} ratio mismatch`);
@@ -77,7 +77,7 @@ const fs = require('fs');
   }
   await routePage.close();
 
-  const response = await fetch('http://127.0.0.1:4173/assets/documents/pta-membership-optin-only-board-school-20260710.pdf');
+  const response = await fetch('http://127.0.0.1:4173/assets/documents/journal/pta-membership-optin-record.pdf');
   audit.pdf = { status: response.status, contentType: response.headers.get('content-type'), length: Number(response.headers.get('content-length') || 0) };
   if (!response.ok) failures.push(`PDF status=${response.status}`);
   if (!String(audit.pdf.contentType).includes('application/pdf')) failures.push(`PDF content-type=${audit.pdf.contentType}`);
