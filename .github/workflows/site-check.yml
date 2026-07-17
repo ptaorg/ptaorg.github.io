@@ -6,21 +6,12 @@ on:
     branches:
       - main
 
-permissions:
-  contents: write
-
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout feature branch
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          ref: feature/pta-optin-priority-20260717
-          fetch-depth: 0
-
-      - name: Apply source wording
-        run: python3 scripts/fix-optin-source-note.py
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -33,16 +24,9 @@ jobs:
             npm ci
           elif [ -f package.json ]; then
             npm install
+          else
+            echo "No package.json found; skipping dependency install."
           fi
 
       - name: Run site checks
         run: npm test
-
-      - name: Commit source wording
-        shell: bash
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add pta-membership-optin.html
-          git commit -m "Clarify opt-in source PDF and figure references"
-          git push origin HEAD:feature/pta-optin-priority-20260717
