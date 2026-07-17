@@ -50,6 +50,22 @@ if old_body not in html:
     raise SystemExit("body class marker not found")
 html = html.replace(old_body, new_body, 1)
 
+# The legacy script moved the principal-liability section outside main after page load.
+# Preserve that behavior for older layouts, but disable it for this text-first layout.
+legacy_move = """  var principal = document.getElementById('principal-liability');
+  if (principal && fact.nextElementSibling !== principal) {
+    fact.insertAdjacentElement('afterend', principal);
+  }
+"""
+text_first_move = """  var principal = document.getElementById('principal-liability');
+  if (!document.body.classList.contains('guide-board-text-first') && principal && fact.nextElementSibling !== principal) {
+    fact.insertAdjacentElement('afterend', principal);
+  }
+"""
+if legacy_move not in html:
+    raise SystemExit("legacy principal move block not found")
+html = html.replace(legacy_move, text_first_move, 1)
+
 style = r'''
 <style id="guide-board-text-first-20260717">
 body.guide-board-text-first .page-hero--photo{
@@ -60,8 +76,8 @@ body.guide-board-text-first .page-hero--photo{
 body.guide-board-text-first .page-hero--photo::before,
 body.guide-board-text-first .page-hero--photo::after{opacity:.28!important}
 body.guide-board-text-first .page-hero-bg-img{display:none!important}
-body.guide-board-text-first #board-executive-brief{padding-top:54px!important}
 body.guide-board-text-first #principal-liability{padding-top:54px!important}
+body.guide-board-text-first #board-executive-brief{padding-top:54px!important}
 body.guide-board-text-first .gbv-head{margin-bottom:18px!important}
 body.guide-board-text-first .principal-liability-explanation{margin-top:28px!important}
 body.guide-board-text-first .principal-liability-meaning{margin-top:34px!important}
@@ -101,8 +117,8 @@ body.guide-board-text-first .principal-liability-full-evidence{margin-top:25px!i
 body.guide-board-text-first .gbv-source{margin-top:32px!important}
 @media(max-width:720px){
   body.guide-board-text-first .page-hero--photo{padding:44px 0 40px!important}
-  body.guide-board-text-first #board-executive-brief,
-  body.guide-board-text-first #principal-liability{padding-top:44px!important}
+  body.guide-board-text-first #principal-liability,
+  body.guide-board-text-first #board-executive-brief{padding-top:44px!important}
   .board-visual-details>summary{font-size:.9rem;padding-right:38px}
   .board-visual-details__body{padding-top:18px}
 }
@@ -164,7 +180,7 @@ new_stack = (
 )
 executive = executive[:stack_start] + new_stack + executive[stack_end:]
 
-# Put the concise written brief first, followed by school-held information and the newspaper evidence.
+# Put the school-information explanation and newspaper first, then the concise board brief.
 original_blocks = [(p_start, p_end, principal), (e_start, e_end, executive)]
 html = remove_blocks(html, original_blocks)
 main_marker = "<main>"
@@ -172,7 +188,7 @@ main_pos = html.find(main_marker)
 if main_pos < 0:
     raise SystemExit("main marker not found")
 insert_at = main_pos + len(main_marker)
-html = html[:insert_at] + "\n" + executive + "\n" + principal + html[insert_at:]
+html = html[:insert_at] + "\n" + principal + "\n" + executive + html[insert_at:]
 
 # Assertions guard against accidental loss or duplication.
 checks = {
@@ -182,6 +198,7 @@ checks = {
     "newspaper figure": html.count('class="principal-liability-full-evidence"') == 1,
     "visual details": html.count('class="board-visual-details') >= 2,
     "hero photograph removed": 'class="page-hero-bg-img"' not in html,
+    "legacy move guarded": "!document.body.classList.contains('guide-board-text-first')" in html,
 }
 failed = [name for name, ok in checks.items() if not ok]
 if failed:
