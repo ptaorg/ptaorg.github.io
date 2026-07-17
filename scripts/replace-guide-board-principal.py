@@ -23,7 +23,7 @@ start = html.find(start_marker)
 if start < 0:
     raise SystemExit("existing principal-liability section not found")
 
-# Find the matching closing section, accounting for any nested section elements.
+# Find the matching closing section, accounting for nested section elements.
 token_re = re.compile(r"<section\b|</section\s*>", re.I)
 depth = 0
 end = None
@@ -43,6 +43,15 @@ old = html[start:end]
 if "principal-risk-evidence-card" not in old and "principal-liability-evidence" not in old:
     raise SystemExit("refusing to replace an unexpected principal section")
 
-html = html[:start] + section + html[end:]
+# Remove the old section wherever it currently sits.
+html = html[:start] + html[end:]
+
+# Put the revised evidence directly after <main>, before the executive summary.
+main_anchor = "<main>\n"
+executive_anchor = '<section id="board-executive-brief"'
+if main_anchor not in html or executive_anchor not in html:
+    raise SystemExit("guide opening anchors not found")
+html = html.replace(main_anchor, main_anchor + section + "\n", 1)
+
 path.write_text(html, encoding="utf-8")
-print(f"replaced principal section: old={len(old)} chars, new={len(section)} chars")
+print(f"moved principal section to guide opening: old={len(old)} chars, new={len(section)} chars")
