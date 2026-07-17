@@ -6,12 +6,21 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
+
+      - name: Reorder education board page to text-first layout
+        run: python3 scripts/reorder-guide-board-text-first.py
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -30,3 +39,37 @@ jobs:
 
       - name: Run site checks
         run: npm test
+
+      - name: Install Playwright and Chromium for verification
+        run: |
+          npm install --no-save --package-lock=false playwright
+          npx playwright install --with-deps chromium
+
+      - name: Verify text-first education board page in real browsers
+        shell: bash
+        run: |
+          python3 -m http.server 4173 > /tmp/guide-board-text-first-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID || true' EXIT
+          sleep 2
+          node scripts/check-guide-board-text-first.mjs
+
+      - name: Upload browser audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: guide-board-text-first-audit
+          path: guide-board-text-first-audit
+
+      - name: Commit verified page
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add guide-board.html
+          if git diff --cached --quiet; then
+            echo "No page change to commit."
+          else
+            git commit -m "Reorder education board guide to text-first layout"
+            git push origin HEAD:${{ github.head_ref }}
+          fi
