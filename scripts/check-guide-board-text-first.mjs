@@ -12,25 +12,33 @@ for (const item of [
 ]) {
   const page = await browser.newPage({ viewport: { width: item.width, height: item.height } });
   await page.goto('http://127.0.0.1:4173/guide-board.html', { waitUntil: 'networkidle' });
+  const closedSvgVisible = await page.locator('#board-executive-brief details.board-visual-details svg').first().isVisible();
   const data = await page.evaluate(() => {
     const main = document.querySelector('main');
     const mainSections = [...main.children].filter((el) => el.tagName === 'SECTION');
+    const executive = document.querySelector('#board-executive-brief');
+    const principal = document.querySelector('#principal-liability');
+    const boardJp = document.querySelector('#board-jp-guideline');
     const executiveDetails = document.querySelector('#board-executive-brief details.board-visual-details');
     const compactDetails = document.querySelector('#principal-liability details.board-visual-details--compact');
     const newspaper = document.querySelector('.principal-liability-full-evidence img');
     const explanation = document.querySelector('.principal-liability-explanation');
     const heroPhoto = document.querySelector('.page-hero-bg-img');
-    const firstExecutiveSvg = document.querySelector('#board-executive-brief svg');
     const newspaperStyle = getComputedStyle(newspaper);
     return {
       h1Count: document.querySelectorAll('h1').length,
-      firstSection: mainSections[0]?.id || '',
-      secondSection: mainSections[1]?.id || '',
+      directSections: mainSections.map((el) => el.id),
       detailsCount: document.querySelectorAll('details.board-visual-details').length,
       executiveOpen: executiveDetails?.open ?? null,
       compactOpen: compactDetails?.open ?? null,
       heroPhotoExists: Boolean(heroPhoto),
-      svgVisibleClosed: firstExecutiveSvg ? Boolean(firstExecutiveSvg.offsetWidth || firstExecutiveSvg.offsetHeight || firstExecutiveSvg.getClientRects().length) : null,
+      executiveContainsPrincipal: executive?.contains(principal) ?? null,
+      principalParentTag: principal?.parentElement?.tagName || '',
+      principalParentId: principal?.parentElement?.id || '',
+      principalParentClass: principal?.parentElement?.className || '',
+      executiveTop: executive?.getBoundingClientRect().top || 0,
+      principalTop: principal?.getBoundingClientRect().top || 0,
+      boardJpTop: boardJp?.getBoundingClientRect().top || 0,
       newspaperVisible: Boolean(newspaper?.getClientRects().length),
       newspaperNaturalWidth: newspaper?.naturalWidth || 0,
       newspaperNaturalHeight: newspaper?.naturalHeight || 0,
@@ -47,12 +55,14 @@ for (const item of [
 
   const failures = [];
   if (data.h1Count !== 1) failures.push(`h1=${data.h1Count}`);
-  if (data.firstSection !== 'board-executive-brief') failures.push(`first=${data.firstSection}`);
-  if (data.secondSection !== 'principal-liability') failures.push(`second=${data.secondSection}`);
   if (data.detailsCount < 2) failures.push(`details=${data.detailsCount}`);
   if (data.executiveOpen !== false || data.compactOpen !== false) failures.push('details not closed');
   if (data.heroPhotoExists) failures.push('hero photo remains');
-  if (data.svgVisibleClosed !== false) failures.push('executive SVG visible while closed');
+  if (closedSvgVisible) failures.push('executive SVG visible while closed');
+  if (data.executiveContainsPrincipal) failures.push('principal section nested inside executive section');
+  if (data.principalParentTag !== 'MAIN') failures.push(`principal parent=${data.principalParentTag}#${data.principalParentId}.${data.principalParentClass}`);
+  if (!data.directSections.includes('principal-liability') || !data.directSections.includes('board-executive-brief') || !data.directSections.includes('board-jp-guideline')) failures.push(`direct sections=${data.directSections.join(',')}`);
+  if (!(data.principalTop < data.boardJpTop)) failures.push('principal text does not precede long article');
   if (!data.newspaperVisible) failures.push('newspaper not visible');
   if (data.newspaperNaturalWidth !== 320 || data.newspaperNaturalHeight !== 539) failures.push(`newspaper natural=${data.newspaperNaturalWidth}x${data.newspaperNaturalHeight}`);
   const naturalRatio = 320 / 539;
@@ -70,7 +80,7 @@ for (const item of [
   if (!openVisible) failures.push('SVG not visible after opening details');
   await page.screenshot({ path: `${outDir}/${item.name}-diagrams-open.png`, fullPage: false });
 
-  results.push({ viewport: item, data, openVisible, failures });
+  results.push({ viewport: item, data, closedSvgVisible, openVisible, failures });
   await page.close();
 }
 
