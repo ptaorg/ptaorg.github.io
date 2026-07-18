@@ -36,6 +36,7 @@
 .achievement-list{display:grid;gap:12px;margin:18px 0 0;padding:0;list-style:none}.achievement-list li{position:relative;padding:14px 16px 14px 48px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;line-height:1.8}.achievement-list li::before{content:'✓';position:absolute;left:18px;color:#15803d;font-weight:900;font-size:1.2rem}
 .use-table{width:100%;border-collapse:collapse;margin-top:18px}.use-table th,.use-table td{padding:15px 16px;border:1px solid #dbe4ee;text-align:left;vertical-align:top;line-height:1.8}.use-table th{width:34%;background:#eef4fa;color:#0f2742}.support-promise{background:#f0fdf4;border-left-color:#16a34a}.support-paybox .bank-line{font-size:1.05rem}.transfer-example{margin-top:14px;padding:12px 14px;background:#fff7ed;border-radius:10px;color:#7c2d12;line-height:1.7}.support-small-ask{font-weight:800;color:#0f2742;text-align:center}
 @media(max-width:640px){.use-table,.use-table tbody,.use-table tr,.use-table th,.use-table td{display:block}.use-table th{width:auto;border-bottom:0}.use-table tr{margin-bottom:14px}.support-hero h1 br{display:none}}
+.support-payment-section{position:relative;z-index:3;margin-top:-36px;padding-bottom:18px}.support-payment-shell{width:min(calc(100% - 32px),1120px);margin:auto;background:#fff;border:1px solid #dbe4ee;border-radius:22px;box-shadow:0 24px 56px rgba(15,39,66,.18);padding:30px}.support-payment-head{text-align:center;margin-bottom:22px}.support-payment-head .support-kicker{background:#fff4d6;border-color:#e4c46a;color:#7c5a00;margin-bottom:10px}.support-payment-head h2{font-family:'Noto Serif JP',serif;color:#0f2742;font-size:clamp(1.65rem,3vw,2.35rem);margin:0 0 8px}.support-payment-head p{color:#475569;margin:0}.support-payment-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.support-payment-card{border:1px solid #dbe4ee;border-radius:17px;padding:24px;background:#f8fafc}.support-payment-card h3{font-size:1.25rem;color:#0f2742;margin:0 0 16px}.support-payment-card--paypay{background:#fff5f7;border-color:#ffc2cf}.support-payment-card--paypay .paypay-button{min-height:58px;font-size:1.05rem}.support-main{padding-top:34px}.support-layout{display:block}.support-layout>div{max-width:920px;margin:auto}.support-paybox{display:none}@media(max-width:760px){.support-payment-section{margin-top:-22px}.support-payment-shell{padding:22px 16px}.support-payment-grid{grid-template-columns:1fr}.support-payment-card{padding:20px 17px}}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
@@ -185,6 +186,27 @@ gtag('config', 'G-0D18ZSSLMH');
 <div class="support-actions"><a class="btn-gold bank-hero" href="#bank-transfer">銀行振込で支援する</a><a class="btn-outline-white paypay-hero" href="https://qr.paypay.ne.jp/p2p01_AvAPJAge0mPnf33l" target="_blank" rel="noopener noreferrer">PayPayで支援する</a></div>
 </div>
 </section>
+<section class="support-payment-section" id="support-payment" aria-labelledby="support-payment-title">
+<div class="support-payment-shell">
+<header class="support-payment-head">
+<span class="support-kicker">Donation</span>
+<h2 id="support-payment-title">ご支援窓口</h2>
+<p>銀行振込・PayPayのいずれかをお選びいただけます。少額からでも大変ありがたく受け取らせていただきます。</p>
+</header>
+<div class="support-payment-grid">
+<article class="support-payment-card" id="bank-transfer">
+<h3>銀行振込で支援する</h3>
+<div class="bank-line">住信SBIネット銀行<br>メロン支店（108）　普通<br>6978317<small>名義：サトウ ダイ</small></div>
+<div class="transfer-example"><strong>振込時の記載例</strong><br>通信欄に「PTA支援 ○○様分」とご記入いただけますと助かります。</div>
+</article>
+<article class="support-payment-card support-payment-card--paypay">
+<h3>PayPayで支援する</h3>
+<p class="paypay-note">ボタンからPayPayアプリを開き、PayPay残高からご支援いただけます。</p>
+<a class="paypay-button" href="https://qr.paypay.ne.jp/p2p01_AvAPJAge0mPnf33l" target="_blank" rel="noopener noreferrer">PayPayアプリで支援する</a>
+</article>
+</div>
+</div>
+</section>
 <main class="support-main">
 <div class="wrap support-layout">
 <div>
@@ -225,20 +247,6 @@ gtag('config', 'G-0D18ZSSLMH');
 <div class="support-back"><a href="/index.html">トップページに戻る</a><a href="/guide-board.html">教育委員会・学校向け整理</a><a href="/administrative-materials.html">行政資料整理</a><a href="/board-responses.html">教育委員会の回答</a><a href="/national-archive.html">全国資料館</a></div>
 </section>
 </div>
-<aside class="support-paybox" id="support-payment" aria-label="ご支援窓口">
-<h2>ご支援窓口</h2>
-<div class="pay-method" id="bank-transfer">
-<h3>■ 銀行振込</h3>
-<div class="bank-line">住信SBIネット銀行<br>メロン支店（108）　普通<br>6978317<small>名義：サトウ ダイ</small></div>
-<div class="transfer-example"><strong>振込時の記載例</strong><br>通信欄に「PTA支援 ○○様分」とご記入いただけますと助かります。</div>
-</div>
-<div class="pay-method">
-<h3>■ PayPay</h3>
-<p class="paypay-note">以下のボタンからPayPayアプリを開き、PayPay残高からご支援いただけます。</p>
-<a class="paypay-button" href="https://qr.paypay.ne.jp/p2p01_AvAPJAge0mPnf33l" target="_blank" rel="noopener noreferrer">PayPayアプリで支援する</a>
-</div>
-<p class="support-note support-small-ask">銀行振込・PayPayのいずれかでご支援いただけます。少額からでも構いません。</p>
-</aside>
 </div>
 </main>
 <footer class="footer">
