@@ -1,0 +1,782 @@
+@layer page {
+  /* Consolidated page styles for reality.html */
+  /* Page-specific styles for reality.html */
+  /* =============================================
+   HERO — 実態調査ページ
+   ============================================= */
+  .reality-hero {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(91, 20, 20, 0.34) 0%,
+        rgba(127, 29, 29, 0.18) 54%,
+        rgba(127, 29, 29, 0.08) 100%
+      ),
+      url("/assets/slides/1.jpg") center/cover;
+    padding: 80px 0 72px;
+    text-align: center;
+    color: #fff;
+  }
+  .reality-hero-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 18px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #fca5a5;
+    margin-bottom: 24px;
+  }
+  .reality-hero-kicker::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fca5a5;
+    animation: blink 2s ease infinite;
+  }
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.3;
+      transform: scale(0.7);
+    }
+  }
+  .reality-hero h1 {
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(1.7rem, 3.8vw, 2.9rem);
+    font-weight: 900;
+    line-height: 1.25;
+    color: #fff;
+    margin-bottom: 22px;
+    letter-spacing: -0.01em;
+  }
+  .reality-hero-lead {
+    font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.9;
+    max-width: 660px;
+    margin-inline: auto;
+  }
+
+  /* =============================================
+   ページ内アンカーナビ
+   ============================================= */
+  .anchor-nav {
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 80;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  }
+  .anchor-nav-inner {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    width: min(calc(100% - 40px), 860px);
+    margin-inline: auto;
+  }
+  .anchor-nav-inner::-webkit-scrollbar {
+    display: none;
+  }
+  .anchor-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 20px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: var(--text-soft);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+    transition:
+      color 0.2s,
+      border-color 0.2s;
+  }
+  .anchor-link:hover {
+    color: var(--navy);
+    border-bottom-color: var(--gold);
+  }
+  .anchor-link .anchor-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fee2e2;
+    color: #b91c1c;
+    font-size: 0.68rem;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+
+  /* =============================================
+   書類モックアップ
+   ============================================= */
+  .doc-mockup {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-left: 5px solid #f59e0b;
+    border-radius: 8px;
+    padding: 22px 24px;
+    font-family: "Noto Serif JP", serif;
+    font-size: 0.9rem;
+    line-height: 2;
+    color: #1a1a1a;
+    position: relative;
+    margin: 20px 0;
+  }
+  .doc-mockup-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background: #fef3c7;
+    color: #92400e;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+  }
+  .doc-mockup-title {
+    font-weight: 900;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    color: #111;
+  }
+  .doc-mockup-body {
+    color: #2a2a2a;
+  }
+  .doc-mockup-body p {
+    margin: 0;
+  }
+
+  /* 適正書類（緑） */
+  .doc-mockup-ok {
+    background: #f0fdf4;
+    border-color: #86efac;
+    border-left-color: #16a34a;
+  }
+  .doc-mockup-ok .doc-mockup-label {
+    background: #dcfce7;
+    color: #15803d;
+  }
+
+  /* =============================================
+   問題点注釈
+   ============================================= */
+  .problem-notes {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .problem-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #fff5f5;
+    border-radius: 8px;
+    padding: 12px 16px;
+    border-left: 3px solid #ef4444;
+  }
+  .problem-note-arrow {
+    color: #ef4444;
+    font-weight: 900;
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .problem-note-text {
+    font-size: 0.86rem;
+    color: #7f1d1d;
+    line-height: 1.65;
+    font-weight: 700;
+  }
+  .good-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #f0fdf4;
+    border-radius: 8px;
+    padding: 12px 16px;
+    border-left: 3px solid #16a34a;
+  }
+  .good-note-arrow {
+    color: #16a34a;
+    font-weight: 900;
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .good-note-text {
+    font-size: 0.86rem;
+    color: #14532d;
+    line-height: 1.65;
+    font-weight: 700;
+  }
+
+  /* =============================================
+   法的根拠ボックス
+   ============================================= */
+  .law-box {
+    background: var(--navy);
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-top: 20px;
+  }
+  .law-box-label {
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    color: #d4af37;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .law-box-content {
+    font-size: 0.9rem;
+    line-height: 1.85;
+    color: rgba(255, 255, 255, 0.88);
+  }
+  .law-box-content strong {
+    color: #fde68a;
+  }
+
+  /* =============================================
+   引用バナー（教育委員会）
+   ============================================= */
+  .edu-quote {
+    background: #0a1628;
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-top: 20px;
+  }
+  .edu-quote-source {
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    color: #d4af37;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .edu-quote blockquote {
+    font-family: "Noto Serif JP", serif;
+    font-size: 0.96rem;
+    color: #fff;
+    line-height: 1.85;
+    margin: 0;
+    font-weight: 700;
+  }
+  .edu-quote blockquote::before {
+    content: "\201C";
+    font-size: 1.8rem;
+    color: #d4af37;
+    line-height: 0;
+    vertical-align: -0.35em;
+    margin-right: 4px;
+  }
+
+  /* =============================================
+   タイムライン
+   ============================================= */
+  .timeline {
+    position: relative;
+    margin-top: 32px;
+    padding-left: 40px;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 4px;
+    bottom: 4px;
+    width: 2px;
+    background: linear-gradient(
+      to bottom,
+      #ef4444,
+      #b91c1c 60%,
+      rgba(185, 28, 28, 0.15)
+    );
+  }
+  .timeline-item {
+    position: relative;
+    padding-bottom: 32px;
+  }
+  .timeline-item:last-child {
+    padding-bottom: 0;
+  }
+  .timeline-dot {
+    position: absolute;
+    left: -33px;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #ef4444;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px #ef4444;
+  }
+  .timeline-dot.question {
+    background: #7f1d1d;
+    box-shadow: 0 0 0 2px #7f1d1d;
+  }
+  .timeline-when {
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    color: #b91c1c;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .timeline-item h4 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 0.97rem;
+    font-weight: 900;
+    color: var(--navy);
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+  .timeline-item p {
+    font-size: 0.86rem;
+    color: var(--text-soft);
+    line-height: 1.75;
+    margin: 0;
+  }
+  .timeline-item.question-item h4 {
+    color: #991b1b;
+  }
+
+  /* =============================================
+   資金フロー図
+   ============================================= */
+  .flow-diagram {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 24px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .flow-box {
+    background: #fff;
+    border: 2px solid var(--line);
+    border-radius: 10px;
+    padding: 14px 20px;
+    text-align: center;
+    min-width: 120px;
+    flex-shrink: 0;
+  }
+  .flow-box.school {
+    border-color: #3b82f6;
+    background: #eff6ff;
+  }
+  .flow-box.pta {
+    border-color: #f59e0b;
+    background: #fffbeb;
+  }
+  .flow-box.parent {
+    border-color: #6b7280;
+    background: #f9fafb;
+  }
+  .flow-box-label {
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .flow-box.school .flow-box-label {
+    color: #1d4ed8;
+  }
+  .flow-box.pta .flow-box-label {
+    color: #92400e;
+  }
+  .flow-box.parent .flow-box-label {
+    color: #374151;
+  }
+  .flow-box-name {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 900;
+    font-size: 0.97rem;
+    color: var(--navy);
+  }
+  .flow-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 0 10px;
+    flex-shrink: 0;
+  }
+  .flow-arrow-line {
+    font-size: 1.4rem;
+    color: #ef4444;
+    line-height: 1;
+  }
+  .flow-arrow-desc {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #ef4444;
+    white-space: nowrap;
+  }
+  .flow-problem-note {
+    width: 100%;
+    margin-top: 14px;
+    background: #fff5f5;
+    border-radius: 8px;
+    padding: 12px 16px;
+    border-left: 3px solid #ef4444;
+    font-size: 0.84rem;
+    color: #7f1d1d;
+    font-weight: 700;
+  }
+
+  /* =============================================
+   セクション共通
+   ============================================= */
+  .reality-section {
+    padding: 80px 0;
+  }
+  .reality-section-white {
+    background: #fff;
+  }
+  .reality-section-bg {
+    background: var(--bg);
+  }
+
+  .section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    border-radius: 4px;
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .reality-section h2 {
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(1.4rem, 2.4vw, 2rem);
+    font-weight: 900;
+    color: var(--navy);
+    margin-bottom: 14px;
+    line-height: 1.35;
+  }
+  .reality-section-lead {
+    font-size: 0.97rem;
+    color: var(--text-soft);
+    line-height: 1.9;
+    margin-bottom: 30px;
+    max-width: 720px;
+  }
+
+  /* =============================================
+   CTA セクション（まとめ）
+   ============================================= */
+  .reality-cta {
+    background: linear-gradient(135deg, #0d2044, #1a3a6b);
+    padding: 80px 0;
+    text-align: center;
+    color: #fff;
+  }
+  .reality-cta-title {
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+    font-weight: 900;
+    color: #f4e7a6;
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+  .reality-cta-lead {
+    font-size: clamp(0.88rem, 1.2vw, 1rem);
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.9;
+    max-width: 620px;
+    margin-inline: auto;
+    margin-bottom: 40px;
+  }
+  .cta-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+  }
+  .cta-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 999px;
+    background: #d4af37;
+    color: #0d2044;
+    font-size: 0.93rem;
+    font-weight: 900;
+    text-decoration: none;
+    transition:
+      opacity 0.2s,
+      transform 0.2s;
+  }
+  .cta-btn-primary:hover {
+    opacity: 0.88;
+    transform: translateY(-2px);
+  }
+  .cta-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 24px;
+    border-radius: 999px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    font-size: 0.88rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .cta-btn-secondary:hover {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  /* =============================================
+   事例ハイライトボックス
+   ============================================= */
+  .incident-box {
+    background: #fff5f5;
+    border: 1px solid #fecaca;
+    border-left: 5px solid #ef4444;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-top: 20px;
+  }
+  .incident-box-label {
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    color: #b91c1c;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .incident-box-title {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1rem;
+    font-weight: 900;
+    color: #7f1d1d;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .incident-box-body {
+    font-size: 0.88rem;
+    color: #4a1c1c;
+    line-height: 1.8;
+  }
+
+  /* 職専免サンプル（適正書類、緑系） */
+  .doc-mockup-stamp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 3px solid #7a5a0a;
+    color: #7a5a0a;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-align: center;
+    line-height: 1.3;
+    float: right;
+    margin: -4px 0 8px 16px;
+  }
+
+  /* =============================================
+   レスポンシブ
+   ============================================= */
+  @media (max-width: 860px) {
+    .flow-diagram {
+      gap: 8px;
+    }
+    .flow-arrow {
+      padding: 0 4px;
+    }
+  }
+  @media (max-width: 640px) {
+    .flow-diagram {
+      flex-direction: column;
+      align-items: center;
+    }
+    .flow-arrow {
+      flex-direction: row;
+      padding: 4px 0;
+    }
+    .flow-arrow-line {
+      transform: rotate(90deg);
+    }
+    .anchor-link {
+      padding: 12px 14px;
+      font-size: 0.76rem;
+    }
+  }
+
+  /* Page-specific styles for reality.html */
+  .reality-editorial .reality-hero {
+    text-align: left;
+    background:
+      linear-gradient(90deg, rgba(5, 17, 31, 0.82), rgba(5, 17, 31, 0.38)),
+      url("/assets/slides/1.jpg") center/cover;
+  }
+  .reality-editorial .reality-hero-kicker {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    animation: none;
+    color: #f4e7a6;
+  }
+  .reality-editorial .reality-hero-kicker::before {
+    display: none;
+  }
+  .reality-editorial .reality-hero-lead {
+    margin-inline: 0;
+    max-width: 820px;
+  }
+  .reality-editorial .editorial-section,
+  .reality-editorial .reality-section > .wrap,
+  .reality-editorial .reality-summary > .wrap {
+    width: min(calc(100% - 40px), 920px);
+    margin-inline: auto;
+  }
+  .reality-editorial .reality-intro {
+    padding: 58px 0;
+    border-bottom: 1px solid #dbe4ee;
+  }
+  .reality-editorial .reality-section {
+    padding: 68px 0;
+  }
+  .reality-editorial .section-badge,
+  .reality-editorial .doc-mockup-label,
+  .reality-editorial .law-box-label,
+  .reality-editorial .incident-box-label,
+  .reality-editorial .edu-quote-source {
+    display: block;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #6b7280;
+    letter-spacing: 0.04em;
+    text-transform: none;
+  }
+  .reality-editorial .doc-mockup,
+  .reality-editorial .problem-note,
+  .reality-editorial .good-note,
+  .reality-editorial .law-box,
+  .reality-editorial .edu-quote,
+  .reality-editorial .incident-box {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .reality-editorial .doc-mockup {
+    background: #fff;
+    border: 1px solid #cfd8e2;
+    border-left: 5px solid #b78b2d;
+  }
+  .reality-editorial .problem-notes {
+    gap: 0;
+    border-top: 1px solid #dbe4ee;
+  }
+  .reality-editorial .problem-note,
+  .reality-editorial .good-note {
+    background: #fff;
+    border: 0;
+    border-bottom: 1px solid #dbe4ee;
+    padding: 15px 0;
+    color: #26384b;
+  }
+  .reality-editorial .problem-note-text,
+  .reality-editorial .good-note-text {
+    color: #26384b;
+    font-weight: 500;
+  }
+  .reality-editorial .law-box,
+  .reality-editorial .edu-quote,
+  .reality-editorial .incident-box {
+    background: #f6f8fa;
+    color: #26384b;
+    border: 0;
+    border-left: 5px solid #1e3a5f;
+    padding: 22px 24px;
+  }
+  .reality-editorial .law-box-content,
+  .reality-editorial .edu-quote blockquote,
+  .reality-editorial .incident-box-body {
+    color: #26384b;
+  }
+  .reality-editorial .edu-quote blockquote::before {
+    display: none;
+  }
+  .reality-editorial .flow-box {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .reality-editorial .flow-problem-note {
+    border-radius: 0;
+    background: #f6f8fa;
+    border-left: 5px solid #b78b2d;
+  }
+  .reality-editorial .timeline {
+    padding-left: 0;
+    border-top: 1px solid #dbe4ee;
+  }
+  .reality-editorial .timeline::before,
+  .reality-editorial .timeline-dot {
+    display: none;
+  }
+  .reality-editorial .timeline-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #dbe4ee;
+  }
+  .reality-editorial .reality-summary {
+    padding: 58px 0;
+    background: #f5f7f9;
+    border-top: 1px solid #dbe4ee;
+  }
+  .reality-editorial .reality-summary h2 {
+    font-family: "Noto Serif JP", serif;
+    color: #0f2742;
+    margin: 0 0 14px;
+  }
+  .reality-editorial .reality-summary p {
+    line-height: 2;
+    margin: 0;
+    color: #334155;
+  }
+  @media (max-width: 640px) {
+    .reality-editorial .editorial-section,
+    .reality-editorial .reality-section > .wrap,
+    .reality-editorial .reality-summary > .wrap {
+      width: min(calc(100% - 30px), 920px);
+    }
+  }
+}

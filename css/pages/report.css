@@ -1,0 +1,196 @@
+@layer page {
+  /* Consolidated page styles for report.html */
+  /* Page-specific styles for report.html */
+  .report-editorial .report-axis-section {
+    display: none;
+  }
+  .report-editorial .report-open-lead {
+    padding-bottom: 42px;
+    border-bottom: 1px solid #cfd8e2;
+  }
+  .report-editorial .claim-evidence-box,
+  .report-editorial .law-card,
+  .report-editorial .report-related-links {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .report-editorial .claim-evidence-box {
+    border-left: 4px solid #c6a34b;
+  }
+  .report-editorial .page-banner-kicker {
+    text-transform: none;
+    letter-spacing: 0.04em;
+  }
+
+  /* Page-specific styles for report.html */
+  .ax5-fig {
+    margin: 28px auto 30px;
+    max-width: 900px;
+    text-align: left;
+  }
+  .ax5 {
+    --c1: #f2a73c;
+    --c2: #ee6b58;
+    --c3: #e0619c;
+    --c4: #4e9be0;
+    --c5: #25b9a6;
+    --ink: #13294b;
+    --sub: #526174;
+    position: relative;
+    overflow: hidden;
+    color: var(--ink);
+    font-family: "Noto Sans JP", sans-serif;
+    background: linear-gradient(
+      180deg,
+      rgba(250, 252, 255, 0.98),
+      rgba(255, 255, 255, 0.76)
+    );
+    border-top: 2px solid rgba(19, 41, 75, 0.08);
+    border-bottom: 1px solid rgba(19, 41, 75, 0.1);
+    box-shadow: none;
+  }
+  .ax5::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.48;
+    background-image:
+      linear-gradient(rgba(19, 41, 75, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(19, 41, 75, 0.035) 1px, transparent 1px);
+    background-size: 32px 32px;
+    -webkit-mask: linear-gradient(180deg, #000, transparent 84%);
+    mask: linear-gradient(180deg, #000, transparent 84%);
+  }
+  .ax5 .ax5-list {
+    position: relative;
+    z-index: 2;
+    padding: 24px 34px 8px;
+  }
+  .ax5 .ax5-rail {
+    position: absolute;
+    top: 26px;
+    bottom: 18px;
+    left: 64px;
+    width: 2px;
+    border-radius: 2px;
+    background: linear-gradient(
+      180deg,
+      var(--c1),
+      var(--c2),
+      var(--c3),
+      var(--c4),
+      var(--c5)
+    );
+  }
+  .ax5 .ax5-node {
+    position: relative;
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 20px;
+    padding: 14px 0;
+    align-items: start;
+  }
+  .ax5 .ax5-node + .ax5-node {
+    border-top: 1px solid rgba(19, 41, 75, 0.08);
+  }
+  .ax5 .ax5-num {
+    grid-column: 1;
+    justify-self: center;
+    z-index: 2;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: var(--c);
+    font-weight: 900;
+    font-size: 1.05rem;
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--c) 14%, transparent);
+  }
+  .ax5 .ax5-txt {
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 7px 10px;
+    min-width: 0;
+  }
+  .ax5 .ax5-name {
+    font-weight: 900;
+    color: var(--ink);
+    font-size: clamp(1rem, 2.1vw, 1.16rem);
+    line-height: 1.45;
+  }
+  .ax5 .ax5-law {
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: #64748b;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    white-space: normal;
+  }
+  .ax5 .ax5-desc {
+    display: block;
+    width: 100%;
+    margin: 0;
+    color: var(--sub);
+    font-size: 0.86rem;
+    line-height: 1.7;
+  }
+  .ax5 .ax5-foot {
+    position: relative;
+    z-index: 2;
+    margin-top: 8px;
+    padding: 18px 34px 24px;
+    background: rgba(255, 251, 235, 0.64);
+    border-top: 1px solid rgba(180, 83, 9, 0.18);
+  }
+  .ax5 .ax5-root {
+    font-weight: 850;
+    font-size: clamp(0.98rem, 2.2vw, 1.1rem);
+    margin: 0;
+    color: var(--ink);
+    line-height: 1.65;
+  }
+  .ax5 .ax5-root em {
+    font-style: normal;
+    color: #b45309;
+  }
+  .ax5 .ax5-src {
+    margin: 8px 0 0;
+    font-size: 0.68rem;
+    color: #64748b;
+    line-height: 1.6;
+  }
+  @media (max-width: 600px) {
+    .ax5-fig {
+      margin-left: -2px;
+      margin-right: -2px;
+    }
+    .ax5 .ax5-list,
+    .ax5 .ax5-foot {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+    .ax5 .ax5-rail {
+      left: 39px;
+    }
+    .ax5 .ax5-node {
+      grid-template-columns: 34px 1fr;
+      gap: 13px;
+    }
+    .ax5 .ax5-num {
+      width: 34px;
+      height: 34px;
+      font-size: 0.88rem;
+    }
+    .ax5 .ax5-law {
+      font-size: 0.68rem;
+    }
+  }
+}

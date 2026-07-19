@@ -1,0 +1,36 @@
+@layer page {
+  /* Page-specific styles for journal/core-papers.html */
+  .core-note {
+    border-left: 6px solid #d4af37;
+    background: #fffdf5;
+    padding: 20px 22px;
+    margin: 24px 0;
+    line-height: 2;
+  }
+  .paper-link {
+    display: block;
+    border-top: 1px solid #dbe4ee;
+    padding: 26px 0;
+    text-decoration: none;
+    color: inherit;
+  }
+  .paper-link h2 {
+    font-family: "Noto Serif JP", serif;
+    color: #0a192f;
+    margin: 0 0 10px;
+  }
+  .paper-link p {
+    line-height: 1.95;
+    color: #334155;
+  }
+  .paper-link strong {
+    color: #8a6a10;
+  }
+  .pdf-note {
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    padding: 14px 16px;
+    line-height: 1.8;
+    color: #475569;
+  }
+}

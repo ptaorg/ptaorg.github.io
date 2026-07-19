@@ -246,11 +246,11 @@ function renderSchoolPage(record) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=20260628-type-scale">
+  <link rel="stylesheet" href="/css/site.css?v=20260719">
   <link rel="stylesheet" href="/css/archive.css">
 
 ${gaTag()}
-  <link rel="stylesheet" href="/css/hover-orange.css?v=20260629-hero22-hero22">
+  <link rel="stylesheet" href="/css/interactions.css?v=20260719">
 </head>
 <body>
 ${renderSupportStrip()}

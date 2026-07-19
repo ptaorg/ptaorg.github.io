@@ -1,0 +1,29 @@
+@layer page {
+  /* Page-specific styles for jp/index.html */
+  body {
+    margin: 0;
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+    color: #0f172a;
+    background: #f8fafc;
+    line-height: 1.8;
+  }
+
+  main {
+    width: min(720px, calc(100% - 32px));
+    margin: 14vh auto 0;
+    padding: 32px;
+    background: #fff;
+    border: 1px solid #dbe4ee;
+    border-radius: 12px;
+  }
+
+  a {
+    color: #0f5b88;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,263 @@
+@layer page {
+  /* Consolidated page styles for administrative-materials.html */
+  /* Page-specific styles for administrative-materials.html */
+  .admin-materials-page {
+    background: #f6f8fb;
+    color: #172033;
+  }
+  .admin-materials-hero {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 44px 24px 22px;
+  }
+  .admin-materials-kicker {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #1e3a5f;
+    margin: 0 0 8px;
+  }
+  .admin-materials-hero h1 {
+    font-size: clamp(2rem, 4vw, 3.1rem);
+    line-height: 1.18;
+    margin: 0 0 12px;
+    color: #0f2742;
+  }
+  .admin-materials-subtitle {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #334155;
+    margin: 0 0 10px;
+  }
+  .admin-materials-hero
+    p:not(.admin-materials-kicker):not(.admin-materials-subtitle) {
+    max-width: 860px;
+    line-height: 1.9;
+    margin: 0;
+    color: #475569;
+  }
+  .materials-index {
+    max-width: 1120px;
+    margin: 0 auto 18px;
+    padding: 0 24px 18px;
+    display: flex;
+    gap: 10px 18px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #dbe3ee;
+  }
+  .materials-index a {
+    color: #0f4c81;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 700;
+    font-size: 0.92rem;
+  }
+  .materials-list {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 6px 24px 64px;
+  }
+  .materials-note {
+    margin: 0 0 26px;
+    padding: 12px 16px;
+    border-left: 5px solid #c49a2c;
+    background: #fffdf7;
+    line-height: 1.8;
+    color: #475569;
+  }
+  .materials-category {
+    margin: 34px 0 44px;
+    padding-top: 16px;
+    border-top: 3px solid #183656;
+  }
+  .materials-category h2 {
+    font-size: 1.45rem;
+    line-height: 1.35;
+    margin: 0 0 10px;
+    color: #0f2742;
+  }
+  .materials-category p {
+    margin: 0 0 14px;
+    color: #64748b;
+    line-height: 1.8;
+  }
+  .materials-table-wrap {
+    overflow-x: auto;
+    background: transparent;
+  }
+  .materials-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+  .materials-table th {
+    background: #123453;
+    color: #fff;
+    text-align: left;
+    font-size: 0.86rem;
+    padding: 10px 12px;
+    border-right: 1px solid rgba(255, 255, 255, 0.16);
+    white-space: nowrap;
+  }
+  .materials-table td {
+    vertical-align: top;
+    padding: 12px;
+    border-bottom: 1px solid #dbe3ee;
+  }
+  .materials-table tr:nth-child(even) td {
+    background: #f8fafc;
+  }
+  .materials-table td:first-child {
+    font-weight: 800;
+    color: #0f2742;
+    white-space: nowrap;
+  }
+  .materials-table a {
+    font-weight: 800;
+    color: #0f4c81;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .materials-table small {
+    display: block;
+    color: #64748b;
+    line-height: 1.55;
+    margin-top: 3px;
+  }
+  .materials-primary-row td {
+    background: #f0fdf4;
+  }
+  .materials-pdf-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .materials-pdf-links a {
+    display: inline-flex;
+    padding: 5px 9px;
+    border-radius: 8px;
+    background: #ffffff;
+    border: 1px solid #86efac;
+    color: #14532d;
+    text-decoration: none;
+    font-size: 0.82rem;
+  }
+  .yokohama-brief {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 14px;
+    margin: 14px 0 18px;
+  }
+  .yokohama-brief-card {
+    background: #fff;
+    border: 1px solid #dbe3ee;
+    border-left: 5px solid #c49a2c;
+    border-radius: 0 10px 10px 0;
+    padding: 16px 18px;
+  }
+  .yokohama-brief-card strong {
+    display: block;
+    color: #0f2742;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 6px;
+  }
+  .yokohama-brief-card ul {
+    margin: 8px 0 0;
+    padding-left: 1.2em;
+    color: #475569;
+    line-height: 1.85;
+  }
+  .yokohama-brief-card li {
+    margin: 0 0 4px;
+  }
+  .materials-data-links {
+    margin-top: 30px;
+    padding-top: 18px;
+    border-top: 1px solid #dbe3ee;
+    color: #475569;
+  }
+  .materials-data-links a {
+    font-weight: 800;
+    color: #0f4c81;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  @media (max-width: 720px) {
+    .admin-materials-hero {
+      padding: 32px 18px 18px;
+    }
+    .materials-index {
+      padding: 0 18px 16px;
+    }
+    .materials-list {
+      padding: 4px 18px 48px;
+    }
+    .materials-table {
+      font-size: 0.84rem;
+    }
+    .materials-table th,
+    .materials-table td {
+      padding: 9px 10px;
+    }
+    .yokohama-brief {
+      grid-template-columns: 1fr;
+    }
+  }
+  .admin-materials-hero .admin-materials-kicker {
+    color: #f4e7a6;
+  }
+  .admin-materials-hero h1 {
+    color: #fff;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.32);
+  }
+  .admin-materials-subtitle {
+    color: #fff;
+  }
+  .admin-materials-hero
+    p:not(.admin-materials-kicker):not(.admin-materials-subtitle) {
+    color: rgba(255, 255, 255, 0.86);
+  }
+
+  /* Page-specific styles for administrative-materials.html */
+  .admin-materials-editorial .admin-materials-kicker {
+    text-transform: none;
+    letter-spacing: 0.04em;
+  }
+  .admin-materials-editorial .yokohama-brief {
+    display: block;
+  }
+  .admin-materials-editorial .yokohama-brief-card {
+    margin: 0;
+    padding: 22px 0;
+    background: transparent;
+    border: 0;
+    border-top: 1px solid #dbe3ee;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .admin-materials-editorial .yokohama-brief-card:last-child {
+    border-bottom: 1px solid #dbe3ee;
+  }
+  .admin-materials-editorial .materials-pdf-links {
+    display: block;
+  }
+  .admin-materials-editorial .materials-pdf-links a {
+    display: inline;
+    margin-right: 1em;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    color: #0f4c81;
+    text-decoration: underline;
+  }
+  .admin-materials-editorial main a:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}

@@ -22,663 +22,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=20260705-fixed-header-all-pages">
-<link href="/css/refine.css?v=hover-orange-20260629ccccc" rel="stylesheet"/>
-  <style>
-    :root {
-      --color-navy: var(--navy, #1e3a5f);
-      --color-navy-dark: #0a192f;
-      --color-gold: var(--gold, #d4af37);
-      --color-gold-light: var(--gold-lt, #f4e7a6);
-      --color-line: var(--line, #e5e7eb);
-      --color-text: var(--text, #1a1a1a);
-      --color-text-soft: var(--text-soft, #4b5563);
-      --color-surface-soft: #f8fafc;
-      --transition: var(--t, all .26s ease);
-    }
-
-    /* ===== ISSUE PAGE SHARED STYLES ===== */
-    .issue-hero {
-      background: linear-gradient(135deg, #0A192F 0%, #1A365D 55%, #1e3f7a 100%);
-      color: #fff;
-      padding: 80px 0 72px;
-      position: relative;
-      overflow: hidden;
-    }
-    .issue-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 65% 70% at 85% 35%, rgba(212,175,55,.16) 0%, transparent 60%);
-    }
-    .issue-hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-      background-size: 56px 56px;
-    }
-    .issue-hero-inner {
-      position: relative;
-      z-index: 1;
-      width: min(calc(100% - 40px), 1200px);
-      margin-inline: auto;
-      display: grid;
-      grid-template-columns: 1fr 320px;
-      gap: 40px;
-      align-items: center;
-    }
-    .issue-hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 14px;
-      border-radius: 999px;
-      background: rgba(212,175,55,.18);
-      border: 1px solid rgba(212,175,55,.35);
-      color: var(--color-gold-light);
-      font-size: .82rem;
-      font-weight: 800;
-      letter-spacing: .06em;
-      margin-bottom: 20px;
-    }
-    .issue-hero h1 {
-      font-family: 'Noto Serif JP', serif;
-      font-size: clamp(2rem, 3.8vw, 3.2rem);
-      font-weight: 900;
-      line-height: 1.25;
-      margin-bottom: 18px;
-    }
-    .issue-hero p {
-      color: rgba(255,255,255,.82);
-      font-size: 1.05rem;
-      line-height: 1.85;
-      max-width: 580px;
-    }
-    .issue-hero-toc {
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.13);
-      border-radius: 22px;
-      padding: 22px;
-    }
-    .issue-hero-toc .toc-label {
-      font-size: .75rem;
-      font-weight: 800;
-      letter-spacing: .07em;
-      text-transform: uppercase;
-      color: var(--color-gold-light);
-      margin-bottom: 12px;
-    }
-    .toc-link {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 12px;
-      border-radius: 10px;
-      text-decoration: none;
-      color: rgba(255,255,255,.88);
-      font-size: .88rem;
-      font-weight: 600;
-      transition: var(--transition);
-      margin-bottom: 4px;
-    }
-    .toc-link:hover { background: rgba(255,255,255,.1); }
-    .toc-link-num {
-      width: 22px;
-      height: 22px;
-      border-radius: 6px;
-      background: rgba(212,175,55,.22);
-      color: var(--color-gold-light);
-      display: grid;
-      place-items: center;
-      font-size: .74rem;
-      font-weight: 900;
-      flex-shrink: 0;
-    }
-
-    /* Content layout */
-    .issue-content {
-      width: min(calc(100% - 40px), 1200px);
-      margin-inline: auto;
-      padding: 72px 0 88px;
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 48px;
-      align-items: start;
-    }
-    .issue-sidebar {
-      position: sticky;
-      top: 100px;
-    }
-    .sidebar-nav {
-      background: #fff;
-      border: 1px solid var(--color-line);
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: var(--shadow-sm);
-    }
-    .sidebar-nav-title {
-      font-size: .8rem;
-      font-weight: 900;
-      letter-spacing: .06em;
-      color: var(--color-navy);
-      text-transform: uppercase;
-      margin-bottom: 14px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid var(--color-gold);
-    }
-    .sidebar-link {
-      display: block;
-      padding: 9px 12px;
-      border-radius: 10px;
-      text-decoration: none;
-      color: var(--color-text-soft);
-      font-size: .88rem;
-      font-weight: 600;
-      transition: var(--transition);
-      margin-bottom: 3px;
-    }
-    .sidebar-link:hover { background: rgba(26,54,93,.07); color: var(--color-navy); font-weight: 700; }
-    .sidebar-link.section-head { font-weight: 800; color: var(--color-navy); font-size: .9rem; margin-top: 10px; }
-    .sidebar-cta {
-      margin-top: 18px;
-      padding: 14px;
-      background: linear-gradient(135deg, var(--color-navy-dark), var(--color-navy));
-      border-radius: 16px;
-      text-align: center;
-    }
-    .sidebar-cta p { color: rgba(255,255,255,.8); font-size: .82rem; margin-bottom: 10px; }
-    .sidebar-cta a {
-      display: block;
-      padding: 10px;
-      border-radius: 10px;
-      background: var(--color-gold);
-      color: var(--color-navy-dark);
-      font-weight: 900;
-      font-size: .85rem;
-      text-decoration: none;
-    }
-
-    /* Article */
-    .issue-main { min-width: 0; }
-    .issue-section {
-      margin-bottom: 72px;
-      scroll-margin-top: 100px;
-    }
-    .section-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(26,54,93,.07);
-      color: var(--color-navy);
-      font-size: .78rem;
-      font-weight: 800;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-    .issue-section h2 {
-      font-family: 'Noto Serif JP', serif;
-      font-size: clamp(1.7rem, 2.8vw, 2.3rem);
-      color: var(--color-navy);
-      line-height: 1.28;
-      margin-bottom: 18px;
-      padding-bottom: 16px;
-      border-bottom: 3px solid var(--color-gold);
-    }
-    .issue-section h3 {
-      font-size: 1.18rem;
-      font-weight: 800;
-      color: var(--color-navy);
-      margin: 32px 0 12px;
-      padding-left: 14px;
-      border-left: 4px solid var(--color-gold);
-    }
-    .issue-section p {
-      color: var(--color-text);
-      line-height: 1.9;
-      margin-bottom: 16px;
-      font-size: 1.02rem;
-    }
-
-    /* Law quote */
-    .law-quote-block {
-      background: #F6F9FD;
-      border-left: 5px solid var(--color-navy);
-      border-radius: 0 16px 16px 0;
-      padding: 18px 22px;
-      margin: 20px 0;
-    }
-    .law-quote-block .lq-label {
-      font-size: .75rem;
-      font-weight: 800;
-      letter-spacing: .06em;
-      color: var(--color-navy);
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-    .law-quote-block p {
-      font-family: 'Noto Serif JP', serif;
-      font-size: .97rem;
-      color: var(--color-text);
-      line-height: 1.85;
-      margin: 0;
-    }
-
-    /* Alert blocks */
-    .alert-block {
-      display: flex;
-      gap: 16px;
-      padding: 18px 20px;
-      border-radius: 16px;
-      margin: 20px 0;
-    }
-    .alert-block.danger { background: #FFF5F5; border: 1px solid #FED7D7; border-left: 5px solid #B91C1C; }
-    .alert-block.warning { background: #FFFBEB; border: 1px solid #FDE68A; border-left: 5px solid #D97706; }
-    .alert-block.success { background: #F0FDF4; border: 1px solid #BBF7D0; border-left: 5px solid #15803D; }
-    .alert-block.info { background: #EFF6FF; border: 1px solid #BFDBFE; border-left: 5px solid #2563EB; }
-    .alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
-    .alert-block p { margin: 0; font-size: .96rem; color: var(--color-text); line-height: 1.75; }
-    .alert-block p + p { margin-top: 8px; }
-
-    /* Domino chain */
-    .domino-chain {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      margin: 24px 0;
-      position: relative;
-    }
-    .domino-item {
-      display: flex;
-      gap: 18px;
-      align-items: flex-start;
-      position: relative;
-    }
-    .domino-left {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex-shrink: 0;
-    }
-    .domino-dot {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      font-size: .9rem;
-      color: #fff;
-      flex-shrink: 0;
-      position: relative;
-      z-index: 1;
-    }
-    .domino-dot.illegal { background: linear-gradient(135deg, #B91C1C, #EF4444); }
-    .domino-dot.warning { background: linear-gradient(135deg, #C2410C, #F97316); }
-    .domino-dot.result { background: linear-gradient(135deg, #7C3AED, #8B5CF6); }
-    .domino-line {
-      width: 2px;
-      flex: 1;
-      background: linear-gradient(180deg, #EF4444, transparent);
-      min-height: 20px;
-      margin: 4px 0;
-    }
-    .domino-body {
-      background: #fff;
-      border: 1px solid var(--color-line);
-      border-radius: 16px;
-      padding: 16px 20px;
-      flex: 1;
-      margin-bottom: 18px;
-    }
-    .domino-body strong {
-      display: block;
-      font-size: .97rem;
-      color: var(--color-navy);
-      margin-bottom: 6px;
-    }
-    .domino-body p { margin: 0; font-size: .9rem; color: var(--color-text-soft); line-height: 1.7; }
-    .domino-law {
-      display: inline-flex;
-      margin-top: 8px;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(26,54,93,.07);
-      color: var(--color-navy);
-      font-size: .73rem;
-      font-weight: 700;
-    }
-
-    /* 5-law breakdown */
-    .law-breakdown-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-      margin: 24px 0;
-    }
-    .law-breakdown-card {
-      background: #fff;
-      border: 1px solid var(--color-line);
-      border-radius: 18px;
-      padding: 22px;
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
-    .law-breakdown-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-    .law-breakdown-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--color-navy), var(--color-gold));
-    }
-    .lbc-domain {
-      font-size: .72rem;
-      font-weight: 800;
-      letter-spacing: .06em;
-      color: var(--color-text-soft);
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-    .lbc-law {
-      font-size: 1rem;
-      font-weight: 900;
-      color: var(--color-navy);
-      margin-bottom: 10px;
-    }
-    .lbc-issue {
-      font-size: .88rem;
-      color: var(--color-text-soft);
-      line-height: 1.7;
-    }
-    .lbc-verdict {
-      display: inline-flex;
-      margin-top: 12px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: .74rem;
-      font-weight: 800;
-    }
-    .lbc-verdict.illegal { background: #FEE2E2; color: #B91C1C; }
-    .lbc-verdict.invalid { background: #FEF3C7; color: #92400E; }
-
-    /* Case law block */
-    .case-block {
-      background: linear-gradient(145deg, #F8FAFC, #F1F5F9);
-      border: 1px solid var(--color-line);
-      border-radius: 18px;
-      padding: 24px;
-      margin: 20px 0;
-    }
-    .case-block-head {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      margin-bottom: 14px;
-    }
-    .case-badge {
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(26,54,93,.1);
-      color: var(--color-navy);
-      font-size: .73rem;
-      font-weight: 800;
-      white-space: nowrap;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-    .case-name {
-      font-size: 1rem;
-      font-weight: 900;
-      color: var(--color-navy);
-      line-height: 1.4;
-    }
-    .case-body p { font-size: .93rem; color: var(--color-text); line-height: 1.8; margin-bottom: 8px; }
-    .case-point {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      padding: 10px 14px;
-      background: #fff;
-      border: 1px solid var(--color-line);
-      border-radius: 12px;
-      margin-top: 10px;
-      font-size: .88rem;
-      color: var(--color-text);
-      line-height: 1.7;
-    }
-    .case-point::before {
-      content: '→';
-      color: var(--color-gold);
-      font-weight: 900;
-      flex-shrink: 0;
-    }
-
-    /* Conclusion cards */
-    .conclusion-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      margin: 24px 0;
-    }
-    .conclusion-card {
-      border-radius: 18px;
-      padding: 20px;
-      border: 1px solid;
-    }
-    .conclusion-card.illegal {
-      background: #FFF5F5;
-      border-color: #FED7D7;
-      border-left: 5px solid #B91C1C;
-    }
-    .conclusion-card.invalid {
-      background: #FFFBEB;
-      border-color: #FDE68A;
-      border-left: 5px solid #D97706;
-    }
-    .conclusion-card.impossible {
-      background: #EFF6FF;
-      border-color: #BFDBFE;
-      border-left: 5px solid #2563EB;
-    }
-    .conclusion-card.denied {
-      background: #F0FDF4;
-      border-color: #BBF7D0;
-      border-left: 5px solid #15803D;
-    }
-    .cc-num {
-      font-size: .72rem;
-      font-weight: 800;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-    .conclusion-card.illegal .cc-num { color: #B91C1C; }
-    .conclusion-card.invalid .cc-num { color: #92400E; }
-    .conclusion-card.impossible .cc-num { color: #1D4ED8; }
-    .conclusion-card.denied .cc-num { color: #15803D; }
-    .cc-title { font-size: 1rem; font-weight: 900; color: var(--color-navy); margin-bottom: 8px; line-height: 1.4; }
-    .cc-body { font-size: .88rem; color: var(--color-text-soft); line-height: 1.7; }
-
-    /* Three-set requirement */
-    .three-set {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin: 28px 0 24px;
-    }
-    .three-set-item {
-      background: #ffffff;
-      border: 1px solid #d8e2ee;
-      border-top: 5px solid var(--color-gold);
-      border-radius: 16px;
-      padding: 24px 22px;
-      text-align: left;
-      color: var(--color-text);
-      box-shadow: 0 14px 34px rgba(15,39,66,.08);
-    }
-    .ts-num {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 46px;
-      height: 46px;
-      border-radius: 14px;
-      background: #0f2742;
-      border: 2px solid var(--color-gold);
-      font-size: 1.35rem;
-      font-weight: 900;
-      color: #ffffff;
-      line-height: 1;
-      margin-bottom: 16px;
-    }
-    .ts-title { font-size: 1rem; font-weight: 900; color: #0f2742; margin-bottom: 8px; line-height: 1.45; }
-    .ts-body { font-size: .88rem; color: #334155; line-height: 1.78; font-weight: 600; }
-
-    .yokohama-notice-feature {
-      margin: 30px 0 0;
-      padding: clamp(22px, 3vw, 30px);
-      background: #f0fdf4;
-      border: 1px solid #86efac;
-      border-left: 8px solid #15803d;
-      border-radius: 18px;
-      box-shadow: 0 16px 38px rgba(21,128,61,.10);
-    }
-    .ynf-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: #dcfce7;
-      color: #166534;
-      font-size: .74rem;
-      font-weight: 900;
-      letter-spacing: .07em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    .yokohama-notice-feature h4 {
-      margin: 0 0 10px;
-      color: #0f2742;
-      font-family: 'Noto Serif JP', serif;
-      font-size: clamp(1.08rem, 2vw, 1.35rem);
-      line-height: 1.45;
-      font-weight: 900;
-    }
-    .yokohama-notice-feature p {
-      margin: 0 0 14px;
-      color: #1f2937;
-      line-height: 1.9;
-      font-size: .96rem;
-    }
-    .ynf-points {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      list-style: none;
-      padding: 0;
-      margin: 16px 0 18px;
-    }
-    .ynf-points li {
-      background: #ffffff;
-      border: 1px solid #bbf7d0;
-      border-radius: 12px;
-      padding: 11px 13px;
-      color: #14532d;
-      font-size: .86rem;
-      line-height: 1.65;
-      font-weight: 800;
-    }
-    .ynf-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .ynf-actions a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 40px;
-      padding: 9px 15px;
-      border-radius: 10px;
-      background: #ffffff;
-      border: 1px solid #16a34a;
-      color: #14532d;
-      text-decoration: none;
-      font-size: .87rem;
-      font-weight: 900;
-      line-height: 1.4;
-      transition: var(--transition);
-    }
-    .ynf-actions a:first-child {
-      background: #15803d;
-      color: #ffffff;
-    }
-    .ynf-actions a:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 22px rgba(21,128,61,.14);
-    }
-
-    /* Related links */
-    .related-links-section {
-      background: var(--color-surface-soft);
-      border-radius: 20px;
-      padding: 28px;
-      margin-top: 48px;
-    }
-    .related-links-title { font-size: 1rem; font-weight: 900; color: var(--color-navy); margin-bottom: 16px; }
-    .related-link-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-    .related-link-card {
-      background: #fff;
-      border: 1px solid var(--color-line);
-      border-radius: 14px;
-      padding: 16px;
-      text-decoration: none;
-      color: inherit;
-      transition: var(--transition);
-    }
-    .related-link-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
-    .related-link-card .rlc-label { font-size: .72rem; font-weight: 800; letter-spacing: .05em; color: var(--color-text-soft); text-transform: uppercase; margin-bottom: 6px; }
-    .related-link-card strong { display: block; font-size: .93rem; color: var(--color-navy); line-height: 1.4; margin-bottom: 4px; }
-    .related-link-card span { font-size: .82rem; color: var(--color-text-soft); }
-
-    @media (max-width: 1024px) {
-      .issue-content { grid-template-columns: 1fr; }
-      .issue-sidebar { position: static; }
-      .issue-hero-inner { grid-template-columns: 1fr; }
-      .issue-hero-toc { display: none; }
-    }
-    @media (max-width: 768px) {
-      .law-breakdown-grid { grid-template-columns: 1fr; }
-      .conclusion-grid { grid-template-columns: 1fr; }
-      .three-set { grid-template-columns: 1fr; }
-      .ynf-points { grid-template-columns: 1fr; }
-      .ynf-actions a { width: 100%; }
-      .related-link-grid { grid-template-columns: 1fr; }
-    }
-
-    .page-hero{position:relative;overflow:hidden;}
-    .page-hero-bg-img{position:absolute;inset:0;z-index:0;}
-    .page-hero-bg-img img{width:100%;height:100%;object-fit:cover;filter:brightness(1.05);}
-    .page-hero-bg-img::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(5,17,31,.32) 0%,rgba(5,17,31,.14) 60%,rgba(5,17,31,.05) 100%);}
-    .page-hero-inner{position:relative;z-index:1;}
-  
-    /* ↓ Photo hero overrides — keep white text on photo background ↓ */
-    .page-hero{background:transparent!important;border-top:none!important;border-bottom:none!important}
-    .page-hero h1{color:#fff!important}
-    .page-hero h1 em{color:var(--gold-lt)!important}
-    .page-hero p{color:rgba(255,255,255,.88)!important}
-    .page-hero-kicker{background:rgba(212,175,55,.18)!important;border:1px solid rgba(212,175,55,.4)!important;color:var(--gold-lt)!important}
-    .hero-actions .btn-outline{color:#fff!important;border-color:rgba(255,255,255,.5)!important}
-    .hero-actions .btn-outline:hover{background:rgba(255,255,255,.12)!important;border-color:rgba(255,255,255,.8)!important}
-  </style>
+  <link rel="stylesheet" href="/css/site.css?v=20260719">
+<link href="/css/editorial.css?v=20260719" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/pages/membership.css?v=20260719">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
@@ -709,128 +55,23 @@
 
 
 
-<link rel="stylesheet" href="/css/hover-orange.css?v=20260629-hero22-hero22">
+<link rel="stylesheet" href="/css/interactions.css?v=20260719">
 
 
 
 
 
-<style id="final-hero-layout-fix">
-html,body{overflow-x:hidden!important}
-.support-strip{background:linear-gradient(90deg,#0a192f 0%,#1e3a5f 58%,#2d5a8e 100%)!important;color:#fff!important;border-bottom:1px solid rgba(212,175,55,.42)!important}
-.support-strip-inner,.support-strip-text{color:#fff!important}
-.site-header{background:linear-gradient(90deg,#0a192f 0%,#1e3a5f 58%,#2d5a8e 100%)!important;border-bottom:3px solid #d4af37!important}
-.site-header .nav-container{background:transparent!important}
-.site-header .logo,.site-header .logo span,.site-header .nav-link{color:#fff!important}
-.site-header .hamburger span{background:#fff!important}
-.breadcrumb-bar{display:none!important}
-.page-hero--photo{display:block!important;position:relative!important;width:100%!important;max-width:none!important;min-height:340px!important;margin:0!important;padding:0!important;overflow:hidden!important;background:#0a192f!important;border:0!important;color:#fff!important}
-.page-hero--photo .page-hero-bg-img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:0!important}
-.page-hero--photo .page-hero-bg-img img{display:block!important;width:100%!important;height:100%!important;min-height:340px!important;object-fit:cover!important}
-.page-hero--photo .page-hero-bg-img::after{content:""!important;position:absolute!important;inset:0!important;background:linear-gradient(90deg,rgba(5,17,31,.78) 0%,rgba(5,17,31,.52) 48%,rgba(5,17,31,.18) 100%)!important}
-.page-hero--photo> :not(.page-hero-bg-img){position:relative!important;z-index:1!important;width:min(calc(100% - 40px),1080px)!important;max-width:1080px!important;margin-left:auto!important;margin-right:auto!important;padding-top:68px!important;padding-bottom:74px!important;color:#fff!important}
-.page-hero--photo .page-hero-inner,.page-hero--photo .issue-hero-inner,.page-hero--photo .journal-hero-inner{position:relative!important;z-index:1!important;width:min(calc(100% - 40px),1080px)!important;max-width:1080px!important;margin-left:auto!important;margin-right:auto!important;padding-top:68px!important;padding-bottom:74px!important;color:#fff!important}
-.page-hero--photo h1,.page-hero--photo p,.page-hero--photo .section-lead{color:#fff!important;text-shadow:0 2px 12px rgba(0,0,0,.34)!important}
-.page-hero--photo h1 em{color:#f4e7a6!important}
-@media(max-width:760px){.page-hero--photo{min-height:300px!important}.page-hero--photo .page-hero-bg-img img{min-height:300px!important}.page-hero--photo> :not(.page-hero-bg-img),.page-hero--photo .page-hero-inner,.page-hero--photo .issue-hero-inner,.page-hero--photo .journal-hero-inner{width:min(calc(100% - 28px),1080px)!important;padding-top:44px!important;padding-bottom:52px!important}}
-</style>
+<link rel="stylesheet" href="/css/shared/editorial-page-common.css?v=20260719">
 
-<style id="membership-editorial-fix">
-.issue-hero-inner{grid-template-columns:minmax(0,1fr)!important;max-width:920px!important}
-.issue-hero-toc{display:none!important}
-.issue-hero-eyebrow,.section-eyebrow{text-transform:none!important;letter-spacing:.03em!important;border-radius:3px!important}
-</style>
 
-<style id="membership-editorial-20260710">
-.membership-editorial{background:#fff!important}
-.membership-editorial .issue-hero-inner,
-.membership-editorial .issue-content{grid-template-columns:1fr!important;max-width:920px!important}
-.membership-editorial .issue-hero-eyebrow,
-.membership-editorial .section-eyebrow,
-.membership-editorial .section-kicker{display:none!important}
-.membership-editorial .issue-main figure,
-.membership-editorial .issue-main>svg{display:none!important}
-.membership-editorial .issue-section{margin:0!important;padding:42px 0!important;border-bottom:1px solid #cfd8e2!important}
-.membership-editorial .issue-section h2{border-bottom:0!important;padding-bottom:0!important}
-.membership-editorial .law-breakdown-grid,
-.membership-editorial .conclusion-grid,
-.membership-editorial .three-set,
-.membership-editorial .ynf-points{display:block!important}
-.membership-editorial .law-breakdown-card,
-.membership-editorial .conclusion-card,
-.membership-editorial .three-set-item,
-.membership-editorial .case-block,
-.membership-editorial .yokohama-notice-feature,
-.membership-editorial .alert-block{
-  margin:0!important;
-  padding:22px 0!important;
-  border:0!important;
-  border-bottom:1px solid #dbe4ee!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-  background:#fff!important;
-}
-.membership-editorial .lbc-verdict,
-.membership-editorial .case-badge,
-.membership-editorial .ynf-label{
-  padding:0!important;
-  background:transparent!important;
-  color:var(--color-navy)!important;
-  border-radius:0!important;
-}
-.membership-editorial .case-block-head{border-radius:0!important}
-.membership-editorial .case-body{padding:18px 0 0!important}
-.membership-editorial .case-point{border-radius:0!important}
-.membership-editorial .ynf-actions a,
-.membership-editorial .btn-navy,
-.membership-editorial .btn-soft{
-  display:inline!important;
-  padding:0!important;
-  background:transparent!important;
-  color:var(--color-navy)!important;
-  border:0!important;
-  border-radius:0!important;
-  text-decoration:underline!important;
-  text-underline-offset:.18em!important;
-}
-.membership-editorial .ynf-actions{gap:8px 20px!important}
-.membership-editorial .faq-list,
-.membership-editorial details{border-radius:0!important}
-.membership-editorial details{background:#fff!important}
-.membership-editorial details summary{padding-left:0!important;padding-right:0!important}
-.membership-editorial details>div{padding-left:0!important;padding-right:0!important}
-.membership-editorial .issue-content+section>div>div:last-child{display:none!important}
-</style>
 
-<style id="membership-residual-editorial-20260710">
-.membership-editorial .domino-chain{border-top:1px solid #dbe4ee!important}
-.membership-editorial .domino-item{
-  display:grid!important;
-  grid-template-columns:38px minmax(0,1fr)!important;
-  gap:14px!important;
-  padding:20px 0!important;
-  border-bottom:1px solid #dbe4ee!important;
-}
-.membership-editorial .domino-line{display:none!important}
-.membership-editorial .domino-dot{
-  width:32px!important;
-  height:32px!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-.membership-editorial .domino-body{
-  padding:0!important;
-  border:0!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-  background:#fff!important;
-}
-.membership-editorial .domino-law{padding:0!important;background:transparent!important;border-radius:0!important}
-.membership-editorial .issue-content+section>div>div:nth-of-type(2){border-radius:0!important;border-left:0!important;border-right:0!important}
-</style>
+
+
+
+<link rel="stylesheet" href="/css/inline-utilities.css?v=20260719">
 </head>
 <body class="membership-editorial">
-<aside style="background:#fff4d6;border-bottom:1px solid #e4c46a;padding:12px 20px;text-align:center;font-weight:800"><a href="/pta-membership-optin.html">最重要資料：PTA加入はオプトイン以外では成立しない — 12ページPDF原版と図解を読む</a></aside>
+<aside class="u-1d511ad56e"><a href="/pta-membership-optin.html">最重要資料：PTA加入はオプトイン以外では成立しない — 12ページPDF原版と図解を読む</a></aside>
 
   
 <div class="support-strip" role="complementary" aria-label="活動支援のお願い">
@@ -990,7 +231,7 @@ html,body{overflow-x:hidden!important}
 
     <!-- Main -->
     <main class="issue-main">
-      <section class="issue-section" style="margin-bottom:48px">
+      <section class="issue-section u-5563c524ef">
         <h2>制度として確認すべきこと</h2>
         <p>PTAは学校とは別の団体であり、学校への入学、在籍、進級、PTAからの一方的な通知、保護者の沈黙だけで会員関係を発生させることはできません。会員管理制度としては、会則、会費、活動内容、退会方法を示し、加入者本人の申込みとPTAの承諾を客観的な記録として残す必要があります。</p>
         <p>後日の訴訟では、会費納入、活動参加、説明内容等から個別に黙示の合意や追認が争われる場合があります。しかし、事後的な証拠評価は、全保護者をあらかじめ会員扱いする制度の根拠にはなりません。制度設計と個別紛争の立証を分けて考えます。</p>
@@ -1273,7 +514,7 @@ html,body{overflow-x:hidden!important}
             <div class="case-point">入会意思と個人情報利用・提供への選択が、項目と記録として区別されているか。利用目的、共有先、保存期間は説明されているか。</div>
             <div class="case-point">PTA会費の請求・引落しが、入会申込の前に行われていないか。学校徴収金と同じ文書・口座で扱っていないか。</div>
             <div class="case-point">学校が配布、回収、学校保有情報の利用・提供、連絡ツール配信、未納確認に関与している場合、その校務・服務・情報利用・決裁の根拠文書はあるか。</div>
-            <p><a href="guideline.html#tpl-board-inquiry" class="btn-navy" style="text-decoration:none;display:inline-flex;margin-top:10px">学校・教育委員会への照会書を使う</a></p>
+            <p><a href="guideline.html#tpl-board-inquiry" class="btn-navy u-6fc6370c11">学校・教育委員会への照会書を使う</a></p>
           </div>
         </div>
 
@@ -1297,68 +538,68 @@ html,body{overflow-x:hidden!important}
   </div>
 
     <!-- ===== FAQ：よくある疑問 ===== -->
-    <section style="background:var(--bg);padding:72px 0">
-      <div style="width:min(calc(100% - 40px),860px);margin-inline:auto">
+    <section class="u-f202dd4558">
+      <div class="u-9a9e41516c">
         <div class="section-kicker">FAQ</div>
         <h2 class="section-title">よくある疑問</h2>
-        <div style="display:flex;flex-direction:column;gap:0;margin-top:32px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
+        <div class="u-9cb8fb5324">
 
-          <details style="border-bottom:1px solid var(--line)">
-            <summary style="padding:18px 22px;cursor:pointer;font-weight:800;font-size:.97rem;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center">
+          <details class="u-d94f1d9ea7">
+            <summary class="u-880ef74740">
               「入学と同時に自動でPTAに入ります」と説明されました。これだけで入会根拠になりますか？
-              <span style="color:var(--gold);flex-shrink:0;font-size:1.1rem">▼</span>
+              <span class="u-2524841df6">▼</span>
             </summary>
-            <div style="padding:0 22px 18px;font-size:.93rem;color:var(--text);line-height:1.9;background:#fff">
+            <div class="u-ae1840af47">
               その説明だけでは、入会契約の根拠として十分か確認が必要です。PTAへの入会は契約行為であり、民法第522条の「申込みと承諾」が必要です。入学という事実は、入会の申込みや承諾とは別に確認されるべき事情です。一方、会費納入などの具体的事情から黙示の合意が認定される場合もあるため、加入意思の記録を早めに確認してください。
             </div>
           </details>
 
-          <details style="border-bottom:1px solid var(--line)">
-            <summary style="padding:18px 22px;cursor:pointer;font-weight:800;font-size:.97rem;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center">
+          <details class="u-d94f1d9ea7">
+            <summary class="u-880ef74740">
               「断らなければ会員」という書類が届きました。問題がありますか？
-              <span style="color:var(--gold);flex-shrink:0;font-size:1.1rem">▼</span>
+              <span class="u-2524841df6">▼</span>
             </summary>
-            <div style="padding:0 22px 18px;font-size:.93rem;color:var(--text);line-height:1.9;background:#fff">
+            <div class="u-ae1840af47">
               入会契約の根拠を後から確認しにくい方式です。民法上、沈黙だけから当然に承諾があったとすることはできませんが、会費納入などの事情から黙示の合意が認定される場合もあります。公立学校が保有する名簿を前提にしたオプトアウト方式では、個人情報の利用目的・提供先・本人同意と、誰がいつ入会を申し込んだのかを分けて記録する必要があります。
             </div>
           </details>
 
-          <details style="border-bottom:1px solid var(--line)">
-            <summary style="padding:18px 22px;cursor:pointer;font-weight:800;font-size:.97rem;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center">
+          <details class="u-d94f1d9ea7">
+            <summary class="u-880ef74740">
               入会届を出した覚えがないのに会費が引き落とされています。返金を求められますか？
-              <span style="color:var(--gold);flex-shrink:0;font-size:1.1rem">▼</span>
+              <span class="u-2524841df6">▼</span>
             </summary>
-            <div style="padding:0 22px 18px;font-size:.93rem;color:var(--text);line-height:1.9;background:#fff">
+            <div class="u-ae1840af47">
               返還請求の対象になり得ますが、入会届の有無だけで結論は決まりません。会費納入や活動参加などから黙示の合意が認定されるかを含め、入会記録、徴収根拠、返金規定、時効、学校の関与範囲を確認したうえで、PTAや学校に書面で照会するのが安全です。
             </div>
           </details>
 
-          <details style="border-bottom:1px solid var(--line)">
-            <summary style="padding:18px 22px;cursor:pointer;font-weight:800;font-size:.97rem;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center">
+          <details class="u-d94f1d9ea7">
+            <summary class="u-880ef74740">
               PTAを退会したら子供が不利益を受けますか？
-              <span style="color:var(--gold);flex-shrink:0;font-size:1.1rem">▼</span>
+              <span class="u-2524841df6">▼</span>
             </summary>
-            <div style="padding:0 22px 18px;font-size:.93rem;color:var(--text);line-height:1.9;background:#fff">
+            <div class="u-ae1840af47">
               学校教育上の取扱いをPTA加入状況によって変えることは、学校とPTAの区分や児童生徒への公平な対応の観点から問題です。PTA独自の事業や給付については、実施主体、目的、費用負担、学校行事との関係、子どもへの心理的影響を具体的に確認します。差が生じた場合は、誰が決定したのかを含めて記録し、学校・PTA・教育委員会へ文書で確認します。
             </div>
           </details>
 
-          <details style="border-bottom:1px solid var(--line)">
-            <summary style="padding:18px 22px;cursor:pointer;font-weight:800;font-size:.97rem;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center">
+          <details class="u-d94f1d9ea7">
+            <summary class="u-880ef74740">
               PTAの入会には書面の入会届が必ず必要ですか？
-              <span style="color:var(--gold);flex-shrink:0;font-size:1.1rem">▼</span>
+              <span class="u-2524841df6">▼</span>
             </summary>
-            <div style="padding:0 22px 18px;font-size:.93rem;color:var(--text);line-height:1.9;background:#fff">
+            <div class="u-ae1840af47">
               紙の入会届そのものが常に契約成立要件とは限りませんが、会員管理制度としては、本人の申込みとPTAの承諾を客観的に確認できる記録が必要です。紙、署名、電子フォーム、オンライン申込ログ等を利用できます。口頭申込みを用いる場合も、日時、説明内容、申込者、受理者を記録します。
             </div>
           </details>
 
           <details>
-            <summary style="padding:18px 22px;cursor:pointer;font-weight:800;font-size:.97rem;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center">
+            <summary class="u-880ef74740">
               PTAに加入しないと誰かが困りますか？
-              <span style="color:var(--gold);flex-shrink:0;font-size:1.1rem">▼</span>
+              <span class="u-2524841df6">▼</span>
             </summary>
-            <div style="padding:0 22px 18px;font-size:.93rem;color:var(--text);line-height:1.9;background:#fff">
+            <div class="u-ae1840af47">
               PTAは任意団体であり、非加入は任意加入原則に照らして正当な選択です。学校がPTAに依存している構造がある場合、その解決は個々の保護者に加入を迫ることではなく、学校とPTAの役割分担を見直すことです。「誰かが困るから加入する」という説明だけでは、不適切な構造を温存するおそれがあります。
             </div>
           </details>

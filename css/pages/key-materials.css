@@ -1,0 +1,200 @@
+@layer page {
+  /* Consolidated page styles for key-materials.html */
+  /* Page-specific styles for key-materials.html */
+  .km-page {
+    background: #f4f6f9;
+  }
+  .km-hero {
+    background: linear-gradient(135deg, #0a192f, #1e3a5f 65%, #9a3412);
+    color: #fff;
+    padding: 72px 0 58px;
+  }
+  .km-wrap {
+    width: min(calc(100% - 40px), 1040px);
+    margin: auto;
+  }
+  .km-hero h1 {
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(1.85rem, 4vw, 3rem);
+    margin: 0 0 14px;
+  }
+  .km-hero p {
+    max-width: 840px;
+    line-height: 1.95;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+  }
+  .km-list {
+    counter-reset: item;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 30px 0 86px;
+  }
+  .km-card {
+    counter-increment: item;
+    background: #fff;
+    border: 1px solid #dbe4ee;
+    border-radius: 18px;
+    padding: 24px 26px;
+    box-shadow: 0 10px 28px rgba(5, 17, 31, 0.06);
+    position: relative;
+  }
+  .km-card::before {
+    content: counter(item);
+    position: absolute;
+    left: -12px;
+    top: 22px;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background: #f97316;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+  }
+  .km-card h2 {
+    font-family: "Noto Serif JP", serif;
+    color: #1e3a5f;
+    margin: 0 0 10px;
+    padding-left: 12px;
+  }
+  .km-card h3 {
+    color: #1e3a5f;
+    margin: 18px 0 6px;
+  }
+  .km-card p {
+    line-height: 1.95;
+    margin: 0 0 12px;
+    color: #26364a;
+  }
+  .km-card ul {
+    line-height: 1.9;
+    color: #26364a;
+  }
+  .km-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .km-links a {
+    display: inline-flex;
+    border: 1px solid #fed7aa;
+    background: #fff7ed;
+    color: #c2410c;
+    border-radius: 999px;
+    padding: 7px 13px;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 0.86rem;
+  }
+  .km-note {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-left: 5px solid #f97316;
+    border-radius: 0 14px 14px 0;
+    padding: 17px 19px;
+    margin-top: 20px;
+    line-height: 1.9;
+  }
+  .km-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+  }
+  .km-nav a {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 999px;
+    padding: 9px 15px;
+    text-decoration: none;
+    font-weight: 900;
+  }
+  .km-intro {
+    background: #fff;
+    border: 1px solid #dbe4ee;
+    border-radius: 18px;
+    padding: 26px 28px;
+    margin: 38px 0 0;
+    box-shadow: 0 10px 28px rgba(5, 17, 31, 0.06);
+  }
+  .km-intro h2 {
+    font-family: "Noto Serif JP", serif;
+    color: #1e3a5f;
+    margin: 0 0 12px;
+  }
+  .km-intro p,
+  .km-intro li {
+    line-height: 1.95;
+    color: #26364a;
+  }
+  .km-table {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 14px;
+  }
+  .km-box {
+    background: #f8fafc;
+    border: 1px solid #dbe4ee;
+    border-radius: 14px;
+    padding: 16px;
+  }
+  .km-box strong {
+    display: block;
+    color: #1e3a5f;
+    margin-bottom: 5px;
+  }
+  @media (max-width: 760px) {
+    .km-card {
+      padding: 22px 18px 22px 24px;
+    }
+    .km-card::before {
+      left: -8px;
+    }
+    .km-table {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Page-specific styles for key-materials.html */
+  .km-page {
+    background: #fff;
+  }
+  .km-wrap {
+    width: min(calc(100% - 40px), 920px);
+  }
+  .km-list {
+    gap: 0;
+    padding: 48px 0 86px;
+    border-top: 2px solid #1e3a5f;
+  }
+  .km-card {
+    padding: 30px 0;
+    border: 0;
+    border-bottom: 1px solid #dbe4ee;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .km-card::before {
+    display: none;
+  }
+  .km-card h2 {
+    padding-left: 0;
+  }
+  .km-links {
+    gap: 8px 18px;
+  }
+  .km-links a {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #174f7d;
+    text-decoration: underline;
+  }
+}

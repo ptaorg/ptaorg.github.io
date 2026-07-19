@@ -1,0 +1,219 @@
+@layer page {
+  /* Consolidated page styles for evidence-checklist.html */
+  /* Page-specific styles for evidence-checklist.html */
+  .ec-page {
+    background: #f4f6f9;
+  }
+  .ec-hero {
+    background: linear-gradient(135deg, #0a192f, #1e3a5f 62%, #0f766e);
+    color: #fff;
+    padding: 72px 0 58px;
+  }
+  .ec-wrap {
+    width: min(calc(100% - 40px), 1040px);
+    margin: auto;
+  }
+  .ec-hero h1 {
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(1.85rem, 4vw, 3rem);
+    margin: 0 0 14px;
+  }
+  .ec-hero p {
+    max-width: 840px;
+    line-height: 1.95;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+  }
+  .ec-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    padding: 24px 0 38px;
+  }
+  .ec-card {
+    background: #fff;
+    border: 1px solid #dbe4ee;
+    border-left: 5px solid #f97316;
+    border-radius: 0 16px 16px 0;
+    padding: 22px;
+    box-shadow: 0 10px 28px rgba(5, 17, 31, 0.06);
+  }
+  .ec-card h2 {
+    font-family: "Noto Serif JP", serif;
+    color: #1e3a5f;
+    margin: 0 0 10px;
+  }
+  .ec-card ul {
+    line-height: 1.85;
+    margin: 0 0 0 1.2em;
+    color: #26364a;
+  }
+  .ec-card li {
+    margin: 0.25em 0;
+  }
+  .ec-note {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-left: 5px solid #f97316;
+    border-radius: 0 14px 14px 0;
+    padding: 17px 19px;
+    margin: 0 0 26px;
+    line-height: 1.9;
+  }
+  .ec-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+  }
+  .ec-links a {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 999px;
+    padding: 9px 15px;
+    text-decoration: none;
+    font-weight: 900;
+  }
+  .ec-section {
+    background: #fff;
+    border: 1px solid #dbe4ee;
+    border-radius: 18px;
+    padding: 26px 28px;
+    margin: 28px 0;
+    box-shadow: 0 10px 28px rgba(5, 17, 31, 0.06);
+  }
+  .ec-section h2 {
+    font-family: "Noto Serif JP", serif;
+    color: #1e3a5f;
+    margin: 0 0 12px;
+    border-bottom: 3px solid #d4af37;
+    padding-bottom: 10px;
+  }
+  .ec-section p,
+  .ec-section li {
+    line-height: 1.95;
+    color: #26364a;
+  }
+  .ec-flow {
+    counter-reset: flow;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 16px 0 0;
+    padding: 0;
+  }
+  .ec-flow li {
+    counter-increment: flow;
+    list-style: none;
+    background: #f8fafc;
+    border: 1px solid #dbe4ee;
+    border-radius: 14px;
+    padding: 14px 16px 14px 54px;
+    position: relative;
+  }
+  .ec-flow li::before {
+    content: counter(flow);
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    background: #1e3a5f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+  }
+  .ec-matrix {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .ec-box {
+    background: #f8fafc;
+    border: 1px solid #dbe4ee;
+    border-radius: 14px;
+    padding: 16px;
+  }
+  .ec-box strong {
+    display: block;
+    color: #1e3a5f;
+    margin-bottom: 6px;
+  }
+  @media (max-width: 900px) {
+    .ec-matrix {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 780px) {
+    .ec-list {
+      grid-template-columns: 1fr;
+    }
+    .ec-card,
+    .ec-section {
+      padding: 20px;
+    }
+  }
+
+  /* Page-specific styles for evidence-checklist.html */
+  .ec-page {
+    background: #fff;
+  }
+  .ec-wrap {
+    width: min(calc(100% - 40px), 920px);
+  }
+  .ec-list {
+    display: block;
+    padding: 0;
+    border-top: 2px solid #1e3a5f;
+  }
+  .ec-card,
+  .ec-section,
+  .ec-box,
+  .ec-note {
+    border-radius: 0;
+    box-shadow: none;
+    background: #fff;
+  }
+  .ec-card {
+    padding: 26px 0;
+    border: 0;
+    border-bottom: 1px solid #dbe4ee;
+  }
+  .ec-section {
+    margin: 0;
+    padding: 38px 0;
+    border: 0;
+    border-bottom: 1px solid #cfd8e2;
+  }
+  .ec-section h2 {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  .ec-flow {
+    gap: 0;
+    border-top: 1px solid #dbe4ee;
+  }
+  .ec-flow li {
+    padding: 18px 0 18px 42px;
+    background: #fff;
+    border: 0;
+    border-bottom: 1px solid #dbe4ee;
+    border-radius: 0;
+  }
+  .ec-flow li::before {
+    left: 0;
+    border-radius: 0;
+  }
+  .ec-matrix {
+    display: block;
+    border-top: 1px solid #dbe4ee;
+  }
+  .ec-box {
+    padding: 18px 0;
+    border: 0;
+    border-bottom: 1px solid #dbe4ee;
+  }
+}

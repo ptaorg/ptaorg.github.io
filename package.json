@@ -15,8 +15,6 @@
     "generate:archive": "node scripts/generate-national-archive.js",
     "generate:sitemap": "node scripts/generate-sitemap.js",
     "generate:search": "node scripts/generate-search-index.js",
-    "maintenance:ensure-home-legacy-role-anchor": "node scripts/ensure-home-legacy-role-anchor.js",
-    "maintenance:update-home-date": "node scripts/update-home-last-updated.js",
     "maintenance:bump-site-js:dry-run": "node scripts/bump-site-js-version.js 90 --dry-run",
     "maintenance:bump-site-js": "node scripts/bump-site-js-version.js",
     "maintenance:bump-site-js:check": "npm run maintenance:bump-site-js -- 90 && npm run check:site-js-version",

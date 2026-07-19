@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<link rel="stylesheet" href="/css/open-content.css?v=20260719">
+<link rel="stylesheet" href="/css/document.css?v=20260719">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>全国資料館｜自治体別PTA実物文書アーカイブ</title>
@@ -19,93 +19,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin>
-<style>
-:root{--navy:#0b2a4a;--gold:#d4af37;--line:#d8dee8;--bg:#f4f7fb;--text:#24364a;--muted:#64748b;--red:#e60012;--yellow:#facc15;--orange:#c2410c;--blue:#064f88}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:'Noto Sans JP',-apple-system,BlinkMacSystemFont,'Yu Gothic',Meiryo,sans-serif;line-height:1.9}a{color:var(--blue);text-decoration-thickness:2px;text-underline-offset:3px}.wrap{width:min(100% - 32px,1120px);margin:auto}.topbar{background:var(--navy);color:#fff;padding:10px 0;font-size:.9rem}.topbar .wrap{display:flex;gap:14px;align-items:center;justify-content:center}.topbar b{background:var(--gold);color:var(--navy);border-radius:999px;padding:2px 10px}.header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:2000}.nav{height:64px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;color:var(--navy);text-decoration:none}.navlinks{display:flex;gap:16px;font-weight:800;font-size:.92rem}.navlinks a{text-decoration:none;color:var(--navy)}.hero{background:linear-gradient(135deg,#09213f,#123d67);color:#fff;padding:62px 0;border-bottom:6px solid var(--gold)}.hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(1.95rem,3.7vw,3rem);line-height:1.22;margin:0 0 14px}.hero p{max-width:920px;color:rgba(255,255,255,.92);font-size:1rem}.kicker{font-weight:900;letter-spacing:.12em;color:#8a6700;margin-bottom:8px;font-size:.92rem}.hero .kicker{color:#f8e39b}.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-flex;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:900}.btn.gold{background:var(--gold);color:var(--navy)}.btn.outline{border:1px solid rgba(255,255,255,.6);color:#fff}.section{padding:48px 0;border-bottom:1px solid var(--line)}.section.white{background:#fff}.title{font-family:'Noto Serif JP',serif;color:var(--navy);font-size:clamp(1.35rem,2.05vw,1.95rem);line-height:1.45;margin:0 0 12px;font-weight:800;letter-spacing:.01em}.lead{max-width:930px;line-height:2.05;font-size:.98rem}.map-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:28px;align-items:start;margin-top:26px}.map{height:520px;border:1px solid var(--line);border-radius:18px;background:#e5e7eb;box-shadow:0 12px 30px rgba(5,17,31,.08);overflow:hidden}.map-side{display:grid;gap:12px}.side-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}.side-card strong{display:block;color:var(--navy);font-size:1.1rem}.side-card span{color:var(--muted);font-size:.88rem}.archive-list{display:block;margin-top:26px}.city-visible{background:transparent;padding:24px 0 8px;border-top:1px solid #e5e7eb}.archive-list>.city-visible:first-child{border-top:0;padding-top:0}.city-fold{border:0;border-radius:0;background:transparent;box-shadow:none;overflow:visible;margin:0 0 20px;padding:0 0 22px;border-bottom:1px solid #e5e7eb}.city-fold summary{cursor:pointer;list-style:none;padding:10px 0 12px 14px;background:transparent;border-left:4px solid var(--gold);font-weight:900;color:var(--navy);display:flex;justify-content:space-between;align-items:center;gap:12px}.city-fold summary::-webkit-details-marker{display:none}.city-fold summary::after{content:'開く';background:transparent;color:var(--navy);border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:.78rem;white-space:nowrap}.city-fold[open] summary::after{content:'閉じる'}.fold-body{padding:18px 0 0}.notice{background:#fff7ed;border:1px solid #fed7aa;border-left:8px solid #ea580c;border-radius:0 16px 16px 0;padding:20px 24px;margin:0 0 22px;line-height:2.05}.notice strong{color:#9a3412}.principle{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}.box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 8px 20px rgba(5,17,31,.04)}.box h3{margin:0 0 10px;color:var(--navy);font-size:1.08rem}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin:24px 0}.stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}.stat strong{display:block;font-size:1.45rem;color:var(--navy);line-height:1}.stat span{font-size:.78rem;font-weight:800;color:var(--muted)}.stat.red{background:var(--red);border-color:var(--red)}.stat.red strong,.stat.red span{color:#fff}.stat.yellow{background:var(--yellow);border-color:var(--yellow)}.badge{display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:.75rem;font-weight:900;white-space:nowrap}.bad{background:var(--red);color:#fff}.watch{background:var(--yellow);color:var(--navy)}.info{background:#eef7ff;color:#0b376d}.school-groups{display:grid;grid-template-columns:1fr;gap:26px}.group{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}.group h3{font-family:'Noto Serif JP',serif;color:var(--navy);margin:0 0 16px;padding-bottom:10px;border-bottom:2px solid rgba(212,175,55,.45);font-size:1.28rem;line-height:1.45}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;align-items:start}.card{background:#fff;border:1px solid #dce3ea;border-left:7px solid var(--red);border-radius:14px;padding:14px}.card.info-card{border-left-color:#0b66a3}.card.y{border-left-color:var(--yellow)}.card h4{margin:0 0 5px;color:var(--navy);font-size:1rem}.meta{font-size:.8rem;color:#64748b;font-weight:800;margin:0 0 8px}.point{background:#f8fafc;border:1px solid #e5e7eb;border-radius:10px;padding:9px 11px;font-size:.82rem;line-height:1.8}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.chip{display:inline-flex;border:1px solid #dce3ea;background:#eef7ff;color:#0b376d;border-radius:999px;padding:2px 8px;font-size:.72rem;font-weight:900;text-decoration:none}.inquiry{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 26px;line-height:2}.inquiry-box{margin-top:28px}.footer{background:#071a2d;color:#fff;padding:36px 0}.footer a{color:#f8e39b}@media(max-width:900px){.navlinks{display:none}.principle,.map-layout{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}}@media(max-width:560px){.stats,.cards{grid-template-columns:1fr}.topbar .wrap{display:block}.group,.fold-body{padding:14px}.map{height:380px}.title{font-size:1.32rem}.hero h1{font-size:2rem}}
-</style>
-<link rel="stylesheet" href="/css/hover-orange.css?v=20260629-hero22-hero22">
+<link rel="stylesheet" href="/css/pages/national-archive.css?v=20260719">
+<link rel="stylesheet" href="/css/interactions.css?v=20260719">
 
-<style id="national-archive-editorial-20260710">
-.archive-editorial{background:#fff!important}
-.archive-editorial .topbar b{
-  padding:0!important;
-  background:transparent!important;
-  color:#fff!important;
-  border-radius:0!important;
-}
-.archive-editorial .hero{
-  padding:68px 0 58px!important;
-  border-bottom:1px solid #071a30!important;
-}
-.archive-editorial .archive-source-link{
-  margin:22px 0 0!important;
-}
-.archive-editorial .archive-source-link a{
-  color:#f8e39b!important;
-  font-weight:900!important;
-  text-decoration:underline!important;
-}
-.archive-editorial .section{
-  padding:58px 0!important;
-  background:#fff!important;
-}
-.archive-editorial .map{
-  width:100%!important;
-  margin-top:24px!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-.archive-editorial .archive-list{
-  margin-top:24px!important;
-  border-top:2px solid var(--navy)!important;
-}
-.archive-editorial .city-fold summary::after{
-  padding:0!important;
-  border:0!important;
-  border-radius:0!important;
-  text-decoration:underline!important;
-}
-.archive-editorial .group{
-  padding:24px 0!important;
-  background:#fff!important;
-  border:0!important;
-  border-top:1px solid var(--line)!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-.archive-editorial .cards{
-  display:block!important;
-}
-.archive-editorial .card{
-  margin:0!important;
-  padding:18px 0 18px 18px!important;
-  border:0!important;
-  border-left:4px solid var(--red)!important;
-  border-bottom:1px solid #e5e7eb!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-.archive-editorial .card.y{border-left-color:#b08a00!important}
-.archive-editorial .card.info-card{border-left-color:#0b66a3!important}
-.archive-editorial .point{
-  padding:10px 0!important;
-  background:transparent!important;
-  border:0!important;
-  border-radius:0!important;
-}
-.archive-editorial .chip{
-  padding:0!important;
-  background:transparent!important;
-  border:0!important;
-  border-radius:0!important;
-  text-decoration:underline!important;
-}
-.archive-editorial .badge{
-  border-radius:0!important;
-}
-</style>
+
+<link rel="stylesheet" href="/css/inline-utilities.css?v=20260719">
 </head>
 <body class="archive-editorial">
-<div class="topbar"><div class="wrap"><b>応援のお願い</b><span>資料取得、資料整理、Web公開を続けるため、寄付・カンパでのご支援をお願いします。</span><a style="color:#fff;font-weight:900" href="/support.html">応援ページへ</a></div></div>
+<div class="topbar"><div class="wrap"><b>応援のお願い</b><span>資料取得、資料整理、Web公開を続けるため、寄付・カンパでのご支援をお願いします。</span><a class="u-7f52fa1215" href="/support.html">応援ページへ</a></div></div>
 <header class="header"><div class="wrap nav"><a class="logo" href="/index.html">PTA適正化推進委員会</a><nav class="navlinks"><a href="/index.html">トップ</a><a href="/documents.html">資料</a><a href="/board-responses.html">教委回答</a><a href="/membership.html">入会手続</a><a href="/privacy.html">個人情報</a><a href="/support.html">応援</a></nav></div></header>
 <section class="hero"><div class="wrap"><h1>全国資料館</h1><p>自治体・学校ごとのPTA入会案内、入会申込書、学校徴収金案内、会費徴収資料、個人情報同意書などを掲載しています。</p><p class="archive-source-link"><a href="https://drive.google.com/drive/folders/1tbfpjRNJIhwQypk1vsAOaE7_qwW-lrm5">全国PTA資料の原本フォルダを開く</a></p></div></section>
 <section class="section" id="archive-map"><div class="wrap"><h2 class="title">資料取得・掲載自治体マップ</h2><p class="lead">地図上のピンから自治体別資料へ移動できます。</p><div class="map" id="archiveJapanMap"></div></div></section>

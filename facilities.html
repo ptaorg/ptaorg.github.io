@@ -20,63 +20,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=20260705-fixed-header-all-pages">
-<link href="/css/refine.css?v=hover-orange-20260629ccccc" rel="stylesheet"/>
-  <style>
-    .pg{width:min(calc(100% - 40px),900px);margin-inline:auto;padding:56px 0 96px}
-    .pg h2{font-family:'Noto Serif JP',serif;font-size:clamp(1.45rem,2.4vw,1.95rem);color:var(--navy);margin:0 0 12px;padding-bottom:10px;border-bottom:3px solid var(--gold)}
-    .pg h3{font-size:1.02rem;font-weight:800;color:var(--navy);margin:28px 0 10px;padding-left:12px;border-left:4px solid var(--gold)}
-    .pg p{color:var(--text);line-height:1.9;margin-bottom:14px;font-size:.97rem}
-    .pg section{margin-bottom:64px}
-    .check-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.9rem}
-    .check-table th{background:var(--navy);color:#fff;padding:10px 14px;text-align:left;font-weight:800}
-    .check-table td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.7}
-    .check-table tr:last-child td{border-bottom:none}
-    .check-table tr:nth-child(even) td{background:#f8fafc}
-    .badge{display:inline-flex;padding:3px 9px;border-radius:999px;font-size:.7rem;font-weight:900}
-    .badge-ng{background:#fee2e2;color:#b91c1c}
-    .badge-ok{background:#dcfce7;color:#15803d}
-    .badge-warn{background:#fef3c7;color:#92400e}
-    .safes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
-    .safe-box{border-radius:var(--radius);padding:22px}
-    .safe-public{background:linear-gradient(145deg,#f1f5f9,#e2e8f0);border:1px solid #cbd5e1}
-    .safe-private{background:linear-gradient(145deg,#eff6ff,#dbeafe);border:1px solid #93c5fd}
-    .safe-box h4{font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:900;margin-bottom:10px}
-    .safe-public h4{color:#334155}
-    .safe-private h4{color:#1e3a8a}
-    .safe-box ul{list-style:none;display:flex;flex-direction:column;gap:6px}
-    .safe-box li{font-size:.88rem;color:var(--text);display:flex;align-items:flex-start;gap:8px;line-height:1.6}
-    .safe-box li::before{content:'■';font-size:.55rem;flex-shrink:0;margin-top:5px}
-    .safe-public li::before{color:#64748b}
-    .safe-private li::before{color:#1d4ed8}
-    .wall{background:#fee2e2;border:2px solid #fca5a5;border-radius:var(--radius);padding:18px 22px;margin:0;text-align:center}
-    .wall-label{font-size:.8rem;font-weight:900;color:#b91c1c;margin-bottom:6px}
-    .wall h4{font-size:1rem;font-weight:900;color:#7f1d1d;margin:0}
-    @media(max-width:700px){.safes{grid-template-columns:1fr}.check-table{font-size:.82rem}}
-
-    .page-hero{position:relative;overflow:hidden;}
-    .page-hero-bg-img{
-      position:absolute;inset:0;z-index:0;
-    }
-    .page-hero-bg-img img{
-      width:100%;height:100%;object-fit:cover;
-      filter:brightness(1.05);
-    }
-    .page-hero-bg-img::after{
-      content:'';position:absolute;inset:0;
-      background:linear-gradient(160deg,rgba(5,17,31,.32) 0%,rgba(5,17,31,.14) 60%,rgba(5,17,31,.05) 100%);
-    }
-    .page-hero-inner{position:relative;z-index:1;}
-  
-    /* ↓ Photo hero overrides — keep white text on photo background ↓ */
-    .page-hero{background:transparent!important;border-top:none!important;border-bottom:none!important}
-    .page-hero h1{color:#fff!important}
-    .page-hero h1 em{color:var(--gold-lt)!important}
-    .page-hero p{color:rgba(255,255,255,.88)!important}
-    .page-hero-kicker{background:rgba(212,175,55,.18)!important;border:1px solid rgba(212,175,55,.4)!important;color:var(--gold-lt)!important}
-    .hero-actions .btn-outline{color:#fff!important;border-color:rgba(255,255,255,.5)!important}
-    .hero-actions .btn-outline:hover{background:rgba(255,255,255,.12)!important;border-color:rgba(255,255,255,.8)!important}
-  </style>
+  <link rel="stylesheet" href="/css/site.css?v=20260719">
+<link href="/css/editorial.css?v=20260719" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/pages/facilities.css?v=20260719">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
@@ -107,222 +53,22 @@
 
 
 
-<link rel="stylesheet" href="/css/hover-orange.css?v=20260629-hero22-hero22">
+<link rel="stylesheet" href="/css/interactions.css?v=20260719">
 
 
 
 
 
-<style id="final-hero-layout-fix">
-html,body{overflow-x:hidden!important}
-.support-strip{background:linear-gradient(90deg,#0a192f 0%,#1e3a5f 58%,#2d5a8e 100%)!important;color:#fff!important;border-bottom:1px solid rgba(212,175,55,.42)!important}
-.support-strip-inner,.support-strip-text{color:#fff!important}
-.site-header{background:linear-gradient(90deg,#0a192f 0%,#1e3a5f 58%,#2d5a8e 100%)!important;border-bottom:3px solid #d4af37!important}
-.site-header .nav-container{background:transparent!important}
-.site-header .logo,.site-header .logo span,.site-header .nav-link{color:#fff!important}
-.site-header .hamburger span{background:#fff!important}
-.breadcrumb-bar{display:none!important}
-.page-hero--photo{display:block!important;position:relative!important;width:100%!important;max-width:none!important;min-height:340px!important;margin:0!important;padding:0!important;overflow:hidden!important;background:#0a192f!important;border:0!important;color:#fff!important}
-.page-hero--photo .page-hero-bg-img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:0!important}
-.page-hero--photo .page-hero-bg-img img{display:block!important;width:100%!important;height:100%!important;min-height:340px!important;object-fit:cover!important}
-.page-hero--photo .page-hero-bg-img::after{content:""!important;position:absolute!important;inset:0!important;background:linear-gradient(90deg,rgba(5,17,31,.78) 0%,rgba(5,17,31,.52) 48%,rgba(5,17,31,.18) 100%)!important}
-.page-hero--photo> :not(.page-hero-bg-img){position:relative!important;z-index:1!important;width:min(calc(100% - 40px),1080px)!important;max-width:1080px!important;margin-left:auto!important;margin-right:auto!important;padding-top:68px!important;padding-bottom:74px!important;color:#fff!important}
-.page-hero--photo .page-hero-inner,.page-hero--photo .issue-hero-inner,.page-hero--photo .journal-hero-inner{position:relative!important;z-index:1!important;width:min(calc(100% - 40px),1080px)!important;max-width:1080px!important;margin-left:auto!important;margin-right:auto!important;padding-top:68px!important;padding-bottom:74px!important;color:#fff!important}
-.page-hero--photo h1,.page-hero--photo p,.page-hero--photo .section-lead{color:#fff!important;text-shadow:0 2px 12px rgba(0,0,0,.34)!important}
-.page-hero--photo h1 em{color:#f4e7a6!important}
-@media(max-width:760px){.page-hero--photo{min-height:300px!important}.page-hero--photo .page-hero-bg-img img{min-height:300px!important}.page-hero--photo> :not(.page-hero-bg-img),.page-hero--photo .page-hero-inner,.page-hero--photo .issue-hero-inner,.page-hero--photo .journal-hero-inner{width:min(calc(100% - 28px),1080px)!important;padding-top:44px!important;padding-bottom:52px!important}}
-</style>
+<link rel="stylesheet" href="/css/shared/editorial-page-common.css?v=20260719">
 
-<style id="facilities-editorial-20260710">
-body.facilities-editorial .page-banner,
-body.facilities-editorial .hero-actions{
-  display:none!important;
-}
-body.facilities-editorial .page-hero-kicker,
-body.facilities-editorial .badge{
-  text-transform:none!important;
-  letter-spacing:.03em!important;
-  border-radius:3px!important;
-}
-body.facilities-editorial .pg{
-  width:min(calc(100% - 40px),920px)!important;
-  padding:68px 0 96px!important;
-}
-body.facilities-editorial .pg > section,
-body.facilities-editorial .editorial-panel,
-body.facilities-editorial .editorial-brief{
-  margin:0!important;
-  padding:40px 0 46px!important;
-  background:#fff!important;
-  border:0!important;
-  border-top:1px solid #cfd8e2!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-body.facilities-editorial .editorial-brief-grid,
-body.facilities-editorial .safes{
-  display:block!important;
-}
-body.facilities-editorial .editorial-brief-point,
-body.facilities-editorial .safe-box,
-body.facilities-editorial .alert{
-  margin:0!important;
-  padding:20px 0!important;
-  background:#fff!important;
-  border:0!important;
-  border-top:1px solid #dbe4ee!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-body.facilities-editorial .editorial-brief-point:last-child,
-body.facilities-editorial .safes > .safe-box:last-child{
-  border-bottom:1px solid #dbe4ee!important;
-}
-body.facilities-editorial .wall,
-body.facilities-editorial .law-quote{
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-body.facilities-editorial .check-table .badge-ok,
-body.facilities-editorial .check-table .badge-ng,
-body.facilities-editorial .check-table .badge-warn{
-  background:transparent!important;
-  color:#17345c!important;
-  border:1px solid #94a3b8!important;
-}
-body.facilities-editorial main a:hover{
-  transform:none!important;
-  box-shadow:none!important;
-}
-@media(max-width:700px){
-  body.facilities-editorial .pg{
-    width:min(calc(100% - 30px),920px)!important;
-  }
-}
-</style>
 
-<style id="facilities-final-editorial-20260710">
-.page-banner{display:none!important}
-.pg{max-width:920px!important}
-.pg .section-kicker{display:none!important}
-.pg .safes,
-.pg .source-lens-grid{display:block!important}
-.pg .safe-box,
-.pg .wall,
-.pg .alert,
-.pg .source-lens-item,
-.pg .faq-item{
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-.pg .safe-box,
-.pg .source-lens-item{
-  padding:22px 0!important;
-  border:0!important;
-  border-bottom:1px solid var(--line)!important;
-  background:#fff!important;
-}
-.pg .wall{
-  padding:20px 0!important;
-  background:#fff!important;
-  border:0!important;
-  border-top:2px solid var(--navy)!important;
-  border-bottom:1px solid var(--line)!important;
-}
-.pg .wall-label,
-.pg .badge{
-  padding:0!important;
-  background:transparent!important;
-  color:inherit!important;
-  border-radius:0!important;
-}
-.pg .faq-list{gap:0!important;border-top:1px solid var(--line)!important}
-.pg .faq-item{border:0!important;border-bottom:1px solid var(--line)!important}
-.pg .faq-q{padding:18px 0!important}
-.pg .faq-a{padding-left:0!important;padding-right:0!important}
-</style>
 
-<style id="facilities-final-editorial-20260710">
-.page-banner{display:none!important}
-.pg{max-width:920px!important}
-.pg .section-kicker{display:none!important}
-.pg .safes,
-.pg .source-lens-grid{display:block!important}
-.pg .safe-box,
-.pg .wall,
-.pg .alert,
-.pg .source-lens-item,
-.pg .faq-item{
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-.pg .safe-box,
-.pg .source-lens-item{
-  padding:22px 0!important;
-  border:0!important;
-  border-bottom:1px solid var(--line)!important;
-  background:#fff!important;
-}
-.pg .wall{
-  padding:20px 0!important;
-  background:#fff!important;
-  border:0!important;
-  border-top:2px solid var(--navy)!important;
-  border-bottom:1px solid var(--line)!important;
-}
-.pg .wall-label,
-.pg .badge{
-  padding:0!important;
-  background:transparent!important;
-  color:inherit!important;
-  border-radius:0!important;
-}
-.pg .faq-list{gap:0!important;border-top:1px solid var(--line)!important}
-.pg .faq-item{border:0!important;border-bottom:1px solid var(--line)!important}
-.pg .faq-q{padding:18px 0!important}
-.pg .faq-a{padding-left:0!important;padding-right:0!important}
-</style>
+<link rel="stylesheet" href="/css/shared/shared-a4551fcf4581.css?v=20260719">
 
-<style id="facilities-final-editorial-20260710">
-.page-banner{display:none!important}
-.pg{max-width:920px!important}
-.pg .section-kicker{display:none!important}
-.pg .safes,
-.pg .source-lens-grid{display:block!important}
-.pg .safe-box,
-.pg .wall,
-.pg .alert,
-.pg .source-lens-item,
-.pg .faq-item{
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-.pg .safe-box,
-.pg .source-lens-item{
-  padding:22px 0!important;
-  border:0!important;
-  border-bottom:1px solid var(--line)!important;
-  background:#fff!important;
-}
-.pg .wall{
-  padding:20px 0!important;
-  background:#fff!important;
-  border:0!important;
-  border-top:2px solid var(--navy)!important;
-  border-bottom:1px solid var(--line)!important;
-}
-.pg .wall-label,
-.pg .badge{
-  padding:0!important;
-  background:transparent!important;
-  color:inherit!important;
-  border-radius:0!important;
-}
-.pg .faq-list{gap:0!important;border-top:1px solid var(--line)!important}
-.pg .faq-item{border:0!important;border-bottom:1px solid var(--line)!important}
-.pg .faq-q{padding:18px 0!important}
-.pg .faq-a{padding-left:0!important;padding-right:0!important}
-</style>
+
+
+
+<link rel="stylesheet" href="/css/inline-utilities.css?v=20260719">
 </head>
 <body class="facilities-editorial">
   
@@ -474,7 +220,7 @@ body.facilities-editorial main a:hover{
     </div>
   </section>
 
-  <div class="page-banner" style="background-image:url('assets/slides/1.jpg')">
+  <div class="page-banner u-f62a37ff23">
     <div class="page-banner-content">
       <div class="page-banner-kicker">Facilities &amp; Equipment Issues</div>
       <div class="page-banner-title">施設・設備利用問題</div>
@@ -484,7 +230,7 @@ body.facilities-editorial main a:hover{
   <main class="pg">
 
     <!-- リード -->
-    <p style="font-size:1.05rem;line-height:1.95;color:var(--text);margin-bottom:48px;padding:24px 28px;background:#f8fafc;border-left:5px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0">
+    <p class="u-89d1b55995">
       公立学校の施設・備品は、設置者である地方公共団体が管理する財産です。PTAが利用する場合は、使用目的、場所、時間、許可権者、管理責任、費用または免除の取扱いを、自治体の条例・規則・許可条件に沿って確認します。「従来から使っている」という慣行だけで、使用範囲や学校側の負担が確定するものではありません。
     </p>
 
@@ -495,7 +241,7 @@ body.facilities-editorial main a:hover{
     <!-- 公と私の境界 -->
     <section>
       <h2>公（学校）と私（PTA）の境界線</h2>
-<figure style="margin:30px auto;max-width:860px"><img src="assets/diagrams/05_施設利用/01_公私の境界線.svg" alt="図解：公私の境界線" loading="lazy" style="display:block;width:100%;height:auto"></figure>
+<figure class="u-852a52814b"><img class="u-83b2a80b11" src="assets/diagrams/05_施設利用/01_公私の境界線.svg" alt="図解：公私の境界線" loading="lazy"></figure>
       <p>学校とPTAは協力関係を持ち得ますが、学校施設・備品・職員・情報は公的管理の対象であり、PTA会費・会員情報・内部事務はPTA側の管理対象です。利用許可を介して接続し、境界を記録する必要があります。</p>
 
       <div class="safes">
@@ -561,7 +307,7 @@ body.facilities-editorial main a:hover{
     <section id="facility-sources">
       <h2>施設利用で確認すること</h2>
       <p>PTAによる学校施設利用は、「PTAだから当然に使える」という問題ではありません。学校教育法137条を入口に、教育上の支障、使用目的、場所と時間、費用負担、責任主体、個人情報の保管、使用停止条件を確認します。</p>
-      <ul style="line-height:2;margin-left:1.2em">
+      <ul class="u-afe6394ccb">
 <li><strong>学校教育法137条</strong>：学校施設を社会教育その他公共のために利用させることができる条文（<a href="https://laws.e-gov.go.jp/law/322AC0000000026" target="_blank" rel="noopener">e-Gov法令検索</a>）。</li>
 <li><strong>施設使用許可の確認事項</strong>：使用目的、場所、時間、費用負担、責任主体、停止条件を文書で確認します（<a href="#facility-permission-questions">確認項目へ</a>）。</li>
       </ul>
@@ -570,7 +316,7 @@ body.facilities-editorial main a:hover{
 
     <section class="editorial-panel source-lens-panel" id="facility-permission-questions">
       <h2>137条資料を、施設使用許可の条件に落とし込む</h2>
-<figure style="margin:30px auto;max-width:860px"><img src="assets/diagrams/05_施設利用/02_137条 許可の条件.svg" alt="図解：137条 許可の条件" loading="lazy" style="display:block;width:100%;height:auto"></figure>
+<figure class="u-852a52814b"><img class="u-83b2a80b11" src="assets/diagrams/05_施設利用/02_137条 許可の条件.svg" alt="図解：137条 許可の条件" loading="lazy"></figure>
       <p>学校教育法137条は、PTAに当然の使用権を認める条文ではありません。教育上の支障、使用目的、公共性、許可権者、場所・時間、費用または減免、責任主体、取消し・停止条件を許可文書へ落とし込むために使います。</p>
       <div class="source-lens-grid" aria-label="施設利用の許可条件">
         <div class="source-lens-item"><strong>使用目的</strong><p>PTA会議、資料整理、印刷、物品保管など、目的を具体化しているか。</p></div>
@@ -585,15 +331,15 @@ body.facilities-editorial main a:hover{
 
     <section>
       <h2>「覚書があればOK」ではない——覚書の落とし穴</h2>
-<figure style="margin:30px auto;max-width:860px"><img src="assets/diagrams/05_施設利用/03_覚書の落とし穴.svg" alt="図解：覚書の落とし穴" loading="lazy" style="display:block;width:100%;height:auto"></figure>
+<figure class="u-852a52814b"><img class="u-83b2a80b11" src="assets/diagrams/05_施設利用/03_覚書の落とし穴.svg" alt="図解：覚書の落とし穴" loading="lazy"></figure>
       <p>学校とPTAの間で「施設使用覚書」が交わされていることがあります。これは適正化の第一歩として有意義ですが、<strong>覚書の内容自体が問題ある関与を制度化してしまうことがある</strong>ため、注意が必要です。</p>
 
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0">
+      <div class="u-45e5b9d712">
         <div class="alert alert-success">
           <div class="alert-icon">✅</div>
           <div>
-            <p style="font-weight:800;margin-bottom:4px">確認すべき条項</p>
-            <ul style="font-size:.88rem;margin:8px 0 0 16px;line-height:1.8;color:var(--text)">
+            <p class="u-a75c164e32">確認すべき条項</p>
+            <ul class="u-c3d822b52e">
               <li>使用できる施設・時間帯の特定</li>
               <li>使用料・実費・減免・免除の取扱い</li>
               <li>緊急連絡先・責任者（PTA側）の明示</li>
@@ -605,8 +351,8 @@ body.facilities-editorial main a:hover{
         <div class="alert alert-danger">
           <div class="alert-icon">❌</div>
           <div>
-            <p style="font-weight:800;margin-bottom:4px">別の根拠確認が必要な条項</p>
-            <ul style="font-size:.88rem;margin:8px 0 0 16px;line-height:1.8;color:var(--text)">
+            <p class="u-a75c164e32">別の根拠確認が必要な条項</p>
+            <ul class="u-c3d822b52e">
               <li>学校職員によるPTA内部事務を当然の職務としている条項</li>
               <li>学校印刷機等の使用範囲・費用・管理責任が不明な条項</li>
               <li>鍵の管理権限、返却、事故時対応が不明な条項</li>
@@ -677,33 +423,33 @@ body.facilities-editorial main a:hover{
       <h2>適正化の手順：段階的に整理する</h2>
       <p>一気に変える必要はありません。現状把握から始め、段階的に公私を切り離すことが現実的です。</p>
 
-      <div style="display:flex;flex-direction:column;gap:0;margin:24px 0">
-        <div style="display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)">
-          <div style="width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.95rem;flex-shrink:0">1</div>
+      <div class="u-511087a807">
+        <div class="u-2d0a3315ad">
+          <div class="u-fc822286c6">1</div>
           <div>
-            <p style="font-weight:800;color:var(--navy);margin-bottom:4px">現状の棚卸し</p>
-            <p style="font-size:.92rem;margin:0">PTAが使用している学校施設・備品・費用（光熱費・印刷代・電話代）をリストアップします。「PTA室」以外にも、廊下の一角・印刷室・事務室などが使われているケースがあります。また学校からPTAへの備品購入補助や、PTA名義で使っている学校の郵便受け等も整理します。</p>
+            <p class="u-0a7b9e1f71">現状の棚卸し</p>
+            <p class="u-630a88fa35">PTAが使用している学校施設・備品・費用（光熱費・印刷代・電話代）をリストアップします。「PTA室」以外にも、廊下の一角・印刷室・事務室などが使われているケースがあります。また学校からPTAへの備品購入補助や、PTA名義で使っている学校の郵便受け等も整理します。</p>
           </div>
         </div>
-        <div style="display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)">
-          <div style="width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.95rem;flex-shrink:0">2</div>
+        <div class="u-2d0a3315ad">
+          <div class="u-fc822286c6">2</div>
           <div>
-            <p style="font-weight:800;color:var(--navy);margin-bottom:4px">費用の実態を把握し、負担のあり方を検討する</p>
-            <p style="font-size:.92rem;margin:0">光熱費・印刷費・通信費など、学校側が事実上負担している費用を試算します。全額をPTAが払う必要はありませんが、「費用負担の取り決めがない」状態は解消します。使用量に応じた定額精算（月額○○円等）で合意するのが現実的です。</p>
+            <p class="u-0a7b9e1f71">費用の実態を把握し、負担のあり方を検討する</p>
+            <p class="u-630a88fa35">光熱費・印刷費・通信費など、学校側が事実上負担している費用を試算します。全額をPTAが払う必要はありませんが、「費用負担の取り決めがない」状態は解消します。使用量に応じた定額精算（月額○○円等）で合意するのが現実的です。</p>
           </div>
         </div>
-        <div style="display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)">
-          <div style="width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.95rem;flex-shrink:0">3</div>
+        <div class="u-2d0a3315ad">
+          <div class="u-fc822286c6">3</div>
           <div>
-            <p style="font-weight:800;color:var(--navy);margin-bottom:4px">校長・教育委員会と覚書を作成する</p>
-            <p style="font-size:.92rem;margin:0">使用施設・時間・費用負担・責任者・禁止事項を明記した覚書を校長と締結します。内容については教育委員会の確認を受けることを推奨します。既存の覚書がある場合は、内容が問題ある関与を固定化していないか見直します。</p>
+            <p class="u-0a7b9e1f71">校長・教育委員会と覚書を作成する</p>
+            <p class="u-630a88fa35">使用施設・時間・費用負担・責任者・禁止事項を明記した覚書を校長と締結します。内容については教育委員会の確認を受けることを推奨します。既存の覚書がある場合は、内容が問題ある関与を固定化していないか見直します。</p>
           </div>
         </div>
-        <div style="display:flex;gap:16px;padding:20px 0">
-          <div style="width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.95rem;flex-shrink:0">4</div>
+        <div class="u-8e264a3a28">
+          <div class="u-9da2d49f0c">4</div>
           <div>
-            <p style="font-weight:800;color:var(--navy);margin-bottom:4px">「寄附」構造を段階的に解消する</p>
-            <p style="font-size:.92rem;margin:0">学校の設備整備・備品購入をPTA費で行っている場合、これを段階的に廃止します。教育委員会への予算申請・公費による整備に切り替えることが原則です。「PTAが払わないと整備されない」という構造こそが問題であり、教育委員会への要望活動として取り組むことが適切です。</p>
+            <p class="u-0a7b9e1f71">「寄附」構造を段階的に解消する</p>
+            <p class="u-630a88fa35">学校の設備整備・備品購入をPTA費で行っている場合、これを段階的に廃止します。教育委員会への予算申請・公費による整備に切り替えることが原則です。「PTAが払わないと整備されない」という構造こそが問題であり、教育委員会への要望活動として取り組むことが適切です。</p>
           </div>
         </div>
       </div>
@@ -714,81 +460,81 @@ body.facilities-editorial main a:hover{
       <h2>全国教育委員会の回答に見る共通認識</h2>
       <p>掲載している教育委員会回答には、施設利用・公私の境界に関する回答も含まれています。件数を引用する場合は、自治体数、回答件数、分類タグ件数を分けて確認してください。</p>
 
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0">
+      <div class="u-45e5b9d712">
         <div class="alert alert-success">
           <div class="alert-icon">📌</div>
           <div>
-            <p style="font-weight:800;margin-bottom:4px">適切な回答例の傾向</p>
-            <p style="font-size:.88rem;margin:0">「学校施設のPTA利用には使用許可と費用負担の取り決めが必要」「教職員によるPTA事務補助は適切でない」とする回答が複数の教育委員会から確認されています。</p>
+            <p class="u-a75c164e32">適切な回答例の傾向</p>
+            <p class="u-25ef8681f5">「学校施設のPTA利用には使用許可と費用負担の取り決めが必要」「教職員によるPTA事務補助は適切でない」とする回答が複数の教育委員会から確認されています。</p>
           </div>
         </div>
         <div class="alert alert-warning">
           <div class="alert-icon">⚠️</div>
           <div>
-            <p style="font-weight:800;margin-bottom:4px">曖昧な回答例の傾向</p>
-            <p style="font-size:.88rem;margin:0">「各学校の判断に委ねている」「慣行として認めている」という回答もあり、教育委員会自体が問題を把握・整理できていないケースも見られます。</p>
+            <p class="u-a75c164e32">曖昧な回答例の傾向</p>
+            <p class="u-25ef8681f5">「各学校の判断に委ねている」「慣行として認めている」という回答もあり、教育委員会自体が問題を把握・整理できていないケースも見られます。</p>
           </div>
         </div>
       </div>
 
-      <p>回答全文は<a href="board-responses.html" style="color:var(--navy-3);text-decoration:underline">教育委員会の回答ページ</a>で自治体別に確認できます。</p>
+      <p>回答全文は<a class="u-1b5069be7d" href="board-responses.html">教育委員会の回答ページ</a>で自治体別に確認できます。</p>
     </section>
 
     <!-- 関連 -->
     
 
-    <section style="background:#fff;padding:64px 0">
+    <section class="u-094f6d1696">
       <div class="wrap wrap-narrow">
         <div class="section-kicker">よくある疑問</div>
         <h2 class="section-title">よくある質問</h2>
-        <div class="faq-list" style="display:flex;flex-direction:column;gap:10px;margin-top:28px">
+        <div class="faq-list u-6c3f4e9348">
 
-          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">PTA室の光熱費を学校が負担しています。問題ですか？</div>
-              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          <div class="faq-item u-5dd6296e3a">
+            <div class="faq-q u-9f18855fd6">
+              <div class="faq-q-text u-ecdebb7ec2">PTA室の光熱費を学校が負担しています。問題ですか？</div>
+              <span class="faq-toggle u-4feb68c3bb">▼</span>
             </div>
-            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">問題となる可能性があります。PTA室の光熱費や印刷費を学校側が当然に負担する運用は、公有財産・学校予算・任意団体支援の境界を曖昧にします。使用量に応じた費用負担や使用条件を、書面で明確化することをお勧めします。</p></div>
+            <div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">問題となる可能性があります。PTA室の光熱費や印刷費を学校側が当然に負担する運用は、公有財産・学校予算・任意団体支援の境界を曖昧にします。使用量に応じた費用負担や使用条件を、書面で明確化することをお勧めします。</p></div>
           </div>
 
-          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">学校のコピー機でPTA文書を印刷しています。これはいつからOKになりましたか？</div>
-              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          <div class="faq-item u-5dd6296e3a">
+            <div class="faq-q u-9f18855fd6">
+              <div class="faq-q-text u-ecdebb7ec2">学校のコピー機でPTA文書を印刷しています。これはいつからOKになりましたか？</div>
+              <span class="faq-toggle u-4feb68c3bb">▼</span>
             </div>
-            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">学校教育法137条は公共目的の施設利用を認めていますが、特定団体への恒常的な無償提供まで当然に正当化するものではありません。許可権者や校長への委任の有無は自治体の条例・規則によって異なります。使用目的、使用範囲、費用・減免、責任者、決裁を許可文書で確認します。</p></div>
+            <div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">学校教育法137条は公共目的の施設利用を認めていますが、特定団体への恒常的な無償提供まで当然に正当化するものではありません。許可権者や校長への委任の有無は自治体の条例・規則によって異なります。使用目的、使用範囲、費用・減免、責任者、決裁を許可文書で確認します。</p></div>
           </div>
 
-          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">PTA室の鍵をPTAが管理しています。返却すべきですか？</div>
-              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          <div class="faq-item u-5dd6296e3a">
+            <div class="faq-q u-9f18855fd6">
+              <div class="faq-q-text u-ecdebb7ec2">PTA室の鍵をPTAが管理しています。返却すべきですか？</div>
+              <span class="faq-toggle u-4feb68c3bb">▼</span>
             </div>
-            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">鍵の管理方法は、自治体の施設管理規程と許可条件に沿って確認します。PTAが常時保管する場合でも、貸与記録、保管責任者、複製禁止、紛失時対応、返却条件、学校側の緊急アクセスを明確にする必要があります。根拠や記録がない場合は、使用時の借用・返却を含めて見直します。</p></div>
+            <div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">鍵の管理方法は、自治体の施設管理規程と許可条件に沿って確認します。PTAが常時保管する場合でも、貸与記録、保管責任者、複製禁止、紛失時対応、返却条件、学校側の緊急アクセスを明確にする必要があります。根拠や記録がない場合は、使用時の借用・返却を含めて見直します。</p></div>
           </div>
 
-          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">「PTAのお金で体育館のエアコンを購入した」という話をよく聞きます。問題ですか？</div>
-              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          <div class="faq-item u-5dd6296e3a">
+            <div class="faq-q u-9f18855fd6">
+              <div class="faq-q-text u-ecdebb7ec2">「PTAのお金で体育館のエアコンを購入した」という話をよく聞きます。問題ですか？</div>
+              <span class="faq-toggle u-4feb68c3bb">▼</span>
             </div>
-            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">PTAから学校設備への資金拠出だけで、直ちに地方財政法4条の5へ抵触するわけではありません。寄附の自発的申出、PTA内部の意思決定、自治体の受入決裁、資産計上、使途を確認します。一方、学校側が金額を割り当て、毎年度の予算不足を恒常的に補わせ、非加入・不払いへ圧力を加えている場合は、行政の関与と強制性を具体的に点検します。</p></div>
+            <div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">PTAから学校設備への資金拠出だけで、直ちに地方財政法4条の5へ抵触するわけではありません。寄附の自発的申出、PTA内部の意思決定、自治体の受入決裁、資産計上、使途を確認します。一方、学校側が金額を割り当て、毎年度の予算不足を恒常的に補わせ、非加入・不払いへ圧力を加えている場合は、行政の関与と強制性を具体的に点検します。</p></div>
           </div>
 
-          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">学校がPTA文書を一緒に配布してくれています。これはどこまで許容されますか？</div>
-              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          <div class="faq-item u-5dd6296e3a">
+            <div class="faq-q u-9f18855fd6">
+              <div class="faq-q-text u-ecdebb7ec2">学校がPTA文書を一緒に配布してくれています。これはどこまで許容されますか？</div>
+              <span class="faq-toggle u-4feb68c3bb">▼</span>
             </div>
-            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">配布頻度だけで許否は決まりません。学校がPTA文書を配布する場合は、発行主体、配布目的、対象者、学校職員が扱う根拠、学校保有情報の利用、回収の有無、学校文書との区別を確認します。PTA内部の継続的な連絡はPTA自身の連絡手段を基本とし、学校が協力する範囲を文書で定めます。</p></div>
+            <div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">配布頻度だけで許否は決まりません。学校がPTA文書を配布する場合は、発行主体、配布目的、対象者、学校職員が扱う根拠、学校保有情報の利用、回収の有無、学校文書との区別を確認します。PTA内部の継続的な連絡はPTA自身の連絡手段を基本とし、学校が協力する範囲を文書で定めます。</p></div>
           </div>
 
-          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">教育委員会に施設利用の改善を求めることはできますか？</div>
-              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          <div class="faq-item u-5dd6296e3a">
+            <div class="faq-q u-9f18855fd6">
+              <div class="faq-q-text u-ecdebb7ec2">教育委員会に施設利用の改善を求めることはできますか？</div>
+              <span class="faq-toggle u-4feb68c3bb">▼</span>
             </div>
-            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">できます。教育委員会は、地教行法と自治体の条例・規則に基づき、所管学校の施設・財産管理や学校運営を確認する立場にあります。使用許可、許可権者、費用・減免、責任、鍵・備品管理、停止条件を具体的に示して文書で照会します。全国教育委員会への照会結果も、自治体ごとの判断例として確認できます。</p></div>
+            <div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">できます。教育委員会は、地教行法と自治体の条例・規則に基づき、所管学校の施設・財産管理や学校運営を確認する立場にあります。使用許可、許可権者、費用・減免、責任、鍵・備品管理、停止条件を具体的に示して文書で照会します。全国教育委員会への照会結果も、自治体ごとの判断例として確認できます。</p></div>
           </div>
 
         </div>

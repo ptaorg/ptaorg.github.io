@@ -18,81 +18,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=20260705-fixed-header-all-pages">
-  <link href="/css/refine.css?v=hover-orange-20260629ccccc" rel="stylesheet">
-  <style>
-    /* ===== タイムライン ===== */
-    .tl-outer { width: min(calc(100% - 40px), 860px); margin-inline: auto; padding: 72px 0 80px; }
-    .tl-wrap { position: relative; padding-left: 64px; }
-    .tl-wrap::before {
-      content: ''; position: absolute; left: 24px; top: 8px; bottom: 8px;
-      width: 2px; background: linear-gradient(180deg, var(--navy) 0%, rgba(26,58,82,.1) 100%);
-    }
-    .tl-item { position: relative; margin-bottom: 40px; }
-    .tl-item:last-child { margin-bottom: 0; }
-    .tl-dot {
-      position: absolute; left: -52px; top: 18px;
-      width: 56px; height: 56px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--navy) 0%, #1a3a52 100%);
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      box-shadow: 0 4px 16px rgba(5,17,31,.28); z-index: 1; line-height: 1;
-    }
-    .tl-dot-era { font-size: .55rem; font-weight: 900; color: rgba(212,175,55,.7); letter-spacing: .06em; }
-    .tl-dot-year { font-size: 1rem; font-weight: 900; color: var(--gold); }
-    .tl-dot.highlight { background: linear-gradient(135deg, #15803d 0%, #166534 100%); }
-    .tl-card {
-      background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--navy);
-      border-radius: var(--radius); padding: 24px 28px; box-shadow: var(--shadow-sm);
-      transition: box-shadow .2s, transform .2s;
-    }
-    .tl-card:hover { box-shadow: var(--shadow-md); transform: translateX(2px); }
-    .tl-card.highlight { border-left-color: var(--gold); }
-    .tl-tag {
-      display: inline-block; font-size: .68rem; font-weight: 900; letter-spacing: .07em;
-      color: #73510a; background: rgba(212,175,55,.16); padding: 3px 10px;
-      border-radius: 999px; margin-bottom: 10px;
-    }
-    .tl-title { font-family: 'Noto Serif JP', serif; font-size: 1.08rem; font-weight: 900; color: var(--navy); margin-bottom: 10px; line-height: 1.4; }
-    .tl-desc { font-size: .95rem; color: var(--text); line-height: 1.85; margin-bottom: 0; }
-    .tl-note {
-      margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--line);
-      font-size: .86rem; color: var(--text-soft); line-height: 1.75;
-    }
-    /* ===== インサイトボックス ===== */
-    .insight-box {
-      background: linear-gradient(135deg, var(--navy) 0%, #1a3a52 100%);
-      border-radius: var(--radius); padding: 44px 48px; margin-top: 0;
-    }
-    .insight-box h3 { font-family: 'Noto Serif JP', serif; font-size: 1.35rem; font-weight: 900; color: var(--gold-lt, #fcd34d); margin-bottom: 20px; line-height: 1.4; }
-    .insight-box p { font-size: .96rem; line-height: 1.95; color: rgba(255,255,255,.88); margin-bottom: 14px; }
-    .insight-box p:last-child { margin-bottom: 0; }
-    /* ===== キーカード ===== */
-    .key-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin-top: 40px; }
-    .key-card {
-      background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
-      padding: 24px 20px; text-align: center; box-shadow: var(--shadow-sm);
-    }
-    .key-icon { font-size: 2rem; margin-bottom: 12px; }
-    .key-lbl { font-size: .72rem; font-weight: 900; letter-spacing: .08em; color: var(--text-soft); text-transform: uppercase; margin-bottom: 6px; }
-    .key-val { font-family: 'Noto Serif JP', serif; font-size: 1.02rem; font-weight: 900; color: var(--navy); line-height: 1.45; }
-    /* ===== 関連リンク ===== */
-    .rel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin-top: 28px; }
-    .rel-card {
-      display: block; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius);
-      padding: 18px 20px; text-decoration: none; transition: box-shadow .2s, transform .2s;
-    }
-    .rel-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-    .rel-card-kicker { font-size: .68rem; font-weight: 900; letter-spacing: .1em; color: #73510a; text-transform: uppercase; margin-bottom: 6px; }
-    .rel-card-title { font-family: 'Noto Serif JP', serif; font-size: .97rem; font-weight: 900; color: var(--navy); margin-bottom: 6px; }
-    .rel-card-desc { font-size: .83rem; color: var(--text-soft); line-height: 1.6; }
-    @media(max-width: 680px) {
-      .tl-wrap { padding-left: 52px; }
-      .tl-dot { left: -44px; width: 46px; height: 46px; }
-      .tl-dot-year { font-size: .88rem; }
-      .insight-box { padding: 28px 22px; }
-      .key-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  <link rel="stylesheet" href="/css/site.css?v=20260719">
+  <link href="/css/editorial.css?v=20260719" rel="stylesheet">
+  <link rel="stylesheet" href="/css/pages/timeline.css?v=20260719">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
@@ -107,7 +35,8 @@
   <meta name="twitter:image:alt" content="PTA適正化推進委員会">
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<link rel="stylesheet" href="/css/hover-orange.css?v=20260629-hero22-hero22">
+<link rel="stylesheet" href="/css/interactions.css?v=20260719">
+<link rel="stylesheet" href="/css/inline-utilities.css?v=20260719">
 </head>
 <body>
   
@@ -249,7 +178,7 @@
 
   <main>
 
-  <div class="page-banner" style="background-image:url('assets/slides/1.jpg')">
+  <div class="page-banner u-f62a37ff23">
       <div class="page-banner-content">
         <div class="page-banner-kicker">Institutional History · 制度史</div>
         <h1 class="page-banner-title">PTAの制度史</h1>
@@ -259,12 +188,12 @@
     <!-- ======================================================
          タイムライン
          ====================================================== -->
-    <section style="background:#fff">
+    <section class="u-6050b32582">
       <div class="tl-outer">
         <div class="section-kicker">Timeline</div>
-        <h2 class="section-title" style="margin-bottom:8px">主要な転換点</h2>
-<figure style="margin:30px auto;max-width:860px"><img src="assets/diagrams/11_制度史/01_PTA制度史 年表.svg" alt="図解：PTA制度史 年表" loading="lazy" style="display:block;width:100%;height:auto"></figure>
-        <p style="color:var(--text-soft);font-size:.95rem;margin-bottom:48px;line-height:1.75">
+        <h2 class="section-title u-8e26c5f7a1">主要な転換点</h2>
+<figure class="u-852a52814b"><img class="u-83b2a80b11" src="assets/diagrams/11_制度史/01_PTA制度史 年表.svg" alt="図解：PTA制度史 年表" loading="lazy"></figure>
+        <p class="u-3a548427c0">
           1946年の導入から現在まで——法令の変化と慣行のズレが積み重なった経緯を整理します。<br>
           制度史は、過去を飾るためではなく、現在の学校関与・名簿提供・会費徴収がどこで本来の線を越えたのかを読むための補助線です。
         </p>
@@ -361,7 +290,7 @@
               <span class="tl-dot-year">2026</span>
             </div>
             <div class="tl-card highlight">
-              <div class="tl-tag" style="background:rgba(212,175,55,.18)">行政対応の広がり</div>
+              <div class="tl-tag u-6ddda38179">行政対応の広がり</div>
               <div class="tl-title">入会意思確認・名簿分離を求める行政対応へ</div>
               <p class="tl-desc">近年、教育委員会回答や通知の中で、PTA加入の任意性、入会意思確認、学校名簿の目的外利用、学校徴収金との分離を確認する動きが強まっている。個別通知の内容は、発出主体・日付・対象校・実施時期を一次資料で確認する必要がある。</p>
               <div class="tl-note">この流れは、PTAを否定するものではなく、任意団体としてのPTAと学校行政の責任範囲を分け直すものとして位置づけられる。制度史の到達点は、カードや標語ではなく、入会記録・名簿管理・会費徴収・教職員関与の具体的な分離で確認される。</div>
@@ -375,14 +304,14 @@
     <!-- ======================================================
          制度史の視点
          ====================================================== -->
-    <section style="background:var(--bg); padding:72px 0; border-top:1px solid var(--line)">
+    <section class="u-15df30ef72">
       <div class="wrap">
         <div class="section-kicker">Perspective</div>
-        <h2 class="section-title" style="margin-bottom:40px">制度史から読み解くPTA問題</h2>
+        <h2 class="section-title u-b3a1e90014">制度史から読み解くPTA問題</h2>
 
         <div class="insight-box">
           <h3>「新しい問題」ではなく「本来の姿への回帰」</h3>
-<figure style="margin:30px auto;max-width:860px"><img src="assets/diagrams/11_制度史/02_本来の姿への回帰.svg" alt="図解：本来の姿への回帰" loading="lazy" style="display:block;width:100%;height:auto"></figure>
+<figure class="u-852a52814b"><img class="u-83b2a80b11" src="assets/diagrams/11_制度史/02_本来の姿への回帰.svg" alt="図解：本来の姿への回帰" loading="lazy"></figure>
           <p>PTAは1946年の導入当初から「任意団体」としての性格を明確に持っていました。社会教育法（1949年）は行政・学校による介入を明文で禁止し、地方公務員法（1953年）は教職員の職務専念義務を法制化しました。</p>
           <p>しかし半世紀以上の運用の中で、学校組織とPTAの境界は徐々に曖昧化しました。個人情報保護制度の整備と一元化により、学校名簿をPTA運営に使う慣行、学校徴収金とPTA会費を一体化する慣行、教職員がPTA事務を恒常的に担う慣行は、改めて根拠を問われる状態になっています。</p>
           <p>現在の適正化の動きは、「突然始まった新しい問題」ではありません。1946年以来の任意団体性、1949年以来の行政統制禁止、そして近年の個人情報保護制度の整理を、学校現場の実務に反映させる作業です。</p>
@@ -411,10 +340,10 @@
     <!-- ======================================================
          関連ページ
          ====================================================== -->
-    <section style="background:#fff; padding:60px 0; border-top:1px solid var(--line)">
+    <section class="u-c202e0b18b">
       <div class="wrap">
         <div class="section-kicker">Related</div>
-        <h2 class="section-title" style="margin-bottom:32px">関連ページ</h2>
+        <h2 class="section-title u-06dcf347ed">関連ページ</h2>
         <div class="rel-grid">
           <a href="law-map.html" class="rel-card">
             <div class="rel-card-kicker">Legal Framework</div>

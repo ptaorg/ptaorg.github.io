@@ -1,0 +1,31 @@
+@layer page {
+  /* Shared by 4 pages. Extracted from duplicated inline CSS. */
+  body {
+    margin: 0;
+    background: #f4f7fa;
+    color: #172033;
+    font-family: -apple-system, BlinkMacSystemFont, "Noto Sans JP", sans-serif;
+  }
+  .redirect {
+    width: min(calc(100% - 36px), 720px);
+    margin: 12vh auto;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #d9e3ed;
+    border-left: 7px solid #176c72;
+    border-radius: 0 16px 16px 0;
+    box-shadow: 0 12px 30px rgba(15, 39, 66, 0.08);
+  }
+  h1 {
+    font-size: clamp(1.35rem, 4vw, 2rem);
+    line-height: 1.5;
+    color: #102c4a;
+  }
+  p {
+    line-height: 1.9;
+  }
+  a {
+    color: #075f8c;
+    font-weight: 800;
+  }
+}

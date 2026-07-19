@@ -20,328 +20,9 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="/css/style.css?v=20260705-fixed-header-all-pages" rel="stylesheet"/>
-<link href="/css/refine.css?v=hover-orange-20260629cccccbb" rel="stylesheet"/>
-<style>
-    /* 就任直後フロー */
-    .onboard-section{background:#fff;padding:80px 0}
-    .onboard-timeline{
-      position:relative;
-      display:flex;flex-direction:column;gap:0;
-      margin-top:48px;
-      padding-left:60px;
-    }
-    .onboard-timeline::before{
-      content:'';position:absolute;left:20px;top:0;bottom:0;
-      width:2px;background:linear-gradient(180deg,var(--navy),rgba(26,58,82,.2));
-    }
-    .otl-step{
-      position:relative;
-      padding-bottom:36px;
-    }
-    .otl-step:last-child{padding-bottom:0}
-    .otl-dot{
-      position:absolute;left:-50px;top:8px;
-      width:40px;height:40px;border-radius:50%;
-      background:linear-gradient(135deg,var(--navy),var(--navy-3));
-      color:#fff;display:grid;place-items:center;
-      font-size:.95rem;font-weight:900;
-      box-shadow:0 4px 12px rgba(5,17,31,.25);
-      z-index:1;
-    }
-    .otl-phase{
-      display:inline-flex;padding:3px 10px;border-radius:999px;
-      font-size:.7rem;font-weight:900;letter-spacing:.06em;
-      background:rgba(212,175,55,.12);color:#7a5c00;
-      margin-bottom:8px;
-    }
-    .otl-title{
-      font-family:'Noto Serif JP',serif;font-size:1.15rem;
-      font-weight:900;color:var(--navy);margin-bottom:8px;
-    }
-    .otl-body{
-      background:var(--bg);border:1px solid var(--line);
-      border-radius:var(--radius);padding:20px 22px;
-    }
-    .otl-body p{font-size:.9rem;color:var(--text-soft);line-height:1.8;margin:0}
-    .otl-checklist{display:flex;flex-direction:column;gap:8px;margin-top:12px}
-    .otl-check{
-      display:flex;align-items:flex-start;gap:12px;
-      padding:10px 14px;background:#fff;
-      border:1px solid var(--line);border-radius:10px;
-      cursor:pointer;transition:var(--t);
-    }
-    .otl-check:hover{border-color:var(--navy-3);background:var(--bg)}
-    .check-box{
-      width:20px;height:20px;border:2px solid var(--line);
-      border-radius:6px;flex-shrink:0;margin-top:1px;
-      display:grid;place-items:center;font-size:.72rem;
-      transition:var(--t);
-    }
-    .check-box.checked{background:#15803d;border-color:#15803d;color:#fff}
-    .check-text{font-size:.88rem;color:var(--text);line-height:1.6}
-    .check-text strong{color:var(--navy)}
-    .check-law{display:block;font-size:.74rem;color:var(--text-soft);margin-top:2px}
-
-    /* リスクインフォグラフィック */
-    .risk-infographic{
-      background:linear-gradient(145deg,#1d4ed8,#2563eb);
-      padding:80px 0;color:#fff;
-    }
-    .risk-chart{
-      display:grid;grid-template-columns:repeat(3,1fr);
-      gap:18px;margin-top:48px;
-    }
-    .risk-col{
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:var(--radius);padding:28px;
-    }
-    .risk-col h3{
-      font-family:'Noto Serif JP',serif;font-size:1.05rem;
-      color:var(--gold-lt);margin-bottom:14px;
-    }
-    .risk-bar-wrap{margin-bottom:14px}
-    .risk-bar-label{
-      display:flex;justify-content:space-between;
-      font-size:.8rem;color:rgba(255,255,255,.75);margin-bottom:5px;
-    }
-    .risk-bar-track{height:8px;background:rgba(255,255,255,.15);border-radius:999px;overflow:hidden}
-    .risk-bar-fill{height:100%;border-radius:999px;transition:width 1s ease}
-    .risk-bar-fill-red{background:linear-gradient(90deg,#b91c1c,#ef4444)}
-    .risk-bar-fill-orange{background:linear-gradient(90deg,#c2410c,#f97316)}
-    .risk-bar-fill-blue{background:linear-gradient(90deg,#1d4ed8,#60a5fa)}
-
-    /* Before/After */
-    .compare-section{background:var(--bg);padding:80px 0}
-    .compare-wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
-    .compare-col{border-radius:var(--radius);padding:28px}
-    .compare-col.before{background:#fff5f5;border:1px solid #fecaca}
-    .compare-col.after{background:#f0fdf4;border:1px solid #bbf7d0}
-    .compare-label{font-size:.78rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
-    .compare-col.before .compare-label{color:#b91c1c}
-    .compare-col.after .compare-label{color:#15803d}
-    .compare-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;font-size:.9rem;color:var(--text);line-height:1.6}
-    .ci-dot-ng{width:18px;height:18px;border-radius:50%;background:#fee2e2;color:#b91c1c;display:grid;place-items:center;font-size:.7rem;flex-shrink:0;margin-top:1px}
-    .ci-dot-ok{width:18px;height:18px;border-radius:50%;background:#dcfce7;color:#15803d;display:grid;place-items:center;font-size:.7rem;flex-shrink:0;margin-top:1px}
-
-    /* Roadmap */
-    .roadmap-section{background:#fff;padding:80px 0}
-    .roadmap{display:flex;flex-direction:column;gap:0;margin-top:40px}
-    .rm-step{display:flex;gap:20px;position:relative}
-    .rm-step::before{content:'';position:absolute;left:19px;top:48px;bottom:-20px;width:2px;background:linear-gradient(180deg,var(--gold) 0%,transparent 100%)}
-    .rm-step:last-child::before{display:none}
-    .rm-num{
-      width:40px;height:40px;border-radius:50%;
-      background:linear-gradient(135deg,var(--navy),var(--navy-3));
-      color:#fff;display:grid;place-items:center;
-      font-weight:900;font-size:.95rem;flex-shrink:0;
-      margin-top:6px;position:relative;z-index:1;
-    }
-    .rm-body{
-      background:#fff;border:1px solid var(--line);
-      border-radius:var(--radius);padding:20px 22px;
-      flex:1;margin-bottom:20px;
-    }
-    .rm-phase{
-      display:inline-flex;padding:3px 10px;border-radius:999px;
-      background:rgba(212,175,55,.12);color:#7a5c00;
-      font-size:.7rem;font-weight:900;letter-spacing:.04em;margin-bottom:8px;
-    }
-    .rm-body strong{display:block;font-size:1rem;color:var(--navy);margin-bottom:6px}
-    .rm-body p{margin:0;font-size:.9rem;color:var(--text-soft);line-height:1.75}
-
-    /* PDF */
-    .officer-pdf{background:var(--navy);padding:72px 0;color:#fff}
-    .officer-pdf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
-    .opdf-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:24px;transition:var(--t)}
-    .opdf-card:hover{background:rgba(255,255,255,.1);transform:translateY(-3px)}
-    .opdf-icon{font-size:2rem;margin-bottom:10px}
-    .opdf-card h3{font-size:1rem;font-weight:900;color:var(--gold-lt);margin-bottom:6px}
-    .opdf-card p{font-size:.84rem;color:rgba(255,255,255,.72);line-height:1.65;margin-bottom:14px}
-    .opdf-btn{display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border-radius:999px;background:var(--gold);color:var(--navy);font-weight:900;font-size:.82rem;text-decoration:none;transition:var(--t)}
-    .opdf-btn:hover{background:var(--gold-lt)}
-
-    @media(max-width:900px){
-      .risk-chart{grid-template-columns:1fr}
-      .compare-wrap{grid-template-columns:1fr}
-      .officer-pdf-grid{grid-template-columns:1fr 1fr}
-    }
-    @media(max-width:560px){.officer-pdf-grid{grid-template-columns:1fr}}
-
-    .page-hero{position:relative;overflow:hidden;}
-    .page-hero-bg-img{
-      position:absolute;inset:0;z-index:0;
-    }
-    .page-hero-bg-img img{
-      width:100%;height:100%;object-fit:cover;
-      filter:brightness(1.05);
-    }
-    .page-hero-bg-img::after{
-      content:'';position:absolute;inset:0;
-      background:linear-gradient(160deg,rgba(5,17,31,.32) 0%,rgba(5,17,31,.14) 60%,rgba(5,17,31,.05) 100%);
-    }
-    .page-hero-inner{position:relative;z-index:1;}
-
-    /* ↓ Photo hero overrides — keep white text on photo background ↓ */
-    .page-hero{background:transparent!important;border-top:none!important;border-bottom:none!important}
-    .page-hero h1{color:#fff!important}
-    .page-hero h1 em{color:var(--gold-lt)!important}
-    .page-hero p{color:rgba(255,255,255,.88)!important}
-    .page-hero-kicker{background:rgba(212,175,55,.18)!important;border:1px solid rgba(212,175,55,.4)!important;color:var(--gold-lt)!important}
-    .hero-actions .btn-outline{color:#fff!important;border-color:rgba(255,255,255,.5)!important}
-    .hero-actions .btn-outline:hover{background:rgba(255,255,255,.12)!important;border-color:rgba(255,255,255,.8)!important}
-
-
-    /* 学校利用・働き方改革：PTA役員向け補強 */
-    .officer-core-section{background:#fff;padding:74px 0;border-top:1px solid var(--line)}
-    .officer-core-section.alt{background:var(--bg)}
-    .officer-core-section .section-lead{max-width:900px;margin-left:auto;margin-right:auto;text-align:left}
-    .officer-prose{max-width:980px;margin:22px auto 0;font-size:1rem;line-height:2;color:var(--text);}
-    .officer-prose p{margin:0 0 1.2em}
-    .officer-prose strong{color:var(--navy);background:linear-gradient(transparent 62%,rgba(212,175,55,.28) 62%)}
-    .officer-principle-box{max-width:980px;margin:28px auto 0;border-left:7px solid var(--gold);background:#fffaf0;padding:22px 26px;border-radius:0 14px 14px 0;box-shadow:0 3px 14px rgba(15,23,42,.05)}
-    .officer-principle-box h3{font-family:'Noto Serif JP',serif;color:var(--navy);font-size:1.18rem;margin:0 0 10px}
-    .officer-principle-box p{margin:0;line-height:1.9;color:var(--text)}
-    .officer-legal-table{width:100%;max-width:1040px;margin:28px auto 0;border-collapse:collapse;font-size:.94rem;background:#fff;box-shadow:0 2px 10px rgba(15,23,42,.04)}
-    .officer-legal-table th,.officer-legal-table td{border:1px solid var(--line);vertical-align:top;padding:14px 16px;line-height:1.75;text-align:left}
-    .officer-legal-table th{background:#f1f5f9;color:var(--navy);font-weight:900}
-    .officer-source-link{max-width:980px;margin:20px auto 0;background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:.92rem;line-height:1.75;color:var(--text-soft)}
-    .officer-source-link a{font-weight:900;color:var(--navy)}
-    .officer-action-list{max-width:980px;margin:24px auto 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-    .officer-action-list li{list-style:none;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;line-height:1.7;font-size:.94rem}
-    .officer-action-list strong{display:block;color:var(--navy);margin-bottom:3px}
-    @media(max-width:760px){.officer-action-list{grid-template-columns:1fr}.officer-legal-table{display:block;overflow-x:auto}.officer-legal-table th,.officer-legal-table td{min-width:12rem}}
-
-    .officer-video-section {
-      background: linear-gradient(180deg, #fffaf0 0%, #ffffff 100%);
-      padding: 48px 0;
-      border-top: 1px solid rgba(15,39,71,.06);
-      border-bottom: 1px solid rgba(15,39,71,.08);
-    }
-
-    .officer-video-card {
-      display: grid;
-      grid-template-columns: minmax(0, .95fr) minmax(320px, 1.25fr);
-      gap: 28px;
-      align-items: center;
-      background: #fff;
-      border: 1px solid rgba(15,39,71,.14);
-      border-left: 8px solid #2f6f73;
-      border-radius: 0 22px 22px 0;
-      box-shadow: 0 16px 38px rgba(5,17,31,.10);
-      padding: 30px;
-    }
-
-    .officer-video-badge {
-      display: inline-flex;
-      padding: 5px 12px;
-      border-radius: 999px;
-      background: rgba(47,111,115,.10);
-      color: #2f6f73;
-      font-size: .74rem;
-      font-weight: 900;
-      letter-spacing: .08em;
-      margin-bottom: 12px;
-    }
-
-    .officer-video-copy h2 {
-      font-family: 'Noto Serif JP', serif;
-      color: var(--navy);
-      font-size: clamp(1.35rem, 2.5vw, 2rem);
-      line-height: 1.45;
-      margin: 0 0 12px;
-    }
-
-    .officer-video-copy p {
-      color: var(--text);
-      font-size: .98rem;
-      line-height: 1.95;
-      margin: 0;
-    }
-
-    .officer-video-frame {
-      position: relative;
-      width: 100%;
-    }
-
-    .officer-video-frame video {
-      display: block;
-      width: 100%;
-      height: auto;
-      aspect-ratio: 16 / 9;
-      border-radius: 16px;
-      background: #0f2747;
-      box-shadow: 0 18px 42px rgba(5,17,31,.18);
-    }
-
-    @media (max-width: 860px) {
-      .officer-video-card {
-        grid-template-columns: 1fr;
-        padding: 24px 20px;
-        border-left-width: 6px;
-      }
-
-      .officer-video-section {
-        padding: 36px 0;
-      }
-    }
-
-    .officer-chain-direct {
-      background: linear-gradient(180deg, #f0fdfa 0%, #ffffff 100%);
-      padding: 42px 0;
-      border-top: 1px solid rgba(15,39,71,.06);
-      border-bottom: 1px solid rgba(15,39,71,.08);
-    }
-
-    .officer-chain-card {
-      background: #fff;
-      border: 1px solid rgba(15,39,71,.14);
-      border-left: 8px solid #2f6f73;
-      border-radius: 0 18px 18px 0;
-      box-shadow: 0 14px 34px rgba(5,17,31,.10);
-      padding: 28px 30px;
-    }
-
-    .officer-chain-badge {
-      display: inline-flex;
-      padding: 5px 12px;
-      border-radius: 999px;
-      background: rgba(47,111,115,.10);
-      color: #2f6f73;
-      font-size: .74rem;
-      font-weight: 900;
-      letter-spacing: .08em;
-      margin-bottom: 12px;
-    }
-
-    .officer-chain-card h2 {
-      font-family: 'Noto Serif JP', serif;
-      color: var(--navy);
-      font-size: clamp(1.35rem, 2.5vw, 2rem);
-      line-height: 1.45;
-      margin: 0 0 12px;
-    }
-
-    .officer-chain-card p {
-      color: var(--text);
-      font-size: .98rem;
-      line-height: 1.95;
-      margin: 0 0 18px;
-    }
-
-    .officer-chain-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    @media (max-width: 760px) {
-      .officer-chain-direct { padding: 32px 0; }
-      .officer-chain-card { padding: 24px 20px; border-left-width: 6px; }
-    }
-
-  </style>
+<link href="/css/site.css?v=20260719" rel="stylesheet"/>
+<link href="/css/editorial.css?v=20260719" rel="stylesheet"/>
+<link rel="stylesheet" href="/css/pages/guide-pta.css?v=20260719">
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
 <script>
@@ -376,181 +57,21 @@
 
 
 
-<link rel="stylesheet" href="/css/hover-orange.css?v=20260629-hero22-hero22">
+<link rel="stylesheet" href="/css/interactions.css?v=20260719">
 
 
 
 
 
-<style id="final-hero-layout-fix">
-html,body{overflow-x:hidden!important}
-.support-strip{background:linear-gradient(90deg,#0a192f 0%,#1e3a5f 58%,#2d5a8e 100%)!important;color:#fff!important;border-bottom:1px solid rgba(212,175,55,.42)!important}
-.support-strip-inner,.support-strip-text{color:#fff!important}
-.site-header{background:linear-gradient(90deg,#0a192f 0%,#1e3a5f 58%,#2d5a8e 100%)!important;border-bottom:3px solid #d4af37!important}
-.site-header .nav-container{background:transparent!important}
-.site-header .logo,.site-header .logo span,.site-header .nav-link{color:#fff!important}
-.site-header .hamburger span{background:#fff!important}
-.breadcrumb-bar{display:none!important}
-.page-hero--photo{display:block!important;position:relative!important;width:100%!important;max-width:none!important;min-height:340px!important;margin:0!important;padding:0!important;overflow:hidden!important;background:#0a192f!important;border:0!important;color:#fff!important}
-.page-hero--photo .page-hero-bg-img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:0!important}
-.page-hero--photo .page-hero-bg-img img{display:block!important;width:100%!important;height:100%!important;min-height:340px!important;object-fit:cover!important}
-.page-hero--photo .page-hero-bg-img::after{content:""!important;position:absolute!important;inset:0!important;background:linear-gradient(90deg,rgba(5,17,31,.78) 0%,rgba(5,17,31,.52) 48%,rgba(5,17,31,.18) 100%)!important}
-.page-hero--photo> :not(.page-hero-bg-img){position:relative!important;z-index:1!important;width:min(calc(100% - 40px),1080px)!important;max-width:1080px!important;margin-left:auto!important;margin-right:auto!important;padding-top:68px!important;padding-bottom:74px!important;color:#fff!important}
-.page-hero--photo .page-hero-inner,.page-hero--photo .issue-hero-inner,.page-hero--photo .journal-hero-inner{position:relative!important;z-index:1!important;width:min(calc(100% - 40px),1080px)!important;max-width:1080px!important;margin-left:auto!important;margin-right:auto!important;padding-top:68px!important;padding-bottom:74px!important;color:#fff!important}
-.page-hero--photo h1,.page-hero--photo p,.page-hero--photo .section-lead{color:#fff!important;text-shadow:0 2px 12px rgba(0,0,0,.34)!important}
-.page-hero--photo h1 em{color:#f4e7a6!important}
-@media(max-width:760px){.page-hero--photo{min-height:300px!important}.page-hero--photo .page-hero-bg-img img{min-height:300px!important}.page-hero--photo> :not(.page-hero-bg-img),.page-hero--photo .page-hero-inner,.page-hero--photo .issue-hero-inner,.page-hero--photo .journal-hero-inner{width:min(calc(100% - 28px),1080px)!important;padding-top:44px!important;padding-bottom:52px!important}}
-</style>
+<link rel="stylesheet" href="/css/shared/editorial-page-common.css?v=20260719">
 
-<style id="guide-pta-editorial-20260710">
-body.guide-pta-editorial .page-hero-kicker{
-  text-transform:none!important;
-  letter-spacing:.03em!important;
-  border-radius:3px!important;
-}
-body.guide-pta-editorial .hero-actions,
-body.guide-pta-editorial .officer-chain-direct{
-  display:none!important;
-}
-body.guide-pta-editorial .officer-video-section{
-  padding:38px 0!important;
-  background:#f8fafc!important;
-  border-bottom:1px solid #dbe4ee!important;
-}
-body.guide-pta-editorial .officer-video-card{
-  border:0!important;
-  border-left:4px solid var(--gold)!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-  padding:22px 0 22px 24px!important;
-  background:transparent!important;
-}
-body.guide-pta-editorial .officer-video-badge,
-body.guide-pta-editorial .otl-phase,
-body.guide-pta-editorial .rm-phase{
-  display:none!important;
-}
-body.guide-pta-editorial #guidebook-text{
-  padding-top:68px!important;
-}
-body.guide-pta-editorial #guidebook-text > .wrap > div:first-child{
-  display:none!important;
-}
-body.guide-pta-editorial .gb-chapter,
-body.guide-pta-editorial .gb-chapter-accordion{
-  border:0!important;
-  border-top:1px solid #cfd8e2!important;
-  border-radius:0!important;
-  margin:0!important;
-  padding:0!important;
-  background:#fff!important;
-}
-body.guide-pta-editorial .gb-chapter-accordion:last-child{
-  border-bottom:1px solid #cfd8e2!important;
-}
-body.guide-pta-editorial .gb-chapter-summary{
-  cursor:default!important;
-  list-style:none!important;
-  padding:24px 0 18px!important;
-  background:#fff!important;
-  border:0!important;
-  color:var(--navy)!important;
-}
-body.guide-pta-editorial .gb-chapter-summary::-webkit-details-marker,
-body.guide-pta-editorial .gb-chapter-state,
-body.guide-pta-editorial .gb-chapter-summary::after{
-  display:none!important;
-}
-body.guide-pta-editorial .gb-chapter-content{
-  display:block!important;
-  padding:0 0 34px!important;
-  background:#fff!important;
-}
-body.guide-pta-editorial .otl-body,
-body.guide-pta-editorial .risk-col,
-body.guide-pta-editorial .compare-col,
-body.guide-pta-editorial .rm-body,
-body.guide-pta-editorial .opdf-card,
-body.guide-pta-editorial .otl-check{
-  border-radius:0!important;
-  box-shadow:none!important;
-  transform:none!important;
-}
-body.guide-pta-editorial .risk-chart,
-body.guide-pta-editorial .officer-pdf-grid{
-  display:block!important;
-  max-width:880px!important;
-  margin-left:auto!important;
-  margin-right:auto!important;
-}
-body.guide-pta-editorial .risk-col,
-body.guide-pta-editorial .opdf-card{
-  margin:0!important;
-  padding:24px 0!important;
-  border:0!important;
-  border-top:1px solid rgba(255,255,255,.24)!important;
-  background:transparent!important;
-}
-body.guide-pta-editorial .risk-col:last-child,
-body.guide-pta-editorial .opdf-card:last-child{
-  border-bottom:1px solid rgba(255,255,255,.24)!important;
-}
-body.guide-pta-editorial .compare-wrap{
-  grid-template-columns:1fr!important;
-  gap:0!important;
-  border-top:1px solid #cfd8e2!important;
-}
-body.guide-pta-editorial .compare-col{
-  padding:24px 0!important;
-  border:0!important;
-  border-bottom:1px solid #cfd8e2!important;
-  background:transparent!important;
-}
-body.guide-pta-editorial .rm-body{
-  border:0!important;
-  border-bottom:1px solid #cfd8e2!important;
-  padding:18px 0 24px!important;
-}
-body.guide-pta-editorial main a:hover,
-body.guide-pta-editorial main button:hover,
-body.guide-pta-editorial main summary:hover{
-  transform:none!important;
-  box-shadow:none!important;
-}
-@media(max-width:760px){
-  body.guide-pta-editorial .officer-video-card{
-    padding-left:18px!important;
-  }
-  body.guide-pta-editorial .onboard-timeline{
-    padding-left:48px!important;
-  }
-}
-</style>
 
-<style id="officer-final-editorial-20260710">
-body.guide-pta-editorial .page-hero-kicker{display:none!important}
-body.guide-pta-editorial .risk-bar-track{display:none!important}
-body.guide-pta-editorial .risk-bar-label{justify-content:flex-start!important;gap:12px!important}
-body.guide-pta-editorial .risk-bar-label span:last-child{display:none!important}
-body.guide-pta-editorial .compare-label{
-  text-transform:none!important;
-  letter-spacing:0!important;
-}
-body.guide-pta-editorial .otl-dot,
-body.guide-pta-editorial .rm-num{
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-body.guide-pta-editorial .otl-body,
-body.guide-pta-editorial .otl-check{
-  background:#fff!important;
-  border-left:0!important;
-  border-right:0!important;
-}
-</style>
+
+
+<link rel="stylesheet" href="/css/inline-utilities.css?v=20260719">
 </head>
 <body class="guide-pta-editorial">
-<aside style="background:#fff4d6;border-bottom:1px solid #e4c46a;padding:12px 20px;text-align:center;font-weight:800"><a href="/pta-membership-optin.html">役員の最初の確認：会員名簿を「全保護者からの引き算」ではなく加入申込記録から作る →</a></aside>
+<aside class="u-1d511ad56e"><a href="/pta-membership-optin.html">役員の最初の確認：会員名簿を「全保護者からの引き算」ではなく加入申込記録から作る →</a></aside>
 <div aria-label="活動支援のお願い" class="support-strip" role="complementary">
 <div class="support-strip-inner">
 <span class="support-strip-label">応援のお願い</span>
@@ -721,23 +242,23 @@ body.guide-pta-editorial .otl-check{
 </div>
 </section>
 <!-- ガイドブック全文テキスト -->
-<section id="guidebook-text" style="background:#fff;border-bottom:3px solid #e2e8f0;padding:60px 0 48px">
-<div class="wrap" style="max-width:800px">
-<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
-<span style="font-size:.7rem;font-weight:900;letter-spacing:.1em;color:#b91c1c;text-transform:uppercase;background:#fef2f2;padding:4px 10px;border-radius:4px">PTA運営適正化ガイドブック 役員版 全文</span>
+<section class="u-13eea91b89" id="guidebook-text">
+<div class="wrap u-f3b4dfed28">
+<div class="u-7c59c9848f">
+<span class="u-0d3e4b625c">PTA運営適正化ガイドブック 役員版 全文</span>
 </div>
-<h2 style="font-size:1.7rem;font-weight:900;color:#1e3a5f;margin:0 0 32px;line-height:1.4">PTA役員が知るべきこと<br/><span style="font-size:1.1rem;font-weight:700;color:#4a6580">——任意団体として正しく運営するための手引き</span></h2>
-<p style="margin:-16px 0 28px;color:#475569;line-height:1.8;font-size:.92rem">第1章から第11章までを連続して掲載しています。図解資料は本文後半にまとめています。</p>
-<div class="guidebook-text-body" style="font-size:1rem;line-height:1.9;color:#1e293b">
+<h2 class="u-d4731a5caa">PTA役員が知るべきこと<br/><span class="u-6c12dc5a50">——任意団体として正しく運営するための手引き</span></h2>
+<p class="u-205c54a0e2">第1章から第11章までを連続して掲載しています。図解資料は本文後半にまとめています。</p>
+<div class="guidebook-text-body u-1b26ea59b2">
 <!-- はじめに -->
-<div class="gb-chapter" style="margin-bottom:40px">
-<h3 style="font-size:1.15rem;font-weight:900;color:#1e3a5f;border-left:4px solid #1d4ed8;padding-left:12px;margin-bottom:16px">はじめに</h3>
+<div class="gb-chapter u-b3a1e90014">
+<h3 class="u-80229abfe3">はじめに</h3>
 <p>PTAは、学校補助団体ではありません。学校の下請けでも、教育委員会の末端組織でも、学校行事を支えるために保護者を動員する組織でもありません。PTAは、保護者と教職員が、本人の自由な意思で参加する任意団体です。学校と協力することはできます。しかし、学校の不足を埋めるために存在する団体ではありません。</p>
 <p>いま、PTAをめぐって、強制加入、みなし加入、会費徴収、個人情報の取扱い、役員の押し付け、学校との一体化が各地で問題になっています。これは一部の学校だけの話ではありません。長年の慣行の中で、PTAが「任意団体」であることが曖昧にされ、保護者が断りにくい仕組みが続いてきたことが、社会的に問われています。</p>
 <p>もちろん、PTA役員が会員減少を不安に感じることは理解できます。入会申込を取り直せば、会員が減るかもしれません。活動が維持できなくなるかもしれません。学校からも困ると言われるかもしれません。しかし、それはPTAが本来の姿に戻る過程です。会員が減るなら、会員数に合わせて活動を小さくすればよいのです。人が集まらない活動は、無理に続けるのではなく、やめるか縮小すればよいのです。</p>
 <p>PTA活動は、無理やり維持するから苦しくなります。自分から手を挙げて参加する人がいるから、活動に活気が生まれます。本人の意思で入会し、できる範囲で関わるからこそ、その協力は尊いものになります。</p>
 <p>PTA役員に求められるのは、学校のために保護者を動員することではありません。会員の意思に基づき、透明で、説明可能で、無理のない団体運営を行うことです。</p>
-<p style="font-weight:700;color:#1e3a5f">品格をもって運営してください。法を守ってください。子どもの前で、筋の通らないことを正当化しないでください。</p>
+<p class="u-c8ad8077ec">品格をもって運営してください。法を守ってください。子どもの前で、筋の通らないことを正当化しないでください。</p>
 <p>大人が任意加入を偽り、学校の信用を使い、個人情報を曖昧に扱い、断れない空気を作るなら、それは子どもに示すべき姿ではありません。PTAは、子どものためという言葉を使う団体です。であればこそ、まず大人が、法を守り、約束を守り、自由な意思を尊重する手本となるべきです。</p>
 </div>
 <!-- 第1章 -->
@@ -749,16 +270,16 @@ body.guide-pta-editorial .otl-check{
 <span aria-hidden="true" class="gb-chapter-state"></span>
 </summary>
 <div class="gb-chapter-content">
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">1-1　PTA役員は学校の代理人ではありません</h4>
+<h4 class="u-e6e5a2e03b">1-1　PTA役員は学校の代理人ではありません</h4>
 <p>PTA役員は、学校の代理人ではありません。PTA会長は校長の補佐役ではなく、副会長は教頭の事務補助者ではありません。会計は学校徴収金の処理係ではなく、書記は学校配布物の作成係でもありません。PTA役員は、PTA会則、総会決議、会員の意思に基づいて、PTAという任意団体を運営する立場です。</p>
 <p>学校から頼まれたから実施する。学校行事だからPTAが費用を出す。学校が困っているからPTA会費で備品を購入する。学校が便利だからPTA通知を学校アプリで流す。このような運営は、一見すると学校への協力に見えます。しかし、PTA内部の意思決定と説明責任が抜け落ちています。PTAは学校と協力できます。しかし、学校の一部になることはできません。学校に協力することと、学校の業務を肩代わりすることは違います。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">1-2　PTAは自立した任意団体です</h4>
+<h4 class="u-e6e5a2e03b">1-2　PTAは自立した任意団体です</h4>
 <p>PTAは、学校とは別の自立した任意団体です。自立した団体である以上、自分で会員を確認し、自分で会費を管理し、自分で個人情報を取得し、自分で活動量を決め、自分で説明責任を果たす必要があります。「学校がやってくれるから」「昔からそうだったから」「他のPTAもそうしているから」という理由は、PTA運営の根拠にはなりません。</p>
 <p>PTAが学校の制度に入り込むほど、保護者はPTAを学校の一部と誤認します。PTA加入を学校手続と誤認し、PTA会費を義務的費用と誤認し、PTA役員を断れないものと誤認します。PTAが任意団体であることを守るには、学校との境界を実務上も明確にする必要があります。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">1-3　最初に確認する資料</h4>
+<h4 class="u-e6e5a2e03b">1-3　最初に確認する資料</h4>
 <p>役員になったら、まず現状を確認します。確認すべき資料は、PTA会則、総会資料、総会議事録、予算書、決算書、監査報告、入会申込記録、退会受付記録、会員台帳、個人情報利用目的、会費徴収方法、学校徴収金との関係、学校アプリや学校メールでのPTA通知の実態、学校職員がPTA事務に関与している範囲、学校施設利用の許可又は届出、役員選出方法などです。このうち最も重要なのは、入会申込記録です。</p>
 <p>入会申込記録がなければ、誰が会員なのかを説明できません。誰から会費を取れるのか、誰に議決権があるのか、誰を役員候補にできるのか、誰の個人情報を利用できるのかも説明できません。PTA運営の出発点は、会則でも、前年度資料でも、学校の名簿でもありません。本人の入会申込記録です。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">1-4　「昔からそう」は役員を守りません</h4>
+<h4 class="u-e6e5a2e03b">1-4　「昔からそう」は役員を守りません</h4>
 <p>PTA運営で最も危険な言葉は、「昔からそう」です。昔から全員加入だった。昔から入会届はなかった。昔から退会届を出さない限り会員だった。昔から学校が名簿を渡していた。昔から学校徴収金と一緒に会費を引き落としていた。しかし、昔からそうだったことは、現在も適法・適正であることの根拠にはなりません。むしろ、問題を知った後も続ければ、現在の役員が説明責任を問われます。役員が守るべきなのは、過去の慣行ではありません。現在の会員、保護者、児童生徒、学校、そして役員自身です。</p>
 </div>
 </details>
@@ -771,13 +292,13 @@ body.guide-pta-editorial .otl-check{
 <span aria-hidden="true" class="gb-chapter-state"></span>
 </summary>
 <div class="gb-chapter-content">
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">2-1　PTA加入は「なんとなく所属」ではありません</h4>
+<h4 class="u-e6e5a2e03b">2-1　PTA加入は「なんとなく所属」ではありません</h4>
 <p>PTA加入は、単なる慣習ではありません。「保護者だから自動的に入っている」という関係でもありません。PTAに加入するということは、会則に基づく団体関係に入るということです。会費を支払い、会則に従い、総会で議決権を持ち、役員や委員の候補者となることがあり、PTAから連絡を受け、PTA活動に関係します。これは契約関係です。契約である以上、本人の意思表示が必要です。本人の意思表示である以上、記録が必要です。「入会申込記録はありませんが、会員です」という説明は通用しません。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">2-2　PTAは消費者契約法上の事業者です</h4>
+<h4 class="u-e6e5a2e03b">2-2　PTAは消費者契約法上の事業者です</h4>
 <p>PTAは、消費者契約法上の「事業者」に該当する団体です。消費者契約法は、事業者を「法人その他の団体」等と定義しており、法人格のないPTAも同法上の事業者として扱われます。したがって、PTAが「営利団体ではありません」「ボランティアです」「子どものためです」「法人格はありません」と説明しても、加入関係における説明責任は消えません。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">2-3　使ってはならない入会案内</h4>
+<h4 class="u-e6e5a2e03b">2-3　使ってはならない入会案内</h4>
 <p>PTAの入会案内では、保護者に加入義務があるかのように読める表現を使ってはなりません。たとえば、「保護者の皆様にはPTAにご加入いただきます」「全家庭加入となっています」「退会する場合は退会届を提出してください」「提出がない場合は加入として扱います」「PTA会費は学校徴収金と一緒に引き落とします」といった表現は避ける必要があります。これらの表現は、加入が当然である、支払いが義務である、断ることは迷惑である、という誤認を生じさせます。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">2-4　入会案内に必ず書くこと</h4>
+<h4 class="u-e6e5a2e03b">2-4　入会案内に必ず書くこと</h4>
 <p>入会案内には、PTAが学校とは別の任意団体であること、加入は本人の自由意思によること、加入しないこと又は退会することによって児童生徒に不利益が生じないこと、会費額、会費の主な使途、会則を確認できる方法、活動内容、個人情報の取得項目、個人情報の利用目的、退会方法、問い合わせ先を明記します。任意加入と一行書くだけでは足りません。文言だけではなく、手続全体を任意加入に合わせる必要があります。</p>
 </div>
 </details>
@@ -790,13 +311,13 @@ body.guide-pta-editorial .otl-check{
 <span aria-hidden="true" class="gb-chapter-state"></span>
 </summary>
 <div class="gb-chapter-content">
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">3-1　必要なのは「書面」ではなく「記録」です</h4>
+<h4 class="u-e6e5a2e03b">3-1　必要なのは「書面」ではなく「記録」です</h4>
 <p>必要なのは、必ずしも紙の入会申込書だけではありません。紙の申込書、電子フォーム、メール、署名付きPDF、会員管理システムなど、本人の入会意思、申込日、申込内容、利用目的の確認を後から説明できる記録であれば、方法は問いません。重要なのは形式ではなく、「誰が、いつ、どの内容を確認して、入会を申し込んだのか」をPTAが説明できることです。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">3-2　入会申込記録がないPTAは会員を特定できません</h4>
+<h4 class="u-e6e5a2e03b">3-2　入会申込記録がないPTAは会員を特定できません</h4>
 <p>入会申込記録がないPTAは、会員を特定できません。会則に「保護者をもって会員とする」と書いてあっても、それだけでは足りません。PTAは任意加入団体です。任意加入団体である以上、本人の加入意思が必要です。本人の加入意思が記録されていなければ、PTAは「この人は会員です」と説明できません。会員を特定できなければ、会費請求の根拠、総会の定足数、議決権、役員選出対象、個人情報の利用根拠がすべて崩れます。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">3-3　PTAは非会員を把握できません</h4>
+<h4 class="u-e6e5a2e03b">3-3　PTAは非会員を把握できません</h4>
 <p>PTAが正当に把握できるのは、入会申込をした会員の情報だけです。非会員を特定するには、全保護者情報とPTA会員情報を照合する必要があります。これは、学校が学校目的で保有している個人情報を、PTA目的で利用する処理です。したがって、「非会員には送らないようにします」という説明は成り立ちません。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">3-4　「退会届を出していないから会員」は通用しません</h4>
+<h4 class="u-e6e5a2e03b">3-4　「退会届を出していないから会員」は通用しません</h4>
 <p>任意加入団体では、まず入会申込が必要です。入会申込があり、PTAが受け付けて、初めて会員になります。入会申込記録がない人について、「退会届がないから会員」と扱うことはできません。退会届は、すでに有効な会員関係がある場合に意味を持つ書類です。</p>
 </div>
 </details>
@@ -809,11 +330,11 @@ body.guide-pta-editorial .otl-check{
 <span aria-hidden="true" class="gb-chapter-state"></span>
 </summary>
 <div class="gb-chapter-content">
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">4-1　PTAが持てるのは会員情報です</h4>
+<h4 class="u-e6e5a2e03b">4-1　PTAが持てるのは会員情報です</h4>
 <p>PTAが正当に持てるのは、本人がPTAに提供した会員情報です。しかし、PTAは学校に在籍する全児童・全保護者の情報を当然に持つことはできません。全保護者情報を持たない以上、非会員を把握できません。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">4-2　非会員への実費請求はできません</h4>
+<h4 class="u-e6e5a2e03b">4-2　非会員への実費請求はできません</h4>
 <p>PTAは非会員を把握できません。したがって、非会員家庭にだけ実費を請求する運用は組み立てられません。また、学校施設や学校行事に接続して行う活動では、子どもを会員家庭・非会員家庭で扱い分けることもできません。実施するなら、会員向け活動として学校外又は会員内で完結させる必要があります。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">4-3　子どもを会員・非会員で分けてはいけません</h4>
+<h4 class="u-e6e5a2e03b">4-3　子どもを会員・非会員で分けてはいけません</h4>
 <p>PTAは保護者の任意団体です。児童生徒は、PTA加入契約の当事者ではありません。学校内で行われる活動や、学校行事に接続する活動について、会員家庭の子どもと非会員家庭の子どもを分けることは避けなければなりません。子どもを分ける運用は、学校内での不利益や分断を生みます。学校内で行う活動は、児童生徒を分けない設計にする必要があります。</p>
 </div>
 </details>
@@ -826,11 +347,11 @@ body.guide-pta-editorial .otl-check{
 <span aria-hidden="true" class="gb-chapter-state"></span>
 </summary>
 <div class="gb-chapter-content">
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">5-1　学校が持つ情報はPTAの情報ではありません</h4>
+<h4 class="u-e6e5a2e03b">5-1　学校が持つ情報はPTAの情報ではありません</h4>
 <p>学校は、就学、在籍管理、教育活動、安全確保等のために、児童生徒と保護者の個人情報を保有しています。これは学校の情報です。PTAの情報ではありません。個人情報保護委員会は、PTA名簿の基本は本人からの直接取得であるとしています。学校が持っているからもらう、学校アプリに登録されているからPTA通知にも使う、担任が知っているからPTA役員に教える——この発想は誤りです。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">5-2　学校からの提供には法的整理が必要です</h4>
+<h4 class="u-e6e5a2e03b">5-2　学校からの提供には法的整理が必要です</h4>
 <p>公立学校からPTAに個人情報を渡す場合、少なくとも法的整理が必要です。利用目的内の提供か、本人同意があるか、安全管理措置はあるか、再提供禁止・返却・廃棄は定められているかを確認する必要があります。「便利だから」「昔からそうだから」「子どものためだから」という理由は、個人情報提供の根拠にはなりません。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">5-3　取得する情報は最小限にします</h4>
+<h4 class="u-e6e5a2e03b">5-3　取得する情報は最小限にします</h4>
 <p>PTAが取得してよい情報は、活動に必要な最小限です。住所、勤務先、家族構成、緊急連絡先、健康情報、収入状況、非加入理由、退会理由などは、取得の必要性を厳格に確認します。参加できない理由を詮索しないこと、退会理由を書かせないこと、非加入理由を聞かないことが、任意団体としての基本です。</p>
 </div>
 </details>
@@ -843,13 +364,13 @@ body.guide-pta-editorial .otl-check{
 <span aria-hidden="true" class="gb-chapter-state"></span>
 </summary>
 <div class="gb-chapter-content">
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">6-1　学校職員がPTA事務を担う場合の確認</h4>
+<h4 class="u-e6e5a2e03b">6-1　学校職員がPTA事務を担う場合の確認</h4>
 <p>PTAの入会受付、退会受付、会員台帳管理、会費管理、文書作成、印刷、配布、回収、集計、問い合わせ対応を学校職員が勤務時間中に行っている場合は、具体的作業、校務としての位置づけ、職務命令、職専免、個人情報利用、費用負担、決裁を確認します。PTAから依頼されたというだけでは学校側の職務上の根拠にはなりません。PTA内部事務はPTA自身が処理することを基本とし、学校が協力する範囲は文書で区分します。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">6-2　学校アプリ・学校メールを使う場合の確認</h4>
+<h4 class="u-e6e5a2e03b">6-2　学校アプリ・学校メールを使う場合の確認</h4>
 <p>学校アプリ、学校メール、学校公式連絡網は、学校が保護者へ学校業務に関する連絡を行うための仕組みです。PTA内部連絡は、PTAが本人から直接取得した会員連絡先を用いることが最も明確です。学校の連絡手段を利用する場合は、送信主体、対象者、利用目的、学校保有連絡先を使う根拠、承認者、配信記録、非会員への配信の必要性を確認し、学校の公式連絡とPTA通知を区別します。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">6-3　入学説明会・入学式で案内する場合の区分</h4>
+<h4 class="u-e6e5a2e03b">6-3　入学説明会・入学式で案内する場合の区分</h4>
 <p>入学説明会や入学式は、学校が学校生活や就学手続を説明する公式な場です。その場でPTAが案内する場合は、学校手続とは別であること、加入は任意であること、発行主体と提出先がPTAであることを明示し、学校による提出強制や一括回収と誤認されない方法を取ります。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">6-4　学校配布物とPTA配布物を区別する</h4>
+<h4 class="u-e6e5a2e03b">6-4　学校配布物とPTA配布物を区別する</h4>
 <p>学校提出書類とPTA入会案内を同じ機会に配布する場合でも、文書の発行主体、提出先、提出義務の有無を明確に区別します。PTA文書には、学校の提出書類ではないこと、加入は任意であること、未加入でも児童生徒に不利益がないことを明示します。</p>
 </div>
 </details>
@@ -862,11 +383,11 @@ body.guide-pta-editorial .otl-check{
 <span aria-hidden="true" class="gb-chapter-state"></span>
 </summary>
 <div class="gb-chapter-content">
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">7-1　PTA会費は学校徴収金ではありません</h4>
+<h4 class="u-e6e5a2e03b">7-1　PTA会費は学校徴収金ではありません</h4>
 <p>PTA会費は、任意団体であるPTAの会費です。教材費、給食費、修学旅行積立金などの学校徴収金とは性質が異なります。PTA会費を学校徴収金と同じ案内、口座、引落し、未納管理で扱うと、保護者はPTA会費を義務的費用と誤認しやすくなります。PTAが入会した会員から直接徴収する方式が最も明確です。学校が徴収事務に関与する場合は、加入記録、委任、口座情報の利用、校務・服務、決裁、会計区分を個別に説明します。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">7-2　学校のために使う支出を見直します</h4>
+<h4 class="u-e6e5a2e03b">7-2　学校のために使う支出を見直します</h4>
 <p>PTA会費は、PTAの目的のために使うものです。学校備品の購入、授業で使う教材や消耗品、学校行事の運営費、教職員への手当・謝礼・慰労・飲食費、学校が本来公費で整備すべきものへの支出は、厳格に見直す必要があります。「子どものため」は説明になりません。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">7-3　会計は会員に説明できる状態にします</h4>
+<h4 class="u-e6e5a2e03b">7-3　会計は会員に説明できる状態にします</h4>
 <p>予算書、決算書、監査報告、通帳、帳簿、領収書、支出決裁記録をPTAが管理します。特に、活動手当、謝礼、交通費、飲食費、教職員関係支出、学校への物品提供は、説明責任が重くなります。会計が説明できないPTAは、活動を縮小する必要があります。</p>
 </div>
 </details>
@@ -879,9 +400,9 @@ body.guide-pta-editorial .otl-check{
 <span aria-hidden="true" class="gb-chapter-state"></span>
 </summary>
 <div class="gb-chapter-content">
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">8-1　役員選出は罰ゲームではありません</h4>
+<h4 class="u-e6e5a2e03b">8-1　役員選出は罰ゲームではありません</h4>
 <p>PTAは任意団体です。加入が任意である以上、活動参加も、役員就任も、本人の意思が基本です。くじ引きで役員を決める、欠席者を役員候補にする、辞退理由を審査する、家庭事情を申告させる、ポイント不足の人を追い込む、役員を断る人を非協力的と扱う——このような運営は、任意団体としての性質に反します。役員が足りない場合、問題は保護者の意識ではありません。活動量が会員の意思と生活実態に合っていないのです。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">8-2　活動量を会員の意思に合わせます</h4>
+<h4 class="u-e6e5a2e03b">8-2　活動量を会員の意思に合わせます</h4>
 <p>PTA活動は、前年度踏襲で維持するものではありません。毎年度、この活動は本当に必要か、会員が希望しているか、参加できる人だけで実施できるか、非会員家庭の児童生徒に不利益を生まないか、会費を使う根拠を説明できるかを確認します。人が集まらない活動は、会員が必要性を感じていない活動です。役員の強制で維持してはいけません。</p>
 </div>
 </details>
@@ -894,9 +415,9 @@ body.guide-pta-editorial .otl-check{
 <span aria-hidden="true" class="gb-chapter-state"></span>
 </summary>
 <div class="gb-chapter-content">
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">9-1　学校教育法137条はPTAの特権ではありません</h4>
+<h4 class="u-e6e5a2e03b">9-1　学校教育法137条はPTAの特権ではありません</h4>
 <p>学校教育法137条は、学校教育上支障のない限り、学校の施設を社会教育その他公共のために利用させることができると定めています。この条文は、PTAが学校施設を当然に使えるという意味ではありません。PTAが学校の内部組織であるという意味でもありません。学校施設は、本来、学校教育のための施設です。PTAが使う場合、それは目的外使用です。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">9-2〜9-4　学校施設を使うなら分離を徹底する</h4>
+<h4 class="u-e6e5a2e03b">9-2〜9-4　学校施設を使うなら分離を徹底する</h4>
 <p>「学校教育上支障がない」とは、空き教室があるという意味だけではありません。学校施設を使うPTAほど、学校とは別の任意団体であることを明確に示す必要があります。施設利用については、利用目的、利用日時、責任者、使用許可・届出、個人情報を扱う作業の有無を確認します。任意加入、入会記録、会費、役員選出、学校関与に問題がある場合は、公共性、教育上の支障、許可条件、公私分離の観点から使用範囲を見直します。</p>
 </div>
 </details>
@@ -909,11 +430,11 @@ body.guide-pta-editorial .otl-check{
 <span aria-hidden="true" class="gb-chapter-state"></span>
 </summary>
 <div class="gb-chapter-content">
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">10-1　最初の30日で現状を確認します</h4>
+<h4 class="u-e6e5a2e03b">10-1　最初の30日で現状を確認します</h4>
 <p>最初の30日で、会則、総会資料、入会申込記録、会員台帳、会費徴収方法、学校徴収金との混在、学校から受け取っている個人情報、学校アプリや学校メールでのPTA通知、学校職員によるPTA事務、学校施設利用の許可・届出・実態を確認します。加入、情報利用、会費徴収、学校職員の事務について根拠を確認できない場合は、当該運用の停止を含む見直しと、学校・教育委員会との協議を行います。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">10-2　次年度までに運営を切り替えます</h4>
+<h4 class="u-e6e5a2e03b">10-2　次年度までに運営を切り替えます</h4>
 <p>次年度までに、入会申込制へ移行します。既存会員についても更新申込を行います。PTA独自の連絡手段を整えます。PTA会費を直接徴収に移行します。学校徴収金との分離を行います。活動を廃止・縮小・希望制化します。役員選出方法を見直します。会則を改正します。会員と保護者に説明します。</p>
-<h4 style="font-size:.95rem;font-weight:700;color:#1e3a5f;margin:20px 0 8px">10-3　説明の基本姿勢</h4>
+<h4 class="u-e6e5a2e03b">10-3　説明の基本姿勢</h4>
 <p>是正を進めるときは、過去の役員を攻撃する必要はありません。しかし、問題の核心をぼかしてはいけません。PTAは任意団体です。加入は本人の自由意思によります。入会申込記録なしの会員扱いは続けられません。この説明を、会員向け、保護者向け、学校向けに分けて行います。</p>
 </div>
 </details>
@@ -926,45 +447,45 @@ body.guide-pta-editorial .otl-check{
 <span aria-hidden="true" class="gb-chapter-state"></span>
 </summary>
 <div class="gb-chapter-content">
-<div style="background:#f8fafc;border-radius:10px;padding:20px 24px;margin-bottom:16px;border-left:3px solid #2563eb">
-<p style="font-weight:700;margin-bottom:6px;color:#1e3a5f">Q1　入会申込書がないまま長年運営してきました。過去分はどうすればよいですか。</p>
-<p style="margin:0;color:#334155">まず、現在と将来の運営を止血します。次年度又は更新時から、入会意思確認を行い、申込記録のある人だけを会員として扱います。過去について問い合わせがあった場合に備え、いつから、どのように是正したかを記録します。これは過去の役員を責めるためではありません。現在の役員が同じ状態を引き継がないためです。</p>
+<div class="u-a81cdad593">
+<p class="u-6af33bf200">Q1　入会申込書がないまま長年運営してきました。過去分はどうすればよいですか。</p>
+<p class="u-e3cc22adbb">まず、現在と将来の運営を止血します。次年度又は更新時から、入会意思確認を行い、申込記録のある人だけを会員として扱います。過去について問い合わせがあった場合に備え、いつから、どのように是正したかを記録します。これは過去の役員を責めるためではありません。現在の役員が同じ状態を引き継がないためです。</p>
 </div>
-<div style="background:#f8fafc;border-radius:10px;padding:20px 24px;margin-bottom:16px;border-left:3px solid #2563eb">
-<p style="font-weight:700;margin-bottom:6px;color:#1e3a5f">Q2　入会申込を取り直すと会員が減ります。</p>
-<p style="margin:0;color:#334155">減ります。しかし、それが任意加入です。入会意思を確認しないまま会員数を維持することは、PTAの適正運営ではありません。会員が減るなら、会員数に合わせて活動を縮小してください。</p>
+<div class="u-a81cdad593">
+<p class="u-6af33bf200">Q2　入会申込を取り直すと会員が減ります。</p>
+<p class="u-e3cc22adbb">減ります。しかし、それが任意加入です。入会意思を確認しないまま会員数を維持することは、PTAの適正運営ではありません。会員が減るなら、会員数に合わせて活動を縮小してください。</p>
 </div>
-<div style="background:#f8fafc;border-radius:10px;padding:20px 24px;margin-bottom:16px;border-left:3px solid #2563eb">
-<p style="font-weight:700;margin-bottom:6px;color:#1e3a5f">Q3　退会届が出ていない人は会員ではないのですか。</p>
-<p style="margin:0;color:#334155">退会届は、すでに有効な入会申込がある人に意味を持つ書類です。入会申込記録がない人について、「退会届がないから会員」と扱うことはできません。まず必要なのは、入会申込記録です。</p>
+<div class="u-a81cdad593">
+<p class="u-6af33bf200">Q3　退会届が出ていない人は会員ではないのですか。</p>
+<p class="u-e3cc22adbb">退会届は、すでに有効な入会申込がある人に意味を持つ書類です。入会申込記録がない人について、「退会届がないから会員」と扱うことはできません。まず必要なのは、入会申込記録です。</p>
 </div>
-<div style="background:#f8fafc;border-radius:10px;padding:20px 24px;margin-bottom:16px;border-left:3px solid #2563eb">
-<p style="font-weight:700;margin-bottom:6px;color:#1e3a5f">Q4　非会員には送らず、非会員には実費請求すればよいのではありませんか。</p>
-<p style="margin:0;color:#334155">できません。PTAが把握できるのは、入会申込をした会員だけです。非会員を特定するには、学校の全保護者情報とPTA会員情報を照合する必要がありますが、それは学校が学校目的で保有している個人情報を、PTA目的で使う処理です。</p>
+<div class="u-a81cdad593">
+<p class="u-6af33bf200">Q4　非会員には送らず、非会員には実費請求すればよいのではありませんか。</p>
+<p class="u-e3cc22adbb">できません。PTAが把握できるのは、入会申込をした会員だけです。非会員を特定するには、学校の全保護者情報とPTA会員情報を照合する必要がありますが、それは学校が学校目的で保有している個人情報を、PTA目的で使う処理です。</p>
 </div>
-<div style="background:#f8fafc;border-radius:10px;padding:20px 24px;margin-bottom:16px;border-left:3px solid #2563eb">
-<p style="font-weight:700;margin-bottom:6px;color:#1e3a5f">Q5　学校アプリでPTA通知を送ってもよいですか。</p>
-<p style="margin:0;color:#334155">送ってはなりません。学校アプリは、学校が学校業務上の連絡を行うための仕組みです。PTAは学校とは別の任意団体であり、学校アプリはPTAの連絡網ではありません。PTAは、本人から直接取得した会員連絡先を使い、PTA自身の責任で連絡してください。</p>
+<div class="u-a81cdad593">
+<p class="u-6af33bf200">Q5　学校アプリでPTA通知を送ってもよいですか。</p>
+<p class="u-e3cc22adbb">送ってはなりません。学校アプリは、学校が学校業務上の連絡を行うための仕組みです。PTAは学校とは別の任意団体であり、学校アプリはPTAの連絡網ではありません。PTAは、本人から直接取得した会員連絡先を使い、PTA自身の責任で連絡してください。</p>
 </div>
-<div style="background:#f8fafc;border-radius:10px;padding:20px 24px;margin-bottom:16px;border-left:3px solid #2563eb">
-<p style="font-weight:700;margin-bottom:6px;color:#1e3a5f">Q6　入学説明会や入学式でPTAの案内をしてもよいですか。</p>
-<p style="margin:0;color:#334155">行うべきではありません。PTAは学校とは別の任意団体です。入会案内を行う場合は、学校手続から切り離し、PTAが発行主体として行います。</p>
+<div class="u-a81cdad593">
+<p class="u-6af33bf200">Q6　入学説明会や入学式でPTAの案内をしてもよいですか。</p>
+<p class="u-e3cc22adbb">行うべきではありません。PTAは学校とは別の任意団体です。入会案内を行う場合は、学校手続から切り離し、PTAが発行主体として行います。</p>
 </div>
-<div style="background:#f8fafc;border-radius:10px;padding:20px 24px;margin-bottom:16px;border-left:3px solid #2563eb">
-<p style="font-weight:700;margin-bottom:6px;color:#1e3a5f">Q7　学校が協力してくれないとPTAが回りません。</p>
-<p style="margin:0;color:#334155">学校が協力しないと回らない活動は、PTA活動として過大です。活動を減らしてください。PTAは、学校の人員、学校の連絡網、学校の個人情報、学校の施設に依存して巨大化してはいけません。</p>
+<div class="u-a81cdad593">
+<p class="u-6af33bf200">Q7　学校が協力してくれないとPTAが回りません。</p>
+<p class="u-e3cc22adbb">学校が協力しないと回らない活動は、PTA活動として過大です。活動を減らしてください。PTAは、学校の人員、学校の連絡網、学校の個人情報、学校の施設に依存して巨大化してはいけません。</p>
 </div>
-<div style="background:#f8fafc;border-radius:10px;padding:20px 24px;margin-bottom:16px;border-left:3px solid #2563eb">
-<p style="font-weight:700;margin-bottom:6px;color:#1e3a5f">Q8　学校施設はPTAなら自由に使えますか。</p>
-<p style="margin:0;color:#334155">自由には使えません。学校教育法137条は、PTAに学校施設を自由使用させる条文ではありません。PTAが学校施設を使うなら、任意加入、会員管理、個人情報、会費、学校との分離を明確にしなければなりません。</p>
+<div class="u-a81cdad593">
+<p class="u-6af33bf200">Q8　学校施設はPTAなら自由に使えますか。</p>
+<p class="u-e3cc22adbb">自由には使えません。学校教育法137条は、PTAに学校施設を自由使用させる条文ではありません。PTAが学校施設を使うなら、任意加入、会員管理、個人情報、会費、学校との分離を明確にしなければなりません。</p>
 </div>
-<div style="background:#f8fafc;border-radius:10px;padding:20px 24px;margin-bottom:16px;border-left:3px solid #2563eb">
-<p style="font-weight:700;margin-bottom:6px;color:#1e3a5f">Q9　校長や教頭がPTA役員に入っている会則は問題ですか。</p>
-<p style="margin:0;color:#334155">学校管理職がPTAの意思決定、会計、業務執行に関与する形は、学校とPTAの分離を不明確にします。少なくとも、議決権・会計権限・業務執行権限を持つ役職に学校管理職を置く運営は見直してください。</p>
+<div class="u-a81cdad593">
+<p class="u-6af33bf200">Q9　校長や教頭がPTA役員に入っている会則は問題ですか。</p>
+<p class="u-e3cc22adbb">学校管理職がPTAの意思決定、会計、業務執行に関与する形は、学校とPTAの分離を不明確にします。少なくとも、議決権・会計権限・業務執行権限を持つ役職に学校管理職を置く運営は見直してください。</p>
 </div>
-<div style="background:#f8fafc;border-radius:10px;padding:20px 24px;margin-bottom:16px;border-left:3px solid #2563eb">
-<p style="font-weight:700;margin-bottom:6px;color:#1e3a5f">Q10　非会員の子どもに記念品を配らないことはできますか。</p>
-<p style="margin:0;color:#334155">学校内、学校行事、全児童生徒の前で配布するものについて、会員・非会員で子どもを扱い分ける運用は避けるべきです。それは児童生徒への不利益や分断を生みます。さらに、PTAは非会員を把握できません。子どもを分ける必要がある活動は、学校内で実施すべきではありません。</p>
+<div class="u-a81cdad593">
+<p class="u-6af33bf200">Q10　非会員の子どもに記念品を配らないことはできますか。</p>
+<p class="u-e3cc22adbb">学校内、学校行事、全児童生徒の前で配布するものについて、会員・非会員で子どもを扱い分ける運用は避けるべきです。それは児童生徒への不利益や分断を生みます。さらに、PTAは非会員を把握できません。子どもを分ける必要がある活動は、学校内で実施すべきではありません。</p>
 </div>
 </div>
 </details>
@@ -978,7 +499,7 @@ body.guide-pta-editorial .otl-check{
 <h2 id="pta-first-check">役員が守るべきものは、前年度踏襲ではなく「説明できる運営」です</h2>
 <p>PTA役員に求められるのは、過去の慣行をそのまま維持することではありません。会員をどう確定したのか、会費を誰からどの根拠で受け取るのか、個人情報をどこから取得したのか、学校職員にどこまで依頼しているのかを、第三者に説明できる状態へ整えることです。</p>
 <p>教育委員会向けページでは、学校がPTAのために行っている関与部分を点検対象として整理しています。PTA役員向けページでは、同じ論点を、役員自身が学校に依存しない運営へ切り替えるための実務として整理します。学校を責めるためではなく、PTAが任意団体として自立し、役員個人が説明困難な慣行を背負わないための確認です。</p>
-<ul class="officer-action-list" style="max-width:none;margin:18px 0 0;padding:0">
+<ul class="officer-action-list u-cf82cca950">
 <li><strong>会員確定</strong>入会申込記録を確認し、会則上の「会員」と実際の台帳を一致させる。</li>
 <li><strong>徴収根拠</strong>学校徴収金とPTA会費を分け、会費は会員から直接受け取る設計にする。</li>
 <li><strong>情報取得</strong>学校名簿に依存せず、PTAが本人から必要最小限の情報を取得する。</li>
@@ -991,9 +512,9 @@ body.guide-pta-editorial .otl-check{
 <div class="section-kicker">学校利用の前提条件</div>
 <h2 class="section-title">学校教育法第137条を前提に、学校に依存しないPTA運営へ切り替える</h2>
 <p class="section-lead">PTA役員にとっても、学校教育法第137条は重要です。学校施設、PTA室、印刷機、児童経由配布、学校連絡ツール、学校ホームページは、PTAが当然に使えるものではありません。学校教育上の支障がないこと、社会教育その他公共のための利用であることを、PTA側も説明できる状態にしておく必要があります。</p>
-<div class="statute-quote" style="border:2px solid #17345c;background:#f8fafc;border-radius:14px;padding:18px 20px;margin:20px 0 24px;box-shadow:0 4px 14px rgba(15,23,42,.06)">
-<div style="font-weight:900;color:#17345c;margin-bottom:8px;letter-spacing:.04em">学校教育法第137条（条文）</div>
-<p style="font-size:1.12rem;line-height:1.9;margin:0;color:#111827"><strong>学校教育上支障のない限り、学校には、社会教育に関する施設を附置し、又は学校の施設を社会教育その他公共のために、利用させることができる。</strong></p>
+<div class="statute-quote u-5d650fee62">
+<div class="u-962be87567">学校教育法第137条（条文）</div>
+<p class="u-6eb6ca8b8d"><strong>学校教育上支障のない限り、学校には、社会教育に関する施設を附置し、又は学校の施設を社会教育その他公共のために、利用させることができる。</strong></p>
 </div>
 <div class="officer-prose">
 <p><strong>PTA役員側から見れば、これは学校に便宜を求めるための最低条件です。</strong>入会申込記録がない、会費徴収の根拠が不明、非会員児童への配慮がない、学校名簿に依存している、教職員に回収や督促を頼んでいる。このような状態では、学校側が「学校教育上支障がない」と判断しにくくなります。</p>
@@ -1019,9 +540,9 @@ body.guide-pta-editorial .otl-check{
 <div class="section-kicker">学校の働き方改革</div>
 <h2 class="section-title">3分類から見ると、PTA内部事務は先生に背負わせるものではありません</h2>
 <p class="section-lead">学校の働き方改革は、PTA役員にも関係します。文部科学省の3分類では、学校徴収金の徴収・管理や地域ボランティアとの連絡調整が「基本的には学校以外が担うべき業務」に整理されています。学校徴収金でさえ教師が担わない方向に進められている以上、PTA会費やPTA名簿、役員選出は、PTAが自分たちで担うべき内部事務です。</p>
-<figure class="document-figure" style="margin:22px 0 26px;border:1px solid #d9e2ef;border-radius:14px;padding:12px;background:#fff;box-shadow:0 4px 14px rgba(15,23,42,.05)">
-<img alt="学校・教師が担う業務に係る3分類" src="assets/documents/mext-workstyle-3categories-table.png" style="display:block;width:100%;height:auto;border-radius:10px"/>
-<figcaption style="font-size:.9rem;color:#667085;margin-top:8px">文部科学省資料の別添1。学校徴収金の徴収・管理、地域ボランティアとの連絡調整は「基本的には学校以外が担うべき業務」に分類されている。</figcaption>
+<figure class="document-figure u-b9763deedb">
+<img class="u-2825d84e46" alt="学校・教師が担う業務に係る3分類" src="assets/documents/mext-workstyle-3categories-table.png"/>
+<figcaption class="u-2c9552a3f8">文部科学省資料の別添1。学校徴収金の徴収・管理、地域ボランティアとの連絡調整は「基本的には学校以外が担うべき業務」に分類されている。</figcaption>
 </figure>
 <div class="officer-prose">
 <p><strong>PTA役員が学校に頼んできた作業の多くは、先生の本来業務ではありません。</strong>入会申込書の回収、会費袋の回収、未納確認、会員名簿の作成、役員候補者の抽出、PTA通知文の作成・配信、PTA会計の記帳は、PTAが自分たちで処理すべき団体事務です。</p>
@@ -1045,23 +566,7 @@ body.guide-pta-editorial .otl-check{
 </div>
 </section>
 <section class="rc6-section" id="first-check">
-<style>
-.rc6-section{background:var(--bg,#f5f7fa);padding:64px 0}
-.rc6-wrap{width:min(calc(100% - 40px),860px);margin-inline:auto}
-.rc6-section .section-title{font-family:'Noto Sans JP',sans-serif;font-size:clamp(1.55rem,2.4vw,2.05rem);line-height:1.35;letter-spacing:0}
-.rc6-list{display:flex;flex-direction:column;gap:12px;margin-top:28px}
-.rc6-item{background:#fff;border:1px solid var(--line,#e2e8f0);border-left:4px solid var(--navy,#1e3a5f);border-radius:12px;padding:16px 18px;box-shadow:0 1px 3px rgba(10,22,40,.05)}
-.rc6-head{display:flex;align-items:center;gap:12px}
-.rc6-no{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--navy,#1e3a5f);color:var(--gold-lt,#e8cd77);font-weight:900;font-size:.82rem;display:flex;align-items:center;justify-content:center}
-.rc6-axis{font-weight:900;color:var(--navy,#1e3a5f);font-size:1.02rem}
-.rc6-q{margin:10px 0 8px 38px;font-size:.95rem;font-weight:700;line-height:1.75;color:var(--text,#1e293b)}
-.rc6-ok{font-size:.86rem;color:#166534;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:8px 12px;margin-left:38px}
-.rc6-ok b{color:#15803d}
-.rc6-link{margin-left:38px;margin-top:8px;font-size:.82rem}
-.rc6-link a{color:var(--navy,#1e3a5f);text-decoration:none;border-bottom:1px dotted var(--navy,#1e3a5f)}
-.rc6-cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-@media(max-width:560px){.rc6-q,.rc6-ok,.rc6-link{margin-left:0}}
-</style>
+
 <div class="rc6-wrap">
 <h2 class="section-title">役員が確認する6点</h2>
 <p class="section-lead">活動内容より先に「PTAが自分で説明できる根拠」を確認します。各項目は核心の1問だけ。深掘りは各論ページ・ガイドブック本文へ。</p>
@@ -1111,8 +616,8 @@ body.guide-pta-editorial .otl-check{
 
 </div>
 <div class="rc6-cta">
-<a class="btn-navy" href="audit/index.html?mode=officer" style="font-size:.95rem;padding:13px 26px">チェックツールで確認する</a>
-<a class="btn-soft" href="#guidebook-text" style="font-size:.95rem;padding:13px 26px">ガイドブック本文を読む</a>
+<a class="btn-navy u-6a4ab49f82" href="audit/index.html?mode=officer">チェックツールで確認する</a>
+<a class="btn-soft u-6a4ab49f82" href="#guidebook-text">ガイドブック本文を読む</a>
 </div>
 </div>
 </section>
@@ -1153,7 +658,7 @@ body.guide-pta-editorial .otl-check{
 <div class="officer-visual-text">
 <span class="officer-visual-label">02</span>
 <h3>PTAコンプライアンスの全体構造</h3>
-<figure style="margin:30px auto;max-width:860px"><img src="assets/diagrams/08_PTA役員/01_コンプライアンス全体構造.svg" alt="図解：コンプライアンス全体構造" loading="lazy" style="display:block;width:100%;height:auto"></figure>
+<figure class="u-852a52814b"><img class="u-83b2a80b11" src="assets/diagrams/08_PTA役員/01_コンプライアンス全体構造.svg" alt="図解：コンプライアンス全体構造" loading="lazy"></figure>
 <p>入会申込、会員記録、会費請求、学校関与の分離は一体で確認します。入会記録がないまま会費請求を続けることは、特に見直しが必要です。</p>
 <ul>
 <li>入会申込と会員台帳をPTA自身が管理する。</li>
@@ -1195,7 +700,7 @@ body.guide-pta-editorial .otl-check{
 <div class="officer-visual-text">
 <span class="officer-visual-label">04</span>
 <h3>入会申込書を作りましょう</h3>
-<figure style="margin:30px auto;max-width:860px"><img src="assets/diagrams/08_PTA役員/02_入会申込書の有無.svg" alt="図解：入会申込書の有無" loading="lazy" style="display:block;width:100%;height:auto"></figure>
+<figure class="u-852a52814b"><img class="u-83b2a80b11" src="assets/diagrams/08_PTA役員/02_入会申込書の有無.svg" alt="図解：入会申込書の有無" loading="lazy"></figure>
 <p>入会は本人の意思表示に基づく団体加入です。紙、電子フォーム、メール等の形式を問わず、後から説明できる入会申込記録を整えます。</p>
 <ul>
 <li>会則、会費、退会方法、個人情報利用目的を示す。</li>
@@ -1371,7 +876,7 @@ body.guide-pta-editorial .otl-check{
 </div>
 </section>
 <!-- リスクインフォグラフィック（削除） -->
-<section class="risk-infographic" style="display:none">
+<section class="risk-infographic u-6aa34d7432">
 <div class="wrap">
 <div class="section-center">
 </div>
@@ -1380,37 +885,37 @@ body.guide-pta-editorial .otl-check{
 <h3>⚖️ 不当利得返還請求リスク</h3>
 <div class="risk-bar-wrap">
 <div class="risk-bar-label"><span>入会届なし</span><span>高リスク</span></div>
-<div class="risk-bar-track"><div class="risk-bar-fill risk-bar-fill-red" style="width:90%"></div></div>
+<div class="risk-bar-track"><div class="risk-bar-fill risk-bar-fill-red u-fc9c1b2112"></div></div>
 </div>
 <div class="risk-bar-wrap">
 <div class="risk-bar-label"><span>オプトアウト方式</span><span>高リスク</span></div>
-<div class="risk-bar-track"><div class="risk-bar-fill risk-bar-fill-red" style="width:85%"></div></div>
+<div class="risk-bar-track"><div class="risk-bar-fill risk-bar-fill-red u-4a312b68e2"></div></div>
 </div>
-<p style="font-size:.84rem;color:rgba(255,255,255,.72);margin-top:12px;line-height:1.7">徴収した会費が民法703条の不当利得と認定された場合、会長が被告として返還義務を負う可能性があります。</p>
+<p class="u-aec6b7c34a">徴収した会費が民法703条の不当利得と認定された場合、会長が被告として返還義務を負う可能性があります。</p>
 </div>
 <div class="risk-col">
 <h3>🔒 個人情報リスク</h3>
 <div class="risk-bar-wrap">
 <div class="risk-bar-label"><span>学校名簿を利用</span><span>要対応</span></div>
-<div class="risk-bar-track"><div class="risk-bar-fill risk-bar-fill-orange" style="width:75%"></div></div>
+<div class="risk-bar-track"><div class="risk-bar-fill risk-bar-fill-orange u-7dd6cdfc41"></div></div>
 </div>
 <div class="risk-bar-wrap">
 <div class="risk-bar-label"><span>同意なく名簿作成</span><span>高リスク</span></div>
-<div class="risk-bar-track"><div class="risk-bar-fill risk-bar-fill-red" style="width:88%"></div></div>
+<div class="risk-bar-track"><div class="risk-bar-fill risk-bar-fill-red u-e26e43af35"></div></div>
 </div>
-<p style="font-size:.84rem;color:rgba(255,255,255,.72);margin-top:12px;line-height:1.7">適法な取得根拠を説明できない個人情報を利用し続ければ、PTA役員にも説明責任・管理責任が及ぶ可能性があります。</p>
+<p class="u-aec6b7c34a">適法な取得根拠を説明できない個人情報を利用し続ければ、PTA役員にも説明責任・管理責任が及ぶ可能性があります。</p>
 </div>
 <div class="risk-col">
 <h3>📋 会計・管理リスク</h3>
 <div class="risk-bar-wrap">
 <div class="risk-bar-label"><span>個人口座で管理</span><span>高リスク</span></div>
-<div class="risk-bar-track"><div class="risk-bar-fill risk-bar-fill-red" style="width:92%"></div></div>
+<div class="risk-bar-track"><div class="risk-bar-fill risk-bar-fill-red u-b6958c6d49"></div></div>
 </div>
 <div class="risk-bar-wrap">
 <div class="risk-bar-label"><span>監査体制なし</span><span>要対応</span></div>
-<div class="risk-bar-track"><div class="risk-bar-fill risk-bar-fill-orange" style="width:65%"></div></div>
+<div class="risk-bar-track"><div class="risk-bar-fill risk-bar-fill-orange u-42112ea816"></div></div>
 </div>
-<p style="font-size:.84rem;color:rgba(255,255,255,.72);margin-top:12px;line-height:1.7">役員個人の通帳での管理は横領事件の典型パターンです。退任後に前任者として追及される可能性があります。</p>
+<p class="u-aec6b7c34a">役員個人の通帳での管理は横領事件の典型パターンです。退任後に前任者として追及される可能性があります。</p>
 </div>
 </div>
 </div>
@@ -1421,10 +926,10 @@ body.guide-pta-editorial .otl-check{
 <div class="section-center">
 <div class="section-kicker">現状と理想</div>
 <h2 class="section-title">問題のある慣行と適正な運営の比較</h2>
-<figure style="margin:30px auto;max-width:860px"><img src="assets/diagrams/08_PTA役員/04_慣行と適正運営の比較.svg" alt="図解：慣行と適正運営の比較" loading="lazy" style="display:block;width:100%;height:auto"></figure>
+<figure class="u-852a52814b"><img class="u-83b2a80b11" src="assets/diagrams/08_PTA役員/04_慣行と適正運営の比較.svg" alt="図解：慣行と適正運営の比較" loading="lazy"></figure>
 <p class="section-lead">どこを変えれば良いか、対比で確認します。</p>
 </div>
-<h3 style="font-family:'Noto Serif JP',serif;color:var(--navy);margin:40px 0 16px;font-size:1.2rem">入会手続</h3>
+<h3 class="u-769ffce6ef">入会手続</h3>
 <div class="compare-wrap">
 <div class="compare-col before">
 <div class="compare-label">❌ 問題のある現状</div>
@@ -1441,7 +946,7 @@ body.guide-pta-editorial .otl-check{
 <div class="compare-item"><div class="ci-dot-ok">✓</div>個人情報利用目的を入会届に明示</div>
 </div>
 </div>
-<h3 style="font-family:'Noto Serif JP',serif;color:var(--navy);margin:32px 0 16px;font-size:1.2rem">学校との関係</h3>
+<h3 class="u-ac6aa476d9">学校との関係</h3>
 <div class="compare-wrap">
 <div class="compare-col before">
 <div class="compare-label">❌ 問題のある現状</div>
@@ -1461,78 +966,78 @@ body.guide-pta-editorial .otl-check{
 </div>
 </section>
 <!-- 入会案内のNG表現・OK表現（第2章） -->
-<section style="background:#fff;padding:80px 0;border-top:4px solid #d97706">
+<section class="u-93647b8919">
 <div class="wrap">
-<div class="section-kicker" style="background:#fffbeb;color:#92400e">入会案内の書き方</div>
+<div class="section-kicker u-9da2c6ea23">入会案内の書き方</div>
 <h2 class="section-title">使ってはならない言葉と<br/>必ず書くべき内容</h2>
 <p class="section-lead">PTA加入は消費者契約です。案内文の書き方一つで、消費者契約法上の「誤認」「困惑」を生じさせる可能性があります。</p>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:36px 0">
-<div style="background:#fff5f5;border:2px solid #fecaca;border-radius:var(--radius);padding:24px">
-<div style="font-size:.76rem;font-weight:900;letter-spacing:.06em;color:#b91c1c;margin-bottom:14px">❌ 使ってはならない表現</div>
-<div style="display:flex;flex-direction:column;gap:8px">
-<div style="background:#fee2e2;border-radius:8px;padding:10px 14px;font-size:.87rem;color:#7f1d1d;line-height:1.6">「保護者の皆様にはPTAにご加入いただきます」</div>
-<div style="background:#fee2e2;border-radius:8px;padding:10px 14px;font-size:.87rem;color:#7f1d1d;line-height:1.6">「全家庭加入となっています」</div>
-<div style="background:#fee2e2;border-radius:8px;padding:10px 14px;font-size:.87rem;color:#7f1d1d;line-height:1.6">「退会する場合は退会届を提出してください」（入会申込なしで送付）</div>
-<div style="background:#fee2e2;border-radius:8px;padding:10px 14px;font-size:.87rem;color:#7f1d1d;line-height:1.6">「提出がない場合は加入として扱います」</div>
-<div style="background:#fee2e2;border-radius:8px;padding:10px 14px;font-size:.87rem;color:#7f1d1d;line-height:1.6">「PTA会費は学校徴収金と一緒に引き落とします」</div>
-<div style="background:#fee2e2;border-radius:8px;padding:10px 14px;font-size:.87rem;color:#7f1d1d;line-height:1.6">「子どものためですのでご協力ください」（義務的文脈で）</div>
-<div style="background:#fee2e2;border-radius:8px;padding:10px 14px;font-size:.87rem;color:#7f1d1d;line-height:1.6">「全家庭で公平に役員をお願いします」</div>
+<div class="u-4c59603957">
+<div class="u-d9755392b4">
+<div class="u-ce3588ecf2">❌ 使ってはならない表現</div>
+<div class="u-0fbf9e859f">
+<div class="u-79f0d4e492">「保護者の皆様にはPTAにご加入いただきます」</div>
+<div class="u-79f0d4e492">「全家庭加入となっています」</div>
+<div class="u-79f0d4e492">「退会する場合は退会届を提出してください」（入会申込なしで送付）</div>
+<div class="u-79f0d4e492">「提出がない場合は加入として扱います」</div>
+<div class="u-79f0d4e492">「PTA会費は学校徴収金と一緒に引き落とします」</div>
+<div class="u-79f0d4e492">「子どものためですのでご協力ください」（義務的文脈で）</div>
+<div class="u-79f0d4e492">「全家庭で公平に役員をお願いします」</div>
 </div>
-<p style="font-size:.8rem;color:#b91c1c;font-weight:700;margin-top:12px;line-height:1.6">→ これらは「加入が当然」「支払いが義務」「断ると迷惑」という誤認を生じさせます。消費者契約法第4条の取消し事由として問題になります。</p>
+<p class="u-0290fce595">→ これらは「加入が当然」「支払いが義務」「断ると迷惑」という誤認を生じさせます。消費者契約法第4条の取消し事由として問題になります。</p>
 </div>
-<div style="background:#f0fdf4;border:2px solid #bbf7d0;border-radius:var(--radius);padding:24px">
-<div style="font-size:.76rem;font-weight:900;letter-spacing:.06em;color:#15803d;margin-bottom:14px">✅ 入会案内に必ず書く内容</div>
-<div style="display:flex;flex-direction:column;gap:8px">
-<div style="background:#dcfce7;border-radius:8px;padding:10px 14px;font-size:.87rem;color:#14532d;line-height:1.6">PTAは学校とは別の<strong>任意団体</strong>であること</div>
-<div style="background:#dcfce7;border-radius:8px;padding:10px 14px;font-size:.87rem;color:#14532d;line-height:1.6">加入は<strong>本人の自由意思</strong>によること</div>
-<div style="background:#dcfce7;border-radius:8px;padding:10px 14px;font-size:.87rem;color:#14532d;line-height:1.6">加入しないこと・退会することで<strong>児童生徒に不利益がない</strong>こと</div>
-<div style="background:#dcfce7;border-radius:8px;padding:10px 14px;font-size:.87rem;color:#14532d;line-height:1.6"><strong>会費額・徴収方法・主な使途</strong></div>
-<div style="background:#dcfce7;border-radius:8px;padding:10px 14px;font-size:.87rem;color:#14532d;line-height:1.6"><strong>個人情報の取得項目・利用目的</strong></div>
-<div style="background:#dcfce7;border-radius:8px;padding:10px 14px;font-size:.87rem;color:#14532d;line-height:1.6"><strong>退会方法・問い合わせ先</strong>（PTAであること）</div>
-<div style="background:#dcfce7;border-radius:8px;padding:10px 14px;font-size:.87rem;color:#14532d;line-height:1.6">会則を確認できる方法・活動内容の概要</div>
+<div class="u-c64b06e77a">
+<div class="u-15354020b6">✅ 入会案内に必ず書く内容</div>
+<div class="u-0fbf9e859f">
+<div class="u-3fe696620b">PTAは学校とは別の<strong>任意団体</strong>であること</div>
+<div class="u-3fe696620b">加入は<strong>本人の自由意思</strong>によること</div>
+<div class="u-3fe696620b">加入しないこと・退会することで<strong>児童生徒に不利益がない</strong>こと</div>
+<div class="u-3fe696620b"><strong>会費額・徴収方法・主な使途</strong></div>
+<div class="u-3fe696620b"><strong>個人情報の取得項目・利用目的</strong></div>
+<div class="u-3fe696620b"><strong>退会方法・問い合わせ先</strong>（PTAであること）</div>
+<div class="u-3fe696620b">会則を確認できる方法・活動内容の概要</div>
 </div>
-<p style="font-size:.8rem;color:#15803d;font-weight:700;margin-top:12px;line-height:1.6">→ 「任意加入と一行書くだけでは足りない」。手続全体（配布経路・回収先・徴収方法）も任意加入に合わせる必要があります。</p>
+<p class="u-e49198d927">→ 「任意加入と一行書くだけでは足りない」。手続全体（配布経路・回収先・徴収方法）も任意加入に合わせる必要があります。</p>
 </div>
 </div>
-<div style="background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:20px 24px">
-<div style="font-size:.74rem;font-weight:900;letter-spacing:.06em;color:var(--navy);margin-bottom:8px">⚠ 「任意」と書いても実態が伴わなければ意味がありません</div>
-<p style="font-size:.88rem;color:var(--text);line-height:1.8;margin:0">任意加入と書きながら、学校説明会の中で配り、学校提出書類と一緒に回収し、未提出者を会員扱いし、学校徴収金と一緒に会費を引き落とすなら、それは任意加入ではありません。文言だけでなく、<strong>手続全体を任意加入に合わせる</strong>必要があります。</p>
+<div class="u-5f23a542d5">
+<div class="u-2b5e4d6eb6">⚠ 「任意」と書いても実態が伴わなければ意味がありません</div>
+<p class="u-d4c1e16fca">任意加入と書きながら、学校説明会の中で配り、学校提出書類と一緒に回収し、未提出者を会員扱いし、学校徴収金と一緒に会費を引き落とすなら、それは任意加入ではありません。文言だけでなく、<strong>手続全体を任意加入に合わせる</strong>必要があります。</p>
 </div>
 </div>
 </section>
 <!-- 役員選出は罰ゲームではない（第8章） -->
-<section style="background:var(--bg);padding:80px 0">
+<section class="u-14e3bd4945">
 <div class="wrap">
 <div class="section-kicker">役員選出</div>
 <h2 class="section-title">役員選出は「罰ゲーム」では<br/>ありません</h2>
 <p class="section-lead">PTA活動は本人の意思が基本です。「人が集まらない活動は活動量が多すぎる」——ガイドブックが示す原則をそのまま伝えます。</p>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:32px 0">
-<div style="background:#fff5f5;border:1px solid #fecaca;border-radius:var(--radius);padding:24px">
-<div style="font-size:.76rem;font-weight:900;letter-spacing:.06em;color:#b91c1c;margin-bottom:14px">❌ 任意団体の性質に反する選出方法</div>
-<div style="display:flex;flex-direction:column;gap:8px;font-size:.87rem;color:var(--text);line-height:1.65">
-<div style="display:flex;gap:8px;align-items:flex-start"><span style="color:#b91c1c;flex-shrink:0">✗</span>くじ引きで役員を決める</div>
-<div style="display:flex;gap:8px;align-items:flex-start"><span style="color:#b91c1c;flex-shrink:0">✗</span>欠席者を役員候補にする</div>
-<div style="display:flex;gap:8px;align-items:flex-start"><span style="color:#b91c1c;flex-shrink:0">✗</span>辞退理由を審査する・家庭事情を申告させる</div>
-<div style="display:flex;gap:8px;align-items:flex-start"><span style="color:#b91c1c;flex-shrink:0">✗</span>子ども一人につき一回などのノルマを課す</div>
-<div style="display:flex;gap:8px;align-items:flex-start"><span style="color:#b91c1c;flex-shrink:0">✗</span>役員を断る人を「非協力的」と扱う</div>
-<div style="display:flex;gap:8px;align-items:flex-start"><span style="color:#b91c1c;flex-shrink:0">✗</span>退会しにくい空気を作る</div>
+<div class="u-31c4567cb9">
+<div class="u-0eb2ff1265">
+<div class="u-ce3588ecf2">❌ 任意団体の性質に反する選出方法</div>
+<div class="u-90f7bfc715">
+<div class="u-ea5b1a860b"><span class="u-00625d1adf">✗</span>くじ引きで役員を決める</div>
+<div class="u-ea5b1a860b"><span class="u-00625d1adf">✗</span>欠席者を役員候補にする</div>
+<div class="u-ea5b1a860b"><span class="u-00625d1adf">✗</span>辞退理由を審査する・家庭事情を申告させる</div>
+<div class="u-ea5b1a860b"><span class="u-00625d1adf">✗</span>子ども一人につき一回などのノルマを課す</div>
+<div class="u-ea5b1a860b"><span class="u-00625d1adf">✗</span>役員を断る人を「非協力的」と扱う</div>
+<div class="u-ea5b1a860b"><span class="u-00625d1adf">✗</span>退会しにくい空気を作る</div>
 </div>
 </div>
-<div style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px">
-<div style="font-size:.76rem;font-weight:900;letter-spacing:.06em;color:var(--navy);margin-bottom:14px">📌 役員が足りない場合の正しい考え方</div>
-<p style="font-size:.88rem;color:var(--text);line-height:1.8;margin:0 0 12px">役員が足りない場合、問題は保護者の意識ではありません。<strong>活動量が会員の意思と生活実態に合っていない</strong>のです。</p>
-<div style="display:flex;flex-direction:column;gap:8px">
-<div style="display:flex;gap:8px;align-items:flex-start;font-size:.87rem;color:var(--text);line-height:1.65"><span style="color:#15803d;flex-shrink:0">→</span>人が集まらない活動は廃止または縮小する</div>
-<div style="display:flex;gap:8px;align-items:flex-start;font-size:.87rem;color:var(--text);line-height:1.65"><span style="color:#15803d;flex-shrink:0">→</span>毎年「この活動は本当に必要か」を確認する</div>
-<div style="display:flex;gap:8px;align-items:flex-start;font-size:.87rem;color:var(--text);line-height:1.65"><span style="color:#15803d;flex-shrink:0">→</span>学校依存を前提にした規模の活動は縮小する</div>
-<div style="display:flex;gap:8px;align-items:flex-start;font-size:.87rem;color:var(--text);line-height:1.65"><span style="color:#15803d;flex-shrink:0">→</span>参加できない家庭への圧力をかけない</div>
+<div class="u-6517bcb168">
+<div class="u-d556cab343">📌 役員が足りない場合の正しい考え方</div>
+<p class="u-afbd6507c0">役員が足りない場合、問題は保護者の意識ではありません。<strong>活動量が会員の意思と生活実態に合っていない</strong>のです。</p>
+<div class="u-0fbf9e859f">
+<div class="u-ec7974c8c5"><span class="u-6de0fe8890">→</span>人が集まらない活動は廃止または縮小する</div>
+<div class="u-ec7974c8c5"><span class="u-6de0fe8890">→</span>毎年「この活動は本当に必要か」を確認する</div>
+<div class="u-ec7974c8c5"><span class="u-6de0fe8890">→</span>学校依存を前提にした規模の活動は縮小する</div>
+<div class="u-ec7974c8c5"><span class="u-6de0fe8890">→</span>参加できない家庭への圧力をかけない</div>
 </div>
 </div>
 </div>
-<div style="background:linear-gradient(135deg,#1d4ed8,#2563eb);border-radius:var(--radius);padding:24px 28px;text-align:center">
-<p style="color:rgba(255,255,255,.9);font-size:.97rem;font-weight:700;line-height:1.85;margin:0">
+<div class="u-afcb03a237">
+<p class="u-4e1e16db70">
             PTA活動は、無理やり維持するから苦しくなります。<br/>
-<strong style="color:var(--gold-lt)">自分から手を挙げて参加する人がいるから、活動に活気が生まれます。</strong><br/>
+<strong class="u-ff02fbc91c">自分から手を挙げて参加する人がいるから、活動に活気が生まれます。</strong><br/>
             本人の意思で入会し、できる範囲で関わるからこそ、その協力は尊いものになります。
           </p>
 </div>
@@ -1588,25 +1093,25 @@ body.guide-pta-editorial .otl-check{
 </div>
 </div>
 </section>
-<section id="exit-design" style="background:#fff;padding:80px 0;border-top:4px solid var(--gold)">
+<section class="u-bec0cb53be" id="exit-design">
 <div class="wrap wrap-narrow">
 <div class="section-kicker">出口設計</div>
-<h2 class="section-title" style="margin-top:8px">どの形へ移行するか：4つの類型</h2>
-<p style="line-height:1.95;margin:16px 0 0">適正化の到達点は一つではありません。学校資源から独立して存続する形も、身軽になる形も、法定制度へ機能を引き継ぐ形もあります。役員会・総会で方向を決めるときは、次の4類型を比較してください。どの類型を選んでも、<strong>学校保有情報の目的外利用の停止、学校口座での会費徴収の停止、勤務時間内PTA内部事務の停止、非会員児童の完全な平等</strong>という最低条件は共通です。</p>
-<div style="overflow-x:auto;margin:26px 0 0">
-<table style="width:100%;border-collapse:collapse;font-size:.92rem;line-height:1.75;background:#fff">
-<thead><tr><th style="background:#1e3a5f;color:#fff;padding:10px 14px;text-align:left;white-space:nowrap">類型</th><th style="background:#1e3a5f;color:#fff;padding:10px 14px;text-align:left">内容</th><th style="background:#1e3a5f;color:#fff;padding:10px 14px;text-align:left">適法化の要点</th></tr></thead>
+<h2 class="section-title u-43a97fe494">どの形へ移行するか：4つの類型</h2>
+<p class="u-3cc6f821be">適正化の到達点は一つではありません。学校資源から独立して存続する形も、身軽になる形も、法定制度へ機能を引き継ぐ形もあります。役員会・総会で方向を決めるときは、次の4類型を比較してください。どの類型を選んでも、<strong>学校保有情報の目的外利用の停止、学校口座での会費徴収の停止、勤務時間内PTA内部事務の停止、非会員児童の完全な平等</strong>という最低条件は共通です。</p>
+<div class="u-642a7b8d98">
+<table class="u-f0721e1af9">
+<thead><tr><th class="u-d726b232e5">類型</th><th class="u-3c2d05ac3c">内容</th><th class="u-3c2d05ac3c">適法化の要点</th></tr></thead>
 <tbody>
-<tr><td style="border-bottom:1px solid #dbe4ee;padding:10px 14px;white-space:nowrap"><strong>① 適正化型</strong></td><td style="border-bottom:1px solid #dbe4ee;padding:10px 14px">PTA存続＋完全オプトイン・会計分離・学校資源からの独立</td><td style="border-bottom:1px solid #dbe4ee;padding:10px 14px">入会申込書、PTA独自の徴収（独自の口座振替依頼書）、独自の名簿取得、非会員無差別の明文化</td></tr>
-<tr><td style="border-bottom:1px solid #dbe4ee;padding:10px 14px;background:#f8fafc;white-space:nowrap"><strong>② スリム化型</strong></td><td style="border-bottom:1px solid #dbe4ee;padding:10px 14px;background:#f8fafc">会費ゼロPTA・行事単位のボランティア制</td><td style="border-bottom:1px solid #dbe4ee;padding:10px 14px;background:#f8fafc">恒常財産と年会費を持たず、活動ごとに参加者を募集。個人情報は活動単位で直接取得</td></tr>
-<tr><td style="border-bottom:1px solid #dbe4ee;padding:10px 14px;white-space:nowrap"><strong>③ 解散→再構築型</strong></td><td style="border-bottom:1px solid #dbe4ee;padding:10px 14px">単位PTAを解散し、保護者ボランティア組織へ再編</td><td style="border-bottom:1px solid #dbe4ee;padding:10px 14px">会則に従う解散手続（総会決議・残余財産処理）。学校支援は地域学校協働活動へ接続</td></tr>
-<tr><td style="border-bottom:1px solid #dbe4ee;padding:10px 14px;background:#f8fafc;white-space:nowrap"><strong>④ 制度移行型</strong></td><td style="border-bottom:1px solid #dbe4ee;padding:10px 14px;background:#f8fafc">代表機能を学校運営協議会へ、支援機能を地域学校協働本部へ移管</td><td style="border-bottom:1px solid #dbe4ee;padding:10px 14px;background:#f8fafc">法定制度のため、学校資源利用・教職員関与に法令上の根拠がある（任意団体との決定的な差）</td></tr>
+<tr><td class="u-7a89cdfff3"><strong>① 適正化型</strong></td><td class="u-019efadaad">PTA存続＋完全オプトイン・会計分離・学校資源からの独立</td><td class="u-019efadaad">入会申込書、PTA独自の徴収（独自の口座振替依頼書）、独自の名簿取得、非会員無差別の明文化</td></tr>
+<tr><td class="u-02c7867a6d"><strong>② スリム化型</strong></td><td class="u-be81903c40">会費ゼロPTA・行事単位のボランティア制</td><td class="u-be81903c40">恒常財産と年会費を持たず、活動ごとに参加者を募集。個人情報は活動単位で直接取得</td></tr>
+<tr><td class="u-7a89cdfff3"><strong>③ 解散→再構築型</strong></td><td class="u-019efadaad">単位PTAを解散し、保護者ボランティア組織へ再編</td><td class="u-019efadaad">会則に従う解散手続（総会決議・残余財産処理）。学校支援は地域学校協働活動へ接続</td></tr>
+<tr><td class="u-02c7867a6d"><strong>④ 制度移行型</strong></td><td class="u-be81903c40">代表機能を学校運営協議会へ、支援機能を地域学校協働本部へ移管</td><td class="u-be81903c40">法定制度のため、学校資源利用・教職員関与に法令上の根拠がある（任意団体との決定的な差）</td></tr>
 </tbody>
 </table>
 </div>
-<h3 style="font-family:'Noto Serif JP',serif;color:#1e3a5f;margin:36px 0 12px;font-size:1.15rem">「会費ゼロPTA」という選択肢</h3>
-<p style="line-height:1.95;margin:0">役員の負担の多く（会費徴収、未納管理、名簿管理、会計責任、監査対応）は、固定会費と恒常財産から生まれています。年会費と自動加入と役員ノルマを置かず、必要な活動があるときだけ目的・金額・使途を明示して賛同者から都度の寄付・カンパ・実費を募る「会費ゼロPTA」に移行すると、会費徴収の法的リスク、学校口座への依存、非会員との線引き、役員の会計責任が同時に軽くなります。これは活動の縮小ではなく、<strong>役員を違法・不当リスクから解放する再設計</strong>です。</p>
-<p style="margin:24px 0 0"><a class="btn-gold" href="framework.html" style="margin-right:10px">全体構造と出口設計を読む（グランドフレームワーク）</a><a class="btn-soft" href="proper-management.html">適正なPTA運営モデルへ</a></p>
+<h3 class="u-f5399017bd">「会費ゼロPTA」という選択肢</h3>
+<p class="u-ebf1321068">役員の負担の多く（会費徴収、未納管理、名簿管理、会計責任、監査対応）は、固定会費と恒常財産から生まれています。年会費と自動加入と役員ノルマを置かず、必要な活動があるときだけ目的・金額・使途を明示して賛同者から都度の寄付・カンパ・実費を募る「会費ゼロPTA」に移行すると、会費徴収の法的リスク、学校口座への依存、非会員との線引き、役員の会計責任が同時に軽くなります。これは活動の縮小ではなく、<strong>役員を違法・不当リスクから解放する再設計</strong>です。</p>
+<p class="u-55aeffdf70"><a class="btn-gold u-9ac490086e" href="framework.html">全体構造と出口設計を読む（グランドフレームワーク）</a><a class="btn-soft" href="proper-management.html">適正なPTA運営モデルへ</a></p>
 </div>
 </section>
 <section class="officer-source-pdf" id="pdf-officer">
@@ -1626,285 +1131,285 @@ body.guide-pta-editorial .otl-check{
 </div>
 </section>
 <!-- ===== FAQ ===== -->
-<section style="background:#fff;padding:72px 0">
+<section class="u-6f693d30f4">
 <div class="wrap wrap-narrow">
 <div class="section-center">
 <div class="section-kicker">よくある疑問</div>
 <h2 class="section-title">PTA役員からよく出る質問</h2>
 </div>
-<div class="faq-list" style="display:flex;flex-direction:column;gap:10px;margin-top:32px">
-<div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-<div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-<div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">就任直後に問題に気づいた場合、前任者の責任を問えますか？</div>
-<span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+<div class="faq-list u-79a2bf0b81">
+<div class="faq-item u-5dd6296e3a">
+<div class="faq-q u-9f18855fd6">
+<div class="faq-q-text u-ecdebb7ec2">就任直後に問題に気づいた場合、前任者の責任を問えますか？</div>
+<span class="faq-toggle u-4feb68c3bb">▼</span>
 </div>
-<div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">原則として、過去の役員が故意・重過失で不法行為を行っていた場合に限り責任追及が可能です。ただし現任役員として「問題に気づいたが放置した」場合は現任役員の責任も問われます。まず改善計画を文書化し、総会・役員会に提案することで「善意かつ改善着手済み」の事実を記録に残すことが重要です。過去の役員を攻撃する必要はありませんが、問題の核心をぼかしてはいけません。</p></div>
+<div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">原則として、過去の役員が故意・重過失で不法行為を行っていた場合に限り責任追及が可能です。ただし現任役員として「問題に気づいたが放置した」場合は現任役員の責任も問われます。まず改善計画を文書化し、総会・役員会に提案することで「善意かつ改善着手済み」の事実を記録に残すことが重要です。過去の役員を攻撃する必要はありませんが、問題の核心をぼかしてはいけません。</p></div>
 </div>
-<div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-<div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-<div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">会長個人の通帳で会費を管理しています。今すぐ変えるべきですか？</div>
-<span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+<div class="faq-item u-5dd6296e3a">
+<div class="faq-q u-9f18855fd6">
+<div class="faq-q-text u-ecdebb7ec2">会長個人の通帳で会費を管理しています。今すぐ変えるべきですか？</div>
+<span class="faq-toggle u-4feb68c3bb">▼</span>
 </div>
-<div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">即座に変えるべきです。役員個人口座での管理は横領事件の典型パターンです。退任後に「あの期間に不明金がある」と追及されるリスクがあります。今期中にPTA名義の法人口座または代表者連名口座を開設し、会計規程と年次監査を整備してください。PDF雛形は上記からダウンロードできます。</p></div>
+<div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">即座に変えるべきです。役員個人口座での管理は横領事件の典型パターンです。退任後に「あの期間に不明金がある」と追及されるリスクがあります。今期中にPTA名義の法人口座または代表者連名口座を開設し、会計規程と年次監査を整備してください。PDF雛形は上記からダウンロードできます。</p></div>
 </div>
-<div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-<div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-<div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">入会申込書がないまま長年運営してきました。過去分はどうすれば？</div>
-<span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+<div class="faq-item u-5dd6296e3a">
+<div class="faq-q u-9f18855fd6">
+<div class="faq-q-text u-ecdebb7ec2">入会申込書がないまま長年運営してきました。過去分はどうすれば？</div>
+<span class="faq-toggle u-4feb68c3bb">▼</span>
 </div>
-<div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">まず現在と将来の運営を「止血」します。次年度または更新時から入会意思確認を行い、申込記録のある人だけを会員として扱います。過去について問い合わせがあった場合に備え、いつから、どのように是正したかを記録します。これは過去の役員を責めるためではなく、現在の役員が同じ状態を引き継がないためです。</p></div>
+<div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">まず現在と将来の運営を「止血」します。次年度または更新時から入会意思確認を行い、申込記録のある人だけを会員として扱います。過去について問い合わせがあった場合に備え、いつから、どのように是正したかを記録します。これは過去の役員を責めるためではなく、現在の役員が同じ状態を引き継がないためです。</p></div>
 </div>
-<div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-<div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-<div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">入会届に変えたら会員が減ります。どう説明すれば？</div>
-<span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+<div class="faq-item u-5dd6296e3a">
+<div class="faq-q u-9f18855fd6">
+<div class="faq-q-text u-ecdebb7ec2">入会届に変えたら会員が減ります。どう説明すれば？</div>
+<span class="faq-toggle u-4feb68c3bb">▼</span>
 </div>
-<div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">減る可能性はありますが、それが任意加入です。入会意思を確認しないまま会員数を維持するのではなく、会員数に合わせて活動規模を見直します。過去の会費は、入会記録がないだけで直ちに全額返還義務が生じるとは限らず、会費納入などから黙示の合意が認定されるかを含めて個別に確認します。今後は加入意思、会費、個人情報利用を分けて記録する方が安全です。</p></div>
+<div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">減る可能性はありますが、それが任意加入です。入会意思を確認しないまま会員数を維持するのではなく、会員数に合わせて活動規模を見直します。過去の会費は、入会記録がないだけで直ちに全額返還義務が生じるとは限らず、会費納入などから黙示の合意が認定されるかを含めて個別に確認します。今後は加入意思、会費、個人情報利用を分けて記録する方が安全です。</p></div>
 </div>
-<div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-<div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-<div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">退会届が出ていない人は会員ではないのですか？</div>
-<span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+<div class="faq-item u-5dd6296e3a">
+<div class="faq-q u-9f18855fd6">
+<div class="faq-q-text u-ecdebb7ec2">退会届が出ていない人は会員ではないのですか？</div>
+<span class="faq-toggle u-4feb68c3bb">▼</span>
 </div>
-<div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">退会届は、すでに有効な入会申込がある人に意味を持つ書類です。入会申込記録がない人について「退会届がないから会員」と扱うことはできません。順番が逆です。任意加入団体では、まず入会申込が必要です。入会申込があり、PTAが受け付けて初めて会員になります。そのあと、本人が退会を希望する場合に退会届が意味を持ちます。</p></div>
+<div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">退会届は、すでに有効な入会申込がある人に意味を持つ書類です。入会申込記録がない人について「退会届がないから会員」と扱うことはできません。順番が逆です。任意加入団体では、まず入会申込が必要です。入会申込があり、PTAが受け付けて初めて会員になります。そのあと、本人が退会を希望する場合に退会届が意味を持ちます。</p></div>
 </div>
-<div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-<div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-<div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">担任の先生がPTA配布物を配ってくれています。やめてもらう方法は？</div>
-<span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+<div class="faq-item u-5dd6296e3a">
+<div class="faq-q u-9f18855fd6">
+<div class="faq-q-text u-ecdebb7ec2">担任の先生がPTA配布物を配ってくれています。やめてもらう方法は？</div>
+<span class="faq-toggle u-4feb68c3bb">▼</span>
 </div>
-<div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">「先生を困らせたくない」という思いで続けているケースが多いですが、担任を法的リスクにさらしているのはむしろPTA側です。「地公法35条の問題があることを認識したため、配布業務はPTAが担います」と校長に申し入れるのが最も筋の通った方法です。学校がやってくれないと回らない活動は、活動規模が過大です。PTAが独自に連絡手段を整備し、学校依存を前提にした規模まで活動を削る必要があります。</p></div>
+<div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">「先生を困らせたくない」という思いで続けているケースが多いですが、担任を法的リスクにさらしているのはむしろPTA側です。「地公法35条の問題があることを認識したため、配布業務はPTAが担います」と校長に申し入れるのが最も筋の通った方法です。学校がやってくれないと回らない活動は、活動規模が過大です。PTAが独自に連絡手段を整備し、学校依存を前提にした規模まで活動を削る必要があります。</p></div>
 </div>
-<div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-<div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-<div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">学校アプリでPTA通知を送ってもよいですか？</div>
-<span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+<div class="faq-item u-5dd6296e3a">
+<div class="faq-q u-9f18855fd6">
+<div class="faq-q-text u-ecdebb7ec2">学校アプリでPTA通知を送ってもよいですか？</div>
+<span class="faq-toggle u-4feb68c3bb">▼</span>
 </div>
-<div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">送ってはなりません。学校アプリは、学校が学校業務上の連絡を行うための仕組みであり、PTAの連絡網ではありません。また「PTA会員だけに送るので構わない」という説明も成り立ちません。会員だけに送るには学校アプリ上の保護者情報とPTA会員情報を照合する必要があり、その照合自体が学校が学校目的で保有している保護者情報をPTA目的で利用する処理になります。PTAは本人から直接取得した会員連絡先を使い、PTAの責任で連絡してください。</p></div>
+<div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">送ってはなりません。学校アプリは、学校が学校業務上の連絡を行うための仕組みであり、PTAの連絡網ではありません。また「PTA会員だけに送るので構わない」という説明も成り立ちません。会員だけに送るには学校アプリ上の保護者情報とPTA会員情報を照合する必要があり、その照合自体が学校が学校目的で保有している保護者情報をPTA目的で利用する処理になります。PTAは本人から直接取得した会員連絡先を使い、PTAの責任で連絡してください。</p></div>
 </div>
-<div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-<div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-<div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">校長や教頭がPTA役員に入っている会則は問題ですか？</div>
-<span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+<div class="faq-item u-5dd6296e3a">
+<div class="faq-q u-9f18855fd6">
+<div class="faq-q-text u-ecdebb7ec2">校長や教頭がPTA役員に入っている会則は問題ですか？</div>
+<span class="faq-toggle u-4feb68c3bb">▼</span>
 </div>
-<div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">学校管理職がPTAの意思決定・会計・業務執行に関与する形は、学校とPTAの分離を不明確にします。少なくとも、議決権・会計権限・業務執行権限を持つ役職に学校管理職を置く運営は見直してください。校長から助言を受けることと、学校管理職がPTAの意思決定機関に入ることは別です。学校管理職は「来賓・渉外窓口」として関与するにとどめるのが原則です。</p></div>
+<div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">学校管理職がPTAの意思決定・会計・業務執行に関与する形は、学校とPTAの分離を不明確にします。少なくとも、議決権・会計権限・業務執行権限を持つ役職に学校管理職を置く運営は見直してください。校長から助言を受けることと、学校管理職がPTAの意思決定機関に入ることは別です。学校管理職は「来賓・渉外窓口」として関与するにとどめるのが原則です。</p></div>
 </div>
-<div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-<div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-<div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">非会員の子どもに記念品を配らないことはできますか？</div>
-<span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+<div class="faq-item u-5dd6296e3a">
+<div class="faq-q u-9f18855fd6">
+<div class="faq-q-text u-ecdebb7ec2">非会員の子どもに記念品を配らないことはできますか？</div>
+<span class="faq-toggle u-4feb68c3bb">▼</span>
 </div>
-<div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">学校内・学校行事・全児童生徒の前で配布するものについて、会員・非会員で子どもを扱い分ける運用は避けてください。それは児童生徒への不利益と分断を生みます。さらに、PTAは非会員を把握できません（全保護者情報を持っていないため）。そのため、非会員の子どもだけを別扱いする実務も成り立ちません。会員向け活動と児童生徒全体に関わる活動を分けて整理し、子どもを分ける必要がある活動は学校内で実施すべきではありません。</p></div>
+<div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">学校内・学校行事・全児童生徒の前で配布するものについて、会員・非会員で子どもを扱い分ける運用は避けてください。それは児童生徒への不利益と分断を生みます。さらに、PTAは非会員を把握できません（全保護者情報を持っていないため）。そのため、非会員の子どもだけを別扱いする実務も成り立ちません。会員向け活動と児童生徒全体に関わる活動を分けて整理し、子どもを分ける必要がある活動は学校内で実施すべきではありません。</p></div>
 </div>
-<div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-<div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-<div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">会長として改善を提案したら前任者から反発されました。どうすれば？</div>
-<span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+<div class="faq-item u-5dd6296e3a">
+<div class="faq-q u-9f18855fd6">
+<div class="faq-q-text u-ecdebb7ec2">会長として改善を提案したら前任者から反発されました。どうすれば？</div>
+<span class="faq-toggle u-4feb68c3bb">▼</span>
 </div>
-<div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">前任者の慣行を引き継ぐ義務はありません。むしろ問題のある慣行を「知りながら継続した」場合、その後の責任はあなたに及びます。改善提案の記録（メール・議事録）を残すことをお勧めします。「前任者がそうしていた」は免責事由にならず、「知っていたのに続けた」として現任役員の責任が問われます。</p></div>
+<div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">前任者の慣行を引き継ぐ義務はありません。むしろ問題のある慣行を「知りながら継続した」場合、その後の責任はあなたに及びます。改善提案の記録（メール・議事録）を残すことをお勧めします。「前任者がそうしていた」は免責事由にならず、「知っていたのに続けた」として現任役員の責任が問われます。</p></div>
 </div>
-<div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-<div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-<div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">非会員の保護者の分も役員を割り当てていいですか？</div>
-<span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+<div class="faq-item u-5dd6296e3a">
+<div class="faq-q u-9f18855fd6">
+<div class="faq-q-text u-ecdebb7ec2">非会員の保護者の分も役員を割り当てていいですか？</div>
+<span class="faq-toggle u-4feb68c3bb">▼</span>
 </div>
-<div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">なりません。PTAは任意加入の団体ですので、非会員に役員や委員を割り当てることはできません。非会員に役員業務を強いることは、加入を事実上強制する行為と評価されます。非会員の保護者分は空欄のままにするか、会員のみで選出してください。活動の担い手が足りない場合は活動規模を見直すことが根本的な解決策です。</p></div>
+<div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">なりません。PTAは任意加入の団体ですので、非会員に役員や委員を割り当てることはできません。非会員に役員業務を強いることは、加入を事実上強制する行為と評価されます。非会員の保護者分は空欄のままにするか、会員のみで選出してください。活動の担い手が足りない場合は活動規模を見直すことが根本的な解決策です。</p></div>
 </div>
-<div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-<div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-<div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">学校名簿をPTAの名簿作成に使っても良いですか？</div>
-<span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+<div class="faq-item u-5dd6296e3a">
+<div class="faq-q u-9f18855fd6">
+<div class="faq-q-text u-ecdebb7ec2">学校名簿をPTAの名簿作成に使っても良いですか？</div>
+<span class="faq-toggle u-4feb68c3bb">▼</span>
 </div>
-<div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">使えません。学校名簿は学校業務目的のために管理されており、PTAへの提供には保護者の明示的な同意が必要です。同意なく利用した場合は個人情報保護法違反になります。学校が「慣例だから」と提供していたとしても、提供を受けて使用したPTA側も責任を免れません。PTAは入会申込の際に保護者本人から直接連絡先を取得し、その情報のみを名簿に使用してください。</p></div>
+<div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">使えません。学校名簿は学校業務目的のために管理されており、PTAへの提供には保護者の明示的な同意が必要です。同意なく利用した場合は個人情報保護法違反になります。学校が「慣例だから」と提供していたとしても、提供を受けて使用したPTA側も責任を免れません。PTAは入会申込の際に保護者本人から直接連絡先を取得し、その情報のみを名簿に使用してください。</p></div>
 </div>
-<div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-<div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-<div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">教職員が役員選考に関与するのは問題ですか？</div>
-<span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+<div class="faq-item u-5dd6296e3a">
+<div class="faq-q u-9f18855fd6">
+<div class="faq-q-text u-ecdebb7ec2">教職員が役員選考に関与するのは問題ですか？</div>
+<span class="faq-toggle u-4feb68c3bb">▼</span>
 </div>
-<div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">問題です。PTAは学校とは独立した任意団体です。校長や担任が特定の保護者に役員を打診する、候補者名簿を学校が作成するといった慣行は見直してください。役員選考はPTAが責任を持って実施し、学校管理職は関与しない形が原則です。</p></div>
+<div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">問題です。PTAは学校とは独立した任意団体です。校長や担任が特定の保護者に役員を打診する、候補者名簿を学校が作成するといった慣行は見直してください。役員選考はPTAが責任を持って実施し、学校管理職は関与しない形が原則です。</p></div>
 </div>
-<div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-<div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-<div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">前年度のPTA会計に問題がありました。どうすればよいですか？</div>
-<span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+<div class="faq-item u-5dd6296e3a">
+<div class="faq-q u-9f18855fd6">
+<div class="faq-q-text u-ecdebb7ec2">前年度のPTA会計に問題がありました。どうすればよいですか？</div>
+<span class="faq-toggle u-4feb68c3bb">▼</span>
 </div>
-<div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">監査委員会で問題を記録し、理事会・総会に報告することが重要です。個人口座での管理・収支不明の支出は、横領・不正利用として刑事問題になりえます。「波風を立てたくない」という理由で報告を省略すると、現任役員が共犯者または隠蔽者と評価されるリスクがあります。不正の疑いが強い場合は弁護士に相談し、会員への情報開示と再発防止策の策定を進めてください。</p></div>
+<div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">監査委員会で問題を記録し、理事会・総会に報告することが重要です。個人口座での管理・収支不明の支出は、横領・不正利用として刑事問題になりえます。「波風を立てたくない」という理由で報告を省略すると、現任役員が共犯者または隠蔽者と評価されるリスクがあります。不正の疑いが強い場合は弁護士に相談し、会員への情報開示と再発防止策の策定を進めてください。</p></div>
 </div>
 </div>
 </div>
 </section>
 <!-- ===== 就任時チェックリスト（印刷用） ===== -->
-<section id="officer-checklist" style="background:#fff;padding:80px 0;border-top:4px solid var(--gold)">
+<section class="u-bec0cb53be" id="officer-checklist">
 <div class="wrap wrap-narrow">
 <div class="section-center">
 <div class="section-kicker">印刷して使える</div>
 <h2 class="section-title">就任時に確認すべき20項目チェックリスト</h2>
-<p class="section-sub" style="margin-top:12px;font-size:.95rem;color:var(--text-soft)">就任直後に確認すべき項目を4カテゴリに分類しました。クリックで✓がつきます。印刷してご活用ください。</p>
+<p class="section-sub u-1b9d060512">就任直後に確認すべき項目を4カテゴリに分類しました。クリックで✓がつきます。印刷してご活用ください。</p>
 </div>
-<div class="checklist-grid-20" style="display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px">
+<div class="checklist-grid-20 u-027f079de6">
 <!-- カテゴリ① -->
-<div style="border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;background:var(--bg)">
-<div style="display:flex;align-items:center;gap:10px;margin-bottom:18px">
-<span style="width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:.8rem;font-weight:900;flex-shrink:0">①</span>
-<span style="font-size:.88rem;font-weight:900;color:var(--navy);letter-spacing:.04em">入会・名簿</span>
+<div class="u-97889ba7c9">
+<div class="u-e514fbf4c3">
+<span class="u-ba05ea0e63">①</span>
+<span class="u-c9faee9320">入会・名簿</span>
 </div>
-<div class="cl20-list" style="display:flex;flex-direction:column;gap:9px">
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">入会届が存在するか</span>
+<div class="cl20-list u-70308928f9">
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">入会届が存在するか</span>
 </label>
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">オプトイン方式か（加入は本人の申込による）</span>
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">オプトイン方式か（加入は本人の申込による）</span>
 </label>
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">学校名簿を無断利用していないか</span>
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">学校名簿を無断利用していないか</span>
 </label>
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">非会員名簿が別管理されているか</span>
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">非会員名簿が別管理されているか</span>
 </label>
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">個人情報の利用目的を明示しているか</span>
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">個人情報の利用目的を明示しているか</span>
 </label>
 </div>
 </div>
 <!-- カテゴリ② -->
-<div style="border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;background:var(--bg)">
-<div style="display:flex;align-items:center;gap:10px;margin-bottom:18px">
-<span style="width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:.8rem;font-weight:900;flex-shrink:0">②</span>
-<span style="font-size:.88rem;font-weight:900;color:var(--navy);letter-spacing:.04em">会費・会計</span>
+<div class="u-97889ba7c9">
+<div class="u-e514fbf4c3">
+<span class="u-ba05ea0e63">②</span>
+<span class="u-c9faee9320">会費・会計</span>
 </div>
-<div class="cl20-list" style="display:flex;flex-direction:column;gap:9px">
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">PTA専用口座があるか</span>
+<div class="cl20-list u-70308928f9">
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">PTA専用口座があるか</span>
 </label>
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">会費徴収を学校に代行させていないか</span>
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">会費徴収を学校に代行させていないか</span>
 </label>
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">会計規程があるか</span>
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">会計規程があるか</span>
 </label>
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">決算書を全会員に公開しているか</span>
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">決算書を全会員に公開しているか</span>
 </label>
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">監査が実施されているか</span>
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">監査が実施されているか</span>
 </label>
 </div>
 </div>
 <!-- カテゴリ③ -->
-<div style="border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;background:var(--bg)">
-<div style="display:flex;align-items:center;gap:10px;margin-bottom:18px">
-<span style="width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:.8rem;font-weight:900;flex-shrink:0">③</span>
-<span style="font-size:.88rem;font-weight:900;color:var(--navy);letter-spacing:.04em">学校との関係</span>
+<div class="u-97889ba7c9">
+<div class="u-e514fbf4c3">
+<span class="u-ba05ea0e63">③</span>
+<span class="u-c9faee9320">学校との関係</span>
 </div>
-<div class="cl20-list" style="display:flex;flex-direction:column;gap:9px">
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">教職員の職専免申請が取られているか</span>
+<div class="cl20-list u-70308928f9">
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">教職員の職専免申請が取られているか</span>
 </label>
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">学校施設使用が目的外使用として手続きされているか</span>
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">学校施設使用が目的外使用として手続きされているか</span>
 </label>
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">学校印刷機の使用が整理されているか</span>
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">学校印刷機の使用が整理されているか</span>
 </label>
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">配布物が学校経由でなくPTA独自配布か</span>
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">配布物が学校経由でなくPTA独自配布か</span>
 </label>
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">覚書・委任契約が適切か</span>
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">覚書・委任契約が適切か</span>
 </label>
 </div>
 </div>
 <!-- カテゴリ④ -->
-<div style="border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;background:var(--bg)">
-<div style="display:flex;align-items:center;gap:10px;margin-bottom:18px">
-<span style="width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:.8rem;font-weight:900;flex-shrink:0">④</span>
-<span style="font-size:.88rem;font-weight:900;color:var(--navy);letter-spacing:.04em">役員・活動</span>
+<div class="u-97889ba7c9">
+<div class="u-e514fbf4c3">
+<span class="u-ba05ea0e63">④</span>
+<span class="u-c9faee9320">役員・活動</span>
 </div>
-<div class="cl20-list" style="display:flex;flex-direction:column;gap:9px">
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">役員選出が任意か</span>
+<div class="cl20-list u-70308928f9">
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">役員選出が任意か</span>
 </label>
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">強制参加・強制役員がないか</span>
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">強制参加・強制役員がないか</span>
 </label>
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">退会者に不利益がないか</span>
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">退会者に不利益がないか</span>
 </label>
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">会則が最新化されているか</span>
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">会則が最新化されているか</span>
 </label>
-<label class="cl20-item" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-<span class="cl20-box" style="width:22px;height:22px;border:2px solid var(--line);border-radius:6px;flex-shrink:0;margin-top:1px;display:grid;place-items:center;font-size:.8rem;transition:.2s;background:#fff"></span>
-<span style="font-size:.88rem;color:var(--text);line-height:1.6">非会員への対応が文書化されているか</span>
+<label class="cl20-item u-b034b27c3f">
+<span class="cl20-box u-42f9b22277"></span>
+<span class="u-3127356195">非会員への対応が文書化されているか</span>
 </label>
 </div>
 </div>
 </div>
-<div style="margin-top:32px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap">
-<button onclick="window.print()" onmouseout="this.style.opacity='1'" onmouseover="this.style.opacity='.85'" style="display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:999px;background:var(--navy);color:#fff;font-weight:900;font-size:.9rem;border:none;cursor:pointer;transition:.2s">
+<div class="u-eb2e84983f">
+<button class="u-5d62219a0e" onclick="window.print()" onmouseout="this.style.opacity='1'" onmouseover="this.style.opacity='.85'">
 <svg fill="none" height="16" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24" width="16"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="8" width="12" x="6" y="14"></rect></svg>
             このチェックリストを印刷する
           </button>
-<button id="cl20-reset" onclick="document.querySelectorAll('.cl20-box').forEach(b=&gt;{b.textContent='';b.style.background='#fff';b.style.borderColor='var(--line)';b.style.color=''})" onmouseout="this.style.borderColor='var(--line)';this.style.color='var(--text-soft)'" onmouseover="this.style.borderColor='var(--navy)';this.style.color='var(--navy)'" style="display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:999px;background:transparent;color:var(--text-soft);font-weight:700;font-size:.9rem;border:1px solid var(--line);cursor:pointer;transition:.2s">
+<button class="u-4c0d921b51" id="cl20-reset" onclick="document.querySelectorAll('.cl20-box').forEach(b=&gt;{b.textContent='';b.style.background='#fff';b.style.borderColor='var(--line)';b.style.color=''})" onmouseout="this.style.borderColor='var(--line)';this.style.color='var(--text-soft)'" onmouseover="this.style.borderColor='var(--navy)';this.style.color='var(--navy)'">
             チェックをリセット
           </button>
 </div>
 </div>
 </section>
 <!-- ===== 全国の教育委員会回答から見た判断基準 ===== -->
-<section style="background:#f7f9fc;padding:82px 0;border-top:1px solid #d8e0ea;border-bottom:1px solid #d8e0ea">
-<div class="wrap" style="max-width:1080px">
-<div style="max-width:860px;margin:0 auto 34px">
-<div class="section-kicker" style="background:#fff8df;border:1px solid rgba(212,175,55,.38);color:#7a5c00">行政の公式見解</div>
+<section class="u-54c2f21d33">
+<div class="wrap u-b6f56b162d">
+<div class="u-3b982506c8">
+<div class="section-kicker u-44c81fda3c">行政の公式見解</div>
 <h2 class="section-title">全国の教育委員会回答から見た判断基準</h2>
-<p class="section-lead" style="max-width:820px;margin-top:12px">教育委員会への照会と資料収集を通じて得た公式回答を収録しています。役員が自校PTAの運営を見直す際に、任意加入、会費徴収、名簿提供、学校関与の基準を確認できるようにしています。</p>
-<p style="margin-top:16px;font-size:.94rem;line-height:1.95;color:var(--text)">個々のPTAで判断に迷うときは、役員会内部の慣行だけで結論を出すのではなく、教育委員会がどのように任意加入、会費徴収、名簿提供、学校関与を説明しているかを確認してください。回答本文は、自治体別・論点別に整理したページで確認できます。</p>
-<p style="margin-top:18px"><a href="board-responses.html#municipality-index" style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;background:var(--navy);color:#fff;text-decoration:none;font-weight:900;box-shadow:0 10px 24px rgba(15,39,66,.16)">教育委員会の回答集を見る →</a></p>
+<p class="section-lead u-18f13d4502">教育委員会への照会と資料収集を通じて得た公式回答を収録しています。役員が自校PTAの運営を見直す際に、任意加入、会費徴収、名簿提供、学校関与の基準を確認できるようにしています。</p>
+<p class="u-2bc2959321">個々のPTAで判断に迷うときは、役員会内部の慣行だけで結論を出すのではなく、教育委員会がどのように任意加入、会費徴収、名簿提供、学校関与を説明しているかを確認してください。回答本文は、自治体別・論点別に整理したページで確認できます。</p>
+<p class="u-2bdf8e45fd"><a class="u-5d0cd3cfca" href="board-responses.html#municipality-index">教育委員会の回答集を見る →</a></p>
 </div>
-<div style="max-width:920px;margin:0 auto;border-top:1px solid #cbd5e1">
-<div style="padding:26px 0;border-bottom:1px solid #cbd5e1;display:grid;grid-template-columns:minmax(150px,220px) 1fr;gap:24px;align-items:start">
+<div class="u-ff59e6ee80">
+<div class="u-af277605ce">
 <div>
-<div style="font-size:.78rem;font-weight:900;color:#7a5c00;letter-spacing:.08em;margin-bottom:6px">厚木市教育委員会</div>
-<div style="font-size:.82rem;color:var(--text-soft)">令和8年4月回答</div>
-</div>
-<div>
-<p style="font-family:'Noto Serif JP',serif;font-size:1.18rem;line-height:1.75;color:var(--navy);font-weight:900;margin:0 0 12px;border-left:5px solid var(--gold);padding-left:16px">PTAが独自に徴収することが最もふさわしい方法</p>
-<p style="font-size:.92rem;color:var(--text);line-height:1.9;margin:0">会費の代行徴収、学校集金への合算について、PTA自身が独自に徴収すべきとの見解です。役員としては、「なぜ学校経由で集めているのか」「会員本人の入会意思と徴収同意を確認できるのか」を問い直す基準になります。</p>
-</div>
-</div>
-<div style="padding:26px 0;border-bottom:1px solid #cbd5e1;display:grid;grid-template-columns:minmax(150px,220px) 1fr;gap:24px;align-items:start">
-<div>
-<div style="font-size:.78rem;font-weight:900;color:#7a5c00;letter-spacing:.08em;margin-bottom:6px">兵庫県教育委員会</div>
-<div style="font-size:.82rem;color:var(--text-soft)">任意加入の判断基準</div>
+<div class="u-3a2dea569b">厚木市教育委員会</div>
+<div class="u-d200c61306">令和8年4月回答</div>
 </div>
 <div>
-<p style="font-family:'Noto Serif JP',serif;font-size:1.18rem;line-height:1.75;color:var(--navy);font-weight:900;margin:0 0 12px;border-left:5px solid var(--gold);padding-left:16px">みなし加入は不適切</p>
-<p style="font-size:.92rem;color:var(--text);line-height:1.9;margin:0">入学・転入と同時に全員をPTA会員とする運用は、任意加入の原則と整合しません。役員としては、「入会申込記録がない状態でも会員扱いしていないか」「未提出者を会費・役員選出の対象にしていないか」を点検する根拠になります。</p>
+<p class="u-2d4cc6deb2">PTAが独自に徴収することが最もふさわしい方法</p>
+<p class="u-f3ec78b448">会費の代行徴収、学校集金への合算について、PTA自身が独自に徴収すべきとの見解です。役員としては、「なぜ学校経由で集めているのか」「会員本人の入会意思と徴収同意を確認できるのか」を問い直す基準になります。</p>
+</div>
+</div>
+<div class="u-af277605ce">
+<div>
+<div class="u-3a2dea569b">兵庫県教育委員会</div>
+<div class="u-d200c61306">任意加入の判断基準</div>
+</div>
+<div>
+<p class="u-2d4cc6deb2">みなし加入は不適切</p>
+<p class="u-f3ec78b448">入学・転入と同時に全員をPTA会員とする運用は、任意加入の原則と整合しません。役員としては、「入会申込記録がない状態でも会員扱いしていないか」「未提出者を会費・役員選出の対象にしていないか」を点検する根拠になります。</p>
 </div>
 </div>
 </div>
-<div style="max-width:920px;margin:24px auto 0;padding:18px 0 0;color:var(--text-soft);font-size:.86rem;line-height:1.85">
-<p style="margin:0">上記は役員が自校PTAの運営を点検するための入口です。回答本文、自治体名、分類、回答日等は <a href="board-responses.html" style="color:var(--navy);font-weight:900;text-decoration:underline;text-underline-offset:4px">教育委員会の回答ページ</a> で確認してください。</p>
+<div class="u-6ae5cf5a74">
+<p class="u-ab79ea2b85">上記は役員が自校PTAの運営を点検するための入口です。回答本文、自治体名、分類、回答日等は <a class="u-c6ff70be31" href="board-responses.html">教育委員会の回答ページ</a> で確認してください。</p>
 </div>
 </div>
 </section>

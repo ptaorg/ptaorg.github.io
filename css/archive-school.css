@@ -1,361 +1,363 @@
-/* Archive school detail pages */
-.archive-school-body {
-  background: #f8fafc;
-}
-
-.archive-school-page {
-  width: min(980px, calc(100% - 40px));
-  margin: 0 auto;
-  padding: 42px 0 80px;
-}
-
-.archive-school-back {
-  margin-bottom: 18px;
-}
-
-.archive-school-back a {
-  color: var(--navy);
-  font-size: .9rem;
-  font-weight: 800;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-}
-
-.archive-school-hero {
-  background: linear-gradient(135deg, #071a33 0%, #0b2a4a 68%, #113d6b 100%);
-  color: #fff;
-  border-bottom: 4px solid var(--gold);
-  border-radius: 18px;
-  padding: 42px;
-  margin-bottom: 26px;
-  box-shadow: 0 18px 42px rgba(11, 42, 74, .16);
-}
-
-.archive-school-kicker {
-  color: var(--gold-lt);
-  font-weight: 900;
-  font-size: .78rem;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.archive-school-hero h1 {
-  color: #fff;
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  line-height: 1.22;
-  margin: 0 0 14px;
-}
-
-.archive-school-hero p {
-  color: rgba(255,255,255,.86);
-  line-height: 1.9;
-  margin: 0;
-}
-
-.archive-school-section {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 26px 28px;
-  margin-bottom: 18px;
-  box-shadow: var(--shadow-sm);
-}
-
-.archive-school-section h2 {
-  color: var(--navy);
-  font-family: 'Noto Serif JP', serif;
-  font-size: 1.25rem;
-  margin: 0 0 14px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid rgba(212,175,55,.35);
-}
-
-.archive-school-section p,
-.archive-school-section li {
-  color: var(--text);
-  line-height: 1.85;
-  font-size: .96rem;
-}
-
-.archive-school-section ul {
-  margin: 0;
-  padding-left: 1.2em;
-}
-
-.archive-school-status {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin: 0;
-}
-
-.archive-school-status div {
-  background: #f8fafc;
-  border-radius: 12px;
-  padding: 14px;
-}
-
-.archive-school-status dt {
-  color: #64748b;
-  font-size: .76rem;
-  font-weight: 900;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  margin-bottom: 4px;
-}
-
-.archive-school-status dd {
-  color: var(--navy);
-  font-weight: 900;
-  margin: 0;
-}
-
-.archive-school-placeholder {
-  display: inline-flex;
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: #fff7ed;
-  border: 1px solid #fed7aa;
-  color: #92400e !important;
-  font-weight: 900;
-}
-
-.archive-school-images {
-  display: grid;
-  gap: 18px;
-}
-
-.archive-school-figure {
-  margin: 0;
-}
-
-.archive-school-figure img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: #f8fafc;
-}
-
-.archive-school-figure figcaption {
-  margin-top: 8px;
-  color: #64748b;
-  font-size: .86rem;
-  line-height: 1.7;
-}
-
-.archive-school-flags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.archive-school-flags span {
-  display: inline-flex;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: #eef2ff;
-  color: #24366f;
-  font-size: .82rem;
-  font-weight: 900;
-}
-
-/* Evaluation status colors */
-.status-card {
-  border: 4px solid transparent;
-}
-
-.eval-critical {
-  background: #e60012 !important;
-  color: #ffffff !important;
-  border: 4px solid #e60012 !important;
-}
-
-.eval-problem {
-  background: #f97316 !important;
-  color: #ffffff !important;
-  border: 4px solid #f97316 !important;
-}
-
-.eval-warning {
-  background: #facc15 !important;
-  color: #0b2a4a !important;
-  border: 4px solid #facc15 !important;
-}
-
-.eval-insufficient {
-  background: #fef3c7 !important;
-  color: #92400e !important;
-  border: 4px solid #f59e0b !important;
-}
-
-.eval-good {
-  background: #2563eb !important;
-  color: #ffffff !important;
-  border: 4px solid #2563eb !important;
-}
-
-.eval-pending {
-  background: #dbeafe !important;
-  color: #1e3a8a !important;
-  border: 4px solid #93c5fd !important;
-}
-
-.archive-school-status .status-card dt,
-.archive-school-status .status-card dd,
-.status-card .archive-label,
-.status-card .archive-value,
-.status-card .l,
-.status-card .v {
-  color: inherit !important;
-}
-
-.archive-school-status .status-card dt,
-.status-card .archive-label,
-.status-card .l {
-  opacity: .86;
-}
-
-/* Page PDF print controls */
-.archive-school-author,
-.archive-print-note {
-  color: var(--text);
-  line-height: 1.85;
-}
-
-.archive-school-hero .archive-school-author {
-  color: rgba(255,255,255,.88);
-  font-weight: 900;
-  margin: 0 0 16px;
-}
-
-.archive-print-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 14px 0 18px;
-}
-
-.archive-print-button {
-  appearance: none;
-  border: 0;
-  border-radius: 999px;
-  background: var(--gold);
-  color: var(--navy);
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: 12px 20px;
-  font: inherit;
-  font-weight: 900;
-  box-shadow: 0 10px 22px rgba(11,42,74,.14);
-}
-
-.archive-print-button:hover {
-  background: var(--gold-lt);
-}
-
-.archive-print-save-section .archive-print-button {
-  margin-top: 8px;
-}
-
-.archive-existing-pdf {
-  margin-top: 16px;
-}
-
-@media print {
-  body,
+@layer feature {
+  /* Archive school detail pages */
   .archive-school-body {
-    background: #ffffff !important;
+    background: #f8fafc;
   }
 
-  .archive-print-button,
-  .archive-print-actions,
-  .archive-school-back,
-  .archive-back,
-  nav,
-  footer {
-    display: none !important;
-  }
-
-  .archive-school-page,
-  .archive-page,
-  .p {
-    width: 100% !important;
-    max-width: none !important;
-    padding: 0 !important;
-  }
-
-  .archive-school-hero,
-  .archive-hero,
-  .hero {
-    background: #ffffff !important;
-    color: #000000 !important;
-    border: 2px solid #000000 !important;
-    box-shadow: none !important;
-  }
-
-  .archive-school-hero h1,
-  .archive-school-hero p,
-  .archive-hero h1,
-  .archive-hero p,
-  .hero h1,
-  .hero p {
-    color: #000000 !important;
-  }
-
-  .archive-school-section,
-  .archive-section,
-  .sec {
-    box-shadow: none !important;
-    border: 1px solid #999 !important;
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-
-  img {
-    max-width: 100% !important;
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-
-  .archive-tag,
-  .tag,
-  .archive-school-flags span,
-  .status-card,
-  .eval-critical,
-  .eval-problem,
-  .eval-warning,
-  .eval-insufficient,
-  .eval-good,
-  .eval-pending {
-    border: 1px solid #333 !important;
-    background: #ffffff !important;
-    color: #000000 !important;
-  }
-}
-
-@media (max-width: 700px) {
   .archive-school-page {
-    width: min(100% - 28px, 980px);
-    padding-top: 28px;
+    width: min(980px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 42px 0 80px;
+  }
+
+  .archive-school-back {
+    margin-bottom: 18px;
+  }
+
+  .archive-school-back a {
+    color: var(--navy);
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
   }
 
   .archive-school-hero {
-    padding: 30px 22px;
-    border-radius: 14px;
+    background: linear-gradient(135deg, #071a33 0%, #0b2a4a 68%, #113d6b 100%);
+    color: #fff;
+    border-bottom: 4px solid var(--gold);
+    border-radius: 18px;
+    padding: 42px;
+    margin-bottom: 26px;
+    box-shadow: 0 18px 42px rgba(11, 42, 74, 0.16);
+  }
+
+  .archive-school-kicker {
+    color: var(--gold-lt);
+    font-weight: 900;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .archive-school-hero h1 {
+    color: #fff;
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.22;
+    margin: 0 0 14px;
+  }
+
+  .archive-school-hero p {
+    color: rgba(255, 255, 255, 0.86);
+    line-height: 1.9;
+    margin: 0;
   }
 
   .archive-school-section {
-    padding: 22px 18px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 26px 28px;
+    margin-bottom: 18px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .archive-school-section h2 {
+    color: var(--navy);
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.25rem;
+    margin: 0 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.35);
+  }
+
+  .archive-school-section p,
+  .archive-school-section li {
+    color: var(--text);
+    line-height: 1.85;
+    font-size: 0.96rem;
+  }
+
+  .archive-school-section ul {
+    margin: 0;
+    padding-left: 1.2em;
   }
 
   .archive-school-status {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 0;
+  }
+
+  .archive-school-status div {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 14px;
+  }
+
+  .archive-school-status dt {
+    color: #64748b;
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .archive-school-status dd {
+    color: var(--navy);
+    font-weight: 900;
+    margin: 0;
+  }
+
+  .archive-school-placeholder {
+    display: inline-flex;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    color: #92400e;
+    font-weight: 900;
+  }
+
+  .archive-school-images {
+    display: grid;
+    gap: 18px;
+  }
+
+  .archive-school-figure {
+    margin: 0;
+  }
+
+  .archive-school-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #f8fafc;
+  }
+
+  .archive-school-figure figcaption {
+    margin-top: 8px;
+    color: #64748b;
+    font-size: 0.86rem;
+    line-height: 1.7;
+  }
+
+  .archive-school-flags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .archive-school-flags span {
+    display: inline-flex;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #24366f;
+    font-size: 0.82rem;
+    font-weight: 900;
+  }
+
+  /* Evaluation status colors */
+  .status-card {
+    border: 4px solid transparent;
+  }
+
+  .eval-critical {
+    background: #e60012;
+    color: #ffffff;
+    border: 4px solid #e60012;
+  }
+
+  .eval-problem {
+    background: #f97316;
+    color: #ffffff;
+    border: 4px solid #f97316;
+  }
+
+  .eval-warning {
+    background: #facc15;
+    color: #0b2a4a;
+    border: 4px solid #facc15;
+  }
+
+  .eval-insufficient {
+    background: #fef3c7;
+    color: #92400e;
+    border: 4px solid #f59e0b;
+  }
+
+  .eval-good {
+    background: #2563eb;
+    color: #ffffff;
+    border: 4px solid #2563eb;
+  }
+
+  .eval-pending {
+    background: #dbeafe;
+    color: #1e3a8a;
+    border: 4px solid #93c5fd;
+  }
+
+  .archive-school-status .status-card dt,
+  .archive-school-status .status-card dd,
+  .status-card .archive-label,
+  .status-card .archive-value,
+  .status-card .l,
+  .status-card .v {
+    color: inherit;
+  }
+
+  .archive-school-status .status-card dt,
+  .status-card .archive-label,
+  .status-card .l {
+    opacity: 0.86;
+  }
+
+  /* Page PDF print controls */
+  .archive-school-author,
+  .archive-print-note {
+    color: var(--text);
+    line-height: 1.85;
+  }
+
+  .archive-school-hero .archive-school-author {
+    color: rgba(255, 255, 255, 0.88);
+    font-weight: 900;
+    margin: 0 0 16px;
+  }
+
+  .archive-print-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 14px 0 18px;
+  }
+
+  .archive-print-button {
+    appearance: none;
+    border: 0;
+    border-radius: 999px;
+    background: var(--gold);
+    color: var(--navy);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 12px 20px;
+    font: inherit;
+    font-weight: 900;
+    box-shadow: 0 10px 22px rgba(11, 42, 74, 0.14);
+  }
+
+  .archive-print-button:hover {
+    background: var(--gold-lt);
+  }
+
+  .archive-print-save-section .archive-print-button {
+    margin-top: 8px;
+  }
+
+  .archive-existing-pdf {
+    margin-top: 16px;
+  }
+
+  @media print {
+    body,
+    .archive-school-body {
+      background: #ffffff;
+    }
+
+    .archive-print-button,
+    .archive-print-actions,
+    .archive-school-back,
+    .archive-back,
+    nav,
+    footer {
+      display: none;
+    }
+
+    .archive-school-page,
+    .archive-page,
+    .p {
+      width: 100%;
+      max-width: none;
+      padding: 0;
+    }
+
+    .archive-school-hero,
+    .archive-hero,
+    .hero {
+      background: #ffffff;
+      color: #000000;
+      border: 2px solid #000000;
+      box-shadow: none;
+    }
+
+    .archive-school-hero h1,
+    .archive-school-hero p,
+    .archive-hero h1,
+    .archive-hero p,
+    .hero h1,
+    .hero p {
+      color: #000000;
+    }
+
+    .archive-school-section,
+    .archive-section,
+    .sec {
+      box-shadow: none;
+      border: 1px solid #999;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    img {
+      max-width: 100%;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .archive-tag,
+    .tag,
+    .archive-school-flags span,
+    .status-card,
+    .eval-critical,
+    .eval-problem,
+    .eval-warning,
+    .eval-insufficient,
+    .eval-good,
+    .eval-pending {
+      border: 1px solid #333;
+      background: #ffffff;
+      color: #000000;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .archive-school-page {
+      width: min(100% - 28px, 980px);
+      padding-top: 28px;
+    }
+
+    .archive-school-hero {
+      padding: 30px 22px;
+      border-radius: 14px;
+    }
+
+    .archive-school-section {
+      padding: 22px 18px;
+    }
+
+    .archive-school-status {
+      grid-template-columns: 1fr;
+    }
   }
 }

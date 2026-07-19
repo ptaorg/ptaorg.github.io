@@ -1,0 +1,121 @@
+@layer page {
+  /* Shared by 10 pages. Extracted from duplicated inline CSS. */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  .support-strip {
+    background: linear-gradient(90deg, #0a192f 0%, #1e3a5f 58%, #2d5a8e 100%);
+    color: #fff;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.42);
+  }
+  .support-strip-inner,
+  .support-strip-text {
+    color: #fff;
+  }
+  .site-header {
+    background: linear-gradient(90deg, #0a192f 0%, #1e3a5f 58%, #2d5a8e 100%);
+    border-bottom: 3px solid #d4af37;
+  }
+  .site-header .nav-container {
+    background: transparent;
+  }
+  .site-header .logo,
+  .site-header .logo span,
+  .site-header .nav-link {
+    color: #fff;
+  }
+  .site-header .hamburger span {
+    background: #fff;
+  }
+  .breadcrumb-bar {
+    display: none;
+  }
+  .page-hero--photo {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: none;
+    min-height: 340px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #0a192f;
+    border: 0;
+    color: #fff;
+  }
+  .page-hero--photo .page-hero-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  .page-hero--photo .page-hero-bg-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 340px;
+    object-fit: cover;
+  }
+  .page-hero--photo .page-hero-bg-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(5, 17, 31, 0.78) 0%,
+      rgba(5, 17, 31, 0.52) 48%,
+      rgba(5, 17, 31, 0.18) 100%
+    );
+  }
+  .page-hero--photo > :not(.page-hero-bg-img) {
+    position: relative;
+    z-index: 1;
+    width: min(calc(100% - 40px), 1080px);
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 68px;
+    padding-bottom: 74px;
+    color: #fff;
+  }
+  .page-hero--photo .page-hero-inner,
+  .page-hero--photo .issue-hero-inner,
+  .page-hero--photo .journal-hero-inner {
+    position: relative;
+    z-index: 1;
+    width: min(calc(100% - 40px), 1080px);
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 68px;
+    padding-bottom: 74px;
+    color: #fff;
+  }
+  .page-hero--photo h1,
+  .page-hero--photo p,
+  .page-hero--photo .section-lead {
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.34);
+  }
+  .page-hero--photo h1 em {
+    color: #f4e7a6;
+  }
+  @media (max-width: 760px) {
+    .page-hero--photo {
+      min-height: 300px;
+    }
+    .page-hero--photo .page-hero-bg-img img {
+      min-height: 300px;
+    }
+    .page-hero--photo > :not(.page-hero-bg-img),
+    .page-hero--photo .page-hero-inner,
+    .page-hero--photo .issue-hero-inner,
+    .page-hero--photo .journal-hero-inner {
+      width: min(calc(100% - 28px), 1080px);
+      padding-top: 44px;
+      padding-bottom: 52px;
+    }
+  }
+}

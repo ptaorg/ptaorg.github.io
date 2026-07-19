@@ -27,8 +27,8 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"/>
-<link href="/css/style.css?v=20260705-fixed-header-all-pages" rel="stylesheet"/>
-<link href="/css/refine.css?v=hover-orange-20260629ccccc" rel="stylesheet"/>
+<link href="/css/site.css?v=20260719" rel="stylesheet"/>
+<link href="/css/editorial.css?v=20260719" rel="stylesheet"/>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -36,155 +36,11 @@
   gtag('js', new Date());
   gtag('config', 'G-0D18ZSSLMH');
 </script>
-<style>
-  .breadcrumb-bar{background:#fff;border-bottom:1px solid #d8dee8;}
-  .breadcrumb-inner{max-width:1120px;margin:0 auto;padding:11px 24px;font-size:.92rem;line-height:1.6;color:#475569;display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
-  .breadcrumb-inner a{color:#06c;text-decoration:none;}.breadcrumb-inner a:hover{text-decoration:underline;}.breadcrumb-inner .current{color:#334155;}
-  .pm-hero{background:linear-gradient(135deg,#fff 0%,#f3f7fb 54%,#eef4fb 100%);border-bottom:1px solid #dbe4ef;}
-  .pm-hero-inner{max-width:1120px;margin:0 auto;padding:72px 24px 58px;}
-  .pm-kicker{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(212,175,55,.55);background:#fff9e6;color:#17345c;border-radius:999px;padding:6px 14px;font-weight:900;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px;}
-  .pm-title{font-family:'Noto Serif JP',serif;color:#0b2545;font-size:clamp(2rem,5vw,4.2rem);line-height:1.18;margin:0 0 22px;font-weight:900;letter-spacing:-.03em;}
-  .pm-title span{color:#d4af37;}
-  .pm-lead{max-width:860px;font-size:clamp(1.02rem,1.8vw,1.22rem);line-height:2;color:#23384f;font-weight:700;margin:0 0 28px;}
-  .pm-hero-note{max-width:860px;border-left:6px solid #d4af37;background:#fff;padding:18px 22px;border-radius:0 14px 14px 0;color:#334155;line-height:1.95;box-shadow:0 10px 28px rgba(15,23,42,.06);}
-  .pm-wrap{max-width:1120px;margin:0 auto;padding:56px 24px 84px;}
-  .pm-section{margin:0 0 64px;}
-  .pm-section h2{font-family:'Noto Serif JP',serif;color:#0b2545;font-size:clamp(1.55rem,3vw,2.3rem);line-height:1.45;margin:0 0 20px;border-left:8px solid #d4af37;padding-left:18px;}
-  .pm-section h3{color:#17345c;font-size:1.2rem;margin:30px 0 12px;}
-  .pm-section p{font-size:1rem;line-height:2;max-width:900px;color:#26384e;margin:0 0 16px;}
-  .pm-definition{font-family:'Noto Serif JP',serif;font-size:clamp(1.35rem,2.8vw,2.05rem);line-height:1.65;color:#102a4c;font-weight:900;border-top:3px solid #0b2545;border-bottom:1px solid #cbd5e1;padding:28px 0;margin:22px 0 30px;}
-  .pm-definition em{font-style:normal;color:#d86100;}
-  .pm-rule-list{counter-reset:pmrule;list-style:none;padding:0;margin:28px 0 0;display:grid;gap:20px;}
-  .pm-rule-list li{counter-increment:pmrule;position:relative;padding:22px 24px 22px 78px;background:#fff;border:1px solid #d9e2ef;border-left:6px solid #17345c;border-radius:14px;box-shadow:0 8px 24px rgba(15,23,42,.05);}
-  .pm-rule-list li::before{content:counter(pmrule);position:absolute;left:22px;top:22px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#17345c;color:#fff;font-weight:900;}
-  .pm-rule-list strong{display:block;color:#0b2545;font-size:1.08rem;margin-bottom:8px;}
-  .pm-rule-list span{display:block;line-height:1.9;color:#334155;}
-  .pm-table{width:100%;border-collapse:collapse;margin:24px 0;background:#fff;border:1px solid #d9e2ef;border-radius:14px;overflow:hidden;box-shadow:0 8px 22px rgba(15,23,42,.04);}
-  .pm-table th,.pm-table td{border:1px solid #d9e2ef;padding:16px 18px;vertical-align:top;line-height:1.8;text-align:left;}
-  .pm-table th{background:#f2f6fb;color:#0b2545;font-weight:900;white-space:nowrap;}
-  .pm-steps{display:grid;gap:16px;margin-top:26px;}
-  .pm-step{border-left:6px solid #d4af37;background:#fffdf6;padding:18px 22px;border-radius:0 12px 12px 0;}
-  .pm-step strong{display:block;color:#0b2545;margin-bottom:6px;font-size:1.05rem;}
-  .pm-step span{line-height:1.9;color:#334155;}
-  .pm-link-band{background:#0b2545;color:#fff;border-radius:18px;padding:30px;margin-top:30px;}
-  .pm-link-band h2{color:#fff;border-left-color:#d4af37;margin-bottom:16px;}
-  .pm-link-band p{color:#e2e8f0;}
-  .pm-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;}
-  .pm-actions a{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:999px;padding:12px 18px;font-weight:900;background:#d4af37;color:#0b2545;box-shadow:0 10px 22px rgba(0,0,0,.18);}
-  .pm-actions a.secondary{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35);box-shadow:none;}
-  @media (max-width:720px){.pm-hero-inner{padding:48px 20px 42px}.pm-wrap{padding:40px 20px 64px}.pm-rule-list li{padding-left:22px;padding-top:72px}.pm-rule-list li::before{top:22px}.pm-table{display:block;overflow-x:auto}.pm-actions a{width:100%;}}
-</style>
-<link rel="stylesheet" href="/css/hover-orange.css?v=20260629-hero22-hero22">
+<link rel="stylesheet" href="/css/pages/proper-management.css?v=20260719">
+<link rel="stylesheet" href="/css/interactions.css?v=20260719">
 
-<style id="proper-management-editorial-20260710">
-body.proper-management-editorial .breadcrumb-bar{
-  display:none!important;
-}
-body.proper-management-editorial .pm-kicker{
-  border-radius:3px!important;
-  text-transform:none!important;
-  letter-spacing:.04em!important;
-}
-body.proper-management-editorial .pm-wrap{
-  max-width:920px!important;
-  padding:64px 24px 96px!important;
-}
-body.proper-management-editorial .pm-section{
-  margin:0!important;
-  padding:40px 0 48px!important;
-  border-top:1px solid #cfd8e2!important;
-}
-body.proper-management-editorial .pm-section:first-child{
-  border-top:2px solid #17345c!important;
-}
-body.proper-management-editorial .pm-section h2{
-  border-left:0!important;
-  padding-left:0!important;
-  padding-bottom:12px!important;
-  border-bottom:2px solid #17345c!important;
-}
-body.proper-management-editorial .pm-rule-list{
-  display:block!important;
-}
-body.proper-management-editorial .pm-rule-list li{
-  margin:0!important;
-  padding:24px 0 24px 58px!important;
-  background:#fff!important;
-  border:0!important;
-  border-top:1px solid #dbe4ee!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-body.proper-management-editorial .pm-rule-list li:last-child{
-  border-bottom:1px solid #dbe4ee!important;
-}
-body.proper-management-editorial .pm-rule-list li::before{
-  left:0!important;
-  top:22px!important;
-  width:34px!important;
-  height:34px!important;
-  border-radius:2px!important;
-}
-body.proper-management-editorial .pm-table{
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-body.proper-management-editorial .pm-step{
-  margin:0!important;
-  padding:22px 0!important;
-  background:#fff!important;
-  border:0!important;
-  border-top:1px solid #dbe4ee!important;
-  border-radius:0!important;
-}
-body.proper-management-editorial .pm-step:last-child{
-  border-bottom:1px solid #dbe4ee!important;
-}
-body.proper-management-editorial .pm-link-band{
-  margin-top:0!important;
-  padding:40px 0 0!important;
-  background:#fff!important;
-  color:#26384e!important;
-  border-radius:0!important;
-  border-top:1px solid #cfd8e2!important;
-}
-body.proper-management-editorial .pm-link-band h2{
-  color:#0b2545!important;
-}
-body.proper-management-editorial .pm-link-band p{
-  color:#334155!important;
-}
-body.proper-management-editorial .pm-actions{
-  display:block!important;
-  margin-top:18px!important;
-}
-body.proper-management-editorial .pm-actions a,
-body.proper-management-editorial .pm-actions a.secondary{
-  display:block!important;
-  width:auto!important;
-  padding:14px 0!important;
-  background:#fff!important;
-  color:#174f7d!important;
-  border:0!important;
-  border-bottom:1px solid #dbe4ee!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-  text-decoration:underline!important;
-  text-underline-offset:.18em!important;
-}
-body.proper-management-editorial main a:hover{
-  transform:none!important;
-  box-shadow:none!important;
-}
-@media(max-width:720px){
-  body.proper-management-editorial .pm-wrap{
-    padding:48px 18px 72px!important;
-  }
-  body.proper-management-editorial .pm-rule-list li{
-    padding:22px 0 22px 50px!important;
-  }
-}
-</style>
+
+<link rel="stylesheet" href="/css/inline-utilities.css?v=20260719">
 </head>
 <body class="proper-management-editorial">
 
@@ -345,7 +201,7 @@ body.proper-management-editorial main a:hover{
 </section>
 <section class="pm-section" id="principles">
   <h2>七つの基本原則</h2>
-<figure style="margin:30px auto;max-width:860px"><img src="assets/diagrams/13_適正化とは/01_七つの基本原則.svg" alt="図解：七つの基本原則" loading="lazy" style="display:block;width:100%;height:auto"></figure>
+<figure class="u-852a52814b"><img class="u-83b2a80b11" src="assets/diagrams/13_適正化とは/01_七つの基本原則.svg" alt="図解：七つの基本原則" loading="lazy"></figure>
   <ol class="pm-rule-list">
     <li><strong>入会は契約であり、明示の申込みを基本にする</strong><span>入学、在籍、進級をもってPTA会員と扱うのではなく、会則、会費、活動内容、退会自由を示したうえで、本人の入会意思を記録します。</span></li>
     <li><strong>学校とPTAを公私分離する</strong><span>PTAは学校の内部組織ではありません。学校の校務と、PTAの会員管理、会費徴収、役員選出、会計、広報を分けます。</span></li>

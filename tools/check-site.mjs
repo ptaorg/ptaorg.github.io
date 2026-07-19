@@ -40,7 +40,7 @@ function read(file) {
 
 function walk(dir = ".", out = []) {
   for (const entry of fs.readdirSync(path.join(root, dir), { withFileTypes: true })) {
-    if (entry.name === ".git") continue;
+    if ([".git", "_site", "node_modules"].includes(entry.name)) continue;
     const rel = dir === "." ? entry.name : `${dir}/${entry.name}`;
     if (entry.isDirectory()) walk(rel, out);
     else out.push(rel.replaceAll("\\", "/"));

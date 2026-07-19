@@ -20,67 +20,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=20260705-fixed-header-all-pages">
-<link href="/css/refine.css?v=hover-orange-20260629cccccbb" rel="stylesheet"/>
-  <style>
-    .pg{width:min(calc(100% - 40px),900px);margin-inline:auto;padding:56px 0 96px}
-    .pg h2{font-family:'Noto Serif JP',serif;font-size:clamp(1.45rem,2.4vw,1.95rem);color:var(--navy);margin:0 0 12px;padding-bottom:10px;border-bottom:3px solid var(--gold)}
-    .pg h3{font-size:1.02rem;font-weight:800;color:var(--navy);margin:28px 0 10px;padding-left:12px;border-left:4px solid var(--gold)}
-    .pg p{color:var(--text);line-height:1.9;margin-bottom:14px;font-size:.97rem}
-    .pg section{margin-bottom:64px}
-    .flow-row{display:flex;align-items:stretch;gap:0;margin:28px 0}
-    .flow-node{flex:1;border-radius:14px;padding:22px 18px;text-align:center}
-    .flow-node h4{font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:900;margin-bottom:6px}
-    .flow-node p{font-size:.84rem;line-height:1.65;margin:0}
-    .flow-arrow{display:flex;align-items:center;padding:0 10px;color:var(--text-soft);font-size:1.4rem;flex-shrink:0}
-    .fn-school{background:#dbeafe;border:1.5px solid #93c5fd}
-    .fn-school h4{color:#1e3a8a}
-    .fn-block{background:#fee2e2;border:2px solid #fca5a5;position:relative}
-    .fn-block h4{color:#7f1d1d}
-    .fn-pta{background:#f0fdf4;border:1.5px solid #86efac}
-    .fn-pta h4{color:#14532d}
-    .block-x{position:absolute;top:-16px;left:50%;transform:translateX(-50%);width:32px;height:32px;background:#b91c1c;border-radius:50%;color:#fff;display:grid;place-items:center;font-size:1rem;font-weight:900}
-    .ok-arrow{color:#15803d;font-size:1rem;margin:0 6px}
-    .result-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
-    .result-ok{background:#f0fdf4;border:1px solid #bbf7d0;border-left:4px solid #15803d;border-radius:var(--radius);padding:16px 18px}
-    .result-ng{background:#fff5f5;border:1px solid #fecaca;border-left:4px solid #b91c1c;border-radius:var(--radius);padding:16px 18px}
-    .result-label{font-size:.72rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
-    .result-ok .result-label{color:#15803d}
-    .result-ng .result-label{color:#b91c1c}
-    .result-ok p,.result-ng p{font-size:.88rem;line-height:1.7;margin:0;color:var(--text)}
-    .steps{display:flex;flex-direction:column;gap:0;margin:20px 0}
-    .step-r{display:flex;gap:16px;position:relative;padding-bottom:24px}
-    .step-r::before{content:'';position:absolute;left:19px;top:44px;bottom:0;width:2px;background:linear-gradient(180deg,var(--gold) 0%,transparent 100%)}
-    .step-r:last-child::before{display:none}
-    .step-num{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-3));color:#fff;display:grid;place-items:center;font-weight:900;font-size:.95rem;flex-shrink:0;z-index:1}
-    .step-body{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;flex:1}
-    .step-body strong{display:block;font-size:.97rem;color:var(--navy);margin-bottom:5px}
-    .step-body p{margin:0;font-size:.88rem;color:var(--text-soft);line-height:1.75}
-    @media(max-width:700px){.flow-row{flex-direction:column}.flow-arrow{transform:rotate(90deg);padding:4px 0;justify-content:center}.result-row{grid-template-columns:1fr}}
-
-    .page-hero{position:relative;overflow:hidden;}
-    .page-hero-bg-img{
-      position:absolute;inset:0;z-index:0;
-    }
-    .page-hero-bg-img img{
-      width:100%;height:100%;object-fit:cover;
-      filter:brightness(1.05);
-    }
-    .page-hero-bg-img::after{
-      content:'';position:absolute;inset:0;
-      background:linear-gradient(160deg,rgba(5,17,31,.32) 0%,rgba(5,17,31,.14) 60%,rgba(5,17,31,.05) 100%);
-    }
-    .page-hero-inner{position:relative;z-index:1;}
-  
-    /* ↓ Photo hero overrides — keep white text on photo background ↓ */
-    .page-hero{background:transparent!important;border-top:none!important;border-bottom:none!important}
-    .page-hero h1{color:#fff!important}
-    .page-hero h1 em{color:var(--gold-lt)!important}
-    .page-hero p{color:rgba(255,255,255,.88)!important}
-    .page-hero-kicker{background:rgba(212,175,55,.18)!important;border:1px solid rgba(212,175,55,.4)!important;color:var(--gold-lt)!important}
-    .hero-actions .btn-outline{color:#fff!important;border-color:rgba(255,255,255,.5)!important}
-    .hero-actions .btn-outline:hover{background:rgba(255,255,255,.12)!important;border-color:rgba(255,255,255,.8)!important}
-  </style>
+  <link rel="stylesheet" href="/css/site.css?v=20260719">
+<link href="/css/editorial.css?v=20260719" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/pages/privacy.css?v=20260719">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
@@ -115,97 +57,16 @@
 
 
 
-<link rel="stylesheet" href="/css/hover-orange.css?v=20260629-hero22-hero22">
+<link rel="stylesheet" href="/css/interactions.css?v=20260719">
 
 
 
 
 
-<style id="final-hero-layout-fix">
-html,body{overflow-x:hidden!important}
-.support-strip{background:linear-gradient(90deg,#0a192f 0%,#1e3a5f 58%,#2d5a8e 100%)!important;color:#fff!important;border-bottom:1px solid rgba(212,175,55,.42)!important}
-.support-strip-inner,.support-strip-text{color:#fff!important}
-.site-header{background:linear-gradient(90deg,#0a192f 0%,#1e3a5f 58%,#2d5a8e 100%)!important;border-bottom:3px solid #d4af37!important}
-.site-header .nav-container{background:transparent!important}
-.site-header .logo,.site-header .logo span,.site-header .nav-link{color:#fff!important}
-.site-header .hamburger span{background:#fff!important}
-.breadcrumb-bar{display:none!important}
-.page-hero--photo{display:block!important;position:relative!important;width:100%!important;max-width:none!important;min-height:340px!important;margin:0!important;padding:0!important;overflow:hidden!important;background:#0a192f!important;border:0!important;color:#fff!important}
-.page-hero--photo .page-hero-bg-img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:0!important}
-.page-hero--photo .page-hero-bg-img img{display:block!important;width:100%!important;height:100%!important;min-height:340px!important;object-fit:cover!important}
-.page-hero--photo .page-hero-bg-img::after{content:""!important;position:absolute!important;inset:0!important;background:linear-gradient(90deg,rgba(5,17,31,.78) 0%,rgba(5,17,31,.52) 48%,rgba(5,17,31,.18) 100%)!important}
-.page-hero--photo> :not(.page-hero-bg-img){position:relative!important;z-index:1!important;width:min(calc(100% - 40px),1080px)!important;max-width:1080px!important;margin-left:auto!important;margin-right:auto!important;padding-top:68px!important;padding-bottom:74px!important;color:#fff!important}
-.page-hero--photo .page-hero-inner,.page-hero--photo .issue-hero-inner,.page-hero--photo .journal-hero-inner{position:relative!important;z-index:1!important;width:min(calc(100% - 40px),1080px)!important;max-width:1080px!important;margin-left:auto!important;margin-right:auto!important;padding-top:68px!important;padding-bottom:74px!important;color:#fff!important}
-.page-hero--photo h1,.page-hero--photo p,.page-hero--photo .section-lead{color:#fff!important;text-shadow:0 2px 12px rgba(0,0,0,.34)!important}
-.page-hero--photo h1 em{color:#f4e7a6!important}
-@media(max-width:760px){.page-hero--photo{min-height:300px!important}.page-hero--photo .page-hero-bg-img img{min-height:300px!important}.page-hero--photo> :not(.page-hero-bg-img),.page-hero--photo .page-hero-inner,.page-hero--photo .issue-hero-inner,.page-hero--photo .journal-hero-inner{width:min(calc(100% - 28px),1080px)!important;padding-top:44px!important;padding-bottom:52px!important}}
-</style>
+<link rel="stylesheet" href="/css/shared/editorial-page-common.css?v=20260719">
 
-<style id="privacy-editorial-20260710">
-.privacy-editorial{background:#fff!important}
-.privacy-editorial .hero-actions,
-.privacy-editorial .page-hero-kicker,
-.privacy-editorial .section-kicker,
-.privacy-editorial .pg figure,
-.privacy-editorial .flow-row,
-.privacy-editorial .result-row,
-.privacy-editorial .alert-danger{display:none!important}
-.privacy-editorial .pg{width:min(calc(100% - 40px),920px)!important}
-.privacy-editorial .pg section{margin-bottom:0!important;padding:42px 0!important;border-bottom:1px solid #cfd8e2!important}
-.privacy-editorial .pg h2{border-bottom:0!important;padding-bottom:0!important;line-height:1.5!important}
-.privacy-editorial .editorial-panel,
-.privacy-editorial .source-lens-panel{
-  margin:0!important;
-  padding:42px 0!important;
-  border:0!important;
-  border-bottom:1px solid #cfd8e2!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-  background:#fff!important;
-}
-.privacy-editorial .source-lens-grid{display:block!important;border-top:1px solid #dbe4ee!important}
-.privacy-editorial .source-lens-item{
-  padding:18px 0!important;
-  border:0!important;
-  border-bottom:1px solid #dbe4ee!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-  background:#fff!important;
-}
-.privacy-editorial .steps{border-top:1px solid #dbe4ee!important}
-.privacy-editorial .step-r{
-  display:grid!important;
-  grid-template-columns:44px minmax(0,1fr)!important;
-  gap:14px!important;
-  padding:20px 0!important;
-  border-bottom:1px solid #dbe4ee!important;
-}
-.privacy-editorial .step-r::before{display:none!important}
-.privacy-editorial .step-num{width:34px!important;height:34px!important;border-radius:0!important;background:var(--navy)!important}
-.privacy-editorial .step-body{
-  padding:0!important;
-  border:0!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-  background:#fff!important;
-}
-.privacy-editorial .faq-list{gap:0!important;border-top:1px solid var(--line)!important}
-.privacy-editorial .faq-item{border:0!important;border-bottom:1px solid var(--line)!important;border-radius:0!important}
-.privacy-editorial .faq-q{padding:18px 0!important}
-.privacy-editorial .faq-a{padding-left:0!important;padding-right:0!important}
-.privacy-editorial .btn-soft,
-.privacy-editorial .btn-navy,
-.privacy-editorial .ed-link-buttons a{
-  display:inline!important;
-  padding:0!important;
-  background:transparent!important;
-  color:var(--navy)!important;
-  border:0!important;
-  border-radius:0!important;
-  text-decoration:underline!important;
-  text-underline-offset:.18em!important;
-}
-</style>
+
+<link rel="stylesheet" href="/css/inline-utilities.css?v=20260719">
 </head>
 <body class="privacy-editorial">
   
@@ -363,7 +224,7 @@ html,body{overflow-x:hidden!important}
   <main class="pg">
 
     <!-- リード -->
-    <p style="font-size:1.05rem;line-height:1.95;color:var(--text);margin-bottom:48px;padding:24px 28px;background:#f8fafc;border-left:5px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0">
+    <p class="u-89d1b55995">
       学校は入学手続等で保護者の住所、電話番号、緊急連絡先等の個人情報を取得します。学校保有情報をPTA目的で扱う場合は、学校自身による利用、学校からPTAへの提供、PTAによる加入者本人からの直接取得を分けます。学校側の利用・提供については、第61条の所掌事務・業務と保有の必要性、特定された利用目的の範囲、第69条第1項又は第2項の根拠、対象情報、本人説明、記録を確認します。
     </p>
 
@@ -383,12 +244,12 @@ html,body{overflow-x:hidden!important}
       <p>法改正による個人情報保護制度の一元化後、公立学校を含む地方公共団体側の個人情報取扱いは、個人情報保護法第5章の規律として整理されます。第61条では、法令の定める所掌事務又は業務を遂行するために必要な場合に限って保有できるため、PTAの会員管理、会費徴収、役員選出等を学校の所掌事務・業務として特定できるかが前提になります。</p><p>そのうえで、学校が特定した利用目的の範囲内として第69条第1項により利用・提供できるのかを確認します。利用目的外である場合は、第69条第2項各号のどの例外を根拠とするのか、本人又は第三者の権利利益を不当に侵害するおそれがないか、対象情報と期間が限定されているかを確認します。学校自身による利用とPTAへの提供は別々に整理し、PTAは学校とは別の私的団体であり、学校在籍情報から会員関係が発生するわけではないことを前提にします。</p>
 
       <h3>なぜオプトアウトでは不十分か</h3>
-<figure style="margin:30px auto;max-width:860px"><img src="assets/diagrams/02_個人情報/02_オプトアウトでは不十分.svg" alt="図解：オプトアウトでは不十分" loading="lazy" style="display:block;width:100%;height:auto"></figure>
+<figure class="u-852a52814b"><img class="u-83b2a80b11" src="assets/diagrams/02_個人情報/02_オプトアウトでは不十分.svg" alt="図解：オプトアウトでは不十分" loading="lazy"></figure>
       <p>「同意しない場合は申し出てください」という方式は、保護者が積極的に承諾した記録を残すものではありません。学校と保護者の関係では、沈黙や未提出を同意として扱うと、同意の任意性・明確性・記録性が崩れます。PTAが会員情報を必要とするなら、PTA加入の意思確認と個人情報の利用目的を分け、本人が積極的に記入・提出した記録を残す必要があります。</p>
 
       <h3>全国教育委員会の公式回答</h3>
       <p>当委員会が収集・掲載している教育委員会回答でも、学校名簿をPTA運営へ使うことについて、本人同意、利用目的、学校とPTAの分離、名簿管理を確認すべき事項として扱う回答が確認できます。回答本文は自治体ごとに表現が異なるため、結論だけを抜き出さず、実物資料と照合して読む必要があります。</p>
-      <a href="board-responses.html" class="btn-soft" style="text-decoration:none;display:inline-flex">教育委員会の回答一覧を見る →</a>
+      <a href="board-responses.html" class="btn-soft u-978bc22be9">教育委員会の回答一覧を見る →</a>
 
       <h3>私立学校への適用について</h3>
       <p>私立学校は「行政機関等」ではありませんが、学校法人等として民間部門の個人情報保護法上の規律を受けます。そのため、利用目的の特定、目的外利用、第三者提供、安全管理措置等を民間部門の条文体系で確認します。公立学校と私立学校では適用条文が異なるため、同じ条文番号で一括りにせず、いずれの場合も<strong>学校による利用・提供の根拠、対象情報、本人説明、記録</strong>を確認します。</p>
@@ -408,7 +269,7 @@ html,body{overflow-x:hidden!important}
     <section id="privacy-sources">
       <h2>確認に使う一次資料</h2>
       <p>学校保有情報をPTA目的で扱っている場合は、学校自身が利用しているのか、PTAへ提供しているのかを先に分けます。そのうえで、所掌事務・業務、利用目的、第69条第1項又は第2項の根拠、本人説明、不同意者の除外、利用・提供記録を確認します。</p>
-      <ul style="line-height:2;margin-left:1.2em">
+      <ul class="u-afe6394ccb">
 <li><strong>個人情報保護委員会「公立学校とPTAの間で個人情報のやり取りをするためのポイント」（2026年3月）</strong>：学校とPTAの間で個人情報をやり取りする際の利用目的、本人説明、同意、記録管理を確認します（<a href="https://www.ppc.go.jp/files/pdf/260325_shiryou-3.pdf" target="_blank" rel="noopener">公式PDF</a>）。</li>
 <li><strong>学校名簿・学校アプリ利用確認書</strong>：学校保有情報とPTA連絡利用を確認する提出文書です（<a href="guideline.html#tpl-school-info-stop">ひな形</a>）。</li>
       </ul>
@@ -439,13 +300,13 @@ html,body{overflow-x:hidden!important}
         <div class="source-lens-item"><strong>子どもの扱い</strong><p>非会員情報をもとに児童生徒の記念品、行事、登校班、見守りの扱いを分けていないかを確認します。</p></div>
       </div>
       <p class="source-note">「非会員を把握しないと運営できない」制度は、PTAが学校保有情報へ依存している可能性があります。設計の出発点は、会員情報だけで完結する運営です。</p>
-      <p><a href="guideline.html#tpl-school-info-stop" class="btn-navy" style="text-decoration:none;display:inline-flex;margin-top:8px">学校名簿・学校アプリ利用確認書を使う</a></p>
+      <p><a href="guideline.html#tpl-school-info-stop" class="btn-navy u-411c94ee19">学校名簿・学校アプリ利用確認書を使う</a></p>
     </section>
 
 
     <section>
       <h2>現場でよく起きる4つの問題パターン</h2>
-<figure style="margin:30px auto;max-width:860px"><img src="assets/diagrams/02_個人情報/03_4つの問題パターン.svg" alt="図解：4つの問題パターン" loading="lazy" style="display:block;width:100%;height:auto"></figure>
+<figure class="u-852a52814b"><img class="u-83b2a80b11" src="assets/diagrams/02_個人情報/03_4つの問題パターン.svg" alt="図解：4つの問題パターン" loading="lazy"></figure>
       <div class="steps">
         <div class="step-r">
           <div class="step-num">1</div>
@@ -481,7 +342,7 @@ html,body{overflow-x:hidden!important}
     <!-- 適正な情報取得の手順 -->
     <section>
       <h2>会員情報を取得・管理する基本手順</h2>
-<figure style="margin:30px auto;max-width:860px"><img src="assets/diagrams/02_個人情報/04_適正な取得手順.svg" alt="図解：適正な情報取得の手順" loading="lazy" style="display:block;width:100%;height:auto"></figure>
+<figure class="u-852a52814b"><img class="u-83b2a80b11" src="assets/diagrams/02_個人情報/04_適正な取得手順.svg" alt="図解：適正な情報取得の手順" loading="lazy"></figure>
       <p>恒常的な会員管理は、PTAが加入者本人から必要な情報を直接取得する方式が最も明確です。学校が配布・回収等に協力する場合でも、発行主体、提出先、学校職員の役割、学校保有情報を利用しないことを明確にします。</p>
       <div class="steps">
         <div class="step-r">
@@ -506,59 +367,59 @@ html,body{overflow-x:hidden!important}
           </div>
         </div>
       </div>
-      <a href="guideline.html#tpl-info-consent" class="btn-navy" style="text-decoration:none;display:inline-flex;margin-top:8px">個人情報取得・利用同意書を確認する</a>
+      <a href="guideline.html#tpl-info-consent" class="btn-navy u-411c94ee19">個人情報取得・利用同意書を確認する</a>
     </section>
 
-    <section style="background:#fff;padding:64px 0">
+    <section class="u-094f6d1696">
       <div class="wrap wrap-narrow">
         <div class="section-kicker">よくある疑問</div>
         <h2 class="section-title">よくある質問</h2>
-        <div class="faq-list" style="display:flex;flex-direction:column;gap:10px;margin-top:28px">
+        <div class="faq-list u-6c3f4e9348">
 
-          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">学校から「名簿はPTA規約に同意した人に渡している」と説明されましたが適法ですか？</div>
-              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          <div class="faq-item u-5dd6296e3a">
+            <div class="faq-q u-9f18855fd6">
+              <div class="faq-q-text u-ecdebb7ec2">学校から「名簿はPTA規約に同意した人に渡している」と説明されましたが適法ですか？</div>
+              <span class="faq-toggle u-4feb68c3bb">▼</span>
             </div>
-            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">規約への同意だけで足りるかは、対象情報、利用・提供目的、提供先、任意性、拒否方法、記録の内容によります。学校提出書類と一体化している場合は、保護者がPTAへの情報利用・提供を自由に拒否できたか、学校手続と誤認しなかったかを確認します。規約への包括的な記名だけで、すべての利用・提供に同意したと直ちに扱うことはできません。</p></div>
+            <div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">規約への同意だけで足りるかは、対象情報、利用・提供目的、提供先、任意性、拒否方法、記録の内容によります。学校提出書類と一体化している場合は、保護者がPTAへの情報利用・提供を自由に拒否できたか、学校手続と誤認しなかったかを確認します。規約への包括的な記名だけで、すべての利用・提供に同意したと直ちに扱うことはできません。</p></div>
           </div>
-          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">PTAに渡った個人情報を削除してもらうにはどうすればいいですか？</div>
-              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          <div class="faq-item u-5dd6296e3a">
+            <div class="faq-q u-9f18855fd6">
+              <div class="faq-q-text u-ecdebb7ec2">PTAに渡った個人情報を削除してもらうにはどうすればいいですか？</div>
+              <span class="faq-toggle u-4feb68c3bb">▼</span>
             </div>
-            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">まずPTAに対し、情報の取得元、利用目的、保存期間、共有先を確認し、利用停止、訂正、削除又は匿名化を求めます。法定の請求権が成立するかは、PTAに適用される民間部門の規律と具体的な保有・利用状況によります。一方、学校が保有する情報や学校連絡ツールの利用については、行政機関等の制度に基づく開示・訂正・利用停止手続の対象となるかを学校・教育委員会に確認します。<a href="guideline.html#tpl-school-info-stop">学校名簿・学校アプリ利用確認書</a>も利用できます。</p></div>
+            <div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">まずPTAに対し、情報の取得元、利用目的、保存期間、共有先を確認し、利用停止、訂正、削除又は匿名化を求めます。法定の請求権が成立するかは、PTAに適用される民間部門の規律と具体的な保有・利用状況によります。一方、学校が保有する情報や学校連絡ツールの利用については、行政機関等の制度に基づく開示・訂正・利用停止手続の対象となるかを学校・教育委員会に確認します。<a href="guideline.html#tpl-school-info-stop">学校名簿・学校アプリ利用確認書</a>も利用できます。</p></div>
           </div>
-          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">子どもが緊急時に連絡が取れなくなるのでは？と心配です。</div>
-              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          <div class="faq-item u-5dd6296e3a">
+            <div class="faq-q u-9f18855fd6">
+              <div class="faq-q-text u-ecdebb7ec2">子どもが緊急時に連絡が取れなくなるのでは？と心配です。</div>
+              <span class="faq-toggle u-4feb68c3bb">▼</span>
             </div>
-            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">学校の緊急連絡は学校が直接行うものであり、PTAを経由する必要はありません。学校への緊急連絡先届（教育目的）とPTA名簿（PTA活動目的）は完全に別物です。学校が直接保有する緊急連絡先情報はPTAとは無関係に機能しますので、PTAの名簿からの削除は緊急連絡には影響しません。</p></div>
-          </div>
-
-          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">個人情報保護制度の一元化で何が変わりましたか？</div>
-              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
-            </div>
-            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">個人情報保護制度の一元化により、地方公共団体等の個人情報取扱いも個人情報保護法第5章の枠組みで確認する整理になりました。公立学校が保有する児童・保護者情報をPTA目的で扱う場合は、学校自身による利用とPTAへの提供を分け、第61条の所掌事務・業務、特定された利用目的の範囲、第69条第1項又は第2項の根拠を確認します。自治体の条例・規則等は、現在の法体系との整合を含めて確認します。</p></div>
+            <div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">学校の緊急連絡は学校が直接行うものであり、PTAを経由する必要はありません。学校への緊急連絡先届（教育目的）とPTA名簿（PTA活動目的）は完全に別物です。学校が直接保有する緊急連絡先情報はPTAとは無関係に機能しますので、PTAの名簿からの削除は緊急連絡には影響しません。</p></div>
           </div>
 
-          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">PTA非加入を選んだら子どものクラスでの扱いが不利になりました。これは問題ですか？</div>
-              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          <div class="faq-item u-5dd6296e3a">
+            <div class="faq-q u-9f18855fd6">
+              <div class="faq-q-text u-ecdebb7ec2">個人情報保護制度の一元化で何が変わりましたか？</div>
+              <span class="faq-toggle u-4feb68c3bb">▼</span>
             </div>
-            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">学校教育上の取扱いをPTA加入状況によって変えることは、学校とPTAの区分や児童生徒への公平な対応の観点から問題です。PTA独自の事業や給付については、実施主体、目的、費用負担、学校行事との関係、子どもへの心理的影響を具体的に確認します。配布物、行事参加、記念品等で差が生じた場合は、誰が決めたのかを含めて記録し、学校・PTA・教育委員会へ文書で確認します。</p></div>
+            <div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">個人情報保護制度の一元化により、地方公共団体等の個人情報取扱いも個人情報保護法第5章の枠組みで確認する整理になりました。公立学校が保有する児童・保護者情報をPTA目的で扱う場合は、学校自身による利用とPTAへの提供を分け、第61条の所掌事務・業務、特定された利用目的の範囲、第69条第1項又は第2項の根拠を確認します。自治体の条例・規則等は、現在の法体系との整合を含めて確認します。</p></div>
           </div>
 
-          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">PTAがSNSやLINEグループで個人情報を共有しています。問題ですか？</div>
-              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          <div class="faq-item u-5dd6296e3a">
+            <div class="faq-q u-9f18855fd6">
+              <div class="faq-q-text u-ecdebb7ec2">PTA非加入を選んだら子どものクラスでの扱いが不利になりました。これは問題ですか？</div>
+              <span class="faq-toggle u-4feb68c3bb">▼</span>
             </div>
-            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">PTAが個人情報データベース等を事業の用に供している場合は、法人格や営利性の有無にかかわらず、民間部門の個人情報保護法上の規律を確認します。氏名、住所、電話番号、写真等をLINEグループやSNSで共有する場合は、取得時に示した利用目的の範囲、閲覧できる者、再共有の可否、安全管理、本人説明を確認します。公開範囲の広いSNS等へ掲載する場合は、対象者ごとの同意を得る運用が最も明確です。</p></div>
+            <div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">学校教育上の取扱いをPTA加入状況によって変えることは、学校とPTAの区分や児童生徒への公平な対応の観点から問題です。PTA独自の事業や給付については、実施主体、目的、費用負担、学校行事との関係、子どもへの心理的影響を具体的に確認します。配布物、行事参加、記念品等で差が生じた場合は、誰が決めたのかを含めて記録し、学校・PTA・教育委員会へ文書で確認します。</p></div>
+          </div>
+
+          <div class="faq-item u-5dd6296e3a">
+            <div class="faq-q u-9f18855fd6">
+              <div class="faq-q-text u-ecdebb7ec2">PTAがSNSやLINEグループで個人情報を共有しています。問題ですか？</div>
+              <span class="faq-toggle u-4feb68c3bb">▼</span>
+            </div>
+            <div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">PTAが個人情報データベース等を事業の用に供している場合は、法人格や営利性の有無にかかわらず、民間部門の個人情報保護法上の規律を確認します。氏名、住所、電話番号、写真等をLINEグループやSNSで共有する場合は、取得時に示した利用目的の範囲、閲覧できる者、再共有の可否、安全管理、本人説明を確認します。公開範囲の広いSNS等へ掲載する場合は、対象者ごとの同意を得る運用が最も明確です。</p></div>
           </div>
 
         </div>

@@ -21,114 +21,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style.css?v=20260705-fixed-header-all-pages">
-<link rel="stylesheet" href="/css/refine.css?v=hover-orange-20260629ccccc">
-<style>
-.parent-page{background:var(--bg);color:var(--text)}
-.parent-lead-mag{background:#fff;padding:80px 0 70px}.lead-kicker{display:inline-flex;align-items:center;gap:7px;padding:5px 13px;border-radius:999px;background:rgba(5,17,31,.07);color:var(--navy);font-size:.76rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase;margin-bottom:12px}.parent-lead-mag h2{font-family:'Noto Serif JP',serif;font-size:clamp(1.8rem,3.6vw,2.8rem);line-height:1.32;color:var(--navy);margin-bottom:18px}.parent-lead-mag p{font-size:1.02rem;line-height:2.05;color:var(--text);margin:0 0 16px}.parent-lead-mag p.soft{color:var(--text-soft)}.lead-close{font-weight:900;color:var(--navy);border-left:6px solid var(--gold);background:#fff7ed;padding:16px 20px;border-radius:0 14px 14px 0;margin-top:24px!important}
-.case-section{background:#fff;padding:80px 0}.case-section .wrap-narrow{max-width:900px;margin:0 auto;padding:0 24px}.case-note{max-width:840px;margin:14px auto 0;text-align:center;font-size:.82rem;color:var(--text-soft);line-height:1.8}.case-list{display:flex;flex-direction:column;gap:18px;margin-top:42px}.case-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;box-shadow:var(--shadow-sm);overflow:hidden;transition:box-shadow .2s,border-color .2s}.case-card.is-open{box-shadow:var(--shadow-md);border-color:rgba(212,175,55,.55)}.case-top{padding:24px 26px 6px}.case-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}.case-tag{font-size:.7rem;font-weight:900;letter-spacing:.06em;color:#fff;background:var(--navy);padding:4px 11px;border-radius:999px}.case-from{font-size:.76rem;font-weight:700;color:var(--text-soft)}.case-subject{font-family:'Noto Serif JP',serif;font-weight:900;font-size:1.16rem;color:var(--navy);line-height:1.55;margin:0 0 14px}.case-summary{font-size:.96rem;line-height:1.95;color:var(--text-soft);margin:0}.case-toggle{width:100%;display:flex;align-items:center;justify-content:center;gap:8px;background:none;border:none;cursor:pointer;padding:16px 24px;font-family:inherit;font-size:.9rem;font-weight:900;color:var(--navy-3)}.case-toggle:hover{color:var(--navy);background:var(--bg)}.case-toggle:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}.case-toggle .chev{width:18px;height:18px;flex-shrink:0;transition:transform .3s ease}.case-toggle .lbl-close{display:none}.case-card.is-open .case-toggle .chev{transform:rotate(180deg)}.case-card.is-open .case-toggle .lbl-open{display:none}.case-card.is-open .case-toggle .lbl-close{display:inline}.case-answer{display:none;overflow:hidden}.case-card.is-open .case-answer{display:block}.case-ans{padding:18px 26px 28px;border-top:1px dashed var(--line)}.case-quote{background:var(--cream);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:18px 20px;margin:0}.case-quote .qlabel{display:block;font-size:.72rem;font-weight:900;letter-spacing:.08em;color:#a9851f;margin-bottom:9px}.case-quote p{font-family:'Noto Serif JP',serif;font-size:.96rem;line-height:2;color:var(--text);margin:0 0 13px}.case-quote p:last-child{margin-bottom:0}.case-reply{margin-top:18px}.case-valid{display:flex;align-items:flex-start;gap:8px;font-weight:900;color:var(--navy);font-size:.96rem;line-height:1.7;margin:0 0 12px}.case-valid:before{content:'✓';color:var(--green);font-weight:900;flex-shrink:0}.case-reply p{font-size:.94rem;line-height:1.95;color:var(--text);margin:0 0 12px}.case-links{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin-top:8px}.case-more{display:inline-flex;align-items:center;gap:6px;font-size:.86rem;font-weight:900;color:var(--navy-3);text-decoration:none}.case-more:hover{text-decoration:underline}.case-ask{font-size:.84rem;color:var(--text-soft)}.case-ask a{color:var(--navy-3);font-weight:900}.case-foot{text-align:center;margin-top:34px;padding:22px;border-radius:var(--radius);background:#0f2742;color:#fff}.case-foot p{line-height:1.9;margin:0 0 12px}.case-foot .gold{color:var(--gold-lt);font-weight:900}.case-foot a{display:inline-flex;padding:9px 18px;border-radius:999px;background:var(--gold);color:var(--navy);font-weight:900;text-decoration:none}
-.visual-section{padding:82px 0;background:#f8fafc}.visual-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:42px}.visual-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);text-decoration:none;color:inherit;transition:var(--t)}.visual-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}.vc-visual{height:170px;background-size:cover;background-position:center;position:relative;display:flex;align-items:flex-start;justify-content:flex-start;padding:14px}.vc-visual:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,17,31,.2),rgba(5,17,31,.55))}.vc-label{position:relative;z-index:2;display:inline-flex;padding:5px 11px;border-radius:999px;font-size:.75rem;font-weight:900;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.18)}.vc-label-ok{background:var(--green)}.vc-label-warn{background:var(--orange)}.vc-label-ng{background:var(--red)}.vc-body{padding:22px}.vc-title{font-family:'Noto Serif JP',serif;color:var(--navy);font-weight:900;font-size:1.08rem;line-height:1.45;margin-bottom:8px}.vc-desc{font-size:.9rem;color:var(--text-soft);line-height:1.8;margin-bottom:12px}.vc-law{display:inline-flex;font-size:.72rem;font-weight:900;color:var(--navy);background:#f8fafc;border:1px solid var(--line);border-radius:999px;padding:3px 9px;margin:2px}
-.mc-section{background:linear-gradient(135deg,#1d4ed8,#2563eb);padding:78px 0;color:#fff}.mc-panel{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:32px}.mc-meter{display:flex;align-items:center;gap:16px;padding:14px 18px;margin-bottom:22px;background:rgba(0,0,0,.18);border-radius:14px}.mc-count{flex-shrink:0;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--navy);font-family:'Noto Serif JP',serif;font-weight:900;font-size:1.5rem;transition:transform .25s ease}.mc-count.pop{transform:scale(1.15)}.mc-meter-text{font-size:.9rem;line-height:1.6;color:rgba(255,255,255,.9)}.mc-meter-text b{color:var(--gold-lt)}.mc-options{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}.mc-option{display:flex;align-items:flex-start;gap:12px;cursor:pointer;padding:14px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;transition:background .2s}.mc-option:hover{background:rgba(255,255,255,.09)}.mc-option input{margin-top:3px;width:16px;height:16px;accent-color:var(--gold)}.mc-option strong{display:block;color:#fff;font-size:.95rem}.mc-option span{display:block;font-size:.82rem;color:rgba(255,255,255,.66);margin-top:2px}.mc-button{width:100%;padding:14px;border-radius:999px;background:var(--gold);color:var(--navy);font-weight:900;font-size:1rem;border:none;cursor:pointer;transition:opacity .2s}.mc-button:hover{opacity:.92}.mc-app-link{display:inline-flex;align-items:center;gap:7px;color:var(--gold-lt);font-size:.9rem;font-weight:800;text-decoration:none;border-bottom:1px solid rgba(244,231,166,.45);padding-bottom:1px}
-.steps-section{padding:82px 0;background:#fff}.steps-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}.step-block{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:22px}.step-num{width:44px;height:44px;border-radius:999px;background:var(--navy);color:#fff;font-weight:900;display:grid;place-items:center;margin-bottom:12px}.step-block h4{font-family:'Noto Serif JP',serif;color:var(--navy);font-size:1.05rem;margin-bottom:8px}.step-block p{font-size:.9rem;color:var(--text-soft);line-height:1.8}.pdf-section{background:#0f2742;color:#fff;padding:82px 0}.pdf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}.pdf-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:24px}.pdf-icon{font-size:1.6rem;margin-bottom:10px}.pdf-card h3{color:var(--gold-lt);font-family:'Noto Serif JP',serif;margin-bottom:8px}.pdf-card p{font-size:.9rem;color:rgba(255,255,255,.76);line-height:1.75;margin-bottom:14px}.pdf-btn{display:inline-flex;padding:9px 16px;border-radius:999px;background:var(--gold);color:var(--navy);font-weight:900;text-decoration:none;font-size:.86rem}.soudan-section{padding:82px 0;background:#f8fafc}.soudan-box{background:#fff;border:1px solid var(--line);border-left:7px solid var(--gold);border-radius:0 18px 18px 0;padding:30px;box-shadow:var(--shadow-sm);max-width:900px;margin:34px auto 0}.soudan-box p{line-height:2;color:var(--text)}.parent-link-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}.faq-section{background:#fff;padding:82px 0}.faq-list{display:flex;flex-direction:column;gap:12px;margin-top:34px}.faq2-item{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}.faq2-q{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 22px;cursor:pointer}.faq2-q-text{font-weight:900;color:var(--navy);line-height:1.6}.faq2-q-text:before{content:'Q. ';color:var(--gold)}.faq2-chevron{width:18px;height:18px;transition:transform .25s}.faq2-item.is-open .faq2-chevron{transform:rotate(180deg)}.faq2-a{display:none;padding:0 22px 20px}.faq2-item.is-open .faq2-a{display:block}.faq2-a p{border-top:1px solid var(--line);padding-top:14px;line-height:1.9;color:var(--text-soft);margin:0}.faq2-a p:before{content:'A. ';font-weight:900;color:var(--navy)}.howto-section{padding:82px 0;background:#f8fafc}.section-label{display:inline-flex;padding:5px 13px;border-radius:999px;background:rgba(5,17,31,.07);color:var(--navy);font-size:.76rem;font-weight:900;margin-bottom:12px}.section-sub{color:var(--text-soft);line-height:1.85}.howto-steps{display:grid;gap:16px;margin-top:30px}.howto-step{display:grid;grid-template-columns:64px 1fr;gap:18px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow-sm)}.howto-num{width:52px;height:52px;border-radius:999px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:900}.howto-num span:first-child{font-size:.65rem;display:block;line-height:1}.howto-num span:last-child{font-size:1.05rem;display:block;line-height:1}.howto-body h4{font-family:'Noto Serif JP',serif;color:var(--navy);font-size:1.05rem;margin-bottom:6px}.howto-body p{color:var(--text-soft);line-height:1.85}.howto-tip{display:inline-flex;margin-top:8px;color:#7a5c00;background:#fff7ed;border:1px solid #fed7aa;border-radius:999px;padding:3px 10px;font-size:.8rem;font-weight:800}
-@media(max-width:900px){.visual-grid,.steps-flow,.pdf-grid{grid-template-columns:1fr}.case-section .wrap-narrow{padding:0 18px}.vc-visual{height:150px}.howto-step{grid-template-columns:1fr}.mc-panel{padding:22px 16px}}
-
-.parent-openchat-section{padding:82px 0;background:linear-gradient(180deg,#f2fbf7 0%,#f8fafc 100%);border-top:1px solid rgba(15,39,71,.08);border-bottom:1px solid rgba(15,39,71,.08)}
-.parent-openchat-intro{max-width:800px;margin:0 auto;text-align:center}
-.parent-openchat-intro .section-kicker{background:rgba(6,199,85,.11);color:#087b3f}
-.parent-openchat-intro .section-lead{margin-left:auto;margin-right:auto}
-.parent-openchat-panel{display:grid;grid-template-columns:minmax(320px,.86fr) minmax(360px,1.14fr);gap:34px;align-items:center;margin-top:38px;padding:30px;background:#fff;border:1px solid rgba(15,39,71,.13);border-radius:22px;box-shadow:0 18px 44px rgba(5,17,31,.10)}
-.parent-openchat-map-wrap{position:relative;min-width:0;padding:22px;background:#fff;border:1px solid rgba(15,39,71,.10);border-radius:18px;overflow:hidden}
-.parent-openchat-map-heading{position:relative;z-index:1;margin:0 0 8px;color:var(--navy);font-size:.82rem;font-weight:900;letter-spacing:.06em}
-.parent-openchat-map{position:relative;z-index:1;display:block;width:min(100%,410px);height:auto;max-height:500px;margin:0 auto}
-.parent-openchat-region{cursor:pointer;outline:none}
-.parent-openchat-region .region-shape{stroke:#fff;stroke-width:3;stroke-linejoin:round;vector-effect:non-scaling-stroke;filter:drop-shadow(0 3px 3px rgba(5,17,31,.20));transform-box:fill-box;transform-origin:center;transition:transform .18s ease,filter .18s ease,opacity .18s ease}
-.parent-openchat-region:hover .region-shape,.parent-openchat-region:focus .region-shape{transform:translateY(-2px) scale(1.018);filter:drop-shadow(0 7px 6px rgba(5,17,31,.24))}
-.parent-openchat-region:focus-visible .region-shape{stroke:#0f2747;stroke-width:6}
-.parent-openchat-region--hokkaido .region-shape{fill:#8fc95d}
-.parent-openchat-region--tohoku .region-shape{fill:#58b971}
-.parent-openchat-region--kanto .region-shape{fill:#68bfb4}
-.parent-openchat-region--chubu .region-shape{fill:#aaa0d8}
-.parent-openchat-region--kinki .region-shape{fill:#efb34d}
-.parent-openchat-region--chugoku .region-shape{fill:#f28b3f}
-.parent-openchat-region--chugoku .region-shape--shikoku{fill:#ed7b68}
-.parent-openchat-region--kyushu .region-shape{fill:#ed8e91}
-.parent-openchat-links h3{font-family:'Noto Serif JP',serif;color:var(--navy);font-size:1.25rem;margin:0 0 14px}
-.parent-openchat-link-list{display:grid;gap:9px}
-.parent-openchat-link{display:grid;grid-template-columns:12px minmax(0,1fr) 22px;gap:12px;align-items:center;padding:12px 14px;background:#fff;border:1px solid var(--line);border-radius:12px;color:var(--navy);text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease}
-.parent-openchat-link:hover{transform:translateX(3px);border-color:rgba(6,199,85,.55);box-shadow:0 8px 20px rgba(5,17,31,.08)}
-.parent-openchat-link:focus-visible{outline:3px solid rgba(6,199,85,.35);outline-offset:2px}
-.parent-openchat-link-dot{width:12px;height:12px;border-radius:50%;background:var(--region-color)}
-.parent-openchat-link strong{display:block;font-size:.92rem;line-height:1.45}
-.parent-openchat-link small{display:block;margin-top:2px;color:var(--text-soft);font-size:.72rem;line-height:1.4}
-.parent-openchat-link svg{width:20px;height:20px;color:#087b3f}
-.parent-openchat-note{display:flex;gap:12px;align-items:flex-start;margin-top:18px;padding:15px 17px;background:#fff;border:1px solid rgba(15,39,71,.12);border-radius:14px;color:var(--text-soft);font-size:.82rem;line-height:1.75}
-.parent-openchat-note svg{width:22px;height:22px;flex:0 0 auto;color:#087b3f;margin-top:2px}
-.parent-openchat-note p{margin:0}
-.parent-openchat-note strong{color:var(--navy)}
-@media(max-width:820px){.parent-openchat-section{padding:64px 0}.parent-openchat-panel{grid-template-columns:1fr;padding:22px;gap:24px}.parent-openchat-map-wrap{padding:18px}.parent-openchat-map{width:min(100%,360px)}.parent-openchat-links h3{text-align:center}}
-@media(max-width:520px){.parent-openchat-section{padding:54px 0}.parent-openchat-panel{margin-top:28px;padding:16px;border-radius:18px}.parent-openchat-map-wrap{padding:14px 8px 12px}.parent-openchat-map-heading{padding-left:8px}.parent-openchat-map{width:min(100%,300px)}.parent-openchat-link{padding:11px 12px}.parent-openchat-note{padding:13px 14px}}
-@media(prefers-reduced-motion:reduce){.parent-openchat-region .region-shape,.parent-openchat-link{transition:none}}
-
-.parent-chain-direct {
-  background: linear-gradient(180deg, #fff7ed 0%, #fff 100%);
-  padding: 42px 0;
-  border-top: 1px solid rgba(15,39,71,.06);
-  border-bottom: 1px solid rgba(15,39,71,.08);
-}
-
-.parent-chain-card {
-  background: #fff;
-  border: 1px solid rgba(15,39,71,.14);
-  border-left: 8px solid #b91c1c;
-  border-radius: 0 18px 18px 0;
-  box-shadow: 0 14px 34px rgba(5,17,31,.10);
-  padding: 28px 30px;
-}
-
-.parent-chain-badge {
-  display: inline-flex;
-  padding: 5px 12px;
-  border-radius: 999px;
-  background: rgba(185,28,28,.09);
-  color: #b91c1c;
-  font-size: .74rem;
-  font-weight: 900;
-  letter-spacing: .08em;
-  margin-bottom: 12px;
-}
-
-.parent-chain-card h2 {
-  font-family: 'Noto Serif JP', serif;
-  color: var(--navy);
-  font-size: clamp(1.35rem, 2.5vw, 2rem);
-  line-height: 1.45;
-  margin: 0 0 12px;
-}
-
-.parent-chain-card p {
-  color: var(--text);
-  font-size: .98rem;
-  line-height: 1.95;
-  margin: 0 0 18px;
-}
-
-.parent-chain-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-@media (max-width: 760px) {
-  .parent-chain-direct {
-    padding: 32px 0;
-  }
-
-  .parent-chain-card {
-    padding: 24px 20px;
-    border-left-width: 6px;
-  }
-}
-</style>
+<link rel="stylesheet" href="/css/site.css?v=20260719">
+<link rel="stylesheet" href="/css/editorial.css?v=20260719">
+<link rel="stylesheet" href="/css/pages/guide-parent.css?v=20260719">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0D18ZSSLMH');</script>
@@ -150,109 +45,17 @@
 
 
 
-<link rel="stylesheet" href="/css/hover-orange.css?v=20260629-hero22-hero22">
+<link rel="stylesheet" href="/css/interactions.css?v=20260719">
 
 
 
 
 
-<style id="final-hero-layout-fix">
-html,body{overflow-x:hidden!important}
-.support-strip{background:linear-gradient(90deg,#0a192f 0%,#1e3a5f 58%,#2d5a8e 100%)!important;color:#fff!important;border-bottom:1px solid rgba(212,175,55,.42)!important}
-.support-strip-inner,.support-strip-text{color:#fff!important}
-.site-header{background:linear-gradient(90deg,#0a192f 0%,#1e3a5f 58%,#2d5a8e 100%)!important;border-bottom:3px solid #d4af37!important}
-.site-header .nav-container{background:transparent!important}
-.site-header .logo,.site-header .logo span,.site-header .nav-link{color:#fff!important}
-.site-header .hamburger span{background:#fff!important}
-.breadcrumb-bar{display:none!important}
-.page-hero--photo{display:block!important;position:relative!important;width:100%!important;max-width:none!important;min-height:340px!important;margin:0!important;padding:0!important;overflow:hidden!important;background:#0a192f!important;border:0!important;color:#fff!important}
-.page-hero--photo .page-hero-bg-img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:0!important}
-.page-hero--photo .page-hero-bg-img img{display:block!important;width:100%!important;height:100%!important;min-height:340px!important;object-fit:cover!important}
-.page-hero--photo .page-hero-bg-img::after{content:""!important;position:absolute!important;inset:0!important;background:linear-gradient(90deg,rgba(5,17,31,.78) 0%,rgba(5,17,31,.52) 48%,rgba(5,17,31,.18) 100%)!important}
-.page-hero--photo> :not(.page-hero-bg-img){position:relative!important;z-index:1!important;width:min(calc(100% - 40px),1080px)!important;max-width:1080px!important;margin-left:auto!important;margin-right:auto!important;padding-top:68px!important;padding-bottom:74px!important;color:#fff!important}
-.page-hero--photo .page-hero-inner,.page-hero--photo .issue-hero-inner,.page-hero--photo .journal-hero-inner{position:relative!important;z-index:1!important;width:min(calc(100% - 40px),1080px)!important;max-width:1080px!important;margin-left:auto!important;margin-right:auto!important;padding-top:68px!important;padding-bottom:74px!important;color:#fff!important}
-.page-hero--photo h1,.page-hero--photo p,.page-hero--photo .section-lead{color:#fff!important;text-shadow:0 2px 12px rgba(0,0,0,.34)!important}
-.page-hero--photo h1 em{color:#f4e7a6!important}
-@media(max-width:760px){.page-hero--photo{min-height:300px!important}.page-hero--photo .page-hero-bg-img img{min-height:300px!important}.page-hero--photo> :not(.page-hero-bg-img),.page-hero--photo .page-hero-inner,.page-hero--photo .issue-hero-inner,.page-hero--photo .journal-hero-inner{width:min(calc(100% - 28px),1080px)!important;padding-top:44px!important;padding-bottom:52px!important}}
-</style>
+<link rel="stylesheet" href="/css/shared/editorial-page-common.css?v=20260719">
 
-<style id="parent-editorial-fix">
-.visual-grid,.steps-flow,.pdf-grid{display:block!important;max-width:900px!important;margin-left:auto!important;margin-right:auto!important}
-.visual-card{display:grid!important;grid-template-columns:190px minmax(0,1fr)!important;border:0!important;border-top:1px solid var(--line)!important;border-radius:0!important;box-shadow:none!important;margin:0!important}
-.visual-card:last-child{border-bottom:1px solid var(--line)!important}
-.visual-card:hover{transform:none!important;box-shadow:none!important}
-.vc-visual{height:auto!important;min-height:150px!important;border-radius:0!important}
-.step-block,.pdf-card{border:0!important;border-top:1px solid var(--line)!important;border-radius:0!important;box-shadow:none!important;margin:0!important;padding:22px 0!important}
-.step-block:last-child,.pdf-card:last-child{border-bottom:1px solid var(--line)!important}
-.page-hero-kicker,.lead-kicker,.section-kicker{text-transform:none!important;letter-spacing:.03em!important;border-radius:3px!important}
-@media(max-width:700px){.visual-card{grid-template-columns:1fr!important}.vc-visual{min-height:160px!important}}
-</style>
 
-<style id="parent-final-editorial-20260710">
-.parent-page .mc-section{display:none!important}
-.parent-page .lead-kicker,
-.parent-page .section-kicker,
-.parent-page .section-label{display:none!important}
-.parent-page .case-section,
-.parent-page .visual-section,
-.parent-page .steps-section,
-.parent-page .soudan-section,
-.parent-page .faq-section,
-.parent-page .howto-section{padding:68px 0!important}
-.parent-page .case-note{text-align:left!important;max-width:900px!important}
-.parent-page .case-list{gap:0!important;border-top:2px solid var(--navy)!important}
-.parent-page .case-card{
-  border:0!important;
-  border-bottom:1px solid var(--line)!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-  background:#fff!important;
-}
-.parent-page .case-card.is-open{box-shadow:none!important;border-color:var(--line)!important}
-.parent-page .case-top{padding:26px 0 8px!important}
-.parent-page .case-tag{
-  padding:0!important;
-  background:transparent!important;
-  color:var(--navy)!important;
-  border-radius:0!important;
-  font-size:.78rem!important;
-}
-.parent-page .case-toggle{
-  justify-content:flex-start!important;
-  padding:12px 0 20px!important;
-  text-decoration:underline!important;
-  text-underline-offset:.18em!important;
-}
-.parent-page .case-ans{padding:20px 0 32px!important}
-.parent-page .case-quote{border-radius:0!important}
-.parent-page .case-foot,
-.parent-page .soudan-box,
-.parent-page .faq2-item,
-.parent-page .howto-step{
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-.parent-page .faq-list{gap:0!important;border-top:1px solid var(--line)!important}
-.parent-page .faq2-item{border:0!important;border-bottom:1px solid var(--line)!important}
-.parent-page .faq2-q{padding:18px 0!important}
-.parent-page .faq2-a{padding:0 0 22px!important}
-.parent-page .howto-steps{gap:0!important;border-top:1px solid var(--line)!important}
-.parent-page .howto-step{
-  grid-template-columns:52px 1fr!important;
-  padding:22px 0!important;
-  border:0!important;
-  border-bottom:1px solid var(--line)!important;
-}
-.parent-page .howto-num{border-radius:0!important}
-.parent-page .parent-link-row a{
-  padding:0!important;
-  background:transparent!important;
-  border:0!important;
-  border-radius:0!important;
-  color:var(--navy)!important;
-  text-decoration:underline!important;
-}
-</style>
+
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -293,9 +96,10 @@ html,body{overflow-x:hidden!important}
  ]
 }
 </script>
+<link rel="stylesheet" href="/css/inline-utilities.css?v=20260719">
 </head>
 <body class="parent-page">
-<aside style="background:#fff4d6;border-bottom:1px solid #e4c46a;padding:12px 20px;text-align:center;font-weight:800"><a href="/pta-membership-optin.html">まず確認：加入申込みをしていなければ、沈黙や入学だけでPTA加入は成立しません →</a></aside>
+<aside class="u-1d511ad56e"><a href="/pta-membership-optin.html">まず確認：加入申込みをしていなければ、沈黙や入学だけでPTA加入は成立しません →</a></aside>
 <div aria-label="活動支援のお願い" class="support-strip" role="complementary">
 <div class="support-strip-inner">
 <span class="support-strip-label">応援のお願い</span>
@@ -435,17 +239,17 @@ html,body{overflow-x:hidden!important}
 <main>
 <section class="parent-lead-mag" id="parent-lead"><div class="wrap-narrow"><div class="lead-kicker">最初に確認すること</div><h2>学校への入学と、PTAへの加入は別の手続です</h2><p>学校への在籍は、児童生徒と公立学校との学校教育上の関係を生じさせます。しかし、学校とは別組織であるPTAとの会員関係まで自動的に発生させるものではありません。</p><p class="soft">入会申込書や電子申込記録がないまま会員と扱われている場合は、加入の申込み、PTAによる承諾、会費の請求根拠、個人情報の取得経路を分けて確認します。学校の案内、徴収金、連絡ツール、教職員の事務にPTA手続が混ざっていないかも重要です。</p><p class="lead-close">最初に確認するのは、感情や慣例ではなく、入会記録、会則、会費案内、口座振替の依頼書、個人情報の利用目的です。</p></div></section>
 
-<section id="parent-framework" style="background:linear-gradient(180deg,#f8fafc 0%,#eef3f8 100%);padding:64px 0;border-bottom:1px solid rgba(5,17,31,.08)">
+<section class="u-c6502d6217" id="parent-framework">
 <div class="wrap-narrow">
 <div class="section-kicker">問題の全体構造</div>
-<h2 class="section-title" style="margin-top:8px">あなたの学校で起きていることは、全国共通の構造です</h2>
-<p style="line-height:1.95;margin:18px 0 0">「入会した覚えがないのに会員扱いされている」「会費が給食費と一緒に引き落とされている」「断ると子どもが困ると言われた」。これらは、あなたの学校だけの偶然ではありません。学校名簿・学校口座・学校施設・教職員の事務・児童経由の配布という<strong>学校の資源</strong>にPTAが接続されてきた、全国共通の運用構造から生まれています。</p>
-<p style="line-height:1.95;margin:14px 0 0">構造には急所があります。入会申込書がないのにPTA会費が学校管理の口座情報で引き落とされている場合、最初に問うべきは「学校がPTAに情報を渡したか」ではなく、<strong>学校自身が、学校徴収金等のために取得した口座情報を、PTA会費徴収という別の目的に使っていないか</strong>です。学校・教育委員会は、法令の定める事務の範囲でしか個人情報の利用目的を特定できず（個人情報保護法第61条）、PTAの会員管理や会費徴収は通常、学校の法令上の事務ではありません。</p>
-<div style="background:#fff;border:1px solid #dbe4ee;border-left:5px solid #1e3a5f;border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0 0;line-height:1.9">
-<strong style="color:#1e3a5f">あなたの体験は、証拠に変換できます。</strong>
-<p style="margin:8px 0 0">感情論にする必要はありません。入会申込書の有無（不存在の回答）、会費引落しの明細、学校納入金の通知、PTA会則、当番表。これらの記録が、教育委員会への照会、個人情報保護委員会への申出、住民監査請求の材料になります。集め方は<a href="evidence-checklist.html">証拠チェックリスト</a>へ。</p>
+<h2 class="section-title u-43a97fe494">あなたの学校で起きていることは、全国共通の構造です</h2>
+<p class="u-f4c2cbc47e">「入会した覚えがないのに会員扱いされている」「会費が給食費と一緒に引き落とされている」「断ると子どもが困ると言われた」。これらは、あなたの学校だけの偶然ではありません。学校名簿・学校口座・学校施設・教職員の事務・児童経由の配布という<strong>学校の資源</strong>にPTAが接続されてきた、全国共通の運用構造から生まれています。</p>
+<p class="u-e85459abce">構造には急所があります。入会申込書がないのにPTA会費が学校管理の口座情報で引き落とされている場合、最初に問うべきは「学校がPTAに情報を渡したか」ではなく、<strong>学校自身が、学校徴収金等のために取得した口座情報を、PTA会費徴収という別の目的に使っていないか</strong>です。学校・教育委員会は、法令の定める事務の範囲でしか個人情報の利用目的を特定できず（個人情報保護法第61条）、PTAの会員管理や会費徴収は通常、学校の法令上の事務ではありません。</p>
+<div class="u-a2c27fc593">
+<strong class="u-271f265cff">あなたの体験は、証拠に変換できます。</strong>
+<p class="u-e9adfef7e5">感情論にする必要はありません。入会申込書の有無（不存在の回答）、会費引落しの明細、学校納入金の通知、PTA会則、当番表。これらの記録が、教育委員会への照会、個人情報保護委員会への申出、住民監査請求の材料になります。集め方は<a href="evidence-checklist.html">証拠チェックリスト</a>へ。</p>
 </div>
-<p style="margin:22px 0 0"><a class="btn-navy" href="framework.html">PTA問題の全体構造（グランドフレームワーク）を読む</a></p>
+<p class="u-3d4486ed0e"><a class="btn-navy" href="framework.html">PTA問題の全体構造（グランドフレームワーク）を読む</a></p>
 </div>
 </section>
 
@@ -455,10 +259,10 @@ html,body{overflow-x:hidden!important}
 <div class="case-card"><div class="case-top"><div class="case-meta"><span class="case-tag">個人情報</span><span class="case-from">保護者の方より</span></div><h3 class="case-subject">入学前なのに、PTAが個人情報を持って訪ねてきました</h3><p class="case-summary">入学前、PTA委員が住所・電話番号まで載った登校班名簿を持って自宅に来訪。提供した覚えがないのになぜ情報が渡っているのか、学校からPTAへの個人情報提供は妥当か、というご相談です。</p></div><button class="case-toggle" aria-expanded="false"><span class="lbl-open">相談の全文を読む</span><span class="lbl-close">閉じる</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div class="case-answer"><div class="case-ans"><blockquote class="case-quote"><span class="qlabel">相談の全文</span><p>長女の小学校入学を控え、準備を進めていた際のことです。突然、PTA委員と名乗る見知らぬ女性が自宅を訪ねてきました。その女性が手にしていたのは「登校班の名簿」で、そこには長女の名前や性別のみならず、住所、電話番号といった個人情報が詳細に記載されていました。</p><p>私はPTAに対して個人情報を提供した覚えはなく、入学前の段階でなぜPTAにこのような情報が渡っているのか、強い不信感を抱いています。</p><p>さらに、このPTAは入会案内において「加入されない場合は（記念品の）プレゼントをお渡しできない場合があります」と明記し、子どもを人質にするような加入強要を行っています。「もらえない児童が悲しい思いをする」という文言を使い、保護者の心情を操作して加入を迫る姿勢には、明確な悪意を感じます。</p><p>公立学校の教育環境において、個人情報の不適切な取り扱いや、子どもの権利を侵害してまで組織維持を図るこれらの手法に対し、法的にはどのような違反が問えるのでしょうか。特に「学校側からPTAへの個人情報提供」の妥当性と、このような組織運営を是正するための具体的な手続きについて、ご教示をお願いしたく存じます。</p></blockquote><div class="case-reply"><p class="case-valid">「なんでPTAが知っているの？」という不信感は、正しいセンサーです。</p><p>公立学校が保有する児童・保護者の情報を、本人の同意なくPTAに渡す運用は、個人情報保護法（行政機関等の目的外提供・第69条）の問題です。入学前であっても取得経路は一つとは限らないため、まず学校、PTA、地域団体その他の取得経路を確認します。学校保有情報が使われた場合は、学校自身による目的外利用か、PTAへの提供かを分けて確認する必要があります。①取得経路・利用目的・提供記録の開示を学校とPTAの双方へ書面で求める、②学校保有情報については行政機関等の開示・訂正・利用停止制度を確認し、PTA保有情報についてはPTAに利用目的の説明や削除等を求める、③学校側の取扱いは教育委員会・個人情報保護委員会へ相談する、という流れが考えられます。</p><div class="case-links"><a class="case-more" href="privacy.html">個人情報の取扱いを確認する</a><span class="case-ask">個別のご相談は <a href="#soudan">こちらの相談先</a> へ</span></div></div></div></div></div>
 <div class="case-card"><div class="case-top"><div class="case-meta"><span class="case-tag">会費・公私混同</span><span class="case-from">保護者の方より</span></div><h3 class="case-subject">学校がPTA会費を一括徴収、後から「任意です」</h3><p class="case-summary">学校の「諸経費」にPTA会費が当然のように含まれ自動引き落とし。10日後に「任意です」と後出し通知。学校による会費代行と、形骸化した任意性を根本から是正したい、というご相談です。</p></div><button class="case-toggle" aria-expanded="false"><span class="lbl-open">相談の全文を読む</span><span class="lbl-close">閉じる</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div class="case-answer"><div class="case-ans"><blockquote class="case-quote"><span class="qlabel">相談の全文</span><p>度重なるご相談となり恐縮ですが、学校とPTAの極めて不適切な運営実態についてご意見を伺いたく存じます。</p><p>今年度の新年度開始時、小学校から「諸経費決定のお知らせ」が届きました。そこには、教材費や積立金といった学校が徴収すべき費用と並び、明らかに別団体であるはずの「PTA会費」が当然のように記載されており、自動口座引き落としの手続きが組まれていました。</p><p>その後、10日ほど経ってから、突然PTA会長と校長の連名で「PTAへの入会は任意である」旨を告げる文書が配布されました。これまで加入の意思確認すら行わず、半ば強制的に全保護者を加入させていた実態を棚に上げ、会費徴収の通知を先に送りつけた上で、後出しで「任意です」と通知するやり方に、強い不信感を覚えています。</p><p>私が特に問題だと考えているのは、次の2点です。<br>1. 学校によるPTA会費徴収の代行。学校の公的な徴収業務に私的団体であるPTAの会費を混入させる行為は、公立学校の公共性や中立性に反するのではないか。<br>2. 「任意加入」の形骸化。実質的に強制徴収の体制を維持したまま、事後的に任意性を強調する文書を出す手法は、保護者の適正な意思決定を妨げる欺瞞的な運用ではないか。</p><p>学校とPTAが一体となって会費を徴収する仕組みを根底から是正し、公私分離を徹底させるためには、どのような法的アプローチや行政への申し入れが有効でしょうか。</p></blockquote><div class="case-reply"><p class="case-valid">「順番がおかしい」というあなたの直感は、正しいものです。</p><p>ご指摘の2点——公的な徴収業務に私的団体の会費を混ぜること、形だけの事後的「任意」周知——は、いずれも核心を突いています。学校徴収金にPTA会費を混在させる運用は、加入契約、請求主体、口座情報の利用目的、学校徴収金の取扱基準、教職員が徴収事務を行う根拠との関係で確認が必要です。①入会意思の確認を引き落としより前に行うよう求める、②学校徴収金とPTA会費の経理・通知を分ける（公私分離）よう申し入れる、③改善がなければ教育委員会・監査委員へ申し入れる、が有効です。</p><div class="case-links"><a class="case-more" href="fee-collection.html">会費徴収の論点を読む →</a><span class="case-ask">個別のご相談は <a href="#soudan">こちらの相談先</a> へ</span></div></div></div></div></div>
 </div><div class="case-foot"><p>あなたの状況に近い相談が、一つでもありましたか。<br><span class="gold">同じことで悩んだ人が、すでに動いています。</span>まずは手元のプリントで、30秒だけ確認してみましょう。</p><a href="#parent-selfcheck">30秒チェックへ ↓</a></div></div></section>
-<section class="visual-section"><div class="wrap"><div class="section-center"><div class="section-kicker">あなたの違和感は、正しい</div><h2 class="section-title">「みんなやってるから」は、理由になりません</h2><p class="section-lead">PTAについて、まず確かめておきたい“事実”です。ここを知っておくと、誰かに説明するときの根拠になります。</p></div><div class="visual-grid"><a href="membership.html" class="visual-card"><div class="vc-visual" style="background-image:url('/assets/slides/1.jpg')"><span class="vc-label vc-label-ok">✅ あなたの権利</span><div style="position:absolute;bottom:14px;width:100%;text-align:center;font-size:1rem;font-weight:900;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.7);z-index:2">入らなくていい</div></div><div class="vc-body"><div class="vc-title">学校への在籍だけでPTA会員にはなりません</div><div class="vc-desc">PTAは学校とは別組織です。本人の申込みとPTAの承諾を確認できなければ、学校への入学だけで会員関係は成立しません。</div><div class="vc-law">憲法 21条</div><div class="vc-law">民法 521・522条</div></div></a><a href="privacy.html" class="visual-card"><div class="vc-visual" style="background-image:url('/assets/slides/2.jpg')"><span class="vc-label vc-label-warn">⚠️ 要確認</span><div style="position:absolute;bottom:14px;width:100%;text-align:center;font-size:1rem;font-weight:900;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.7);z-index:2">名簿提供の根拠確認</div></div><div class="vc-body"><div class="vc-title">学校からPTAへの名簿提供は目的外提供の問題</div><div class="vc-desc">学校が教育目的で保有する住所・電話番号等を、根拠なくPTAへ渡す運用は、個人情報保護法第69条との関係で確認が必要です。</div><div class="vc-law">個人情報保護法 69条</div></div></a><a href="fee-collection.html" class="visual-card"><div class="vc-visual" style="background-image:url('/assets/slides/2.jpg')"><span class="vc-label vc-label-ng">❌ 要是正</span><div style="position:absolute;bottom:14px;width:100%;text-align:center;font-size:1rem;font-weight:900;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.7);z-index:2">学校徴収金との混在</div></div><div class="vc-body"><div class="vc-title">PTA会費と学校徴収金は分けるべきものです</div><div class="vc-desc">給食費や教材費の通知にPTA会費が混ざると、保護者は任意の会費だと判断できません。徴収主体と根拠を分けて確認します。</div><div class="vc-law">民法 522条</div><div class="vc-law">地方財政法</div></div></a></div></div></section>
-<section class="mc-section" id="parent-selfcheck"><div class="wrap wrap-narrow"><div style="text-align:center;margin-bottom:40px"><div class="section-kicker" style="background:rgba(212,175,55,.15);color:var(--gold-lt)">30秒セルフチェック</div><h2 class="section-title" style="color:#fff;margin-top:8px">あなたは、いくつ当てはまる？</h2><p style="color:rgba(255,255,255,.78);font-size:.95rem;line-height:1.85">手元のプリントや、これまでの経験を思い出して選んでください。良し悪しの判定ではなく、どこを確認すればいいかの“地図”です。</p></div><div class="mc-panel"><p style="color:rgba(255,255,255,.7);font-size:.85rem;margin-bottom:16px">書類の特徴をすべて選択してください（複数可）</p><div class="mc-meter" aria-live="polite"><div class="mc-count" id="mcCount">0</div><div class="mc-meter-text" id="mcMeterText">あてはまる項目を選ぶと、ここに数が出ます。</div></div><div class="mc-options" id="checker-options"><label class="mc-option"><input type="checkbox" value="auto"><div><strong>入会の意思確認欄がない</strong><span>書類を受け取っただけで自動的に会員扱いになる</span></div></label><label class="mc-option"><input type="checkbox" value="optout"><div><strong>「希望しない場合はご連絡ください」と書いてある</strong><span>断らなければ加入というオプトアウト方式</span></div></label><label class="mc-option"><input type="checkbox" value="combined"><div><strong>給食費等と同じ書類・口座で会費が記載されている</strong><span>学校徴収金とPTA会費が一体化している</span></div></label><label class="mc-option"><input type="checkbox" value="privacy"><div><strong>個人情報の利用目的・提供先の記載がない</strong><span>どこに情報が渡るか書いていない</span></div></label><label class="mc-option"><input type="checkbox" value="ok"><div><strong>自署欄があり、任意と書かれている</strong><span>自分で署名して提出するオプトイン方式</span></div></label></div><button class="mc-button" onclick="runChecker()">判定する</button><div style="text-align:center;margin-top:16px"><a href="audit/index.html" class="mc-app-link">⚙️ もっと詳しく診断する（運営チェック）→</a></div><div id="checker-result" style="display:none;margin-top:24px"></div></div></div></section>
-<section class="steps-section"><div class="wrap"><div class="section-center"><div class="section-kicker">行動ガイド</div><h2 class="section-title">保護者が取るべき3つのステップ</h2><figure style="margin:30px auto;max-width:860px"><img src="/assets/diagrams/07_保護者/01_取るべき3ステップ.svg" alt="図解：取るべき3ステップ" loading="lazy" style="display:block;width:100%;height:auto"></figure><p class="section-lead">一気に全部やらなくて大丈夫。まず①だけでも十分です。問題があれば書面で伝え、改善されなければ上位機関へ。</p></div><div class="steps-flow"><div class="step-block"><div class="step-num">1</div><h4>現状を確認する</h4><p>入会届の有無・会費引落の経緯・名簿の提供方法を確認。保護者向けチェックでリスクが見えます。</p></div><div class="step-block"><div class="step-num">2</div><h4>文書でPTAに照会</h4><p>「いつ入会したか」「個人情報提供に同意した記録はあるか」をPTA宛に文書で問い合わせます。テンプレートをご活用ください。</p></div><div class="step-block"><div class="step-num">3</div><h4>教育委員会に相談</h4><p>学校が名簿、徴収金、連絡ツール、教職員、施設を通じて関与している場合は、その事実と根拠を教育委員会に照会します。PTA内部の問題と学校・教育委員会の関与を分けて伝えます。</p></div></div></div></section>
-<section class="pdf-section" id="pdf-dl"><div class="wrap"><div class="section-center"><div class="section-kicker" style="background:rgba(212,175,55,.15);border:1px solid rgba(212,175,55,.3);color:var(--gold-lt)">PDFテンプレート</div><h2 class="section-title" style="color:#fff">すぐ使えるテンプレートPDF</h2><p class="section-lead" style="color:rgba(255,255,255,.78)">印刷してそのまま使えます。自分の状況に合わせて使用してください。</p></div><div class="pdf-grid"><div class="pdf-card"><div class="pdf-icon">📋</div><h3>PTA入会状況照会書</h3><p>「いつ入会したか」「同意の記録があるか」をPTAに問い合わせるための文書テンプレートです。</p><a href="assets/pdf/pta-membership-inquiry.pdf" class="pdf-btn">PDFを開く</a></div><div class="pdf-card"><div class="pdf-icon">🚫</div><h3>退会届・非加入届</h3><p>PTAを退会・非加入とする意思を明確に文書化するためのテンプレートです。任意性の根拠条文付き。</p><a href="assets/pdf/pta-withdrawal-notice.pdf" class="pdf-btn">PDFを開く</a></div><div class="pdf-card"><div class="pdf-icon">🛡️</div><h3>個人情報削除要請書</h3><p>PTAが保有する個人情報の削除・利用停止を求めるための文書です。</p><a href="assets/pdf/personal-data-deletion-request.pdf" class="pdf-btn">PDFを開く</a></div></div></div></section>
+<section class="visual-section"><div class="wrap"><div class="section-center"><div class="section-kicker">あなたの違和感は、正しい</div><h2 class="section-title">「みんなやってるから」は、理由になりません</h2><p class="section-lead">PTAについて、まず確かめておきたい“事実”です。ここを知っておくと、誰かに説明するときの根拠になります。</p></div><div class="visual-grid"><a href="membership.html" class="visual-card"><div class="vc-visual u-8069c5fefa"><span class="vc-label vc-label-ok">✅ あなたの権利</span><div class="u-a46ad36e62">入らなくていい</div></div><div class="vc-body"><div class="vc-title">学校への在籍だけでPTA会員にはなりません</div><div class="vc-desc">PTAは学校とは別組織です。本人の申込みとPTAの承諾を確認できなければ、学校への入学だけで会員関係は成立しません。</div><div class="vc-law">憲法 21条</div><div class="vc-law">民法 521・522条</div></div></a><a href="privacy.html" class="visual-card"><div class="vc-visual u-9a73035c22"><span class="vc-label vc-label-warn">⚠️ 要確認</span><div class="u-a46ad36e62">名簿提供の根拠確認</div></div><div class="vc-body"><div class="vc-title">学校からPTAへの名簿提供は目的外提供の問題</div><div class="vc-desc">学校が教育目的で保有する住所・電話番号等を、根拠なくPTAへ渡す運用は、個人情報保護法第69条との関係で確認が必要です。</div><div class="vc-law">個人情報保護法 69条</div></div></a><a href="fee-collection.html" class="visual-card"><div class="vc-visual u-9a73035c22"><span class="vc-label vc-label-ng">❌ 要是正</span><div class="u-a46ad36e62">学校徴収金との混在</div></div><div class="vc-body"><div class="vc-title">PTA会費と学校徴収金は分けるべきものです</div><div class="vc-desc">給食費や教材費の通知にPTA会費が混ざると、保護者は任意の会費だと判断できません。徴収主体と根拠を分けて確認します。</div><div class="vc-law">民法 522条</div><div class="vc-law">地方財政法</div></div></a></div></div></section>
+<section class="mc-section" id="parent-selfcheck"><div class="wrap wrap-narrow"><div class="u-de6408af90"><div class="section-kicker u-1961d1ec21">30秒セルフチェック</div><h2 class="section-title u-89c5314721">あなたは、いくつ当てはまる？</h2><p class="u-39dc7955de">手元のプリントや、これまでの経験を思い出して選んでください。良し悪しの判定ではなく、どこを確認すればいいかの“地図”です。</p></div><div class="mc-panel"><p class="u-f2c8217840">書類の特徴をすべて選択してください（複数可）</p><div class="mc-meter" aria-live="polite"><div class="mc-count" id="mcCount">0</div><div class="mc-meter-text" id="mcMeterText">あてはまる項目を選ぶと、ここに数が出ます。</div></div><div class="mc-options" id="checker-options"><label class="mc-option"><input type="checkbox" value="auto"><div><strong>入会の意思確認欄がない</strong><span>書類を受け取っただけで自動的に会員扱いになる</span></div></label><label class="mc-option"><input type="checkbox" value="optout"><div><strong>「希望しない場合はご連絡ください」と書いてある</strong><span>断らなければ加入というオプトアウト方式</span></div></label><label class="mc-option"><input type="checkbox" value="combined"><div><strong>給食費等と同じ書類・口座で会費が記載されている</strong><span>学校徴収金とPTA会費が一体化している</span></div></label><label class="mc-option"><input type="checkbox" value="privacy"><div><strong>個人情報の利用目的・提供先の記載がない</strong><span>どこに情報が渡るか書いていない</span></div></label><label class="mc-option"><input type="checkbox" value="ok"><div><strong>自署欄があり、任意と書かれている</strong><span>自分で署名して提出するオプトイン方式</span></div></label></div><button class="mc-button" onclick="runChecker()">判定する</button><div class="u-86f64cb31e"><a href="audit/index.html" class="mc-app-link">⚙️ もっと詳しく診断する（運営チェック）→</a></div><div class="u-ad558f231a" id="checker-result"></div></div></div></section>
+<section class="steps-section"><div class="wrap"><div class="section-center"><div class="section-kicker">行動ガイド</div><h2 class="section-title">保護者が取るべき3つのステップ</h2><figure class="u-852a52814b"><img class="u-83b2a80b11" src="/assets/diagrams/07_保護者/01_取るべき3ステップ.svg" alt="図解：取るべき3ステップ" loading="lazy"></figure><p class="section-lead">一気に全部やらなくて大丈夫。まず①だけでも十分です。問題があれば書面で伝え、改善されなければ上位機関へ。</p></div><div class="steps-flow"><div class="step-block"><div class="step-num">1</div><h4>現状を確認する</h4><p>入会届の有無・会費引落の経緯・名簿の提供方法を確認。保護者向けチェックでリスクが見えます。</p></div><div class="step-block"><div class="step-num">2</div><h4>文書でPTAに照会</h4><p>「いつ入会したか」「個人情報提供に同意した記録はあるか」をPTA宛に文書で問い合わせます。テンプレートをご活用ください。</p></div><div class="step-block"><div class="step-num">3</div><h4>教育委員会に相談</h4><p>学校が名簿、徴収金、連絡ツール、教職員、施設を通じて関与している場合は、その事実と根拠を教育委員会に照会します。PTA内部の問題と学校・教育委員会の関与を分けて伝えます。</p></div></div></div></section>
+<section class="pdf-section" id="pdf-dl"><div class="wrap"><div class="section-center"><div class="section-kicker u-1b3313eec0">PDFテンプレート</div><h2 class="section-title u-eedb2619ac">すぐ使えるテンプレートPDF</h2><p class="section-lead u-bd60f196d5">印刷してそのまま使えます。自分の状況に合わせて使用してください。</p></div><div class="pdf-grid"><div class="pdf-card"><div class="pdf-icon">📋</div><h3>PTA入会状況照会書</h3><p>「いつ入会したか」「同意の記録があるか」をPTAに問い合わせるための文書テンプレートです。</p><a href="assets/pdf/pta-membership-inquiry.pdf" class="pdf-btn">PDFを開く</a></div><div class="pdf-card"><div class="pdf-icon">🚫</div><h3>退会届・非加入届</h3><p>PTAを退会・非加入とする意思を明確に文書化するためのテンプレートです。任意性の根拠条文付き。</p><a href="assets/pdf/pta-withdrawal-notice.pdf" class="pdf-btn">PDFを開く</a></div><div class="pdf-card"><div class="pdf-icon">🛡️</div><h3>個人情報削除要請書</h3><p>PTAが保有する個人情報の削除・利用停止を求めるための文書です。</p><a href="assets/pdf/personal-data-deletion-request.pdf" class="pdf-btn">PDFを開く</a></div></div></div></section>
 <section class="soudan-section" id="soudan"><div class="wrap-narrow"><div class="section-center"><div class="section-kicker">相談</div><h2 class="section-title">ひとりで抱えなくて、大丈夫です</h2><p class="section-lead">資料を見れば、整理できることがあります。学校名や個人名が分かる部分はマスキングして、状況をお知らせください。</p></div><div class="soudan-box"><p>入会案内、会費徴収通知、役員選出資料、学校メール、教育委員会からの回答などがあれば、論点の整理に役立ちます。公開にあたっては、個人が特定されないよう配慮します。</p><div class="parent-link-row"><a class="btn-navy" href="contact.html">お問い合わせ・情報提供へ</a><a class="btn-soft" href="support.html">活動を応援する</a></div></div></div></section>
 <section class="parent-openchat-section" id="line-openchat">
   <div class="wrap">
@@ -518,13 +322,13 @@ html,body{overflow-x:hidden!important}
       <div class="parent-openchat-links">
         <h3>地域を選ぶ</h3>
         <div class="parent-openchat-link-list">
-          <a class="parent-openchat-link" style="--region-color:#8fc95d" href="https://line.me/ti/g2/s3JxHp3Bsxv9mvk2EUjqFd3SprvyugKhSoyTcA?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" target="_blank" rel="noopener noreferrer"><span class="parent-openchat-link-dot" aria-hidden="true"></span><span><strong>北海道</strong><small>PTA内部通報 オープンチャット</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-          <a class="parent-openchat-link" style="--region-color:#58b971" href="https://line.me/ti/g2/PNMGi9UCO4jF7zdGdCUIXfgjcNqkZOKJhnbb2A?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" target="_blank" rel="noopener noreferrer"><span class="parent-openchat-link-dot" aria-hidden="true"></span><span><strong>東北地方</strong><small>PTA内部通報 オープンチャット</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-          <a class="parent-openchat-link" style="--region-color:#68bfb4" href="https://line.me/ti/g2/YwLJzP8peaQrw11_2jUAs2hFXbNcfGH1wyT_WA?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" target="_blank" rel="noopener noreferrer"><span class="parent-openchat-link-dot" aria-hidden="true"></span><span><strong>関東地方</strong><small>PTA内部通報 オープンチャット</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-          <a class="parent-openchat-link" style="--region-color:#aaa0d8" href="https://line.me/ti/g2/W7eZaMZ8HcylrnFBc8_MeoJIrC7pmWTLdyPgcA?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" target="_blank" rel="noopener noreferrer"><span class="parent-openchat-link-dot" aria-hidden="true"></span><span><strong>中部地方</strong><small>PTA内部通報 オープンチャット</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-          <a class="parent-openchat-link" style="--region-color:#efb34d" href="https://line.me/ti/g2/Nb7R44W6pdkfBCIN_MPeCcvrlNotwxIsYJNikA?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" target="_blank" rel="noopener noreferrer"><span class="parent-openchat-link-dot" aria-hidden="true"></span><span><strong>近畿地方</strong><small>PTA内部通報 オープンチャット</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-          <a class="parent-openchat-link" style="--region-color:#f28b3f" href="https://line.me/ti/g2/Ugu4zD-83VtZU-Ctv60zoQ5zB3Dlhhvtiea8Aw?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" target="_blank" rel="noopener noreferrer"><span class="parent-openchat-link-dot" aria-hidden="true"></span><span><strong>中国・四国地方</strong><small>PTA内部通報 オープンチャット</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-          <a class="parent-openchat-link" style="--region-color:#ed8e91" href="https://line.me/ti/g2/dL3oYBZn8HwrnisEKWdFl_SUgqytFlMmWA1MPA?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" target="_blank" rel="noopener noreferrer"><span class="parent-openchat-link-dot" aria-hidden="true"></span><span><strong>九州地方</strong><small>PTA内部通報 オープンチャット</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="parent-openchat-link u-82d940c533" href="https://line.me/ti/g2/s3JxHp3Bsxv9mvk2EUjqFd3SprvyugKhSoyTcA?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" target="_blank" rel="noopener noreferrer"><span class="parent-openchat-link-dot" aria-hidden="true"></span><span><strong>北海道</strong><small>PTA内部通報 オープンチャット</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="parent-openchat-link u-01b6404073" href="https://line.me/ti/g2/PNMGi9UCO4jF7zdGdCUIXfgjcNqkZOKJhnbb2A?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" target="_blank" rel="noopener noreferrer"><span class="parent-openchat-link-dot" aria-hidden="true"></span><span><strong>東北地方</strong><small>PTA内部通報 オープンチャット</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="parent-openchat-link u-0a213efc41" href="https://line.me/ti/g2/YwLJzP8peaQrw11_2jUAs2hFXbNcfGH1wyT_WA?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" target="_blank" rel="noopener noreferrer"><span class="parent-openchat-link-dot" aria-hidden="true"></span><span><strong>関東地方</strong><small>PTA内部通報 オープンチャット</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="parent-openchat-link u-16573db9ad" href="https://line.me/ti/g2/W7eZaMZ8HcylrnFBc8_MeoJIrC7pmWTLdyPgcA?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" target="_blank" rel="noopener noreferrer"><span class="parent-openchat-link-dot" aria-hidden="true"></span><span><strong>中部地方</strong><small>PTA内部通報 オープンチャット</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="parent-openchat-link u-0f1760d9d7" href="https://line.me/ti/g2/Nb7R44W6pdkfBCIN_MPeCcvrlNotwxIsYJNikA?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" target="_blank" rel="noopener noreferrer"><span class="parent-openchat-link-dot" aria-hidden="true"></span><span><strong>近畿地方</strong><small>PTA内部通報 オープンチャット</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="parent-openchat-link u-6553c513e6" href="https://line.me/ti/g2/Ugu4zD-83VtZU-Ctv60zoQ5zB3Dlhhvtiea8Aw?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" target="_blank" rel="noopener noreferrer"><span class="parent-openchat-link-dot" aria-hidden="true"></span><span><strong>中国・四国地方</strong><small>PTA内部通報 オープンチャット</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="parent-openchat-link u-03603a5b36" href="https://line.me/ti/g2/dL3oYBZn8HwrnisEKWdFl_SUgqytFlMmWA1MPA?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" target="_blank" rel="noopener noreferrer"><span class="parent-openchat-link-dot" aria-hidden="true"></span><span><strong>九州地方</strong><small>PTA内部通報 オープンチャット</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
         </div>
       </div>
     </div>
@@ -536,7 +340,7 @@ html,body{overflow-x:hidden!important}
   </div>
 </section>
 <section class="faq-section"><div class="wrap-narrow"><div class="section-center"><div class="section-kicker">FAQ</div><h2 class="section-title">FAQ</h2></div><div class="faq-list"><div class="faq2-item"><div class="faq2-q"><div class="faq2-q-text">PTAに入らないと子どもが不利益を受けますか？</div><svg class="faq2-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="faq2-a"><p>保護者の加入・非加入によって、学校生活上の扱いを変えることは適切ではありません。卒業記念品や行事についても、子どもを分ける説明がないか確認してください。</p></div></div><div class="faq2-item"><div class="faq2-q"><div class="faq2-q-text">入会申込書を書いていないのに会員と言われました。</div><svg class="faq2-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="faq2-a"><p>まず、入会申込書や同意書の有無、提出記録、会則上の入会手続を確認します。PTAは任意団体であり、入会は本人の意思表示が前提です。</p></div></div><div class="faq2-item"><div class="faq2-q"><div class="faq2-q-text">学校からPTAに名簿が渡っているようです。</div><svg class="faq2-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="faq2-a"><p>学校が保有する児童・保護者情報をPTAが利用している場合、利用目的、本人同意、提供範囲を確認する必要があります。PTAが直接取得した情報かどうかも重要です。</p></div></div><div class="faq2-item"><div class="faq2-q"><div class="faq2-q-text">退会の手続きはどうすればいいですか？</div><svg class="faq2-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="faq2-a"><p>PTAの会則に従い、書面で意思表示することを推奨します。会則に手続きが定められていない場合でも、意思表示により退会は有効と整理し得ます。</p></div></div></div></div></section>
-<section class="howto-section"><div class="container"><div class="section-label">退会する人へ</div><h2 class="section-title">退会を決めたら：手続きの進め方</h2><figure style="margin:30px auto;max-width:860px"><img src="/assets/diagrams/07_保護者/02_退会・非加入の手順.svg" alt="図解：退会・非加入の手順" loading="lazy" style="display:block;width:100%;height:auto"></figure><p class="section-sub">落ち着いて一歩ずつ進めれば、手続きは難しくありません。</p><div class="howto-steps"><div class="howto-step"><div class="howto-num"><span>Step</span><span>1</span></div><div class="howto-body"><h4>PTA会則・規約を確認する</h4><p>PTA会長または役員に会則の提示を求め、入会・退会手続を確認します。学校が職務上取得・保有している会則がある場合は、学校または教育委員会に保有状況を確認します。</p><span class="howto-tip">会員関係を主張する根拠として会則を確認</span></div></div><div class="howto-step"><div class="howto-num"><span>Step</span><span>2</span></div><div class="howto-body"><h4>退会届（または非加入意思表示書）を作成する</h4><p>書面による意思表示を推奨します。自署のある書面を用意することで、後日のトラブルを防ぐことができます。</p><span class="howto-tip">当サイトのテンプレートPDFを活用ください</span></div></div><div class="howto-step"><div class="howto-num"><span>Step</span><span>3</span></div><div class="howto-body"><h4>PTAの役員・会長宛に提出する</h4><p>退会届はPTA会長またはPTAが指定する受付先へ提出します。学校による取次ぎは当然の校務ではないため、学校経由にする場合は、学校が取次ぎを受ける根拠と受領先を確認してください。提出日、提出方法、受領者を記録します。</p></div></div><div class="howto-step"><div class="howto-num"><span>Step</span><span>4</span></div><div class="howto-body"><h4>会費の引き落とし停止を確認する</h4><p>口座引き落としがある場合は銀行への手続きも必要な場合があります。PTAから「退会受理」の確認を得た後、引き落とし状況を必ず確認してください。</p><span class="howto-tip">返還の可否は契約成立、支払経緯、受益等の事実関係から検討します</span></div></div><div class="howto-step"><div class="howto-num"><span>Step</span><span>5</span></div><div class="howto-body"><h4>子どもへの不利益がないか確認する</h4><p>退会後も子どもの学校生活に変化がないかを確認してください。登校班・記念品・学校行事などで差別的扱いがあれば、速やかに教育委員会に相談してください。</p><span class="howto-tip">差別的扱いは教育委員会へ相談を</span></div></div></div></div></section>
+<section class="howto-section"><div class="container"><div class="section-label">退会する人へ</div><h2 class="section-title">退会を決めたら：手続きの進め方</h2><figure class="u-852a52814b"><img class="u-83b2a80b11" src="/assets/diagrams/07_保護者/02_退会・非加入の手順.svg" alt="図解：退会・非加入の手順" loading="lazy"></figure><p class="section-sub">落ち着いて一歩ずつ進めれば、手続きは難しくありません。</p><div class="howto-steps"><div class="howto-step"><div class="howto-num"><span>Step</span><span>1</span></div><div class="howto-body"><h4>PTA会則・規約を確認する</h4><p>PTA会長または役員に会則の提示を求め、入会・退会手続を確認します。学校が職務上取得・保有している会則がある場合は、学校または教育委員会に保有状況を確認します。</p><span class="howto-tip">会員関係を主張する根拠として会則を確認</span></div></div><div class="howto-step"><div class="howto-num"><span>Step</span><span>2</span></div><div class="howto-body"><h4>退会届（または非加入意思表示書）を作成する</h4><p>書面による意思表示を推奨します。自署のある書面を用意することで、後日のトラブルを防ぐことができます。</p><span class="howto-tip">当サイトのテンプレートPDFを活用ください</span></div></div><div class="howto-step"><div class="howto-num"><span>Step</span><span>3</span></div><div class="howto-body"><h4>PTAの役員・会長宛に提出する</h4><p>退会届はPTA会長またはPTAが指定する受付先へ提出します。学校による取次ぎは当然の校務ではないため、学校経由にする場合は、学校が取次ぎを受ける根拠と受領先を確認してください。提出日、提出方法、受領者を記録します。</p></div></div><div class="howto-step"><div class="howto-num"><span>Step</span><span>4</span></div><div class="howto-body"><h4>会費の引き落とし停止を確認する</h4><p>口座引き落としがある場合は銀行への手続きも必要な場合があります。PTAから「退会受理」の確認を得た後、引き落とし状況を必ず確認してください。</p><span class="howto-tip">返還の可否は契約成立、支払経緯、受益等の事実関係から検討します</span></div></div><div class="howto-step"><div class="howto-num"><span>Step</span><span>5</span></div><div class="howto-body"><h4>子どもへの不利益がないか確認する</h4><p>退会後も子どもの学校生活に変化がないかを確認してください。登校班・記念品・学校行事などで差別的扱いがあれば、速やかに教育委員会に相談してください。</p><span class="howto-tip">差別的扱いは教育委員会へ相談を</span></div></div></div></div></section>
 </main>
 <footer class="footer">
 <div class="footer-inner">

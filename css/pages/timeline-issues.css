@@ -1,0 +1,182 @@
+@layer page {
+  /* Consolidated page styles for timeline-issues.html */
+  /* Page-specific styles for timeline-issues.html */
+  .ti-page {
+    background: #f4f6f9;
+  }
+  .ti-hero {
+    background: linear-gradient(135deg, #0a192f, #1e3a5f 65%, #0f766e);
+    color: #fff;
+    padding: 72px 0 58px;
+  }
+  .ti-wrap {
+    width: min(calc(100% - 40px), 1040px);
+    margin: auto;
+  }
+  .ti-hero h1 {
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(1.85rem, 4vw, 3rem);
+    margin: 0 0 14px;
+  }
+  .ti-hero p {
+    max-width: 840px;
+    line-height: 1.95;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+  }
+  .ti-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 28px 0 86px;
+  }
+  .ti-card {
+    background: #fff;
+    border: 1px solid #dbe4ee;
+    border-radius: 18px;
+    padding: 24px 26px;
+    box-shadow: 0 10px 28px rgba(5, 17, 31, 0.06);
+  }
+  .ti-card h2 {
+    font-family: "Noto Serif JP", serif;
+    color: #1e3a5f;
+    margin: 0 0 10px;
+    border-bottom: 3px solid #d4af37;
+    padding-bottom: 8px;
+  }
+  .ti-card h3 {
+    color: #1e3a5f;
+    margin: 18px 0 6px;
+  }
+  .ti-card p,
+  .ti-card li {
+    line-height: 1.95;
+    color: #26364a;
+  }
+  .ti-linkbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .ti-linkbox a {
+    display: inline-flex;
+    border: 1px solid #fed7aa;
+    background: #fff7ed;
+    color: #c2410c;
+    border-radius: 999px;
+    padding: 7px 13px;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 0.86rem;
+  }
+  .ti-note {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-left: 5px solid #f97316;
+    border-radius: 0 14px 14px 0;
+    padding: 17px 19px;
+    line-height: 1.9;
+  }
+  .ti-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+  }
+  .ti-nav a {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 999px;
+    padding: 9px 15px;
+    text-decoration: none;
+    font-weight: 900;
+  }
+  .ti-intro {
+    background: #fff;
+    border: 1px solid #dbe4ee;
+    border-radius: 18px;
+    padding: 26px 28px;
+    margin: 36px 0 0;
+    box-shadow: 0 10px 28px rgba(5, 17, 31, 0.06);
+  }
+  .ti-intro h2 {
+    font-family: "Noto Serif JP", serif;
+    color: #1e3a5f;
+    margin: 0 0 12px;
+  }
+  .ti-intro p,
+  .ti-intro li {
+    line-height: 1.95;
+    color: #26364a;
+  }
+  .ti-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .ti-box {
+    background: #f8fafc;
+    border: 1px solid #dbe4ee;
+    border-radius: 14px;
+    padding: 16px;
+  }
+  .ti-box strong {
+    display: block;
+    color: #1e3a5f;
+    margin-bottom: 6px;
+  }
+  @media (max-width: 780px) {
+    .ti-grid {
+      grid-template-columns: 1fr;
+    }
+    .ti-card,
+    .ti-intro {
+      padding: 22px 18px;
+    }
+  }
+
+  /* Page-specific styles for timeline-issues.html */
+  .ti-page {
+    background: #fff;
+  }
+  .ti-wrap {
+    width: min(calc(100% - 40px), 920px);
+  }
+  .ti-intro,
+  .ti-card,
+  .ti-box,
+  .ti-note {
+    border-radius: 0;
+    box-shadow: none;
+    background: #fff;
+  }
+  .ti-intro {
+    margin: 0;
+    padding: 42px 0;
+    border: 0;
+    border-bottom: 1px solid #cfd8e2;
+  }
+  .ti-grid {
+    display: block;
+    border-top: 1px solid #dbe4ee;
+  }
+  .ti-box {
+    padding: 18px 0;
+    border: 0;
+    border-bottom: 1px solid #dbe4ee;
+  }
+  .ti-list {
+    gap: 0;
+    padding: 0 0 86px;
+  }
+  .ti-card {
+    padding: 34px 0;
+    border: 0;
+    border-bottom: 1px solid #cfd8e2;
+  }
+  .ti-card h2 {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}

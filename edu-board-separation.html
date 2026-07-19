@@ -20,87 +20,9 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="/css/style.css?v=20260705-fixed-header-all-pages" rel="stylesheet"/>
-<link href="/css/refine.css?v=hover-orange-20260629ccccc" rel="stylesheet"/>
-<style>
-    .page-hero{position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(5,17,31,.36) 0%,rgba(5,17,31,.18) 54%,rgba(5,17,31,.06) 100%),url('assets/slides/1.jpg') center/cover!important;color:#fff}
-    .page-hero h1,.page-hero p{color:#fff!important;text-shadow:0 2px 12px rgba(5,17,31,.36)}
-    .page-hero-kicker{background:rgba(212,175,55,.18)!important;border:1px solid rgba(212,175,55,.4)!important;color:var(--gold-lt)!important}
-    .edu-page{background:#fff;padding:44px 0 72px}
-    .edu-layout{width:min(calc(100% - 40px),1060px);margin-inline:auto;display:block}
-    .edu-toc{position:static;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:0 0 18px;margin:0 0 34px;box-shadow:none}
-    .edu-toc h2{font-size:.78rem;color:var(--navy);margin:0 0 10px;font-weight:900;letter-spacing:.08em}
-    .edu-toc a{display:inline-block;padding:0;border-radius:0;margin:0 18px 8px 0;color:var(--text-soft);font-size:.84rem;line-height:1.55;text-decoration:underline;text-decoration-color:rgba(11,42,74,.24);text-underline-offset:4px}
-    .edu-toc a:hover{background:transparent;color:var(--navy);font-weight:700;text-decoration-color:var(--gold)}
-    .edu-article{min-width:0;max-width:920px;margin-inline:auto;background:transparent;border:0;border-radius:0;box-shadow:none;padding:0}
-    .edu-article section{scroll-margin-top:100px;margin-bottom:44px}
-    .edu-article section:last-child{margin-bottom:0}
-    .edu-article h2{font-family:'Noto Serif JP',serif;color:var(--navy);font-size:clamp(1.32rem,2.1vw,1.85rem);line-height:1.35;margin:0 0 18px;padding-bottom:10px;border-bottom:2px solid var(--gold)}
-    .edu-article h3{color:var(--navy-2);font-size:1.03rem;line-height:1.55;margin:24px 0 10px;padding-left:12px;border-left:3px solid var(--gold);font-weight:900}
-    .edu-article p{color:var(--text);font-size:.97rem;line-height:1.95;margin:0 0 14px}
-    .edu-article ul{margin:0 0 18px;padding-left:1.25rem;color:var(--text);line-height:1.85}
-    .edu-article li+li{margin-top:6px}
-    .edu-note{background:#f6f9fd;border-left:4px solid var(--navy);border-radius:0 12px 12px 0;padding:18px 20px;margin:18px 0;color:var(--text);line-height:1.85}
-    .edu-core{background:linear-gradient(135deg,#0c1f35,#1a3a52);color:#fff;border-radius:var(--radius);padding:28px;margin:8px 0 28px}
-    .edu-core strong{display:block;color:var(--gold-lt);font-family:'Noto Serif JP',serif;font-size:1.18rem;line-height:1.55;margin-bottom:8px}
-    .edu-core p{color:rgba(255,255,255,.82);margin:0}
-    .edu-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius-sm);margin:18px 0 24px;background:#fff}
-    .edu-table{width:100%;min-width:760px;border-collapse:collapse;font-size:.9rem}
-    .edu-table th{background:var(--navy);color:#fff;text-align:left;padding:12px 14px;font-size:.82rem;line-height:1.55;white-space:nowrap}
-    .edu-table td{padding:13px 14px;border-top:1px solid var(--line);vertical-align:top;color:var(--text);line-height:1.75}
-    .edu-table tbody th{background:#f6f9fd;color:var(--navy);border-top:1px solid var(--line);font-weight:900;vertical-align:top}
-    .edu-table tr:nth-child(even) td,.edu-table tr:nth-child(even) th[scope=row]{background:#fbfdff}
-    .notice-model{background:#fffdf2;border:1px solid #ead99b;border-radius:var(--radius);padding:24px;margin:18px 0;color:#3f3310}
-    .notice-model p{color:#3f3310}
-    .notice-model p:last-child{margin-bottom:0}
-    .transition-list{display:grid;gap:14px;margin-top:18px}
-    .transition-item{border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px;background:#fbfdff}
-    .transition-item strong{display:block;color:var(--navy);font-size:.98rem;margin-bottom:4px}
-    .flow-list{display:grid;gap:12px;margin:20px 0}
-    .flow-item{display:grid;grid-template-columns:86px minmax(0,1fr);gap:14px;align-items:start;border:1px solid var(--line);border-radius:var(--radius-sm);background:#fff;padding:16px}
-    .flow-label{display:inline-flex;align-items:center;justify-content:center;min-height:36px;border-radius:8px;background:var(--navy);color:#fff;font-weight:900;letter-spacing:.04em}
-    .flow-item strong{display:block;color:var(--navy);margin-bottom:4px}
-    .script-box{background:#f8fafc;border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin:18px 0}
-    .script-box h3{margin-top:0}
-    .script-box blockquote{margin:0;border-left:4px solid var(--gold);padding:2px 0 2px 18px;color:var(--text);line-height:1.9}
-    .law-explain{display:grid;gap:12px;margin:18px 0}
-    .law-explain-item{background:#fbfdff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:16px}
-    .law-explain-item strong{display:block;color:var(--navy);margin-bottom:4px}
-    .qa-item{border-top:1px solid var(--line);padding:20px 0}
-    .qa-item:first-of-type{border-top:none;padding-top:0}
-    .qa-item h3{border-left:none;padding-left:0;margin:0 0 8px;color:var(--navy);font-size:1rem}
-    .edu-voices-section{background:#fff}
-    .edu-voices-subhead{margin-bottom:10px!important;color:var(--navy)!important;font-weight:900}
-    .edu-voices-summary{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:20px 0 22px}
-    .edu-voices-card{display:flex;align-items:center;min-height:72px;border:1px solid var(--line);border-radius:14px;background:#f8fafc;padding:14px;color:var(--navy);font-weight:900;line-height:1.55}
-    .edu-voices-table-wrap{margin-top:20px}
-    .edu-voices-table{min-width:1080px}
-    .edu-voices-table th:nth-child(1),.edu-voices-table td:nth-child(1){width:48px;text-align:center;font-weight:900}
-    .edu-voices-table th:nth-child(2),.edu-voices-table td:nth-child(2){width:108px}
-    .edu-voices-table th:nth-child(6),.edu-voices-table td:nth-child(6){width:112px}
-    .edu-voices-terms{display:block;color:var(--text-soft);font-size:.82rem;line-height:1.7}
-    .edu-voices-terms span{display:inline;border:0;border-radius:0;background:transparent;color:inherit;padding:0;font-weight:700}
-    .edu-voices-terms span+span::before{content:"／";color:#94a3b8;margin:0 .25em 0 .1em;font-weight:400}
-    .edu-voices-source{font-weight:900;color:var(--navy);text-decoration:underline;text-underline-offset:3px}
-    .edu-voices-conclusion{background:#fff8df;border-left:5px solid var(--gold);border-radius:0 14px 14px 0;padding:18px 20px;margin:22px 0 0;color:#3f3310;line-height:1.9}
-    .edu-voices-note{margin-top:14px;color:var(--text-soft);font-size:.88rem;line-height:1.8}
-    .reference-list{display:grid;gap:10px;list-style:none!important;padding-left:0!important}
-    .reference-list a{display:block;border:1px solid var(--line);border-radius:10px;padding:12px 14px;text-decoration:none;color:var(--navy);font-weight:800;background:#f8fafc}
-    .reference-list a:hover{border-color:var(--gold);background:#fff}
-    .edu-caution{background:#f8fafc;border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px;color:var(--text-soft);font-size:.9rem;line-height:1.85}
-    .edu-final{background:linear-gradient(135deg,#1d4ed8,#2563eb);border-radius:var(--radius);padding:30px;color:#fff}
-    .edu-final p{font-family:'Noto Serif JP',serif;color:#fff;font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.75;font-weight:900;margin:0}
-    .edu-final .btn-gold{margin-top:22px}
-    .mini-link{display:inline-flex;align-items:center;gap:8px;margin-top:14px;color:var(--navy);font-weight:900;text-decoration:none;border-bottom:2px solid var(--gold)}
-    .mini-link:hover{color:var(--gold)}
-    .page-hero .edu-guide-return{background:rgba(5,17,31,.72)!important;border-color:rgba(255,255,255,.72)!important;color:#fff!important}
-    .page-hero .edu-guide-return:hover{background:rgba(5,17,31,.9)!important;border-color:#fff!important}
-    .desktop-nav .nav-item.has-dropdown:last-of-type .mega-menu{left:auto;right:0;transform:translateY(10px)}
-    .desktop-nav .nav-item.has-dropdown:last-of-type:hover .mega-menu,.desktop-nav .nav-item.has-dropdown:last-of-type.is-open .mega-menu{transform:translateY(0)}
-    @media(max-width:920px){.edu-voices-summary{grid-template-columns:1fr 1fr}.edu-voices-table{min-width:960px}}
-    @media(max-width:640px){.edu-page{padding:28px 0 52px}.edu-layout{width:min(calc(100% - 28px),1060px)}.edu-table{min-width:680px}.edu-voices-summary{grid-template-columns:1fr}.edu-voices-table{min-width:900px}.page-hero h1{font-size:1.82rem}.flow-item{grid-template-columns:1fr}.flow-label{justify-content:flex-start;padding:0 12px}}
-    @media print{.site-header,.mobile-overlay,.footer,.edu-toc,.hero-actions{display:none!important}.page-hero{border:none;padding:0 0 18px;background:#fff!important}.page-hero::before,.page-hero::after{display:none}.page-hero-inner{width:100%}.edu-page{padding:0;background:#fff}.edu-layout{display:block;width:100%}.edu-article{border:none;box-shadow:none;padding:0}.edu-article section{break-inside:avoid}.edu-voices-table{min-width:0;font-size:.72rem}.edu-voices-terms span{border:1px solid #555;background:#fff;color:#000}.edu-final{background:#fff;color:#000;border:1px solid #aaa}.edu-final p{color:#000}}
-  </style>
+<link href="/css/site.css?v=20260719" rel="stylesheet"/>
+<link href="/css/editorial.css?v=20260719" rel="stylesheet"/>
+<link rel="stylesheet" href="/css/pages/edu-board-separation.css?v=20260719">
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
 <script>
@@ -113,7 +35,8 @@
 <meta property="og:image" content="https://ptaorg.com/assets/og-image-popc-en.png" />
 <meta property="og:image:secure_url" content="https://ptaorg.com/assets/og-image-popc-en.png" />
 <meta name="twitter:image" content="https://ptaorg.com/assets/og-image-popc-en.png" />
-<link rel="stylesheet" href="/css/hover-orange.css?v=20260629-hero22-hero22">
+<link rel="stylesheet" href="/css/interactions.css?v=20260719">
+<link rel="stylesheet" href="/css/inline-utilities.css?v=20260719">
 </head>
 <body>
 <div aria-label="活動支援のお願い" class="support-strip" role="complementary">
@@ -302,44 +225,7 @@
 <h2>3. 役割分担</h2>
 <p>学校・教育委員会は学校教育と学校運営を担い、PTAは会員管理、会費、役員選出、会計、広報等の団体運営を担います。</p>
 <figure class="separation-fig" role="img" aria-label="一体化した運用から役割分担へ">
-<style>
-.separation-fig{margin:28px auto 34px;max-width:900px}
-.separation{--ink:#13294b;--sub:#526174;--red:#d94d42;--grn:#21845e;--blue:#316fa8;position:relative;overflow:hidden;color:var(--ink);font-family:'Noto Sans JP',sans-serif;background:linear-gradient(180deg,rgba(250,253,255,.96),rgba(255,255,255,.72));border-top:2px solid rgba(19,41,75,.08);border-bottom:1px solid rgba(19,41,75,.08);box-shadow:none}
-.separation::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.45;background-image:linear-gradient(rgba(19,41,75,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(19,41,75,.035) 1px,transparent 1px);background-size:32px 32px;-webkit-mask:linear-gradient(180deg,#000,transparent 82%);mask:linear-gradient(180deg,#000,transparent 82%)}
-.separation .separation-cnr{display:none}
-.separation .separation-cnr.tl{top:13px;left:13px;border-right:0;border-bottom:0}.separation .separation-cnr.tr{top:13px;right:13px;border-left:0;border-bottom:0}
-.separation .separation-cnr.bl{bottom:13px;left:13px;border-right:0;border-top:0}.separation .separation-cnr.br{bottom:13px;right:13px;border-left:0;border-top:0}
-.separation .separation-head{position:relative;z-index:2;padding:28px 34px 6px}
-.separation .separation-kick{display:inline-flex;align-items:center;gap:10px;font-size:.7rem;font-weight:800;letter-spacing:.12em;color:#155e75}
-.separation .separation-kick i{height:2px;width:26px;border-radius:2px;background:#0f766e}
-.separation .separation-title{font-family:'Noto Sans JP',sans-serif;font-weight:900;color:var(--ink);font-size:clamp(1.24rem,3vw,1.72rem);line-height:1.35;margin:10px 0 0}
-.separation .separation-title em{font-style:normal;color:var(--grn)}
-.separation .separation-grid{position:relative;z-index:2;padding:18px 34px 8px;display:grid;grid-template-columns:1fr 44px 1fr;gap:14px;align-items:stretch}
-.separation .separation-card{border-radius:0;padding:16px 16px 14px;background:transparent;border:0;border-left:3px solid rgba(19,41,75,.12)}
-.separation .separation-card.bad{border-left-color:rgba(217,77,66,.72);background:linear-gradient(90deg,rgba(217,77,66,.075),transparent 78%)}
-.separation .separation-card.good{border-left-color:rgba(33,132,94,.72);background:linear-gradient(90deg,rgba(33,132,94,.075),transparent 78%)}
-.separation .separation-cap{font-family:'Noto Sans JP',sans-serif;font-weight:850;font-size:.98rem;margin:0 0 14px;display:flex;align-items:center;gap:8px}
-.separation .bad .separation-cap{color:#991b1b}.separation .good .separation-cap{color:#166534}
-.separation .separation-merge{display:flex;justify-content:center;align-items:center;margin:18px 0}
-.separation .separation-org{width:84px;height:84px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.92rem;border:1.5px solid}
-.separation .separation-org.s{background:rgba(49,111,168,.08);border-color:rgba(49,111,168,.55);color:#1d4e89}
-.separation .separation-org.p{background:rgba(217,77,66,.08);border-color:rgba(217,77,66,.55);color:#991b1b;margin-left:-26px}
-.separation .separation-shared{text-align:center;font-size:.82rem;color:#334155;line-height:1.65;margin-top:4px}
-.separation .separation-shared b{color:#991b1b;font-weight:800}
-.separation .separation-split{display:grid;grid-template-columns:1fr 1px 1fr;gap:10px;align-items:start;margin:10px 0 4px}
-.separation .separation-vline{background:repeating-linear-gradient(180deg,rgba(51,176,122,.7) 0 5px,transparent 5px 10px)}
-.separation .separation-side{text-align:center}
-.separation .separation-side b{display:block;font-family:'Noto Sans JP',sans-serif;color:var(--ink);font-size:.95rem;margin-bottom:8px}
-.separation .separation-side span{display:block;color:var(--sub);font-size:.8rem;line-height:1.9}
-.separation .separation-note{text-align:center;font-size:.78rem;color:#64748b;margin:12px 0 0}
-.separation .separation-arrow{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#e0a83c}
-.separation .separation-arrow b{font-size:.66rem;letter-spacing:.18em;writing-mode:vertical-rl;font-weight:700}
-.separation .separation-arrow svg{width:22px;height:22px;stroke:#e0a83c;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.separation .separation-foot{position:relative;z-index:2;margin-top:8px;padding:18px 34px 24px;background:rgba(240,253,250,.58);border-top:1px solid rgba(13,148,136,.16)}
-.separation .separation-foot p{margin:0;color:var(--sub);font-size:.85rem;line-height:1.7}
-.separation .separation-foot .src{margin-top:8px;font-size:.66rem;color:#64748b}
-@media(max-width:620px){.separation .separation-head,.separation .separation-grid,.separation .separation-foot{padding-left:18px;padding-right:18px}.separation .separation-grid{grid-template-columns:1fr;gap:10px}.separation .separation-arrow{flex-direction:row;padding:4px 0}.separation .separation-arrow b{writing-mode:horizontal-tb}.separation .separation-arrow svg{transform:rotate(90deg)}}
-</style>
+
 <div class="separation">
 <span class="separation-cnr tl"></span><span class="separation-cnr tr"></span><span class="separation-cnr bl"></span><span class="separation-cnr br"></span>
 <div class="separation-head">
@@ -410,7 +296,7 @@
 </section>
 <section id="not-do">
 <h2>4. 教育委員会通知に明記する事項</h2>
-<figure style="margin:30px auto;max-width:860px"><img src="assets/diagrams/06_教育委員会/03_学校が行わない事項.svg" alt="図解：学校が行わない事項" loading="lazy" style="display:block;width:100%;height:auto"></figure>
+<figure class="u-852a52814b"><img class="u-83b2a80b11" src="assets/diagrams/06_教育委員会/03_学校が行わない事項.svg" alt="図解：学校が行わない事項" loading="lazy"></figure>
 <p>通知は抽象的な「適切に対応する」では現場を守れません。学校が担わない事項を、業務ごとに明記する必要があります。</p>
 <p>教育委員会通知の中心は、学校側の業務範囲です。学校は何を学校業務として扱い、何をPTA自身の団体運営事務として扱うのか。この境界を明文化すれば、校長は個別の要望に対して「学校として協力できる範囲はここまでです」と説明できます。</p>
 <p>通知文は、現場で読み替えが起きない粒度で書く必要があります。「PTAの自主性に配慮する」「学校とPTAの適切な関係に留意する」だけでは、従来慣行を続ける学校と、見直しに踏み出す学校に分かれてしまいます。入会申込書の回収、会費徴収、会員・非会員管理、未納管理、役員選出、PTA文書配信といった具体的な行為ごとに、学校が担わない事項を列挙することが、校長を守る通知になります。</p>

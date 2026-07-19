@@ -1,0 +1,75 @@
+@layer page {
+  /* Shared by 3 pages. Extracted from duplicated inline CSS. */
+  .breadcrumb-bar {
+    background: #fff;
+    border-bottom: 1px solid #d8dee8;
+  }
+  .breadcrumb-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 11px 24px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: #475569;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .breadcrumb-inner a {
+    color: #06c;
+    text-decoration: none;
+  }
+  .breadcrumb-inner a:hover {
+    text-decoration: underline;
+  }
+  .breadcrumb-inner .current {
+    color: #334155;
+  }
+  .document-breadcrumb {
+    max-width: 1120px;
+    margin: 0 auto 18px;
+    padding: 11px 0;
+    font-size: 0.92rem;
+    color: #475569;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #d8dee8;
+  }
+  .document-breadcrumb a {
+    color: #06c;
+    text-decoration: none;
+  }
+  .document-breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  .plain-prose-block {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+  .unboxed-panel {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .editorial-panel:not(.ed-resource-panel),
+  .documents-note.editorial-panel {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+  .ed-resource-panel {
+    box-shadow: none;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,18 @@
+@layer page {
+  /* Page-specific styles for national-materials.html */
+  body {
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Noto Sans JP",
+      sans-serif;
+    line-height: 1.9;
+    padding: 40px;
+    color: #1f2937;
+  }
+  a {
+    color: #1e3a5f;
+    font-weight: 800;
+  }
+}

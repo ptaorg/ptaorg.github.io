@@ -1,0 +1,233 @@
+@layer page {
+  /* Page-specific styles for timeline.html */
+  /* ===== タイムライン ===== */
+  .tl-outer {
+    width: min(calc(100% - 40px), 860px);
+    margin-inline: auto;
+    padding: 72px 0 80px;
+  }
+  .tl-wrap {
+    position: relative;
+    padding-left: 64px;
+  }
+  .tl-wrap::before {
+    content: "";
+    position: absolute;
+    left: 24px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(
+      180deg,
+      var(--navy) 0%,
+      rgba(26, 58, 82, 0.1) 100%
+    );
+  }
+  .tl-item {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  .tl-item:last-child {
+    margin-bottom: 0;
+  }
+  .tl-dot {
+    position: absolute;
+    left: -52px;
+    top: 18px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--navy) 0%, #1a3a52 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(5, 17, 31, 0.28);
+    z-index: 1;
+    line-height: 1;
+  }
+  .tl-dot-era {
+    font-size: 0.55rem;
+    font-weight: 900;
+    color: rgba(212, 175, 55, 0.7);
+    letter-spacing: 0.06em;
+  }
+  .tl-dot-year {
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--gold);
+  }
+  .tl-dot.highlight {
+    background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+  }
+  .tl-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--navy);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    box-shadow: var(--shadow-sm);
+    transition:
+      box-shadow 0.2s,
+      transform 0.2s;
+  }
+  .tl-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(2px);
+  }
+  .tl-card.highlight {
+    border-left-color: var(--gold);
+  }
+  .tl-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    color: #73510a;
+    background: rgba(212, 175, 55, 0.16);
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
+  .tl-title {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.08rem;
+    font-weight: 900;
+    color: var(--navy);
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .tl-desc {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.85;
+    margin-bottom: 0;
+  }
+  .tl-note {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--line);
+    font-size: 0.86rem;
+    color: var(--text-soft);
+    line-height: 1.75;
+  }
+  /* ===== インサイトボックス ===== */
+  .insight-box {
+    background: linear-gradient(135deg, var(--navy) 0%, #1a3a52 100%);
+    border-radius: var(--radius);
+    padding: 44px 48px;
+    margin-top: 0;
+  }
+  .insight-box h3 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: var(--gold-lt, #fcd34d);
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  .insight-box p {
+    font-size: 0.96rem;
+    line-height: 1.95;
+    color: rgba(255, 255, 255, 0.88);
+    margin-bottom: 14px;
+  }
+  .insight-box p:last-child {
+    margin-bottom: 0;
+  }
+  /* ===== キーカード ===== */
+  .key-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+    margin-top: 40px;
+  }
+  .key-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 24px 20px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+  }
+  .key-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+  .key-lbl {
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    color: var(--text-soft);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .key-val {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.02rem;
+    font-weight: 900;
+    color: var(--navy);
+    line-height: 1.45;
+  }
+  /* ===== 関連リンク ===== */
+  .rel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
+    margin-top: 28px;
+  }
+  .rel-card {
+    display: block;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    text-decoration: none;
+    transition:
+      box-shadow 0.2s,
+      transform 0.2s;
+  }
+  .rel-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  .rel-card-kicker {
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    color: #73510a;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .rel-card-title {
+    font-family: "Noto Serif JP", serif;
+    font-size: 0.97rem;
+    font-weight: 900;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .rel-card-desc {
+    font-size: 0.83rem;
+    color: var(--text-soft);
+    line-height: 1.6;
+  }
+  @media (max-width: 680px) {
+    .tl-wrap {
+      padding-left: 52px;
+    }
+    .tl-dot {
+      left: -44px;
+      width: 46px;
+      height: 46px;
+    }
+    .tl-dot-year {
+      font-size: 0.88rem;
+    }
+    .insight-box {
+      padding: 28px 22px;
+    }
+    .key-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -22,419 +22,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=20260705-fixed-header-all-pages">
-  <style>
-
-/* =============================================
-   HERO — 実態調査ページ
-   ============================================= */
-.reality-hero {
-  background:
-    linear-gradient(90deg, rgba(91,20,20,.34) 0%, rgba(127,29,29,.18) 54%, rgba(127,29,29,.08) 100%),
-    url('assets/slides/1.jpg') center/cover;
-  padding: 80px 0 72px;
-  text-align: center;
-  color: #fff;
-}
-.reality-hero-kicker {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 5px 18px; border-radius: 999px;
-  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25);
-  font-size: .72rem; font-weight: 900; letter-spacing: .14em;
-  text-transform: uppercase; color: #fca5a5;
-  margin-bottom: 24px;
-}
-.reality-hero-kicker::before {
-  content: ''; width: 6px; height: 6px; border-radius: 50%;
-  background: #fca5a5; animation: blink 2s ease infinite;
-}
-@keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(.7)} }
-.reality-hero h1 {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(1.7rem, 3.8vw, 2.9rem);
-  font-weight: 900; line-height: 1.25; color: #fff;
-  margin-bottom: 22px; letter-spacing: -.01em;
-}
-.reality-hero-lead {
-  font-size: clamp(.9rem, 1.4vw, 1.05rem);
-  color: rgba(255,255,255,.82); line-height: 1.9;
-  max-width: 660px; margin-inline: auto;
-}
-
-/* =============================================
-   ページ内アンカーナビ
-   ============================================= */
-.anchor-nav {
-  background: #fff;
-  border-bottom: 1px solid var(--line);
-  position: sticky; top: 0; z-index: 80;
-  box-shadow: 0 2px 10px rgba(0,0,0,.06);
-}
-.anchor-nav-inner {
-  display: flex; gap: 0; overflow-x: auto;
-  scrollbar-width: none;
-  width: min(calc(100% - 40px), 860px);
-  margin-inline: auto;
-}
-.anchor-nav-inner::-webkit-scrollbar { display: none; }
-.anchor-link {
-  display: flex; align-items: center; gap: 8px;
-  padding: 14px 20px;
-  font-size: .82rem; font-weight: 800;
-  color: var(--text-soft);
-  text-decoration: none;
-  border-bottom: 3px solid transparent;
-  white-space: nowrap;
-  transition: color .2s, border-color .2s;
-}
-.anchor-link:hover {
-  color: var(--navy);
-  border-bottom-color: var(--gold);
-}
-.anchor-link .anchor-num {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 20px; height: 20px; border-radius: 50%;
-  background: #fee2e2; color: #b91c1c;
-  font-size: .68rem; font-weight: 900;
-  flex-shrink: 0;
-}
-
-/* =============================================
-   書類モックアップ
-   ============================================= */
-.doc-mockup {
-  background: #fffbeb;
-  border: 1px solid #fde68a;
-  border-left: 5px solid #f59e0b;
-  border-radius: 8px;
-  padding: 22px 24px;
-  font-family: 'Noto Serif JP', serif;
-  font-size: .9rem; line-height: 2;
-  color: #1a1a1a;
-  position: relative;
-  margin: 20px 0;
-}
-.doc-mockup-label {
-  display: inline-block; margin-bottom: 12px;
-  padding: 3px 10px; border-radius: 4px;
-  background: #fef3c7; color: #92400e;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: .7rem; font-weight: 900; letter-spacing: .06em;
-}
-.doc-mockup-title {
-  font-weight: 900; font-size: 1.05rem;
-  margin-bottom: 8px; color: #111;
-}
-.doc-mockup-body { color: #2a2a2a; }
-.doc-mockup-body p { margin: 0; }
-
-/* 適正書類（緑） */
-.doc-mockup-ok {
-  background: #f0fdf4;
-  border-color: #86efac;
-  border-left-color: #16a34a;
-}
-.doc-mockup-ok .doc-mockup-label {
-  background: #dcfce7; color: #15803d;
-}
-
-/* =============================================
-   問題点注釈
-   ============================================= */
-.problem-notes {
-  margin-top: 18px;
-  display: flex; flex-direction: column; gap: 10px;
-}
-.problem-note {
-  display: flex; align-items: flex-start; gap: 10px;
-  background: #fff5f5; border-radius: 8px;
-  padding: 12px 16px;
-  border-left: 3px solid #ef4444;
-}
-.problem-note-arrow {
-  color: #ef4444; font-weight: 900; font-size: 1rem;
-  flex-shrink: 0; margin-top: 1px;
-}
-.problem-note-text {
-  font-size: .86rem; color: #7f1d1d; line-height: 1.65; font-weight: 700;
-}
-.good-note {
-  display: flex; align-items: flex-start; gap: 10px;
-  background: #f0fdf4; border-radius: 8px;
-  padding: 12px 16px;
-  border-left: 3px solid #16a34a;
-}
-.good-note-arrow {
-  color: #16a34a; font-weight: 900; font-size: 1rem;
-  flex-shrink: 0; margin-top: 1px;
-}
-.good-note-text {
-  font-size: .86rem; color: #14532d; line-height: 1.65; font-weight: 700;
-}
-
-/* =============================================
-   法的根拠ボックス
-   ============================================= */
-.law-box {
-  background: var(--navy);
-  color: #fff;
-  border-radius: 10px;
-  padding: 20px 24px;
-  margin-top: 20px;
-}
-.law-box-label {
-  font-size: .68rem; font-weight: 900; letter-spacing: .1em;
-  color: #d4af37; text-transform: uppercase; margin-bottom: 10px;
-}
-.law-box-content {
-  font-size: .9rem; line-height: 1.85; color: rgba(255,255,255,.88);
-}
-.law-box-content strong { color: #fde68a; }
-
-/* =============================================
-   引用バナー（教育委員会）
-   ============================================= */
-.edu-quote {
-  background: #0a1628;
-  border-radius: 10px;
-  padding: 22px 24px;
-  margin-top: 20px;
-}
-.edu-quote-source {
-  font-size: .72rem; font-weight: 900; letter-spacing: .07em;
-  color: #d4af37; margin-bottom: 10px;
-  text-transform: uppercase;
-}
-.edu-quote blockquote {
-  font-family: 'Noto Serif JP', serif;
-  font-size: .96rem; color: #fff;
-  line-height: 1.85; margin: 0; font-weight: 700;
-}
-.edu-quote blockquote::before {
-  content: '\201C'; font-size: 1.8rem; color: #d4af37;
-  line-height: 0; vertical-align: -.35em; margin-right: 4px;
-}
-
-/* =============================================
-   タイムライン
-   ============================================= */
-.timeline {
-  position: relative;
-  margin-top: 32px;
-  padding-left: 40px;
-}
-.timeline::before {
-  content: '';
-  position: absolute; left: 14px; top: 4px; bottom: 4px;
-  width: 2px;
-  background: linear-gradient(to bottom, #ef4444, #b91c1c 60%, rgba(185,28,28,.15));
-}
-.timeline-item {
-  position: relative;
-  padding-bottom: 32px;
-}
-.timeline-item:last-child { padding-bottom: 0; }
-.timeline-dot {
-  position: absolute; left: -33px; top: 3px;
-  width: 18px; height: 18px; border-radius: 50%;
-  background: #ef4444; border: 3px solid #fff;
-  box-shadow: 0 0 0 2px #ef4444;
-}
-.timeline-dot.question {
-  background: #7f1d1d; box-shadow: 0 0 0 2px #7f1d1d;
-}
-.timeline-when {
-  font-size: .72rem; font-weight: 900; letter-spacing: .07em;
-  color: #b91c1c; text-transform: uppercase; margin-bottom: 4px;
-}
-.timeline-item h4 {
-  font-family: 'Noto Serif JP', serif;
-  font-size: .97rem; font-weight: 900; color: var(--navy);
-  margin-bottom: 6px; line-height: 1.4;
-}
-.timeline-item p {
-  font-size: .86rem; color: var(--text-soft); line-height: 1.75; margin: 0;
-}
-.timeline-item.question-item h4 { color: #991b1b; }
-
-/* =============================================
-   資金フロー図
-   ============================================= */
-.flow-diagram {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  margin: 24px 0;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.flow-box {
-  background: #fff;
-  border: 2px solid var(--line);
-  border-radius: 10px;
-  padding: 14px 20px;
-  text-align: center;
-  min-width: 120px;
-  flex-shrink: 0;
-}
-.flow-box.school {
-  border-color: #3b82f6; background: #eff6ff;
-}
-.flow-box.pta {
-  border-color: #f59e0b; background: #fffbeb;
-}
-.flow-box.parent {
-  border-color: #6b7280; background: #f9fafb;
-}
-.flow-box-label {
-  font-size: .68rem; font-weight: 900; letter-spacing: .06em;
-  text-transform: uppercase; margin-bottom: 6px;
-}
-.flow-box.school .flow-box-label { color: #1d4ed8; }
-.flow-box.pta .flow-box-label { color: #92400e; }
-.flow-box.parent .flow-box-label { color: #374151; }
-.flow-box-name {
-  font-family: 'Noto Serif JP', serif;
-  font-weight: 900; font-size: .97rem; color: var(--navy);
-}
-.flow-arrow {
-  display: flex; flex-direction: column; align-items: center;
-  gap: 2px; padding: 0 10px; flex-shrink: 0;
-}
-.flow-arrow-line {
-  font-size: 1.4rem; color: #ef4444; line-height: 1;
-}
-.flow-arrow-desc {
-  font-size: .68rem; font-weight: 700; color: #ef4444;
-  white-space: nowrap;
-}
-.flow-problem-note {
-  width: 100%; margin-top: 14px;
-  background: #fff5f5; border-radius: 8px; padding: 12px 16px;
-  border-left: 3px solid #ef4444;
-  font-size: .84rem; color: #7f1d1d; font-weight: 700;
-}
-
-/* =============================================
-   セクション共通
-   ============================================= */
-.reality-section {
-  padding: 80px 0;
-}
-.reality-section-white { background: #fff; }
-.reality-section-bg { background: var(--bg); }
-
-.section-badge {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 5px 14px; border-radius: 4px;
-  background: #fee2e2; border: 1px solid #fecaca;
-  color: #b91c1c; font-size: .72rem; font-weight: 900;
-  letter-spacing: .08em; text-transform: uppercase;
-  margin-bottom: 16px;
-}
-.reality-section h2 {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(1.4rem, 2.4vw, 2rem);
-  font-weight: 900; color: var(--navy);
-  margin-bottom: 14px; line-height: 1.35;
-}
-.reality-section-lead {
-  font-size: .97rem; color: var(--text-soft);
-  line-height: 1.9; margin-bottom: 30px;
-  max-width: 720px;
-}
-
-/* =============================================
-   CTA セクション（まとめ）
-   ============================================= */
-.reality-cta {
-  background: linear-gradient(135deg, #0d2044, #1a3a6b);
-  padding: 80px 0;
-  text-align: center;
-  color: #fff;
-}
-.reality-cta-title {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
-  font-weight: 900; color: #f4e7a6;
-  margin-bottom: 16px; line-height: 1.3;
-}
-.reality-cta-lead {
-  font-size: clamp(.88rem, 1.2vw, 1rem);
-  color: rgba(255,255,255,.75); line-height: 1.9;
-  max-width: 620px; margin-inline: auto; margin-bottom: 40px;
-}
-.cta-btn-group {
-  display: flex; flex-wrap: wrap; gap: 14px;
-  justify-content: center;
-}
-.cta-btn-primary {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 14px 28px; border-radius: 999px;
-  background: #d4af37; color: #0d2044;
-  font-size: .93rem; font-weight: 900; text-decoration: none;
-  transition: opacity .2s, transform .2s;
-}
-.cta-btn-primary:hover { opacity: .88; transform: translateY(-2px); }
-.cta-btn-secondary {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 14px 24px; border-radius: 999px;
-  background: transparent; color: #fff;
-  border: 2px solid rgba(255,255,255,.35);
-  font-size: .88rem; font-weight: 800; text-decoration: none;
-  transition: all .2s;
-}
-.cta-btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,.1); }
-
-/* =============================================
-   事例ハイライトボックス
-   ============================================= */
-.incident-box {
-  background: #fff5f5;
-  border: 1px solid #fecaca;
-  border-left: 5px solid #ef4444;
-  border-radius: 10px;
-  padding: 20px 24px;
-  margin-top: 20px;
-}
-.incident-box-label {
-  font-size: .7rem; font-weight: 900; letter-spacing: .07em;
-  color: #b91c1c; text-transform: uppercase; margin-bottom: 8px;
-}
-.incident-box-title {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 1rem; font-weight: 900; color: #7f1d1d;
-  margin-bottom: 8px; line-height: 1.4;
-}
-.incident-box-body {
-  font-size: .88rem; color: #4a1c1c; line-height: 1.8;
-}
-
-/* 職専免サンプル（適正書類、緑系） */
-.doc-mockup-stamp {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 52px; height: 52px; border-radius: 50%;
-  border: 3px solid #7a5a0a; color: #7a5a0a;
-  font-size: .72rem; font-weight: 900; letter-spacing: .04em;
-  text-align: center; line-height: 1.3;
-  float: right; margin: -4px 0 8px 16px;
-}
-
-/* =============================================
-   レスポンシブ
-   ============================================= */
-@media(max-width:860px){
-  .flow-diagram { gap: 8px; }
-  .flow-arrow { padding: 0 4px; }
-}
-@media(max-width:640px){
-  .flow-diagram { flex-direction: column; align-items: center; }
-  .flow-arrow { flex-direction: row; padding: 4px 0; }
-  .flow-arrow-line { transform: rotate(90deg); }
-  .anchor-link { padding: 12px 14px; font-size: .76rem; }
-}
-
-  </style>
+  <link rel="stylesheet" href="/css/site.css?v=20260719">
+  <link rel="stylesheet" href="/css/pages/reality.css?v=20260719">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
@@ -447,35 +36,10 @@
 </script>
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<link rel="stylesheet" href="/css/hover-orange.css?v=20260629-hero22-hero22">
+<link rel="stylesheet" href="/css/interactions.css?v=20260719">
 
-<style id="reality-editorial-20260710">
-.reality-editorial .reality-hero{text-align:left!important;background:linear-gradient(90deg,rgba(5,17,31,.82),rgba(5,17,31,.38)),url('assets/slides/1.jpg') center/cover!important}
-.reality-editorial .reality-hero-kicker{padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;animation:none!important;color:#f4e7a6!important}
-.reality-editorial .reality-hero-kicker::before{display:none!important}
-.reality-editorial .reality-hero-lead{margin-inline:0!important;max-width:820px!important}
-.reality-editorial .editorial-section,.reality-editorial .reality-section>.wrap,.reality-editorial .reality-summary>.wrap{width:min(calc(100% - 40px),920px)!important;margin-inline:auto!important}
-.reality-editorial .reality-intro{padding:58px 0!important;border-bottom:1px solid #dbe4ee!important}
-.reality-editorial .reality-section{padding:68px 0!important}
-.reality-editorial .section-badge,.reality-editorial .doc-mockup-label,.reality-editorial .law-box-label,.reality-editorial .incident-box-label,.reality-editorial .edu-quote-source{display:block!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;color:#6b7280!important;letter-spacing:.04em!important;text-transform:none!important}
-.reality-editorial .doc-mockup,.reality-editorial .problem-note,.reality-editorial .good-note,.reality-editorial .law-box,.reality-editorial .edu-quote,.reality-editorial .incident-box{border-radius:0!important;box-shadow:none!important}
-.reality-editorial .doc-mockup{background:#fff!important;border:1px solid #cfd8e2!important;border-left:5px solid #b78b2d!important}
-.reality-editorial .problem-notes{gap:0!important;border-top:1px solid #dbe4ee!important}
-.reality-editorial .problem-note,.reality-editorial .good-note{background:#fff!important;border:0!important;border-bottom:1px solid #dbe4ee!important;padding:15px 0!important;color:#26384b!important}
-.reality-editorial .problem-note-text,.reality-editorial .good-note-text{color:#26384b!important;font-weight:500!important}
-.reality-editorial .law-box,.reality-editorial .edu-quote,.reality-editorial .incident-box{background:#f6f8fa!important;color:#26384b!important;border:0!important;border-left:5px solid #1e3a5f!important;padding:22px 24px!important}
-.reality-editorial .law-box-content,.reality-editorial .edu-quote blockquote,.reality-editorial .incident-box-body{color:#26384b!important}
-.reality-editorial .edu-quote blockquote::before{display:none!important}
-.reality-editorial .flow-box{border-radius:0!important;box-shadow:none!important}
-.reality-editorial .flow-problem-note{border-radius:0!important;background:#f6f8fa!important;border-left:5px solid #b78b2d!important}
-.reality-editorial .timeline{padding-left:0!important;border-top:1px solid #dbe4ee!important}
-.reality-editorial .timeline::before,.reality-editorial .timeline-dot{display:none!important}
-.reality-editorial .timeline-item{padding:20px 0!important;border-bottom:1px solid #dbe4ee!important}
-.reality-editorial .reality-summary{padding:58px 0!important;background:#f5f7f9!important;border-top:1px solid #dbe4ee!important}
-.reality-editorial .reality-summary h2{font-family:'Noto Serif JP',serif;color:#0f2742;margin:0 0 14px}
-.reality-editorial .reality-summary p{line-height:2;margin:0;color:#334155}
-@media(max-width:640px){.reality-editorial .editorial-section,.reality-editorial .reality-section>.wrap,.reality-editorial .reality-summary>.wrap{width:min(calc(100% - 30px),920px)!important}}
-</style>
+
+<link rel="stylesheet" href="/css/inline-utilities.css?v=20260719">
 </head>
 <body class="reality-editorial">
 
@@ -628,7 +192,7 @@
         <p>○○小学校・中学校に入学されたお子様の保護者の皆様へ、</p>
         <p>本年度よりPTA会費（月額500円）を学校の口座引落にてお預かりします。</p>
         <p>なお、PTA活動へのご参加は全家庭を原則としております。</p>
-        <p style="margin-top:8px;">ご不明の点は学校事務室まで。</p>
+        <p class="u-a33b8fc2ff">ご不明の点は学校事務室まで。</p>
       </div>
     </div>
 
@@ -651,7 +215,7 @@
       </div>
     </div>
 
-    <div class="law-box" style="margin-top:28px;">
+    <div class="law-box u-8286115d2f">
       <div class="law-box-label">法的根拠</div>
       <div class="law-box-content">
         <strong>民法第521条・第522条</strong>：学校への入学、PTAからの一方的な通知、保護者の沈黙だけでは、本人の申込みとPTAの承諾を確認できません。恒常的な会員管理は、会則、会費、活動内容、退会方法を示し、申込みと承諾を客観的に記録します。<br><br>
@@ -662,7 +226,7 @@
     <div class="edu-quote">
       <div class="edu-quote-source">教育委員会公式回答</div>
       <blockquote>自治体回答から入会意思の確認方法を検証する</blockquote>
-      <p style="font-size:.82rem;color:rgba(255,255,255,.6);margin-top:8px;">自治体回答は、回答本文、質問文、担当部署、対象範囲、回答日を一式で確認し、各学校の入会案内、会則、申込記録と照合します。</p>
+      <p class="u-1548da92a1">自治体回答は、回答本文、質問文、担当部署、対象範囲、回答日を一式で確認し、各学校の入会案内、会則、申込記録と照合します。</p>
     </div>
   </div>
 </section>
@@ -683,25 +247,25 @@
       <span class="doc-mockup-label">再現例：学校徴収金とPTA会費が一体化した案内</span>
       <div class="doc-mockup-title">学校徴収金のご案内（○月分）</div>
       <div class="doc-mockup-body">
-        <table style="width:100%;border-collapse:collapse;font-family:'Noto Serif JP',serif;">
+        <table class="u-46c01013b7">
           <tr>
-            <td style="padding:4px 0;">① 給食費</td>
-            <td style="text-align:right;padding:4px 0;">4,500円</td>
+            <td class="u-f53e77edc6">① 給食費</td>
+            <td class="u-5e91f8b7cd">4,500円</td>
           </tr>
           <tr>
-            <td style="padding:4px 0;">② 学校教材費</td>
-            <td style="text-align:right;padding:4px 0;">800円</td>
+            <td class="u-f53e77edc6">② 学校教材費</td>
+            <td class="u-5e91f8b7cd">800円</td>
           </tr>
-          <tr style="color:#b91c1c;">
-            <td style="padding:4px 0;font-weight:900;">③ PTA会費（※）</td>
-            <td style="text-align:right;padding:4px 0;font-weight:900;">500円</td>
+          <tr class="u-af6d8893cc">
+            <td class="u-e1e6f4dd97">③ PTA会費（※）</td>
+            <td class="u-a0e95d6d4b">500円</td>
           </tr>
-          <tr style="border-top:2px solid #999;">
-            <td style="padding:6px 0;font-weight:900;">合計</td>
-            <td style="text-align:right;padding:6px 0;font-weight:900;">5,800円</td>
+          <tr class="u-752320f674">
+            <td class="u-cece883bdc">合計</td>
+            <td class="u-5beef52897">5,800円</td>
           </tr>
         </table>
-        <p style="margin-top:12px;font-size:.82rem;color:#666;">※PTAに加入されていない方も引落対象です</p>
+        <p class="u-649e224eed">※PTAに加入されていない方も引落対象です</p>
       </div>
     </div>
 
@@ -721,7 +285,7 @@
     </div>
 
     <!-- 資金フロー図 -->
-    <h3 style="font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:900;color:var(--navy);margin:28px 0 0;">絵でわかる：代行徴収の資金の流れ</h3>
+    <h3 class="u-70f355dd9e">絵でわかる：代行徴収の資金の流れ</h3>
     <div class="flow-diagram">
       <div class="flow-box parent">
         <div class="flow-box-label">保護者</div>
@@ -748,10 +312,10 @@
       この再現例では、加入者と非加入者の区分、会費債務、口座情報の利用、学校側の校務・決裁、PTA会計への送金が一つの手続に重なっています。学校が関与する場合は、それぞれの根拠と記録を分けて確認します。
     </div>
 
-    <div class="edu-quote" style="margin-top:24px;">
+    <div class="edu-quote u-04bbec5e3d">
       <div class="edu-quote-source">教育委員会公式回答</div>
       <blockquote>自治体回答から徴収主体と学校関与の根拠を確認する</blockquote>
-      <p style="font-size:.82rem;color:rgba(255,255,255,.6);margin-top:8px;">自治体回答は、質問内容、回答文言、対象校、制度の根拠文書を確認し、特定の回答だけから全国一律の結論を導かないようにします。</p>
+      <p class="u-1548da92a1">自治体回答は、質問内容、回答文言、対象校、制度の根拠文書を確認し、特定の回答だけから全国一律の結論を導かないようにします。</p>
     </div>
   </div>
 </section>
@@ -803,7 +367,7 @@
       <div class="incident-box-body">報道や断片的な説明を引用するときは、対象校数、対象人数、情報項目、利用又は提供の主体、時期、本人説明、教育委員会の調査結果、再発防止措置を原資料で確認します。確認できない具体的数値や評価は掲載しません。</div>
     </div>
 
-    <div class="law-box" style="margin-top:24px;">
+    <div class="law-box u-04bbec5e3d">
       <div class="law-box-label">法的根拠</div>
       <div class="law-box-content">
         <strong>個人情報保護法第61条・第69条</strong>：まず、学校の所掌事務・業務と保有の必要性、特定された利用目的の範囲を確認します。利用目的内で第69条第1項により扱えるのか、目的外であれば第2項のどの例外を根拠とするのかを確認し、学校自身による利用とPTAへの提供を別々に整理します。
@@ -824,28 +388,28 @@
     </p>
 
     <div class="doc-mockup doc-mockup-ok">
-      <span class="doc-mockup-label" style="background:#dcfce7;color:#15803d;">確認資料の例：職務専念義務免除申請書</span>
+      <span class="doc-mockup-label u-6b827c6351">確認資料の例：職務専念義務免除申請書</span>
       <div class="doc-mockup-stamp">承認<br>印</div>
       <div class="doc-mockup-title">職務専念義務免除申請書（適正な場合）</div>
       <div class="doc-mockup-body">
-        <table style="width:100%;border-collapse:collapse;font-size:.88rem;font-family:'Noto Serif JP',serif;">
-          <tr><td style="padding:3px 0;width:130px;">申請者氏名</td><td>○○ ○○</td></tr>
-          <tr><td style="padding:3px 0;">所属</td><td>○○小学校</td></tr>
-          <tr><td style="padding:3px 0;">PTA活動の名称</td><td>PTA総会準備・運営</td></tr>
-          <tr><td style="padding:3px 0;">申請日時</td><td>令和○年○月○日（○）○時〜○時</td></tr>
-          <tr><td style="padding:3px 0;">承認</td><td>校長 ○○ ○○ 印</td></tr>
+        <table class="u-3601ecdf6a">
+          <tr><td class="u-6834d0c612">申請者氏名</td><td>○○ ○○</td></tr>
+          <tr><td class="u-ba4cc2a2c4">所属</td><td>○○小学校</td></tr>
+          <tr><td class="u-ba4cc2a2c4">PTA活動の名称</td><td>PTA総会準備・運営</td></tr>
+          <tr><td class="u-ba4cc2a2c4">申請日時</td><td>令和○年○月○日（○）○時〜○時</td></tr>
+          <tr><td class="u-ba4cc2a2c4">承認</td><td>校長 ○○ ○○ 印</td></tr>
         </table>
       </div>
     </div>
 
-    <div class="good-note" style="margin-top:16px;">
+    <div class="good-note u-76977cc9f2">
       <span class="good-note-arrow">→</span>
       <span class="good-note-text">職専免を根拠とする場合は、適用規則、対象者、日時、用務、承認者を確認します。校務として処理している場合は、校務分掌、職務命令、決裁、費用負担を別に確認します。</span>
     </div>
 
-    <div style="background:#fff;border:2px solid #fecaca;border-radius:12px;padding:24px;margin-top:28px;">
-      <h3 style="font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:900;color:#7f1d1d;margin-bottom:12px;">確認が必要な運用</h3>
-      <div class="problem-notes" style="margin-top:0;">
+    <div class="u-72b1a18fab">
+      <h3 class="u-0cdb967861">確認が必要な運用</h3>
+      <div class="problem-notes u-1294519fc5">
         <div class="problem-note">
           <span class="problem-note-arrow">→</span>
           <span class="problem-note-text">PTA書類の作成・連絡業務が行われている場合、作業内容、時間、校務としての位置付け、職務命令又は職専免等の根拠を確認する。</span>
@@ -861,7 +425,7 @@
       </div>
     </div>
 
-    <div class="law-box" style="margin-top:24px;">
+    <div class="law-box u-04bbec5e3d">
       <div class="law-box-label">法的根拠</div>
       <div class="law-box-content">
         <strong>地方公務員法第35条（職務に専念する義務）</strong>：職員は、法律または条例に特別の定がある場合を除く外、その勤務時間及び職務上の注意力のすべてをその職責遂行のために用い、当該地方公共団体がなすべき責を有する職務にのみ従事しなければならない。<br><br>
@@ -869,7 +433,7 @@
       </div>
     </div>
 
-    <div class="incident-box" style="margin-top:24px;">
+    <div class="incident-box u-04bbec5e3d">
       <div class="incident-box-label">外部監査による指摘事例</div>
       <div class="incident-box-title">包括外部監査で確認された服務管理上の論点</div>
       <div class="incident-box-body">

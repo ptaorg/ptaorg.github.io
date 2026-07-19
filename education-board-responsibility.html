@@ -20,111 +20,9 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="/css/style.css?v=20260705-fixed-header-all-pages" rel="stylesheet"/>
-<link href="/css/refine.css?v=hover-orange-20260629ccccc" rel="stylesheet"/>
-<style>
-    .law-wrap{width:min(calc(100% - 40px),1100px);margin-inline:auto;padding:56px 0 96px}
-
-    /* 法令カード群 */
-    .law-cards{display:flex;flex-direction:column;gap:0;margin-top:40px}
-    .lc{
-      border-radius:0;border-bottom:1px solid var(--line);
-      overflow:hidden;background:#fff;
-      transition:box-shadow .3s ease;
-    }
-    .lc:first-child{border-radius:var(--radius) var(--radius) 0 0;border-top:1px solid var(--line)}
-    .lc:last-child{border-radius:0 0 var(--radius) var(--radius)}
-    .lc-header{
-      display:grid;grid-template-columns:56px 1fr auto;
-      align-items:center;gap:0;
-      cursor:pointer;user-select:none;
-      padding:0;transition:background .2s ease;
-    }
-    .lc-header:hover{background:#f8fafc}
-    .lc-num{
-      display:flex;align-items:center;justify-content:center;
-      height:72px;
-      font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:900;
-      color:var(--navy);border-right:3px solid transparent;
-      transition:border-color .2s;
-    }
-    .lc.is-open .lc-num{border-color:var(--gold)}
-    .lc-meta{padding:16px 20px}
-    .lc-kicker{font-size:.72rem;font-weight:900;letter-spacing:.08em;color:var(--text-soft);text-transform:uppercase;margin-bottom:3px}
-    .lc-title{font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:900;color:var(--navy)}
-    .lc-lead{font-size:.85rem;color:var(--text-soft);line-height:1.55;margin-top:3px}
-    .lc-toggle{padding:0 22px;color:var(--text-soft);font-size:.8rem;transition:transform .3s ease}
-    .lc.is-open .lc-toggle{transform:rotate(180deg)}
-    .lc-body{
-      max-height:0;overflow:hidden;
-      transition:max-height .45s cubic-bezier(.4,0,.2,1);
-      border-top:0 solid var(--line);
-    }
-    .lc.is-open .lc-body{max-height:1200px;border-top-width:1px}
-    .lc-inner{padding:28px 28px 32px 76px}
-    .lc-inner .law-quote{margin:0 0 18px}
-    .lc-inner p{font-size:.95rem;color:var(--text);line-height:1.9;margin-bottom:14px}
-    .lc-inner h4{font-size:.95rem;font-weight:800;color:var(--navy);margin:20px 0 8px;padding-left:10px;border-left:3px solid var(--gold)}
-    .egov-link{
-      display:inline-flex;align-items:center;gap:5px;
-      padding:7px 14px;border-radius:8px;
-      background:#eff6ff;color:#1d4ed8;
-      font-size:.8rem;font-weight:800;
-      text-decoration:none;border:1px solid #bfdbfe;
-      transition:var(--t);
-    }
-    .egov-link:hover{background:#dbeafe}
-
-    /* 5論点マトリクス */
-    .matrix{
-      display:grid;
-      grid-template-columns:repeat(5,1fr);
-      gap:12px;margin-top:40px;
-    }
-    .mx-col{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm)}
-    .mx-head{
-      padding:14px 12px;text-align:center;
-      font-size:.78rem;font-weight:900;color:#fff;
-    }
-    .mx-body{background:#fff;border:1px solid var(--line);border-top:none;padding:12px}
-    .mx-law{
-      display:block;font-size:.75rem;color:var(--navy);
-      padding:5px 8px;border-radius:7px;margin-bottom:5px;
-      background:rgba(5,17,31,.05);font-weight:700;
-      line-height:1.4;
-    }
-    .mx-col:nth-child(1) .mx-head{background:#1d4ed8}
-    .mx-col:nth-child(2) .mx-head{background:#0e7490}
-    .mx-col:nth-child(3) .mx-head{background:#b45309}
-    .mx-col:nth-child(4) .mx-head{background:#7c3aed}
-    .mx-col:nth-child(5) .mx-head{background:#0f766e}
-
-    @media(max-width:900px){.matrix{grid-template-columns:repeat(3,1fr)}}
-    @media(max-width:600px){.matrix{grid-template-columns:1fr 1fr}.lc-inner{padding:20px 16px}.lc-num{font-size:.85rem}}
-
-    .page-hero{position:relative;overflow:hidden;}
-    .page-hero-bg-img{
-      position:absolute;inset:0;z-index:0;
-    }
-    .page-hero-bg-img img{
-      width:100%;height:100%;object-fit:cover;
-      filter:brightness(1.05);
-    }
-    .page-hero-bg-img::after{
-      content:'';position:absolute;inset:0;
-      background:linear-gradient(160deg,rgba(5,17,31,.32) 0%,rgba(5,17,31,.14) 60%,rgba(5,17,31,.05) 100%);
-    }
-    .page-hero-inner{position:relative;z-index:1;}
-  
-    /* ↓ Photo hero overrides — keep white text on photo background ↓ */
-    .page-hero{background:transparent!important;border-top:none!important;border-bottom:none!important}
-    .page-hero h1{color:#fff!important}
-    .page-hero h1 em{color:var(--gold-lt)!important}
-    .page-hero p{color:rgba(255,255,255,.88)!important}
-    .page-hero-kicker{background:rgba(212,175,55,.18)!important;border:1px solid rgba(212,175,55,.4)!important;color:var(--gold-lt)!important}
-    .hero-actions .btn-outline{color:#fff!important;border-color:rgba(255,255,255,.5)!important}
-    .hero-actions .btn-outline:hover{background:rgba(255,255,255,.12)!important;border-color:rgba(255,255,255,.8)!important}
-  </style>
+<link href="/css/site.css?v=20260719" rel="stylesheet"/>
+<link href="/css/editorial.css?v=20260719" rel="stylesheet"/>
+<link rel="stylesheet" href="/css/pages/education-board-responsibility--1.css?v=20260719">
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
 <script>
@@ -135,22 +33,7 @@
   gtag('config', 'G-0D18ZSSLMH');
 </script>
 
-<style id="stage31-breadcrumb-and-unbox">
-  .breadcrumb-bar{background:#fff;border-bottom:1px solid #d8dee8;}
-  .breadcrumb-inner{max-width:1120px;margin:0 auto;padding:11px 24px;font-size:.92rem;line-height:1.6;color:#475569;display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
-  .breadcrumb-inner a{color:#06c;text-decoration:none;}
-  .breadcrumb-inner a:hover{text-decoration:underline;}
-  .breadcrumb-inner .current{color:#334155;}
-  .document-breadcrumb{max-width:1120px;margin:0 auto 18px;padding:11px 0;font-size:.92rem;color:#475569;display:flex;gap:8px;align-items:center;flex-wrap:wrap;border-bottom:1px solid #d8dee8;}
-  .document-breadcrumb a{color:#06c;text-decoration:none;}
-  .document-breadcrumb a:hover{text-decoration:underline;}
-  .plain-prose-block{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important;}
-  .unboxed-panel{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important;}
-
-  .editorial-panel:not(.ed-resource-panel),
-  .documents-note.editorial-panel{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important;}
-  .ed-resource-panel{box-shadow:none!important;border-radius:0!important;}
-</style>
+<link rel="stylesheet" href="/css/shared/shared-7e0cca275a65.css?v=20260719">
 <meta property="og:image" content="https://ptaorg.com/assets/og-image-popc-en.png" />
 <meta property="og:image:secure_url" content="https://ptaorg.com/assets/og-image-popc-en.png" />
 <meta name="twitter:image" content="https://ptaorg.com/assets/og-image-popc-en.png" />
@@ -172,31 +55,13 @@
 
 
 
-<link rel="stylesheet" href="/css/hover-orange.css?v=20260629-hero22-hero22">
+<link rel="stylesheet" href="/css/interactions.css?v=20260719">
 
 
 
 
 
-<style id="final-hero-layout-fix">
-html,body{overflow-x:hidden!important}
-.support-strip{background:linear-gradient(90deg,#0a192f 0%,#1e3a5f 58%,#2d5a8e 100%)!important;color:#fff!important;border-bottom:1px solid rgba(212,175,55,.42)!important}
-.support-strip-inner,.support-strip-text{color:#fff!important}
-.site-header{background:linear-gradient(90deg,#0a192f 0%,#1e3a5f 58%,#2d5a8e 100%)!important;border-bottom:3px solid #d4af37!important}
-.site-header .nav-container{background:transparent!important}
-.site-header .logo,.site-header .logo span,.site-header .nav-link{color:#fff!important}
-.site-header .hamburger span{background:#fff!important}
-.breadcrumb-bar{display:none!important}
-.page-hero--photo{display:block!important;position:relative!important;width:100%!important;max-width:none!important;min-height:340px!important;margin:0!important;padding:0!important;overflow:hidden!important;background:#0a192f!important;border:0!important;color:#fff!important}
-.page-hero--photo .page-hero-bg-img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:0!important}
-.page-hero--photo .page-hero-bg-img img{display:block!important;width:100%!important;height:100%!important;min-height:340px!important;object-fit:cover!important}
-.page-hero--photo .page-hero-bg-img::after{content:""!important;position:absolute!important;inset:0!important;background:linear-gradient(90deg,rgba(5,17,31,.78) 0%,rgba(5,17,31,.52) 48%,rgba(5,17,31,.18) 100%)!important}
-.page-hero--photo> :not(.page-hero-bg-img){position:relative!important;z-index:1!important;width:min(calc(100% - 40px),1080px)!important;max-width:1080px!important;margin-left:auto!important;margin-right:auto!important;padding-top:68px!important;padding-bottom:74px!important;color:#fff!important}
-.page-hero--photo .page-hero-inner,.page-hero--photo .issue-hero-inner,.page-hero--photo .journal-hero-inner{position:relative!important;z-index:1!important;width:min(calc(100% - 40px),1080px)!important;max-width:1080px!important;margin-left:auto!important;margin-right:auto!important;padding-top:68px!important;padding-bottom:74px!important;color:#fff!important}
-.page-hero--photo h1,.page-hero--photo p,.page-hero--photo .section-lead{color:#fff!important;text-shadow:0 2px 12px rgba(0,0,0,.34)!important}
-.page-hero--photo h1 em{color:#f4e7a6!important}
-@media(max-width:760px){.page-hero--photo{min-height:300px!important}.page-hero--photo .page-hero-bg-img img{min-height:300px!important}.page-hero--photo> :not(.page-hero-bg-img),.page-hero--photo .page-hero-inner,.page-hero--photo .issue-hero-inner,.page-hero--photo .journal-hero-inner{width:min(calc(100% - 28px),1080px)!important;padding-top:44px!important;padding-bottom:52px!important}}
-</style>
+<link rel="stylesheet" href="/css/shared/editorial-page-common.css?v=20260719">
 </head>
 <body class="thesis-page">
 <div aria-label="活動支援のお願い" class="support-strip" role="complementary">

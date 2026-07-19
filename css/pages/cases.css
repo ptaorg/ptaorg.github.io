@@ -1,0 +1,61 @@
+@layer page {
+  /* Page-specific styles for cases.html */
+  .cases-editorial .report-layout-section {
+    display: block;
+    width: min(calc(100% - 40px), 920px);
+    margin-inline: auto;
+  }
+  .cases-editorial .report-toc {
+    display: none;
+  }
+  .cases-editorial .report-content-wrap {
+    width: 100%;
+    max-width: none;
+  }
+  .cases-editorial .pta-report-container {
+    max-width: none;
+  }
+  .cases-editorial .editorial-panel,
+  .cases-editorial .claim-evidence-box,
+  .cases-editorial .case-card,
+  .cases-editorial .report-related-links {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .cases-editorial .case-card {
+    margin: 0;
+    padding: 34px 0;
+    background: #fff;
+    border: 0;
+    border-top: 1px solid #cfd8e2;
+  }
+  .cases-editorial .case-card:last-child {
+    border-bottom: 1px solid #cfd8e2;
+  }
+  .cases-editorial .case-badge {
+    display: none;
+  }
+  .cases-editorial .case-card-grid {
+    display: block;
+  }
+  .cases-editorial .case-card-grid > div {
+    padding: 15px 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .cases-editorial .case-card-grid > div:last-child {
+    border-bottom: 0;
+  }
+  .cases-editorial .page-banner-kicker {
+    text-transform: none;
+    letter-spacing: 0.04em;
+  }
+  .cases-editorial main a:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  @media (max-width: 720px) {
+    .cases-editorial .report-layout-section {
+      width: min(calc(100% - 30px), 920px);
+    }
+  }
+}

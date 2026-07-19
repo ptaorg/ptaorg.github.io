@@ -1,0 +1,503 @@
+@layer page {
+  /* Consolidated page styles for guideline.html */
+  /* Page-specific styles for guideline.html */
+  /* ===== ガイドライン共通 ===== */
+  .gl-wrap {
+    width: min(calc(100% - 40px), 960px);
+    margin-inline: auto;
+    padding: 72px 0 80px;
+  }
+
+  /* ===== 問題パターンカード ===== */
+  .gl-problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-top: 36px;
+  }
+  .gl-problem-card {
+    background: #fff5f5;
+    border: 1px solid #fca5a5;
+    border-left: 4px solid #b91c1c;
+    border-radius: var(--radius);
+    padding: 20px 18px;
+  }
+  .gl-problem-icon {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  .gl-problem-title {
+    font-size: 0.95rem;
+    font-weight: 900;
+    color: #b91c1c;
+    margin-bottom: 8px;
+  }
+  .gl-problem-desc {
+    font-size: 0.86rem;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* ===== 基本原則カード ===== */
+  .gl-principle-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+    margin-top: 36px;
+  }
+  .gl-principle-card {
+    background: linear-gradient(145deg, var(--navy) 0%, #1a3a52 100%);
+    border-radius: var(--radius);
+    padding: 28px 22px;
+    color: #fff;
+  }
+  .gl-principle-num {
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .gl-principle-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .gl-principle-title {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.05rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .gl-principle-desc {
+    font-size: 0.87rem;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.8;
+  }
+  .gl-principle-law {
+    margin-top: 12px;
+    font-size: 0.76rem;
+    color: var(--gold-lt, #fcd34d);
+    font-weight: 700;
+  }
+
+  /* ===== 実務整理 ===== */
+  .gl-tab-nav {
+    display: none;
+  }
+  .gl-tab-btn {
+    padding: 10px 18px;
+    font-size: 0.87rem;
+    font-weight: 800;
+    color: var(--text-soft);
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    cursor: pointer;
+    transition:
+      color 0.2s,
+      border-color 0.2s;
+    border-radius: 0;
+    white-space: nowrap;
+  }
+  .gl-tab-btn:hover {
+    color: var(--navy);
+  }
+  .gl-tab-btn.active {
+    color: var(--navy);
+    border-bottom-color: var(--gold);
+  }
+  .gl-tab-panel {
+    display: block;
+    margin-top: 26px;
+  }
+  .gl-tab-panel + .gl-tab-panel {
+    border-top: 1px solid var(--line);
+    padding-top: 30px;
+  }
+  .gl-panel-heading {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.18rem;
+    font-weight: 900;
+    color: var(--navy);
+    line-height: 1.5;
+    margin: 0 0 18px;
+    padding-left: 14px;
+    border-left: 4px solid var(--gold);
+  }
+
+  /* ===== 実務ガイドライン内カード ===== */
+  .gl-box {
+    background: #f8fafc;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+    margin-bottom: 20px;
+  }
+  .gl-box h4 {
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .gl-box p,
+  .gl-box li {
+    font-size: 0.92rem;
+    color: var(--text);
+    line-height: 1.8;
+  }
+  .gl-box ul,
+  .gl-box ol {
+    padding-left: 18px;
+    margin: 8px 0;
+  }
+  .gl-ok {
+    color: #15803d;
+    font-weight: 900;
+  }
+  .gl-ng {
+    color: #b91c1c;
+    font-weight: 900;
+  }
+  .gl-law-cite {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    background: rgba(26, 58, 82, 0.08);
+    color: var(--navy);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .gl-notice {
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    margin-top: 16px;
+    font-size: 0.88rem;
+    color: var(--navy);
+    line-height: 1.7;
+  }
+  .gl-ng-box {
+    background: #fff5f5;
+    border: 1px solid #fca5a5;
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    margin-top: 12px;
+    font-size: 0.88rem;
+    color: #7f1d1d;
+    line-height: 1.7;
+  }
+
+  /* ===== 要請リスト ===== */
+  .gl-request-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .gl-request-item {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+  }
+  .gl-request-num {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--gold);
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+    font-weight: 900;
+  }
+  .gl-request-body h4 {
+    font-size: 0.97rem;
+    font-weight: 900;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .gl-request-body p {
+    font-size: 0.88rem;
+    color: var(--text);
+    line-height: 1.75;
+    margin: 0;
+  }
+
+  /* ===== テンプレートアコーディオン ===== */
+  .gl-tpl-item {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .gl-tpl-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 22px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--navy);
+    text-align: left;
+    gap: 12px;
+  }
+  .gl-tpl-btn:hover {
+    background: var(--bg);
+  }
+  .gl-tpl-chevron {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    transition: transform 0.25s;
+    fill: none;
+    stroke: var(--text-soft);
+    stroke-width: 2;
+  }
+  .gl-tpl-item.open .gl-tpl-chevron {
+    transform: rotate(180deg);
+  }
+  .gl-tpl-body {
+    display: none;
+    padding: 0 22px 22px;
+  }
+  .gl-tpl-item.open .gl-tpl-body {
+    display: block;
+  }
+  .gl-tpl-pre {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 18px 20px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: var(--text);
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin-bottom: 10px;
+  }
+  .gl-copy-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 16px;
+    border-radius: 999px;
+    border: 1.5px solid var(--navy);
+    background: transparent;
+    color: var(--navy);
+    font-size: 0.82rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition:
+      background 0.2s,
+      color 0.2s;
+  }
+  .gl-copy-btn:hover {
+    background: var(--navy);
+    color: #fff;
+  }
+  .gl-copy-btn.copied {
+    background: #15803d;
+    border-color: #15803d;
+    color: #fff;
+  }
+  .gl-pack-lead {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--navy);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 20px 24px;
+    margin-top: 26px;
+    color: var(--text);
+    line-height: 1.9;
+    font-size: 0.95rem;
+  }
+  .gl-pack-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .gl-pack-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--gold);
+    border-radius: 10px;
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .gl-pack-card h3 {
+    margin: 0;
+    color: var(--navy);
+    font-size: 1.04rem;
+    line-height: 1.5;
+  }
+  .gl-pack-card p {
+    margin: 0;
+    color: var(--text);
+    font-size: 0.91rem;
+    line-height: 1.85;
+  }
+  .gl-pack-basis {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .gl-pack-basis li {
+    background: #f8fafc;
+    border: 1px solid #dbe4ee;
+    border-radius: 999px;
+    color: #334155;
+    font-size: 0.76rem;
+    font-weight: 800;
+    padding: 5px 9px;
+  }
+  .gl-pack-action {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+  }
+  .gl-pack-action a {
+    display: inline-flex;
+    align-items: center;
+    border: 1.5px solid var(--navy);
+    color: var(--navy);
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 7px 12px;
+    font-size: 0.8rem;
+    font-weight: 900;
+  }
+  .gl-pack-action a:hover {
+    background: var(--navy);
+    color: #fff;
+  }
+
+  @media (max-width: 800px) {
+    .gl-problem-grid {
+      grid-template-columns: 1fr;
+    }
+    .gl-principle-grid {
+      grid-template-columns: 1fr;
+    }
+    .gl-pack-grid {
+      grid-template-columns: 1fr;
+    }
+    .gl-panel-heading {
+      font-size: 1.08rem;
+    }
+  }
+
+  /* Page-specific styles for guideline.html */
+  body.guideline-editorial main > .wrap:first-child {
+    display: none;
+  }
+  body.guideline-editorial .section-kicker {
+    display: none;
+  }
+  body.guideline-editorial .gl-wrap,
+  body.guideline-editorial main > section > .wrap {
+    width: min(calc(100% - 40px), 920px);
+    max-width: 920px;
+  }
+  body.guideline-editorial .gl-problem-grid,
+  body.guideline-editorial .gl-principle-grid,
+  body.guideline-editorial .gl-pack-grid {
+    display: block;
+  }
+  body.guideline-editorial .gl-problem-card,
+  body.guideline-editorial .gl-principle-card,
+  body.guideline-editorial .gl-box,
+  body.guideline-editorial .gl-ng-box,
+  body.guideline-editorial .gl-notice,
+  body.guideline-editorial .gl-request-item,
+  body.guideline-editorial .gl-pack-card {
+    margin: 0;
+    padding: 22px 0;
+    background: #fff;
+    color: #26384e;
+    border: 0;
+    border-top: 1px solid #dbe4ee;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  body.guideline-editorial .gl-problem-card:last-child,
+  body.guideline-editorial .gl-principle-card:last-child,
+  body.guideline-editorial .gl-box:last-child,
+  body.guideline-editorial .gl-pack-card:last-child {
+    border-bottom: 1px solid #dbe4ee;
+  }
+  body.guideline-editorial .gl-problem-icon,
+  body.guideline-editorial .gl-principle-icon {
+    display: none;
+  }
+  body.guideline-editorial .gl-problem-title,
+  body.guideline-editorial .gl-principle-title,
+  body.guideline-editorial .gl-principle-desc,
+  body.guideline-editorial .gl-principle-law {
+    color: #17345c;
+  }
+  body.guideline-editorial .gl-principle-num {
+    color: #7a5a12;
+    text-transform: none;
+    letter-spacing: 0.03em;
+  }
+  body.guideline-editorial .gl-panel-heading {
+    padding-left: 0;
+    padding-bottom: 10px;
+    border-left: 0;
+    border-bottom: 2px solid #17345c;
+  }
+  body.guideline-editorial .gl-law-cite,
+  body.guideline-editorial .gl-pack-basis li,
+  body.guideline-editorial .gl-copy-btn,
+  body.guideline-editorial .gl-pack-action a {
+    border-radius: 3px;
+  }
+  body.guideline-editorial .gl-tpl-item,
+  body.guideline-editorial .gl-tpl-pre {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  body.guideline-editorial .gl-policy-note {
+    border-top: 3px solid #c6a34b;
+    border-bottom: 1px solid #c6a34b;
+    padding: 24px 0;
+  }
+  body.guideline-editorial main a:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  @media (max-width: 700px) {
+    body.guideline-editorial .gl-wrap,
+    body.guideline-editorial main > section > .wrap {
+      width: min(calc(100% - 30px), 920px);
+    }
+  }
+}

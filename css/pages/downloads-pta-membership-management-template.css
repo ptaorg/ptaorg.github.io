@@ -1,0 +1,53 @@
+@layer page {
+  /* Page-specific styles for downloads/pta-membership-management-template.html */
+  body {
+    background: #f7f3e8;
+    color: #0f2747;
+    font-family: "Noto Sans JP", system-ui, sans-serif;
+    line-height: 1.8;
+  }
+  .download-wrap {
+    width: min(calc(100% - 40px), 860px);
+    margin: 72px auto;
+    background: #fff;
+    border: 1px solid rgba(15, 39, 71, 0.14);
+    border-left: 8px solid #2f6f73;
+    border-radius: 22px;
+    box-shadow: 0 16px 42px rgba(5, 17, 31, 0.1);
+    padding: 32px;
+  }
+  h1 {
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(1.4rem, 2.8vw, 2rem);
+    line-height: 1.45;
+    margin: 0 0 12px;
+    color: #0f2747;
+  }
+  p {
+    color: #475569;
+    margin: 0 0 16px;
+  }
+  .status {
+    background: #f8fafc;
+    border: 1px solid #dbe4ee;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 18px 0;
+    color: #334155;
+    font-weight: 700;
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .actions a {
+    text-decoration: none;
+  }
+  .small-note {
+    font-size: 0.88rem;
+    color: #64748b;
+    margin-top: 14px;
+  }
+}

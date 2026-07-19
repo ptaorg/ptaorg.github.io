@@ -1,0 +1,240 @@
+@layer page {
+  /* Consolidated page styles for personnel.html */
+  /* Page-specific styles for personnel.html */
+  .pg-main {
+    width: min(calc(100% - 40px), 900px);
+    margin-inline: auto;
+    padding: 56px 0 96px;
+  }
+  .pg-section {
+    margin-bottom: 64px;
+  }
+  .pg-section h2 {
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    color: var(--navy);
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--gold);
+  }
+  .pg-section h3 {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin: 28px 0 10px;
+    padding-left: 12px;
+    border-left: 4px solid var(--gold);
+  }
+  .pg-section p {
+    color: var(--text);
+    line-height: 1.9;
+    margin-bottom: 14px;
+    font-size: 0.97rem;
+  }
+
+  .scope-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin: 20px 0;
+  }
+  .scope-ok {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: var(--radius);
+    padding: 22px;
+  }
+  .scope-ng {
+    background: #fff5f5;
+    border: 1px solid #fecaca;
+    border-radius: var(--radius);
+    padding: 22px;
+  }
+  .scope-label {
+    font-size: 0.74rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .scope-ok .scope-label {
+    color: #15803d;
+  }
+  .scope-ng .scope-label {
+    color: #b91c1c;
+  }
+  .scope-item {
+    display: flex;
+    gap: 9px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .ok-dot {
+    color: #15803d;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+  .ng-dot {
+    color: #b91c1c;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 700px) {
+    .scope-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .page-hero {
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero-bg-img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .page-hero-bg-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1.05);
+  }
+  .page-hero-bg-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      160deg,
+      rgba(5, 17, 31, 0.32) 0%,
+      rgba(5, 17, 31, 0.14) 60%,
+      rgba(5, 17, 31, 0.05) 100%
+    );
+  }
+  .page-hero-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ↓ Photo hero overrides — keep white text on photo background ↓ */
+  .page-hero {
+    background: transparent;
+    border-top: none;
+    border-bottom: none;
+  }
+  .page-hero h1 {
+    color: #fff;
+  }
+  .page-hero h1 em {
+    color: var(--gold-lt);
+  }
+  .page-hero p {
+    color: rgba(255, 255, 255, 0.88);
+  }
+  .page-hero-kicker {
+    background: rgba(212, 175, 55, 0.18);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: var(--gold-lt);
+  }
+  .hero-actions .btn-outline {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  .hero-actions .btn-outline:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* Page-specific styles for personnel.html */
+  body.personnel-editorial .page-banner,
+  body.personnel-editorial .hero-actions {
+    display: none;
+  }
+  body.personnel-editorial .page-hero-kicker,
+  body.personnel-editorial .section-kicker,
+  body.personnel-editorial .scope-label {
+    text-transform: none;
+    letter-spacing: 0.03em;
+    border-radius: 3px;
+  }
+  body.personnel-editorial .pg-main {
+    width: min(calc(100% - 40px), 920px);
+    padding: 68px 0 96px;
+  }
+  body.personnel-editorial .pg-section,
+  body.personnel-editorial .editorial-panel,
+  body.personnel-editorial .editorial-brief {
+    margin: 0;
+    padding: 40px 0 46px;
+    background: #fff;
+    border: 0;
+    border-top: 1px solid #cfd8e2;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  body.personnel-editorial .editorial-brief-grid,
+  body.personnel-editorial .scope-grid {
+    display: block;
+  }
+  body.personnel-editorial .editorial-brief-point,
+  body.personnel-editorial .scope-ok,
+  body.personnel-editorial .scope-ng {
+    margin: 0;
+    padding: 20px 0;
+    background: #fff;
+    border: 0;
+    border-top: 1px solid #dbe4ee;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  body.personnel-editorial .scope-grid > div:last-child,
+  body.personnel-editorial .editorial-brief-point:last-child {
+    border-bottom: 1px solid #dbe4ee;
+  }
+  body.personnel-editorial .scope-label {
+    color: #17345c;
+  }
+  body.personnel-editorial .ok-dot,
+  body.personnel-editorial .ng-dot {
+    color: #64748b;
+  }
+  body.personnel-editorial .alert,
+  body.personnel-editorial .law-quote,
+  body.personnel-editorial .ed-resource-list > div {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  body.personnel-editorial main a:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  @media (max-width: 700px) {
+    body.personnel-editorial .pg-main {
+      width: min(calc(100% - 30px), 920px);
+    }
+  }
+
+  /* Page-specific styles for personnel.html */
+  body.personnel-editorial .faq-list {
+    gap: 0;
+    border-top: 1px solid #cfd8e2;
+  }
+  body.personnel-editorial .faq-item {
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid #cfd8e2;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  body.personnel-editorial .faq-q {
+    padding: 20px 0;
+  }
+  body.personnel-editorial .faq-a {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

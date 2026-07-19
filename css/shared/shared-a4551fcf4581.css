@@ -1,0 +1,60 @@
+@layer page {
+  /* Shared by 3 pages. Extracted from duplicated inline CSS. */
+  .page-banner {
+    display: none;
+  }
+  .pg {
+    max-width: 920px;
+  }
+  .pg .section-kicker {
+    display: none;
+  }
+  .pg .safes,
+  .pg .source-lens-grid {
+    display: block;
+  }
+  .pg .safe-box,
+  .pg .wall,
+  .pg .alert,
+  .pg .source-lens-item,
+  .pg .faq-item {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .pg .safe-box,
+  .pg .source-lens-item {
+    padding: 22px 0;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    background: #fff;
+  }
+  .pg .wall {
+    padding: 20px 0;
+    background: #fff;
+    border: 0;
+    border-top: 2px solid var(--navy);
+    border-bottom: 1px solid var(--line);
+  }
+  .pg .wall-label,
+  .pg .badge {
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    border-radius: 0;
+  }
+  .pg .faq-list {
+    gap: 0;
+    border-top: 1px solid var(--line);
+  }
+  .pg .faq-item {
+    border: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .pg .faq-q {
+    padding: 18px 0;
+  }
+  .pg .faq-a {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

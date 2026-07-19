@@ -1,0 +1,516 @@
+@layer page {
+  /* Consolidated page styles for board-responses.html */
+  /* Page-specific styles for board-responses.html */
+  .compact-hero-section {
+    background: linear-gradient(135deg, #061a33 0%, #092646 58%, #0f345a 100%);
+    color: #fff;
+    padding: 44px 0 38px;
+    text-align: center;
+    border-bottom: 5px solid var(--gold);
+  }
+  .compact-hero-section .hero-kicker {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(212, 175, 55, 0.13);
+    padding: 4px 16px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+  }
+  .compact-hero-section h1 {
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(1.55rem, 3vw, 2.25rem);
+    font-weight: 900;
+    line-height: 1.35;
+    margin: 0;
+    color: #fff;
+  }
+  .response-trends-section {
+    background: #fff;
+    padding: 52px 0 44px;
+    border-bottom: 1px solid var(--line);
+  }
+  .response-trends-section .reading-body {
+    max-width: 960px;
+  }
+  .reading-body p {
+    font-size: 0.96rem;
+    line-height: 2.05;
+    color: #273449;
+    margin: 0 0 1.05em;
+  }
+  .reading-body h2,
+  .trend-group h3 {
+    font-family: "Noto Serif JP", serif;
+    color: var(--navy);
+  }
+  .reading-body h2 {
+    font-size: 1.55rem;
+    line-height: 1.45;
+    margin: 0 0 18px;
+  }
+  .trend-group {
+    margin-top: 26px;
+    padding-top: 18px;
+    border-top: 1px solid #dbe4ee;
+  }
+  .trend-group h3 {
+    font-size: 1.12rem;
+    line-height: 1.5;
+    margin: 0 0 14px;
+  }
+  .trend-example-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .trend-example-list li {
+    margin: 0 0 12px;
+    padding: 0 0 12px 1.1em;
+    position: relative;
+    border-bottom: 1px solid #eef2f7;
+    line-height: 1.9;
+    color: #334155;
+    font-size: 0.94rem;
+  }
+  .trend-example-list li::before {
+    content: "・";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--navy);
+    font-weight: 900;
+  }
+  .trend-example-list a {
+    color: var(--navy);
+    font-weight: 900;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(30, 58, 95, 0.3);
+  }
+  .trend-example-list a:hover {
+    color: var(--orange);
+    border-bottom-color: var(--orange);
+  }
+  .map-section {
+    background: #fff;
+    padding: 56px 0 48px;
+    border-bottom: 1px solid var(--line);
+  }
+  #responseMap {
+    height: 520px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-md);
+    margin-top: 24px;
+    background: #e5e7eb;
+    overflow: hidden;
+  }
+  .leaflet-container {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .map-note {
+    font-size: 0.82rem;
+    color: var(--text-soft);
+    margin-top: 10px;
+  }
+  .map-index-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    padding: 8px 20px;
+    border-radius: 8px;
+    background: var(--navy);
+    color: #fff;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+  .map-index-link:hover {
+    opacity: 0.82;
+  }
+  .municipality-index-section {
+    background: var(--bg);
+    padding: 64px 0 56px;
+  }
+  .index-map-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 28px;
+    align-items: start;
+  }
+  .index-main {
+    min-width: 0;
+  }
+  .region-map-panel {
+    display: grid;
+    gap: 14px;
+  }
+  .region-map-card {
+    background: #fff;
+    border: 1px solid #dbe4ee;
+    border-radius: 14px;
+    padding: 10px;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+  .region-map-card h3 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 0.95rem;
+    color: var(--navy);
+    margin: 0 0 8px;
+  }
+  .region-map {
+    height: 220px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #eef2f7;
+    overflow: hidden;
+  }
+  .muni-search-wrap {
+    margin: 24px 0 32px;
+  }
+  #muniSearch {
+    width: 100%;
+    max-width: 480px;
+    padding: 10px 16px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    background: #fff;
+  }
+  #muniSearch:focus {
+    border-color: var(--navy);
+  }
+  #regionIndex .region-block {
+    margin-bottom: 40px;
+    scroll-margin-top: 80px;
+  }
+  #regionIndex .region-heading {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: var(--navy);
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--navy);
+    margin-bottom: 18px;
+  }
+  #regionIndex .prefecture-group {
+    margin-bottom: 18px;
+  }
+  #regionIndex .pref-heading {
+    font-size: 0.82rem;
+    font-weight: 900;
+    color: var(--text-soft);
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+    padding-left: 10px;
+    border-left: 3px solid var(--gold);
+  }
+  #regionIndex .municipality-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  #regionIndex .muni-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 12px;
+    border-radius: 6px;
+    background: #fff;
+    border: 1px solid var(--line);
+    color: var(--navy);
+    font-size: 0.84rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+      background 0.14s,
+      border-color 0.14s;
+    white-space: nowrap;
+  }
+  #regionIndex .muni-link:hover {
+    background: var(--navy);
+    color: #fff;
+    border-color: var(--navy);
+  }
+  #regionIndex .muni-count {
+    font-size: 0.72rem;
+    background: var(--gold);
+    color: #fff;
+    border-radius: 999px;
+    padding: 1px 6px;
+    font-weight: 900;
+    line-height: 1.3;
+  }
+  .response-bodies-section {
+    background: #fff;
+    padding: 64px 0 72px;
+  }
+  #responseBodiesContent .type-section {
+    margin-bottom: 60px;
+  }
+  #responseBodiesContent .type-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: var(--navy);
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--navy);
+    margin-bottom: 20px;
+  }
+  .type-label-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    border-radius: 6px;
+    background: var(--navy);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+  .response-item {
+    background: #fffdf8;
+    border: 1px solid #e8dfc9;
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 14px;
+  }
+  .response-muni-name {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.05rem;
+    font-weight: 900;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .response-meta {
+    font-size: 0.82rem;
+    color: var(--text-soft);
+    margin-bottom: 10px;
+  }
+  .response-item details summary {
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--navy);
+    padding: 6px 0;
+    user-select: none;
+  }
+  .response-item details summary::-webkit-details-marker {
+    display: none;
+  }
+  .response-item details[open] summary {
+    margin-bottom: 10px;
+  }
+  .response-body {
+    font-size: 0.91rem;
+    line-height: 1.85;
+    color: var(--text);
+    white-space: pre-wrap;
+    border-top: 1px solid var(--line);
+    padding-top: 12px;
+  }
+  .back-to-index {
+    margin-top: 14px;
+    font-size: 0.8rem;
+  }
+  .back-to-index a {
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .back-to-index a:hover {
+    text-decoration: underline;
+  }
+  .excluded-section {
+    background: var(--bg);
+    padding: 46px 0;
+    border-top: 1px solid var(--line);
+  }
+  .caution-section {
+    background: #fff;
+    padding: 40px 0;
+    border-top: 1px solid var(--line);
+  }
+  .caution-section p {
+    font-size: 0.86rem;
+    color: var(--text-soft);
+    line-height: 1.8;
+    max-width: 860px;
+  }
+  .footer-contact-masked {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
+  .manual-map-pin-layer {
+    display: none;
+  }
+  @media (max-width: 980px) {
+    .index-map-layout {
+      grid-template-columns: 1fr;
+    }
+    .region-map-panel {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 680px) {
+    .compact-hero-section {
+      padding: 36px 0 32px;
+    }
+    #responseMap {
+      height: 360px;
+    }
+    .region-map-panel {
+      grid-template-columns: 1fr;
+    }
+    .region-map {
+      height: 260px;
+    }
+    .response-item {
+      padding: 16px 14px;
+    }
+  }
+
+  /* Page-specific styles for board-responses.html */
+  .board-responses-editorial .compact-hero-section {
+    padding: 58px 0 52px;
+    text-align: left;
+    border-bottom: 1px solid #071a30;
+  }
+  .board-responses-editorial .compact-hero-section .wrap {
+    width: min(calc(100% - 40px), 1040px);
+  }
+  .board-responses-editorial .compact-hero-section .hero-kicker {
+    display: block;
+    width: max-content;
+    margin: 0 0 16px;
+    padding: 0 0 6px;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.75);
+    border-radius: 0;
+    text-transform: none;
+    letter-spacing: 0.05em;
+  }
+  .board-responses-editorial .response-trends-section .reading-body,
+  .board-responses-editorial .response-bodies-section > .wrap,
+  .board-responses-editorial .excluded-section > .wrap,
+  .board-responses-editorial .caution-section > .wrap {
+    width: min(calc(100% - 40px), 920px);
+  }
+  .board-responses-editorial #responseMap,
+  .board-responses-editorial .region-map,
+  .board-responses-editorial .region-map-card {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .board-responses-editorial .map-index-link {
+    display: inline;
+    padding: 0;
+    background: transparent;
+    color: #174f7d;
+    border-radius: 0;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+  .board-responses-editorial .region-map-panel {
+    gap: 22px;
+  }
+  .board-responses-editorial .region-map-card {
+    padding: 0 0 20px;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #cfd8e2;
+  }
+  .board-responses-editorial #muniSearch {
+    max-width: 100%;
+    border-radius: 0;
+    border-width: 0 0 2px;
+    padding: 12px 2px;
+  }
+  .board-responses-editorial #regionIndex .municipality-list {
+    display: block;
+  }
+  .board-responses-editorial #regionIndex .muni-link {
+    display: inline;
+    margin-right: 1em;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    color: #174f7d;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+    line-height: 2.2;
+    white-space: normal;
+  }
+  .board-responses-editorial #regionIndex .muni-link:hover {
+    background: transparent;
+    color: #9a4c00;
+  }
+  .board-responses-editorial #regionIndex .muni-count {
+    padding: 0;
+    background: transparent;
+    color: #64748b;
+    border-radius: 0;
+    font-weight: 700;
+  }
+  .board-responses-editorial .type-label-badge {
+    display: none;
+  }
+  .board-responses-editorial .response-item {
+    margin: 0;
+    padding: 24px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #cfd8e2;
+    border-radius: 0;
+  }
+  .board-responses-editorial .response-item:first-of-type {
+    border-top: 1px solid #cfd8e2;
+  }
+  .board-responses-editorial .response-item details summary {
+    padding: 8px 0;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+  .board-responses-editorial .trend-example-list a,
+  .board-responses-editorial .back-to-index a {
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+    border-bottom: 0;
+  }
+  .board-responses-editorial main a:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  @media (max-width: 680px) {
+    .board-responses-editorial .compact-hero-section .wrap,
+    .board-responses-editorial .response-trends-section .reading-body,
+    .board-responses-editorial .response-bodies-section > .wrap,
+    .board-responses-editorial .excluded-section > .wrap,
+    .board-responses-editorial .caution-section > .wrap {
+      width: min(calc(100% - 30px), 920px);
+    }
+  }
+}

@@ -7,142 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style.css?v=20260705-fixed-header-all-pages">
-<link href="/css/refine.css?v=hover-orange-20260629ccccc" rel="stylesheet"/>
-<style>
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-  font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Meiryo',sans-serif;
-  font-size:14px; line-height:1.95; color:#222; background:#fff;
-  max-width:820px; margin:0 auto; padding:40px 50px;
-}
-a { color:#1a4a8a; text-decoration:underline; word-break:break-all; }
-a:hover { color:#c0392b; }
-
-.cover { text-align:center; border:3px double #1a4a8a; padding:50px 30px 44px; margin-bottom:50px; position:relative; }
-.cover-kamon { font-size:40px; color:#1a4a8a; margin-bottom:18px; }
-.cover-label { font-size:11px; color:#555; letter-spacing:.3em; margin-bottom:6px; }
-.cover-org { font-size:13px; color:#1a4a8a; font-weight:700; letter-spacing:.15em; margin-bottom:28px; }
-.cover-title { font-family:'Noto Serif JP','Yu Mincho',serif; font-size:26px; color:#1a4a8a; font-weight:700; letter-spacing:.06em; line-height:1.55; margin-bottom:12px; }
-.cover-subtitle { font-size:13px; color:#555; letter-spacing:.08em; margin-bottom:28px; }
-.cover-tag { display:inline-block; border:1px solid #1a4a8a; color:#1a4a8a; font-size:11px; padding:3px 12px; letter-spacing:.15em; margin:0 4px; }
-.cover-edition { position:absolute; bottom:14px; right:20px; font-size:11px; color:#666; }
-
-.section-break { border-top:2px solid #1a4a8a; margin:52px 0 36px; padding-top:36px; }
-.section-title { text-align:center; font-size:16px; font-weight:700; letter-spacing:.4em; margin-bottom:20px; padding-bottom:8px; border-bottom:2px solid #1a4a8a; color:#1a4a8a; }
-h2 { font-size:17px; font-weight:700; color:#1a4a8a; margin:40px 0 14px; padding:9px 14px; border-left:5px solid #1a4a8a; background:#f0f4ff; line-height:1.55; }
-h3 { font-size:15px; font-weight:700; margin:28px 0 10px; padding-left:12px; border-left:3px solid #5b7ec9; color:#1a3060; }
-p { margin-bottom:12px; text-align:justify; }
-p.lead { font-size:15px; line-height:2.05; margin-bottom:18px; }
-a { color:#1a4a8a; }
-
-.toc-item { display:flex; align-items:baseline; padding:6px 0; border-bottom:1px dotted #ccc; }
-.toc-num { font-weight:700; min-width:36px; color:#1a4a8a; font-size:13px; }
-.toc-text { flex:1; font-size:13px; }
-.toc-sub { display:flex; align-items:baseline; padding:4px 0 4px 36px; border-bottom:1px dotted #eee; font-size:12px; color:#444; }
-.toc-kana { min-width:28px; color:#666; font-size:11px; }
-
-.law-cite { background:#f8f5e8; border-left:4px solid #c8a800; padding:12px 16px; margin:16px 0; font-size:12.5px; color:#333; line-height:1.85; }
-.law-cite-title { font-weight:700; color:#7a6200; margin-bottom:5px; font-size:11px; letter-spacing:.1em; }
-.law-cite-link { font-size:11px; color:#1a4a8a; margin-top:6px; display:block; }
-
-.principle-box { border:3px solid #1a4a8a; border-radius:4px; padding:20px 26px; margin:22px 0; background:#e8efff; text-align:center; }
-.principle-box p { font-size:15px; font-weight:700; color:#1a3060; line-height:1.85; text-align:center; margin-bottom:0; }
-
-.risk-box { border:3px solid #c0392b; border-radius:4px; padding:18px 22px; margin:22px 0; background:#fff0f0; }
-.risk-box-title { font-weight:700; font-size:13px; background:#c0392b; color:#fff; display:inline-block; padding:4px 14px; margin-bottom:12px; letter-spacing:.1em; }
-.risk-item { display:flex; align-items:flex-start; margin-bottom:9px; font-size:13px; line-height:1.8; }
-.risk-item::before { content:"⚠"; margin-right:8px; color:#c0392b; flex-shrink:0; margin-top:1px; }
-
-.case-box { border:2px solid #8b5e00; border-radius:4px; padding:16px 20px; margin:18px 0; background:#fffbf0; }
-.case-box-title { font-weight:700; font-size:12px; background:#8b5e00; color:#fff; display:inline-block; padding:3px 12px; margin-bottom:12px; letter-spacing:.1em; }
-.case-item { display:flex; align-items:flex-start; margin-bottom:8px; font-size:13px; line-height:1.8; }
-.case-item::before { content:"▶"; margin-right:8px; color:#8b5e00; flex-shrink:0; font-size:10px; margin-top:4px; }
-
-.social-box { border:2px solid #6a1a6a; border-radius:4px; padding:16px 20px; margin:18px 0; background:#fbf0fb; }
-.social-box-title { font-weight:700; font-size:12px; background:#6a1a6a; color:#fff; display:inline-block; padding:3px 12px; margin-bottom:12px; letter-spacing:.1em; }
-
-.mext-box { border:2px solid #1a6a1a; border-radius:4px; padding:16px 20px; margin:18px 0; background:#f0fbf0; }
-.mext-box-title { font-weight:700; font-size:12px; background:#1a6a1a; color:#fff; display:inline-block; padding:3px 12px; margin-bottom:12px; letter-spacing:.1em; }
-
-.judgment-box { border:2px solid #5a3a00; border-radius:4px; padding:16px 20px; margin:18px 0; background:#fdf6ee; }
-.judgment-box-title { font-weight:700; font-size:12px; background:#5a3a00; color:#fff; display:inline-block; padding:3px 12px; margin-bottom:12px; letter-spacing:.1em; }
-
-.paradox-box { border:2px solid #1a4a8a; border-radius:4px; padding:16px 20px; margin:18px 0; background:#f0f4ff; }
-.paradox-box-title { font-weight:700; font-size:12px; background:#1a4a8a; color:#fff; display:inline-block; padding:3px 12px; margin-bottom:12px; letter-spacing:.1em; }
-
-.ppc-box { border:2px solid #1a5a6a; border-radius:4px; padding:16px 20px; margin:18px 0; background:#f0fafb; }
-.ppc-box-title { font-weight:700; font-size:12px; background:#1a5a6a; color:#fff; display:inline-block; padding:3px 12px; margin-bottom:12px; letter-spacing:.1em; }
-
-.check-box { border:1.5px solid #1a4a8a; border-radius:4px; padding:16px 20px; margin:18px 0; background:#f5f8ff; }
-.check-box-title { font-weight:700; font-size:12px; background:#1a4a8a; color:#fff; display:inline-block; padding:3px 12px; margin-bottom:12px; letter-spacing:.1em; }
-.check-item { display:flex; align-items:flex-start; margin-bottom:7px; font-size:13px; line-height:1.75; }
-.check-item::before { content:"□"; margin-right:10px; color:#1a4a8a; font-size:15px; flex-shrink:0; margin-top:1px; }
-
-.notice-box { border:2px solid #c0392b; border-radius:4px; padding:14px 18px; margin:18px 0; background:#fff8f8; }
-.notice-box-title { font-weight:700; font-size:12px; background:#c0392b; color:#fff; display:inline-block; padding:3px 12px; margin-bottom:10px; letter-spacing:.1em; }
-
-.info-box { border:1.5px solid #2980b9; border-radius:4px; padding:14px 18px; margin:18px 0; background:#f0f7ff; }
-.info-box-title { font-weight:700; font-size:12px; background:#2980b9; color:#fff; display:inline-block; padding:3px 12px; margin-bottom:10px; letter-spacing:.1em; }
-
-.division-box { display:flex; gap:0; margin:18px 0; border:1.5px solid #999; border-radius:4px; overflow:hidden; }
-.division-col { flex:1; padding:14px 16px; font-size:13px; }
-.division-col:first-child { background:#f5f8ff; border-right:1px solid #ccc; }
-.division-col:last-child { background:#fff8f8; }
-.division-col-title { font-weight:700; font-size:12px; display:block; margin-bottom:8px; padding-bottom:5px; border-bottom:1px solid #ccc; }
-.div-ok { color:#1a6a1a; }
-.div-ng { color:#c0392b; }
-
-.flow-box { border:1.5px solid #1a4a8a; border-radius:4px; padding:16px 20px; margin:18px 0; background:#f0f5ff; }
-.flow-box-title { font-weight:700; font-size:12px; color:#1a4a8a; margin-bottom:14px; }
-.flow-step { display:flex; align-items:flex-start; margin-bottom:10px; font-size:13px; }
-.flow-num { font-weight:700; color:#fff; background:#1a4a8a; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; margin-right:10px; flex-shrink:0; margin-top:2px; }
-.flow-arrow { text-align:center; color:#1a4a8a; font-size:16px; margin:4px 0 4px 34px; }
-
-.qa-item { margin-bottom:20px; border-bottom:1px dotted #ccc; padding-bottom:16px; }
-.qa-q { font-weight:700; color:#1a4a8a; margin-bottom:6px; display:flex; gap:8px; font-size:14px; }
-.qa-q-label { background:#1a4a8a; color:#fff; font-size:11px; padding:2px 8px; flex-shrink:0; align-self:flex-start; margin-top:2px; }
-.qa-a { padding-left:16px; border-left:3px solid #ccd8f0; font-size:13px; line-height:1.85; }
-.qa-a-label { font-weight:700; color:#c0392b; margin-right:6px; }
-
-ul.list { margin:8px 0 14px 1.5em; list-style:none; }
-ul.list li { margin-bottom:6px; font-size:13px; padding-left:1em; position:relative; }
-ul.list li::before { content:"・"; position:absolute; left:-.2em; color:#1a4a8a; }
-
-.form-example { border:1px solid #999; padding:18px 20px; margin:18px 0; font-size:13px; }
-.form-example-title { text-align:center; font-weight:700; font-size:14px; margin-bottom:14px; padding-bottom:8px; border-bottom:1px solid #ccc; }
-.form-row { display:flex; align-items:baseline; margin-bottom:10px; gap:10px; }
-.form-label { min-width:120px; color:#555; font-size:12px; flex-shrink:0; }
-.form-line { flex:1; border-bottom:1px solid #999; min-height:20px; }
-.form-note { font-size:11px; color:#555; margin-top:10px; padding-top:8px; border-top:1px dotted #ccc; }
-
-.rule-box { border:1px solid #aaa; padding:16px 20px; margin:14px 0; font-size:13px; background:#fafafa; }
-.rule-box-title { font-weight:700; font-size:12px; color:#555; margin-bottom:10px; }
-.rule-article { margin-bottom:10px; }
-.rule-article-num { font-weight:700; color:#1a4a8a; }
-
-.ref-box { border:1px solid #bbb; background:#f9f9f9; padding:14px 18px; margin:18px 0; font-size:12px; }
-.ref-box-title { font-weight:700; font-size:12px; color:#444; margin-bottom:8px; padding-bottom:6px; border-bottom:1px dotted #ccc; }
-.ref-item { margin-bottom:7px; padding-left:1em; position:relative; line-height:1.75; }
-.ref-item::before { content:"▷"; position:absolute; left:0; color:#999; font-size:10px; top:3px; }
-
-strong { font-weight:700; }
-em.warn { font-style:normal; font-weight:700; color:#c0392b; }
-em.blue { font-style:normal; font-weight:700; color:#1a4a8a; }
-em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
-
-@media print {
-  body { padding:20px 30px; }
-  .section-break { page-break-before:always; border-top:none; }
-  h2 { page-break-after:avoid; }
-  .check-box,.notice-box,.case-box,.risk-box { page-break-inside:avoid; }
-}
-@media (max-width:600px) {
-  body { padding:20px 18px; }
-  .division-box { flex-direction:column; }
-  .division-col:first-child { border-right:none; border-bottom:1px solid #ccc; }
-}
-</style>
+<link rel="stylesheet" href="/css/site.css?v=20260719">
+<link href="/css/editorial.css?v=20260719" rel="stylesheet"/>
+<link rel="stylesheet" href="/css/pages/pta-_-4-_.css?v=20260719">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
@@ -159,48 +26,10 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
 <meta name="twitter:image" content="https://ptaorg.com/assets/og-image-popc-en.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<link rel="stylesheet" href="/css/hover-orange.css?v=20260629-hero22-hero22">
+<link rel="stylesheet" href="/css/interactions.css?v=20260719">
 
-<style id="guidebook-editorial-20260710">
-.guidebook-editorial .cover-tag{display:none}
-.guidebook-editorial .principle-box,
-.guidebook-editorial .risk-box,
-.guidebook-editorial .case-box,
-.guidebook-editorial .social-box,
-.guidebook-editorial .mext-box,
-.guidebook-editorial .judgment-box,
-.guidebook-editorial .paradox-box,
-.guidebook-editorial .ppc-box,
-.guidebook-editorial .check-box,
-.guidebook-editorial .notice-box,
-.guidebook-editorial .info-box,
-.guidebook-editorial .flow-box{
-  background:#fff!important;
-  border:0!important;
-  border-left:3px solid #1a4a8a!important;
-  border-radius:0!important;
-  padding:16px 0 16px 20px!important;
-}
-.guidebook-editorial .risk-box-title,
-.guidebook-editorial .case-box-title,
-.guidebook-editorial .social-box-title,
-.guidebook-editorial .mext-box-title,
-.guidebook-editorial .judgment-box-title,
-.guidebook-editorial .paradox-box-title,
-.guidebook-editorial .ppc-box-title,
-.guidebook-editorial .check-box-title,
-.guidebook-editorial .notice-box-title,
-.guidebook-editorial .info-box-title{
-  display:block!important;
-  padding:0 0 7px!important;
-  background:transparent!important;
-  color:#1a3060!important;
-  letter-spacing:.04em!important;
-}
-.guidebook-editorial .risk-item::before,
-.guidebook-editorial .case-item::before{content:'—'!important;color:#64748b!important}
-.guidebook-editorial .flow-num{border-radius:2px!important}
-</style>
+
+<link rel="stylesheet" href="/css/inline-utilities.css?v=20260719">
 </head>
 <body class="guidebook-editorial">
 
@@ -210,7 +39,7 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
   <div class="cover-org">PTA適正化推進委員会</div>
   <h1 class="cover-title">公立学校における<br>PTA運営の適正化に関する<br>ガイドブック</h1>
   <div class="cover-subtitle">──学校とPTAの境界を明確にし、法令が示す本来の関係を確認するために──</div>
-  <div style="margin-top:20px;">
+  <div class="u-910f53fb7a">
     <span class="cover-tag">教育委員会向け</span>
     <span class="cover-tag">学校管理職向け</span>
   </div>
@@ -221,7 +50,7 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
 <p>PTAは、学校とは別の<em class="blue">任意加入の民間団体（社会教育関係団体）</em>です。この単純な事実が、全国の学校現場で長年にわたって無視されてきました。その結果として生じている<em class="warn">学校とPTAの公私混同</em>こそが、今日のPTA問題のすべての根源です。</p>
 <p>問題の解決は複雑ではありません。<em class="blue">基本に立ち戻り、学校とPTAをきちんと切り分ける</em>──それだけです。今求められているのは、間違った運営をどう法的に追認するかという脱法的発想ではなく、法令が最初から示していた本来の姿に戻ることです。そして、このまま放置することは、教育委員会・学校・PTA役員のいずれにとっても<em class="warn">深刻な訴訟リスク</em>を意味します。</p>
 
-<div style="margin:40px 0 50px;">
+<div class="u-e928efea07">
 <div class="section-title">目　次</div>
 <div class="toc-item"><span class="toc-num">第１章</span><span class="toc-text">PTAとは何か──社会教育関係団体であり、学校補助団体では断じてない</span></div>
 <div class="toc-sub"><span class="toc-kana">1-1</span><span class="toc-text">PTAの法的性格</span></div>
@@ -293,7 +122,7 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
 </div>
 <div class="social-box">
   <div class="social-box-title">社会問題化の現状</div>
-  <ul class="list" style="margin-bottom:0;">
+  <ul class="list u-768bda7dd9">
     <li>全国各地で、PTA関係文書の保有状況や説明責任が問われている</li>
     <li>教育委員会・学校・PTAに対する説明要求、議会質問、訴訟等が報告されている</li>
     <li>SNSを通じて保護者の情報共有が急速に進み、「PTAが任意加入であること」の認知が拡大している</li>
@@ -307,14 +136,14 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
 <h3>1-5　文部科学省が示す学校・教師の役割分担──業務の3分類と2025年通知</h3>
 <div class="mext-box">
   <div class="mext-box-title">文部科学省「業務の3分類」（中央教育審議会答申・平成31年1月）</div>
-  <p style="font-size:13px; margin-bottom:8px;"><strong>① 基本的には学校以外が担うべき業務（学校・教師がすべきでない業務）</strong></p>
-  <ul class="list" style="margin-bottom:14px;">
+  <p class="u-4dfc34462f"><strong>① 基本的には学校以外が担うべき業務（学校・教師がすべきでない業務）</strong></p>
+  <ul class="list u-16dbf2a37c">
     <li>登下校に関する対応</li>
     <li>放課後から夜間などにおける見回り、補導された時の対応</li>
     <li><strong>学校徴収金の徴収・管理</strong></li>
     <li>地域ボランティアとの<strong>連絡調整</strong>等</li>
   </ul>
-  <a href="https://www.mext.go.jp/content/20230725-mext_zaimu-000031116_3.pdf" target="_blank" rel="noopener" style="font-size:11px; color:#1a6a1a; display:block;">▶ 原文PDF：文部科学省「学校・教師が担う業務に係る３分類 更なる役割分担・適正化の推進に向けた取組について」（令和5年7月）</a>
+  <a class="u-7c10a5137f" href="https://www.mext.go.jp/content/20230725-mext_zaimu-000031116_3.pdf" target="_blank" rel="noopener">▶ 原文PDF：文部科学省「学校・教師が担う業務に係る３分類 更なる役割分担・適正化の推進に向けた取組について」（令和5年7月）</a>
 </div>
 <p>業務の3分類は、学校・教師が担ってきた業務の主たる担い手を整理し、負担軽減と役割分担を進める政策資料です。学校がPTAに関与できる法的上限を「連絡調整だけ」と定めた規定ではありません。ただし、会員管理、会費徴収、役員選出、会計等のPTA内部事務を学校が担う場合は、具体的作業、校務としての位置づけ、職務命令、個人情報利用、会計規程等の根拠が別途必要です。さらに文部科学省の2025年通知は、学校給食費以外の学校徴収金について、公会計化だけでなく、保護者から業者等への直接支払など学校を経由しない方法を示しました。</p>
 <div class="principle-box">
@@ -339,9 +168,9 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
 
 <div class="judgment-box">
   <div class="judgment-box-title">消費者庁「消費者契約法逐条解説」（公式見解）</div>
-  <p style="font-size:13px; margin-bottom:8px;">「その他の団体」には、民法上の組合をはじめ、法人格を有しない社団又は財団が含まれる。</p>
-  <p style="font-size:13px; margin-bottom:0;"><strong>各種の親善、社交等を目的とする団体、PTA、学会、同窓会等といった法人となることが可能であるがその手続を経ない各種の団体がこれに含まれる。</strong></p>
-  <a href="https://www.caa.go.jp/policies/policy/consumer_system/consumer_contract_act/annotations/assets/consumer_system_cms203_230915_04.pdf" target="_blank" rel="noopener" style="font-size:11px; color:#5a3a00; display:block; margin-top:8px;">▶ 原文PDF：消費者庁「消費者契約法逐条解説」（令和5年9月改訂版）</a>
+  <p class="u-4dfc34462f">「その他の団体」には、民法上の組合をはじめ、法人格を有しない社団又は財団が含まれる。</p>
+  <p class="u-2acdf1a313"><strong>各種の親善、社交等を目的とする団体、PTA、学会、同窓会等といった法人となることが可能であるがその手続を経ない各種の団体がこれに含まれる。</strong></p>
+  <a class="u-cacbe756d9" href="https://www.caa.go.jp/policies/policy/consumer_system/consumer_contract_act/annotations/assets/consumer_system_cms203_230915_04.pdf" target="_blank" rel="noopener">▶ 原文PDF：消費者庁「消費者契約法逐条解説」（令和5年9月改訂版）</a>
 </div>
 
 <p>消費者契約法の目的は、「消費者と事業者との間の<em class="blue">情報の質及び量並びに交渉力の格差</em>」を是正することにあります（第1条）。PTA役員（運営側）と一般保護者（加入を求められる側）の間には、PTAの内部事情・権利義務関係・任意性についての情報量に明確な格差があります。この格差こそが、消費者契約法の適用を正当化します。</p>
@@ -375,7 +204,7 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
 
 <div class="notice-box">
   <div class="notice-box-title">教育委員会・学校管理職が認識すべきこと</div>
-  <p style="font-size:13px; margin-bottom:0;">学校がPTA加入手続に関与し、PTA会費の徴収を担い、学校アプリでPTA通知を配信していた場合、PTAに対する訴訟において「学校も共同行為者」として関与が問われる可能性があります。教育委員会が実態を把握しながら放置していた場合も同様です。これは「PTAの問題だから学校は関係ない」では済まない問題です。</p>
+  <p class="u-2acdf1a313">学校がPTA加入手続に関与し、PTA会費の徴収を担い、学校アプリでPTA通知を配信していた場合、PTAに対する訴訟において「学校も共同行為者」として関与が問われる可能性があります。教育委員会が実態を把握しながら放置していた場合も同様です。これは「PTAの問題だから学校は関係ない」では済まない問題です。</p>
 </div>
 </div><!-- end 第2章 -->
 
@@ -399,8 +228,8 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
 <p>学校が教育目的で取得した保護者・児童生徒情報をPTA会員管理、会費徴収、役員選出等へ使う場合は、まず学校自身による目的外利用なのか、学校からPTAへの提供なのかを分けます。学校自身が口座振替データや名簿をPTA目的で使う場合も、第61条・第69条との関係が生じます。PTAへ情報を渡す場合は、別組織への提供として、利用目的と第69条第2項等の具体的根拠を確認します。</p>
 <div class="notice-box">
   <div class="notice-box-title">第61条・第69条を中心に整理する</div>
-  <p style="font-size:13px; margin-bottom:8px;">民間事業者を主な対象とする第27条だけで整理しては足りません。公立学校が保有する児童生徒・保護者情報は、地方公共団体の機関が保有する<em class="blue">保有個人情報</em>です。学校自身によるPTA目的での利用は第61条・第69条、学校からPTAへの提供は第69条を中心に確認します。</p>
-  <p style="font-size:13px; margin-bottom:0;">したがって、学校側は「保護者のため」「PTA活動のため」という一般的説明ではなく、法令に基づく場合に当たるのか、第69条第2項各号の例外要件に当たるのか、本人の自由な意思に基づく個別同意がどの範囲で取得されているのかを、文書で説明できなければなりません。</p>
+  <p class="u-4dfc34462f">民間事業者を主な対象とする第27条だけで整理しては足りません。公立学校が保有する児童生徒・保護者情報は、地方公共団体の機関が保有する<em class="blue">保有個人情報</em>です。学校自身によるPTA目的での利用は第61条・第69条、学校からPTAへの提供は第69条を中心に確認します。</p>
+  <p class="u-2acdf1a313">したがって、学校側は「保護者のため」「PTA活動のため」という一般的説明ではなく、法令に基づく場合に当たるのか、第69条第2項各号の例外要件に当たるのか、本人の自由な意思に基づく個別同意がどの範囲で取得されているのかを、文書で説明できなければなりません。</p>
 </div>
 
 <h3>3-2　本人同意を根拠とする場合の条件</h3>
@@ -411,16 +240,16 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
 
 <div class="notice-box">
   <div class="notice-box-title">同意があれば何でも提供できるわけではない</div>
-  <p style="font-size:13px; margin-bottom:0;">本人同意は第69条第2項の根拠の一つですが、同意の対象、提供項目、利用目的、提供先、不同意者の除外、提供記録まで具体化する必要があります。PTAが必要な情報を加入者本人から直接取得する方式は、加入記録と利用目的を一体で管理できるため、恒常的な会員管理の基本方式として最も明確です。</p>
+  <p class="u-2acdf1a313">本人同意は第69条第2項の根拠の一つですが、同意の対象、提供項目、利用目的、提供先、不同意者の除外、提供記録まで具体化する必要があります。PTAが必要な情報を加入者本人から直接取得する方式は、加入記録と利用目的を一体で管理できるため、恒常的な会員管理の基本方式として最も明確です。</p>
 </div>
 
 <h3>3-3　PTAが会員自身から情報を取得すべき理由</h3>
 <p>個人情報保護委員会のPTA向けFAQも明確に述べています。</p>
 <div class="ppc-box">
   <div class="ppc-box-title">個人情報保護委員会 FAQ（公式見解）</div>
-  <p style="font-size:13px; margin-bottom:8px;">「PTAが名簿を作成しようとする場合、<strong>本人にその利用目的を通知・公表し、本人から取得した個人情報をその利用目的の範囲内で利用することが可能</strong>です。」</p>
-  <p style="font-size:13px; margin-bottom:0;">「なお、学校による個人情報（個人データ又は保有個人情報）の第三者提供については、個人情報保護法の規定に基づいて適正に取り扱うことが求められます。」</p>
-  <a href="https://www.ppc.go.jp/all_faq_index/faq1-q4-13/" target="_blank" style="font-size:11px; color:#1a5a6a; display:block; margin-top:8px;">▶ 個人情報保護委員会FAQ「PTAが学校から生徒等に関する個人情報を取得する場合、どういった点に注意すればよいですか」</a>
+  <p class="u-4dfc34462f">「PTAが名簿を作成しようとする場合、<strong>本人にその利用目的を通知・公表し、本人から取得した個人情報をその利用目的の範囲内で利用することが可能</strong>です。」</p>
+  <p class="u-2acdf1a313">「なお、学校による個人情報（個人データ又は保有個人情報）の第三者提供については、個人情報保護法の規定に基づいて適正に取り扱うことが求められます。」</p>
+  <a class="u-3272859dc1" href="https://www.ppc.go.jp/all_faq_index/faq1-q4-13/" target="_blank">▶ 個人情報保護委員会FAQ「PTAが学校から生徒等に関する個人情報を取得する場合、どういった点に注意すればよいですか」</a>
 </div>
 <p>PTAが会員の個人情報を必要とするなら、<em class="blue">PTAが入会申込書や電子フォーム等を通じて加入者本人から直接取得する</em>ことを基本とします。学校経由の取得を行う場合は、学校自身の利用とPTAへの提供を分け、法的根拠、対象項目、不同意者の除外、更新・削除手順を別途説明しなければなりません。</p>
 <p>加入の勧誘、入会申込の受付、会員情報の取得、会費の請求・会計、名簿作成、退会受付は、PTA内部手続としてPTA自身が責任を持つことが基本です。学校が配布、施設利用、連絡調整等で協力する場合は、学校の情報、職員、施設、媒体をどの範囲で使うのか、その根拠と責任主体を文書で分けます。</p>
@@ -437,13 +266,13 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
 <h3>3-5　個人情報保護委員会の最新見解</h3>
 <div class="ppc-box">
   <div class="ppc-box-title">個人情報保護委員会「公立学校とPTAの間で個人情報のやり取りをするためのポイント」（令和8年3月）</div>
-  <p style="font-size:13px; margin-bottom:8px;">個人情報保護委員会は令和8年3月、教育委員会・公立学校関係者・PTA関係者向けに、公立学校とPTAの間の個人情報のやり取りについての資料を公表しました。この資料は、学校保有情報をPTA目的で利用・提供する際に、利用目的、第69条の例外根拠、本人同意、不同意者の削除・マスキング等を具体的に確認する必要があることを示しています。</p>
-  <ul class="list" style="margin-bottom:8px;">
+  <p class="u-4dfc34462f">個人情報保護委員会は令和8年3月、教育委員会・公立学校関係者・PTA関係者向けに、公立学校とPTAの間の個人情報のやり取りについての資料を公表しました。この資料は、学校保有情報をPTA目的で利用・提供する際に、利用目的、第69条の例外根拠、本人同意、不同意者の削除・マスキング等を具体的に確認する必要があることを示しています。</p>
+  <ul class="list u-c500155b62">
     <li>学校からPTAへの情報提供は、<strong>「利用目的」の範囲内と整理できる場合</strong>か、<strong>本人の同意がある場合</strong>か、<strong>特別の理由がある場合</strong>に限られる（法第69条）</li>
     <li>同意が得られなかった個人情報部分は、提供にあたって<strong>削除やマスキング処理が必要</strong></li>
     <li><strong>同意は個人ごとに取得する必要がある</strong>──一部の保護者が同意しない場合、その情報は提供できない</li>
   </ul>
-  <a href="https://www.ppc.go.jp/files/pdf/202603_school_pta_pd_point.pdf" target="_blank" rel="noopener" style="font-size:11px; color:#1a5a6a; display:block;">▶ 原文PDF：個人情報保護委員会「公立学校とPTAの間で個人情報のやり取りをするためのポイント」（令和8年3月）</a>
+  <a class="u-d9b14fadba" href="https://www.ppc.go.jp/files/pdf/202603_school_pta_pd_point.pdf" target="_blank" rel="noopener">▶ 原文PDF：個人情報保護委員会「公立学校とPTAの間で個人情報のやり取りをするためのポイント」（令和8年3月）</a>
 </div>
 <p>この資料が公表されたこと自体、国が「学校とPTA間の個人情報のやり取りは現状問題がある」と認識していることの証左です。教育委員会はこの資料を精読し、管下学校の実態を確認する必要があります。</p>
 
@@ -468,14 +297,14 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
 <h3>4-2　「学校教育上支障のない限り」──判例が示す広い意味</h3>
 <div class="judgment-box">
   <div class="judgment-box-title">最高裁判所 平成18年2月7日 第三小法廷判決（民集60巻2号401頁）</div>
-  <p style="font-size:13px; margin-bottom:8px;">学校教育上の支障とは、</p>
-  <ul class="list" style="margin-bottom:8px;">
+  <p class="u-4dfc34462f">学校教育上の支障とは、</p>
+  <ul class="list u-c500155b62">
     <li><strong>物理的支障に限られるものではなく</strong></li>
     <li>教育的配慮の観点から、<strong>児童・生徒に対し精神的悪影響を与え、学校の教育方針にもとることとなる場合も含まれ</strong></li>
     <li><strong>将来における教育上の支障が生ずるおそれが明白に認められる場合も含まれる</strong></li>
   </ul>
-  <a href="https://www.courts.go.jp/app/hanrei_jp/detail2?id=52387" target="_blank" style="font-size:11px; color:#5a3a00; display:block;">▶ 裁判所ウェブサイト：最高裁判所 平成18年2月7日 第三小法廷判決</a>
-  <a href="https://www.mext.go.jp/b_menu/hakusho/nc/mext_00095.html" target="_blank" style="font-size:11px; color:#5a3a00; display:block; margin-top:4px;">▶ 文部科学省：公立学校施設の目的外使用に係る留意事項の周知について（通知）令和7年3月26日</a>
+  <a class="u-39e923b09e" href="https://www.courts.go.jp/app/hanrei_jp/detail2?id=52387" target="_blank">▶ 裁判所ウェブサイト：最高裁判所 平成18年2月7日 第三小法廷判決</a>
+  <a class="u-96962e9e05" href="https://www.mext.go.jp/b_menu/hakusho/nc/mext_00095.html" target="_blank">▶ 文部科学省：公立学校施設の目的外使用に係る留意事項の周知について（通知）令和7年3月26日</a>
 </div>
 <p>「学校教育上の支障」は物理的な障害だけに限られず、教育的配慮や将来の支障のおそれを含み得ます。ただし、特定のPTA運営上の問題が直ちにこの要件へ該当するとは限りません。施設利用の目的、児童生徒への具体的影響、学校教育との関係、許可条件違反の有無を記録に基づいて判断します。</p>
 
@@ -507,10 +336,10 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
 
 <div class="paradox-box">
   <div class="paradox-box-title">社会教育法第12条の「都合のいい使われ方」と「都合の悪い踏みにじり方」</div>
-  <div class="division-box" style="margin:0;">
+  <div class="division-box u-38965f9b18">
     <div class="division-col">
       <span class="division-col-title div-ok">「都合のいい」使われ方（第12条を盾にして）</span>
-      <ul class="list" style="margin-bottom:0;">
+      <ul class="list u-768bda7dd9">
         <li>保護者がPTA問題について教育委員会に相談すると、「PTAは社会教育関係団体であり独立した団体なので、教育委員会は介入できない」と回答して門前払い</li>
         <li>PTA強制加入・会費不正について是正を求めると「PTAの内部問題」として拒絶</li>
         <li>PTA関係文書の確認に対して「PTAは別団体なので文書は保有していない」と回答</li>
@@ -518,7 +347,7 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
     </div>
     <div class="division-col">
       <span class="division-col-title div-ng">「都合の悪い」踏みにじり方（第12条を完全に無視して）</span>
-      <ul class="list" style="margin-bottom:0;">
+      <ul class="list u-768bda7dd9">
         <li>校長・教頭が学校管理職としての権限とPTA役員としての権限を区分せず、PTAの意思決定へ事実上の指揮命令を行う</li>
         <li>学校がPTA内部の意思決定を指揮し、会員管理・会計・役員選出等をPTAの自主的判断によらず決定する</li>
         <li>教育委員会がPTA連合会と一体的に活動し、PTAの組織・運営に事実上関与</li>
@@ -564,7 +393,7 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
 </div>
 <div class="case-box">
   <div class="case-box-title">ケーススタディ：学校徴収金への便乗徴収</div>
-  <p style="font-size:13px; margin-bottom:8px;">高校・中学校・小学校を問わず、教材費、積立金、給食費、校外活動費等の学校徴収金と、PTA会費を同じ案内文・同じ口座振替・同じ会計処理の中で扱う運用が見られます。これは保護者から見ると、PTA会費が学校に支払う義務的費用であるかのように見えるため、任意加入の説明を形骸化させます。</p>
+  <p class="u-4dfc34462f">高校・中学校・小学校を問わず、教材費、積立金、給食費、校外活動費等の学校徴収金と、PTA会費を同じ案内文・同じ口座振替・同じ会計処理の中で扱う運用が見られます。これは保護者から見ると、PTA会費が学校に支払う義務的費用であるかのように見えるため、任意加入の説明を形骸化させます。</p>
   <div class="case-item">学校徴収金案内の中に、PTA会費が当然の徴収項目として記載されている</div>
   <div class="case-item">口座振替依頼書で、学校徴収金とPTA会費が分離されていない</div>
   <div class="case-item">入会申込記録がないにもかかわらず、全家庭からPTA会費を徴収している</div>
@@ -608,7 +437,7 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
 <div class="division-box">
   <div class="division-col">
     <span class="division-col-title div-ok">要綱・内規で整理できる事項（例）</span>
-    <ul class="list" style="margin-bottom:0;">
+    <ul class="list u-768bda7dd9">
       <li>PTA通知の掲示場所・期間</li>
       <li>施設利用申請の手続フロー</li>
       <li>PTAとの連絡窓口の設置</li>
@@ -616,7 +445,7 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
   </div>
   <div class="division-col">
     <span class="division-col-title div-ng">要綱・内規だけでは足りない事項（例）</span>
-    <ul class="list" style="margin-bottom:0;">
+    <ul class="list u-768bda7dd9">
       <li>学校保有個人情報のPTAへの提供</li>
       <li>PTA会費の学校口座での管理</li>
       <li>勤務時間中の教職員によるPTA事務</li>
@@ -747,7 +576,7 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
 <p>個人情報に関する問題は、学校がPTAへ何を、どの目的で、どの根拠に基づき扱わせたかを切り分ける問題です。情報提供の根拠、本人同意の有無、同意しない者の扱い、PTA名簿の作成経路を確認し、学校・教育委員会の個人情報管理手順に照らして整理します。</p>
 <div class="notice-box">
   <div class="notice-box-title">第69条違反の有無は、同意の有無だけでは決まらない</div>
-  <p style="font-size:13px; margin-bottom:0;">本人の同意があるとされる場合でも、同意の対象、提供情報の範囲、提供先、利用目的、不同意者の除外方法が具体的に示されていなければ、実質的な同意として評価できるか疑問が残ります。教育委員会は、同意書の有無だけでなく、保護者が自由に拒否できる設計になっているかを確認する必要があります。</p>
+  <p class="u-2acdf1a313">本人の同意があるとされる場合でも、同意の対象、提供情報の範囲、提供先、利用目的、不同意者の除外方法が具体的に示されていなければ、実質的な同意として評価できるか疑問が残ります。教育委員会は、同意書の有無だけでなく、保護者が自由に拒否できる設計になっているかを確認する必要があります。</p>
 </div>
 
 <h3>11-3　財務・服務管理上の点検場面</h3>
@@ -820,26 +649,26 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
 <h2>付録２　様式例</h2>
 <div class="form-example">
   <div class="form-example-title">PTA入会申込書</div>
-  <p style="font-size:12px; color:#555; margin-bottom:14px;">※PTAへの加入は任意です。入会しない場合も、学校教育上の不利益はありません。本申込書の提出をもって入会となります。提出しない場合は、非加入の扱いとなります。</p>
-  <div class="form-row"><div class="form-label">申込日</div><div class="form-line"></div><span style="font-size:13px;">年</span><div class="form-line" style="min-width:30px;"></div><span style="font-size:13px;">月</span><div class="form-line" style="min-width:30px;"></div><span style="font-size:13px;">日</span></div>
-  <div class="form-row"><div class="form-label">児童氏名</div><div class="form-line"></div><span style="font-size:12px; color:#555;">（　　年　組）</span></div>
+  <p class="u-6e8e410f61">※PTAへの加入は任意です。入会しない場合も、学校教育上の不利益はありません。本申込書の提出をもって入会となります。提出しない場合は、非加入の扱いとなります。</p>
+  <div class="form-row"><div class="form-label">申込日</div><div class="form-line"></div><span class="u-cdcef186c8">年</span><div class="form-line u-7e9f10f4ee"></div><span class="u-cdcef186c8">月</span><div class="form-line u-7e9f10f4ee"></div><span class="u-cdcef186c8">日</span></div>
+  <div class="form-row"><div class="form-label">児童氏名</div><div class="form-line"></div><span class="u-64190e69e8">（　　年　組）</span></div>
   <div class="form-row"><div class="form-label">保護者氏名</div><div class="form-line"></div></div>
   <div class="form-row"><div class="form-label">連絡先（PTA用）</div><div class="form-line"></div></div>
-  <div style="margin:14px 0; font-size:13px; line-height:1.8;">私は、○○小学校PTAへの加入を申し込みます。氏名・住所・電話番号・メールアドレス等の個人情報を、PTA活動（会員名簿・連絡・行事案内等）に利用することに同意します。</div>
-  <div style="text-align:right; font-size:13px;">○○小学校PTA 御中</div>
+  <div class="u-acf727ccb1">私は、○○小学校PTAへの加入を申し込みます。氏名・住所・電話番号・メールアドレス等の個人情報を、PTA活動（会員名簿・連絡・行事案内等）に利用することに同意します。</div>
+  <div class="u-b58b47ff7e">○○小学校PTA 御中</div>
   <div class="form-note">
     ※提出先はPTAです（学校ではありません）。<br>
     ※取得した個人情報はPTA活動目的にのみ利用します。学校からの一括提供は受けておりません。<br>
     ※入会をご希望されない場合、提出の必要はありません。
   </div>
 </div>
-<div class="form-example" style="margin-top:22px;">
+<div class="form-example u-a0146c242a">
   <div class="form-example-title">PTA退会届</div>
-  <div class="form-row"><div class="form-label">届出日</div><div class="form-line"></div><span style="font-size:13px;">年</span><div class="form-line" style="min-width:30px;"></div><span style="font-size:13px;">月</span><div class="form-line" style="min-width:30px;"></div><span style="font-size:13px;">日</span></div>
+  <div class="form-row"><div class="form-label">届出日</div><div class="form-line"></div><span class="u-cdcef186c8">年</span><div class="form-line u-7e9f10f4ee"></div><span class="u-cdcef186c8">月</span><div class="form-line u-7e9f10f4ee"></div><span class="u-cdcef186c8">日</span></div>
   <div class="form-row"><div class="form-label">児童氏名</div><div class="form-line"></div></div>
   <div class="form-row"><div class="form-label">保護者氏名</div><div class="form-line"></div></div>
-  <div style="margin:14px 0; font-size:13px; line-height:1.8;">私は、○○小学校PTAを退会します。退会以降は会費の請求を停止するとともに、私の個人情報をPTA名簿等から削除し、以後利用しないでください。</div>
-  <div style="text-align:right; font-size:13px;">○○小学校PTA 御中</div>
+  <div class="u-acf727ccb1">私は、○○小学校PTAを退会します。退会以降は会費の請求を停止するとともに、私の個人情報をPTA名簿等から削除し、以後利用しないでください。</div>
+  <div class="u-b58b47ff7e">○○小学校PTA 御中</div>
   <div class="form-note">※退会しても、学校教育上の不利益はありません。</div>
 </div>
 
@@ -855,7 +684,7 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
   <div class="ref-item"><a href="https://elaws.e-gov.go.jp/document?lawid=325AC0000000261" target="_blank">地方公務員法（第35条：職務専念義務、第38条：兼職・兼業）</a></div>
   <div class="ref-item"><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank">民法（第703条：不当利得、第709条：不法行為）</a></div>
 </div>
-<div class="ref-box" style="margin-top:14px;">
+<div class="ref-box u-8d84299030">
   <div class="ref-box-title">文部科学省・国の機関による通知・資料</div>
   <div class="ref-item"><a href="https://www.mext.go.jp/b_menu/hakusho/nc/mext_00095.html" target="_blank">文部科学省「公立学校施設の目的外使用に係る留意事項の周知について」（令和7年3月26日 ６文科教第2074号）</a></div>
   <div class="ref-item"><a href="https://www.mext.go.jp/content/20230725-mext_zaimu-000031116_3.pdf" target="_blank" rel="noopener">原文PDF：文部科学省「学校・教師が担う業務に係る３分類 更なる役割分担・適正化の推進」（令和5年7月）</a></div>
@@ -864,14 +693,14 @@ em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
   <div class="ref-item"><a href="https://www.caa.go.jp/policies/policy/consumer_system/consumer_contract_act/annotations/assets/consumer_system_cms203_230915_04.pdf" target="_blank" rel="noopener">原文PDF：消費者庁「消費者契約法逐条解説」（令和5年9月改訂）──PTAが「事業者」にあたることを明示</a></div>
   <div class="ref-item"><a href="https://www.mext.go.jp/a_menu/shotou/jinji/1329576.htm" target="_blank">文部科学省「PTA等学校関係団体が実施する事業に係る兼職兼業等の取扱い及び学校における会計処理の適正化についての点検・調査結果」</a></div>
 </div>
-<div class="ref-box" style="margin-top:14px;">
+<div class="ref-box u-8d84299030">
   <div class="ref-box-title">判例</div>
   <div class="ref-item"><a href="https://www.courts.go.jp/app/hanrei_jp/detail2?id=52387" target="_blank">最高裁判所 平成18年2月7日 第三小法廷判決（民集60巻2号401頁）──「学校教育上の支障」の定義（物理的・精神的・将来的支障を含む）</a></div>
 </div>
 </div><!-- end 付録 -->
 
-<div style="margin-top:60px; padding-top:20px; border-top:2px solid #1a4a8a; text-align:center; font-size:12px; color:#555; line-height:2.2;">
-  <strong style="color:#1a4a8a;">PTA適正化推進委員会</strong><br>
+<div class="u-051b1d1be3">
+  <strong class="u-5f05435c7b">PTA適正化推進委員会</strong><br>
   公立学校におけるPTA運営の適正化に関するガイドブック（第4版）<br>
   本資料は、教育委員会・学校管理職の参考資料として作成したものです。<br>
   各自治体・学校の状況に応じて、必要な確認・整理を行ってください。

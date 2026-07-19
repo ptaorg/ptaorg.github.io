@@ -1,0 +1,289 @@
+@layer page {
+  /* Consolidated page styles for facilities.html */
+  /* Page-specific styles for facilities.html */
+  .pg {
+    width: min(calc(100% - 40px), 900px);
+    margin-inline: auto;
+    padding: 56px 0 96px;
+  }
+  .pg h2 {
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(1.45rem, 2.4vw, 1.95rem);
+    color: var(--navy);
+    margin: 0 0 12px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--gold);
+  }
+  .pg h3 {
+    font-size: 1.02rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin: 28px 0 10px;
+    padding-left: 12px;
+    border-left: 4px solid var(--gold);
+  }
+  .pg p {
+    color: var(--text);
+    line-height: 1.9;
+    margin-bottom: 14px;
+    font-size: 0.97rem;
+  }
+  .pg section {
+    margin-bottom: 64px;
+  }
+  .check-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9rem;
+  }
+  .check-table th {
+    background: var(--navy);
+    color: #fff;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 800;
+  }
+  .check-table td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+    line-height: 1.7;
+  }
+  .check-table tr:last-child td {
+    border-bottom: none;
+  }
+  .check-table tr:nth-child(even) td {
+    background: #f8fafc;
+  }
+  .badge {
+    display: inline-flex;
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 900;
+  }
+  .badge-ng {
+    background: #fee2e2;
+    color: #b91c1c;
+  }
+  .badge-ok {
+    background: #dcfce7;
+    color: #15803d;
+  }
+  .badge-warn {
+    background: #fef3c7;
+    color: #92400e;
+  }
+  .safes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .safe-box {
+    border-radius: var(--radius);
+    padding: 22px;
+  }
+  .safe-public {
+    background: linear-gradient(145deg, #f1f5f9, #e2e8f0);
+    border: 1px solid #cbd5e1;
+  }
+  .safe-private {
+    background: linear-gradient(145deg, #eff6ff, #dbeafe);
+    border: 1px solid #93c5fd;
+  }
+  .safe-box h4 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+  .safe-public h4 {
+    color: #334155;
+  }
+  .safe-private h4 {
+    color: #1e3a8a;
+  }
+  .safe-box ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .safe-box li {
+    font-size: 0.88rem;
+    color: var(--text);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.6;
+  }
+  .safe-box li::before {
+    content: "■";
+    font-size: 0.55rem;
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+  .safe-public li::before {
+    color: #64748b;
+  }
+  .safe-private li::before {
+    color: #1d4ed8;
+  }
+  .wall {
+    background: #fee2e2;
+    border: 2px solid #fca5a5;
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    margin: 0;
+    text-align: center;
+  }
+  .wall-label {
+    font-size: 0.8rem;
+    font-weight: 900;
+    color: #b91c1c;
+    margin-bottom: 6px;
+  }
+  .wall h4 {
+    font-size: 1rem;
+    font-weight: 900;
+    color: #7f1d1d;
+    margin: 0;
+  }
+  @media (max-width: 700px) {
+    .safes {
+      grid-template-columns: 1fr;
+    }
+    .check-table {
+      font-size: 0.82rem;
+    }
+  }
+
+  .page-hero {
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero-bg-img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .page-hero-bg-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1.05);
+  }
+  .page-hero-bg-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      160deg,
+      rgba(5, 17, 31, 0.32) 0%,
+      rgba(5, 17, 31, 0.14) 60%,
+      rgba(5, 17, 31, 0.05) 100%
+    );
+  }
+  .page-hero-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ↓ Photo hero overrides — keep white text on photo background ↓ */
+  .page-hero {
+    background: transparent;
+    border-top: none;
+    border-bottom: none;
+  }
+  .page-hero h1 {
+    color: #fff;
+  }
+  .page-hero h1 em {
+    color: var(--gold-lt);
+  }
+  .page-hero p {
+    color: rgba(255, 255, 255, 0.88);
+  }
+  .page-hero-kicker {
+    background: rgba(212, 175, 55, 0.18);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: var(--gold-lt);
+  }
+  .hero-actions .btn-outline {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  .hero-actions .btn-outline:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* Page-specific styles for facilities.html */
+  body.facilities-editorial .page-banner,
+  body.facilities-editorial .hero-actions {
+    display: none;
+  }
+  body.facilities-editorial .page-hero-kicker,
+  body.facilities-editorial .badge {
+    text-transform: none;
+    letter-spacing: 0.03em;
+    border-radius: 3px;
+  }
+  body.facilities-editorial .pg {
+    width: min(calc(100% - 40px), 920px);
+    padding: 68px 0 96px;
+  }
+  body.facilities-editorial .pg > section,
+  body.facilities-editorial .editorial-panel,
+  body.facilities-editorial .editorial-brief {
+    margin: 0;
+    padding: 40px 0 46px;
+    background: #fff;
+    border: 0;
+    border-top: 1px solid #cfd8e2;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  body.facilities-editorial .editorial-brief-grid,
+  body.facilities-editorial .safes {
+    display: block;
+  }
+  body.facilities-editorial .editorial-brief-point,
+  body.facilities-editorial .safe-box,
+  body.facilities-editorial .alert {
+    margin: 0;
+    padding: 20px 0;
+    background: #fff;
+    border: 0;
+    border-top: 1px solid #dbe4ee;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  body.facilities-editorial .editorial-brief-point:last-child,
+  body.facilities-editorial .safes > .safe-box:last-child {
+    border-bottom: 1px solid #dbe4ee;
+  }
+  body.facilities-editorial .wall,
+  body.facilities-editorial .law-quote {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  body.facilities-editorial .check-table .badge-ok,
+  body.facilities-editorial .check-table .badge-ng,
+  body.facilities-editorial .check-table .badge-warn {
+    background: transparent;
+    color: #17345c;
+    border: 1px solid #94a3b8;
+  }
+  body.facilities-editorial main a:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  @media (max-width: 700px) {
+    body.facilities-editorial .pg {
+      width: min(calc(100% - 30px), 920px);
+    }
+  }
+}

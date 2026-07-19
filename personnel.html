@@ -20,50 +20,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=20260705-fixed-header-all-pages">
-<link href="/css/refine.css?v=hover-orange-20260629cccccbb" rel="stylesheet"/>
-  <style>
-    .pg-main{width:min(calc(100% - 40px),900px);margin-inline:auto;padding:56px 0 96px}
-    .pg-section{margin-bottom:64px}
-    .pg-section h2{font-family:'Noto Serif JP',serif;font-size:clamp(1.5rem,2.5vw,2rem);color:var(--navy);margin-bottom:12px;padding-bottom:10px;border-bottom:3px solid var(--gold)}
-    .pg-section h3{font-size:1.05rem;font-weight:800;color:var(--navy);margin:28px 0 10px;padding-left:12px;border-left:4px solid var(--gold)}
-    .pg-section p{color:var(--text);line-height:1.9;margin-bottom:14px;font-size:.97rem}
-
-    .scope-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:20px 0}
-    .scope-ok{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:var(--radius);padding:22px}
-    .scope-ng{background:#fff5f5;border:1px solid #fecaca;border-radius:var(--radius);padding:22px}
-    .scope-label{font-size:.74rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
-    .scope-ok .scope-label{color:#15803d}
-    .scope-ng .scope-label{color:#b91c1c}
-    .scope-item{display:flex;gap:9px;font-size:.9rem;line-height:1.6;margin-bottom:8px;color:var(--text)}
-    .ok-dot{color:#15803d;font-weight:900;flex-shrink:0}
-    .ng-dot{color:#b91c1c;font-weight:900;flex-shrink:0}
-
-    @media(max-width:700px){.scope-grid{grid-template-columns:1fr}}
-
-    .page-hero{position:relative;overflow:hidden;}
-    .page-hero-bg-img{
-      position:absolute;inset:0;z-index:0;
-    }
-    .page-hero-bg-img img{
-      width:100%;height:100%;object-fit:cover;
-      filter:brightness(1.05);
-    }
-    .page-hero-bg-img::after{
-      content:'';position:absolute;inset:0;
-      background:linear-gradient(160deg,rgba(5,17,31,.32) 0%,rgba(5,17,31,.14) 60%,rgba(5,17,31,.05) 100%);
-    }
-    .page-hero-inner{position:relative;z-index:1;}
-  
-    /* ↓ Photo hero overrides — keep white text on photo background ↓ */
-    .page-hero{background:transparent!important;border-top:none!important;border-bottom:none!important}
-    .page-hero h1{color:#fff!important}
-    .page-hero h1 em{color:var(--gold-lt)!important}
-    .page-hero p{color:rgba(255,255,255,.88)!important}
-    .page-hero-kicker{background:rgba(212,175,55,.18)!important;border:1px solid rgba(212,175,55,.4)!important;color:var(--gold-lt)!important}
-    .hero-actions .btn-outline{color:#fff!important;border-color:rgba(255,255,255,.5)!important}
-    .hero-actions .btn-outline:hover{background:rgba(255,255,255,.12)!important;border-color:rgba(255,255,255,.8)!important}
-  </style>
+  <link rel="stylesheet" href="/css/site.css?v=20260719">
+<link href="/css/editorial.css?v=20260719" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/pages/personnel.css?v=20260719">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
@@ -98,216 +57,24 @@
 
 
 
-<link rel="stylesheet" href="/css/hover-orange.css?v=20260629-hero22-hero22">
+<link rel="stylesheet" href="/css/interactions.css?v=20260719">
 
 
 
 
 
-<style id="final-hero-layout-fix">
-html,body{overflow-x:hidden!important}
-.support-strip{background:linear-gradient(90deg,#0a192f 0%,#1e3a5f 58%,#2d5a8e 100%)!important;color:#fff!important;border-bottom:1px solid rgba(212,175,55,.42)!important}
-.support-strip-inner,.support-strip-text{color:#fff!important}
-.site-header{background:linear-gradient(90deg,#0a192f 0%,#1e3a5f 58%,#2d5a8e 100%)!important;border-bottom:3px solid #d4af37!important}
-.site-header .nav-container{background:transparent!important}
-.site-header .logo,.site-header .logo span,.site-header .nav-link{color:#fff!important}
-.site-header .hamburger span{background:#fff!important}
-.breadcrumb-bar{display:none!important}
-.page-hero--photo{display:block!important;position:relative!important;width:100%!important;max-width:none!important;min-height:340px!important;margin:0!important;padding:0!important;overflow:hidden!important;background:#0a192f!important;border:0!important;color:#fff!important}
-.page-hero--photo .page-hero-bg-img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:0!important}
-.page-hero--photo .page-hero-bg-img img{display:block!important;width:100%!important;height:100%!important;min-height:340px!important;object-fit:cover!important}
-.page-hero--photo .page-hero-bg-img::after{content:""!important;position:absolute!important;inset:0!important;background:linear-gradient(90deg,rgba(5,17,31,.78) 0%,rgba(5,17,31,.52) 48%,rgba(5,17,31,.18) 100%)!important}
-.page-hero--photo> :not(.page-hero-bg-img){position:relative!important;z-index:1!important;width:min(calc(100% - 40px),1080px)!important;max-width:1080px!important;margin-left:auto!important;margin-right:auto!important;padding-top:68px!important;padding-bottom:74px!important;color:#fff!important}
-.page-hero--photo .page-hero-inner,.page-hero--photo .issue-hero-inner,.page-hero--photo .journal-hero-inner{position:relative!important;z-index:1!important;width:min(calc(100% - 40px),1080px)!important;max-width:1080px!important;margin-left:auto!important;margin-right:auto!important;padding-top:68px!important;padding-bottom:74px!important;color:#fff!important}
-.page-hero--photo h1,.page-hero--photo p,.page-hero--photo .section-lead{color:#fff!important;text-shadow:0 2px 12px rgba(0,0,0,.34)!important}
-.page-hero--photo h1 em{color:#f4e7a6!important}
-@media(max-width:760px){.page-hero--photo{min-height:300px!important}.page-hero--photo .page-hero-bg-img img{min-height:300px!important}.page-hero--photo> :not(.page-hero-bg-img),.page-hero--photo .page-hero-inner,.page-hero--photo .issue-hero-inner,.page-hero--photo .journal-hero-inner{width:min(calc(100% - 28px),1080px)!important;padding-top:44px!important;padding-bottom:52px!important}}
-</style>
+<link rel="stylesheet" href="/css/shared/editorial-page-common.css?v=20260719">
 
-<style id="personnel-editorial-20260710">
-body.personnel-editorial .page-banner,
-body.personnel-editorial .hero-actions{
-  display:none!important;
-}
-body.personnel-editorial .page-hero-kicker,
-body.personnel-editorial .section-kicker,
-body.personnel-editorial .scope-label{
-  text-transform:none!important;
-  letter-spacing:.03em!important;
-  border-radius:3px!important;
-}
-body.personnel-editorial .pg-main{
-  width:min(calc(100% - 40px),920px)!important;
-  padding:68px 0 96px!important;
-}
-body.personnel-editorial .pg-section,
-body.personnel-editorial .editorial-panel,
-body.personnel-editorial .editorial-brief{
-  margin:0!important;
-  padding:40px 0 46px!important;
-  background:#fff!important;
-  border:0!important;
-  border-top:1px solid #cfd8e2!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-body.personnel-editorial .editorial-brief-grid,
-body.personnel-editorial .scope-grid{
-  display:block!important;
-}
-body.personnel-editorial .editorial-brief-point,
-body.personnel-editorial .scope-ok,
-body.personnel-editorial .scope-ng{
-  margin:0!important;
-  padding:20px 0!important;
-  background:#fff!important;
-  border:0!important;
-  border-top:1px solid #dbe4ee!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-body.personnel-editorial .scope-grid > div:last-child,
-body.personnel-editorial .editorial-brief-point:last-child{
-  border-bottom:1px solid #dbe4ee!important;
-}
-body.personnel-editorial .scope-label{
-  color:#17345c!important;
-}
-body.personnel-editorial .ok-dot,
-body.personnel-editorial .ng-dot{
-  color:#64748b!important;
-}
-body.personnel-editorial .alert,
-body.personnel-editorial .law-quote,
-body.personnel-editorial .ed-resource-list > div{
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-body.personnel-editorial main a:hover{
-  transform:none!important;
-  box-shadow:none!important;
-}
-@media(max-width:700px){
-  body.personnel-editorial .pg-main{
-    width:min(calc(100% - 30px),920px)!important;
-  }
-}
-</style>
 
-<style id="personnel-faq-editorial-20260710">
-body.personnel-editorial .faq-list{
-  gap:0!important;
-  border-top:1px solid #cfd8e2!important;
-}
-body.personnel-editorial .faq-item{
-  border-left:0!important;
-  border-right:0!important;
-  border-top:0!important;
-  border-bottom:1px solid #cfd8e2!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-body.personnel-editorial .faq-q{
-  padding:20px 0!important;
-}
-body.personnel-editorial .faq-a{
-  padding-left:0!important;
-  padding-right:0!important;
-}
-</style>
 
-<style id="personnel-final-editorial-20260710">
-.page-banner{display:none!important}
-.pg-main{max-width:920px!important}
-.pg-main .section-kicker,
-.pg-main .editorial-brief-band{display:none!important}
-.pg-main .editorial-brief,
-.pg-main .editorial-panel,
-.pg-main .alert,
-.pg-main .source-lens-item,
-.pg-main .faq-item{
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-.pg-main .editorial-brief{padding:0!important;background:#fff!important;border:0!important}
-.pg-main .editorial-brief-body{padding:0!important}
-.pg-main .editorial-brief-grid,
-.pg-main .source-lens-grid{display:block!important}
-.pg-main .editorial-brief-point,
-.pg-main .source-lens-item{
-  padding:18px 0!important;
-  border:0!important;
-  border-bottom:1px solid var(--line)!important;
-  background:#fff!important;
-}
-.pg-main .editorial-brief-point>span{display:none!important}
-.pg-main .faq-list{gap:0!important;border-top:1px solid var(--line)!important}
-.pg-main .faq-item{border:0!important;border-bottom:1px solid var(--line)!important}
-.pg-main .faq-q{padding:18px 0!important}
-.pg-main .faq-a{padding-left:0!important;padding-right:0!important}
-</style>
 
-<style id="personnel-final-editorial-20260710">
-.page-banner{display:none!important}
-.pg-main{max-width:920px!important}
-.pg-main .section-kicker,
-.pg-main .editorial-brief-band{display:none!important}
-.pg-main .editorial-brief,
-.pg-main .editorial-panel,
-.pg-main .alert,
-.pg-main .source-lens-item,
-.pg-main .faq-item{
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-.pg-main .editorial-brief{padding:0!important;background:#fff!important;border:0!important}
-.pg-main .editorial-brief-body{padding:0!important}
-.pg-main .editorial-brief-grid,
-.pg-main .source-lens-grid{display:block!important}
-.pg-main .editorial-brief-point,
-.pg-main .source-lens-item{
-  padding:18px 0!important;
-  border:0!important;
-  border-bottom:1px solid var(--line)!important;
-  background:#fff!important;
-}
-.pg-main .editorial-brief-point>span{display:none!important}
-.pg-main .faq-list{gap:0!important;border-top:1px solid var(--line)!important}
-.pg-main .faq-item{border:0!important;border-bottom:1px solid var(--line)!important}
-.pg-main .faq-q{padding:18px 0!important}
-.pg-main .faq-a{padding-left:0!important;padding-right:0!important}
-</style>
 
-<style id="personnel-final-editorial-20260710">
-.page-banner{display:none!important}
-.pg-main{max-width:920px!important}
-.pg-main .section-kicker,
-.pg-main .editorial-brief-band{display:none!important}
-.pg-main .editorial-brief,
-.pg-main .editorial-panel,
-.pg-main .alert,
-.pg-main .source-lens-item,
-.pg-main .faq-item{
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-.pg-main .editorial-brief{padding:0!important;background:#fff!important;border:0!important}
-.pg-main .editorial-brief-body{padding:0!important}
-.pg-main .editorial-brief-grid,
-.pg-main .source-lens-grid{display:block!important}
-.pg-main .editorial-brief-point,
-.pg-main .source-lens-item{
-  padding:18px 0!important;
-  border:0!important;
-  border-bottom:1px solid var(--line)!important;
-  background:#fff!important;
-}
-.pg-main .editorial-brief-point>span{display:none!important}
-.pg-main .faq-list{gap:0!important;border-top:1px solid var(--line)!important}
-.pg-main .faq-item{border:0!important;border-bottom:1px solid var(--line)!important}
-.pg-main .faq-q{padding:18px 0!important}
-.pg-main .faq-a{padding-left:0!important;padding-right:0!important}
-</style>
+<link rel="stylesheet" href="/css/shared/shared-3856bd620b71.css?v=20260719">
+
+
+
+
+<link rel="stylesheet" href="/css/inline-utilities.css?v=20260719">
 </head>
 <body class="personnel-editorial">
   
@@ -459,7 +226,7 @@ body.personnel-editorial .faq-a{
     </div>
   </section>
 
-  <div class="page-banner" style="background-image:url('assets/slides/1.jpg')">
+  <div class="page-banner u-f62a37ff23">
     <div class="page-banner-content">
       <div class="page-banner-kicker">Personnel &amp; Election Issues</div>
       <div class="page-banner-title">役員選出・人事問題</div>
@@ -515,10 +282,10 @@ body.personnel-editorial .faq-a{
     <!-- 時計インフォグラフィック -->
     <section class="pg-section">
       <h2>図解：職務専念義務の壁</h2>
-<figure style="margin:30px auto;max-width:860px"><img src="assets/diagrams/04_教職員関与/01_職務専念義務の壁.svg" alt="図解：職務専念義務の壁" loading="lazy" style="display:block;width:100%;height:auto"></figure>
+<figure class="u-852a52814b"><img class="u-83b2a80b11" src="assets/diagrams/04_教職員関与/01_職務専念義務の壁.svg" alt="図解：職務専念義務の壁" loading="lazy"></figure>
       <p>問題の核心は、勤務時間中の作業が当該地方公共団体の職務として位置付けられているか、それともPTAという別団体の内部事務なのかを確認できることです。</p>
 
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin:28px 0">
+      <div class="u-2089b09d52">
 
         <!-- 時計SVG -->
         <svg width="100%" viewBox="0 0 300 300" role="img">
@@ -543,9 +310,9 @@ body.personnel-editorial .faq-a{
 
         <!-- 条文ボックス -->
         <div>
-          <div style="background:var(--navy);border-radius:var(--radius);padding:22px;margin-bottom:16px">
-            <div style="font-size:.74rem;font-weight:900;letter-spacing:.08em;color:var(--gold-lt);margin-bottom:10px">地方公務員法 第35条（職務専念義務）</div>
-            <p style="color:rgba(255,255,255,.9);font-size:.92rem;line-height:1.85;margin:0">職員は、法律又は条例に特別の定がある場合を除く外、その勤務時間及び職務上の注意力のすべてをその職責遂行のために用い、当該地方公共団体がなすべき責を有する職務にのみ従事しなければならない。</p>
+          <div class="u-0a5716ebc0">
+            <div class="u-f467ccdd1e">地方公務員法 第35条（職務専念義務）</div>
+            <p class="u-446d6af037">職員は、法律又は条例に特別の定がある場合を除く外、その勤務時間及び職務上の注意力のすべてをその職責遂行のために用い、当該地方公共団体がなすべき責を有する職務にのみ従事しなければならない。</p>
           </div>
           <div class="alert alert-danger">
             <div class="alert-icon">⚠️</div>
@@ -558,7 +325,7 @@ body.personnel-editorial .faq-a{
     <!-- 行政実例 -->
     <section class="pg-section">
       <h2>行政実例が示す、学校職務と任意団体事務の区別</h2>
-<figure style="margin:30px auto;max-width:860px"><img src="assets/diagrams/04_教職員関与/02_職務命令のダブルバインド.svg" alt="図解：職務命令のダブルバインド" loading="lazy" style="display:block;width:100%;height:auto"></figure>
+<figure class="u-852a52814b"><img class="u-83b2a80b11" src="assets/diagrams/04_教職員関与/02_職務命令のダブルバインド.svg" alt="図解：職務命令のダブルバインド" loading="lazy"></figure>
       <p>昭和39年の行政実例は、PTA等の任意団体の事務と教職員の職務上の事務を区別する資料の一つです。現在の具体的な運用は、現行の条例・規則、学校管理規則、職務命令、職専免等と合わせて確認します。</p>
 
       <div class="law-quote">
@@ -580,7 +347,7 @@ body.personnel-editorial .faq-a{
     <!-- 渉外業務の範囲 -->
     <section class="pg-section">
       <h2>学校の連絡調整とPTA内部事務を分ける</h2>
-<figure style="margin:30px auto;max-width:860px"><img src="assets/diagrams/04_教職員関与/03_渉外のOKとNG.svg" alt="図解：渉外のOKとNG" loading="lazy" style="display:block;width:100%;height:auto"></figure>
+<figure class="u-852a52814b"><img class="u-83b2a80b11" src="assets/diagrams/04_教職員関与/03_渉外のOKとNG.svg" alt="図解：渉外のOKとNG" loading="lazy"></figure>
       <p>「一切の関与禁止」ではありません。<strong>渉外業務（学校↔PTA間の連絡調整窓口）</strong>を基本的な接点とし、PTA内部事務の代行と分けて確認します。</p>
       <div class="scope-grid">
         <div class="scope-ok">
@@ -605,7 +372,7 @@ body.personnel-editorial .faq-a{
 
       <h3>教職員がPTA役員になること</h3>
       <p>校長、教頭、教員がPTAの副会長、会計、書記等を兼ねる例があります。この場合は、学校職務上の立場とPTA役員としての立場を分け、次の点を確認します。</p>
-      <ul style="margin:12px 0 12px 20px;font-size:.95rem;line-height:1.9;color:var(--text)">
+      <ul class="u-722d928ed4">
         <li>勤務時間中の役員活動について、校務、職務命令、職専免等の根拠があるか</li>
         <li>学校の公的権限とPTAの私的意思決定が混同されていないか</li>
         <li>管理職の役職が、加入や議決に対する心理的圧力を生じさせていないか</li>
@@ -617,36 +384,36 @@ body.personnel-editorial .faq-a{
     <!-- 是正手順 -->
     <section class="pg-section">
       <h2>是正の進め方：段階的に切り離す</h2>
-<figure style="margin:30px auto;max-width:860px"><img src="assets/diagrams/04_教職員関与/04_職専免の濫用.svg" alt="図解：職専免の濫用" loading="lazy" style="display:block;width:100%;height:auto"></figure>
+<figure class="u-852a52814b"><img class="u-83b2a80b11" src="assets/diagrams/04_教職員関与/04_職専免の濫用.svg" alt="図解：職専免の濫用" loading="lazy"></figure>
       <p>「今すぐすべてをやめる」と機能不全が起きます。現状把握から始め、段階的に切り離すことが現実的です。</p>
 
-      <div style="display:flex;flex-direction:column;gap:0;margin:24px 0">
-        <div style="display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)">
-          <div style="width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.95rem;flex-shrink:0">1</div>
+      <div class="u-511087a807">
+        <div class="u-2d0a3315ad">
+          <div class="u-fc822286c6">1</div>
           <div>
-            <p style="font-weight:800;color:var(--navy);margin-bottom:4px">現状の棚卸し</p>
-            <p style="font-size:.92rem;margin:0">教職員が行っているPTA関連作業をリストアップします（配布物・集金補助・印刷・電話対応など）。多くの場合、誰も「全体像」を把握していないまま慣習が続いています。</p>
+            <p class="u-0a7b9e1f71">現状の棚卸し</p>
+            <p class="u-630a88fa35">教職員が行っているPTA関連作業をリストアップします（配布物・集金補助・印刷・電話対応など）。多くの場合、誰も「全体像」を把握していないまま慣習が続いています。</p>
           </div>
         </div>
-        <div style="display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)">
-          <div style="width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.95rem;flex-shrink:0">2</div>
+        <div class="u-2d0a3315ad">
+          <div class="u-fc822286c6">2</div>
           <div>
-            <p style="font-weight:800;color:var(--navy);margin-bottom:4px">PTA側で代替できる業務を特定する</p>
-            <p style="font-size:.92rem;margin:0">会費管理、会員連絡、総会資料、役員選出等について、学校に依存しない方法を検討します。PTA内部事務の多くは、PTA側の口座、連絡手段、会計・会員管理体制へ移すことができます。</p>
+            <p class="u-0a7b9e1f71">PTA側で代替できる業務を特定する</p>
+            <p class="u-630a88fa35">会費管理、会員連絡、総会資料、役員選出等について、学校に依存しない方法を検討します。PTA内部事務の多くは、PTA側の口座、連絡手段、会計・会員管理体制へ移すことができます。</p>
           </div>
         </div>
-        <div style="display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)">
-          <div style="width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.95rem;flex-shrink:0">3</div>
+        <div class="u-2d0a3315ad">
+          <div class="u-fc822286c6">3</div>
           <div>
-            <p style="font-weight:800;color:var(--navy);margin-bottom:4px">校長・教育委員会と移行計画を共有する</p>
-            <p style="font-size:.92rem;margin:0">現行運用の職務上の根拠を確認し、PTA内部事務を段階的にPTA側へ移す計画を、校長・教育委員会・PTAで共有します。</p>
+            <p class="u-0a7b9e1f71">校長・教育委員会と移行計画を共有する</p>
+            <p class="u-630a88fa35">現行運用の職務上の根拠を確認し、PTA内部事務を段階的にPTA側へ移す計画を、校長・教育委員会・PTAで共有します。</p>
           </div>
         </div>
-        <div style="display:flex;gap:16px;padding:20px 0">
-          <div style="width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.95rem;flex-shrink:0">4</div>
+        <div class="u-8e264a3a28">
+          <div class="u-9da2d49f0c">4</div>
           <div>
-            <p style="font-weight:800;color:var(--navy);margin-bottom:4px">切り離し後の連絡調整と協力範囲を書面化する</p>
-            <p style="font-size:.92rem;margin:0">学校とPTAの連絡窓口、学校が扱う事項、PTAが自ら処理する内部事務、施設・情報・会計の責任範囲を文書化します。</p>
+            <p class="u-0a7b9e1f71">切り離し後の連絡調整と協力範囲を書面化する</p>
+            <p class="u-630a88fa35">学校とPTAの連絡窓口、学校が扱う事項、PTAが自ら処理する内部事務、施設・情報・会計の責任範囲を文書化します。</p>
           </div>
         </div>
       </div>
@@ -657,24 +424,24 @@ body.personnel-editorial .faq-a{
       <h2>全国教育委員会の回答に見る共通認識</h2>
       <p>掲載している教育委員会回答には、<strong>PTA内部事務への教職員関与について、職務専念義務や服務上の整理を要する</strong>という趣旨の回答が含まれています。件数を引用する場合は、回答本文と分類タグを分けて確認してください。</p>
 
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0">
+      <div class="u-45e5b9d712">
         <div class="alert alert-success">
           <div class="alert-icon">📌</div>
           <div>
-            <p style="font-weight:800;margin-bottom:4px">適切な回答例の傾向</p>
-            <p style="font-size:.88rem;margin:0">「PTA活動は教職員の職務ではないため、勤務時間中の従事は適切でない」「会費集金・名簿管理は学校の所掌外」とする回答が複数の教育委員会から確認されています。</p>
+            <p class="u-a75c164e32">適切な回答例の傾向</p>
+            <p class="u-25ef8681f5">「PTA活動は教職員の職務ではないため、勤務時間中の従事は適切でない」「会費集金・名簿管理は学校の所掌外」とする回答が複数の教育委員会から確認されています。</p>
           </div>
         </div>
         <div class="alert alert-warning">
           <div class="alert-icon">⚠️</div>
           <div>
-            <p style="font-weight:800;margin-bottom:4px">曖昧な回答例の傾向</p>
-            <p style="font-size:.88rem;margin:0">「各学校の判断に委ねている」「慣行的に行われているが問題とは認識していない」という回答もあり、教育委員会自体の認識が整理されていないケースも見られます。</p>
+            <p class="u-a75c164e32">曖昧な回答例の傾向</p>
+            <p class="u-25ef8681f5">「各学校の判断に委ねている」「慣行的に行われているが問題とは認識していない」という回答もあり、教育委員会自体の認識が整理されていないケースも見られます。</p>
           </div>
         </div>
       </div>
 
-      <p>回答全文は<a href="board-responses.html" style="color:var(--navy-3);text-decoration:underline">教育委員会の回答ページ</a>で自治体別に確認できます。</p>
+      <p>回答全文は<a class="u-1b5069be7d" href="board-responses.html">教育委員会の回答ページ</a>で自治体別に確認できます。</p>
     </section>
 
     <!-- 関連リンク -->
@@ -682,7 +449,7 @@ body.personnel-editorial .faq-a{
     <section class="pg-section" id="personnel-sources">
       <h2>確認に使う一次資料</h2>
       <p>教職員がPTA事務に関与する問題は、「慣行」ではなく、職務専念義務、兼職兼業、学校会計処理、学校関係団体との関係として整理します。まずは文部科学省の学校関係団体資料と、地方公務員法35条を確認します。</p>
-      <ul style="line-height:2;margin-left:1.2em">
+      <ul class="u-afe6394ccb">
 <li><strong>文部科学省 学校関係団体が実施する事業に係る兼職兼業等の取扱い等</strong>：PTA等学校関係団体、兼職兼業、学校会計処理、教職員関与の入口（<a href="https://www.mext.go.jp/a_menu/shotou/jinji/1329576.htm" target="_blank" rel="noopener">公式ページ</a>）。</li>
 <li><strong>地方公務員法35条</strong>：職務専念義務を確認する条文（<a href="https://laws.e-gov.go.jp/law/325AC0000000261" target="_blank" rel="noopener">e-Gov法令検索</a>）。</li>
 <li><strong>教職員関与の照会項目</strong>：勤務時間、職務命令、職専免、兼職兼業、会計処理、移行計画を確認します（<a href="#personnel-inquiry-questions">確認項目へ</a>）。</li>
@@ -706,58 +473,58 @@ body.personnel-editorial .faq-a{
 
     
 
-    <section style="background:#fff;padding:64px 0">
+    <section class="u-094f6d1696">
       <div class="wrap wrap-narrow">
         <div class="section-kicker">よくある疑問</div>
         <h2 class="section-title">よくある質問</h2>
-        <div class="faq-list" style="display:flex;flex-direction:column;gap:10px;margin-top:28px">
+        <div class="faq-list u-6c3f4e9348">
 
-          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">担任の先生がPTA封筒の仕分けをしています。問題ですか？</div>
-              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          <div class="faq-item u-5dd6296e3a">
+            <div class="faq-q u-9f18855fd6">
+              <div class="faq-q-text u-ecdebb7ec2">担任の先生がPTA封筒の仕分けをしています。問題ですか？</div>
+              <span class="faq-toggle u-4feb68c3bb">▼</span>
             </div>
-            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">勤務時間中に恒常的・組織的に行われている場合は、その作業が校務として特定されているか、職務命令または職専免等の根拠があるかを確認します。作業量の大小だけでなく、誰の事務を、どの身分と時間で行っているかが重要です。</p></div>
+            <div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">勤務時間中に恒常的・組織的に行われている場合は、その作業が校務として特定されているか、職務命令または職専免等の根拠があるかを確認します。作業量の大小だけでなく、誰の事務を、どの身分と時間で行っているかが重要です。</p></div>
           </div>
 
-          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">「服務免除を取れば、勤務時間中にPTA活動をしてもいい」と言われました。本当ですか？</div>
-              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          <div class="faq-item u-5dd6296e3a">
+            <div class="faq-q u-9f18855fd6">
+              <div class="faq-q-text u-ecdebb7ec2">「服務免除を取れば、勤務時間中にPTA活動をしてもいい」と言われました。本当ですか？</div>
+              <span class="faq-toggle u-4feb68c3bb">▼</span>
             </div>
-            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">職務専念義務免除は、各自治体の条例・規則に基づいて行われます。PTA関係で適用する場合は、対象者、用務、日時、申請・承認記録、承認権者を確認します。校長の口頭了解だけで足りるか、包括的な取扱いが可能かは自治体の規定によります。職専免の有無とは別に、学校施設・情報・会計等の便宜供与の根拠も確認します。</p></div>
+            <div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">職務専念義務免除は、各自治体の条例・規則に基づいて行われます。PTA関係で適用する場合は、対象者、用務、日時、申請・承認記録、承認権者を確認します。校長の口頭了解だけで足りるか、包括的な取扱いが可能かは自治体の規定によります。職専免の有無とは別に、学校施設・情報・会計等の便宜供与の根拠も確認します。</p></div>
           </div>
 
-          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">渉外業務として「校長がPTA総会に出席する」のは問題ありませんか？</div>
-              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          <div class="faq-item u-5dd6296e3a">
+            <div class="faq-q u-9f18855fd6">
+              <div class="faq-q-text u-ecdebb7ec2">渉外業務として「校長がPTA総会に出席する」のは問題ありませんか？</div>
+              <span class="faq-toggle u-4feb68c3bb">▼</span>
             </div>
-            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">総会への出席は、学校代表としての説明・連絡調整なのか、PTA役員としての議決参加なのかを分けます。役員として議決権を行使し、予算・人事・会員管理を担う場合は、兼職等の手続、勤務時間の取扱い、学校の公的権限とPTAの自主的意思決定の分離を確認します。</p></div>
+            <div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">総会への出席は、学校代表としての説明・連絡調整なのか、PTA役員としての議決参加なのかを分けます。役員として議決権を行使し、予算・人事・会員管理を担う場合は、兼職等の手続、勤務時間の取扱い、学校の公的権限とPTAの自主的意思決定の分離を確認します。</p></div>
           </div>
 
-          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">事務職員がPTA会費の集計を補助しています。どう対応すればいいですか？</div>
-              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          <div class="faq-item u-5dd6296e3a">
+            <div class="faq-q u-9f18855fd6">
+              <div class="faq-q-text u-ecdebb7ec2">事務職員がPTA会費の集計を補助しています。どう対応すればいいですか？</div>
+              <span class="faq-toggle u-4feb68c3bb">▼</span>
             </div>
-            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">まず、会費集計が校務として特定されているか、職務命令、職専免、学校会計規程等の根拠があるかを確認します。根拠が明確でない場合は、PTAが自ら会計と徴収を担う体制を整え、学校事務職員への依存を段階的に終了する計画を共有します。</p></div>
+            <div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">まず、会費集計が校務として特定されているか、職務命令、職専免、学校会計規程等の根拠があるかを確認します。根拠が明確でない場合は、PTAが自ら会計と徴収を担う体制を整え、学校事務職員への依存を段階的に終了する計画を共有します。</p></div>
           </div>
 
-          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">「PTAのためにやっているんだから感謝してほしい」と教職員に言われます。どう返すべきですか？</div>
-              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          <div class="faq-item u-5dd6296e3a">
+            <div class="faq-q u-9f18855fd6">
+              <div class="faq-q-text u-ecdebb7ec2">「PTAのためにやっているんだから感謝してほしい」と教職員に言われます。どう返すべきですか？</div>
+              <span class="faq-toggle u-4feb68c3bb">▼</span>
             </div>
-            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">善意で行われてきたことは尊重しつつ、勤務時間中の作業が学校職務なのかPTA内部事務なのかは別に確認します。根拠が明確でない恒常的な運用は、教職員本人にも服務上の負担やリスクを生じさせます。個人を責めるのではなく、学校・教育委員会・PTAの役割分担を組織として見直します。</p></div>
+            <div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">善意で行われてきたことは尊重しつつ、勤務時間中の作業が学校職務なのかPTA内部事務なのかは別に確認します。根拠が明確でない恒常的な運用は、教職員本人にも服務上の負担やリスクを生じさせます。個人を責めるのではなく、学校・教育委員会・PTAの役割分担を組織として見直します。</p></div>
           </div>
 
-          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
-            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
-              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">教育委員会に改善を求めることはできますか？</div>
-              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          <div class="faq-item u-5dd6296e3a">
+            <div class="faq-q u-9f18855fd6">
+              <div class="faq-q-text u-ecdebb7ec2">教育委員会に改善を求めることはできますか？</div>
+              <span class="faq-toggle u-4feb68c3bb">▼</span>
             </div>
-            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">できます。教育委員会は、所管する学校の管理、教職員の服務、学校事務の適正な処理について権限と責任を持ちます。照会では、抽象的に「PTAへ協力してよいか」を尋ねるのではなく、作業内容、勤務時間、校務としての位置付け、職務命令、職専免・兼職等の根拠、会計・情報・施設の取扱いを具体的に確認します。</p></div>
+            <div class="faq-a u-d698da3e16"><p class="u-7079a4bd04">できます。教育委員会は、所管する学校の管理、教職員の服務、学校事務の適正な処理について権限と責任を持ちます。照会では、抽象的に「PTAへ協力してよいか」を尋ねるのではなく、作業内容、勤務時間、校務としての位置付け、職務命令、職専免・兼職等の根拠、会計・情報・施設の取扱いを具体的に確認します。</p></div>
           </div>
         </div>
       </div>

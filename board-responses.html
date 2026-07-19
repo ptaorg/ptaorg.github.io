@@ -20,137 +20,13 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="/css/style.css?v=20260705-fixed-header-all-pages" rel="stylesheet"/>
-<link href="/css/refine.css?v=hover-orange-20260629ccccc" rel="stylesheet"/>
+<link href="/css/site.css?v=20260719" rel="stylesheet"/>
+<link href="/css/editorial.css?v=20260719" rel="stylesheet"/>
 <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet"/>
-<style>
-.compact-hero-section{background:linear-gradient(135deg,#061a33 0%,#092646 58%,#0f345a 100%);color:#fff;padding:44px 0 38px;text-align:center;border-bottom:5px solid var(--gold)}.compact-hero-section .hero-kicker{display:inline-block;font-size:.72rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(212,175,55,.13);padding:4px 16px;border-radius:999px;margin-bottom:16px}.compact-hero-section h1{font-family:'Noto Serif JP',serif;font-size:clamp(1.55rem,3vw,2.25rem);font-weight:900;line-height:1.35;margin:0;color:#fff}.response-trends-section{background:#fff;padding:52px 0 44px;border-bottom:1px solid var(--line)}.response-trends-section .reading-body{max-width:960px}.reading-body p{font-size:.96rem;line-height:2.05;color:#273449;margin:0 0 1.05em}.reading-body h2,.trend-group h3{font-family:'Noto Serif JP',serif;color:var(--navy)}.reading-body h2{font-size:1.55rem;line-height:1.45;margin:0 0 18px}.trend-group{margin-top:26px;padding-top:18px;border-top:1px solid #dbe4ee}.trend-group h3{font-size:1.12rem;line-height:1.5;margin:0 0 14px}.trend-example-list{list-style:none;margin:0;padding:0}.trend-example-list li{margin:0 0 12px;padding:0 0 12px 1.1em;position:relative;border-bottom:1px solid #eef2f7;line-height:1.9;color:#334155;font-size:.94rem}.trend-example-list li::before{content:"・";position:absolute;left:0;top:0;color:var(--navy);font-weight:900}.trend-example-list a{color:var(--navy);font-weight:900;text-decoration:none;border-bottom:1px solid rgba(30,58,95,.3)}.trend-example-list a:hover{color:var(--orange);border-bottom-color:var(--orange)}.map-section{background:#fff;padding:56px 0 48px;border-bottom:1px solid var(--line)}#responseMap{height:520px;border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--shadow-md);margin-top:24px;background:#e5e7eb;overflow:hidden}.leaflet-container{max-width:100%;overflow:hidden}.map-note{font-size:.82rem;color:var(--text-soft);margin-top:10px}.map-index-link{display:inline-flex;align-items:center;gap:6px;margin-top:16px;padding:8px 20px;border-radius:8px;background:var(--navy);color:#fff;font-size:.88rem;font-weight:700;text-decoration:none;transition:opacity .15s}.map-index-link:hover{opacity:.82}.municipality-index-section{background:var(--bg);padding:64px 0 56px}.index-map-layout{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-items:start}.index-main{min-width:0}.region-map-panel{display:grid;gap:14px}.region-map-card{background:#fff;border:1px solid #dbe4ee;border-radius:14px;padding:10px;box-shadow:var(--shadow-sm);overflow:hidden}.region-map-card h3{font-family:'Noto Serif JP',serif;font-size:.95rem;color:var(--navy);margin:0 0 8px}.region-map{height:220px;width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:10px;background:#eef2f7;overflow:hidden}.muni-search-wrap{margin:24px 0 32px}#muniSearch{width:100%;max-width:480px;padding:10px 16px;border:1px solid var(--line);border-radius:10px;font-size:.95rem;font-family:inherit;outline:none;background:#fff}#muniSearch:focus{border-color:var(--navy)}#regionIndex .region-block{margin-bottom:40px;scroll-margin-top:80px}#regionIndex .region-heading{font-family:'Noto Serif JP',serif;font-size:1.1rem;font-weight:900;color:var(--navy);padding-bottom:8px;border-bottom:2px solid var(--navy);margin-bottom:18px}#regionIndex .prefecture-group{margin-bottom:18px}#regionIndex .pref-heading{font-size:.82rem;font-weight:900;color:var(--text-soft);letter-spacing:.06em;margin-bottom:8px;padding-left:10px;border-left:3px solid var(--gold)}#regionIndex .municipality-list{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px}#regionIndex .muni-link{display:inline-flex;align-items:center;gap:4px;padding:4px 12px;border-radius:6px;background:#fff;border:1px solid var(--line);color:var(--navy);font-size:.84rem;font-weight:700;text-decoration:none;transition:background .14s,border-color .14s;white-space:nowrap}#regionIndex .muni-link:hover{background:var(--navy);color:#fff;border-color:var(--navy)}#regionIndex .muni-count{font-size:.72rem;background:var(--gold);color:#fff;border-radius:999px;padding:1px 6px;font-weight:900;line-height:1.3}.response-bodies-section{background:#fff;padding:64px 0 72px}#responseBodiesContent .type-section{margin-bottom:60px}#responseBodiesContent .type-heading{display:flex;align-items:center;gap:10px;font-family:'Noto Serif JP',serif;font-size:1.15rem;font-weight:900;color:var(--navy);padding-bottom:10px;border-bottom:2px solid var(--navy);margin-bottom:20px}.type-label-badge{display:inline-flex;align-items:center;justify-content:center;width:2em;height:2em;border-radius:6px;background:var(--navy);color:#fff;font-size:1rem;font-weight:900;flex-shrink:0}.response-item{background:#fffdf8;border:1px solid #e8dfc9;border-radius:12px;padding:20px 22px;margin-bottom:14px}.response-muni-name{font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:900;color:var(--navy);margin-bottom:4px}.response-meta{font-size:.82rem;color:var(--text-soft);margin-bottom:10px}.response-item details summary{cursor:pointer;list-style:none;font-size:.88rem;font-weight:700;color:var(--navy);padding:6px 0;user-select:none}.response-item details summary::-webkit-details-marker{display:none}.response-item details[open] summary{margin-bottom:10px}.response-body{font-size:.91rem;line-height:1.85;color:var(--text);white-space:pre-wrap;border-top:1px solid var(--line);padding-top:12px}.back-to-index{margin-top:14px;font-size:.8rem}.back-to-index a{color:var(--navy);text-decoration:none;font-weight:700}.back-to-index a:hover{text-decoration:underline}.excluded-section{background:var(--bg);padding:46px 0;border-top:1px solid var(--line)}.caution-section{background:#fff;padding:40px 0;border-top:1px solid var(--line)}.caution-section p{font-size:.86rem;color:var(--text-soft);line-height:1.8;max-width:860px}.footer-contact-masked{color:rgba(255,255,255,.72);font-size:.9rem;line-height:1.8}.manual-map-pin-layer{display:none!important}@media(max-width:980px){.index-map-layout{grid-template-columns:1fr}.region-map-panel{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:680px){.compact-hero-section{padding:36px 0 32px}#responseMap{height:360px}.region-map-panel{grid-template-columns:1fr}.region-map{height:260px}.response-item{padding:16px 14px}}
-</style>
-<link rel="stylesheet" href="/css/hover-orange.css?v=20260629-hero22-hero22"/>
+<link rel="stylesheet" href="/css/pages/board-responses.css?v=20260719">
+<link rel="stylesheet" href="/css/interactions.css?v=20260719"/>
 
-<style id="board-responses-editorial-20260710">
-.board-responses-editorial .compact-hero-section{
-  padding:58px 0 52px!important;
-  text-align:left!important;
-  border-bottom:1px solid #071a30!important;
-}
-.board-responses-editorial .compact-hero-section .wrap{
-  width:min(calc(100% - 40px),1040px)!important;
-}
-.board-responses-editorial .compact-hero-section .hero-kicker{
-  display:block!important;
-  width:max-content!important;
-  margin:0 0 16px!important;
-  padding:0 0 6px!important;
-  background:transparent!important;
-  border:0!important;
-  border-bottom:1px solid rgba(212,175,55,.75)!important;
-  border-radius:0!important;
-  text-transform:none!important;
-  letter-spacing:.05em!important;
-}
-.board-responses-editorial .response-trends-section .reading-body,
-.board-responses-editorial .response-bodies-section>.wrap,
-.board-responses-editorial .excluded-section>.wrap,
-.board-responses-editorial .caution-section>.wrap{
-  width:min(calc(100% - 40px),920px)!important;
-}
-.board-responses-editorial #responseMap,
-.board-responses-editorial .region-map,
-.board-responses-editorial .region-map-card{
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-.board-responses-editorial .map-index-link{
-  display:inline!important;
-  padding:0!important;
-  background:transparent!important;
-  color:#174f7d!important;
-  border-radius:0!important;
-  text-decoration:underline!important;
-  text-underline-offset:.18em!important;
-}
-.board-responses-editorial .region-map-panel{
-  gap:22px!important;
-}
-.board-responses-editorial .region-map-card{
-  padding:0 0 20px!important;
-  background:transparent!important;
-  border:0!important;
-  border-bottom:1px solid #cfd8e2!important;
-}
-.board-responses-editorial #muniSearch{
-  max-width:100%!important;
-  border-radius:0!important;
-  border-width:0 0 2px!important;
-  padding:12px 2px!important;
-}
-.board-responses-editorial #regionIndex .municipality-list{
-  display:block!important;
-}
-.board-responses-editorial #regionIndex .muni-link{
-  display:inline!important;
-  margin-right:1em!important;
-  padding:0!important;
-  background:transparent!important;
-  border:0!important;
-  border-radius:0!important;
-  color:#174f7d!important;
-  text-decoration:underline!important;
-  text-underline-offset:.18em!important;
-  line-height:2.2!important;
-  white-space:normal!important;
-}
-.board-responses-editorial #regionIndex .muni-link:hover{
-  background:transparent!important;
-  color:#9a4c00!important;
-}
-.board-responses-editorial #regionIndex .muni-count{
-  padding:0!important;
-  background:transparent!important;
-  color:#64748b!important;
-  border-radius:0!important;
-  font-weight:700!important;
-}
-.board-responses-editorial .type-label-badge{
-  display:none!important;
-}
-.board-responses-editorial .response-item{
-  margin:0!important;
-  padding:24px 0!important;
-  background:transparent!important;
-  border:0!important;
-  border-bottom:1px solid #cfd8e2!important;
-  border-radius:0!important;
-}
-.board-responses-editorial .response-item:first-of-type{
-  border-top:1px solid #cfd8e2!important;
-}
-.board-responses-editorial .response-item details summary{
-  padding:8px 0!important;
-  text-decoration:underline!important;
-  text-underline-offset:.18em!important;
-}
-.board-responses-editorial .trend-example-list a,
-.board-responses-editorial .back-to-index a{
-  text-decoration:underline!important;
-  text-underline-offset:.18em!important;
-  border-bottom:0!important;
-}
-.board-responses-editorial main a:hover{
-  transform:none!important;
-  box-shadow:none!important;
-}
-@media(max-width:680px){
-  .board-responses-editorial .compact-hero-section .wrap,
-  .board-responses-editorial .response-trends-section .reading-body,
-  .board-responses-editorial .response-bodies-section>.wrap,
-  .board-responses-editorial .excluded-section>.wrap,
-  .board-responses-editorial .caution-section>.wrap{
-    width:min(calc(100% - 30px),920px)!important;
-  }
-}
-</style>
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -191,6 +67,7 @@
  ]
 }
 </script>
+<link rel="stylesheet" href="/css/inline-utilities.css?v=20260719">
 </head>
 <body class="board-responses-editorial">
 <header class="site-header"><div class="nav-container"><a class="logo" href="index.html"><img alt="PTA適正化推進委員会" src="assets/popc-logo.png"/><span>PTA適正化推進委員会</span></a><div class="header-search"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input aria-label="サイト内検索" class="search-input" placeholder="キーワードで検索…" type="text"/><div class="search-results-dropdown"></div></div><nav aria-label="主要ナビゲーション" class="desktop-nav">
@@ -311,7 +188,7 @@
 <section class="municipality-index-section" id="municipality-index"><div class="wrap"><h2 class="section-title">自治体索引</h2><p class="section-lead">地方・都道府県ごとに掲載回答を確認できます。</p><div class="index-map-layout"><div class="index-main"><div class="muni-search-wrap"><input id="muniSearch" placeholder="自治体名で絞り込み" type="search"/></div><div id="regionIndex"></div></div><aside class="region-map-panel"><div class="region-map-card"><h3>北海道・東北</h3><div class="region-map" id="regionMap-hokkaido-tohoku" data-region-id="hokkaido-tohoku"></div></div><div class="region-map-card"><h3>関東</h3><div class="region-map" id="regionMap-kanto" data-region-id="kanto"></div></div><div class="region-map-card"><h3>中部</h3><div class="region-map" id="regionMap-chubu" data-region-id="chubu"></div></div><div class="region-map-card"><h3>近畿</h3><div class="region-map" id="regionMap-kinki" data-region-id="kinki"></div></div><div class="region-map-card"><h3>中国・四国</h3><div class="region-map" id="regionMap-chugoku-shikoku" data-region-id="chugoku-shikoku"></div></div><div class="region-map-card"><h3>九州・沖縄</h3><div class="region-map" id="regionMap-kyushu" data-region-id="kyushu"></div></div></aside></div></div></section>
 <section class="response-bodies-section"><div class="wrap"><h2 class="section-title">回答本文</h2><p class="section-lead">各自治体等の回答本文を、公開用に個人情報等を省略したうえで掲載しています。回答本文は折りたたみを開いて確認してください。</p><div id="responseBodiesContent"></div></div></section>
 <section class="excluded-section"><div class="wrap"><h2 class="section-title">掲載対象から外した資料</h2><p class="section-lead">回答本文ではない可能性が高い資料、重複資料、本文確認ができない資料は、判断理由を明示して掲載対象から外しています。</p><div id="excludedResponses"></div></div></section>
-<section class="download-section" style="background:#fff;padding:52px 0;border-top:1px solid var(--line)"><div class="wrap"><h2 class="section-title">データのダウンロード</h2><p class="section-lead">掲載回答を、研究・報道・行政実務での検証に使いやすい形式で提供しています。個人情報等はマスキング済みです。(最終更新:2026-06-30・72自治体・72件)</p><p style="margin:18px 0 0"><a class="map-index-link" href="/data/board-responses.csv" download>CSVをダウンロード</a> <a class="map-index-link" href="/data/board-responses.json" download style="margin-left:10px">JSONをダウンロード</a></p><p class="map-note" style="margin-top:14px">ご利用の際は、出典として「PTA適正化推進委員会（ptaorg.com）」を明記してください。回答内容は各自治体の回答時点の見解です。</p></div></section>
+<section class="download-section u-b442328aac"><div class="wrap"><h2 class="section-title">データのダウンロード</h2><p class="section-lead">掲載回答を、研究・報道・行政実務での検証に使いやすい形式で提供しています。個人情報等はマスキング済みです。(最終更新:2026-06-30・72自治体・72件)</p><p class="u-857044f032"><a class="map-index-link" href="/data/board-responses.csv" download>CSVをダウンロード</a> <a class="map-index-link u-f47fba25ce" href="/data/board-responses.json" download>JSONをダウンロード</a></p><p class="map-note u-c53ea1da23">ご利用の際は、出典として「PTA適正化推進委員会（ptaorg.com）」を明記してください。回答内容は各自治体の回答時点の見解です。</p></div></section>
 <section class="caution-section"><div class="wrap"><p>本ページは、各教育委員会等からの回答を整理した資料ページです。回答内容は各自治体等の回答時点の見解・説明であり、個別事案への適用には、学校別の実物文書、規約、入会申込書、会費徴収資料、個人情報同意書、施設利用許可資料等との照合が必要です。</p></div></section>
 <footer class="footer"><div class="footer-inner"><div class="footer-grid"><div><h3>PTA適正化推進委員会</h3><div class="footer-contact-masked"><p>本ページでは、個人情報保護と資料公開の安全性を優先し、所在地・電話番号等の直接連絡先は表示していません。</p><p><a href="/contact.html">お問い合わせページへ</a></p></div></div></div><p class="copyright">© PTA適正化推進委員会</p></div></footer>
 <script crossorigin="" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

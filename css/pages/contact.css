@@ -1,0 +1,131 @@
+@layer page {
+  /* Page-specific styles for contact.html */
+  .contact-hero {
+    background: linear-gradient(135deg, #0f2742, #1e3a5f);
+    color: #fff;
+    padding: 70px 0 62px;
+  }
+  .contact-hero .wrap {
+    max-width: 980px;
+  }
+  .contact-kicker {
+    display: inline-block;
+    color: #d4af37;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 0.74rem;
+    margin-bottom: 14px;
+  }
+  .contact-hero h1 {
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    line-height: 1.35;
+    margin: 0 0 18px;
+    color: #fff;
+  }
+  .contact-hero p {
+    max-width: 760px;
+    line-height: 1.95;
+    color: rgba(255, 255, 255, 0.82);
+    margin: 0;
+  }
+  .contact-body {
+    background: #fff;
+    padding: 64px 0 78px;
+  }
+  .contact-article {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .contact-lead {
+    font-size: 1.02rem;
+    line-height: 2;
+    color: #334155;
+    margin: 0 0 34px;
+  }
+  .contact-methods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin: 28px 0 42px;
+  }
+  .contact-method {
+    background: #fff;
+    border: 1px solid #dbe4ee;
+    border-left: 7px solid #d4af37;
+    border-radius: 0 18px 18px 0;
+    padding: 26px 28px;
+    box-shadow: 0 12px 28px rgba(15, 39, 66, 0.06);
+  }
+  .contact-method h2 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.24rem;
+    color: #0f2742;
+    margin: 0 0 12px;
+  }
+  .contact-method p {
+    line-height: 1.85;
+    color: #475569;
+    margin: 0 0 16px;
+  }
+  .contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e3a5f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 11px 18px;
+    font-weight: 900;
+  }
+  .contact-button:hover {
+    background: #ea580c;
+    color: #fff;
+  }
+  .contact-note {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-left: 7px solid #ea580c;
+    border-radius: 0 16px 16px 0;
+    padding: 24px 26px;
+    margin: 34px 0;
+  }
+  .contact-note h2 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.18rem;
+    margin: 0 0 12px;
+    color: #9a3412;
+  }
+  .contact-note ul {
+    margin: 0;
+    padding-left: 1.2em;
+    color: #7c2d12;
+    line-height: 1.9;
+  }
+  .contact-policy {
+    border-top: 1px solid #e5e7eb;
+    margin-top: 42px;
+    padding-top: 28px;
+    color: #475569;
+    line-height: 1.95;
+  }
+  .contact-policy h2 {
+    font-family: "Noto Serif JP", serif;
+    color: #0f2742;
+    font-size: 1.28rem;
+    margin: 0 0 12px;
+  }
+  @media (max-width: 760px) {
+    .contact-methods {
+      grid-template-columns: 1fr;
+    }
+    .contact-body {
+      padding: 46px 0 60px;
+    }
+    .contact-method {
+      padding: 22px 20px;
+    }
+  }
+}

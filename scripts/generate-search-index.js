@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const { ROOT, writeFileIfChanged } = require("./archive-utils");
 
-const SKIP_DIRS = new Set([".git", ".claude", "assets", "css", "data", "js", "scripts", "tools", "node_modules", "ホーム"]);
+const SKIP_DIRS = new Set([".git", ".claude", "_site", "assets", "css", "data", "js", "scripts", "tools", "node_modules", "ホーム"]);
 const SKIP_FILES = new Set(["404.html"]);
 
 function read(filePath) {

@@ -1,0 +1,50 @@
+@layer page {
+  /* Shared by 3 pages. Extracted from duplicated inline CSS. */
+  .fee-editorial .issue-hero-inner {
+    grid-template-columns: 1fr;
+    max-width: 960px;
+  }
+  .fee-editorial .issue-hero-toc,
+  .fee-editorial .related-links-section {
+    display: none;
+  }
+  .fee-editorial .issue-content {
+    grid-template-columns: 1fr;
+    max-width: 960px;
+  }
+  .fee-editorial .section-eyebrow,
+  .fee-editorial .section-kicker,
+  .fee-editorial .editorial-brief-band {
+    display: none;
+  }
+  .fee-editorial .triple-problem,
+  .fee-editorial .transition-options {
+    display: block;
+  }
+  .fee-editorial .triple-card,
+  .fee-editorial .trans-card,
+  .fee-editorial .double-commission,
+  .fee-editorial .alert-block,
+  .fee-editorial .law-quote-block,
+  .fee-editorial .mext-quote {
+    margin: 0;
+    padding: 22px 0;
+    border: 0;
+    border-bottom: 1px solid #d8dee8;
+    border-radius: 0;
+    box-shadow: none;
+    background: #fff;
+    transform: none;
+  }
+  .fee-editorial .triple-law,
+  .fee-editorial .trans-label,
+  .fee-editorial .req-law {
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+  }
+  .fee-editorial .req-step-num {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
