@@ -8,5 +8,17 @@ Disallow: /data/
 Disallow: /.github/
 Allow: /
 
+# OpenAI search and model crawlers are explicitly allowed on public pages.
+User-agent: OAI-SearchBot
+User-agent: GPTBot
+Disallow: /tools/
+Disallow: /docs/
+Disallow: /source-candidates/
+Disallow: /scripts/
+Disallow: /tests/
+Disallow: /data/
+Disallow: /.github/
+Allow: /
+
 Sitemap: https://ptaorg.com/sitemap.xml
 Sitemap: https://ptaorg.com/sitemap-research.xml

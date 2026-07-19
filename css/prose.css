@@ -1,0 +1,167 @@
+/*
+ * Site-wide text-first presentation.
+ * Loaded last on every public HTML page by scripts/enhance-public-pages.js.
+ * Controls, forms, maps, source images and alert boxes remain framed.
+ */
+
+body[data-content-mode="prose"] {
+  --prose-ink: #1f2d3d;
+  --prose-muted: #5d6b79;
+  --prose-line: #d7e0e9;
+  --prose-navy: #102a43;
+  background-color: #fff;
+  color: var(--prose-ink);
+}
+
+body[data-content-mode="prose"] :where(p, li, dd) {
+  text-wrap: pretty;
+}
+
+body[data-content-mode="prose"] :where(main, body > article, section) > p {
+  max-width: 78ch;
+}
+
+/* Information cards become continuous document rows. */
+body[data-content-mode="prose"]
+  :where(
+    .card,
+    [class$="-card"],
+    [class*="-card "],
+    [class$="-item"],
+    [class*="-item "],
+    .case-block,
+    .archive-box,
+    .panel,
+    .editorial-panel,
+    .research-panel,
+    .source-lens-panel,
+    .support-panel,
+    .fee-panel,
+    .law-panel,
+    .essay-link-panel,
+    .ed-resource-panel
+  ):not(header *, footer *, nav *, form *, .region-map-card, .support-payment-card) {
+  margin: 0 !important;
+  padding: 1.35rem 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--prose-line) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+body[data-content-mode="prose"]
+  :where(
+    .card,
+    [class$="-card"],
+    [class*="-card "],
+    [class$="-item"],
+    [class*="-item "],
+    .case-block,
+    .archive-box,
+    .panel,
+    .editorial-panel,
+    .research-panel,
+    .source-lens-panel,
+    .support-panel,
+    .fee-panel,
+    .law-panel,
+    .essay-link-panel,
+    .ed-resource-panel
+  ):not(header *, footer *, nav *, form *, .region-map-card, .support-payment-card):hover {
+  background: transparent !important;
+  border-color: var(--prose-line) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Repeated card grids read from top to bottom instead of as a portal dashboard. */
+body[data-content-mode="prose"]
+  :where([class$="-grid"], [class*="-grid "], .grid):not(header *, footer *, nav *, form *, .region-map, .map-grid) {
+  display: block !important;
+  grid-template-columns: none !important;
+  gap: 0 !important;
+  border-top: 2px solid var(--prose-navy);
+}
+
+/* Compact facts retain a label/value relationship without floating cards. */
+body[data-content-mode="prose"]
+  :where(.meta-card, .archive-box, .archive-evidence-card) {
+  display: grid !important;
+  grid-template-columns: minmax(8rem, 0.32fr) minmax(0, 1fr) !important;
+  gap: 0.8rem 1.2rem !important;
+  align-items: baseline;
+}
+
+body[data-content-mode="prose"]
+  :where(.meta-card, .archive-box, .archive-evidence-card)
+  :where(.lb, .archive-label) {
+  color: var(--prose-muted) !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.04em;
+}
+
+body[data-content-mode="prose"] .archive-status-card {
+  border-left: 4px solid #b42318 !important;
+  padding-left: 1rem !important;
+}
+
+/* Source text is a quotation-like reading block, not a raised card. */
+body[data-content-mode="prose"] .body-card {
+  white-space: pre-wrap;
+  border-left: 4px solid #d4af37 !important;
+  padding-left: 1.25rem !important;
+}
+
+/* Related links become a compact source list. */
+body[data-content-mode="prose"] .rel-grid > a {
+  display: flex !important;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 !important;
+  padding: 1rem 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--prose-line) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Notes and alerts remain distinguishable, but lose the floating-card effect. */
+body[data-content-mode="prose"]
+  :where(
+    .notice,
+    .note,
+    .notice-box,
+    .info-box,
+    .key-takeaway,
+    .conclusion-box,
+    .archive-assessment-note
+  ) {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Real source material and tools are intentionally left intact. */
+body[data-content-mode="prose"]
+  :where(figure, table, form, .region-map-card, .support-payment-card, .cta-band) {
+  max-width: 100%;
+}
+
+@media (max-width: 700px) {
+  body[data-content-mode="prose"]
+    :where(.meta-card, .archive-box, .archive-evidence-card) {
+    grid-template-columns: 1fr !important;
+    gap: 0.25rem !important;
+  }
+}
+
+@media print {
+  body[data-content-mode="prose"]
+    :where(.card, [class$="-card"], [class*="-card "]) {
+    break-inside: avoid;
+  }
+}
