@@ -1,8 +1,8 @@
 {
-  "commit": "e9a6697afd577b2615e3807e6a5b47cad30f9aa8",
-  "verified_at": "2026-07-19T03:57:54.943943+00:00",
+  "commit": "336369bd35768a9d2005d9de9257fd6c9aa67718",
+  "verified_at": "2026-07-19T10:20:21.094181+00:00",
   "public_page": "https://ptaorg.com/support.html",
-  "probe_url": "https://ptaorg.com/support.html?deployment=e9a6697afd577b2615e3807e6a5b47cad30f9aa8&attempt=1&ts=1784433474",
+  "probe_url": "https://ptaorg.com/support.html?deployment=336369bd35768a9d2005d9de9257fd6c9aa67718&attempt=1&ts=1784456420",
   "expected_paypay_url": "https://qr.paypay.ne.jp/p2p01_AvAPJAge0mPnf33l",
   "detected_paypay_url": "https://qr.paypay.ne.jp/p2p01_AvAPJAge0mPnf33l",
   "verified": true
