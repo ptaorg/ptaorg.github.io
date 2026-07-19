@@ -98,7 +98,7 @@ jobs:
           git fetch origin deploy-status:refs/remotes/origin/deploy-status || true
 
           if git show-ref --verify --quiet refs/remotes/origin/deploy-status; then
-            git switch --create deploy-status --force-create refs/remotes/origin/deploy-status
+            git switch --force-create deploy-status refs/remotes/origin/deploy-status
           else
             git switch --orphan deploy-status
           fi
