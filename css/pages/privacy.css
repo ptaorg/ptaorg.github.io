@@ -348,21 +348,78 @@
     box-shadow: none;
     background: #fff;
   }
-  .privacy-editorial .faq-list {
-    gap: 0;
-    border-top: 1px solid var(--line);
+  .privacy-editorial .privacy-faq-section {
+    scroll-margin-top: 90px;
   }
-  .privacy-editorial .faq-item {
-    border: 0;
+  .privacy-editorial .privacy-faq-intro {
+    max-width: 780px;
+    margin: 0 0 26px;
+    color: var(--text-soft);
+  }
+  .privacy-editorial .privacy-faq-list {
+    border-top: 2px solid var(--navy);
+  }
+  .privacy-editorial .privacy-faq-item {
+    scroll-margin-top: 90px;
+    padding: 30px 0 32px;
     border-bottom: 1px solid var(--line);
-    border-radius: 0;
   }
-  .privacy-editorial .faq-q {
-    padding: 18px 0;
+  .privacy-editorial .privacy-faq-item h3 {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+    margin: 0 0 18px;
+    padding: 0;
+    border: 0;
+    color: var(--navy);
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(1.05rem, 1.8vw, 1.22rem);
+    line-height: 1.65;
   }
-  .privacy-editorial .faq-a {
-    padding-left: 0;
-    padding-right: 0;
+  .privacy-editorial .privacy-faq-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    min-height: 30px;
+    margin-top: 2px;
+    background: var(--navy);
+    color: #fff;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 0.76rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+  .privacy-editorial .privacy-faq-answer {
+    margin-left: 54px;
+    padding-left: 18px;
+    border-left: 4px solid var(--gold);
+  }
+  .privacy-editorial .privacy-faq-answer p {
+    margin: 0 0 13px;
+    color: var(--text);
+    line-height: 1.9;
+  }
+  .privacy-editorial .privacy-faq-answer p:last-child {
+    margin-bottom: 0;
+  }
+  .privacy-editorial .privacy-faq-answer > p:first-child > strong:first-child {
+    color: #7a5700;
+  }
+  .privacy-editorial .privacy-faq-check {
+    padding-top: 12px;
+    border-top: 1px dashed var(--line);
+    color: var(--text-soft);
+    font-size: 0.92rem;
+  }
+  .privacy-editorial .privacy-faq-source {
+    margin: 30px 0 0;
+    padding: 20px 0 0;
+    border-top: 1px solid var(--line);
+    color: var(--text-soft);
+    font-size: 0.9rem;
+    line-height: 1.85;
   }
   .privacy-editorial .btn-soft,
   .privacy-editorial .btn-navy,
@@ -375,5 +432,18 @@
     border-radius: 0;
     text-decoration: underline;
     text-underline-offset: 0.18em;
+  }
+  @media (max-width: 620px) {
+    .privacy-editorial .privacy-faq-item h3 {
+      grid-template-columns: 36px minmax(0, 1fr);
+      gap: 9px;
+    }
+    .privacy-editorial .privacy-faq-mark {
+      width: 34px;
+    }
+    .privacy-editorial .privacy-faq-answer {
+      margin-left: 0;
+      padding-left: 14px;
+    }
   }
 }
