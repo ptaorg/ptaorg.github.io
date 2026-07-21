@@ -8,9 +8,82 @@ Disallow: /data/
 Disallow: /.github/
 Allow: /
 
-# OpenAI search and model crawlers are explicitly allowed on public pages.
+# === AI search and model crawlers: explicitly allowed on public pages ===
+
+# OpenAI (ChatGPT)
 User-agent: OAI-SearchBot
 User-agent: GPTBot
+User-agent: ChatGPT-User
+Disallow: /tools/
+Disallow: /docs/
+Disallow: /source-candidates/
+Disallow: /scripts/
+Disallow: /tests/
+Disallow: /data/
+Disallow: /.github/
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: anthropic-ai
+Disallow: /tools/
+Disallow: /docs/
+Disallow: /source-candidates/
+Disallow: /scripts/
+Disallow: /tests/
+Disallow: /data/
+Disallow: /.github/
+Allow: /
+
+# Google (Gemini / AI Overviews)
+User-agent: Google-Extended
+Disallow: /tools/
+Disallow: /docs/
+Disallow: /source-candidates/
+Disallow: /scripts/
+Disallow: /tests/
+Disallow: /data/
+Disallow: /.github/
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+Disallow: /tools/
+Disallow: /docs/
+Disallow: /source-candidates/
+Disallow: /scripts/
+Disallow: /tests/
+Disallow: /data/
+Disallow: /.github/
+Allow: /
+
+# Microsoft (Copilot / Bing)
+User-agent: bingbot
+Disallow: /tools/
+Disallow: /docs/
+Disallow: /source-candidates/
+Disallow: /scripts/
+Disallow: /tests/
+Disallow: /data/
+Disallow: /.github/
+Allow: /
+
+# Apple (Siri / Apple Intelligence)
+User-agent: Applebot
+User-agent: Applebot-Extended
+Disallow: /tools/
+Disallow: /docs/
+Disallow: /source-candidates/
+Disallow: /scripts/
+Disallow: /tests/
+Disallow: /data/
+Disallow: /.github/
+Allow: /
+
+# Common Crawl (used to train many AI models)
+User-agent: CCBot
 Disallow: /tools/
 Disallow: /docs/
 Disallow: /source-candidates/
