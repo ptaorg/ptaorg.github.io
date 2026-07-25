@@ -1,9 +1,9 @@
 {
-  "commit": "9dbb0b9e643a6522ad1239e6e9dd9a55841e2199",
-  "verified_at": "2026-07-25T23:08:48.231605+00:00",
+  "commit": "27bce689f2cb1a607ad8d8bbce68b1f0d3f5d840",
+  "verified_at": "2026-07-25T23:09:19.064357+00:00",
   "public_page": "https://ptaorg.com/support.html",
-  "probe_url": "https://ptaorg.com/support.html?deployment=9dbb0b9e643a6522ad1239e6e9dd9a55841e2199&attempt=24&ts=1785020923",
-  "expected_paypay_url": "https://qr.paypay.ne.jp/p2p01_AvAPJAge0mPnf33l",
+  "probe_url": "https://ptaorg.com/support.html?deployment=27bce689f2cb1a607ad8d8bbce68b1f0d3f5d840&attempt=1&ts=1785020958",
+  "expected_paypay_url": "https://qr.paypay.ne.jp/p2p01_kCikEVD8MbCvLpG1",
   "detected_paypay_url": "https://qr.paypay.ne.jp/p2p01_kCikEVD8MbCvLpG1",
-  "verified": false
+  "verified": true
 }
