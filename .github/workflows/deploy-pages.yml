@@ -42,7 +42,7 @@ jobs:
         shell: bash
         run: |
           set -u
-          expected='https://qr.paypay.ne.jp/p2p01_AvAPJAge0mPnf33l'
+          expected='https://qr.paypay.ne.jp/p2p01_kCikEVD8MbCvLpG1'
           verified=false
           actual=''
           probe=''
