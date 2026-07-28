@@ -1,9 +1,9 @@
 name: Simplify core navigation
 
 on:
-  push:
+  pull_request:
     branches:
-      - automation/simplify-core-navigation-20260728
+      - main
 
 permissions:
   contents: write
