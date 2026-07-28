@@ -1,1 +1,1 @@
-trigger PPC page validation after workflow registration
+trigger PPC page validation after one-shot workflow installation
