@@ -1,0 +1,93 @@
+name: Temporary navigation diagnostic
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Chromium
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/nav-diagnostic
+          cd /tmp/nav-diagnostic
+          npm init -y >/dev/null
+          npm install playwright >/dev/null
+          npx playwright install chromium --with-deps
+      - name: Capture desktop and mobile geometry
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m http.server 4173 >/tmp/nav-http.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" >/dev/null 2>&1 || true' EXIT
+          sleep 2
+          cat > /tmp/nav-diagnostic/diagnose.mjs <<'JS'
+          import fs from 'node:fs';
+          import { chromium } from 'playwright';
+
+          const report = { desktop: {}, mobile: {} };
+          const browser = await chromium.launch({ headless: true });
+          const desktop = await browser.newContext({ viewport: { width: 1280, height: 1000 } });
+          const page = await desktop.newPage();
+          for (const file of ['index.html', 'ppc-points.html', 'pta-membership-optin.html', 'journal.html', 'national-archive.html']) {
+            await page.goto(`http://127.0.0.1:4173/${file}`, { waitUntil: 'networkidle' });
+            report.desktop[file] = {
+              title: await page.title(),
+              navVisible: await page.locator('.desktop-nav').isVisible(),
+              hamburgerVisible: await page.locator('#hamburger').isVisible(),
+              labels: await page.locator('.desktop-nav > .nav-link, .desktop-nav > .nav-item > .nav-link').allTextContents(),
+              logo: await page.locator('.logo').boundingBox(),
+              search: await page.locator('.header-search').boundingBox(),
+              nav: await page.locator('.desktop-nav').boundingBox(),
+              container: await page.locator('.nav-container').boundingBox()
+            };
+          }
+          await page.goto('http://127.0.0.1:4173/ppc-points.html', { waitUntil: 'networkidle' });
+          await page.screenshot({ path: '/tmp/navigation-diagnostic-desktop.png', fullPage: false });
+          await desktop.close();
+
+          const mobile = await browser.newContext({ viewport: { width: 390, height: 844 } });
+          const mobilePage = await mobile.newPage();
+          await mobilePage.goto('http://127.0.0.1:4173/ppc-points.html', { waitUntil: 'networkidle' });
+          report.mobile.before = {
+            desktopVisible: await mobilePage.locator('.desktop-nav').isVisible(),
+            hamburgerVisible: await mobilePage.locator('#hamburger').isVisible(),
+            overlayVisible: await mobilePage.locator('#mobileOverlay').isVisible(),
+            overlayCount: await mobilePage.locator('#mobileOverlay').count()
+          };
+          if (await mobilePage.locator('#hamburger').isVisible()) {
+            await mobilePage.locator('#hamburger').click();
+            await mobilePage.waitForTimeout(500);
+          }
+          report.mobile.after = {
+            overlayVisible: await mobilePage.locator('#mobileOverlay').isVisible(),
+            overlayClass: await mobilePage.locator('#mobileOverlay').getAttribute('class'),
+            labels: await mobilePage.locator('#mobileOverlay a.mobile-link').allTextContents()
+          };
+          await mobilePage.screenshot({ path: '/tmp/navigation-diagnostic-mobile.png', fullPage: false });
+          await mobile.close();
+          await browser.close();
+          fs.writeFileSync('/tmp/navigation-diagnostic.json', JSON.stringify(report, null, 2) + '\n');
+          console.log(JSON.stringify(report, null, 2));
+          JS
+          cd /tmp/nav-diagnostic
+          node diagnose.mjs
+      - name: Upload diagnostic
+        uses: actions/upload-artifact@v4
+        with:
+          name: navigation-diagnostic
+          path: |
+            /tmp/navigation-diagnostic.json
+            /tmp/navigation-diagnostic-desktop.png
+            /tmp/navigation-diagnostic-mobile.png
+          retention-days: 3
