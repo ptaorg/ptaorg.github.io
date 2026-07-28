@@ -1,0 +1,313 @@
+name: Simplify core navigation v3
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  update-validate-and-visual-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      BASE_SHA: 32bac25609334aaac88530f1d4add99892b97c8d
+      VALIDATED_BRANCH: automation/simplify-core-navigation-v3-validated-20260728
+      HELPER_BRANCH: automation/simplify-core-navigation-v3-20260728
+
+    steps:
+      - name: Checkout exact main base
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BASE_SHA }}
+          fetch-depth: 1
+
+      - name: Confirm main has not moved
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          test "$(git rev-parse HEAD)" = "$BASE_SHA"
+          test "$(git rev-parse origin/main)" = "$BASE_SHA"
+
+      - name: Replace all primary navigation variants
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+
+          const root = process.cwd();
+          const skipDirs = new Set(['.git', 'node_modules', '_site', 'assets']);
+          const requiredLinks = ['/ppc-points.html', '/pta-membership-optin.html', '/index.html#audience-gateway', '/journal.html', '/national-archive.html'];
+
+          const desktopNav = '<nav aria-label="主要ナビゲーション" class="desktop-nav"><a class="nav-link" href="/index.html">トップ</a><a class="nav-link" href="/ppc-points.html">PPC資料</a><a class="nav-link" href="/pta-membership-optin.html">オプトイン</a><div class="nav-item has-dropdown"><a class="nav-link" href="/index.html#audience-gateway">立場別</a><div class="mega-menu"><div class="mega-col"><h4>立場から読む</h4><ul><li><a href="/guide-parent.html">保護者の方へ</a></li><li><a href="/guide-pta.html">PTA役員の方へ</a></li><li><a href="/guide-board.html">教育委員会・学校へ</a></li><li><a href="/guide-research.html">研究者・記者の方へ</a></li></ul></div></div></div><a class="nav-link" href="/journal.html">論考</a><a class="nav-link" href="/national-archive.html">全国資料館</a></nav>';
+
+          const mobileNav = '<div class="mobile-overlay" id="mobileOverlay"><div class="mobile-menu-group"><div class="mobile-menu-label">主要入口</div><a class="mobile-link" href="/index.html">トップ</a><a class="mobile-link" href="/ppc-points.html">PPC資料の読み方</a><a class="mobile-link" href="/pta-membership-optin.html">オプトイン</a><a class="mobile-link" href="/journal.html">論考</a><a class="mobile-link" href="/national-archive.html">全国資料館</a></div><div class="mobile-menu-group"><div class="mobile-menu-label">立場別</div><a class="mobile-link" href="/guide-parent.html">保護者の方へ</a><a class="mobile-link" href="/guide-pta.html">PTA役員の方へ</a><a class="mobile-link" href="/guide-board.html">教育委員会・学校へ</a><a class="mobile-link" href="/guide-research.html">研究者・記者の方へ</a></div><button type="button" class="mobile-close-btn" id="closeOverlay" aria-label="メニューを閉じる">閉じる ×</button></div>';
+
+          const simpleNavLinks = '<nav class="navlinks" aria-label="主要ナビゲーション"><a href="/index.html">トップ</a><a href="/ppc-points.html">PPC資料</a><a href="/pta-membership-optin.html">オプトイン</a><a href="/index.html#audience-gateway">立場別</a><a href="/journal.html">論考</a><a href="/national-archive.html">全国資料館</a></nav>';
+
+          function walk(dir, files = []) {
+            for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+              if (entry.isDirectory()) {
+                if (!skipDirs.has(entry.name)) walk(path.join(dir, entry.name), files);
+              } else if (entry.isFile() && entry.name.endsWith('.html')) {
+                files.push(path.join(dir, entry.name));
+              }
+            }
+            return files;
+          }
+
+          function findMatchingDivEnd(html, start, rel) {
+            const tokenRe = /<\/?div\b[^>]*>/gi;
+            tokenRe.lastIndex = start;
+            let depth = 0;
+            for (let match; (match = tokenRe.exec(html)); ) {
+              if (/^<\/div/i.test(match[0])) depth -= 1;
+              else if (!/\/>$/.test(match[0])) depth += 1;
+              if (depth === 0) return tokenRe.lastIndex;
+            }
+            throw new Error(`${rel}: matching mobile overlay closing div not found`);
+          }
+
+          function replaceDesktop(html, rel) {
+            const marker = html.indexOf('class="desktop-nav"');
+            if (marker < 0) return { html, found: false };
+            const start = html.lastIndexOf('<nav', marker);
+            const close = html.indexOf('</nav>', marker);
+            if (start < 0 || close < 0) throw new Error(`${rel}: desktop nav boundary not found`);
+            return { html: html.slice(0, start) + desktopNav + html.slice(close + 6), found: true };
+          }
+
+          function replaceOrInsertMobile(html, rel, mustExist) {
+            const marker = html.indexOf('id="mobileOverlay"');
+            if (marker >= 0) {
+              const start = html.lastIndexOf('<div', marker);
+              if (start < 0) throw new Error(`${rel}: mobile overlay opening div not found`);
+              const end = findMatchingDivEnd(html, start, rel);
+              return { html: html.slice(0, start) + mobileNav + html.slice(end), found: true, inserted: false };
+            }
+            if (!mustExist) return { html, found: false, inserted: false };
+            const desktopMarker = html.indexOf('class="desktop-nav"');
+            const headerEnd = html.indexOf('</header>', desktopMarker);
+            if (desktopMarker < 0 || headerEnd < 0) throw new Error(`${rel}: cannot insert mobile navigation after header`);
+            const insertAt = headerEnd + '</header>'.length;
+            return { html: html.slice(0, insertAt) + '\n' + mobileNav + html.slice(insertAt), found: true, inserted: true };
+          }
+
+          const changed = [];
+          let standardDesktop = 0;
+          let standardMobile = 0;
+          let insertedMobile = 0;
+
+          for (const file of walk(root)) {
+            const rel = path.relative(root, file).replace(/\\/g, '/');
+            if (rel === 'national-archive.html' || rel === 'archive/kuki/index.html') continue;
+            const original = fs.readFileSync(file, 'utf8');
+            const desktop = replaceDesktop(original, rel);
+            const mobile = replaceOrInsertMobile(desktop.html, rel, desktop.found || desktop.html.includes('id="hamburger"'));
+            const next = mobile.html;
+            if (!desktop.found && !mobile.found) continue;
+            if (desktop.found) standardDesktop += 1;
+            if (mobile.found) standardMobile += 1;
+            if (mobile.inserted) insertedMobile += 1;
+
+            if (desktop.found) {
+              const marker = next.indexOf('class="desktop-nav"');
+              const start = next.lastIndexOf('<nav', marker);
+              const end = next.indexOf('</nav>', marker) + 6;
+              const segment = next.slice(start, end);
+              for (const link of requiredLinks) if (!segment.includes(link)) throw new Error(`${rel}: desktop link missing ${link}`);
+              for (const old of ['問題別', '根拠資料', 'チェック・文例', 'btn-gold']) if (segment.includes(old)) throw new Error(`${rel}: old desktop item remains ${old}`);
+            }
+            if (next.includes('id="hamburger"') && !next.includes('id="mobileOverlay"')) throw new Error(`${rel}: hamburger exists without mobile overlay`);
+            if (next !== original) {
+              fs.writeFileSync(file, next, 'utf8');
+              changed.push(rel);
+            }
+          }
+
+          for (const rel of ['national-archive.html', 'archive/kuki/index.html']) {
+            const file = path.join(root, rel);
+            const original = fs.readFileSync(file, 'utf8');
+            const marker = original.indexOf('class="navlinks"');
+            if (marker < 0) throw new Error(`${rel}: custom navlinks missing`);
+            const start = original.lastIndexOf('<nav', marker);
+            const close = original.indexOf('</nav>', marker);
+            if (start < 0 || close < 0) throw new Error(`${rel}: custom nav boundary missing`);
+            const next = original.slice(0, start) + simpleNavLinks + original.slice(close + 6);
+            for (const link of requiredLinks) if (!next.slice(start, start + simpleNavLinks.length).includes(link)) throw new Error(`${rel}: custom link missing ${link}`);
+            fs.writeFileSync(file, next, 'utf8');
+            changed.push(rel);
+          }
+
+          const cssBlock = `\n  /* Simplified primary navigation: keep the six core destinations accessible on small screens. */\n  @media (max-width: 900px) {\n    .header .nav {\n      height: auto;\n      min-height: 64px;\n      flex-direction: column;\n      align-items: stretch;\n      gap: 6px;\n      padding: 10px 0;\n    }\n    .header .logo {\n      text-align: center;\n    }\n    .header .navlinks {\n      display: flex;\n      overflow-x: auto;\n      gap: 6px;\n      padding: 2px 0 6px;\n      scrollbar-width: thin;\n      -webkit-overflow-scrolling: touch;\n    }\n    .header .navlinks a {\n      flex: 0 0 auto;\n      white-space: nowrap;\n      padding: 5px 8px;\n      font-size: 0.8rem;\n    }\n  }\n`;
+          for (const rel of ['css/pages/national-archive.css', 'css/pages/archive-kuki-index.css']) {
+            const file = path.join(root, rel);
+            let css = fs.readFileSync(file, 'utf8');
+            const marker = '/* Simplified primary navigation:';
+            if (!css.includes(marker)) css += cssBlock;
+            fs.writeFileSync(file, css, 'utf8');
+            changed.push(rel);
+          }
+
+          if (standardDesktop < 40) throw new Error(`too few standard desktop pages: ${standardDesktop}`);
+          if (standardMobile < standardDesktop) throw new Error(`standard mobile nav missing: desktop=${standardDesktop} mobile=${standardMobile}`);
+          const uniqueChanged = [...new Set(changed)].sort();
+          fs.writeFileSync('/tmp/navigation-count.txt', String(uniqueChanged.length));
+          fs.writeFileSync('/tmp/navigation-summary.txt', `standardDesktop=${standardDesktop}\nstandardMobile=${standardMobile}\nmobileInserted=${insertedMobile}\ncustomNavPages=2\nchanged=${uniqueChanged.length}\n`);
+          console.log(fs.readFileSync('/tmp/navigation-summary.txt', 'utf8'));
+          NODE
+
+      - name: Install project dependencies
+        run: npm ci
+
+      - name: Run all repository checks
+        run: npm run check:all
+
+      - name: Install Chromium for layout verification
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/nav-browser
+          cd /tmp/nav-browser
+          npm init -y >/dev/null
+          npm install playwright >/dev/null
+          npx playwright install chromium --with-deps
+
+      - name: Verify desktop and mobile navigation in Chromium
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m http.server 4173 >/tmp/nav-http.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" >/dev/null 2>&1 || true' EXIT
+          sleep 2
+          cat > /tmp/nav-browser/check.mjs <<'JS'
+          import fs from 'node:fs';
+          import { chromium } from 'playwright';
+          const target = ['トップ', 'PPC資料', 'オプトイン', '立場別', '論考', '全国資料館'];
+          const audienceTarget = ['保護者の方へ', 'PTA役員の方へ', '教育委員会・学校へ', '研究者・記者の方へ'];
+          const report = { standardDesktop: {}, customDesktop: {}, mobile: {} };
+          const assert = (value, message) => { if (!value) throw new Error(message); };
+          const browser = await chromium.launch({ headless: true });
+
+          const desktop = await browser.newContext({ viewport: { width: 1280, height: 1000 } });
+          const page = await desktop.newPage();
+          for (const file of ['index.html', 'ppc-points.html', 'pta-membership-optin.html', 'journal.html']) {
+            await page.goto(`http://127.0.0.1:4173/${file}`, { waitUntil: 'domcontentloaded' });
+            await page.waitForTimeout(250);
+            const nav = page.locator('.desktop-nav');
+            assert(await nav.isVisible(), `${file}: standard desktop nav hidden`);
+            const labels = (await page.locator('.desktop-nav > .nav-link, .desktop-nav > .nav-item > .nav-link').allTextContents()).map(t => t.replace(/\s+/g, '').replace('▾', ''));
+            assert(JSON.stringify(labels) === JSON.stringify(target), `${file}: labels ${JSON.stringify(labels)}`);
+            const navBox = await nav.boundingBox();
+            const containerBox = await page.locator('.nav-container').boundingBox();
+            assert(navBox && containerBox && navBox.x + navBox.width <= containerBox.x + containerBox.width + 1, `${file}: nav exceeds header`);
+            const audience = page.locator('.desktop-nav .nav-item.has-dropdown');
+            await audience.hover();
+            const audienceLabels = (await audience.locator('.mega-menu a').allTextContents()).map(t => t.trim());
+            assert(JSON.stringify(audienceLabels) === JSON.stringify(audienceTarget), `${file}: audience ${JSON.stringify(audienceLabels)}`);
+            report.standardDesktop[file] = { labels, audienceLabels, navBox, containerBox };
+          }
+          await page.goto('http://127.0.0.1:4173/ppc-points.html', { waitUntil: 'domcontentloaded' });
+          await page.screenshot({ path: '/tmp/navigation-standard-desktop.png' });
+
+          for (const file of ['national-archive.html', 'archive/kuki/index.html']) {
+            await page.goto(`http://127.0.0.1:4173/${file}`, { waitUntil: 'domcontentloaded' });
+            await page.waitForTimeout(250);
+            const nav = page.locator('.navlinks');
+            assert(await nav.isVisible(), `${file}: custom desktop nav hidden`);
+            const labels = (await nav.locator('a').allTextContents()).map(t => t.trim());
+            assert(JSON.stringify(labels) === JSON.stringify(target), `${file}: custom labels ${JSON.stringify(labels)}`);
+            report.customDesktop[file] = { labels, box: await nav.boundingBox() };
+          }
+          await page.goto('http://127.0.0.1:4173/national-archive.html', { waitUntil: 'domcontentloaded' });
+          await page.screenshot({ path: '/tmp/navigation-archive-desktop.png' });
+          await desktop.close();
+
+          const mobile = await browser.newContext({ viewport: { width: 390, height: 844 } });
+          const m = await mobile.newPage();
+          await m.goto('http://127.0.0.1:4173/ppc-points.html', { waitUntil: 'domcontentloaded' });
+          assert(await m.locator('#hamburger').isVisible(), 'standard mobile hamburger hidden');
+          await m.locator('#hamburger').click();
+          await m.locator('#mobileOverlay').waitFor({ state: 'visible' });
+          const standardMobileLabels = (await m.locator('#mobileOverlay a.mobile-link').allTextContents()).map(t => t.trim());
+          for (const label of [...target.slice(0, 3), ...target.slice(4), ...audienceTarget]) assert(standardMobileLabels.includes(label === 'PPC資料' ? 'PPC資料の読み方' : label), `standard mobile missing ${label}`);
+          await m.screenshot({ path: '/tmp/navigation-standard-mobile.png' });
+          report.mobile.standard = standardMobileLabels;
+
+          for (const file of ['national-archive.html', 'archive/kuki/index.html']) {
+            await m.goto(`http://127.0.0.1:4173/${file}`, { waitUntil: 'domcontentloaded' });
+            await m.waitForTimeout(250);
+            const nav = m.locator('.navlinks');
+            assert(await nav.isVisible(), `${file}: custom mobile nav hidden`);
+            const labels = (await nav.locator('a').allTextContents()).map(t => t.trim());
+            assert(JSON.stringify(labels) === JSON.stringify(target), `${file}: custom mobile labels ${JSON.stringify(labels)}`);
+            const bodyWidth = await m.evaluate(() => document.documentElement.scrollWidth);
+            assert(bodyWidth <= 390, `${file}: body has horizontal overflow ${bodyWidth}`);
+            report.mobile[file] = { labels, scroll: await nav.evaluate(el => ({ clientWidth: el.clientWidth, scrollWidth: el.scrollWidth })) };
+          }
+          await m.goto('http://127.0.0.1:4173/national-archive.html', { waitUntil: 'domcontentloaded' });
+          await m.screenshot({ path: '/tmp/navigation-archive-mobile.png' });
+          await mobile.close();
+          await browser.close();
+          fs.writeFileSync('/tmp/navigation-browser-report.json', JSON.stringify(report, null, 2) + '\n');
+          console.log(JSON.stringify(report, null, 2));
+          JS
+          cd /tmp/nav-browser
+          node check.mjs
+
+      - name: Verify scope and create one commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$(git status --porcelain)"
+          git diff --check
+          unexpected=$(git diff --name-only | grep -Ev '(\.html$|^css/pages/(national-archive|archive-kuki-index)\.css$)' || true)
+          test -z "$unexpected" || { echo "$unexpected" >&2; exit 1; }
+          test "$(git diff --name-only | wc -l | tr -d ' ')" = "$(cat /tmp/navigation-count.txt)"
+          git config user.name "ptaorg"
+          git config user.email "noreply@ptaorg.com"
+          git add -- '*.html' css/pages/national-archive.css css/pages/archive-kuki-index.css
+          git commit -m '重要ページに絞って共通ナビゲーションを整理'
+          test "$(git rev-list --count "$BASE_SHA"..HEAD)" = "1"
+
+      - name: Recheck main and publish validated commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$BASE_SHA"
+          git push origin "HEAD:refs/heads/$VALIDATED_BRANCH"
+          {
+            echo '## Simplified navigation v3 passed'
+            echo
+            echo "- Base: $BASE_SHA"
+            echo "- Commit: $(git rev-parse HEAD)"
+            cat /tmp/navigation-summary.txt
+            echo '- npm run check:all: passed'
+            echo '- Chromium desktop/mobile checks: passed'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: simplified-navigation-v3
+          path: |
+            /tmp/navigation-browser-report.json
+            /tmp/navigation-standard-desktop.png
+            /tmp/navigation-standard-mobile.png
+            /tmp/navigation-archive-desktop.png
+            /tmp/navigation-archive-mobile.png
+          if-no-files-found: warn
+          retention-days: 3
+
+      - name: Remove helper branch
+        if: success()
+        shell: bash
+        run: git push origin --delete "$HELPER_BRANCH"
