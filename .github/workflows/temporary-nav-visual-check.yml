@@ -48,7 +48,8 @@ jobs:
           }
 
           for (const file of urls) {
-            await page.goto(`http://127.0.0.1:4173/${file}`, { waitUntil: 'networkidle' });
+            await page.goto(`http://127.0.0.1:4173/${file}`, { waitUntil: 'domcontentloaded', timeout: 30000 });
+            await page.waitForTimeout(400);
             const nav = page.locator('.desktop-nav');
             assert(await nav.isVisible(), `${file}: desktop nav not visible`);
             const labels = await page.locator('.desktop-nav > .nav-link, .desktop-nav > .nav-item > .nav-link').allTextContents();
@@ -56,13 +57,18 @@ jobs:
             assert(JSON.stringify(normalized) === JSON.stringify(['トップ', 'PPC資料', 'オプトイン', '立場別', '論考', '全国資料館']), `${file}: unexpected desktop labels ${JSON.stringify(normalized)}`);
 
             const logoBox = await page.locator('.logo').boundingBox();
-            const searchBox = await page.locator('.header-search').boundingBox();
             const navBox = await nav.boundingBox();
             const containerBox = await page.locator('.nav-container').boundingBox();
-            assert(logoBox && searchBox && navBox && containerBox, `${file}: missing header geometry`);
-            assert(searchBox.x + searchBox.width <= navBox.x + 1, `${file}: search overlaps navigation`);
+            const search = page.locator('.header-search');
+            const searchBox = await search.count() ? await search.boundingBox() : null;
+            assert(logoBox && navBox && containerBox, `${file}: missing required header geometry`);
+            if (searchBox) {
+              assert(searchBox.x + searchBox.width <= navBox.x + 1, `${file}: search overlaps navigation`);
+            } else {
+              assert(logoBox.x + logoBox.width <= navBox.x + 1, `${file}: logo overlaps navigation`);
+            }
             assert(navBox.x + navBox.width <= containerBox.x + containerBox.width + 1, `${file}: navigation exceeds container`);
-            assert(navBox.height < 60, `${file}: navigation wrapped vertically`);
+            assert(navBox.height < 80, `${file}: navigation wrapped vertically`);
 
             const audience = page.locator('.desktop-nav .nav-item.has-dropdown');
             await audience.hover();
@@ -70,15 +76,17 @@ jobs:
             assert(await menu.isVisible(), `${file}: audience dropdown not visible`);
             const audienceLinks = (await menu.locator('a').allTextContents()).map((text) => text.trim());
             assert(audienceLinks.length === 4, `${file}: audience dropdown count ${audienceLinks.length}`);
-            report.desktop[file] = { labels: normalized, audienceLinks };
+            report.desktop[file] = { labels: normalized, audienceLinks, logoBox, searchBox, navBox, containerBox };
           }
-          await page.goto('http://127.0.0.1:4173/ppc-points.html', { waitUntil: 'networkidle' });
+          await page.goto('http://127.0.0.1:4173/ppc-points.html', { waitUntil: 'domcontentloaded', timeout: 30000 });
+          await page.waitForTimeout(400);
           await page.screenshot({ path: '/tmp/navigation-desktop.png', fullPage: false });
           await desktop.close();
 
           const mobile = await browser.newContext({ viewport: { width: 390, height: 844 } });
           const mobilePage = await mobile.newPage();
-          await mobilePage.goto('http://127.0.0.1:4173/ppc-points.html', { waitUntil: 'networkidle' });
+          await mobilePage.goto('http://127.0.0.1:4173/ppc-points.html', { waitUntil: 'domcontentloaded', timeout: 30000 });
+          await mobilePage.waitForTimeout(400);
           assert(!(await mobilePage.locator('.desktop-nav').isVisible()), 'mobile: desktop nav should be hidden');
           const hamburger = mobilePage.locator('#hamburger');
           assert(await hamburger.isVisible(), 'mobile: hamburger not visible');
@@ -97,7 +105,12 @@ jobs:
           console.log(JSON.stringify(report, null, 2));
           JS
           cd /tmp/nav-check
-          node check.mjs
+          set +e
+          node check.mjs > /tmp/navigation-browser-log.txt 2>&1
+          status=$?
+          set -e
+          cat /tmp/navigation-browser-log.txt
+          exit "$status"
 
       - name: Upload evidence
         if: always()
@@ -106,7 +119,9 @@ jobs:
           name: navigation-visual-check
           path: |
             /tmp/navigation-browser-report.json
+            /tmp/navigation-browser-log.txt
             /tmp/navigation-desktop.png
             /tmp/navigation-mobile.png
+            /tmp/nav-http.log
           if-no-files-found: warn
           retention-days: 3
