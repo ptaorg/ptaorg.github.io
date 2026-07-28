@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ env.BASE_SHA }}
-          fetch-depth: 0
+          fetch-depth: 1
 
       - name: Confirm main has not moved
         shell: bash
@@ -58,6 +58,18 @@ jobs:
             return files;
           }
 
+          function findMatchingDivEnd(html, start, rel) {
+            const tokenRe = /<\/?div\b[^>]*>/gi;
+            tokenRe.lastIndex = start;
+            let depth = 0;
+            for (let match; (match = tokenRe.exec(html)); ) {
+              if (/^<\/div/i.test(match[0])) depth -= 1;
+              else if (!/\/>$/.test(match[0])) depth += 1;
+              if (depth === 0) return tokenRe.lastIndex;
+            }
+            throw new Error(`${rel}: matching mobile overlay closing div not found`);
+          }
+
           function replaceDesktop(html, rel) {
             const markerPos = html.indexOf('class="desktop-nav"');
             if (markerPos < 0) return { html, found: false };
@@ -74,10 +86,10 @@ jobs:
             const markerPos = html.indexOf('id="mobileOverlay"');
             if (markerPos < 0) return { html, found: false };
             const start = html.lastIndexOf('<div', markerPos);
-            const main = html.indexOf('<main', markerPos);
-            if (start < 0 || main < 0) throw new Error(`${rel}: mobile nav boundary not found`);
+            if (start < 0) throw new Error(`${rel}: mobile overlay opening div not found`);
+            const end = findMatchingDivEnd(html, start, rel);
             return {
-              html: html.slice(0, start) + mobileNav + '\n' + html.slice(main),
+              html: html.slice(0, start) + mobileNav + html.slice(end),
               found: true
             };
           }
@@ -111,7 +123,7 @@ jobs:
             if (mobile.found) {
               const marker = mobile.html.indexOf('id="mobileOverlay"');
               const start = mobile.html.lastIndexOf('<div', marker);
-              const end = mobile.html.indexOf('<main', marker);
+              const end = findMatchingDivEnd(mobile.html, start, rel);
               const segment = mobile.html.slice(start, end);
               for (const required of ['/ppc-points.html', '/pta-membership-optin.html', '/journal.html', '/national-archive.html']) {
                 if (!segment.includes(required)) throw new Error(`${rel}: required mobile link missing: ${required}`);
