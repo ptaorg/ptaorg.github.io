@@ -1,0 +1,198 @@
+name: Simplify core navigation v2
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  update-and-validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      BASE_SHA: 32bac25609334aaac88530f1d4add99892b97c8d
+      VALIDATED_BRANCH: automation/simplify-core-navigation-v2-validated-20260728
+      HELPER_BRANCH: automation/simplify-core-navigation-v2-20260728
+
+    steps:
+      - name: Checkout exact main base
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BASE_SHA }}
+          fetch-depth: 1
+
+      - name: Confirm main has not moved
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          test "$(git rev-parse HEAD)" = "$BASE_SHA"
+          test "$(git rev-parse origin/main)" = "$BASE_SHA"
+
+      - name: Replace and complete global navigation
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+
+          const root = process.cwd();
+          const skipDirs = new Set(['.git', 'node_modules', '_site', 'assets']);
+          const requiredLinks = ['/ppc-points.html', '/pta-membership-optin.html', '/journal.html', '/national-archive.html'];
+
+          const desktopNav = '<nav aria-label="主要ナビゲーション" class="desktop-nav"><a class="nav-link" href="/index.html">トップ</a><a class="nav-link" href="/ppc-points.html">PPC資料</a><a class="nav-link" href="/pta-membership-optin.html">オプトイン</a><div class="nav-item has-dropdown"><a class="nav-link" href="/index.html#audience-gateway">立場別</a><div class="mega-menu"><div class="mega-col"><h4>立場から読む</h4><ul><li><a href="/guide-parent.html">保護者の方へ</a></li><li><a href="/guide-pta.html">PTA役員の方へ</a></li><li><a href="/guide-board.html">教育委員会・学校へ</a></li><li><a href="/guide-research.html">研究者・記者の方へ</a></li></ul></div></div></div><a class="nav-link" href="/journal.html">論考</a><a class="nav-link" href="/national-archive.html">全国資料館</a></nav>';
+
+          const mobileNav = '<div class="mobile-overlay" id="mobileOverlay"><div class="mobile-menu-group"><div class="mobile-menu-label">主要入口</div><a class="mobile-link" href="/index.html">トップ</a><a class="mobile-link" href="/ppc-points.html">PPC資料の読み方</a><a class="mobile-link" href="/pta-membership-optin.html">オプトイン</a><a class="mobile-link" href="/journal.html">論考</a><a class="mobile-link" href="/national-archive.html">全国資料館</a></div><div class="mobile-menu-group"><div class="mobile-menu-label">立場別</div><a class="mobile-link" href="/guide-parent.html">保護者の方へ</a><a class="mobile-link" href="/guide-pta.html">PTA役員の方へ</a><a class="mobile-link" href="/guide-board.html">教育委員会・学校へ</a><a class="mobile-link" href="/guide-research.html">研究者・記者の方へ</a></div><button type="button" class="mobile-close-btn" id="closeOverlay" aria-label="メニューを閉じる">閉じる ×</button></div>';
+
+          function walk(dir, files = []) {
+            for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+              if (entry.isDirectory()) {
+                if (!skipDirs.has(entry.name)) walk(path.join(dir, entry.name), files);
+              } else if (entry.isFile() && entry.name.endsWith('.html')) {
+                files.push(path.join(dir, entry.name));
+              }
+            }
+            return files;
+          }
+
+          function findMatchingDivEnd(html, start, rel) {
+            const tokenRe = /<\/?div\b[^>]*>/gi;
+            tokenRe.lastIndex = start;
+            let depth = 0;
+            for (let match; (match = tokenRe.exec(html)); ) {
+              if (/^<\/div/i.test(match[0])) depth -= 1;
+              else if (!/\/>$/.test(match[0])) depth += 1;
+              if (depth === 0) return tokenRe.lastIndex;
+            }
+            throw new Error(`${rel}: matching mobile overlay closing div not found`);
+          }
+
+          function replaceDesktop(html, rel) {
+            const marker = html.indexOf('class="desktop-nav"');
+            if (marker < 0) return { html, found: false };
+            const start = html.lastIndexOf('<nav', marker);
+            const close = html.indexOf('</nav>', marker);
+            if (start < 0 || close < 0) throw new Error(`${rel}: desktop nav boundary not found`);
+            return { html: html.slice(0, start) + desktopNav + html.slice(close + 6), found: true };
+          }
+
+          function replaceOrInsertMobile(html, rel, mustExist) {
+            const marker = html.indexOf('id="mobileOverlay"');
+            if (marker >= 0) {
+              const start = html.lastIndexOf('<div', marker);
+              if (start < 0) throw new Error(`${rel}: mobile overlay opening div not found`);
+              const end = findMatchingDivEnd(html, start, rel);
+              return { html: html.slice(0, start) + mobileNav + html.slice(end), found: true, inserted: false };
+            }
+            if (!mustExist) return { html, found: false, inserted: false };
+            const desktopMarker = html.indexOf('class="desktop-nav"');
+            const headerEnd = html.indexOf('</header>', desktopMarker);
+            if (desktopMarker < 0 || headerEnd < 0) throw new Error(`${rel}: cannot insert mobile navigation after header`);
+            const insertAt = headerEnd + '</header>'.length;
+            return { html: html.slice(0, insertAt) + '\n' + mobileNav + html.slice(insertAt), found: true, inserted: true };
+          }
+
+          const changed = [];
+          let desktopFiles = 0;
+          let mobileFiles = 0;
+          let insertedMobile = 0;
+
+          for (const file of walk(root)) {
+            const rel = path.relative(root, file).replace(/\\/g, '/');
+            const original = fs.readFileSync(file, 'utf8');
+            const desktop = replaceDesktop(original, rel);
+            const mobile = replaceOrInsertMobile(desktop.html, rel, desktop.found || desktop.html.includes('id="hamburger"'));
+            let next = mobile.html;
+
+            if (!desktop.found && !mobile.found) continue;
+            if (desktop.found) desktopFiles += 1;
+            if (mobile.found) mobileFiles += 1;
+            if (mobile.inserted) insertedMobile += 1;
+
+            if (desktop.found) {
+              const marker = next.indexOf('class="desktop-nav"');
+              const start = next.lastIndexOf('<nav', marker);
+              const end = next.indexOf('</nav>', marker) + 6;
+              const segment = next.slice(start, end);
+              for (const link of requiredLinks) if (!segment.includes(link)) throw new Error(`${rel}: desktop link missing ${link}`);
+              for (const old of ['問題別', '根拠資料', 'チェック・文例', 'btn-gold']) {
+                if (segment.includes(old)) throw new Error(`${rel}: old desktop item remains ${old}`);
+              }
+            }
+
+            if (next.includes('id="hamburger"') && !next.includes('id="mobileOverlay"')) {
+              throw new Error(`${rel}: hamburger exists without mobile overlay`);
+            }
+
+            if (mobile.found) {
+              const marker = next.indexOf('id="mobileOverlay"');
+              const start = next.lastIndexOf('<div', marker);
+              const end = findMatchingDivEnd(next, start, rel);
+              const segment = next.slice(start, end);
+              for (const link of requiredLinks) if (!segment.includes(link)) throw new Error(`${rel}: mobile link missing ${link}`);
+              if (!segment.includes('<div class="mobile-menu-label">立場別</div>')) throw new Error(`${rel}: mobile audience group missing`);
+            }
+
+            if (next !== original) {
+              fs.writeFileSync(file, next, 'utf8');
+              changed.push(rel);
+            }
+          }
+
+          if (desktopFiles < 40) throw new Error(`too few desktop navigation pages found: ${desktopFiles}`);
+          if (mobileFiles < desktopFiles) throw new Error(`mobile navigation missing: desktop=${desktopFiles} mobile=${mobileFiles}`);
+          if (changed.length < 40) throw new Error(`too few pages changed: ${changed.length}`);
+
+          fs.writeFileSync('/tmp/navigation-count.txt', String(changed.length));
+          fs.writeFileSync('/tmp/navigation-summary.txt', `desktop=${desktopFiles}\nmobile=${mobileFiles}\nmobileInserted=${insertedMobile}\nchanged=${changed.length}\n`);
+          console.log(fs.readFileSync('/tmp/navigation-summary.txt', 'utf8'));
+          NODE
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run all checks
+        run: npm run check:all
+
+      - name: Verify scope and commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$(git status --porcelain)"
+          git diff --check
+          if git diff --name-only | grep -Ev '\.html$' >/tmp/non-html-files.txt; then
+            echo 'Unexpected non-HTML changes:' >&2
+            cat /tmp/non-html-files.txt >&2
+            exit 1
+          fi
+          test "$(git diff --name-only | wc -l | tr -d ' ')" = "$(cat /tmp/navigation-count.txt)"
+          git config user.name "ptaorg"
+          git config user.email "noreply@ptaorg.com"
+          git add -- '*.html'
+          git commit -m '重要ページに絞って共通ナビゲーションを整理'
+          test "$(git rev-list --count "$BASE_SHA"..HEAD)" = "1"
+
+      - name: Recheck main and publish validated commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$BASE_SHA"
+          git push origin "HEAD:refs/heads/$VALIDATED_BRANCH"
+          {
+            echo '## Core navigation v2 validation passed'
+            echo
+            echo "- Base: $BASE_SHA"
+            echo "- Commit: $(git rev-parse HEAD)"
+            cat /tmp/navigation-summary.txt
+            echo '- npm run check:all: passed'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Remove helper branch
+        if: success()
+        shell: bash
+        run: git push origin --delete "$HELPER_BRANCH"
