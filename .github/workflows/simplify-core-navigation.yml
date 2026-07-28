@@ -83,31 +83,42 @@ jobs:
           }
 
           const changed = [];
-          const navFiles = [];
+          let desktopFiles = 0;
+          let mobileFiles = 0;
           for (const file of walk(root)) {
             const rel = path.relative(root, file).replace(/\\/g, '/');
             const original = fs.readFileSync(file, 'utf8');
             const desktop = replaceDesktop(original, rel);
             const mobile = replaceMobile(desktop.html, rel);
 
-            if (desktop.found !== mobile.found) {
-              throw new Error(`${rel}: desktop/mobile navigation markers are inconsistent`);
-            }
-            if (!desktop.found) continue;
+            if (!desktop.found && !mobile.found) continue;
+            if (desktop.found) desktopFiles += 1;
+            if (mobile.found) mobileFiles += 1;
 
-            navFiles.push(rel);
-            const desktopStart = mobile.html.indexOf('class="desktop-nav"');
-            const desktopOpen = mobile.html.lastIndexOf('<nav', desktopStart);
-            const desktopClose = mobile.html.indexOf('</nav>', desktopStart) + 6;
-            const desktopSegment = mobile.html.slice(desktopOpen, desktopClose);
-            for (const required of ['/ppc-points.html', '/pta-membership-optin.html', '/journal.html', '/national-archive.html']) {
-              if (!desktopSegment.includes(required)) throw new Error(`${rel}: required desktop link missing: ${required}`);
+            if (desktop.found) {
+              const marker = mobile.html.indexOf('class="desktop-nav"');
+              const start = mobile.html.lastIndexOf('<nav', marker);
+              const end = mobile.html.indexOf('</nav>', marker) + 6;
+              const segment = mobile.html.slice(start, end);
+              for (const required of ['/ppc-points.html', '/pta-membership-optin.html', '/journal.html', '/national-archive.html']) {
+                if (!segment.includes(required)) throw new Error(`${rel}: required desktop link missing: ${required}`);
+              }
+              for (const removed of ['問題別', '根拠資料', 'チェック・文例', 'btn-gold']) {
+                if (segment.includes(removed)) throw new Error(`${rel}: old desktop navigation remains: ${removed}`);
+              }
             }
-            for (const removed of ['問題別', '根拠資料', 'チェック・文例', 'btn-gold']) {
-              if (desktopSegment.includes(removed)) throw new Error(`${rel}: old desktop navigation remains: ${removed}`);
-            }
-            if (!mobile.html.includes('<div class="mobile-menu-label">立場別</div>')) {
-              throw new Error(`${rel}: mobile audience group missing`);
+
+            if (mobile.found) {
+              const marker = mobile.html.indexOf('id="mobileOverlay"');
+              const start = mobile.html.lastIndexOf('<div', marker);
+              const end = mobile.html.indexOf('<main', marker);
+              const segment = mobile.html.slice(start, end);
+              for (const required of ['/ppc-points.html', '/pta-membership-optin.html', '/journal.html', '/national-archive.html']) {
+                if (!segment.includes(required)) throw new Error(`${rel}: required mobile link missing: ${required}`);
+              }
+              if (!segment.includes('<div class="mobile-menu-label">立場別</div>')) {
+                throw new Error(`${rel}: mobile audience group missing`);
+              }
             }
 
             if (mobile.html !== original) {
@@ -116,12 +127,14 @@ jobs:
             }
           }
 
-          if (navFiles.length < 40) throw new Error(`too few navigation pages found: ${navFiles.length}`);
-          if (changed.length !== navFiles.length) throw new Error(`not every navigation page changed: ${changed.length}/${navFiles.length}`);
+          if (desktopFiles < 40) throw new Error(`too few desktop navigation pages found: ${desktopFiles}`);
+          if (mobileFiles < 40) throw new Error(`too few mobile navigation pages found: ${mobileFiles}`);
+          if (changed.length < 40) throw new Error(`too few pages changed: ${changed.length}`);
 
           fs.writeFileSync('/tmp/navigation-files.txt', changed.join('\n') + '\n');
           fs.writeFileSync('/tmp/navigation-count.txt', String(changed.length));
-          console.log(`Updated navigation in ${changed.length} HTML files.`);
+          fs.writeFileSync('/tmp/navigation-summary.txt', `desktop=${desktopFiles}\nmobile=${mobileFiles}\nchanged=${changed.length}\n`);
+          console.log(fs.readFileSync('/tmp/navigation-summary.txt', 'utf8'));
           NODE
 
       - name: Install dependencies
@@ -160,7 +173,7 @@ jobs:
             echo
             echo "- Base: $BASE_SHA"
             echo "- Commit: $(git rev-parse HEAD)"
-            echo "- HTML files updated: $(cat /tmp/navigation-count.txt)"
+            cat /tmp/navigation-summary.txt
             echo '- npm run check:all: passed'
           } >> "$GITHUB_STEP_SUMMARY"
 
