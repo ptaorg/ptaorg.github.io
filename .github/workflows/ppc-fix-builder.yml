@@ -1,0 +1,113 @@
+name: PPC page fix builder
+
+on:
+  pull_request:
+    branches:
+      - automation/ppc-fix-workflow-base-20260728
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      BASE_SHA: c88fdd297daeb237913a75a23f85f2b3804445f7
+      OUT_BRANCH: fix/ppc-points-css-images-validated-20260728
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BASE_SHA }}
+          fetch-depth: 1
+      - name: Confirm unchanged main
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$BASE_SHA"
+      - name: Render six source pages
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet PyMuPDF
+          curl --fail --location --retry 3 -o /tmp/ppc.pdf https://www.ppc.go.jp/files/pdf/202603_school_pta_pd_point.pdf
+          python <<'PY'
+          import fitz
+          from pathlib import Path
+          doc=fitz.open('/tmp/ppc.pdf'); assert doc.page_count==17
+          out=Path('assets/images/ppc-points'); out.mkdir(parents=True,exist_ok=True)
+          pages={1:'ppc-page-01-cover.png',3:'ppc-page-03-overview.png',5:'ppc-page-05-school-point1.png',8:'ppc-page-08-temporary-note.png',11:'ppc-page-11-consent.png',17:'ppc-page-17-notes.png'}
+          for n,name in pages.items(): doc[n-1].get_pixmap(matrix=fitz.Matrix(2,2),alpha=False).save(out/name)
+          PY
+      - name: Add page-specific CSS and figures
+        run: |
+          set -euo pipefail
+          python <<'PY'
+          from pathlib import Path
+          p=Path('ppc-points.html'); s=p.read_text(encoding='utf-8')
+          marker='PPC_POINTS_VISUAL_FIX_20260728'; assert marker not in s
+          def one(a,b):
+              global s
+              assert s.count(a)==1,(s.count(a),a[:80])
+              s=s.replace(a,b,1)
+          s=s.replace('"name": "会費徴収と 学校徴収金の混在"','"name": "PPC「公立学校とPTAの間で個人情報のやり取りをするためのポイント」の読み方"')
+          css='''<style id="PPC_POINTS_VISUAL_FIX_20260728">
+.ppc-editorial{background:#eef3f8;color:#1d2a34}.ppc-editorial .issue-main{max-width:1040px;margin:auto;padding:26px 18px 64px}.ppc-editorial .editorial-panel{background:#fff;border:1px solid #d5e0ea;border-radius:18px;padding:30px;margin:22px 0;box-shadow:0 10px 28px rgba(11,51,87,.08)}.ppc-editorial .editorial-panel>:first-child{margin-top:0}.ppc-editorial h1{font-family:"Noto Serif JP",serif;font-size:clamp(1.65rem,3vw,2.25rem);line-height:1.48;color:#102a43}.ppc-editorial h2{font-family:"Noto Serif JP",serif;font-size:clamp(1.35rem,2.4vw,1.75rem);line-height:1.5;color:#123b63;border-bottom:2px solid #d6e7f4;padding-bottom:.45rem}.ppc-editorial h3{color:#123b63;border-left:4px solid #0b6aa2;padding-left:.75rem}.ppc-editorial p,.ppc-editorial li{font-size:1rem;line-height:1.95}.ppc-editorial .editorial-bluebar{border-radius:14px;background:linear-gradient(90deg,#0b6aa2,#0b3357);color:#fff;padding:1.05rem 1.25rem;box-shadow:0 7px 18px rgba(11,51,87,.14)}.ppc-editorial .editorial-matrix{display:grid;grid-template-columns:minmax(170px,230px) 1fr;border:1px solid #d7e1ea;border-radius:14px;overflow:hidden}.ppc-editorial .editorial-matrix-row{display:contents}.ppc-editorial .editorial-matrix-term,.ppc-editorial .editorial-matrix-desc{padding:15px 17px;border-bottom:1px solid #e5edf3}.ppc-editorial .editorial-matrix-term{background:#f3f8fb;color:#123b63;font-weight:700}.ppc-figure{padding:14px;border:1px solid #d5e0ea;border-radius:16px;background:#f8fbfd;box-shadow:0 6px 18px rgba(11,51,87,.06)}.ppc-figure img{display:block;width:100%;height:auto;border:1px solid #cbd7e2;border-radius:10px;background:#fff}.ppc-figure figcaption{padding-top:.8rem;color:#334e68;font-size:.94rem;line-height:1.8}.ppc-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:1.25rem 0;align-items:start}.ppc-outline,.ppc-callout{margin:1.25rem 0;padding:1.05rem 1.25rem;border:1px solid #cfdde8;border-radius:14px;background:#f8fbfd}.ppc-outline strong{display:block;color:#123b63;margin-bottom:.4rem}@media(max-width:820px){.ppc-editorial .issue-main{padding:16px 12px 48px}.ppc-editorial .editorial-panel{padding:22px 16px}.ppc-gallery{grid-template-columns:1fr}.ppc-editorial .editorial-matrix{grid-template-columns:1fr}}
+</style>'''
+          one('</head>',css+'\n</head>')
+          bar='<div class="editorial-bluebar">この資料は、学校がPTAに情報を渡してよい場面を広げるものではなく、渡すために何を確認しなければならないかを示すものです。</div>'
+          intro='''<div class="ppc-outline"><strong>このページで確認すること</strong><ul><li>法第61条は、まず学校の所掌事務と利用目的の特定を要求していること</li><li>法第69条第2項は資料自身が「臨時的」な場面の規定と注記していること</li><li>反復するPTA会費徴収・会員管理はPTAが本人から直接取得するのが基本であること</li></ul></div><div class="ppc-gallery"><figure class="ppc-figure"><img src="/assets/images/ppc-points/ppc-page-01-cover.png" alt="PPC資料の表紙"><figcaption><strong>資料1ページ・表紙。</strong>令和8年3月公表、全17ページの資料です。</figcaption></figure><figure class="ppc-figure"><img src="/assets/images/ppc-points/ppc-page-03-overview.png" alt="PPC資料3ページの全体フロー"><figcaption><strong>資料3ページ・全体像。</strong>必要性、利用目的、目的外提供の順に確認する構成です。</figcaption></figure></div>'''
+          one(bar,bar+intro)
+          a='<p>つまり順序はこうです。<strong>まず法令上の所掌事務があり、その範囲内で利用目的を特定し、その利用目的のためであれば利用・提供できる。</strong>この順序を踏まないものは、次のいずれかになります。</p>'
+          one(a,a+'<figure class="ppc-figure"><img src="/assets/images/ppc-points/ppc-page-05-school-point1.png" alt="資料5ページ、利用目的の特定"><figcaption><strong>資料5ページ。</strong>法第61条と法第69条第1項の順序が示されています。</figcaption></figure>')
+          a='<p>資料11ページも、公的規律の下では「特別の理由」があるとして<strong>臨時的に</strong>利用・提供する場合には本人同意は要件とならない、と同じ整理を繰り返しています。</p>'
+          one(a,a+'<div class="ppc-gallery"><figure class="ppc-figure"><img src="/assets/images/ppc-points/ppc-page-08-temporary-note.png" alt="資料8ページの臨時的との注記"><figcaption><strong>資料8ページ。</strong>本人同意と特別の理由は、いずれも<strong>「臨時的」</strong>な利用・提供の規定と明記されています。</figcaption></figure><figure class="ppc-figure"><img src="/assets/images/ppc-points/ppc-page-11-consent.png" alt="資料11ページ、公的規律における本人同意"><figcaption><strong>資料11ページ。</strong>特別の理由による利用・提供は臨時的な場面として整理されています。</figcaption></figure></div>')
+          a='<p>資料自身が末尾（17ページ）で次のように述べています。</p>'
+          one(a,a+'<figure class="ppc-figure"><img src="/assets/images/ppc-points/ppc-page-17-notes.png" alt="資料17ページの注意書き"><figcaption><strong>資料17ページ。</strong>「公立学校とPTAの関係性を方向付ける趣旨ではありません」と明記されています。</figcaption></figure>')
+          a='          </div>\n        </div>\n      </section>'
+          one(a,'          </div>\n        </div>\n        <div class="ppc-callout"><strong>原本で見るべき箇所：</strong>5ページ、8ページ、11ページ、17ページです。</div>\n      </section>')
+          p.write_text(s,encoding='utf-8')
+          PY
+      - name: Repository checks
+        run: |
+          npm ci
+          npm run check:all
+      - name: Chromium verification
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/pw && cd /tmp/pw
+          npm init -y >/dev/null
+          npm install playwright >/dev/null
+          npx playwright install chromium --with-deps
+          cd "$GITHUB_WORKSPACE"
+          python3 -m http.server 4173 >/tmp/http.log 2>&1 &
+          pid=$!; trap 'kill $pid || true' EXIT; sleep 2
+          cat >/tmp/pw/check.mjs <<'JS'
+          import fs from 'node:fs'; import {chromium} from 'playwright';
+          const b=await chromium.launch({headless:true}); const report={};
+          for(const v of [{w:1440,h:1000},{w:390,h:844}]){const c=await b.newContext({viewport:{width:v.w,height:v.h}}),p=await c.newPage();await p.goto('http://127.0.0.1:4173/ppc-points.html',{waitUntil:'networkidle'});const imgs=p.locator('.ppc-figure img');if(await imgs.count()!==6)throw new Error('image count');for(let i=0;i<6;i++)if(!await imgs.nth(i).evaluate(e=>e.complete&&e.naturalWidth>500))throw new Error('image load');const st=await p.locator('.editorial-panel').first().evaluate(e=>{const s=getComputedStyle(e);return{bg:s.backgroundColor,r:s.borderRadius,shadow:s.boxShadow}});if(st.bg==='rgba(0, 0, 0, 0)'||st.shadow==='none')throw new Error('css missing');const sw=await p.evaluate(()=>document.documentElement.scrollWidth);if(sw>v.w)throw new Error('overflow');report[v.w]={st,sw};await p.screenshot({path:`/tmp/ppc-${v.w}.png`,fullPage:true});await c.close()}await b.close();fs.writeFileSync('/tmp/report.json',JSON.stringify(report,null,2));
+          JS
+          cd /tmp/pw && node check.mjs
+      - name: Commit and publish validated branch
+        run: |
+          set -euo pipefail
+          cd "$GITHUB_WORKSPACE"
+          git diff --check
+          test "$(git status --porcelain | wc -l)" = 7
+          git config user.name ptaorg
+          git config user.email noreply@ptaorg.com
+          git add ppc-points.html assets/images/ppc-points
+          git commit -m 'PPC資料ページのCSSと原本画像を整備'
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$BASE_SHA"
+          git push origin "HEAD:refs/heads/$OUT_BRANCH"
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ppc-page-fix-evidence
+          path: |
+            /tmp/report.json
+            /tmp/ppc-1440.png
+            /tmp/ppc-390.png
+          if-no-files-found: warn
+          retention-days: 3
