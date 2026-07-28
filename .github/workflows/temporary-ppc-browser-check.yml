@@ -1,0 +1,135 @@
+name: Temporary PPC browser check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  browser-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      COMMIT_SHA: 32bac25609334aaac88530f1d4add99892b97c8d
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Playwright
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/ppc-browser-check
+          cd /tmp/ppc-browser-check
+          npm init -y >/dev/null
+          npm install playwright >/dev/null
+          npx playwright install chromium --with-deps
+
+      - name: Verify live site in Chromium
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > /tmp/ppc-browser-check/check.mjs <<'JS'
+          import fs from 'node:fs';
+          import { chromium } from 'playwright';
+
+          const commit = process.env.COMMIT_SHA;
+          const stamp = Date.now();
+          const noCacheHeaders = {
+            'Cache-Control': 'no-cache, no-store, max-age=0',
+            'Pragma': 'no-cache'
+          };
+          const report = {
+            commit,
+            checkedAt: new Date().toISOString(),
+            checks: {}
+          };
+
+          function assert(condition, message) {
+            if (!condition) throw new Error(message);
+          }
+
+          const browser = await chromium.launch({ headless: true });
+          const context = await browser.newContext({
+            viewport: { width: 1440, height: 1200 },
+            extraHTTPHeaders: noCacheHeaders
+          });
+          const page = await context.newPage();
+
+          try {
+            const ppcUrl = `https://ptaorg.com/ppc-points.html?deployment=${commit}&ts=${stamp}`;
+            const ppcResponse = await page.goto(ppcUrl, { waitUntil: 'networkidle', timeout: 60000 });
+            assert(ppcResponse?.ok(), `ppc-points HTTP status: ${ppcResponse?.status()}`);
+            const ppcTitle = await page.title();
+            const ppcText = await page.locator('body').innerText();
+            assert(ppcTitle.includes('PPC'), `unexpected title: ${ppcTitle}`);
+            assert(ppcText.includes('法第61条'), '法第61条 text not found');
+            assert(ppcText.includes('臨時的'), '臨時的 text not found');
+            await page.screenshot({ path: '/tmp/ppc-points-live.png', fullPage: true });
+            report.checks.page = { ok: true, url: ppcUrl, title: ppcTitle };
+
+            const pdfHref = '/assets/documents/ppc-school-pta-personal-data-202603.pdf';
+            const pdfLink = page.locator(`a[href="${pdfHref}"], a[href="assets/documents/ppc-school-pta-personal-data-202603.pdf"]`).first();
+            assert(await pdfLink.count() === 1, 'PDF link not found on ppc-points page');
+            assert(await pdfLink.isVisible(), 'PDF link is not visible');
+            const pdfUrl = `https://ptaorg.com${pdfHref}?deployment=${commit}&ts=${stamp}`;
+            const pdfResponse = await context.request.get(pdfUrl, { headers: noCacheHeaders, timeout: 60000 });
+            const pdfBody = await pdfResponse.body();
+            assert(pdfResponse.ok(), `PDF HTTP status: ${pdfResponse.status()}`);
+            assert(pdfBody.subarray(0, 4).toString('ascii') === '%PDF', 'PDF signature not found');
+            report.checks.pdf = {
+              ok: true,
+              url: pdfUrl,
+              status: pdfResponse.status(),
+              contentType: pdfResponse.headers()['content-type'] ?? '',
+              bytes: pdfBody.length
+            };
+
+            const searchInput = page.locator('.header-search .search-input').first();
+            assert(await searchInput.count() === 1, 'site search input not found');
+            const searchResults = {};
+            for (const query of ['臨時的', '所掌事務']) {
+              await searchInput.fill('');
+              await searchInput.fill(query);
+              await page.waitForFunction(() => document.querySelectorAll('.search-results-dropdown a').length > 0, null, { timeout: 10000 });
+              const hrefs = await page.locator('.search-results-dropdown a').evaluateAll((links) => links.map((link) => link.getAttribute('href') || ''));
+              assert(hrefs.some((href) => href.includes('ppc-points.html')), `${query}: ppc-points search result not found (${hrefs.join(', ')})`);
+              searchResults[query] = hrefs;
+            }
+            report.checks.search = { ok: true, results: searchResults };
+
+            const adminUrl = `https://ptaorg.com/administrative-materials.html?deployment=${commit}&ts=${stamp}`;
+            const adminResponse = await page.goto(adminUrl, { waitUntil: 'networkidle', timeout: 60000 });
+            assert(adminResponse?.ok(), `administrative-materials HTTP status: ${adminResponse?.status()}`);
+            const adminText = await page.locator('#privacy').innerText();
+            assert(adminText.includes('結論に直結する二点の解説'), 'administrative link text not found');
+            const adminLink = page.locator('#privacy a', { hasText: '結論に直結する二点の解説' }).first();
+            assert(await adminLink.count() === 1, 'administrative link element not found');
+            const adminHref = await adminLink.getAttribute('href');
+            assert(adminHref?.includes('ppc-points.html'), `unexpected administrative link href: ${adminHref}`);
+            await page.screenshot({ path: '/tmp/administrative-materials-live.png', fullPage: true });
+            report.checks.administrativeMaterials = { ok: true, url: adminUrl, href: adminHref };
+
+            fs.writeFileSync('/tmp/ppc-browser-report.json', JSON.stringify(report, null, 2) + '\n');
+            console.log(JSON.stringify(report, null, 2));
+          } finally {
+            await browser.close();
+          }
+          JS
+          cd /tmp/ppc-browser-check
+          node check.mjs
+
+      - name: Upload browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ppc-browser-check
+          path: |
+            /tmp/ppc-browser-report.json
+            /tmp/ppc-points-live.png
+            /tmp/administrative-materials-live.png
+          if-no-files-found: warn
+          retention-days: 3
