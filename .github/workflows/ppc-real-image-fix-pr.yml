@@ -88,6 +88,9 @@ jobs:
               'git add ppc-points.html css/prose.css css/pages/ppc-points.css ',
               'git add ppc-points.html css/prose.css css/pages/ppc-points.css sitemap.xml data/site-search-index.js assets/images/ppc-points '
           )
+          lines = text.splitlines()
+          lines = ['git add -A' if line.startswith('git add ppc-points.html ') else line for line in lines]
+          text = '\n'.join(lines) + '\n'
           path.write_text(text, encoding='utf-8')
           PY
           python /tmp/prepare_ppc_repair.py
