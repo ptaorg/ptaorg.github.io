@@ -68,6 +68,7 @@ jobs:
 
           text = text.replace('set -euo pipefail\n\nimages=(', 'set -euo pipefail\n' + render + '\nimages=(', 1)
           text = text.replace('.jpg', '.png')
+          text = text.replace('rm -f assets/images/ppc-points/*.png', 'rm -f assets/images/ppc-points/*.jpg', 1)
           text = text.replace('xxd -p -l 3', 'xxd -p -l 8')
           text = text.replace('"ffd8ff"', '"89504e470d0a1a0a"')
           text = text.replace("!x.contentType.startsWith('image/jpeg')", "!x.contentType.startsWith('image/png')")
