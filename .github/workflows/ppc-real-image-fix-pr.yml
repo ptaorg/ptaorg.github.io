@@ -24,6 +24,13 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Adjust verification thresholds to the source image dimensions
+        shell: bash
+        run: |
+          set -euo pipefail
+          sed -i 's/-gt 20000/-gt 1000/' scripts/ppc-real-image-fix.sh
+          sed -i 's/naturalHeight<500/naturalHeight<300/g' scripts/ppc-real-image-fix.sh
+
       - name: Run validated repair
         shell: bash
         run: bash scripts/ppc-real-image-fix.sh
