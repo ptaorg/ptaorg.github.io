@@ -36,7 +36,7 @@ jobs:
           text = path.read_text(encoding='utf-8')
           text = text.replace(
               'npm ci\nnpm run check:all',
-              'npm ci\nnpm run generate:sitemap\nnpm run generate:search\nnpm run check:all'
+              'npm ci\nnpm run generate:sitemap\nnpm run generate:search\ngit add sitemap.xml data/site-search-index.js\nnpm run check:all'
           )
           text = text.replace(
               'git add ppc-points.html css/prose.css css/pages/ppc-points.css ',
