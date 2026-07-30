@@ -1,0 +1,51 @@
+name: Run PPC real-image fix from PR
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  run-fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run validated repair
+        shell: bash
+        run: bash scripts/ppc-real-image-fix.sh
+
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ppc-real-image-fix-evidence
+          path: |
+            /tmp/ppc-local-report.json
+            /tmp/ppc-public-report.json
+            /tmp/ppc-final-commit.txt
+            /tmp/ppc-local-desktop-top.png
+            /tmp/ppc-local-desktop-middle.png
+            /tmp/ppc-local-desktop-bottom.png
+            /tmp/ppc-local-mobile-top.png
+            /tmp/ppc-local-mobile-middle.png
+            /tmp/ppc-public-desktop-top.png
+            /tmp/ppc-public-desktop-middle.png
+            /tmp/ppc-public-desktop-bottom.png
+            /tmp/ppc-public-mobile-top.png
+            /tmp/ppc-public-mobile-middle.png
+          if-no-files-found: warn
+          retention-days: 7
