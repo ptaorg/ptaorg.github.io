@@ -28,42 +28,44 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python <<'PY'
+          cat > /tmp/prepare_ppc_repair.py <<'PY'
           from pathlib import Path
+
           path = Path('scripts/ppc-real-image-fix.sh')
           text = path.read_text(encoding='utf-8')
 
           render = r'''
-python -m pip install --quiet PyMuPDF
-curl --fail --location --retry 3 --output /tmp/ppc-source.pdf \
-  https://www.ppc.go.jp/files/pdf/202603_school_pta_pd_point.pdf
-python <<'PYPDF'
-import fitz
-from pathlib import Path
+          python -m pip install --quiet PyMuPDF
+          curl --fail --location --retry 3 --output /tmp/ppc-source.pdf \
+            https://www.ppc.go.jp/files/pdf/202603_school_pta_pd_point.pdf
+          python <<'PYPDF'
+          import fitz
+          from pathlib import Path
 
-document = fitz.open('/tmp/ppc-source.pdf')
-assert document.page_count == 17, document.page_count
-output = Path('assets/images/ppc-points')
-output.mkdir(parents=True, exist_ok=True)
-pages = {
-    1: 'ppc-page-01-cover.png',
-    3: 'ppc-page-03-overview.png',
-    5: 'ppc-page-05-school-point1.png',
-    8: 'ppc-page-08-temporary-note.png',
-    11: 'ppc-page-11-consent.png',
-    17: 'ppc-page-17-notes.png',
-}
-for number, filename in pages.items():
-    pixmap = document[number - 1].get_pixmap(matrix=fitz.Matrix(2, 2), alpha=False)
-    target = output / filename
-    pixmap.save(target)
-    data = target.read_bytes()
-    assert data[:8] == b'\x89PNG\r\n\x1a\n', (filename, data[:8])
-    assert len(data) > 20000, (filename, len(data))
-    print(filename, pixmap.width, pixmap.height, len(data))
-PYPDF
-rm -f assets/images/ppc-points/*.jpg
-'''
+          document = fitz.open('/tmp/ppc-source.pdf')
+          assert document.page_count == 17, document.page_count
+          output = Path('assets/images/ppc-points')
+          output.mkdir(parents=True, exist_ok=True)
+          pages = {
+              1: 'ppc-page-01-cover.png',
+              3: 'ppc-page-03-overview.png',
+              5: 'ppc-page-05-school-point1.png',
+              8: 'ppc-page-08-temporary-note.png',
+              11: 'ppc-page-11-consent.png',
+              17: 'ppc-page-17-notes.png',
+          }
+          for number, filename in pages.items():
+              pixmap = document[number - 1].get_pixmap(matrix=fitz.Matrix(2, 2), alpha=False)
+              target = output / filename
+              pixmap.save(target)
+              data = target.read_bytes()
+              assert data[:8] == b'\x89PNG\r\n\x1a\n', (filename, data[:8])
+              assert len(data) > 20000, (filename, len(data))
+              print(filename, pixmap.width, pixmap.height, len(data))
+          PYPDF
+          rm -f assets/images/ppc-points/*.jpg
+          '''
+
           text = text.replace('set -euo pipefail\n\nimages=(', 'set -euo pipefail\n' + render + '\nimages=(', 1)
           text = text.replace('.jpg', '.png')
           text = text.replace('xxd -p -l 3', 'xxd -p -l 8')
@@ -79,6 +81,7 @@ rm -f assets/images/ppc-points/*.jpg
           )
           path.write_text(text, encoding='utf-8')
           PY
+          python /tmp/prepare_ppc_repair.py
 
       - name: Run validated repair
         shell: bash
