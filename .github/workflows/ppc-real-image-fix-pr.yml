@@ -73,6 +73,14 @@ jobs:
           text = text.replace('"ffd8ff"', '"89504e470d0a1a0a"')
           text = text.replace("!x.contentType.startsWith('image/jpeg')", "!x.contentType.startsWith('image/png')")
           text = text.replace(
+              "await p.goto('http://127.0.0.1:4173/ppc-points.html',{waitUntil:'networkidle'});const r=",
+              "await p.goto('http://127.0.0.1:4173/ppc-points.html',{waitUntil:'networkidle'});for(const img of await p.locator('.ppc-source-figure img').all()){await img.scrollIntoViewIfNeeded();await img.evaluate(el=>el.decode?el.decode().catch(()=>{}):Promise.resolve())}await p.evaluate(()=>scrollTo(0,0));const r="
+          )
+          text = text.replace(
+              "await p.goto(`https://ptaorg.com/ppc-points.html?verify=${commit}&attempt=${a}`,{waitUntil:'networkidle',timeout:60000});const r=",
+              "await p.goto(`https://ptaorg.com/ppc-points.html?verify=${commit}&attempt=${a}`,{waitUntil:'networkidle',timeout:60000});for(const img of await p.locator('.ppc-source-figure img').all()){await img.scrollIntoViewIfNeeded();await img.evaluate(el=>el.decode?el.decode().catch(()=>{}):Promise.resolve())}await p.evaluate(()=>scrollTo(0,0));const r="
+          )
+          text = text.replace(
               'npm ci\nnpm run check:all',
               'npm ci\nnpm run generate:sitemap\nnpm run generate:search\ngit add sitemap.xml data/site-search-index.js\nnpm run check:all'
           )
