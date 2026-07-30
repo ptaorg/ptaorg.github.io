@@ -24,12 +24,26 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Adjust verification thresholds to the source image dimensions
+      - name: Adjust repair script for source dimensions and generated files
         shell: bash
         run: |
           set -euo pipefail
           sed -i 's/-gt 20000/-gt 1000/' scripts/ppc-real-image-fix.sh
           sed -i 's/naturalHeight<500/naturalHeight<300/g' scripts/ppc-real-image-fix.sh
+          python <<'PY'
+          from pathlib import Path
+          path = Path('scripts/ppc-real-image-fix.sh')
+          text = path.read_text(encoding='utf-8')
+          text = text.replace(
+              'npm ci\nnpm run check:all',
+              'npm ci\nnpm run generate:sitemap\nnpm run generate:search\nnpm run check:all'
+          )
+          text = text.replace(
+              'git add ppc-points.html css/prose.css css/pages/ppc-points.css ',
+              'git add ppc-points.html css/prose.css css/pages/ppc-points.css sitemap.xml data/site-search-index.js '
+          )
+          path.write_text(text, encoding='utf-8')
+          PY
 
       - name: Run validated repair
         shell: bash
