@@ -1540,22 +1540,24 @@
   main
     > section:not(#board-executive-brief):not(#principal-liability):not(
       #board-jp-guideline
-    ) {
+    ):not(#guidebook-text) {
     display: none;
   }
   main > #board-executive-brief,
-  main > #principal-liability {
+  main > #principal-liability,
+  main > #guidebook-text {
     display: block;
   }
   body.guide-board-direct-fixed
     main
     > section:not(#board-executive-brief):not(#principal-liability):not(
       #board-jp-guideline
-    ) {
+    ):not(#guidebook-text) {
     display: none;
   }
   body.guide-board-direct-fixed main > #board-executive-brief,
-  body.guide-board-direct-fixed main > #principal-liability {
+  body.guide-board-direct-fixed main > #principal-liability,
+  body.guide-board-direct-fixed main > #guidebook-text {
     display: block;
   }
   body.guide-board-direct-fixed #board-executive-brief {
