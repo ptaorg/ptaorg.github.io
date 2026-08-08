@@ -1,48 +1,14 @@
-name: One-time administrative materials URL update
+name: Archived administrative materials update
 
 on:
-  pull_request:
-    paths:
-      - '.github/admin-materials-trigger.txt'
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  update:
+  archived:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-      - name: Insert official MEXT URLs
-        shell: python
-        run: |
-          from pathlib import Path
-          p = Path('administrative-materials.html')
-          s = p.read_text(encoding='utf-8')
-          mext_anchor = '''<tr><td>A</td><td><a href="https://www.mext.go.jp/content/20221011-mxt_syoto01_02.pdf" rel="noopener" target="_blank">学校関係団体が実施する事業に係る兼職兼業等の取扱い及び学校における会計処理の適正化についての留意事項等について</a><small>文部科学省通知PDF</small></td><td>学校関係団体・PTA関連の兼職兼業、会計処理、教職員関与を確認する通知。</td><td>公式PDF。</td></tr>'''
-          mext_rows = '''<tr><td>A</td><td><a href="https://www.mext.go.jp/a_menu/shotou/hatarakikata/__icsFiles/afieldfile/2019/03/18/1414498_1_1.pdf" rel="noopener" target="_blank">学校における働き方改革に関する取組の徹底について</a><small>30文科初第1497号・平成31年3月18日</small></td><td>学校・教師が担う業務の3分類、学校徴収金、見守り・夜間パトロール、周年行事、都道府県から市町村・学校への周知。</td><td><a href="https://www.mext.go.jp/a_menu/shotou/hatarakikata/__icsFiles/afieldfile/2019/03/18/1414498_1_1.pdf" rel="noopener" target="_blank">公式URLを開く</a></td></tr>
-<tr><td>A</td><td><a href="https://www.mext.go.jp/content/000373343.pdf" rel="noopener" target="_blank">「教師を取り巻く環境整備について緊急的に取り組むべき施策」を踏まえた取組の徹底等について</a><small>5文科初第1090号・令和5年9月8日</small></td><td>3分類の徹底、学校給食費の公会計化、働き方改革チェックシート、学校・家庭・地域との役割共有、周知経路。</td><td><a href="https://www.mext.go.jp/content/000373343.pdf" rel="noopener" target="_blank">公式URLを開く</a></td></tr>
-<tr><td>制度</td><td><a href="https://www.mext.go.jp/content/20250207-mxt_hourei-000040175_1.pdf" rel="noopener" target="_blank">改正給特法の概要</a><small>文部科学省資料・2026年4月1日施行部分</small></td><td>教育委員会の業務量管理・健康確保措置実施計画、実施状況公表、総合教育会議報告。</td><td><a href="https://www.mext.go.jp/content/20250207-mxt_hourei-000040175_1.pdf" rel="noopener" target="_blank">公式URLを開く</a></td></tr>
-<tr><td>制度</td><td><a href="https://www.mext.go.jp/content/20251020-mxt_syoto02-000045471_15.pdf" rel="noopener" target="_blank">業務量管理・健康確保措置に関する改正指針のポイント・指針本文</a><small>文部科学省参考資料・令和7年10月20日</small></td><td>学校徴収金を学校が担わないための措置、公会計化又は保護者と事業者の直接購入、教育委員会の計画・公表責任。</td><td><a href="https://www.mext.go.jp/content/20251020-mxt_syoto02-000045471_15.pdf" rel="noopener" target="_blank">公式URLを開く</a></td></tr>'''
-          work_anchor = '''<tr><td>A</td><td><a href="https://www.mext.go.jp/a_menu/shotou/hatarakikata/index.htm" rel="noopener" target="_blank">学校における働き方改革について</a><small>文部科学省ページ</small></td><td>学校・教師が担う業務の整理、学校徴収金、地域対応、学校以外が担うべき業務の入口。</td><td>公式ページ。文部科学省資料への入口として確認。</td></tr>'''
-          work_rows = '''<tr><td>A</td><td><a href="https://www.mext.go.jp/content/20201120-mxt_zaimu-000011189_1.pdf" rel="noopener" target="_blank">学校徴収金会計業務における教員の負担軽減のための調査研究</a><small>平成29年度文部科学省委託調査</small></td><td>PTA会費の口座引落し、現金集金、教頭・教諭・事務職員・保護者の担当割合、校務分掌の実態。</td><td><a href="https://www.mext.go.jp/content/20201120-mxt_zaimu-000011189_1.pdf" rel="noopener" target="_blank">公式URLを開く</a></td></tr>
-<tr><td>A</td><td><a href="https://www.mext.go.jp/content/20210513-mxt_zaimu-000014852_1.pdf" rel="noopener" target="_blank">全国の学校における働き方改革事例集</a><small>文部科学省・2021年</small></td><td>PTA活動・行事・会合の見直し、PTA委任状等のオンライン化、教職員のPTA関連業務時間。</td><td><a href="https://www.mext.go.jp/content/20210513-mxt_zaimu-000014852_1.pdf" rel="noopener" target="_blank">公式URLを開く</a></td></tr>
-<tr><td>A</td><td><a href="https://www.mext.go.jp/content/20230330-mxt_zaimu01-000027881_1.pdf" rel="noopener" target="_blank">「働き方改革チェックシート」の活用に関する説明</a><small>文部科学省・2023年</small></td><td>保護者・PTA対応・地域対応、PTA関連活動・会合・教職員参加行事の精選。</td><td><a href="https://www.mext.go.jp/content/20230330-mxt_zaimu01-000027881_1.pdf" rel="noopener" target="_blank">公式URLを開く</a></td></tr>
-<tr><td>A</td><td><a href="https://www.mext.go.jp/content/20250324-mxt_zaimu-000041069.pdf" rel="noopener" target="_blank">令和6年度 教育委員会における学校の働き方改革のための取組状況調査結果</a><small>文部科学省・全国概要</small></td><td>学校徴収金を公会計化又は教師が関与しない方法で処理している教育委員会の割合。</td><td><a href="https://www.mext.go.jp/content/20250324-mxt_zaimu-000041069.pdf" rel="noopener" target="_blank">公式URLを開く</a></td></tr>
-<tr><td>A</td><td><a href="https://www.mext.go.jp/content/20240122-mxt_zaimu-000033271_11.pdf" rel="noopener" target="_blank">GIGAスクール構想の下での校務DX化チェックリスト 自己点検結果</a><small>2024年公表版</small></td><td>学校徴収金の定義にPTA会費を明記していた時点の資料。口座振替、ネットバンキング、PTA委任状等のデジタル化。</td><td><a href="https://www.mext.go.jp/content/20240122-mxt_zaimu-000033271_11.pdf" rel="noopener" target="_blank">公式URLを開く</a></td></tr>
-<tr><td>A</td><td><a href="https://www.mext.go.jp/content/20260306-mxt_shuukyo01-000048038_3.pdf" rel="noopener" target="_blank">GIGAスクール構想の下での校務DXチェックリスト 自己点検結果</a><small>令和8年3月9日公表版</small></td><td>学校徴収金の例示からPTA会費等の明示がなくなった版。なお「PTA委任状等」は提出資料例として残る。</td><td><a href="https://www.mext.go.jp/content/20260306-mxt_shuukyo01-000048038_3.pdf" rel="noopener" target="_blank">公式URLを開く</a></td></tr>'''
-          if '30文科初第1497号' not in s:
-              s = s.replace(mext_anchor, mext_anchor + '\n' + mext_rows)
-          if '平成29年度文部科学省委託調査' not in s:
-              s = s.replace(work_anchor, work_anchor + '\n' + work_rows)
-          p.write_text(s, encoding='utf-8')
-      - name: Commit page and remove one-time workflow
-        run: |
-          rm .github/workflows/one-time-admin-materials-pr.yml
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add administrative-materials.html .github/workflows/one-time-admin-materials-pr.yml
-          git commit -m "行政資料ページに文科省公式URLを追加"
-          git push origin main
+      - name: Confirm archived state
+        run: echo 'The one-time administrative materials update has already been applied.'

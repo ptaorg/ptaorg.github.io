@@ -41,8 +41,24 @@ jobs:
         id: verify
         shell: bash
         run: |
-          set -u
-          expected='https://qr.paypay.ne.jp/p2p01_kCikEVD8MbCvLpG1'
+          set -euo pipefail
+
+          expected=$(python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          source = Path("support.html").read_text(encoding="utf-8")
+          urls = sorted(set(re.findall(
+              r'https://qr\.paypay\.ne\.jp/p2p01_[^"\'<>\s]+',
+              source,
+          )))
+          if len(urls) != 1:
+              raise SystemExit(
+                  f"Expected exactly one unique PayPay URL in support.html; found {len(urls)}"
+              )
+          print(urls[0])
+          PY
+          )
           verified=false
           actual=''
           probe=''

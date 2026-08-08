@@ -1,59 +1,14 @@
-name: Simplify compliance page wording
+name: Archived compliance copy simplifier
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  simplify-compliance:
+  archived:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
-      - name: Simplify compliance page
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import re
-          path = Path('compliance.html')
-          text = path.read_text(encoding='utf-8')
-          replacements = {
-            'このページは、全国の学校現場で見られるPTA運営上の典型的な問題を、実際の文書・通知・運用例をもとに整理するものです。':
-            '学校現場で確認されたPTA運営上の事例を、文書・通知・運用例とともに掲載しています。',
-            'PTAは本来、保護者と教職員による任意加入の団体ですが、入学手続、学校徴収金、学校連絡、児童経由配布、役員選出、個人情報の利用などを通じて、学校とPTAの境界が曖昧になることがあります。':
-            '入学手続、学校徴収金、学校連絡、児童経由配布、役員選出、個人情報利用における学校とPTAの関係を確認します。',
-            'このページでは、特定の学校や個人を非難するのではなく、保護者・PTA役員・学校・教育委員会が確認すべき論点を整理します。': '',
-            '再現文書と資金の流れから、問題構造の読み方を確認する →': '再現文書・資金の流れ',
-            '<h3>どこが問題か</h3>': '<h3>確認事項</h3>',
-            '<h3>関係する法令・制度</h3>': '<h3>関連法令・制度</h3>',
-            '<h3>改善の方向</h3>': '<h3>見直し事項</h3>',
-            '<h4>改善の方向・確認すべきこと</h4>': '<h4>確認・見直し事項</h4>',
-            '<h4>関係する論点ページ</h4>': '<h4>関連ページ</h4>',
-            'content: "何が起きているか";': 'content: none;'
-          }
-          for old, new in replacements.items():
-              text = text.replace(old, new)
-          text = re.sub(r'<div class="case-kicker">Case\s+(\d+)</div>', r'<div class="case-kicker">事例 \1</div>', text)
-          text = re.sub(r'<nav class="case-anchor-nav".*?</nav>', '', text, count=1, flags=re.S)
-          text = re.sub(r'<section class="closing-cta">.*?</section>', '', text, count=1, flags=re.S)
-          path.write_text(text, encoding='utf-8')
-          PY
-      - name: Run checks
-        run: npm test
-      - name: Commit change
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "4189826+github-actions[bot]@users.noreply.github.com"
-          git add compliance.html
-          if git diff --cached --quiet; then
-            echo "No compliance changes needed"
-          else
-            git commit -m "Simplify compliance page wording"
-            git push origin main
-          fi
+      - name: Confirm archived state
+        run: echo 'Automatic compliance copy rewriting is disabled.'
