@@ -30,21 +30,6 @@
     color: #0f2742;
   }
 
-  .archive-school-page::before {
-    content: "厚木市評価前提：入会申込書を求めた開示請求に対して送付されなかった学校は、PTA自体が存在しない場合を除き、入会申込書不存在として扱います。会員扱い、会費請求、個人情報利用、役員選出の根拠が確認できません。";
-    display: block;
-    margin: 0 0 18px;
-    padding: 18px 20px;
-    border: 2px solid #e60012;
-    border-left: 10px solid #e60012;
-    border-radius: 16px;
-    background: #fff5f5;
-    color: #7f1d1d;
-    font-weight: 900;
-    line-height: 2;
-    box-shadow: 0 12px 28px rgba(230, 0, 18, 0.08);
-  }
-
   .archive-back {
     font-weight: 800;
     color: #0b376d;
@@ -270,7 +255,6 @@
       padding: 0;
     }
 
-    .archive-school-page::before,
     .archive-hero,
     .archive-section {
       box-shadow: none;
