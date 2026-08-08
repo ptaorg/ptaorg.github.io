@@ -151,6 +151,52 @@ body[data-content-mode="prose"]
   max-width: 100%;
 }
 
+/*
+ * These groups carry an actual side-by-side comparison. Keep the open,
+ * rule-based editorial treatment on desktop instead of flattening them with
+ * the generic repeated-grid rule above. They still stack on narrow screens.
+ */
+@media (min-width: 769px) {
+  body[data-content-mode="prose"].personnel-editorial .scope-grid,
+  body[data-content-mode="prose"].facilities-editorial .safes,
+  body[data-content-mode="prose"].fee-editorial .transition-options {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0 !important;
+    align-items: stretch;
+    border-top: 1px solid var(--prose-line) !important;
+    border-bottom: 1px solid var(--prose-line) !important;
+  }
+
+  body[data-content-mode="prose"].fee-editorial .triple-problem {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0 !important;
+    align-items: stretch;
+    border-top: 1px solid var(--prose-line) !important;
+    border-bottom: 1px solid var(--prose-line) !important;
+  }
+
+  body[data-content-mode="prose"].personnel-editorial .scope-grid > *,
+  body[data-content-mode="prose"].facilities-editorial .safes > *,
+  body[data-content-mode="prose"].fee-editorial .transition-options > *,
+  body[data-content-mode="prose"].fee-editorial .triple-problem > * {
+    margin: 0 !important;
+    padding: 1.5rem 1.75rem !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  body[data-content-mode="prose"].personnel-editorial .scope-grid > * + *,
+  body[data-content-mode="prose"].facilities-editorial .safes > * + *,
+  body[data-content-mode="prose"].fee-editorial .transition-options > * + *,
+  body[data-content-mode="prose"].fee-editorial .triple-problem > * + * {
+    border-left: 1px solid var(--prose-line) !important;
+  }
+}
+
 @media (max-width: 700px) {
   body[data-content-mode="prose"]
     :where(.meta-card, .archive-box, .archive-evidence-card) {

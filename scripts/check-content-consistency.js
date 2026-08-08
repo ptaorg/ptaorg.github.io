@@ -236,6 +236,28 @@ if (!archiveHtml.includes('資料未掲載と文書不存在は区別して表�
   findings.push('national-archive.html: 資料未掲載と文書不存在を区別する説明がありません');
 }
 
+const proseCss = fs.readFileSync(path.join(root, 'css', 'prose.css'), 'utf8');
+const comparisonCssTokens = [
+  'body[data-content-mode="prose"].personnel-editorial .scope-grid',
+  'body[data-content-mode="prose"].facilities-editorial .safes',
+  'body[data-content-mode="prose"].fee-editorial .transition-options',
+  'body[data-content-mode="prose"].fee-editorial .triple-problem',
+  'grid-template-columns: repeat(2, minmax(0, 1fr)) !important;',
+  'grid-template-columns: repeat(3, minmax(0, 1fr)) !important;',
+];
+for (const token of comparisonCssTokens) {
+  if (!proseCss.includes(token)) {
+    findings.push(`css/prose.css: 比較レイアウトの保護指定がありません (${token})`);
+  }
+}
+const comparisonCssVersion = '/css/prose.css?v=20260809-1';
+for (const rel of ['personnel.html', 'facilities.html', 'fee-collection.html']) {
+  const html = fs.readFileSync(path.join(root, rel), 'utf8');
+  if (!html.includes(comparisonCssVersion)) {
+    findings.push(`${rel}: 比較レイアウト修正版CSSを読み込んでいません`);
+  }
+}
+
 const theoryPath = path.join(root, 'journal', 'pta-unified-legal-theory.html');
 const theoryHtml = fs.readFileSync(theoryPath, 'utf8');
 const incorrectTheorySource = 'https://www.mext.go.jp/content/20260303-mxt_syoto01-000046407_1.pdf';
