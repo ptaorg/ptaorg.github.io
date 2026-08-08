@@ -180,21 +180,29 @@ ${renderCountCards(atsugiRecords)}
         <div class="archive-legend" aria-label="評価バッジの説明">
 ${renderLegend()}
         </div>
-        <div class="atsugi-school-groups" aria-label="厚木市内学校一覧">
-          <div class="atsugi-school-group">
-            <h3>小学校</h3>
-            <div class="archive-school-card-list">
+        <details class="atsugi-school-details">
+          <summary>
+            <span>厚木市36校の学校別根拠資料</span>
+            <small>学校名・評価・資料画像・元PDF・一次資料URLを確認</small>
+          </summary>
+          <div class="atsugi-school-details-body">
+            <div class="atsugi-school-groups" aria-label="厚木市内学校一覧">
+              <div class="atsugi-school-group">
+                <h3>小学校</h3>
+                <div class="archive-school-card-list">
 ${renderSchoolCards(atsugiRecords, "小学校")}
-            </div>
-          </div>
-          <div class="atsugi-school-group">
-            <h3>中学校</h3>
-            <div class="archive-school-card-list">
+                </div>
+              </div>
+              <div class="atsugi-school-group">
+                <h3>中学校</h3>
+                <div class="archive-school-card-list">
 ${renderSchoolCards(atsugiRecords, "中学校")}
+                </div>
+              </div>
             </div>
+            <p class="atsugi-schools-note">補足：この一覧は、厚木市内の学校を母集団として整理するための基礎一覧です。未評価の学校は、個別評価を行わず、資料画像・元PDF・一次資料URLの有無を先に示しています。</p>
           </div>
-        </div>
-        <p class="atsugi-schools-note">補足：この一覧は、厚木市内の学校を母集団として整理するための基礎一覧です。未評価の学校は、個別評価を行わず、資料画像・元PDF・一次資料URLの有無を先に示しています。</p>
+        </details>
       </div>
     </section>
 `;

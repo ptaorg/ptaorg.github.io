@@ -546,6 +546,299 @@
   .archive-editorial .badge {
     border-radius: 0;
   }
+
+  /* 厚木市の学校別根拠資料：本文を先に読める、平坦な資料一覧 */
+  .archive-editorial .atsugi-schools-section {
+    padding: 58px 0;
+    background: #f8fafc;
+    border-bottom: 1px solid var(--line);
+  }
+  .archive-editorial .atsugi-schools-head {
+    max-width: 930px;
+  }
+  .archive-editorial .section-kicker {
+    margin-bottom: 6px;
+    color: #8a6700;
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .archive-editorial .section-title {
+    margin: 0 0 12px;
+    color: var(--navy);
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(1.45rem, 2.2vw, 2rem);
+    line-height: 1.45;
+  }
+  .archive-editorial .section-lead {
+    max-width: 930px;
+    margin: 0;
+    font-size: 0.98rem;
+    line-height: 2.05;
+  }
+  .archive-editorial .archive-source-overview {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin: 28px 0 24px;
+    border-top: 2px solid var(--navy);
+    border-bottom: 1px solid var(--line);
+  }
+  .archive-editorial .archive-source-overview > div {
+    padding: 15px 14px;
+    border-right: 1px solid var(--line);
+  }
+  .archive-editorial .archive-source-overview > div:last-child {
+    border-right: 0;
+  }
+  .archive-editorial .archive-source-overview strong,
+  .archive-editorial .archive-source-overview span {
+    display: block;
+  }
+  .archive-editorial .archive-source-overview strong {
+    color: var(--navy);
+    font-size: 1.45rem;
+    line-height: 1.2;
+  }
+  .archive-editorial .archive-source-overview span {
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 800;
+  }
+  .archive-editorial .archive-evaluation-summary {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 8px;
+    margin: 0 0 18px;
+  }
+  .archive-editorial .archive-count-card {
+    padding: 10px 8px;
+    background: #fff;
+    border-top: 4px solid var(--line);
+  }
+  .archive-editorial .archive-count-card.eval-critical {
+    border-top-color: #b42318;
+  }
+  .archive-editorial .archive-count-card.eval-problem {
+    border-top-color: #c2410c;
+  }
+  .archive-editorial .archive-count-card.eval-warning {
+    border-top-color: #b08a00;
+  }
+  .archive-editorial .archive-count-card.eval-insufficient {
+    border-top-color: #d97706;
+  }
+  .archive-editorial .archive-count-card.eval-good {
+    border-top-color: #2563eb;
+  }
+  .archive-editorial .archive-count-card.eval-pending {
+    border-top-color: #64748b;
+  }
+  .archive-editorial .archive-count-label,
+  .archive-editorial .archive-count-card strong {
+    display: block;
+  }
+  .archive-editorial .archive-count-label {
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 800;
+  }
+  .archive-editorial .archive-count-card strong {
+    margin-top: 2px;
+    color: var(--navy);
+    font-size: 1.12rem;
+  }
+  .archive-editorial .archive-legend {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 8px 14px;
+    align-items: baseline;
+    margin: 0 0 28px;
+    padding: 18px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .archive-editorial .archive-legend > span:not(.eval-badge) {
+    color: #475569;
+    font-size: 0.84rem;
+    line-height: 1.7;
+  }
+  .archive-editorial .eval-badge {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 2px 7px;
+    background: transparent;
+    border: 1px solid currentColor;
+    border-radius: 2px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+  .archive-editorial .eval-critical {
+    color: #9f1b13;
+  }
+  .archive-editorial .eval-problem {
+    color: #9a3412;
+  }
+  .archive-editorial .eval-warning,
+  .archive-editorial .eval-insufficient {
+    color: #7a5a00;
+  }
+  .archive-editorial .eval-good {
+    color: #1d4ed8;
+  }
+  .archive-editorial .eval-pending {
+    color: #475569;
+  }
+  .archive-editorial .atsugi-school-details {
+    margin-top: 28px;
+    border-top: 2px solid var(--navy);
+    border-bottom: 1px solid var(--line);
+  }
+  .archive-editorial .atsugi-school-details > summary {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 0;
+    color: var(--navy);
+    cursor: pointer;
+    list-style: none;
+    font-weight: 900;
+  }
+  .archive-editorial .atsugi-school-details > summary::-webkit-details-marker {
+    display: none;
+  }
+  .archive-editorial .atsugi-school-details > summary small {
+    display: block;
+    margin-left: auto;
+    color: var(--muted);
+    font-size: 0.76rem;
+    font-weight: 700;
+  }
+  .archive-editorial .atsugi-school-details > summary::after {
+    content: "開く";
+    flex: 0 0 auto;
+    color: var(--navy);
+    font-size: 0.78rem;
+    text-decoration: underline;
+  }
+  .archive-editorial .atsugi-school-details[open] > summary::after {
+    content: "閉じる";
+  }
+  .archive-editorial .atsugi-school-details-body {
+    padding: 0 0 26px;
+  }
+  .archive-editorial .atsugi-school-groups {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .archive-editorial .atsugi-school-group h3 {
+    margin: 0 0 10px;
+    color: var(--navy);
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.2rem;
+  }
+  .archive-editorial .archive-school-card-list {
+    border-top: 2px solid var(--navy);
+  }
+  .archive-editorial .archive-school-card {
+    padding: 15px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .archive-editorial .archive-school-card-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .archive-editorial .archive-school-card h4,
+  .archive-editorial .archive-school-card p {
+    margin: 0;
+  }
+  .archive-editorial .archive-school-card h4 {
+    color: var(--navy);
+    font-size: 1rem;
+  }
+  .archive-editorial .archive-school-card p {
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 0.8rem;
+    line-height: 1.65;
+  }
+  .archive-editorial .archive-evidence-links {
+    margin-top: 8px;
+  }
+  .archive-editorial .archive-source-status {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+  }
+  .archive-editorial .archive-source-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    font-size: 0.76rem;
+    font-weight: 800;
+    line-height: 1.6;
+  }
+  .archive-editorial .archive-source-chip::before {
+    content: "・";
+  }
+  .archive-editorial a.archive-source-chip.is-present {
+    color: var(--blue);
+    text-decoration: underline;
+  }
+  .archive-editorial .archive-source-chip.is-missing {
+    color: var(--muted);
+  }
+  .archive-editorial .atsugi-schools-note {
+    margin: 24px 0 0;
+    padding-left: 16px;
+    color: #475569;
+    border-left: 4px solid var(--gold);
+    font-size: 0.84rem;
+    line-height: 1.85;
+  }
+  @media (max-width: 760px) {
+    .archive-editorial .archive-source-overview,
+    .archive-editorial .archive-evaluation-summary {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .archive-editorial .archive-source-overview > div:nth-child(2) {
+      border-right: 0;
+    }
+    .archive-editorial .archive-source-overview > div:nth-child(-n + 2) {
+      border-bottom: 1px solid var(--line);
+    }
+    .archive-editorial .archive-legend {
+      grid-template-columns: 1fr;
+    }
+    .archive-editorial .atsugi-school-details > summary,
+    .archive-editorial .archive-school-card-main {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    .archive-editorial .atsugi-school-details > summary small {
+      margin-left: 0;
+    }
+    .archive-editorial .atsugi-school-details > summary::after {
+      position: absolute;
+      right: 16px;
+    }
+  }
 }
 
   /* Simplified primary navigation: keep the six core destinations accessible on small screens. */
