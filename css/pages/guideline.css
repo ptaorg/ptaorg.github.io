@@ -230,6 +230,7 @@
     font-size: 0.97rem;
     font-weight: 900;
     color: var(--navy);
+    line-height: 1.9;
     margin-bottom: 6px;
   }
   .gl-request-body p {

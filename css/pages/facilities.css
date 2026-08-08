@@ -97,6 +97,8 @@
     font-family: "Noto Serif JP", serif;
     font-size: 1rem;
     font-weight: 900;
+    line-height: 1.8;
+    margin-top: 0;
     margin-bottom: 10px;
   }
   .safe-public h3 {
@@ -146,8 +148,10 @@
     margin-bottom: 6px;
   }
   .wall h3 {
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", system-ui, sans-serif;
     font-size: 1rem;
     font-weight: 900;
+    line-height: 1.8;
     color: #7f1d1d;
     margin: 0;
   }

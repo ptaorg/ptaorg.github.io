@@ -369,6 +369,7 @@
     font-size: 1rem;
     font-weight: 900;
     color: var(--color-navy);
+    margin-top: 0;
     margin-bottom: 8px;
     line-height: 1.4;
   }
@@ -652,6 +653,8 @@
     font-size: 1rem;
     font-weight: 900;
     color: var(--color-navy);
+    line-height: 1.8;
+    margin-top: 0;
     margin-bottom: 10px;
   }
   .trans-item {
@@ -1307,6 +1310,7 @@
     font-weight: 700;
     color: #fff;
     font-size: 0.96rem;
+    line-height: 1.8;
   }
   .fee .fee-branch p {
     margin: 0 0 10px;

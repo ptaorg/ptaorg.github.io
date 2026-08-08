@@ -509,6 +509,7 @@
     font-family: "Noto Serif JP", serif;
     color: var(--navy);
     font-size: 1.05rem;
+    line-height: 1.8;
     margin-bottom: 8px;
   }
   .step-block p {
@@ -700,6 +701,7 @@
     font-family: "Noto Serif JP", serif;
     color: var(--navy);
     font-size: 1.05rem;
+    line-height: 1.8;
     margin-bottom: 6px;
   }
   .howto-body p {
