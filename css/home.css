@@ -423,6 +423,12 @@
     border-top: 1px solid var(--home-line);
   }
 
+  .hc-update-stamp {
+    margin: -12px 0 24px;
+    color: var(--home-muted);
+    font-size: 0.9rem;
+  }
+
   .home-page .hc-update-list > a {
     display: grid;
     grid-template-columns: 120px 1fr;

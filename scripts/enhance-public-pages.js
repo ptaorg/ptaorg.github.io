@@ -3,7 +3,7 @@ const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE_ORIGIN = "https://ptaorg.com";
-const REVIEW_DATE = "2026-07-19";
+const DEFAULT_REVIEW_DATE = "2026-07-19";
 const ROBOTS_VALUE = "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1";
 const SKIP_DIRS = new Set([
   ".git",
@@ -195,7 +195,14 @@ function addMetaProperty(html, property, content) {
   return addHeadMarkup(html, `<meta property="${property}" content="${escapeAttribute(content)}">`);
 }
 
-function upsertOpenGraph(html, rel, url, title, description) {
+function reviewDateFor(html) {
+  const bodyDate = html.match(/<body\b[^>]*\bdata-reviewed=["'](\d{4}-\d{2}-\d{2})["']/i);
+  if (bodyDate) return bodyDate[1];
+  const structuredDate = html.match(/"dateModified"\s*:\s*"(\d{4}-\d{2}-\d{2})"/);
+  return structuredDate ? structuredDate[1] : DEFAULT_REVIEW_DATE;
+}
+
+function upsertOpenGraph(html, rel, url, title, description, reviewDate) {
   let next = html;
   next = addMetaProperty(next, "og:site_name", "PTA適正化推進委員会");
   next = addMetaProperty(next, "og:locale", "ja_JP");
@@ -204,16 +211,9 @@ function upsertOpenGraph(html, rel, url, title, description) {
   next = addMetaProperty(next, "og:description", description);
   next = addMetaProperty(next, "og:url", url);
   if (/<meta\s+property=["']og:type["'][^>]*content=["']article["']/i.test(next)) {
-    next = addMetaProperty(next, "article:modified_time", REVIEW_DATE);
+    next = addMetaProperty(next, "article:modified_time", reviewDate);
   }
   return next;
-}
-
-function normalizeJsonLdDates(html) {
-  return html.replace(
-    /<script\s+type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi,
-    (block) => block.replace(/"dateModified"\s*:\s*"[^"]+"/g, `"dateModified": "${REVIEW_DATE}"`)
-  );
 }
 
 function breadcrumbItems(rel, name, url) {
@@ -239,7 +239,7 @@ function schemaType(rel) {
   return "WebPage";
 }
 
-function addJsonLd(html, rel, url, name, description) {
+function addJsonLd(html, rel, url, name, description, reviewDate) {
   if (/application\/ld\+json/i.test(html)) return html;
   const type = schemaType(rel);
   const page = {
@@ -249,7 +249,7 @@ function addJsonLd(html, rel, url, name, description) {
     name,
     description,
     inLanguage: "ja",
-    dateModified: REVIEW_DATE,
+    dateModified: reviewDate,
     isPartOf: { "@type": "WebSite", "@id": `${SITE_ORIGIN}/#website`, name: "PTA適正化推進委員会", url: `${SITE_ORIGIN}/` },
     publisher: { "@type": "Organization", name: "PTA適正化推進委員会", url: `${SITE_ORIGIN}/about.html` }
   };
@@ -269,9 +269,9 @@ function addJsonLd(html, rel, url, name, description) {
   return addHeadMarkup(html, `<script type="application/ld+json">\n${json}\n</script>`);
 }
 
-function markProseMode(html) {
+function markProseMode(html, reviewDate) {
   if (/<body\b[^>]*data-content-mode=/i.test(html)) return html;
-  return html.replace(/<body\b([^>]*)>/i, '<body data-content-mode="prose" data-reviewed="2026-07-19"$1>');
+  return html.replace(/<body\b([^>]*)>/i, `<body data-content-mode="prose" data-reviewed="${reviewDate}"$1>`);
 }
 
 function enhance(filePath, checkOnly) {
@@ -282,15 +282,15 @@ function enhance(filePath, checkOnly) {
   const url = pageUrl(rel);
   const name = pageName(original);
   const description = descriptionFor(rel, original);
+  const reviewDate = reviewDateFor(original);
   let html = original;
   html = upsertDescription(html, description);
   html = upsertRobots(html);
   html = upsertCanonical(html, url);
   html = upsertDiscoveryMetadata(html);
-  html = addJsonLd(html, rel, url, name, description);
-  html = normalizeJsonLdDates(html);
-  html = upsertOpenGraph(html, rel, url, titleFor(original), description);
-  html = markProseMode(html);
+  html = addJsonLd(html, rel, url, name, description, reviewDate);
+  html = upsertOpenGraph(html, rel, url, titleFor(original), description, reviewDate);
+  html = markProseMode(html, reviewDate);
 
   const changed = html !== original;
   if (changed && !checkOnly) fs.writeFileSync(filePath, html, "utf8");

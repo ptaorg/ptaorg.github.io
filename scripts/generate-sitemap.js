@@ -15,7 +15,28 @@ function toIsoDate(value) {
   return new Date(value).toISOString().slice(0, 10);
 }
 
-function fileLastmod(filePath) {
+function readExistingLastmods() {
+  const sitemapPath = path.join(ROOT, "sitemap.xml");
+  const lastmods = new Map();
+  if (!fs.existsSync(sitemapPath)) return lastmods;
+
+  const sitemap = fs.readFileSync(sitemapPath, "utf8");
+  const urlPattern = /<url>\s*<loc>([^<]+)<\/loc>\s*<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>[\s\S]*?<\/url>/g;
+  for (const match of sitemap.matchAll(urlPattern)) {
+    lastmods.set(match[1], match[2]);
+  }
+  return lastmods;
+}
+
+function explicitReviewedDate(filePath) {
+  const html = fs.readFileSync(filePath, "utf8");
+  const match = html.match(/\bdata-reviewed=["'](\d{4}-\d{2}-\d{2})["']/i);
+  return match ? match[1] : null;
+}
+
+function fileLastmod(filePath, url, existingLastmods) {
+  const candidates = [existingLastmods.get(url), explicitReviewedDate(filePath)].filter(Boolean);
+  if (candidates.length) return candidates.sort().at(-1);
   return toIsoDate(fs.statSync(filePath).mtime);
 }
 
@@ -65,14 +86,18 @@ function upsertUrl(urls, url, lastmod) {
 
 function main() {
   const urls = new Map();
+  const existingLastmods = readExistingLastmods();
 
   for (const filePath of walkHtml(ROOT)) {
-    upsertUrl(urls, htmlFileToUrl(filePath), fileLastmod(filePath));
+    const url = htmlFileToUrl(filePath);
+    upsertUrl(urls, url, fileLastmod(filePath, url, existingLastmods));
   }
 
   for (const record of listSchoolData()) {
     const pagePath = path.join(ROOT, record.basePath.replace(/^\/+/, ""), "index.html");
-    if (fs.existsSync(pagePath)) upsertUrl(urls, record.canonical, fileLastmod(pagePath));
+    if (fs.existsSync(pagePath)) {
+      upsertUrl(urls, record.canonical, fileLastmod(pagePath, record.canonical, existingLastmods));
+    }
   }
 
   const sorted = Array.from(urls.values()).sort((a, b) => {

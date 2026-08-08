@@ -6,13 +6,14 @@ Canonical site: https://ptaorg.com/
 Publisher: PTA適正化推進委員会
 Language: Japanese
 Contact: https://ptaorg.com/contact.html
-Public HTML pages reviewed: 198
-Site-wide review date: 2026-07-19
+Public HTML pages reviewed: 201
+Site-wide review date: 2026-08-08
 
 All public HTML pages expose a unique canonical URL, description, indexing policy, publisher metadata, Open Graph metadata, JSON-LD and a text-first presentation. Source-document images, forms, maps and interactive tools remain available where they are part of the evidence or function of the page.
 
 ## Start here
 
+- [PTA運営が現行法体系を満たす唯一の構造](https://ptaorg.com/journal/pta-unified-legal-theory.html): 明示的加入意思表示とPTA自己徴収を、加入契約、会員情報、会費債権、服務、会計を貫く統一理論として論証。六つの完全分離と滋賀県監査結果の検討を含む第1版PDF原本あり。
 - [PTA加入はオプトイン以外では成立しない](https://ptaorg.com/pta-membership-optin.html): 加入の申込み、個人情報提供への同意、会費の支払いを分けた基幹解説。PDF版あり。
 - [PPC「公立学校とPTAの個人情報」全17ページ詳細解説](https://ptaorg.com/ppc-school-pta-personal-data.html): 個人情報保護委員会の2026年3月資料を逐ページで解説。公式記載と当委員会の分析を区別。
 - [学校保有情報のPTA目的利用・提供](https://ptaorg.com/privacy.html): 個人情報論点の総合ページ。
@@ -20,13 +21,18 @@ All public HTML pages expose a unique canonical URL, description, indexing polic
 - [教育委員会・学校向けガイド](https://ptaorg.com/guide-board.html): 学校関与を点検する実務ガイド。
 - [根拠資料・調査方法](https://ptaorg.com/research-index.html): 一次資料、判例、行政回答、実物文書の入口。
 
-## Primary sources used by the two priority pages
+## Primary sources used by the priority pages
 
 - [Civil Code - e-Gov](https://laws.e-gov.go.jp/law/129AC0000000089): Articles 521 and 522.
+- [Consumer Contract Act - e-Gov](https://laws.e-gov.go.jp/law/412AC0000000061): Articles 2, 3, 4 and 10; the CAA annotations are linked from the unified-theory page.
 - [Act on the Protection of Personal Information - e-Gov](https://laws.e-gov.go.jp/law/415AC0000000057): Articles 61, 62, 69, 70 and 75; private-sector provisions are also cited where relevant.
+- [Local Public Service Act - e-Gov](https://laws.e-gov.go.jp/law/325AC0000000261): Articles 32, 35 and 38.
 - [PPC school/PTA document, March 2026](https://www.ppc.go.jp/files/pdf/202603_school_pta_pd_point.pdf): Official 17-page source document.
 - [PPC public-sector Q&A Q3-3-2](https://www.ppc.go.jp/all_faq_index/faq7-q3-3-2/): Purpose limitation and the temporary nature of Article 69(2).
 - [PPC public-sector Q&A Q3-3-10](https://www.ppc.go.jp/all_faq_index/faq7-q3-3-10): Opt-out cannot be treated as public-sector consent under Article 69(2)(i).
+- [MEXT standard duties notice, July 2020](https://www.mext.go.jp/content/20200717-mxt_syoto01-000001234_4.pdf): Standard duties, school-fee handling and the policy direction toward transfer outside schools.
+- [MEXT school-fee public-accounting notice, April 2025](https://www.mext.go.jp/content/20250616-mxt_zaimu-100002245_2.pdf): Public accounting or direct payment for costs tied to school educational activities.
+- [Shiga resident-audit result, June 2026](https://www.pref.shiga.lg.jp/file/attachment/5614558.pdf): Limited judgment on the specific collection system, PTA private-entity status, private funds and the original collection-right holder.
 
 ## Citation guidance
 

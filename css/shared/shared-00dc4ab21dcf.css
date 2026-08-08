@@ -47,24 +47,4 @@
     border-radius: 0;
     box-shadow: none;
   }
-
-  /* PPC資料ページでは、実体に一致するJPEGを表示する。 */
-  body.ppc-editorial #lead::before {
-    background-image: url('/assets/images/ppc-points/ppc-page-01-cover.jpg') !important;
-  }
-  body.ppc-editorial #lead::after {
-    background-image: url('/assets/images/ppc-points/ppc-page-03-overview.jpg') !important;
-  }
-  body.ppc-editorial #point1::after {
-    background-image: url('/assets/images/ppc-points/ppc-page-05-school-point1.jpg') !important;
-  }
-  body.ppc-editorial #point2::before {
-    background-image: url('/assets/images/ppc-points/ppc-page-08-temporary-note.jpg') !important;
-  }
-  body.ppc-editorial #point2::after {
-    background-image: url('/assets/images/ppc-points/ppc-page-11-consent.jpg') !important;
-  }
-  body.ppc-editorial #notes::before {
-    background-image: url('/assets/images/ppc-points/ppc-page-17-notes.jpg') !important;
-  }
 }
