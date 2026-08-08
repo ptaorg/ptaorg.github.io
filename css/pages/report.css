@@ -21,6 +21,13 @@
     text-transform: none;
     letter-spacing: 0.04em;
   }
+  .report-footer h3 {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin: 0 0 12px;
+    line-height: 1.8;
+  }
 
   /* Page-specific styles for report.html */
   .ax5-fig {
