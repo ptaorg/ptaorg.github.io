@@ -93,16 +93,16 @@
     background: linear-gradient(145deg, #eff6ff, #dbeafe);
     border: 1px solid #93c5fd;
   }
-  .safe-box h4 {
+  .safe-box h3 {
     font-family: "Noto Serif JP", serif;
     font-size: 1rem;
     font-weight: 900;
     margin-bottom: 10px;
   }
-  .safe-public h4 {
+  .safe-public h3 {
     color: #334155;
   }
-  .safe-private h4 {
+  .safe-private h3 {
     color: #1e3a8a;
   }
   .safe-box ul {
@@ -145,7 +145,7 @@
     color: #b91c1c;
     margin-bottom: 6px;
   }
-  .wall h4 {
+  .wall h3 {
     font-size: 1rem;
     font-weight: 900;
     color: #7f1d1d;

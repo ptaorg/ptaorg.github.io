@@ -505,7 +505,7 @@
     place-items: center;
     margin-bottom: 12px;
   }
-  .step-block h4 {
+  .step-block h3 {
     font-family: "Noto Serif JP", serif;
     color: var(--navy);
     font-size: 1.05rem;
@@ -696,7 +696,7 @@
     display: block;
     line-height: 1;
   }
-  .howto-body h4 {
+  .howto-body h3 {
     font-family: "Noto Serif JP", serif;
     color: var(--navy);
     font-size: 1.05rem;

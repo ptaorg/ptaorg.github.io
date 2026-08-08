@@ -226,7 +226,7 @@
     font-size: 0.9rem;
     font-weight: 900;
   }
-  .gl-request-body h4 {
+  .gl-request-body h3 {
     font-size: 0.97rem;
     font-weight: 900;
     color: var(--navy);

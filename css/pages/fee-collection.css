@@ -365,7 +365,7 @@
   .triple-card.t3 .triple-num {
     color: #1d4ed8;
   }
-  .triple-card h4 {
+  .triple-card h3 {
     font-size: 1rem;
     font-weight: 900;
     color: var(--color-navy);
@@ -648,7 +648,7 @@
   .trans-card.acceptable .trans-label {
     color: #92400e;
   }
-  .trans-card h4 {
+  .trans-card h3 {
     font-size: 1rem;
     font-weight: 900;
     color: var(--color-navy);
@@ -1301,7 +1301,7 @@
     border-color: rgba(226, 88, 77, 0.5);
     background: rgba(226, 88, 77, 0.08);
   }
-  .fee .fee-branch h4 {
+  .fee .fee-branch h3 {
     margin: 0 0 6px;
     font-family: "Noto Serif JP", serif;
     font-weight: 700;
