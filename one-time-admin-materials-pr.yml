@@ -1,0 +1,14 @@
+name: Archived administrative materials update
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  archived:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirm archived state
+        run: echo 'The one-time administrative materials update has already been applied.'

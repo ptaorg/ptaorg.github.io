@@ -1,0 +1,132 @@
+name: Deploy static site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload static site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Verify public PayPay link
+        id: verify
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          expected=$(python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          source = Path("support.html").read_text(encoding="utf-8")
+          urls = sorted(set(re.findall(
+              r'https://qr\.paypay\.ne\.jp/p2p01_[^"\'<>\s]+',
+              source,
+          )))
+          if len(urls) != 1:
+              raise SystemExit(
+                  f"Expected exactly one unique PayPay URL in support.html; found {len(urls)}"
+              )
+          print(urls[0])
+          PY
+          )
+          verified=false
+          actual=''
+          probe=''
+
+          for attempt in $(seq 1 24); do
+            probe="https://ptaorg.com/support.html?deployment=${GITHUB_SHA}&attempt=${attempt}&ts=$(date +%s)"
+            if curl --fail --silent --show-error --location \
+              --header 'Cache-Control: no-cache, no-store, max-age=0' \
+              --header 'Pragma: no-cache' \
+              "$probe" --output /tmp/support-live.html; then
+              actual=$(grep -o 'https://qr.paypay.ne.jp/p2p01_[^"< ]*' /tmp/support-live.html | head -n 1 || true)
+              if grep --fixed-strings --quiet "$expected" /tmp/support-live.html; then
+                verified=true
+                break
+              fi
+            fi
+            sleep 5
+          done
+
+          EXPECTED_URL="$expected" \
+          ACTUAL_URL="$actual" \
+          VERIFIED="$verified" \
+          PROBE_URL="$probe" \
+          COMMIT_SHA="$GITHUB_SHA" \
+          python3 - <<'PY'
+          import json
+          import os
+          from datetime import datetime, timezone
+
+          record = {
+              "commit": os.environ["COMMIT_SHA"],
+              "verified_at": datetime.now(timezone.utc).isoformat(),
+              "public_page": "https://ptaorg.com/support.html",
+              "probe_url": os.environ["PROBE_URL"],
+              "expected_paypay_url": os.environ["EXPECTED_URL"],
+              "detected_paypay_url": os.environ["ACTUAL_URL"],
+              "verified": os.environ["VERIFIED"] == "true",
+          }
+          with open("/tmp/deployment-verification.json", "w", encoding="utf-8") as f:
+              json.dump(record, f, ensure_ascii=False, indent=2)
+              f.write("\n")
+          PY
+
+          echo "verified=$verified" >> "$GITHUB_OUTPUT"
+
+      - name: Record verification result
+        if: always() && steps.verify.outcome != 'skipped'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '4189826+github-actions[bot]@users.noreply.github.com'
+          git fetch origin deploy-status:refs/remotes/origin/deploy-status || true
+
+          if git show-ref --verify --quiet refs/remotes/origin/deploy-status; then
+            git switch --force-create deploy-status refs/remotes/origin/deploy-status
+          else
+            git switch --orphan deploy-status
+          fi
+
+          git rm --recursive --force . >/dev/null 2>&1 || true
+          cp /tmp/deployment-verification.json deployment-verification.json
+          git add deployment-verification.json
+          git commit --message "Record Pages deployment verification for ${GITHUB_SHA}"
+          git push --force origin deploy-status
+
+      - name: Require successful public verification
+        if: steps.verify.outputs.verified != 'true'
+        run: |
+          echo 'The deployed public page does not contain the expected PayPay URL.' >&2
+          exit 1
