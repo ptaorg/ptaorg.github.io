@@ -26,6 +26,7 @@
     font-weight: 800;
     color: var(--navy);
     margin: 0 0 12px;
+    padding: 0;
     line-height: 1.8;
   }
 
