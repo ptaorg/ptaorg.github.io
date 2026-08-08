@@ -33,6 +33,30 @@
     padding: 52px 0 44px;
     border-bottom: 1px solid var(--line);
   }
+  .dataset-scope-section {
+    background: #f6f8fb;
+    padding: 34px 0 30px;
+    border-bottom: 1px solid var(--line);
+  }
+  .dataset-scope-section .reading-body {
+    max-width: 920px;
+  }
+  .dataset-scope-section h2 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--navy);
+    margin: 0 0 12px;
+  }
+  .dataset-scope-section p {
+    margin: 0 0 0.8em;
+    font-size: 0.92rem;
+    line-height: 1.9;
+    color: #334155;
+  }
+  .dataset-scope-section p:last-child {
+    margin-bottom: 0;
+  }
   .response-trends-section .reading-body {
     max-width: 960px;
   }
@@ -413,6 +437,7 @@
     letter-spacing: 0.05em;
   }
   .board-responses-editorial .response-trends-section .reading-body,
+  .board-responses-editorial .dataset-scope-section .reading-body,
   .board-responses-editorial .response-bodies-section > .wrap,
   .board-responses-editorial .excluded-section > .wrap,
   .board-responses-editorial .caution-section > .wrap {
@@ -507,6 +532,7 @@
   @media (max-width: 680px) {
     .board-responses-editorial .compact-hero-section .wrap,
     .board-responses-editorial .response-trends-section .reading-body,
+    .board-responses-editorial .dataset-scope-section .reading-body,
     .board-responses-editorial .response-bodies-section > .wrap,
     .board-responses-editorial .excluded-section > .wrap,
     .board-responses-editorial .caution-section > .wrap {
