@@ -236,6 +236,29 @@ if (!archiveHtml.includes('資料未掲載と文書不存在は区別して表�
   findings.push('national-archive.html: 資料未掲載と文書不存在を区別する説明がありません');
 }
 
+const theoryPath = path.join(root, 'journal', 'pta-unified-legal-theory.html');
+const theoryHtml = fs.readFileSync(theoryPath, 'utf8');
+const incorrectTheorySource = 'https://www.mext.go.jp/content/20260303-mxt_syoto01-000046407_1.pdf';
+const staleTheoryLabels = [
+  '文部科学省令和8年PTA運営改善報告書',
+  '文部科学省令和8年PTA運営改善事例調査報告書',
+];
+if (theoryHtml.includes(incorrectTheorySource)) {
+  findings.push('journal/pta-unified-legal-theory.html: 学校徴収金通知ではない文科省URLが残っています');
+}
+for (const label of staleTheoryLabels) {
+  if (theoryHtml.includes(label)) {
+    findings.push(`journal/pta-unified-legal-theory.html: 訂正前の資料名が残っています (${label})`);
+  }
+}
+const correctedTheoryPdf = 'assets/documents/journal/pta-unified-legal-theory-v1-with-errata-20260809.pdf';
+if (!theoryHtml.includes(`/${correctedTheoryPdf}`) || !fs.existsSync(path.join(root, correctedTheoryPdf))) {
+  findings.push('journal/pta-unified-legal-theory.html: 訂正表付きPDFのリンク又はファイルがありません');
+}
+if (!theoryHtml.includes('令和7年度「令和の時代」におけるPTA運営改善支援にかかる委託事業報告書（令和8年公表）')) {
+  findings.push('journal/pta-unified-legal-theory.html: PTA運営改善報告書の正式名称がありません');
+}
+
 if (findings.length) {
   console.error('Content consistency check failed:');
   for (const finding of findings) console.error(`- ${finding}`);
