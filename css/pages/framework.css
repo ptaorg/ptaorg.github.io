@@ -25,6 +25,13 @@
     background: #fff;
   }
 
+  /* Prevent 100vw from including the browser scrollbar on this page. */
+  .thesis-page .page-hero--photo {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   /* このページ専用: 表・確度ラベル・目次 */
   .fw-table-wrap {
     overflow-x: auto;
