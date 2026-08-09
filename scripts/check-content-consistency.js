@@ -6,6 +6,90 @@ const root = path.join(__dirname, '..');
 const forbidden = [
   { text: 'https://ptaorg.github.io/donate/', label: '旧寄付URL' },
   { text: '運営チェックアプリ', label: '旧運営チェック名称' },
+  { text: 'https://www.mext.go.jp/a_menu/sports/syokuiku/1419091.htm', label: '断線した文科省公会計化URL' },
+  { text: 'https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo3/079/giji_list/index.htm', label: '断線した中教審特別部会URL' },
+  { text: 'https://www.city.osaka.lg.jp/kyoiku/cmsfiles/contents/0000179/179154/3daiitibu.pdf', label: '断線した大阪市PTA手引きPDF URL' },
+  { text: 'https://www.city.osaka.lg.jp/kyoiku/page/0000179154.html', label: '断線した大阪市PTA手引き掲載URL' },
+  { text: 'https://www.city.osaka.lg.jp/seisakukikakushitsu/page/0000656953.html', label: '断線した大阪市市民の声URL' },
+  { text: 'https://cgi.city.yokohama.lg.jp/shimin/kouchou/search/data/37001728.html', label: '断線した横浜市市民の声URL' },
+  { text: 'https://elaws.e-gov.go.jp/document?lawid=', label: '旧e-Gov法令URL' },
+  { text: '411AC0000000061', label: '誤った消費者契約法の法令番号' },
+];
+
+const REQUIRED_SOURCE_FRAGMENTS = [
+  {
+    file: 'framework.html',
+    fragments: [
+      'https://www.mext.go.jp/content/20230821-mxt_kenshoku-100003364_4.pdf',
+      '学校給食費徴収・管理に関するガイドライン',
+    ],
+  },
+  {
+    file: 'administrative-materials.html',
+    fragments: [
+      'https://www.mext.go.jp/a_menu/shotou/hatarakikata/mext_00349.html',
+      '中央教育審議会での審議（平成29年6月22日諮問～平成31年1月25日答申）',
+      'https://www.pref.kanagawa.jp/docs/gt2/ptahandbook.html',
+      '神奈川県教育委員会「PTA活動のためのハンドブック」',
+    ],
+  },
+  ...['guide-board.html', 'edu-board-separation.html'].map((file) => ({
+    file,
+    fragments: [
+      'https://www.city.matsue.lg.jp/soshikikarasagasu/shimimbu_shiminseikatsusodanka/koho_kocho/4/1/1_5/19768.html',
+      'https://cgi.city.yokohama.lg.jp/shimin/kouchou/search/data/37004619.html',
+      '校外委員が任意参加になるなら立候補制にしてください',
+    ],
+  })),
+  {
+    file: 'cases.html',
+    fragments: [
+      'https://laws.e-gov.go.jp/law/129AC0000000089#Mp-At_522',
+      '滋賀県監査委員「住民監査請求に係る監査結果」（令和8年6月2日公表）',
+    ],
+  },
+  {
+    file: 'privacy.html',
+    fragments: [
+      'https://laws.e-gov.go.jp/law/415AC0000000057',
+    ],
+  },
+  {
+    file: 'starter-kit/sources.html',
+    fragments: [
+      'https://laws.e-gov.go.jp/law/129AC0000000089',
+      'https://laws.e-gov.go.jp/law/322AC0000000026',
+      'https://laws.e-gov.go.jp/law/324AC0000000207',
+      'https://laws.e-gov.go.jp/law/415AC0000000057',
+      'https://laws.e-gov.go.jp/law/325AC0000000261',
+      'https://laws.e-gov.go.jp/law/412AC0000000061',
+    ],
+  },
+  {
+    file: 'PTA運営適正化ガイドブック_第4版_改訂本文.html',
+    fragments: [
+      'https://laws.e-gov.go.jp/law/321CONSTITUTION',
+      'https://laws.e-gov.go.jp/law/129AC0000000089',
+      'https://laws.e-gov.go.jp/law/412AC0000000061',
+    ],
+  },
+  {
+    file: 'journal/pta-fee-collection-legal-analysis.html',
+    fragments: [
+      'https://www.mext.go.jp/content/20250616-mxt_zaimu-100002245_2.pdf',
+      '学校徴収金の公会計化等の取組の一層の推進について（令和7年4月30日・7初財務第3号・文部科学省）',
+    ],
+  },
+  ...[
+    'journal/pta-fee-collection-legal-analysis.html',
+    'journal/pta-shokumu-sennen-gimu.html',
+  ].map((file) => ({
+    file,
+    fragments: [
+      'https://www.mext.go.jp/content/20230821-mxt_kenshoku-100003364_4.pdf',
+      '学校給食費徴収・管理に関するガイドライン（令和元年7月・文部科学省）',
+    ],
+  })),
 ];
 
 const ignoredDirs = new Set(['.git', 'node_modules']);
@@ -78,6 +162,15 @@ function walk(dir) {
 }
 
 walk(root);
+
+for (const rule of REQUIRED_SOURCE_FRAGMENTS) {
+  const text = fs.readFileSync(path.join(root, rule.file), 'utf8');
+  for (const fragment of rule.fragments) {
+    if (!text.includes(fragment)) {
+      findings.push(`${rule.file}: 確認済みの公式資料URL又は正式表示がありません (${fragment})`);
+    }
+  }
+}
 
 const boardDataPath = path.join(root, 'data', 'board-responses.json');
 const boardData = JSON.parse(fs.readFileSync(boardDataPath, 'utf8'));
