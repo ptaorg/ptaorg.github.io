@@ -208,6 +208,36 @@ function checkPublicHtmlBasics() {
   }
 }
 
+function maskNonContentMarkup(html) {
+  const preserveLines = (block) => block.replace(/[^\n]/g, " ");
+  return html
+    .replace(/<!--[\s\S]*?-->/g, preserveLines)
+    .replace(/<(script|style|template)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, preserveLines);
+}
+
+function checkHeadingHierarchy() {
+  for (const file of publicHtmlFiles()) {
+    const html = maskNonContentMarkup(read(file));
+    const headings = [...html.matchAll(/<h([1-6])\b[^>]*>/gi)].map((match) => ({
+      level: Number(match[1]),
+      line: lineNumber(html, match.index),
+    }));
+    const h1Count = headings.filter((heading) => heading.level === 1).length;
+    if (h1Count !== 1) {
+      errors.push(`公開ページのH1は1個でなければなりません: ${file} (${h1Count}個)`);
+    }
+    for (let index = 1; index < headings.length; index += 1) {
+      const previous = headings[index - 1];
+      const current = headings[index];
+      if (current.level > previous.level + 1) {
+        errors.push(
+          `見出しレベルが飛んでいます: ${file}:${current.line} (h${previous.level}→h${current.level})`
+        );
+      }
+    }
+  }
+}
+
 function checkInternalFragments() {
   for (const file of publicHtmlFiles()) {
     const html = read(file);
@@ -323,6 +353,7 @@ function checkGoogleSitesLinks() {
 checkRequiredFiles();
 checkSitemap();
 checkPublicHtmlBasics();
+checkHeadingHierarchy();
 checkInternalFragments();
 checkInternalRefs();
 checkAssetSignatures();
