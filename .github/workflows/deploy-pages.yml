@@ -37,7 +37,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: Verify public PayPay link
+      - name: Verify public deployment
         id: verify
         shell: bash
         run: |
@@ -59,7 +59,7 @@ jobs:
           print(urls[0])
           PY
           )
-          verified=false
+          support_verified=false
           actual=''
           probe=''
 
@@ -71,17 +71,47 @@ jobs:
               "$probe" --output /tmp/support-live.html; then
               actual=$(grep -o 'https://qr.paypay.ne.jp/p2p01_[^"< ]*' /tmp/support-live.html | head -n 1 || true)
               if grep --fixed-strings --quiet "$expected" /tmp/support-live.html; then
-                verified=true
+                support_verified=true
                 break
               fi
             fi
             sleep 5
           done
 
+          report_verified=false
+          report_probe=''
+          report_title='PTA運営の法的構造と是正基準'
+          report_marker='data-page-revision="report-20260809-2"'
+          report_heading='部分修正ではなく、内部事務の主体をそろえる'
+
+          for attempt in $(seq 1 24); do
+            report_probe="https://ptaorg.com/report.html?deployment=${GITHUB_SHA}&attempt=${attempt}&ts=$(date +%s)"
+            if curl --fail --silent --show-error --location \
+              --header 'Cache-Control: no-cache, no-store, max-age=0' \
+              --header 'Pragma: no-cache' \
+              "$report_probe" --output /tmp/report-live.html; then
+              if grep --fixed-strings --quiet "$report_title" /tmp/report-live.html \
+                && grep --fixed-strings --quiet "$report_marker" /tmp/report-live.html \
+                && grep --fixed-strings --quiet "$report_heading" /tmp/report-live.html; then
+                report_verified=true
+                break
+              fi
+            fi
+            sleep 5
+          done
+
+          deployment_verified=false
+          if [[ "$support_verified" == 'true' && "$report_verified" == 'true' ]]; then
+            deployment_verified=true
+          fi
+
           EXPECTED_URL="$expected" \
           ACTUAL_URL="$actual" \
-          VERIFIED="$verified" \
-          PROBE_URL="$probe" \
+          SUPPORT_VERIFIED="$support_verified" \
+          SUPPORT_PROBE_URL="$probe" \
+          REPORT_VERIFIED="$report_verified" \
+          REPORT_PROBE_URL="$report_probe" \
+          VERIFIED="$deployment_verified" \
           COMMIT_SHA="$GITHUB_SHA" \
           python3 - <<'PY'
           import json
@@ -91,10 +121,15 @@ jobs:
           record = {
               "commit": os.environ["COMMIT_SHA"],
               "verified_at": datetime.now(timezone.utc).isoformat(),
-              "public_page": "https://ptaorg.com/support.html",
-              "probe_url": os.environ["PROBE_URL"],
+              "support_page": "https://ptaorg.com/support.html",
+              "support_probe_url": os.environ["SUPPORT_PROBE_URL"],
               "expected_paypay_url": os.environ["EXPECTED_URL"],
               "detected_paypay_url": os.environ["ACTUAL_URL"],
+              "support_verified": os.environ["SUPPORT_VERIFIED"] == "true",
+              "report_page": "https://ptaorg.com/report.html",
+              "report_probe_url": os.environ["REPORT_PROBE_URL"],
+              "report_revision": "report-20260809-2",
+              "report_verified": os.environ["REPORT_VERIFIED"] == "true",
               "verified": os.environ["VERIFIED"] == "true",
           }
           with open("/tmp/deployment-verification.json", "w", encoding="utf-8") as f:
@@ -102,7 +137,7 @@ jobs:
               f.write("\n")
           PY
 
-          echo "verified=$verified" >> "$GITHUB_OUTPUT"
+          echo "verified=$deployment_verified" >> "$GITHUB_OUTPUT"
 
       - name: Record verification result
         if: always() && steps.verify.outcome != 'skipped'
