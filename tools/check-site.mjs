@@ -6,6 +6,7 @@ const root = process.cwd();
 const errors = [];
 const warnings = [];
 
+const siteOrigin = "https://ptaorg.com";
 const internalHosts = new Set(["ptaorg.com", "www.ptaorg.com", "ptaorg.github.io"]);
 const requiredFiles = [
   "index.html",
@@ -144,6 +145,20 @@ function publicHtmlFiles() {
   return [...new Set(files)];
 }
 
+function htmlFileFromUrl(url) {
+  let file = decodeURIComponent(url.pathname).replace(/^\/+/, "");
+  if (!file || file.endsWith("/")) file += "index.html";
+  return file;
+}
+
+function dynamicFragmentExists(file, fragment) {
+  const answer = file === "board-responses.html" && fragment.match(/^ans-(\d+)$/);
+  if (!answer || !exists("data/board-responses.json")) return false;
+  const data = JSON.parse(read("data/board-responses.json"));
+  return Array.isArray(data.responses)
+    && data.responses.some((response) => String(response.no) === answer[1]);
+}
+
 function checkPublicHtmlBasics() {
   for (const file of publicHtmlFiles()) {
     const html = read(file);
@@ -188,6 +203,44 @@ function checkPublicHtmlBasics() {
       const rel = attributeValue(tag, "rel").toLowerCase().split(/\s+/);
       if (!rel.includes("noopener")) {
         errors.push(`別タブリンクにnoopenerがありません: ${file}:${lineNumber(html, match.index)}`);
+      }
+    }
+  }
+}
+
+function checkInternalFragments() {
+  for (const file of publicHtmlFiles()) {
+    const html = read(file);
+    const pageUrl = file === "index.html" ? `${siteOrigin}/` : new URL(file, `${siteOrigin}/`).href;
+    for (const match of html.matchAll(/<a\b[^>]*>/gi)) {
+      const href = attributeValue(match[0], "href");
+      if (!href.includes("#") || /^(?:mailto:|tel:|javascript:|data:)/i.test(href)) continue;
+
+      let targetUrl;
+      try {
+        targetUrl = new URL(href, pageUrl);
+      } catch {
+        continue;
+      }
+      if (!internalHosts.has(targetUrl.hostname) || !targetUrl.hash) continue;
+
+      let fragment;
+      let targetFile;
+      try {
+        fragment = decodeURIComponent(targetUrl.hash.slice(1));
+        targetFile = htmlFileFromUrl(targetUrl);
+      } catch {
+        errors.push(`内部リンクのフラグメントを解釈できません: ${file}:${lineNumber(html, match.index)} (${href})`);
+        continue;
+      }
+      if (!fragment || fragment.startsWith(":~:text=") || !exists(targetFile)) continue;
+
+      const targetHtml = read(targetFile);
+      const targetIds = new Set(
+        [...targetHtml.matchAll(/\b(?:id|name)\s*=\s*["']([^"']+)["']/gi)].map((idMatch) => idMatch[1])
+      );
+      if (!targetIds.has(fragment) && !dynamicFragmentExists(targetFile, fragment)) {
+        errors.push(`内部リンクの移動先IDが見つかりません: ${file}:${lineNumber(html, match.index)} (${href})`);
       }
     }
   }
@@ -270,6 +323,7 @@ function checkGoogleSitesLinks() {
 checkRequiredFiles();
 checkSitemap();
 checkPublicHtmlBasics();
+checkInternalFragments();
 checkInternalRefs();
 checkAssetSignatures();
 checkGoogleSitesLinks();
