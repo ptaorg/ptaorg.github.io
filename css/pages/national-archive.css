@@ -466,6 +466,20 @@
   .archive-editorial {
     background: #fff;
   }
+  .archive-editorial .skip-link {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 9999;
+    padding: 8px 12px;
+    color: #fff;
+    background: var(--navy);
+    transform: translateY(-160%);
+    transition: transform 0.15s ease;
+  }
+  .archive-editorial .skip-link:focus {
+    transform: translateY(0);
+  }
   .archive-editorial main {
     display: block;
   }
