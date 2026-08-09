@@ -24,11 +24,11 @@ function countByStatus(records) {
   return counts;
 }
 
-function renderCountCards(records) {
+function renderCountItems(records) {
   const counts = countByStatus(records);
   return STATUS_ORDER.map((status) => {
     const cls = statusClassFor(status);
-    return `          <div class="archive-count-card ${cls}">
+    return `          <div class="archive-count-item ${cls}">
             <span class="archive-count-label">${escapeHtml(status)}</span>
             <strong>${counts[status] || 0}校</strong>
           </div>`;
@@ -94,8 +94,8 @@ function sourceLinks(record) {
   return links;
 }
 
-function renderSourceChip({ href, label, present }) {
-  const cls = present ? "archive-source-chip is-present" : "archive-source-chip is-missing";
+function renderSourceItem({ href, label, present }) {
+  const cls = present ? "archive-source-item is-present" : "archive-source-item is-missing";
   return href
     ? `<a class="${cls}" href="${escapeHtml(href)}">${escapeHtml(label)}</a>`
     : `<span class="${cls}">${escapeHtml(label)}</span>`;
@@ -105,18 +105,18 @@ function renderEvidence(record) {
   const images = sourceImages(record);
   const pdfs = localPdfPaths(record);
   const links = sourceLinks(record);
-  const chips = [
+  const items = [
     images.length
-      ? renderSourceChip({ href: images[0].src, label: `資料画像あり（${images.length}枚）`, present: true })
-      : renderSourceChip({ label: "資料画像未掲載", present: false }),
+      ? renderSourceItem({ href: images[0].src, label: `資料画像あり（${images.length}枚）`, present: true })
+      : renderSourceItem({ label: "資料画像未掲載", present: false }),
     pdfs.length
-      ? renderSourceChip({ href: pdfs[0], label: `元PDFあり（${pdfs.length}件）`, present: true })
-      : renderSourceChip({ label: "元PDF未掲載", present: false }),
+      ? renderSourceItem({ href: pdfs[0], label: `元PDFあり（${pdfs.length}件）`, present: true })
+      : renderSourceItem({ label: "元PDF未掲載", present: false }),
     links.length
-      ? renderSourceChip({ href: links[0].url, label: `一次資料URLあり（${links.length}件）`, present: true })
-      : renderSourceChip({ label: "一次資料URL未確認", present: false })
+      ? renderSourceItem({ href: links[0].url, label: `一次資料URLあり（${links.length}件）`, present: true })
+      : renderSourceItem({ label: "一次資料URL未確認", present: false })
   ];
-  return `<div class="archive-source-status">${chips.join("")}</div>`;
+  return `<div class="archive-source-status">${items.join("")}</div>`;
 }
 
 function evidenceCounts(records) {
@@ -127,7 +127,7 @@ function evidenceCounts(records) {
   };
 }
 
-function renderSchoolCards(records, schoolType) {
+function renderSchoolRecords(records, schoolType) {
   return records
     .filter((record) => record.schoolType === schoolType)
     .sort(sortSchools)
@@ -139,8 +139,8 @@ function renderSchoolCards(records, schoolType) {
         : `<span>${name}</span>`;
       const status = displayStatus(record.status);
       const documentName = record.materials?.documentName || "未確認";
-      return `              <article class="archive-school-card">
-                <div class="archive-school-card-main">
+      return `              <article class="archive-school-record">
+                <div class="archive-school-record-main">
                   <div>
                     <h4>${nameHtml}</h4>
                     <p>${escapeHtml(record.schoolType)} ／ 確認資料：${escapeHtml(documentName)}</p>
@@ -164,39 +164,42 @@ function renderAtsugiSection(records) {
     <section class="atsugi-schools-section" id="atsugi-schools">
       <div class="wrap">
         <div class="section-center atsugi-schools-head">
-          <div class="section-kicker">Atsugi City</div>
+          <p class="archive-section-number">03 / 自治体別資料</p>
           <h2 class="section-title">神奈川県厚木市</h2>
           <p class="section-lead">厚木市内の小学校・中学校について、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を学校別に整理しています。評価だけでなく、学校別ページ、資料画像、元PDF、一次資料URLの有無をあわせて確認してください。</p>
         </div>
+        <h3 class="archive-subtitle">資料の掲載状況</h3>
         <div class="archive-source-overview" aria-label="厚木市資料根拠の掲載状況">
           <div><strong>${atsugiRecords.length}校</strong><span>学校別ページ</span></div>
           <div><strong>${counts.images}校</strong><span>資料画像あり</span></div>
           <div><strong>${counts.pdfs}校</strong><span>元PDFあり</span></div>
           <div><strong>${counts.sourceLinks}校</strong><span>一次資料URLあり</span></div>
         </div>
+        <h3 class="archive-subtitle">当委員会による評価内訳</h3>
+        <p class="archive-evaluation-note">以下は掲載資料を基にした当委員会の整理です。未掲載資料や現在の実務により評価が変わる可能性があり、行政機関・裁判所による法的判断ではありません。</p>
         <div class="archive-evaluation-summary" aria-label="厚木市の評価別集計">
-${renderCountCards(atsugiRecords)}
+${renderCountItems(atsugiRecords)}
         </div>
         <div class="archive-legend" aria-label="評価バッジの説明">
 ${renderLegend()}
         </div>
         <details class="atsugi-school-details">
           <summary>
-            <span>厚木市36校の学校別根拠資料</span>
+            <span>厚木市${atsugiRecords.length}校の学校別根拠資料</span>
             <small>学校名・評価・資料画像・元PDF・一次資料URLを確認</small>
           </summary>
           <div class="atsugi-school-details-body">
             <div class="atsugi-school-groups" aria-label="厚木市内学校一覧">
               <div class="atsugi-school-group">
                 <h3>小学校</h3>
-                <div class="archive-school-card-list">
-${renderSchoolCards(atsugiRecords, "小学校")}
+                <div class="archive-school-records">
+${renderSchoolRecords(atsugiRecords, "小学校")}
                 </div>
               </div>
               <div class="atsugi-school-group">
                 <h3>中学校</h3>
-                <div class="archive-school-card-list">
-${renderSchoolCards(atsugiRecords, "中学校")}
+                <div class="archive-school-records">
+${renderSchoolRecords(atsugiRecords, "中学校")}
                 </div>
               </div>
             </div>

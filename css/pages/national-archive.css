@@ -466,6 +466,12 @@
   .archive-editorial {
     background: #fff;
   }
+  .archive-editorial main {
+    display: block;
+  }
+  .archive-editorial [id] {
+    scroll-margin-top: 92px;
+  }
   .archive-editorial .topbar b {
     padding: 0;
     background: transparent;
@@ -473,11 +479,28 @@
     border-radius: 0;
   }
   .archive-editorial .hero {
-    padding: 68px 0 58px;
+    padding: 74px 0 64px;
     border-bottom: 1px solid #071a30;
   }
-  .archive-editorial .archive-source-link {
+  .archive-editorial .hero .wrap {
+    max-width: 1120px;
+  }
+  .archive-editorial .archive-hero-lead {
+    max-width: 860px;
+    margin: 0;
+    font-size: 1.04rem;
+    font-weight: 600;
+    line-height: 2;
+  }
+  .archive-editorial .archive-hero-meta {
     margin: 22px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.24);
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.78rem;
+  }
+  .archive-editorial .archive-source-link {
+    margin: 16px 0 0;
   }
   .archive-editorial .archive-source-link a {
     color: #f8e39b;
@@ -488,11 +511,121 @@
     padding: 58px 0;
     background: #fff;
   }
+  .archive-editorial .archive-jump {
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+  }
+  .archive-editorial .archive-jump .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 24px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .archive-editorial .archive-jump a {
+    padding: 5px 0;
+    color: #334155;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+  .archive-editorial .archive-intro {
+    border-bottom: 1px solid var(--line);
+  }
+  .archive-editorial .archive-prose {
+    max-width: 900px;
+  }
+  .archive-editorial .archive-prose > p:not(.archive-section-number):not(.archive-intro-conclusion):not(.archive-caution) {
+    margin: 18px 0 0;
+    font-size: 0.96rem;
+    line-height: 2.08;
+  }
+  .archive-editorial .archive-section-number {
+    margin: 0 0 12px;
+    color: #8a6700;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+  }
+  .archive-editorial .archive-intro-conclusion {
+    margin: 22px 0 0;
+    padding: 18px 20px;
+    background: #f4f7fb;
+    border-left: 4px solid var(--gold);
+    color: #172b43;
+    font-size: 0.94rem;
+    line-height: 2;
+  }
+  .archive-editorial .archive-evidence-definitions {
+    margin: 28px 0;
+    border-top: 2px solid var(--navy);
+  }
+  .archive-editorial .archive-evidence-definitions > div {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr);
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .archive-editorial .archive-evidence-definitions dt {
+    color: var(--navy);
+    font-weight: 900;
+  }
+  .archive-editorial .archive-evidence-definitions dd {
+    margin: 0;
+    color: #475569;
+    font-size: 0.9rem;
+    line-height: 1.9;
+  }
+  .archive-editorial .archive-subtitle {
+    margin: 28px 0 10px;
+    color: var(--navy);
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.12rem;
+    line-height: 1.6;
+  }
+  .archive-editorial .archive-reading-steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: archive-step;
+    border-top: 1px solid var(--line);
+  }
+  .archive-editorial .archive-reading-steps li {
+    position: relative;
+    padding: 13px 0 13px 42px;
+    counter-increment: archive-step;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.9rem;
+    line-height: 1.9;
+  }
+  .archive-editorial .archive-reading-steps li::before {
+    content: counter(archive-step, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    color: #8a6700;
+    font-size: 0.78rem;
+    font-weight: 900;
+  }
+  .archive-editorial .archive-caution {
+    margin: 24px 0 0;
+    padding: 16px 0 0;
+    border-top: 2px solid var(--navy);
+    color: #334155;
+    font-size: 0.88rem;
+    line-height: 1.95;
+  }
   .archive-editorial .map {
     width: 100%;
     margin-top: 24px;
     border-radius: 0;
     box-shadow: none;
+  }
+  .archive-editorial .archive-dynamic-anchor {
+    height: 0;
+    overflow: hidden;
   }
   .archive-editorial .archive-list {
     margin-top: 24px;
@@ -612,31 +745,31 @@
     gap: 8px;
     margin: 0 0 18px;
   }
-  .archive-editorial .archive-count-card {
+  .archive-editorial .archive-count-item {
     padding: 10px 8px;
     background: #fff;
     border-top: 4px solid var(--line);
   }
-  .archive-editorial .archive-count-card.eval-critical {
+  .archive-editorial .archive-count-item.eval-critical {
     border-top-color: #b42318;
   }
-  .archive-editorial .archive-count-card.eval-problem {
+  .archive-editorial .archive-count-item.eval-problem {
     border-top-color: #c2410c;
   }
-  .archive-editorial .archive-count-card.eval-warning {
+  .archive-editorial .archive-count-item.eval-warning {
     border-top-color: #b08a00;
   }
-  .archive-editorial .archive-count-card.eval-insufficient {
+  .archive-editorial .archive-count-item.eval-insufficient {
     border-top-color: #d97706;
   }
-  .archive-editorial .archive-count-card.eval-good {
+  .archive-editorial .archive-count-item.eval-good {
     border-top-color: #2563eb;
   }
-  .archive-editorial .archive-count-card.eval-pending {
+  .archive-editorial .archive-count-item.eval-pending {
     border-top-color: #64748b;
   }
   .archive-editorial .archive-count-label,
-  .archive-editorial .archive-count-card strong {
+  .archive-editorial .archive-count-item strong {
     display: block;
   }
   .archive-editorial .archive-count-label {
@@ -644,7 +777,7 @@
     font-size: 0.72rem;
     font-weight: 800;
   }
-  .archive-editorial .archive-count-card strong {
+  .archive-editorial .archive-count-item strong {
     margin-top: 2px;
     color: var(--navy);
     font-size: 1.12rem;
@@ -658,6 +791,13 @@
     padding: 18px 0;
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
+  }
+  .archive-editorial .archive-evaluation-note {
+    max-width: 900px;
+    margin: 0 0 14px;
+    color: #475569;
+    font-size: 0.84rem;
+    line-height: 1.85;
   }
   .archive-editorial .archive-legend > span:not(.eval-badge) {
     color: #475569;
@@ -744,10 +884,10 @@
     font-family: "Noto Serif JP", serif;
     font-size: 1.2rem;
   }
-  .archive-editorial .archive-school-card-list {
+  .archive-editorial .archive-school-records {
     border-top: 2px solid var(--navy);
   }
-  .archive-editorial .archive-school-card {
+  .archive-editorial .archive-school-record {
     padding: 15px 0;
     background: transparent;
     border: 0;
@@ -755,21 +895,21 @@
     border-radius: 0;
     box-shadow: none;
   }
-  .archive-editorial .archive-school-card-main {
+  .archive-editorial .archive-school-record-main {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 16px;
   }
-  .archive-editorial .archive-school-card h4,
-  .archive-editorial .archive-school-card p {
+  .archive-editorial .archive-school-record h4,
+  .archive-editorial .archive-school-record p {
     margin: 0;
   }
-  .archive-editorial .archive-school-card h4 {
+  .archive-editorial .archive-school-record h4 {
     color: var(--navy);
     font-size: 1rem;
   }
-  .archive-editorial .archive-school-card p {
+  .archive-editorial .archive-school-record p {
     margin-top: 3px;
     color: var(--muted);
     font-size: 0.8rem;
@@ -783,7 +923,7 @@
     flex-wrap: wrap;
     gap: 4px 16px;
   }
-  .archive-editorial .archive-source-chip {
+  .archive-editorial .archive-source-item {
     display: inline-flex;
     align-items: center;
     padding: 0;
@@ -794,14 +934,14 @@
     font-weight: 800;
     line-height: 1.6;
   }
-  .archive-editorial .archive-source-chip::before {
+  .archive-editorial .archive-source-item::before {
     content: "・";
   }
-  .archive-editorial a.archive-source-chip.is-present {
+  .archive-editorial a.archive-source-item.is-present {
     color: var(--blue);
     text-decoration: underline;
   }
-  .archive-editorial .archive-source-chip.is-missing {
+  .archive-editorial .archive-source-item.is-missing {
     color: var(--muted);
   }
   .archive-editorial .atsugi-schools-note {
@@ -827,7 +967,7 @@
       grid-template-columns: 1fr;
     }
     .archive-editorial .atsugi-school-details > summary,
-    .archive-editorial .archive-school-card-main {
+    .archive-editorial .archive-school-record-main {
       align-items: flex-start;
       flex-direction: column;
     }
@@ -837,6 +977,201 @@
     .archive-editorial .atsugi-school-details > summary::after {
       position: absolute;
       right: 16px;
+    }
+  }
+
+  /* その他の自治体：繰り返しカードではなく、罫線で区切る資料記録 */
+  .archive-editorial .archive-material-records {
+    border-top: 2px solid var(--navy);
+  }
+  .archive-editorial .archive-material-record {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .archive-editorial .archive-material-record h4,
+  .archive-editorial .archive-material-record p {
+    margin: 0;
+  }
+  .archive-editorial .archive-material-record h4 {
+    color: var(--navy);
+    font-size: 1rem;
+  }
+  .archive-editorial .archive-record-state {
+    margin-left: 8px;
+    color: #475569;
+    font-size: 0.72rem;
+    font-weight: 800;
+  }
+  .archive-editorial .archive-record-meta {
+    margin-top: 4px !important;
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 800;
+  }
+  .archive-editorial .archive-record-point {
+    margin-top: 7px !important;
+    color: #334155;
+    font-size: 0.86rem;
+    line-height: 1.85;
+  }
+  .archive-editorial .archive-record-link,
+  .archive-editorial .archive-folder-link {
+    margin: 8px 0 0;
+    font-size: 0.84rem;
+    font-weight: 900;
+  }
+  .archive-editorial .archive-folder-link {
+    margin-top: 18px;
+  }
+  .archive-editorial .group > h4 {
+    margin: 0 0 12px;
+    color: var(--navy);
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.1rem;
+  }
+
+  /* JSON目録：表として原本URLを示し、カードやタグの装飾に依存しない */
+  .archive-editorial .archive-drive-materials {
+    padding: 58px 0;
+    background: #f8fafc;
+    border-bottom: 1px solid var(--line);
+  }
+  .archive-editorial .archive-drive-lead {
+    max-width: 900px;
+    margin: 0;
+    color: #334155;
+    font-size: 0.96rem;
+    line-height: 2;
+  }
+  .archive-editorial .archive-drive-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    margin: 18px 0 26px;
+  }
+  .archive-editorial .archive-drive-actions a {
+    color: var(--blue);
+    font-size: 0.86rem;
+    font-weight: 900;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+  .archive-editorial .archive-drive-cautions {
+    max-width: 900px;
+    margin: 0 0 28px;
+    padding: 16px 0;
+    border-top: 2px solid var(--navy);
+    border-bottom: 1px solid var(--line);
+  }
+  .archive-editorial .archive-drive-cautions strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--navy);
+  }
+  .archive-editorial .archive-drive-cautions ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+  .archive-editorial .archive-drive-cautions li {
+    margin: 4px 0;
+    color: #475569;
+    font-size: 0.84rem;
+    line-height: 1.8;
+  }
+  .archive-editorial .archive-drive-table-wrap {
+    overflow-x: auto;
+    background: #fff;
+    border-top: 2px solid var(--navy);
+  }
+  .archive-editorial .archive-drive-table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+  }
+  .archive-editorial .archive-drive-table th,
+  .archive-editorial .archive-drive-table td {
+    padding: 12px 13px;
+    border-bottom: 1px solid #dbe3ec;
+    text-align: left;
+    vertical-align: top;
+    font-size: 0.86rem;
+    line-height: 1.7;
+  }
+  .archive-editorial .archive-drive-table th {
+    background: #eef2f7;
+    color: var(--navy);
+    font-size: 0.8rem;
+    font-weight: 900;
+  }
+  .archive-editorial .archive-drive-table a {
+    color: var(--blue);
+    font-weight: 900;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+  .archive-editorial .archive-drive-issue {
+    display: inline;
+    color: #475569;
+    font-size: 0.76rem;
+    font-weight: 800;
+  }
+  .archive-editorial .archive-drive-issue + .archive-drive-issue::before {
+    content: " ／ ";
+    color: #94a3b8;
+  }
+  .archive-editorial .archive-drive-representative {
+    margin-top: 34px;
+  }
+  .archive-editorial .archive-drive-representative h3 {
+    margin: 0 0 10px;
+    color: var(--navy);
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.12rem;
+  }
+  .archive-editorial .archive-drive-status {
+    padding: 14px 0;
+    color: #7c2d12;
+    font-size: 0.84rem;
+  }
+  .archive-editorial .archive-drive-updated {
+    margin: 10px 0 0;
+    color: #64748b;
+    font-size: 0.76rem;
+  }
+
+  @media (max-width: 620px) {
+    .archive-editorial .hero {
+      padding: 54px 0 48px;
+    }
+    .archive-editorial .archive-jump .wrap {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 20px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .archive-editorial .archive-jump a {
+      flex: 0 0 auto;
+      white-space: nowrap;
+    }
+    .archive-editorial .archive-evidence-definitions > div {
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    .archive-editorial .archive-intro-conclusion {
+      padding: 16px;
+    }
+    .archive-editorial .archive-drive-materials {
+      padding: 46px 0;
+    }
+    .archive-editorial .archive-drive-table-wrap {
+      margin-right: -16px;
+    }
+    .archive-editorial .archive-drive-table th,
+    .archive-editorial .archive-drive-table td {
+      padding: 10px;
+      font-size: 0.8rem;
     }
   }
 }
