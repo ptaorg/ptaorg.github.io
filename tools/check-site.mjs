@@ -118,6 +118,81 @@ function checkSitemap() {
   }
 }
 
+function attributeValue(tag, name) {
+  const match = tag.match(new RegExp(`\\b${name}\\s*=\\s*(["'])([\\s\\S]*?)\\1`, "i"));
+  return match ? match[2].trim() : "";
+}
+
+function lineNumber(text, index) {
+  return text.slice(0, index).split("\n").length;
+}
+
+function publicHtmlFiles() {
+  if (!exists("sitemap.xml")) return [];
+  const files = [];
+  for (const match of read("sitemap.xml").matchAll(/<loc>([^<]+)<\/loc>/g)) {
+    try {
+      const url = new URL(match[1]);
+      if (!internalHosts.has(url.hostname)) continue;
+      let file = decodeURIComponent(url.pathname).replace(/^\/+/, "");
+      if (!file || file.endsWith("/")) file += "index.html";
+      if (file.endsWith(".html") && exists(file)) files.push(file);
+    } catch {
+      // URL validity is reported by the sitemap and internal-reference checks.
+    }
+  }
+  return [...new Set(files)];
+}
+
+function checkPublicHtmlBasics() {
+  for (const file of publicHtmlFiles()) {
+    const html = read(file);
+    if (!/<html\b[^>]*\blang\s*=\s*["'][^"']+["']/i.test(html)) {
+      errors.push(`公開ページの言語指定がありません: ${file}`);
+    }
+    if (!/<meta\b[^>]*\bname\s*=\s*["']viewport["'][^>]*>/i.test(html)) {
+      errors.push(`公開ページのviewport指定がありません: ${file}`);
+    }
+
+    for (const match of html.matchAll(/<img\b[^>]*>/gi)) {
+      if (!/\balt\s*=\s*["'][^"']*["']/i.test(match[0])) {
+        errors.push(`画像の代替テキスト属性がありません: ${file}:${lineNumber(html, match.index)}`);
+      }
+    }
+
+    const labelRanges = [...html.matchAll(/<label\b[^>]*>[\s\S]*?<\/label>/gi)]
+      .map((match) => [match.index, match.index + match[0].length]);
+    const labelledIds = new Set(
+      [...html.matchAll(/<label\b[^>]*\bfor\s*=\s*["']([^"']+)["']/gi)].map((match) => match[1])
+    );
+    for (const match of html.matchAll(/<(input|select|textarea)\b[^>]*>/gi)) {
+      const tag = match[0];
+      if (attributeValue(tag, "type").toLowerCase() === "hidden") continue;
+      const id = attributeValue(tag, "id");
+      const wrapped = labelRanges.some(([start, end]) => start < match.index && match.index < end);
+      const named = Boolean(
+        attributeValue(tag, "aria-label")
+        || attributeValue(tag, "aria-labelledby")
+        || attributeValue(tag, "title")
+        || (id && labelledIds.has(id))
+        || wrapped
+      );
+      if (!named) {
+        errors.push(`入力欄の読み上げ名がありません: ${file}:${lineNumber(html, match.index)}`);
+      }
+    }
+
+    for (const match of html.matchAll(/<a\b[^>]*>/gi)) {
+      const tag = match[0];
+      if (attributeValue(tag, "target").toLowerCase() !== "_blank") continue;
+      const rel = attributeValue(tag, "rel").toLowerCase().split(/\s+/);
+      if (!rel.includes("noopener")) {
+        errors.push(`別タブリンクにnoopenerがありません: ${file}:${lineNumber(html, match.index)}`);
+      }
+    }
+  }
+}
+
 function checkInternalRefs() {
   const tracked = trackedFiles();
   const trackedLower = new Map([...tracked].map((file) => [file.toLowerCase(), file]));
@@ -194,6 +269,7 @@ function checkGoogleSitesLinks() {
 
 checkRequiredFiles();
 checkSitemap();
+checkPublicHtmlBasics();
 checkInternalRefs();
 checkAssetSignatures();
 checkGoogleSitesLinks();
