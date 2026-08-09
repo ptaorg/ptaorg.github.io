@@ -14,9 +14,41 @@ const forbidden = [
   { text: 'https://cgi.city.yokohama.lg.jp/shimin/kouchou/search/data/37001728.html', label: '断線した横浜市市民の声URL' },
   { text: 'https://elaws.e-gov.go.jp/document?lawid=', label: '旧e-Gov法令URL' },
   { text: '411AC0000000061', label: '誤った消費者契約法の法令番号' },
+  { text: '非入会通知書', label: '廃止した非入会通知書' },
+  { text: '退会届・非加入届', label: '退会と非加入を混同した案内' },
+  { text: 'href="/forms/pta-hinyukai-tsuchi.html"', label: '廃止書式への内部リンク' },
+  { text: '加入手続の窓口や提出先は学校・PTAの案内も確認してください', label: '学校をPTA加入手続の窓口にする案内' },
+  { text: '非加入意思表示書', label: '非加入者に意思表示書を求める案内' },
+  { text: '学校経由にする場合は、学校が取次ぎを受ける根拠と受領先を確認してください', label: '学校をPTA退会手続の取次先にする案内' },
 ];
 
 const REQUIRED_SOURCE_FRAGMENTS = [
+  {
+    file: 'forms/pta-hinyukai-tsuchi.html',
+    fragments: [
+      'content="noindex,follow"',
+      '入会していない人に届出は不要です',
+      '学校は、誰がPTA会員か、誰が非会員か、誰が退会したかを把握しません',
+      'PTAも、加入を申し込んでいない人の一覧を作りません',
+    ],
+  },
+  {
+    file: 'forms/pta-taikai-todoke.html',
+    fragments: [
+      'PTA退会通知書',
+      '現会員本人からPTAが自ら設けた窓口へ直接提出します',
+      '退会理由、児童生徒の氏名・学年・組、住所、押印は不要です',
+    ],
+  },
+  {
+    file: 'guide-parent.html',
+    fragments: [
+      '入会していない人が、入らないことを届け出る必要はありません',
+      '学校・担任・児童生徒を介さず、PTAが自ら設けた窓口へ直接行います',
+      '学校は加入状況の照会先・取次先にしません',
+      '入会していない人は何も提出しません',
+    ],
+  },
   {
     file: 'framework.html',
     fragments: [
@@ -92,6 +124,12 @@ const REQUIRED_SOURCE_FRAGMENTS = [
   })),
 ];
 
+const REQUIRED_FORM_PDFS = [
+  'assets/pdf/pta-membership-inquiry.pdf',
+  'assets/pdf/pta-withdrawal-notice.pdf',
+  'assets/pdf/personal-data-deletion-request.pdf',
+];
+
 const ignoredDirs = new Set(['.git', 'node_modules']);
 const findings = [];
 const COLLECTION_SCOPE = '76自治体・111件';
@@ -162,6 +200,21 @@ function walk(dir) {
 }
 
 walk(root);
+
+for (const rel of REQUIRED_FORM_PDFS) {
+  const full = path.join(root, rel);
+  if (!fs.existsSync(full)) {
+    findings.push(`${rel}: PDF書式がありません`);
+    continue;
+  }
+  const bytes = fs.readFileSync(full);
+  if (!bytes.subarray(0, 5).equals(Buffer.from('%PDF-'))) {
+    findings.push(`${rel}: PDFヘッダーが不正です`);
+  }
+  if (bytes.length < 3000) {
+    findings.push(`${rel}: 仮置き又は内容不足の可能性があります (${bytes.length} bytes)`);
+  }
+}
 
 for (const rule of REQUIRED_SOURCE_FRAGMENTS) {
   const text = fs.readFileSync(path.join(root, rule.file), 'utf8');

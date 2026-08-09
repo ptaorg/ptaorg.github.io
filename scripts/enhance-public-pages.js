@@ -34,7 +34,7 @@ const SECTION_BREADCRUMBS = {
 
 const MANUAL_DESCRIPTIONS = {
   "administrative-materials.html": "PTA運営の適正化に必要な法令、個人情報保護委員会資料、文部科学省資料、教育委員会通知を、論点と使いどころが分かる形で整理した一次資料案内です。",
-  "documents.html": "PTAの非加入、退会、情報提供停止、教育委員会への照会などに使える文例を、提出先と確認事項ごとにまとめています。",
+  "documents.html": "PTAへの加入記録照会、退会通知、情報提供停止、教育委員会への照会などに使える文例を、提出先と確認事項ごとにまとめています。",
   "edu-board-separation.html": "教育委員会と学校が、PTA内部の自治と学校管理上の責任を混同せず、情報・会費・職員・施設の関与を点検するための解説です。",
   "education-board-responsibility.html": "PTAに関する教育委員会の責任範囲を、学校管理、個人情報、徴収、服務、施設利用の観点から整理します。",
   "framework.html": "PTAの任意加入、個人情報、会費徴収、教職員関与、施設利用を、主体・根拠・記録の順に点検する共通フレームワークです。",
