@@ -81,7 +81,7 @@ jobs:
           report_verified=false
           report_probe=''
           report_title='PTA運営の法的構造と是正基準'
-          report_marker='data-page-revision="report-20260809-2"'
+          report_marker='data-page-revision="report-20260809-3"'
           report_heading='部分修正ではなく、内部事務の主体をそろえる'
 
           for attempt in $(seq 1 24); do
@@ -128,7 +128,7 @@ jobs:
               "support_verified": os.environ["SUPPORT_VERIFIED"] == "true",
               "report_page": "https://ptaorg.com/report.html",
               "report_probe_url": os.environ["REPORT_PROBE_URL"],
-              "report_revision": "report-20260809-2",
+              "report_revision": "report-20260809-3",
               "report_verified": os.environ["REPORT_VERIFIED"] == "true",
               "verified": os.environ["VERIFIED"] == "true",
           }
