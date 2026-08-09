@@ -1,266 +1,655 @@
-@layer page {
-  /* Page-specific styles for education-board-responsibility.html */
-  .law-wrap {
-    width: min(calc(100% - 40px), 1100px);
-    margin-inline: auto;
-    padding: 56px 0 96px;
+/* Education-board responsibility: text-first administrative paper */
+.board-responsibility-editorial {
+  --board-ink: #1f2d3d;
+  --board-navy: #0b2a4a;
+  --board-navy-2: #173f67;
+  --board-muted: #607080;
+  --board-line: #d6dee7;
+  --board-gold: #c59a2d;
+  --board-orange: #b95716;
+  --board-paper: #ffffff;
+  --board-soft: #f5f7fa;
+  color: var(--board-ink);
+  background: var(--board-paper);
+}
+
+.board-responsibility-editorial .board-page-main {
+  background: var(--board-paper);
+}
+
+.board-responsibility-editorial .board-shell {
+  width: min(calc(100% - 40px), 1040px);
+  margin-inline: auto;
+}
+
+.board-responsibility-editorial .board-hero {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(circle at 84% 16%, rgba(197, 154, 45, 0.2), transparent 31rem),
+    linear-gradient(128deg, #081d33 0%, #0d3154 58%, #164b78 100%);
+  border-top: 3px solid var(--board-gold);
+}
+
+.board-responsibility-editorial .board-hero::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.board-responsibility-editorial .board-hero .board-shell {
+  position: relative;
+  z-index: 1;
+  padding-block: clamp(58px, 7vw, 84px);
+}
+
+.board-responsibility-editorial .board-eyebrow {
+  max-width: none;
+  margin: 0 0 14px;
+  color: #f4d77e;
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1.5;
+  letter-spacing: 0.12em;
+}
+
+.board-responsibility-editorial .board-hero h1 {
+  max-width: 19em;
+  margin: 0;
+  color: #fff;
+  font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(2rem, 4.6vw, 3.15rem);
+  font-weight: 900;
+  line-height: 1.38;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+
+.board-responsibility-editorial .board-deck {
+  max-width: 75ch;
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.94);
+  font-size: clamp(1rem, 1.55vw, 1.1rem);
+  font-weight: 500;
+  line-height: 1.95;
+}
+
+.board-responsibility-editorial .board-meta {
+  max-width: none;
+  margin: 22px 0 0;
+  padding-top: 17px;
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+.board-responsibility-editorial .board-shell--document {
+  padding-block: 42px 96px;
+}
+
+.board-responsibility-editorial .board-toc {
+  width: 100%;
+  margin: 0 0 64px;
+  padding: 0 0 22px;
+  border: 0;
+  border-bottom: 1px solid var(--board-line);
+  background: transparent;
+  box-shadow: none;
+}
+
+.board-responsibility-editorial .board-toc-title {
+  margin: 0 0 12px;
+  color: var(--board-navy);
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+
+.board-responsibility-editorial .board-toc ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.board-responsibility-editorial .board-toc li {
+  margin: 0;
+  padding: 0;
+}
+
+.board-responsibility-editorial .board-toc a {
+  color: var(--board-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.7;
+  text-decoration: underline;
+  text-decoration-color: rgba(11, 42, 74, 0.28);
+  text-underline-offset: 5px;
+}
+
+.board-responsibility-editorial .board-toc a:hover,
+.board-responsibility-editorial .board-toc a:focus-visible {
+  color: var(--board-navy);
+  text-decoration-color: var(--board-gold);
+}
+
+.board-responsibility-editorial .board-document {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.board-responsibility-editorial .board-document > section {
+  margin: 0 0 78px;
+}
+
+.board-responsibility-editorial .board-document > section:last-child {
+  margin-bottom: 0;
+}
+
+.board-responsibility-editorial .board-section-number {
+  max-width: none;
+  margin: 0 0 10px;
+  color: #7a6530;
+  font-size: 0.75rem;
+  font-weight: 900;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+}
+
+.board-responsibility-editorial .board-document h2 {
+  margin: 0 0 28px;
+  padding-top: 22px;
+  color: var(--board-navy);
+  border-top: 2px solid var(--board-navy);
+  font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(1.55rem, 3vw, 2.05rem);
+  font-weight: 900;
+  line-height: 1.48;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+
+.board-responsibility-editorial .board-document h3 {
+  margin: 34px 0 14px;
+  padding: 0;
+  color: var(--board-navy-2);
+  border: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: clamp(1.08rem, 2vw, 1.28rem);
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.board-responsibility-editorial .board-document p,
+.board-responsibility-editorial .board-document li,
+.board-responsibility-editorial .board-document dd,
+.board-responsibility-editorial .board-document dt,
+.board-responsibility-editorial .board-document td,
+.board-responsibility-editorial .board-document th {
+  color: var(--board-ink);
+  font-size: 1.01rem;
+  line-height: 2;
+}
+
+.board-responsibility-editorial .board-document p {
+  max-width: none;
+  margin: 0 0 18px;
+}
+
+.board-responsibility-editorial .board-document a {
+  color: #075ca3;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(7, 92, 163, 0.32);
+  text-underline-offset: 4px;
+}
+
+.board-responsibility-editorial .board-document a:hover,
+.board-responsibility-editorial .board-document a:focus-visible {
+  color: #a04f00;
+  text-decoration-color: currentColor;
+}
+
+.board-responsibility-editorial .board-document strong {
+  color: var(--board-navy);
+  font-weight: 800;
+}
+
+.board-responsibility-editorial .board-verdict {
+  margin: 0 0 28px;
+  padding: 24px 26px 24px 30px;
+  border: 0;
+  border-left: 5px solid var(--board-gold);
+  background: var(--board-soft);
+}
+
+.board-responsibility-editorial .board-verdict p {
+  margin: 0;
+  color: var(--board-navy);
+  font-size: clamp(1.03rem, 1.8vw, 1.14rem);
+  font-weight: 500;
+  line-height: 1.95;
+}
+
+.board-responsibility-editorial .board-verdict--model {
+  border-left-color: var(--board-orange);
+}
+
+.board-responsibility-editorial .board-table-wrap {
+  width: 100%;
+  margin: 28px 0 30px;
+  overflow-x: auto;
+  border-top: 2px solid var(--board-navy);
+  border-bottom: 1px solid var(--board-line);
+  -webkit-overflow-scrolling: touch;
+}
+
+.board-responsibility-editorial .board-table {
+  width: 100%;
+  min-width: 760px;
+  margin: 0;
+  border: 0;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: none;
+}
+
+.board-responsibility-editorial .board-table th,
+.board-responsibility-editorial .board-table td {
+  padding: 15px 16px;
+  border: 0;
+  border-bottom: 1px solid var(--board-line);
+  vertical-align: top;
+  text-align: left;
+}
+
+.board-responsibility-editorial .board-table th {
+  color: var(--board-navy);
+  background: #edf2f7;
+  font-size: 0.86rem;
+  font-weight: 900;
+  line-height: 1.7;
+}
+
+.board-responsibility-editorial .board-table td {
+  font-size: 0.92rem;
+  line-height: 1.85;
+}
+
+.board-responsibility-editorial .board-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.board-responsibility-editorial .board-table--audit {
+  min-width: 900px;
+}
+
+.board-responsibility-editorial .board-subsection {
+  margin: 0;
+  padding: 0 0 34px;
+  border-bottom: 1px solid var(--board-line);
+}
+
+.board-responsibility-editorial .board-subsection + .board-subsection {
+  padding-top: 2px;
+}
+
+.board-responsibility-editorial .board-subsection:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.board-responsibility-editorial .board-source-line {
+  max-width: none;
+  margin: 0 0 18px;
+  padding: 12px 15px;
+  color: #415466;
+  border-left: 3px solid #7f96aa;
+  background: #f7f9fb;
+  font-size: 0.84rem;
+  line-height: 1.85;
+}
+
+.board-responsibility-editorial .board-source-line a {
+  font-weight: 600;
+}
+
+.board-responsibility-editorial .board-evaluation {
+  max-width: none;
+  margin-top: 24px;
+  padding: 16px 18px;
+  border-left: 4px solid var(--board-orange);
+  background: #fff8f2;
+}
+
+.board-responsibility-editorial .board-axis {
+  margin: 0;
+  padding: 0 0 36px 22px;
+  border-left: 3px solid #c9d4df;
+  border-bottom: 1px solid var(--board-line);
+}
+
+.board-responsibility-editorial .board-axis + .board-axis {
+  padding-top: 2px;
+}
+
+.board-responsibility-editorial .board-axis:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.board-responsibility-editorial .board-axis-label {
+  max-width: none;
+  margin: 32px 0 4px;
+  color: #7a6530;
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+}
+
+.board-responsibility-editorial .board-axis h3 {
+  margin-top: 4px;
+}
+
+.board-responsibility-editorial .board-response-list {
+  margin: 24px 0 0;
+}
+
+.board-responsibility-editorial .board-response-list > div {
+  margin: 0;
+  padding: 24px 0;
+  border-top: 1px solid var(--board-line);
+}
+
+.board-responsibility-editorial .board-response-list > div:last-child {
+  border-bottom: 1px solid var(--board-line);
+}
+
+.board-responsibility-editorial .board-response-list dt {
+  margin: 0 0 8px;
+  color: var(--board-navy);
+  font-weight: 900;
+  line-height: 1.75;
+}
+
+.board-responsibility-editorial .board-response-list dd {
+  max-width: none;
+  margin: 0;
+  color: var(--board-ink);
+}
+
+.board-responsibility-editorial .board-process {
+  margin: 30px 0 28px;
+  padding: 0;
+  list-style: none;
+  counter-reset: board-process;
+}
+
+.board-responsibility-editorial .board-process > li {
+  position: relative;
+  min-height: 54px;
+  margin: 0;
+  padding: 22px 0 22px 70px;
+  border-top: 1px solid var(--board-line);
+  counter-increment: board-process;
+}
+
+.board-responsibility-editorial .board-process > li:last-child {
+  border-bottom: 1px solid var(--board-line);
+}
+
+.board-responsibility-editorial .board-process > li::before {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  width: 42px;
+  height: 42px;
+  color: #fff;
+  background: var(--board-navy);
+  border-radius: 50%;
+  content: counter(board-process, decimal-leading-zero);
+  font-size: 0.75rem;
+  font-weight: 900;
+  line-height: 42px;
+  text-align: center;
+}
+
+.board-responsibility-editorial .board-process > li > strong {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 1.03rem;
+  line-height: 1.7;
+}
+
+.board-responsibility-editorial .board-process > li > p {
+  margin: 0;
+}
+
+.board-responsibility-editorial .board-source-list {
+  margin: 24px 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.board-responsibility-editorial .board-source-list li {
+  margin: 0;
+  padding: 15px 0;
+  border-top: 1px solid var(--board-line);
+}
+
+.board-responsibility-editorial .board-source-list li:last-child {
+  border-bottom: 1px solid var(--board-line);
+}
+
+.board-responsibility-editorial .board-limit-note {
+  max-width: none;
+  margin: 28px 0 0;
+  padding: 20px 22px;
+  color: #4f5f6e;
+  border: 1px solid var(--board-line);
+  background: #fbfcfd;
+  font-size: 0.88rem;
+  line-height: 1.9;
+}
+
+.board-responsibility-editorial .board-next {
+  margin-top: 88px;
+  padding-top: 0;
+}
+
+.board-responsibility-editorial .board-next ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.board-responsibility-editorial .board-next li {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--board-line);
+}
+
+.board-responsibility-editorial .board-next li:last-child {
+  border-bottom: 1px solid var(--board-line);
+}
+
+.board-responsibility-editorial .board-next a {
+  display: block;
+  padding: 19px 2px;
+  color: var(--board-navy);
+  text-decoration: none;
+}
+
+.board-responsibility-editorial .board-next a:hover,
+.board-responsibility-editorial .board-next a:focus-visible {
+  color: #9b4c00;
+  background: #faf7ef;
+}
+
+.board-responsibility-editorial .board-next strong,
+.board-responsibility-editorial .board-next span {
+  display: block;
+}
+
+.board-responsibility-editorial .board-next strong {
+  margin-bottom: 4px;
+  color: inherit;
+}
+
+.board-responsibility-editorial .board-next span {
+  color: var(--board-muted);
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+  .board-responsibility-editorial .board-shell {
+    width: min(calc(100% - 28px), 1040px);
   }
 
-  /* 法令カード群 */
-  .law-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin-top: 40px;
+  .board-responsibility-editorial .board-hero .board-shell {
+    padding-block: 48px 52px;
   }
-  .lc {
-    border-radius: 0;
-    border-bottom: 1px solid var(--line);
-    overflow: hidden;
-    background: #fff;
-    transition: box-shadow 0.3s ease;
+
+  .board-responsibility-editorial .board-hero h1 {
+    font-size: clamp(1.85rem, 8.7vw, 2.6rem);
+    line-height: 1.42;
   }
-  .lc:first-child {
-    border-radius: var(--radius) var(--radius) 0 0;
-    border-top: 1px solid var(--line);
-  }
-  .lc:last-child {
-    border-radius: 0 0 var(--radius) var(--radius);
-  }
-  .lc-header {
-    display: grid;
-    grid-template-columns: 56px 1fr auto;
-    align-items: center;
-    gap: 0;
-    cursor: pointer;
-    user-select: none;
-    padding: 0;
-    transition: background 0.2s ease;
-  }
-  .lc-header:hover {
-    background: #f8fafc;
-  }
-  .lc-num {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 72px;
-    font-family: "Noto Serif JP", serif;
-    font-size: 1.05rem;
-    font-weight: 900;
-    color: var(--navy);
-    border-right: 3px solid transparent;
-    transition: border-color 0.2s;
-  }
-  .lc.is-open .lc-num {
-    border-color: var(--gold);
-  }
-  .lc-meta {
-    padding: 16px 20px;
-  }
-  .lc-kicker {
-    font-size: 0.72rem;
-    font-weight: 900;
-    letter-spacing: 0.08em;
-    color: var(--text-soft);
-    text-transform: uppercase;
-    margin-bottom: 3px;
-  }
-  .lc-title {
-    font-family: "Noto Serif JP", serif;
-    font-size: 1.05rem;
-    font-weight: 900;
-    color: var(--navy);
-  }
-  .lc-lead {
-    font-size: 0.85rem;
-    color: var(--text-soft);
-    line-height: 1.55;
-    margin-top: 3px;
-  }
-  .lc-toggle {
-    padding: 0 22px;
-    color: var(--text-soft);
-    font-size: 0.8rem;
-    transition: transform 0.3s ease;
-  }
-  .lc.is-open .lc-toggle {
-    transform: rotate(180deg);
-  }
-  .lc-body {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-    border-top: 0 solid var(--line);
-  }
-  .lc.is-open .lc-body {
-    max-height: 1200px;
-    border-top-width: 1px;
-  }
-  .lc-inner {
-    padding: 28px 28px 32px 76px;
-  }
-  .lc-inner .law-quote {
-    margin: 0 0 18px;
-  }
-  .lc-inner p {
-    font-size: 0.95rem;
-    color: var(--text);
+
+  .board-responsibility-editorial .board-deck {
+    margin-top: 20px;
+    font-size: 0.98rem;
     line-height: 1.9;
-    margin-bottom: 14px;
-  }
-  .lc-inner h4 {
-    font-size: 0.95rem;
-    font-weight: 800;
-    color: var(--navy);
-    margin: 20px 0 8px;
-    padding-left: 10px;
-    border-left: 3px solid var(--gold);
-  }
-  .egov-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    padding: 7px 14px;
-    border-radius: 8px;
-    background: #eff6ff;
-    color: #1d4ed8;
-    font-size: 0.8rem;
-    font-weight: 800;
-    text-decoration: none;
-    border: 1px solid #bfdbfe;
-    transition: var(--t);
-  }
-  .egov-link:hover {
-    background: #dbeafe;
   }
 
-  /* 5論点マトリクス */
-  .matrix {
+  .board-responsibility-editorial .board-meta {
+    font-size: 0.72rem;
+  }
+
+  .board-responsibility-editorial .board-shell--document {
+    padding-block: 32px 72px;
+  }
+
+  .board-responsibility-editorial .board-toc {
+    margin-bottom: 48px;
+  }
+
+  .board-responsibility-editorial .board-toc ol {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
-    margin-top: 40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px 18px;
   }
-  .mx-col {
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
+
+  .board-responsibility-editorial .board-document > section {
+    margin-bottom: 62px;
   }
-  .mx-head {
-    padding: 14px 12px;
-    text-align: center;
-    font-size: 0.78rem;
-    font-weight: 900;
-    color: #fff;
+
+  .board-responsibility-editorial .board-document h2 {
+    padding-top: 18px;
+    font-size: clamp(1.42rem, 7vw, 1.85rem);
   }
-  .mx-body {
+
+  .board-responsibility-editorial .board-document h3 {
+    font-size: 1.08rem;
+  }
+
+  .board-responsibility-editorial .board-document p,
+  .board-responsibility-editorial .board-document li,
+  .board-responsibility-editorial .board-document dd,
+  .board-responsibility-editorial .board-document dt {
+    font-size: 0.97rem;
+    line-height: 1.95;
+  }
+
+  .board-responsibility-editorial .board-verdict {
+    padding: 20px 18px 20px 21px;
+  }
+
+  .board-responsibility-editorial .board-axis {
+    padding-left: 16px;
+  }
+
+  .board-responsibility-editorial .board-process > li {
+    padding-left: 60px;
+  }
+
+  .board-responsibility-editorial .board-limit-note {
+    padding: 17px 16px;
+  }
+}
+
+@media (max-width: 430px) {
+  .board-responsibility-editorial .board-toc ol {
+    grid-template-columns: 1fr;
+  }
+
+  .board-responsibility-editorial .board-hero h1 {
+    font-size: 1.82rem;
+  }
+
+  .board-responsibility-editorial .board-process > li {
+    padding: 19px 0 19px 52px;
+  }
+
+  .board-responsibility-editorial .board-process > li::before {
+    top: 20px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+  }
+}
+
+@media print {
+  .board-responsibility-editorial .support-strip,
+  .board-responsibility-editorial .site-header,
+  .board-responsibility-editorial .mobile-overlay,
+  .board-responsibility-editorial .footer,
+  .board-responsibility-editorial .board-next {
+    display: none !important;
+  }
+
+  .board-responsibility-editorial .board-hero {
+    color: #000;
     background: #fff;
-    border: 1px solid var(--line);
-    border-top: none;
-    padding: 12px;
-  }
-  .mx-law {
-    display: block;
-    font-size: 0.75rem;
-    color: var(--navy);
-    padding: 5px 8px;
-    border-radius: 7px;
-    margin-bottom: 5px;
-    background: rgba(5, 17, 31, 0.05);
-    font-weight: 700;
-    line-height: 1.4;
-  }
-  .mx-col:nth-child(1) .mx-head {
-    background: #1d4ed8;
-  }
-  .mx-col:nth-child(2) .mx-head {
-    background: #0e7490;
-  }
-  .mx-col:nth-child(3) .mx-head {
-    background: #b45309;
-  }
-  .mx-col:nth-child(4) .mx-head {
-    background: #7c3aed;
-  }
-  .mx-col:nth-child(5) .mx-head {
-    background: #0f766e;
+    border-top: 0;
+    border-bottom: 2px solid #000;
   }
 
-  @media (max-width: 900px) {
-    .matrix {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  @media (max-width: 600px) {
-    .matrix {
-      grid-template-columns: 1fr 1fr;
-    }
-    .lc-inner {
-      padding: 20px 16px;
-    }
-    .lc-num {
-      font-size: 0.85rem;
-    }
+  .board-responsibility-editorial .board-hero::after {
+    display: none;
   }
 
-  .page-hero {
-    position: relative;
-    overflow: hidden;
+  .board-responsibility-editorial .board-hero h1,
+  .board-responsibility-editorial .board-deck,
+  .board-responsibility-editorial .board-meta,
+  .board-responsibility-editorial .board-eyebrow {
+    color: #000;
   }
-  .page-hero-bg-img {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-  }
-  .page-hero-bg-img img {
+
+  .board-responsibility-editorial .board-shell {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(1.05);
-  }
-  .page-hero-bg-img::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      160deg,
-      rgba(5, 17, 31, 0.32) 0%,
-      rgba(5, 17, 31, 0.14) 60%,
-      rgba(5, 17, 31, 0.05) 100%
-    );
-  }
-  .page-hero-inner {
-    position: relative;
-    z-index: 1;
   }
 
-  /* ↓ Photo hero overrides — keep white text on photo background ↓ */
-  .page-hero {
-    background: transparent;
-    border-top: none;
-    border-bottom: none;
+  .board-responsibility-editorial .board-shell--document {
+    padding-block: 24px 0;
   }
-  .page-hero h1 {
-    color: #fff;
+
+  .board-responsibility-editorial .board-document a {
+    color: #000;
   }
-  .page-hero h1 em {
-    color: var(--gold-lt);
-  }
-  .page-hero p {
-    color: rgba(255, 255, 255, 0.88);
-  }
-  .page-hero-kicker {
-    background: rgba(212, 175, 55, 0.18);
-    border: 1px solid rgba(212, 175, 55, 0.4);
-    color: var(--gold-lt);
-  }
-  .hero-actions .btn-outline {
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.5);
-  }
-  .hero-actions .btn-outline:hover {
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(255, 255, 255, 0.8);
+
+  .board-responsibility-editorial .board-document > section {
+    break-inside: avoid-page;
   }
 }
