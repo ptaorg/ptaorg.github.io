@@ -868,6 +868,9 @@ body.facilities-editorial .faq-a p {
 
   body.facilities-editorial .check-table {
     overflow: visible;
+    max-width: 100%;
+    white-space: normal !important;
+    table-layout: fixed;
   }
 
   body.facilities-editorial .check-table tr:first-child {
@@ -887,6 +890,8 @@ body.facilities-editorial .faq-a p {
     padding: 6px 0;
     border: 0;
     font-size: 0.9rem;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
   }
 
   body.facilities-editorial .check-table td:first-child {
