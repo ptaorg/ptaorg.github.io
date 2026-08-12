@@ -648,6 +648,7 @@
     color: #536171;
     font-size: 0.78rem;
     line-height: 1.7;
+    word-break: keep-all;
   }
 
   .compliance-editorial .reading-guide {
