@@ -416,25 +416,97 @@
   }
 
   /* Page-specific styles for board-responses.html */
+  .board-responses-editorial {
+    --board-ink: #182635;
+    --board-muted: #5b6875;
+    --board-navy: #17324d;
+    --board-gold: #b98b2f;
+    --board-paper: #f5f3ed;
+    --board-line: #cfd8df;
+    background: #fff;
+    color: var(--board-ink);
+  }
+
   .board-responses-editorial .compact-hero-section {
-    padding: 58px 0 52px;
+    position: relative;
+    padding: clamp(58px, 7vw, 82px) 0 clamp(54px, 6vw, 72px);
+    background: var(--board-paper);
+    color: var(--board-ink);
     text-align: left;
-    border-bottom: 1px solid #071a30;
+    border-top: 1px solid #e1ddd2;
+    border-bottom: 1px solid #d8d4c9;
+  }
+  .board-responses-editorial .compact-hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 5px;
+    background: var(--board-gold);
   }
   .board-responses-editorial .compact-hero-section .wrap {
-    width: min(calc(100% - 40px), 1040px);
+    width: min(calc(100% - 48px), 920px);
   }
   .board-responses-editorial .compact-hero-section .hero-kicker {
     display: block;
-    width: max-content;
-    margin: 0 0 16px;
-    padding: 0 0 6px;
+    width: fit-content;
+    margin: 0 0 20px;
+    padding: 0 0 7px;
     background: transparent;
     border: 0;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.75);
+    border-bottom: 2px solid var(--board-gold);
     border-radius: 0;
+    color: var(--board-navy);
     text-transform: none;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.12em;
+  }
+  .board-responses-editorial .compact-hero-section h1 {
+    max-width: 18em;
+    margin: 0 0 22px;
+    color: var(--board-navy);
+    font-size: clamp(2.15rem, 4.3vw, 3.45rem);
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+  }
+  .board-responses-editorial .compact-hero-section p {
+    max-width: 49rem;
+    margin: 0;
+    color: #354657;
+    font-size: clamp(0.98rem, 1.35vw, 1.06rem);
+    line-height: 2;
+  }
+  .board-response-index {
+    width: min(calc(100% - 48px), 920px);
+    margin: 0 auto;
+    padding: 17px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    align-items: baseline;
+    border-bottom: 1px solid var(--board-line);
+    font-size: 0.82rem;
+  }
+  .board-response-index span {
+    color: var(--board-muted);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .board-response-index a {
+    color: var(--board-navy);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .board-response-index a:hover,
+  .board-response-index a:focus-visible {
+    border-bottom-color: currentColor;
+  }
+  .board-responses-editorial #dataset-scope,
+  .board-responses-editorial #response-trends,
+  .board-responses-editorial #response-map-section,
+  .board-responses-editorial #municipality-index,
+  .board-responses-editorial #response-bodies,
+  .board-responses-editorial #excluded-responses,
+  .board-responses-editorial #data-download {
+    scroll-margin-top: 92px;
   }
   .board-responses-editorial .response-trends-section .reading-body,
   .board-responses-editorial .dataset-scope-section .reading-body,
@@ -503,6 +575,25 @@
   .board-responses-editorial .type-label-badge {
     display: none;
   }
+  .board-responses-editorial .response-meta {
+    margin: 0 0 7px;
+    line-height: 1.8;
+  }
+  .board-responses-editorial .mask-note {
+    color: #725500;
+    font-weight: 700;
+  }
+  .board-responses-editorial .response-topics {
+    margin: 0 0 9px;
+    color: #40505e;
+    font-size: 0.8rem;
+    line-height: 1.85;
+  }
+  .board-responses-editorial .response-topics strong {
+    margin-right: 0.65em;
+    color: var(--board-muted);
+    font-weight: 700;
+  }
   .board-responses-editorial .response-item {
     margin: 0;
     padding: 24px 0;
@@ -531,12 +622,19 @@
   }
   @media (max-width: 680px) {
     .board-responses-editorial .compact-hero-section .wrap,
+    .board-response-index,
     .board-responses-editorial .response-trends-section .reading-body,
     .board-responses-editorial .dataset-scope-section .reading-body,
     .board-responses-editorial .response-bodies-section > .wrap,
     .board-responses-editorial .excluded-section > .wrap,
     .board-responses-editorial .caution-section > .wrap {
       width: min(calc(100% - 30px), 920px);
+    }
+    .board-response-index {
+      gap: 8px 16px;
+    }
+    .board-response-index span {
+      width: 100%;
     }
   }
 }

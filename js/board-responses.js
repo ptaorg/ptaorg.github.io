@@ -54,9 +54,6 @@
     style.id = 'board-response-pin-style';
     style.textContent = `
       .source-note{font-size:.78rem;color:var(--text-soft);margin-top:8px}
-      .response-tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 10px}
-      .response-tags span{font-size:.72rem;font-weight:800;color:#1e3a5f;background:#f4f7fb;border:1px solid #dbe4ee;border-radius:999px;padding:2px 8px}
-      .mask-chip{display:inline-block;margin-left:.5em;color:#614500;background:#fff4c7;border:1px solid #ead88a;border-radius:999px;padding:1px 7px;font-size:.72rem;font-family:'Noto Sans JP',sans-serif;font-weight:900}
       .excluded-response-list{font-size:.88rem;line-height:1.8}.excluded-response-list li{margin-bottom:.6rem}
       .response-pin-wrap{background:transparent!important;border:none!important}
       .response-pin-marker{display:block;width:14px;height:14px;border-radius:50% 50% 50% 0;background:#d93025;border:2px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.28);transform:rotate(-45deg)}
@@ -124,10 +121,11 @@
       for (const d of items) {
         const muni = muniByName[d.municipality] || {}, no = muni.no;
         const idAttr = no && !anchored.has(no) ? ` id="${ansId(no)}"` : ''; if (no) anchored.add(no);
-        const tags = (muni.usefulTags || []).map(t => `<span>${esc(t.label)}</span>`).join('');
-        const flags = (muni.qualityFlags || []).map(f => f.key === 'masked' ? `<span class="mask-chip">${esc(f.label)}</span>` : '').join('');
-        html += `<article class="response-item"${idAttr}><h4 class="response-muni-name">${esc(d.municipality)}${flags}</h4><p class="response-meta">分類：${esc(d.typeLabel || type)} ／ 回答日：${esc(d.date || '未確認')}</p>`;
-        if (tags) html += `<div class="response-tags">${tags}</div>`;
+        const topics = (muni.usefulTags || []).map(t => t.label).filter(Boolean).join('・');
+        const masked = (muni.qualityFlags || []).find(f => f.key === 'masked');
+        const processing = masked ? ` ／ 公開処理：<span class="mask-note">${esc(masked.label)}</span>` : '';
+        html += `<article class="response-item"${idAttr}><h4 class="response-muni-name">${esc(d.municipality)}</h4><p class="response-meta">分類：${esc(d.typeLabel || type)} ／ 回答日：${esc(d.date || '未確認')}${processing}</p>`;
+        if (topics) html += `<p class="response-topics"><strong>確認論点</strong>${esc(topics)}</p>`;
         html += `<details><summary>回答本文を読む</summary><div class="response-body">${esc(d.body || '回答本文未掲載。')}</div></details>`;
         if (d.sourceFile) html += `<p class="source-note">元資料：${esc(d.sourceFile)}</p>`;
         const plink = no != null ? (window.PTA_BOARD_RESPONSE_PERMALINKS || {})[String(no)] : null;
