@@ -1,182 +1,558 @@
 @layer page {
-  /* Consolidated page styles for timeline-issues.html */
-  /* Page-specific styles for timeline-issues.html */
   .ti-page {
-    background: #f4f6f9;
-  }
-  .ti-hero {
-    background: linear-gradient(135deg, #0a192f, #1e3a5f 65%, #0f766e);
-    color: #fff;
-    padding: 72px 0 58px;
-  }
-  .ti-wrap {
-    width: min(calc(100% - 40px), 1040px);
-    margin: auto;
-  }
-  .ti-hero h1 {
-    font-family: "Noto Serif JP", serif;
-    font-size: clamp(1.85rem, 4vw, 3rem);
-    margin: 0 0 14px;
-  }
-  .ti-hero p {
-    max-width: 840px;
-    line-height: 1.95;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 700;
-  }
-  .ti-list {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    padding: 28px 0 86px;
-  }
-  .ti-card {
+    --ti-ink: #10283e;
+    --ti-body: #27394b;
+    --ti-muted: #657384;
+    --ti-line: #d8dde2;
+    --ti-paper: #f6f3ed;
+    --ti-wash: #f4f6f7;
+    --ti-accent: #c7531f;
     background: #fff;
-    border: 1px solid #dbe4ee;
-    border-radius: 18px;
-    padding: 24px 26px;
-    box-shadow: 0 10px 28px rgba(5, 17, 31, 0.06);
+    color: var(--ti-body);
   }
-  .ti-card h2 {
-    font-family: "Noto Serif JP", serif;
-    color: #1e3a5f;
-    margin: 0 0 10px;
-    border-bottom: 3px solid #d4af37;
-    padding-bottom: 8px;
+
+  .ti-page main {
+    background: #fff;
   }
-  .ti-card h3 {
-    color: #1e3a5f;
-    margin: 18px 0 6px;
+
+  .ti-page .ti-wrap {
+    width: min(calc(100% - 48px), 1040px);
+    margin-inline: auto;
   }
-  .ti-card p,
-  .ti-card li {
-    line-height: 1.95;
-    color: #26364a;
+
+  .ti-page .ti-hero {
+    position: relative;
+    padding: 76px 0 68px;
+    border-top: 4px solid var(--ti-accent);
+    border-bottom: 1px solid #d7d2c9;
+    background: var(--ti-paper);
+    color: var(--ti-ink);
   }
-  .ti-linkbox {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 12px;
+
+  .ti-page .ti-hero::before,
+  .ti-page .ti-hero::after {
+    content: none;
   }
-  .ti-linkbox a {
-    display: inline-flex;
-    border: 1px solid #fed7aa;
-    background: #fff7ed;
-    color: #c2410c;
-    border-radius: 999px;
-    padding: 7px 13px;
-    text-decoration: none;
+
+  .ti-page .ti-kicker,
+  .ti-page .ti-section-label,
+  .ti-page .ti-section-number {
+    margin: 0 0 14px;
+    color: var(--ti-accent);
+    font-size: 0.78rem;
     font-weight: 900;
-    font-size: 0.86rem;
+    letter-spacing: 0.13em;
   }
-  .ti-note {
-    background: #fff7ed;
-    border: 1px solid #fed7aa;
-    border-left: 5px solid #f97316;
-    border-radius: 0 14px 14px 0;
-    padding: 17px 19px;
+
+  .ti-page .ti-hero h1 {
+    max-width: 920px;
+    margin: 0;
+    color: var(--ti-ink);
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(2.25rem, 5vw, 4.15rem);
+    font-weight: 900;
+    line-height: 1.28;
+    letter-spacing: 0.015em;
+  }
+
+  .ti-page .ti-hero-lead {
+    max-width: 880px;
+    margin: 24px 0 0;
+    color: #263e52;
+    font-size: clamp(1rem, 1.45vw, 1.12rem);
+    font-weight: 700;
+    line-height: 2;
+  }
+
+  .ti-page .ti-hero-thesis {
+    max-width: 880px;
+    margin: 28px 0 0;
+    padding: 18px 0 18px 22px;
+    border-top: 1px solid #d7d2c9;
+    border-bottom: 1px solid #d7d2c9;
+    border-left: 4px solid var(--ti-accent);
+    color: #34495b;
+    line-height: 1.95;
+  }
+
+  .ti-page .ti-hero-thesis strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--ti-ink);
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.08rem;
+  }
+
+  .ti-page .ti-intro,
+  .ti-page .ti-history,
+  .ti-page .ti-logic,
+  .ti-page .ti-section,
+  .ti-page .ti-sources {
+    border-bottom: 1px solid var(--ti-line);
+  }
+
+  .ti-page .ti-intro {
+    padding: 68px 0 64px;
+  }
+
+  .ti-page .ti-history {
+    padding: 68px 0 70px;
+  }
+
+  .ti-page .ti-logic {
+    padding: 64px 0 60px;
+  }
+
+  .ti-page .ti-section {
+    padding: 64px 0 66px;
+  }
+
+  .ti-page .ti-sources {
+    padding: 62px 0 60px;
+  }
+
+  .ti-page .ti-intro h2,
+  .ti-page .ti-history h2,
+  .ti-page .ti-logic h2,
+  .ti-page .ti-section h2,
+  .ti-page .ti-sources h2 {
+    max-width: 900px;
+    margin: 0 0 22px;
+    color: var(--ti-ink);
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(1.65rem, 3.1vw, 2.45rem);
+    font-weight: 900;
+    line-height: 1.5;
+  }
+
+  .ti-page .ti-intro > p:not(.ti-section-label):not(.ti-intro-follow),
+  .ti-page .ti-section-lead,
+  .ti-page .ti-logic > p:not(.ti-section-label),
+  .ti-page .ti-section > p:not(.ti-section-number):not(.ti-section-conclusion),
+  .ti-page .ti-sources > p:not(.ti-section-label) {
+    max-width: 900px;
+    margin: 0 0 22px;
+    color: var(--ti-body);
+    font-size: 1rem;
+    line-height: 2.05;
+  }
+
+  .ti-page main a {
+    color: #0e5878;
+    text-decoration-color: #9ebdca;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
+
+  .ti-page main a:hover {
+    color: var(--ti-accent);
+    text-decoration-color: var(--ti-accent);
+  }
+
+  .ti-page .ti-reading-bounds {
+    margin: 36px 0 0;
+    border-top: 2px solid var(--ti-ink);
+  }
+
+  .ti-page .ti-reading-bounds > div {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 30px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--ti-line);
+  }
+
+  .ti-page .ti-reading-bounds dt {
+    color: var(--ti-accent);
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+  }
+
+  .ti-page .ti-reading-bounds dd {
+    margin: 0;
+    color: var(--ti-body);
     line-height: 1.9;
   }
-  .ti-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 24px;
+
+  .ti-page .ti-reading-bounds dd strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--ti-ink);
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.08rem;
   }
-  .ti-nav a {
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.45);
-    border-radius: 999px;
-    padding: 9px 15px;
-    text-decoration: none;
+
+  .ti-page .ti-reading-bounds dd span {
+    display: block;
+  }
+
+  .ti-page .ti-intro-follow {
+    max-width: 900px;
+    margin: 30px 0 0;
+    padding-left: 20px;
+    border-left: 4px solid var(--ti-accent);
+    color: #34495b;
+    line-height: 2;
+  }
+
+  .ti-page .ti-history-line {
+    position: relative;
+    margin-top: 38px;
+  }
+
+  .ti-page .ti-history-line::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 145px;
+    width: 1px;
+    background: #c7cfd6;
+    content: "";
+  }
+
+  .ti-page .ti-history-entry {
+    position: relative;
+    display: grid;
+    grid-template-columns: 145px minmax(0, 1fr);
+    gap: 34px;
+    padding: 0 0 52px;
+  }
+
+  .ti-page .ti-history-entry:last-child {
+    padding-bottom: 12px;
+  }
+
+  .ti-page .ti-history-marker {
+    position: relative;
+    padding-right: 28px;
+    text-align: right;
+  }
+
+  .ti-page .ti-history-marker::after {
+    position: absolute;
+    top: 9px;
+    right: -7px;
+    width: 13px;
+    height: 13px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: var(--ti-accent);
+    box-shadow: 0 0 0 1px var(--ti-accent);
+    content: "";
+  }
+
+  .ti-page .ti-history-marker span {
+    display: block;
+    color: var(--ti-ink);
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.14rem;
     font-weight: 900;
   }
-  .ti-intro {
-    background: #fff;
-    border: 1px solid #dbe4ee;
-    border-radius: 18px;
-    padding: 26px 28px;
-    margin: 36px 0 0;
-    box-shadow: 0 10px 28px rgba(5, 17, 31, 0.06);
-  }
-  .ti-intro h2 {
-    font-family: "Noto Serif JP", serif;
-    color: #1e3a5f;
-    margin: 0 0 12px;
-  }
-  .ti-intro p,
-  .ti-intro li {
-    line-height: 1.95;
-    color: #26364a;
-  }
-  .ti-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
-  }
-  .ti-box {
-    background: #f8fafc;
-    border: 1px solid #dbe4ee;
-    border-radius: 14px;
-    padding: 16px;
-  }
-  .ti-box strong {
+
+  .ti-page .ti-history-marker small {
     display: block;
-    color: #1e3a5f;
-    margin-bottom: 6px;
+    margin-top: 5px;
+    color: var(--ti-muted);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
   }
-  @media (max-width: 780px) {
-    .ti-grid {
-      grid-template-columns: 1fr;
+
+  .ti-page .ti-history-body {
+    min-width: 0;
+  }
+
+  .ti-page .ti-history-body h3 {
+    margin: -3px 0 12px;
+    color: var(--ti-ink);
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(1.18rem, 2.1vw, 1.48rem);
+    line-height: 1.65;
+  }
+
+  .ti-page .ti-history-body p {
+    margin: 0;
+    color: var(--ti-body);
+    line-height: 2;
+  }
+
+  .ti-page .ti-history-body p + p {
+    margin-top: 12px;
+  }
+
+  .ti-page .ti-history-caution {
+    margin: 36px 0 0 179px;
+    padding: 20px 0 4px 22px;
+    border-left: 4px solid var(--ti-accent);
+  }
+
+  .ti-page .ti-history-caution strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--ti-ink);
+    font-family: "Noto Serif JP", serif;
+  }
+
+  .ti-page .ti-history-caution p {
+    margin: 0;
+    color: #45586a;
+    line-height: 1.9;
+  }
+
+  .ti-page .ti-logic {
+    background: linear-gradient(90deg, transparent 0, transparent 20px, var(--ti-wash) 20px, var(--ti-wash) calc(100% - 20px), transparent calc(100% - 20px));
+  }
+
+  .ti-page .ti-logic-list {
+    margin: 34px 0 0;
+    border-top: 2px solid var(--ti-ink);
+  }
+
+  .ti-page .ti-logic-list > div {
+    display: grid;
+    grid-template-columns: minmax(250px, 0.8fr) minmax(0, 1.4fr);
+    gap: 34px;
+    padding: 22px 0;
+    border-bottom: 1px solid #cdd4da;
+  }
+
+  .ti-page .ti-logic-list dt {
+    color: var(--ti-ink);
+    font-family: "Noto Serif JP", serif;
+    font-weight: 900;
+    line-height: 1.75;
+  }
+
+  .ti-page .ti-logic-list dd {
+    margin: 0;
+    color: var(--ti-body);
+    line-height: 1.9;
+  }
+
+  .ti-page .ti-list {
+    padding-bottom: 84px;
+  }
+
+  .ti-page .ti-section h3,
+  .ti-page .ti-document-map h3 {
+    margin: 32px 0 14px;
+    color: var(--ti-ink);
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.18rem;
+    line-height: 1.65;
+  }
+
+  .ti-page .ti-section ul {
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--ti-line);
+  }
+
+  .ti-page .ti-section li {
+    position: relative;
+    padding: 17px 16px 17px 31px;
+    border-bottom: 1px solid var(--ti-line);
+    color: var(--ti-body);
+    line-height: 1.85;
+  }
+
+  .ti-page .ti-section li::before {
+    position: absolute;
+    top: 1.6em;
+    left: 7px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--ti-accent);
+    content: "";
+  }
+
+  .ti-page .ti-section-conclusion {
+    max-width: 900px;
+    margin: 28px 0 0;
+    padding: 2px 0 2px 20px;
+    border-left: 4px solid var(--ti-accent);
+    color: #405468;
+    line-height: 2;
+  }
+
+  .ti-page .ti-document-map {
+    margin-top: 42px;
+    padding-top: 4px;
+  }
+
+  .ti-page .ti-document-map > p {
+    margin: 0 0 18px;
+    color: var(--ti-body);
+    line-height: 1.9;
+  }
+
+  .ti-page .ti-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border-top: 2px solid var(--ti-ink);
+    border-bottom: 1px solid var(--ti-line);
+  }
+
+  .ti-page .ti-table-wrap table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  .ti-page .ti-table-wrap th,
+  .ti-page .ti-table-wrap td {
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--ti-line);
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.75;
+  }
+
+  .ti-page .ti-table-wrap th {
+    background: #eef1f2;
+    color: var(--ti-ink);
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+  }
+
+  .ti-page .ti-table-wrap th:first-child,
+  .ti-page .ti-table-wrap td:first-child {
+    width: 34%;
+    color: var(--ti-ink);
+    font-weight: 700;
+  }
+
+  .ti-page .ti-table-wrap tbody tr:last-child td {
+    border-bottom: 0;
+  }
+
+  .ti-page .ti-note {
+    margin: 38px 0 0;
+    padding: 21px 0 21px 22px;
+    border-left: 5px solid var(--ti-accent);
+    background: #fbf5ed;
+    color: #3e4f5f;
+    line-height: 1.95;
+  }
+
+  .ti-page .ti-note strong {
+    color: var(--ti-ink);
+  }
+
+  @media (max-width: 760px) {
+    .ti-page .ti-wrap {
+      width: min(calc(100% - 28px), 1040px);
     }
-    .ti-card,
-    .ti-intro {
-      padding: 22px 18px;
+
+    .ti-page .ti-hero {
+      padding: 52px 0 46px;
+    }
+
+    .ti-page .ti-hero h1 {
+      font-size: clamp(2rem, 10vw, 2.75rem);
+    }
+
+    .ti-page .ti-hero-lead {
+      margin-top: 20px;
+      line-height: 1.9;
+    }
+
+    .ti-page .ti-hero-thesis {
+      padding: 15px 0 15px 16px;
+    }
+
+    .ti-page .ti-intro,
+    .ti-page .ti-history,
+    .ti-page .ti-logic,
+    .ti-page .ti-section,
+    .ti-page .ti-sources {
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+
+    .ti-page .ti-reading-bounds > div,
+    .ti-page .ti-logic-list > div {
+      grid-template-columns: 1fr;
+      gap: 9px;
+      padding: 18px 0;
+    }
+
+    .ti-page .ti-history-line::before {
+      left: 9px;
+    }
+
+    .ti-page .ti-history-entry {
+      grid-template-columns: 1fr;
+      gap: 14px;
+      padding: 0 0 44px 30px;
+    }
+
+    .ti-page .ti-history-marker {
+      display: flex;
+      gap: 12px;
+      align-items: baseline;
+      padding-right: 0;
+      text-align: left;
+    }
+
+    .ti-page .ti-history-marker::after {
+      top: 7px;
+      right: auto;
+      left: -27px;
+    }
+
+    .ti-page .ti-history-marker small {
+      margin-top: 0;
+    }
+
+    .ti-page .ti-history-caution {
+      margin-left: 30px;
+      padding-left: 16px;
+    }
+
+    .ti-page .ti-logic {
+      background: var(--ti-wash);
+    }
+
+    .ti-page .ti-table-wrap table {
+      min-width: 720px;
+    }
+
+    .ti-page .ti-table-wrap th,
+    .ti-page .ti-table-wrap td {
+      padding: 14px;
+    }
+
+    .ti-page .ti-note {
+      margin-top: 30px;
+      padding-left: 16px;
     }
   }
 
-  /* Page-specific styles for timeline-issues.html */
-  .ti-page {
-    background: #fff;
-  }
-  .ti-wrap {
-    width: min(calc(100% - 40px), 920px);
-  }
-  .ti-intro,
-  .ti-card,
-  .ti-box,
-  .ti-note {
-    border-radius: 0;
-    box-shadow: none;
-    background: #fff;
-  }
-  .ti-intro {
-    margin: 0;
-    padding: 42px 0;
-    border: 0;
-    border-bottom: 1px solid #cfd8e2;
-  }
-  .ti-grid {
-    display: block;
-    border-top: 1px solid #dbe4ee;
-  }
-  .ti-box {
-    padding: 18px 0;
-    border: 0;
-    border-bottom: 1px solid #dbe4ee;
-  }
-  .ti-list {
-    gap: 0;
-    padding: 0 0 86px;
-  }
-  .ti-card {
-    padding: 34px 0;
-    border: 0;
-    border-bottom: 1px solid #cfd8e2;
-  }
-  .ti-card h2 {
-    border-bottom: 0;
-    padding-bottom: 0;
+  @media print {
+    .ti-page .ti-hero {
+      padding: 32px 0;
+      border-top-color: #777;
+      background: #fff;
+    }
+
+    .ti-page .ti-history-entry,
+    .ti-page .ti-section,
+    .ti-page .ti-sources,
+    .ti-page .ti-document-map {
+      break-inside: avoid;
+    }
+
+    .ti-page .ti-list {
+      padding-bottom: 0;
+    }
+
+    .ti-page a {
+      color: inherit;
+    }
   }
 }
