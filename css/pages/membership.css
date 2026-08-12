@@ -1040,12 +1040,9 @@
   }
 
   .membership-editorial .issue-hero-inner {
-    width: min(calc(100% - 48px), 1040px);
-    max-width: 1040px;
-    display: grid;
-    grid-template-columns: minmax(0, 1.45fr) minmax(250px, 0.75fr);
-    gap: clamp(42px, 7vw, 84px);
-    align-items: end;
+    width: min(calc(100% - 48px), 920px);
+    max-width: 920px;
+    display: block;
   }
 
   .membership-editorial .issue-hero-eyebrow {
@@ -1063,10 +1060,11 @@
   }
 
   .membership-editorial .issue-hero h1 {
+    max-width: 15em;
     margin: 0 0 22px;
     color: var(--membership-navy);
-    font-size: clamp(2.45rem, 5.4vw, 4.65rem);
-    line-height: 1.15;
+    font-size: clamp(2.25rem, 4.6vw, 3.75rem);
+    line-height: 1.22;
     letter-spacing: -0.035em;
   }
 
@@ -1076,31 +1074,6 @@
     color: #354657;
     font-size: clamp(0.98rem, 1.35vw, 1.08rem);
     line-height: 2;
-  }
-
-  .membership-distinction {
-    margin: 0;
-    border-top: 2px solid var(--membership-navy);
-  }
-
-  .membership-distinction > div {
-    padding: 18px 0 20px;
-    border-bottom: 1px solid #bdc8d1;
-  }
-
-  .membership-distinction dt {
-    margin: 0 0 7px;
-    color: var(--membership-blue);
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-  }
-
-  .membership-distinction dd {
-    margin: 0;
-    color: #354657;
-    font-size: 0.88rem;
-    line-height: 1.8;
   }
 
   .membership-index {
@@ -1583,13 +1556,7 @@
 
   @media (max-width: 760px) {
     .membership-editorial .issue-hero-inner {
-      width: min(calc(100% - 36px), 1040px);
-      grid-template-columns: 1fr;
-      gap: 34px;
-    }
-
-    .membership-editorial .issue-hero h1 br {
-      display: none;
+      width: min(calc(100% - 36px), 920px);
     }
 
     .membership-index {
