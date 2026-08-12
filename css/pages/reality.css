@@ -89,6 +89,7 @@
     font-weight: 900;
     letter-spacing: -0.015em;
     line-height: 1.5;
+    text-wrap: balance;
   }
 
   .reality-editorial .reality-section h2,
