@@ -203,6 +203,120 @@ body.ppc-editorial .editorial-caution {
   line-height: 1.85;
 }
 
+.ppc-operation-figure {
+  width: min(100%, 1040px);
+  margin: 42px 0 48px;
+  padding: 24px 0 0;
+  border-top: 3px solid var(--ppc-page-navy);
+}
+
+.ppc-operation-figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.ppc-operation-box {
+  fill: #fff;
+  stroke: #9fb4c5;
+  stroke-width: 2;
+}
+
+.ppc-operation-box--school {
+  fill: #eef6fa;
+  stroke: var(--ppc-page-blue);
+  stroke-width: 3;
+}
+
+.ppc-operation-heading {
+  fill: var(--ppc-page-navy);
+  font-family: "Noto Serif JP", serif;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.ppc-operation-copy,
+.ppc-operation-note,
+.ppc-operation-sub {
+  fill: #425b70;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.ppc-operation-alert {
+  fill: var(--ppc-page-red);
+  font-weight: 900;
+}
+
+.ppc-operation-arrow {
+  fill: none;
+  stroke: var(--ppc-page-blue);
+  stroke-width: 3;
+}
+
+.ppc-operation-arrow--red {
+  stroke: var(--ppc-page-red);
+}
+
+.ppc-operation-divider {
+  stroke: var(--ppc-page-line);
+  stroke-width: 2;
+}
+
+.ppc-operation-verdict {
+  fill: var(--ppc-page-red);
+  font-family: "Noto Serif JP", serif;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.ppc-operation-figure figcaption {
+  margin-top: 14px;
+  padding: 13px 0 0;
+  border-top: 1px solid var(--ppc-page-line);
+  color: #425b70;
+  font-size: 0.88rem;
+  line-height: 1.85;
+}
+
+.ppc-background-points {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  width: min(100%, 1000px);
+  margin: 34px 0 40px;
+  border-top: 3px solid var(--ppc-page-navy);
+}
+
+.ppc-background-points p {
+  display: contents;
+}
+
+.ppc-background-points strong,
+.ppc-background-points span {
+  padding: 18px 20px 18px 0;
+  border-bottom: 1px solid var(--ppc-page-line);
+  line-height: 1.9;
+}
+
+.ppc-background-points strong {
+  color: var(--ppc-page-navy);
+}
+
+.ppc-background-points span {
+  color: var(--ppc-page-muted);
+}
+
+body.ppc-editorial .ppc-background-scope {
+  width: min(100%, 960px);
+  max-width: 960px !important;
+  margin-top: 38px;
+  padding: 22px 0 22px 24px;
+  border-left: 5px solid var(--ppc-page-gold);
+  background: linear-gradient(90deg, #fff9e9, rgba(255, 249, 233, 0));
+}
+
 /* The legal route is the visual centre of the page. */
 body.ppc-editorial .ppc-core {
   padding-top: 78px !important;
@@ -346,8 +460,27 @@ body.ppc-editorial .ppc-core-title {
 
   body.ppc-editorial .editorial-matrix,
   .ppc-source-gallery,
-  .ppc-law-route li {
+  .ppc-law-route li,
+  .ppc-background-points {
     grid-template-columns: 1fr;
+  }
+
+  .ppc-operation-figure {
+    overflow-x: auto;
+  }
+
+  .ppc-operation-figure svg {
+    width: 820px;
+    max-width: none;
+  }
+
+  .ppc-background-points strong {
+    padding-bottom: 6px;
+    border-bottom: 0;
+  }
+
+  .ppc-background-points span {
+    padding-top: 0;
   }
 
   body.ppc-editorial .editorial-matrix-term {
