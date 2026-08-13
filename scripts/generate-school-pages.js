@@ -60,6 +60,30 @@ function sourceImages(record) {
     .filter((image) => image && image.src && publicPathExists(image.src));
 }
 
+function imageDimensions(publicPath) {
+  if (!publicPath || isHttpUrl(publicPath)) return null;
+  const filePath = path.join(ROOT, String(publicPath).replace(/^\/+/, ""));
+  if (!fs.existsSync(filePath)) return null;
+  const bytes = fs.readFileSync(filePath);
+  if (bytes.length >= 24 && bytes.toString("ascii", 1, 4) === "PNG") {
+    return { width: bytes.readUInt32BE(16), height: bytes.readUInt32BE(20) };
+  }
+  return null;
+}
+
+function commonChrome() {
+  const source = fs.readFileSync(path.join(ROOT, "national-archive.html"), "utf8");
+  const header = source.match(/<header class="site-header">[\s\S]*?<\/header>/)?.[0];
+  const mobileStart = source.indexOf('<div class="mobile-overlay" id="mobileOverlay">');
+  const mainStart = source.indexOf("<main", mobileStart);
+  const mobile = mobileStart >= 0 && mainStart > mobileStart
+    ? source.slice(mobileStart, mainStart).trim()
+    : "";
+  const footer = source.match(/<footer class="footer">[\s\S]*?<\/footer>/)?.[0];
+  if (!header || !mobile || !footer) throw new Error("Common site chrome could not be read from national-archive.html");
+  return { header, mobile, footer };
+}
+
 function sourceLinks(record) {
   const links = [];
   for (const item of asArray(record.sourceLinks)) {
@@ -102,16 +126,6 @@ function meaningfulDocuments(record) {
   return [...new Set(values)];
 }
 
-function renderSupportStrip() {
-  return `<div class="support-strip" role="complementary" aria-label="活動支援のお願い">
-  <div class="support-strip-inner">
-    <span class="support-strip-label">応援のお願い</span>
-    <span class="support-strip-text">資料取得、資料整理、Web公開を続けるため、寄付・カンパでのご支援をお願いします。</span>
-    <a class="support-strip-link" href="/support.html">応援ページへ</a>
-  </div>
-</div>`;
-}
-
 function renderSourceChip({ href, label, present }) {
   const cls = present ? "archive-source-chip is-present" : "archive-source-chip is-missing";
   return href
@@ -152,12 +166,16 @@ function renderSourceEvidence(record) {
 function renderImages(record) {
   const images = sourceImages(record);
   if (!images.length) return `      <p class="archive-muted">資料画像は未掲載です。資料画像を掲載する場合は、個人情報・印影・口座情報・QRコード等を確認し、必要な伏せ処理を行います。</p>`;
-  return images.map((image, index) => `      <figure class="archive-figure">
+  return images.map((image, index) => {
+    const dimensions = imageDimensions(image.src);
+    const size = dimensions ? ` width="${dimensions.width}" height="${dimensions.height}"` : "";
+    return `      <figure class="archive-figure">
         <a class="archive-figure-link" href="${escapeHtml(image.src)}">
-          <img src="${escapeHtml(image.src)}" alt="${escapeHtml(image.alt || `${record.schoolName} 資料画像${index + 1}`)}" loading="lazy" decoding="async">
+          <img src="${escapeHtml(image.src)}" alt="${escapeHtml(image.alt || `${record.schoolName} 資料画像${index + 1}`)}"${size} loading="lazy" decoding="async">
         </a>
         <figcaption>${escapeHtml(image.caption || `資料画像${index + 1}`)}</figcaption>
-      </figure>`).join("\n");
+      </figure>`;
+  }).join("\n");
 }
 
 function renderPdfLinks(record) {
@@ -219,6 +237,7 @@ function renderSchoolPage(record) {
   const pdfCount = pdfLinks(record).length;
   const pdfStatus = displayPdfStatus(record.materials.pdfStatus, pdfCount);
   const statusLabel = displayStatus(record.status);
+  const chrome = commonChrome();
 
   return `<!DOCTYPE html>
 <html lang="ja">
@@ -246,26 +265,28 @@ function renderSchoolPage(record) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/site.css?v=20260814-2">
-  <link rel="stylesheet" href="/css/archive.css?v=20260808">
+  <link rel="stylesheet" href="/css/site.css?v=20260814-3">
+  <link rel="stylesheet" href="/css/archive.css?v=20260814-1">
 
 ${gaTag()}
   <link rel="stylesheet" href="/css/interactions.css?v=20260719">
 </head>
-<body>
-${renderSupportStrip()}
-  <main class="archive-school-page">
-    <p><a class="archive-back" href="/national-archive.html">全国資料館へ戻る</a></p>
+<body class="archive-school-document">
+<a class="skip-link" href="#main-content">本文へ移動</a>
+${chrome.header}
+${chrome.mobile}
+<nav class="breadcrumb" aria-label="現在地"><div class="wrap"><a href="/index.html">トップ</a><span>›</span><a href="/national-archive.html">全国資料館</a><span>›</span><span aria-current="page">${escapeHtml(record.schoolName)}</span></div></nav>
+  <main class="archive-school-page" id="main-content">
 
-    <section class="archive-hero">
-      <div class="archive-kicker">ATSUGI ${escapeHtml(record.schoolType)}</div>
+    <header class="archive-hero">
+      <div class="archive-kicker">厚木市・${escapeHtml(record.schoolType)}｜一次資料</div>
       <h1>${escapeHtml(record.schoolName)} PTA関連資料・評価</h1>
       <p class="archive-school-author">作成主体：PTA適正化推進委員会</p>
       <div class="archive-print-actions archive-print-top">
         <button class="archive-print-button" type="button" onclick="window.print()">このページをPDF保存</button>
       </div>
       <p>${escapeHtml(renderSummary(record))}</p>
-    </section>
+    </header>
 
     <section class="archive-section">
       <h2>資料確認状況</h2>
@@ -328,6 +349,9 @@ ${renderParagraphs(record.evaluation, "個別評価は未実施です。掲載�
       <button class="archive-print-button" type="button" onclick="window.print()">このページをPDF保存</button>${renderPdfLinks(record)}
     </section>
   </main>
+${chrome.footer}
+<script src="/data/site-search-index.js?v=20260809-2"></script>
+<script src="/js/site.js?v=90"></script>
 </body>
 </html>`;
 }
