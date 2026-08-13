@@ -968,4 +968,100 @@
       margin-left: 0;
     }
   }
+
+  /* Long-form supplements stay available without delaying the main argument. */
+  body.guide-pta-editorial .officer-supplement {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid #cfd8e2;
+    background: #fff;
+  }
+  body.guide-pta-editorial .officer-supplement-summary {
+    position: relative;
+    width: min(calc(100% - 40px), 980px);
+    margin-inline: auto;
+    padding: 22px 112px 22px 0;
+    list-style: none;
+    cursor: pointer;
+    color: var(--text, #1e293b);
+  }
+  body.guide-pta-editorial .officer-supplement-summary::-webkit-details-marker {
+    display: none;
+  }
+  body.guide-pta-editorial .officer-supplement-summary::after {
+    content: "＋ 開く";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    translate: 0 -50%;
+    min-width: 72px;
+    color: var(--navy, #1e3a5f);
+    font-size: 0.82rem;
+    font-weight: 900;
+    text-align: right;
+  }
+  body.guide-pta-editorial .officer-supplement[open] > .officer-supplement-summary::after {
+    content: "− 閉じる";
+  }
+  body.guide-pta-editorial .officer-supplement[open] > .officer-supplement-summary {
+    border-bottom: 1px solid #dbe4ee;
+  }
+  body.guide-pta-editorial .officer-supplement-summary:focus-visible {
+    outline: 3px solid #c9961a;
+    outline-offset: 4px;
+  }
+  body.guide-pta-editorial .officer-supplement-label {
+    display: block;
+    margin-bottom: 6px;
+    padding-left: 9px;
+    border-left: 3px solid var(--gold, #c9961a);
+    color: #52616f;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+  }
+  body.guide-pta-editorial .officer-supplement-summary strong {
+    display: block;
+    color: var(--navy, #1e3a5f);
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(1.08rem, 2vw, 1.35rem);
+    line-height: 1.55;
+  }
+  body.guide-pta-editorial .officer-supplement-note {
+    display: block;
+    margin-top: 5px;
+    color: #52616f;
+    font-size: 0.88rem;
+    line-height: 1.75;
+  }
+  body.guide-pta-editorial #guidebook-text {
+    padding: 0;
+  }
+  body.guide-pta-editorial .officer-guidebook-supplement > .u-13eea91b89 {
+    padding-top: 52px;
+  }
+  body.guide-pta-editorial .officer-video-supplement .officer-video-section {
+    border-top: 0;
+  }
+  body.guide-pta-editorial .officer-visual-supplement {
+    border-top: 1px solid #cfd8e2;
+  }
+
+  @media (max-width: 640px) {
+    body.guide-pta-editorial .officer-supplement-summary {
+      width: min(calc(100% - 32px), 980px);
+      padding: 18px 0 20px;
+    }
+    body.guide-pta-editorial .officer-supplement-summary::after {
+      position: static;
+      display: block;
+      translate: none;
+      margin-top: 10px;
+      text-align: left;
+    }
+    body.guide-pta-editorial .officer-supplement-note {
+      font-size: 0.84rem;
+    }
+  }
 }
