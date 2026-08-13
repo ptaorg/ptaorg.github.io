@@ -131,6 +131,8 @@
   }
 
   .op-verdict {
+    width: min(100%, 850px);
+    max-width: 850px;
     margin: 58px 0 20px;
     padding: 4px 0 4px 25px;
     border-left: 6px solid var(--op-gold);
@@ -209,7 +211,7 @@
     letter-spacing: 0.1em;
   }
   .op-section h2 {
-    max-width: 900px;
+    max-width: 850px;
     margin: 0 0 22px;
     color: var(--op-navy);
     font-family: "Noto Serif JP", serif;
@@ -225,7 +227,8 @@
     line-height: 1.65;
   }
   .op-section p {
-    max-width: 850px;
+    width: min(100%, 850px);
+    max-width: 850px !important;
     margin: 0 0 17px;
     font-size: 1rem;
     line-height: 2;
@@ -323,7 +326,8 @@
     color: #16704a;
   }
   .op-note {
-    max-width: 900px !important;
+    width: min(100%, 850px);
+    max-width: 850px !important;
     margin-top: 28px !important;
     padding: 18px 0 18px 20px;
     border-left: 5px solid var(--op-gold);
@@ -336,7 +340,8 @@
 
   .op-sequence {
     counter-reset: sequence;
-    max-width: 950px !important;
+    width: min(100%, 850px);
+    max-width: 850px !important;
     margin: 32px 0 !important;
     padding: 0 !important;
     border-top: 2px solid var(--op-navy);
@@ -366,7 +371,8 @@
   }
 
   .op-equation {
-    max-width: 950px !important;
+    width: min(100%, 850px);
+    max-width: 850px !important;
     margin: 30px 0 !important;
     padding: 26px 0;
     border-top: 3px solid var(--op-red);
@@ -506,7 +512,8 @@
 
   .op-transition-list {
     counter-reset: transition;
-    max-width: 950px !important;
+    width: min(100%, 850px);
+    max-width: 850px !important;
     margin: 28px 0 !important;
     padding: 0 !important;
     border-top: 2px solid var(--op-navy);
@@ -537,7 +544,8 @@
     line-height: 1.8;
   }
   .op-role-questions {
-    max-width: 900px;
+    width: min(100%, 850px);
+    max-width: 850px;
     margin-top: 22px;
     border-top: 1px solid var(--op-line);
   }
@@ -678,7 +686,7 @@
   .op-source ol {
     margin: 0;
     padding-left: 1.35rem;
-    max-width: 940px;
+    max-width: 850px;
   }
   .op-source li {
     margin: 0.7em 0;
@@ -691,7 +699,8 @@
     font-weight: 700;
   }
   .op-citation-format {
-    max-width: 940px;
+    width: min(100%, 850px);
+    max-width: 850px !important;
     margin: 26px 0 14px;
     padding-top: 20px;
     border-top: 1px solid var(--op-line);

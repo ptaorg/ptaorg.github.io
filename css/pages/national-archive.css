@@ -32,7 +32,10 @@
       sans-serif;
     line-height: 1.9;
   }
-  a {
+  .archive-editorial main a,
+  .archive-editorial .hero a,
+  .archive-editorial .topbar a,
+  .archive-editorial .archive-jump a {
     color: var(--blue);
     text-decoration-thickness: 2px;
     text-underline-offset: 3px;
@@ -415,14 +418,6 @@
   }
   .inquiry-box {
     margin-top: 28px;
-  }
-  .footer {
-    background: #071a2d;
-    color: #fff;
-    padding: 36px 0;
-  }
-  .footer a {
-    color: #f8e39b;
   }
   @media (max-width: 900px) {
     .navlinks {
