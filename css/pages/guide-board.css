@@ -2581,7 +2581,7 @@
   body.guide-board-text-first .board-guide-card {
     position: relative;
     min-height: 0;
-    padding: 18px 4px 18px 20px;
+    padding: 18px 4px 18px 22px !important;
     border: 0;
     border-top: 1px solid #dbe4ee;
     border-radius: 0;
@@ -2640,7 +2640,7 @@
     background: #f6f8fa;
   }
   body.guide-board-text-first .rc5-item {
-    padding: 18px 4px 20px 18px;
+    padding: 18px 4px 20px 20px !important;
     border: 0;
     border-bottom: 1px solid #d5dee8;
     border-left: 5px solid #173f63;
