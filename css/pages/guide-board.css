@@ -1089,7 +1089,7 @@
     background: #fff;
   }
   body.guide-board-direct-fixed #board-first-reading {
-    display: none;
+    display: block;
   }
   body.guide-board-direct-fixed main,
   body.guide-board-direct-fixed .board-guide-section,
@@ -1537,29 +1537,6 @@
   body.guide-board-direct-fixed #board-fact-accordion-v31 {
     display: none;
   }
-  main
-    > section:not(#board-executive-brief):not(#principal-liability):not(
-      #board-jp-guideline
-    ):not(#guidebook-text) {
-    display: none;
-  }
-  main > #board-executive-brief,
-  main > #principal-liability,
-  main > #guidebook-text {
-    display: block;
-  }
-  body.guide-board-direct-fixed
-    main
-    > section:not(#board-executive-brief):not(#principal-liability):not(
-      #board-jp-guideline
-    ):not(#guidebook-text) {
-    display: none;
-  }
-  body.guide-board-direct-fixed main > #board-executive-brief,
-  body.guide-board-direct-fixed main > #principal-liability,
-  body.guide-board-direct-fixed main > #guidebook-text {
-    display: block;
-  }
   body.guide-board-direct-fixed #board-executive-brief {
     background: linear-gradient(180deg, #fff 0%, #f8fbff 52%, #fff 100%);
     border-top: 1px solid #dbe4ee;
@@ -1726,13 +1703,6 @@
     font-size: 0.84rem;
     line-height: 1.7;
     margin-top: 2px;
-  }
-  body.guide-board-direct-fixed #board-jp-guideline,
-  #board-jp-guideline {
-    display: block;
-    background: #fff;
-    border-top: 1px solid #d8e0ec;
-    padding: 72px 0;
   }
   .board-jp-shell {
     width: min(calc(100% - 48px), 1120px);
