@@ -184,7 +184,7 @@ function upsertDiscoveryMetadata(html) {
     next = addHeadMarkup(next, '<link rel="alternate" type="text/plain" href="/llms.txt" title="AI向けサイト案内">');
   }
   if (!/<link\s+rel=["']stylesheet["'][^>]*href=["']\/css\/prose\.css/i.test(next)) {
-    next = addHeadMarkup(next, '<link rel="stylesheet" href="/css/prose.css?v=20260719">');
+    next = addHeadMarkup(next, '<link rel="stylesheet" href="/css/prose.css?v=20260814-2">');
   }
   return next;
 }

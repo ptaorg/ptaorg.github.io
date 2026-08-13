@@ -396,7 +396,7 @@ for (const token of comparisonCssTokens) {
     findings.push(`css/prose.css: 比較レイアウトの保護指定がありません (${token})`);
   }
 }
-const comparisonCssVersion = '/css/prose.css?v=20260809-1';
+const comparisonCssVersion = '/css/prose.css?v=20260814-2';
 for (const rel of ['personnel.html', 'facilities.html', 'fee-collection.html']) {
   const html = fs.readFileSync(path.join(root, rel), 'utf8');
   if (!html.includes(comparisonCssVersion)) {

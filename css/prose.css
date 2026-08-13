@@ -40,7 +40,17 @@ body[data-content-mode="prose"]
     .law-panel,
     .essay-link-panel,
     .ed-resource-panel
-  ):not(header *, footer *, nav *, form *, .region-map-card, .support-payment-card) {
+  ):not(
+    header *,
+    footer *,
+    nav *,
+    form *,
+    .region-map-card,
+    .support-payment-card,
+    .journal-page .article-card,
+    .archive-editorial .card,
+    .archive-editorial .archive-count-item
+  ) {
   margin: 0 !important;
   padding: 1.35rem 0 !important;
   background: transparent !important;
@@ -70,7 +80,17 @@ body[data-content-mode="prose"]
     .law-panel,
     .essay-link-panel,
     .ed-resource-panel
-  ):not(header *, footer *, nav *, form *, .region-map-card, .support-payment-card):hover {
+  ):not(
+    header *,
+    footer *,
+    nav *,
+    form *,
+    .region-map-card,
+    .support-payment-card,
+    .journal-page .article-card,
+    .archive-editorial .card,
+    .archive-editorial .archive-count-item
+  ):hover {
   background: transparent !important;
   border-color: var(--prose-line) !important;
   box-shadow: none !important;

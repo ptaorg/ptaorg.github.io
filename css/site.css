@@ -5431,19 +5431,45 @@
 
   /* === Global typography scale tuning === */
   :root {
-    --type-hero-title: clamp(1.48rem, 2.55vw, 2.22rem);
-    --type-page-title: clamp(1.42rem, 2.45vw, 2.18rem);
-    --type-section-title: clamp(1.35rem, 2.25vw, 2.05rem);
-    --type-card-title: clamp(1.02rem, 1.35vw, 1.18rem);
+    --type-hero-title: clamp(1.72rem, 2.65vw, 2.4rem);
+    --type-page-title: clamp(1.72rem, 2.65vw, 2.4rem);
+    --type-section-title: clamp(1.2rem, 1.65vw, 1.55rem);
+    --type-subsection-title: clamp(1.05rem, 1.25vw, 1.22rem);
+    --type-card-title: clamp(1rem, 1.22vw, 1.12rem);
     --type-lead: 0.96rem;
+    --type-scale-revision: 20260814;
   }
 
-  /* Page and section headings: reduce visual pressure while preserving hierarchy */
-  .page-hero h1,
-  .page-hero--photo h1 {
-    font-size: var(--type-page-title);
-    line-height: 1.36;
-    letter-spacing: -0.012em;
+  /*
+   * One compact heading scale for the whole site.
+   * Page styles are intentionally allowed to control colour, spacing and
+   * decoration, but not to grow headings back into display-poster sizes.
+   */
+  body h1,
+  body :where(.page-hero, .page-hero--photo, .hero, .simple-hero) h1 {
+    font-size: var(--type-page-title) !important;
+    line-height: 1.38 !important;
+    letter-spacing: -0.012em !important;
+  }
+  main h2 {
+    font-size: var(--type-section-title) !important;
+    line-height: 1.48 !important;
+    letter-spacing: -0.006em !important;
+  }
+  main h3 {
+    font-size: var(--type-subsection-title) !important;
+    line-height: 1.55 !important;
+    letter-spacing: 0 !important;
+  }
+  main h4 {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* The PPC legal route remains the page's focal point, without shouting. */
+  body.ppc-editorial main h2.ppc-core-title {
+    font-size: clamp(1.9rem, 3.1vw, 2.65rem) !important;
+    line-height: 1.32 !important;
   }
   .page-hero p,
   .page-hero--photo p {
@@ -5451,9 +5477,9 @@
     line-height: 1.9;
   }
   .section-title {
-    font-size: var(--type-section-title);
-    line-height: 1.34;
-    letter-spacing: -0.01em;
+    font-size: var(--type-section-title) !important;
+    line-height: 1.48 !important;
+    letter-spacing: -0.006em !important;
   }
   .section-lead {
     font-size: 0.95rem;
@@ -5463,9 +5489,9 @@
   /* Homepage text hero */
   .home-text-hero h1,
   .home-photo-hero-title {
-    font-size: var(--type-hero-title);
-    line-height: 1.36;
-    letter-spacing: -0.012em;
+    font-size: var(--type-hero-title) !important;
+    line-height: 1.38 !important;
+    letter-spacing: -0.012em !important;
   }
   .home-text-hero p,
   .home-photo-hero-lead {
@@ -5479,8 +5505,8 @@
   .board-page .page-hero h1,
   .pta-page .page-hero h1,
   .simple-hero h1 {
-    font-size: var(--type-page-title);
-    line-height: 1.36;
+    font-size: var(--type-page-title) !important;
+    line-height: 1.38 !important;
   }
   .journal-intro h2,
   .panel h2,
@@ -5488,8 +5514,8 @@
   .guide-section h2,
   .content-section h2,
   .feature-section h2 {
-    font-size: clamp(1.18rem, 1.75vw, 1.55rem);
-    line-height: 1.45;
+    font-size: var(--type-section-title) !important;
+    line-height: 1.48 !important;
   }
 
   /* Card titles */
@@ -5499,8 +5525,8 @@
   .ac-title,
   .case-subject,
   .card h3 {
-    font-size: var(--type-card-title);
-    line-height: 1.5;
+    font-size: var(--type-card-title) !important;
+    line-height: 1.52 !important;
   }
 
   /* Header/nav should stay compact */
@@ -5519,10 +5545,11 @@
 
   @media (max-width: 760px) {
     :root {
-      --type-hero-title: clamp(1.34rem, 6vw, 1.78rem);
-      --type-page-title: clamp(1.32rem, 5.6vw, 1.72rem);
-      --type-section-title: clamp(1.22rem, 5vw, 1.58rem);
-      --type-card-title: 1.02rem;
+      --type-hero-title: clamp(1.68rem, 7vw, 2rem);
+      --type-page-title: clamp(1.68rem, 7vw, 2rem);
+      --type-section-title: clamp(1.18rem, 5.2vw, 1.45rem);
+      --type-subsection-title: clamp(1.04rem, 4.5vw, 1.2rem);
+      --type-card-title: 1rem;
       --type-lead: 0.92rem;
     }
     .page-hero,
