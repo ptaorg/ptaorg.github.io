@@ -29,7 +29,7 @@
   .cases-editorial .case-page-header h1 {
     margin: 8px 0 18px;
     color: #10263d;
-    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-size: clamp(1.85rem, 3.6vw, 2.7rem);
     line-height: 1.3;
     letter-spacing: 0.01em;
   }
@@ -80,16 +80,32 @@
   }
 
   .cases-editorial .case-section {
+    --case-section-accent: #275d85;
     scroll-margin-top: 92px;
     margin-top: 58px;
     padding-top: 44px;
-    border-top: 1px solid #cbd8e4;
+    border-top: 3px solid var(--case-section-accent);
+  }
+
+  .cases-editorial .case-section:nth-of-type(4n + 2) {
+    --case-section-accent: #9a3412;
+  }
+
+  .cases-editorial .case-section:nth-of-type(4n + 3) {
+    --case-section-accent: #19705b;
+  }
+
+  .cases-editorial .case-section:nth-of-type(4n) {
+    --case-section-accent: #8a6700;
   }
 
   .cases-editorial .case-section > h2 {
     margin: 0 0 22px;
+    padding: 11px 16px 13px 18px;
+    background: linear-gradient(90deg, color-mix(in srgb, var(--case-section-accent) 10%, white), #fff 76%);
+    border-left: 6px solid var(--case-section-accent);
     color: #10263d;
-    font-size: clamp(1.55rem, 2.6vw, 2.15rem);
+    font-size: clamp(1.35rem, 2.3vw, 1.85rem);
     line-height: 1.45;
   }
 
@@ -106,7 +122,8 @@
   }
 
   .cases-editorial .case-focus {
-    border-top: 4px solid #9a3412;
+    --case-section-accent: #9a3412;
+    border-top-width: 5px;
   }
 
   .cases-editorial .case-focus > .case-number {
