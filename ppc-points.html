@@ -119,7 +119,7 @@
 }
 </script>
 <link rel="stylesheet" href="/css/prose.css?v=20260814-2">
-<link rel="stylesheet" href="/css/pages/ppc-points.css?v=20260814-3">
+<link rel="stylesheet" href="/css/pages/ppc-points.css?v=20260814-4">
 <meta property="og:site_name" content="PTA適正化推進委員会">
 <meta property="og:locale" content="ja_JP">
 <script type="application/ld+json">
@@ -166,7 +166,7 @@
 .ppc-editorial .editorial-caution p:last-child{margin-bottom:0;}
 </style>
 </head>
-<body data-content-mode="prose" data-reviewed="2026-08-14" data-page-revision="ppc-points-20260814-3" class="ppc-editorial">
+<body data-content-mode="prose" data-reviewed="2026-08-14" data-page-revision="ppc-points-20260814-4" class="ppc-editorial">
 
   
 <div class="support-strip" role="complementary" aria-label="活動支援のお願い">
@@ -240,40 +240,44 @@
           <figcaption><strong>資料3ページ・全体像。</strong>最初の問いは「学校とPTAの間で個人情報のやり取りが必要か」です。必要とする場合も、直ちに同意や委任へ進むのではなく、学校業務に関する法令上の所掌事務又は業務の範囲内で利用目的を特定しているかを先に確認する構成です。</figcaption>
         </figure>
 
-        <figure class="ppc-operation-figure">
-          <svg viewBox="0 0 1040 330" role="img" aria-labelledby="ppc-operation-title ppc-operation-desc">
-            <title id="ppc-operation-title">学校徴収金の経路へPTA会費徴収が組み込まれる構造</title>
-            <desc id="ppc-operation-desc">保護者が学校教育と学校徴収金のために学校へ提供した学籍、保護者、口座情報が、PTAからの委任を理由としてPTA会費の反復徴収にも使われる構造を示す。</desc>
-            <defs>
-              <marker id="ppc-arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0b5f8f"/></marker>
-              <marker id="ppc-arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#a61f2b"/></marker>
-            </defs>
-            <rect class="ppc-operation-box" x="20" y="52" width="250" height="116"/>
-            <text class="ppc-operation-heading" x="145" y="89" text-anchor="middle">保護者</text>
-            <text class="ppc-operation-copy" x="145" y="119" text-anchor="middle">学籍・保護者情報</text>
-            <text class="ppc-operation-copy" x="145" y="145" text-anchor="middle">学校徴収金の口座情報</text>
+        <figure class="ppc-authority-figure" aria-labelledby="ppc-authority-title">
+          <h3 id="ppc-authority-title">「委任があるから校務」ではない――校務性を判断する正しい順序</h3>
 
-            <rect class="ppc-operation-box ppc-operation-box--school" x="395" y="32" width="250" height="156"/>
-            <text class="ppc-operation-heading" x="520" y="70" text-anchor="middle">公立学校</text>
-            <text class="ppc-operation-copy" x="520" y="102" text-anchor="middle">学校目的で情報を保有</text>
-            <text class="ppc-operation-copy" x="520" y="128" text-anchor="middle">学校徴収金を口座振替</text>
-            <text class="ppc-operation-copy ppc-operation-alert" x="520" y="160" text-anchor="middle">同じ経路でPTA会費も反復徴収</text>
+          <div class="ppc-authority-wrong" aria-label="成立しない判断順序">
+            <span class="ppc-authority-flag">誤った近道</span>
+            <strong>PTAから委任された</strong>
+            <span class="ppc-authority-wrong-arrow" aria-hidden="true">→</span>
+            <strong>学校の校務になった</strong>
+            <span class="ppc-authority-wrong-mark" aria-label="この推論は成立しない">×</span>
+          </div>
 
-            <rect class="ppc-operation-box" x="770" y="52" width="250" height="116"/>
-            <text class="ppc-operation-heading" x="895" y="89" text-anchor="middle">PTA</text>
-            <text class="ppc-operation-copy" x="895" y="119" text-anchor="middle">会員管理・会費徴収</text>
-            <text class="ppc-operation-copy" x="895" y="145" text-anchor="middle">学校へ徴収事務を「委任」</text>
+          <p class="ppc-authority-gate"><strong>委任は入口ではありません。</strong>PTA側が事務を頼んだという事実だけでは、学校側の権限も校務性も生じません。次の順序を一段ずつ通過する必要があります。</p>
 
-            <path class="ppc-operation-arrow" d="M270 110 H382" marker-end="url(#ppc-arrow-blue)"/>
-            <text class="ppc-operation-note" x="326" y="93" text-anchor="middle">情報・口座</text>
-            <path class="ppc-operation-arrow ppc-operation-arrow--red" d="M770 110 H658" marker-end="url(#ppc-arrow-red)"/>
-            <text class="ppc-operation-note ppc-operation-alert" x="714" y="93" text-anchor="middle">委任・依頼</text>
+          <ol class="ppc-authority-route">
+            <li class="ppc-authority-step ppc-authority-step--gate">
+              <span class="ppc-authority-number">01</span>
+              <div><span class="ppc-authority-law">最初の門</span><strong>法令の定める学校の所掌事務又は業務か</strong><p>PTAの会員管理・会費徴収が、学校又は教育委員会のどの法令上の事務なのかを具体的に示します。ここを通らなければ、後の委任・校務分掌・職務命令へは進めません。</p></div>
+            </li>
+            <li class="ppc-authority-step">
+              <span class="ppc-authority-number">02</span>
+              <div><span class="ppc-authority-law">受任・契約</span><strong>学校又は校長に、その事務を引き受ける権限があるか</strong><p>PTAが委任したかではなく、学校側が受任・契約できる法的権限、決裁、私金取扱いの根拠を確認します。委任契約は、学校側に存在しない権限を新設しません。</p></div>
+            </li>
+            <li class="ppc-authority-step">
+              <span class="ppc-authority-number">03</span>
+              <div><span class="ppc-authority-law">法61条・69条</span><strong>学校保有情報を、その事務のために扱えるか</strong><p>所掌事務の遂行に個人情報が必要な場合に限り、61条により利用目的を特定します。69条2項の本人同意は臨時的例外であり、毎年度反復する会費徴収の恒常ルートにはなりません。</p></div>
+            </li>
+            <li class="ppc-authority-step">
+              <span class="ppc-authority-number">04</span>
+              <div><span class="ppc-authority-law">職務命令・地公法35条</span><strong>誰が、どの職務として、勤務時間中に行うのか</strong><p>適法な学校事務であることを前提に、校務分掌、職務命令、職務専念義務、職専免、兼職兼業等を確認します。職務命令を先に出しても、権限のないPTA内部事務は公務化されません。</p></div>
+            </li>
+            <li class="ppc-authority-step">
+              <span class="ppc-authority-number">05</span>
+              <div><span class="ppc-authority-law">具体的処理</span><strong>徴収・保管・振替・未納管理を実行できるか</strong><p>最後に、学校徴収金との分離、口座振替、会費債権の確認、非加入者・不同意者の除外、私金の保管、会計責任を個別に審査します。</p></div>
+            </li>
+          </ol>
 
-            <line class="ppc-operation-divider" x1="20" y1="228" x2="1020" y2="228"/>
-            <text class="ppc-operation-verdict" x="520" y="270" text-anchor="middle">同意＋委任だけでは、学校の法令上の所掌事務・情報利用権限は生まれない</text>
-            <text class="ppc-operation-sub" x="520" y="302" text-anchor="middle">恒常運用なら、法第61条の入口から審査する</text>
-          </svg>
-          <figcaption>典型的な問題構造。保護者の同意とPTAから学校への委任は別の関係です。どちらも、それだけで学校の法令上の権限を創設するものではありません。</figcaption>
+          <p class="ppc-authority-conclusion"><span>結論</span><strong>「校務」は委任の効果ではなく、上記の審査を通過した後に判断されるものです。</strong></p>
+          <figcaption>所掌事務→受任・契約権限→個人情報保護法→服務→具体的処理の順です。委任・要領・校務分掌・職務命令を先に置いて、この順序を逆転させることはできません。</figcaption>
         </figure>
 
         <h3>行政側で示される「委任された学校業務」という説明</h3>
