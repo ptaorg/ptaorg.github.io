@@ -183,6 +183,16 @@ body.ppc-editorial .editorial-caution {
   margin: 0;
 }
 
+.ppc-source-gallery--cover {
+  grid-template-columns: minmax(0, 680px);
+}
+
+.ppc-source-figure--context {
+  width: min(100%, 1000px);
+  margin-top: 38px;
+  margin-bottom: 48px;
+}
+
 .ppc-source-figure img {
   display: block;
   width: 100%;
