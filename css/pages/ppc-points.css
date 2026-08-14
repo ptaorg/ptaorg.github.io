@@ -506,6 +506,188 @@ body.ppc-editorial .ppc-core-title {
   color: var(--ppc-page-red);
 }
 
+.ppc-return-figure {
+  width: min(100%, 1000px);
+  margin: 52px 0;
+  border-top: 5px solid var(--ppc-page-navy);
+  border-bottom: 1px solid var(--ppc-page-line);
+}
+
+.ppc-return-heading {
+  padding: 26px 0 22px;
+}
+
+.ppc-return-heading p {
+  margin: 0 0 6px;
+  color: var(--ppc-page-blue);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+}
+
+.ppc-return-heading h3 {
+  margin: 0;
+  color: var(--ppc-page-navy);
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  line-height: 1.5;
+}
+
+.ppc-return-entry,
+.ppc-return-test,
+.ppc-return-back {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 26px;
+  align-items: center;
+  padding: 22px 0;
+}
+
+.ppc-return-entry {
+  border-left: 6px solid var(--ppc-page-red);
+  border-bottom: 1px solid var(--ppc-page-line);
+  padding-left: 18px;
+}
+
+.ppc-return-entry > span,
+.ppc-return-test > span,
+.ppc-return-back > span {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 900;
+}
+
+.ppc-return-entry > span,
+.ppc-return-entry small {
+  color: var(--ppc-page-red);
+}
+
+.ppc-return-entry strong,
+.ppc-return-entry small {
+  display: block;
+}
+
+.ppc-return-entry small {
+  margin-top: 5px;
+  font-size: 0.84rem;
+  font-weight: 900;
+}
+
+.ppc-return-test {
+  position: relative;
+  margin-top: 28px;
+  border-top: 1px solid var(--ppc-page-line);
+  border-bottom: 1px solid var(--ppc-page-line);
+}
+
+.ppc-return-test::before {
+  content: "↓";
+  position: absolute;
+  top: -32px;
+  left: 75px;
+  color: var(--ppc-page-red);
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.ppc-return-test > span {
+  color: var(--ppc-page-blue);
+}
+
+.ppc-return-branches,
+.ppc-return-outcomes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ppc-return-branch {
+  padding: 24px 24px 24px 0;
+  border-bottom: 1px solid var(--ppc-page-line);
+}
+
+.ppc-return-branch + .ppc-return-branch {
+  padding-right: 0;
+  padding-left: 28px;
+  border-left: 1px solid var(--ppc-page-line);
+}
+
+.ppc-return-branch > span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--ppc-page-blue);
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.ppc-return-branch strong {
+  color: var(--ppc-page-navy);
+}
+
+.ppc-return-branch p,
+.ppc-return-back p {
+  margin: 7px 0 0;
+  color: var(--ppc-page-muted);
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+.ppc-return-branch--ongoing > span,
+.ppc-return-branch--ongoing strong {
+  color: var(--ppc-page-red);
+}
+
+.ppc-return-back {
+  margin-top: 28px;
+  border-top: 5px solid var(--ppc-page-blue);
+  border-bottom: 1px solid var(--ppc-page-line);
+}
+
+.ppc-return-back > span,
+.ppc-return-back strong {
+  color: var(--ppc-page-navy);
+}
+
+.ppc-return-outcomes p {
+  margin: 0;
+  padding: 22px 24px 22px 0;
+}
+
+.ppc-return-outcomes p + p {
+  padding-right: 0;
+  padding-left: 28px;
+  border-left: 1px solid var(--ppc-page-line);
+}
+
+.ppc-return-outcomes strong,
+.ppc-return-outcomes span {
+  display: block;
+}
+
+.ppc-return-outcomes strong {
+  color: var(--ppc-page-navy);
+}
+
+.ppc-return-outcomes span {
+  margin-top: 6px;
+  color: var(--ppc-page-muted);
+  font-size: 0.84rem;
+  line-height: 1.75;
+}
+
+.ppc-return-outcomes .ppc-return-stop {
+  border-top: 4px solid var(--ppc-page-red);
+}
+
+.ppc-return-stop strong {
+  color: var(--ppc-page-red);
+}
+
+.ppc-return-figure figcaption {
+  padding: 16px 0;
+  border-top: 1px solid var(--ppc-page-line);
+  color: var(--ppc-page-muted);
+  font-size: 0.8rem;
+  line-height: 1.75;
+}
+
 .ppc-law-distinction {
   margin: 38px 0 !important;
   padding: 20px 0 20px 24px;
@@ -564,8 +746,23 @@ body.ppc-editorial .ppc-core-title {
   body.ppc-editorial .editorial-matrix,
   .ppc-source-gallery,
   .ppc-law-route li,
-  .ppc-background-points {
+  .ppc-background-points,
+  .ppc-return-entry,
+  .ppc-return-test,
+  .ppc-return-back,
+  .ppc-return-branches,
+  .ppc-return-outcomes {
     grid-template-columns: 1fr;
+  }
+
+  .ppc-return-test::before {
+    left: 20px;
+  }
+
+  .ppc-return-branch + .ppc-return-branch,
+  .ppc-return-outcomes p + p {
+    padding-left: 0;
+    border-left: 0;
   }
 
   .ppc-authority-wrong {
