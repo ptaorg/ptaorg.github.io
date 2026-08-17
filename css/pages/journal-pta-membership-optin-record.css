@@ -53,6 +53,125 @@
     margin-top: 12px;
   }
 
+  .journal-front-verdict {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 18px;
+    align-items: center;
+    border: 1px solid #b7d9d4;
+    border-left: 6px solid #0f766e;
+    border-radius: 0 14px 14px 0;
+    background: #edf9f6;
+    padding: 22px;
+    margin: 0 0 34px;
+  }
+
+  .journal-front-verdict > span {
+    border-radius: 999px;
+    background: #0a514b;
+    padding: 6px 12px;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 900;
+  }
+
+  .journal-front-verdict p {
+    margin: 0;
+    color: #173f3b;
+    font-size: 1.04rem;
+    line-height: 1.9;
+  }
+
+  .membership-chain {
+    display: grid;
+    gap: 28px;
+    max-width: 560px;
+    margin: 36px auto;
+    padding: 0;
+    list-style: none;
+  }
+
+  .membership-chain li {
+    position: relative;
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 16px;
+    align-items: center;
+    min-height: 70px;
+    border: 1px solid #c5dbd7;
+    border-radius: 13px;
+    background: #fbfefd;
+    padding: 13px 18px;
+    box-shadow: 0 8px 24px rgba(15, 76, 72, 0.07);
+  }
+
+  .membership-chain li:not(:last-child)::after {
+    content: "↓";
+    position: absolute;
+    right: 50%;
+    bottom: -27px;
+    color: #69807d;
+    font-size: 1.05rem;
+    font-weight: 900;
+    transform: translateX(50%);
+  }
+
+  .membership-chain small {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border-radius: 50%;
+    background: #0f766e;
+    color: #fff;
+    font-size: 0.74rem;
+    font-weight: 900;
+  }
+
+  .membership-chain strong {
+    color: #173f3b;
+    font-size: 1.02rem;
+  }
+
+  .journal-evidence-key {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 34px 0 44px;
+  }
+
+  .journal-evidence-key > div {
+    border: 1px solid #d8e1e4;
+    border-radius: 12px;
+    background: #fff;
+    padding: 16px;
+  }
+
+  .journal-evidence-key p {
+    margin: 9px 0 0;
+    color: #53616e;
+    font-size: 0.86rem;
+    line-height: 1.7;
+  }
+
+  .journal-evidence-badge {
+    display: inline-flex;
+    border-radius: 999px;
+    padding: 5px 10px;
+    font-size: 0.72rem;
+    font-weight: 900;
+  }
+
+  .journal-evidence-badge--primary {
+    background: #fff2c4;
+    color: #765700;
+  }
+
+  .journal-evidence-badge--analysis {
+    background: #dff4f0;
+    color: #0a5b55;
+  }
+
   .journal-emphasis {
     border-left: 6px solid #0f766e;
     border-radius: 0 12px 12px 0;
@@ -237,6 +356,15 @@
   @media (max-width: 720px) {
     .membership-flow-grid {
       grid-template-columns: 1fr;
+    }
+
+    .journal-front-verdict,
+    .journal-evidence-key {
+      grid-template-columns: 1fr;
+    }
+
+    .journal-front-verdict > span {
+      width: fit-content;
     }
 
     .optin-reason-article article > h2 {
