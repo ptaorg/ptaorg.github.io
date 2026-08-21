@@ -1,4 +1,4 @@
-/* site.js loader — 2026-08-21 */
+/* site.js loader — 2026-08-21 v91 */
 (function(){
   function load(src, id, done){
     if (document.getElementById(id)) { if (done) done(); return; }
@@ -9,7 +9,7 @@
     if (done) s.onload = done;
     (document.head || document.documentElement).appendChild(s);
   }
-  load('/js/site-core-v90.js?v=90', 'site-core-v90', function(){
-    load('/js/current-location-nav.js?v=20260821-1', 'current-location-nav');
+  load('/js/site-core-v90.js?v=91', 'site-core-v90', function(){
+    load('/js/current-location-nav.js?v=20260821-8', 'current-location-nav');
   });
 })();
