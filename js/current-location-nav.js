@@ -1,4 +1,4 @@
-/* Parent journey current-location navigation — 2026-08-21 */
+/* Parent journey current-location navigation — 2026-08-21 v6 */
 (function(){
   var path = location.pathname.replace(/\/+$/, '') || '/index.html';
   var pages = {
@@ -9,12 +9,6 @@
   };
   var page = pages[path];
   if (!page) return;
-
-  var css = document.createElement('link');
-  css.rel = 'stylesheet';
-  css.href = '/css/shared/current-location-nav.css?v=20260821-1';
-  css.id = 'current-location-nav-css';
-  if (!document.getElementById(css.id)) document.head.appendChild(css);
 
   var items = [
     ['guide','保護者向け','/guide-parent.html'],
@@ -43,16 +37,29 @@
   }
 
   function init(){
-    var main = document.querySelector('main');
-    if (!main || document.querySelector('.current-location-sidebar')) return;
+    if (document.querySelector('.current-location-sidebar')) return;
     document.body.classList.add('current-location-enabled');
 
     var withdrawal = document.querySelector('.howto-section');
     if (withdrawal && !withdrawal.id) withdrawal.id = 'parent-withdrawal';
 
+    var aside = document.createElement('aside');
+    aside.className = 'current-location-sidebar';
+    aside.setAttribute('aria-label','保護者向け 現在地ナビ');
+    var title = document.createElement('div');
+    title.className = 'current-location-title';
+    title.textContent = '保護者向け';
+    aside.appendChild(title);
+    aside.appendChild(navLinks());
+    document.body.appendChild(aside);
+
+    var host = document.querySelector('main') || document.querySelector('.page-main') || document.querySelector('.editorial-main') || document.querySelector('.container') || document.querySelector('.wrap-narrow');
+    if (!host) return;
+
     var existingCrumb = document.querySelector('.breadcrumb, .breadcrumbs, nav[aria-label="パンくずリスト"], nav[aria-label="パンくず"]');
+    var crumb = existingCrumb;
     if (!existingCrumb) {
-      var crumb = document.createElement('nav');
+      crumb = document.createElement('nav');
       crumb.className = 'current-location-breadcrumb';
       crumb.setAttribute('aria-label','パンくずリスト');
       var top = document.createElement('a');
@@ -76,18 +83,8 @@
         current.setAttribute('aria-current','page');
         crumb.appendChild(current);
       }
-      main.insertBefore(crumb, main.firstChild);
+      host.insertBefore(crumb, host.firstChild);
     }
-
-    var aside = document.createElement('aside');
-    aside.className = 'current-location-sidebar';
-    aside.setAttribute('aria-label','保護者向け 現在地ナビ');
-    var title = document.createElement('div');
-    title.className = 'current-location-title';
-    title.textContent = '保護者向け';
-    aside.appendChild(title);
-    aside.appendChild(navLinks());
-    document.body.appendChild(aside);
 
     var compact = document.createElement('details');
     compact.className = 'current-location-compact';
@@ -95,9 +92,8 @@
     summary.innerHTML = '<span>現在地</span><strong>' + page.label + '</strong>';
     compact.appendChild(summary);
     compact.appendChild(navLinks());
-    var crumbNode = main.querySelector('.current-location-breadcrumb');
-    if (crumbNode && crumbNode.nextSibling) main.insertBefore(compact, crumbNode.nextSibling);
-    else main.insertBefore(compact, main.firstChild);
+    if (crumb && crumb.parentNode === host && crumb.nextSibling) host.insertBefore(compact, crumb.nextSibling);
+    else host.insertBefore(compact, host.firstChild);
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, {once:true});
