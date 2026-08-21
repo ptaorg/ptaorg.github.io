@@ -1,0 +1,44 @@
+name: One-time article35 WARP link fix
+
+on:
+  push:
+    branches:
+      - chatgpt/article35-warp-original-scan-20260821
+    paths:
+      - .github/workflows/one-time-article35-warp.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - name: Fix archived MEXT link
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('journal/pta-shokumu-sennen-gimu.html')
+          s = p.read_text(encoding='utf-8')
+          old = 'https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo3/041/siryo/attach/1417145.htm'
+          new = 'https://warp.ndl.go.jp/en/web/20240108174506/https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo3/041/siryo/attach/1417145.htm'
+          if s.count(old) != 2:
+              raise SystemExit(f'unexpected old URL count: {s.count(old)}')
+          s = s.replace(old, new)
+          target = '<a href="' + new + '" rel="noopener" target="_blank">文部科学省で開く</a>'
+          if target in s:
+              s = s.replace(target, '<a href="' + new + '" rel="noopener" target="_blank">国立国会図書館WARPで開く</a>', 1)
+          p.write_text(s, encoding='utf-8')
+          PY
+          rm -f assets/images/article35/jichisho-1964-original.webp
+          rm -f .github/workflows/one-time-article35-warp.yml
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -- journal/pta-shokumu-sennen-gimu.html assets/images/article35/jichisho-1964-original.webp .github/workflows/one-time-article35-warp.yml
+          git commit -m '文科省「資料5」のリンクをWARP保存版へ修正'
+          git push origin HEAD:${{ github.ref_name }}
