@@ -103,7 +103,6 @@
 <link rel="stylesheet" href="/css/prose.css?v=20260814-2">
 <meta property="og:site_name" content="PTA適正化推進委員会">
 <meta property="og:locale" content="ja_JP">
-<link rel="stylesheet" href="/css/shared/current-location-nav-v5.css?v=1">
 </head>
 <body data-content-mode="prose" data-reviewed="2026-08-14" data-page-revision="guide-parent-20260814-1" class="parent-page">
 <aside class="u-1d511ad56e"><a href="/pta-membership-optin.html">まず確認：加入申込みをしていなければ、沈黙や入学だけでPTA加入は成立しません →</a></aside>
@@ -351,7 +350,7 @@
 </div>
 <p class="copyright">© PTA適正化推進委員会</p>
 </footer>
-<script src="/js/site.js?v=90"></script>
+<script src="/js/site.js?v=91"></script>
 <script>
 (function(){document.querySelectorAll('.case-card').forEach(function(card){card.classList.remove('is-open');var btn=card.querySelector('.case-toggle');if(btn)btn.setAttribute('aria-expanded','false');});document.querySelectorAll('.case-toggle').forEach(function(btn){btn.addEventListener('click',function(){var card=btn.closest('.case-card');var open=card.classList.toggle('is-open');btn.setAttribute('aria-expanded',open?'true':'false');});});})();
 (function(){var opts=document.getElementById('checker-options');if(!opts)return;var boxes=opts.querySelectorAll('input[type="checkbox"]');var cnt=document.getElementById('mcCount');var txt=document.getElementById('mcMeterText');function upd(){var n=0;boxes.forEach(function(b){if(b.checked)n++;});if(cnt){cnt.textContent=n;cnt.classList.remove('pop');void cnt.offsetWidth;cnt.classList.add('pop');}if(txt){txt.innerHTML=n===0?'あてはまる項目を選ぶと、ここに数が出ます。':'<b>'+n+'つ</b> 選択中。下の「判定する」を押してください。';}}boxes.forEach(function(b){b.addEventListener('change',upd);});upd();})();
@@ -393,6 +392,5 @@ function runChecker(){
 }
 document.querySelectorAll('.faq2-q').forEach(function(btn){btn.addEventListener('click',function(){var item=btn.closest('.faq2-item');var open=item.classList.contains('is-open');document.querySelectorAll('.faq2-item.is-open').forEach(function(el){el.classList.remove('is-open');});if(!open)item.classList.add('is-open');});});
 </script>
-<script src="/js/current-location-nav.js?v=20260821-6" defer></script>
 </body>
 </html>
