@@ -94,4 +94,22 @@
     .article35-resource-item p,.article35-resource-item > a { grid-column: 1; grid-row: auto; }
     .article35-resource-item > a { margin-top: 8px; }
   }
+  .article35-transcript {
+    margin: 24px 0;
+    border-top: 1px solid #b9c7d8;
+    border-bottom: 1px solid #b9c7d8;
+  }
+  .article35-transcript-block { padding: 20px 22px; background: #fbfcfe; }
+  .article35-transcript-block + .article35-transcript-block { border-top: 1px solid #dbe4ee; }
+  .article35-transcript-answer { background: #f3f7fb; border-left: 5px solid #0f2742; }
+  .article35-transcript-label { margin: 0 0 10px; font-family: "Noto Sans JP", sans-serif; font-size: .82rem; font-weight: 900; letter-spacing: .12em; color: #0f2742; }
+  .article35-transcript ol { margin: 10px 0 0; padding-left: 1.5em; }
+  .article35-pdf-preview { margin: 28px 0; }
+  .article35-pdf-preview iframe { display: block; width: 100%; min-height: 720px; border: 1px solid #cbd5e1; background: #fff; }
+  .article35-pdf-preview figcaption { margin-top: 10px; color: #64748b; font-size: .9rem; line-height: 1.7; }
+  @media (max-width: 720px) {
+    .article35-transcript-block { padding: 18px 16px; }
+    .article35-pdf-preview iframe { min-height: 560px; }
+  }
+
 }
