@@ -1,4 +1,4 @@
-/* site.js loader — 2026-08-21 v91 */
+/* site.js loader — 2026-08-21 v92 */
 (function(){
   function load(src, id, done){
     if (document.getElementById(id)) { if (done) done(); return; }
@@ -131,7 +131,7 @@
     if (document.body.classList.contains('journal-page') || path === '/journal.html') injectJournal();
   }
 
-  load('/js/site-core-v90.js?v=91', 'site-core-v90', function(){
-    load('/js/current-location-nav.js?v=20260821-8', 'current-location-nav', installCoreEssayEntrances);
+  load('/js/site-core-v90.js?v=92', 'site-core-v90', function(){
+    load('/js/current-location-nav.js?v=20260821-9', 'current-location-nav', installCoreEssayEntrances);
   });
 })();
