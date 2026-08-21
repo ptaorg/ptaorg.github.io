@@ -1,4 +1,4 @@
-/* Parent journey current-location navigation — 2026-08-21 */
+/* Parent journey current-location navigation — 2026-08-21 v4 */
 .current-location-breadcrumb{max-width:1180px;margin:14px auto 8px;padding:0 24px;font-family:"Noto Sans JP",sans-serif;font-size:.78rem;line-height:1.7;color:#667085}
 .current-location-breadcrumb a{color:#36506b;text-decoration:none}
 .current-location-breadcrumb a:hover{text-decoration:underline}
@@ -19,12 +19,17 @@
 .current-location-list a:hover{color:#142c47;background:#f6f8fa}
 .current-location-list .is-current a{color:#122b47;font-weight:800;border-left-color:#274e75;background:#f3f6f9}
 .current-location-list .is-current a::before{content:"▶";color:#274e75;font-size:.68rem;top:.61rem}
-@media (min-width:1400px){
-  .current-location-compact{display:none}
-  .current-location-sidebar{display:block;position:fixed;z-index:140;left:16px;top:112px;width:154px;padding:.75rem .6rem .7rem;background:rgba(255,255,255,.96);border-top:2px solid #1f4267;border-bottom:1px solid #d8dee7;box-shadow:0 4px 18px rgba(20,35,50,.06);font-family:"Noto Sans JP",sans-serif}
-  .current-location-title{padding:.1rem .45rem .55rem;font-size:.78rem;font-weight:900;letter-spacing:.04em;color:#152f4d;border-bottom:1px solid #dce2e9;margin-bottom:.25rem}
-  .current-location-sidebar .current-location-list a{font-size:.76rem;padding:.46rem .25rem .46rem 1.1rem}
-  .current-location-sidebar .current-location-list .is-current a::before{top:.58rem}
+@media (min-width:1024px){
+  .current-location-compact{display:none!important}
+  .current-location-sidebar{display:block!important;position:fixed;z-index:240;left:12px;top:112px;width:168px;padding:.8rem .65rem .75rem;background:#fff;border-top:3px solid #1f4267;border-right:1px solid #d8dee7;border-bottom:1px solid #d8dee7;box-shadow:0 5px 22px rgba(20,35,50,.10);font-family:"Noto Sans JP",sans-serif}
+  .current-location-title{padding:.1rem .45rem .6rem;font-size:.8rem;font-weight:900;letter-spacing:.04em;color:#152f4d;border-bottom:1px solid #dce2e9;margin-bottom:.25rem}
+  .current-location-sidebar .current-location-list a{font-size:.78rem;padding:.5rem .25rem .5rem 1.12rem}
+  .current-location-sidebar .current-location-list .is-current a::before{top:.61rem}
+  .current-location-enabled main{padding-left:180px}
+}
+@media (max-width:1023px){
+  .current-location-sidebar{display:none!important}
+  .current-location-compact{display:block}
 }
 @media (max-width:720px){
   .current-location-breadcrumb{margin:10px auto 6px;padding:0 16px;font-size:.73rem}
