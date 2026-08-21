@@ -1,0 +1,55 @@
+name: one-time-nav-layout-fix-v9
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  patch:
+    if: ${{ !contains(github.event.head_commit.message, '[nav-layout-v9]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fix breadcrumb size/color and sidebar overlap
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path('js/current-location-nav.js')
+          t = p.read_text(encoding='utf-8')
+          t = t.replace('/* Current-location navigation — 2026-08-21 v8 */','/* Current-location navigation — 2026-08-21 v9 */')
+          t = t.replace("'.loc-trail,.breadcrumb-bar,.breadcrumb,.breadcrumbs{font-size:clamp(1.8rem,2.45vw,2.45rem)!important;line-height:1.35!important}' +", "'.loc-trail,.breadcrumb-bar,.breadcrumb,.breadcrumbs{font-size:1.05rem!important;line-height:1.55!important;color:#174a7c!important}' +")
+          t = t.replace("'.loc-trail-inner{padding:18px 28px!important;gap:12px!important}' +", "'.loc-trail-inner{padding:10px 24px!important;gap:8px!important;color:#174a7c!important}' +")
+          t = t.replace("'.loc-trail .loc-current{max-width:none!important;white-space:normal!important;overflow:visible!important;text-overflow:clip!important;font-weight:800!important}' +", "'.loc-trail .loc-current{max-width:none!important;white-space:normal!important;overflow:visible!important;text-overflow:clip!important;font-weight:800!important;color:#174a7c!important}' +")
+          t = t.replace("'.loc-trail a{font-weight:800!important}' +", "'.loc-trail a,.breadcrumb-bar a,.breadcrumb a,.breadcrumbs a{font-weight:800!important;color:#174a7c!important}' +")
+          t = t.replace("'.current-location-sidebar{display:none;position:fixed;z-index:900;top:118px;width:178px", "'.current-location-sidebar{display:none;position:fixed;z-index:900;top:158px;width:178px")
+          t = t.replace("'@media(min-width:1100px){.current-location-sidebar{display:block;left:max(10px,calc(50vw - 680px))}.current-location-compact{display:none!important}}' +", "'@media(min-width:1100px){.current-location-sidebar{display:block;left:18px}.current-location-compact{display:none!important}body.current-location-enabled main{padding-left:210px!important;box-sizing:border-box!important}}' +")
+          t = t.replace("'@media(max-width:1099px){.current-location-sidebar{display:none!important}.loc-trail,.breadcrumb-bar,.breadcrumb,.breadcrumbs{font-size:clamp(1.3rem,4vw,1.9rem)!important}.loc-trail-inner{padding:14px 16px!important}}';", "'@media(max-width:1099px){.current-location-sidebar{display:none!important}.loc-trail,.breadcrumb-bar,.breadcrumb,.breadcrumbs{font-size:1rem!important;line-height:1.55!important}.loc-trail-inner{padding:9px 16px!important}}';")
+          t = t.replace("function init(){\n    if (document.querySelector('.current-location-sidebar')) return;", "function init(){\n    document.body.classList.add('current-location-enabled');\n    if (document.querySelector('.current-location-sidebar')) return;")
+          p.write_text(t, encoding='utf-8')
+
+          s = Path('js/site.js')
+          u = s.read_text(encoding='utf-8')
+          u = u.replace('/* site.js loader — 2026-08-21 v91 */','/* site.js loader — 2026-08-21 v92 */')
+          u = u.replace('/js/site-core-v90.js?v=91','/js/site-core-v90.js?v=92')
+          u = u.replace('/js/current-location-nav.js?v=20260821-8','/js/current-location-nav.js?v=20260821-9')
+          s.write_text(u, encoding='utf-8')
+
+          changed = 0
+          for h in Path('.').rglob('*.html'):
+              x = h.read_text(encoding='utf-8', errors='ignore')
+              y = x.replace('/js/site.js?v=91','/js/site.js?v=92').replace('js/site.js?v=91','js/site.js?v=92')
+              if y != x:
+                  h.write_text(y, encoding='utf-8')
+                  changed += 1
+          print('html updated', changed)
+          PY
+      - name: Commit and push
+        run: |
+          git config user.name "ptaorg"
+          git config user.email "az001530051919@gmail.com"
+          git add js/current-location-nav.js js/site.js '*.html' journal/*.html 2>/dev/null || true
+          git add -u
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "[nav-layout-v9] パンくずを青で適正サイズ化し左ナビの重なりを解消"
+          git push
