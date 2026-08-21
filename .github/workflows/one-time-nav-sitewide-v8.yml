@@ -1,0 +1,42 @@
+name: one-time-nav-sitewide-v8
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  patch:
+    if: ${{ !contains(github.event.head_commit.message, '[nav-sitewide-v8]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update all HTML loaders
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          changed=[]
+          for p in Path('.').rglob('*.html'):
+              t=p.read_text(encoding='utf-8',errors='ignore')
+              old=t
+              t=t.replace('/js/site.js?v=90','/js/site.js?v=91')
+              t=t.replace('js/site.js?v=90','js/site.js?v=91')
+              t=t.replace('/js/site.js?v=89','/js/site.js?v=91')
+              t=t.replace('js/site.js?v=89','js/site.js?v=91')
+              # remove previous direct current-location includes; site.js v91 now loads v8 globally
+              t=re.sub(r'\s*<script[^>]+src=["\']/js/current-location-nav\.js\?v=[^"\']+["\'][^>]*></script>','',t)
+              t=re.sub(r'\s*<link[^>]+href=["\']/css/shared/current-location-nav(?:-v5)?\.css\?v=[^"\']+["\'][^>]*>','',t)
+              if t!=old:
+                  p.write_text(t,encoding='utf-8')
+                  changed.append(str(p))
+          print('changed',len(changed))
+          for x in changed[:100]: print(x)
+          PY
+      - name: Commit and push
+        run: |
+          git config user.name "ptaorg"
+          git config user.email "az001530051919@gmail.com"
+          git add -A
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "[nav-sitewide-v8] パンくず拡大と左現在地ナビを全ページ共通化"
+          git push
