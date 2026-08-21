@@ -1,8 +1,8 @@
 /* Parent journey current-location navigation — 2026-08-21 v5 */
-.current-location-breadcrumb{max-width:1180px;margin:14px auto 8px;padding:0 24px;font-family:"Noto Sans JP",sans-serif;font-size:.78rem;line-height:1.7;color:#667085}
-.current-location-breadcrumb a{color:#36506b;text-decoration:none}
+.current-location-breadcrumb{max-width:1180px;margin:16px auto 10px;padding:0 24px;font-family:"Noto Sans JP",sans-serif;font-size:1rem;line-height:1.8;color:#5b6675}
+.current-location-breadcrumb a{color:#36506b;text-decoration:none;font-weight:600}
 .current-location-breadcrumb a:hover{text-decoration:underline}
-.current-location-breadcrumb [aria-current="page"]{color:#182230;font-weight:700}
+.current-location-breadcrumb [aria-current="page"]{color:#182230;font-weight:800}
 .current-location-sidebar{display:none}
 .current-location-compact{max-width:1180px;margin:0 auto 18px;padding:0 24px;font-family:"Noto Sans JP",sans-serif}
 .current-location-compact summary{display:flex;align-items:center;gap:.65rem;padding:.72rem .85rem;border-top:1px solid #d9dee7;border-bottom:1px solid #d9dee7;background:#fff;cursor:pointer;list-style:none}
@@ -28,4 +28,4 @@
   .current-location-enabled main{padding-left:158px}
 }
 @media (max-width:839px){.current-location-sidebar{display:none!important}.current-location-compact{display:block}}
-@media (max-width:720px){.current-location-breadcrumb{margin:10px auto 6px;padding:0 16px;font-size:.73rem}.current-location-compact{padding:0 16px;margin-bottom:14px;position:sticky;top:66px;z-index:120}.current-location-compact summary{background:rgba(255,255,255,.97);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}}
+@media (max-width:720px){.current-location-breadcrumb{margin:12px auto 8px;padding:0 16px;font-size:.9rem;line-height:1.75}.current-location-compact{padding:0 16px;margin-bottom:14px;position:sticky;top:66px;z-index:120}.current-location-compact summary{background:rgba(255,255,255,.97);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}}
