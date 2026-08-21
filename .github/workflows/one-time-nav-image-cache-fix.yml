@@ -1,0 +1,36 @@
+name: one-time-nav-image-cache-fix
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: ${{ !contains(github.event.head_commit.message, '[nav-v5]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch cache-busting URLs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          for name in ['guide-parent.html','membership.html','privacy.html','fee-collection.html']:
+              p=Path(name); t=p.read_text(encoding='utf-8')
+              t=t.replace('/css/shared/current-location-nav.css?v=20260821-3','/css/shared/current-location-nav-v5.css?v=1')
+              t=t.replace('/js/current-location-nav.js?v=20260821-3','/js/current-location-nav.js?v=20260821-5')
+              p.write_text(t,encoding='utf-8')
+          p=Path('journal/pta-shokumu-sennen-gimu.html'); t=p.read_text(encoding='utf-8')
+          t=t.replace('/assets/images/article35/jichisho-1964-scan-20260821.png"','/assets/images/article35/jichisho-1964-scan-20260821.png?v=2"')
+          p.write_text(t,encoding='utf-8')
+          PY
+      - name: Commit and push
+        run: |
+          git config user.name "ptaorg"
+          git config user.email "az001530051919@gmail.com"
+          git add guide-parent.html membership.html privacy.html fee-collection.html journal/pta-shokumu-sennen-gimu.html
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "[nav-v5] 左固定現在地ナビと旧自治省画像のキャッシュを更新"
+          git push
