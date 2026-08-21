@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>全国PTA一次資料｜PTA適正化推進委員会</title>
+  <meta name="description" content="全国から収集したPTA関係の一次資料を、原資料と解説を併せて閲覧するページです。">
+  <link rel="canonical" href="https://ptaorg.com/document.html">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/prose.css">
+  <link rel="stylesheet" href="/css/pages/document-viewer.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">本文へ移動</a>
+  <header class="document-site-header">
+    <div class="document-header-inner">
+      <a class="document-brand" href="/">PTA適正化推進委員会</a>
+      <nav aria-label="主要ナビゲーション">
+        <a href="/">ホーム</a>
+        <a href="/national-archive.html" aria-current="page">全国資料</a>
+        <a href="/documents.html">資料</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="document-main">
+    <nav class="document-breadcrumb" aria-label="パンくずリスト">
+      <a href="/">ホーム</a><span aria-hidden="true">／</span><a href="/national-archive.html">全国のPTA関係資料</a><span aria-hidden="true">／</span><span id="breadcrumbCurrent">資料</span>
+    </nav>
+
+    <div id="documentLoading" class="document-status" role="status">資料情報を読み込んでいます。</div>
+    <div id="documentError" class="document-error" hidden>
+      <h1>資料を表示できません</h1>
+      <p id="documentErrorMessage">指定された資料が資料台帳に見つかりませんでした。</p>
+      <p><a href="/national-archive.html">全国資料ページへ戻る</a></p>
+    </div>
+
+    <article id="documentArticle" hidden>
+      <header class="document-hero">
+        <p class="document-kicker">全国PTA一次資料</p>
+        <h1 id="documentTitle"></h1>
+        <p id="documentLocation" class="document-location"></p>
+        <p id="documentLead" class="document-lead"></p>
+      </header>
+
+      <section class="document-section" aria-labelledby="overviewTitle">
+        <p class="document-section-number">01</p>
+        <h2 id="overviewTitle">資料の概要</h2>
+        <p id="documentSummary"></p>
+        <dl id="documentOverview" class="document-facts"></dl>
+      </section>
+
+      <section class="document-section" aria-labelledby="sourceTitle">
+        <p class="document-section-number">02</p>
+        <h2 id="sourceTitle">原資料</h2>
+        <p>下の閲覧欄はGoogle Drive上の原本を表示しています。複数ページの資料は閲覧欄の中で上下にスクロールできます。表示できない場合や、印刷・保存を行う場合は「Google Driveで原資料を開く」を利用してください。</p>
+        <div class="document-viewer-wrap">
+          <iframe id="documentFrame" class="document-viewer" title="原資料PDF" loading="eager" allow="autoplay"></iframe>
+        </div>
+        <p class="document-source-actions"><a id="documentDriveLink" href="#" target="_blank" rel="noopener">Google Driveで原資料を開く</a></p>
+      </section>
+
+      <section class="document-section" aria-labelledby="findingsTitle">
+        <p class="document-section-number">03</p>
+        <h2 id="findingsTitle">この資料で確認できる事項</h2>
+        <ul id="documentFindings" class="document-findings"></ul>
+        <p class="document-reading-note">上記は資料本文の確認結果を要約したものです。評価や結論を示すものではなく、正確な文言と前後関係は原資料で確認してください。</p>
+      </section>
+
+      <section class="document-section" aria-labelledby="issuesTitle">
+        <p class="document-section-number">04</p>
+        <h2 id="issuesTitle">関連する論点</h2>
+        <p id="documentIssues"></p>
+      </section>
+
+      <section class="document-section" aria-labelledby="provenanceTitle">
+        <p class="document-section-number">05</p>
+        <h2 id="provenanceTitle">出典・取得情報</h2>
+        <dl id="documentProvenance" class="document-facts"></dl>
+      </section>
+    </article>
+  </main>
+
+  <footer class="document-site-footer">
+    <p>PTA適正化推進委員会</p>
+    <p><a href="/national-archive.html">全国のPTA関係資料へ戻る</a></p>
+  </footer>
+  <noscript><p class="document-noscript">この資料ページの表示にはJavaScriptが必要です。全国資料ページからGoogle Drive上の原資料を開いてください。</p></noscript>
+  <script src="/js/document-viewer.js" defer></script>
+</body>
+</html>
