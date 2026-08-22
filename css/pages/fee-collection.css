@@ -657,6 +657,7 @@ body.fee-editorial .fee-faq-list details p {
 
   body.fee-editorial .fee-comparison td:nth-child(2)::before,
   body.fee-editorial .fee-comparison td:nth-child(3)::before,
+  body.fee-editorial .fee-comparison td[data-label]::before,
   body.fee-editorial .fee-check-table td:nth-child(2)::before,
   body.fee-editorial .fee-check-table td:nth-child(3)::before {
     display: block;
@@ -674,6 +675,10 @@ body.fee-editorial .fee-faq-list details p {
 
   body.fee-editorial .fee-comparison td:nth-child(3)::before {
     content: "PTA会費";
+  }
+
+  body.fee-editorial .fee-comparison td[data-label]::before {
+    content: attr(data-label);
   }
 
   body.fee-editorial .fee-check-table td:nth-child(2)::before {
