@@ -1,4 +1,4 @@
-/* site.js loader — 2026-08-21 v92 */
+/* site.js loader — 2026-08-23 v93 */
 (function(){
   function load(src, id, done){
     if (document.getElementById(id)) { if (done) done(); return; }
@@ -123,12 +123,33 @@
     if (header) header.insertAdjacentElement('afterend', section);
   }
 
+  function injectFrameworkBoundaryClarification(){
+    if (document.getElementById('fw-boundary-internal-use')) return;
+    var section = document.getElementById('fw-borders');
+    if (!section) return;
+    var wrap = section.querySelector('.wrap-narrow');
+    var steps = wrap && wrap.querySelector('ol.thesis-steps');
+    if (!wrap || !steps) return;
+
+    var block = document.createElement('div');
+    block.id = 'fw-boundary-internal-use';
+    block.className = 'thesis-callout';
+    block.innerHTML =
+      '<strong>境界線は「学校からPTAへ情報を渡したか」だけでは決まりません。</strong>' +
+      '<p>学校が名簿ファイルをPTAへ提供していなくても、学校が保有する情報をPTA内部事務のために検索・照合・抽出・連絡・徴収へ使えば、学校自身による「利用」という境界問題が生じます。個人情報保護法69条は、利用目的以外の目的のために保有個人情報を「自ら利用し、又は提供」することを原則として制限しています。</p>' +
+      '<p><strong>典型例：</strong>学校在籍者とPTA入会届の提出者を照合して未提出者を割り出す、学年・学級・学籍番号等を使って担任が提出を督促する、学校保有情報からPTA会員・非会員を判別する、学校口座情報を使ってPTA会費の対象登録・引落し・未納管理を行う、登校班・地区班・旗振り当番をPTA目的で編成する、学校連絡アプリでPTA配信対象者を抽出する、といった処理です。</p>' +
+      '<p>さらに、教職員が職務上知り得た家庭・児童・保護者情報をPTA内部事務へ用いる場面では、学校組織としての61条・69条の整理とは別に、個人情報保護法67条の従事者義務も確認する必要があります。</p>' +
+      '<p><strong>確認の中心は、「誰に渡したか」だけでなく「誰の事務のために、誰の情報・システム・職員を使ったか」です。</strong> この視点で見ると、入会、名簿、会費、会計、当番、連絡、教職員労務は、すべて同じ「学校とPTAの境界」の問題としてつながります。具体例と67条・懲戒等の射程は<a href="/ppc-school-pta-personal-data.html#internal-use-examples">PPC資料17ページ詳細解説</a>で整理しています。</p>';
+    steps.insertAdjacentElement('beforebegin', block);
+  }
+
   function installCoreEssayEntrances(){
     addCoreEssayStyles();
     addGlobalNav();
     var path = (window.location.pathname || '').replace(/\/+$/,'');
     if (document.body.classList.contains('home-page') || path === '' || path === '/index.html') injectHome();
     if (document.body.classList.contains('journal-page') || path === '/journal.html') injectJournal();
+    if (path === '/framework.html' || document.getElementById('fw-borders')) injectFrameworkBoundaryClarification();
   }
 
   load('/js/site-core-v90.js?v=92', 'site-core-v90', function(){
