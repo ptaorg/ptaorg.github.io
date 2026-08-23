@@ -41,7 +41,7 @@
       "name": "資料・文例索引",
       "description": "PTA適正化に関する一次資料、法的根拠、提出用ひな形、回答データベース、行政通知への入口を一覧で案内します。旧documents.html?id=形式のURLにも対応します。",
       "inLanguage": "ja",
-      "dateModified": "2026-08-09",
+      "dateModified": "2026-08-23",
       "isPartOf": {
         "@type": "WebSite",
         "@id": "https://ptaorg.com/#website",
@@ -82,7 +82,7 @@
 <meta property="og:description" content="PTA適正化に関する一次資料、法的根拠、提出用ひな形、回答データベース、行政通知への入口を一覧で案内します。旧documents.html?id=形式のURLにも対応します。">
 <meta property="og:url" content="https://ptaorg.com/documents.html">
 </head>
-<body data-content-mode="prose" data-reviewed="2026-08-09" class="documents-editorial">
+<body data-content-mode="prose" data-reviewed="2026-08-23" class="documents-editorial">
 <div aria-label="活動支援のお願い" class="support-strip" role="complementary">
 <div class="support-strip-inner">
 <span class="support-strip-label">応援のお願い</span>
@@ -117,7 +117,6 @@
 </section>
 <main class="doc-index">
 <div aria-live="polite" class="legacy-note" id="legacyNote">
-<p><strong>旧資料ID：</strong><code id="legacyId"></code></p>
 <p id="legacyText">関連する資料ページへ移動できます。</p>
 <a href="national-archive.html" id="legacyLink">現在の掲載先を開く</a>
 </div>
@@ -143,10 +142,10 @@
 <a class="doc-item" href="guideline.html#tpl-board-inquiry"><strong>学校・教育委員会への確認照会書</strong><span>入会記録、学校保有情報、会費徴収、教職員関与、施設利用について、保有文書と事実関係を確認する書式。</span></a>
 <a class="doc-item" href="guideline.html#tpl-fee-separation"><strong>PTA会費徴収分離申入書</strong><span>学校徴収金とPTA会費の通知、口座、引落し、未納管理を分けるための申入書。</span></a>
 <a class="doc-item" href="guideline.html#template-pack"><strong>入会・個人情報関係の書式</strong><span>入会申込、利用目的の説明、本人同意等を記録する書式を確認。</span></a>
+<a class="doc-item gold" href="guideline.html"><strong>PTA運営適正化ガイドライン（現行版）</strong><span>入会、個人情報、会費、教職員関与、施設利用の確認事項と書式をまとめた、2026年8月23日現在の実務資料。</span></a>
 <a class="doc-item gold" href="guide-board.html#board-jp-guideline"><strong>教育委員会・学校管理職向け分離資料</strong><span>学校とPTAの関与範囲を確認する行政向け本文、通知ひな形、学校別実態調査票。</span></a>
-<a class="doc-item" href="PTA運営適正化ガイドブック_第4版_改訂本文.html"><strong>PTA運営適正化ガイドブック 第4版</strong><span>保護者、役員、学校向けの総合ガイドブック本文。</span></a>
-<a class="doc-item" href="PTA運営適正化ガイドブック_第4版_改訂版.pdf"><strong>PTA運営適正化ガイドブック 第4版 PDF</strong><span>印刷、配布、保存用のPDF版。</span></a>
-<a class="doc-item" href="guideline.html"><strong>PTA運営適正化ガイドライン</strong><span>入会、個人情報、会費、教職員関与、施設利用の確認事項と書式をまとめた実務資料。</span></a>
+<a class="doc-item" href="PTA運営適正化ガイドブック_第4版_改訂本文.html"><strong>旧版・保存資料：PTA運営適正化ガイドブック 第4版</strong><span>旧版本文です。2026年8月23日以後の現行見解ではありません。引用・実務利用には現行ガイドラインをご利用ください。</span></a>
+<a class="doc-item" href="PTA運営適正化ガイドブック_第4版_改訂版.pdf"><strong>旧版・保存資料：ガイドブック 第4版 PDF</strong><span>旧版であることと現行掲載先を案内する保存用PDFです。</span></a>
 <a class="doc-item" href="audit/index.html"><strong>PTA運営チェック</strong><span>現在の運営状況を設問に沿って点検するチェックツール。</span></a>
 </div>
 </section>
@@ -258,19 +257,22 @@ const destinations = {
   'mext-toshin2019': ['guide-board.html#key-materials', '文部科学省答申・関連資料は、教育委員会向けガイドの根拠資料欄に整理しています。'],
   'atsugi-pta-notice': ['guide-board.html#municipal-voices', '厚木市通知は、教育委員会向けガイドの自治体動向欄に整理しています。'],
   'guidebook-board': ['guide-board.html#board-ed-resource-set', '教育委員会向け資料セットは、教育委員会向けガイド内に整理しています。'],
-  'guidebook-pta': ['PTA運営適正化ガイドブック_第4版_改訂本文.html', 'PTA運営適正化ガイドブック本文へ移動できます。'],
+  'guidebook-pta': ['guideline.html', '現行のPTA運営適正化ガイドラインへ移動できます。'],
   'pta-voluntary-kamino': ['guide-parent.html#parent-selfcheck', 'PTA任意加入に関する資料確認は、保護者向けガイドのセルフチェック欄に整理しています。']
 };
 const params = new URLSearchParams(location.search);
 const id = params.get('id');
 if (id) {
-  const target = destinations[id] || ['national-archive.html', '指定された旧資料IDに完全対応する個別ページが見つからないため、全国資料館へ案内します。'];
-  document.getElementById('legacyId').textContent = id;
+  const target = destinations[id] || ['national-archive.html', '指定された移行前資料の照合番号に完全対応する個別ページが見つからないため、全国資料館へ案内します。'];
+  const idLine = document.createElement('p');
+  idLine.innerHTML = '<strong>移行前資料の照合番号：</strong><code></code>';
+  idLine.querySelector('code').textContent = id;
+  document.getElementById('legacyNote').insertBefore(idLine, document.getElementById('legacyText'));
   document.getElementById('legacyText').textContent = target[1];
   document.getElementById('legacyLink').href = target[0];
   document.getElementById('legacyNote').classList.add('is-active');
 }
 </script>
-<script defer="" src="/js/site.js?v=92"></script>
+<script defer="" src="/js/site.js?v=93"></script>
 </body>
 </html>

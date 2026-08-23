@@ -4,7 +4,7 @@ const { ROOT, writeFileIfChanged } = require("./archive-utils");
 
 const args = process.argv.slice(2);
 const DRY_RUN = args.includes("--dry-run");
-const TARGET_VERSION = args.find((arg) => /^\d+$/.test(arg)) || "90";
+const TARGET_VERSION = args.find((arg) => /^\d+$/.test(arg)) || "93";
 const SKIP_DIRS = new Set([".git", ".claude", "assets", "css", "data", "js", "scripts", "tools", "node_modules", "ホーム"]);
 const SCRIPT_RE = /(<script\b[^>]*\bsrc=["'])([^"']*js\/site\.js)(?:\?v=\d+)?(["'][^>]*><\/script>)/gi;
 

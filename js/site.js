@@ -152,7 +152,7 @@
     if (path === '/framework.html' || document.getElementById('fw-borders')) injectFrameworkBoundaryClarification();
   }
 
-  load('/js/site-core-v90.js?v=92', 'site-core-v90', function(){
-    load('/js/current-location-nav.js?v=20260821-9', 'current-location-nav', installCoreEssayEntrances);
+  load('/js/site-core-v90.js?v=93', 'site-core-v90', function(){
+    load('/js/current-location-nav.js?v=20260823-10', 'current-location-nav', installCoreEssayEntrances);
   });
 })();
