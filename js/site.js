@@ -55,10 +55,10 @@
       if (!nav.querySelector('[data-board-submit-nav]')) {
         var submit = document.createElement('a');
         submit.className = 'nav-link board-submit-nav';
-        submit.href = '/school-pta-separation.html#submit-to-board';
+        submit.href = '/submit-to-board.html';
         submit.textContent = '教育委員会へ提出';
-        submit.title = '各地でPTA適正化に取り組む方向け：教育委員会・学校管理職への提出用資料';
-        submit.setAttribute('aria-label','教育委員会への提出用資料');
+        submit.title = '各地でPTA適正化に取り組む方向け：教育委員会・学校管理職への提出資料と手順';
+        submit.setAttribute('aria-label','教育委員会への提出資料と手順');
         submit.setAttribute('data-board-submit-nav','');
         if (history && history.parentNode === nav) history.insertAdjacentElement('afterend', submit);
         else nav.insertBefore(submit, nav.firstChild);
@@ -84,7 +84,7 @@
       if (!group.querySelector('[data-board-submit-mobile]')) {
         var submit = document.createElement('a');
         submit.className = 'mobile-link board-submit-nav-mobile';
-        submit.href = '/school-pta-separation.html#submit-to-board';
+        submit.href = '/submit-to-board.html';
         submit.textContent = '教育委員会へ提出する資料';
         submit.setAttribute('data-board-submit-mobile','');
         if (history) history.insertAdjacentElement('afterend', submit);
