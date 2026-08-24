@@ -1,4 +1,4 @@
-/* site.js loader — 2026-08-23 v93 */
+/* site.js loader — 2026-08-25 v94 */
 (function(){
   function load(src, id, done){
     if (document.getElementById(id)) { if (done) done(); return; }
@@ -16,6 +16,9 @@
     style.id = 'core-essay-entrance-style';
     style.textContent =
       '.core-history-nav{font-weight:900!important;color:#8b1e2d!important;border-bottom-color:#8b1e2d!important}' +
+      '.board-submit-nav{font-weight:900!important;color:#5f4707!important;background:#fff8df!important;border:1px solid #d7b95a!important;border-radius:4px;padding:7px 10px!important;white-space:nowrap}' +
+      '.board-submit-nav:hover{background:#fff1bd!important;color:#4f3b08!important}' +
+      '.board-submit-nav-mobile{font-weight:900!important;color:#7a5908!important}' +
       '.core-essay-entrance{max-width:1100px;margin:74px auto;padding:38px 34px 34px;border-top:3px solid #8b1e2d;border-bottom:1px solid #cfd6dc;background:#fff;color:#18212b}' +
       '.core-essay-entrance .core-kicker{margin:0 0 10px;font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;font-weight:900;color:#8b1e2d}' +
       '.core-essay-entrance h2{margin:0 0 20px!important;padding:0!important;border:0!important;font-family:"Noto Serif JP",serif!important;font-size:clamp(1.65rem,4vw,2.55rem)!important;line-height:1.45!important;color:#18212b!important}' +
@@ -31,34 +34,62 @@
       '.core-journal-more{margin:24px 0 0;font-size:.9rem}' +
       '.core-journal-more a{color:#354f69;font-weight:700}' +
       '.core-essay-entrance.core-essay-journal{margin-top:34px;margin-bottom:52px}' +
-      '@media(max-width:760px){.core-essay-entrance{margin:48px 16px;padding:28px 18px 26px}.core-essay-entrance .core-thesis{padding-left:15px}.core-history-nav{font-weight:800!important}}';
+      '@media(max-width:760px){.core-essay-entrance{margin:48px 16px;padding:28px 18px 26px}.core-essay-entrance .core-thesis{padding-left:15px}.core-history-nav{font-weight:800!important}.board-submit-nav{padding:6px 8px!important}}';
     document.head.appendChild(style);
   }
 
   function addGlobalNav(){
     document.querySelectorAll('.desktop-nav').forEach(function(nav){
-      if (nav.querySelector('[data-core-history-nav]')) return;
-      var a = document.createElement('a');
-      a.className = 'nav-link core-history-nav';
-      a.href = '/pta-history.html';
-      a.textContent = 'PTAの成り立ち';
-      a.setAttribute('data-core-history-nav','');
-      var ppc = nav.querySelector('a[href="/ppc-points.html"]');
-      if (ppc && ppc.parentNode === nav) ppc.insertAdjacentElement('afterend', a);
-      else nav.insertBefore(a, nav.firstChild);
+      var history = nav.querySelector('[data-core-history-nav]');
+      if (!history) {
+        history = document.createElement('a');
+        history.className = 'nav-link core-history-nav';
+        history.href = '/pta-history.html';
+        history.textContent = 'PTAの成り立ち';
+        history.setAttribute('data-core-history-nav','');
+        var ppc = nav.querySelector('a[href="/ppc-points.html"]');
+        if (ppc && ppc.parentNode === nav) ppc.insertAdjacentElement('afterend', history);
+        else nav.insertBefore(history, nav.firstChild);
+      }
+
+      if (!nav.querySelector('[data-board-submit-nav]')) {
+        var submit = document.createElement('a');
+        submit.className = 'nav-link board-submit-nav';
+        submit.href = '/school-pta-separation.html#submit-to-board';
+        submit.textContent = '教育委員会へ提出';
+        submit.title = '各地でPTA適正化に取り組む方向け：教育委員会・学校管理職への提出用資料';
+        submit.setAttribute('aria-label','教育委員会への提出用資料');
+        submit.setAttribute('data-board-submit-nav','');
+        if (history && history.parentNode === nav) history.insertAdjacentElement('afterend', submit);
+        else nav.insertBefore(submit, nav.firstChild);
+      }
     });
 
     document.querySelectorAll('.mobile-menu-group').forEach(function(group){
       var label = group.querySelector('.mobile-menu-label');
-      if (!label || label.textContent.trim() !== '最重要' || group.querySelector('[data-core-history-mobile]')) return;
-      var a = document.createElement('a');
-      a.className = 'mobile-link';
-      a.href = '/pta-history.html';
-      a.textContent = 'PTAの成立とこれから';
-      a.setAttribute('data-core-history-mobile','');
-      var ppc = group.querySelector('a[href="/ppc-points.html"]');
-      if (ppc) ppc.insertAdjacentElement('afterend', a);
-      else group.appendChild(a);
+      if (!label || label.textContent.trim() !== '最重要') return;
+
+      var history = group.querySelector('[data-core-history-mobile]');
+      if (!history) {
+        history = document.createElement('a');
+        history.className = 'mobile-link';
+        history.href = '/pta-history.html';
+        history.textContent = 'PTAの成立とこれから';
+        history.setAttribute('data-core-history-mobile','');
+        var ppc = group.querySelector('a[href="/ppc-points.html"]');
+        if (ppc) ppc.insertAdjacentElement('afterend', history);
+        else group.appendChild(history);
+      }
+
+      if (!group.querySelector('[data-board-submit-mobile]')) {
+        var submit = document.createElement('a');
+        submit.className = 'mobile-link board-submit-nav-mobile';
+        submit.href = '/school-pta-separation.html#submit-to-board';
+        submit.textContent = '教育委員会へ提出する資料';
+        submit.setAttribute('data-board-submit-mobile','');
+        if (history) history.insertAdjacentElement('afterend', submit);
+        else group.appendChild(submit);
+      }
     });
   }
 
