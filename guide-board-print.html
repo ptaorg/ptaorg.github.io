@@ -31,12 +31,14 @@ body{background:#fff;color:#172033}
 #print-root .support-strip,#print-root .site-header,#print-root .footer{display:none!important}
 #print-root section{scroll-margin:0}
 .source-note{margin-top:28px;padding-top:14px;border-top:1px solid #cbd5e1;color:#64748b;font-size:.8rem;line-height:1.7}
+.submission-help{margin:0 0 24px;padding:18px 20px;border:1px solid #d6c27a;border-left:6px solid #a77b13;background:#fffaf0;color:#3f4d5f}
+.submission-help strong{display:block;color:#624a0d;margin-bottom:5px}.submission-help p{margin:.35em 0;line-height:1.8;font-size:.9rem}
 @media(max-width:720px){.print-shell{width:min(calc(100% - 28px),1000px)}.print-toolbar{align-items:flex-start;flex-direction:column}.print-actions{width:100%}.print-actions button,.print-actions a{flex:1;text-align:center}}
 @media print{
   @page{size:A4;margin:15mm 14mm 17mm}
   body{font-family:"Noto Serif JP","Yu Mincho",serif!important;background:#fff!important;color:#111!important;font-size:10pt!important}
   .print-shell{width:100%!important;max-width:none!important;margin:0!important;padding:0!important}
-  .print-toolbar{display:none!important}
+  .print-toolbar,.submission-help{display:none!important}
   .print-title{margin:0 0 7mm;padding:0 0 4mm;border-bottom:2px solid #333}.print-title h1{font-size:19pt;color:#111}.print-title p,.print-title small{font-size:8pt;color:#444}
   #print-root,#print-root *{box-shadow:none!important;text-shadow:none!important}
   #print-root main,#print-root section,#print-root .board-guide-section{background:#fff!important;color:#111!important}
@@ -63,14 +65,15 @@ body{background:#fff;color:#172033}
 <body class="guide-board-direct-fixed guide-board-editorial guide-board-text-first">
 <div class="print-shell">
   <div class="print-toolbar">
-    <div><strong>教育委員会・学校管理職向けガイド　印刷版</strong><span>現在の guide-board.html 本文を読み込み、折り畳みを展開し、本文・図・一次資料を原則そのまま印刷します。</span></div>
-    <div class="print-actions"><button id="printBtn" type="button" disabled>印刷・PDF保存</button><a href="/school-pta-separation.html">公私分離の総論</a><a href="/guide-board.html">通常ページへ戻る</a></div>
+    <div><strong>教育委員会への提出用｜学校とPTAの境界ガイド</strong><span>各地でPTA適正化に取り組む方が、教育委員会・学校管理職へ提出できるよう、guide-board.html の本文・図・一次資料を印刷用に展開します。</span></div>
+    <div class="print-actions"><a href="/submit-to-board.html">提出方法・資料セット</a><button id="printBtn" type="button" disabled>提出用に印刷・PDF保存</button><a href="/school-pta-separation.html#submit-to-board">「公私分離」の総論</a><a href="/guide-board.html">通常ページへ戻る</a></div>
   </div>
   <header class="print-title">
-    <small>PTA適正化推進委員会｜行政提出・印刷用</small>
+    <small>PTA適正化推進委員会｜教育委員会・学校管理職への提出・説明用</small>
     <h1>学校とPTAの境界を<br>学校管理の問題として点検する</h1>
     <p>原文： https://ptaorg.com/guide-board.html　｜　印刷時はサイト共通ヘッダー・検索・ナビゲーション等の画面操作要素のみ除外し、本文・図・根拠資料は原則保持します。</p>
   </header>
+  <div class="submission-help"><strong>各地でPTA適正化に取り組む方へ</strong><p>地域の開示資料・学校文書と併せて教育委員会へ提出することを想定した印刷ページです。PTA内部への介入要求ではなく、学校が関与している部分について、学校管理・服務・個人情報・会計上の確認を求める資料としてお使いください。</p><p>併せて「正しいPTA運営とは何か――学校とPTAの公私分離」を提出すると、個別問題がなぜ同じ構造に行き着くのかを説明できます。<br><a href="/submit-to-board.html">提出資料の組み合わせ方と3ステップはこちら</a></p></div>
   <div id="status">本文を読み込んでいます…</div>
   <div id="print-root" aria-live="polite"></div>
   <p class="source-note">この印刷ページは <code>/guide-board.html</code> の本文を同一サイト内から読み込んで表示します。原文が更新された場合、印刷版にもその時点の本文が反映されます。印刷専用ページ側では、サイト共通ヘッダー等の操作要素だけを除外し、提出資料として意味を持つ本文・図・一次資料・参考リンクは原則として残します。</p>
