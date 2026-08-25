@@ -33,30 +33,67 @@
 }
 </script>
 <style>
-:root{--navy:#17345c;--ink:#172033;--text:#334155;--muted:#64748b;--line:#d7e0ea;--gold:#a77b13;--goldsoft:#fff8df;--blue:#eef6fb;--green:#eff8f2}
+:root{--navy:#17345c;--navy2:#0f2948;--ink:#172033;--text:#334155;--muted:#64748b;--line:#d7e0ea;--gold:#a77b13;--goldsoft:#fff8df;--blue:#eef6fb;--green:#eff8f2;--greenline:#2f7a4e}
 *{box-sizing:border-box}
-body{margin:0;background:#fff;color:var(--text);font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;line-height:1.9}
-.submit-header{border-bottom:1px solid var(--line);background:#fff}
-.submit-nav{width:min(calc(100% - 40px),1080px);min-height:70px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:22px}
-.submit-brand{display:flex;align-items:center;gap:10px;color:var(--navy);font-weight:900;text-decoration:none}.submit-brand img{width:42px;height:42px;object-fit:contain}
-.submit-links{display:flex;gap:16px;align-items:center;flex-wrap:wrap}.submit-links a{font-size:.88rem;font-weight:800;color:var(--navy);text-decoration:none}.submit-links .current{padding:8px 12px;border:1px solid #d7b95a;background:var(--goldsoft);color:#5f4707;border-radius:4px}
-.shell{width:min(calc(100% - 44px),960px);margin:auto}.hero{padding:68px 0 46px;border-bottom:1px solid var(--line)}.kicker{margin:0 0 12px;color:#7a5908;font-size:.78rem;font-weight:900;letter-spacing:.08em}.hero h1{margin:0;color:var(--ink);font-family:"Noto Serif JP","Yu Mincho",serif;font-size:clamp(2rem,5vw,3.2rem);line-height:1.35}.hero .sub{margin:18px 0 0;padding-left:18px;border-left:5px solid var(--gold);color:var(--navy);font-size:clamp(1.05rem,2.1vw,1.3rem);font-weight:800;line-height:1.75}.lead{padding:36px 0 22px}.lead p{font-size:1.03rem;line-height:2;margin:0 0 1.1em}.lead strong{color:var(--ink)}
+body.submit-page{margin:0!important;background:#fff!important;color:var(--text)!important;font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",Meiryo,sans-serif!important;line-height:1.9!important}
+body.submit-page>header.submit-header{display:block!important;position:relative!important;inset:auto!important;z-index:20!important;margin:0!important;padding:0!important;background:#fff!important;border:0!important;border-bottom:4px solid var(--navy)!important;box-shadow:0 2px 12px rgba(15,41,72,.08)!important}
+body.submit-page .submit-nav{width:min(calc(100% - 40px),1120px)!important;min-height:82px!important;margin:0 auto!important;padding:12px 0!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:22px!important}
+body.submit-page .submit-brand{display:flex!important;align-items:center!important;gap:10px!important;color:var(--navy)!important;font-weight:900!important;text-decoration:none!important;white-space:nowrap!important}
+body.submit-page .submit-brand img{display:block!important;width:44px!important;height:44px!important;object-fit:contain!important}
+body.submit-page .submit-links{display:flex!important;gap:8px!important;align-items:center!important;justify-content:flex-end!important;flex-wrap:wrap!important;margin:0!important;padding:0!important}
+body.submit-page .submit-links a{display:inline-flex!important;align-items:center!important;min-height:42px!important;margin:0!important;padding:8px 12px!important;border:1px solid transparent!important;border-radius:5px!important;color:var(--navy)!important;background:#fff!important;font-size:.84rem!important;font-weight:900!important;line-height:1.35!important;text-decoration:none!important;box-shadow:none!important}
+body.submit-page .submit-links a.nav-route{border-color:#9eb5cb!important;background:#f5f9fc!important}
+body.submit-page .submit-links a.nav-route:nth-of-type(3){border-color:#9bc7a8!important;background:#f1f9f4!important;color:#225d3b!important}
+body.submit-page .submit-links a.current{border-color:#d7b95a!important;background:var(--goldsoft)!important;color:#5f4707!important}
+body.submit-page .submit-links a:hover{transform:none!important;background:#eef4f8!important}
+.shell{width:min(calc(100% - 44px),960px);margin:auto}
+.hero{padding:62px 0 38px;border-bottom:1px solid var(--line)}
+.kicker{margin:0 0 12px;color:#7a5908;font-size:.78rem;font-weight:900;letter-spacing:.08em}
+.hero h1{margin:0;color:var(--ink);font-family:"Noto Serif JP","Yu Mincho",serif;font-size:clamp(2rem,5vw,3.2rem);line-height:1.35}
+.hero .sub{margin:18px 0 0;padding-left:18px;border-left:5px solid var(--gold);color:var(--navy);font-size:clamp(1.05rem,2.1vw,1.3rem);font-weight:800;line-height:1.75}
+.route-panel{margin:30px 0 42px;padding:26px;border:2px solid #b7c7d7;border-top:7px solid var(--navy);background:#f8fbfd}
+.route-panel-head{margin-bottom:18px}
+.route-panel-head small{display:block;margin-bottom:4px;color:#7a5908;font-weight:900;letter-spacing:.08em}
+.route-panel-head h2{margin:0 0 8px!important;padding:0!important;border:0!important;color:var(--ink)!important;font-family:"Noto Serif JP","Yu Mincho",serif!important;font-size:clamp(1.45rem,3vw,2rem)!important;line-height:1.45!important}
+.route-panel-head p{margin:0;color:#475569;font-size:.96rem;line-height:1.8}
+.route-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.route-card{display:flex;flex-direction:column;min-height:270px;padding:22px;border:2px solid #97aec5;background:#fff;text-decoration:none!important;color:var(--text)!important;box-shadow:0 7px 18px rgba(23,52,92,.08)}
+.route-card.route-1{border-top:8px solid var(--navy)}
+.route-card.route-2{border-color:#9bc7a8;border-top:8px solid var(--greenline)}
+.route-no{display:inline-block;width:max-content;margin-bottom:10px;padding:3px 8px;border-radius:3px;background:var(--navy);color:#fff;font-size:.76rem;font-weight:900;letter-spacing:.05em}
+.route-2 .route-no{background:var(--greenline)}
+.route-card h3{margin:0 0 10px!important;color:var(--ink)!important;font-size:1.3rem!important;line-height:1.5!important}
+.route-card .route-purpose{margin:0 0 12px;font-weight:900;color:var(--navy);line-height:1.7}
+.route-2 .route-purpose{color:#225d3b}
+.route-card p{margin:0 0 16px!important;font-size:.92rem!important;line-height:1.8!important;color:#475569!important}
+.route-cta{margin-top:auto;padding-top:14px;border-top:1px solid #d9e2ea;color:var(--navy);font-weight:900;font-size:.95rem}
+.route-2 .route-cta{color:#225d3b}
+.route-subnav{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:18px;font-size:.86rem}
+.route-subnav a{color:var(--navy);font-weight:800;text-underline-offset:3px}
+.lead{padding:12px 0 26px}.lead p{font-size:1.03rem;line-height:2;margin:0 0 1.1em}.lead strong{color:var(--ink)}
 .package{margin:24px 0 48px;padding:24px 26px;border:1px solid #d6c27a;border-top:5px solid var(--gold);background:#fffaf0}.package h2{margin:0 0 10px;color:var(--ink);font-family:"Noto Serif JP","Yu Mincho",serif;font-size:1.5rem}.package p{margin:.7em 0}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 4px}.actions a{display:inline-block;padding:11px 15px;border:1px solid #b8c7d6;border-radius:4px;background:#fff;color:var(--navy);font-size:.9rem;font-weight:900;text-decoration:none}.actions a.primary{background:var(--navy);border-color:var(--navy);color:#fff}
-.section{padding:46px 0;border-top:1px solid var(--line)}.section h2{margin:0 0 20px;padding:4px 0 8px 16px;border-left:5px solid var(--navy);border-bottom:1px solid var(--line);color:var(--ink);font-family:"Noto Serif JP","Yu Mincho",serif;font-size:clamp(1.35rem,3vw,1.9rem)}.section h3{margin:28px 0 10px;color:var(--navy);font-size:1.08rem}.section p{margin:1em 0}.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:26px 0}.step{padding:20px;border:1px solid var(--line);background:#fff}.step small{display:block;color:#7a5908;font-weight:900;letter-spacing:.05em;margin-bottom:5px}.step strong{display:block;color:var(--ink);font-size:1.02rem;margin-bottom:8px}.step p{margin:0;font-size:.92rem;line-height:1.8}.point{margin:24px 0;padding:18px 20px;border-left:5px solid var(--gold);background:var(--goldsoft)}.point strong{color:#5f4707}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}.box{padding:20px;border:1px solid var(--line);background:#fff}.box.good{border-top:5px solid #2f7a4e;background:var(--green)}.box.bad{border-top:5px solid #9b4d4d;background:#fff5f5}.box h3{margin:0 0 10px}.box ul{margin:0;padding-left:1.25em}.box li{margin:.45em 0}.checklist{margin:18px 0;padding:0;list-style:none}.checklist li{position:relative;padding:10px 0 10px 30px;border-top:1px solid #e2e8f0}.checklist li:first-child{border-top:0}.checklist li::before{content:'□';position:absolute;left:2px;color:var(--navy);font-weight:900}.fine{color:var(--muted);font-size:.86rem;line-height:1.75}.footer{border-top:1px solid var(--line);margin-top:32px;padding:28px 0 50px}.footer p{margin:.35em 0}.footer a{color:var(--navy);font-weight:800}
-@media(max-width:760px){.submit-links{display:none}.shell{width:min(calc(100% - 30px),960px)}.hero{padding:48px 0 38px}.steps,.two{grid-template-columns:1fr}.package{padding:22px 18px}.actions a{width:100%;text-align:center}}
-@media print{.submit-header,.actions,.footer{display:none!important}.shell{width:100%;max-width:none}.hero{padding:0 0 7mm}.package{background:#fff;border-color:#777}.section{padding:7mm 0}.steps,.two{grid-template-columns:1fr}.step,.box,.point,.package{break-inside:avoid-page}a{color:#111;text-decoration:none}}
+.section{padding:46px 0;border-top:1px solid var(--line)}.section h2{margin:0 0 20px;padding:4px 0 8px 16px;border-left:5px solid var(--navy);border-bottom:1px solid var(--line);color:var(--ink);font-family:"Noto Serif JP","Yu Mincho",serif;font-size:clamp(1.35rem,3vw,1.9rem)}.section h3{margin:28px 0 10px;color:var(--navy);font-size:1.08rem}.section p{margin:1em 0}.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:26px 0}.step{padding:20px;border:1px solid var(--line);background:#fff}.step small{display:block;color:#7a5908;font-weight:900;letter-spacing:.05em;margin-bottom:5px}.step strong{display:block;color:var(--ink);font-size:1.02rem;margin-bottom:8px}.step p{margin:0;font-size:.92rem;line-height:1.8}.point{margin:24px 0;padding:18px 20px;border-left:5px solid var(--gold);background:var(--goldsoft)}.point strong{color:#5f4707}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}.box{padding:20px;border:1px solid var(--line);background:#fff}.box.good{border-top:5px solid #2f7a4e;background:var(--green)}.box.bad{border-top:5px solid #9b4d4d;background:#fff5f5}.box h3{margin:0 0 10px}.box ul{margin:0;padding-left:1.25em}.box li{margin:.45em 0}.checklist{margin:18px 0;padding:0;list-style:none}.checklist li{position:relative;padding:10px 0 10px 30px;border-top:1px solid #e2e8f0}.checklist li:first-child{border-top:0}.checklist li::before{content:'□';position:absolute;left:2px;color:var(--navy);font-weight:900}.fine{color:var(--muted);font-size:.86rem;line-height:1.75}
+body.submit-page>footer.submit-footer{display:block!important;margin:48px 0 0!important;padding:0!important;background:var(--navy2)!important;border:0!important;border-top:6px solid var(--gold)!important;color:#fff!important}
+body.submit-page .submit-footer-inner{width:min(calc(100% - 44px),960px)!important;margin:0 auto!important;padding:34px 0 38px!important}
+body.submit-page .submit-footer-title{margin:0 0 6px!important;color:#fff!important;font-size:1.08rem!important;font-weight:900!important}
+body.submit-page .submit-footer-copy{margin:0 0 18px!important;color:#dce7f1!important;font-size:.88rem!important;line-height:1.75!important}
+body.submit-page .submit-footer-links{display:flex!important;gap:10px 18px!important;flex-wrap:wrap!important;margin:0!important;padding:0!important}
+body.submit-page .submit-footer-links a{color:#fff!important;font-weight:900!important;text-decoration:underline!important;text-underline-offset:4px!important}
+@media(max-width:840px){body.submit-page .submit-nav{align-items:flex-start!important;flex-direction:column!important}.submit-links{width:100%!important;justify-content:flex-start!important}.route-grid{grid-template-columns:1fr}.route-card{min-height:0}}
+@media(max-width:620px){.shell{width:min(calc(100% - 28px),960px)}.hero{padding:44px 0 30px}.route-panel{margin-top:22px;padding:18px 15px}.submit-links a.nav-secondary{display:none!important}body.submit-page .submit-links a{flex:1 1 calc(50% - 8px)!important;justify-content:center!important;text-align:center!important}.steps,.two{grid-template-columns:1fr}.package{padding:22px 18px}.actions a{width:100%;text-align:center}}
+@media print{body.submit-page>header.submit-header,.route-panel,.actions,body.submit-page>footer.submit-footer{display:none!important}.shell{width:100%;max-width:none}.hero{padding:0 0 7mm}.package{background:#fff;border-color:#777}.section{padding:7mm 0}.steps,.two{grid-template-columns:1fr}.step,.box,.point,.package{break-inside:avoid-page}a{color:#111;text-decoration:none}}
 </style>
 </head>
-<body>
+<body class="submit-page">
 <header class="submit-header">
   <div class="submit-nav">
     <a class="submit-brand" href="/index.html"><img src="/assets/popc-logo.png" alt=""><span>PTA適正化推進委員会</span></a>
     <nav class="submit-links" aria-label="提出資料ナビゲーション">
-      <a href="/index.html">トップ</a>
-      <a href="/school-pta-separation.html">公私分離の総論</a>
-      <a href="/guide-board.html">教育委員会向けガイド</a>
-      <a href="/national-archive.html">全国資料館</a>
-      <a class="current" href="/submit-to-board.html" aria-current="page">教育委員会へ提出</a>
+      <a class="nav-secondary" href="/index.html">トップ</a>
+      <a class="nav-route" href="/school-pta-separation.html">① 公私分離・総論</a>
+      <a class="nav-route" href="/guide-board-print.html">② 教委向け印刷版</a>
+      <a class="current" href="/submit-to-board.html" aria-current="page">提出の使い方</a>
+      <a class="nav-secondary" href="/national-archive.html">全国資料館</a>
     </nav>
   </div>
 </header>
@@ -65,8 +102,33 @@ body{margin:0;background:#fff;color:var(--text);font-family:"Noto Sans JP","Hira
   <header class="hero">
     <p class="kicker">各地でPTA適正化に取り組む方へ</p>
     <h1>教育委員会へ提出する資料</h1>
-    <p class="sub">教育委員会に学校とPTAの関係を調査・点検してもらうために、地域で確認した事実資料と、全国共通の法的・制度的な説明資料を組み合わせて提出するためのページです。</p>
+    <p class="sub">教育委員会に学校とPTAの関係を調査・点検してもらうときは、まず下の<strong>2つの共通資料</strong>を使います。地域で確認した事実資料と組み合わせて提出してください。</p>
   </header>
+
+  <section class="route-panel" aria-labelledby="route-title">
+    <div class="route-panel-head">
+      <small>まず、この2つを使います</small>
+      <h2 id="route-title">教育委員会へ提出する共通資料は2種類です</h2>
+      <p><strong>①は「なぜ学校とPTAを切り離す必要があるか」</strong>を説明する総論。<strong>②は「教育委員会が具体的に何を確認するか」</strong>を示す実務ガイドです。</p>
+    </div>
+    <div class="route-grid">
+      <a class="route-card route-1" href="/school-pta-separation.html">
+        <span class="route-no">提出資料 ①</span>
+        <h3>正しいPTA運営とは何か</h3>
+        <div class="route-purpose">なぜ「学校とPTAの公私分離」が必要なのかを説明する資料</div>
+        <p>自動加入、個人情報、委任、会費徴収、教職員服務、社会教育法、教育委員会の管理監督までを一つの構造で説明します。</p>
+        <span class="route-cta">総論を開く・印刷する →</span>
+      </a>
+      <a class="route-card route-2" href="/guide-board-print.html">
+        <span class="route-no">提出資料 ②</span>
+        <h3>学校とPTAの境界を学校管理の問題として点検する</h3>
+        <div class="route-purpose">教育委員会・学校管理職が「何を確認するか」を示す実務資料</div>
+        <p>加入、学校徴収金、個人情報、教職員関与、施設・システム利用等を、行政が確認すべき項目として整理したA4印刷版です。</p>
+        <span class="route-cta">実務ガイド印刷版を開く →</span>
+      </a>
+    </div>
+    <div class="route-subnav"><a href="/guide-board.html">実務ガイドをWebで読む</a><a href="/national-archive.html">地域事例と照合するため全国資料館を見る</a></div>
+  </section>
 
   <section class="lead">
     <p>このページは、全国各地でPTAの適正化に取り組む保護者、PTA役員、市民等が、教育委員会へ働きかけるときに使う<strong>提出・説明資料の入口</strong>です。「PTAを指導してください」と漠然と求めるのではなく、<strong>所管学校がPTA内部事務にどこまで関与しているのかを、学校管理の問題として具体的に確認してもらう</strong>ことを目的としています。</p>
@@ -75,21 +137,11 @@ body{margin:0;background:#fff;color:var(--text);font-family:"Noto Sans JP","Hira
     <div class="point"><strong>資料の役割分担：</strong>地域の入会案内、徴収資料、委任状、校務分掌、開示文書等が「実際に何が行われているか」を示す事実資料です。ここで案内する共通資料は、その事実が<strong>なぜ学校管理・個人情報・服務・会計等の問題として教育委員会の確認対象になるのか</strong>を説明するために添えます。</div>
   </section>
 
-  <section class="package" aria-labelledby="package-title">
-    <h2 id="package-title">教育委員会への働きかけに使う基本セット</h2>
-    <p><strong>地域の事実資料＋公私分離の総論＋教育委員会向け実務ガイド</strong>を基本セットとして想定しています。個別事案だけを提出すると「PTA内部の問題」と整理されることがありますが、学校側の関与を法制度全体から説明する資料を添えることで、「PTAそのものへの介入」ではなく「所管学校の管理・監督上の確認」であることを明確にできます。</p>
-    <div class="actions">
-      <a class="primary" href="/school-pta-separation.html">① 公私分離の総論を読む・印刷する</a>
-      <a href="/guide-board-print.html">② 教育委員会向けガイドを印刷する</a>
-      <a href="/guide-board.html">Web版の教育委員会向けガイド</a>
-    </div>
-  </section>
-
   <section class="section" id="steps">
     <h2>提出までの3ステップ</h2>
     <div class="steps">
       <div class="step"><small>STEP 1</small><strong>地域の事実を確認する</strong><p>入会案内、PTA規約、学校徴収金資料、委任状、校務分掌、名簿・個人情報関係資料、学校アプリの案内、会計資料など、実際の運用が分かる文書をそろえます。</p></div>
-      <div class="step"><small>STEP 2</small><strong>共通の説明資料を添える</strong><p>「正しいPTA運営とは何か――学校とPTAの公私分離」と、教育委員会向けガイドの印刷版を添え、地域で確認した事実がなぜ学校側の確認事項になるのかを示します。</p></div>
+      <div class="step"><small>STEP 2</small><strong>上の2つの共通資料を添える</strong><p>①「正しいPTA運営とは何か」と、②「学校とPTAの境界を学校管理の問題として点検する」印刷版を添え、地域で確認した事実がなぜ学校側の確認事項になるのかを示します。</p></div>
       <div class="step"><small>STEP 3</small><strong>教育委員会へ確認を求める</strong><p>PTAの総会や役員人事への介入ではなく、学校側が関与している部分について、事実確認、法的根拠、服務、個人情報、会計、施設・システム利用の整理を求めます。</p></div>
     </div>
     <div class="point"><strong>提出の軸：</strong>「PTAを監督してください」ではなく、「所管学校がPTAとの関係で行っている公的作用について、教育委員会の学校管理・服務管理の問題として事実と根拠を確認し、必要に応じて運用を見直してください」と整理します。</div>
@@ -118,25 +170,32 @@ body{margin:0;background:#fff;color:var(--text);font-family:"Noto Sans JP","Hira
   </section>
 
   <section class="section" id="common-materials">
-    <h2>教育委員会への働きかけで、共通資料は何を説明するのか</h2>
-    <p>地域の実物資料が<strong>「この学校・この自治体で何が行われているか」</strong>を示すのに対し、共通資料は、<strong>「なぜその事実が学校管理上の問題になるのか」「教育委員会は何を確認すべきなのか」</strong>を説明するための資料です。個別事案の証拠に代わるものではなく、地域で確認した事実を法的・制度的な枠組みの中に位置付ける役割を持ちます。</p>
-    <h3>「正しいPTA運営とは何か」――学校とPTAの公私分離を説明する総論</h3>
+    <h2>教育委員会への働きかけで、2つの共通資料は何を説明するのか</h2>
+    <p>地域の実物資料が<strong>「この学校・この自治体で何が行われているか」</strong>を示すのに対し、上の2つの共通資料は、<strong>「なぜその事実が学校管理上の問題になるのか」「教育委員会は具体的に何を確認すべきなのか」</strong>を説明するための資料です。個別事案の証拠に代わるものではなく、地域で確認した事実を法的・制度的な枠組みの中に位置付ける役割を持ちます。</p>
+    <h3>提出資料①「正しいPTA運営とは何か」――公私分離の総論</h3>
     <p>自動加入、個人情報、委任、会費徴収、教職員服務、社会教育法、教育委員会の管理監督までを「学校とPTAの公私分離」という一つの構造で説明します。個別の論点だけを示すと「PTA内部の話」と受け取られやすい場面でも、<strong>PTA内部への介入を求めているのではなく、学校が担っている加入・情報・徴収・会計・人員等の部分を点検してほしい</strong>という働きかけの全体像を示すために使用します。</p>
-    <h3>「学校とPTAの境界を学校管理の問題として点検する」印刷版――教委が確認する実務項目</h3>
+    <h3>提出資料②「学校とPTAの境界を学校管理の問題として点検する」――実務ガイド印刷版</h3>
     <p>教育委員会・学校管理職が実際に確認すべき事項を、加入、個人情報、会費徴収、教職員関与、施設・システム利用等の項目に分けて整理した資料です。総論が「なぜ確認が必要か」を説明するのに対し、この印刷版は<strong>「具体的に何を確認するか」</strong>を示します。Web版の本文・図・一次資料を、ヘッダー等に隠れないA4印刷用ページとして展開します。</p>
     <div class="point"><strong>実際の使い方：</strong>地域資料の該当箇所を示したうえで、この2つの共通資料を添え、「添付資料で確認できる学校側の運用について、事実関係と根拠となる法令・規程・決裁等を確認し、根拠がない又は不十分な場合は運用の見直しを検討してください」と教育委員会へ提出することを想定しています。</div>
     <div class="actions">
-      <a class="primary" href="/school-pta-separation.html">教委提出用：公私分離の総論へ</a>
-      <a href="/guide-board-print.html">教委提出用：実務ガイド印刷版へ</a>
+      <a class="primary" href="/school-pta-separation.html">提出資料① 公私分離の総論へ</a>
+      <a href="/guide-board-print.html">提出資料② 実務ガイド印刷版へ</a>
       <a href="/national-archive.html">全国の実物資料を見る</a>
     </div>
   </section>
 </div>
 </main>
-<footer class="footer">
-  <div class="shell">
-    <p><strong>PTA適正化推進委員会</strong></p>
-    <p><a href="/index.html">トップ</a>　<a href="/school-pta-separation.html">公私分離の総論</a>　<a href="/guide-board.html">教育委員会向け</a>　<a href="/national-archive.html">全国資料館</a></p>
+<footer class="submit-footer">
+  <div class="submit-footer-inner">
+    <p class="submit-footer-title">PTA適正化推進委員会</p>
+    <p class="submit-footer-copy">各地でPTA適正化に取り組む方が、教育委員会へ事実確認・根拠確認・運用見直しを求める際の共通資料を公開しています。</p>
+    <nav class="submit-footer-links" aria-label="フッターナビゲーション">
+      <a href="/submit-to-board.html">提出の使い方</a>
+      <a href="/school-pta-separation.html">提出資料① 公私分離の総論</a>
+      <a href="/guide-board-print.html">提出資料② 実務ガイド印刷版</a>
+      <a href="/national-archive.html">全国資料館</a>
+      <a href="/index.html">トップ</a>
+    </nav>
   </div>
 </footer>
 </body>
