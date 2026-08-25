@@ -40,10 +40,42 @@ body{background:#fff;color:#172033}
 #print-root .yk-case-body [style*="color:var(--gold-lt)"],#print-root [style*="color: var(--gold-lt)"]{color:#6b4f00!important}
 #print-root .yk-case-body div[style*="background:rgba(255,255,255"]{background:#f8fafc!important;border-color:#dbe4ee!important}
 #print-root .yk-case-body div[style*="background:rgba(212,175,55"]{background:#fff8df!important;border-color:#e3c55e!important}
+
+/* 一次資料棚：PDFをその場でスクロールして確認できるカード */
+#print-root .material-preview-guide{margin:20px 0 18px;padding:14px 16px;border:1px solid #d6dee8;border-left:5px solid #17345c;background:#f8fafc;color:#334155;font-size:.88rem;line-height:1.75}
+#print-root .material-preview-guide strong{color:#17345c!important}
+#print-root .material-preview-legend{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:8px;font-size:.78rem;color:#526276}
+#print-root .material-preview-legend span{display:inline-flex;align-items:center;gap:6px}
+#print-root .material-preview-legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
+#print-root .material-preview-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:24px!important;align-items:start;margin-top:18px!important}
+#print-root .material-preview-card{--material-accent:#2563eb;--material-soft:#eff6ff;display:flex;flex-direction:column;min-width:0;background:#fff!important;border:2px solid var(--material-accent)!important;border-top-width:6px!important;border-radius:14px!important;overflow:hidden;box-shadow:0 10px 26px rgba(15,39,66,.09)!important;color:#1e293b!important}
+#print-root .material-preview-card.tone-mext{--material-accent:#2563eb;--material-soft:#eff6ff}
+#print-root .material-preview-card.tone-survey{--material-accent:#d97706;--material-soft:#fff7ed}
+#print-root .material-preview-card.tone-board{--material-accent:#15803d;--material-soft:#f0fdf4}
+#print-root .material-preview-card.tone-ppc{--material-accent:#7c3aed;--material-soft:#f5f3ff}
+#print-root .material-preview-card.tone-workstyle{--material-accent:#475569;--material-soft:#f1f5f9}
+#print-root .material-pdf-preview{position:relative;height:440px;background:#e9eef4;border-bottom:1px solid #d6dee8;overflow:hidden}
+#print-root .material-pdf-preview::before{content:'PDFプレビュー　枠内をスクロールして原文を確認';position:absolute;z-index:2;top:0;left:0;right:0;padding:7px 10px;background:rgba(15,39,66,.92);color:#fff;font-size:.72rem;font-weight:900;letter-spacing:.02em;pointer-events:none}
+#print-root .material-pdf-preview iframe{display:block;width:100%;height:100%;border:0;background:#fff;padding-top:28px;box-sizing:border-box}
+#print-root .material-print-thumb{display:none!important;width:100%;height:auto!important;object-fit:contain;background:#fff}
+#print-root .material-card-body{padding:18px 20px 20px;background:#fff!important}
+#print-root .material-card-body .u-04286c45b7{display:flex!important;align-items:center;gap:8px!important;margin-bottom:9px!important}
+#print-root .material-card-body .u-04286c45b7 span:last-child{display:inline-flex!important;padding:4px 9px!important;border-radius:999px!important;background:var(--material-soft)!important;color:var(--material-accent)!important;border:1px solid color-mix(in srgb,var(--material-accent) 35%, white)!important;font-size:.73rem!important;font-weight:900!important}
+#print-root .material-card-body .u-f37617fbe7{color:#102a43!important;font-size:1.02rem!important;font-weight:900!important;line-height:1.65!important;margin:6px 0 9px!important}
+#print-root .material-card-body .u-af5088f3da{color:#475569!important;font-size:.88rem!important;line-height:1.8!important;margin:0!important}
+#print-root .material-tags{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 0}
+#print-root .material-tag{display:inline-flex;padding:4px 8px;border-radius:5px;background:var(--material-soft);color:var(--material-accent);font-size:.72rem;font-weight:800;border:1px solid color-mix(in srgb,var(--material-accent) 25%, white)}
+#print-root .material-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px;padding-top:14px;border-top:1px solid #e2e8f0}
+#print-root .material-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:8px 12px;border-radius:6px;text-decoration:none!important;font-size:.8rem;font-weight:900!important;border:1px solid var(--material-accent)!important}
+#print-root .material-actions .material-pdf-open{background:var(--material-accent)!important;color:#fff!important}
+#print-root .material-actions .material-detail-open{background:#fff!important;color:var(--material-accent)!important}
+#print-root .material-preview-card:hover{transform:none!important}
+
 .source-note{margin-top:28px;padding-top:14px;border-top:1px solid #cbd5e1;color:#64748b;font-size:.8rem;line-height:1.7}
 .submission-help{margin:0 0 24px;padding:18px 20px;border:1px solid #d6c27a;border-left:6px solid #a77b13;background:#fffaf0;color:#3f4d5f}
 .submission-help strong{display:block;color:#624a0d;margin-bottom:5px}.submission-help p{margin:.35em 0;line-height:1.8;font-size:.9rem}
-@media(max-width:720px){.print-shell{width:min(calc(100% - 24px),1180px)}.print-toolbar{align-items:flex-start;flex-direction:column}.print-actions{width:100%}.print-actions button,.print-actions a{flex:1;text-align:center}}
+@media(max-width:900px){#print-root .material-preview-grid{grid-template-columns:1fr!important}}
+@media(max-width:720px){.print-shell{width:min(calc(100% - 24px),1180px)}.print-toolbar{align-items:flex-start;flex-direction:column}.print-actions{width:100%}.print-actions button,.print-actions a{flex:1;text-align:center}#print-root .material-pdf-preview{height:390px}}
 @media print{
   @page{size:A4;margin:15mm 14mm 17mm}
   body{font-family:"Noto Serif JP","Yu Mincho",serif!important;background:#fff!important;color:#111!important;font-size:10pt!important}
@@ -69,6 +101,13 @@ body{background:#fff;color:#172033}
   #print-root svg{max-width:100%!important;height:auto!important}
   #print-root .gbv-scroll,#print-root .diagram-scroll,#print-root .table-wrap{overflow:visible!important}
   #print-root .gbv-scroll svg,#print-root .diagram-scroll img,#print-root table{min-width:0!important}
+  #print-root .material-preview-guide{display:none!important}
+  #print-root .material-preview-grid{display:block!important}
+  #print-root .material-preview-card{break-inside:avoid-page;page-break-inside:avoid;margin:0 0 8mm!important;border:1.5px solid #777!important;border-top-width:4px!important}
+  #print-root .material-pdf-preview{height:auto!important;background:#fff!important;border-bottom:1px solid #aaa!important}
+  #print-root .material-pdf-preview::before,#print-root .material-pdf-preview iframe{display:none!important}
+  #print-root .material-print-thumb{display:block!important;max-height:110mm!important;object-fit:contain!important}
+  #print-root .material-actions{display:none!important}
   .source-note{font-size:7.5pt;color:#444;border-top:1px solid #777;break-before:avoid-page}
 }
 </style>
@@ -94,12 +133,83 @@ body{background:#fff;color:#172033}
   var root=document.getElementById('print-root');
   var status=document.getElementById('status');
   var btn=document.getElementById('printBtn');
+  var materialMap=[
+    {needle:'学校徴収金の公会計化等の取組の一層の推進について',pdf:'/assets/documents/mext-school-collection-public-accounting-20250430.pdf',tone:'mext',tags:['学校徴収金','公会計','負担軽減']},
+    {needle:'学校関係団体に係る兼職兼業等の取扱い及び会計処理の適正化',pdf:'https://www.mext.go.jp/content/20221011-mxt_syoto01_02.pdf',tone:'mext',tags:['兼職兼業','会計処理','教職員関与']},
+    {needle:'PTA等学校関係団体に係る兼職兼業等・会計処理適正化の点検・調査結果',pdf:'https://www.mext.go.jp/a_menu/shotou/jinji/__icsFiles/afieldfile/2013/01/09/1329576_02.pdf',tone:'survey',tags:['全国調査','PTA負担','学校会計']},
+    {needle:'横浜市教育委員会通知 学教第1965号',pdf:'/assets/docs/yokohama-notice-1965-complete.pdf',tone:'board',tags:['任意加入','個人情報','会費徴収','非会員対応']},
+    {needle:'公立学校とPTAの間で個人情報のやり取りをするためのポイント',pdf:'/assets/documents/ppc-school-pta-personal-data-202603.pdf',tone:'ppc',tags:['PPC','61条','69条','個人情報']},
+    {needle:'中央教育審議会答申（平成31年1月）業務の3分類',pdf:'https://www.mext.go.jp/a_menu/shotou/hatarakikata/__icsFiles/afieldfile/2019/03/18/1414498_1_1.pdf',tone:'workstyle',tags:['働き方改革','3分類','学校徴収金']}
+  ];
   function prepare(scope){
     scope.querySelectorAll('details').forEach(function(d){d.open=true;d.setAttribute('open','');});
     scope.querySelectorAll('.faq-body').forEach(function(el){el.style.display='block';});
     scope.querySelectorAll('.faq-trigger').forEach(function(el){el.setAttribute('aria-expanded','true');});
     scope.querySelectorAll('script').forEach(function(el){el.remove();});
     scope.querySelectorAll('[id]').forEach(function(el){ if(el.id==='print-root') return; });
+  }
+  function upgradeKeyMaterials(scope){
+    var grid=scope.querySelector('.key-materials-grid');
+    if(!grid||grid.dataset.previewReady==='1')return;
+    grid.dataset.previewReady='1';
+    grid.classList.add('material-preview-grid');
+    var guide=document.createElement('div');
+    guide.className='material-preview-guide';
+    guide.innerHTML='<strong>原文PDFをこの場で確認できます。</strong> 各カード上部のPDFは枠内を縦スクロールできます。資料種別ごとに枠色を分け、下部に原本PDFと詳しい解説への導線を置いています。<div class="material-preview-legend"><span><i style="background:#2563eb"></i>文部科学省通知</span><span><i style="background:#d97706"></i>調査結果</span><span><i style="background:#15803d"></i>教育委員会通知</span><span><i style="background:#7c3aed"></i>個人情報保護委員会</span><span><i style="background:#475569"></i>働き方改革資料</span></div>';
+    grid.parentNode.insertBefore(guide,grid);
+    Array.prototype.slice.call(grid.children).forEach(function(card){
+      if(card.nodeType!==1)return;
+      var text=(card.textContent||'').replace(/\s+/g,' ').trim();
+      var cfg=materialMap.find(function(x){return text.indexOf(x.needle)!==-1;});
+      if(!cfg)return;
+      var detailHref=card.getAttribute('href')||'#';
+      var article=document.createElement('article');
+      article.className='material-preview-card tone-'+cfg.tone;
+      var preview=document.createElement('div');
+      preview.className='material-pdf-preview';
+      var frame=document.createElement('iframe');
+      frame.loading='lazy';
+      frame.title='原文PDFプレビュー：'+cfg.needle;
+      frame.src=cfg.pdf+'#view=FitH&toolbar=1&navpanes=0';
+      preview.appendChild(frame);
+      var oldImg=card.querySelector('img');
+      if(oldImg){
+        var printImg=oldImg.cloneNode(true);
+        printImg.className=(printImg.className||'')+' material-print-thumb';
+        preview.appendChild(printImg);
+      }
+      article.appendChild(preview);
+      var body=document.createElement('div');
+      body.className='material-card-body';
+      var oldBody=card.querySelector('.u-152a9b1880');
+      if(oldBody){
+        var clone=oldBody.cloneNode(true);
+        var oldCta=clone.querySelector('.u-25df1960ba');
+        if(oldCta)oldCta.remove();
+        body.appendChild(clone);
+      }
+      var tags=document.createElement('div');
+      tags.className='material-tags';
+      cfg.tags.forEach(function(tag){var s=document.createElement('span');s.className='material-tag';s.textContent=tag;tags.appendChild(s);});
+      body.appendChild(tags);
+      var actions=document.createElement('div');
+      actions.className='material-actions';
+      var pdfLink=document.createElement('a');
+      pdfLink.className='material-pdf-open';
+      pdfLink.href=cfg.pdf;
+      pdfLink.target='_blank';
+      pdfLink.rel='noopener';
+      pdfLink.textContent='原本PDFを別タブで開く';
+      actions.appendChild(pdfLink);
+      var detail=document.createElement('a');
+      detail.className='material-detail-open';
+      detail.href=detailHref;
+      detail.textContent='解説・関連資料を見る';
+      actions.appendChild(detail);
+      body.appendChild(actions);
+      article.appendChild(body);
+      grid.replaceChild(article,card);
+    });
   }
   fetch('/guide-board.html',{cache:'no-store'})
     .then(function(res){if(!res.ok)throw new Error('HTTP '+res.status);return res.text();})
@@ -110,6 +220,7 @@ body{background:#fff;color:#172033}
       prepare(main);
       root.appendChild(document.importNode(main,true));
       prepare(root);
+      upgradeKeyMaterials(root);
       status.remove();
       btn.disabled=false;
     })
