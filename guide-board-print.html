@@ -15,13 +15,13 @@
 <style>
 html{scroll-behavior:auto}
 body{background:#fff;color:#172033}
-.print-shell{width:min(calc(100% - 42px),1000px);margin:0 auto;padding:28px 0 70px}
+.print-shell{width:min(calc(100% - 36px),1180px);margin:0 auto;padding:28px 0 70px}
 .print-toolbar{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:24px;padding:14px 0;border-bottom:1px solid #cbd5e1}
 .print-toolbar strong{display:block;color:#17345c;font-size:1rem}.print-toolbar span{display:block;color:#64748b;font-size:.8rem;line-height:1.6}
 .print-actions{display:flex;gap:10px;flex-wrap:wrap}.print-actions button,.print-actions a{appearance:none;border:1px solid #b8c7d6;background:#fff;color:#17345c;padding:9px 14px;border-radius:4px;text-decoration:none;font:inherit;font-size:.86rem;font-weight:900;cursor:pointer}.print-actions button{background:#17345c;color:#fff;border-color:#17345c}
 .print-title{padding:0 0 20px;margin-bottom:26px;border-bottom:3px solid #17345c}.print-title small{display:block;color:#64748b;font-weight:900;letter-spacing:.08em;margin-bottom:7px}.print-title h1{margin:0;color:#172033;font-family:"Noto Serif JP","Yu Mincho",serif;font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.4}.print-title p{margin:10px 0 0;color:#526276;font-size:.88rem}
 #status{padding:26px 0;color:#526276}
-#print-root main{display:block}
+#print-root,#print-root main{display:block;width:100%;max-width:none;margin:0;border:0;box-shadow:none;background:#fff}
 #print-root details{display:block!important}
 #print-root details>summary{display:block!important}
 #print-root details[open]>summary::after{display:none!important}
@@ -30,10 +30,20 @@ body{background:#fff;color:#172033}
 #print-root .hero-actions,#print-root .board-chain-direct{display:none!important}
 #print-root .support-strip,#print-root .site-header,#print-root .footer{display:none!important}
 #print-root section{scroll-margin:0}
+/* 印刷用ページでは、元ページの外周ラッパーを解除して本文を開放する */
+#print-root .wrap,#print-root .wrap-narrow,#print-root .container,#print-root .container-narrow,#print-root .gbv-wrap,#print-root .gbv-shell,#print-root .board-jp-shell,#print-root .principal-liability-wrap,#print-root .rc5-wrap{width:100%!important;max-width:none!important;margin-left:0!important;margin-right:0!important}
+#print-root .gbv-shell,#print-root .board-jp-shell,#print-root .principal-liability-wrap,#print-root .rc5-wrap{border-left:0!important;border-right:0!important;box-shadow:none!important;border-radius:0!important}
+#print-root main>section{border-left:0!important;border-right:0!important}
+/* 白背景上で旧ページの淡色指定が残る箇所を可読色へ戻す */
+#print-root .yk-case-body,#print-root .yk-case-body p,#print-root .yk-case-body div,#print-root .yk-case-body span{color:#27384c!important}
+#print-root .yk-case-body strong{color:#102a43!important}
+#print-root .yk-case-body [style*="color:var(--gold-lt)"],#print-root [style*="color: var(--gold-lt)"]{color:#6b4f00!important}
+#print-root .yk-case-body div[style*="background:rgba(255,255,255"]{background:#f8fafc!important;border-color:#dbe4ee!important}
+#print-root .yk-case-body div[style*="background:rgba(212,175,55"]{background:#fff8df!important;border-color:#e3c55e!important}
 .source-note{margin-top:28px;padding-top:14px;border-top:1px solid #cbd5e1;color:#64748b;font-size:.8rem;line-height:1.7}
 .submission-help{margin:0 0 24px;padding:18px 20px;border:1px solid #d6c27a;border-left:6px solid #a77b13;background:#fffaf0;color:#3f4d5f}
 .submission-help strong{display:block;color:#624a0d;margin-bottom:5px}.submission-help p{margin:.35em 0;line-height:1.8;font-size:.9rem}
-@media(max-width:720px){.print-shell{width:min(calc(100% - 28px),1000px)}.print-toolbar{align-items:flex-start;flex-direction:column}.print-actions{width:100%}.print-actions button,.print-actions a{flex:1;text-align:center}}
+@media(max-width:720px){.print-shell{width:min(calc(100% - 24px),1180px)}.print-toolbar{align-items:flex-start;flex-direction:column}.print-actions{width:100%}.print-actions button,.print-actions a{flex:1;text-align:center}}
 @media print{
   @page{size:A4;margin:15mm 14mm 17mm}
   body{font-family:"Noto Serif JP","Yu Mincho",serif!important;background:#fff!important;color:#111!important;font-size:10pt!important}
@@ -41,8 +51,9 @@ body{background:#fff;color:#172033}
   .print-toolbar,.submission-help{display:none!important}
   .print-title{margin:0 0 7mm;padding:0 0 4mm;border-bottom:2px solid #333}.print-title h1{font-size:19pt;color:#111}.print-title p,.print-title small{font-size:8pt;color:#444}
   #print-root,#print-root *{box-shadow:none!important;text-shadow:none!important}
-  #print-root main,#print-root section,#print-root .board-guide-section{background:#fff!important;color:#111!important}
-  #print-root .wrap,#print-root .container,#print-root .gbv-wrap,#print-root .board-jp-shell,#print-root .principal-liability-wrap,#print-root .rc5-wrap,#print-root .board-reference-fold{width:100%!important;max-width:none!important;margin-left:0!important;margin-right:0!important}
+  #print-root main,#print-root section,#print-root .board-guide-section{background:#fff!important;color:#111!important;border-left:0!important;border-right:0!important}
+  #print-root .wrap,#print-root .wrap-narrow,#print-root .container,#print-root .container-narrow,#print-root .gbv-wrap,#print-root .gbv-shell,#print-root .board-jp-shell,#print-root .principal-liability-wrap,#print-root .rc5-wrap,#print-root .board-reference-fold{width:100%!important;max-width:none!important;margin-left:0!important;margin-right:0!important}
+  #print-root .gbv-shell,#print-root .board-jp-shell,#print-root .principal-liability-wrap,#print-root .rc5-wrap{border-left:0!important;border-right:0!important;box-shadow:none!important;border-radius:0!important}
   #print-root .page-hero,#print-root .board-guide-section,#print-root #board-executive-brief,#print-root #principal-liability,#print-root .rc5-section{padding-left:0!important;padding-right:0!important}
   #print-root h1,#print-root h2,#print-root h3,#print-root h4{color:#111!important;break-after:avoid-page;page-break-after:avoid}
   #print-root p,#print-root li,#print-root td,#print-root th{color:#111!important}
