@@ -25,6 +25,28 @@
     background: #fff;
   }
 
+  /* framework.html: dark header contrast overrides.
+     site.js injects some priority links with !important colors, so this
+     page must explicitly restore accessible contrast on the dark header. */
+  .thesis-page .site-header .logo,
+  .thesis-page .site-header .logo span,
+  .thesis-page .site-header .nav-link,
+  .thesis-page .site-header .core-history-nav {
+    color: #fff !important;
+  }
+  .thesis-page .site-header .core-history-nav {
+    border-bottom-color: rgba(255, 255, 255, 0.78) !important;
+  }
+  .thesis-page .site-header .nav-link-priority {
+    color: #0a192f !important;
+    background: #f4e7a6 !important;
+    border: 1px solid #d4af37 !important;
+  }
+  .thesis-page .site-header .nav-link-priority:hover {
+    color: #0a192f !important;
+    background: #fff2b8 !important;
+  }
+
   /* Prevent 100vw from including the browser scrollbar on this page. */
   .thesis-page .page-hero--photo {
     width: 100%;
@@ -129,5 +151,15 @@
   .fw-thesis-box p {
     margin: 0;
     font-size: 1.02rem;
+  }
+
+  /* prose/editorial rules load after this page stylesheet on framework.html.
+     Force the dark thesis box to keep light body text. */
+  .thesis-page .fw-thesis-box,
+  .thesis-page .fw-thesis-box p {
+    color: #f8fafc !important;
+  }
+  .thesis-page .fw-thesis-box strong {
+    color: #f6d778 !important;
   }
 }
