@@ -13,222 +13,38 @@
 <link href="/css/prose.css?v=20260814-2" rel="stylesheet">
 <link href="/css/inline-utilities.css?v=20260719" rel="stylesheet">
 <style>
-html{scroll-behavior:auto}
-body{background:#fff;color:#172033}
-.print-shell{width:min(calc(100% - 36px),1180px);margin:0 auto;padding:28px 0 70px}
-.print-toolbar{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:24px;padding:14px 0;border-bottom:1px solid #cbd5e1}
-.print-toolbar strong{display:block;color:#17345c;font-size:1rem}.print-toolbar span{display:block;color:#64748b;font-size:.8rem;line-height:1.6}
-.print-actions{display:flex;gap:10px;flex-wrap:wrap}.print-actions button,.print-actions a{appearance:none;border:1px solid #b8c7d6;background:#fff;color:#17345c;padding:9px 14px;border-radius:4px;text-decoration:none;font:inherit;font-size:.86rem;font-weight:900;cursor:pointer}.print-actions button{background:#17345c;color:#fff;border-color:#17345c}
-.print-title{padding:0 0 20px;margin-bottom:26px;border-bottom:3px solid #17345c}.print-title small{display:block;color:#64748b;font-weight:900;letter-spacing:.08em;margin-bottom:7px}.print-title h1{margin:0;color:#172033;font-family:"Noto Serif JP","Yu Mincho",serif;font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.4}.print-title p{margin:10px 0 0;color:#526276;font-size:.88rem}
-#status{padding:26px 0;color:#526276}
-#print-root,#print-root main{display:block;width:100%;max-width:none;margin:0;border:0;box-shadow:none;background:#fff}
-#print-root details{display:block!important}
-#print-root details>summary{display:block!important}
-#print-root details[open]>summary::after{display:none!important}
-#print-root .faq-body{display:block!important}
-#print-root .faq-arrow{display:none!important}
-#print-root .hero-actions,#print-root .board-chain-direct{display:none!important}
-#print-root .support-strip,#print-root .site-header,#print-root .footer{display:none!important}
-#print-root section{scroll-margin:0}
-/* 印刷用ページでは、元ページの外周ラッパーを解除して本文を開放する */
-#print-root .wrap,#print-root .wrap-narrow,#print-root .container,#print-root .container-narrow,#print-root .gbv-wrap,#print-root .gbv-shell,#print-root .board-jp-shell,#print-root .principal-liability-wrap,#print-root .rc5-wrap{width:100%!important;max-width:none!important;margin-left:0!important;margin-right:0!important}
-#print-root .gbv-shell,#print-root .board-jp-shell,#print-root .principal-liability-wrap,#print-root .rc5-wrap{border-left:0!important;border-right:0!important;box-shadow:none!important;border-radius:0!important}
-#print-root main>section{border-left:0!important;border-right:0!important}
-/* 白背景上で旧ページの淡色指定が残る箇所を可読色へ戻す */
-#print-root .yk-case-body,#print-root .yk-case-body p,#print-root .yk-case-body div,#print-root .yk-case-body span{color:#27384c!important}
-#print-root .yk-case-body strong{color:#102a43!important}
-#print-root .yk-case-body [style*="color:var(--gold-lt)"],#print-root [style*="color: var(--gold-lt)"]{color:#6b4f00!important}
-#print-root .yk-case-body div[style*="background:rgba(255,255,255"]{background:#f8fafc!important;border-color:#dbe4ee!important}
-#print-root .yk-case-body div[style*="background:rgba(212,175,55"]{background:#fff8df!important;border-color:#e3c55e!important}
-
-/* 一次資料棚：PDFをその場でスクロールして確認できるカード */
-#print-root .material-preview-guide{margin:20px 0 18px;padding:14px 16px;border:1px solid #d6dee8;border-left:5px solid #17345c;background:#f8fafc;color:#334155;font-size:.88rem;line-height:1.75}
-#print-root .material-preview-guide strong{color:#17345c!important}
-#print-root .material-preview-legend{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:8px;font-size:.78rem;color:#526276}
-#print-root .material-preview-legend span{display:inline-flex;align-items:center;gap:6px}
-#print-root .material-preview-legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
-#print-root .material-preview-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:24px!important;align-items:start;margin-top:18px!important}
-#print-root .material-preview-card{--material-accent:#2563eb;--material-soft:#eff6ff;display:flex;flex-direction:column;min-width:0;background:#fff!important;border:2px solid var(--material-accent)!important;border-top-width:6px!important;border-radius:14px!important;overflow:hidden;box-shadow:0 10px 26px rgba(15,39,66,.09)!important;color:#1e293b!important}
-#print-root .material-preview-card.tone-mext{--material-accent:#2563eb;--material-soft:#eff6ff}
-#print-root .material-preview-card.tone-survey{--material-accent:#d97706;--material-soft:#fff7ed}
-#print-root .material-preview-card.tone-board{--material-accent:#15803d;--material-soft:#f0fdf4}
-#print-root .material-preview-card.tone-ppc{--material-accent:#7c3aed;--material-soft:#f5f3ff}
-#print-root .material-preview-card.tone-workstyle{--material-accent:#475569;--material-soft:#f1f5f9}
-#print-root .material-pdf-preview{position:relative;height:440px;background:#e9eef4;border-bottom:1px solid #d6dee8;overflow:hidden}
-#print-root .material-pdf-preview::before{content:'PDFプレビュー　枠内をスクロールして原文を確認';position:absolute;z-index:2;top:0;left:0;right:0;padding:7px 10px;background:rgba(15,39,66,.92);color:#fff;font-size:.72rem;font-weight:900;letter-spacing:.02em;pointer-events:none}
-#print-root .material-pdf-preview iframe{display:block;width:100%;height:100%;border:0;background:#fff;padding-top:28px;box-sizing:border-box}
-#print-root .material-print-thumb{display:none!important;width:100%;height:auto!important;object-fit:contain;background:#fff}
-#print-root .material-card-body{padding:18px 20px 20px;background:#fff!important}
-#print-root .material-card-body .u-04286c45b7{display:flex!important;align-items:center;gap:8px!important;margin-bottom:9px!important}
-#print-root .material-card-body .u-04286c45b7 span:last-child{display:inline-flex!important;padding:4px 9px!important;border-radius:999px!important;background:var(--material-soft)!important;color:var(--material-accent)!important;border:1px solid color-mix(in srgb,var(--material-accent) 35%, white)!important;font-size:.73rem!important;font-weight:900!important}
-#print-root .material-card-body .u-f37617fbe7{color:#102a43!important;font-size:1.02rem!important;font-weight:900!important;line-height:1.65!important;margin:6px 0 9px!important}
-#print-root .material-card-body .u-af5088f3da{color:#475569!important;font-size:.88rem!important;line-height:1.8!important;margin:0!important}
-#print-root .material-tags{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 0}
-#print-root .material-tag{display:inline-flex;padding:4px 8px;border-radius:5px;background:var(--material-soft);color:var(--material-accent);font-size:.72rem;font-weight:800;border:1px solid color-mix(in srgb,var(--material-accent) 25%, white)}
-#print-root .material-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px;padding-top:14px;border-top:1px solid #e2e8f0}
-#print-root .material-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:8px 12px;border-radius:6px;text-decoration:none!important;font-size:.8rem;font-weight:900!important;border:1px solid var(--material-accent)!important}
-#print-root .material-actions .material-pdf-open{background:var(--material-accent)!important;color:#fff!important}
-#print-root .material-actions .material-detail-open{background:#fff!important;color:var(--material-accent)!important}
-#print-root .material-preview-card:hover{transform:none!important}
-
-.source-note{margin-top:28px;padding-top:14px;border-top:1px solid #cbd5e1;color:#64748b;font-size:.8rem;line-height:1.7}
-.submission-help{margin:0 0 24px;padding:18px 20px;border:1px solid #d6c27a;border-left:6px solid #a77b13;background:#fffaf0;color:#3f4d5f}
-.submission-help strong{display:block;color:#624a0d;margin-bottom:5px}.submission-help p{margin:.35em 0;line-height:1.8;font-size:.9rem}
-@media(max-width:900px){#print-root .material-preview-grid{grid-template-columns:1fr!important}}
-@media(max-width:720px){.print-shell{width:min(calc(100% - 24px),1180px)}.print-toolbar{align-items:flex-start;flex-direction:column}.print-actions{width:100%}.print-actions button,.print-actions a{flex:1;text-align:center}#print-root .material-pdf-preview{height:390px}}
-@media print{
-  @page{size:A4;margin:15mm 14mm 17mm}
-  body{font-family:"Noto Serif JP","Yu Mincho",serif!important;background:#fff!important;color:#111!important;font-size:10pt!important}
-  .print-shell{width:100%!important;max-width:none!important;margin:0!important;padding:0!important}
-  .print-toolbar,.submission-help{display:none!important}
-  .print-title{margin:0 0 7mm;padding:0 0 4mm;border-bottom:2px solid #333}.print-title h1{font-size:19pt;color:#111}.print-title p,.print-title small{font-size:8pt;color:#444}
-  #print-root,#print-root *{box-shadow:none!important;text-shadow:none!important}
-  #print-root main,#print-root section,#print-root .board-guide-section{background:#fff!important;color:#111!important;border-left:0!important;border-right:0!important}
-  #print-root .wrap,#print-root .wrap-narrow,#print-root .container,#print-root .container-narrow,#print-root .gbv-wrap,#print-root .gbv-shell,#print-root .board-jp-shell,#print-root .principal-liability-wrap,#print-root .rc5-wrap,#print-root .board-reference-fold{width:100%!important;max-width:none!important;margin-left:0!important;margin-right:0!important}
-  #print-root .gbv-shell,#print-root .board-jp-shell,#print-root .principal-liability-wrap,#print-root .rc5-wrap{border-left:0!important;border-right:0!important;box-shadow:none!important;border-radius:0!important}
-  #print-root .page-hero,#print-root .board-guide-section,#print-root #board-executive-brief,#print-root #principal-liability,#print-root .rc5-section{padding-left:0!important;padding-right:0!important}
-  #print-root h1,#print-root h2,#print-root h3,#print-root h4{color:#111!important;break-after:avoid-page;page-break-after:avoid}
-  #print-root p,#print-root li,#print-root td,#print-root th{color:#111!important}
-  #print-root a{color:#111!important;text-decoration:none!important}
-  #print-root .chapter-block,#print-root .board-auto-accordion,#print-root .board-reference-fold,#print-root .principal-risk-main,#print-root .principal-risk-evidence-card,#print-root .gbv-figure,#print-root figure,#print-root table{break-inside:avoid-page;page-break-inside:avoid}
-  #print-root details{display:block!important;border-color:#888!important}
-  #print-root details>summary{display:block!important;background:#fff!important;color:#111!important;border-color:#999!important;cursor:default!important}
-  #print-root details>summary::after{display:none!important}
-  #print-root .chapter-content,#print-root .board-reference-fold__body{display:block!important}
-  #print-root .faq-body{display:block!important}
-  #print-root .faq-trigger{display:flex!important;background:#fff!important;color:#111!important;border-color:#999!important;pointer-events:none}
-  #print-root img{max-width:100%!important;height:auto!important;filter:none!important}
-  #print-root svg{max-width:100%!important;height:auto!important}
-  #print-root .gbv-scroll,#print-root .diagram-scroll,#print-root .table-wrap{overflow:visible!important}
-  #print-root .gbv-scroll svg,#print-root .diagram-scroll img,#print-root table{min-width:0!important}
-  #print-root .material-preview-guide{display:none!important}
-  #print-root .material-preview-grid{display:block!important}
-  #print-root .material-preview-card{break-inside:avoid-page;page-break-inside:avoid;margin:0 0 8mm!important;border:1.5px solid #777!important;border-top-width:4px!important}
-  #print-root .material-pdf-preview{height:auto!important;background:#fff!important;border-bottom:1px solid #aaa!important}
-  #print-root .material-pdf-preview::before,#print-root .material-pdf-preview iframe{display:none!important}
-  #print-root .material-print-thumb{display:block!important;max-height:110mm!important;object-fit:contain!important}
-  #print-root .material-actions{display:none!important}
-  .source-note{font-size:7.5pt;color:#444;border-top:1px solid #777;break-before:avoid-page}
-}
+body{background:#fff;color:#172033}.print-shell{width:min(calc(100% - 36px),1180px);margin:auto;padding:28px 0 70px}.print-toolbar{display:flex;justify-content:space-between;gap:18px;align-items:center;padding:14px 0 20px;border-bottom:1px solid #cbd5e1}.print-toolbar strong{color:#17345c}.print-toolbar span{display:block;color:#64748b;font-size:.8rem;line-height:1.6}.print-actions{display:flex;gap:8px;flex-wrap:wrap}.print-actions a,.print-actions button{border:1px solid #b8c7d6;background:#fff;color:#17345c;padding:8px 12px;border-radius:5px;text-decoration:none;font-weight:900}.print-actions button{background:#17345c;color:#fff}.print-title{padding:22px 0;border-bottom:3px solid #17345c}.print-title small{color:#64748b;font-weight:900}.print-title h1{margin:.3em 0;color:#172033;font-family:"Noto Serif JP",serif;font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.35}.print-title p{color:#526276;font-size:.86rem}.submission-help{margin:22px 0;padding:16px 18px;border:1px solid #d6c27a;border-left:6px solid #a77b13;background:#fffaf0;color:#3f4d5f}.submission-help strong{color:#624a0d}.source-note{margin-top:28px;padding-top:14px;border-top:1px solid #cbd5e1;color:#64748b;font-size:.8rem;line-height:1.7}
+#print-root,#print-root main{width:100%;max-width:none;margin:0;border:0;box-shadow:none;background:#fff}#print-root details{display:block!important}#print-root details>summary{display:block!important}#print-root .faq-body{display:block!important}#print-root .support-strip,#print-root .site-header,#print-root .footer,#print-root .hero-actions,#print-root .board-chain-direct{display:none!important}#print-root .wrap,#print-root .wrap-narrow,#print-root .container,#print-root .container-narrow,#print-root .gbv-wrap,#print-root .gbv-shell,#print-root .board-jp-shell,#print-root .principal-liability-wrap,#print-root .rc5-wrap{width:100%!important;max-width:none!important;margin-left:0!important;margin-right:0!important}#print-root .gbv-shell,#print-root .board-jp-shell,#print-root .principal-liability-wrap,#print-root .rc5-wrap{border-left:0!important;border-right:0!important;box-shadow:none!important;border-radius:0!important}#print-root .yk-case-body,#print-root .yk-case-body p,#print-root .yk-case-body div,#print-root .yk-case-body span{color:#27384c!important}#print-root .yk-case-body strong{color:#102a43!important}
+.material-preview-guide{margin:20px 0 18px;padding:14px 16px;border:1px solid #d6dee8;border-left:5px solid #17345c;background:#f8fafc;color:#334155;font-size:.88rem;line-height:1.75}.material-preview-legend{display:flex;flex-wrap:wrap;gap:7px 12px;margin-top:8px;font-size:.76rem}.material-preview-legend span{display:flex;align-items:center;gap:5px}.material-preview-legend i{width:11px;height:11px;border-radius:3px}.material-preview-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:22px!important;margin-top:18px!important}.material-preview-card{--a:#2563eb;--s:#eff6ff;display:flex;flex-direction:column;background:#fff!important;border:2px solid var(--a)!important;border-top-width:6px!important;border-radius:13px!important;overflow:hidden;box-shadow:0 9px 24px rgba(15,39,66,.08)!important}.tone-survey{--a:#d97706;--s:#fff7ed}.tone-board{--a:#15803d;--s:#f0fdf4}.tone-ppc{--a:#7c3aed;--s:#f5f3ff}.tone-workstyle{--a:#475569;--s:#f1f5f9}.material-pdf-preview{position:relative;height:420px;background:#eef2f6;border-bottom:1px solid #d6dee8;overflow:hidden}.material-pdf-preview.is-embedded:before{content:'PDFプレビュー　枠内をスクロールして原文を確認';position:absolute;z-index:2;inset:0 0 auto 0;padding:7px 10px;background:#0f2742;color:#fff;font-size:.72rem;font-weight:900}.material-pdf-preview iframe{width:100%;height:100%;border:0;background:#fff;padding-top:28px;box-sizing:border-box}.material-pdf-preview.is-fallback{height:auto;min-height:420px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px;box-sizing:border-box}.material-fallback-thumb{display:block!important;max-width:94%!important;max-height:300px!important;width:auto!important;height:auto!important;object-fit:contain!important;background:#fff;border:1px solid #cbd5e1;box-shadow:0 3px 12px rgba(15,39,66,.08)}.material-fallback-note{width:min(92%,520px);margin-top:13px;padding:10px 12px;background:#fff;border:1px solid #cbd5e1;border-left:4px solid var(--a);border-radius:7px;color:#475569!important;font-size:.78rem;line-height:1.65}.material-fallback-note strong{display:block;color:#102a43!important}.material-print-thumb{display:none!important}.material-card-body{padding:17px 19px 19px;background:#fff!important}.material-card-body .u-04286c45b7{display:flex!important;align-items:center;gap:8px!important}.material-card-body .u-04286c45b7 span:last-child{display:inline-flex!important;padding:4px 8px!important;border-radius:999px!important;background:var(--s)!important;color:var(--a)!important;font-size:.72rem!important;font-weight:900!important}.material-card-body .u-f37617fbe7{color:#102a43!important;font-size:1rem!important;font-weight:900!important;line-height:1.6!important;margin:8px 0!important}.material-card-body .u-af5088f3da{color:#475569!important;font-size:.87rem!important;line-height:1.75!important}.material-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:13px}.material-tag{padding:4px 7px;border-radius:5px;background:var(--s);color:var(--a);font-size:.7rem;font-weight:800;border:1px solid #d7dee7}.material-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;padding-top:13px;border-top:1px solid #e2e8f0}.material-actions a{padding:8px 11px;border-radius:6px;text-decoration:none!important;font-size:.78rem;font-weight:900!important;border:1px solid var(--a)!important}.material-pdf-open{background:var(--a)!important;color:#fff!important}.material-detail-open{background:#fff!important;color:var(--a)!important}
+#print-root .u-e3ecbfa5d9{margin:34px 0!important;padding:22px!important;border:2px solid #17345c!important;border-top-width:6px!important;border-radius:13px!important;background:#f8fafc!important}#print-root .u-9208c063cb{color:#102a43!important;font-size:1.2rem!important;margin:5px 0 8px!important}#print-root .u-a6d09e3a6f{color:#526276!important;font-size:.86rem!important;line-height:1.75!important}#print-root .u-6129d9d5c1{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}#print-root .u-4f4b752163{--r:#2563eb;display:grid!important;grid-template-columns:132px 1fr!important;min-height:118px!important;background:#fff!important;border:1.5px solid #cbd5e1!important;border-left:5px solid var(--r)!important;border-radius:9px!important;overflow:hidden!important;text-decoration:none!important;color:#1e293b!important;box-shadow:0 3px 12px rgba(15,39,66,.05)!important}#print-root .u-4f4b752163:nth-child(4n+2){--r:#15803d}#print-root .u-4f4b752163:nth-child(4n+3){--r:#7c3aed}#print-root .u-4f4b752163:nth-child(4n+4){--r:#d97706}#print-root .u-1c4091b2e6{width:132px!important;height:100%!important;min-height:118px!important;object-fit:cover!important;background:#eef2f6!important;border-right:1px solid #e2e8f0!important;margin:0!important}#print-root .u-0843a64ade{display:flex!important;gap:9px!important;padding:13px 14px!important;background:#fff!important}#print-root .u-b57469f380{color:var(--r)!important;font-size:.7rem!important;font-weight:900!important}#print-root .u-64815fcd28{color:#102a43!important;font-size:.86rem!important;font-weight:900!important;line-height:1.55!important}#print-root .u-2f10664f65{color:#64748b!important;font-size:.73rem!important;line-height:1.5!important}
+@media(max-width:900px){.material-preview-grid,#print-root .u-6129d9d5c1{grid-template-columns:1fr!important}}@media(max-width:720px){.print-shell{width:min(calc(100% - 24px),1180px)}.print-toolbar{align-items:flex-start;flex-direction:column}.material-pdf-preview{height:370px}.material-pdf-preview.is-fallback{min-height:340px}#print-root .u-4f4b752163{grid-template-columns:100px 1fr!important}#print-root .u-1c4091b2e6{width:100px!important}}
+@media print{@page{size:A4;margin:15mm 14mm 17mm}.print-toolbar,.submission-help{display:none!important}.print-shell{width:100%!important;max-width:none!important;margin:0!important;padding:0!important}body{font-family:"Noto Serif JP",serif!important;color:#111!important;font-size:10pt!important}#print-root,#print-root *{box-shadow:none!important;text-shadow:none!important}#print-root h1,#print-root h2,#print-root h3,#print-root h4,#print-root p,#print-root li,#print-root td,#print-root th{color:#111!important}.material-preview-guide{display:none!important}.material-preview-grid{display:block!important}.material-preview-card{margin:0 0 8mm!important;break-inside:avoid-page;border:1.5px solid #777!important}.material-pdf-preview{height:auto!important;min-height:0!important;background:#fff!important;padding:0!important}.material-pdf-preview:before,.material-pdf-preview iframe,.material-fallback-note,.material-fallback-thumb{display:none!important}.material-print-thumb{display:block!important;max-height:110mm!important;width:100%!important;height:auto!important;object-fit:contain!important}.material-actions{display:none!important}#print-root .u-e3ecbfa5d9{border:1.5px solid #777!important;padding:5mm!important}#print-root .u-6129d9d5c1{grid-template-columns:repeat(2,minmax(0,1fr))!important}#print-root .u-4f4b752163{grid-template-columns:28mm 1fr!important;border:1px solid #aaa!important;border-left:3px solid #777!important;break-inside:avoid-page}#print-root .u-1c4091b2e6{width:28mm!important;min-height:20mm!important}.source-note{font-size:7.5pt}}
 </style>
 </head>
 <body class="guide-board-direct-fixed guide-board-editorial guide-board-text-first">
 <div class="print-shell">
-  <div class="print-toolbar">
-    <div><strong>教育委員会への提出用｜学校とPTAの境界ガイド</strong><span>各地でPTA適正化に取り組む方が、教育委員会・学校管理職へ提出できるよう、guide-board.html の本文・図・一次資料を印刷用に展開します。</span></div>
-    <div class="print-actions"><a href="/submit-to-board.html">提出方法・資料セット</a><button id="printBtn" type="button" disabled>提出用に印刷・PDF保存</button><a href="/school-pta-separation.html#submit-to-board">「公私分離」の総論</a><a href="/guide-board.html">通常ページへ戻る</a></div>
-  </div>
-  <header class="print-title">
-    <small>PTA適正化推進委員会｜教育委員会・学校管理職への提出・説明用</small>
-    <h1>学校とPTAの境界を<br>学校管理の問題として点検する</h1>
-    <p>原文： https://ptaorg.com/guide-board.html　｜　印刷時はサイト共通ヘッダー・検索・ナビゲーション等の画面操作要素のみ除外し、本文・図・根拠資料は原則保持します。</p>
-  </header>
-  <div class="submission-help"><strong>各地でPTA適正化に取り組む方へ</strong><p>地域の開示資料・学校文書と併せて教育委員会へ提出することを想定した印刷ページです。PTA内部への介入要求ではなく、学校が関与している部分について、学校管理・服務・個人情報・会計上の確認を求める資料としてお使いください。</p><p>併せて「正しいPTA運営とは何か――学校とPTAの公私分離」を提出すると、個別問題がなぜ同じ構造に行き着くのかを説明できます。<br><a href="/submit-to-board.html">提出資料の組み合わせ方と3ステップはこちら</a></p></div>
-  <div id="status">本文を読み込んでいます…</div>
-  <div id="print-root" aria-live="polite"></div>
-  <p class="source-note">この印刷ページは <code>/guide-board.html</code> の本文を同一サイト内から読み込んで表示します。原文が更新された場合、印刷版にもその時点の本文が反映されます。印刷専用ページ側では、サイト共通ヘッダー等の操作要素だけを除外し、提出資料として意味を持つ本文・図・一次資料・参考リンクは原則として残します。</p>
+<div class="print-toolbar"><div><strong>教育委員会への提出用｜学校とPTAの境界ガイド</strong><span>guide-board.html の本文・図・一次資料を印刷用に展開します。</span></div><div class="print-actions"><a href="/submit-to-board.html">提出方法・資料セット</a><button id="printBtn" disabled>提出用に印刷・PDF保存</button><a href="/school-pta-separation.html#submit-to-board">「公私分離」の総論</a><a href="/guide-board.html">通常ページへ戻る</a></div></div>
+<header class="print-title"><small>PTA適正化推進委員会｜教育委員会・学校管理職への提出・説明用</small><h1>学校とPTAの境界を<br>学校管理の問題として点検する</h1><p>原文：https://ptaorg.com/guide-board.html</p></header>
+<div class="submission-help"><strong>各地でPTA適正化に取り組む方へ</strong><p>地域の開示資料・学校文書と併せて教育委員会へ提出することを想定した印刷ページです。学校が関与している部分について、学校管理・服務・個人情報・会計上の確認を求める資料としてお使いください。</p></div>
+<div id="status">本文を読み込んでいます…</div><div id="print-root"></div>
+<p class="source-note">この印刷ページは /guide-board.html の本文を同一サイト内から読み込みます。</p>
 </div>
 <script>
 (function(){
-  var root=document.getElementById('print-root');
-  var status=document.getElementById('status');
-  var btn=document.getElementById('printBtn');
-  var materialMap=[
-    {needle:'学校徴収金の公会計化等の取組の一層の推進について',pdf:'/assets/documents/mext-school-collection-public-accounting-20250430.pdf',tone:'mext',tags:['学校徴収金','公会計','負担軽減']},
-    {needle:'学校関係団体に係る兼職兼業等の取扱い及び会計処理の適正化',pdf:'https://www.mext.go.jp/content/20221011-mxt_syoto01_02.pdf',tone:'mext',tags:['兼職兼業','会計処理','教職員関与']},
-    {needle:'PTA等学校関係団体に係る兼職兼業等・会計処理適正化の点検・調査結果',pdf:'https://www.mext.go.jp/a_menu/shotou/jinji/__icsFiles/afieldfile/2013/01/09/1329576_02.pdf',tone:'survey',tags:['全国調査','PTA負担','学校会計']},
-    {needle:'横浜市教育委員会通知 学教第1965号',pdf:'/assets/docs/yokohama-notice-1965-complete.pdf',tone:'board',tags:['任意加入','個人情報','会費徴収','非会員対応']},
-    {needle:'公立学校とPTAの間で個人情報のやり取りをするためのポイント',pdf:'/assets/documents/ppc-school-pta-personal-data-202603.pdf',tone:'ppc',tags:['PPC','61条','69条','個人情報']},
-    {needle:'中央教育審議会答申（平成31年1月）業務の3分類',pdf:'https://www.mext.go.jp/a_menu/shotou/hatarakikata/__icsFiles/afieldfile/2019/03/18/1414498_1_1.pdf',tone:'workstyle',tags:['働き方改革','3分類','学校徴収金']}
-  ];
-  function prepare(scope){
-    scope.querySelectorAll('details').forEach(function(d){d.open=true;d.setAttribute('open','');});
-    scope.querySelectorAll('.faq-body').forEach(function(el){el.style.display='block';});
-    scope.querySelectorAll('.faq-trigger').forEach(function(el){el.setAttribute('aria-expanded','true');});
-    scope.querySelectorAll('script').forEach(function(el){el.remove();});
-    scope.querySelectorAll('[id]').forEach(function(el){ if(el.id==='print-root') return; });
-  }
-  function upgradeKeyMaterials(scope){
-    var grid=scope.querySelector('.key-materials-grid');
-    if(!grid||grid.dataset.previewReady==='1')return;
-    grid.dataset.previewReady='1';
-    grid.classList.add('material-preview-grid');
-    var guide=document.createElement('div');
-    guide.className='material-preview-guide';
-    guide.innerHTML='<strong>原文PDFをこの場で確認できます。</strong> 各カード上部のPDFは枠内を縦スクロールできます。資料種別ごとに枠色を分け、下部に原本PDFと詳しい解説への導線を置いています。<div class="material-preview-legend"><span><i style="background:#2563eb"></i>文部科学省通知</span><span><i style="background:#d97706"></i>調査結果</span><span><i style="background:#15803d"></i>教育委員会通知</span><span><i style="background:#7c3aed"></i>個人情報保護委員会</span><span><i style="background:#475569"></i>働き方改革資料</span></div>';
-    grid.parentNode.insertBefore(guide,grid);
-    Array.prototype.slice.call(grid.children).forEach(function(card){
-      if(card.nodeType!==1)return;
-      var text=(card.textContent||'').replace(/\s+/g,' ').trim();
-      var cfg=materialMap.find(function(x){return text.indexOf(x.needle)!==-1;});
-      if(!cfg)return;
-      var detailHref=card.getAttribute('href')||'#';
-      var article=document.createElement('article');
-      article.className='material-preview-card tone-'+cfg.tone;
-      var preview=document.createElement('div');
-      preview.className='material-pdf-preview';
-      var frame=document.createElement('iframe');
-      frame.loading='lazy';
-      frame.title='原文PDFプレビュー：'+cfg.needle;
-      frame.src=cfg.pdf+'#view=FitH&toolbar=1&navpanes=0';
-      preview.appendChild(frame);
-      var oldImg=card.querySelector('img');
-      if(oldImg){
-        var printImg=oldImg.cloneNode(true);
-        printImg.className=(printImg.className||'')+' material-print-thumb';
-        preview.appendChild(printImg);
-      }
-      article.appendChild(preview);
-      var body=document.createElement('div');
-      body.className='material-card-body';
-      var oldBody=card.querySelector('.u-152a9b1880');
-      if(oldBody){
-        var clone=oldBody.cloneNode(true);
-        var oldCta=clone.querySelector('.u-25df1960ba');
-        if(oldCta)oldCta.remove();
-        body.appendChild(clone);
-      }
-      var tags=document.createElement('div');
-      tags.className='material-tags';
-      cfg.tags.forEach(function(tag){var s=document.createElement('span');s.className='material-tag';s.textContent=tag;tags.appendChild(s);});
-      body.appendChild(tags);
-      var actions=document.createElement('div');
-      actions.className='material-actions';
-      var pdfLink=document.createElement('a');
-      pdfLink.className='material-pdf-open';
-      pdfLink.href=cfg.pdf;
-      pdfLink.target='_blank';
-      pdfLink.rel='noopener';
-      pdfLink.textContent='原本PDFを別タブで開く';
-      actions.appendChild(pdfLink);
-      var detail=document.createElement('a');
-      detail.className='material-detail-open';
-      detail.href=detailHref;
-      detail.textContent='解説・関連資料を見る';
-      actions.appendChild(detail);
-      body.appendChild(actions);
-      article.appendChild(body);
-      grid.replaceChild(article,card);
-    });
-  }
-  fetch('/guide-board.html',{cache:'no-store'})
-    .then(function(res){if(!res.ok)throw new Error('HTTP '+res.status);return res.text();})
-    .then(function(html){
-      var doc=new DOMParser().parseFromString(html,'text/html');
-      var main=doc.querySelector('main');
-      if(!main)throw new Error('main element not found');
-      prepare(main);
-      root.appendChild(document.importNode(main,true));
-      prepare(root);
-      upgradeKeyMaterials(root);
-      status.remove();
-      btn.disabled=false;
-    })
-    .catch(function(err){
-      status.innerHTML='本文を自動取得できませんでした。通常ページを開いてください。 <a href="/guide-board.html">guide-board.html</a><br><small>'+String(err.message||err)+'</small>';
-    });
-  btn.addEventListener('click',function(){window.print();});
+var root=document.getElementById('print-root'),status=document.getElementById('status'),btn=document.getElementById('printBtn');
+var materials=[
+['学校徴収金の公会計化等の取組の一層の推進について','/assets/documents/mext-school-collection-public-accounting-20250430.pdf','mext',['学校徴収金','公会計','負担軽減']],
+['学校関係団体に係る兼職兼業等の取扱い及び会計処理の適正化','https://www.mext.go.jp/content/20221011-mxt_syoto01_02.pdf','mext',['兼職兼業','会計処理','教職員関与']],
+['PTA等学校関係団体に係る兼職兼業等・会計処理適正化の点検・調査結果','https://www.mext.go.jp/a_menu/shotou/jinji/__icsFiles/afieldfile/2013/01/09/1329576_02.pdf','survey',['全国調査','PTA負担','学校会計']],
+['横浜市教育委員会通知 学教第1965号','/assets/docs/yokohama-notice-1965-complete.pdf','board',['任意加入','個人情報','会費徴収']],
+['公立学校とPTAの間で個人情報のやり取りをするためのポイント','/assets/documents/ppc-school-pta-personal-data-202603.pdf','ppc',['PPC','61条','69条']],
+['中央教育審議会答申（平成31年1月）業務の3分類','https://www.mext.go.jp/a_menu/shotou/hatarakikata/__icsFiles/afieldfile/2019/03/18/1414498_1_1.pdf','workstyle',['働き方改革','3分類','学校徴収金']]
+];
+function prepare(s){s.querySelectorAll('details').forEach(function(d){d.open=true});s.querySelectorAll('.faq-body').forEach(function(e){e.style.display='block'});s.querySelectorAll('script').forEach(function(e){e.remove()})}
+function embed(u){return /^(\/)?assets\/.+\.pdf$/i.test(u)}
+function upgrade(s){var g=s.querySelector('.key-materials-grid');if(!g)return;g.classList.add('material-preview-grid');var h=document.createElement('div');h.className='material-preview-guide';h.innerHTML='<strong>一次資料は、埋め込み可能なPDFだけをその場でスクロール表示します。</strong> 外部サイトが埋め込みを拒否する資料は、サムネイルと原本PDFへのボタンを表示します。<div class="material-preview-legend"><span><i style="background:#2563eb"></i>文科省</span><span><i style="background:#d97706"></i>調査</span><span><i style="background:#15803d"></i>教育委員会</span><span><i style="background:#7c3aed"></i>PPC</span><span><i style="background:#475569"></i>働き方改革</span></div>';g.parentNode.insertBefore(h,g);
+Array.from(g.children).forEach(function(c){var t=(c.textContent||'').replace(/\s+/g,' '),m=materials.find(function(x){return t.indexOf(x[0])>=0});if(!m)return;var href=c.getAttribute('href')||'#',img=c.querySelector('img'),a=document.createElement('article');a.className='material-preview-card tone-'+m[2];var p=document.createElement('div');p.className='material-pdf-preview '+(embed(m[1])?'is-embedded':'is-fallback');if(embed(m[1])){var f=document.createElement('iframe');f.loading='lazy';f.title='原文PDFプレビュー';f.src=m[1]+'#view=FitH&toolbar=1&navpanes=0';p.appendChild(f)}else{if(img){var si=img.cloneNode(true);si.className='material-fallback-thumb';p.appendChild(si)}var n=document.createElement('div');n.className='material-fallback-note';n.innerHTML='<strong>外部PDFのためページ内表示は行いません。</strong>発出元サイトの設定により埋め込みが拒否されるため、下の「原本PDFを別タブで開く」から確認してください。';p.appendChild(n)}if(img){var pi=img.cloneNode(true);pi.className='material-print-thumb';p.appendChild(pi)}a.appendChild(p);var b=document.createElement('div');b.className='material-card-body';var ob=c.querySelector('.u-152a9b1880');if(ob){var cl=ob.cloneNode(true),cta=cl.querySelector('.u-25df1960ba');if(cta)cta.remove();b.appendChild(cl)}var tags=document.createElement('div');tags.className='material-tags';m[3].forEach(function(x){var q=document.createElement('span');q.className='material-tag';q.textContent=x;tags.appendChild(q)});b.appendChild(tags);var ac=document.createElement('div');ac.className='material-actions';ac.innerHTML='<a class="material-pdf-open" target="_blank" rel="noopener" href="'+m[1]+'">原本PDFを別タブで開く</a><a class="material-detail-open" href="'+href+'">解説・関連資料を見る</a>';b.appendChild(ac);a.appendChild(b);g.replaceChild(a,c)})}
+fetch('/guide-board.html',{cache:'no-store'}).then(function(r){if(!r.ok)throw Error(r.status);return r.text()}).then(function(h){var d=new DOMParser().parseFromString(h,'text/html'),m=d.querySelector('main');if(!m)throw Error('main not found');prepare(m);root.appendChild(document.importNode(m,true));prepare(root);upgrade(root);status.remove();btn.disabled=false}).catch(function(e){status.innerHTML='本文を取得できませんでした。 <a href="/guide-board.html">通常ページ</a>'});btn.onclick=function(){window.print()};
 })();
 </script>
-</body>
-</html>
+</body></html>
