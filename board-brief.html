@@ -68,9 +68,16 @@ strong{color:#172033}
   a{color:inherit}
 }
 @media screen and (max-width:850px){
+  .toolbar{position:static;flex-wrap:wrap}
   .document{width:100%;margin:0}
-  .page{width:100%;height:auto;min-height:297mm;padding:18px 18px 70mm}
-  .qr-strip{left:18px;right:18px}
+  .page{width:100%;height:auto;min-height:0;padding:18px;overflow:visible;margin-bottom:12px}
+  .qr-strip{position:static;left:auto;right:auto;bottom:auto;margin-top:24px;padding-top:12px}
+  .qr-grid,.qr-grid.three{grid-template-columns:1fr;gap:14px}
+  .qr-item{align-items:flex-start}
+  .qr-item img{width:24mm;height:24mm;flex:0 0 24mm}
+  .page-no{position:static;display:block;text-align:right;margin-top:18px}
+  .mast{gap:12px}
+  .org{max-width:45%}
 }
 </style>
 </head>
