@@ -1,13 +1,13 @@
 {
-  "commit": "a3d649085a7421ee15628067483717e5481b0d1e",
-  "verified_at": "2026-08-27T04:24:53.800272+00:00",
+  "commit": "9dd31719e314f4da56fcfd21ac18f8f1a2c2e1cc",
+  "verified_at": "2026-08-27T04:25:25.648393+00:00",
   "support_page": "https://ptaorg.com/support.html",
-  "support_probe_url": "https://ptaorg.com/support.html?deployment=a3d649085a7421ee15628067483717e5481b0d1e&attempt=1&ts=1787804693",
+  "support_probe_url": "https://ptaorg.com/support.html?deployment=9dd31719e314f4da56fcfd21ac18f8f1a2c2e1cc&attempt=1&ts=1787804725",
   "expected_paypay_url": "https://qr.paypay.ne.jp/p2p01_SV4kOonbQ7R5vLoh",
   "detected_paypay_url": "https://qr.paypay.ne.jp/p2p01_SV4kOonbQ7R5vLoh",
   "support_verified": true,
   "report_page": "https://ptaorg.com/report.html",
-  "report_probe_url": "https://ptaorg.com/report.html?deployment=a3d649085a7421ee15628067483717e5481b0d1e&attempt=1&ts=1787804693",
+  "report_probe_url": "https://ptaorg.com/report.html?deployment=9dd31719e314f4da56fcfd21ac18f8f1a2c2e1cc&attempt=1&ts=1787804725",
   "report_revision": "report-20260809-3",
   "report_verified": true,
   "verified": true
