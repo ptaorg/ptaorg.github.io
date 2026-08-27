@@ -25,6 +25,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Refresh generated search index
+        run: node scripts/generate-search-index.js
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
@@ -100,8 +103,77 @@ jobs:
             sleep 5
           done
 
+          fetch_public() {
+            local url="$1"
+            local output="$2"
+            local check_url=''
+            for attempt in $(seq 1 24); do
+              check_url="${url}?deployment=${GITHUB_SHA}&attempt=${attempt}&ts=$(date +%s)"
+              if curl --fail --silent --show-error \
+                --header 'Cache-Control: no-cache, no-store, max-age=0' \
+                --header 'Pragma: no-cache' \
+                "$check_url" --output "$output"; then
+                return 0
+              fi
+              sleep 5
+            done
+            return 1
+          }
+
+          mext_verified=false
+          if fetch_public 'https://ptaorg.com/journal/mext-not-public.html' /tmp/mext-live.html \
+            && grep --fixed-strings --quiet 'https://ptaorg.com/journal/mext-not-public.html' /tmp/mext-live.html \
+            && grep --fixed-strings --quiet '文部科学省の公式通知・通達・文書回答そのものではありません' /tmp/mext-live.html; then
+            mext_verified=true
+          fi
+
+          duty_journal_verified=false
+          if fetch_public 'https://ptaorg.com/journal/pta-duty-concentration.html' /tmp/duty-journal-live.html \
+            && grep --fixed-strings --quiet 'https://ptaorg.com/journal/pta-shokumu-sennen-gimu.html' /tmp/duty-journal-live.html \
+            && grep --fixed-strings --quiet 'content="0;url=/journal/pta-shokumu-sennen-gimu.html"' /tmp/duty-journal-live.html; then
+            duty_journal_verified=true
+          fi
+
+          duty_root_verified=false
+          if fetch_public 'https://ptaorg.com/pta-duty-concentration.html' /tmp/duty-root-live.html \
+            && grep --fixed-strings --quiet 'https://ptaorg.com/journal/pta-shokumu-sennen-gimu.html' /tmp/duty-root-live.html \
+            && grep --fixed-strings --quiet 'content="0;url=/journal/pta-shokumu-sennen-gimu.html"' /tmp/duty-root-live.html; then
+            duty_root_verified=true
+          fi
+
+          fee_redirect_verified=false
+          if fetch_public 'https://ptaorg.com/journal/school-fee-illegality.html' /tmp/fee-redirect-live.html \
+            && grep --fixed-strings --quiet 'https://ptaorg.com/journal/pta-fee-collection-legal-analysis.html' /tmp/fee-redirect-live.html \
+            && grep --fixed-strings --quiet 'content="0;url=/journal/pta-fee-collection-legal-analysis.html"' /tmp/fee-redirect-live.html; then
+            fee_redirect_verified=true
+          fi
+
+          sitemap_migration_verified=false
+          if fetch_public 'https://ptaorg.com/sitemap-research.xml' /tmp/sitemap-research-live.xml \
+            && grep --fixed-strings --quiet 'https://ptaorg.com/journal/mext-not-public.html' /tmp/sitemap-research-live.xml; then
+            sitemap_migration_verified=true
+          fi
+
+          search_index_verified=false
+          if fetch_public 'https://ptaorg.com/data/site-search-index.js' /tmp/site-search-live.js \
+            && grep --fixed-strings --quiet '/journal/mext-not-public.html' /tmp/site-search-live.js; then
+            search_index_verified=true
+          fi
+
+          migration_verified=false
+          if [[ "$mext_verified" == 'true' \
+            && "$duty_journal_verified" == 'true' \
+            && "$duty_root_verified" == 'true' \
+            && "$fee_redirect_verified" == 'true' \
+            && "$sitemap_migration_verified" == 'true' \
+            && "$search_index_verified" == 'true' ]]; then
+            migration_verified=true
+          fi
+
+          echo "Migration checks: mext=$mext_verified duty_journal=$duty_journal_verified duty_root=$duty_root_verified fee=$fee_redirect_verified sitemap=$sitemap_migration_verified search_index=$search_index_verified"
+
           deployment_verified=false
-          if [[ "$support_verified" == 'true' && "$report_verified" == 'true' ]]; then
+          if [[ "$support_verified" == 'true' && "$report_verified" == 'true' && "$migration_verified" == 'true' ]]; then
             deployment_verified=true
           fi
 
@@ -111,6 +183,13 @@ jobs:
           SUPPORT_PROBE_URL="$probe" \
           REPORT_VERIFIED="$report_verified" \
           REPORT_PROBE_URL="$report_probe" \
+          MEXT_VERIFIED="$mext_verified" \
+          DUTY_JOURNAL_VERIFIED="$duty_journal_verified" \
+          DUTY_ROOT_VERIFIED="$duty_root_verified" \
+          FEE_REDIRECT_VERIFIED="$fee_redirect_verified" \
+          SITEMAP_MIGRATION_VERIFIED="$sitemap_migration_verified" \
+          SEARCH_INDEX_VERIFIED="$search_index_verified" \
+          MIGRATION_VERIFIED="$migration_verified" \
           VERIFIED="$deployment_verified" \
           COMMIT_SHA="$GITHUB_SHA" \
           python3 - <<'PY'
@@ -130,6 +209,15 @@ jobs:
               "report_probe_url": os.environ["REPORT_PROBE_URL"],
               "report_revision": "report-20260809-3",
               "report_verified": os.environ["REPORT_VERIFIED"] == "true",
+              "migration_pages": {
+                  "mext_record_verified": os.environ["MEXT_VERIFIED"] == "true",
+                  "duty_journal_redirect_verified": os.environ["DUTY_JOURNAL_VERIFIED"] == "true",
+                  "duty_root_redirect_verified": os.environ["DUTY_ROOT_VERIFIED"] == "true",
+                  "fee_redirect_verified": os.environ["FEE_REDIRECT_VERIFIED"] == "true",
+                  "research_sitemap_verified": os.environ["SITEMAP_MIGRATION_VERIFIED"] == "true",
+                  "site_search_index_verified": os.environ["SEARCH_INDEX_VERIFIED"] == "true",
+                  "verified": os.environ["MIGRATION_VERIFIED"] == "true",
+              },
               "verified": os.environ["VERIFIED"] == "true",
           }
           with open("/tmp/deployment-verification.json", "w", encoding="utf-8") as f:
@@ -163,5 +251,5 @@ jobs:
       - name: Require successful public verification
         if: steps.verify.outputs.verified != 'true'
         run: |
-          echo 'The deployed public page does not contain the expected PayPay URL.' >&2
+          echo 'The deployed public pages did not pass all required verification checks.' >&2
           exit 1
