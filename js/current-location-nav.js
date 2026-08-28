@@ -1,7 +1,9 @@
-/* Current-location navigation — 2026-08-23 v10 */
+/* Current-location navigation — 2026-08-28 v11 */
 (function(){
   var path = location.pathname.replace(/\/+$/, '') || '/index.html';
   if (path === '/index.html' || path === '/') return;
+
+  var KURUME_URL = '/kurume-28-toushin2-pta-personal-information.html';
 
   function pageLabel(){
     var h1 = document.querySelector('main h1, h1');
@@ -15,12 +17,14 @@
       ['guide','保護者向け','/guide-parent.html'],
       ['membership','加入手続き','/membership.html'],
       ['privacy','個人情報','/privacy.html'],
+      ['kurume','久留米市28答申第2号',KURUME_URL],
       ['fee','会費徴収','/fee-collection.html'],
       ['withdrawal','退会・非加入','/guide-parent.html#parent-withdrawal']
     ]},
     ppc: {title:'個人情報・PPC', items:[
       ['ppc','PPC資料','/ppc-points.html'],
       ['privacy','個人情報','/privacy.html'],
+      ['kurume','久留米市28答申第2号',KURUME_URL],
       ['membership','加入手続き','/membership.html'],
       ['fee','会費徴収','/fee-collection.html'],
       ['law','法制度マップ','/law-map.html']
@@ -39,6 +43,7 @@
       ['board','教育委員会回答','/board-responses.html'],
       ['archive','全国資料館','/national-archive.html'],
       ['admin','行政通知・公式PDF','/administrative-materials.html'],
+      ['kurume','久留米市28答申第2号',KURUME_URL],
       ['journal','論考・調査報告','/journal.html']
     ]},
     audience: {title:'立場別', items:[
@@ -76,8 +81,12 @@
 
   function chooseGroup(){
     if (path === '/journal/pta-shokumu-sennen-gimu.html') return {mode:'article35', title:'この論考の現在地', items:article35Items};
+    if (path === KURUME_URL) return {mode:'normal', key:'kurume', data:GROUPS.ppc};
     if (path === '/ppc-points.html') return {mode:'normal', key:'ppc', data:GROUPS.ppc};
-    if (['/guide-parent.html','/membership.html','/privacy.html','/fee-collection.html'].indexOf(path) >= 0) return {mode:'normal', key:path.indexOf('guide-parent')>=0?'guide':path.indexOf('membership')>=0?'membership':path.indexOf('privacy')>=0?'privacy':'fee', data:GROUPS.parent};
+    if (['/guide-parent.html','/membership.html','/privacy.html','/fee-collection.html'].indexOf(path) >= 0) {
+      var kp = path.indexOf('guide-parent')>=0?'guide':path.indexOf('membership')>=0?'membership':path.indexOf('privacy')>=0?'privacy':'fee';
+      return {mode:'normal', key:kp, data:GROUPS.parent};
+    }
     if (['/law-map.html','/personnel.html','/facilities.html','/education-board-responsibility.html','/cases.html','/timeline.html'].indexOf(path) >= 0) {
       var k = path.indexOf('personnel')>=0?'personnel':path.indexOf('facilities')>=0?'facilities':path.indexOf('education-board')>=0?'boardresp':'law';
       return {mode:'normal', key:k, data:GROUPS.law};
@@ -96,6 +105,33 @@
     return {mode:'normal', key:'current', data:GROUPS.generic};
   }
 
+  function injectKurumeEvidence(){
+    if (path === '/privacy.html') {
+      var ul = document.querySelector('#privacy-sources ul');
+      if (ul && !ul.querySelector('[data-kurume-evidence]')) {
+        var li = document.createElement('li');
+        li.setAttribute('data-kurume-evidence','');
+        li.innerHTML = '<strong><a href="' + KURUME_URL + '">久留米市情報公開・個人情報保護審査会 28答申第2号（2016年7月15日）</a></strong>：学校からPTAへの個人情報提供について、提供停止・利用停止請求が実際に行われ、教育委員会の通知と運用変更を経た後の審査会判断です。<strong>停止請求を認容した答申ではなく、是正後の運用を前提に拒否決定を妥当とした資料</strong>である点を含め、<a href="' + KURUME_URL + '">事案・是正経過・答申5〜6頁の整理</a>をサイト内で確認できます。';
+        var first = ul.querySelector('li');
+        if (first) first.insertAdjacentElement('afterend', li); else ul.appendChild(li);
+      }
+    }
+
+    if (path === '/administrative-materials.html') {
+      var tbody = document.querySelector('#privacy .materials-table tbody');
+      if (tbody && !tbody.querySelector('[data-kurume-evidence]')) {
+        var tr = document.createElement('tr');
+        tr.setAttribute('data-kurume-evidence','');
+        tr.innerHTML = '<td>A</td>' +
+          '<td><a href="' + KURUME_URL + '"><strong>久留米市情報公開・個人情報保護審査会 28答申第2号</strong></a><small>久留米市・2016年7月15日／学校からPTAへの情報提供・利用停止請求</small></td>' +
+          '<td>学校からPTAへの提供停止、学校による利用停止の請求、教育委員会の是正通知、名簿回収、保護者からの直接取得への運用変更を一続きで確認する過去の行政実例。</td>' +
+          '<td>拒否決定を妥当とした答申。ただし、先行答申と教育委員会通知による<strong>是正後の運用</strong>を前提に判断した経過を、<a href="' + KURUME_URL + '">サイト内解説で確認</a>。</td>';
+        var firstRow = tbody.querySelector('tr');
+        if (firstRow) firstRow.insertAdjacentElement('afterend', tr); else tbody.appendChild(tr);
+      }
+    }
+  }
+
   var group = chooseGroup();
   var items = group.mode === 'article35' ? group.items.slice() : group.data.items.slice();
   var title = group.mode === 'article35' ? group.title : group.data.title;
@@ -108,7 +144,7 @@
   }
 
   var style = document.createElement('style');
-  style.id = 'current-location-nav-v10-style';
+  style.id = 'current-location-nav-v11-style';
   style.textContent =
     '.loc-trail,.breadcrumb-bar,.breadcrumb,.breadcrumbs{font-size:1.05rem!important;line-height:1.55!important;color:#174a7c!important}' +
     '.loc-trail-inner{padding:10px 24px!important;gap:8px!important;color:#174a7c!important}' +
@@ -160,8 +196,10 @@
   }
 
   function init(){
+    injectKurumeEvidence();
     document.body.classList.add('current-location-enabled');
     if (document.querySelector('.current-location-sidebar')) return;
+
     var aside = document.createElement('aside');
     aside.className = 'current-location-sidebar';
     aside.setAttribute('aria-label','現在地ナビ');
