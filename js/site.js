@@ -1,4 +1,4 @@
-/* site.js loader — 2026-08-25 v94 */
+/* site.js loader — 2026-08-29 v95 */
 (function(){
   function load(src, id, done){
     if (document.getElementById(id)) { if (done) done(); return; }
@@ -174,9 +174,53 @@
     steps.insertAdjacentElement('beforebegin', block);
   }
 
+  function installPersonnelFaq(){
+    if (!document.body.classList.contains('personnel-editorial')) return;
+    document.querySelectorAll('.faq-item').forEach(function(item, index){
+      var q = item.querySelector('.faq-q');
+      var a = item.querySelector('.faq-a');
+      if (!q || !a || q.dataset.personnelFaqReady === '1') return;
+
+      var id = a.id || ('personnel-faq-answer-' + (index + 1));
+      a.id = id;
+      q.dataset.personnelFaqReady = '1';
+      q.setAttribute('role', 'button');
+      q.setAttribute('tabindex', '0');
+      q.setAttribute('aria-controls', id);
+      q.setAttribute('aria-expanded', 'false');
+      q.style.cursor = 'pointer';
+      a.setAttribute('aria-hidden', 'true');
+      a.style.maxHeight = '0px';
+      a.style.paddingBottom = '0px';
+
+      function setOpen(open){
+        item.classList.toggle('is-open', open);
+        q.setAttribute('aria-expanded', open ? 'true' : 'false');
+        a.setAttribute('aria-hidden', open ? 'false' : 'true');
+        a.style.maxHeight = open ? 'none' : '0px';
+        a.style.paddingBottom = open ? '20px' : '0px';
+        var icon = q.querySelector('.faq-toggle');
+        if (icon) icon.textContent = open ? '▲' : '▼';
+      }
+
+      function toggle(){
+        setOpen(q.getAttribute('aria-expanded') !== 'true');
+      }
+
+      q.addEventListener('click', toggle);
+      q.addEventListener('keydown', function(e){
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggle();
+        }
+      });
+    });
+  }
+
   function installCoreEssayEntrances(){
     addCoreEssayStyles();
     addGlobalNav();
+    installPersonnelFaq();
     var path = (window.location.pathname || '').replace(/\/+$/,'');
     if (document.body.classList.contains('home-page') || path === '' || path === '/index.html') injectHome();
     if (document.body.classList.contains('journal-page') || path === '/journal.html') injectJournal();
