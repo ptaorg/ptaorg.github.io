@@ -60,6 +60,17 @@
     color: var(--home-gold-light);
   }
 
+  .hc-hero-copy::before {
+    display: block;
+    width: 112px;
+    aspect-ratio: 1;
+    margin: 0 0 18px;
+    border-radius: 50%;
+    background: #fff url("/assets/pta-boundary-logo.svg") center / cover no-repeat;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    content: "";
+  }
+
   .hc-hero h1 {
     margin: 0 0 24px;
     color: #fff;
@@ -487,6 +498,11 @@
 
     .hc-hero {
       padding: 52px 0;
+    }
+
+    .hc-hero-copy::before {
+      width: 86px;
+      margin-bottom: 15px;
     }
 
     .hc-hero h1 {
