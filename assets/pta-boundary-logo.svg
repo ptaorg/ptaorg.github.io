@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">学校とPTAの境界を示すシンボル</title>
+  <desc id="desc">開いた本の上に子ども、学校、成長する葉を配置した円形のシンボル</desc>
+  <defs>
+    <linearGradient id="ring" x1="38" y1="52" x2="282" y2="276" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b6fb8"/>
+      <stop offset="0.55" stop-color="#169a8a"/>
+      <stop offset="1" stop-color="#9acb20"/>
+    </linearGradient>
+    <linearGradient id="hill" x1="74" y1="154" x2="248" y2="232" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#33a7c7"/>
+      <stop offset="1" stop-color="#8bcf35"/>
+    </linearGradient>
+    <linearGradient id="book" x1="84" y1="201" x2="236" y2="266" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0e7bb6"/>
+      <stop offset="1" stop-color="#064c86"/>
+    </linearGradient>
+  </defs>
+  <circle cx="160" cy="160" r="151" fill="#fff"/>
+  <circle cx="160" cy="160" r="145" fill="none" stroke="url(#ring)" stroke-width="12"/>
+  <circle cx="160" cy="160" r="130" fill="#fbfdff" stroke="#dbe7ee" stroke-width="2"/>
+
+  <path d="M73 205c26-40 61-58 102-56 31 2 60 14 83 38v44H68z" fill="url(#hill)" opacity=".96"/>
+
+  <path d="M161 157c-4-34 1-67 14-97 12 10 22 21 28 34 14-7 30-10 47-8-7 28-25 49-54 62-8 4-20 7-35 9z" fill="#159a70"/>
+  <path d="M160 160c1-28-7-52-23-73-10 8-17 17-21 28-13-4-26-4-39 0 9 24 26 40 51 48 9 3 19 2 32-3z" fill="#78c83c"/>
+  <path d="M159 95v102" stroke="#0d817f" stroke-width="8" stroke-linecap="round"/>
+
+  <g fill="#0b68a5">
+    <circle cx="111" cy="151" r="9"/>
+    <path d="M101 166c0-8 5-13 10-13s10 5 10 13v23h-6v20h-8v-20h-6z"/>
+    <circle cx="137" cy="140" r="11"/>
+    <path d="M125 158c0-10 6-16 12-16s12 6 12 16v29h-7v25h-10v-25h-7z"/>
+  </g>
+
+  <g transform="translate(196 119)">
+    <path d="M0 21h62v59H0z" fill="#0b78b5"/>
+    <path d="M19 0h24v21H19z" fill="#0a679f"/>
+    <circle cx="31" cy="11" r="6" fill="#fff"/>
+    <path d="M31 7v4l3 2" fill="none" stroke="#0a679f" stroke-width="2" stroke-linecap="round"/>
+    <g fill="#fff">
+      <path d="M9 32h8v9H9zM24 32h8v9h-8zM39 32h8v9h-8zM9 48h8v9H9zM39 48h8v9h-8z"/>
+      <path d="M25 58h13v22H25z"/>
+    </g>
+  </g>
+
+  <path d="M66 215c31-16 61-15 94 2 33-17 64-18 95-2v54c-31-13-62-11-95 8-33-19-64-21-95-8z" fill="#fff" stroke="#0b659c" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M160 218v57" stroke="#0b659c" stroke-width="5"/>
+  <path d="M72 244c28-11 56-8 83 8M248 244c-28-11-56-8-83 8" fill="none" stroke="url(#book)" stroke-width="8" stroke-linecap="round"/>
+</svg>
