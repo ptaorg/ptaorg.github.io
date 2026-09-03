@@ -395,12 +395,42 @@
   }
 
   function initFAQ() {
-    document.querySelectorAll('.faq-item .faq-q').forEach(function(q){
+    document.querySelectorAll('.faq-item .faq-q').forEach(function(q, index){
       if (q.dataset.faqReady === '1') return;
+
+      var item = q.closest('.faq-item');
+      var answer = item && item.querySelector('.faq-a');
+      if (!item || !answer) return;
+
+      var id = answer.id || ('site-faq-answer-' + (index + 1));
+      answer.id = id;
       q.dataset.faqReady = '1';
-      q.addEventListener('click', function(){
-        var item = q.closest('.faq-item');
-        if (item) item.classList.toggle('is-open');
+      q.setAttribute('role', 'button');
+      q.setAttribute('tabindex', '0');
+      q.setAttribute('aria-controls', id);
+      q.style.cursor = 'pointer';
+
+      function setOpen(open){
+        item.classList.toggle('is-open', open);
+        q.setAttribute('aria-expanded', open ? 'true' : 'false');
+        answer.setAttribute('aria-hidden', open ? 'false' : 'true');
+        answer.style.maxHeight = open ? 'none' : '0px';
+        answer.style.paddingBottom = open ? '20px' : '0px';
+        var icon = q.querySelector('.faq-toggle');
+        if (icon) icon.textContent = open ? '▲' : '▼';
+      }
+
+      function toggle(){
+        setOpen(q.getAttribute('aria-expanded') !== 'true');
+      }
+
+      setOpen(item.classList.contains('is-open'));
+      q.addEventListener('click', toggle);
+      q.addEventListener('keydown', function(e){
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggle();
+        }
       });
     });
   }
