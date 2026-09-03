@@ -1,4 +1,4 @@
-/* site.js loader — 2026-09-03 v96 */
+/* site.js loader — 2026-09-03 v97 */
 (function(){
   function load(src, id, done){
     if (document.getElementById(id)) { if (done) done(); return; }
@@ -91,6 +91,37 @@
         else group.appendChild(submit);
       }
     });
+  }
+
+  function installMobileSearch(){
+    var overlay = document.getElementById('mobileOverlay');
+    if (!overlay || overlay.querySelector('[data-mobile-site-search]')) return;
+
+    var box = document.createElement('div');
+    box.className = 'header-search mobile-menu-search';
+    box.setAttribute('data-mobile-site-search','');
+    box.innerHTML =
+      '<label class="mobile-menu-search-label" for="mobileSiteSearch">サイト内検索</label>' +
+      '<input id="mobileSiteSearch" aria-label="サイト内検索" class="search-input" placeholder="例：会費徴収、個人情報、退会" type="search">' +
+      '<div class="search-results-dropdown" aria-live="polite"></div>';
+
+    var firstGroup = overlay.querySelector('.mobile-menu-group');
+    if (firstGroup) overlay.insertBefore(box, firstGroup);
+    else overlay.insertBefore(box, overlay.firstChild);
+
+    if (!document.getElementById('mobile-menu-search-style-v97')) {
+      var style = document.createElement('style');
+      style.id = 'mobile-menu-search-style-v97';
+      style.textContent =
+        '.mobile-overlay .mobile-menu-search{display:block!important;flex:none!important;width:min(100%,430px)!important;max-width:430px!important;margin:0 0 8px!important;position:relative!important}' +
+        '.mobile-menu-search-label{display:block;margin:0 0 6px;color:rgba(255,255,255,.72);font-size:.76rem;font-weight:900;letter-spacing:.08em}' +
+        '.mobile-overlay .mobile-menu-search input{min-height:46px;padding:10px 12px!important;border:1px solid rgba(255,255,255,.38)!important;border-radius:0!important;background:#fff!important;color:#18212b!important}' +
+        '.mobile-overlay .mobile-menu-search .search-results-dropdown{position:static!important;margin-top:6px!important;max-height:42vh!important;border-radius:0!important;box-shadow:none!important;text-align:left!important}' +
+        '.mobile-overlay .mobile-menu-search .srd-item{padding:11px 12px!important}';
+      document.head.appendChild(style);
+    }
+
+    if (typeof window.initSearch === 'function') window.initSearch();
   }
 
   function makeCoreSection(journal){
@@ -228,6 +259,7 @@
   }
 
   load('/js/site-core-v90.js?v=96', 'site-core-v90', function(){
+    installMobileSearch();
     load('/js/current-location-nav.js?v=20260823-10', 'current-location-nav', installCoreEssayEntrances);
   });
 })();
