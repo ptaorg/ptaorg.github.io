@@ -99,7 +99,7 @@ body[data-content-mode="prose"]
 
 /* Repeated card grids read from top to bottom instead of as a portal dashboard. */
 body[data-content-mode="prose"]
-  :where([class$="-grid"], [class*="-grid "], .grid):not(header *, footer *, nav *, form *, .region-map, .map-grid) {
+  :where([class$="-grid"], [class*="-grid "], .grid):not(header *, footer *, nav *, form *, .region-map, .map-grid, .hc-hero-grid) {
   display: block !important;
   grid-template-columns: none !important;
   gap: 0 !important;

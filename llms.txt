@@ -6,15 +6,15 @@ Canonical site: https://ptaorg.com/
 Publisher: PTA適正化推進委員会
 Language: Japanese
 Contact: https://ptaorg.com/contact.html
-Public HTML pages reviewed: 201
-Site-wide review date: 2026-08-08
+Public canonical URLs listed in sitemaps: 211
+Site overview review date: 2026-09-03
 
 All public HTML pages expose a unique canonical URL, description, indexing policy, publisher metadata, Open Graph metadata, JSON-LD and a text-first presentation. Source-document images, forms, maps and interactive tools remain available where they are part of the evidence or function of the page.
 
 ## Start here
 
-- [PTA運営が現行法体系を満たす唯一の構造](https://ptaorg.com/journal/pta-unified-legal-theory.html): 明示的加入意思表示とPTA自己徴収を、加入契約、会員情報、会費債権、服務、会計を貫く統一理論として論証。六つの完全分離と滋賀県監査結果の検討を含む第1版PDF原本あり。
-- [PTA加入はオプトイン以外では成立しない](https://ptaorg.com/pta-membership-optin.html): 加入の申込み、個人情報提供への同意、会費の支払いを分けた基幹解説。PDF版あり。
+- [現行法体系と整合するPTA運営の基本モデル――明示的加入意思表示とPTA自己徴収の統一理論](https://ptaorg.com/journal/pta-unified-legal-theory.html): 明示的加入意思表示とPTA自己徴収を、加入契約、会員情報、会費債権、服務、会計を貫く統一理論として論証。六つの完全分離と滋賀県監査結果の検討を含む第1版PDF原本あり。
+- [PTA加入は自動加入・沈黙だけでは成立しない](https://ptaorg.com/pta-membership-optin.html): 加入の申込み、個人情報提供への同意、会費の支払いを分けた基幹解説。PDF版あり。
 - [PPC「公立学校とPTAの個人情報」全17ページ詳細解説](https://ptaorg.com/ppc-school-pta-personal-data.html): 個人情報保護委員会の2026年3月資料を逐ページで解説。公式記載と当委員会の分析を区別。
 - [学校保有情報のPTA目的利用・提供](https://ptaorg.com/privacy.html): 個人情報論点の総合ページ。
 - [PTA入会手続](https://ptaorg.com/membership.html): 任意加入、申込み、承諾、退会、会費、個人情報の全体整理。

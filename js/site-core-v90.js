@@ -173,9 +173,47 @@
           dropdown.classList.remove('is-open');
           return;
         }
-        var hits = getSearchIndex().filter(function(row){
-          return row && (row[0] + ' ' + row[1] + ' ' + row[2]).toLowerCase().indexOf(q) >= 0;
-        }).slice(0, 8);
+        var priorityPaths = {
+          '/membership.html': 1,
+          '/pta-membership-optin.html': 1,
+          '/fee-collection.html': 1,
+          '/privacy.html': 1,
+          '/personnel.html': 1,
+          '/facilities.html': 1,
+          '/ppc-points.html': 1,
+          '/board-responses.html': 1
+        };
+        var queryBoosts = {
+          '会費徴収': ['/fee-collection.html'],
+          '個人情報': ['/privacy.html'],
+          '学校施設': ['/facilities.html'],
+          '施設利用': ['/facilities.html'],
+          '職務専念義務': ['/personnel.html'],
+          '教職員': ['/personnel.html'],
+          '退会': ['/guide-parent.html', '/membership.html', '/pta-membership-optin.html']
+        };
+        var boostedPaths = queryBoosts[q] || [];
+        var hits = getSearchIndex().map(function(row, order){
+          if (!row) return null;
+          var title = String(row[0] || '').toLowerCase();
+          var path = String(row[1] || '').toLowerCase();
+          var desc = String(row[2] || '').toLowerCase();
+          var score = 0;
+          if (title === q) score += 140;
+          else if (title.indexOf(q) === 0) score += 100;
+          else if (title.indexOf(q) >= 0) score += 75;
+          if (path.indexOf(q) >= 0) score += 45;
+          if (desc.indexOf(q) >= 0) score += 20;
+          if (boostedPaths.indexOf(path) >= 0) score += 120;
+          if (score && priorityPaths[path]) score += 15;
+          return score ? { row: row, score: score, order: order } : null;
+        }).filter(function(hit){
+          return hit !== null;
+        }).sort(function(a, b){
+          return b.score - a.score || a.order - b.order;
+        }).slice(0, 8).map(function(hit){
+          return hit.row;
+        });
         if (!hits.length) {
           var empty = document.createElement('div');
           empty.className = 'search-result-item srd-empty';

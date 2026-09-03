@@ -1,4 +1,4 @@
-/* site.js loader — 2026-08-29 v95 */
+/* site.js loader — 2026-09-03 v96 */
 (function(){
   function load(src, id, done){
     if (document.getElementById(id)) { if (done) done(); return; }
@@ -227,7 +227,7 @@
     if (path === '/framework.html' || document.getElementById('fw-borders')) injectFrameworkBoundaryClarification();
   }
 
-  load('/js/site-core-v90.js?v=93', 'site-core-v90', function(){
+  load('/js/site-core-v90.js?v=96', 'site-core-v90', function(){
     load('/js/current-location-nav.js?v=20260823-10', 'current-location-nav', installCoreEssayEntrances);
   });
 })();
