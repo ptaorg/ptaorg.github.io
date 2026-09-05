@@ -1,0 +1,212 @@
+/*
+ * Site-wide footer normalization.
+ * Loaded after page-specific styles so every public footer has the same shell.
+ * Internal grids/lists remain page-owned; this file normalizes the outer footer.
+ */
+
+:root {
+  --global-footer-bg: #10233d;
+  --global-footer-ink: #dbe6f2;
+  --global-footer-strong: #ffffff;
+  --global-footer-accent: #c89b18;
+  --global-footer-link-hover: #f3d36a;
+  --global-footer-line: rgba(255, 255, 255, 0.16);
+}
+
+body > footer,
+footer.footer,
+footer.site-foot,
+footer.essay-footer,
+footer.submit-footer,
+footer.document-site-footer {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 48px 0 0 !important;
+  padding: 0 20px !important;
+  border: 0 !important;
+  border-top: 3px solid var(--global-footer-accent) !important;
+  border-radius: 0 !important;
+  background: var(--global-footer-bg) !important;
+  color: var(--global-footer-ink) !important;
+  box-shadow: none !important;
+  text-align: left;
+}
+
+/* Existing wrapper names used across the site. */
+body > footer :where(
+  .footer-inner,
+  .foot-inner,
+  .essay-footer-inner,
+  .submit-footer-inner,
+  .footer-container,
+  .footer-content,
+  .wrap
+),
+footer.footer :where(
+  .footer-inner,
+  .footer-container,
+  .footer-content,
+  .wrap
+),
+footer.site-foot .foot-inner,
+footer.essay-footer .essay-footer-inner,
+footer.submit-footer .submit-footer-inner {
+  box-sizing: border-box !important;
+  width: min(100%, 1180px) !important;
+  max-width: 1180px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  color: var(--global-footer-ink) !important;
+}
+
+/* Give the main inner shell stable vertical rhythm without flattening its grid. */
+body > footer > :where(
+  .footer-inner,
+  .foot-inner,
+  .essay-footer-inner,
+  .submit-footer-inner,
+  .footer-container,
+  .footer-content,
+  .wrap
+),
+footer.footer > :where(.footer-inner, .footer-container, .footer-content, .wrap),
+footer.site-foot > .foot-inner,
+footer.essay-footer > .essay-footer-inner,
+footer.submit-footer > .submit-footer-inner {
+  padding-top: 30px !important;
+  padding-bottom: 34px !important;
+}
+
+/* Wrapper-less document footers. */
+footer.document-site-footer {
+  padding-top: 28px !important;
+  padding-bottom: 32px !important;
+}
+footer.document-site-footer > * {
+  box-sizing: border-box;
+  width: min(100%, 1180px);
+  max-width: 1180px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Preserve rich footer grids but keep them inside the common reading width. */
+body > footer .footer-grid,
+footer.footer .footer-grid {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+body > footer :where(p, li, span, small, address, div),
+footer.footer :where(p, li, span, small, address, div),
+footer.site-foot :where(p, li, span, small, address, div),
+footer.essay-footer :where(p, li, span, small, address, div),
+footer.submit-footer :where(p, li, span, small, address, div),
+footer.document-site-footer :where(p, li, span, small, address, div) {
+  color: var(--global-footer-ink) !important;
+}
+
+body > footer :where(strong, h2, h3, h4, .foot-brand, .submit-footer-title),
+footer.footer :where(strong, h2, h3, h4),
+footer.site-foot :where(strong, .foot-brand),
+footer.essay-footer strong,
+footer.submit-footer :where(strong, .submit-footer-title),
+footer.document-site-footer strong {
+  color: var(--global-footer-strong) !important;
+}
+
+body > footer a,
+footer.footer a,
+footer.site-foot a,
+footer.essay-footer a,
+footer.submit-footer a,
+footer.document-site-footer a {
+  color: #ffffff !important;
+  text-decoration-color: rgba(255, 255, 255, 0.48) !important;
+  text-underline-offset: 3px;
+}
+
+body > footer a:hover,
+footer.footer a:hover,
+footer.site-foot a:hover,
+footer.essay-footer a:hover,
+footer.submit-footer a:hover,
+footer.document-site-footer a:hover {
+  color: var(--global-footer-link-hover) !important;
+  text-decoration-color: var(--global-footer-link-hover) !important;
+}
+
+body > footer :where(.footer-governance, .footer-bottom, .copyright),
+footer.footer :where(.footer-governance, .footer-bottom, .copyright) {
+  border-color: var(--global-footer-line) !important;
+}
+
+/* Avoid the old light-background copyright rule becoming a pale strip. */
+body > footer .copyright,
+footer.footer .copyright {
+  width: 100% !important;
+  max-width: 1180px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  color: rgba(255, 255, 255, 0.62) !important;
+}
+
+@media (max-width: 760px) {
+  body > footer,
+  footer.footer,
+  footer.site-foot,
+  footer.essay-footer,
+  footer.submit-footer,
+  footer.document-site-footer {
+    margin-top: 36px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  body > footer > :where(
+    .footer-inner,
+    .foot-inner,
+    .essay-footer-inner,
+    .submit-footer-inner,
+    .footer-container,
+    .footer-content,
+    .wrap
+  ),
+  footer.footer > :where(.footer-inner, .footer-container, .footer-content, .wrap),
+  footer.site-foot > .foot-inner,
+  footer.essay-footer > .essay-footer-inner,
+  footer.submit-footer > .submit-footer-inner {
+    padding-top: 24px !important;
+    padding-bottom: 28px !important;
+  }
+
+  footer.document-site-footer {
+    padding-top: 24px !important;
+    padding-bottom: 28px !important;
+  }
+}
+
+@media print {
+  body > footer,
+  footer.footer,
+  footer.site-foot,
+  footer.essay-footer,
+  footer.submit-footer,
+  footer.document-site-footer {
+    margin-top: 24px !important;
+    padding: 12px 0 !important;
+    border-top: 1px solid #777 !important;
+    background: #fff !important;
+    color: #111 !important;
+  }
+
+  body > footer *,
+  footer.footer *,
+  footer.site-foot *,
+  footer.essay-footer *,
+  footer.submit-footer *,
+  footer.document-site-footer * {
+    color: #111 !important;
+  }
+}
