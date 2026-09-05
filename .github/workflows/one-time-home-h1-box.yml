@@ -1,3 +1,4 @@
+# trigger
 name: One-time home H1 box
 on:
   push:
@@ -45,7 +46,7 @@ jobs:
           if old not in css:
               raise SystemExit('home H1 style block not found')
           css = css.replace(old, new, 1)
-          if '@media (max-width: 560px)' in css and 'home-page .hc-hero h1 {\n      padding: 14px 16px 16px;' not in css:
+          if 'home-page .hc-hero h1 {\n    padding: 14px 16px 16px;' not in css:
               css += '''\n@media (max-width: 560px) {\n  .home-page .hc-hero h1 {\n    padding: 14px 16px 16px;\n    border-left-width: 4px;\n  }\n}\n'''
           css_path.write_text(css, encoding='utf-8')
 
