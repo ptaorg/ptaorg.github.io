@@ -186,6 +186,9 @@ function upsertDiscoveryMetadata(html) {
   if (!/<link\s+rel=["']stylesheet["'][^>]*href=["']\/css\/prose\.css/i.test(next)) {
     next = addHeadMarkup(next, '<link rel="stylesheet" href="/css/prose.css?v=20260906-4">');
   }
+  if (/<footer\b/i.test(next) && !/<link\s+rel=["']stylesheet["'][^>]*href=["']\/css\/global-footer\.css/i.test(next)) {
+    next = addHeadMarkup(next, '<link rel="stylesheet" href="/css/global-footer.css?v=20260906-1">');
+  }
   return next;
 }
 
