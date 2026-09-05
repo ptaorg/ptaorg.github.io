@@ -351,7 +351,7 @@ ${renderParagraphs(record.evaluation, "個別評価は未実施です。掲載�
   </main>
 ${chrome.footer}
 <script src="/data/site-search-index.js?v=20260809-2"></script>
-<script src="/js/site.js?v=93"></script>
+<script src="/js/site.js?v=94"></script>
 </body>
 </html>`;
 }

@@ -350,7 +350,7 @@
 </div>
 <p class="copyright">© PTA適正化推進委員会</p>
 </footer>
-<script src="/js/site.js?v=93"></script>
+<script src="/js/site.js?v=94"></script>
 <script>
 (function(){document.querySelectorAll('.case-card').forEach(function(card){card.classList.remove('is-open');var btn=card.querySelector('.case-toggle');if(btn)btn.setAttribute('aria-expanded','false');});document.querySelectorAll('.case-toggle').forEach(function(btn){btn.addEventListener('click',function(){var card=btn.closest('.case-card');var open=card.classList.toggle('is-open');btn.setAttribute('aria-expanded',open?'true':'false');});});})();
 (function(){var opts=document.getElementById('checker-options');if(!opts)return;var boxes=opts.querySelectorAll('input[type="checkbox"]');var cnt=document.getElementById('mcCount');var txt=document.getElementById('mcMeterText');function upd(){var n=0;boxes.forEach(function(b){if(b.checked)n++;});if(cnt){cnt.textContent=n;cnt.classList.remove('pop');void cnt.offsetWidth;cnt.classList.add('pop');}if(txt){txt.innerHTML=n===0?'あてはまる項目を選ぶと、ここに数が出ます。':'<b>'+n+'つ</b> 選択中。下の「判定する」を押してください。';}}boxes.forEach(function(b){b.addEventListener('change',upd);});upd();})();
