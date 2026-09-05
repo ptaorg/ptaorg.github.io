@@ -1,0 +1,36 @@
+name: One-time home priority links v2
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/one-time-home-priority-links-v2.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Apply update
+        run: python3 scripts/one_time_home_priority_links.py
+      - name: Verify
+        run: |
+          grep -q 'home-priority-nav' index.html
+          grep -q 'Home priority shortcut cards' css/home-entrance.css
+          npm run check:site
+      - name: Commit
+        run: |
+          rm -f .github/workflows/one-time-home-priority-links.yml
+          rm -f .github/workflows/one-time-home-priority-links-v2.yml
+          rm -f scripts/one_time_home_priority_links.py
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html css/home-entrance.css
+          git add -u
+          git commit -m 'Add important page shortcuts to home' || exit 0
+          git push
