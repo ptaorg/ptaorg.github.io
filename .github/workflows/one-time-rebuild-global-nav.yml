@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'scripts/one-time-rebuild-global-nav.py'
+      - 'scripts/one-time-rebuild-global-nav-v2.py'
       - '.github/workflows/one-time-rebuild-global-nav.yml'
 
 permissions:
@@ -17,7 +18,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Apply navigation rebuild
-        run: python3 scripts/one-time-rebuild-global-nav.py
+        run: python3 scripts/one-time-rebuild-global-nav-v2.py
       - name: Verify site
         run: |
           npm run check:site
