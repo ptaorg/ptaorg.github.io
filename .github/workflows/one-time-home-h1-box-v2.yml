@@ -1,0 +1,55 @@
+name: One-time home H1 box v2
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/one-time-home-h1-box-v2.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Add H1 stylesheet
+        shell: bash
+        run: |
+          cat > css/home-h1-box.css <<'EOF'
+          .home-page .hc-hero h1 {
+            display: inline-block;
+            max-width: 760px;
+            margin: 0 0 22px;
+            padding: 18px 24px 20px;
+            border: 1px solid rgba(255,255,255,.18);
+            border-left: 6px solid #d0a51b;
+            border-radius: 4px;
+            background: #0b5560;
+            box-shadow: 0 10px 28px rgba(3,18,33,.22);
+            color: #fff;
+          }
+          @media (max-width: 560px) {
+            .home-page .hc-hero h1 {
+              padding: 14px 16px 16px;
+              border-left-width: 4px;
+            }
+          }
+          EOF
+          python3 -c "from pathlib import Path; p=Path('index.html'); s=p.read_text(encoding='utf-8'); tag='<link rel=\"stylesheet\" href=\"/css/home-h1-box.css?v=20260905-1\">'; s=s if tag in s else s.replace('</head>', tag+'\n</head>', 1); p.write_text(s, encoding='utf-8')"
+      - name: Verify
+        shell: bash
+        run: |
+          grep -q 'background: #0b5560' css/home-h1-box.css
+          grep -q 'home-h1-box.css?v=20260905-1' index.html
+          npm run check:site
+      - name: Commit
+        shell: bash
+        run: |
+          rm -f .github/workflows/one-time-home-h1-box-v2.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html css/home-h1-box.css
+          git add -u
+          git commit -m 'Style home H1 as filled white-text box' || exit 0
+          git push
