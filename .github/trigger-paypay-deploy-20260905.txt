@@ -1,1 +1,0 @@
-Trigger deployment after updating the PayPay support link.
