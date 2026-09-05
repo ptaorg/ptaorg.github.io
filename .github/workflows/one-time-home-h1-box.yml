@@ -1,0 +1,72 @@
+name: One-time home H1 box
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/one-time-home-h1-box.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Update home H1 style
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          css_path = Path('css/home-entrance.css')
+          css = css_path.read_text(encoding='utf-8')
+          old = '''  .home-page .hc-hero h1 {
+    max-width: 760px;
+    font-size: clamp(2.35rem, 5.1vw, 4.25rem);
+    letter-spacing: -0.03em;
+  }
+'''
+          new = '''  .home-page .hc-hero h1 {
+    display: inline-block;
+    max-width: 760px;
+    margin: 0 0 22px;
+    padding: 18px 24px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-left: 6px solid #d0a51b;
+    border-radius: 4px;
+    background: #0b5560;
+    box-shadow: 0 10px 28px rgba(3, 18, 33, 0.22);
+    color: #fff;
+    font-size: clamp(2.35rem, 5.1vw, 4.25rem);
+    letter-spacing: -0.03em;
+  }
+'''
+          if old not in css:
+              raise SystemExit('home H1 style block not found')
+          css = css.replace(old, new, 1)
+          if '@media (max-width: 560px)' in css and 'home-page .hc-hero h1 {\n      padding: 14px 16px 16px;' not in css:
+              css += '''\n@media (max-width: 560px) {\n  .home-page .hc-hero h1 {\n    padding: 14px 16px 16px;\n    border-left-width: 4px;\n  }\n}\n'''
+          css_path.write_text(css, encoding='utf-8')
+
+          index = Path('index.html')
+          html = index.read_text(encoding='utf-8')
+          html = html.replace('/css/home-entrance.css?v=20260905-2', '/css/home-entrance.css?v=20260905-3')
+          index.write_text(html, encoding='utf-8')
+          PY
+      - name: Verify
+        shell: bash
+        run: |
+          grep -q 'background: #0b5560' css/home-entrance.css
+          grep -q '/css/home-entrance.css?v=20260905-3' index.html
+          npm run check:site
+      - name: Commit
+        shell: bash
+        run: |
+          rm -f .github/workflows/one-time-home-h1-box.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html css/home-entrance.css
+          git add -u
+          git commit -m 'Style home H1 as filled white-text box' || exit 0
+          git push
