@@ -281,3 +281,75 @@ body[data-content-mode="prose"] .psc-case-viz-state {
     break-inside: avoid;
   }
 }
+
+/* Site-wide reading highlights: heading rule + inline emphasis marker. */
+body[data-content-mode="prose"] {
+  --prose-highlight-gold: #c89b18;
+  --prose-highlight-soft: rgba(212, 175, 55, 0.24);
+}
+
+body[data-content-mode="prose"] main h3::after {
+  content: "";
+  display: block;
+  width: 4.75rem;
+  max-width: 42%;
+  height: 3px;
+  margin-top: 0.42rem;
+  background: var(--prose-highlight-gold);
+}
+
+body[data-content-mode="prose"] main :where(
+  .support-payment-card,
+  .region-map-card,
+  .search-results-dropdown,
+  .psc-case-viz-step,
+  .psc-audit-head,
+  .psc-audit-meta
+) h3::after {
+  display: none;
+}
+
+body[data-content-mode="prose"] main :where(p, li, dd) > strong {
+  background-image: linear-gradient(
+    to top,
+    var(--prose-highlight-soft) 0,
+    var(--prose-highlight-soft) 0.5em,
+    transparent 0.5em,
+    transparent 100%
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+body[data-content-mode="prose"] main :where(
+  .psc-audit-status,
+  .psc-audit-badge,
+  .badge,
+  .tag,
+  .status,
+  .btn,
+  .button,
+  [class*="button"],
+  [class*="badge"],
+  [class*="status"]
+) strong {
+  background-image: none;
+}
+
+@media (max-width: 700px) {
+  body[data-content-mode="prose"] main h3::after {
+    width: 3.75rem;
+    height: 2px;
+    margin-top: 0.34rem;
+  }
+}
+
+@media print {
+  body[data-content-mode="prose"] main h3::after {
+    background: #666;
+  }
+  body[data-content-mode="prose"] main :where(p, li, dd) > strong {
+    background-image: none;
+  }
+}
+
