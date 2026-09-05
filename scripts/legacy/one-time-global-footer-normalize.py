@@ -3,7 +3,7 @@ import re
 
 ROOT = Path('.')
 SKIP_DIRS = {'.git', '.claude', '_site', 'node_modules', 'assets', 'css', 'data', 'js', 'scripts', 'tools', 'ホーム'}
-FOOTER_HREF = '/css/global-footer.css?v=20260906-1'
+FOOTER_HREF = '/css/global-footer.css?v=20260906-2'
 FOOTER_LINK = f'<link rel="stylesheet" href="{FOOTER_HREF}">'
 
 
@@ -43,7 +43,7 @@ if enhancer.exists():
     marker = 'global-footer.css?v=20260906-1'
     if marker not in s:
         needle = '''  if (!/<link\\s+rel=["']stylesheet["'][^>]*href=["']\\/css\\/prose\\.css/i.test(next)) {\n    next = addHeadMarkup(next, '<link rel="stylesheet" href="/css/prose.css?v=20260906-4">');\n  }\n  return next;'''
-        replacement = '''  if (!/<link\\s+rel=["']stylesheet["'][^>]*href=["']\\/css\\/prose\\.css/i.test(next)) {\n    next = addHeadMarkup(next, '<link rel="stylesheet" href="/css/prose.css?v=20260906-4">');\n  }\n  if (/<footer\\b/i.test(next) && !/<link\\s+rel=["']stylesheet["'][^>]*href=["']\\/css\\/global-footer\\.css/i.test(next)) {\n    next = addHeadMarkup(next, '<link rel="stylesheet" href="/css/global-footer.css?v=20260906-1">');\n  }\n  return next;'''
+        replacement = '''  if (!/<link\\s+rel=["']stylesheet["'][^>]*href=["']\\/css\\/prose\\.css/i.test(next)) {\n    next = addHeadMarkup(next, '<link rel="stylesheet" href="/css/prose.css?v=20260906-4">');\n  }\n  if (/<footer\\b/i.test(next) && !/<link\\s+rel=["']stylesheet["'][^>]*href=["']\\/css\\/global-footer\\.css/i.test(next)) {\n    next = addHeadMarkup(next, '<link rel="stylesheet" href="/css/global-footer.css?v=20260906-2">');\n  }\n  return next;'''
         if needle not in s:
             raise RuntimeError('enhance-public-pages.js insertion point not found')
         enhancer.write_text(s.replace(needle, replacement, 1), encoding='utf-8')
