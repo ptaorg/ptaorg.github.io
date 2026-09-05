@@ -1,0 +1,18 @@
+.home-page .hc-hero h1 {
+  display: inline-block;
+  max-width: 760px;
+  margin: 0 0 22px;
+  padding: 18px 24px 20px;
+  border: 1px solid rgba(255,255,255,.18);
+  border-left: 6px solid #d0a51b;
+  border-radius: 4px;
+  background: #0b5560;
+  box-shadow: 0 10px 28px rgba(3,18,33,.22);
+  color: #fff;
+}
+@media (max-width: 560px) {
+  .home-page .hc-hero h1 {
+    padding: 14px 16px 16px;
+    border-left-width: 4px;
+  }
+}
