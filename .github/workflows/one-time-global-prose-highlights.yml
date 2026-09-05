@@ -1,0 +1,141 @@
+name: One-time global prose highlights
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/one-time-global-prose-highlights.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Add site-wide reading highlights
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          css_path = Path('css/prose.css')
+          css = css_path.read_text(encoding='utf-8')
+          marker = '/* Site-wide reading highlights: heading rule + inline emphasis marker. */'
+          block = r'''
+
+/* Site-wide reading highlights: heading rule + inline emphasis marker. */
+body[data-content-mode="prose"] {
+  --prose-highlight-gold: #c89b18;
+  --prose-highlight-soft: rgba(212, 175, 55, 0.24);
+}
+
+/* Give third-level headings a compact visual anchor without making them look like links. */
+body[data-content-mode="prose"] main h3::after {
+  content: "";
+  display: block;
+  width: 4.75rem;
+  max-width: 42%;
+  height: 3px;
+  margin-top: 0.42rem;
+  background: var(--prose-highlight-gold);
+}
+
+/* Keep controls/source widgets visually neutral. */
+body[data-content-mode="prose"] main :where(
+  .support-payment-card,
+  .region-map-card,
+  .search-results-dropdown,
+  .psc-case-viz-step,
+  .psc-audit-head,
+  .psc-audit-meta
+) h3::after {
+  display: none;
+}
+
+/* Existing bold text becomes a subtle reading marker, not a new semantic status. */
+body[data-content-mode="prose"] main :where(p, li, dd) > strong {
+  background-image: linear-gradient(
+    to top,
+    var(--prose-highlight-soft) 0,
+    var(--prose-highlight-soft) 0.5em,
+    transparent 0.5em,
+    transparent 100%
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Do not paint button-like or status-like labels. */
+body[data-content-mode="prose"] main :where(
+  .psc-audit-status,
+  .psc-audit-badge,
+  .badge,
+  .tag,
+  .status,
+  .btn,
+  .button,
+  [class*="button"],
+  [class*="badge"],
+  [class*="status"]
+) strong {
+  background-image: none;
+}
+
+@media (max-width: 700px) {
+  body[data-content-mode="prose"] main h3::after {
+    width: 3.75rem;
+    height: 2px;
+    margin-top: 0.34rem;
+  }
+}
+
+@media print {
+  body[data-content-mode="prose"] main h3::after {
+    background: #666;
+  }
+  body[data-content-mode="prose"] main :where(p, li, dd) > strong {
+    background-image: none;
+  }
+}
+'''
+          if marker not in css:
+              css = css.rstrip() + block + '\n'
+          css_path.write_text(css, encoding='utf-8')
+
+          new_version = '20260905-3'
+          for path in Path('.').rglob('*.html'):
+              parts = set(path.parts)
+              if parts & {'.git', '_site', 'node_modules', 'assets', 'css', 'data', 'js', 'scripts', 'tools', 'ホーム'}:
+                  continue
+              text = path.read_text(encoding='utf-8', errors='ignore')
+              updated = re.sub(r'/css/prose\.css\?v=[^"\']+', f'/css/prose.css?v={new_version}', text)
+              if updated != text:
+                  path.write_text(updated, encoding='utf-8')
+
+          enhancer = Path('scripts/enhance-public-pages.js')
+          text = enhancer.read_text(encoding='utf-8')
+          text = re.sub(r'/css/prose\.css\?v=\d{8}(?:-\d+)?', f'/css/prose.css?v={new_version}', text)
+          enhancer.write_text(text, encoding='utf-8')
+          PY
+      - name: Verify update
+        shell: bash
+        run: |
+          grep -q 'Site-wide reading highlights' css/prose.css
+          grep -q '/css/prose.css?v=20260905-3' index.html
+          grep -q '/css/prose.css?v=20260905-3' pta-school-processing.html
+          npm run check:site
+      - name: Commit and remove workflow
+        shell: bash
+        run: |
+          rm .github/workflows/one-time-global-prose-highlights.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add css/prose.css scripts/enhance-public-pages.js '*.html' 'journal/**/*.html' 'archive/**/*.html' 'audit/**/*.html' 'board-responses/**/*.html' 'forms/**/*.html' 2>/dev/null || true
+          git add -u
+          git commit -m 'Add site-wide prose highlights' || exit 0
+          git push
