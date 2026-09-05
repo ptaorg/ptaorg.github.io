@@ -1,134 +1,25 @@
-# trigger: 2026-09-06
 name: One-time unify public footers
+
 on:
   push:
     paths:
-      - '.github/workflows/one-time-unify-public-footers.yml'
+      - 'scripts/one-time-unify-public-footers.py'
+
 permissions:
   contents: write
+
 jobs:
   unify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Normalize footer presentation and prose cache
+      - name: Apply footer normalization
+        run: python scripts/one-time-unify-public-footers.py
+      - name: Verify site
+        run: npm run check:site
+      - name: Commit result
         run: |
-          python - <<'PY'
-          from pathlib import Path
-          import re
-
-          css = Path('css/prose.css')
-          text = css.read_text(encoding='utf-8')
-          marker = '/* Site-wide footer normalization */'
-          block = r'''
-
-/* Site-wide footer normalization */
-body[data-content-mode="prose"] footer {
-  box-sizing: border-box !important;
-  margin-top: 48px !important;
-  padding: 0 20px !important;
-  border-top: 3px solid var(--prose-highlight-gold, #c89b18) !important;
-  background: #10233d !important;
-  color: #dbe6f2 !important;
-  box-shadow: none !important;
-}
-
-body[data-content-mode="prose"] footer :where(
-  .footer-inner,
-  .essay-footer-inner,
-  .submit-footer-inner,
-  .foot-inner,
-  .footer-container
-) {
-  box-sizing: border-box !important;
-  width: min(100%, 1180px) !important;
-  max-width: 1180px !important;
-  margin: 0 auto !important;
-  padding: 30px 0 34px !important;
-  color: #dbe6f2 !important;
-}
-
-body[data-content-mode="prose"] footer :where(p, li, span, small) {
-  color: #dbe6f2 !important;
-}
-
-body[data-content-mode="prose"] footer :where(strong, .foot-brand, .submit-footer-title) {
-  color: #fff !important;
-}
-
-body[data-content-mode="prose"] footer a {
-  color: #fff !important;
-  text-decoration-color: rgba(255,255,255,.48) !important;
-  text-underline-offset: 3px;
-}
-
-body[data-content-mode="prose"] footer a:hover {
-  color: #f3d36a !important;
-  text-decoration-color: #f3d36a !important;
-}
-
-body[data-content-mode="prose"] footer .footer-governance {
-  margin-top: 18px !important;
-  padding-top: 16px !important;
-  border-top: 1px solid rgba(255,255,255,.16) !important;
-}
-
-@media (max-width: 640px) {
-  body[data-content-mode="prose"] footer {
-    margin-top: 36px !important;
-    padding-inline: 16px !important;
-  }
-  body[data-content-mode="prose"] footer :where(
-    .footer-inner,
-    .essay-footer-inner,
-    .submit-footer-inner,
-    .foot-inner,
-    .footer-container
-  ) {
-    padding: 24px 0 28px !important;
-  }
-}
-
-@media print {
-  body[data-content-mode="prose"] footer {
-    border-top: 1px solid #777 !important;
-    background: #fff !important;
-    color: #111 !important;
-  }
-  body[data-content-mode="prose"] footer * {
-    color: #111 !important;
-  }
-}
-'''
-          if marker not in text:
-              text += block
-          css.write_text(text, encoding='utf-8')
-
-          old_pat = re.compile(r'/css/prose\.css(?:\?v=[A-Za-z0-9._-]+)?')
-          changed = 0
-          skip = {'.git','node_modules','_site','assets','css','data','js','scripts','tools'}
-          for p in Path('.').rglob('*.html'):
-              if any(part in skip for part in p.parts):
-                  continue
-              s = p.read_text(encoding='utf-8')
-              n = old_pat.sub('/css/prose.css?v=20260906-3', s)
-              if n != s:
-                  p.write_text(n, encoding='utf-8')
-                  changed += 1
-          print('updated html:', changed)
-
-          enhancer = Path('scripts/enhance-public-pages.js')
-          s = enhancer.read_text(encoding='utf-8')
-          enhancer.write_text(old_pat.sub('/css/prose.css?v=20260906-3', s), encoding='utf-8')
-          PY
-      - name: Verify
-        run: |
-          grep -q 'Site-wide footer normalization' css/prose.css
-          grep -q '/css/prose.css?v=20260906-3' pta-future.html
-          grep -q '/css/prose.css?v=20260906-3' scripts/enhance-public-pages.js
-          npm run check:site
-      - name: Commit and remove one-time workflow
-        run: |
+          rm -f scripts/one-time-unify-public-footers.py
           rm -f .github/workflows/one-time-unify-public-footers.yml
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
