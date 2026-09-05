@@ -10,142 +10,137 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Add global chapter heading style
-        shell: bash
-        run: |
-          if ! grep -q 'Site-wide chapter heading labels' css/prose.css; then
-            cat >> css/prose.css <<'EOF'
-
-/* Site-wide chapter heading labels: compact, text-width, and distinct from cards/tools. */
-body[data-content-mode="prose"] main h2:not(:where(
-  .hero h2,
-  nav h2,
-  form h2,
-  dialog h2,
-  .card h2,
-  [class$="-card"] h2,
-  [class*="-card "] h2,
-  .panel h2,
-  [class$="-panel"] h2,
-  [class*="-panel "] h2,
-  .cta-band h2,
-  .support-payment-card h2,
-  .region-map-card h2,
-  .search-results-dropdown h2,
-  .document-error h2,
-  .psc-case-viz-step h2,
-  .psc-audit-head h2
-)) {
-  display: block;
-  width: fit-content;
-  max-width: 100%;
-  box-sizing: border-box;
-  margin: 1.9rem 0 1.15rem;
-  padding: 10px 14px 11px;
-  border: 1px solid #17345c;
-  border-left: 4px solid var(--prose-highlight-gold, #c89b18);
-  border-radius: 2px;
-  background: var(--prose-navy, #102a43);
-  color: #fff !important;
-  box-shadow: 0 6px 16px rgba(10, 25, 47, 0.10);
-  font-size: clamp(1.05rem, 1.8vw, 1.4rem);
-  line-height: 1.35;
-  text-wrap: balance;
-  overflow-wrap: anywhere;
-}
-
-@media (max-width: 640px) {
-  body[data-content-mode="prose"] main h2:not(:where(
-    .hero h2,
-    nav h2,
-    form h2,
-    dialog h2,
-    .card h2,
-    [class$="-card"] h2,
-    [class*="-card "] h2,
-    .panel h2,
-    [class$="-panel"] h2,
-    [class*="-panel "] h2,
-    .cta-band h2,
-    .support-payment-card h2,
-    .region-map-card h2,
-    .search-results-dropdown h2,
-    .document-error h2,
-    .psc-case-viz-step h2,
-    .psc-audit-head h2
-  )) {
-    margin: 1.55rem 0 0.95rem;
-    padding: 9px 12px 10px;
-    border-left-width: 3px;
-    font-size: 1.03rem;
-  }
-}
-
-@media print {
-  body[data-content-mode="prose"] main h2:not(:where(
-    .hero h2,
-    nav h2,
-    form h2,
-    dialog h2,
-    .card h2,
-    [class$="-card"] h2,
-    [class*="-card "] h2,
-    .panel h2,
-    [class$="-panel"] h2,
-    [class*="-panel "] h2,
-    .cta-band h2,
-    .support-payment-card h2,
-    .region-map-card h2,
-    .search-results-dropdown h2,
-    .document-error h2,
-    .psc-case-viz-step h2,
-    .psc-audit-head h2
-  )) {
-    background: #fff !important;
-    color: #111 !important;
-    border-color: #777;
-    box-shadow: none;
-  }
-}
-EOF
-          fi
-      - name: Refresh prose stylesheet cache version across public HTML
+      - name: Apply global chapter heading design
         run: |
           python - <<'PY'
           from pathlib import Path
           import re
 
-          root = Path('.')
+          css_path = Path('css/prose.css')
+          css = css_path.read_text(encoding='utf-8')
+          marker = 'Site-wide chapter heading labels'
+          addition = r'''
+
+          /* Site-wide chapter heading labels: compact, text-width, and distinct from cards/tools. */
+          body[data-content-mode="prose"] main h2:not(:where(
+            .hero h2,
+            nav h2,
+            form h2,
+            dialog h2,
+            .card h2,
+            [class$="-card"] h2,
+            [class*="-card "] h2,
+            .panel h2,
+            [class$="-panel"] h2,
+            [class*="-panel "] h2,
+            .cta-band h2,
+            .support-payment-card h2,
+            .region-map-card h2,
+            .search-results-dropdown h2,
+            .document-error h2,
+            .psc-case-viz-step h2,
+            .psc-audit-head h2
+          )) {
+            display: block;
+            width: fit-content;
+            max-width: 100%;
+            box-sizing: border-box;
+            margin: 1.9rem 0 1.15rem;
+            padding: 10px 14px 11px;
+            border: 1px solid #17345c;
+            border-left: 4px solid var(--prose-highlight-gold, #c89b18);
+            border-radius: 2px;
+            background: var(--prose-navy, #102a43);
+            color: #fff !important;
+            box-shadow: 0 6px 16px rgba(10, 25, 47, 0.10);
+            font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+            line-height: 1.35;
+            text-wrap: balance;
+            overflow-wrap: anywhere;
+          }
+
+          @media (max-width: 640px) {
+            body[data-content-mode="prose"] main h2:not(:where(
+              .hero h2,
+              nav h2,
+              form h2,
+              dialog h2,
+              .card h2,
+              [class$="-card"] h2,
+              [class*="-card "] h2,
+              .panel h2,
+              [class$="-panel"] h2,
+              [class*="-panel "] h2,
+              .cta-band h2,
+              .support-payment-card h2,
+              .region-map-card h2,
+              .search-results-dropdown h2,
+              .document-error h2,
+              .psc-case-viz-step h2,
+              .psc-audit-head h2
+            )) {
+              margin: 1.55rem 0 0.95rem;
+              padding: 9px 12px 10px;
+              border-left-width: 3px;
+              font-size: 1.03rem;
+            }
+          }
+
+          @media print {
+            body[data-content-mode="prose"] main h2:not(:where(
+              .hero h2,
+              nav h2,
+              form h2,
+              dialog h2,
+              .card h2,
+              [class$="-card"] h2,
+              [class*="-card "] h2,
+              .panel h2,
+              [class$="-panel"] h2,
+              [class*="-panel "] h2,
+              .cta-band h2,
+              .support-payment-card h2,
+              .region-map-card h2,
+              .search-results-dropdown h2,
+              .document-error h2,
+              .psc-case-viz-step h2,
+              .psc-audit-head h2
+            )) {
+              background: #fff !important;
+              color: #111 !important;
+              border-color: #777;
+              box-shadow: none;
+            }
+          }
+          '''
+          if marker not in css:
+              css_path.write_text(css + addition, encoding='utf-8')
+
+          pattern = re.compile(r'/css/prose\.css(?:\?v=[A-Za-z0-9._-]+)?')
           skip = {'.git', 'node_modules', '_site', 'assets', 'css', 'data', 'js', 'scripts', 'tools'}
           changed = 0
-          pattern = re.compile(r'/css/prose\.css(?:\?v=[A-Za-z0-9._-]+)?')
-          for p in root.rglob('*.html'):
+          for p in Path('.').rglob('*.html'):
               if any(part in skip for part in p.parts):
                   continue
               text = p.read_text(encoding='utf-8')
               new = pattern.sub('/css/prose.css?v=20260906-1', text)
+              if 'home-h1-box.css' in new and p.name == 'index.html':
+                  new = '\n'.join(line for line in new.splitlines() if 'home-h1-box.css' not in line)
+                  if text.endswith('\n'):
+                      new += '\n'
               if new != text:
                   p.write_text(new, encoding='utf-8')
                   changed += 1
-          print(f'Updated prose.css cache reference in {changed} HTML files')
+          print(f'Updated {changed} HTML files')
 
           enhancer = Path('scripts/enhance-public-pages.js')
           text = enhancer.read_text(encoding='utf-8')
           new = pattern.sub('/css/prose.css?v=20260906-1', text)
           if new != text:
               enhancer.write_text(new, encoding='utf-8')
-              print('Updated enhancer default prose.css version')
+
+          Path('css/home-h1-box.css').unlink(missing_ok=True)
           PY
-      - name: Remove accidental home H1-only styling
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          p = Path('index.html')
-          text = p.read_text(encoding='utf-8')
-          lines = [line for line in text.splitlines() if 'home-h1-box.css' not in line]
-          p.write_text('\n'.join(lines) + ('\n' if text.endswith('\n') else ''), encoding='utf-8')
-          PY
-          rm -f css/home-h1-box.css
       - name: Verify rollout
         run: |
           grep -q 'Site-wide chapter heading labels' css/prose.css
@@ -153,7 +148,7 @@ EOF
           ! grep -q 'home-h1-box.css' index.html
           grep -q '/css/prose.css?v=20260906-1' scripts/enhance-public-pages.js
           npm run check:site
-      - name: Remove one-time workflow and commit
+      - name: Commit rollout and remove one-time workflow
         run: |
           rm -f .github/workflows/one-time-global-section-headings.yml
           git config user.name 'github-actions[bot]'
