@@ -1,0 +1,54 @@
+name: One-time fix footer support CTA
+
+on:
+  push:
+    paths:
+      - 'scripts/legacy/one-time-fix-footer-support-cta.py'
+      - '.github/workflows/one-time-fix-footer-support-cta.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply footer CTA fix
+        run: python3 scripts/legacy/one-time-fix-footer-support-cta.py
+      - name: Verify CTA styles and cache references
+        run: |
+          grep -q 'Footer support CTA normalization' css/global-footer.css
+          grep -R -L '/css/global-footer.css?v=20260906-2' --include='*.html' . | grep -vE '^./(\.git|\.claude|_site|node_modules|assets|css|data|js|scripts|tools|ホーム)/' > /tmp/missing_footer_css || true
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          skip={'.git','.claude','_site','node_modules','assets','css','data','js','scripts','tools','ホーム'}
+          missing=[]
+          total=0
+          for p in Path('.').rglob('*.html'):
+              if any(part in skip for part in p.parts):
+                  continue
+              s=p.read_text(encoding='utf-8')
+              if not re.search(r'<footer\b',s,re.I):
+                  continue
+              total += 1
+              if '/css/global-footer.css?v=20260906-2' not in s:
+                  missing.append(str(p))
+          print('verified footer pages:', total)
+          if missing:
+              raise SystemExit('missing v2 footer css: '+', '.join(missing[:30]))
+          PY
+      - name: Commit fix
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No changes'
+          else
+            git commit -m 'Fix footer support CTA visibility across site'
+            git push
+          fi
