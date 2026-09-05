@@ -1,0 +1,73 @@
+/* Static global navigation — 2026-09-06 */
+
+.global-nav-v102 {
+  gap: .28rem !important;
+}
+
+.global-nav-v102 > .nav-link,
+.global-nav-v102 > .nav-item > .nav-link {
+  font-size: .84rem !important;
+  padding: 8px 8px !important;
+  white-space: nowrap;
+}
+
+.global-nav-v102 .mega-menu {
+  width: min(520px, calc(100vw - 32px));
+  padding: 18px;
+  gap: 16px;
+}
+
+.global-nav-v102 .mega-col h4 {
+  font-size: .78rem;
+}
+
+.global-nav-v102 .mega-col a {
+  font-size: .84rem;
+  padding: 6px 0;
+}
+
+.global-nav-v102 .board-submit-nav {
+  font-weight: 900 !important;
+  color: #5f4707 !important;
+  background: #fff8df !important;
+  border: 1px solid #d7b95a !important;
+  border-radius: 6px !important;
+  padding: 8px 11px !important;
+}
+
+.global-nav-v102 .board-submit-nav:hover {
+  background: #fff1bd !important;
+  color: #4f3b08 !important;
+}
+
+.global-nav-v102 .is-here,
+.global-nav-v102 .is-here-parent {
+  color: #c89b18 !important;
+  font-weight: 900 !important;
+}
+
+.global-nav-v102 .mega-menu a.is-here {
+  color: #b45309 !important;
+  font-weight: 900 !important;
+}
+
+.mobile-overlay .mobile-link.is-here {
+  border-left: 4px solid #c89b18;
+  padding-left: 16px;
+}
+
+.mobile-overlay .board-submit-nav-mobile {
+  font-weight: 900 !important;
+  color: #7a5908 !important;
+}
+
+@media (max-width: 1180px) {
+  .global-nav-v102 > .nav-link,
+  .global-nav-v102 > .nav-item > .nav-link {
+    font-size: .78rem !important;
+    padding-inline: 6px !important;
+  }
+  .global-nav-v102 {
+    gap: .12rem !important;
+  }
+}
