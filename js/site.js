@@ -1,4 +1,4 @@
-/* site.js loader — 2026-09-03 v98 */
+/* site.js loader — 2026-09-05 v99 */
 (function(){
   function load(src, id, done){
     if (document.getElementById(id)) { if (done) done(); return; }
@@ -205,6 +205,100 @@
     steps.insertAdjacentElement('beforebegin', block);
   }
 
+  function injectSchoolProcessingVisuals(){
+    if (document.getElementById('psc-evidence-visuals')) return;
+    var path = (window.location.pathname || '').replace(/\/+$/,'');
+    if (path !== '/pta-school-processing.html') return;
+
+    var heading = findHeading('h2','優先15自治体・都道府県の第1次比較');
+    if (!heading) return;
+    var node = heading.nextElementSibling;
+    while (node && !node.classList.contains('psc-table-wrap')) node = node.nextElementSibling;
+    if (!node) return;
+    var table = node.querySelector('table.psc-table');
+    if (!table) return;
+
+    var rows = Array.prototype.slice.call(table.querySelectorAll('tbody tr'));
+    if (!rows.length) return;
+
+    var basisCounts = {
+      '規則・訓令・要綱・要領等': 0,
+      '徴収・会計等の内部制度': 0,
+      '内部手引＋委任等': 0,
+      '委任・同意・契約中心': 0
+    };
+    var issueDefs = [
+      {label:'個人情報保護法61条', re:/61条/},
+      {label:'受任権限・受任主体', re:/受任権限|受任主体|受託所掌|学校長の受任|公法上の受任/},
+      {label:'上位授権・法規階層', re:/上位授権|上位法|法規階層|法規的根拠|法規性/}
+    ];
+    var issueCounts = issueDefs.map(function(d){ return {label:d.label,re:d.re,count:0}; });
+
+    rows.forEach(function(tr){
+      var cells = tr.querySelectorAll('td');
+      if (cells.length < 6) return;
+      var basis = (cells[1].textContent || '').trim();
+      var issues = ((cells[4].textContent || '') + ' ' + (cells[5].textContent || '')).trim();
+
+      if (/教育委員会規則|訓令|要綱|要領/.test(basis)) basisCounts['規則・訓令・要綱・要領等']++;
+      else if (/学校徴収|私費会計|受託事務分掌/.test(basis)) basisCounts['徴収・会計等の内部制度']++;
+      else if (/内部手引/.test(basis)) basisCounts['内部手引＋委任等']++;
+      else basisCounts['委任・同意・契約中心']++;
+
+      issueCounts.forEach(function(d){ if (d.re.test(issues)) d.count++; });
+    });
+
+    if (!document.getElementById('psc-evidence-visuals-style')) {
+      var style = document.createElement('style');
+      style.id = 'psc-evidence-visuals-style';
+      style.textContent =
+        '#psc-evidence-visuals{margin:28px 0 34px;padding:24px 26px;border:1px solid #cbd4da;background:#fbfcfc}' +
+        '#psc-evidence-visuals .psc-viz-title{margin:0 0 8px!important;font-family:"Noto Serif JP",serif;font-size:1.3rem;line-height:1.5}' +
+        '#psc-evidence-visuals .psc-viz-intro{margin:0 0 22px!important;color:#52606b;font-size:.9rem;line-height:1.75}' +
+        '#psc-evidence-visuals .psc-viz-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}' +
+        '#psc-evidence-visuals .psc-viz-panel{min-width:0}' +
+        '#psc-evidence-visuals .psc-viz-panel h3{margin:0 0 14px!important;font-size:1rem!important}' +
+        '#psc-evidence-visuals .psc-viz-row{display:grid;grid-template-columns:minmax(128px,1.15fr) minmax(130px,2fr) 34px;gap:9px;align-items:center;margin:10px 0}' +
+        '#psc-evidence-visuals .psc-viz-label{font-size:.8rem;line-height:1.45;color:#33424d}' +
+        '#psc-evidence-visuals .psc-viz-track{height:16px;background:#e9eef1;overflow:hidden}' +
+        '#psc-evidence-visuals .psc-viz-fill{display:block;height:100%;min-width:2px;background:#526b7a}' +
+        '#psc-evidence-visuals .psc-viz-issues .psc-viz-fill{background:#8a4a4a}' +
+        '#psc-evidence-visuals .psc-viz-value{font-weight:900;font-size:.82rem;text-align:right;color:#27343e}' +
+        '#psc-evidence-visuals .psc-viz-note{margin:18px 0 0!important;padding-top:14px;border-top:1px solid #d7dee3;color:#66727b;font-size:.78rem;line-height:1.7}' +
+        '@media(max-width:820px){#psc-evidence-visuals .psc-viz-grid{grid-template-columns:1fr;gap:24px}}' +
+        '@media(max-width:520px){#psc-evidence-visuals{padding:20px 16px}#psc-evidence-visuals .psc-viz-row{grid-template-columns:1fr 34px;gap:6px 9px}#psc-evidence-visuals .psc-viz-label{grid-column:1/3}#psc-evidence-visuals .psc-viz-track{grid-column:1/2}}';
+      document.head.appendChild(style);
+    }
+
+    function barRows(items, total, issueClass){
+      return items.map(function(item){
+        var pct = total > 0 ? Math.max(0, Math.min(100, (item.count / total) * 100)) : 0;
+        return '<div class="psc-viz-row">' +
+          '<div class="psc-viz-label">' + item.label + '</div>' +
+          '<div class="psc-viz-track" role="img" aria-label="' + item.label + ' ' + item.count + '件／' + total + '件">' +
+            '<span class="psc-viz-fill" style="width:' + pct.toFixed(1) + '%"></span>' +
+          '</div>' +
+          '<div class="psc-viz-value">' + item.count + '</div>' +
+        '</div>';
+      }).join('');
+    }
+
+    var basisItems = Object.keys(basisCounts).map(function(label){ return {label:label,count:basisCounts[label]}; });
+    var section = document.createElement('section');
+    section.id = 'psc-evidence-visuals';
+    section.setAttribute('aria-labelledby','psc-evidence-visuals-title');
+    section.innerHTML =
+      '<h3 id="psc-evidence-visuals-title" class="psc-viz-title">15自治体の比較を可視化する</h3>' +
+      '<p class="psc-viz-intro">左は「学校処理を何で説明しているか」の分布、右は比較表の「なお残る主要論点」「現時点の法的評価」に明記された未解決論点の出現件数です。どちらも適法度・優良度の順位ではありません。</p>' +
+      '<div class="psc-viz-grid">' +
+        '<div class="psc-viz-panel psc-viz-basis"><h3>主たる根拠形態の分布</h3>' + barRows(basisItems, rows.length, false) + '</div>' +
+        '<div class="psc-viz-panel psc-viz-issues"><h3>主要な未解決論点の出現件数</h3>' + barRows(issueCounts, rows.length, true) + '</div>' +
+      '</div>' +
+      '<p class="psc-viz-note">集計対象：現在の比較表15自治体・都道府県。右側は同一自治体が複数論点に重複して数えられます。表の記載から自動集計しているため、原資料の追加・表の更新に応じて数値も変わります。</p>';
+
+    node.parentNode.insertBefore(section, node);
+  }
+
   function installCoreEssayEntrances(){
     addCoreEssayStyles();
     addGlobalNav();
@@ -212,6 +306,7 @@
     if (document.body.classList.contains('home-page') || path === '' || path === '/index.html') injectHome();
     if (document.body.classList.contains('journal-page') || path === '/journal.html') injectJournal();
     if (path === '/framework.html' || document.getElementById('fw-borders')) injectFrameworkBoundaryClarification();
+    if (path === '/pta-school-processing.html') injectSchoolProcessingVisuals();
   }
 
   load('/js/site-core-v90.js?v=98', 'site-core-v90', function(){
