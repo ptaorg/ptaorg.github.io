@@ -1,0 +1,46 @@
+name: One-time update PayPay link
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/one-time-update-paypay-link.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Replace PayPay URL
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('support.html')
+          s = p.read_text(encoding='utf-8')
+          old = 'https://qr.paypay.ne.jp/p2p01_SV4kOonbQ7R5vLoh'
+          new = 'https://qr.paypay.ne.jp/p2p01_zWYjBYv3Ca5I7SvM'
+          n = s.count(old)
+          if n != 2:
+              raise SystemExit(f'Expected 2 old PayPay links, found {n}')
+          s = s.replace(old, new)
+          if s.count(new) != 2:
+              raise SystemExit('New PayPay link replacement verification failed')
+          p.write_text(s, encoding='utf-8')
+          PY
+      - name: Verify
+        shell: bash
+        run: |
+          ! grep -Fq 'p2p01_SV4kOonbQ7R5vLoh' support.html
+          test "$(grep -o 'p2p01_zWYjBYv3Ca5I7SvM' support.html | wc -l)" -eq 2
+      - name: Commit change and remove workflow
+        shell: bash
+        run: |
+          rm .github/workflows/one-time-update-paypay-link.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add support.html .github/workflows/one-time-update-paypay-link.yml
+          git commit -m 'Update PayPay support link'
+          git push origin main
