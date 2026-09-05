@@ -189,6 +189,12 @@ function upsertDiscoveryMetadata(html) {
   if (/<footer\b/i.test(next) && !/<link\s+rel=["']stylesheet["'][^>]*href=["']\/css\/global-footer\.css/i.test(next)) {
     next = addHeadMarkup(next, '<link rel="stylesheet" href="/css/global-footer.css?v=20260906-2">');
   }
+  if (!/<link\s+rel=["']stylesheet["'][^>]*href=["']\/css\/scroll-top\.css/i.test(next)) {
+    next = addHeadMarkup(next, '<link rel="stylesheet" href="/css/scroll-top.css?v=20260906-1">');
+  }
+  if (!/<script\b[^>]*src=["']\/js\/scroll-top\.js/i.test(next)) {
+    next = addHeadMarkup(next, '<script defer src="/js/scroll-top.js?v=20260906-1"></script>');
+  }
   return next;
 }
 

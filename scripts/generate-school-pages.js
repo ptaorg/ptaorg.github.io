@@ -266,12 +266,14 @@ function renderSchoolPage(record) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/site.css?v=20260814-3">
+  <link rel="stylesheet" href="/css/scroll-top.css?v=20260906-1">
   <link rel="stylesheet" href="/css/global-footer.css?v=20260906-1">
   <link rel="stylesheet" href="/css/global-nav.css?v=20260906-1">
   <link rel="stylesheet" href="/css/archive.css?v=20260814-1">
 
 ${gaTag()}
   <link rel="stylesheet" href="/css/interactions.css?v=20260719">
+  <script defer src="/js/scroll-top.js?v=20260906-1"></script>
 </head>
 <body class="archive-school-document">
 <a class="skip-link" href="#main-content">本文へ移動</a>
