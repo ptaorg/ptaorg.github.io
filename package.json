@@ -5,7 +5,7 @@
     "test": "npm run check:site && npm run check:site-js-version",
     "check:site": "node tools/check-site.mjs",
     "check:generated": "node scripts/check-generated-files.js",
-    "check:site-js-version": "node scripts/check-site-js-version.js 95",
+    "check:site-js-version": "node scripts/check-site-js-version.js 96",
     "check:content": "node scripts/check-content-consistency.js",
     "check:metadata": "node scripts/enhance-public-pages.js --check",
     "check:all": "npm run check:site && npm run check:metadata && npm run check:content && npm run check:generated && npm run check:site-js-version",
@@ -17,9 +17,9 @@
     "generate:sitemap": "node scripts/generate-sitemap.js",
     "generate:search": "node scripts/generate-search-index.js",
     "enhance:pages": "node scripts/enhance-public-pages.js",
-    "maintenance:bump-site-js:dry-run": "node scripts/bump-site-js-version.js 95 --dry-run",
+    "maintenance:bump-site-js:dry-run": "node scripts/bump-site-js-version.js 96 --dry-run",
     "maintenance:bump-site-js": "node scripts/bump-site-js-version.js",
-    "maintenance:bump-site-js:check": "npm run maintenance:bump-site-js -- 95 && npm run check:site-js-version",
+    "maintenance:bump-site-js:check": "npm run maintenance:bump-site-js -- 96 && npm run check:site-js-version",
     "maintenance:site-js-cache": "npm run report:site-js-version && npm run maintenance:bump-site-js:dry-run && npm run maintenance:bump-site-js:check && npm run report:site-js-version && npm run check:all"
   }
 }

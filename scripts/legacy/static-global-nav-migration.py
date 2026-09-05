@@ -2,12 +2,13 @@ from pathlib import Path
 import re
 
 ROOT = Path('.')
-SITE_JS_VERSION = '95'
-GLOBAL_NAV_VERSION = '20260906-1'
+SITE_JS_VERSION = '96'
+GLOBAL_NAV_VERSION = '20260906-2'
 
 DESKTOP_NAV = '''<nav aria-label="主要ナビゲーション" class="desktop-nav global-nav-v102">
 <a class="nav-link" href="/index.html">トップ</a>
 <a class="nav-link global-membership-nav" href="/pta-membership-optin.html">任意加入</a>
+<div class="nav-item has-dropdown" data-global-nav-group="audience"><a class="nav-link" href="/guide-parent.html" aria-haspopup="true" aria-expanded="false">立場別</a><div class="mega-menu audience-menu" aria-label="立場別メニュー"><div class="mega-col"><h4>立場から探す</h4><ul><li><a href="/guide-parent.html">保護者</a></li><li><a href="/guide-pta.html">PTA役員</a></li><li><a href="/guide-board.html">教育委員会・学校</a></li><li><a href="/guide-research.html">研究者・記者</a></li></ul></div></div></div>
 <div class="nav-item has-dropdown" data-global-nav-group="school"><a class="nav-link" href="/framework.html" aria-haspopup="true" aria-expanded="false">学校とPTA</a><div class="mega-menu" aria-label="学校とPTAメニュー"><div class="mega-col"><h4>境界と事務</h4><ul><li><a href="/framework.html">学校とPTAの境界</a></li><li><a href="/fee-collection.html">会費・学校徴収</a></li><li><a href="/privacy.html">個人情報</a></li></ul></div><div class="mega-col"><h4>人・場所・法</h4><ul><li><a href="/personnel.html">教職員のPTA事務</a></li><li><a href="/facilities.html">学校施設・媒体</a></li><li><a href="/law-map.html">法制度マップ</a></li></ul></div></div></div>
 <div class="nav-item has-dropdown" data-global-nav-group="research"><a class="nav-link" href="/pta-school-processing.html" aria-haspopup="true" aria-expanded="false">全国調査</a><div class="mega-menu" aria-label="全国調査メニュー"><div class="mega-col"><h4>全国比較</h4><ul><li><a href="/pta-school-processing.html">学校処理の全国法的整合性調査</a></li><li><a href="/cases.html">自治体別事例</a></li></ul></div><div class="mega-col"><h4>資料</h4><ul><li><a href="/national-archive.html">全国資料館</a></li><li><a href="/report.html">調査報告</a></li></ul></div></div></div>
 <a class="nav-link global-board-nav" href="/board-responses.html">教育委員会回答</a>
@@ -19,6 +20,7 @@ HEADER = '''<header class="site-header"><div class="nav-container"><a class="log
 
 MOBILE = '''<div class="mobile-overlay" id="mobileOverlay">
 <div class="mobile-menu-group" data-global-mobile-group><div class="mobile-menu-label">主要</div><a class="mobile-link" href="/index.html">トップ</a><a class="mobile-link global-membership-nav" href="/pta-membership-optin.html">任意加入</a><a class="mobile-link global-board-nav" href="/board-responses.html">教育委員会回答</a><a class="mobile-link board-submit-nav-mobile" href="/submit-to-board.html">教育委員会へ提出</a></div>
+<div class="mobile-menu-group" data-global-mobile-group><div class="mobile-menu-label">立場別</div><a class="mobile-link" href="/guide-parent.html">保護者</a><a class="mobile-link" href="/guide-pta.html">PTA役員</a><a class="mobile-link" href="/guide-board.html">教育委員会・学校</a><a class="mobile-link" href="/guide-research.html">研究者・記者</a></div>
 <div class="mobile-menu-group" data-global-mobile-group><div class="mobile-menu-label">学校とPTA</div><a class="mobile-link" href="/framework.html">学校とPTAの境界</a><a class="mobile-link" href="/fee-collection.html">会費・学校徴収</a><a class="mobile-link" href="/privacy.html">個人情報</a><a class="mobile-link" href="/personnel.html">教職員のPTA事務</a><a class="mobile-link" href="/facilities.html">学校施設・媒体</a><a class="mobile-link" href="/law-map.html">法制度マップ</a></div>
 <div class="mobile-menu-group" data-global-mobile-group><div class="mobile-menu-label">全国調査</div><a class="mobile-link" href="/pta-school-processing.html">学校処理の全国法的整合性調査</a><a class="mobile-link" href="/cases.html">自治体別事例</a><a class="mobile-link" href="/national-archive.html">全国資料館</a><a class="mobile-link" href="/report.html">調査報告</a></div>
 <div class="mobile-menu-group" data-global-mobile-group><div class="mobile-menu-label">論考・資料</div><a class="mobile-link" href="/ppc-points.html">PPC資料</a><a class="mobile-link" href="/pta-history.html">PTAの成り立ち</a><a class="mobile-link" href="/pta-future.html">PTAのこれから</a><a class="mobile-link" href="/journal.html">論考・調査報告</a><a class="mobile-link" href="/key-materials.html">根拠法令・一次資料</a><a class="mobile-link" href="/documents.html">文例・提出資料</a></div>
@@ -151,6 +153,12 @@ def behavior_only_nav_function():
       ['/facilities.html','学校施設・媒体'],
       ['/law-map.html','法制度マップ']
     ];
+    var audienceLinks = [
+      ['/guide-parent.html','保護者'],
+      ['/guide-pta.html','PTA役員'],
+      ['/guide-board.html','教育委員会・学校'],
+      ['/guide-research.html','研究者・記者']
+    ];
     var researchLinks = [
       ['/pta-school-processing.html','学校処理の全国法的整合性調査'],
       ['/cases.html','自治体別事例'],
@@ -187,7 +195,7 @@ def behavior_only_nav_function():
       if (membershipPaths.indexOf(path) !== -1) {
         var m = nav.querySelector('.global-membership-nav'); if (m) m.classList.add('is-here');
       }
-      [['school',schoolLinks],['research',researchLinks],['reading',readingLinks]].forEach(function(g){
+      [['audience',audienceLinks],['school',schoolLinks],['research',researchLinks],['reading',readingLinks]].forEach(function(g){
         if (!inLinks(g[1])) return;
         var parent = nav.querySelector('[data-global-nav-group="' + g[0] + '"] > .nav-link');
         if (parent) parent.classList.add('is-here-parent');
@@ -278,8 +286,8 @@ def update_structure():
     path = Path('SITE_STRUCTURE.md')
     text = path.read_text(encoding='utf-8')
     text = re.sub(
-        r'グローバルナビゲーションは `トップ / 任意加入 / 学校とPTA / 全国調査 / 教育委員会回答 / 論考・資料 / 教育委員会へ提出` を基本系統とします。[^\n]*',
-        'グローバルナビゲーションは `トップ / 任意加入 / 学校とPTA / 全国調査 / 教育委員会回答 / 論考・資料 / 教育委員会へ提出` を基本系統とします。デスクトップ・モバイルともHTMLへ静的に出力し、`js/site.js` は現在地表示・ドロップダウン開閉・検索等の補助動作だけを担当します。',
+        r'グローバルナビゲーションは `トップ / 任意加入 / 立場別 / 学校とPTA / 全国調査 / 教育委員会回答 / 論考・資料 / 教育委員会へ提出` を基本系統とします。[^\n]*',
+        'グローバルナビゲーションは `トップ / 任意加入 / 立場別 / 学校とPTA / 全国調査 / 教育委員会回答 / 論考・資料 / 教育委員会へ提出` を基本系統とします。デスクトップ・モバイルともHTMLへ静的に出力し、`js/site.js` は現在地表示・ドロップダウン開閉・検索等の補助動作だけを担当します。',
         text,
         count=1,
     )

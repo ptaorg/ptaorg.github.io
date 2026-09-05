@@ -71,3 +71,13 @@
     gap: .12rem !important;
   }
 }
+
+
+/* Audience navigation */
+.global-nav-v102 [data-global-nav-group="audience"] .mega-menu {
+  width: min(300px, calc(100vw - 32px));
+}
+
+.global-nav-v102 [data-global-nav-group="audience"] .mega-col {
+  min-width: 0;
+}

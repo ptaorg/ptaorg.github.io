@@ -1,4 +1,4 @@
-/* site.js loader — 2026-09-06 v102 static-nav */
+/* site.js loader — 2026-09-06 v103 static-nav+audience */
 (function(){
   function load(src, id, done){
     if (document.getElementById(id)) { if (done) done(); return; }
@@ -48,6 +48,12 @@
       ['/facilities.html','学校施設・媒体'],
       ['/law-map.html','法制度マップ']
     ];
+    var audienceLinks = [
+      ['/guide-parent.html','保護者'],
+      ['/guide-pta.html','PTA役員'],
+      ['/guide-board.html','教育委員会・学校'],
+      ['/guide-research.html','研究者・記者']
+    ];
     var researchLinks = [
       ['/pta-school-processing.html','学校処理の全国法的整合性調査'],
       ['/cases.html','自治体別事例'],
@@ -84,7 +90,7 @@
       if (membershipPaths.indexOf(path) !== -1) {
         var m = nav.querySelector('.global-membership-nav'); if (m) m.classList.add('is-here');
       }
-      [['school',schoolLinks],['research',researchLinks],['reading',readingLinks]].forEach(function(g){
+      [['audience',audienceLinks],['school',schoolLinks],['research',researchLinks],['reading',readingLinks]].forEach(function(g){
         if (!inLinks(g[1])) return;
         var parent = nav.querySelector('[data-global-nav-group="' + g[0] + '"] > .nav-link');
         if (parent) parent.classList.add('is-here-parent');
