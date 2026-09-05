@@ -1,0 +1,37 @@
+name: One-time restore audience navigation
+
+on:
+  push:
+    paths:
+      - 'scripts/legacy/restore-audience-global-nav.py'
+      - '.github/workflows/one-time-restore-audience-nav.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Restore audience navigation
+        run: python3 scripts/legacy/restore-audience-global-nav.py
+      - name: Verify navigation source
+        run: |
+          grep -q 'data-global-nav-group="audience"' index.html
+          grep -q '<div class="mobile-menu-label">立場別</div>' index.html
+          grep -q "\['audience',audienceLinks\]" js/site.js
+          grep -q "SITE_JS_VERSION = '96'" scripts/legacy/static-global-nav-migration.py
+      - name: Commit changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No changes'
+          else
+            git commit -m 'Restore audience navigation across public pages'
+            git push
+          fi
