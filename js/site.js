@@ -1,4 +1,4 @@
-/* site.js loader — 2026-09-05 v99 */
+/* site.js loader — 2026-09-05 v100 */
 (function(){
   function load(src, id, done){
     if (document.getElementById(id)) { if (done) done(); return; }
@@ -205,98 +205,91 @@
     steps.insertAdjacentElement('beforebegin', block);
   }
 
-  function injectSchoolProcessingVisuals(){
-    if (document.getElementById('psc-evidence-visuals')) return;
+  function injectSchoolProcessingCaseVisuals(){
     var path = (window.location.pathname || '').replace(/\/+$/,'');
     if (path !== '/pta-school-processing.html') return;
 
-    var heading = findHeading('h2','優先15自治体・都道府県の第1次比較');
-    if (!heading) return;
-    var node = heading.nextElementSibling;
-    while (node && !node.classList.contains('psc-table-wrap')) node = node.nextElementSibling;
-    if (!node) return;
-    var table = node.querySelector('table.psc-table');
-    if (!table) return;
+    var oldSummary = document.getElementById('psc-evidence-visuals');
+    if (oldSummary) oldSummary.remove();
 
-    var rows = Array.prototype.slice.call(table.querySelectorAll('tbody tr'));
-    if (!rows.length) return;
-
-    var basisCounts = {
-      '規則・訓令・要綱・要領等': 0,
-      '徴収・会計等の内部制度': 0,
-      '内部手引＋委任等': 0,
-      '委任・同意・契約中心': 0
-    };
-    var issueDefs = [
-      {label:'個人情報保護法61条', re:/61条/},
-      {label:'受任権限・受任主体', re:/受任権限|受任主体|受託所掌|学校長の受任|公法上の受任/},
-      {label:'上位授権・法規階層', re:/上位授権|上位法|法規階層|法規的根拠|法規性/}
-    ];
-    var issueCounts = issueDefs.map(function(d){ return {label:d.label,re:d.re,count:0}; });
-
-    rows.forEach(function(tr){
-      var cells = tr.querySelectorAll('td');
-      if (cells.length < 6) return;
-      var basis = (cells[1].textContent || '').trim();
-      var issues = ((cells[4].textContent || '') + ' ' + (cells[5].textContent || '')).trim();
-
-      if (/教育委員会規則|訓令|要綱|要領/.test(basis)) basisCounts['規則・訓令・要綱・要領等']++;
-      else if (/学校徴収|私費会計|受託事務分掌/.test(basis)) basisCounts['徴収・会計等の内部制度']++;
-      else if (/内部手引/.test(basis)) basisCounts['内部手引＋委任等']++;
-      else basisCounts['委任・同意・契約中心']++;
-
-      issueCounts.forEach(function(d){ if (d.re.test(issues)) d.count++; });
-    });
-
-    if (!document.getElementById('psc-evidence-visuals-style')) {
+    if (!document.getElementById('psc-case-visuals-style')) {
       var style = document.createElement('style');
-      style.id = 'psc-evidence-visuals-style';
+      style.id = 'psc-case-visuals-style';
       style.textContent =
-        '#psc-evidence-visuals{margin:28px 0 34px;padding:24px 26px;border:1px solid #cbd4da;background:#fbfcfc}' +
-        '#psc-evidence-visuals .psc-viz-title{margin:0 0 8px!important;font-family:"Noto Serif JP",serif;font-size:1.3rem;line-height:1.5}' +
-        '#psc-evidence-visuals .psc-viz-intro{margin:0 0 22px!important;color:#52606b;font-size:.9rem;line-height:1.75}' +
-        '#psc-evidence-visuals .psc-viz-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}' +
-        '#psc-evidence-visuals .psc-viz-panel{min-width:0}' +
-        '#psc-evidence-visuals .psc-viz-panel h3{margin:0 0 14px!important;font-size:1rem!important}' +
-        '#psc-evidence-visuals .psc-viz-row{display:grid;grid-template-columns:minmax(128px,1.15fr) minmax(130px,2fr) 34px;gap:9px;align-items:center;margin:10px 0}' +
-        '#psc-evidence-visuals .psc-viz-label{font-size:.8rem;line-height:1.45;color:#33424d}' +
-        '#psc-evidence-visuals .psc-viz-track{height:16px;background:#e9eef1;overflow:hidden}' +
-        '#psc-evidence-visuals .psc-viz-fill{display:block;height:100%;min-width:2px;background:#526b7a}' +
-        '#psc-evidence-visuals .psc-viz-issues .psc-viz-fill{background:#8a4a4a}' +
-        '#psc-evidence-visuals .psc-viz-value{font-weight:900;font-size:.82rem;text-align:right;color:#27343e}' +
-        '#psc-evidence-visuals .psc-viz-note{margin:18px 0 0!important;padding-top:14px;border-top:1px solid #d7dee3;color:#66727b;font-size:.78rem;line-height:1.7}' +
-        '@media(max-width:820px){#psc-evidence-visuals .psc-viz-grid{grid-template-columns:1fr;gap:24px}}' +
-        '@media(max-width:520px){#psc-evidence-visuals{padding:20px 16px}#psc-evidence-visuals .psc-viz-row{grid-template-columns:1fr 34px;gap:6px 9px}#psc-evidence-visuals .psc-viz-label{grid-column:1/3}#psc-evidence-visuals .psc-viz-track{grid-column:1/2}}';
+        '.psc-case-viz{margin:14px 26px 24px;padding:18px 18px 16px;border-top:1px solid #cfd7de;border-bottom:1px solid #cfd7de;background:#fafbfb}' +
+        '.psc-case-viz-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}' +
+        '.psc-case-viz-title{font-weight:900;font-size:.92rem;color:#243746}' +
+        '.psc-case-viz-note{font-size:.74rem;color:#68747d}' +
+        '.psc-case-viz-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}' +
+        '.psc-case-viz-step{position:relative;min-width:0;padding:12px 10px 11px;border:1px solid #cfd7de;background:#fff}' +
+        '.psc-case-viz-step:after{content:"→";position:absolute;right:-9px;top:50%;transform:translateY(-50%);z-index:2;color:#9aa5ad;font-weight:900;background:#fafbfb;padding:0 1px}' +
+        '.psc-case-viz-step:nth-child(4n):after,.psc-case-viz-step:last-child:after{display:none}' +
+        '.psc-case-viz-no{display:block;font-family:ui-monospace,monospace;font-size:.68rem;font-weight:900;color:#6b7780;margin-bottom:4px}' +
+        '.psc-case-viz-label{display:block;font-size:.8rem;font-weight:900;line-height:1.35;color:#25343e;margin-bottom:7px}' +
+        '.psc-case-viz-state{display:inline-block;padding:2px 6px;border-left:4px solid #607d90;background:#edf3f6;font-size:.7rem;font-weight:800;line-height:1.45;color:#304b5b}' +
+        '.psc-case-viz-step.is-partial .psc-case-viz-state{border-left-color:#a47921;background:#fbf4e4;color:#6e5215}' +
+        '.psc-case-viz-step.is-open .psc-case-viz-state{border-left-color:#8a4545;background:#f8eded;color:#713838}' +
+        '.psc-case-viz-legend{margin:13px 0 0!important;font-size:.72rem;line-height:1.65!important;color:#67737c}' +
+        '.psc-case-viz-legend b{color:#263944}.psc-case-viz-legend span{white-space:nowrap;margin-right:12px}' +
+        '.psc-case-viz-legend .lg-ok:before,.psc-case-viz-legend .lg-partial:before,.psc-case-viz-legend .lg-open:before{content:"■";margin-right:4px}' +
+        '.psc-case-viz-legend .lg-ok:before{color:#607d90}.psc-case-viz-legend .lg-partial:before{color:#a47921}.psc-case-viz-legend .lg-open:before{color:#8a4545}' +
+        '@media(max-width:760px){.psc-case-viz{margin-left:18px;margin-right:18px;padding-left:12px;padding-right:12px}.psc-case-viz-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.psc-case-viz-step:nth-child(4n):after{display:block}.psc-case-viz-step:nth-child(2n):after,.psc-case-viz-step:last-child:after{display:none}}' +
+        '@media(max-width:430px){.psc-case-viz-grid{grid-template-columns:1fr}.psc-case-viz-step:after{content:"↓";right:auto;left:50%;top:auto;bottom:-13px;transform:translateX(-50%);background:#fafbfb}.psc-case-viz-step:nth-child(2n):after,.psc-case-viz-step:nth-child(4n):after{display:block}.psc-case-viz-step:last-child:after{display:none}}';
       document.head.appendChild(style);
     }
 
-    function barRows(items, total, issueClass){
-      return items.map(function(item){
-        var pct = total > 0 ? Math.max(0, Math.min(100, (item.count / total) * 100)) : 0;
-        return '<div class="psc-viz-row">' +
-          '<div class="psc-viz-label">' + item.label + '</div>' +
-          '<div class="psc-viz-track" role="img" aria-label="' + item.label + ' ' + item.count + '件／' + total + '件">' +
-            '<span class="psc-viz-fill" style="width:' + pct.toFixed(1) + '%"></span>' +
-          '</div>' +
-          '<div class="psc-viz-value">' + item.count + '</div>' +
-        '</div>';
-      }).join('');
-    }
+    var labels = ['対象事務','公法上の根拠','受任主体','委任の順序','校長・職員','地公法35条','学校教育法37条','個情法61・69条'];
 
-    var basisItems = Object.keys(basisCounts).map(function(label){ return {label:label,count:basisCounts[label]}; });
-    var section = document.createElement('section');
-    section.id = 'psc-evidence-visuals';
-    section.setAttribute('aria-labelledby','psc-evidence-visuals-title');
-    section.innerHTML =
-      '<h3 id="psc-evidence-visuals-title" class="psc-viz-title">15自治体の比較を可視化する</h3>' +
-      '<p class="psc-viz-intro">左は「学校処理を何で説明しているか」の分布、右は比較表の「なお残る主要論点」「現時点の法的評価」に明記された未解決論点の出現件数です。どちらも適法度・優良度の順位ではありません。</p>' +
-      '<div class="psc-viz-grid">' +
-        '<div class="psc-viz-panel psc-viz-basis"><h3>主たる根拠形態の分布</h3>' + barRows(basisItems, rows.length, false) + '</div>' +
-        '<div class="psc-viz-panel psc-viz-issues"><h3>主要な未解決論点の出現件数</h3>' + barRows(issueCounts, rows.length, true) + '</div>' +
-      '</div>' +
-      '<p class="psc-viz-note">集計対象：現在の比較表15自治体・都道府県。右側は同一自治体が複数論点に重複して数えられます。表の記載から自動集計しているため、原資料の追加・表の更新に応じて数値も変わります。</p>';
+    document.querySelectorAll('section.psc-audit-case').forEach(function(caseEl){
+      if (caseEl.querySelector('.psc-case-viz')) return;
+      var items = Array.prototype.slice.call(caseEl.querySelectorAll('ol.psc-audit-list > li')).slice(0,8);
+      if (!items.length) return;
 
-    node.parentNode.insertBefore(section, node);
+      var viz = document.createElement('div');
+      viz.className = 'psc-case-viz';
+
+      var head = document.createElement('div');
+      head.className = 'psc-case-viz-head';
+      head.innerHTML = '<span class="psc-case-viz-title">法的構造の可視化</span>' +
+        '<span class="psc-case-viz-note">色は資料確認状況。適法性・優良度の点数ではありません。</span>';
+      viz.appendChild(head);
+
+      var grid = document.createElement('div');
+      grid.className = 'psc-case-viz-grid';
+
+      items.forEach(function(item, index){
+        var status = item.querySelector('.psc-audit-status');
+        var step = document.createElement('div');
+        step.className = 'psc-case-viz-step';
+        var stateText = '確認中';
+        if (status) {
+          stateText = (status.textContent || '').trim();
+          if (status.classList.contains('open')) step.classList.add('is-open');
+          else if (status.classList.contains('partial')) step.classList.add('is-partial');
+          else step.classList.add('is-ok');
+        } else {
+          step.classList.add('is-partial');
+        }
+        step.innerHTML = '<span class="psc-case-viz-no">' + String(index + 1).padStart(2,'0') + '</span>' +
+          '<span class="psc-case-viz-label">' + (labels[index] || ('項目' + (index + 1))) + '</span>' +
+          '<span class="psc-case-viz-state"></span>';
+        step.querySelector('.psc-case-viz-state').textContent = stateText;
+        grid.appendChild(step);
+      });
+      viz.appendChild(grid);
+
+      var legend = document.createElement('p');
+      legend.className = 'psc-case-viz-legend';
+      legend.innerHTML = '<span class="lg-ok"><b>資料上確認</b></span>' +
+        '<span class="lg-partial"><b>部分確認・限定的整理</b></span>' +
+        '<span class="lg-open"><b>未解決・疑義</b></span>' +
+        '「確認」は、その資料・制度が存在することを示すだけで、適法性を肯定する表示ではありません。';
+      viz.appendChild(legend);
+
+      var lead = caseEl.querySelector('.psc-audit-lead');
+      if (lead) lead.insertAdjacentElement('afterend', viz);
+      else caseEl.insertBefore(viz, caseEl.firstChild ? caseEl.firstChild.nextSibling : null);
+    });
   }
 
   function installCoreEssayEntrances(){
@@ -306,7 +299,7 @@
     if (document.body.classList.contains('home-page') || path === '' || path === '/index.html') injectHome();
     if (document.body.classList.contains('journal-page') || path === '/journal.html') injectJournal();
     if (path === '/framework.html' || document.getElementById('fw-borders')) injectFrameworkBoundaryClarification();
-    if (path === '/pta-school-processing.html') injectSchoolProcessingVisuals();
+    if (path === '/pta-school-processing.html') injectSchoolProcessingCaseVisuals();
   }
 
   load('/js/site-core-v90.js?v=98', 'site-core-v90', function(){
