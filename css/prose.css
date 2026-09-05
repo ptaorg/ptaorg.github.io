@@ -225,6 +225,56 @@ body[data-content-mode="prose"]
   }
 }
 
+/*
+ * PTA school-processing case visuals are an actual comparison matrix.
+ * Do not let the generic prose-mode "flatten all *-grid classes" rule
+ * turn this 8-item matrix into a long vertical card stack.
+ */
+body[data-content-mode="prose"] .psc-case-viz-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+  border-top: 0 !important;
+}
+
+body[data-content-mode="prose"] .psc-case-viz-step {
+  grid-column: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 10px 11px !important;
+  background: #fff !important;
+  border: 1px solid #cfd7de !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+body[data-content-mode="prose"] .psc-case-viz-step::after {
+  content: none !important;
+  display: none !important;
+}
+
+body[data-content-mode="prose"] .psc-case-viz-state {
+  max-width: 100%;
+  white-space: normal !important;
+}
+
+@media (max-width: 760px) {
+  body[data-content-mode="prose"] .psc-case-viz-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 430px) {
+  body[data-content-mode="prose"] .psc-case-viz-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  body[data-content-mode="prose"] .psc-case-viz-step {
+    padding: 9px 8px !important;
+  }
+}
+
 @media print {
   body[data-content-mode="prose"]
     :where(.card, [class$="-card"], [class*="-card "]) {
