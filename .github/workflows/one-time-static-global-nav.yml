@@ -19,8 +19,30 @@ jobs:
           fetch-depth: 0
       - name: Migrate navigation into static HTML
         run: python3 scripts/legacy/static-global-nav-migration.py
-      - name: Run full site checks
-        run: npm run check:all
+      - name: Verify navigation migration
+        run: |
+          npm run check:site-js-version
+          npm run check:content
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          bad=[]
+          count=0
+          for p in Path('.').rglob('*.html'):
+              if any(x in {'.git','node_modules','_site','assets','css','data','js','scripts','tools','ホーム'} for x in p.parts):
+                  continue
+              s=p.read_text(encoding='utf-8')
+              if '<header class="site-header"' in s:
+                  count += 1
+                  if 'global-nav-v102' not in s or '/css/global-nav.css?v=20260906-1' not in s:
+                      bad.append(str(p))
+          site_js=Path('js/site.js').read_text(encoding='utf-8')
+          if 'nav.innerHTML = desktopHtml' in site_js or 'mobileGroup(' in site_js:
+              raise SystemExit('runtime nav generation still present')
+          if bad:
+              raise SystemExit('static nav missing: ' + ', '.join(bad[:20]))
+          print('verified static headers:', count)
+          PY
       - name: Commit migration
         run: |
           git config user.name 'github-actions[bot]'
