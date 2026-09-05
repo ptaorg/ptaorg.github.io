@@ -40,9 +40,6 @@
 <style>
 :root{--psc-ink:#17212b;--psc-sub:#4b5967;--psc-line:#cfd7de;--psc-soft:#f5f7f8;--psc-accent:#7b2e2e;--psc-blue:#234a68;--psc-paper:#fff}
 body{color:var(--psc-ink);background:#f2f3f1}
-.psc-header{background:#fff;border-bottom:1px solid #dfe4e7;position:relative;z-index:5}
-.psc-nav{max-width:1180px;margin:auto;padding:14px 22px;display:flex;gap:22px;align-items:center;justify-content:space-between}
-.psc-brand{font-weight:800;color:#17212b;text-decoration:none;white-space:nowrap}.psc-links{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}.psc-links a{color:#33414c;text-decoration:none;font-size:.92rem}.psc-links a:hover{text-decoration:underline}
 .psc-page{max-width:1180px;margin:0 auto;background:var(--psc-paper);box-shadow:0 0 0 1px rgba(25,35,45,.04);padding:54px 48px 80px}
 .psc-label{font-size:.77rem;letter-spacing:.12em;font-weight:800;color:var(--psc-accent);text-transform:uppercase;margin:0 0 12px}
 .psc-page h1{font-family:"Noto Serif JP",serif;font-size:clamp(2rem,4.2vw,3.45rem);line-height:1.3;letter-spacing:.02em;margin:0 0 22px}.psc-deck{font-size:1.18rem;line-height:2;color:#34424e;margin:0 0 22px;max-width:52em}.psc-meta{font-size:.88rem;color:#66717a;padding-bottom:26px;border-bottom:3px double #aeb8c0}
@@ -51,16 +48,15 @@ body{color:var(--psc-ink);background:#f2f3f1}
 .psc-rank{margin:26px 0;border-top:2px solid #8d99a3}.psc-rank div{display:grid;grid-template-columns:52px 1fr;gap:14px;padding:12px 6px;border-bottom:1px solid var(--psc-line)}.psc-rank dt{font-weight:900;font-size:1.05rem}.psc-rank dd{margin:0;line-height:1.75}.psc-note{font-size:.9rem;color:#5c6872}
 .psc-table-wrap{overflow-x:auto;margin:26px 0 8px;padding:0;max-width:100%;-webkit-overflow-scrolling:touch}.psc-table{width:100%;min-width:0;border-collapse:collapse;font-size:.86rem;table-layout:fixed}.psc-table th{background:#e8edf0!important;color:#17212b!important;text-align:left;padding:11px 9px;border-top:2px solid #727f89;border-bottom:1px solid #9eabb5;vertical-align:bottom;font-weight:800;line-height:1.45;white-space:normal;overflow-wrap:anywhere}.psc-table td{padding:12px 9px;border-bottom:1px solid #d7dde2;vertical-align:top;line-height:1.65;white-space:normal;overflow-wrap:anywhere}.psc-table tr:nth-child(even) td{background:#fafbfb}.psc-table th:nth-child(1),.psc-table td:nth-child(1){width:7%}.psc-table th:nth-child(2),.psc-table td:nth-child(2){width:13%}.psc-table th:nth-child(3),.psc-table td:nth-child(3){width:16%}.psc-table th:nth-child(4),.psc-table td:nth-child(4){width:21%}.psc-table th:nth-child(5),.psc-table td:nth-child(5){width:21%}.psc-table th:nth-child(6),.psc-table td:nth-child(6){width:13%;text-align:left}.psc-table th:nth-child(7),.psc-table td:nth-child(7){width:9%}.psc-table .rank{font-weight:800;font-size:.82rem;text-align:left;line-height:1.55}.psc-table .source{white-space:normal;word-break:normal;overflow-wrap:anywhere}.psc-table .source a{display:inline;overflow-wrap:anywhere}
 .psc-audit-case{margin:28px 0 42px;border:1px solid #c8d1d8;border-top:5px solid #234a68;background:#fff}.psc-audit-head{padding:24px 26px 20px;background:#f4f7f9;border-bottom:1px solid #c8d1d8}.psc-audit-kicker{margin:0 0 6px!important;font-size:.76rem;font-weight:900;letter-spacing:.09em;color:#5b6872}.psc-audit-head h3{margin:0 0 14px!important;font-family:"Noto Serif JP",serif!important;font-size:1.45rem!important}.psc-audit-meta{display:flex;gap:10px 18px;flex-wrap:wrap;font-size:.86rem}.psc-audit-badge{display:inline-block;padding:4px 9px;border:1px solid #8fa1ad;background:#fff;font-weight:800}.psc-audit-badge.is-rank{border-color:#234a68;color:#234a68}.psc-audit-lead{padding:20px 26px 4px}.psc-audit-list{list-style:none;padding:0;margin:0 26px 22px;counter-reset:audit}.psc-audit-list>li{counter-increment:audit;position:relative;padding:18px 12px 18px 58px;border-top:1px solid #d5dce1;line-height:1.82}.psc-audit-list>li:before{content:counter(audit,decimal-leading-zero);position:absolute;left:10px;top:18px;font-family:ui-monospace,monospace;font-weight:900;color:#7b2e2e}.psc-audit-list strong{display:block;margin-bottom:4px;color:#223746}.psc-audit-status{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:2px;font-size:.72rem;line-height:1.55;font-weight:900;vertical-align:1px}.psc-audit-status.ok{background:#edf4ef;color:#275b3a}.psc-audit-status.partial{background:#fff4d8;color:#735509}.psc-audit-status.open{background:#f7eaea;color:#7b2e2e}.psc-audit-conclusion{margin:0;padding:22px 26px;background:#fbf8f6;border-top:1px solid #d8c7c2}.psc-audit-sources{padding:16px 26px 22px;border-top:1px solid #d5dce1;background:#fafbfb;font-size:.88rem}.psc-audit-sources p{margin:0 0 6px!important}.psc-audit-sources a{overflow-wrap:anywhere}.psc-case{padding:24px 0;border-top:1px solid var(--psc-line)}.psc-case:last-child{border-bottom:1px solid var(--psc-line)}.psc-case h3{margin-top:0}.psc-case .psc-case-tag{display:inline-block;font-size:.75rem;font-weight:800;letter-spacing:.06em;color:#fff;background:var(--psc-blue);padding:3px 8px;margin-bottom:8px}.psc-case .psc-case-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 34px}.psc-case .psc-case-grid p{margin:0}.psc-case b{color:#243746}
-.psc-source-list{padding-left:1.2em}.psc-source-list li{margin:8px 0;overflow-wrap:anywhere}.psc-status{background:#f3f6f7;border:1px solid #d3dce2;padding:18px 22px;margin:30px 0}.psc-footer{max-width:1080px;margin:0 auto 50px;padding:24px 30px;color:#66717a;font-size:.84rem;text-align:center}.psc-footer a{color:#425a6b}
-@media(max-width:980px){.psc-table{min-width:900px}.psc-table-wrap{border-right:1px solid #d7dde2;border-left:1px solid #d7dde2}}
-@media(max-width:760px){.psc-nav{align-items:flex-start;flex-direction:column}.psc-links{justify-content:flex-start;gap:12px 16px}.psc-page{padding:38px 22px 60px;box-shadow:none}.psc-page h2{margin-top:44px}.psc-case .psc-case-grid{grid-template-columns:1fr}.psc-deck{font-size:1.06rem}.psc-table{font-size:.84rem}.psc-audit-head,.psc-audit-lead,.psc-audit-conclusion,.psc-audit-sources{padding-left:18px;padding-right:18px}.psc-audit-list{margin-left:18px;margin-right:18px}.psc-audit-list>li{padding-left:48px}}
+.psc-source-list{padding-left:1.2em}.psc-source-list li{margin:8px 0;overflow-wrap:anywhere}.psc-status{background:#f3f6f7;border:1px solid #d3dce2;padding:18px 22px;margin:30px 0}@media(max-width:980px){.psc-table{min-width:900px}.psc-table-wrap{border-right:1px solid #d7dde2;border-left:1px solid #d7dde2}}
+@media(max-width:760px){.psc-links{justify-content:flex-start;gap:12px 16px}.psc-page{padding:38px 22px 60px;box-shadow:none}.psc-page h2{margin-top:44px}.psc-case .psc-case-grid{grid-template-columns:1fr}.psc-deck{font-size:1.06rem}.psc-table{font-size:.84rem}.psc-audit-head,.psc-audit-lead,.psc-audit-conclusion,.psc-audit-sources{padding-left:18px;padding-right:18px}.psc-audit-list{margin-left:18px;margin-right:18px}.psc-audit-list>li{padding-left:48px}}
 
 .psc-table-caption{caption-side:top;text-align:left;padding:0 0 10px;font-weight:800;color:#33424d}.psc-scroll-note{display:none;margin:0 0 8px!important;font-size:.78rem;color:#66737c}
 .psc-case-viz-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:10px!important;border-top:0!important}.psc-case-viz-step{margin:0!important;padding:11px 10px!important;border:1px solid #cfd7de!important;background:#fff!important}.psc-case-viz-step:after{display:none!important}.psc-case-viz{margin:14px 26px 24px!important;padding:16px 18px!important;border-top:1px solid #cfd7de!important;border-bottom:1px solid #cfd7de!important;background:#fafbfb!important}
 @media(max-width:980px){.psc-scroll-note{display:block}.psc-page{padding-left:30px;padding-right:30px}}@media(max-width:760px){.psc-page{padding:34px 18px 58px}.psc-case-viz-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.psc-case-viz{margin-left:18px!important;margin-right:18px!important;padding-left:12px!important;padding-right:12px!important}}
-</style>
-<link rel="alternate" type="text/plain" href="/llms.txt" title="AI向けサイト案内"></head>
-<body data-content-mode="prose" data-reviewed="2026-09-05" data-page-revision="pta-school-processing-20260905-5" class="pta-school-processing-editorial">
+.psc-toc{margin:28px 0 36px;padding:18px 20px;border-top:2px solid #7f8b95;border-bottom:1px solid #d4dbe0;background:#fafbfb}.psc-toc-title{margin:0 0 10px!important;font-size:.78rem;font-weight:900;letter-spacing:.08em;color:#596773}.psc-toc ol{margin:0;padding-left:1.4em;columns:2;column-gap:34px}.psc-toc li{break-inside:avoid;margin:4px 0;line-height:1.55;font-size:.86rem}.psc-toc a{color:#294c66;text-decoration:none}.psc-toc a:hover{text-decoration:underline}@media(max-width:980px){.psc-toc ol{columns:1}}</style>
+<link rel="alternate" type="text/plain" href="/llms.txt" title="AI向けサイト案内"><meta property="article:published_time" content="2026-09-05"><meta property="article:modified_time" content="2026-09-05"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://ptaorg.com/"},{"@type":"ListItem","position":2,"name":"論考・調査報告","item":"https://ptaorg.com/journal.html"},{"@type":"ListItem","position":3,"name":"PTA内部事務の学校処理 全国法的整合性調査","item":"https://ptaorg.com/pta-school-processing.html"}]}</script></head>
+<body data-content-mode="prose" data-reviewed="2026-09-05" data-page-revision="pta-school-processing-20260905-6" class="pta-school-processing-editorial">
 <div class="support-strip" role="complementary" aria-label="活動支援のお願い"><div class="support-strip-inner"><span class="support-strip-label">応援のお願い</span><span class="support-strip-text">資料取得、資料整理、Web公開を続けるため、寄付・カンパでのご支援をお願いします。</span><a class="support-strip-link" href="/support.html">応援ページへ</a></div></div>
 <header class="site-header"><div class="nav-container"><a class="logo" href="/index.html"><img alt="PTA適正化推進委員会" src="/assets/popc-logo.png"><span>PTA適正化推進委員会</span></a><div class="header-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input aria-label="サイト内検索" class="search-input" placeholder="キーワードで検索…" type="text"><div class="search-results-dropdown"></div></div><nav aria-label="主要ナビゲーション" class="desktop-nav"><a class="nav-link" href="/index.html">トップ</a><a class="nav-link" href="/pta-membership-optin.html">オプトイン</a><a class="nav-link" href="/ppc-points.html">PPC資料</a><a class="nav-link nav-link-priority" href="/board-responses.html" aria-label="教育委員会の回答">教育委員会回答</a><div class="nav-item has-dropdown"><a class="nav-link" href="/law-map.html" aria-haspopup="true">論点別</a><div class="mega-menu" aria-label="論点別メニュー"><div class="mega-col"><h4>加入・情報</h4><ul><li><a class="mega-link" href="/law-map.html"><strong>法制度マップ</strong><span>論点と関連法令を一覧で確認</span></a></li><li><a class="mega-link" href="/membership.html"><strong>入会と申込記録</strong><span>任意加入と意思確認の成立要件</span></a></li><li><a class="mega-link" href="/privacy.html"><strong>個人情報</strong><span>学校保有情報とPTA利用の境界</span></a></li></ul></div><div class="mega-col"><h4>学校との境界</h4><ul><li><a class="mega-link" href="/fee-collection.html"><strong>会費徴収</strong><span>学校徴収金との分離を確認</span></a></li><li><a class="mega-link" href="/personnel.html"><strong>教職員関与</strong><span>勤務時間・職務専念義務を整理</span></a></li><li><a class="mega-link" href="/facilities.html"><strong>施設利用</strong><span>学校施設の目的外使用を確認</span></a></li><li><a class="mega-link" href="/education-board-responsibility.html"><strong>教育委員会の所掌</strong><span>学校関与を点検すべき理由</span></a></li></ul></div></div></div><div class="nav-item has-dropdown"><a class="nav-link" href="/documents.html" aria-haspopup="true">根拠資料</a><div class="mega-menu" aria-label="根拠資料メニュー"><div class="mega-col"><h4>一次資料</h4><ul><li><a class="mega-link" href="/board-responses.html"><strong>教育委員会の回答</strong><span>自治体別・論点別の公式回答</span></a></li><li><a class="mega-link" href="/national-archive.html"><strong>全国資料館</strong><span>自治体・学校の実物文書</span></a></li><li><a class="mega-link" href="/administrative-materials.html"><strong>行政通知・公式PDF</strong><span>行政機関の通知と公開資料</span></a></li></ul></div><div class="mega-col"><h4>分析・検証</h4><ul><li><a class="mega-link" href="/journal.html"><strong>論考・調査報告</strong><span>個別テーマを本文で読む</span></a></li><li><a class="mega-link" href="/report.html"><strong>総合分析レポート</strong><span>問題構造を俯瞰して確認</span></a></li><li><a class="mega-link" href="/cases.html"><strong>判例整理</strong><span>関連裁判例の争点を確認</span></a></li><li><a class="mega-link" href="/claim-evidence-ledger.html"><strong>主張と根拠の対応表</strong><span>条文・資料・文例を照合</span></a></li></ul></div></div></div><div class="nav-item has-dropdown"><a class="nav-link" href="/index.html#audience-gateway" aria-haspopup="true">立場別</a><div class="mega-menu" aria-label="立場別メニュー"><div class="mega-col"><h4>読む人から選ぶ</h4><ul><li><a class="mega-link" href="/guide-parent.html"><strong>保護者の方へ</strong><span>入会・会費・情報の確認手順</span></a></li><li><a class="mega-link" href="/guide-pta.html"><strong>PTA役員の方へ</strong><span>運営を適正化する実務手順</span></a></li></ul></div><div class="mega-col"><h4>実務・調査</h4><ul><li><a class="mega-link" href="/guide-board.html"><strong>教育委員会・学校へ</strong><span>学校関与と初動チェック</span></a></li><li><a class="mega-link" href="/guide-research.html"><strong>研究者・記者の方へ</strong><span>一次資料と調査導線</span></a></li></ul></div></div></div></nav><button class="hamburger" id="hamburger" aria-controls="mobileOverlay" aria-expanded="false" aria-label="メニューを開く"><span></span><span></span><span></span></button></div></header>
 <div class="mobile-overlay" id="mobileOverlay"><div class="mobile-menu-group"><div class="mobile-menu-label">最重要</div><a class="mobile-link" href="/index.html">トップ</a><a class="mobile-link" href="/pta-membership-optin.html">オプトインの原則</a><a class="mobile-link" href="/ppc-points.html">PPC資料の読み方</a><a class="mobile-link mobile-link-priority" href="/board-responses.html">教育委員会の回答</a></div><div class="mobile-menu-group"><div class="mobile-menu-label">論点別</div><a class="mobile-link" href="/law-map.html">法制度マップ</a><a class="mobile-link" href="/membership.html">加入と申込記録</a><a class="mobile-link" href="/privacy.html">個人情報</a><a class="mobile-link" href="/fee-collection.html">会費徴収</a><a class="mobile-link" href="/personnel.html">教職員関与</a><a class="mobile-link" href="/facilities.html">施設利用</a><a class="mobile-link" href="/education-board-responsibility.html">教育委員会の所掌</a></div><div class="mobile-menu-group"><div class="mobile-menu-label">根拠資料</div><a class="mobile-link" href="/national-archive.html">全国資料館</a><a class="mobile-link" href="/journal.html">論考・調査報告</a><a class="mobile-link" href="/administrative-materials.html">行政通知・公式PDF</a><a class="mobile-link" href="/report.html">総合分析レポート</a><a class="mobile-link" href="/cases.html">判例整理</a></div><div class="mobile-menu-group"><div class="mobile-menu-label">立場別</div><a class="mobile-link" href="/guide-parent.html">保護者の方へ</a><a class="mobile-link" href="/guide-pta.html">PTA役員の方へ</a><a class="mobile-link" href="/guide-board.html">教育委員会・学校へ</a><a class="mobile-link" href="/guide-research.html">研究者・記者の方へ</a></div><button type="button" class="mobile-close-btn" id="closeOverlay" aria-label="メニューを閉じる">閉じる ×</button></div>
@@ -72,15 +68,15 @@ body{color:var(--psc-ink);background:#f2f3f1}
 <p class="psc-deck">PTAから学校への「委任」、保護者本人の「同意」、校長判断、学校徴収金・準公金・私費会計規程があれば、公立学校・校長・教職員はPTA固有の内部事務を恒常的に処理できるのか。全国の制度を、同じ審査順序で比較します。</p>
 <p class="psc-meta">第1次比較：優先15自治体・都道府県　／　基準日：2026年9月5日　／　原回答・原規程・公式資料を可能な限り突合</p>
 </header>
-
+<nav class="psc-toc" aria-label="この調査報告の目次"><p class="psc-toc-title">目次</p><ol><li><a href="#why">1　なぜ全国比較が必要なのか</a></li><li><a href="#review-order">2　審査の順序</a></li><li><a href="#ppc-2026">3　2026年3月PPC資料が示した審査順序</a></li><li><a href="#evaluation-axes">4　「法的に整理されている」と「適法・望ましい」は別である</a></li><li><a href="#comparison">5　優先15自治体・都道府県の第1次比較</a></li><li><a href="#system-types">6　制度類型別に見ると何が違うのか</a></li><li><a href="#strongest-argument">7　学校処理を正当化する側の主張を最も強く組み立てると</a></li><li><a href="#major-cases">8　主要事例を一件ずつ審査する</a></li><li><a href="#school-act-37">9　学校教育法37条と校長判断をどう読むか</a></li><li><a href="#lpsa-35">10　地方公務員法35条――勤務時間中に行う根拠は何か</a></li><li><a href="#consent-limits">11　「本人同意」と「利用目的にPTAと書くこと」の限界</a></li><li><a href="#follow-up-questions">12　再照会で確認する共通質問</a></li><li><a href="#conclusion">13　現時点の結論</a></li><li><a href="#sources">14　主要な公式資料</a></li></ol></nav>
 <div class="psc-emphasis"><strong>この調査の出発点は「委任があるか」ではありません。</strong><br>先に確認するのは、そのPTA事務を自治体・教育委員会・学校が公務として処理できる公法上・組織法上の根拠があるかです。その根拠が確認できて初めて、PTAからの委任・準委任・代理・委託を受ける権限があるかを検討します。</div>
 
-<h2>1　なぜ全国比較が必要なのか</h2>
+<h2 id="why">1　なぜ全国比較が必要なのか</h2>
 <p>全国の自治体・教育委員会への照会と公開資料を追うと、学校がPTA会費の請求・口座振替・収納・送金を行い、加入書類や会員情報を保管し、教職員が勤務時間中にPTA会計を処理する仕組みが確認できます。その説明として使われるのが、「PTA会長から校長への委任」「本人の同意」「校長が学校運営上必要と判断」「学校徴収金・準公金・私費会計の規程に基づく」といった構成です。</p>
 <p>これらは同じ強さの根拠ではありません。PTAを具体的に名指しし、受任条件、校長の管理責任、担当職員、帳簿・口座管理まで定める自治体もあれば、毎年度の準委任契約だけを中心に説明する自治体もあります。そこで、制度の有無だけでなく、その規程が何を根拠に学校事務を設定しているのかまで遡って比較する必要があります。</p>
 <p>なお、本調査は自治体を「違法」と決めつけるための一覧ではありません。自治体・教育委員会・監査委員等が示す正当化論を、反対説を過小評価しないために最も有利な形で整理し、その論理でもなお説明できていない法的論点を明示することを目的としています。</p>
 
-<h2>2　審査の順序</h2>
+<h2 id="review-order">2　審査の順序</h2>
 <p>各自治体は、次の順序で審査します。順序を入れ替えると、「PTAが委任したから学校の公務になった」という結論先取りが生じるためです。</p>
 <ol class="psc-flow">
 <li><b>対象となるPTA事務を特定する</b>入会受付、会員確定、会員名簿、会費請求、口座振替、収納、未納確認・督促、免除、返金、送金、通帳・印鑑、帳簿・決算、役員選出、文書配布、学校保有個人情報の利用・提供などを分けます。</li>
@@ -93,19 +89,19 @@ body{color:var(--psc-ink);background:#f2f3f1}
 <li><b>69条2項の例外は後に検討する</b>本人同意（1号）や特別の理由（4号）を、恒常的なPTA事務処理を制度化する一般的根拠として先に置きません。</li>
 </ol>
 
-<h2>3　2026年3月PPC資料が示した審査順序</h2>
+<h2 id="ppc-2026">3　2026年3月PPC資料が示した審査順序</h2>
 <p>個人情報保護委員会（PPC）は2026年3月、「公立学校とPTAの間で個人情報のやりとりをするためのポイント」を公表しました。同資料は、まず学校業務の根拠法令を確認し、個人情報保護法61条に基づき、<strong>法令の定める所掌事務又は業務の範囲内で利用目的をできる限り特定する</strong>という順序を示しています。その利用目的のための利用・提供であれば69条1項の問題となります。</p>
 <p>一方、69条2項1号の本人同意と4号の特別の理由について、PPC資料は、いずれも「臨時的」な利用・提供が行われる場合の規定であると明記しています。したがって、毎年度繰り返す会員管理・会費徴収・役員選出等について「本人同意を得ているから学校情報を利用できる」と説明するだけでは、61条の所掌事務・必要性・利用目的の検討を代替できません。</p>
 <p>公式資料：<a href="https://www.ppc.go.jp/files/pdf/202603_school_pta_pd_point.pdf" target="_blank" rel="noopener">個人情報保護委員会「公立学校とPTAの間で個人情報のやりとりをするためのポイント」（令和8年3月）</a></p>
 
-<h2>4　「法的に整理されている」と「適法・望ましい」は別である</h2>
+<h2 id="evaluation-axes">4　「法的に整理されている」と「適法・望ましい」は別である</h2>
 <p class="psc-note"><strong>本調査は、規則や要綱が詳しい自治体を「良い制度」と評価しません。</strong> 規程・契約・手続が詳細であることは、行政側の正当化論が明文化され、検証対象が明確になっていることを意味するだけです。制度の適法性、上位法との整合性、公私分離としての妥当性、政策としての望ましさは別に審査します。</p>
 <dl class="psc-rank">
 <div><dt>軸1</dt><dd><strong>根拠の明文化レベル。</strong> 条例・規則、要綱・訓令、内部基準、契約・委任、慣行のどこに学校処理の根拠が置かれているかを事実として確認します。上位の形式で書かれていること自体を高評価しません。</dd></div>
 <div><dt>軸2</dt><dd><strong>法的整合性。</strong> その根拠が上位法上の権限に接続しているか、受任主体、教職員の職務、地方公務員法35条、学校教育法37条、個人情報保護法61条・69条まで整合するかを別個に審査します。</dd></div>
 </dl>
 
-<h2>5　優先15自治体・都道府県の第1次比較</h2>
+<h2 id="comparison">5　優先15自治体・都道府県の第1次比較</h2>
 <p>2026年9月5日時点の第1次比較は、原資料を自治体ごとに再点検しながら更新しています。自治体ごとに、学校処理を説明する文書の階層と内容には大きな差があります。しかし、<strong>規則まで作っている自治体が、要綱や契約だけの自治体より「良い」「より適法」という意味ではありません。</strong> 明文化が詳細であるほど、その規則を制定する上位法上の権限、私人団体事務を公務へ取り込める範囲、個人情報保護法61条への接続を具体的に審査できるというだけです。</p>
 <p class="psc-scroll-note">※ 画面幅が狭い場合は、表を左右にスクロールできます。</p><div class="psc-table-wrap">
 <table class="psc-table"><caption class="psc-table-caption">優先15自治体・都道府県の学校処理制度比較（根拠の明文化と法的整合性は別軸）</caption>
@@ -130,7 +126,7 @@ body{color:var(--psc-ink);background:#f2f3f1}
 </table>
 </div>
 
-<h2>6　制度類型別に見ると何が違うのか</h2>
+<h2 id="system-types">6　制度類型別に見ると何が違うのか</h2>
 <h3>類型1　PTA・団体会計を明示する内部規程</h3>
 <p>川崎市、橋本市、神戸市、島根県、北海道などです。この類型は、単なる慣例や口頭依頼よりも、対象となる団体、受任条件、校長の責任、職員の分担、帳簿・口座等が文書上詳しく明文化されています。<strong>これは制度の適法性や望ましさを意味せず、検証すべき法的構成が具体化されているという意味にとどまります。</strong></p>
 <p>一方、ここで区別すべきなのが、<strong>内部規程が「受任した後の処理方法」を定めていること</strong>と、<strong>その規程を根拠に私人団体の内部事務を学校の公的所掌へ取り込めること</strong>です。後者まで説明するには、規程の制定根拠と上位規範、受任主体、職員の職務、個人情報利用を接続して確認する必要があります。</p>
@@ -145,13 +141,13 @@ body{color:var(--psc-ink);background:#f2f3f1}
 <h3>類型4　職専免・兼職を併用する外部PTA活動型</h3>
 <p>兵庫県の回答では、書面委任や本人同意とともに、教職員のPTA活動を職務専念義務免除・兼職等で処理する構成が示されています。これは、PTA事務を「公務そのもの」とせず、教職員の外部活動として整理する構成です。その場合、学校として受任した事務と、個々の教職員がPTA会員・役員として行う外部活動を明確に分け、学校の個人情報、システム、口座、印刷設備、職務命令系統の利用範囲も分離する必要があります。</p>
 
-<h2>7　学校処理を正当化する側の主張を最も強く組み立てると</h2>
+<h2 id="strongest-argument">7　学校処理を正当化する側の主張を最も強く組み立てると</h2>
 <p><strong>以下は、学校によるPTA内部事務の処理を適法と評価するものではありません。</strong> 自治体、教育委員会、監査委員等が実際に示している事情を過小評価せず、正当化する側の論理を最も有利な形で再構成し、そのうえで法的に検証するためのものです。</p>
 <p>正当化する側の論理を最も強く組み立てると、おおむね次のようになります。PTAは学校教育と密接な公益的活動を行い、地方公共団体・教育委員会には学校管理に関する一定の裁量がある。教育委員会が学校徴収金・団体会計・準公金等について内部規程を制定し、受任条件、校長の管理責任、職員分担、監査、会計統制を整えている。PTAから書面委任を受け、加入者に限定して徴収し、個人情報も必要最小限に処理する。これらを一体として学校管理上の制度と位置付け得る、という主張です。しかし、本調査は、このような事情の積み重ねだけで、公法上の受任権限、教職員の職務性、個人情報保護法61条上の所掌事務が当然に基礎付けられるとは評価しません。</p>
 <p>滋賀県監査委員は2026年5月の住民監査請求で、PTAの公益性・学校との密接性、PTA会長から校長への委任、校務分掌、校長の指揮監督、授業料等との一体的な徴収処理などを総合し、対象となった徴収事務について「地方公共団体の事務と同一視し得るような特段の事情」があるとして、地方公務員法35条違反ではないと判断しました。学校処理を肯定した公的判断として検討対象にはなります。しかし、この判断がPTA内部事務を公務として受任できる法的授権そのものを示したわけではありません。</p>
 <div class="psc-emphasis"><strong>最大の問題は、「一体運用している」という事実を、その一体運用の適法性を支える事情として使っている点です。</strong><br>本来問うべきなのは、私人団体の会費徴収を何の権限で授業料等の公的徴収事務と一体化したのかです。ところが、すでに一体処理していることを「公務との密接性」の根拠にし、校務分掌に置いたことを校務性の事情にし、校長が指揮監督していることを職務性の事情にし、PTA会長から委任されたことを受任の事情にするなら、問題となっている運用が相互に自分自身を正当化する循環になります。これを一般化すれば、私人事務を公務へ深く組み込むほど行政側が自ら「特段の事情」を作り出せることになり、地方公務員法35条が画する職務範囲の境界を空洞化させかねません。</div>
 
-<h2>8　主要事例を一件ずつ審査する</h2>
+<h2 id="major-cases">8　主要事例を一件ずつ審査する</h2>
 <p>ここでは自治体ごとに、対象事務、公法上の事務根拠、受任権限、委任の順序、校長と教職員の権限、地方公務員法35条、学校教育法37条、個人情報保護法61条・69条を、同じ順序で確認します。単に「規程がある」「委任がある」という紹介ではなく、どこまで確認でき、どこが未確認なのかを分離します。</p>
 
 <section class="psc-audit-case" id="case-kawasaki">
@@ -232,7 +228,7 @@ body{color:var(--psc-ink);background:#f2f3f1}
     <li><strong>学校教育法37条 <span class="psc-audit-status partial">包括管理の根拠として機能</span></strong>校長責任・職員分担の制度設計は校務掌理と整合しますが、37条だけから団体会計の受任権限が生じるわけではありません。受任前の制度根拠は要綱・その上位規範で確認する必要があります。</li>
     <li><strong>個人情報保護法61条・69条 <span class="psc-audit-status open">未確認</span></strong>会費徴収に学校保有の氏名、学級、口座情報等を利用する実態がある場合には61条が問題になります。現在確認した要綱からは、PTA会費徴収のための学校保有個人情報の利用目的・必要性までは確認できません。</li>
   </ol>
-  <p class="psc-audit-conclusion"><strong>根拠形態：内部規程・監査等。</strong> 学校徴収金と団体会計を分離し、書面委任、校長包括管理、職員個人への依頼との線引きまで詳細に定めています。一方、要綱の上位授権、法的受任主体、35条・61条への接続が残ります。</p>
+  <p class="psc-audit-conclusion"><strong>根拠形態：県要綱・書面委任。</strong> 学校徴収金と団体会計を分離し、書面委任、校長包括管理、職員個人への依頼との線引きまで詳細に定めています。一方、要綱の上位授権、法的受任主体、35条・61条への接続が残ります。</p>
   <div class="psc-audit-sources"><p><strong>公式資料</strong></p><p><a href="https://www.pref.shimane.lg.jp/gakkokikaku/kenritsukanri/chosyukintou.data/r060401chosyukintouyoukou.pdf" target="_blank" rel="noopener">島根県教育委員会「学校徴収金等取扱要綱」</a></p><p><a href="https://www1.pref.shimane.lg.jp/education/kyoiku/iinkai/joho/iinkai_gidai/h20kaigiroku/h20_1424/kyougi1.html" target="_blank" rel="noopener">教育委員会会議・要綱改正協議（団体から書面委任を受ける趣旨）</a></p></div>
 </section>
 <section class="psc-audit-case" id="case-tokushima">
@@ -252,20 +248,21 @@ body{color:var(--psc-ink);background:#f2f3f1}
   <div class="psc-audit-sources"><p><strong>取得資料</strong></p><p>徳島市教育委員会「学校園管理者のためのPTA運営の手引き」（2026年2月・当委員会取得の内部資料）</p><p><strong>教育委員会説明：</strong>同手引の職専免対応は「当面の間の対応」「暫定的な対応」であり、今後さらに検討・整理すると回答。</p><p><a href="https://www.ppc.go.jp/files/pdf/202603_school_pta_pd_point.pdf" target="_blank" rel="noopener">比較基準：PPC 2026年3月資料</a></p></div>
 </section>
 
-<h2>9　学校教育法37条と校長判断をどう読むか</h2>
+<h2 id="school-act-37">9　学校教育法37条と校長判断をどう読むか</h2>
+<p class="psc-note"><strong>条文番号について：</strong>本ページで学校教育法37条4項を挙げる場合は、小学校の校長について定める同項と、各校種についてこれを準用する規定を含む趣旨で表記しています。</p>
 <p>学校教育法37条4項は、校長が校務をつかさどり、所属職員を監督することを定めています。この規定は、既に学校の校務に属する事務について、校長が掌理し分担させる重要な根拠です。</p>
 <p>しかし、争点となっているのはその一段前です。PTAの加入受付、会員確定、会費債権の請求、未納督促、PTA会計、役員選出など、学校とは別主体であるPTAの内部事務が、どの根拠で学校の校務に入ったのかという問題です。したがって、<strong>「校長が判断した」「校長が命じた」という事実だけでは、命令対象事務の校務該当性の説明にはなりません。</strong></p>
 <p>本調査では、①事務が校務に属する根拠と、②その校務を校長が掌理・分担する権限を二段階で審査します。</p>
 
-<h2>10　地方公務員法35条――勤務時間中に行う根拠は何か</h2>
+<h2 id="lpsa-35">10　地方公務員法35条――勤務時間中に行う根拠は何か</h2>
 <p>教職員が勤務時間中にPTA固有事務を処理する場合、地方公務員法35条との関係では、その事務が職務として位置付けられる根拠が問題になります。校長の指示が存在することは重要ですが、指示を出したこと自体が、私人団体の事務を当然に地方公共団体の職務へ転換するわけではありません。</p>
 <p>自治体側は、条例・規則・学校管理制度によって当該事務を自治体・学校の事務として位置付けた場合、校務分掌と校長の指揮監督を通じて35条との整合を説明しようとします。滋賀県監査は、その主張が実際に採用された例です。ただし、規則等に書いたこと自体で上位法上の職務性が確定するわけではありません。</p>
 
-<h2>11　「本人同意」と「利用目的にPTAと書くこと」の限界</h2>
+<h2 id="consent-limits">11　「本人同意」と「利用目的にPTAと書くこと」の限界</h2>
 <p>個人情報の問題では、「本人同意を取っている」「利用目的にPTA関係事務と記載している」という説明だけで審査を終えません。PPC資料が先に求めているのは、学校がその個人情報を保有することが法令の定める所掌事務又は業務の範囲内であることです。</p>
 <p>利用目的の欄にPTAと記載する行為は、既存の所掌事務について目的を具体化することはできますが、記載したこと自体によって、従来学校の所掌ではなかったPTA内部事務が新たに学校業務になるわけではありません。また、69条2項1号の本人同意は、PPCが「臨時的」利用・提供の規定として整理しており、毎年度・全校で反復する仕組みについては61条からの説明が必要です。</p>
 
-<h2>12　再照会で確認する共通質問</h2>
+<h2 id="follow-up-questions">12　再照会で確認する共通質問</h2>
 <ul>
 <li>PTAからの委任を受ける<strong>前</strong>に、学校・校長がその事務を受任できる根拠となる条例・規則・条項は何か。</li>
 <li>校長個人、学校、教育委員会、地方公共団体のうち、法的な受任者は誰か。</li>
@@ -275,13 +272,19 @@ body{color:var(--psc-ink);background:#f2f3f1}
 <li>69条2項1号の本人同意を毎年度・反復的な情報利用の根拠としている場合、PPCの2026年3月資料が「臨時的」と整理したことをどう評価するか。</li>
 </ul>
 
-<h2>13　現時点の結論</h2>
+<h2 id="conclusion">13　現時点の結論</h2>
 <p>全国には、PTA内部事務を学校が処理するための制度が実際に存在します。したがって「全国どこでも単なる慣例で、何の規程もない」と評価するのは正確ではありません。川崎市、橋本市、神戸市、島根県などにはPTAや団体会計を具体的に予定した要綱・規程があり、滋賀県では住民監査において地方公務員法35条との整合性を肯定する判断まで示されています。</p>
 <p>同時に、第1次調査では、<strong>規則や内部規程がどれほど詳細でも、制定根拠・上位授権、学校・校長の公法上の受任権限、教職員の職務根拠、個人情報保護法61条までを一体として確認できた事例はまだありません。</strong> とりわけ、委任・本人同意・校長判断を主要根拠とする自治体では、私法上の契約成立と行政側の権限が逆転していないかを再確認する必要があります。</p>
 <div class="psc-emphasis"><strong>全国比較から見える中心命題：</strong><br>「PTAが学校へ委任したか」ではなく、まず「学校はそのPTA事務を受任できる公的権限を持つか」を問う。その後に委任契約、校長の掌理、教職員の職務、個人情報利用を順に確認する。この順序を守ることで、自治体ごとの制度差を同じ物差しで検証できます。</div>
 
-<h2>14　主要な公式資料</h2>
+<h2 id="sources">14　主要な公式資料</h2>
 <ul class="psc-source-list">
+<li><a href="https://laws.e-gov.go.jp/law/322AC0000000026" target="_blank" rel="noopener">学校教育法</a>（校長の校務掌理・所属職員監督等）</li>
+<li><a href="https://laws.e-gov.go.jp/law/331AC0000000162" target="_blank" rel="noopener">地方教育行政の組織及び運営に関する法律</a>（教育委員会・学校管理制度）</li>
+<li><a href="https://laws.e-gov.go.jp/law/325AC0000000261" target="_blank" rel="noopener">地方公務員法</a>（35条・職務専念義務）</li>
+<li><a href="https://laws.e-gov.go.jp/law/415AC0000000057" target="_blank" rel="noopener">個人情報の保護に関する法律</a>（61条・69条等）</li>
+<li><a href="https://laws.e-gov.go.jp/law/129AC0000000089" target="_blank" rel="noopener">民法</a>（委任・準委任等）</li>
+<li><a href="https://laws.e-gov.go.jp/law/324AC0000000207" target="_blank" rel="noopener">社会教育法</a>（社会教育関係団体との関係）</li>
 <li><a href="https://www.ppc.go.jp/files/pdf/202603_school_pta_pd_point.pdf" target="_blank" rel="noopener">個人情報保護委員会「公立学校とPTAの間で個人情報のやりとりをするためのポイント」（2026年3月）</a></li>
 <li><a href="https://www.city.kawasaki.jp/templates/outline/880/0000140964.html" target="_blank" rel="noopener">川崎市「川崎市立学校におけるPTAの会費の取扱等に関する要綱」</a></li>
 <li><a href="https://www.city.osaka.lg.jp/kyoiku/cmsfiles/contents/0000669/669109/kaikeikizyun.pdf" target="_blank" rel="noopener">大阪市教育委員会「学校徴収金会計基準」（令和8年4月）</a></li>
