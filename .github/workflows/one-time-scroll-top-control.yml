@@ -1,0 +1,39 @@
+name: One-time site-wide back-to-top control
+
+on:
+  push:
+    paths:
+      - 'css/scroll-top.css'
+      - 'js/scroll-top.js'
+      - 'scripts/legacy/one-time-scroll-top-control.py'
+      - '.github/workflows/one-time-scroll-top-control.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install back-to-top assets across public HTML
+        run: python3 scripts/legacy/one-time-scroll-top-control.py
+      - name: Verify behavior assets
+        run: |
+          test -f css/scroll-top.css
+          test -f js/scroll-top.js
+          grep -q 'scroll-top-button' css/scroll-top.css
+          grep -q 'scrollTopButton' js/scroll-top.js
+      - name: Commit changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No changes'
+          else
+            git commit -m 'Add back-to-top control across public pages'
+            git push
+          fi
