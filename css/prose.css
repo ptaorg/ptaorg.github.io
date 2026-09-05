@@ -353,8 +353,6 @@ body[data-content-mode="prose"] main :where(
   }
 }
 
-
-
 /* Site-wide chapter heading labels: compact, text-width, and distinct from cards/tools. */
 body[data-content-mode="prose"] main h2:not(:where(
   .hero h2,
@@ -375,21 +373,21 @@ body[data-content-mode="prose"] main h2:not(:where(
   .psc-case-viz-step h2,
   .psc-audit-head h2
 )) {
-  display: block;
-  width: fit-content;
+  display: inline-block;
+  width: max-content;
   max-width: 100%;
   box-sizing: border-box;
-  margin: 1.9rem 0 1.15rem;
-  padding: 10px 14px 11px;
+  margin: 1.7rem 0 1rem;
+  padding: 7px 11px 8px;
   border: 1px solid #17345c;
-  border-left: 4px solid var(--prose-highlight-gold, #c89b18);
+  border-left: 3px solid var(--prose-highlight-gold, #c89b18);
   border-radius: 2px;
   background: var(--prose-navy, #102a43);
   color: #fff !important;
-  box-shadow: 0 6px 16px rgba(10, 25, 47, 0.10);
-  font-size: clamp(1.05rem, 1.8vw, 1.4rem);
-  line-height: 1.35;
-  text-wrap: balance;
+  box-shadow: 0 3px 8px rgba(10, 25, 47, 0.08);
+  font-size: clamp(.98rem, 1.35vw, 1.14rem);
+  line-height: 1.32;
+  text-wrap: pretty;
   overflow-wrap: anywhere;
 }
 
@@ -413,10 +411,11 @@ body[data-content-mode="prose"] main h2:not(:where(
     .psc-case-viz-step h2,
     .psc-audit-head h2
   )) {
-    margin: 1.55rem 0 0.95rem;
-    padding: 9px 12px 10px;
+    margin: 1.4rem 0 .85rem;
+    padding: 6px 9px 7px;
     border-left-width: 3px;
-    font-size: 1.03rem;
+    font-size: .98rem;
+    line-height: 1.3;
   }
 }
 
