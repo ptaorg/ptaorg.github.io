@@ -99,7 +99,7 @@
       var ka = path.indexOf('guide-pta')>=0?'pta':path.indexOf('guide-board')>=0?'board':'research';
       return {mode:'normal', key:ka, data:GROUPS.audience};
     }
-    if (path === '/journal.html' || path === '/report.html' || path.indexOf('/journal/') === 0) {
+    if (path === '/journal.html' || path === '/report.html' || path === '/pta-school-processing.html' || path.indexOf('/journal/') === 0) {
       return {mode:'normal', key:path === '/journal.html'?'journal':path === '/report.html'?'report':'current', data:GROUPS.journal};
     }
     return {mode:'normal', key:'current', data:GROUPS.generic};
