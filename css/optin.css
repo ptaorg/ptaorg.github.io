@@ -809,3 +809,25 @@
       border-left-width: 4px;
     }
   }
+
+/* compact scope heading override */
+#scope > h2 {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  padding: 10px 14px 11px;
+  border-left-width: 4px;
+  font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+  line-height: 1.35;
+}
+
+@media (max-width: 640px) {
+  #scope > h2 {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    padding: 9px 12px 10px;
+    border-left-width: 3px;
+    font-size: 1.03rem;
+  }
+}
