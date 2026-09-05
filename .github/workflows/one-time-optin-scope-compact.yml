@@ -13,37 +13,39 @@ jobs:
       - name: Compact scope heading
         run: |
           cat >> css/optin.css <<'EOF'
-
-  /* compact scope heading override */
-  #scope > h2 {
-    display: inline-block;
-    width: auto;
-    max-width: 100%;
-    padding: 10px 14px 11px;
-    border-left-width: 4px;
-    font-size: clamp(1.05rem, 1.8vw, 1.4rem);
-    line-height: 1.35;
-  }
-
-  @media (max-width: 640px) {
-    #scope > h2 {
-      display: inline-block;
-      width: auto;
-      max-width: 100%;
-      padding: 9px 12px 10px;
-      border-left-width: 3px;
-      font-size: 1.03rem;
-    }
-  }
-EOF
+          
+          /* compact scope heading override */
+          #scope > h2 {
+            display: inline-block;
+            width: auto;
+            max-width: 100%;
+            padding: 10px 14px 11px;
+            border-left-width: 4px;
+            font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+            line-height: 1.35;
+          }
+          
+          @media (max-width: 640px) {
+            #scope > h2 {
+              display: inline-block;
+              width: auto;
+              max-width: 100%;
+              padding: 9px 12px 10px;
+              border-left-width: 3px;
+              font-size: 1.03rem;
+            }
+          }
+          EOF
+          sed -i 's#/css/optin.css?v=20260905-1#/css/optin.css?v=20260905-2#' pta-membership-optin.html
       - name: Verify
         run: |
           grep -q 'compact scope heading override' css/optin.css
           grep -q 'display: inline-block' css/optin.css
+          grep -q '/css/optin.css?v=20260905-2' pta-membership-optin.html
       - name: Commit
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add css/optin.css
+          git add css/optin.css pta-membership-optin.html
           git commit -m 'Compact opt-in scope heading to text width' || exit 0
           git push
