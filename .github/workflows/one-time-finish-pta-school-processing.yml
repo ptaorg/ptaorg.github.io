@@ -1,0 +1,123 @@
+name: One-time finish PTA school-processing page
+
+on:
+  push:
+    paths:
+      - '.github/workflows/one-time-finish-pta-school-processing.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  finish-page:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply final content and navigation review
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path('pta-school-processing.html')
+          s = p.read_text(encoding='utf-8')
+
+          # Revision metadata.
+          s = s.replace('data-page-revision="pta-school-processing-20260905-5"', 'data-page-revision="pta-school-processing-20260905-6"')
+          if 'property="article:published_time"' not in s:
+              s = s.replace('</head>', '<meta property="article:published_time" content="2026-09-05"><meta property="article:modified_time" content="2026-09-05"></head>', 1)
+
+          # Remove CSS left over from the former standalone header/footer.
+          s = re.sub(r'\.psc-header\{[^}]*\}\s*', '', s)
+          s = re.sub(r'\.psc-nav\{[^}]*\}\s*', '', s)
+          s = re.sub(r'\.psc-brand\{[^}]*\}\.psc-links\{[^}]*\}\.psc-links a\{[^}]*\}\.psc-links a:hover\{[^}]*\}\s*', '', s)
+          s = re.sub(r'\.psc-footer\{[^}]*\}\.psc-footer a\{[^}]*\}\s*', '', s)
+          s = s.replace('.psc-nav{align-items:flex-start;flex-direction:column}.psc-links{justify-content:flex-start;gap:12px 16px}', '')
+
+          # Give all major sections stable anchors and add an in-page TOC.
+          headings = [
+              ('1　なぜ全国比較が必要なのか','why'),
+              ('2　審査の順序','review-order'),
+              ('3　2026年3月PPC資料が示した審査順序','ppc-2026'),
+              ('4　「法的に整理されている」と「適法・望ましい」は別である','evaluation-axes'),
+              ('5　優先15自治体・都道府県の第1次比較','comparison'),
+              ('6　制度類型別に見ると何が違うのか','system-types'),
+              ('7　学校処理を正当化する側の主張を最も強く組み立てると','strongest-argument'),
+              ('8　主要事例を一件ずつ審査する','major-cases'),
+              ('9　学校教育法37条と校長判断をどう読むか','school-act-37'),
+              ('10　地方公務員法35条――勤務時間中に行う根拠は何か','lpsa-35'),
+              ('11　「本人同意」と「利用目的にPTAと書くこと」の限界','consent-limits'),
+              ('12　再照会で確認する共通質問','follow-up-questions'),
+              ('13　現時点の結論','conclusion'),
+              ('14　主要な公式資料','sources')
+          ]
+          for text, ident in headings:
+              s = s.replace(f'<h2>{text}</h2>', f'<h2 id="{ident}">{text}</h2>', 1)
+
+          if 'class="psc-toc"' not in s:
+              toc_items = ''.join(f'<li><a href="#{ident}">{text}</a></li>' for text, ident in headings)
+              toc = f'<nav class="psc-toc" aria-label="この調査報告の目次"><p class="psc-toc-title">目次</p><ol>{toc_items}</ol></nav>'
+              marker = '</header>\n\n<div class="psc-emphasis">'
+              assert marker in s, 'article header marker not found'
+              s = s.replace(marker, '</header>\n' + toc + '\n<div class="psc-emphasis">', 1)
+
+          toc_css = '.psc-toc{margin:28px 0 36px;padding:18px 20px;border-top:2px solid #7f8b95;border-bottom:1px solid #d4dbe0;background:#fafbfb}.psc-toc-title{margin:0 0 10px!important;font-size:.78rem;font-weight:900;letter-spacing:.08em;color:#596773}.psc-toc ol{margin:0;padding-left:1.4em;columns:2;column-gap:34px}.psc-toc li{break-inside:avoid;margin:4px 0;line-height:1.55;font-size:.86rem}.psc-toc a{color:#294c66;text-decoration:none}.psc-toc a:hover{text-decoration:underline}@media(max-width:980px){.psc-toc ol{columns:1}}'
+          if '.psc-toc{' not in s:
+              s = s.replace('</style>', toc_css + '</style>', 1)
+
+          # School Education Act 37(4) notation: clarify cross-application to other school types.
+          note = '<p class="psc-note"><strong>条文番号について：</strong>本ページで学校教育法37条4項を挙げる場合は、小学校の校長について定める同項と、各校種についてこれを準用する規定を含む趣旨で表記しています。</p>'
+          marker = '<h2 id="school-act-37">9　学校教育法37条と校長判断をどう読むか</h2>'
+          if note not in s:
+              s = s.replace(marker, marker + '\n' + note, 1)
+
+          # Correct the Shimane conclusion label; there is no audit decision in this case section.
+          m = re.search(r'(<section class="psc-audit-case" id="case-shimane">.*?</section>)', s, re.S)
+          assert m, 'Shimane section not found'
+          shimane = m.group(1)
+          shimane = shimane.replace('<strong>根拠形態：内部規程・監査等。</strong>', '<strong>根拠形態：県要綱・書面委任。</strong>', 1)
+          s = s[:m.start()] + shimane + s[m.end():]
+
+          # Put the governing statutes before secondary/municipal materials in the source list.
+          source_marker = '<h2 id="sources">14　主要な公式資料</h2>\n<ul class="psc-source-list">'
+          statutes = '''<h2 id="sources">14　主要な公式資料</h2>
+          <ul class="psc-source-list">
+          <li><a href="https://laws.e-gov.go.jp/law/322AC0000000026" target="_blank" rel="noopener">学校教育法</a>（校長の校務掌理・所属職員監督等）</li>
+          <li><a href="https://laws.e-gov.go.jp/law/331AC0000000162" target="_blank" rel="noopener">地方教育行政の組織及び運営に関する法律</a>（教育委員会・学校管理制度）</li>
+          <li><a href="https://laws.e-gov.go.jp/law/325AC0000000261" target="_blank" rel="noopener">地方公務員法</a>（35条・職務専念義務）</li>
+          <li><a href="https://laws.e-gov.go.jp/law/415AC0000000057" target="_blank" rel="noopener">個人情報の保護に関する法律</a>（61条・69条等）</li>
+          <li><a href="https://laws.e-gov.go.jp/law/129AC0000000089" target="_blank" rel="noopener">民法</a>（委任・準委任等）</li>
+          <li><a href="https://laws.e-gov.go.jp/law/324AC0000000207" target="_blank" rel="noopener">社会教育法</a>（社会教育関係団体との関係）</li>'''
+          if '地方教育行政の組織及び運営に関する法律</a>（教育委員会・学校管理制度）' not in s:
+              assert source_marker in s, 'source heading marker not found'
+              s = s.replace(source_marker, statutes, 1)
+
+          # Add breadcrumb structured data if absent.
+          if '"@type":"BreadcrumbList"' not in s:
+              breadcrumb = '<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://ptaorg.com/"},{"@type":"ListItem","position":2,"name":"論考・調査報告","item":"https://ptaorg.com/journal.html"},{"@type":"ListItem","position":3,"name":"PTA内部事務の学校処理 全国法的整合性調査","item":"https://ptaorg.com/pta-school-processing.html"}]}</script>'
+              s = s.replace('</head>', breadcrumb + '</head>', 1)
+
+          # Verify the full page remains intact.
+          assert s.count('class="psc-audit-case"') == 5
+          assert s.count('<tr><td>') >= 15
+          assert '根拠形態：県要綱・書面委任。' in s
+          assert '根拠形態：内部規程・監査等。</strong> 学校徴収金と団体会計' not in s
+          assert s.count('class="psc-toc"') == 1
+          assert s.count('id="sources"') == 1
+          assert '<header class="site-header">' in s and '<footer class="footer">' in s
+
+          p.write_text(s, encoding='utf-8')
+          PY
+
+      - name: Commit final review and remove one-time workflow
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/one-time-finish-pta-school-processing.yml
+          git add pta-school-processing.html
+          git commit -m "Finish PTA school-processing page review"
+          git push
