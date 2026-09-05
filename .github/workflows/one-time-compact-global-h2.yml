@@ -1,0 +1,157 @@
+name: One-time compact global H2
+
+on:
+  push:
+    paths:
+      - '.github/workflows/one-time-compact-global-h2.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compact global H2 labels and bump cache
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          css = Path('css/prose.css')
+          text = css.read_text(encoding='utf-8')
+          marker = '/* Site-wide chapter heading labels:'
+          if marker not in text:
+              raise SystemExit('global H2 marker not found')
+          text = text.split(marker, 1)[0].rstrip() + '\n\n' + r'''/* Site-wide chapter heading labels: compact, text-width, and distinct from cards/tools. */
+          body[data-content-mode="prose"] main h2:not(:where(
+            .hero h2,
+            nav h2,
+            form h2,
+            dialog h2,
+            .card h2,
+            [class$="-card"] h2,
+            [class*="-card "] h2,
+            .panel h2,
+            [class$="-panel"] h2,
+            [class*="-panel "] h2,
+            .cta-band h2,
+            .support-payment-card h2,
+            .region-map-card h2,
+            .search-results-dropdown h2,
+            .document-error h2,
+            .psc-case-viz-step h2,
+            .psc-audit-head h2
+          )) {
+            display: inline-block;
+            width: max-content;
+            max-width: 100%;
+            box-sizing: border-box;
+            margin: 1.7rem 0 1rem;
+            padding: 7px 11px 8px;
+            border: 1px solid #17345c;
+            border-left: 3px solid var(--prose-highlight-gold, #c89b18);
+            border-radius: 2px;
+            background: var(--prose-navy, #102a43);
+            color: #fff !important;
+            box-shadow: 0 3px 8px rgba(10, 25, 47, 0.08);
+            font-size: clamp(.98rem, 1.35vw, 1.14rem);
+            line-height: 1.32;
+            text-wrap: pretty;
+            overflow-wrap: anywhere;
+          }
+
+          @media (max-width: 640px) {
+            body[data-content-mode="prose"] main h2:not(:where(
+              .hero h2,
+              nav h2,
+              form h2,
+              dialog h2,
+              .card h2,
+              [class$="-card"] h2,
+              [class*="-card "] h2,
+              .panel h2,
+              [class$="-panel"] h2,
+              [class*="-panel "] h2,
+              .cta-band h2,
+              .support-payment-card h2,
+              .region-map-card h2,
+              .search-results-dropdown h2,
+              .document-error h2,
+              .psc-case-viz-step h2,
+              .psc-audit-head h2
+            )) {
+              margin: 1.4rem 0 .85rem;
+              padding: 6px 9px 7px;
+              border-left-width: 3px;
+              font-size: .98rem;
+              line-height: 1.3;
+            }
+          }
+
+          @media print {
+            body[data-content-mode="prose"] main h2:not(:where(
+              .hero h2,
+              nav h2,
+              form h2,
+              dialog h2,
+              .card h2,
+              [class$="-card"] h2,
+              [class*="-card "] h2,
+              .panel h2,
+              [class$="-panel"] h2,
+              [class*="-panel "] h2,
+              .cta-band h2,
+              .support-payment-card h2,
+              .region-map-card h2,
+              .search-results-dropdown h2,
+              .document-error h2,
+              .psc-case-viz-step h2,
+              .psc-audit-head h2
+            )) {
+              background: #fff !important;
+              color: #111 !important;
+              border-color: #777;
+              box-shadow: none;
+            }
+          }
+          '''.lstrip()
+          css.write_text(text, encoding='utf-8')
+
+          pattern = re.compile(r'/css/prose\.css(?:\?v=[A-Za-z0-9._-]+)?')
+          skip = {'.git','node_modules','_site','assets','css','data','js','scripts','tools'}
+          changed = 0
+          for p in Path('.').rglob('*.html'):
+              if any(part in skip for part in p.parts):
+                  continue
+              old = p.read_text(encoding='utf-8')
+              new = pattern.sub('/css/prose.css?v=20260906-2', old)
+              if new != old:
+                  p.write_text(new, encoding='utf-8')
+                  changed += 1
+          print('HTML cache refs updated:', changed)
+
+          enhancer = Path('scripts/enhance-public-pages.js')
+          old = enhancer.read_text(encoding='utf-8')
+          new = pattern.sub('/css/prose.css?v=20260906-2', old)
+          enhancer.write_text(new, encoding='utf-8')
+          PY
+
+      - name: Verify
+        run: |
+          grep -q 'width: max-content' css/prose.css
+          grep -q 'font-size: clamp(.98rem, 1.35vw, 1.14rem)' css/prose.css
+          grep -q '/css/prose.css?v=20260906-2' pta-history.html
+          grep -q '/css/prose.css?v=20260906-2' scripts/enhance-public-pages.js
+          npm run check:site
+
+      - name: Commit and remove one-time workflow
+        run: |
+          rm -f .github/workflows/one-time-compact-global-h2.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Compact site-wide chapter headings' || exit 0
+          git push
