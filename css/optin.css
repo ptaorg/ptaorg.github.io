@@ -787,3 +787,25 @@
     }
   }
 }
+
+
+  /* scope heading filled panel */
+  #scope > h2 {
+    display: block;
+    width: 100%;
+    margin: 0 0 24px;
+    padding: 16px 20px 18px;
+    border: 1px solid #17345c;
+    border-left: 6px solid var(--op-gold);
+    border-radius: 2px;
+    background: var(--op-navy);
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(10, 25, 47, 0.10);
+  }
+
+  @media (max-width: 640px) {
+    #scope > h2 {
+      padding: 14px 15px 16px;
+      border-left-width: 4px;
+    }
+  }
