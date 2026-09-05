@@ -1,0 +1,72 @@
+/* Site-wide back-to-top control */
+.scroll-top-button {
+  position: fixed;
+  right: max(18px, env(safe-area-inset-right));
+  bottom: max(18px, env(safe-area-inset-bottom));
+  z-index: 2147483000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 54px;
+  height: 54px;
+  padding: 0 13px;
+  border: 2px solid #c89b18;
+  border-radius: 999px;
+  background: #102a43;
+  color: #fff;
+  box-shadow: 0 7px 22px rgba(10, 25, 47, .24);
+  font: 800 .78rem/1 "Noto Sans JP", system-ui, sans-serif;
+  letter-spacing: .02em;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s ease, background .18s ease;
+}
+
+.scroll-top-button::before {
+  content: "↑";
+  font-size: 1.08rem;
+  line-height: 1;
+}
+
+.scroll-top-button.is-visible {
+  opacity: .96;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top-button:hover {
+  background: #173a5e;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.scroll-top-button:focus-visible {
+  outline: 3px solid #f3d36a;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .scroll-top-button {
+    right: max(12px, env(safe-area-inset-right));
+    bottom: max(12px, env(safe-area-inset-bottom));
+    min-width: 48px;
+    height: 48px;
+    padding: 0 11px;
+    font-size: .72rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-top-button {
+    transition: none;
+  }
+}
+
+@media print {
+  .scroll-top-button {
+    display: none !important;
+  }
+}
