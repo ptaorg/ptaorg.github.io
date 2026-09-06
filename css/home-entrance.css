@@ -831,78 +831,45 @@
   }
 }
 
-/* Home priority shortcut cards. */
+/* Supplemental references follow the home page's main explanation. */
 @layer page {
-  .home-priority-nav {
-    padding: 18px 0 22px;
+  .home-page .home-priority-nav {
+    padding: 32px 0;
+    border-block: 1px solid #dbe3e9;
+    background: #fff;
+  }
+  .home-page .home-priority-nav h2 {
+    margin: 0 0 20px;
+    color: #102f4b;
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(1.3rem, 3vw, 1.7rem);
+    line-height: 1.6;
+  }
+  .home-page .home-priority-links { display: block; }
+  .home-page .home-priority-link {
+    display: grid;
+    grid-template-columns: 5em minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px 20px;
+    align-items: baseline;
+    padding: 16px 0;
     border-bottom: 1px solid #dbe3e9;
-    background: #fff;
-  }
-  .home-priority-links {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 10px;
-  }
-  .home-priority-link {
-    position: relative;
-    display: grid;
-    min-width: 0;
-    min-height: 92px;
-    gap: 4px;
-    align-content: center;
-    padding: 15px 42px 15px 17px;
-    border: 1px solid #d5dee6;
-    border-top: 3px solid #c8d2da;
-    background: #fff;
     color: #15324d;
     text-decoration: none;
-    box-shadow: 0 3px 10px rgba(15, 42, 67, 0.07);
-    transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease;
-  }
-  .home-priority-link--accent { border-top-color: #d0a51b; }
-  .home-priority-link::after {
-    content: "→";
-    position: absolute;
-    top: 50%;
-    right: 16px;
-    color: #a37500;
-    font-size: 1.05rem;
-    font-weight: 900;
-    transform: translateY(-50%);
-  }
-  .home-priority-link:hover,
-  .home-priority-link:focus-visible {
-    border-color: #c9a12a;
-    box-shadow: 0 7px 18px rgba(15, 42, 67, 0.12);
-    transform: translateY(-2px);
-  }
-  .home-priority-kicker {
-    color: #8a6500;
-    font-size: 0.68rem;
-    font-weight: 900;
-    letter-spacing: 0.08em;
-  }
-  .home-priority-link strong {
     overflow-wrap: anywhere;
-    color: #102f4b;
-    font-size: 0.98rem;
-    line-height: 1.42;
   }
-  .home-priority-link small {
-    color: #657586;
-    font-size: 0.74rem;
-    line-height: 1.45;
+  .home-page .home-priority-link strong {
+    text-decoration: underline;
+    text-underline-offset: .22em;
+    line-height: 1.7;
   }
-  @media (max-width: 980px) {
-    .home-priority-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  }
-  @media (max-width: 560px) {
-    .home-priority-nav { padding: 12px 0 14px; }
-    .home-priority-links { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
-    .home-priority-link { min-height: 76px; padding: 11px 30px 11px 12px; }
-    .home-priority-link::after { right: 10px; font-size: 0.9rem; }
-    .home-priority-link strong { font-size: 0.87rem; }
-    .home-priority-link small { display: none; }
+  .home-page .home-priority-kicker,
+  .home-page .home-priority-link small { color: #536575; line-height: 1.8; }
+  .home-page .home-priority-kicker { font-size: .8rem; }
+  .home-page .home-priority-link:hover strong { color: #0a5b55; }
+  .home-page .home-priority-link:focus-visible { outline: 3px solid #0a5b55; outline-offset: 3px; }
+  .home-page .hc-issues .hc-issue-list { margin-top: 28px; }
+  @media (max-width: 680px) {
+    .home-page .home-priority-link { grid-template-columns: 4.5em minmax(0, 1fr); gap: 4px 12px; }
+    .home-page .home-priority-link small { grid-column: 2; }
   }
 }
-
