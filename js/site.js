@@ -61,7 +61,6 @@
       ['/report.html','調査報告']
     ];
     var readingLinks = [
-      ['/ppc-points.html','PPC資料'],
       ['/pta-history.html','PTAの成り立ち'],
       ['/pta-future.html','PTAのこれから'],
       ['/journal.html','論考・調査報告'],
