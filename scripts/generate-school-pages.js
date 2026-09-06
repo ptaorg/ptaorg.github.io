@@ -267,8 +267,8 @@ function renderSchoolPage(record) {
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/site.css?v=20260814-3">
   <link rel="stylesheet" href="/css/scroll-top.css?v=20260906-1">
-  <link rel="stylesheet" href="/css/global-footer.css?v=20260906-1">
-  <link rel="stylesheet" href="/css/global-nav.css?v=20260906-1">
+  <link rel="stylesheet" href="/css/global-footer.css?v=20260906-2">
+  <link rel="stylesheet" href="/css/global-nav.css?v=20260906-2">
   <link rel="stylesheet" href="/css/archive.css?v=20260814-1">
 
 ${gaTag()}
@@ -355,7 +355,7 @@ ${renderParagraphs(record.evaluation, "個別評価は未実施です。掲載�
   </main>
 ${chrome.footer}
 <script src="/data/site-search-index.js?v=20260809-2"></script>
-<script src="/js/site.js?v=95"></script>
+<script src="/js/site.js?v=96"></script>
 </body>
 </html>`;
 }

@@ -1,6 +1,8 @@
 const { spawnSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
+const os = require("os");
+const ROOT = path.resolve(__dirname, "..");
 const { listSchoolData } = require("./archive-utils");
 
 const GENERATED_SCHOOL_FILES = listSchoolData().map((record) =>
@@ -13,26 +15,42 @@ const GENERATED_FILES = [
   "data/site-search-index.js"
 ];
 
-function run(command, args) {
-  const result = spawnSync(command, args, { stdio: "inherit", shell: process.platform === "win32" });
-  if (result.status !== 0) process.exit(result.status || 1);
+function run(workspace, script) {
+  const result = spawnSync(process.execPath, [script], {
+    cwd: workspace, stdio: "inherit", shell: false
+  });
+  if (result.error) throw result.error;
+  if (result.status !== 0) throw new Error(`${script} failed (${result.status})`);
 }
 
 function main() {
-  const before = new Map(GENERATED_FILES.map((file) => [file, fs.readFileSync(file, "utf8")]));
-  run("node", ["scripts/generate-school-pages.js"]);
-  run("node", ["scripts/generate-national-archive.js"]);
-  run("node", ["scripts/enhance-public-pages.js"]);
-  run("node", ["scripts/generate-sitemap.js"]);
-  run("node", ["scripts/generate-search-index.js"]);
+  const workspace = fs.mkdtempSync(path.join(os.tmpdir(), "pta-generated-check-"));
+  try {
+    fs.cpSync(ROOT, workspace, {
+      recursive: true,
+      filter: (source) => ![".git", "node_modules"].includes(path.basename(source))
+    });
+    for (const script of [
+      "scripts/generate-school-pages.js",
+      "scripts/generate-national-archive.js",
+      "scripts/enhance-public-pages.js",
+      "scripts/generate-sitemap.js",
+      "scripts/generate-search-index.js"
+    ]) run(workspace, script);
 
-  const changed = GENERATED_FILES.filter((file) => before.get(file) !== fs.readFileSync(file, "utf8"));
-  if (changed.length) {
-    console.error("Generated files are out of date. Run npm run generate:schools && npm run generate:archive && npm run enhance:pages && npm run generate:sitemap && npm run generate:search, then commit the result.");
-    console.error(`Changed during verification: ${changed.join(", ")}`);
-    process.exit(1);
+    const changed = GENERATED_FILES.filter((file) =>
+      !fs.readFileSync(path.join(ROOT, file)).equals(fs.readFileSync(path.join(workspace, file)))
+    );
+    if (changed.length) {
+      console.error("Generated files differ from the current generator output. Review the differences before regenerating; working files were not changed.");
+      console.error(`Differences: ${changed.join(", ")}`);
+      process.exitCode = 1;
+    } else {
+      console.log("Generated files are up to date. Working files were not changed.");
+    }
+  } finally {
+    fs.rmSync(workspace, { recursive: true, force: true });
   }
-  console.log("Generated files are up to date.");
 }
 
 if (require.main === module) {

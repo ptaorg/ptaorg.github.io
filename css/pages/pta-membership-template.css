@@ -38,6 +38,12 @@
     padding: 30px 0 28px;
   }
 
+  /* Keep navigation legible on this page's dark header. */
+  .site-header .logo,
+  .site-header .nav-link:not(.board-submit-nav) {
+    color: #fff;
+  }
+
   .wrap {
     max-width: 980px;
     margin: auto;
