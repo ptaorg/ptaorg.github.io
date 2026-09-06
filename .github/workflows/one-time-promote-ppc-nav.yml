@@ -1,0 +1,36 @@
+name: One-time promote PPC navigation
+
+on:
+  push:
+    paths:
+      - 'scripts/legacy/one-time-promote-ppc-nav.py'
+      - '.github/workflows/one-time-promote-ppc-nav.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Promote PPC to top navigation
+        run: python3 scripts/legacy/one-time-promote-ppc-nav.py
+      - name: Verify navigation source
+        run: |
+          grep -q 'global-ppc-nav' index.html
+          grep -q 'href="/ppc-points.html">PPC</a>' index.html
+          grep -q 'トップ / 任意加入 / PPC / 立場別' SITE_STRUCTURE.md
+      - name: Commit changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No changes'
+          else
+            git commit -m 'Promote PPC to primary navigation'
+            git push
+          fi
