@@ -1,4 +1,4 @@
-/* site.js loader — 2026-09-06 v103 static-nav+audience */
+/* site.js loader — 2026-09-06 v104 seo+measurement */
 (function(){
   function load(src, id, done){
     if (document.getElementById(id)) { if (done) done(); return; }
@@ -353,6 +353,7 @@
     if (path === '/pta-school-processing.html') injectSchoolProcessingCaseVisuals();
   }
 
+  load('/js/seo-analytics-v104.js?v=20260906-1', 'seo-analytics-v104');
   load('/js/site-core-v90.js?v=98', 'site-core-v90', function(){
     installMobileSearch();
     load('/js/current-location-nav.js?v=20260823-10', 'current-location-nav', installCoreEssayEntrances);
