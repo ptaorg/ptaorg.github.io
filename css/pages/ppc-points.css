@@ -980,3 +980,14 @@ body.ppc-editorial .ppc-conclusion-panel > h2:first-child::before {
     padding-left: 17px;
   }
 }
+
+/* 2026-09-06: improve contrast of the red PPC core line */
+.ppc-core-title span:last-child {
+  color: #c51f2b;
+  -webkit-text-stroke: 0.8px #fff;
+  paint-order: stroke fill;
+  text-shadow:
+    0 0 1px rgba(255,255,255,.95),
+    0 1px 1px rgba(0,0,0,.18);
+}
+
