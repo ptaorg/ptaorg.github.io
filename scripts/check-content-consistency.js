@@ -396,10 +396,12 @@ for (const token of comparisonCssTokens) {
     findings.push(`css/prose.css: 比較レイアウトの保護指定がありません (${token})`);
   }
 }
-const comparisonCssVersion = '/css/prose.css?v=20260814-2';
+const comparisonCssVersion = fs.readFileSync(path.join(root, 'index.html'), 'utf8')
+  .match(/href=["'](\/css\/prose\.css\?v=[^"']+)["']/)?.[1];
+if (!comparisonCssVersion) findings.push('index.html: 比較元のprose.cssバージョンがありません');
 for (const rel of ['personnel.html', 'facilities.html', 'fee-collection.html']) {
   const html = fs.readFileSync(path.join(root, rel), 'utf8');
-  if (!html.includes(comparisonCssVersion)) {
+  if (!comparisonCssVersion || !html.includes(comparisonCssVersion)) {
     findings.push(`${rel}: 比較レイアウト修正版CSSを読み込んでいません`);
   }
 }

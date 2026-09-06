@@ -299,6 +299,8 @@ function checkInternalRefs() {
       pattern.lastIndex = 0;
       let match;
       while ((match = pattern.exec(text))) {
+        // JavaScript URL constructors are not CSS url() references.
+        if (pattern === patterns[1] && /\.js$/i.test(file) && /\bnew\s+$/i.test(text.slice(0, match.index))) continue;
         const ref = normalizeInternalRef(match[1], file);
         if (!ref) continue;
         if (tracked.has(ref) || tracked.has(`${ref}/index.html`)) continue;
