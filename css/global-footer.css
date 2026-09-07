@@ -229,6 +229,19 @@ footer.footer .footer-support {
   box-shadow: 0 10px 28px rgba(0,0,0,.14) !important;
 }
 
+/* Keep one shared footer markup, but show the support CTA in the footer's top slot. */
+body > footer:has(> .footer-support),
+footer.footer:has(> .footer-support) {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+body > footer:has(> .footer-support) > .footer-support,
+footer.footer:has(> .footer-support) > .footer-support {
+  order: -1 !important;
+  margin: 22px auto 0 !important;
+}
+
 body > footer .footer-support > div,
 footer.footer .footer-support > div {
   min-width: 0 !important;
@@ -288,6 +301,11 @@ footer.footer .footer-support > a:hover {
     align-items: stretch !important;
     flex-direction: column !important;
     gap: 14px !important;
+  }
+
+  body > footer:has(> .footer-support) > .footer-support,
+  footer.footer:has(> .footer-support) > .footer-support {
+    margin: 18px auto 0 !important;
   }
 
   body > footer .footer-support > a,
