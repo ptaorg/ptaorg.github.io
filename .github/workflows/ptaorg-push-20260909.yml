@@ -70,4 +70,4 @@ jobs:
           git commit -m 'Strengthen PTA membership, privacy, parent and personnel guidance'
           git push origin HEAD:main
 
-# retrigger after repairing payload chunks
+# retrigger after final chunk repair
