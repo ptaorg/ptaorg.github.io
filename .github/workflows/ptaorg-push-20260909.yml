@@ -1,0 +1,71 @@
+name: Publish PTA site six-file update 2026-09-09
+
+on:
+  push:
+    branches:
+      - chatgpt/push-20260909
+    paths:
+      - '.github/workflows/ptaorg-push-20260909.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruct and validate payload
+        run: |
+          set -euo pipefail
+          cat .ptaorg-push/chunk*.b64 > /tmp/payload.b64
+          base64 -d /tmp/payload.b64 > /tmp/ptaorg-changes-20260909.zip
+          echo "32e2343700004244594124b2730b7f94b14f5644e8be2431307be937d4f0796b  /tmp/ptaorg-changes-20260909.zip" | sha256sum -c -
+          rm -rf /tmp/ptaorg-payload
+          mkdir -p /tmp/ptaorg-payload
+          unzip -q /tmp/ptaorg-changes-20260909.zip -d /tmp/ptaorg-payload
+          find /tmp/ptaorg-payload -type f -printf '%P\n' | sort > /tmp/payload-files.txt
+          printf '%s\n' \
+            'data/site-search-index.js' \
+            'guide-parent.html' \
+            'membership.html' \
+            'personnel.html' \
+            'privacy.html' \
+            'sitemap.xml' > /tmp/expected-files.txt
+          diff -u /tmp/expected-files.txt /tmp/payload-files.txt
+          cd /tmp/ptaorg-payload
+          echo "588fdde3017c233669b819ce65609ba1182d34a59aebc14ebc080198bf5fc70c  data/site-search-index.js" | sha256sum -c -
+          echo "e2f8938ad5ce9b3ceedae53de065ea08d9bd46f1b5ec0c92e3ab849f97e25ac9  guide-parent.html" | sha256sum -c -
+          echo "6b9897fb9b165f41435e2926c2d2f994c9bcb5cc9e59488b37c9dd5e90325229  membership.html" | sha256sum -c -
+          echo "5ccc3090445dc531d6f9f23e187a64e1ac68e4e15307d8c49fafa0971bce032c  personnel.html" | sha256sum -c -
+          echo "71c4dcd3ed649c0825d048dfb037b2b9812c89b528d8395254cafb0f4f7005be  privacy.html" | sha256sum -c -
+          echo "b599ad4d0d3f7b08b1e8c54062c116ce0b6774e5db15df2d553d31bbcfba8a71  sitemap.xml" | sha256sum -c -
+
+      - name: Apply six files to latest main
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git checkout -B main origin/main
+          cp /tmp/ptaorg-payload/membership.html membership.html
+          cp /tmp/ptaorg-payload/privacy.html privacy.html
+          cp /tmp/ptaorg-payload/guide-parent.html guide-parent.html
+          cp /tmp/ptaorg-payload/personnel.html personnel.html
+          cp /tmp/ptaorg-payload/data/site-search-index.js data/site-search-index.js
+          cp /tmp/ptaorg-payload/sitemap.xml sitemap.xml
+          git add membership.html privacy.html guide-parent.html personnel.html data/site-search-index.js sitemap.xml
+          git diff --cached --name-only | sort > /tmp/staged-files.txt
+          printf '%s\n' \
+            'data/site-search-index.js' \
+            'guide-parent.html' \
+            'membership.html' \
+            'personnel.html' \
+            'privacy.html' \
+            'sitemap.xml' > /tmp/expected-files.txt
+          diff -u /tmp/expected-files.txt /tmp/staged-files.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Strengthen PTA membership, privacy, parent and personnel guidance'
+          git push origin HEAD:main
