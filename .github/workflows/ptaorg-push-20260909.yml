@@ -69,3 +69,5 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git commit -m 'Strengthen PTA membership, privacy, parent and personnel guidance'
           git push origin HEAD:main
+
+# retrigger after repairing payload chunks
