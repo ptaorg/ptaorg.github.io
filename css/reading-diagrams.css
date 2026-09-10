@@ -344,3 +344,33 @@ body[data-reading-design].home-page .core-essay-entrance .core-essay-item {
     border-left:0!important;
   }
 }
+/* Relationship diagrams: real vector geometry, with a separate narrow layout. */
+body[data-reading-design] main figure.relationship-figure {
+ display:block!important; background:#fff!important; border:0!important;
+ border-top:2px solid #173650!important; border-bottom:1px solid #d9e5e8!important;
+ border-radius:0!important; box-shadow:none!important; padding:24px 0!important;
+ margin:2rem 0!important;
+}
+body[data-reading-design] .relationship-figure figcaption {
+ display:block!important; margin:0 0 22px!important; padding:0!important;
+ font-size:clamp(1.1rem,2vw,1.45rem)!important; color:#173650!important;
+ font-weight:700!important; background:none!important; border:0!important;
+}
+body[data-reading-design] .relationship-figure .relationship-svg {
+ width:100%!important; height:auto!important; max-width:900px!important;
+ margin:0 auto!important; overflow:visible; background:none!important;
+}
+body[data-reading-design] .relationship-figure .is-desktop {display:block!important;}
+body[data-reading-design] .relationship-figure .is-mobile {display:none!important;}
+body[data-reading-design] .relationship-figure .figure-note {
+ margin:18px 0 0!important; padding:14px 0 0!important; background:none!important;
+ font-size:.88rem!important; line-height:1.9!important;
+}
+@media(max-width:600px) {
+ body[data-reading-design] .relationship-figure .is-desktop {display:none!important;}
+ body[data-reading-design] .relationship-figure .is-mobile {display:block!important;max-width:400px!important;}
+}
+@media print {
+ body[data-reading-design] .relationship-figure .is-desktop {display:block!important;}
+ body[data-reading-design] .relationship-figure .is-mobile {display:none!important;}
+}
