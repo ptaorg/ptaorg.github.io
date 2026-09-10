@@ -317,3 +317,30 @@ body[data-reading-design].home-page .hc-research-grid p {
     grid-row:auto!important;
   }
 }
+
+/* 2026-09-10: fix accidental empty left column in core essay sections. */
+body[data-reading-design].home-page .core-essay-entrance {
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  padding:64px max(24px,calc((100vw - 1100px)/2))!important;
+  border-left:0!important;
+  border-top:1px solid #d9dee3!important;
+  border-bottom:0!important;
+}
+body[data-reading-design].home-page .core-essay-entrance > * {
+  max-width:1100px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+body[data-reading-design].home-page .core-essay-entrance .core-thesis,
+body[data-reading-design].home-page .core-essay-entrance .core-essay-item {
+  max-width:980px!important;
+}
+@media(max-width:680px) {
+  body[data-reading-design].home-page .core-essay-entrance {
+    padding:48px 18px!important;
+    border-left:0!important;
+  }
+}
