@@ -57,3 +57,169 @@ body[data-reading-design].home-page .hc-core-head { align-items:start; }
 }
 /* Older privacy diagrams stay governed by their page stylesheet. */
 body[data-reading-design] main figure.reading-figure { display:block; }
+
+/* Home whitepaper hierarchy v2 — intentionally visible, without shortening body text. */
+body[data-reading-design].home-page .hc-hero {
+  border-bottom:7px solid #c8a33b;
+}
+body[data-reading-design].home-page .hc-core > .home-wrap,
+body[data-reading-design].home-page .hc-issues > .home-wrap {
+  border-left:6px solid #173f5f;
+  padding-left:clamp(24px,4vw,48px);
+}
+body[data-reading-design].home-page .hc-core > .home-wrap {
+  border-left-color:#17675f;
+}
+body[data-reading-design].home-page .hc-core h2,
+body[data-reading-design].home-page .hc-issues h2,
+body[data-reading-design].home-page .hc-audience h2,
+body[data-reading-design].home-page .hc-evidence h2,
+body[data-reading-design].home-page .hc-tools h2,
+body[data-reading-design].home-page .hc-updates h2 {
+  font-family:"Noto Serif JP",serif;
+  font-size:clamp(1.7rem,3.2vw,2.35rem);
+  border-bottom:2px solid #cfd8de;
+  padding-bottom:1rem;
+  margin-bottom:1.5rem;
+}
+body[data-reading-design].home-page .hc-card-grid-three {
+  display:block!important;
+  border-top:3px solid #173f5f!important;
+}
+body[data-reading-design].home-page .hc-card-grid-three .hc-card,
+body[data-reading-design].home-page .hc-card-grid-three .hc-card:last-child {
+  display:grid!important;
+  grid-template-columns:72px minmax(170px,.7fr) minmax(0,1.45fr) auto!important;
+  gap:10px 24px!important;
+  align-items:center!important;
+  padding:24px 4px!important;
+  margin:0!important;
+  min-height:0!important;
+  border:0!important;
+  border-bottom:1px solid #ccd7df!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body[data-reading-design].home-page .hc-card-grid-three .hc-card h3 {
+  margin:0!important;
+  font-family:"Noto Serif JP",serif;
+  font-size:1.18rem!important;
+}
+body[data-reading-design].home-page .hc-card-grid-three .hc-card p {
+  margin:0!important;
+}
+body[data-reading-design].home-page .hc-evidence-grid {
+  gap:0!important;
+  border-top:3px solid #b28b28!important;
+  border-bottom:1px solid #d6d0c0!important;
+}
+body[data-reading-design].home-page .hc-evidence-card {
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  padding:30px 32px 30px 0!important;
+}
+body[data-reading-design].home-page .hc-evidence-card + .hc-evidence-card {
+  border-left:1px solid #d6d0c0!important;
+  padding-left:32px!important;
+  padding-right:0!important;
+}
+body[data-reading-design].home-page .hc-evidence-links a {
+  border:0!important;
+  border-bottom:1px solid currentColor!important;
+  border-radius:0!important;
+  background:transparent!important;
+  padding:0 0 2px!important;
+}
+body[data-reading-design].home-page .hc-research-base {
+  border-top:7px solid #c8a33b;
+  border-bottom:7px solid #c8a33b;
+}
+body[data-reading-design].home-page .hc-research-grid {
+  gap:0!important;
+  border-top:1px solid rgba(255,255,255,.38)!important;
+  border-bottom:1px solid rgba(255,255,255,.38)!important;
+}
+body[data-reading-design].home-page .hc-research-grid > a {
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  padding:28px!important;
+}
+body[data-reading-design].home-page .hc-research-grid > a + a {
+  border-left:1px solid rgba(255,255,255,.28)!important;
+}
+body[data-reading-design].home-page .hc-tool-grid {
+  gap:0 38px!important;
+  border-top:3px solid #173f5f!important;
+}
+body[data-reading-design].home-page .hc-tool-grid > a {
+  border:0!important;
+  border-bottom:1px solid #ccd7df!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  padding:20px 34px 20px 0!important;
+}
+body[data-reading-design].home-page .core-essay-entrance {
+  border-left:6px solid #8b1e2d!important;
+  border-top:0!important;
+  padding-left:max(28px,calc((100vw - 1100px)/2))!important;
+}
+body[data-reading-design].home-page #school-processing-entry {
+  background:#f3f5f6!important;
+}
+body[data-reading-design].home-page #core-essays-entry {
+  background:#fffdf8!important;
+}
+body[data-reading-design].home-page .home-priority-nav {
+  border-top:7px solid #173f5f!important;
+  border-bottom:1px solid #ccd7df!important;
+}
+body[data-reading-design].home-page .home-priority-link {
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+body[data-reading-design].home-page .hc-updates {
+  border-top:1px solid #ccd7df;
+}
+@media(max-width:900px) {
+  body[data-reading-design].home-page .hc-card-grid-three .hc-card,
+  body[data-reading-design].home-page .hc-card-grid-three .hc-card:last-child {
+    grid-template-columns:58px minmax(0,1fr)!important;
+  }
+  body[data-reading-design].home-page .hc-card-grid-three .hc-card p,
+  body[data-reading-design].home-page .hc-card-grid-three .hc-card b {
+    grid-column:2!important;
+  }
+}
+@media(max-width:680px) {
+  body[data-reading-design].home-page .hc-core > .home-wrap,
+  body[data-reading-design].home-page .hc-issues > .home-wrap {
+    border-left-width:4px;
+    padding-left:18px;
+  }
+  body[data-reading-design].home-page .hc-evidence-grid,
+  body[data-reading-design].home-page .hc-research-grid {
+    display:block!important;
+  }
+  body[data-reading-design].home-page .hc-evidence-card,
+  body[data-reading-design].home-page .hc-evidence-card + .hc-evidence-card {
+    padding:24px 0!important;
+    border-left:0!important;
+  }
+  body[data-reading-design].home-page .hc-evidence-card + .hc-evidence-card {
+    border-top:1px solid #d6d0c0!important;
+  }
+  body[data-reading-design].home-page .hc-research-grid > a + a {
+    border-left:0!important;
+    border-top:1px solid rgba(255,255,255,.28)!important;
+  }
+  body[data-reading-design].home-page .core-essay-entrance {
+    border-left-width:4px!important;
+    padding-left:20px!important;
+  }
+}
