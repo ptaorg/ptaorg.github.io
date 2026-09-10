@@ -873,3 +873,318 @@
     .home-page .home-priority-link small { grid-column: 2; }
   }
 }
+
+/* 2026-09-10: reading-first refinement. Keep the argument in the page body;
+   use borders, spacing and document hierarchy instead of card clusters. */
+@layer page {
+  .home-page .hc-section > .home-wrap,
+  .home-page .home-priority-nav > .home-wrap {
+    position: relative;
+  }
+
+  .home-page .hc-section h2,
+  .home-page .home-priority-nav h2 {
+    max-width: 920px;
+  }
+
+  .home-page .hc-section-lead {
+    max-width: 860px;
+  }
+
+  /* Audience gateway: three document entries, not three cards. */
+  .home-page .hc-audience {
+    background: #f7f9fb;
+  }
+
+  .home-page .hc-card-grid-three {
+    display: block;
+    border-top: 2px solid var(--home-navy);
+  }
+
+  .home-page .hc-card-grid-three .hc-card,
+  .home-page .hc-card-grid-three .hc-card:last-child {
+    display: grid;
+    grid-template-columns: 72px minmax(180px, .72fr) minmax(0, 1.55fr) auto;
+    gap: 12px 24px;
+    align-items: center;
+    min-height: 0;
+    padding: 21px 4px;
+    border: 0;
+    border-bottom: 1px solid var(--home-line);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    color: #26394a;
+  }
+
+  .home-page .hc-card-grid-three .hc-card:hover {
+    background: linear-gradient(90deg, rgba(15,118,110,.055), transparent 58%);
+  }
+
+  .home-page .hc-card-grid-three .hc-card-mark {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .home-page .hc-card-grid-three .hc-card-mark .hc-icon {
+    width: 29px;
+    height: 29px;
+  }
+
+  .home-page .hc-card-grid-three .hc-card h3 {
+    margin: 0;
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.12rem;
+  }
+
+  .home-page .hc-card-grid-three .hc-card p {
+    margin: 0;
+    font-size: .94rem;
+    line-height: 1.75;
+  }
+
+  .home-page .hc-card-grid-three .hc-card b {
+    white-space: nowrap;
+    font-size: .86rem;
+  }
+
+  /* Evidence: retain source distinction but remove floating boxes. */
+  .home-page .hc-evidence {
+    background: #fbfaf6;
+  }
+
+  .home-page .hc-evidence-grid {
+    gap: 0;
+    border-top: 2px solid #b69432;
+    border-bottom: 1px solid #d9d4c7;
+  }
+
+  .home-page .hc-evidence-card {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    padding: 28px 30px 30px 0;
+  }
+
+  .home-page .hc-evidence-card + .hc-evidence-card {
+    border-left: 1px solid #d9d4c7;
+    padding-right: 0;
+    padding-left: 30px;
+  }
+
+  .home-page .hc-evidence-card--analysis {
+    border-top: 0;
+  }
+
+  .home-page .hc-evidence-links {
+    gap: 14px 22px;
+  }
+
+  .home-page .hc-evidence-links a {
+    border: 0;
+    border-radius: 0;
+    padding: 0 0 2px;
+    border-bottom: 1px solid currentColor;
+    background: transparent;
+  }
+
+  .home-page .hc-archive-feature {
+    margin-top: 34px;
+    border-radius: 0;
+    border-left: 6px solid var(--home-gold);
+    background: #102b49;
+    padding: 28px 30px;
+  }
+
+  .home-page .hc-archive-actions a {
+    border-radius: 0;
+    background: transparent;
+  }
+
+  /* Research counts: one comparative table-like strip. */
+  .home-page .hc-research-grid {
+    gap: 0;
+    border-top: 1px solid rgba(255,255,255,.34);
+    border-bottom: 1px solid rgba(255,255,255,.34);
+  }
+
+  .home-page .hc-research-grid > a {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    padding: 26px 28px;
+  }
+
+  .home-page .hc-research-grid > a + a {
+    border-left: 1px solid rgba(255,255,255,.24);
+  }
+
+  .home-page .hc-research-grid > a:hover {
+    background: rgba(255,255,255,.055);
+  }
+
+  /* Practical tools: compact reference rows rather than action cards. */
+  .home-page .hc-tool-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 34px;
+    border-top: 2px solid var(--home-navy);
+  }
+
+  .home-page .hc-tool-grid > a {
+    position: relative;
+    min-height: 86px;
+    justify-content: center;
+    padding: 18px 34px 18px 0;
+    border: 0;
+    border-bottom: 1px solid var(--home-line);
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .home-page .hc-tool-grid > a::after {
+    content: "→";
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    color: var(--home-teal);
+    transform: translateY(-50%);
+  }
+
+  .home-page .hc-tool-grid span {
+    margin-top: 5px;
+  }
+
+  /* Keep the five issues visibly sequential. */
+  .home-page .hc-issue-list > a {
+    grid-template-columns: 54px 38px 1fr;
+    padding: 22px 6px;
+  }
+
+  .home-page .hc-issue-list > a:not(:last-child)::after {
+    content: "↓";
+    grid-column: 1;
+    justify-self: center;
+    height: 0;
+    color: #9a7208;
+    font-weight: 900;
+    transform: translateY(22px);
+  }
+
+  /* Essay entrances are chapters in one argument, not detached feature cards. */
+  .home-page .core-essay-entrance {
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: none;
+    padding: 72px max(20px, calc((100vw - 1100px) / 2)) 68px;
+    border-top: 1px solid #d9dee3;
+    border-bottom: 0;
+  }
+
+  .home-page #school-processing-entry {
+    background: #fafafa;
+  }
+
+  .home-page #core-essays-entry {
+    background: #fff;
+  }
+
+  .home-page .core-essay-entrance > * {
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .home-page .core-essay-entrance .core-thesis {
+    max-width: 980px;
+  }
+
+  .home-page .core-essay-item {
+    max-width: 980px;
+    padding: 26px 0;
+    border-top: 1px solid #d9dee3;
+  }
+
+  .home-page .core-essay-item + .core-essay-item {
+    margin-top: 0;
+  }
+
+  /* Updates stay subordinate to the main argument. */
+  .home-page .hc-updates {
+    background: #fafbfc;
+  }
+
+  .home-page .hc-update-list {
+    max-width: 940px;
+  }
+
+  @media (max-width: 900px) {
+    .home-page .hc-card-grid-three .hc-card,
+    .home-page .hc-card-grid-three .hc-card:last-child {
+      grid-template-columns: 58px minmax(0, 1fr);
+      gap: 7px 16px;
+    }
+
+    .home-page .hc-card-grid-three .hc-card p,
+    .home-page .hc-card-grid-three .hc-card b {
+      grid-column: 2;
+    }
+
+    .home-page .hc-card-grid-three .hc-card b {
+      white-space: normal;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .home-page .hc-card-grid-three .hc-card,
+    .home-page .hc-card-grid-three .hc-card:last-child {
+      padding: 18px 0;
+    }
+
+    .home-page .hc-evidence-grid,
+    .home-page .hc-research-grid {
+      display: block;
+    }
+
+    .home-page .hc-evidence-card,
+    .home-page .hc-evidence-card + .hc-evidence-card {
+      padding: 24px 0;
+      border-left: 0;
+    }
+
+    .home-page .hc-evidence-card + .hc-evidence-card {
+      border-top: 1px solid #d9d4c7;
+    }
+
+    .home-page .hc-research-grid > a {
+      display: block;
+      padding: 23px 4px;
+    }
+
+    .home-page .hc-research-grid > a + a {
+      border-top: 1px solid rgba(255,255,255,.24);
+      border-left: 0;
+    }
+
+    .home-page .hc-tool-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .home-page .hc-tool-grid > a {
+      min-height: 78px;
+    }
+
+    .home-page .hc-issue-list > a {
+      grid-template-columns: 40px 32px 1fr;
+    }
+
+    .home-page .hc-issue-list > a:not(:last-child)::after {
+      transform: translateY(20px);
+    }
+
+    .home-page .core-essay-entrance {
+      margin: 0;
+      padding: 54px 17px 50px;
+    }
+  }
+}
