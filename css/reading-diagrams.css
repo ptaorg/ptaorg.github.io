@@ -55,3 +55,5 @@ body[data-reading-design].home-page .hc-core-head { align-items:start; }
  body[data-reading-design] .reading-figure { background:#fff; border-color:#777; break-inside:avoid; color:#111; }
  body[data-reading-design] .reading-figure * { color:#111 !important; }
 }
+/* Older privacy diagrams stay governed by their page stylesheet. */
+body[data-reading-design] main figure.reading-figure { display:block; }
