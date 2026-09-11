@@ -1,0 +1,362 @@
+/*
+ * PTA適正化推進委員会 — Editorial layout system
+ * 2026-09-11
+ *
+ * A restrained, document-first layer shared by public prose pages.
+ * It aligns the visual start/end of text, establishes a stable reading
+ * measure, and gives headings/hero areas a consistent editorial rhythm.
+ */
+
+body[data-content-mode="prose"] {
+  --ed-shell: 1120px;
+  --ed-reading: 820px;
+  --ed-heading: 920px;
+  --ed-gutter: clamp(18px, 3.6vw, 32px);
+  --ed-navy: #102a43;
+  --ed-ink: #223244;
+  --ed-muted: #5b6978;
+  --ed-line: #d5dee7;
+  --ed-gold: #c89b18;
+  --ed-section-gap: clamp(58px, 7vw, 84px);
+  --ed-copy-gap: 1.05rem;
+}
+
+/* One visual axis from navigation through the page body and footer. */
+body[data-content-mode="prose"] .nav-container,
+body[data-content-mode="prose"] .page-hero-inner,
+body[data-content-mode="prose"] .wrap,
+body[data-content-mode="prose"] .container,
+body[data-content-mode="prose"] .op-wrap,
+body[data-content-mode="prose"] .home-wrap,
+body[data-content-mode="prose"] :where(.footer-inner, .essay-footer-inner, .submit-footer-inner, .foot-inner, .footer-container) {
+  width: min(calc(100% - (var(--ed-gutter) * 2)), var(--ed-shell)) !important;
+  max-width: var(--ed-shell) !important;
+  margin-inline: auto !important;
+}
+
+/* Legacy/article wrappers: only direct structural wrappers are widened. */
+body[data-content-mode="prose"] main > :where(
+  .journal-article-wrap,
+  .essay-wrap,
+  .article-wrap,
+  .content-wrap,
+  .research-wrap,
+  .report-wrap,
+  .guide-wrap,
+  .archive-wrap
+) {
+  width: min(calc(100% - (var(--ed-gutter) * 2)), var(--ed-shell)) !important;
+  max-width: var(--ed-shell) !important;
+  margin-inline: auto !important;
+}
+
+/* Stable reading measure. Wide figures/tables remain allowed to use the shell. */
+body[data-content-mode="prose"] main :where(p, blockquote) {
+  max-width: var(--ed-reading);
+}
+
+body[data-content-mode="prose"] main :where(ul, ol, dl) {
+  max-width: var(--ed-reading);
+}
+
+body[data-content-mode="prose"] main :where(p, li, dd) {
+  line-height: 1.95;
+}
+
+body[data-content-mode="prose"] main p + p {
+  margin-top: var(--ed-copy-gap);
+}
+
+body[data-content-mode="prose"] main :where(figure, table, .table-wrap, .reading-figure) {
+  margin-top: clamp(28px, 4vw, 42px);
+  margin-bottom: clamp(34px, 5vw, 52px);
+}
+
+/*
+ * Chapter headings: remove the small dark "label" treatment.
+ * A chapter should read like a chapter, not a button/card heading.
+ */
+body[data-content-mode="prose"] main h2:not(:where(
+  .hero h2,
+  nav h2,
+  form h2,
+  dialog h2,
+  .card h2,
+  [class$="-card"] h2,
+  [class*="-card "] h2,
+  .panel h2,
+  [class$="-panel"] h2,
+  [class*="-panel "] h2,
+  .cta-band h2,
+  .support-payment-card h2,
+  .region-map-card h2,
+  .search-results-dropdown h2,
+  .document-error h2,
+  .psc-case-viz-step h2,
+  .psc-audit-head h2
+)) {
+  display: block !important;
+  width: auto !important;
+  max-width: var(--ed-heading) !important;
+  margin: var(--ed-section-gap) 0 1.35rem !important;
+  padding: 0 0 0.72rem !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--ed-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--ed-navy) !important;
+  box-shadow: none !important;
+  font-family: "Noto Serif JP", serif !important;
+  font-size: clamp(1.52rem, 2.6vw, 2.08rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.48 !important;
+  letter-spacing: -0.018em;
+  text-wrap: pretty;
+  overflow-wrap: normal;
+}
+
+body[data-content-mode="prose"] main h2:not(:where(
+  .hero h2,
+  nav h2,
+  form h2,
+  dialog h2,
+  .card h2,
+  [class$="-card"] h2,
+  [class*="-card "] h2,
+  .panel h2,
+  [class$="-panel"] h2,
+  [class*="-panel "] h2,
+  .cta-band h2,
+  .support-payment-card h2,
+  .region-map-card h2,
+  .search-results-dropdown h2,
+  .document-error h2,
+  .psc-case-viz-step h2,
+  .psc-audit-head h2
+))::before {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-bottom: 13px;
+  background: var(--ed-gold);
+}
+
+/* Existing editorial-panel headings use the same chapter language. */
+body[data-content-mode="prose"] main .editorial-panel > h2 {
+  display: block !important;
+  width: auto !important;
+  max-width: var(--ed-heading) !important;
+  margin: var(--ed-section-gap) 0 1.35rem !important;
+  padding: 0 0 0.72rem !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--ed-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--ed-navy) !important;
+  box-shadow: none !important;
+  font-family: "Noto Serif JP", serif !important;
+  font-size: clamp(1.52rem, 2.6vw, 2.08rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.48 !important;
+}
+
+body[data-content-mode="prose"] main .editorial-panel > h2::before {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-bottom: 13px;
+  background: var(--ed-gold);
+}
+
+/* Subheads: enough authority without adding boxes. */
+body[data-content-mode="prose"] main h3 {
+  max-width: var(--ed-heading);
+  margin-top: clamp(34px, 5vw, 50px);
+  color: var(--ed-navy);
+  line-height: 1.62;
+}
+
+body[data-content-mode="prose"] main h3::after {
+  width: 3.75rem;
+  height: 2px;
+  margin-top: 0.48rem;
+}
+
+/* Standard hero rhythm for internal pages. Home keeps its own identity. */
+body[data-content-mode="prose"]:not(.home-page) > :where(.page-hero, .op-hero, .essay-hero, .journal-hero),
+body[data-content-mode="prose"]:not(.home-page) main > :where(.page-hero, .hero, .essay-hero, .journal-hero) {
+  padding-top: clamp(68px, 8vw, 94px) !important;
+  padding-bottom: clamp(58px, 7vw, 82px) !important;
+}
+
+body[data-content-mode="prose"] :where(.page-hero, .op-hero, .essay-hero, .journal-hero, main > .hero) h1 {
+  max-width: var(--ed-heading) !important;
+  margin-bottom: 20px !important;
+  font-family: "Noto Serif JP", serif !important;
+  font-size: clamp(2.05rem, 4.5vw, 3.45rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.28 !important;
+  letter-spacing: -0.028em !important;
+  text-wrap: pretty;
+}
+
+body[data-content-mode="prose"] :where(.page-hero, .op-hero, .essay-hero, .journal-hero, main > .hero) :where(.lead, .op-lead, .hero-lead, .page-lead, p) {
+  max-width: var(--ed-reading) !important;
+  line-height: 1.95 !important;
+}
+
+/* The opt-in pillar page previously changed measure between hero and body. */
+body[data-content-mode="prose"].optin-priority-page .op-hero .op-wrap,
+body[data-content-mode="prose"].optin-priority-page .op-jump .op-wrap,
+body[data-content-mode="prose"].optin-priority-page main > .op-wrap {
+  width: min(calc(100% - (var(--ed-gutter) * 2)), var(--ed-shell)) !important;
+  max-width: var(--ed-shell) !important;
+  margin-inline: auto !important;
+}
+
+body[data-content-mode="prose"].optin-priority-page .op-hero h1,
+body[data-content-mode="prose"].optin-priority-page .op-hero .op-lead,
+body[data-content-mode="prose"].optin-priority-page .op-hero-meta,
+body[data-content-mode="prose"].optin-priority-page .op-verdict,
+body[data-content-mode="prose"].optin-priority-page .op-section > :where(h2, h3, p, ul, ol, dl, blockquote) {
+  max-width: var(--ed-reading) !important;
+}
+
+body[data-content-mode="prose"].optin-priority-page .op-hero h1 {
+  max-width: var(--ed-heading) !important;
+}
+
+body[data-content-mode="prose"].optin-priority-page .op-verdict {
+  margin-top: clamp(48px, 6vw, 66px) !important;
+}
+
+body[data-content-mode="prose"].optin-priority-page .op-section {
+  padding-top: clamp(54px, 6vw, 70px) !important;
+  padding-bottom: clamp(54px, 6vw, 70px) !important;
+}
+
+/* Plain legacy pages get a deliberate title area instead of raw browser flow. */
+body[data-content-mode="prose"] > header:not(.site-header):not(.page-hero):not(.op-hero) {
+  width: min(calc(100% - (var(--ed-gutter) * 2)), var(--ed-shell));
+  margin-inline: auto;
+  padding: clamp(54px, 7vw, 78px) 0 30px;
+  border-bottom: 1px solid var(--ed-line);
+}
+
+body[data-content-mode="prose"] > header:not(.site-header):not(.page-hero):not(.op-hero) h1 {
+  max-width: var(--ed-heading);
+  margin: 0 0 14px;
+  color: var(--ed-navy);
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(2rem, 4vw, 3.15rem);
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+
+body[data-content-mode="prose"] > header:not(.site-header):not(.page-hero):not(.op-hero) p {
+  max-width: var(--ed-reading);
+  color: var(--ed-muted);
+}
+
+body[data-content-mode="prose"] > main:not(:has(> .page-hero)):not(:has(> .hero)) {
+  padding-bottom: clamp(58px, 7vw, 84px);
+}
+
+/* Footer follows the same outer axis as the body instead of a separate width. */
+body[data-content-mode="prose"] footer :where(.footer-inner, .essay-footer-inner, .submit-footer-inner, .foot-inner, .footer-container) {
+  width: min(calc(100% - (var(--ed-gutter) * 2)), var(--ed-shell)) !important;
+  max-width: var(--ed-shell) !important;
+}
+
+@media (max-width: 760px) {
+  body[data-content-mode="prose"] {
+    --ed-reading: 100%;
+    --ed-heading: 100%;
+    --ed-section-gap: 52px;
+  }
+
+  body[data-content-mode="prose"] main h2:not(:where(
+    .hero h2,
+    nav h2,
+    form h2,
+    dialog h2,
+    .card h2,
+    [class$="-card"] h2,
+    [class*="-card "] h2,
+    .panel h2,
+    [class$="-panel"] h2,
+    [class*="-panel "] h2,
+    .cta-band h2,
+    .support-payment-card h2,
+    .region-map-card h2,
+    .search-results-dropdown h2,
+    .document-error h2,
+    .psc-case-viz-step h2,
+    .psc-audit-head h2
+  )),
+  body[data-content-mode="prose"] main .editorial-panel > h2 {
+    margin-top: 50px !important;
+    padding-bottom: 0.62rem !important;
+    font-size: clamp(1.34rem, 7vw, 1.72rem) !important;
+  }
+
+  body[data-content-mode="prose"] main h2:not(:where(
+    .hero h2,
+    nav h2,
+    form h2,
+    dialog h2,
+    .card h2,
+    [class$="-card"] h2,
+    [class*="-card "] h2,
+    .panel h2,
+    [class$="-panel"] h2,
+    [class*="-panel "] h2,
+    .cta-band h2,
+    .support-payment-card h2,
+    .region-map-card h2,
+    .search-results-dropdown h2,
+    .document-error h2,
+    .psc-case-viz-step h2,
+    .psc-audit-head h2
+  ))::before,
+  body[data-content-mode="prose"] main .editorial-panel > h2::before {
+    width: 44px;
+    height: 2px;
+    margin-bottom: 10px;
+  }
+
+  body[data-content-mode="prose"] :where(.page-hero, .op-hero, .essay-hero, .journal-hero, main > .hero) h1 {
+    font-size: clamp(1.95rem, 9vw, 2.7rem) !important;
+    line-height: 1.32 !important;
+  }
+}
+
+@media print {
+  body[data-content-mode="prose"] main h2:not(:where(
+    .hero h2,
+    nav h2,
+    form h2,
+    dialog h2,
+    .card h2,
+    [class$="-card"] h2,
+    [class*="-card "] h2,
+    .panel h2,
+    [class$="-panel"] h2,
+    [class*="-panel "] h2,
+    .cta-band h2,
+    .support-payment-card h2,
+    .region-map-card h2,
+    .search-results-dropdown h2,
+    .document-error h2,
+    .psc-case-viz-step h2,
+    .psc-audit-head h2
+  )),
+  body[data-content-mode="prose"] main .editorial-panel > h2 {
+    color: #111 !important;
+    border-bottom-color: #888 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+}
