@@ -95,7 +95,9 @@ function pageRecord(filePath) {
     || decodeBasicEntities(stripTags(matchFirst(html, /<p[^>]*class=["'][^"']*(?:hero-lead|section-lead|lead)[^"']*["'][^>]*>([\s\S]*?)<\/p>/i)))
     || title;
 
-  return [title, htmlPathToUrl(filePath), description.replace(/\s+/g, " ").slice(0, 160)];
+  const url = htmlPathToUrl(filePath);
+  const role = roleFor(url);
+  return [title, url, description.replace(/\s+/g, " ").slice(0, 160), role ? role.role : "current-canonical"];
 }
 
 function main() {
