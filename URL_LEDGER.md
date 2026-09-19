@@ -20,10 +20,14 @@
 | `/membership.html` | current-canonical | 任意加入・入会手続の実務入口 | — | index | 現行の総合解説。会費・個人情報・学校との関係まで接続する |
 | `/pta-membership-optin.html` | research-record | オプトイン、申込み、意思表示の詳細解説 | `/membership.html` | index | 独立した詳細説明として保持。入口ではなく深掘り用 |
 | `/journal/pta-membership-optin-record.html` | research-record | 任意加入の研究・記録ページ | `/membership.html` | index | 引用・検証のための記録。自動リダイレクトしない |
-| `/starter-kit/manual.html` | old/reference | PTA運営スターターキット v1.0 の旧本文 | `/membership.html` | reference | 現行制度の入口にはしない。旧版であることを明示して維持 |
+| `/starter-kit/*` | old/reference | PTA運営スターターキットの旧版・参照資料 | `/membership.html` | reference | `data/url-ledger.json` の prefix rule で旧版として扱い、通常検索・sitemapから除外 |
 | `/guide-parent.html` | audience-guide | 保護者が最初に確認するための入口 | `/membership.html` | index | 任意加入の判断・確認から総合解説へ接続 |
 | `/guide-pta.html` | audience-guide | PTA役員が運営を点検する入口 | `/membership.html` | index | 会員名簿・会費・個人情報・学校依存の確認へ接続 |
 | `/guide-board.html` | audience-guide | 教育委員会・学校が学校関与を点検する入口 | `/membership.html` | index | 入会・名簿・徴収・学校事務の確認へ接続 |
+
+## 機械可読台帳
+
+`data/url-ledger.json` が検索・sitemap生成時の役割判定を担います。個別URLは `entries`、ディレクトリ単位の旧版は `prefix_rules` で管理します。Markdown版は人間向けの運用説明です。
 
 ## 運用ルール
 
