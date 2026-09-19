@@ -227,6 +227,21 @@
             var title = document.createElement('strong');
             title.className = 'srd-item-title';
             title.textContent = row[0];
+            var roleLabels = {
+              'current-canonical': '現行入口',
+              'audience-guide': '立場別入口',
+              'research-record': '論考・記録',
+              'source-archive': '原資料',
+              'old/reference': '旧版・参考',
+              'internal/development': '内部資料'
+            };
+            var role = roleLabels[String(row[3] || '')] || '';
+            if (role) {
+              var badge = document.createElement('span');
+              badge.className = 'srd-item-role';
+              badge.textContent = role;
+              a.appendChild(badge);
+            }
             var desc = document.createElement('span');
             desc.className = 'srd-item-desc';
             desc.textContent = row[2] || '';
@@ -248,6 +263,10 @@
     var hamburger = document.getElementById('hamburger');
     var overlay = document.getElementById('mobileOverlay');
     if (!hamburger || !overlay || hamburger.dataset.stableMobileNav === 'v90') return;
+
+    addStyle('search-role-badge-v90',
+      '.srd-item-role{display:inline-block;align-self:flex-start;margin:2px 0 3px;padding:2px 7px;border:1px solid currentColor;border-radius:999px;font-size:.68rem;font-weight:800;line-height:1.2;opacity:.72}'
+    );
 
     addStyle('mobile-nav-stable-v90',
       'html.mobile-nav-lock-root{overflow:hidden!important;overscroll-behavior:none!important}' +
