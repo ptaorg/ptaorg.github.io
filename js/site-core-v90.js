@@ -538,7 +538,7 @@
     if (!label) return;
 
     var group = LOC_GROUPS[cur] || null;
-    var frag = '<div class="loc-trail-inner"><a href="/index.html">トップ</a>';
+    var frag = '<div class="loc-trail-inner"><a href="/">トップ</a>';
     if (section) {
       frag += '<span class="loc-sep">›</span><a href="' + section.href + '">' + section.label + '</a>';
     } else if (group) {

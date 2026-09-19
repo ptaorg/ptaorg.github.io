@@ -134,10 +134,52 @@
     } catch (e) { return ''; }
   }
 
+  function actionLabel(el){
+    return (el.getAttribute('data-ga-label') || el.textContent || '')
+      .trim().replace(/\s+/g,' ').slice(0,160);
+  }
+
+  function fireInstrumentedAction(el){
+    var eventName = el.getAttribute('data-ga-event');
+    if (!eventName) return;
+    var params = {
+      page_path: window.location.pathname,
+      action_label: actionLabel(el)
+    };
+    ['category', 'target', 'method', 'position'].forEach(function(name){
+      var value = el.getAttribute('data-ga-' + name);
+      if (value) params['action_' + name] = value.slice(0,100);
+    });
+    fire(eventName, params);
+  }
+
+  function installSupportScrollMeasurement(){
+    if (!document.body || document.body.getAttribute('data-ga-scroll-page') !== 'support') return;
+    var sent = {};
+    function measure(){
+      var max = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight) - window.innerHeight;
+      if (max <= 0) return;
+      var percent = Math.min(100, Math.round(((window.scrollY || window.pageYOffset || 0) / max) * 100));
+      [50, 90].forEach(function(threshold){
+        if (percent < threshold || sent[threshold]) return;
+        sent[threshold] = true;
+        fire('support_scroll_depth', {
+          page_path: window.location.pathname,
+          percent_scrolled: threshold
+        });
+      });
+    }
+    window.addEventListener('scroll', measure, { passive: true });
+    measure();
+  }
+
   function installActionMeasurement(){
     if (window.__popcActionMeasurementV104) return;
     window.__popcActionMeasurementV104 = true;
     document.addEventListener('click', function(ev){
+      var action = ev.target && ev.target.closest ? ev.target.closest('[data-ga-event]') : null;
+      if (action) fireInstrumentedAction(action);
+
       var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
       if (!a) return;
       var raw = a.getAttribute('href') || '';
@@ -184,6 +226,7 @@
     addPpcContextLinks();
     addAboutTrustNote();
     installActionMeasurement();
+    installSupportScrollMeasurement();
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, {once:true});

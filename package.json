@@ -5,7 +5,7 @@
     "test": "npm run check:site && npm run check:site-js-version",
     "check:site": "node tools/check-site.mjs",
     "check:generated": "node scripts/check-generated-files.js",
-    "check:site-js-version": "node scripts/check-site-js-version.js 96",
+    "check:site-js-version": "node scripts/check-site-js-version.js 97",
     "check:content": "node scripts/check-content-consistency.js",
     "check:metadata": "node scripts/enhance-public-pages.js --check",
     "check:all": "npm run check:site && npm run check:metadata && npm run check:content && npm run check:generated && npm run check:site-js-version",

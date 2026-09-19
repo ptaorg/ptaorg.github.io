@@ -7,6 +7,48 @@
     margin-inline: auto;
     padding: 72px 0 80px;
   }
+  .gl-role-choices {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px;
+    width: min(100% - 40px, 1120px);
+    margin: 22px auto 0;
+  }
+  .gl-role-choices > p {
+    grid-column: 1 / -1;
+    margin: 0 0 -2px;
+    color: var(--navy);
+    font-size: .84rem;
+    font-weight: 900;
+    letter-spacing: .05em;
+  }
+  .gl-role-choices > a {
+    display: block;
+    padding: 16px 18px;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--gold);
+    background: #fff;
+    color: var(--navy);
+    font-size: .96rem;
+    font-weight: 900;
+    line-height: 1.65;
+    text-decoration: none;
+  }
+  .gl-role-choices > a small {
+    display: block;
+    margin-top: 3px;
+    color: var(--text);
+    font-size: .79rem;
+    font-weight: 700;
+  }
+  .gl-role-choices > a:hover,
+  .gl-role-choices > a:focus-visible {
+    border-color: var(--navy);
+    background: var(--navy);
+    color: #fff;
+  }
+  .gl-role-choices > a:hover small,
+  .gl-role-choices > a:focus-visible small { color: #fff; }
 
   /* ===== 問題パターンカード ===== */
   .gl-problem-grid {
@@ -409,6 +451,10 @@
     }
     .gl-pack-grid {
       grid-template-columns: 1fr;
+    }
+    .gl-role-choices {
+      grid-template-columns: 1fr;
+      width: min(100% - 28px, 1120px);
     }
     .gl-panel-heading {
       font-size: 1.08rem;

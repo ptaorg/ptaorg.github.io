@@ -646,6 +646,54 @@ body.personnel-editorial .faq-a p {
   line-height: 1.9;
 }
 
+body.personnel-editorial .editorial-next-steps {
+  margin-top: 38px;
+  padding: 24px;
+  border: 1px solid var(--personnel-line);
+  border-left: 5px solid var(--personnel-navy);
+  background: #f7fafc;
+}
+
+body.personnel-editorial .editorial-next-steps h3 {
+  margin: 0;
+  color: var(--personnel-navy);
+  font-size: 1.1rem;
+}
+
+body.personnel-editorial .editorial-next-steps > p {
+  margin: 10px 0 18px;
+  color: #3b4d5f;
+  font-size: .92rem;
+  line-height: 1.8;
+}
+
+body.personnel-editorial .editorial-next-steps > div {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+
+body.personnel-editorial .editorial-next-steps a {
+  display: flex;
+  align-items: center;
+  min-height: 62px;
+  padding: 11px 12px;
+  border: 1px solid #afbecb;
+  background: #fff;
+  color: var(--personnel-navy);
+  font-size: .84rem;
+  font-weight: 800;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+body.personnel-editorial .editorial-next-steps a:hover,
+body.personnel-editorial .editorial-next-steps a:focus-visible {
+  border-color: var(--personnel-navy);
+  background: var(--personnel-navy);
+  color: #fff;
+}
+
 @media (max-width: 760px) {
   body.personnel-editorial .page-hero-inner,
   body.personnel-editorial .pg-main {
@@ -708,6 +756,15 @@ body.personnel-editorial .faq-a p {
 
   body.personnel-editorial .personnel-verdict p {
     font-size: 0.98rem;
+  }
+
+  body.personnel-editorial .editorial-next-steps {
+    margin-top: 30px;
+    padding: 19px 16px;
+  }
+
+  body.personnel-editorial .editorial-next-steps > div {
+    grid-template-columns: 1fr;
   }
 
   body.personnel-editorial .personnel-test-order li {

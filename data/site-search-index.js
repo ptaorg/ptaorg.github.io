@@ -740,6 +740,16 @@ window.PTA_SITE_SEARCH_INDEX = [
     "PTA適正化の最終地点は「会費をどう適法に集めるか」の先にある。固定会費型PTAが構造的に抱える緊張を分析し、年会費・恒常財産・役員ノルマ・学校資源利用を置かない最小構造フォーラム（PTF）という基底形の制度設計を提示します。"
   ],
   [
+    "PTA運営の法的構造と教育行政の確認責任",
+    "/journal/pta-legal-structure-education-administration.html",
+    "PTAの任意性と学校・PTAの公私分離を軸に、会費徴収、個人情報、教職員関与、学校施設及び教育行政の確認責任を法令・判例の射程に沿って整理する基幹論考です。"
+  ],
+  [
+    "参考文献・引用法令・判例一覧（総覧）",
+    "/journal/pta-legal-structure-references.html",
+    "『PTA運営の法的構造と教育行政の確認責任』で参照・引用した法令、判例、裁判資料、学術・実務資料を整理した総覧です。"
+  ],
+  [
     "PTA加入はなぜ「オプトイン」なのか",
     "/journal/pta-membership-optin-record.html",
     "民法522条・95条、消費者契約法4条・10条、個人情報保護法を接続し、PTA加入のオプトイン、全員提出型チェック欄、会員資格・会費・個人情報を一本の論理線で整理します。"
@@ -883,56 +893,6 @@ window.PTA_SITE_SEARCH_INDEX = [
     "PTA役員向け｜入会申込書がないとPTA運営の何が崩れるのか",
     "/pta-officer-chain.html",
     "PTA役員向けに、入会申込書がない場合に会員名簿・会費徴収・役員選出・個人情報・学校依存・会計説明がどう崩れるかを整理します。"
-  ],
-  [
-    "PTA管理アプリ画面プレビュー",
-    "/pta-open-system/apps-script/admin-app-preview.html",
-    "これは静的プレビューです。実際の操作はApps Scriptに貼り付けた管理アプリ画面で行います。"
-  ],
-  [
-    "PTA管理アプリ",
-    "/pta-open-system/apps-script/Index.functional.html",
-    "PTAの加入申込み、会員確定、会員名簿を分離して管理するGoogle Apps Script向け管理画面の実装例です。"
-  ],
-  [
-    "トップページ",
-    "/pta-open-system/google-sites-html/01_top.html",
-    "PTAホームページについて、PTA適正化推進委員会が公開情報と確認資料に基づいて整理したページです。"
-  ],
-  [
-    "お知らせ",
-    "/pta-open-system/google-sites-html/02_news.html",
-    "新しいお知らせは、一番上に追加してください。日付、件名、本文、関連資料リンク、カテゴリを入れると見やすくなります。"
-  ],
-  [
-    "活動紹介",
-    "/pta-open-system/google-sites-html/03_activities.html",
-    "活動紹介について、PTA適正化推進委員会が公開情報と確認資料に基づいて整理したページです。"
-  ],
-  [
-    "資料室",
-    "/pta-open-system/google-sites-html/04_documents.html",
-    "PTAに関する資料を掲載します。PDFやGoogleドライブ上のファイルへのリンクを置くことができます。"
-  ],
-  [
-    "入会案内",
-    "/pta-open-system/google-sites-html/05_join.html",
-    "入会案内について、PTA適正化推進委員会が公開情報と確認資料に基づいて整理したページです。"
-  ],
-  [
-    "重要事項",
-    "/pta-open-system/google-sites-html/06_important.html",
-    "重要事項について、PTA適正化推進委員会が公開情報と確認資料に基づいて整理したページです。"
-  ],
-  [
-    "FAQ",
-    "/pta-open-system/google-sites-html/07_faq.html",
-    "ありません。PTAに加入しないことにより、児童・生徒が学校教育活動上の不利益を受けるものではありません。"
-  ],
-  [
-    "お問い合わせ",
-    "/pta-open-system/google-sites-html/08_contact.html",
-    "お問い合わせについて、PTA適正化推進委員会が公開情報と確認資料に基づいて整理したページです。"
   ],
   [
     "PTA内部事務の学校処理 全国法的整合性調査",

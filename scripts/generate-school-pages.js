@@ -279,7 +279,7 @@ ${gaTag()}
 <a class="skip-link" href="#main-content">本文へ移動</a>
 ${chrome.header}
 ${chrome.mobile}
-<nav class="breadcrumb" aria-label="現在地"><div class="wrap"><a href="/index.html">トップ</a><span>›</span><a href="/national-archive.html">全国資料館</a><span>›</span><span aria-current="page">${escapeHtml(record.schoolName)}</span></div></nav>
+<nav class="breadcrumb" aria-label="現在地"><div class="wrap"><a href="/">トップ</a><span>›</span><a href="/national-archive.html">全国資料館</a><span>›</span><span aria-current="page">${escapeHtml(record.schoolName)}</span></div></nav>
   <main class="archive-school-page" id="main-content">
 
     <header class="archive-hero">
@@ -355,7 +355,7 @@ ${renderParagraphs(record.evaluation, "個別評価は未実施です。掲載�
   </main>
 ${chrome.footer}
 <script src="/data/site-search-index.js?v=20260809-2"></script>
-<script src="/js/site.js?v=96"></script>
+<script src="/js/site.js?v=97"></script>
 </body>
 </html>`;
 }
