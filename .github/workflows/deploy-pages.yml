@@ -25,8 +25,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Refresh generated search index
-        run: node scripts/generate-search-index.js
+      - name: Refresh generated public artifacts
+        run: |
+          node scripts/generate-school-pages.js
+          node scripts/generate-national-archive.js
+          node scripts/enhance-public-pages.js
+          node scripts/generate-sitemap.js
+          node scripts/generate-search-index.js
 
       - name: Run full site checks
         run: npm test
@@ -39,6 +44,25 @@ jobs:
         with:
           source: .
           destination: ./_site
+
+      - name: Write public build manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          import os
+          from datetime import datetime, timezone
+
+          manifest = {
+              "source_commit": os.environ["GITHUB_SHA"],
+              "built_at": datetime.now(timezone.utc).isoformat(),
+              "builder": "github-actions/jekyll-build-pages",
+          }
+          with open("_site/site-manifest.json", "w", encoding="utf-8") as f:
+              json.dump(manifest, f, ensure_ascii=False, indent=2)
+              f.write("\n")
+          PY
 
       - name: Upload built public site
         uses: actions/upload-pages-artifact@v3
