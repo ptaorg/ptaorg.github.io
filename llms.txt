@@ -6,7 +6,7 @@ Canonical site: https://ptaorg.com/
 Publisher: PTA適正化推進委員会
 Language: Japanese
 Contact: https://ptaorg.com/contact.html
-Public canonical URLs listed in sitemaps: 211
+Public canonical URLs listed in sitemap.xml: 203
 Site overview review date: 2026-09-03
 
 All public HTML pages expose a unique canonical URL, description, indexing policy, publisher metadata, Open Graph metadata, JSON-LD and a text-first presentation. Source-document images, forms, maps and interactive tools remain available where they are part of the evidence or function of the page.
