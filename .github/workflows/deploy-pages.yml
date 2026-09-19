@@ -40,6 +40,25 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
+      - name: Write public build manifest source
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          import os
+          from datetime import datetime, timezone
+
+          manifest = {
+              "source_commit": os.environ["GITHUB_SHA"],
+              "built_at": datetime.now(timezone.utc).isoformat(),
+              "builder": "github-actions/jekyll-build-pages",
+          }
+          with open("site-manifest.json", "w", encoding="utf-8") as f:
+              json.dump(manifest, f, ensure_ascii=False, indent=2)
+              f.write("\n")
+          PY
+
       - name: Build public site with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
