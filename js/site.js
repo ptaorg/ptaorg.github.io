@@ -1,4 +1,4 @@
-/* site.js loader — 2026-09-06 v104 seo+measurement */
+/* site.js loader — 2026-09-06 v103 static-nav+audience */
 (function(){
   function load(src, id, done){
     if (document.getElementById(id)) { if (done) done(); return; }
