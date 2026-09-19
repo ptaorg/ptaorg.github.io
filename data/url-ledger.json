@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "updated": "2026-09-20",
+  "default": { "sitemap": "index", "search": "index" },
+  "entries": [
+    { "url": "/membership.html", "role": "current-canonical", "sitemap": "index", "search": "index", "successor": null },
+    { "url": "/pta-membership-optin.html", "role": "research-record", "sitemap": "index", "search": "index", "successor": "/membership.html" },
+    { "url": "/journal/pta-membership-optin-record.html", "role": "research-record", "sitemap": "index", "search": "index", "successor": "/membership.html" },
+    { "url": "/starter-kit/manual.html", "role": "old/reference", "sitemap": "reference", "search": "reference", "successor": "/membership.html" },
+    { "url": "/guide-parent.html", "role": "audience-guide", "sitemap": "index", "search": "index", "successor": "/membership.html" },
+    { "url": "/guide-pta.html", "role": "audience-guide", "sitemap": "index", "search": "index", "successor": "/membership.html" },
+    { "url": "/guide-board.html", "role": "audience-guide", "sitemap": "index", "search": "index", "successor": "/membership.html" }
+  ]
+}
