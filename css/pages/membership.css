@@ -1703,7 +1703,7 @@ body.membership-editorial .editorial-main.prose-page > h1 {
 
 body.membership-editorial .editorial-main.prose-page > .lead {
   max-width: 48rem;
-  margin: 0 0 42px;
+  margin: 0 auto 42px;
   color: #354657;
   font-size: clamp(1rem, 1.35vw, 1.1rem);
   line-height: 2;
