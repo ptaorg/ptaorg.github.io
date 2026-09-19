@@ -6,8 +6,8 @@ const SKIP_DIRS = new Set([".git", "_site", "node_modules", "assets", "css", "da
 const SKIP_FILES = new Set(["404.html"]);
 
 const PPC_LINK = /(<a\b[^>]*href=["\']\/ppc-points\.html["\'][^>]*>)PPC(<\/a>)/gi;
-const MEMBERSHIP_DESKTOP = /(<a class="nav-link global-membership-nav") href="\/pta-membership-optin\.html"/g;
-const MEMBERSHIP_MOBILE = /(<a class="mobile-link global-membership-nav") href="\/pta-membership-optin\.html"/g;
+const MEMBERSHIP_DESKTOP = /(<a class="nav-link(?: global-membership-nav)?") href="\/pta-membership-optin\.html"/g;
+const MEMBERSHIP_MOBILE = /(<a class="mobile-link(?: global-membership-nav)?") href="\/pta-membership-optin\.html"/g;
 const DESKTOP = '<a class="nav-link global-ppc-nav" href="/ppc-points.html">PPC</a>';
 const DESKTOP_NEXT = '<a class="nav-link global-ppc-nav" href="/ppc-points.html">個人情報</a>';
 const MOBILE = '<a class="mobile-link global-ppc-nav" href="/ppc-points.html">PPC</a>';
