@@ -11,6 +11,7 @@ exclude:
   - package.json
   - README.md
   - SITE_STRUCTURE.md
+  - URL_LEDGER.md
   - コミット手順.md
   - コミット手順.html
   - starter-kit/*.md
