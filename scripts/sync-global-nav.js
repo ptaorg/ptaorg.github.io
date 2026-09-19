@@ -5,7 +5,7 @@ const ROOT = path.resolve(__dirname, "..");
 const SKIP_DIRS = new Set([".git", "_site", "node_modules", "assets", "css", "data", "js", "scripts", "tools", ".claude", ".github", "docs", "source-candidates", "tests", "pta-open-system", "starter-kit"]);
 const SKIP_FILES = new Set(["404.html"]);
 
-const PPC_LINK = /(<a\b[^>]*href=["\']\/ppc-points\.html["\'][^>]*>)PPC(<\/a>)/gi;
+const PPC_LINK = /(<a\b[^>]*href=["\']\/ppc-points\.html["\'][^>]*>)PPC(<\/a>)/gi;\nconst MEMBERSHIP_DESKTOP = /(<a class="nav-link global-membership-nav") href="\/pta-membership-optin\.html"/g;\nconst MEMBERSHIP_MOBILE = /(<a class="mobile-link global-membership-nav") href="\/pta-membership-optin\.html"/g;
 const DESKTOP = '<a class="nav-link global-ppc-nav" href="/ppc-points.html">PPC</a>';
 const DESKTOP_NEXT = '<a class="nav-link global-ppc-nav" href="/ppc-points.html">個人情報</a>';
 const MOBILE = '<a class="mobile-link global-ppc-nav" href="/ppc-points.html">PPC</a>';
@@ -25,7 +25,7 @@ function walk(dir, out = []) {
 
 function sync(file, checkOnly) {
   const original = fs.readFileSync(file, "utf8");
-  const next = original.replaceAll(DESKTOP, DESKTOP_NEXT).replaceAll(MOBILE, MOBILE_NEXT).replace(PPC_LINK, "$1個人情報$2");
+  const next = original\n    .replaceAll(DESKTOP, DESKTOP_NEXT)\n    .replaceAll(MOBILE, MOBILE_NEXT)\n    .replace(PPC_LINK, "$1個人情報$2")\n    .replace(MEMBERSHIP_DESKTOP, "$1 href=\"/membership.html\"")\n    .replace(MEMBERSHIP_MOBILE, "$1 href=\"/membership.html\"");
   if (next !== original && !checkOnly) fs.writeFileSync(file, next, "utf8");
   return next !== original;
 }
@@ -34,7 +34,7 @@ const checkOnly = process.argv.includes("--check");
 const files = walk(ROOT);
 const changed = files.filter((file) => sync(file, checkOnly));
 if (checkOnly && changed.length) {
-  console.error("Global navigation still contains the old PPC label:");
+  console.error("Global navigation is out of sync (PPC label or membership entry):");
   for (const file of changed) console.error("-", path.relative(ROOT, file).replace(/\\/g, "/"));
   process.exit(1);
 }
