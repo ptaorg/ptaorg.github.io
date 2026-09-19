@@ -115,6 +115,41 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
+      - name: Verify core public entry points
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          fetch_public() {
+            local url="$1"
+            local output="$2"
+            local probe
+            for attempt in $(seq 1 24); do
+              probe="${url}?deployment=${GITHUB_SHA}&attempt=${attempt}&ts=$(date +%s)"
+              if curl --fail --silent --show-error --location \
+                --header 'Cache-Control: no-cache, no-store, max-age=0' \
+                --header 'Pragma: no-cache' \
+                "$probe" --output "$output"; then
+                return 0
+              fi
+              sleep 5
+            done
+            return 1
+          }
+
+          fetch_public 'https://ptaorg.com/' /tmp/home-live.html
+          grep --fixed-strings --quiet '個人情報' /tmp/home-live.html
+          grep --fixed-strings --quiet 'membership.html' /tmp/home-live.html
+
+          fetch_public 'https://ptaorg.com/membership.html' /tmp/membership-live.html
+          grep --fixed-strings --quiet 'PTA新制度スタートキット｜任意加入・会費・個人情報・学校との関係' /tmp/membership-live.html
+          grep --fixed-strings --quiet '現行の実務入口' /tmp/membership-live.html
+
+          fetch_public 'https://ptaorg.com/llms.txt' /tmp/llms-live.txt
+          grep --fixed-strings --quiet '2026-09-20' /tmp/llms-live.txt
+          grep --fixed-strings --quiet '/membership.html' /tmp/llms-live.txt
+          echo 'Core public entry-point verification passed.'
+
       - name: Verify public deployment
         id: verify
         shell: bash
