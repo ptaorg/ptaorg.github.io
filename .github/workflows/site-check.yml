@@ -28,5 +28,13 @@ jobs:
             echo "No package.json found; skipping dependency install."
           fi
 
+      - name: Refresh generated public artifacts
+        run: |
+          node scripts/generate-school-pages.js
+          node scripts/generate-national-archive.js
+          node scripts/enhance-public-pages.js
+          node scripts/generate-sitemap.js
+          node scripts/generate-search-index.js
+
       - name: Run site checks
         run: npm test
