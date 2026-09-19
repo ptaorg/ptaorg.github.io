@@ -23,7 +23,7 @@ jobs:
           grep -q 'data-global-nav-group="audience"' index.html
           grep -q '<div class="mobile-menu-label">立場別</div>' index.html
           grep -q "\['audience',audienceLinks\]" js/site.js
-          grep -q "SITE_JS_VERSION = '96'" scripts/legacy/static-global-nav-migration.py
+          grep -q "SITE_JS_VERSION = '97'" scripts/legacy/static-global-nav-migration.py
       - name: Commit changes
         run: |
           git config user.name 'github-actions[bot]'

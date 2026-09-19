@@ -32,7 +32,7 @@ jobs:
               s=p.read_text(encoding='utf-8')
               if '<header class="site-header"' in s:
                   count += 1
-                  if 'global-nav-v102' not in s or '/css/global-nav.css?v=20260906-1' not in s:
+                  if 'global-nav-v102' not in s or '/css/global-nav.css?v=20260906-2' not in s:
                       bad.append(str(p))
           site_js=Path('js/site.js').read_text(encoding='utf-8')
           if 'nav.innerHTML = desktopHtml' in site_js or 'mobileGroup(' in site_js:

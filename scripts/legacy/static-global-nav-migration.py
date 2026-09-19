@@ -2,7 +2,7 @@ from pathlib import Path
 import re
 
 ROOT = Path('.')
-SITE_JS_VERSION = '96'
+SITE_JS_VERSION = '97'
 GLOBAL_NAV_VERSION = '20260906-2'
 
 DESKTOP_NAV = '''<nav aria-label="主要ナビゲーション" class="desktop-nav global-nav-v102">
@@ -255,7 +255,7 @@ def migrate_site_js():
     if not pattern.search(text):
         raise RuntimeError('addGlobalNav function not found')
     text = pattern.sub(behavior_only_nav_function() + '\n\n  function installMobileSearch(){', text, count=1)
-    text = re.sub(r'/\* site\.js loader — .*? \*/', '/* site.js loader — 2026-09-06 v102 static-nav */', text, count=1)
+    text = re.sub(r'/\* site\.js loader — .*? \*/', '/* site.js loader — 2026-09-06 v104 seo+measurement */', text, count=1)
     path.write_text(text, encoding='utf-8')
 
 
