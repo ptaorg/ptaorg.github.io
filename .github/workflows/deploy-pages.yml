@@ -46,6 +46,47 @@ jobs:
           source: .
           destination: ./_site
 
+      - name: Inspect public artifact boundary
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f _site/site-manifest.json
+          forbidden=(
+            ".claude"
+            ".github"
+            "docs"
+            "scripts"
+            "tools"
+            "tests"
+            "source-candidates"
+            "pta-open-system"
+            "starter-kit/implementation"
+            "starter-kit/source"
+            "starter-kit/downloads"
+            "starter-kit/forms"
+            "starter-kit/pdf"
+            "starter-kit/templates"
+            "starter-kit/html"
+            "コミット手順.html"
+            "deploy-pages.yml"
+            "one-time-admin-materials-pr.yml"
+            "simplify-compliance-copy.yml"
+            "package.json"
+            "package-lock.json"
+          )
+          for path in "${forbidden[@]}"; do
+            if [ -e "_site/$path" ]; then
+              echo "Forbidden internal path in public artifact: _site/$path"
+              exit 1
+            fi
+          done
+          if find _site -type f -name '*.md' -print -quit | grep -q .; then
+            echo "Markdown work files leaked into public artifact."
+            find _site -type f -name '*.md' -print
+            exit 1
+          fi
+          echo "Public artifact boundary check passed."
+
       - name: Upload built public site
         uses: actions/upload-pages-artifact@v3
         with:
