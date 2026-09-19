@@ -1,6 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 const { ROOT, writeFileIfChanged } = require("./archive-utils");
+const URL_LEDGER = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "url-ledger.json"), "utf8"));
+const URL_ROLES = new Map(URL_LEDGER.entries.map((entry) => [entry.url, entry]));
 
 const SKIP_DIRS = new Set([".git", ".claude", "_site", "assets", "css", "data", "js", "scripts", "tools", "node_modules", "ホーム", "starter-kit"]);
 const SKIP_FILES = new Set(["404.html"]);
@@ -92,7 +94,14 @@ function pageRecord(filePath) {
 
 function main() {
   const records = collectHtmlFiles(ROOT)
-    .map(pageRecord)
+    .map((filePath) => {
+      const record = pageRecord(filePath);
+      if (!record) return null;
+      const role = URL_ROLES.get(record[1]);
+      if (role && role.search === "reference") return null;
+      if (role && role.search === "exclude") return null;
+      return record;
+    })
     .filter(Boolean)
     .sort((a, b) => {
       if (a[1] === "/index.html") return -1;
