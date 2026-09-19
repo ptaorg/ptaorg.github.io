@@ -11,3 +11,13 @@ exclude:
   - package.json
   - README.md
   - SITE_STRUCTURE.md
+  - コミット手順.md
+  - コミット手順.html
+  - starter-kit/*.md
+  - starter-kit/implementation/
+  - starter-kit/source/
+  - starter-kit/downloads/
+  - starter-kit/forms/
+  - starter-kit/pdf/
+  - starter-kit/templates/
+  - starter-kit/html/
