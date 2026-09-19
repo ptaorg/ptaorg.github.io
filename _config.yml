@@ -21,6 +21,7 @@ exclude:
   - starter-kit/pdf/
   - starter-kit/templates/
   - starter-kit/html/
+  - assets/compliance/README.md
   - .claude/
   - .github/
   - .visual-audit-request-20260711/
