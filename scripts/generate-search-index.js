@@ -3,8 +3,14 @@ const path = require("path");
 const { ROOT, writeFileIfChanged } = require("./archive-utils");
 const URL_LEDGER = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "url-ledger.json"), "utf8"));
 const URL_ROLES = new Map(URL_LEDGER.entries.map((entry) => [entry.url, entry]));
+function roleFor(url) {
+  const exact = URL_ROLES.get(url);
+  if (exact) return exact;
+  const rule = (URL_LEDGER.prefix_rules || []).find((entry) => url.startsWith(entry.prefix));
+  return rule || null;
+}
 
-const SKIP_DIRS = new Set([".git", ".claude", "_site", "assets", "css", "data", "js", "scripts", "tools", "node_modules", "ホーム", "starter-kit"]);
+const SKIP_DIRS = new Set([".git", ".claude", "_site", "assets", "css", "data", "js", "scripts", "tools", "node_modules", "ホーム"]);
 const SKIP_FILES = new Set(["404.html"]);
 
 function read(filePath) {
@@ -97,7 +103,7 @@ function main() {
     .map((filePath) => {
       const record = pageRecord(filePath);
       if (!record) return null;
-      const role = URL_ROLES.get(record[1]);
+      const role = roleFor(record[1]);
       if (role && role.search === "reference") return null;
       if (role && role.search === "exclude") return null;
       return record;
