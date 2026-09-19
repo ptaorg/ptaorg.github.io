@@ -49,6 +49,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          chmod -R u+w _site
           python3 - <<'PY'
           import json
           import os
