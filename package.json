@@ -17,9 +17,9 @@
     "generate:sitemap": "node scripts/generate-sitemap.js",
     "generate:search": "node scripts/generate-search-index.js",
     "enhance:pages": "node scripts/enhance-public-pages.js",
-    "maintenance:bump-site-js:dry-run": "node scripts/bump-site-js-version.js 96 --dry-run",
+    "maintenance:bump-site-js:dry-run": "node scripts/bump-site-js-version.js 97 --dry-run",
     "maintenance:bump-site-js": "node scripts/bump-site-js-version.js",
-    "maintenance:bump-site-js:check": "npm run maintenance:bump-site-js -- 96 && npm run check:site-js-version",
+    "maintenance:bump-site-js:check": "npm run maintenance:bump-site-js -- 97 && npm run check:site-js-version",
     "maintenance:site-js-cache": "npm run report:site-js-version && npm run maintenance:bump-site-js:dry-run && npm run maintenance:bump-site-js:check && npm run report:site-js-version && npm run check:all"
   }
 }

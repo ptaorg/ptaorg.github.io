@@ -2,6 +2,7 @@ from pathlib import Path
 import re
 
 ROOT = Path('.')
+SITE_JS_VERSION = '97'
 SKIP_DIRS = {'.git', 'node_modules', '_site', 'assets', 'css', 'data', 'js', 'scripts', 'tools', 'ホーム'}
 
 AUDIENCE_DESKTOP = '''<div class="nav-item has-dropdown" data-global-nav-group="audience"><a class="nav-link" href="/guide-parent.html" aria-haspopup="true" aria-expanded="false">立場別</a><div class="mega-menu audience-menu" aria-label="立場別メニュー"><div class="mega-col"><h4>立場から探す</h4><ul><li><a href="/guide-parent.html">保護者</a></li><li><a href="/guide-pta.html">PTA役員</a></li><li><a href="/guide-board.html">教育委員会・学校</a></li><li><a href="/guide-research.html">研究者・記者</a></li></ul></div></div></div>'''
@@ -37,7 +38,7 @@ def patch_html(path: Path):
         s = s.replace(SCHOOL_MOBILE_MARKER, AUDIENCE_MOBILE + '\n' + SCHOOL_MOBILE_MARKER, 1)
 
     s = re.sub(r'/css/global-nav\.css\?v=[A-Za-z0-9._-]+', '/css/global-nav.css?v=20260906-2', s)
-    s = re.sub(r'/js/site\.js\?v=[A-Za-z0-9._-]+', '/js/site.js?v=96', s)
+    s = re.sub(r'/js/site\.js\?v=[A-Za-z0-9._-]+', f'/js/site.js?v={SITE_JS_VERSION}', s)
 
     if s != original:
         path.write_text(s, encoding='utf-8')
@@ -56,7 +57,7 @@ def patch_site_js():
         s = s.replace(marker, AUDIENCE_LINKS_JS + marker, 1)
     s = s.replace("[['school',schoolLinks],['research',researchLinks],['reading',readingLinks]]",
                   "[['audience',audienceLinks],['school',schoolLinks],['research',researchLinks],['reading',readingLinks]]")
-    s = re.sub(r'/\* site\.js loader — .*? \*/', '/* site.js loader — 2026-09-06 v103 static-nav+audience */', s, count=1)
+    s = re.sub(r'/\* site\.js loader — .*? \*/', '/* site.js loader — 2026-09-06 v104 seo+measurement */', s, count=1)
     if s != original:
         path.write_text(s, encoding='utf-8')
 
@@ -65,7 +66,7 @@ def patch_static_migration_source():
     path = Path('scripts/legacy/static-global-nav-migration.py')
     s = path.read_text(encoding='utf-8')
     original = s
-    s = s.replace("SITE_JS_VERSION = '95'", "SITE_JS_VERSION = '96'")
+    s = re.sub(r"SITE_JS_VERSION = '\d+'", f"SITE_JS_VERSION = '{SITE_JS_VERSION}'", s, count=1)
     s = s.replace("GLOBAL_NAV_VERSION = '20260906-1'", "GLOBAL_NAV_VERSION = '20260906-2'")
 
     if 'data-global-nav-group="audience"' not in s:
@@ -111,9 +112,9 @@ def patch_package():
     path = Path('package.json')
     s = path.read_text(encoding='utf-8')
     original = s
-    s = s.replace('check-site-js-version.js 95', 'check-site-js-version.js 96')
-    s = s.replace('bump-site-js-version.js 95 --dry-run', 'bump-site-js-version.js 96 --dry-run')
-    s = s.replace('maintenance:bump-site-js -- 95', 'maintenance:bump-site-js -- 96')
+    s = re.sub(r'(check-site-js-version\.js )\d+', r'\g<1>' + SITE_JS_VERSION, s)
+    s = re.sub(r'(bump-site-js-version\.js )\d+( --dry-run)', r'\g<1>' + SITE_JS_VERSION + r'\g<2>', s)
+    s = re.sub(r'(maintenance:bump-site-js -- )\d+', r'\g<1>' + SITE_JS_VERSION, s)
     if s != original:
         path.write_text(s, encoding='utf-8')
 
@@ -142,7 +143,7 @@ def verify():
             'data-global-nav-group="audience"',
             '<div class="mobile-menu-label">立場別</div>',
             '/guide-parent.html', '/guide-pta.html', '/guide-board.html', '/guide-research.html',
-            '/css/global-nav.css?v=20260906-2', '/js/site.js?v=96'
+            '/css/global-nav.css?v=20260906-2', f'/js/site.js?v={SITE_JS_VERSION}'
         ]
         if any(x not in s for x in required):
             failures.append(str(p))

@@ -274,9 +274,9 @@ def update_generator():
 def update_package():
     path = Path('package.json')
     text = path.read_text(encoding='utf-8')
-    text = text.replace('check-site-js-version.js 94', 'check-site-js-version.js 95')
-    text = text.replace('bump-site-js-version.js 94 --dry-run', 'bump-site-js-version.js 95 --dry-run')
-    text = text.replace('maintenance:bump-site-js -- 94', 'maintenance:bump-site-js -- 95')
+    text = re.sub(r'(check-site-js-version\.js )\d+', r'\g<1>' + SITE_JS_VERSION, text)
+    text = re.sub(r'(bump-site-js-version\.js )\d+( --dry-run)', r'\g<1>' + SITE_JS_VERSION + r'\g<2>', text)
+    text = re.sub(r'(maintenance:bump-site-js -- )\d+', r'\g<1>' + SITE_JS_VERSION, text)
     path.write_text(text, encoding='utf-8')
 
 
