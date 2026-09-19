@@ -1,6 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 const { ROOT, SITE_ORIGIN, listSchoolData, writeFileIfChanged } = require("./archive-utils");
+const URL_LEDGER = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "url-ledger.json"), "utf8"));
+const URL_ROLES = new Map(URL_LEDGER.entries.map((entry) => [entry.url, entry]));
 
 const SKIP_DIRS = new Set([".git", ".claude", "_site", "node_modules", "#U30db#U30fc#U30e0", "assets", "css", "data", "js", "scripts", "tools", "ホーム", "starter-kit"]);
 const SKIP_FILES = new Set(["404.html", "PTA#U904b#U55b6#U9069#U6b63#U5316#U30ac#U30a4#U30c9#U30d6#U30c3#U30af_#U7b2c4#U7248_#U6539#U8a02#U672c#U6587.html"]);
@@ -90,6 +92,9 @@ function main() {
 
   for (const filePath of walkHtml(ROOT)) {
     const url = htmlFileToUrl(filePath);
+    const role = URL_ROLES.get(new URL(url).pathname);
+    if (role && role.sitemap === "reference") continue;
+    if (role && role.sitemap === "exclude") continue;
     upsertUrl(urls, url, fileLastmod(filePath, url, existingLastmods));
   }
 
