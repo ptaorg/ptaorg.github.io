@@ -62,4 +62,4 @@ All public HTML pages expose a unique canonical URL, description, indexing polic
 - [Legal framework map](https://ptaorg.com/law-map.html)
 - [Evidence checklist](https://ptaorg.com/evidence-checklist.html)
 - [Forms and submission documents](https://ptaorg.com/documents.html)
-- [PTA operations starter kit](https://ptaorg.com/starter-kit/manual.html)
+- [PTA operations starter kit（旧版・参考）](https://ptaorg.com/starter-kit/manual.html): 現行入口ではなく、旧版の本文・引用を確認するための保存ページ。
