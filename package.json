@@ -22,6 +22,8 @@
     "maintenance:bump-site-js:check": "npm run maintenance:bump-site-js -- 97 && npm run check:site-js-version",
     "maintenance:site-js-cache": "npm run report:site-js-version && npm run maintenance:bump-site-js:dry-run && npm run maintenance:bump-site-js:check && npm run report:site-js-version && npm run check:all",
     "sync:nav": "node scripts/sync-global-nav.js",
-    "check:nav": "node scripts/sync-global-nav.js --check"
+    "check:nav": "node scripts/sync-global-nav.js --check",
+    "sync:catalog": "npm run generate:sitemap && npm run generate:search",
+    "check:catalog": "npm run check:generated"
   }
 }
