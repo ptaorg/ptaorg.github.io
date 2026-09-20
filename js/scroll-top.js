@@ -87,9 +87,35 @@
     }
   }
 
+  function initHomeThreeMinuteEntry() {
+    if (!document.body || !document.body.classList.contains('home-page')) return;
+
+    var entry = document.querySelector('a[href="/audit/index.html"]');
+    if (!entry) return;
+
+    entry.setAttribute('href', '/pta/start.html');
+
+    var spans = entry.querySelectorAll('span');
+    if (spans.length < 2) return;
+
+    var label = spans[0].querySelector('small');
+    if (label) label.textContent = '初めての方へ';
+    spans[0].childNodes.forEach(function (node) {
+      if (node.nodeType === Node.TEXT_NODE && node.textContent.indexOf('3分セルフチェック') !== -1) {
+        node.textContent = node.textContent.replace('3分セルフチェック', '3分で読む');
+      }
+    });
+
+    var action = spans[1].firstChild;
+    if (action && action.nodeType === Node.TEXT_NODE) {
+      action.textContent = 'PTA問題の全体像を読む ';
+    }
+  }
+
   function initPageEnhancements() {
     initScrollTop();
     initHomeOptinDefinition();
+    initHomeThreeMinuteEntry();
   }
 
   if (document.readyState === 'loading') {
