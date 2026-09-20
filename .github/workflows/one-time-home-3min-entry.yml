@@ -1,0 +1,39 @@
+name: One-time homepage 3-minute entry
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  update-home-entry:
+    if: github.event.head_commit.message != 'chore: promote 3-minute reading entry from homepage [done]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Update homepage entry
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          old = '<a href="/audit/index.html"><span><small>初めての方へ</small>3分セルフチェック</span><span>立場を選んでチェックする <span aria-hidden="true">→</span></span></a>'
+          new = '<a href="/pta/start.html"><span><small>初めての方へ</small>3分で読む</span><span>PTA問題の全体像を読む <span aria-hidden="true">→</span></span></a>'
+          if old not in s:
+              raise SystemExit('target homepage entry not found; no change made')
+          p.write_text(s.replace(old, new, 1), encoding='utf-8')
+          PY
+      - name: Remove temporary workflow
+        run: rm -f .github/workflows/one-time-home-3min-entry.yml
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html .github/workflows/one-time-home-3min-entry.yml
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: promote 3-minute reading entry from homepage [done]"
+          git push
