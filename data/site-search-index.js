@@ -261,439 +261,439 @@ window.PTA_SITE_SEARCH_INDEX = [
     "全国教育委員会への照会結果",
     "/board-responses.html",
     "PTA入会、会費徴収、個人情報、教職員関与、学校施設利用について、各地の教育委員会等からの回答本文を公開用にマスキングして掲載しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【三重県】PTAに関する回答(全文)",
     "/board-responses/01-mie.html",
     "三重県によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:会費徴収・委任、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【京都府亀岡市】PTAに関する回答(全文)",
     "/board-responses/02-kyoto-kameoka.html",
     "京都府亀岡市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【京都府京都市】PTAに関する回答(全文)",
     "/board-responses/03-kyoto-kyoto.html",
     "京都府京都市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【兵庫県】PTAに関する回答(全文)",
     "/board-responses/04-hyogo.html",
     "兵庫県によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【兵庫県宝塚市】PTAに関する回答(全文)",
     "/board-responses/05-hyogo-takarazuka.html",
     "兵庫県宝塚市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【兵庫県西宮市】PTAに関する回答(全文)",
     "/board-responses/06-hyogo-nishinomiya.html",
     "兵庫県西宮市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【兵庫県西脇市】PTAに関する回答(全文)",
     "/board-responses/07-hyogo-nishiwaki.html",
     "兵庫県西脇市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【北海道厚岸町】PTAに関する回答(全文)",
     "/board-responses/08-hokkaido-akkeshi.html",
     "北海道厚岸町によるPTA関連照会への回答本文(個人情報等マスキング済み)。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【北海道厚沢部町】PTAに関する回答(全文)",
     "/board-responses/09-hokkaido-assabu.html",
     "北海道厚沢部町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【千葉県鎌ケ谷市】PTAに関する回答(全文)",
     "/board-responses/10-chiba-kamagaya.html",
     "千葉県鎌ケ谷市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【千葉県鴨川市】PTAに関する回答(全文)",
     "/board-responses/11-chiba-kamogawa.html",
     "千葉県鴨川市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【埼玉県三郷市】PTAに関する回答(全文)",
     "/board-responses/12-saitama-misato.html",
     "埼玉県三郷市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【埼玉県川口市】PTAに関する回答(全文)",
     "/board-responses/13-saitama-kawaguchi.html",
     "埼玉県川口市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、学校施設利用。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【埼玉県東秩父村】PTAに関する回答(全文)",
     "/board-responses/14-saitama-higashichichibu.html",
     "埼玉県東秩父村によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【埼玉県白岡市】PTAに関する回答(全文)",
     "/board-responses/15-saitama-shiraoka.html",
     "埼玉県白岡市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【埼玉県越谷市】PTAに関する回答(全文)",
     "/board-responses/16-saitama-koshigaya.html",
     "埼玉県越谷市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【大分県】PTAに関する回答(全文)",
     "/board-responses/17-oita.html",
     "大分県によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【大阪市】PTAに関する回答(全文)",
     "/board-responses/18-osaka-osaka.html",
     "大阪市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、学校施設利用。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【大阪府堺市】PTAに関する回答(全文)",
     "/board-responses/19-osaka-sakai.html",
     "大阪府堺市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:教職員関与、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【大阪府大阪市】PTAに関する回答(全文)",
     "/board-responses/20-osaka-osaka.html",
     "大阪府大阪市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【大阪府教育庁】PTAに関する回答(全文)",
     "/board-responses/21-osaka-kyoikucho.html",
     "大阪府教育庁によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【大阪府東大阪市】PTAに関する回答(全文)",
     "/board-responses/22-osaka-higashiosaka.html",
     "大阪府東大阪市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:会費徴収・委任、個人情報・名簿、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【大阪府茨木市】PTAに関する回答(全文)",
     "/board-responses/23-osaka-ibaraki.html",
     "大阪府茨木市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【宮城県仙台市（職務専念義務・PTA会費徴収事務）】PTAに関する回答(全文)",
     "/board-responses/24-miyagi-sendai.html",
     "宮城県仙台市（職務専念義務・PTA会費徴収事務）によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【宮城県南三陸町】PTAに関する回答(全文)",
     "/board-responses/25-miyagi-minamisanriku.html",
     "宮城県南三陸町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【宮城県大崎市】PTAに関する回答(全文)",
     "/board-responses/26-miyagi-osaki.html",
     "宮城県大崎市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【宮城県白石市】PTAに関する回答(全文)",
     "/board-responses/27-miyagi-shiroishi.html",
     "宮城県白石市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【山梨県西桂町教育委員会】PTAに関する回答(全文)",
     "/board-responses/28-yamanashi-nishikatsura.html",
     "山梨県西桂町教育委員会によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【岐阜県東白川村】PTAに関する回答(全文)",
     "/board-responses/29-gifu-higashishirakawa.html",
     "岐阜県東白川村によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【岡山県岡山市】PTAに関する回答(全文)",
     "/board-responses/30-okayama-okayama.html",
     "岡山県岡山市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【徳島県徳島市】PTAに関する回答(全文)",
     "/board-responses/31-tokushima-tokushima.html",
     "徳島県徳島市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【愛知県刈谷市】PTAに関する回答(全文)",
     "/board-responses/32-aichi-kariya.html",
     "愛知県刈谷市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【愛知県愛西市】PTAに関する回答(全文)",
     "/board-responses/33-aichi-aisai.html",
     "愛知県愛西市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【愛知県江南市教育委員会】PTAに関する回答(全文)",
     "/board-responses/34-aichi-konan.html",
     "愛知県江南市教育委員会によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【愛知県犬山市】PTAに関する回答(全文)",
     "/board-responses/35-aichi-inuyama.html",
     "愛知県犬山市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【愛知県蒲郡市】PTAに関する回答(全文)",
     "/board-responses/36-aichi-gamagori.html",
     "愛知県蒲郡市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【愛知県豊橋市】PTAに関する回答(全文)",
     "/board-responses/37-aichi-toyohashi.html",
     "愛知県豊橋市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【愛知県豊田市】PTAに関する回答(全文)",
     "/board-responses/38-aichi-toyota.html",
     "愛知県豊田市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【新潟県魚沼市】PTAに関する回答(全文)",
     "/board-responses/39-niigata-uonuma.html",
     "新潟県魚沼市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【東京都三鷹市】PTAに関する回答(全文)",
     "/board-responses/40-tokyo-mitaka.html",
     "東京都三鷹市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【東京都中央区】PTAに関する回答(全文)",
     "/board-responses/41-tokyo-chuo.html",
     "東京都中央区によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【東京都多摩市】PTAに関する回答(全文)",
     "/board-responses/42-tokyo-tama.html",
     "東京都多摩市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【東京都町田市】PTAに関する回答(全文)",
     "/board-responses/43-tokyo-machida.html",
     "東京都町田市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【栃木県さくら市】PTAに関する回答(全文)",
     "/board-responses/44-tochigi-sakura.html",
     "栃木県さくら市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【栃木県日光市】PTAに関する回答(全文)",
     "/board-responses/45-tochigi-nikko.html",
     "栃木県日光市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【椎葉村教育委員会】PTAに関する回答(全文)",
     "/board-responses/46-miyazaki-shiiba.html",
     "椎葉村教育委員会によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【沖縄県座間味村】PTAに関する回答(全文)",
     "/board-responses/47-okinawa-zamami.html",
     "沖縄県座間味村によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【滋賀県】PTAに関する回答(全文)",
     "/board-responses/48-shiga.html",
     "滋賀県によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【熊本県山江村】PTAに関する回答(全文)",
     "/board-responses/49-kumamoto-yamae.html",
     "熊本県山江村によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【神奈川県小田原市】PTAに関する回答(全文)",
     "/board-responses/50-kanagawa-odawara.html",
     "神奈川県小田原市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【神奈川県平塚市】PTAに関する回答(全文)",
     "/board-responses/51-kanagawa-hiratsuka.html",
     "神奈川県平塚市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【神奈川県相模原市】PTAに関する回答(全文)",
     "/board-responses/52-kanagawa-sagamihara.html",
     "神奈川県相模原市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【神奈川県逗子市】PTAに関する回答(全文)",
     "/board-responses/53-kanagawa-zushi.html",
     "神奈川県逗子市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【福岡県中間市】PTAに関する回答(全文)",
     "/board-responses/54-fukuoka-nakama.html",
     "福岡県中間市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【福岡県小竹町】PTAに関する回答(全文)",
     "/board-responses/55-fukuoka-kotake.html",
     "福岡県小竹町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【福岡県広川町】PTAに関する回答(全文)",
     "/board-responses/56-fukuoka-hirokawa.html",
     "福岡県広川町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【福島県三春町】PTAに関する回答(全文)",
     "/board-responses/57-fukushima-miharu.html",
     "福島県三春町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【福島県只見町】PTAに関する回答(全文)",
     "/board-responses/58-fukushima-tadami.html",
     "福島県只見町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【福島県国見町】PTAに関する回答(全文)",
     "/board-responses/59-fukushima-kunimi.html",
     "福島県国見町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【福島県富岡町】PTAに関する回答(全文)",
     "/board-responses/60-fukushima-tomioka.html",
     "福島県富岡町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【福島県須賀川市】PTAに関する回答(全文)",
     "/board-responses/61-fukushima-sukagawa.html",
     "福島県須賀川市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【茨城県利根町】PTAに関する回答(全文)",
     "/board-responses/62-ibaraki-tone.html",
     "茨城県利根町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【茨城県阿見市】PTAに関する回答(全文)",
     "/board-responses/63-ibaraki-ami.html",
     "茨城県阿見市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【長崎県小値賀町】PTAに関する回答(全文)",
     "/board-responses/64-nagasaki-ojika.html",
     "長崎県小値賀町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【長崎県雲仙市】PTAに関する回答(全文)",
     "/board-responses/65-nagasaki-unzen.html",
     "長崎県雲仙市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【長野県安曇野市】PTAに関する回答(全文)",
     "/board-responses/66-nagano-azumino.html",
     "長野県安曇野市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【長野県木祖村】PTAに関する回答(全文)",
     "/board-responses/67-nagano-kiso.html",
     "長野県木祖村によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【長野県茅野市】PTAに関する回答(全文)",
     "/board-responses/68-nagano-chino.html",
     "長野県茅野市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【青森県横浜町】PTAに関する回答(全文)",
     "/board-responses/69-aomori-yokohama.html",
     "青森県横浜町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教委指導・是正。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【静岡県静岡市】PTAに関する回答(全文)",
     "/board-responses/70-shizuoka-shizuoka.html",
     "静岡県静岡市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【高知県いの町】PTAに関する回答(全文)",
     "/board-responses/71-kochi-ino.html",
     "高知県いの町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "【鹿児島県鹿児島市】PTAに関する回答(全文)",
     "/board-responses/72-kagoshima-kagoshima.html",
     "鹿児島県鹿児島市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "判例検証の基準｜結論・認定事実・射程を分けて読む",
@@ -807,7 +807,7 @@ window.PTA_SITE_SEARCH_INDEX = [
     "研究者・記者の方へ",
     "/guide-research.html",
     "PTA問題を一次資料で検証する研究者・記者向けの方法論ページ。資料検証、法令、行政回答、学校文書、論考、引用時の確認事項を整理します。",
-    "current-canonical"
+    "audience-guide"
   ],
   [
     "PTA運営適正化ガイドライン｜文部科学省・PPC等の公的資料から整理",
@@ -825,79 +825,79 @@ window.PTA_SITE_SEARCH_INDEX = [
     "PTAと消費者契約法——事業者性・任意加入の説明・退会と会費返還を条文から整理",
     "/journal/consumer-contract.html",
     "PTAは消費者契約法の「事業者」に当たるのか。消費者庁逐条解説の例示、3条の説明義務、4条の誤認・困惑、10条の不利益条項、退会制限や会費返還、熊本PTA裁判の教訓までを条文に沿って整理します。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "重点論考",
     "/journal/core-papers.html",
     "PTA問題を、加入契約、学校保有情報、会費徴収、教職員関与、教育行政の責任という制度構造から読むための重点論考と一次資料への入口です。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "司法が突きつける現実——熊本PTA裁判と鹿児島地裁が示した「慣例の終わり」",
     "/journal/judicial-reality-pta-cases.html",
     "熊本PTA裁判（地裁は請求棄却・高裁で和解）は何を確定させ、何を確定させなかったのか。黙示の同意の限界、和解が各地の教育委員会通知を動かした経緯、判例引用時の正確性まで、PTA裁判例の実務的な読み方を整理します。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "学校によるPTA会費徴収はどこまで制度化できるか——川崎市型を「最強の反証例」として検証する",
     "/journal/kawasaki-pta-fee-school-duty.html",
     "教育委員会規則でPTA会費収納を校務として明文化した川崎市を、学校によるPTA会費徴収の最も強い制度化例として検証します。委任・同意だけでは足りないという審査順序、個人情報保護法61条、地方教育行政法21条・33条、教職員の職務、PTA自己徴収との比較を整理します。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "「PTA業務は公務ではない」とする文科省通話記録の読み方",
     "/journal/mext-not-public.html",
     "令和8年1月22日の文部科学省教職員制度課との通話記録として旧サイトに掲載していた内容を移植。公式通知・文書回答とは区別し、学校とPTAの連絡調整とPTA内部事務をどう読み分けるか整理します。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "給食費公会計化がPTA会費を制度へ巻き込んだ——美咲町学校徴収金管理規則の構造",
     "/journal/misaki-public-accounting-pta-fee.html",
     "岡山県美咲町が2026年3月に制定した学校徴収金管理規則を、同日制定の学校給食費条例、公会計と私費会計の条文差、人口・学校規模から分析します。給食費公会計化の制度設計にPTA会費徴収を巻き込み、従来慣行を学校・教職員の事務として固定した構造を検証します。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "PTA非会員情報・協力金・学校名簿の問題",
     "/journal/nonmember-info.html",
     "PTAに入らない家庭を学校名簿で特定し、協力金を依頼し、記念品や当番で区別する——その運用は何が問題か。学校保有情報の目的外利用、個人情報保護委員会資料、非会員児童の平等、「数えなくても回る」事業設計までを整理します。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "PTAオプトアウト加入の成立要件と実務リスク",
     "/journal/optout-invalidity.html",
     "「非加入届を出さない限りPTA会員」というオプトアウト方式・みなし加入は成立するのか。民法の申込みと承諾、黙示の合意の限界、会費・名簿・学校関与に連鎖するリスク、オプトインへの移行手順までを整理します。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "PTAをめぐる行政会議録・議事録――加入・会費・個人情報・学校関与に関する12資料",
     "/journal/pta-administrative-minutes.html",
     "PTAの任意加入、会費徴収、個人情報、教職員関与、学校施設・学校事務との関係が行政内部で議論された教育委員会・地方議会・社会教育委員会等の会議録12件を整理します。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "学校徴収金とPTA会費の不可分徴収——給食費と一緒の引き落としはなぜ問題か（総合的法的分析）",
     "/journal/pta-fee-collection-legal-analysis.html",
     "PTA会費が給食費・教材費と同じ通知・同じ口座で引き落とされる「不可分徴収」を、契約法・行政会計・服務法制・個人情報の四領域から総合分析。委任契約の限界、教職員と保護者を守る分離の設計、移行の手順までを整理します。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "PTA適正化の最終地点",
     "/journal/pta-final-point-ptf.html",
     "PTA適正化の最終地点は「会費をどう適法に集めるか」の先にある。固定会費型PTAが構造的に抱える緊張を分析し、年会費・恒常財産・役員ノルマ・学校資源利用を置かない最小構造フォーラム（PTF）という基底形の制度設計を提示します。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "PTA運営の法的構造と教育行政の確認責任",
     "/journal/pta-legal-structure-education-administration.html",
     "PTAの任意性と学校・PTAの公私分離を軸に、会費徴収、個人情報、教職員関与、学校施設及び教育行政の確認責任を法令・判例の射程に沿って整理する基幹論考です。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "参考文献・引用法令・判例一覧（総覧）",
     "/journal/pta-legal-structure-references.html",
     "『PTA運営の法的構造と教育行政の確認責任』で参照・引用した法令、判例、裁判資料、学術・実務資料を整理した総覧です。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "PTA加入はなぜ「オプトイン」なのか",
@@ -909,43 +909,43 @@ window.PTA_SITE_SEARCH_INDEX = [
     "地方公務員法35条とPTA事務｜教職員は勤務時間中にどこまで関与できるか",
     "/journal/pta-shokumu-sennen-gimu.html",
     "PTA会費・会計・会員名簿・役員選出などを教職員が勤務時間中に処理できるかを、地方公務員法35条、昭和39年旧自治省行政実例、文科省資料、中央教育審議会、2020年標準職務通知、2025年公会計化通知、2026年滋賀県監査から検証します。一次資料PDFと原資料画像も掲載。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "現行法体系と整合するPTA運営の基本モデル――明示的加入意思表示とPTA自己徴収の統一理論",
     "/journal/pta-unified-legal-theory.html",
     "PTAへの加入、会員情報、会費債権、徴収、未納管理、教職員労務、会計を一つの連続した処理として分析し、明示的な加入意思表示とPTA自身による会費徴収を統一して論証します。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "川崎市モデルも横浜市モデルも「詰み」——学校代行維持論の構造的限界",
     "/journal/school-collection-model-comparison.html",
     "学校によるPTA会費徴収を維持する二つの制度設計——委任を制度化する川崎市型と、加入届・同意を徹底する横浜市型——を比較し、双方が行き着く構造的限界と、個人情報保護委員会資料以降の出口（分離）を整理します。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "学校徴収金とPTA会費を分ける理由",
     "/journal/school-fee-separation.html",
     "給食費・教材費とPTA会費を同じ通知・同じ口座・同じ未納管理で扱うと何が壊れるのか。意思確認・会計・服務・個人情報・子どもの立場の五つの観点から混在の問題を整理し、通知・口座・未納管理を分ける実装手順と申入書につなぎます。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "学校経由の第三者提供同意とPTA名簿",
     "/journal/third-party-consent.html",
     "学校書類に「PTAへの情報提供に同意します」の欄を置けば名簿提供は適法になるのか。同意の特定性・任意性・撤回、加入意思との分離、FAQ Q3-3-2の「臨時的」の壁、直接取得という本筋までを整理します。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "働き方改革から見たPTA会費代理徴収の限界",
     "/journal/work-style-reform.html",
     "教員の働き方改革はPTA事務を「効率化して残す」のではなく「学校業務から外す」方向を指す。中教審の3分類、学校徴収金の公会計化、地方公務員法35条、DX化の落とし穴から、PTA会費代理徴収の限界と分離への手順を整理します。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "横浜市教育委員会通知「学教第1965号」の意義",
     "/journal/yokohama-notice-1965.html",
     "横浜市教育委員会通知 学教第1965号を、通知本文と別紙の一式として、PTA任意加入、入会届、個人情報同意、会費説明、非加入家庭配慮の根拠資料として整理します。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "最重要資料5件｜PTA運営を一次資料で確認する",
@@ -966,16 +966,16 @@ window.PTA_SITE_SEARCH_INDEX = [
     "current-canonical"
   ],
   [
-    "PTA任意加入と入会申込書｜自動加入・黙示の合意・成立要件",
+    "PTAの会員資格と入会手続｜任意加入・会費・個人情報・学校との関係",
     "/membership.html",
-    "PTA任意加入・強制加入・自動加入を、民法522条の成立要件と入会申込書の記録に分けて解説。黙示の合意、熊本PTA裁判の射程、加入・個人情報提供・口座振替の違いを整理します。",
+    "PTAの会員資格と入会手続を起点に、任意加入、会費、個人情報、学校との公私分離、制度移行を整理します。",
     "current-canonical"
   ],
   [
     "全国資料館｜自治体別PTA実物文書アーカイブ",
     "/national-archive.html",
     "自治体・学校ごとのPTA入会案内、申込書、会費徴収、個人情報、役員選出等の実物文書を、資料画像・元PDF・原本URLとともに確認できます。未掲載・不存在・未評価を区別して読むための基準も掲載しています。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "PTAと教職員・校長の関与｜会計・役員・職務専念義務",
@@ -1074,6 +1074,66 @@ window.PTA_SITE_SEARCH_INDEX = [
     "current-canonical"
   ],
   [
+    "PTA管理アプリ画面プレビュー",
+    "/pta-open-system/apps-script/admin-app-preview.html",
+    "これは静的プレビューです。実際の操作はApps Scriptに貼り付けた管理アプリ画面で行います。",
+    "current-canonical"
+  ],
+  [
+    "PTA管理アプリ",
+    "/pta-open-system/apps-script/Index.functional.html",
+    "PTAの加入申込み、会員確定、会員名簿を分離して管理するGoogle Apps Script向け管理画面の実装例です。",
+    "current-canonical"
+  ],
+  [
+    "トップページ",
+    "/pta-open-system/google-sites-html/01_top.html",
+    "PTAホームページについて、PTA適正化推進委員会が公開情報と確認資料に基づいて整理したページです。",
+    "current-canonical"
+  ],
+  [
+    "お知らせ",
+    "/pta-open-system/google-sites-html/02_news.html",
+    "新しいお知らせは、一番上に追加してください。日付、件名、本文、関連資料リンク、カテゴリを入れると見やすくなります。",
+    "current-canonical"
+  ],
+  [
+    "活動紹介",
+    "/pta-open-system/google-sites-html/03_activities.html",
+    "活動紹介について、PTA適正化推進委員会が公開情報と確認資料に基づいて整理したページです。",
+    "current-canonical"
+  ],
+  [
+    "資料室",
+    "/pta-open-system/google-sites-html/04_documents.html",
+    "PTAに関する資料を掲載します。PDFやGoogleドライブ上のファイルへのリンクを置くことができます。",
+    "current-canonical"
+  ],
+  [
+    "入会案内",
+    "/pta-open-system/google-sites-html/05_join.html",
+    "入会案内について、PTA適正化推進委員会が公開情報と確認資料に基づいて整理したページです。",
+    "current-canonical"
+  ],
+  [
+    "重要事項",
+    "/pta-open-system/google-sites-html/06_important.html",
+    "重要事項について、PTA適正化推進委員会が公開情報と確認資料に基づいて整理したページです。",
+    "current-canonical"
+  ],
+  [
+    "FAQ",
+    "/pta-open-system/google-sites-html/07_faq.html",
+    "ありません。PTAに加入しないことにより、児童・生徒が学校教育活動上の不利益を受けるものではありません。",
+    "current-canonical"
+  ],
+  [
+    "お問い合わせ",
+    "/pta-open-system/google-sites-html/08_contact.html",
+    "お問い合わせについて、PTA適正化推進委員会が公開情報と確認資料に基づいて整理したページです。",
+    "current-canonical"
+  ],
+  [
     "PTA内部事務の学校処理 全国法的整合性調査",
     "/pta-school-processing.html",
     "PTAから学校への委任、本人同意、校長判断、学校徴収金・準公金・私費会計規程を根拠に、公立学校がPTA内部事務を恒常処理する制度を全国比較。公法上の受任権限、地方公務員法35条、学校教育法37条、個人情報保護法61条・69条の順で検証します。",
@@ -1095,97 +1155,13 @@ window.PTA_SITE_SEARCH_INDEX = [
     "根拠資料・調査方法",
     "/research-index.html",
     "PTA問題を一次資料で検証するため、法制度、行政回答、学校・PTA文書、判例、制度史、資料確認の基準を整理しています。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "正しいPTA運営とは何か｜学校とPTAの公私分離",
     "/school-pta-separation.html",
     "自動加入、オプトアウト、学校徴収金との抱合せ徴収、学校名簿利用、教職員によるPTA会計・役員就任などを、学校とPTAの公私分離という一つの構造から整理します。",
     "current-canonical"
-  ],
-  [
-    "情報公開・監査確認項目｜PTA適正運営スターターキット v1.0",
-    "/starter-kit/audit.html",
-    "情報公開・監査確認項目について、PTA適正化推進委員会が公開情報と確認資料に基づいて整理したページです。",
-    "old/reference"
-  ],
-  [
-    "更新履歴｜PTA適正運営スターターキット v1.0",
-    "/starter-kit/changelog.html",
-    "更新履歴について、PTA適正化推進委員会が公開情報と確認資料に基づいて整理したページです。",
-    "old/reference"
-  ],
-  [
-    "詳細チェックリスト｜PTA適正運営スターターキット v1.0",
-    "/starter-kit/checklist.html",
-    "詳細チェックリストについて、PTA適正化推進委員会が公開情報と確認資料に基づいて整理したページです。",
-    "old/reference"
-  ],
-  [
-    "ダウンロード｜PTA適正運営スターターキット v1.0",
-    "/starter-kit/downloads.html",
-    "公開・配布で使うファイルは下の3点です。学校や教育委員会に渡す場合はPDF印刷版、サイト管理や改訂作業では総合ZIP、会員台帳の実務運用ではXLSXを使います。",
-    "old/reference"
-  ],
-  [
-    "Google実装版｜PTA適正運営スターターキット v1.0",
-    "/starter-kit/google-implementation.html",
-    "会員台帳、会費管理、退会管理、役員承諾、権限管理、削除予定、ログ、フォーム設計、コード設定を分けます。会員台帳は入会申込に基づく加入者のみを対象にします。",
-    "old/reference"
-  ],
-  [
-    "マニュアル本文｜PTA適正運営スターターキット v1.0",
-    "/starter-kit/manual.html",
-    "PTAは学校の内部組織ではなく、任意加入の団体です。加入は契約であり、入会する意思を示した保護者等とPTAとの間で成立します。学校に在籍したこと、入学説明会に出席したこと、書類を提出しなかったこと、会費が引き落とされたことだけで当然に会員になる設計は採用しません。",
-    "old/reference"
-  ],
-  [
-    "PDF印刷版｜PTA適正運営スターターキット v1.0",
-    "/starter-kit/print.html",
-    "PDF本体は容量が大きいため、このGitHub Pages公開ページでは構成を示します。配布用PDFは正式ZIPまたはRelease添付で管理します。",
-    "old/reference"
-  ],
-  [
-    "QA・検査結果｜PTA適正運営スターターキット v1.0",
-    "/starter-kit/qa.html",
-    "PDF本体、ZIP本体、Apps Script本体、スプレッドシート雛形などの大容量・バイナリ系ファイルは、GitHub書き込み制約を確認しながら別コミットまたはRelease添付で扱うのが安全です。",
-    "old/reference"
-  ],
-  [
-    "反論対応集｜PTA適正運営スターターキット v1.0",
-    "/starter-kit/rebuttals.html",
-    "任意加入を明示した結果として加入者が減るのであれば、それは従来の運営が十分に説明できていなかったということです。任意加入はPTAを弱めるためではなく、説明できる会員制団体へ立て直すための前提です。",
-    "old/reference"
-  ],
-  [
-    "移行ロードマップ｜PTA適正運営スターターキット v1.0",
-    "/starter-kit/roadmap.html",
-    "移行ロードマップについて、PTA適正化推進委員会が公開情報と確認資料に基づいて整理したページです。",
-    "old/reference"
-  ],
-  [
-    "PTA会則モデル｜PTA適正運営スターターキット v1.0",
-    "/starter-kit/rules.html",
-    "本会の会員は、本会の目的に賛同し、所定の入会申込を行い、本会がこれを受け付けた保護者、教職員その他本会が認めた者とする。",
-    "old/reference"
-  ],
-  [
-    "学校・教育委員会向け説明書｜PTA適正運営スターターキット v1.0",
-    "/starter-kit/school-board.html",
-    "PTA活動への協力と、PTA内部事務の代行は別です。学校は児童生徒の教育活動を行う機関であり、PTAの加入契約、会員台帳、会費請求、役員選任、内部会計を当然に処理する機関ではありません。",
-    "old/reference"
-  ],
-  [
-    "一次資料リンク集｜PTA適正運営スターターキット v1.0",
-    "/starter-kit/sources.html",
-    "法令や通知は改正・更新されることがあります。公開資料として引用する場合は、引用時点の最新版を確認してください。判例や裁判例は事案ごとの判断であり、単純な標語として使わず、何が争点で何が判断されたかを確認して用います。",
-    "old/reference"
-  ],
-  [
-    "標準書式14種｜PTA適正運営スターターキット v1.0",
-    "/starter-kit/templates.html",
-    "ここに掲げる書式は、PTAが自ら会員に対して説明し、PTA自身の窓口で取得・管理するための標準形です。学校提出、担任回収、児童経由回収、学校名簿照合を前提に改変しないでください。",
-    "old/reference"
   ],
   [
     "提出文書キット",
