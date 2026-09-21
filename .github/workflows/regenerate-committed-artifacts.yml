@@ -1,0 +1,35 @@
+name: Regenerate committed artifacts
+on:
+  push:
+    paths:
+      - ".github/workflows/regenerate-committed-artifacts.yml"
+permissions:
+  contents: write
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: |
+          node scripts/generate-school-pages.js
+          node scripts/sync-global-nav.js
+          node scripts/generate-national-archive.js
+          node scripts/enhance-public-pages.js
+          node scripts/generate-sitemap.js
+          node scripts/generate-search-index.js
+      - run: npm run check:all
+      - name: Commit generated artifacts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '4189826+github-actions[bot]@users.noreply.github.com'
+          git add -A -- '*.html' 'sitemap.xml' 'data/site-search-index.js'
+          if git diff --cached --quiet; then
+            echo "No generated artifact changes."
+            exit 0
+          fi
+          git commit -m "chore: commit regenerated site artifacts"
+          git push
