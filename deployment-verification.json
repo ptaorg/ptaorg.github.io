@@ -1,23 +1,32 @@
 {
-  "commit": "9a0d737dd90dbaf51ce27d622d31f7f22a961f1b",
-  "verified_at": "2026-09-19T20:35:30.291853+00:00",
+  "commit": "4a68ec658c34fa17b3e85e2a69f07bc3e732a2d5",
+  "verified_at": "2026-09-21T19:50:48.278980+00:00",
   "support_page": "https://ptaorg.com/support.html",
-  "support_probe_url": "https://ptaorg.com/support.html?deployment=9a0d737dd90dbaf51ce27d622d31f7f22a961f1b&attempt=1&ts=1789850128",
+  "support_probe_url": "https://ptaorg.com/support.html",
   "expected_paypay_url": "https://qr.paypay.ne.jp/p2p01_u6jLEEem3zVb9ZRy",
   "detected_paypay_url": "https://qr.paypay.ne.jp/p2p01_u6jLEEem3zVb9ZRy",
   "support_verified": true,
+  "support_reachable": true,
   "report_page": "https://ptaorg.com/report.html",
-  "report_probe_url": "https://ptaorg.com/report.html?deployment=9a0d737dd90dbaf51ce27d622d31f7f22a961f1b&attempt=1&ts=1789850128",
+  "report_probe_url": "https://ptaorg.com/report.html",
   "report_revision": "report-20260809-3",
   "report_verified": true,
+  "report_reachable": true,
   "migration_pages": {
     "mext_record_verified": true,
+    "mext_record_reachable": true,
     "duty_journal_redirect_verified": true,
+    "duty_journal_redirect_reachable": true,
     "duty_root_redirect_verified": true,
+    "duty_root_redirect_reachable": true,
     "fee_redirect_verified": true,
+    "fee_redirect_reachable": true,
     "research_sitemap_verified": true,
+    "research_sitemap_reachable": true,
     "site_search_index_verified": true,
-    "verified": true
+    "site_search_index_reachable": true
   },
+  "content_verified": true,
+  "public_reachable": true,
   "verified": true
 }
