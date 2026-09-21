@@ -5,7 +5,7 @@ const ROOT = path.resolve(__dirname, "..");
 const SKIP_DIRS = new Set([".git", "_site", "node_modules", "assets", "css", "data", "js", "scripts", "tools", ".claude", ".github", "docs", "source-candidates", "tests", "pta-open-system", "starter-kit"]);
 const SKIP_FILES = new Set(["404.html"]);
 
-const PPC_LINK = /(<a\\b[^>]*href=["\\\x27]\\/ppc-points\\.html["\\\x27][^>]*>)(?:PPC|個人情報)(<\\/a>)/gi;
+const PPC_LINK = /(<a\b[^>]*href=["']\/ppc-points\.html["'][^>]*>)(?:PPC|個人情報)(<\/a>)/gi;
 const MEMBERSHIP_DESKTOP = /(<a class="nav-link(?: global-membership-nav)?") href="\/pta-membership-optin\.html"/g;
 const MEMBERSHIP_MOBILE = /(<a class="mobile-link(?: global-membership-nav)?") href="\/pta-membership-optin\.html"/g;
 const DESKTOP = '<a class="nav-link global-ppc-nav" href="/ppc-points.html">PPC</a>';
