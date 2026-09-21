@@ -30,7 +30,7 @@ function sync(file, checkOnly) {
   const next = original
     .replaceAll(DESKTOP, DESKTOP_NEXT)
     .replaceAll(MOBILE, MOBILE_NEXT)
-    .replace(PPC_LINK, "$1個人情報$2")
+    .replace(PPC_LINK, "$1PPC$2")
     .replace(MEMBERSHIP_DESKTOP, "$1 href=\"/membership.html\"")
     .replace(MEMBERSHIP_MOBILE, "$1 href=\"/membership.html\"");
   if (next !== original && !checkOnly) fs.writeFileSync(file, next, "utf8");
