@@ -142,7 +142,7 @@ jobs:
           grep --fixed-strings --quiet 'membership.html' /tmp/home-live.html
 
           fetch_public 'https://ptaorg.com/membership.html' /tmp/membership-live.html
-          grep --fixed-strings --quiet 'PTA新制度スタートキット｜任意加入・会費・個人情報・学校との関係' /tmp/membership-live.html
+          grep --fixed-strings --quiet 'PTAの会員資格と入会手続｜任意加入・会費・個人情報・学校との関係｜PTA適正化推進委員会' /tmp/membership-live.html
           grep --fixed-strings --quiet '現行の実務入口' /tmp/membership-live.html
 
           fetch_public 'https://ptaorg.com/llms.txt' /tmp/llms-live.txt
