@@ -120,34 +120,48 @@ jobs:
         run: |
           set -euo pipefail
 
-          fetch_public() {
+          verify_content() {
             local url="$1"
             local output="$2"
+            shift 2
+            local attempt
             local probe
-            for attempt in $(seq 1 24); do
+            for attempt in $(seq 1 60); do
               probe="${url}?deployment=${GITHUB_SHA}&attempt=${attempt}&ts=$(date +%s)"
               if curl --fail --silent --show-error --location \
                 --header 'Cache-Control: no-cache, no-store, max-age=0' \
                 --header 'Pragma: no-cache' \
                 "$probe" --output "$output"; then
-                return 0
+                local ok=true
+                local needle
+                for needle in "$@"; do
+                  if ! grep --fixed-strings --quiet "$needle" "$output"; then
+                    ok=false
+                    break
+                  fi
+                done
+                if [[ "$ok" == 'true' ]]; then
+                  return 0
+                fi
               fi
               sleep 5
             done
+            echo "Public verification timed out: $url" >&2
             return 1
           }
 
-          fetch_public 'https://ptaorg.com/' /tmp/home-live.html
-          grep --fixed-strings --quiet 'PPC' /tmp/home-live.html
-          grep --fixed-strings --quiet 'membership.html' /tmp/home-live.html
+          verify_content 'https://ptaorg.com/' /tmp/home-live.html \
+            'PPC' \
+            'membership.html'
 
-          fetch_public 'https://ptaorg.com/membership.html' /tmp/membership-live.html
-          grep --fixed-strings --quiet 'PTAの会員資格と入会手続｜任意加入・会費・個人情報・学校との関係｜PTA適正化推進委員会' /tmp/membership-live.html
-          grep --fixed-strings --quiet '現行の実務入口' /tmp/membership-live.html
+          verify_content 'https://ptaorg.com/membership.html' /tmp/membership-live.html \
+            'PTAの会員資格と入会手続｜任意加入・会費・個人情報・学校との関係｜PTA適正化推進委員会' \
+            '現行の実務入口'
 
-          fetch_public 'https://ptaorg.com/llms.txt' /tmp/llms-live.txt
-          grep --fixed-strings --quiet '2026-09-20' /tmp/llms-live.txt
-          grep --fixed-strings --quiet '/membership.html' /tmp/llms-live.txt
+          verify_content 'https://ptaorg.com/llms.txt' /tmp/llms-live.txt \
+            '2026-09-20' \
+            '/membership.html'
+
           echo 'Core public entry-point verification passed.'
 
       - name: Verify public deployment
