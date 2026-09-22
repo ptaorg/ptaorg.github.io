@@ -52,6 +52,8 @@ npm run generate:search
 npm run generate:all
 ```
 
+`generate:all` は、学校別ページ、グローバルナビ、全国資料館、公開ページ補正、サイトマップ、検索インデックスを順に更新します。これは更新用コマンドであり、検査用コマンドではありません。
+
 ## 生成ファイルの確認
 
 生成結果がコミット済みファイルと一致しているかを確認します。
@@ -62,14 +64,18 @@ npm run check:generated
 
 ## 自動チェック
 
-Pull Request と `main` への push では、GitHub Actions の `Site checks` が `npm test` を実行します。`npm test` は `npm run check:all` の別名です。
+Pull Request と `main` への push では、GitHub Actions の `Site checks` が、チェックアウト直後の状態に対して `npm test` を実行します。`npm test` は `npm run check:all` の別名です。
+
+CIでは、`npm test` より前に生成ファイルやナビゲーションを更新しません。コミット済み生成物が生成元とずれている場合は、`check:generated` や `check:nav` を失敗させて差分を見える状態にします。検査終了後は `git diff --exit-code` で、検査自体が追跡ファイルを書き換えていないことも確認します。
+
+ハーネス自体の最低条件は `npm run check:harness` で確認します。AI・作業者向け編集原則はリポジトリ直下の `AGENTS.md` を正とします。
 
 ## `site.js` のキャッシュ更新
 
 `js/site.js` を更新した場合、HTML側の読み込み指定も更新します。
 
 ```bash
-npm run maintenance:bump-site-js -- 89
+npm run maintenance:bump-site-js -- 97
 ```
 
 数字は `js/site.js` の版数に合わせて変更します。
@@ -85,4 +91,4 @@ npm run maintenance:bump-site-js -- 89
 - 大きなHTMLの置換は、本文変更とキャッシュ更新を分けて行う。
 - 一回限りの置換スクリプトは `scripts/legacy/` などへ分け、構造説明Markdownに混在させない。
 
-最終更新: 2026-06-29
+最終更新: 2026-09-22
