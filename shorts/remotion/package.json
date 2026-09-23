@@ -1,0 +1,16 @@
+{
+  "name": "pta-shorts-remotion",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.tsx",
+    "render": "remotion render src/index.tsx PTAShort"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.527",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.527"
+  }
+}
