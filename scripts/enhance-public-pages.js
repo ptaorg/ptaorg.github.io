@@ -17,6 +17,8 @@ const SKIP_DIRS = new Set([
   "js",
   "scripts",
   "tools",
+  "starter-kit",
+  "pta-open-system",
   "ホーム"
 ]);
 const SKIP_FILES = new Set([
@@ -204,6 +206,30 @@ function addMetaProperty(html, property, content) {
   return addHeadMarkup(html, `<meta property="${property}" content="${escapeAttribute(content)}">`);
 }
 
+function dedupePattern(html, pattern) {
+  let seen = false;
+  return html.replace(pattern, (match) => {
+    if (seen) return "";
+    seen = true;
+    return match;
+  });
+}
+
+function dedupeHeadSingletons(html) {
+  let next = html;
+  const patterns = [
+    /<meta\\b(?=[^>]*\\bname=["\']description["\'])[^>]*>\\s*/gi,
+    /<meta\\b(?=[^>]*\\bname=["\']robots["\'])[^>]*>\\s*/gi,
+    /<meta\\b(?=[^>]*\\bname=["\']author["\'])[^>]*>\\s*/gi,
+    /<link\\b(?=[^>]*\\brel=["\']canonical["\'])[^>]*>\\s*/gi,
+    /<link\\b(?=[^>]*\\brel=["\']alternate["\'])(?=[^>]*\\bhref=["\']\\/llms\\.txt["\'])[^>]*>\\s*/gi,
+  ];
+  for (const property of ["og:site_name","og:locale","og:type","og:title","og:description","og:url","article:modified_time"]) {
+    patterns.push(new RegExp(`<meta\\\\b(?=[^>]*\\\\bproperty=["\']${property}["\'])[^>]*>\\\\s*`, "gi"));
+  }
+  for (const pattern of patterns) next = dedupePattern(next, pattern);
+  return next;
+}
 function reviewDateFor(html) {
   const bodyDate = html.match(/<body\b[^>]*\bdata-reviewed=["'](\d{4}-\d{2}-\d{2})["']/i);
   if (bodyDate) return bodyDate[1];
@@ -292,7 +318,7 @@ function enhance(filePath, checkOnly) {
   const name = pageName(original);
   const description = descriptionFor(rel, original);
   const reviewDate = reviewDateFor(original);
-  let html = original;
+  let html = dedupeHeadSingletons(original);
   html = upsertDescription(html, description);
   html = upsertRobots(html);
   html = upsertCanonical(html, url);
