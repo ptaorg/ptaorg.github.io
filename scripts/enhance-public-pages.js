@@ -246,7 +246,7 @@ function upsertOpenGraph(html, rel, url, title, description, reviewDate) {
   next = addMetaProperty(next, "og:title", title);
   next = addMetaProperty(next, "og:description", description);
   next = addMetaProperty(next, "og:url", url);
-  if (/<meta\s+property=["']og:type["'][^>]*content=["']article["']/i.test(next)) {
+  if (/<meta\b(?=[^>]*\bproperty=["']og:type["'])(?=[^>]*\bcontent=["']article["'])[^>]*>/i.test(next)) {
     next = addMetaProperty(next, "article:modified_time", reviewDate);
   }
   return next;
