@@ -1,0 +1,55 @@
+name: Generate PTA Shorts v2
+
+on:
+  push:
+    branches:
+      - shorts-v2-showcase
+    paths:
+      - "shorts-v2/**"
+      - ".github/workflows/generate-shorts-v2.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install FFmpeg and Japanese fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-noto-cjk
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: shorts-v2/requirements.txt
+
+      - name: Install renderer dependencies
+        run: pip install -r shorts-v2/requirements.txt
+
+      - name: Render first high-quality sample
+        run: python shorts-v2/render.py
+
+      - name: Inspect output
+        run: |
+          ffprobe -hide_banner shorts-v2/output/membership-001-v2.mp4
+          ls -lh shorts-v2/output/
+
+      - name: Upload sample and QC files
+        uses: actions/upload-artifact@v4
+        with:
+          name: pta-shorts-v2-membership-001
+          path: |
+            shorts-v2/output/membership-001-v2.mp4
+            shorts-v2/output/membership-001-contact-sheet.jpg
+            shorts-v2/output/membership-001-metadata.json
+          if-no-files-found: error
+          retention-days: 14
