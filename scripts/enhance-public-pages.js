@@ -162,20 +162,20 @@ function addHeadMarkup(html, markup) {
 
 function upsertDescription(html, description) {
   if (/<meta\b(?=[^>]*\bname=["']description["'])[^>]*>/i.test(html)) return html;
-  return addHeadMarkup(html, \`<meta name="description" content="\${escapeAttribute(description)}">\`);
+  return addHeadMarkup(html, `<meta name="description" content="${escapeAttribute(description)}">`);
 }
 
 function upsertRobots(html) {
   const robots = /<meta\b(?=[^>]*\bname=["']robots["'])[^>]*>/i;
   if (robots.test(html)) {
-    return html.replace(robots, \`<meta name="robots" content="\${ROBOTS_VALUE}">\`);
+    return html.replace(robots, `<meta name="robots" content="${ROBOTS_VALUE}">`);
   }
-  return addHeadMarkup(html, \`<meta name="robots" content="\${ROBOTS_VALUE}">\`);
+  return addHeadMarkup(html, `<meta name="robots" content="${ROBOTS_VALUE}">`);
 }
 
 function upsertCanonical(html, url) {
   if (/<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/i.test(html)) return html;
-  return addHeadMarkup(html, \`<link rel="canonical" href="\${escapeAttribute(url)}">\`);
+  return addHeadMarkup(html, `<link rel="canonical" href="${escapeAttribute(url)}">`);
 }
 
 function upsertDiscoveryMetadata(html) {
