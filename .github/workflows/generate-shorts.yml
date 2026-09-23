@@ -7,13 +7,29 @@ on:
         description: "Topic ID (blank = all)"
         required: false
         default: ""
+      voice_provider:
+        description: "Narration engine"
+        required: false
+        type: choice
+        options:
+          - voicevox
+          - auto
+          - gtts
+        default: voicevox
+  push:
+    branches:
+      - shorts-remotion-v2
+    paths:
+      - "shorts/**"
+      - ".github/workflows/generate-shorts.yml"
+
 permissions:
   contents: read
 
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 35
 
     steps:
       - name: Checkout
@@ -22,7 +38,16 @@ jobs:
       - name: Install ffmpeg and Japanese fonts
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg fonts-noto-cjk
+          sudo apt-get install -y ffmpeg fonts-noto-cjk curl
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Remotion dependencies
+        working-directory: shorts/remotion
+        run: npm install --no-audit --no-fund
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -34,20 +59,41 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r shorts/requirements.txt
 
-      - name: Generate Shorts
+      - name: Start VOICEVOX
+        if: ${{ github.event_name == 'push' || inputs.voice_provider != 'gtts' }}
         run: |
-          if [ -n "${{ inputs.topic_id }}" ]; then
-            python shorts/generate.py --topic "${{ inputs.topic_id }}"
+          docker pull voicevox/voicevox_engine:cpu-latest
+          docker run -d --name voicevox -p 50021:50021 voicevox/voicevox_engine:cpu-latest
+          for i in $(seq 1 60); do
+            if curl -fsS http://127.0.0.1:50021/version >/dev/null; then
+              echo "VOICEVOX is ready"
+              exit 0
+            fi
+            sleep 2
+          done
+          docker logs voicevox
+          exit 1
+
+      - name: Generate Shorts
+        env:
+          VOICEVOX_URL: http://127.0.0.1:50021
+        run: |
+          TOPIC="${{ inputs.topic_id }}"
+          PROVIDER="${{ inputs.voice_provider }}"
+          if [ -z "$PROVIDER" ]; then PROVIDER="voicevox"; fi
+          if [ -n "$TOPIC" ]; then
+            python shorts/generate.py --topic "$TOPIC" --voice-provider "$PROVIDER"
           else
-            python shorts/generate.py
+            python shorts/generate.py --voice-provider "$PROVIDER"
           fi
 
-      - name: Upload generated videos
+      - name: Upload generated videos and previews
         uses: actions/upload-artifact@v4
         with:
-          name: pta-shorts
+          name: pta-shorts-v2
           path: |
             shorts/output/*.mp4
             shorts/output/*.json
+            shorts/output/*-previews/*.jpg
           if-no-files-found: error
-          retention-days: 14
+          retention-days: 7
