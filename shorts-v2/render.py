@@ -79,8 +79,8 @@ def hook(seg,P,page):
     d.text((72,382),"入学 ＝",font=font(112),fill=WHITE,stroke_width=2,stroke_fill=(0,0,0,80))
     d.text((72,520),"PTA会員？",font=font(112),fill=WHITE,stroke_width=2,stroke_fill=(0,0,0,80))
     d.rounded_rectangle((72,705,850,810),28,fill=(185,28,28,225)); d.text((106,727),"まず、心配しなくて大丈夫",font=font(40),fill=WHITE)
-    d.text((74,1360),"強制加入の不安を煽る動画ではありません",font=font(30),fill=(255,255,255,225))
-    d.text((74,1418),"まず整理すると、心配はかなり減らせます。",font=font(31),fill=WHITE)
+    d.text((74,1360),"まずは安心してください。",font=font(30),fill=(255,255,255,225))
+    d.text((74,1418),"",font=font(31),fill=WHITE)
     return noise(b,2.0)
 
 def split(seg,P,page):
@@ -180,8 +180,8 @@ def reassure(seg,P,page):
 
 def cta(seg,P,page):
     b=Image.new("RGBA",(W,H),rgb(DARK)+(255,)); d=ImageDraw.Draw(b); tag(d)
-    d.text((72,260),"会費・個人情報・役員選出まで",font=font(49),fill=WHITE)
-    d.text((72,340),"まとめて確認できます",font=font(62),fill=(244,231,166))
+    d.text((72,260),"会費や役員のことも",font=font(49),fill=WHITE)
+    d.text((72,340),"サイトでわかりやすく解説",font=font(62),fill=(244,231,166))
     if page:
         p=ImageOps.fit(page,(850,650),Image.Resampling.LANCZOS,centering=(.5,.18)); b.paste(p,(115,500),mask(p.size,24))
     else:
