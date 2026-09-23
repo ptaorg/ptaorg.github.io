@@ -9,7 +9,7 @@
     "check:site-js-version": "node scripts/check-site-js-version.js 97",
     "check:content": "node scripts/check-content-consistency.js",
     "check:metadata": "node scripts/enhance-public-pages.js --check",
-    "check:all": "npm run check:harness && npm run check:site && npm run check:metadata && npm run check:content && npm run check:generated && npm run check:site-js-version && npm run check:url-ledger && npm run check:nav",
+    "check:all": "npm run check:harness && npm run check:site && npm run check:metadata && npm run check:content && npm run check:pages-boundary && npm run check:generated && npm run check:site-js-version && npm run check:url-ledger && npm run check:nav",
     "report:site-js-version": "node scripts/report-site-js-version.js",
     "sync:materials": "node scripts/sync-school-materials.js --dry-run",
     "sync:materials:write": "node scripts/sync-school-materials.js --write",
@@ -27,6 +27,7 @@
     "check:nav": "node scripts/sync-global-nav.js --check",
     "sync:catalog": "npm run generate:sitemap && npm run generate:search",
     "check:catalog": "npm run check:generated",
-    "check:url-ledger": "node scripts/check-url-ledger.js"
+    "check:url-ledger": "node scripts/check-url-ledger.js",
+    "check:pages-boundary": "node scripts/check-pages-boundary.js"
   }
 }
