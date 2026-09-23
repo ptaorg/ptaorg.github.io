@@ -1,0 +1,54 @@
+name: Generate PTA Shorts
+
+on:
+  workflow_dispatch:
+    inputs:
+      topic_id:
+        description: "Topic ID (blank = all)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install ffmpeg and Japanese fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-noto-cjk
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: shorts/requirements.txt
+
+      - name: Install Python dependencies
+        run: pip install -r shorts/requirements.txt
+
+      - name: Generate Shorts
+        run: |
+          if [ -n "${{ inputs.topic_id }}" ]; then
+            python shorts/generate.py --topic "${{ inputs.topic_id }}"
+          else
+            python shorts/generate.py
+          fi
+
+      - name: Upload generated videos
+        uses: actions/upload-artifact@v4
+        with:
+          name: pta-shorts
+          path: |
+            shorts/output/*.mp4
+            shorts/output/*.json
+          if-no-files-found: error
+          retention-days: 14
