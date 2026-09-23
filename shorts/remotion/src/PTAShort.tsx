@@ -432,7 +432,7 @@ const FlowSceneView: React.FC<{scene: FlowScene; accent: string}> = ({scene, acc
               }}
             >
               <div style={{width: 100, height: 100, borderRadius: 28, background: i === 1 ? accent : '#FFFFFF10', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                {i === 1 ? <FormIcon accent={BG}/> : i === 0 ? <GroupIcon accent={i === 0 ? accent : GREEN}/> : <GroupIcon accent={GREEN}/>}
+                <div style={{transform: 'scale(0.34)'}}>{i === 1 ? <FormIcon accent={BG}/> : i === 0 ? <GroupIcon accent={accent}/> : <GroupIcon accent={GREEN}/>}</div>
               </div>
               <div>
                 <div style={{fontSize: 51, color: TEXT, fontWeight: 1000}}>{step.label}</div>
@@ -590,6 +590,17 @@ const SceneRenderer: React.FC<{scene: Scene; accent: string}> = ({scene, accent}
   return <ConclusionSceneView scene={scene as ConclusionScene} accent={accent}/>;
 };
 
+const SceneLayer: React.FC<{scene: Scene; accent: string; index: number; count: number; source: string}> = ({scene, accent, index, count, source}) => {
+  const localFrame = useCurrentFrame();
+  return (
+    <div style={{position: 'absolute', inset: 0, opacity: fadeForScene(localFrame, scene.durationFrames)}}>
+      <SceneRenderer scene={scene} accent={accent}/>
+      <Caption text={scene.voice} accent={accent}/>
+      <Footer source={source} index={index} count={count}/>
+    </div>
+  );
+};
+
 export const PTAShort: React.FC<ShortProps> = (props) => {
   const frame = useCurrentFrame();
   const accent = props.accent || CYAN;
@@ -609,11 +620,7 @@ export const PTAShort: React.FC<ShortProps> = (props) => {
       <BrandBar accent={accent} progress={progress}/>
       {props.scenes.map((scene, index) => (
         <Sequence key={props.id + '-' + index} from={scene.startFrame} durationInFrames={scene.durationFrames}>
-          <div style={{position: 'absolute', inset: 0, opacity: fadeForScene(useCurrentFrame(), scene.durationFrames)}}>
-            <SceneRenderer scene={scene} accent={accent}/>
-            <Caption text={scene.voice} accent={accent}/>
-            <Footer source={props.source} index={index} count={props.scenes.length}/>
-          </div>
+          <SceneLayer scene={scene} accent={accent} index={index} count={props.scenes.length} source={props.source}/>
         </Sequence>
       ))}
       <div style={{position: 'absolute', right: 30, top: 350, bottom: 300, width: 70, borderLeft: '1px dashed #FFFFFF08', opacity: 0.3}}/>
