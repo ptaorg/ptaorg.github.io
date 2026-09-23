@@ -78,14 +78,14 @@ def hook(seg,P,page):
     d.rounded_rectangle((72,235,620,310),22,fill=(212,175,55,238)); d.text((98,250),"入学前に不安な方へ",font=font(30),fill=DARK)
     d.text((72,382),"入学 ＝",font=font(112),fill=WHITE,stroke_width=2,stroke_fill=(0,0,0,80))
     d.text((72,520),"PTA会員？",font=font(112),fill=WHITE,stroke_width=2,stroke_fill=(0,0,0,80))
-    d.rounded_rectangle((72,705,760,810),28,fill=(185,28,28,225)); d.text((106,727),"その前提、確認できます",font=font(42),fill=WHITE)
+    d.rounded_rectangle((72,705,850,810),28,fill=(185,28,28,225)); d.text((106,727),"まず、心配しなくて大丈夫",font=font(40),fill=WHITE)
     d.text((74,1360),"強制加入の不安を煽る動画ではありません",font=font(30),fill=(255,255,255,225))
     d.text((74,1418),"まず整理すると、心配はかなり減らせます。",font=font(31),fill=WHITE)
     return noise(b,2.0)
 
 def split(seg,P,page):
     b=base_light(); d=ImageDraw.Draw(b); tag(d)
-    d.text((72,230),"ここは、分けて考える",font=font(62),fill=DARK); d.rectangle((72,326,1008,330),fill=rgb(GOLD))
+    d.text((72,230),"学校とPTAは別です",font=font(62),fill=DARK); d.rectangle((72,326,1008,330),fill=rgb(GOLD))
     photo(b,P["classroom"],(72,390,1008,790),.74,.7,36); d=ImageDraw.Draw(b)
     d.rounded_rectangle((95,436,505,741),26,fill=(255,255,255,236)); d.rounded_rectangle((575,436,985,741),26,fill=(255,255,255,236))
     d.text((155,486),"学校への",font=font(42),fill=MUTED); d.text((155,548),"入 学",font=font(78),fill=NAVY)
@@ -225,7 +225,7 @@ WrapStyle: 2
 ScaledBorderAndShadow: yes
 [V4+ Styles]
 Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
-Style: Cap,Noto Sans CJK JP,48,&H00FFFFFF,&H000000FF,&H00243B53,&HBB0A192F,-1,0,0,0,100,100,0,0,3,2,0,2,92,210,335,1
+Style: Cap,Noto Sans CJK JP,58,&H00FFFFFF,&H000000FF,&H00243B53,&HBB0A192F,-1,0,0,0,100,100,0,0,3,2,0,2,92,210,335,1
 [Events]
 Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
 """
