@@ -26,6 +26,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: pta-shorts-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -34,6 +38,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate repository
+        if: ${{ github.event_name == 'push' }}
+        run: |
+          npm test
+          git fetch origin main
+          git diff --check origin/main...HEAD
+          git diff --stat origin/main...HEAD
 
       - name: Install ffmpeg and Japanese fonts
         run: |
