@@ -3,196 +3,221 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
+import os
 import shutil
 import subprocess
 import sys
-import tempfile
+import urllib.parse
+import urllib.request
 from pathlib import Path
 
 from gtts import gTTS
-from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parent
 TOPICS = ROOT / "topics.json"
 OUTPUT = ROOT / "output"
 WORK = ROOT / ".work"
-WIDTH, HEIGHT = 1080, 1920
+REMOTION = ROOT / "remotion"
+PUBLIC_GENERATED = REMOTION / "public" / "generated"
 FPS = 30
-
-FONT_CANDIDATES = [
-    "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
-    "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
-    "/usr/share/fonts/truetype/noto/NotoSansCJK-Bold.ttc",
-    "/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc",
-    "C:/Windows/Fonts/YuGothB.ttc",
-]
+VOICEVOX_URL = os.environ.get("VOICEVOX_URL", "http://127.0.0.1:50021").rstrip("/")
 
 
-def run(cmd: list[str]) -> None:
-    print("+", " ".join(cmd))
-    subprocess.run(cmd, check=True)
+def run(cmd: list[str], cwd: Path | None = None) -> None:
+    print("+", " ".join(str(x) for x in cmd))
+    subprocess.run(cmd, cwd=cwd, check=True)
 
 
 def ffprobe_duration(path: Path) -> float:
     result = subprocess.run(
         [
-            "ffprobe", "-v", "error", "-show_entries", "format=duration",
-            "-of", "default=noprint_wrappers=1:nokey=1", str(path)
+            "ffprobe", "-v", "error",
+            "-show_entries", "format=duration",
+            "-of", "default=noprint_wrappers=1:nokey=1",
+            str(path),
         ],
-        check=True, capture_output=True, text=True
+        check=True,
+        capture_output=True,
+        text=True,
     )
     return max(float(result.stdout.strip()), 0.05)
 
 
-def find_font() -> str:
-    for candidate in FONT_CANDIDATES:
-        if Path(candidate).exists():
-            return candidate
-    raise FileNotFoundError("Japanese font not found. Install fonts-noto-cjk.")
+def post_json(url: str, payload: dict | None = None) -> bytes:
+    data = b"" if payload is None else json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    req = urllib.request.Request(
+        url,
+        data=data,
+        method="POST",
+        headers={"Content-Type": "application/json; charset=utf-8"},
+    )
+    with urllib.request.urlopen(req, timeout=120) as response:
+        return response.read()
 
 
-def wrap_text(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.FreeTypeFont, max_width: int) -> list[str]:
-    lines: list[str] = []
-    current = ""
-    for ch in text:
-        trial = current + ch
-        bbox = draw.textbbox((0, 0), trial, font=font)
-        if bbox[2] - bbox[0] <= max_width or not current:
-            current = trial
-        else:
-            lines.append(current)
-            current = ch
-    if current:
-        lines.append(current)
-    return lines
+def voicevox_available() -> bool:
+    try:
+        with urllib.request.urlopen(f"{VOICEVOX_URL}/version", timeout=3) as response:
+            return response.status == 200
+    except Exception:
+        return False
 
 
-def make_background(title: str, out: Path, font_path: str) -> None:
-    img = Image.new("RGB", (WIDTH, HEIGHT), (18, 28, 45))
-    draw = ImageDraw.Draw(img)
-    title_font = ImageFont.truetype(font_path, 78)
-    label_font = ImageFont.truetype(font_path, 38)
-    footer_font = ImageFont.truetype(font_path, 44)
-
-    draw.rectangle((0, 0, 26, HEIGHT), fill=(47, 132, 255))
-    draw.text((90, 120), "PTA適正化推進委員会", font=label_font, fill=(180, 204, 235))
-
-    y = 270
-    for line in wrap_text(draw, title, title_font, 880):
-        draw.text((90, y), line, font=title_font, fill=(255, 255, 255))
-        y += 112
-
-    draw.line((90, y + 28, 990, y + 28), fill=(79, 101, 132), width=3)
-    draw.text((90, 1760), "詳しい資料 → ptaorg.com", font=footer_font, fill=(235, 240, 248))
-    img.save(out, quality=95)
+def synthesize_voicevox(text: str, out: Path, speaker: int, speed: float) -> None:
+    params = urllib.parse.urlencode({"text": text, "speaker": speaker})
+    query_bytes = post_json(f"{VOICEVOX_URL}/audio_query?{params}")
+    query = json.loads(query_bytes.decode("utf-8"))
+    query["speedScale"] = speed
+    query["intonationScale"] = 1.0
+    query["volumeScale"] = 1.0
+    query["prePhonemeLength"] = 0.08
+    query["postPhonemeLength"] = 0.08
+    audio = post_json(f"{VOICEVOX_URL}/synthesis?speaker={speaker}", query)
+    out.write_bytes(audio)
 
 
-def ass_time(seconds: float) -> str:
-    cs = int(round(seconds * 100))
-    h, rem = divmod(cs, 360000)
-    m, rem = divmod(rem, 6000)
-    s, cs = divmod(rem, 100)
-    return f"{h}:{m:02d}:{s:02d}.{cs:02d}"
+def synthesize_gtts(text: str, out: Path) -> None:
+    gTTS(text=text, lang="ja", slow=False).save(str(out))
 
 
-def ass_escape(text: str) -> str:
-    return text.replace("\\", r"\\").replace("{", r"\{").replace("}", r"\}")
+def normalize_with_padding(source: Path, out: Path, pad_seconds: float = 0.30) -> None:
+    raw_duration = ffprobe_duration(source)
+    target = raw_duration + pad_seconds
+    run([
+        "ffmpeg", "-y", "-i", str(source),
+        "-af", f"aresample=48000,apad=pad_dur={pad_seconds}",
+        "-t", f"{target:.3f}",
+        "-ac", "1",
+        "-c:a", "pcm_s16le",
+        str(out),
+    ])
 
 
-def write_ass(segments: list[tuple[float, float, str]], path: Path, font_name: str = "Noto Sans CJK JP") -> None:
-    header = f"""[Script Info]
-ScriptType: v4.00+
-PlayResX: {WIDTH}
-PlayResY: {HEIGHT}
-WrapStyle: 2
-ScaledBorderAndShadow: yes
-
-[V4+ Styles]
-Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
-Style: Default,{font_name},62,&H00FFFFFF,&H000000FF,&H00121C2D,&HAA121C2D,-1,0,0,0,100,100,0,0,1,4,0,2,80,80,250,1
-
-[Events]
-Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
-"""
-    lines = [header]
-    for start, end, text in segments:
-        lines.append(
-            f"Dialogue: 0,{ass_time(start)},{ass_time(end)},Default,,0,0,0,,{ass_escape(text)}\n"
-        )
-    path.write_text("".join(lines), encoding="utf-8")
+def write_concat(paths: list[Path], out: Path) -> None:
+    lines = []
+    for path in paths:
+        safe = path.as_posix().replace("'", "'\\''")
+        lines.append("file '" + safe + "'\n")
+    out.write_text("".join(lines), encoding="utf-8")
 
 
-def render_topic(topic: dict) -> Path:
+def make_previews(video: Path, preview_dir: Path) -> list[str]:
+    preview_dir.mkdir(parents=True, exist_ok=True)
+    duration = ffprobe_duration(video)
+    fractions = [0.06, 0.24, 0.44, 0.64, 0.84]
+    names: list[str] = []
+    for i, fraction in enumerate(fractions, 1):
+        at = max(0.05, min(duration - 0.05, duration * fraction))
+        target = preview_dir / f"preview-{i:02d}.jpg"
+        run([
+            "ffmpeg", "-y", "-ss", f"{at:.3f}", "-i", str(video),
+            "-frames:v", "1", "-q:v", "2", str(target)
+        ])
+        names.append(str(target.relative_to(ROOT)))
+    return names
+
+
+def render_topic(topic: dict, requested_provider: str) -> Path:
     topic_id = topic["id"]
-    title = topic["title"]
-    segments_text = topic["segments"]
-    if not segments_text:
-        raise ValueError(f"{topic_id}: segments is empty")
+    scenes = topic["scenes"]
+    if not scenes:
+        raise ValueError(f"{topic_id}: scenes is empty")
 
-    font_path = find_font()
+    narrator = topic.get("narrator", {})
+    speaker = int(narrator.get("speaker", 3))
+    speed = float(narrator.get("speed", 1.08))
+
+    provider = requested_provider
+    if provider == "auto":
+        provider = "voicevox" if voicevox_available() else "gtts"
+    if provider == "voicevox" and not voicevox_available():
+        raise RuntimeError("VOICEVOX requested but engine is not reachable.")
+
     topic_work = WORK / topic_id
     shutil.rmtree(topic_work, ignore_errors=True)
     topic_work.mkdir(parents=True, exist_ok=True)
     OUTPUT.mkdir(parents=True, exist_ok=True)
 
-    background = topic_work / "background.jpg"
-    make_background(title, background, font_path)
+    static_dir = PUBLIC_GENERATED / topic_id
+    shutil.rmtree(static_dir, ignore_errors=True)
+    static_dir.mkdir(parents=True, exist_ok=True)
 
-    audio_files: list[Path] = []
-    timed_segments: list[tuple[float, float, str]] = []
-    cursor = 0.0
+    padded_wavs: list[Path] = []
+    rendered_scenes: list[dict] = []
+    cursor_frames = 0
 
-    for i, text in enumerate(segments_text, 1):
-        mp3 = topic_work / f"segment-{i:02d}.mp3"
-        gTTS(text=text, lang="ja", slow=False).save(str(mp3))
-        duration = ffprobe_duration(mp3)
-        audio_files.append(mp3)
-        timed_segments.append((cursor, cursor + duration, text))
-        cursor += duration
+    for index, scene in enumerate(scenes, 1):
+        text = scene["voice"].strip()
+        source_audio = topic_work / (f"voice-{index:02d}.wav" if provider == "voicevox" else f"voice-{index:02d}.mp3")
+        if provider == "voicevox":
+            synthesize_voicevox(text, source_audio, speaker=speaker, speed=speed)
+        else:
+            synthesize_gtts(text, source_audio)
+
+        padded = topic_work / f"segment-{index:02d}.wav"
+        normalize_with_padding(source_audio, padded, pad_seconds=0.30)
+        duration = ffprobe_duration(padded)
+        duration_frames = max(45, int(math.ceil(duration * FPS)))
+        padded_wavs.append(padded)
+
+        rendered = dict(scene)
+        rendered["startFrame"] = cursor_frames
+        rendered["durationFrames"] = duration_frames
+        rendered_scenes.append(rendered)
+        cursor_frames += duration_frames
 
     concat_file = topic_work / "concat.txt"
-    concat_file.write_text(
-        "".join(f"file '{p.name}'\n" for p in audio_files),
-        encoding="utf-8"
-    )
-    narration = topic_work / "narration.m4a"
+    write_concat(padded_wavs, concat_file)
+    narration = static_dir / "narration.wav"
     run([
-        "ffmpeg", "-y", "-f", "concat", "-safe", "0",
-        "-i", concat_file.name,
-        "-c:a", "aac", "-b:a", "160k", narration.name
-    ] if Path.cwd() == topic_work else [
         "ffmpeg", "-y", "-f", "concat", "-safe", "0",
         "-i", str(concat_file),
-        "-c:a", "aac", "-b:a", "160k", str(narration)
+        "-c:a", "pcm_s16le", "-ar", "48000", "-ac", "1",
+        str(narration),
     ])
 
-    subtitles = topic_work / "subtitles.ass"
-    write_ass(timed_segments, subtitles)
+    total_frames = cursor_frames
+    props = {
+        "id": topic_id,
+        "title": topic["title"],
+        "source": topic.get("source", "https://ptaorg.com/"),
+        "accent": topic.get("accent", "#4EB5FF"),
+        "audioFile": f"generated/{topic_id}/narration.wav",
+        "totalFrames": total_frames,
+        "scenes": rendered_scenes,
+    }
+    props_file = topic_work / "props.json"
+    props_file.write_text(json.dumps(props, ensure_ascii=False, indent=2), encoding="utf-8")
 
     output = OUTPUT / f"{topic_id}.mp4"
-    ass_filter = f"ass={subtitles.as_posix()}"
     run([
-        "ffmpeg", "-y",
-        "-loop", "1", "-framerate", str(FPS), "-i", str(background),
-        "-i", str(narration),
-        "-vf", ass_filter,
-        "-c:v", "libx264", "-preset", "medium", "-crf", "20",
-        "-pix_fmt", "yuv420p",
-        "-c:a", "aac", "-b:a", "160k",
-        "-shortest", "-movflags", "+faststart",
-        str(output)
-    ])
+        "npx", "remotion", "render",
+        "src/index.tsx", "PTAShort", str(output.resolve()),
+        "--props", str(props_file.resolve()),
+        "--duration", str(total_frames),
+        "--codec", "h264",
+        "--pixel-format", "yuv420p",
+        "--crf", "18",
+        "--concurrency", "2",
+    ], cwd=REMOTION)
 
+    previews = make_previews(output, OUTPUT / f"{topic_id}-previews")
     metadata = {
         "id": topic_id,
-        "title": title,
+        "title": topic["title"],
         "source": topic.get("source", ""),
+        "voice_provider": provider,
+        "voicevox_speaker": speaker if provider == "voicevox" else None,
         "duration_seconds": round(ffprobe_duration(output), 2),
+        "total_frames": total_frames,
+        "scene_count": len(scenes),
         "output": str(output.relative_to(ROOT)),
+        "previews": previews,
     }
     (OUTPUT / f"{topic_id}.json").write_text(
         json.dumps(metadata, ensure_ascii=False, indent=2),
-        encoding="utf-8"
+        encoding="utf-8",
     )
     return output
 
@@ -200,11 +225,18 @@ def render_topic(topic: dict) -> Path:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--topic", default="", help="Generate only this topic id")
+    parser.add_argument(
+        "--voice-provider",
+        choices=["auto", "voicevox", "gtts"],
+        default="auto",
+        help="Narration engine. auto prefers VOICEVOX when available.",
+    )
     args = parser.parse_args()
 
-    if shutil.which("ffmpeg") is None or shutil.which("ffprobe") is None:
-        print("ffmpeg/ffprobe are required.", file=sys.stderr)
-        return 2
+    for binary in ("ffmpeg", "ffprobe", "node", "npx"):
+        if shutil.which(binary) is None:
+            print(f"{binary} is required.", file=sys.stderr)
+            return 2
 
     topics = json.loads(TOPICS.read_text(encoding="utf-8"))
     selected = [t for t in topics if not args.topic or t["id"] == args.topic]
@@ -214,7 +246,7 @@ def main() -> int:
 
     WORK.mkdir(parents=True, exist_ok=True)
     for topic in selected:
-        output = render_topic(topic)
+        output = render_topic(topic, args.voice_provider)
         print(f"Generated: {output}")
     return 0
 
