@@ -3,7 +3,7 @@
   "title": "入学したら、自動的にPTA会員になるの？",
   "source": "https://ptaorg.com/membership.html",
   "voice": "ja-JP-NanamiNeural",
-  "rate": "+25%",
+  "rate": "+30%",
   "pitch": "+0Hz",
   "segments": [
     {
@@ -26,21 +26,12 @@
       "asset": "classroom"
     },
     {
-      "kind": "source_ptaorg",
-      "narration": "PTAに入るかどうかは、本人にきちんと確認するのが基本です。",
-      "caption_chunks": [
-        "PTAに入るかどうかは",
-        "本人にきちんと確認"
-      ],
-      "asset": "parent_docs"
-    },
-    {
       "kind": "reassure",
-      "narration": "不安なら、PTAはどうやって入るんですか、と聞けばオーケー。",
+      "narration": "不安なら、PTAはどうやって入るんですか、と聞けば大丈夫。",
       "caption_chunks": [
         "不安なら",
         "『PTAはどうやって入るんですか？』",
-        "と聞けばOK"
+        "と聞けば大丈夫"
       ],
       "asset": "school_hall"
     },
