@@ -67,8 +67,9 @@ function relativePath(filePath) {
 }
 
 function isPublishable(html) {
-  return !/name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html)
-    && !/http-equiv=["']refresh["']/i.test(html);
+  const noindex = /<meta\\b(?=[^>]*\\bname=["\']robots["\'])(?=[^>]*\\bcontent=["\'][^"\']*noindex)[^>]*>/i;
+  const refresh = /<meta\\b(?=[^>]*\\bhttp-equiv=["\']refresh["\'])[^>]*>/i;
+  return !noindex.test(html) && !refresh.test(html);
 }
 
 function pageUrl(rel) {
@@ -160,12 +161,12 @@ function addHeadMarkup(html, markup) {
 }
 
 function upsertDescription(html, description) {
-  if (/<meta\s+name=["']description["']/i.test(html)) return html;
+  if (/<meta\\b(?=[^>]*\\bname=["\']description["\'])[^>]*>/i.test(html)) return html;
   return addHeadMarkup(html, `<meta name="description" content="${escapeAttribute(description)}">`);
 }
 
 function upsertRobots(html) {
-  const robots = /<meta\s+name=["']robots["'][^>]*>/i;
+  const robots = /<meta\\b(?=[^>]*\\bname=["\']robots["\'])[^>]*>/i;
   if (robots.test(html)) {
     return html.replace(robots, `<meta name="robots" content="${ROBOTS_VALUE}">`);
   }
@@ -173,7 +174,7 @@ function upsertRobots(html) {
 }
 
 function upsertCanonical(html, url) {
-  if (/<link\s+rel=["']canonical["']/i.test(html)) return html;
+  if (/<link\\b(?=[^>]*\\brel=["\']canonical["\'])[^>]*>/i.test(html)) return html;
   return addHeadMarkup(html, `<link rel="canonical" href="${escapeAttribute(url)}">`);
 }
 
@@ -201,7 +202,7 @@ function upsertDiscoveryMetadata(html) {
 }
 
 function addMetaProperty(html, property, content) {
-  const pattern = new RegExp(`<meta\\s+property=["']${property}["']`, "i");
+  const pattern = new RegExp(`<meta\\\\b(?=[^>]*\\\\bproperty=["\']${property}["\'])[^>]*>`, "i");
   if (pattern.test(html)) return html;
   return addHeadMarkup(html, `<meta property="${property}" content="${escapeAttribute(content)}">`);
 }
@@ -218,11 +219,11 @@ function dedupePattern(html, pattern) {
 function dedupeHeadSingletons(html) {
   let next = html;
   const patterns = [
-    /<meta\\b(?=[^>]*\\bname=["\']description["\'])[^>]*>\\s*/gi,
-    /<meta\\b(?=[^>]*\\bname=["\']robots["\'])[^>]*>\\s*/gi,
-    /<meta\\b(?=[^>]*\\bname=["\']author["\'])[^>]*>\\s*/gi,
-    /<link\\b(?=[^>]*\\brel=["\']canonical["\'])[^>]*>\\s*/gi,
-    /<link\\b(?=[^>]*\\brel=["\']alternate["\'])(?=[^>]*\\bhref=["\']\\/llms\\.txt["\'])[^>]*>\\s*/gi,
+    /<meta\b(?=[^>]*\bname=["\']description["\'])[^>]*>\s*/gi,
+    /<meta\b(?=[^>]*\bname=["\']robots["\'])[^>]*>\s*/gi,
+    /<meta\b(?=[^>]*\bname=["\']author["\'])[^>]*>\s*/gi,
+    /<link\b(?=[^>]*\brel=["\']canonical["\'])[^>]*>\s*/gi,
+    /<link\b(?=[^>]*\brel=["\']alternate["\'])(?=[^>]*\bhref=["\']\/llms\.txt["\'])[^>]*>\s*/gi,
   ];
   for (const property of ["og:site_name","og:locale","og:type","og:title","og:description","og:url","article:modified_time"]) {
     patterns.push(new RegExp(`<meta\\\\b(?=[^>]*\\\\bproperty=["\']${property}["\'])[^>]*>\\\\s*`, "gi"));
