@@ -7,13 +7,6 @@ on:
         description: "Topic ID (blank = all)"
         required: false
         default: ""
-  push:
-    branches:
-      - shorts-automation-bootstrap
-    paths:
-      - "shorts/**"
-      - ".github/workflows/generate-shorts.yml"
-
 permissions:
   contents: read
 
