@@ -59,6 +59,7 @@ export type ShortProps = {
   audioFile: string;
   totalFrames: number;
   scenes: Scene[];
+  voiceCredit?: string;
 };
 
 const BG = '#08111F';
@@ -180,7 +181,7 @@ const BrandBar: React.FC<{accent: string; progress: number}> = ({accent, progres
   </>
 );
 
-const Footer: React.FC<{source: string; index: number; count: number}> = ({source, index, count}) => (
+const Footer: React.FC<{source: string; index: number; count: number; voiceCredit?: string}> = ({source, index, count, voiceCredit}) => (
   <div
     style={{
       position: 'absolute',
@@ -196,12 +197,29 @@ const Footer: React.FC<{source: string; index: number; count: number}> = ({sourc
     }}
   >
     <span>{source.replace(/^https?:\/\//, '')}</span>
+    {voiceCredit ? <span style={{fontSize: 19, opacity: 0.82}}>{voiceCredit}</span> : null}
     <span>{String(index + 1).padStart(2, '0')} / {String(count).padStart(2, '0')}</span>
   </div>
 );
 
-const Caption: React.FC<{text: string; accent: string}> = ({text, accent}) => {
+const Caption: React.FC<{text: string; accent: string; frame: number; duration: number}> = ({text, accent, frame, duration}) => {
   if (!text) return null;
+  const chunks = text
+    .split(/(?<=[。！？])/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+  const safeChunks = chunks.length > 0 ? chunks : [text];
+  const chunkIndex = Math.min(
+    safeChunks.length - 1,
+    Math.floor((Math.max(0, frame) / Math.max(1, duration)) * safeChunks.length)
+  );
+  const current = safeChunks[chunkIndex];
+  const pulse = spring({
+    frame: frame - Math.floor((chunkIndex * duration) / safeChunks.length),
+    fps: 30,
+    config: {damping: 20, stiffness: 170},
+    durationInFrames: 14
+  });
   return (
     <div
       style={{
@@ -212,7 +230,7 @@ const Caption: React.FC<{text: string; accent: string}> = ({text, accent}) => {
         minHeight: 150,
         padding: '24px 34px',
         borderRadius: 26,
-        background: '#07111DEB',
+        background: '#07111DF2',
         border: '1px solid #FFFFFF1B',
         boxShadow: '0 20px 70px #00000055',
         display: 'flex',
@@ -220,11 +238,13 @@ const Caption: React.FC<{text: string; accent: string}> = ({text, accent}) => {
         color: TEXT,
         fontSize: 39,
         lineHeight: 1.5,
-        fontWeight: 800
+        fontWeight: 800,
+        opacity: interpolate(pulse, [0, 1], [0.35, 1], clamp),
+        transform: 'translateY(' + interpolate(pulse, [0, 1], [8, 0], clamp) + 'px)'
       }}
     >
       <div style={{width: 6, alignSelf: 'stretch', borderRadius: 999, background: accent, marginRight: 24}} />
-      <div>{text}</div>
+      <div>{current}</div>
     </div>
   );
 };
@@ -590,13 +610,13 @@ const SceneRenderer: React.FC<{scene: Scene; accent: string}> = ({scene, accent}
   return <ConclusionSceneView scene={scene as ConclusionScene} accent={accent}/>;
 };
 
-const SceneLayer: React.FC<{scene: Scene; accent: string; index: number; count: number; source: string}> = ({scene, accent, index, count, source}) => {
+const SceneLayer: React.FC<{scene: Scene; accent: string; index: number; count: number; source: string; voiceCredit?: string}> = ({scene, accent, index, count, source, voiceCredit}) => {
   const localFrame = useCurrentFrame();
   return (
     <div style={{position: 'absolute', inset: 0, opacity: fadeForScene(localFrame, scene.durationFrames)}}>
       <SceneRenderer scene={scene} accent={accent}/>
-      <Caption text={scene.voice} accent={accent}/>
-      <Footer source={source} index={index} count={count}/>
+      <Caption text={scene.voice} accent={accent} frame={localFrame} duration={scene.durationFrames}/>
+      <Footer source={source} index={index} count={count} voiceCredit={voiceCredit}/>
     </div>
   );
 };
@@ -620,7 +640,7 @@ export const PTAShort: React.FC<ShortProps> = (props) => {
       <BrandBar accent={accent} progress={progress}/>
       {props.scenes.map((scene, index) => (
         <Sequence key={props.id + '-' + index} from={scene.startFrame} durationInFrames={scene.durationFrames}>
-          <SceneLayer scene={scene} accent={accent} index={index} count={props.scenes.length} source={props.source}/>
+          <SceneLayer scene={scene} accent={accent} index={index} count={props.scenes.length} source={props.source} voiceCredit={props.voiceCredit}/>
         </Sequence>
       ))}
       <div style={{position: 'absolute', right: 30, top: 350, bottom: 300, width: 70, borderLeft: '1px dashed #FFFFFF08', opacity: 0.3}}/>
