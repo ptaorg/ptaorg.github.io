@@ -202,7 +202,7 @@ function upsertDiscoveryMetadata(html) {
 }
 
 function addMetaProperty(html, property, content) {
-  const pattern = new RegExp(`<meta\\\\b(?=[^>]*\\\\bproperty=["\']${property}["\'])[^>]*>`, "i");
+  const pattern = new RegExp(`<meta\\b(?=[^>]*\\bproperty=["\']${property}["\'])[^>]*>`, "i");
   if (pattern.test(html)) return html;
   return addHeadMarkup(html, `<meta property="${property}" content="${escapeAttribute(content)}">`);
 }
@@ -226,7 +226,7 @@ function dedupeHeadSingletons(html) {
     /<link\b(?=[^>]*\brel=["\']alternate["\'])(?=[^>]*\bhref=["\']\/llms\.txt["\'])[^>]*>\s*/gi,
   ];
   for (const property of ["og:site_name","og:locale","og:type","og:title","og:description","og:url","article:modified_time"]) {
-    patterns.push(new RegExp(`<meta\\\\b(?=[^>]*\\\\bproperty=["\']${property}["\'])[^>]*>\\\\s*`, "gi"));
+    patterns.push(new RegExp(`<meta\\b(?=[^>]*\\bproperty=["\']${property}["\'])[^>]*>\\s*`, "gi"));
   }
   for (const pattern of patterns) next = dedupePattern(next, pattern);
   return next;
