@@ -251,7 +251,7 @@ def scene_video(p,dur,out,i):
     n=max(1,round(dur*FPS)); z=f"min(1+0.032*on/{max(1,n-1)},1.032)"
     x="iw/2-(iw/zoom/2)+12*sin(on/31)" if i%2 else "iw/2-(iw/zoom/2)-12*sin(on/29)"
     y="ih/2-(ih/zoom/2)"
-    vf=f"zoompan=z='{z}':x='{x}':y='{y}':d={n}:s={W}x{H}:fps={FPS},fade=t=in:st=0:d=.08,format=yuv420p"
+    vf=f"zoompan=z='{z}':x='{x}':y='{y}':d={n}:s={W}x{H}:fps={FPS},fade=t=in:st=0:d=0.08,format=yuv420p"
     run(["ffmpeg","-y","-loop","1","-i",str(p),"-t",f"{dur:.3f}","-vf",vf,"-c:v","libx264","-preset","medium","-crf","18","-r",str(FPS),str(out)])
 
 def concat(vs,out):
