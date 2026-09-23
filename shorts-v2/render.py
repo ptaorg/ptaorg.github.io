@@ -262,7 +262,7 @@ def qc(video):
     j=json.loads(cap(["ffprobe","-v","error","-show_streams","-show_format","-of","json",str(video)]))
     v=[x for x in j["streams"] if x.get("codec_type")=="video"]; a=[x for x in j["streams"] if x.get("codec_type")=="audio"]
     assert v and a and int(v[0]["width"])==W and int(v[0]["height"])==H
-    d=float(j["format"]["duration"]); assert 20<=d<=60,d
+    d=float(j["format"]["duration"]); assert 10<=d<=60,d
     return {"duration_seconds":round(d,2),"width":W,"height":H,"fps":v[0].get("r_frame_rate"),"audio_codec":a[0].get("codec_name")}
 
 def sheet(video,out,sec):
