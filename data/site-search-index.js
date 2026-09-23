@@ -21,223 +21,223 @@ window.PTA_SITE_SEARCH_INDEX = [
     "相川小学校 PTA関連資料・評価",
     "/archive/atsugi/aikawa-es/",
     "学校説明会の流れでPTA説明・役員決めへ移行した相談記録を確認。任意加入と学校関与に重大な確認事項があります。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "相川中学校 PTA関連資料・評価",
     "/archive/atsugi/aikawa-jhs/",
     "学校連絡手段、口座振替、教職員関与が複合して確認されます。学校とPTAの分離について重大な確認事項があります。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "愛甲小学校 PTA関連資料・評価",
     "/archive/atsugi/aiko-es/",
     "愛甲小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "厚木第二小学校 PTA関連資料・評価",
     "/archive/atsugi/atsugi-daini-es/",
     "厚木第二小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "厚木小学校 PTA関連資料・評価",
     "/archive/atsugi/atsugi-es/",
     "PTA会員確認カードとみられる資料を確認。入会契約の成立を基礎づける申込・承諾の記録は資料上確認できません。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "厚木中学校 PTA関連資料・評価",
     "/archive/atsugi/atsugi-jhs/",
     "厚木中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "依知小学校 PTA関連資料・評価",
     "/archive/atsugi/echi-es/",
     "PTAカード提出をもって加入扱いとされる資料を確認。入会申込書は資料上確認できず、任意性に重大な確認事項があります。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "依知中学校 PTA関連資料・評価",
     "/archive/atsugi/echi-jhs/",
     "依知中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "依知南小学校 PTA関連資料・評価",
     "/archive/atsugi/echi-minami-es/",
     "依知南小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "藤塚中学校 PTA関連資料・評価",
     "/archive/atsugi/fujizuka-jhs/",
     "藤塚中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "林中学校 PTA関連資料・評価",
     "/archive/atsugi/hayashi-jhs/",
     "林中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "飯山小学校 PTA関連資料・評価",
     "/archive/atsugi/iiyama-es/",
     "飯山小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "上依知小学校 PTA関連資料・評価",
     "/archive/atsugi/kamiechi-es/",
     "上依知小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "上荻野小学校 PTA関連資料・評価",
     "/archive/atsugi/kamiogino-es/",
     "PTA会員カードに、提出をもってPTA入会・継続とする旨が確認されます。入会申込書との分離確認が必要です。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "北小学校 PTA関連資料・評価",
     "/archive/atsugi/kita-es/",
     "北小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "小鮎小学校 PTA関連資料・評価",
     "/archive/atsugi/koayu-es/",
     "小鮎小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "小鮎中学校 PTA関連資料・評価",
     "/archive/atsugi/koayu-jhs/",
     "小鮎中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "緑ケ丘小学校 PTA関連資料・評価",
     "/archive/atsugi/midorigaoka-es/",
     "緑ケ丘小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "毛利台小学校 PTA関連資料・評価",
     "/archive/atsugi/moridai-es/",
     "毛利台小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "森の里小学校 PTA関連資料・評価",
     "/archive/atsugi/morinosato-es/",
     "森の里小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "森の里中学校 PTA関連資料・評価",
     "/archive/atsugi/morinosato-jhs/",
     "森の里中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "睦合東中学校 PTA関連資料・評価",
     "/archive/atsugi/mutsuai-higashi-jhs/",
     "睦合東中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "睦合中学校 PTA関連資料・評価",
     "/archive/atsugi/mutsuai-jhs/",
     "睦合中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "南毛利小学校 PTA関連資料・評価",
     "/archive/atsugi/nanmori-es/",
     "南毛利小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "南毛利中学校 PTA関連資料・評価",
     "/archive/atsugi/nanmori-jhs/",
     "南毛利中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "荻野小学校 PTA関連資料・評価",
     "/archive/atsugi/ogino-es/",
     "荻野小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "荻野中学校 PTA関連資料・評価",
     "/archive/atsugi/ogino-jhs/",
     "荻野中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "三田小学校 PTA関連資料・評価",
     "/archive/atsugi/sanda-es/",
     "三田小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "清水小学校 PTA関連資料・評価",
     "/archive/atsugi/shimizu-es/",
     "清水小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "玉川小学校 PTA関連資料・評価",
     "/archive/atsugi/tamagawa-es/",
     "玉川小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "玉川中学校 PTA関連資料・評価",
     "/archive/atsugi/tamagawa-jhs/",
     "玉川中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "鳶尾小学校 PTA関連資料・評価",
     "/archive/atsugi/tobio-es/",
     "鳶尾小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "戸田小学校 PTA関連資料・評価",
     "/archive/atsugi/toda-es/",
     "戸田小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "東名中学校 PTA関連資料・評価",
     "/archive/atsugi/tomei-jhs/",
     "東名中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "戸室小学校 PTA関連資料・評価",
     "/archive/atsugi/tomuro-es/",
     "戸室小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "妻田小学校 PTA関連資料・評価",
     "/archive/atsugi/tsumada-es/",
     "妻田小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "埼玉県久喜市 PTA関連資料｜学校別PDF整理",
     "/archive/kuki/",
     "埼玉県久喜市の学校別PTA関連PDFを、学校名、原本ファイル名、ページ数で整理した資料ページです。",
-    "current-canonical"
+    "source-archive"
   ],
   [
     "PTA運営チェック",
