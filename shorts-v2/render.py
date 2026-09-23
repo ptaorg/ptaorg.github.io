@@ -248,11 +248,11 @@ def bed(sec,out):
         f.setnchannels(2); f.setsampwidth(2); f.setframerate(sr); f.writeframes((np.clip(stereo,-.9,.9)*32767).astype(np.int16).tobytes())
 
 def scene_video(p,dur,out,i):
-    n=max(1,round(dur*FPS)); z=f"min(1+0.032*on/{max(1,n-1)},1.032)"
-    x="iw/2-(iw/zoom/2)+12*sin(on/31)" if i%2 else "iw/2-(iw/zoom/2)-12*sin(on/29)"
-    y="ih/2-(ih/zoom/2)"
-    vf=f"zoompan=z='{z}':x='{x}':y='{y}':d={n}:s={W}x{H}:fps={FPS},fade=t=in:st=0:d=0.08,format=yuv420p"
-    run(["ffmpeg","-y","-loop","1","-i",str(p),"-t",f"{dur:.3f}","-vf",vf,"-c:v","libx264","-preset","medium","-crf","18","-r",str(FPS),str(out)])
+    # Keep photographic scenes visually stable. Motion comes from hard scene changes
+    # and caption timing rather than continuous pan/zoom that can feel seasick on mobile.
+    vf=f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},format=yuv420p"
+    run(["ffmpeg","-y","-loop","1","-i",str(p),"-t",f"{dur:.3f}","-vf",vf,
+         "-c:v","libx264","-preset","medium","-crf","18","-r",str(FPS),str(out)])
 
 def concat(vs,out):
     lst=out.parent/"video.txt"; lst.write_text("".join(f"file '{p.as_posix()}'\n" for p in vs))
