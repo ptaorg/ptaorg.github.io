@@ -64,6 +64,19 @@ def voicevox_available() -> bool:
         return False
 
 
+def voicevox_credit(speaker_id: int) -> str:
+    try:
+        with urllib.request.urlopen(f"{VOICEVOX_URL}/speakers", timeout=10) as response:
+            speakers = json.loads(response.read().decode("utf-8"))
+        for speaker in speakers:
+            for style in speaker.get("styles", []):
+                if int(style.get("id", -1)) == speaker_id:
+                    return f"VOICEVOX:{speaker.get('name', '音声')}"
+    except Exception:
+        pass
+    return "VOICEVOX"
+
+
 def synthesize_voicevox(text: str, out: Path, speaker: int, speed: float) -> None:
     params = urllib.parse.urlencode({"text": text, "speaker": speaker})
     query_bytes = post_json(f"{VOICEVOX_URL}/audio_query?{params}")
@@ -178,6 +191,7 @@ def render_topic(topic: dict, requested_provider: str) -> Path:
     ])
 
     total_frames = cursor_frames
+    credit = voicevox_credit(speaker) if provider == "voicevox" else ""
     props = {
         "id": topic_id,
         "title": topic["title"],
@@ -186,6 +200,7 @@ def render_topic(topic: dict, requested_provider: str) -> Path:
         "audioFile": f"generated/{topic_id}/narration.wav",
         "totalFrames": total_frames,
         "scenes": rendered_scenes,
+        "voiceCredit": credit,
     }
     props_file = topic_work / "props.json"
     props_file.write_text(json.dumps(props, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -209,6 +224,7 @@ def render_topic(topic: dict, requested_provider: str) -> Path:
         "source": topic.get("source", ""),
         "voice_provider": provider,
         "voicevox_speaker": speaker if provider == "voicevox" else None,
+        "voice_credit": credit,
         "duration_seconds": round(ffprobe_duration(output), 2),
         "total_frames": total_frames,
         "scene_count": len(scenes),
