@@ -1,57 +1,78 @@
-# PTA Shorts 自動生成
+# PTA Shorts 自動生成 v2
 
-このディレクトリは、PTA適正化推進委員会の確認済み台本から YouTube Shorts 用の縦動画を自動生成するための最小構成です。
+PTA適正化推進委員会の確認済み本文をもとに、1080×1920 の YouTube Shorts 用動画を無料構成で生成します。
 
-## 現在できること
+## v2 の考え方
 
-- `shorts/topics.json` に登録した台本を読む
-- セグメントごとに日本語音声を生成する
-- 音声区間に合わせて字幕を作る
-- 1080×1920 の縦動画へ字幕を焼き込む
-- 完成 MP4 を GitHub Actions の Artifact として保存する
+旧版の「静止背景＋字幕」から、Remotion ベースのモーショングラフィックへ移行しました。
 
-現段階では、AIによる法的内容の自動執筆と YouTube への自動公開は行いません。動画生成部分を先に独立して検証する構成です。
+現在のテンプレートには次の6種類のシーンがあります。
 
-## GitHub Actions から生成する
+- hook: 冒頭フック。大見出し、校舎イラスト、疑問・否定表示
+- split: 学校とPTAなど、2概念の比較
+- flow: 保護者 → 加入意思 → PTA会員などの流れ
+- risk: 見直すべき運用を警告カードで表示
+- evidence: ptaorg.com や一次資料の根拠表示
+- conclusion: 結論、要点3点、サイトへのCTA
 
-GitHub の Actions で「Generate PTA Shorts」を開き、Run workflow を実行します。
+すべての重要要素は縦動画の端から離し、YouTube Shorts のUIと重なりにくい位置へ固定しています。
 
-`topic_id` を空欄にすると全件、`membership-001` と入力すると1本だけ生成します。
+## 無料構成
 
-完了後、workflow run の Artifacts に `pta-shorts` が作成されます。MP4 と生成メタデータが入ります。
+- 動画レンダリング: Remotion
+- 音声: VOICEVOX ENGINE
+- フォールバック音声: gTTS
+- 実行: GitHub Actions
+- 最終合成: Remotion / ffmpeg
 
-## 台本を追加する
+外部の有料動画生成APIは必要ありません。
 
-`topics.json` に次の形式で追加します。
+## GitHub Actions
 
-```json
-{
-  "id": "example-001",
-  "title": "動画タイトル",
-  "source": "https://ptaorg.com/...",
-  "segments": [
-    "一つ目の読み上げ文。",
-    "二つ目の読み上げ文。"
-  ]
-}
-```
+Actions の「Generate PTA Shorts」から実行します。
 
-字幕のタイミングは、各セグメントの実際の音声長から自動計算します。そのため、字幕を自然に切りたい位置で `segments` を分けてください。
+- topic_id: 空欄で全件、membership-001 で1本だけ
+- voice_provider: voicevox / gtts / auto
+
+通常は voicevox を使います。
+
+生成Artifactには以下が入ります。
+
+- MP4
+- JSONメタデータ
+- 動画内5地点のJPEGプレビュー
+
+## 台本データ
+
+shorts/topics.json の各動画は scenes 配列で構成します。
+
+音声長を実測し、各シーンの表示時間を自動的に決めます。VOICEVOXの音声と画面切替が同じタイムラインを使うため、手作業で字幕時刻を打つ必要はありません。
 
 ## ローカル実行
 
-Python 3.11+、ffmpeg、Noto Sans CJK 系フォントが必要です。
+必要なもの:
 
-```bash
-pip install -r shorts/requirements.txt
-python shorts/generate.py --topic membership-001
-```
+- Python 3.11+
+- Node.js 20+
+- ffmpeg / ffprobe
+- Noto Sans CJK
+- VOICEVOX ENGINE（推奨）
 
-生成物は `shorts/output/` に出力されます。生成物はリポジトリにはコミットせず、Actions の Artifact で扱うことを前提にしています。
+実行例:
 
-## 次段階
+    cd shorts/remotion
+    npm install
+    cd ../..
+    pip install -r shorts/requirements.txt
+    python shorts/generate.py --topic membership-001 --voice-provider voicevox
 
-1. 3本程度で映像・音声・字幕の品質を確認
-2. 台本生成をAI化。ただし出典URLと確認工程を必須にする
-3. 承認済み動画だけ YouTube Data API で投稿
-4. 投稿済みIDを管理して重複公開を防ぐ
+VOICEVOX ENGINE は http://127.0.0.1:50021 を既定値にしています。別URLの場合は VOICEVOX_URL を設定してください。
+
+## 品質方針
+
+- 法令名、自治体名、数字などを映像テンプレート側で創作しない
+- 出典URLを動画データに残す
+- CTAより根拠表示を優先する
+- 1画面1メッセージを基本とする
+- 写真がなくても成立するよう、校舎・人物・書類等をベクター図解する
+- 今後、一次資料画像やサイト実画面を差し込める構造へ拡張する
