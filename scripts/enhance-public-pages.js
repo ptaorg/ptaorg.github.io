@@ -180,22 +180,22 @@ function upsertCanonical(html, url) {
 
 function upsertDiscoveryMetadata(html) {
   let next = html;
-  if (!/<meta\s+name=["']author["']/i.test(next)) {
+  if (!/<meta\b(?=[^>]*\bname=["']author["'])[^>]*>/i.test(next)) {
     next = addHeadMarkup(next, '<meta name="author" content="PTA適正化推進委員会">');
   }
-  if (!/<link\s+rel=["']alternate["'][^>]*href=["']\/llms\.txt["']/i.test(next)) {
+  if (!/<link\b(?=[^>]*\brel=["']alternate["'])(?=[^>]*\bhref=["']\/llms\.txt["'])[^>]*>/i.test(next)) {
     next = addHeadMarkup(next, '<link rel="alternate" type="text/plain" href="/llms.txt" title="AI向けサイト案内">');
   }
-  if (!/<link\s+rel=["']stylesheet["'][^>]*href=["']\/css\/prose\.css/i.test(next)) {
+  if (!/<link\b(?=[^>]*\brel=["']stylesheet["'])(?=[^>]*\bhref=["']\/css\/prose\.css)[^>]*>/i.test(next)) {
     next = addHeadMarkup(next, '<link rel="stylesheet" href="/css/prose.css?v=20260906-4">');
   }
-  if (/<footer\b/i.test(next) && !/<link\s+rel=["']stylesheet["'][^>]*href=["']\/css\/global-footer\.css/i.test(next)) {
+  if (/<footer\b/i.test(next) && !/<link\b(?=[^>]*\brel=["']stylesheet["'])(?=[^>]*\bhref=["']\/css\/global-footer\.css)[^>]*>/i.test(next)) {
     next = addHeadMarkup(next, '<link rel="stylesheet" href="/css/global-footer.css?v=20260906-2">');
   }
-  if (!/<link\s+rel=["']stylesheet["'][^>]*href=["']\/css\/scroll-top\.css/i.test(next)) {
+  if (!/<link\b(?=[^>]*\brel=["']stylesheet["'])(?=[^>]*\bhref=["']\/css\/scroll-top\.css)[^>]*>/i.test(next)) {
     next = addHeadMarkup(next, '<link rel="stylesheet" href="/css/scroll-top.css?v=20260906-1">');
   }
-  if (!/<script\b[^>]*src=["']\/js\/scroll-top\.js/i.test(next)) {
+  if (!/<script\b(?=[^>]*\bsrc=["']\/js\/scroll-top\.js)[^>]*>/i.test(next)) {
     next = addHeadMarkup(next, '<script defer src="/js/scroll-top.js?v=20260906-1"></script>');
   }
   return next;
