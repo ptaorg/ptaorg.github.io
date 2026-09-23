@@ -1,11 +1,18 @@
 {
   "version": 1,
-  "updated": "2026-09-20",
+  "updated": "2026-09-24",
   "default": {
     "sitemap": "index",
     "search": "index"
   },
   "entries": [
+    {
+      "url": "/",
+      "role": "current-canonical",
+      "sitemap": "index",
+      "search": "index",
+      "successor": null
+    },
     {
       "url": "/membership.html",
       "role": "current-canonical",
@@ -153,6 +160,20 @@
       "role": "source-archive",
       "sitemap": "index",
       "search": "index",
+      "successor": null
+    },
+    {
+      "prefix": "/archive/",
+      "role": "source-archive",
+      "sitemap": "index",
+      "search": "index",
+      "successor": null
+    },
+    {
+      "prefix": "/pta-open-system/",
+      "role": "internal/development",
+      "sitemap": "exclude",
+      "search": "exclude",
       "successor": null
     }
   ]

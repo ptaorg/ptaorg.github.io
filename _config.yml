@@ -24,7 +24,8 @@ exclude:
   - starter-kit/templates/
   - starter-kit/html/
   - assets/compliance/README.md
-  - shorts/README.md
+  - shorts/
+  - parts/
   - .claude/
   - .github/
   - .visual-audit-request-20260711/

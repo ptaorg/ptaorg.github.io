@@ -1074,66 +1074,6 @@ window.PTA_SITE_SEARCH_INDEX = [
     "current-canonical"
   ],
   [
-    "PTA管理アプリ画面プレビュー",
-    "/pta-open-system/apps-script/admin-app-preview.html",
-    "これは静的プレビューです。実際の操作はApps Scriptに貼り付けた管理アプリ画面で行います。",
-    "current-canonical"
-  ],
-  [
-    "PTA管理アプリ",
-    "/pta-open-system/apps-script/Index.functional.html",
-    "PTAの加入申込み、会員確定、会員名簿を分離して管理するGoogle Apps Script向け管理画面の実装例です。",
-    "current-canonical"
-  ],
-  [
-    "トップページ",
-    "/pta-open-system/google-sites-html/01_top.html",
-    "PTAホームページについて、PTA適正化推進委員会が公開情報と確認資料に基づいて整理したページです。",
-    "current-canonical"
-  ],
-  [
-    "お知らせ",
-    "/pta-open-system/google-sites-html/02_news.html",
-    "新しいお知らせは、一番上に追加してください。日付、件名、本文、関連資料リンク、カテゴリを入れると見やすくなります。",
-    "current-canonical"
-  ],
-  [
-    "活動紹介",
-    "/pta-open-system/google-sites-html/03_activities.html",
-    "活動紹介について、PTA適正化推進委員会が公開情報と確認資料に基づいて整理したページです。",
-    "current-canonical"
-  ],
-  [
-    "資料室",
-    "/pta-open-system/google-sites-html/04_documents.html",
-    "PTAに関する資料を掲載します。PDFやGoogleドライブ上のファイルへのリンクを置くことができます。",
-    "current-canonical"
-  ],
-  [
-    "入会案内",
-    "/pta-open-system/google-sites-html/05_join.html",
-    "入会案内について、PTA適正化推進委員会が公開情報と確認資料に基づいて整理したページです。",
-    "current-canonical"
-  ],
-  [
-    "重要事項",
-    "/pta-open-system/google-sites-html/06_important.html",
-    "重要事項について、PTA適正化推進委員会が公開情報と確認資料に基づいて整理したページです。",
-    "current-canonical"
-  ],
-  [
-    "FAQ",
-    "/pta-open-system/google-sites-html/07_faq.html",
-    "ありません。PTAに加入しないことにより、児童・生徒が学校教育活動上の不利益を受けるものではありません。",
-    "current-canonical"
-  ],
-  [
-    "お問い合わせ",
-    "/pta-open-system/google-sites-html/08_contact.html",
-    "お問い合わせについて、PTA適正化推進委員会が公開情報と確認資料に基づいて整理したページです。",
-    "current-canonical"
-  ],
-  [
     "PTA内部事務の学校処理 全国法的整合性調査",
     "/pta-school-processing.html",
     "PTAから学校への委任、本人同意、校長判断、学校徴収金・準公金・私費会計規程を根拠に、公立学校がPTA内部事務を恒常処理する制度を全国比較。公法上の受任権限、地方公務員法35条、学校教育法37条、個人情報保護法61条・69条の順で検証します。",
