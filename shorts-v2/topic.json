@@ -1,0 +1,27 @@
+{
+  "id": "membership-001",
+  "title": "入学したら、自動的にPTA会員になるの？",
+  "source": "https://ptaorg.com/membership.html",
+  "voice": "ja-JP-NanamiNeural",
+  "rate": "-2%",
+  "pitch": "-2Hz",
+  "segments": [
+    {"kind":"hook","narration":"入学したら、自動的にPTA会員になる。役員も断れない。そんなふうに心配していませんか？","caption_chunks":["入学したら自動的にPTA会員？","役員も断れない？","そんな心配、ありませんか？"],"asset":"parent_docs"},
+    {"kind":"split","narration":"まず、ここは分けて考えて大丈夫です。学校への入学という事実と、PTAへの加入は、別の関係です。","caption_chunks":["まず、ここは分けて考えて大丈夫","学校への入学とPTAへの加入は","別の関係です"],"asset":"classroom"},
+    {"kind":"source_ptaorg","narration":"PTA適正化推進委員会の整理でも、学校への在籍とPTAの会員関係は、別に確認することを基本にしています。","caption_chunks":["学校への在籍と","PTAの会員関係は","別に確認します"]},
+    {"kind":"source_mext","narration":"文部科学省も、PTAを、保護者と教師が自ら組織する任意の社会教育団体と説明しています。","caption_chunks":["文部科学省もPTAを","保護者と教師が自ら組織する","任意の社会教育団体と説明"]},
+    {"kind":"bad_flow","narration":"だから、在籍しているだけで自動的に会員扱いにし、そのまま会費や役員選出へ進める運用は、加入の根拠を別に確認する必要があります。","caption_chunks":["在籍だけで自動的に会員扱い？","そのまま会費や役員選出？","加入の根拠は別に確認が必要です"],"asset":"school_hall"},
+    {"kind":"good_flow","narration":"大事なのは、紙かどうかではありません。本人が加入を申し込み、PTAが受け付けたことを、後から確認できることです。","caption_chunks":["紙の入会届そのものが核心ではありません","本人が加入を申し込み","PTAが受け付けた記録を残す"],"asset":"parent_docs"},
+    {"kind":"reassure","narration":"もし入学前で不安なら、まず、入会方法はどうなっていますか、と確認すれば十分です。必要以上に心配しなくて大丈夫です。","caption_chunks":["入学前で不安なら","『入会方法はどうなっていますか』","まずはそれを確認すれば十分です"],"asset":"school_hall"},
+    {"kind":"cta","narration":"会費、個人情報、役員選出まで、詳しくはPTA適正化推進委員会、ptaorg.comで確認できます。","caption_chunks":["会費・個人情報・役員選出まで","詳しくは ptaorg.com へ"]}
+  ],
+  "sources": [
+    {"label":"PTA適正化推進委員会『PTAの会員資格と入会手続』","url":"https://ptaorg.com/membership.html"},
+    {"label":"文部科学省 末松信介文部科学大臣記者会見録（令和4年6月17日）","url":"https://www.mext.go.jp/b_menu/daijin/detail/mext_00278.html"}
+  ],
+  "assets": {
+    "parent_docs":{"url":"https://images.pexels.com/photos/9052137/pexels-photo-9052137.jpeg?auto=compress&cs=tinysrgb&w=1600","credit":"SHVETS production / Pexels","source":"https://www.pexels.com/photo/a-woman-looking-at-documents-9052137/"},
+    "classroom":{"url":"https://images.pexels.com/photos/33449528/pexels-photo-33449528.jpeg?auto=compress&cs=tinysrgb&w=1600","credit":"Gu Ko / Pexels","source":"https://www.pexels.com/photo/japanese-classroom-scene-with-digital-learning-33449528/"},
+    "school_hall":{"url":"https://images.pexels.com/photos/32292156/pexels-photo-32292156.jpeg?auto=compress&cs=tinysrgb&w=1600","credit":"Green odette / Pexels","source":"https://www.pexels.com/ja-jp/photo/32292156/"}
+  }
+}
