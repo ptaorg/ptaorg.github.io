@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "job_id": "replace-me",
+  "platform": "youtube",
+  "content_type": "shorts",
+  "video_file": "video.mp4",
+  "title": "タイトルをここに記載 #Shorts",
+  "description": "説明文をここに記載\nhttps://ptaorg.com/",
+  "made_for_kids": false,
+  "visibility": "public",
+  "language": "ja",
+  "category": "Education",
+  "source_url": "https://ptaorg.com/",
+  "post_publish": {
+    "return_video_url": true,
+    "return_video_id": true,
+    "return_final_title": true,
+    "return_visibility": true
+  }
+}
