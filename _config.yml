@@ -10,6 +10,7 @@ exclude:
   - package-lock.json
   - package.json
   - README.md
+  - AGENTS.md
   - SITE_STRUCTURE.md
   - URL_LEDGER.md
   - コミット手順.md
@@ -23,6 +24,7 @@ exclude:
   - starter-kit/templates/
   - starter-kit/html/
   - assets/compliance/README.md
+  - shorts/README.md
   - .claude/
   - .github/
   - .visual-audit-request-20260711/
