@@ -67,8 +67,8 @@ function relativePath(filePath) {
 }
 
 function isPublishable(html) {
-  const noindex = /<meta\\b(?=[^>]*\\bname=["\']robots["\'])(?=[^>]*\\bcontent=["\'][^"\']*noindex)[^>]*>/i;
-  const refresh = /<meta\\b(?=[^>]*\\bhttp-equiv=["\']refresh["\'])[^>]*>/i;
+  const noindex = /<meta\b(?=[^>]*\bname=["']robots["'])(?=[^>]*\bcontent=["'][^"']*noindex)[^>]*>/i;
+  const refresh = /<meta\b(?=[^>]*\bhttp-equiv=["']refresh["'])[^>]*>/i;
   return !noindex.test(html) && !refresh.test(html);
 }
 
@@ -161,21 +161,21 @@ function addHeadMarkup(html, markup) {
 }
 
 function upsertDescription(html, description) {
-  if (/<meta\\b(?=[^>]*\\bname=["\']description["\'])[^>]*>/i.test(html)) return html;
-  return addHeadMarkup(html, `<meta name="description" content="${escapeAttribute(description)}">`);
+  if (/<meta\b(?=[^>]*\bname=["']description["'])[^>]*>/i.test(html)) return html;
+  return addHeadMarkup(html, \`<meta name="description" content="\${escapeAttribute(description)}">\`);
 }
 
 function upsertRobots(html) {
-  const robots = /<meta\\b(?=[^>]*\\bname=["\']robots["\'])[^>]*>/i;
+  const robots = /<meta\b(?=[^>]*\bname=["']robots["'])[^>]*>/i;
   if (robots.test(html)) {
-    return html.replace(robots, `<meta name="robots" content="${ROBOTS_VALUE}">`);
+    return html.replace(robots, \`<meta name="robots" content="\${ROBOTS_VALUE}">\`);
   }
-  return addHeadMarkup(html, `<meta name="robots" content="${ROBOTS_VALUE}">`);
+  return addHeadMarkup(html, \`<meta name="robots" content="\${ROBOTS_VALUE}">\`);
 }
 
 function upsertCanonical(html, url) {
-  if (/<link\\b(?=[^>]*\\brel=["\']canonical["\'])[^>]*>/i.test(html)) return html;
-  return addHeadMarkup(html, `<link rel="canonical" href="${escapeAttribute(url)}">`);
+  if (/<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/i.test(html)) return html;
+  return addHeadMarkup(html, \`<link rel="canonical" href="\${escapeAttribute(url)}">\`);
 }
 
 function upsertDiscoveryMetadata(html) {
