@@ -3,81 +3,52 @@
   "title": "入学したら、自動的にPTA会員になるの？",
   "source": "https://ptaorg.com/membership.html",
   "voice": "ja-JP-NanamiNeural",
-  "rate": "+8%",
-  "pitch": "-2Hz",
+  "rate": "+25%",
+  "pitch": "+0Hz",
   "segments": [
     {
       "kind": "hook",
-      "narration": "入学したら、自動的にPTA会員？",
+      "narration": "入学したら、PTAにも自動で入るの？",
       "caption_chunks": [
         "入学したら",
-        "自動的にPTA会員？"
+        "PTAにも自動で入るの？"
       ],
       "asset": "parent_docs"
     },
     {
       "kind": "split",
-      "narration": "実は、学校への入学と、PTAへの加入は別です。",
+      "narration": "いいえ。学校に入ることと、PTAに入ることは別です。",
       "caption_chunks": [
-        "実は、",
-        "学校への入学とPTAへの加入は",
-        "別です"
+        "いいえ。",
+        "学校に入ることと",
+        "PTAに入ることは別です"
       ],
       "asset": "classroom"
     },
     {
       "kind": "source_ptaorg",
-      "narration": "当委員会でも、学校在籍とPTAの会員関係は、別に確認することを基本にしています。",
+      "narration": "PTAに入るかどうかは、本人にきちんと確認するのが基本です。",
       "caption_chunks": [
-        "学校への在籍と",
-        "PTAの会員関係は",
-        "別に確認します"
-      ]
-    },
-    {
-      "kind": "source_mext",
-      "narration": "文部科学省も、PTAを、保護者と教師が自ら組織する任意の社会教育団体と説明しています。",
-      "caption_chunks": [
-        "文部科学省もPTAを",
-        "保護者と教師が自ら組織する",
-        "任意の社会教育団体と説明"
-      ]
-    },
-    {
-      "kind": "bad_flow",
-      "narration": "在籍だけで、自動加入、会費、役員選出へ進むなら、加入の根拠は別に確認が必要です。",
-      "caption_chunks": [
-        "在籍だけで自動加入？",
-        "そのまま会費や役員選出？",
-        "加入の根拠は別に確認"
-      ],
-      "asset": "school_hall"
-    },
-    {
-      "kind": "good_flow",
-      "narration": "大事なのは、本人の申込みと、PTAの受付を、記録で確認できることです。",
-      "caption_chunks": [
-        "大事なのは",
-        "本人の申込みとPTAの受付を",
-        "記録で確認できること"
+        "PTAに入るかどうかは",
+        "本人にきちんと確認"
       ],
       "asset": "parent_docs"
     },
     {
       "kind": "reassure",
-      "narration": "不安なら、入会方法はどうなっていますか。まず、それだけ確認すれば十分です。",
+      "narration": "不安なら、PTAはどうやって入るんですか、と聞けばオーケー。",
       "caption_chunks": [
         "不安なら",
-        "『入会方法はどうなっていますか』",
-        "まず、それだけ確認すれば十分"
+        "『PTAはどうやって入るんですか？』",
+        "と聞けばOK"
       ],
       "asset": "school_hall"
     },
     {
       "kind": "cta",
-      "narration": "詳しくは、PTA適正化推進委員会のサイトで確認できます。",
+      "narration": "会費や役員のことも、詳しくはptaorg.comへ。",
       "caption_chunks": [
-        "会費・個人情報・役員選出まで",
+        "会費や役員のことも",
         "詳しくは ptaorg.com へ"
       ]
     }
