@@ -104,8 +104,55 @@
     scheduleHashScroll();
   }, { passive: true });
 
+  function scrollMemoryKey() {
+    return 'ptaorg-scroll:' + location.pathname + location.search;
+  }
+
+  function saveScrollPosition() {
+    if (location.hash) return;
+    try {
+      sessionStorage.setItem(scrollMemoryKey(), JSON.stringify({
+        x: window.scrollX || 0,
+        y: window.scrollY || document.documentElement.scrollTop || 0
+      }));
+    } catch (e) {}
+  }
+
+  function restoreScrollPosition() {
+    if (location.hash) return false;
+    var nav = null;
+    try {
+      var entries = performance.getEntriesByType && performance.getEntriesByType('navigation');
+      nav = entries && entries[0];
+    } catch (e) {}
+    if (!nav || nav.type !== 'back_forward') return false;
+
+    try {
+      var raw = sessionStorage.getItem(scrollMemoryKey());
+      if (!raw) return false;
+      var pos = JSON.parse(raw);
+      if (!pos || typeof pos.y !== 'number') return false;
+      allowAutoTop = false;
+      [0, 80, 260, 700].forEach(function(ms){
+        setTimeout(function(){
+          try { window.scrollTo({ top: Math.max(0, pos.y), left: Math.max(0, pos.x || 0), behavior: 'auto' }); }
+          catch (e) { try { window.scrollTo(Math.max(0, pos.x || 0), Math.max(0, pos.y)); } catch (_) {} }
+        }, ms);
+      });
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  window.addEventListener('pagehide', saveScrollPosition, { passive: true });
+
   window.addEventListener('pageshow', function(){
-    if (location.hash && (location.pathname + location.search) === initialPath) scheduleHashScroll();
+    if (location.hash && (location.pathname + location.search) === initialPath) {
+      scheduleHashScroll();
+      return;
+    }
+    restoreScrollPosition();
   });
 
   var SITE_INDEX = [
