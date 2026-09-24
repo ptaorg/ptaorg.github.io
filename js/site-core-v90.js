@@ -5,7 +5,7 @@
   var allowAutoTop = !location.hash;
 
   try {
-    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    if ('scrollRestoration' in history) history.scrollRestoration = 'auto';
   } catch (e) {}
 
   function ready(fn) {
@@ -105,7 +105,7 @@
   }, { passive: true });
 
   window.addEventListener('pageshow', function(){
-    if (!location.hash && (location.pathname + location.search) === initialPath) forceTopBurst(1200);
+    if (location.hash && (location.pathname + location.search) === initialPath) scheduleHashScroll();
   });
 
   var SITE_INDEX = [
