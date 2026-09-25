@@ -124,7 +124,8 @@ export function auditStatic(root, siteDir) {
       }
     } catch (error) { add('invalid-url', file, `${raw}: ${error.message}`); }
   };
-  const robotsText = fs.existsSync(path.join(root, 'robots.txt')) ? read('robots.txt') : '';
+  const robotsPath = path.join(siteDir || root, 'robots.txt');
+  const robotsText = fs.existsSync(robotsPath) ? fs.readFileSync(robotsPath, 'utf8') : '';
   if (!robotsText) add('robots', 'robots.txt', 'missing or empty');
   const robots = robotsParser(`${origin}/robots.txt`, robotsText);
   const sitemapFiles = new Set(all.filter(f => /^sitemap.*\.xml$/.test(f)));

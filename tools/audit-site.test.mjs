@@ -48,6 +48,19 @@ test('sitemap and robots mismatches fail, including previously unlisted HTML', t
   write('index.html', html.replace('</head>', '<meta name=robots content="index,noindex"></head>'));
   assert.ok(auditStatic(root).findings.some(f => f.code === 'robots-conflict'));
 });
+test('published robots.txt is required and never falls back to the source file', t => {
+  const { root, write, html } = fixture(t);
+  const siteDir = path.join(root, 'build');
+  write('build/index.html', html);
+  write('build/sitemap.xml', fs.readFileSync(path.join(root, 'sitemap.xml')));
+  const missing = auditStatic(root, siteDir).findings;
+  assert.ok(missing.some(f => f.code === 'robots' && f.file === 'robots.txt' && f.severity === 'error'));
+  write('build/robots.txt', fs.readFileSync(path.join(root, 'robots.txt')));
+  assert.deepEqual(auditStatic(root, siteDir).findings, []);
+  fs.unlinkSync(path.join(root, 'robots.txt'));
+  assert.deepEqual(auditStatic(root, siteDir).findings, []);
+});
+
 test('actual publication detects excluded files and inspects built HTML', t => {
   const { root, write, html } = fixture(t);
   write('build/index.html', html.replace('</body>', '<p id=ok></p></body>'));
