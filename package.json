@@ -28,6 +28,15 @@
     "sync:catalog": "npm run generate:sitemap && npm run generate:search",
     "check:catalog": "npm run check:generated",
     "check:url-ledger": "node scripts/check-url-ledger.js",
-    "check:pages-boundary": "node scripts/check-pages-boundary.js"
+    "check:pages-boundary": "node scripts/check-pages-boundary.js",
+    "check:browser": "node tools/audit-site.mjs --browser",
+    "test:audit": "node --test tools/audit-site.test.mjs"
+  },
+  "devDependencies": {
+    "fast-xml-parser": "5.11.1",
+    "parse5": "8.0.1",
+    "playwright": "1.63.0",
+    "robots-parser": "3.0.1",
+    "yaml": "2.9.1"
   }
 }
