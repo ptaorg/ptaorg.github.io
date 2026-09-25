@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { execSync } from "node:child_process";
+import { runAudit } from "./audit-site.mjs";
 
 const root = process.cwd();
 const errors = [];
@@ -360,6 +361,11 @@ checkInternalFragments();
 checkInternalRefs();
 checkAssetSignatures();
 checkGoogleSitesLinks();
+
+const audit = await runAudit();
+for (const finding of audit.findings) {
+  (finding.severity === "error" ? errors : warnings).push(`${finding.code}: ${finding.file}: ${finding.detail}`);
+}
 
 if (warnings.length) {
   console.warn("WARNINGS");

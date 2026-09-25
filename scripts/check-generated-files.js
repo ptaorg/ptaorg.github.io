@@ -15,6 +15,12 @@ const GENERATED_FILES = [
   "data/site-search-index.js"
 ];
 
+// Git may check these text files out as CRLF on Windows. Ignore only that
+// representation difference; content, whitespace and lone CR differences fail.
+function sameGeneratedContent(left, right) {
+  return left.toString("utf8").replace(/\r\n/g, "\n") === right.toString("utf8").replace(/\r\n/g, "\n");
+}
+
 function run(workspace, script) {
   const result = spawnSync(process.execPath, [script], {
     cwd: workspace, stdio: "inherit", shell: false
@@ -39,7 +45,7 @@ function main() {
     ]) run(workspace, script);
 
     const changed = GENERATED_FILES.filter((file) =>
-      !fs.readFileSync(path.join(ROOT, file)).equals(fs.readFileSync(path.join(workspace, file)))
+      !sameGeneratedContent(fs.readFileSync(path.join(ROOT, file)), fs.readFileSync(path.join(workspace, file)))
     );
     if (changed.length) {
       console.error("Generated files differ from the current generator output. Review the differences before regenerating; working files were not changed.");
@@ -56,3 +62,5 @@ function main() {
 if (require.main === module) {
   main();
 }
+
+module.exports = { sameGeneratedContent };
