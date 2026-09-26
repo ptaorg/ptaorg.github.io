@@ -389,22 +389,22 @@ window.PTA_DOCUMENTS = {
     ]
   },
   "guidebook-board": {
-    title: "学校・教育委員会向けガイドブックの確認ポイント",
-    documentName: "PTA運営適正化ガイドブック 第4版",
+    title: "旧版ガイドブック（第4版）の参照案内",
+    documentName: "PTA運営適正化ガイドブック 第4版（旧版）",
     issuer: "PTA適正化推進委員会",
     date: "第4版",
     type: "ガイドブック",
     category: "Guidebook",
     pdfUrl: "assets/docs/guidebook-v4.pdf",
     pdfSize: "PDF・約1.2MB",
-    intro: "学校・教育委員会がPTA運営を確認するためのガイドブックです。PDFを開く前に、ページ本文でも主要論点を確認できます。",
+    intro: "この27ページPDFは旧版資料であり、2026年8月23日以後の当委員会の現行見解ではありません。現行の実務確認には、学校・教育委員会向けガイドの14章と配布・共有用資料をご利用ください。",
     checks: [
       "学校とPTAの分離を確認しているか。",
       "個人情報、会費、職員関与、施設利用を分けて点検しているか。",
       "教育委員会として学校に確認する項目が整理されているか。",
       "原文PDFを使う場合は、該当箇所と関連法令を併読しているか。"
     ],
-    relationship: "学校・教育委員会向けの実務整理です。まずHTML本文で構造を確認し、申入れや内部検討で必要な場合に原文PDFを参照してください。",
+    relationship: "このPDFは経緯確認用の旧版です。現行14章や旧版保存HTMLとは章構成・改訂状態が異なり、現行HTMLの全文PDFではありません。",
     lookPoints: [
       "学校管理職の確認責任",
       "学校保有個人情報",
@@ -412,12 +412,14 @@ window.PTA_DOCUMENTS = {
       "会費徴収と施設利用"
     ],
     keyPoints: [
-      "PDF全文を開く前にHTML本文で全体像を確認できます。",
+      "旧版PDFの記述を、現行の見解としてそのまま適用しないでください。",
       "個別事案の適法性を断定するものではなく、確認項目の整理に使います。",
       "教育委員会回答集や現場実例ページと併読してください。"
     ],
     related: [
-      { label: "HTML本文で読む", url: "guide-board.html#guidebook-text" },
+      { label: "現行14章を読む", url: "guide-board.html#board-jp-guideline" },
+      { label: "配布・共有用資料", url: "guide-board.html#s14" },
+      { label: "旧版保存HTML（PDFとは改訂状態が異なります）", url: "PTA運営適正化ガイドブック_第4版_改訂本文.html" },
       { label: "教育委員会回答集", url: "board-responses.html" },
       { label: "現場実例", url: "compliance.html" }
     ]

@@ -429,6 +429,22 @@ if (!theoryHtml.includes('令和7年度「令和の時代」におけるPTA運�
   findings.push('journal/pta-unified-legal-theory.html: PTA運営改善報告書の正式名称がありません');
 }
 
+// Keep the current guide separate from preserved legacy source material.
+const guideBoard = fs.readFileSync(path.join(root, 'guide-board.html'), 'utf8');
+for (const obsolete of ['New — 第4版', '全27ページ', 'すべての根拠が失われます', 'class="chapter-block']) {
+  if (guideBoard.includes(obsolete)) findings.push(`guide-board.html: 旧版再掲・誤案内が残っています (${obsolete})`);
+}
+for (const id of ['board-jp-guideline', 'guidebook-text', 'guidebook-content', 'key-materials', 'board-ed-resource-set', ...Array.from({ length: 14 }, (_, i) => `s${i + 1}`)]) {
+  if (!guideBoard.includes(`id="${id}"`)) findings.push(`guide-board.html: 保全対象IDがありません (${id})`);
+}
+const guideDocuments = { window: {} };
+vm.runInNewContext(fs.readFileSync(path.join(root, 'js/document-data.js'), 'utf8'), guideDocuments);
+const legacyGuide = guideDocuments.window.PTA_DOCUMENTS['guidebook-board'];
+if (!legacyGuide.intro.includes('旧版') || !legacyGuide.relationship.includes('現行HTMLの全文PDFではありません')
+    || !legacyGuide.related.some(link => link.url === 'guide-board.html#board-jp-guideline')) {
+  findings.push('js/document-data.js: guidebook-boardの旧版注意又は現行14章への案内がありません');
+}
+
 if (findings.length) {
   console.error('Content consistency check failed:');
   for (const finding of findings) console.error(`- ${finding}`);
