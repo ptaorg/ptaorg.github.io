@@ -1,0 +1,28 @@
+{
+  "pageMode": "materials",
+  "municipality": "いわき市",
+  "prefecture": "福島県",
+  "schoolName": "平第四小学校",
+  "schoolType": "小学校",
+  "slug": "school-011-es",
+  "basePath": "/archive/iwaki/school-011-es/",
+  "canonical": "https://ptaorg.com/archive/iwaki/school-011-es/",
+  "ogImage": "/assets/og-image-popc-en.png",
+  "summary": "いわき市の保存資料を学校別に整理した一次資料アーカイブです。",
+  "description": "平第四小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+  "sourceSummary": "Google Drive「全国資料／いわき市」とローカル保存資料を突合し、学校別に整理しています。元PDFは公開可否確認後に順次掲載します。",
+  "documents": [
+    {
+      "year": "",
+      "category": "PDF原資料",
+      "title": "平第四小学校_01.pdf",
+      "source": "Google Drive 全国資料／いわき市",
+      "publicationStatus": "公開前確認中"
+    }
+  ],
+  "lastReviewed": "2026-10-02",
+  "nationalArchive": {
+    "order": 2011,
+    "group": "いわき市・小学校"
+  }
+}
