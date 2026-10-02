@@ -235,6 +235,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ptaorg.com/archive/daito/school-001-es/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/archive/daito/school-002-es/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/archive/daito/school-003-es/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ptaorg.com/archive/iwaki/school-001-es/</loc>
     <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
