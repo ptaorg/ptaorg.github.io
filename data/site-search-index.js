@@ -342,6 +342,108 @@ window.PTA_SITE_SEARCH_INDEX = [
     "source-archive"
   ],
   [
+    "大井小学校 PTA関連資料",
+    "/archive/kameoka/school-001-es/",
+    "大井小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "安詳小学校 PTA関連資料",
+    "/archive/kameoka/school-002-es/",
+    "安詳小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "詳徳小学校 PTA関連資料",
+    "/archive/kameoka/school-003-es/",
+    "詳徳小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "保津小学校 PTA関連資料",
+    "/archive/kameoka/school-004-es/",
+    "保津小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "千代川小学校 PTA関連資料",
+    "/archive/kameoka/school-005-es/",
+    "千代川小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大成中学校 PTA関連資料",
+    "/archive/kameoka/school-006-jhs/",
+    "大成中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "南桑中学校 PTA関連資料",
+    "/archive/kameoka/school-007-jhs/",
+    "南桑中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "亀岡中学校 PTA関連資料",
+    "/archive/kameoka/school-008-jhs/",
+    "亀岡中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "吉川小学校 PTA関連資料",
+    "/archive/kameoka/school-009-es/",
+    "吉川小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "亀岡川東学園 PTA関連資料",
+    "/archive/kameoka/school-010-other/",
+    "亀岡川東学園のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "南つつじが丘小学校 PTA関連資料",
+    "/archive/kameoka/school-011-es/",
+    "南つつじが丘小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "東別院小学校 PTA関連資料",
+    "/archive/kameoka/school-012-es/",
+    "東別院小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "稗田野小学校 PTA関連資料",
+    "/archive/kameoka/school-013-es/",
+    "稗田野小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "城西小学校 PTA関連資料",
+    "/archive/kameoka/school-014-es/",
+    "城西小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "つつじが丘小学校 PTA関連資料",
+    "/archive/kameoka/school-015-es/",
+    "つつじが丘小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "曽我部小学校 PTA関連資料",
+    "/archive/kameoka/school-016-es/",
+    "曽我部小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "亀岡小学校 PTA関連資料",
+    "/archive/kameoka/school-017-es/",
+    "亀岡小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
     "埼玉県久喜市 PTA関連資料｜学校別PDF整理",
     "/archive/kuki/",
     "埼玉県久喜市の学校別PTA関連PDFを、学校名、原本ファイル名、ページ数で整理した資料ページです。",

@@ -1,0 +1,28 @@
+{
+  "pageMode": "materials",
+  "municipality": "亀岡市",
+  "prefecture": "京都府",
+  "schoolName": "保津小学校",
+  "schoolType": "小学校",
+  "slug": "school-004-es",
+  "basePath": "/archive/kameoka/school-004-es/",
+  "canonical": "https://ptaorg.com/archive/kameoka/school-004-es/",
+  "ogImage": "/assets/og-image-popc-en.png",
+  "summary": "亀岡市の開示資料・保存資料を学校別に整理した一次資料アーカイブです。",
+  "description": "保津小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+  "sourceSummary": "Google Driveの「全国資料／亀岡市」に保存された資料を基礎にしています。元PDFは公開可否確認後に順次掲載します。",
+  "documents": [
+    {
+      "year": "",
+      "category": "PDF原資料",
+      "title": "009_保津小学校.pdf",
+      "source": "全国資料・亀岡市",
+      "publicationStatus": "公開前確認中"
+    }
+  ],
+  "lastReviewed": "2026-10-02",
+  "nationalArchive": {
+    "order": 2004,
+    "group": "亀岡市・小学校"
+  }
+}

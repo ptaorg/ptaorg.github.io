@@ -1,0 +1,28 @@
+{
+  "pageMode": "materials",
+  "municipality": "亀岡市",
+  "prefecture": "京都府",
+  "schoolName": "大成中学校",
+  "schoolType": "中学校",
+  "slug": "school-006-jhs",
+  "basePath": "/archive/kameoka/school-006-jhs/",
+  "canonical": "https://ptaorg.com/archive/kameoka/school-006-jhs/",
+  "ogImage": "/assets/og-image-popc-en.png",
+  "summary": "亀岡市の開示資料・保存資料を学校別に整理した一次資料アーカイブです。",
+  "description": "大成中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+  "sourceSummary": "Google Driveの「全国資料／亀岡市」に保存された資料を基礎にしています。元PDFは公開可否確認後に順次掲載します。",
+  "documents": [
+    {
+      "year": "",
+      "category": "PDF原資料",
+      "title": "103_大成中学校.pdf",
+      "source": "全国資料・亀岡市",
+      "publicationStatus": "公開前確認中"
+    }
+  ],
+  "lastReviewed": "2026-10-02",
+  "nationalArchive": {
+    "order": 2006,
+    "group": "亀岡市・中学校"
+  }
+}
