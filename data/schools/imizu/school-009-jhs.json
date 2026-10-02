@@ -1,0 +1,28 @@
+{
+  "pageMode": "materials",
+  "municipality": "射水市",
+  "prefecture": "富山県",
+  "schoolName": "新湊南中学校",
+  "schoolType": "中学校",
+  "slug": "school-009-jhs",
+  "basePath": "/archive/imizu/school-009-jhs/",
+  "canonical": "https://ptaorg.com/archive/imizu/school-009-jhs/",
+  "ogImage": "/assets/og-image-popc-en.png",
+  "summary": "射水市の保存資料を学校別に整理した一次資料アーカイブです。",
+  "description": "新湊南中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+  "sourceSummary": "Google Drive「全国資料」とローカル保存資料を学校名で統合し、重複を整理した索引を基礎にしています。元ファイルは公開可否確認後に順次掲載します。",
+  "documents": [
+    {
+      "year": "",
+      "category": "PDF原資料",
+      "title": "13-1 新湊南中学校.pdf",
+      "source": "ローカル保存資料／全国資料（Google Drive）",
+      "publicationStatus": "公開前確認中"
+    }
+  ],
+  "lastReviewed": "2026-10-02",
+  "nationalArchive": {
+    "order": 8009,
+    "group": "射水市・中学校"
+  }
+}
