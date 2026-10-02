@@ -283,7 +283,7 @@ ${chrome.mobile}
   <main class="archive-school-page" id="main-content">
 
     <header class="archive-hero">
-      <div class="archive-kicker">厚木市・${escapeHtml(record.schoolType)}｜一次資料</div>
+      <div class="archive-kicker">${escapeHtml(record.municipality)}・${escapeHtml(record.schoolType)}｜一次資料</div>
       <h1>${escapeHtml(record.schoolName)} PTA関連資料・評価</h1>
       <p class="archive-school-author">作成主体：PTA適正化推進委員会</p>
       <div class="archive-print-actions archive-print-top">
