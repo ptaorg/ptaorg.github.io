@@ -1,0 +1,54 @@
+{
+  "municipality": "豊橋市",
+  "prefecture": "愛知県",
+  "schoolName": "大清水小学校",
+  "schoolType": "小学校",
+  "slug": "ooshimizu-es",
+  "basePath": "/archive/toyohashi/ooshimizu-es/",
+  "canonical": "https://ptaorg.com/archive/toyohashi/ooshimizu-es/",
+  "ogImage": "/assets/og-image-popc-en.png",
+  "status": "評価準備中",
+  "statusClass": "eval-pending",
+  "summary": "豊橋市の開示資料から大清水小学校分を学校別に整理しています。現段階では資料の存在と確認範囲を示し、個別評価は人による確認後に行います。",
+  "description": "大清水小学校のPTA関連資料について、学校別に確認できる資料と未確認事項を整理するパイロットページです。",
+  "ogDescription": "大清水小学校のPTA関連資料を学校別に整理。個別評価は人による原資料確認後に更新します。",
+  "materials": {
+    "documentName": "豊橋市開示資料（大清水小学校分）",
+    "confirmedDocuments": [
+      "R6・R7 PTA入会案内・説明書",
+      "R6・R7 PTA活動説明書・活動事業案内",
+      "R6・R7 学校徴収金の案内",
+      "R6 PTAと学校との間の契約書・委任状・覚書等"
+    ],
+    "hasMembershipNotice": "R6・R7資料あり",
+    "hasApplicationForm": "未確認",
+    "applicationFormStatus": "未確認",    "hasSchoolCollectionNotice": "R6・R7資料あり",
+    "pdfStatus": "元PDFは公開前確認中",
+    "sourceImages": [],
+    "pdf": null
+  },
+  "confirmedFacts": [
+    "学校別整理フォルダに、R6・R7のPTA入会案内・説明書が整理されている。",
+    "学校別整理フォルダに、R6・R7のPTA活動説明書・活動事業案内が整理されている。",
+    "学校別整理フォルダに、R6・R7の学校徴収金の案内が整理されている。",
+    "学校別整理フォルダに、R6のPTAと学校との間の契約書・委任状・覚書等が整理されている。"
+  ],
+  "unconfirmedPoints": [
+    "大清水小学校で用いられた入会申込書の有無と具体的な意思確認方法。",
+    "学校徴収金資料におけるPTA会費の具体的な取扱いと徴収方法。",
+    "契約書・委任状・覚書等に定められた学校とPTAの事務分担の具体的内容。",
+    "学校がPTA事務のために利用・提供する個人情報の範囲と根拠。",
+    "各資料の個人情報・印影・口座情報・QRコード等について公開可否の確認。"
+  ],
+  "riskFlags": [
+    "未評価"
+  ],
+  "evaluation": [
+    "評価準備中"
+  ],  "humanReviewRequired": true,
+  "lastReviewed": "2026-10-02",
+  "nationalArchive": {
+    "order": 1001,
+    "group": "豊橋市・小学校"
+  }
+}
