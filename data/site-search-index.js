@@ -240,6 +240,12 @@ window.PTA_SITE_SEARCH_INDEX = [
     "source-archive"
   ],
   [
+    "大清水小学校 PTA関連資料",
+    "/archive/toyohashi/ooshimizu-es/",
+    "大清水小学校のPTA関連一次資料を年度・資料種別ごとに整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
     "PTA運営チェック",
     "/audit/",
     "PTAの入会手続、会費徴収、個人情報、役員選出、学校関与について、立場別に確認できるセルフチェックツールです。",

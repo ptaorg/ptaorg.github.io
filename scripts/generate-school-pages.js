@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { renderMaterialSchoolPage } = require("./render-material-school-page");
 const {
   ROOT,
   absoluteUrl,
@@ -225,6 +226,7 @@ function renderSummary(record) {
 }
 
 function renderSchoolPage(record) {
+  if (record.pageMode === "materials") return renderMaterialSchoolPage(record);
   validateSchoolRecord(record);
   const statusClass = statusClassFor(record.status, record.statusClass);
   const ogImage = record.ogImage && publicPathExists(record.ogImage) ? record.ogImage : "/assets/ogp/atsugi/default.png";
