@@ -1,0 +1,22 @@
+@layer feature {
+  .tamano-page .journal-article-hero { padding-block: 44px 30px; }
+  .tamano-page .journal-article-hero h1 { font-size: clamp(1.85rem, 4vw, 2.8rem); line-height: 1.55; }
+  .tamano-page .tamano-dateline { margin-top: 16px; font-size: .85rem; color: #536478; }
+  .tamano-page .journal-article-body { padding-top: 32px; }
+  .tamano-article { overflow-wrap: anywhere; }
+  .tamano-article section { scroll-margin-top: 110px; }
+  .tamano-note { border-left: 4px solid #aa7d25; background: #fffcf4; margin-block: 26px; padding: 18px 22px; }
+  .tamano-note p:last-child { margin-bottom: 0; }
+  .tamano-source-figure { margin: 28px 0; padding: 0; }
+  .tamano-source-figure > a { display: block; border: 1px solid #c8d2df; background: #fff; }
+  .tamano-source-figure img { display: block; width: 100%; height: auto; }
+  .tamano-source-figure figcaption { margin-top: 10px; font-size: .87rem; line-height: 1.85; color: #475569; }
+  .tamano-reference { font-size: .9rem; border-left: 3px solid #c8d2df; padding-left: 14px; }
+  .tamano-sources { font-size: .93rem; }
+  .tamano-related { border-top: 1px solid #dbe4ee; padding-top: 20px; }
+  @media (max-width: 600px) {
+    .tamano-page .journal-article-wrap { width: calc(100% - 32px); }
+    .tamano-note { padding: 14px 16px; }
+    .tamano-page .journal-article-body h2 { font-size: 1.35rem; }
+  }
+}
