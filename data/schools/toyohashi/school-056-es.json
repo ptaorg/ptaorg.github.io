@@ -2,14 +2,14 @@
   "pageMode": "materials",
   "municipality": "豊橋市",
   "prefecture": "愛知県",
-  "schoolName": "大清水小学校",
+  "schoolName": "吉田方小学校",
   "schoolType": "小学校",
-  "slug": "ooshimizu-es",
-  "basePath": "/archive/toyohashi/ooshimizu-es/",
-  "canonical": "https://ptaorg.com/archive/toyohashi/ooshimizu-es/",
+  "slug": "school-056-es",
+  "basePath": "/archive/toyohashi/school-056-es/",
+  "canonical": "https://ptaorg.com/archive/toyohashi/school-056-es/",
   "ogImage": "/assets/og-image-popc-en.png",
   "summary": "豊橋市の開示資料・保存資料を学校別に整理した一次資料アーカイブです。",
-  "description": "大清水小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+  "description": "吉田方小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
   "sourceSummary": "Google Driveの「豊橋市_学校別整理版」に保存された学校別整理資料を基礎にしています。元PDF・画像は公開可否確認後に順次掲載します。",
   "documents": [
     {
@@ -141,7 +141,7 @@
   ],
   "lastReviewed": "2026-10-02",
   "nationalArchive": {
-    "order": 1051,
+    "order": 1056,
     "group": "豊橋市・小学校"
   }
 }

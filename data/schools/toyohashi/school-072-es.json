@@ -2,14 +2,14 @@
   "pageMode": "materials",
   "municipality": "豊橋市",
   "prefecture": "愛知県",
-  "schoolName": "大清水小学校",
+  "schoolName": "つつじが丘小学校",
   "schoolType": "小学校",
-  "slug": "ooshimizu-es",
-  "basePath": "/archive/toyohashi/ooshimizu-es/",
-  "canonical": "https://ptaorg.com/archive/toyohashi/ooshimizu-es/",
+  "slug": "school-072-es",
+  "basePath": "/archive/toyohashi/school-072-es/",
+  "canonical": "https://ptaorg.com/archive/toyohashi/school-072-es/",
   "ogImage": "/assets/og-image-popc-en.png",
   "summary": "豊橋市の開示資料・保存資料を学校別に整理した一次資料アーカイブです。",
-  "description": "大清水小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+  "description": "つつじが丘小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
   "sourceSummary": "Google Driveの「豊橋市_学校別整理版」に保存された学校別整理資料を基礎にしています。元PDF・画像は公開可否確認後に順次掲載します。",
   "documents": [
     {
@@ -27,34 +27,6 @@
       "publicationStatus": "公開前確認中"
     },
     {
-      "year": "R7",
-      "category": "PTA活動",
-      "title": "(3)　R7PTA活動説明書・活動事業案内（小学校）.pdf",
-      "source": "豊橋市開示資料・学校別整理版",
-      "publicationStatus": "公開前確認中"
-    },
-    {
-      "year": "R7",
-      "category": "PTA活動",
-      "title": "(3)　R7PTA活動説明書・活動事業案内（小学校）-3.png",
-      "source": "豊橋市開示資料・学校別整理版",
-      "publicationStatus": "公開前確認中"
-    },
-    {
-      "year": "R7",
-      "category": "PTA活動",
-      "title": "(3)　R7PTA活動説明書・活動事業案内（小学校）-2.png",
-      "source": "豊橋市開示資料・学校別整理版",
-      "publicationStatus": "公開前確認中"
-    },
-    {
-      "year": "R7",
-      "category": "PTA活動",
-      "title": "(3)　R7PTA活動説明書・活動事業案内（小学校）-1.png",
-      "source": "豊橋市開示資料・学校別整理版",
-      "publicationStatus": "公開前確認中"
-    },
-    {
       "year": "R6",
       "category": "学校徴収金",
       "title": "(3)　R6学校が保護者に発出した学校徴収金の案内（小学校）.pdf",
@@ -65,34 +37,6 @@
       "year": "R6",
       "category": "学校徴収金",
       "title": "(3)　R6学校が保護者に発出した学校徴収金の案内（小学校）-1.png",
-      "source": "豊橋市開示資料・学校別整理版",
-      "publicationStatus": "公開前確認中"
-    },
-    {
-      "year": "R6",
-      "category": "PTA活動",
-      "title": "(3)　R6PTA活動説明書・活動事業案内（小学校）.pdf",
-      "source": "豊橋市開示資料・学校別整理版",
-      "publicationStatus": "公開前確認中"
-    },
-    {
-      "year": "R6",
-      "category": "PTA活動",
-      "title": "(3)　R6PTA活動説明書・活動事業案内（小学校）-3.png",
-      "source": "豊橋市開示資料・学校別整理版",
-      "publicationStatus": "公開前確認中"
-    },
-    {
-      "year": "R6",
-      "category": "PTA活動",
-      "title": "(3)　R6PTA活動説明書・活動事業案内（小学校）-2.png",
-      "source": "豊橋市開示資料・学校別整理版",
-      "publicationStatus": "公開前確認中"
-    },
-    {
-      "year": "R6",
-      "category": "PTA活動",
-      "title": "(3)　R6PTA活動説明書・活動事業案内（小学校）-1.png",
       "source": "豊橋市開示資料・学校別整理版",
       "publicationStatus": "公開前確認中"
     },
@@ -120,6 +64,13 @@
     {
       "year": "R7",
       "category": "PTA入会",
+      "title": "(1)　R7PTAが新入生保護者に対し、学校を通じて配布した入会案内・説明書-2.png",
+      "source": "豊橋市開示資料・学校別整理版",
+      "publicationStatus": "公開前確認中"
+    },
+    {
+      "year": "R7",
+      "category": "PTA入会",
       "title": "(1)　R7PTAが新入生保護者に対し、学校を通じて配布した入会案内・説明書-1.png",
       "source": "豊橋市開示資料・学校別整理版",
       "publicationStatus": "公開前確認中"
@@ -134,6 +85,13 @@
     {
       "year": "R6",
       "category": "PTA入会",
+      "title": "(1)　R6PTAが新入生保護者に対し、学校を通じて配布した入会案内・説明書-2.png",
+      "source": "豊橋市開示資料・学校別整理版",
+      "publicationStatus": "公開前確認中"
+    },
+    {
+      "year": "R6",
+      "category": "PTA入会",
       "title": "(1)　R6PTAが新入生保護者に対し、学校を通じて配布した入会案内・説明書-1.png",
       "source": "豊橋市開示資料・学校別整理版",
       "publicationStatus": "公開前確認中"
@@ -141,7 +99,7 @@
   ],
   "lastReviewed": "2026-10-02",
   "nationalArchive": {
-    "order": 1051,
+    "order": 1072,
     "group": "豊橋市・小学校"
   }
 }
