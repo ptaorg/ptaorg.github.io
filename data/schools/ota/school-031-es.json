@@ -1,0 +1,28 @@
+{
+  "pageMode": "materials",
+  "municipality": "大田区",
+  "prefecture": "東京都",
+  "schoolName": "大森第四小学校",
+  "schoolType": "小学校",
+  "slug": "school-031-es",
+  "basePath": "/archive/ota/school-031-es/",
+  "canonical": "https://ptaorg.com/archive/ota/school-031-es/",
+  "ogImage": "/assets/og-image-popc-en.png",
+  "summary": "大田区の保存資料を学校別に整理した一次資料アーカイブです。",
+  "description": "大森第四小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+  "sourceSummary": "Google Drive「全国資料」とローカル保存資料を学校名で統合し、重複を整理した索引を基礎にしています。元ファイルは公開可否確認後に順次掲載します。",
+  "documents": [
+    {
+      "year": "",
+      "category": "PDF原資料",
+      "title": "大森第四小.pdf",
+      "source": "ローカル保存資料／全国資料（Google Drive）",
+      "publicationStatus": "公開前確認中"
+    }
+  ],
+  "lastReviewed": "2026-10-02",
+  "nationalArchive": {
+    "order": 16031,
+    "group": "大田区・小学校"
+  }
+}
