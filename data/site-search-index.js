@@ -234,6 +234,96 @@ window.PTA_SITE_SEARCH_INDEX = [
     "source-archive"
   ],
   [
+    "中央台北小学校 PTA関連資料",
+    "/archive/iwaki/school-001-es/",
+    "中央台北小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+    "source-archive"
+  ],
+  [
+    "中央台南小学校 PTA関連資料",
+    "/archive/iwaki/school-002-es/",
+    "中央台南小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+    "source-archive"
+  ],
+  [
+    "中央台東小学校 PTA関連資料",
+    "/archive/iwaki/school-003-es/",
+    "中央台東小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+    "source-archive"
+  ],
+  [
+    "四倉小学校 PTA関連資料",
+    "/archive/iwaki/school-004-es/",
+    "四倉小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+    "source-archive"
+  ],
+  [
+    "夏井小学校 PTA関連資料",
+    "/archive/iwaki/school-005-es/",
+    "夏井小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+    "source-archive"
+  ],
+  [
+    "平第一小学校 PTA関連資料",
+    "/archive/iwaki/school-006-es/",
+    "平第一小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+    "source-archive"
+  ],
+  [
+    "平第三小学校 PTA関連資料",
+    "/archive/iwaki/school-007-es/",
+    "平第三小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+    "source-archive"
+  ],
+  [
+    "平第二小学校 PTA関連資料",
+    "/archive/iwaki/school-008-es/",
+    "平第二小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+    "source-archive"
+  ],
+  [
+    "平第五小学校 PTA関連資料",
+    "/archive/iwaki/school-009-es/",
+    "平第五小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+    "source-archive"
+  ],
+  [
+    "平第六小学校 PTA関連資料",
+    "/archive/iwaki/school-010-es/",
+    "平第六小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+    "source-archive"
+  ],
+  [
+    "平第四小学校 PTA関連資料",
+    "/archive/iwaki/school-011-es/",
+    "平第四小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+    "source-archive"
+  ],
+  [
+    "草野小学校 PTA関連資料",
+    "/archive/iwaki/school-012-es/",
+    "草野小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+    "source-archive"
+  ],
+  [
+    "豊間小学校 PTA関連資料",
+    "/archive/iwaki/school-013-es/",
+    "豊間小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+    "source-archive"
+  ],
+  [
+    "赤井小学校 PTA関連資料",
+    "/archive/iwaki/school-014-es/",
+    "赤井小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+    "source-archive"
+  ],
+  [
+    "高久小学校 PTA関連資料",
+    "/archive/iwaki/school-015-es/",
+    "高久小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+    "source-archive"
+  ],
+  [
     "埼玉県久喜市 PTA関連資料｜学校別PDF整理",
     "/archive/kuki/",
     "埼玉県久喜市の学校別PTA関連PDFを、学校名、原本ファイル名、ページ数で整理した資料ページです。",
