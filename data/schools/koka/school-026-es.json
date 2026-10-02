@@ -1,0 +1,56 @@
+{
+  "pageMode": "materials",
+  "municipality": "滋賀県甲賀市",
+  "prefecture": "滋賀県",
+  "schoolName": "貴生川小学校",
+  "schoolType": "小学校",
+  "slug": "school-026-es",
+  "basePath": "/archive/koka/school-026-es/",
+  "canonical": "https://ptaorg.com/archive/koka/school-026-es/",
+  "ogImage": "/assets/og-image-popc-en.png",
+  "summary": "滋賀県甲賀市の保存資料を学校別に整理した一次資料アーカイブです。",
+  "description": "貴生川小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+  "sourceSummary": "Google Drive「全国資料」とローカル保存資料を学校名で統合し、重複を整理した索引を基礎にしています。元ファイルは公開可否確認後に順次掲載します。",
+  "documents": [
+    {
+      "year": "",
+      "category": "PDF原資料",
+      "title": "4-1-1_貴生川小_PTA加入についてのお願い.pdf",
+      "source": "ローカル保存資料／全国資料（Google Drive）",
+      "publicationStatus": "公開前確認中"
+    },
+    {
+      "year": "",
+      "category": "PDF原資料",
+      "title": "4-1-2_貴生川小_PTA総会資料.pdf",
+      "source": "ローカル保存資料／全国資料（Google Drive）",
+      "publicationStatus": "公開前確認中"
+    },
+    {
+      "year": "",
+      "category": "学校とPTAの関係",
+      "title": "4-3-1_貴生川小_委任契約書.pdf",
+      "source": "ローカル保存資料／全国資料（Google Drive）",
+      "publicationStatus": "公開前確認中"
+    },
+    {
+      "year": "",
+      "category": "学校徴収金",
+      "title": "4-4-1_貴生川小_学校徴収金案内.pdf",
+      "source": "ローカル保存資料／全国資料（Google Drive）",
+      "publicationStatus": "公開前確認中"
+    },
+    {
+      "year": "",
+      "category": "画像資料",
+      "title": "貴生川小学校S__3686404.jpg",
+      "source": "ローカル保存資料",
+      "publicationStatus": "公開前確認中"
+    }
+  ],
+  "lastReviewed": "2026-10-02",
+  "nationalArchive": {
+    "order": 10026,
+    "group": "滋賀県甲賀市・小学校"
+  }
+}

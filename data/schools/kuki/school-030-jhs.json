@@ -1,0 +1,28 @@
+{
+  "pageMode": "materials",
+  "municipality": "久喜市",
+  "prefecture": "埼玉県",
+  "schoolName": "鷲宮西中学校",
+  "schoolType": "中学校",
+  "slug": "school-030-jhs",
+  "basePath": "/archive/kuki/school-030-jhs/",
+  "canonical": "https://ptaorg.com/archive/kuki/school-030-jhs/",
+  "ogImage": "/assets/og-image-popc-en.png",
+  "summary": "久喜市の保存資料を学校別に整理した一次資料アーカイブです。",
+  "description": "鷲宮西中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+  "sourceSummary": "Google Drive「全国資料」とローカル保存資料を学校名で統合し、重複を整理した索引を基礎にしています。元ファイルは公開可否確認後に順次掲載します。",
+  "documents": [
+    {
+      "year": "",
+      "category": "PDF原資料",
+      "title": "031 鷲宮西中学校20260328_23452097.pdf",
+      "source": "ローカル保存資料／全国資料（Google Drive）",
+      "publicationStatus": "公開前確認中"
+    }
+  ],
+  "lastReviewed": "2026-10-02",
+  "nationalArchive": {
+    "order": 11030,
+    "group": "久喜市・中学校"
+  }
+}

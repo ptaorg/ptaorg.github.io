@@ -1,0 +1,56 @@
+{
+  "pageMode": "materials",
+  "municipality": "滋賀県甲賀市",
+  "prefecture": "滋賀県",
+  "schoolName": "油日小学校",
+  "schoolType": "小学校",
+  "slug": "school-018-es",
+  "basePath": "/archive/koka/school-018-es/",
+  "canonical": "https://ptaorg.com/archive/koka/school-018-es/",
+  "ogImage": "/assets/og-image-popc-en.png",
+  "summary": "滋賀県甲賀市の保存資料を学校別に整理した一次資料アーカイブです。",
+  "description": "油日小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+  "sourceSummary": "Google Drive「全国資料」とローカル保存資料を学校名で統合し、重複を整理した索引を基礎にしています。元ファイルは公開可否確認後に順次掲載します。",
+  "documents": [
+    {
+      "year": "",
+      "category": "PDF原資料",
+      "title": "10-1-1_油日小_入学のしおり（抜粋）.pdf",
+      "source": "ローカル保存資料／全国資料（Google Drive）",
+      "publicationStatus": "公開前確認中"
+    },
+    {
+      "year": "",
+      "category": "PDF原資料",
+      "title": "10-1-2_油日小_ PTA総会資料.pdf",
+      "source": "ローカル保存資料／全国資料（Google Drive）",
+      "publicationStatus": "公開前確認中"
+    },
+    {
+      "year": "R7",
+      "category": "PDF原資料",
+      "title": "10-1-3_油日小_R7 PTA学級委員選出について（１年）.pdf",
+      "source": "ローカル保存資料／全国資料（Google Drive）",
+      "publicationStatus": "公開前確認中"
+    },
+    {
+      "year": "R7",
+      "category": "PDF原資料",
+      "title": "10-1-4_油日小_R7 PTA学級委員選出について（２～６年） .pdf",
+      "source": "ローカル保存資料／全国資料（Google Drive）",
+      "publicationStatus": "公開前確認中"
+    },
+    {
+      "year": "",
+      "category": "学校徴収金",
+      "title": "10-4-1_油日小_学校徴収金案内.pdf",
+      "source": "ローカル保存資料／全国資料（Google Drive）",
+      "publicationStatus": "公開前確認中"
+    }
+  ],
+  "lastReviewed": "2026-10-02",
+  "nationalArchive": {
+    "order": 10018,
+    "group": "滋賀県甲賀市・小学校"
+  }
+}
