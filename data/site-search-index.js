@@ -240,9 +240,9 @@ window.PTA_SITE_SEARCH_INDEX = [
     "source-archive"
   ],
   [
-    "大清水小学校 PTA関連資料・評価",
+    "大清水小学校 PTA関連資料",
     "/archive/toyohashi/ooshimizu-es/",
-    "大清水小学校のPTA関連資料を学校別に整理。個別評価は人による原資料確認後に更新します。",
+    "大清水小学校のPTA関連一次資料を年度・資料種別ごとに整理した学校別アーカイブです。",
     "source-archive"
   ],
   [

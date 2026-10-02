@@ -11,15 +11,7 @@
     "schoolType",
     "slug",
     "basePath",
-    "canonical",
-    "status",
-    "statusClass",
-    "materials",
-    "confirmedFacts",
-    "unconfirmedPoints",
-    "riskFlags",
-    "evaluation",
-    "humanReviewRequired"
+    "canonical"
   ],
   "properties": {
     "municipality": { "type": "string" },
@@ -29,7 +21,25 @@
     "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
     "basePath": { "type": "string", "pattern": "^/archive/.+/$" },
     "canonical": { "type": "string", "format": "uri" },
+    "pageMode": { "type": "string", "enum": ["materials"] },
     "ogImage": { "type": "string" },
+    "sourceSummary": { "type": "string" },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title"],
+        "properties": {
+          "year": { "type": "string" },
+          "category": { "type": "string" },
+          "title": { "type": "string" },
+          "source": { "type": "string" },
+          "publicationStatus": { "type": "string" },
+          "href": { "type": "string" },
+          "linkLabel": { "type": "string" }
+        }
+      }
+    },
     "status": {
       "type": "string",
       "enum": ["重大リスク", "問題あり", "要確認", "資料不足", "適正化モデル", "未評価", "評価準備中"]
