@@ -2394,6 +2394,618 @@ window.PTA_SITE_SEARCH_INDEX = [
     "source-archive"
   ],
   [
+    "くぬぎ台小学校 PTA関連資料",
+    "/archive/sagamihara/school-001-es/",
+    "くぬぎ台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "もえぎ台小学校 PTA関連資料",
+    "/archive/sagamihara/school-002-es/",
+    "もえぎ台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "上溝中学校 PTA関連資料",
+    "/archive/sagamihara/school-003-jhs/",
+    "上溝中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "上溝南中学校 PTA関連資料",
+    "/archive/sagamihara/school-004-jhs/",
+    "上溝南中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "上溝南小学校 PTA関連資料",
+    "/archive/sagamihara/school-005-es/",
+    "上溝南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "上溝小学校 PTA関連資料",
+    "/archive/sagamihara/school-006-es/",
+    "上溝小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "上鶴間中学校 PTA関連資料",
+    "/archive/sagamihara/school-007-jhs/",
+    "上鶴間中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "上鶴間小学校 PTA関連資料",
+    "/archive/sagamihara/school-008-es/",
+    "上鶴間小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "並木小学校 PTA関連資料",
+    "/archive/sagamihara/school-009-es/",
+    "並木小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "中央中学校 PTA関連資料",
+    "/archive/sagamihara/school-010-jhs/",
+    "中央中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "中央小学校 PTA関連資料",
+    "/archive/sagamihara/school-011-es/",
+    "中央小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "中沢中学校 PTA関連資料",
+    "/archive/sagamihara/school-012-jhs/",
+    "中沢中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "中野中学校 PTA関連資料",
+    "/archive/sagamihara/school-013-jhs/",
+    "中野中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "中野小学校 PTA関連資料",
+    "/archive/sagamihara/school-014-es/",
+    "中野小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "串川中学校 PTA関連資料",
+    "/archive/sagamihara/school-015-jhs/",
+    "串川中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "串川小学校 PTA関連資料",
+    "/archive/sagamihara/school-016-es/",
+    "串川小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "九沢小学校 PTA関連資料",
+    "/archive/sagamihara/school-017-es/",
+    "九沢小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "二本松小学校 PTA関連資料",
+    "/archive/sagamihara/school-018-es/",
+    "二本松小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "作の口小学校 PTA関連資料",
+    "/archive/sagamihara/school-019-es/",
+    "作の口小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "光が丘小学校 PTA関連資料",
+    "/archive/sagamihara/school-020-es/",
+    "光が丘小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "共和中学校 PTA関連資料",
+    "/archive/sagamihara/school-021-jhs/",
+    "共和中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "共和小学校 PTA関連資料",
+    "/archive/sagamihara/school-022-es/",
+    "共和小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "内出中学校 PTA関連資料",
+    "/archive/sagamihara/school-023-jhs/",
+    "内出中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "内郷中学校 PTA関連資料",
+    "/archive/sagamihara/school-024-jhs/",
+    "内郷中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "内郷小学校 PTA関連資料",
+    "/archive/sagamihara/school-025-es/",
+    "内郷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "北相中学校 PTA関連資料",
+    "/archive/sagamihara/school-026-jhs/",
+    "北相中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "千木良小学校 PTA関連資料",
+    "/archive/sagamihara/school-027-es/",
+    "千木良小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "南大野小学校 PTA関連資料",
+    "/archive/sagamihara/school-028-es/",
+    "南大野小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "双葉小学校 PTA関連資料",
+    "/archive/sagamihara/school-029-es/",
+    "双葉小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "向陽小学校 PTA関連資料",
+    "/archive/sagamihara/school-030-es/",
+    "向陽小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "夢の丘小学校 PTA関連資料",
+    "/archive/sagamihara/school-031-es/",
+    "夢の丘小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大島小学校 PTA関連資料",
+    "/archive/sagamihara/school-032-es/",
+    "大島小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大沢中学校 PTA関連資料",
+    "/archive/sagamihara/school-033-jhs/",
+    "大沢中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大沢小学校 PTA関連資料",
+    "/archive/sagamihara/school-034-es/",
+    "大沢小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大沼小学校 PTA関連資料",
+    "/archive/sagamihara/school-035-es/",
+    "大沼小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大野北中学校 PTA関連資料",
+    "/archive/sagamihara/school-036-jhs/",
+    "大野北中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大野北小学校 PTA関連資料",
+    "/archive/sagamihara/school-037-es/",
+    "大野北小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大野南中学校 PTA関連資料",
+    "/archive/sagamihara/school-038-jhs/",
+    "大野南中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大野台中央小学校 PTA関連資料",
+    "/archive/sagamihara/school-039-es/",
+    "大野台中央小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大野台中学校 PTA関連資料",
+    "/archive/sagamihara/school-040-jhs/",
+    "大野台中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大野台小学校 PTA関連資料",
+    "/archive/sagamihara/school-041-es/",
+    "大野台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大野小学校 PTA関連資料",
+    "/archive/sagamihara/school-042-es/",
+    "大野小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "宮上小学校 PTA関連資料",
+    "/archive/sagamihara/school-043-es/",
+    "宮上小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "富士見小学校 PTA関連資料",
+    "/archive/sagamihara/school-044-es/",
+    "富士見小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "小山中学校 PTA関連資料",
+    "/archive/sagamihara/school-045-jhs/",
+    "小山中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "小山小学校 PTA関連資料",
+    "/archive/sagamihara/school-046-es/",
+    "小山小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "川尻小学校 PTA関連資料",
+    "/archive/sagamihara/school-047-es/",
+    "川尻小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "広田小学校 PTA関連資料",
+    "/archive/sagamihara/school-048-es/",
+    "広田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "広陵小学校 PTA関連資料",
+    "/archive/sagamihara/school-049-es/",
+    "広陵小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "弥栄中学校 PTA関連資料",
+    "/archive/sagamihara/school-050-jhs/",
+    "弥栄中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "弥栄小学校 PTA関連資料",
+    "/archive/sagamihara/school-051-es/",
+    "弥栄小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "当麻田小学校 PTA関連資料",
+    "/archive/sagamihara/school-052-es/",
+    "当麻田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "新宿小学校 PTA関連資料",
+    "/archive/sagamihara/school-053-es/",
+    "新宿小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "新町中学校 PTA関連資料",
+    "/archive/sagamihara/school-054-jhs/",
+    "新町中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "新磯小学校 PTA関連資料",
+    "/archive/sagamihara/school-055-es/",
+    "新磯小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "旭中学校 PTA関連資料",
+    "/archive/sagamihara/school-056-jhs/",
+    "旭中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "旭小学校 PTA関連資料",
+    "/archive/sagamihara/school-057-es/",
+    "旭小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "星が丘小学校 PTA関連資料",
+    "/archive/sagamihara/school-058-es/",
+    "星が丘小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "東林中学校 PTA関連資料",
+    "/archive/sagamihara/school-059-jhs/",
+    "東林中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "東林小学校 PTA関連資料",
+    "/archive/sagamihara/school-060-es/",
+    "東林小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "根小屋小学校 PTA関連資料",
+    "/archive/sagamihara/school-061-es/",
+    "根小屋小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "桂北小学校 PTA関連資料",
+    "/archive/sagamihara/school-062-es/",
+    "桂北小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "桜台小学校 PTA関連資料",
+    "/archive/sagamihara/school-063-es/",
+    "桜台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "横山小学校 PTA関連資料",
+    "/archive/sagamihara/school-064-es/",
+    "横山小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "橋本小学校 PTA関連資料",
+    "/archive/sagamihara/school-065-es/",
+    "橋本小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "津久井中央小学校 PTA関連資料",
+    "/archive/sagamihara/school-066-es/",
+    "津久井中央小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "淵野辺小学校 PTA関連資料",
+    "/archive/sagamihara/school-067-es/",
+    "淵野辺小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "淵野辺東小学校 PTA関連資料",
+    "/archive/sagamihara/school-068-es/",
+    "淵野辺東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "清新中学校 PTA関連資料",
+    "/archive/sagamihara/school-069-jhs/",
+    "清新中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "清新小学校 PTA関連資料",
+    "/archive/sagamihara/school-070-es/",
+    "清新小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "湘南小学校 PTA関連資料",
+    "/archive/sagamihara/school-071-es/",
+    "湘南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "田名中学校 PTA関連資料",
+    "/archive/sagamihara/school-072-jhs/",
+    "田名中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "田名北小学校 PTA関連資料",
+    "/archive/sagamihara/school-073-es/",
+    "田名北小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "田名小学校 PTA関連資料",
+    "/archive/sagamihara/school-074-es/",
+    "田名小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "由野台中学校 PTA関連資料",
+    "/archive/sagamihara/school-075-jhs/",
+    "由野台中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "相原中学校 PTA関連資料",
+    "/archive/sagamihara/school-076-jhs/",
+    "相原中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "相原小学校 PTA関連資料",
+    "/archive/sagamihara/school-077-es/",
+    "相原小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "相模丘中学校 PTA関連資料",
+    "/archive/sagamihara/school-078-jhs/",
+    "相模丘中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "相模台中学校 PTA関連資料",
+    "/archive/sagamihara/school-079-jhs/",
+    "相模台中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "相模台小学校 PTA関連資料",
+    "/archive/sagamihara/school-080-es/",
+    "相模台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "相武台中学校 PTA関連資料",
+    "/archive/sagamihara/school-081-jhs/",
+    "相武台中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "相武台小学校 PTA関連資料",
+    "/archive/sagamihara/school-082-es/",
+    "相武台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "相陽中学校 PTA関連資料",
+    "/archive/sagamihara/school-083-jhs/",
+    "相陽中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "緑が丘中学校 PTA関連資料",
+    "/archive/sagamihara/school-084-jhs/",
+    "緑が丘中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "緑台小学校 PTA関連資料",
+    "/archive/sagamihara/school-085-es/",
+    "緑台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "若松小学校 PTA関連資料",
+    "/archive/sagamihara/school-086-es/",
+    "若松小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "若草中学校 PTA関連資料",
+    "/archive/sagamihara/school-087-jhs/",
+    "若草中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "若草小学校 PTA関連資料",
+    "/archive/sagamihara/school-088-es/",
+    "若草小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "藤野中学校 PTA関連資料",
+    "/archive/sagamihara/school-089-jhs/",
+    "藤野中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "藤野北小学校 PTA関連資料",
+    "/archive/sagamihara/school-090-es/",
+    "藤野北小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "藤野南小学校 PTA関連資料",
+    "/archive/sagamihara/school-091-es/",
+    "藤野南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "藤野小学校 PTA関連資料",
+    "/archive/sagamihara/school-092-es/",
+    "藤野小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "谷口中学校 PTA関連資料",
+    "/archive/sagamihara/school-093-jhs/",
+    "谷口中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "谷口台小学校 PTA関連資料",
+    "/archive/sagamihara/school-094-es/",
+    "谷口台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "谷口小学校 PTA関連資料",
+    "/archive/sagamihara/school-095-es/",
+    "谷口小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "陽光台小学校 PTA関連資料",
+    "/archive/sagamihara/school-096-es/",
+    "陽光台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "鵜野森中学校 PTA関連資料",
+    "/archive/sagamihara/school-097-jhs/",
+    "鵜野森中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "鶴の台小学校 PTA関連資料",
+    "/archive/sagamihara/school-098-es/",
+    "鶴の台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "鶴園小学校 PTA関連資料",
+    "/archive/sagamihara/school-099-es/",
+    "鶴園小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "鹿島台小学校 PTA関連資料",
+    "/archive/sagamihara/school-100-es/",
+    "鹿島台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "麻溝台中学校 PTA関連資料",
+    "/archive/sagamihara/school-101-jhs/",
+    "麻溝台中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "麻溝小学校 PTA関連資料",
+    "/archive/sagamihara/school-102-es/",
+    "麻溝小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
     "大清水小学校 PTA関連資料",
     "/archive/toyohashi/ooshimizu-es/",
     "大清水小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
