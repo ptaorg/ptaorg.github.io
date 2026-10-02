@@ -242,7 +242,433 @@ window.PTA_SITE_SEARCH_INDEX = [
   [
     "大清水小学校 PTA関連資料",
     "/archive/toyohashi/ooshimizu-es/",
-    "大清水小学校のPTA関連一次資料を年度・資料種別ごとに整理した学校別アーカイブです。",
+    "大清水小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "鷹丘小学校 PTA関連資料",
+    "/archive/toyohashi/school-001-es/",
+    "鷹丘小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "高豊中学校 PTA関連資料",
+    "/archive/toyohashi/school-002-jhs/",
+    "高豊中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "高根小学校 PTA関連資料",
+    "/archive/toyohashi/school-003-es/",
+    "高根小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "高師小学校 PTA関連資料",
+    "/archive/toyohashi/school-004-es/",
+    "高師小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "高師台中学校 PTA関連資料",
+    "/archive/toyohashi/school-005-jhs/",
+    "高師台中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "飯村小学校 PTA関連資料",
+    "/archive/toyohashi/school-006-es/",
+    "飯村小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "青陵中学校 PTA関連資料",
+    "/archive/toyohashi/school-007-jhs/",
+    "青陵中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "野依小学校 PTA関連資料",
+    "/archive/toyohashi/school-008-es/",
+    "野依小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "賀茂小学校 PTA関連資料",
+    "/archive/toyohashi/school-009-es/",
+    "賀茂小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "豊岡中学校 PTA関連資料",
+    "/archive/toyohashi/school-010-jhs/",
+    "豊岡中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "豊小学校 PTA関連資料",
+    "/archive/toyohashi/school-011-es/",
+    "豊小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "豊城中学校 PTA関連資料",
+    "/archive/toyohashi/school-012-jhs/",
+    "豊城中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "豊南小学校 PTA関連資料",
+    "/archive/toyohashi/school-013-es/",
+    "豊南小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "谷川小学校 PTA関連資料",
+    "/archive/toyohashi/school-014-es/",
+    "谷川小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "西郷小学校 PTA関連資料",
+    "/archive/toyohashi/school-015-es/",
+    "西郷小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "花田小学校 PTA関連資料",
+    "/archive/toyohashi/school-016-es/",
+    "花田小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "芦原小学校 PTA関連資料",
+    "/archive/toyohashi/school-017-es/",
+    "芦原小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "老津小学校 PTA関連資料",
+    "/archive/toyohashi/school-018-es/",
+    "老津小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "羽田中学校 PTA関連資料",
+    "/archive/toyohashi/school-019-jhs/",
+    "羽田中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "羽根井小学校 PTA関連資料",
+    "/archive/toyohashi/school-020-es/",
+    "羽根井小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "細谷小学校 PTA関連資料",
+    "/archive/toyohashi/school-021-es/",
+    "細谷小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "章南中学校 PTA関連資料",
+    "/archive/toyohashi/school-022-jhs/",
+    "章南中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "福岡小学校 PTA関連資料",
+    "/archive/toyohashi/school-023-es/",
+    "福岡小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "磯辺小学校 PTA関連資料",
+    "/archive/toyohashi/school-024-es/",
+    "磯辺小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "石巻小学校 PTA関連資料",
+    "/archive/toyohashi/school-025-es/",
+    "石巻小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "石巻中学校 PTA関連資料",
+    "/archive/toyohashi/school-026-jhs/",
+    "石巻中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "玉川小学校 PTA関連資料",
+    "/archive/toyohashi/school-027-es/",
+    "玉川小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "牟呂小学校 PTA関連資料",
+    "/archive/toyohashi/school-028-es/",
+    "牟呂小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "牟呂中学校 PTA関連資料",
+    "/archive/toyohashi/school-029-jhs/",
+    "牟呂中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "牛川小学校 PTA関連資料",
+    "/archive/toyohashi/school-030-es/",
+    "牛川小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "津田小学校 PTA関連資料",
+    "/archive/toyohashi/school-031-es/",
+    "津田小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "汐田小学校 PTA関連資料",
+    "/archive/toyohashi/school-032-es/",
+    "汐田小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "植田小学校 PTA関連資料",
+    "/archive/toyohashi/school-033-es/",
+    "植田小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "栄小学校 PTA関連資料",
+    "/archive/toyohashi/school-034-es/",
+    "栄小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "松葉小学校 PTA関連資料",
+    "/archive/toyohashi/school-035-es/",
+    "松葉小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "松山小学校 PTA関連資料",
+    "/archive/toyohashi/school-036-es/",
+    "松山小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "東陽中学校 PTA関連資料",
+    "/archive/toyohashi/school-037-jhs/",
+    "東陽中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "東陵中学校 PTA関連資料",
+    "/archive/toyohashi/school-038-jhs/",
+    "東陵中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "東部中学校 PTA関連資料",
+    "/archive/toyohashi/school-039-jhs/",
+    "東部中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "東田小学校 PTA関連資料",
+    "/archive/toyohashi/school-040-es/",
+    "東田小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "杉山小学校 PTA関連資料",
+    "/archive/toyohashi/school-041-es/",
+    "杉山小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "本郷中学校 PTA関連資料",
+    "/archive/toyohashi/school-042-jhs/",
+    "本郷中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "旭小学校 PTA関連資料",
+    "/archive/toyohashi/school-043-es/",
+    "旭小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "新川小学校 PTA関連資料",
+    "/archive/toyohashi/school-044-es/",
+    "新川小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "幸小学校 PTA関連資料",
+    "/archive/toyohashi/school-045-es/",
+    "幸小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "岩西小学校 PTA関連資料",
+    "/archive/toyohashi/school-046-es/",
+    "岩西小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "岩田小学校 PTA関連資料",
+    "/archive/toyohashi/school-047-es/",
+    "岩田小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "小沢小学校 PTA関連資料",
+    "/archive/toyohashi/school-048-es/",
+    "小沢小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "富士見小学校 PTA関連資料",
+    "/archive/toyohashi/school-049-es/",
+    "富士見小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "天伯小学校 PTA関連資料",
+    "/archive/toyohashi/school-050-es/",
+    "天伯小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大村小学校 PTA関連資料",
+    "/archive/toyohashi/school-052-es/",
+    "大村小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大崎小学校 PTA関連資料",
+    "/archive/toyohashi/school-053-es/",
+    "大崎小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "多米小学校 PTA関連資料",
+    "/archive/toyohashi/school-054-es/",
+    "多米小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "向山小学校 PTA関連資料",
+    "/archive/toyohashi/school-055-es/",
+    "向山小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "吉田方小学校 PTA関連資料",
+    "/archive/toyohashi/school-056-es/",
+    "吉田方小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "南陽中学校 PTA関連資料",
+    "/archive/toyohashi/school-057-jhs/",
+    "南陽中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "南部中学校 PTA関連資料",
+    "/archive/toyohashi/school-058-jhs/",
+    "南部中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "南稜中学校 PTA関連資料",
+    "/archive/toyohashi/school-059-jhs/",
+    "南稜中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "北部中学校 PTA関連資料",
+    "/archive/toyohashi/school-060-jhs/",
+    "北部中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "前芝小学校 PTA関連資料",
+    "/archive/toyohashi/school-061-es/",
+    "前芝小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "前芝中学校 PTA関連資料",
+    "/archive/toyohashi/school-062-jhs/",
+    "前芝中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "八町小学校 PTA関連資料",
+    "/archive/toyohashi/school-063-es/",
+    "八町小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "五並中学校 PTA関連資料",
+    "/archive/toyohashi/school-064-jhs/",
+    "五並中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "二川小学校 PTA関連資料",
+    "/archive/toyohashi/school-065-es/",
+    "二川小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "二川南小学校 PTA関連資料",
+    "/archive/toyohashi/school-066-es/",
+    "二川南小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "二川中学校 PTA関連資料",
+    "/archive/toyohashi/school-067-jhs/",
+    "二川中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "中野小学校 PTA関連資料",
+    "/archive/toyohashi/school-068-es/",
+    "中野小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "中部中学校 PTA関連資料",
+    "/archive/toyohashi/school-069-jhs/",
+    "中部中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "下条小学校 PTA関連資料",
+    "/archive/toyohashi/school-070-es/",
+    "下条小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "下地小学校 PTA関連資料",
+    "/archive/toyohashi/school-071-es/",
+    "下地小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "つつじが丘小学校 PTA関連資料",
+    "/archive/toyohashi/school-072-es/",
+    "つつじが丘小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
