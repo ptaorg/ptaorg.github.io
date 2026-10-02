@@ -4044,6 +4044,12 @@ window.PTA_SITE_SEARCH_INDEX = [
     "research-record"
   ],
   [
+    "「運営優良PTA」は何を保証するのか――PPCの公的規律と文科省・日本総研調査の間にある空白",
+    "/journal/mext-jri-pta-good-practice-legal-scope.html",
+    "文科省・日本総研の運営優良PTA事例を、個人情報保護委員会（PPC）が公立学校側に求める所掌事務、利用目的、恒常的処理の審査順序と比較し、「優良」という評価の法的射程を検証します。",
+    "research-record"
+  ],
+  [
     "「PTA業務は公務ではない」とする文科省通話記録の読み方",
     "/journal/mext-not-public.html",
     "令和8年1月22日の文部科学省教職員制度課との通話記録として旧サイトに掲載していた内容を移植。公式通知・文書回答とは区別し、学校とPTAの連絡調整とPTA内部事務をどう読み分けるか整理します。",
