@@ -1,0 +1,35 @@
+{
+  "pageMode": "materials",
+  "municipality": "大東市",
+  "prefecture": "大阪府",
+  "schoolName": "住道北小学校",
+  "schoolType": "小学校",
+  "slug": "school-001-es",
+  "basePath": "/archive/daito/school-001-es/",
+  "canonical": "https://ptaorg.com/archive/daito/school-001-es/",
+  "ogImage": "/assets/og-image-popc-en.png",
+  "summary": "大東市の保存資料を学校別に整理した一次資料アーカイブです。",
+  "description": "住道北小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+  "sourceSummary": "Google Drive「全国資料／大東市」とローカル保存資料を突合し、同一資料の重複コピーを統合して学校別に整理しています。元PDFは公開可否確認後に順次掲載します。",
+  "documents": [
+    {
+      "year": "",
+      "category": "学校徴収金",
+      "title": "④【住道北小学校】学校徴収金案内文書.pdf",
+      "source": "全国資料／大東市",
+      "publicationStatus": "公開前確認中"
+    },
+    {
+      "year": "",
+      "category": "校務分掌",
+      "title": "⑥【住道北小学校】校務分掌表.pdf",
+      "source": "全国資料／大東市",
+      "publicationStatus": "公開前確認中"
+    }
+  ],
+  "lastReviewed": "2026-10-02",
+  "nationalArchive": {
+    "order": 3001,
+    "group": "大東市・小学校"
+  }
+}

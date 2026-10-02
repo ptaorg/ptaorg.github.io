@@ -234,6 +234,24 @@ window.PTA_SITE_SEARCH_INDEX = [
     "source-archive"
   ],
   [
+    "住道北小学校 PTA関連資料",
+    "/archive/daito/school-001-es/",
+    "住道北小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+    "source-archive"
+  ],
+  [
+    "南郷小学校 PTA関連資料",
+    "/archive/daito/school-002-es/",
+    "南郷小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+    "source-archive"
+  ],
+  [
+    "四条小学校 PTA関連資料",
+    "/archive/daito/school-003-es/",
+    "四条小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
+    "source-archive"
+  ],
+  [
     "中央台北小学校 PTA関連資料",
     "/archive/iwaki/school-001-es/",
     "中央台北小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
