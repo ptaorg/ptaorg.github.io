@@ -13,6 +13,29 @@
     "basePath",
     "canonical"
   ],
+  "allOf": [
+    {
+      "if": {
+        "properties": { "pageMode": { "const": "materials" } },
+        "required": ["pageMode"]
+      },
+      "then": {
+        "required": ["documents"]
+      },
+      "else": {
+        "required": [
+          "status",
+          "statusClass",
+          "materials",
+          "confirmedFacts",
+          "unconfirmedPoints",
+          "riskFlags",
+          "evaluation",
+          "humanReviewRequired"
+        ]
+      }
+    }
+  ],
   "properties": {
     "municipality": { "type": "string" },
     "prefecture": { "type": "string" },
