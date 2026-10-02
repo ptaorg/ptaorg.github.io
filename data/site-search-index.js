@@ -1908,6 +1908,492 @@ window.PTA_SITE_SEARCH_INDEX = [
     "source-archive"
   ],
   [
+    "おなづか小学校 PTA関連資料",
+    "/archive/ota/school-001-es/",
+    "おなづか小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "中富小学校 PTA関連資料",
+    "/archive/ota/school-002-es/",
+    "中富小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "久原小学校 PTA関連資料",
+    "/archive/ota/school-003-es/",
+    "久原小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "仲六郷小学校 PTA関連資料",
+    "/archive/ota/school-004-es/",
+    "仲六郷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "入新井第一小学校 PTA関連資料",
+    "/archive/ota/school-005-es/",
+    "入新井第一小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "入新井第二小学校 PTA関連資料",
+    "/archive/ota/school-006-es/",
+    "入新井第二小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "入新井第五小学校 PTA関連資料",
+    "/archive/ota/school-007-es/",
+    "入新井第五小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "入新井第四小学校 PTA関連資料",
+    "/archive/ota/school-008-es/",
+    "入新井第四小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "六郷中学校 PTA関連資料",
+    "/archive/ota/school-009-jhs/",
+    "六郷中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "六郷小学校 PTA関連資料",
+    "/archive/ota/school-010-es/",
+    "六郷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "出雲中学校 PTA関連資料",
+    "/archive/ota/school-011-jhs/",
+    "出雲中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "出雲小学校 PTA関連資料",
+    "/archive/ota/school-012-es/",
+    "出雲小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "北糀谷小学校 PTA関連資料",
+    "/archive/ota/school-013-es/",
+    "北糀谷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "千鳥小学校 PTA関連資料",
+    "/archive/ota/school-014-es/",
+    "千鳥小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "南六郷中学校 PTA関連資料",
+    "/archive/ota/school-015-jhs/",
+    "南六郷中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "南六郷小学校 PTA関連資料",
+    "/archive/ota/school-016-es/",
+    "南六郷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "南蒲小学校 PTA関連資料",
+    "/archive/ota/school-017-es/",
+    "南蒲小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "多摩川小学校 PTA関連資料",
+    "/archive/ota/school-018-es/",
+    "多摩川小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大森東小学校 PTA関連資料",
+    "/archive/ota/school-019-es/",
+    "大森東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大森第一中学校 PTA関連資料",
+    "/archive/ota/school-020-jhs/",
+    "大森第一中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大森第一小学校 PTA関連資料",
+    "/archive/ota/school-021-es/",
+    "大森第一小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大森第七中学校 PTA関連資料",
+    "/archive/ota/school-022-jhs/",
+    "大森第七中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大森第三中学校 PTA関連資料",
+    "/archive/ota/school-023-jhs/",
+    "大森第三中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大森第三小学校 PTA関連資料",
+    "/archive/ota/school-024-es/",
+    "大森第三小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大森第二中学校 PTA関連資料",
+    "/archive/ota/school-025-jhs/",
+    "大森第二中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大森第五小学校 PTA関連資料",
+    "/archive/ota/school-026-es/",
+    "大森第五小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大森第八中学校 PTA関連資料",
+    "/archive/ota/school-027-jhs/",
+    "大森第八中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大森第六中学校 PTA関連資料",
+    "/archive/ota/school-028-jhs/",
+    "大森第六中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大森第十中学校 PTA関連資料",
+    "/archive/ota/school-029-jhs/",
+    "大森第十中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大森第四中学校 PTA関連資料",
+    "/archive/ota/school-030-jhs/",
+    "大森第四中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大森第四小学校 PTA関連資料",
+    "/archive/ota/school-031-es/",
+    "大森第四小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "安方中学校 PTA関連資料",
+    "/archive/ota/school-032-jhs/",
+    "安方中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "小池小学校 PTA関連資料",
+    "/archive/ota/school-033-es/",
+    "小池小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "山王小学校 PTA関連資料",
+    "/archive/ota/school-034-es/",
+    "山王小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "嶺町小学校 PTA関連資料",
+    "/archive/ota/school-035-es/",
+    "嶺町小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "御園中学校 PTA関連資料",
+    "/archive/ota/school-036-jhs/",
+    "御園中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "徳持小学校 PTA関連資料",
+    "/archive/ota/school-037-es/",
+    "徳持小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "志茂田中学校 PTA関連資料",
+    "/archive/ota/school-038-jhs/",
+    "志茂田中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "志茂田小学校 PTA関連資料",
+    "/archive/ota/school-039-es/",
+    "志茂田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "新宿小学校 PTA関連資料",
+    "/archive/ota/school-040-es/",
+    "新宿小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "東六郷小学校 PTA関連資料",
+    "/archive/ota/school-041-es/",
+    "東六郷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "東糀谷小学校 PTA関連資料",
+    "/archive/ota/school-042-es/",
+    "東糀谷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "東蒲中学校 PTA関連資料",
+    "/archive/ota/school-043-jhs/",
+    "東蒲中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "東蒲小学校 PTA関連資料",
+    "/archive/ota/school-044-es/",
+    "東蒲小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "東調布中学校 PTA関連資料",
+    "/archive/ota/school-045-jhs/",
+    "東調布中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "東調布第一小学校 PTA関連資料",
+    "/archive/ota/school-046-es/",
+    "東調布第一小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "松仙小学校 PTA関連資料",
+    "/archive/ota/school-047-es/",
+    "松仙小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "梅田小学校 PTA関連資料",
+    "/archive/ota/school-048-es/",
+    "梅田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "池上小学校 PTA関連資料",
+    "/archive/ota/school-049-es/",
+    "池上小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "池上第二小学校 PTA関連資料",
+    "/archive/ota/school-050-es/",
+    "池上第二小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "池雪小学校 PTA関連資料",
+    "/archive/ota/school-051-es/",
+    "池雪小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "洗足池小学校 PTA関連資料",
+    "/archive/ota/school-052-es/",
+    "洗足池小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "田園調布中学校 PTA関連資料",
+    "/archive/ota/school-053-jhs/",
+    "田園調布中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "田園調布小学校 PTA関連資料",
+    "/archive/ota/school-054-es/",
+    "田園調布小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "相生小学校 PTA関連資料",
+    "/archive/ota/school-055-es/",
+    "相生小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "矢口中学校 PTA関連資料",
+    "/archive/ota/school-056-jhs/",
+    "矢口中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "矢口小学校 PTA関連資料",
+    "/archive/ota/school-057-es/",
+    "矢口小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "矢口東小学校 PTA関連資料",
+    "/archive/ota/school-058-es/",
+    "矢口東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "矢口西小学校 PTA関連資料",
+    "/archive/ota/school-059-es/",
+    "矢口西小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "石川台中学校 PTA関連資料",
+    "/archive/ota/school-060-jhs/",
+    "石川台中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "糀谷中学校 PTA関連資料",
+    "/archive/ota/school-061-jhs/",
+    "糀谷中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "羽田中学校 PTA関連資料",
+    "/archive/ota/school-062-jhs/",
+    "羽田中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "羽田小学校 PTA関連資料",
+    "/archive/ota/school-063-es/",
+    "羽田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "萩中小学校 PTA関連資料",
+    "/archive/ota/school-064-es/",
+    "萩中小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "蒲田中学校 PTA関連資料",
+    "/archive/ota/school-065-jhs/",
+    "蒲田中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "蓮沼中学校 PTA関連資料",
+    "/archive/ota/school-066-jhs/",
+    "蓮沼中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "西六郷小学校 PTA関連資料",
+    "/archive/ota/school-067-es/",
+    "西六郷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "調布大塚小学校 PTA関連資料",
+    "/archive/ota/school-068-es/",
+    "調布大塚小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "貝塚中学校 PTA関連資料",
+    "/archive/ota/school-069-jhs/",
+    "貝塚中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "赤松小学校 PTA関連資料",
+    "/archive/ota/school-070-es/",
+    "赤松小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "道塚小学校 PTA関連資料",
+    "/archive/ota/school-071-es/",
+    "道塚小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "都南小学校 PTA関連資料",
+    "/archive/ota/school-072-es/",
+    "都南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "開桜小学校 PTA関連資料",
+    "/archive/ota/school-073-es/",
+    "開桜小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "雪谷中学校 PTA関連資料",
+    "/archive/ota/school-074-jhs/",
+    "雪谷中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "雪谷小学校 PTA関連資料",
+    "/archive/ota/school-075-es/",
+    "雪谷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "馬込中学校 PTA関連資料",
+    "/archive/ota/school-076-jhs/",
+    "馬込中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "馬込小学校 PTA関連資料",
+    "/archive/ota/school-077-es/",
+    "馬込小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "馬込東中学校 PTA関連資料",
+    "/archive/ota/school-078-jhs/",
+    "馬込東中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "馬込第三小学校 PTA関連資料",
+    "/archive/ota/school-079-es/",
+    "馬込第三小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "馬込第二小学校 PTA関連資料",
+    "/archive/ota/school-080-es/",
+    "馬込第二小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "高畑小学校 PTA関連資料",
+    "/archive/ota/school-081-es/",
+    "高畑小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
     "大清水小学校 PTA関連資料",
     "/archive/toyohashi/ooshimizu-es/",
     "大清水小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
