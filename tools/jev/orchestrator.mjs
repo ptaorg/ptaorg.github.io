@@ -256,16 +256,26 @@ async function main() {
   if (args.help) return console.log(usage());
   const config = await loadConfig();
   if (args.check) {
-    const fixedContext = await loadInstructionBundle("PTAの個人情報とサイト修正を検証する", config);
+    const sampleTask = "PTAの個人情報とサイト修正を検証する";
+    const fixedContext = await loadInstructionBundle(sampleTask, config);
+    let contextEngine = { enabled: Boolean(config.contextEngine?.enabled), attached: false, selectedNotes: [] };
+    if (config.contextEngine?.enabled && args.vault) {
+      const selected = await selectVaultContext(sampleTask, args.vault, {
+        routeConfigPath: config.contextEngine.routeConfig,
+        maxNotes: config.contextEngine.maxNotes,
+        maxChars: config.contextEngine.maxChars
+      });
+      contextEngine = { enabled: true, attached: true, routeVersion: selected.routeVersion, selectedNotes: selected.notes.map((x) => x.path) };
+    }
     return console.log(JSON.stringify({ ok: true, policy: config.policyName, version: config.version, readOnly: config.runtime.readOnly,
       models: config.models, defaultWorkers: clampWorkerCount(config.limits.defaultWorkers, config), maxWorkers: config.limits.maxWorkers,
-      aiSystem: { registryVersion: fixedContext.registryVersion, selectedSkills: fixedContext.selectedSkills } }, null, 2));
+      aiSystem: { registryVersion: fixedContext.registryVersion, selectedSkills: fixedContext.selectedSkills }, contextEngine }, null, 2));
   }
   if (!args.task) throw new Error("--task is required. Use --help for usage.");
   if (!config.runtime.readOnly) throw new Error("Refusing to run: fixed policy requires runtime.readOnly=true.");
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) throw new Error("OPENAI_API_KEY is required for an actual run. No key is stored in the repository.");
-  const result = await runPipeline({ task: args.task, scope: args.scope, workers: clampWorkerCount(args.workers, config), config, apiKey });
+  const result = await runPipeline({ task: args.task, scope: args.scope, workers: clampWorkerCount(args.workers, config), config, apiKey, vault: args.vault });
   const json = JSON.stringify(result, null, 2);
   console.log(json);
 }
