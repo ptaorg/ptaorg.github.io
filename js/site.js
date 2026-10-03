@@ -143,6 +143,95 @@
     document.querySelectorAll('.mobile-overlay').forEach(markCurrent);
   }
 
+  function installDesktopSearchPanel(){
+    document.querySelectorAll('.site-header .nav-container > .header-search').forEach(function(box,index){
+      if (box.dataset.desktopSearchReady === '1') return;
+      var input = box.querySelector('.search-input');
+      var dropdown = box.querySelector('.search-results-dropdown');
+      if (!input || !dropdown) return;
+
+      box.dataset.desktopSearchReady = '1';
+      box.classList.add('search-launcher-ready');
+
+      var panelId = 'desktopSiteSearchPanel-' + index;
+      var trigger = document.createElement('button');
+      trigger.type = 'button';
+      trigger.className = 'desktop-search-trigger';
+      trigger.setAttribute('aria-expanded','false');
+      trigger.setAttribute('aria-controls',panelId);
+      trigger.setAttribute('aria-label','サイト内検索を開く');
+      trigger.innerHTML =
+        '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4.2-4.2"></path></svg>' +
+        '<span class="desktop-search-trigger-text">検索</span>';
+
+      var panel = document.createElement('div');
+      panel.id = panelId;
+      panel.className = 'desktop-search-panel';
+      panel.hidden = true;
+
+      var panelHead = document.createElement('div');
+      panelHead.className = 'desktop-search-panel-head';
+      panelHead.innerHTML =
+        '<div><strong>サイト内検索</strong><span>論考・行政資料・自治体回答を横断して探せます</span></div>';
+
+      var close = document.createElement('button');
+      close.type = 'button';
+      close.className = 'desktop-search-close';
+      close.setAttribute('aria-label','検索を閉じる');
+      close.textContent = '×';
+      panelHead.appendChild(close);
+
+      var field = document.createElement('div');
+      field.className = 'desktop-search-field';
+      var originalIcon = box.querySelector(':scope > svg');
+      if (originalIcon) {
+        originalIcon.setAttribute('aria-hidden','true');
+        field.appendChild(originalIcon);
+      }
+      input.placeholder = '例：会費徴収、個人情報、任意加入、学校施設';
+      field.appendChild(input);
+      field.appendChild(dropdown);
+
+      panel.appendChild(panelHead);
+      panel.appendChild(field);
+      box.appendChild(trigger);
+      box.appendChild(panel);
+
+      function setOpen(open){
+        panel.hidden = !open;
+        box.classList.toggle('is-search-open',open);
+        trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        trigger.setAttribute('aria-label', open ? 'サイト内検索を閉じる' : 'サイト内検索を開く');
+        if (open) {
+          window.setTimeout(function(){ input.focus(); }, 0);
+        } else {
+          dropdown.classList.remove('is-open');
+        }
+      }
+
+      trigger.addEventListener('click',function(){
+        setOpen(panel.hidden);
+      });
+      close.addEventListener('click',function(){
+        setOpen(false);
+        trigger.focus();
+      });
+      box.addEventListener('keydown',function(ev){
+        if (ev.key === 'Escape' && !panel.hidden) {
+          ev.preventDefault();
+          setOpen(false);
+          trigger.focus();
+        }
+      });
+      document.addEventListener('click',function(ev){
+        if (!panel.hidden && !box.contains(ev.target)) setOpen(false);
+      });
+      window.addEventListener('resize',function(){
+        if (window.innerWidth <= 860 && !panel.hidden) setOpen(false);
+      });
+    });
+  }
+
   function installMobileSearch(){
     var overlay = document.getElementById('mobileOverlay');
     if (!overlay || overlay.querySelector('[data-mobile-site-search]')) return;
@@ -354,6 +443,7 @@
 
   load('/js/seo-analytics-v104.js?v=20260919-1', 'seo-analytics-v104');
   load('/js/site-core-v90.js?v=99', 'site-core-v90', function(){
+    installDesktopSearchPanel();
     installMobileSearch();
     load('/js/current-location-nav.js?v=20260823-10', 'current-location-nav', installCoreEssayEntrances);
   });
