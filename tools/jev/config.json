@@ -1,12 +1,12 @@
 {
-  "version": 2,
+  "version": 3,
   "policyName": "PTA JEV fixed orchestration",
   "models": {
-    "planner": "gpt-5.6-sol",
-    "worker": "gpt-5.6-luna",
-    "jev": "gpt-5.6-luna",
-    "senior": "gpt-5.6-sol",
-    "secretary": "gpt-5.6-sol"
+    "planner": "gpt-6.1-sol",
+    "worker": "gpt-6-luna",
+    "jev": "gpt-6-luna",
+    "senior": "gpt-6.1-sol",
+    "secretary": "gpt-6.1-sol"
   },
   "reasoning": {
     "planner": "high",
@@ -82,5 +82,15 @@
       "ORCHESTRATION.md",
       "QUALITY_STANDARD.md"
     ]
+  },
+  "modelPolicy": {
+    "roles": {
+      "planner": "sol",
+      "worker": "luna",
+      "jev": "luna",
+      "senior": "sol",
+      "secretary": "sol"
+    },
+    "apiVerifiedOn": "2026-10-04"
   }
 }
