@@ -4140,6 +4140,12 @@ window.PTA_SITE_SEARCH_INDEX = [
     "research-record"
   ],
   [
+    "PTAは「学校のこと」なのか――社会教育法が示す教育委員会・学校・PTAの境界",
+    "/journal/social-education-law-pta-boundary.html",
+    "教育委員会がPTA問題を「各学校の判断」と整理する場面を、社会教育法2条、5条、10～12条、44～47条から検証。学校教育、社会教育行政、PTA内部事務、学校施設管理を分けて読みます。",
+    "research-record"
+  ],
+  [
     "新設校のPTAは誰がつくるのか——玉野中央中学校の準備資料を読む",
     "/journal/tamano-chuo-pta-establishment.html",
     "玉野中央中学校のPTA設立準備を一次資料の画像とともに検証。入会届・自由意思の明文化、学校による会計・会費額の検討、個人情報保護規定の削除、学級費への付け替えの論点を、決定事項・発言・未確認事項に分けて分析します。",
