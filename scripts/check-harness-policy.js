@@ -97,12 +97,47 @@ try {
 } catch (error) {
   errors.push(`ai-system/SKILL_REGISTRY.json: invalid JSON: ${error.message}`);
 }
-const skillIds = new Set((skillRegistry.skills || []).map((skill) => skill.id));
+let jevConfig = {};
+try {
+  jevConfig = JSON.parse(read("tools/jev/config.json") || "{}");
+} catch (error) {
+  errors.push(`tools/jev/config.json: invalid JSON: ${error.message}`);
+}
+
+if (Number(skillRegistry.version || 0) < 3) {
+  errors.push("ai-system/SKILL_REGISTRY.json: registry version must be at least 3");
+}
+
+const skills = Array.isArray(skillRegistry.skills) ? skillRegistry.skills : [];
+const skillIds = new Set();
+for (const skill of skills) {
+  if (!skill.id) {
+    errors.push("ai-system/SKILL_REGISTRY.json: skill without id");
+    continue;
+  }
+  if (skillIds.has(skill.id)) errors.push(`ai-system/SKILL_REGISTRY.json: duplicate skill id "${skill.id}"`);
+  skillIds.add(skill.id);
+}
+
 for (const requiredSkill of [
   "primary-source-research",
   "legal-analysis",
   "municipal-response-analysis",
   "pta-structure-analysis",
+  "pta-membership",
+  "school-pta-personal-data",
+  "school-fee-collection",
+  "teacher-pta-involvement",
+  "school-facility-public-private",
+  "social-education-pta",
+  "administrative-oversight",
+  "pta-officer-selection",
+  "pta-bylaws-membership-rules",
+  "school-pta-delegation-contract",
+  "administrative-inquiry-drafting",
+  "personal-data-purpose-ledger",
+  "public-private-funds",
+  "pta-dissolution-restructuring",
   "website-article",
   "website-edit",
   "publish-verification",
@@ -114,12 +149,68 @@ for (const requiredSkill of [
 ]) {
   if (!skillIds.has(requiredSkill)) errors.push(`ai-system/SKILL_REGISTRY.json: missing required skill "${requiredSkill}"`);
 }
-for (const skill of skillRegistry.skills || []) {
+
+for (const id of skillRegistry.defaultSkills || []) {
+  if (!skillIds.has(id)) errors.push(`ai-system/SKILL_REGISTRY.json: unknown default skill "${id}"`);
+}
+
+const allowedSeniorReview = new Set(jevConfig?.approval?.seniorReview || []);
+const requiredPtaHeadings = [
+  "## 目的",
+  "## 発火条件",
+  "## 確認すべき事実",
+  "## 優先する一次資料",
+  "## 法的確認ポイント",
+  "## よくある誤り",
+  "## 出力形式",
+  "## Seniorへエスカレーションする条件",
+];
+
+for (const skill of skills) {
   if (!skill.path) {
     errors.push(`ai-system/SKILL_REGISTRY.json: skill "${skill.id || "(unknown)"}" has no path`);
     continue;
   }
-  read(path.posix.join("ai-system", skill.path));
+  const skillText = read(path.posix.join("ai-system", skill.path));
+  if (skill.domain === "pta") {
+    for (const heading of requiredPtaHeadings) {
+      if (!skillText.includes(heading)) errors.push(`${skill.path}: PTA skill missing required heading "${heading}"`);
+    }
+  }
+  for (const review of skill.seniorReview || []) {
+    if (!allowedSeniorReview.has(review)) {
+      errors.push(`ai-system/SKILL_REGISTRY.json: skill "${skill.id}" uses unknown seniorReview flag "${review}"`);
+    }
+  }
+}
+
+const ruleIds = new Set();
+const maxSkillCount = Number(jevConfig?.limits?.maxSkillCount || 0);
+for (const rule of skillRegistry.selectionRules || []) {
+  if (!rule.id) {
+    errors.push("ai-system/SKILL_REGISTRY.json: selection rule without id");
+  } else if (ruleIds.has(rule.id)) {
+    errors.push(`ai-system/SKILL_REGISTRY.json: duplicate selection rule id "${rule.id}"`);
+  } else {
+    ruleIds.add(rule.id);
+  }
+
+  const allOf = Array.isArray(rule?.match?.allOf) ? rule.match.allOf : [];
+  const anyOf = Array.isArray(rule?.match?.anyOf) ? rule.match.anyOf : [];
+  if (!allOf.length && !anyOf.length) {
+    errors.push(`ai-system/SKILL_REGISTRY.json: selection rule "${rule.id || "(unknown)"}" has no positive match terms`);
+  }
+
+  if (!Array.isArray(rule.skills) || !rule.skills.length) {
+    errors.push(`ai-system/SKILL_REGISTRY.json: selection rule "${rule.id || "(unknown)"}" has no skills`);
+    continue;
+  }
+  for (const id of rule.skills) {
+    if (!skillIds.has(id)) errors.push(`ai-system/SKILL_REGISTRY.json: selection rule "${rule.id}" references unknown skill "${id}"`);
+  }
+  if (maxSkillCount > 0 && new Set([...(skillRegistry.defaultSkills || []), ...rule.skills]).size > maxSkillCount) {
+    errors.push(`ai-system/SKILL_REGISTRY.json: selection rule "${rule.id}" cannot fit with default skills inside maxSkillCount=${maxSkillCount}`);
+  }
 }
 
 read("SITE_STRUCTURE.md");
