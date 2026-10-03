@@ -8,6 +8,7 @@ import {
   clampWorkerCount,
   classifyRisk,
   extractOutputText,
+  loadConfig,
   prefilterWorkerResults
 } from "./orchestrator.mjs";
 
@@ -72,4 +73,23 @@ test("buildInventory includes text files and skips excluded directories", async 
 test("classifyRisk does not treat discussion of public information as a publish action", () => {
   const result = classifyRisk("公開資料の変更点を分析する");
   assert.equal(result.requiresHumanApproval, false);
+});
+
+
+test("fixed config pins the OpenAI model hierarchy", async () => {
+  const fixed = await loadConfig();
+  assert.deepEqual(fixed.models, {
+    planner: "gpt-5.6-sol",
+    worker: "gpt-5.6-luna",
+    jev: "gpt-5.6-luna",
+    senior: "gpt-5.6-sol",
+    secretary: "gpt-5.6-sol"
+  });
+});
+
+test("fixed config keeps runtime read-only and repository writes human-gated", async () => {
+  const fixed = await loadConfig();
+  assert.equal(fixed.runtime.readOnly, true);
+  assert.equal(fixed.runtime.storeResponses, false);
+  assert.ok(fixed.approval.alwaysHuman.includes("repository_write"));
 });
