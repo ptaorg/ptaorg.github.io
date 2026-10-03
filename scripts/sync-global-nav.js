@@ -35,12 +35,12 @@ const CORE_NAV_MARKERS = [
   'class="mobile-overlay"'
 ];
 
-const PPC_LINK = /(<a\b[^>]*href=["\']\/ppc-points\.html["\'][^>]*>)(?:PPC|個人情報保護委員会（PPC）|個人情報)(<\/a>)/gi;
+const PPC_LINK = /(<a\b[^>]*href=["\']\/ppc-points\.html["\'][^>]*>)(?:PPC|個人情報)(<\/a>)/gi;
 const MEMBERSHIP_DESKTOP = /(<a class="nav-link(?: global-membership-nav)?") href="\/pta-membership-optin\.html"/g;
 const MEMBERSHIP_MOBILE = /(<a class="mobile-link(?: global-membership-nav)?") href="\/pta-membership-optin\.html"/g;
-const DESKTOP = '<a class="nav-link global-ppc-nav" href="/ppc-points.html">個人情報保護委員会（PPC）</a>';
+const DESKTOP = '<a class="nav-link global-ppc-nav" href="/ppc-points.html">PPC</a>';
 const DESKTOP_NEXT = DESKTOP;
-const MOBILE = '<a class="mobile-link global-ppc-nav" href="/ppc-points.html">個人情報保護委員会（PPC）</a>';
+const MOBILE = '<a class="mobile-link global-ppc-nav" href="/ppc-points.html">PPC</a>';
 const MOBILE_NEXT = MOBILE;
 
 function walk(dir, out = []) {
@@ -60,7 +60,7 @@ function sync(file, checkOnly) {
   const next = original
     .replaceAll(DESKTOP, DESKTOP_NEXT)
     .replaceAll(MOBILE, MOBILE_NEXT)
-    .replace(PPC_LINK, "$1個人情報保護委員会（PPC）$2")
+    .replace(PPC_LINK, "$1PPC$2")
     .replace(MEMBERSHIP_DESKTOP, "$1 href=\"/membership.html\"")
     .replace(MEMBERSHIP_MOBILE, "$1 href=\"/membership.html\"");
   if (next !== original && !checkOnly) fs.writeFileSync(file, next, "utf8");
@@ -86,7 +86,7 @@ const checkOnly = process.argv.includes("--check");
 const files = walk(ROOT);
 const changed = files.filter((file) => sync(file, checkOnly));
 if (checkOnly && changed.length) {
-  console.error("Global navigation is out of sync (個人情報保護委員会（PPC） label or membership entry):");
+  console.error("Global navigation is out of sync (PPC label or membership entry):");
   for (const file of changed) console.error("-", path.relative(ROOT, file).replace(/\\/g, "/"));
   process.exit(1);
 }
