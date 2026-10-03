@@ -13,6 +13,8 @@ This directory fixes the OpenAI-only multi-agent workflow used for PTA work. **J
 
 The defaults are stored in `config.json`. The worker count defaults to 8 and is hard-capped at 50. Increasing the number of workers does not change the escalation policy.
 
+The canonical operating instructions live under `ai-system/`. At runtime the orchestrator always loads the core instructions, orchestration contract, and quality standard, then deterministically selects up to the configured number of task Skills from `ai-system/SKILL_REGISTRY.json`. The selected Skill IDs are included in the result for auditability.
+
 ## Safety boundary
 
 The current runtime is intentionally **read-only**. It can inspect local text files and produce findings, but it cannot edit files, send mail, publish, delete, push, merge, deploy, make payments, or change credentials.
@@ -47,6 +49,8 @@ npm run jev:run -- --task "サイト全体を品質監査する" --scope . --wor
 ```
 
 Results are written to standard output only; the read-only runtime does not create result files. The API key is read only from `OPENAI_API_KEY` and must never be committed.
+
+`npm run jev:check` also validates that the fixed AI instruction bundle and registry can be loaded.
 
 ## Data flow
 
