@@ -59,6 +59,26 @@ function fixedInstructions(base, bundle) {
   return `${base}\n\nFIXED AI SYSTEM (authoritative repository guidance):\n${bundle.text}`;
 }
 
+function normalizeUsage(usage) {
+  return {
+    input_tokens: Number(usage?.input_tokens ?? 0),
+    output_tokens: Number(usage?.output_tokens ?? 0),
+    total_tokens: Number(usage?.total_tokens ?? 0),
+    cached_input_tokens: Number(usage?.input_tokens_details?.cached_tokens ?? 0),
+    reasoning_output_tokens: Number(usage?.output_tokens_details?.reasoning_tokens ?? 0)
+  };
+}
+
+function sumUsage(entries) {
+  return entries.reduce((total, entry) => ({
+    input_tokens: total.input_tokens + entry.input_tokens,
+    output_tokens: total.output_tokens + entry.output_tokens,
+    total_tokens: total.total_tokens + entry.total_tokens,
+    cached_input_tokens: total.cached_input_tokens + entry.cached_input_tokens,
+    reasoning_output_tokens: total.reasoning_output_tokens + entry.reasoning_output_tokens
+  }), { input_tokens: 0, output_tokens: 0, total_tokens: 0, cached_input_tokens: 0, reasoning_output_tokens: 0 });
+}
+
 function parseArgs(argv) {
   const args = { scope: ".", workers: null, task: null, taskFile: null, check: false, vault: process.env.PTA_CONTEXT_VAULT ?? null, output: null };
   for (let i = 0; i < argv.length; i += 1) {
@@ -116,7 +136,7 @@ async function runPipeline({ task, scope, workers, config, apiKey, vault }) {
     requires_human_approval: item.requires_human_approval || taskRisk.requiresHumanApproval || classifyRisk(item.objective).requiresHumanApproval
   }));
 
-  const workerCalls = await mapLimit(workItems, workers, async (item) => {
+  const workerResponses = await mapLimit(workItems, workers, async (item) => {
     const context = await readContext(scope, item.paths, config.limits.maxContextCharsPerWorker, `${task}\n${item.objective}`);
     let workerVaultText = "";
     if (config.contextEngine?.enabled && vault) {
@@ -148,9 +168,10 @@ async function runPipeline({ task, scope, workers, config, apiKey, vault }) {
       finding.requires_human_approval ||= risk.requiresHumanApproval || deterministicRisk.requiresHumanApproval || item.requires_human_approval;
       finding.requires_senior_review ||= risk.requiresSeniorReview || deterministicRisk.requiresSeniorReview || item.risk === "high";
     }
-    return response.data;
+    return response;
   });
 
+  const workerCalls = workerResponses.map((response) => response.data);
   const compactWorkers = prefilterWorkerResults(workerCalls);
   const mandatoryHumanIssues = [];
   const mandatorySeniorIssues = [];
@@ -239,6 +260,22 @@ async function runPipeline({ task, scope, workers, config, apiKey, vault }) {
     secretary.data.needs_human.push({ title: issue.title, decision_needed: issue.recommended_action, reason: `Fixed approval gate: ${issue.reason}` });
   }
 
+  const usageEntries = [
+    normalizeUsage(planner.usage),
+    ...workerResponses.map((response) => normalizeUsage(response.usage)),
+    normalizeUsage(jev.usage),
+    normalizeUsage(senior.usage),
+    normalizeUsage(secretary.usage)
+  ];
+  const apiUsage = {
+    planner: normalizeUsage(planner.usage),
+    workers: workerResponses.map((response, index) => ({ task_id: workItems[index]?.id ?? null, ...normalizeUsage(response.usage) })),
+    jev: normalizeUsage(jev.usage),
+    senior: normalizeUsage(senior.usage),
+    secretary: normalizeUsage(secretary.usage),
+    total: sumUsage(usageEntries)
+  };
+
   return {
     policy: config.policyName, version: config.version, runtime: config.runtime, task, scope: path.resolve(scope), models: config.models,
     ai_system: { registry_version: fixedContext.registryVersion, selected_skills: fixedContext.selectedSkills },
@@ -248,6 +285,7 @@ async function runPipeline({ task, scope, workers, config, apiKey, vault }) {
       route_version: vaultContext?.routeVersion ?? null,
       selected_notes: (vaultContext?.notes ?? []).map(({ path: notePath, score, reasons, chars }) => ({ path: notePath, score, reasons, chars }))
     },
+    api_usage: apiUsage,
     worker_count: workItems.length, inventory_count: inventory.length, plan: planner.data, worker_results: compactWorkers,
     jev: jev.data, senior: senior.data, secretary: secretary.data
   };
