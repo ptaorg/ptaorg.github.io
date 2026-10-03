@@ -5,6 +5,7 @@ import os from "node:os";
 import path from "node:path";
 import {
   buildInventory,
+  buildSeniorReviewPacket,
   clampWorkerCount,
   classifyRisk,
   extractOutputText,
@@ -58,6 +59,98 @@ test("prefilterWorkerResults removes exact repeated findings", () => {
   const output = prefilterWorkerResults(input);
   assert.equal(output[0].findings.length, 1);
   assert.equal(output[1].findings.length, 0);
+});
+
+
+test("buildSeniorReviewPacket keeps merged JEV issues compact while inheriting mandatory gates", () => {
+  const workers = [
+    {
+      task_id: "W1",
+      findings: [{
+        id: "F1",
+        finding: "First legal issue",
+        evidence: [{ path: "a.html", detail: "A" }],
+        severity: 2,
+        risk: 2,
+        confidence: 0.88,
+        recommended_action: "Review A",
+        requires_senior_review: true,
+        requires_human_approval: false
+      }]
+    },
+    {
+      task_id: "W2",
+      findings: [{
+        id: "F2",
+        finding: "Overlapping privacy issue",
+        evidence: [{ path: "b.html", detail: "B" }],
+        severity: 2,
+        risk: 2,
+        confidence: 0.86,
+        recommended_action: "Review B",
+        requires_senior_review: true,
+        requires_human_approval: false
+      }]
+    }
+  ];
+  const issues = [{
+    title: "Merged legal/privacy issue",
+    source_task_ids: ["W1", "W2"],
+    source_finding_refs: ["W1::F1", "W2::F2"],
+    summary: "Merged summary",
+    evidence: ["a.html: A", "b.html: B"],
+    severity: 2,
+    risk: 2,
+    confidence: 0.86,
+    route: "senior",
+    reason: "Merged by JEV",
+    recommended_action: "Senior review"
+  }];
+
+  const packet = buildSeniorReviewPacket(issues, workers);
+  assert.equal(packet.length, 1);
+  assert.equal(packet[0].issue_id, "JEV-001");
+  assert.deepEqual(packet[0].source_task_ids, ["W1", "W2"]);
+  assert.equal(packet[0].gates.human_required, false);
+  assert.ok(packet[0].gates.review_reasons.includes("worker_senior"));
+});
+
+test("buildSeniorReviewPacket adds one compressed fallback per task only when JEV omits mandatory findings", () => {
+  const workers = [{
+    task_id: "W1",
+    findings: [
+      {
+        id: "F1",
+        finding: "Human-gated write",
+        evidence: [{ path: "a.html", detail: "A" }],
+        severity: 3,
+        risk: 3,
+        confidence: 0.95,
+        recommended_action: "Ask human",
+        requires_senior_review: true,
+        requires_human_approval: true
+      },
+      {
+        id: "F2",
+        finding: "Legal review",
+        evidence: [{ path: "b.html", detail: "B" }],
+        severity: 2,
+        risk: 2,
+        confidence: 0.8,
+        recommended_action: "Review law",
+        requires_senior_review: true,
+        requires_human_approval: false
+      }
+    ]
+  }];
+
+  const packet = buildSeniorReviewPacket([], workers);
+  assert.equal(packet.length, 1);
+  assert.equal(packet[0].issue_id, "FALLBACK-001");
+  assert.deepEqual(packet[0].source_task_ids, ["W1"]);
+  assert.equal(packet[0].gates.human_required, true);
+  assert.match(packet[0].summary, /Human-gated write/);
+  assert.match(packet[0].summary, /Legal review/);
 });
 
 test("buildInventory includes text files and skips excluded directories", async () => {
