@@ -1,0 +1,75 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import fs from "node:fs/promises";
+import os from "node:os";
+import path from "node:path";
+import {
+  buildInventory,
+  clampWorkerCount,
+  classifyRisk,
+  extractOutputText,
+  prefilterWorkerResults
+} from "./orchestrator.mjs";
+
+const config = {
+  limits: { defaultWorkers: 8, maxWorkers: 50, maxInventoryEntries: 100 },
+  files: { extensions: [".html", ".md", ".js"], excludeDirectories: ["node_modules", ".git"] }
+};
+
+test("classifyRisk keeps repository writes behind human approval", () => {
+  const result = classifyRisk("修正してcommitし、pushまでしてください");
+  assert.equal(result.requiresHumanApproval, true);
+  assert.ok(result.sideEffects.includes("git_push"));
+  assert.ok(result.sideEffects.includes("repository_write"));
+});
+
+test("classifyRisk escalates legal/privacy analysis to senior", () => {
+  const result = classifyRisk("個人情報保護法の適法性を確認する");
+  assert.equal(result.requiresSeniorReview, true);
+  assert.ok(result.seniorReview.includes("legal_interpretation"));
+  assert.ok(result.seniorReview.includes("privacy_personal_data"));
+});
+
+test("clampWorkerCount applies defaults and hard cap", () => {
+  assert.equal(clampWorkerCount(undefined, config), 8);
+  assert.equal(clampWorkerCount("20", config), 20);
+  assert.equal(clampWorkerCount("999", config), 50);
+  assert.equal(clampWorkerCount("0", config), 8);
+});
+
+test("extractOutputText supports top-level and message output", () => {
+  assert.equal(extractOutputText({ output_text: "{\"ok\":true}" }), '{"ok":true}');
+  assert.equal(extractOutputText({ output: [{ type: "message", content: [{ type: "output_text", text: "hello" }] }] }), "hello");
+});
+
+test("prefilterWorkerResults removes exact repeated findings", () => {
+  const baseFinding = {
+    finding: "Same issue",
+    evidence: [{ path: "a.html", detail: "x" }]
+  };
+  const input = [
+    { task_id: "1", findings: [baseFinding] },
+    { task_id: "2", findings: [{ ...baseFinding }] }
+  ];
+  const output = prefilterWorkerResults(input);
+  assert.equal(output[0].findings.length, 1);
+  assert.equal(output[1].findings.length, 0);
+});
+
+test("buildInventory includes text files and skips excluded directories", async () => {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(), "jev-test-"));
+  await fs.writeFile(path.join(root, "index.html"), "<h1>x</h1>");
+  await fs.writeFile(path.join(root, "image.png"), "binary");
+  await fs.mkdir(path.join(root, "node_modules"));
+  await fs.writeFile(path.join(root, "node_modules", "hidden.js"), "x");
+  await fs.mkdir(path.join(root, "docs"));
+  await fs.writeFile(path.join(root, "docs", "note.md"), "hello");
+  const inventory = await buildInventory(root, config);
+  assert.deepEqual(inventory.map((x) => x.path), ["docs/note.md", "index.html"]);
+  await fs.rm(root, { recursive: true, force: true });
+});
+
+test("classifyRisk does not treat discussion of public information as a publish action", () => {
+  const result = classifyRisk("公開資料の変更点を分析する");
+  assert.equal(result.requiresHumanApproval, false);
+});
