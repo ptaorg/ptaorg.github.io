@@ -60,14 +60,16 @@ function fixedInstructions(base, bundle) {
 }
 
 function parseArgs(argv) {
-  const args = { scope: ".", workers: null, task: null, check: false, vault: process.env.PTA_CONTEXT_VAULT ?? null };
+  const args = { scope: ".", workers: null, task: null, taskFile: null, check: false, vault: process.env.PTA_CONTEXT_VAULT ?? null, output: null };
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
     if (arg === "--check") args.check = true;
     else if (arg === "--task") args.task = argv[++i];
+    else if (arg === "--task-file") args.taskFile = argv[++i];
     else if (arg === "--scope") args.scope = argv[++i];
     else if (arg === "--workers") args.workers = argv[++i];
     else if (arg === "--vault") args.vault = argv[++i];
+    else if (arg === "--output") args.output = argv[++i];
     else if (arg === "--help" || arg === "-h") args.help = true;
     else throw new Error(`Unknown argument: ${arg}`);
   }
@@ -75,7 +77,7 @@ function parseArgs(argv) {
 }
 
 function usage() {
-  return `JEV fixed orchestration (read-only)\n\nUsage:\n  node tools/jev/orchestrator.mjs --check\n  node tools/jev/orchestrator.mjs --task "<task>" [--scope .] [--workers 8] [--vault "<Obsidian Vault path>"]\n\nEnvironment:\n  OPENAI_API_KEY      Required for an actual run.\n  PTA_CONTEXT_VAULT   Optional local Obsidian Vault path. --vault takes precedence.\n\nThe orchestrator never writes to the repository or Vault, pushes, merges, sends, publishes, deletes, deploys, or performs financial/credential actions. It only produces analysis and approval queues.`;
+  return `JEV fixed orchestration (read-only)\n\nUsage:\n  node tools/jev/orchestrator.mjs --check\n  node tools/jev/orchestrator.mjs (--task "<task>" | --task-file task.txt) [--scope .] [--workers 8] [--vault "<Obsidian Vault path>"] [--output result.json]\n\nEnvironment:\n  OPENAI_API_KEY      Required for an actual run.\n  PTA_CONTEXT_VAULT   Optional local Obsidian Vault path. --vault takes precedence.\n\nThe orchestrator never writes to the repository or Vault, pushes, merges, sends, publishes, deletes, deploys, or performs financial/credential actions. It only produces analysis and approval queues.`;
 }
 
 async function runPipeline({ task, scope, workers, config, apiKey, vault }) {
@@ -115,13 +117,13 @@ async function runPipeline({ task, scope, workers, config, apiKey, vault }) {
   }));
 
   const workerCalls = await mapLimit(workItems, workers, async (item) => {
-    const context = await readContext(scope, item.paths, config.limits.maxContextCharsPerWorker);
+    const context = await readContext(scope, item.paths, config.limits.maxContextCharsPerWorker, `${task}\n${item.objective}`);
     let workerVaultText = "";
     if (config.contextEngine?.enabled && vault) {
       const workerVaultContext = await selectVaultContext(`${task}\n${item.objective}`, vault, {
         routeConfigPath: config.contextEngine.routeConfig,
-        maxNotes: Math.min(config.contextEngine.maxNotes ?? 10, 6),
-        maxChars: Math.min(config.contextEngine.maxChars ?? 50000, 30000)
+        maxNotes: Math.min(config.contextEngine.maxNotes ?? 10, 4),
+        maxChars: Math.min(config.contextEngine.maxChars ?? 16000, 8000)
       });
       workerVaultText = formatVaultContext(workerVaultContext);
     }
@@ -271,13 +273,21 @@ async function main() {
       models: config.models, defaultWorkers: clampWorkerCount(config.limits.defaultWorkers, config), maxWorkers: config.limits.maxWorkers,
       aiSystem: { registryVersion: fixedContext.registryVersion, selectedSkills: fixedContext.selectedSkills }, contextEngine }, null, 2));
   }
-  if (!args.task) throw new Error("--task is required. Use --help for usage.");
+  if (args.task && args.taskFile) throw new Error("Use either --task or --task-file, not both.");
+  if (args.taskFile) args.task = (await fs.readFile(path.resolve(args.taskFile), "utf8")).replace(/^\uFEFF/, "").trim();
+  if (!args.task) throw new Error("--task or --task-file is required. Use --help for usage.");
   if (!config.runtime.readOnly) throw new Error("Refusing to run: fixed policy requires runtime.readOnly=true.");
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) throw new Error("OPENAI_API_KEY is required for an actual run. No key is stored in the repository.");
   const result = await runPipeline({ task: args.task, scope: args.scope, workers: clampWorkerCount(args.workers, config), config, apiKey, vault: args.vault });
   const json = JSON.stringify(result, null, 2);
-  console.log(json);
+  if (args.output) {
+    const outputPath = path.resolve(args.output);
+    await fs.writeFile(outputPath, `${json}\n`, "utf8");
+    console.log(JSON.stringify({ ok: true, output: outputPath }));
+  } else {
+    console.log(json);
+  }
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
