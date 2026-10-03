@@ -62,8 +62,8 @@ test("selector combines core, case, and topic routes deterministically", async (
   const result = await selectVaultContext("松山市の学校徴収と個人情報を分析", root);
   const paths = result.notes.map((x) => x.path);
   assert.deepEqual(paths.slice(0, 3), [
-    "01_CORE/公私分離.md",
     "01_CORE/基本原則.md",
+    "01_CORE/公私分離.md",
     "03_CASES/愛媛県/松山市.md"
   ]);
   assert.ok(paths.includes("02_LEGAL/個人情報保護法.md"));
