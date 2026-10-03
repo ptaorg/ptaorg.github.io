@@ -10,6 +10,7 @@ import {
   extractOutputText,
   loadConfig,
   prefilterWorkerResults,
+  selectPlannerInventory,
   selectSkills
 } from "./orchestrator.mjs";
 
@@ -90,6 +91,36 @@ test("selectSkills keeps fact-check baseline and adds deterministic matches", ()
   };
   const selected = selectSkills("個人情報の法令を確認してサイトを修正", registry, 3);
   assert.deepEqual(selected.map((x) => x.id), ["fact-check", "legal-analysis", "website-edit"]);
+});
+
+
+test("selectPlannerInventory caps planner input and preserves evidence spine", () => {
+  const inventory = [
+    { path: "cases.html", bytes: 100 },
+    { path: "data/board-responses.json", bytes: 100 },
+    { path: "privacy.html", bytes: 100 },
+    { path: "ppc-school-pta-personal-data.html", bytes: 100 },
+    { path: "fee-collection.html", bytes: 100 },
+    ...Array.from({ length: 500 }, (_, i) => ({ path: `schools/unrelated-${i}.html`, bytes: 100 }))
+  ];
+  const selected = selectPlannerInventory(
+    inventory,
+    "松山市の学校徴収と個人情報を整理する",
+    ["fact-check", "legal-analysis", "municipal-response-analysis", "pta-structure-analysis"],
+    50
+  );
+  const paths = selected.map((x) => x.path);
+  assert.equal(selected.length, 50);
+  assert.ok(paths.includes("cases.html"));
+  assert.ok(paths.includes("data/board-responses.json"));
+  assert.ok(paths.includes("privacy.html"));
+  assert.ok(paths.includes("ppc-school-pta-personal-data.html"));
+  assert.ok(paths.includes("fee-collection.html"));
+});
+
+test("fixed config caps planner inventory before API use", async () => {
+  const fixed = await loadConfig();
+  assert.equal(fixed.limits.maxPlannerInventoryEntries, 320);
 });
 
 test("fixed config pins the OpenAI model hierarchy", async () => {

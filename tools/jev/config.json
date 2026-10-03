@@ -19,6 +19,7 @@
     "defaultWorkers": 8,
     "maxWorkers": 50,
     "maxInventoryEntries": 2500,
+    "maxPlannerInventoryEntries": 320,
     "maxContextCharsPerWorker": 24000,
     "maxPlannerOutputTokens": 7000,
     "maxWorkerOutputTokens": 5000,
