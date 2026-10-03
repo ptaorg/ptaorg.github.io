@@ -9,6 +9,7 @@ import {
   classifyRisk,
   extractOutputText,
   loadConfig,
+  loadInstructionBundle,
   prefilterWorkerResults,
   selectPlannerInventory,
   selectSkills
@@ -121,6 +122,34 @@ test("selectPlannerInventory caps planner input and preserves evidence spine", (
 test("fixed config caps planner inventory before API use", async () => {
   const fixed = await loadConfig();
   assert.equal(fixed.limits.maxPlannerInventoryEntries, 320);
+});
+
+
+test("Senior compact instruction bundle keeps core quality rules and omits orchestration repetition", async () => {
+  const fixed = await loadConfig();
+  const bundle = await loadInstructionBundle(
+    "個人情報の適法性を再検証する",
+    fixed,
+    undefined,
+    {
+      requiredDocs: fixed.seniorContext.requiredDocs,
+      maxSkillCount: fixed.seniorContext.maxSkillCount
+    }
+  );
+  assert.match(bundle.text, /CORE_INSTRUCTIONS\.md/);
+  assert.match(bundle.text, /QUALITY_STANDARD\.md/);
+  assert.doesNotMatch(bundle.text, /ORCHESTRATION\.md/);
+  assert.doesNotMatch(bundle.text, /CONTEXT_ENGINE\.md/);
+  assert.ok(bundle.selectedSkills.includes("legal-analysis"));
+  assert.ok(bundle.selectedSkills.length <= fixed.seniorContext.maxSkillCount);
+});
+
+test("fixed config caps Senior Vault context", async () => {
+  const fixed = await loadConfig();
+  assert.deepEqual(fixed.seniorContext.requiredDocs, ["CORE_INSTRUCTIONS.md", "QUALITY_STANDARD.md"]);
+  assert.equal(fixed.seniorContext.maxSkillCount, 3);
+  assert.equal(fixed.seniorContext.maxVaultNotes, 6);
+  assert.equal(fixed.seniorContext.maxVaultChars, 8000);
 });
 
 test("fixed config pins the OpenAI model hierarchy", async () => {
