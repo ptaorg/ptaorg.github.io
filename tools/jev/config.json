@@ -57,7 +57,8 @@
       "git_merge",
       "deploy",
       "financial_action",
-      "credential_change"
+      "credential_change",
+      "repository_write"
     ],
     "seniorReview": [
       "legal_interpretation",
