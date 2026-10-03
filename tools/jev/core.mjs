@@ -28,33 +28,75 @@ export function classifyRisk(text) {
 }
 
 
+function normalizeMatchText(value) {
+  return String(value ?? "").normalize("NFKC").toLowerCase();
+}
+
+function matchesSelectionRule(haystack, rule) {
+  const match = rule?.match ?? {};
+  const allOf = Array.isArray(match.allOf) ? match.allOf : [];
+  const anyOf = Array.isArray(match.anyOf) ? match.anyOf : [];
+  const noneOf = Array.isArray(match.noneOf) ? match.noneOf : [];
+  if (!allOf.length && !anyOf.length) return false;
+
+  const contains = (term) => {
+    const needle = normalizeMatchText(term);
+    return Boolean(needle) && haystack.includes(needle);
+  };
+  return allOf.every(contains)
+    && (!anyOf.length || anyOf.some(contains))
+    && noneOf.every((term) => !contains(term));
+}
+
 export function selectSkills(task, registry, maxSkills = 6) {
   const skills = Array.isArray(registry?.skills) ? registry.skills : [];
   const byId = new Map(skills.map((skill) => [skill.id, skill]));
   const selected = [];
   const seen = new Set();
+  const parsedLimit = Number.parseInt(String(maxSkills), 10);
+  const limit = Number.isFinite(parsedLimit) && parsedLimit > 0 ? parsedLimit : 6;
 
   function add(skill) {
-    if (!skill || seen.has(skill.id) || selected.length >= maxSkills) return;
+    if (!skill || seen.has(skill.id) || selected.length >= limit) return;
     seen.add(skill.id);
     selected.push(skill);
   }
 
   for (const id of registry?.defaultSkills ?? []) add(byId.get(id));
 
-  const haystack = String(task ?? "").toLowerCase();
+  const haystack = normalizeMatchText(task);
+  const rules = (Array.isArray(registry?.selectionRules) ? registry.selectionRules : [])
+    .map((rule, index) => ({ rule, index }))
+    .filter(({ rule }) => matchesSelectionRule(haystack, rule))
+    .sort((a, b) => (Number(b.rule.priority ?? 0) - Number(a.rule.priority ?? 0)) || a.index - b.index);
+
+  for (const { rule } of rules) {
+    for (const id of rule.skills ?? []) add(byId.get(id));
+  }
+
   const scored = skills.map((skill, index) => {
     const keywords = Array.isArray(skill.keywords) ? skill.keywords : [];
     const score = keywords.reduce((count, keyword) => {
-      const needle = String(keyword).toLowerCase();
+      const needle = normalizeMatchText(keyword);
       return count + (needle && haystack.includes(needle) ? 1 : 0);
     }, 0);
-    return { skill, score, index };
-  }).filter((x) => x.score > 0)
-    .sort((a, b) => b.score - a.score || a.index - b.index);
+    return { skill, score, index, priority: Number(skill.priority ?? 0) };
+  }).filter((x) => x.score > 0);
 
-  for (const { skill } of scored) add(skill);
+  const ordered = scored.filter((x) => !x.skill.fallback)
+    .sort((a, b) => b.score - a.score || b.priority - a.priority || a.index - b.index);
+  const fallback = scored.filter((x) => x.skill.fallback)
+    .sort((a, b) => b.score - a.score || b.priority - a.priority || a.index - b.index);
+
+  for (const { skill } of ordered) add(skill);
+  for (const { skill } of fallback) add(skill);
   return selected;
+}
+
+export function collectSeniorReviewFlags(selectedSkills) {
+  return [...new Set((selectedSkills ?? []).flatMap((skill) =>
+    Array.isArray(skill?.seniorReview) ? skill.seniorReview : []
+  ))];
 }
 
 export function clampWorkerCount(value, config) {
