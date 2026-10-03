@@ -19,7 +19,7 @@
     "defaultWorkers": 8,
     "maxWorkers": 50,
     "maxInventoryEntries": 2500,
-    "maxContextCharsPerWorker": 160000,
+    "maxContextCharsPerWorker": 24000,
     "maxPlannerOutputTokens": 7000,
     "maxWorkerOutputTokens": 5000,
     "maxJevOutputTokens": 9000,
@@ -99,6 +99,6 @@
     "vaultEnv": "PTA_CONTEXT_VAULT",
     "routeConfig": "06_AI_SYSTEM/CONTEXT_ROUTES.json",
     "maxNotes": 10,
-    "maxChars": 50000
+    "maxChars": 16000
   }
 }
