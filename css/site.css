@@ -5793,3 +5793,20 @@
     }
   }
 }
+
+/* Work audit 2026-10-03: keep desktop search results readable. */
+@media (min-width: 1201px) {
+  .site-header .nav-container > .header-search .search-results-dropdown {
+    left: 50%;
+    right: auto;
+    width: min(520px, calc(100vw - 48px));
+    max-width: min(520px, calc(100vw - 48px));
+    transform: translateX(-50%);
+  }
+
+  .site-header .nav-container > .header-search .srd-item-title,
+  .site-header .nav-container > .header-search .srd-item-desc {
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+}
