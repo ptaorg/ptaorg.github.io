@@ -39,7 +39,7 @@ new_func = r'''  function addGlobalNav(){
       ['/report.html','調査報告']
     ];
     var readingLinks = [
-      ['/ppc-points.html','個人情報保護委員会（PPC）資料'],
+      ['/ppc-points.html','PPC資料'],
       ['/pta-history.html','PTAの成り立ち'],
       ['/pta-future.html','PTAのこれから'],
       ['/journal.html','論考・調査報告'],
