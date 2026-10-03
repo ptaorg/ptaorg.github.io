@@ -101,5 +101,14 @@
     "routeConfig": "06_AI_SYSTEM/CONTEXT_ROUTES.json",
     "maxNotes": 10,
     "maxChars": 16000
+  },
+  "seniorContext": {
+    "requiredDocs": [
+      "CORE_INSTRUCTIONS.md",
+      "QUALITY_STANDARD.md"
+    ],
+    "maxSkillCount": 3,
+    "maxVaultNotes": 6,
+    "maxVaultChars": 8000
   }
 }
