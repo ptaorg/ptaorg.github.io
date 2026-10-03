@@ -19,14 +19,13 @@ export async function loadConfig(configPath = CONFIG_PATH) {
 }
 
 function parseArgs(argv) {
-  const args = { scope: ".", workers: null, out: null, task: null, check: false };
+  const args = { scope: ".", workers: null, task: null, check: false };
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
     if (arg === "--check") args.check = true;
     else if (arg === "--task") args.task = argv[++i];
     else if (arg === "--scope") args.scope = argv[++i];
     else if (arg === "--workers") args.workers = argv[++i];
-    else if (arg === "--out") args.out = argv[++i];
     else if (arg === "--help" || arg === "-h") args.help = true;
     else throw new Error(`Unknown argument: ${arg}`);
   }
@@ -34,7 +33,7 @@ function parseArgs(argv) {
 }
 
 function usage() {
-  return `JEV fixed orchestration (read-only)\n\nUsage:\n  node tools/jev/orchestrator.mjs --check\n  node tools/jev/orchestrator.mjs --task "<task>" [--scope .] [--workers 8] [--out result.json]\n\nEnvironment:\n  OPENAI_API_KEY  Required for an actual run.\n\nThe orchestrator never writes to the repository, pushes, merges, sends, publishes, deletes, deploys, or performs financial/credential actions. It only produces analysis and approval queues.`;
+  return `JEV fixed orchestration (read-only)\n\nUsage:\n  node tools/jev/orchestrator.mjs --check\n  node tools/jev/orchestrator.mjs --task "<task>" [--scope .] [--workers 8]\n\nEnvironment:\n  OPENAI_API_KEY  Required for an actual run.\n\nThe orchestrator never writes to the repository, pushes, merges, sends, publishes, deletes, deploys, or performs financial/credential actions. It only produces analysis and approval queues.`;
 }
 
 async function runPipeline({ task, scope, workers, config, apiKey }) {
@@ -169,8 +168,7 @@ async function main() {
   if (!apiKey) throw new Error("OPENAI_API_KEY is required for an actual run. No key is stored in the repository.");
   const result = await runPipeline({ task: args.task, scope: args.scope, workers: clampWorkerCount(args.workers, config), config, apiKey });
   const json = JSON.stringify(result, null, 2);
-  if (args.out) { await fs.writeFile(args.out, json + "\n", "utf8"); console.error(`Wrote ${args.out}`); }
-  else console.log(json);
+  console.log(json);
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
