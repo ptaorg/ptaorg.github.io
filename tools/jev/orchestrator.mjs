@@ -8,6 +8,7 @@ import {
   buildInventory, callOpenAI, clampWorkerCount, classifyRisk, extractOutputText,
   mapLimit, prefilterWorkerResults, readContext, selectSkills
 } from "./core.mjs";
+import { formatVaultContext, selectVaultContext } from "../context-engine/core.mjs";
 
 export { buildInventory, clampWorkerCount, classifyRisk, extractOutputText, prefilterWorkerResults, selectSkills } from "./core.mjs";
 
@@ -59,13 +60,14 @@ function fixedInstructions(base, bundle) {
 }
 
 function parseArgs(argv) {
-  const args = { scope: ".", workers: null, task: null, check: false };
+  const args = { scope: ".", workers: null, task: null, check: false, vault: process.env.PTA_CONTEXT_VAULT ?? null };
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
     if (arg === "--check") args.check = true;
     else if (arg === "--task") args.task = argv[++i];
     else if (arg === "--scope") args.scope = argv[++i];
     else if (arg === "--workers") args.workers = argv[++i];
+    else if (arg === "--vault") args.vault = argv[++i];
     else if (arg === "--help" || arg === "-h") args.help = true;
     else throw new Error(`Unknown argument: ${arg}`);
   }
@@ -73,7 +75,7 @@ function parseArgs(argv) {
 }
 
 function usage() {
-  return `JEV fixed orchestration (read-only)\n\nUsage:\n  node tools/jev/orchestrator.mjs --check\n  node tools/jev/orchestrator.mjs --task "<task>" [--scope .] [--workers 8]\n\nEnvironment:\n  OPENAI_API_KEY  Required for an actual run.\n\nThe orchestrator never writes to the repository, pushes, merges, sends, publishes, deletes, deploys, or performs financial/credential actions. It only produces analysis and approval queues.`;
+  return `JEV fixed orchestration (read-only)\n\nUsage:\n  node tools/jev/orchestrator.mjs --check\n  node tools/jev/orchestrator.mjs --task "<task>" [--scope .] [--workers 8] [--vault "<Obsidian Vault path>"]\n\nEnvironment:\n  OPENAI_API_KEY      Required for an actual run.\n  PTA_CONTEXT_VAULT   Optional local Obsidian Vault path. --vault takes precedence.\n\nThe orchestrator never writes to the repository or Vault, pushes, merges, sends, publishes, deletes, deploys, or performs financial/credential actions. It only produces analysis and approval queues.`;
 }
 
 async function runPipeline({ task, scope, workers, config, apiKey }) {
