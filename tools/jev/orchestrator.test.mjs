@@ -9,6 +9,7 @@ import {
   classifyRisk,
   extractOutputText,
   loadConfig,
+  loadInstructionBundle,
   prefilterWorkerResults,
   selectSkills
 } from "./orchestrator.mjs";
@@ -90,6 +91,61 @@ test("selectSkills keeps fact-check baseline and adds deterministic matches", ()
   };
   const selected = selectSkills("個人情報の法令を確認してサイトを修正", registry, 3);
   assert.deepEqual(selected.map((x) => x.id), ["fact-check", "legal-analysis", "website-edit"]);
+});
+
+test("selectSkills applies deterministic bundles before generic fallback skills", () => {
+  const registry = {
+    defaultSkills: ["fact-check"],
+    selectionRules: [
+      {
+        id: "fee-bundle",
+        priority: 100,
+        match: { allOf: ["pta", "会費"], anyOf: ["学校が徴収"] },
+        skills: ["pta-membership", "school-fee-collection", "school-pta-personal-data", "teacher-pta-involvement"]
+      }
+    ],
+    skills: [
+      { id: "fact-check", path: "skills/fact.md", keywords: ["確認"] },
+      { id: "pta-membership", path: "skills/membership.md", keywords: ["任意加入"] },
+      { id: "school-fee-collection", path: "skills/fees.md", keywords: ["会費"] },
+      { id: "school-pta-personal-data", path: "skills/data.md", keywords: ["個人情報"] },
+      { id: "teacher-pta-involvement", path: "skills/teacher.md", keywords: ["教職員"] },
+      { id: "pta-structure-analysis", path: "skills/pta.md", keywords: ["PTA", "会費"], fallback: true }
+    ]
+  };
+  const selected = selectSkills("ＰＴＡ会費を学校が徴収している", registry, 6);
+  assert.deepEqual(selected.map((x) => x.id), [
+    "fact-check",
+    "pta-membership",
+    "school-fee-collection",
+    "school-pta-personal-data",
+    "teacher-pta-involvement",
+    "pta-structure-analysis"
+  ]);
+});
+
+test("fixed PTA fee collection case activates the required specialist skills together", async () => {
+  const fixed = await loadConfig();
+  const bundle = await loadInstructionBundle("PTA会費を学校が徴収している", fixed);
+  for (const id of [
+    "pta-membership",
+    "school-fee-collection",
+    "school-pta-personal-data",
+    "teacher-pta-involvement"
+  ]) {
+    assert.ok(bundle.selectedSkills.includes(id), `missing selected skill: ${id}`);
+  }
+  assert.ok(bundle.selectedSkills.length <= fixed.limits.maxSkillCount);
+  assert.ok(bundle.seniorReview.includes("legal_interpretation"));
+  assert.ok(bundle.seniorReview.includes("privacy_personal_data"));
+  assert.ok(bundle.seniorReview.includes("financial_analysis"));
+});
+
+test("selected PTA legal skill requires Senior review even without explicit legal wording", async () => {
+  const fixed = await loadConfig();
+  const bundle = await loadInstructionBundle("PTAは任意加入で、入会申込がない保護者を会員扱いできるか確認する", fixed);
+  assert.ok(bundle.selectedSkills.includes("pta-membership"));
+  assert.ok(bundle.seniorReview.includes("legal_interpretation"));
 });
 
 test("fixed config pins the OpenAI model hierarchy", async () => {

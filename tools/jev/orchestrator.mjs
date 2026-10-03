@@ -5,11 +5,11 @@ import process from "node:process";
 import { fileURLToPath } from "node:url";
 import { plannerSchema, workerSchema, jevSchema, seniorSchema, secretarySchema } from "./schemas.mjs";
 import {
-  buildInventory, callOpenAI, clampWorkerCount, classifyRisk, extractOutputText,
+  buildInventory, callOpenAI, clampWorkerCount, classifyRisk, collectSeniorReviewFlags, extractOutputText,
   mapLimit, prefilterWorkerResults, readContext, selectSkills
 } from "./core.mjs";
 
-export { buildInventory, clampWorkerCount, classifyRisk, extractOutputText, prefilterWorkerResults, selectSkills } from "./core.mjs";
+export { buildInventory, clampWorkerCount, classifyRisk, collectSeniorReviewFlags, extractOutputText, prefilterWorkerResults, selectSkills } from "./core.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(HERE, "../..");
@@ -51,7 +51,21 @@ export async function loadInstructionBundle(task, config, repoRoot = REPO_ROOT) 
   if (text.length > config.limits.maxInstructionChars) {
     throw new Error(`Fixed AI instruction bundle exceeds maxInstructionChars (${text.length}).`);
   }
-  return { text, selectedSkills: selected.map((skill) => skill.id), registryVersion: registry.version };
+  return {
+    text,
+    selectedSkills: selected.map((skill) => skill.id),
+    seniorReview: collectSeniorReviewFlags(selected),
+    registryVersion: registry.version
+  };
+}
+
+function withSkillReview(risk, bundle) {
+  const seniorReview = [...new Set([...(risk.seniorReview ?? []), ...(bundle.seniorReview ?? [])])];
+  return {
+    ...risk,
+    seniorReview,
+    requiresSeniorReview: Boolean(risk.requiresSeniorReview || seniorReview.length)
+  };
 }
 
 function fixedInstructions(base, bundle) {
@@ -79,7 +93,7 @@ function usage() {
 async function runPipeline({ task, scope, workers, config, apiKey }) {
   const fixedContext = await loadInstructionBundle(task, config);
   const inventory = await buildInventory(scope, config);
-  const taskRisk = classifyRisk(task);
+  const taskRisk = withSkillReview(classifyRisk(task), fixedContext);
   const inventoryText = inventory.map((x) => `${x.path}\t${x.bytes}`).join("\n");
 
   const planner = await callOpenAI({
@@ -104,7 +118,7 @@ async function runPipeline({ task, scope, workers, config, apiKey }) {
 
   const workerCalls = await mapLimit(workItems, workers, async (item) => {
     const context = await readContext(scope, item.paths, config.limits.maxContextCharsPerWorker);
-    const deterministicRisk = classifyRisk(`${task}\n${item.objective}`);
+    const deterministicRisk = withSkillReview(classifyRisk(`${task}\n${item.objective}`), fixedContext);
     const response = await callOpenAI({
       apiKey, model: config.models.worker, reasoning: config.reasoning.worker,
       instructions: fixedInstructions([
@@ -216,7 +230,11 @@ async function runPipeline({ task, scope, workers, config, apiKey }) {
 
   return {
     policy: config.policyName, version: config.version, runtime: config.runtime, task, scope: path.resolve(scope), models: config.models,
-    ai_system: { registry_version: fixedContext.registryVersion, selected_skills: fixedContext.selectedSkills },
+    ai_system: {
+      registry_version: fixedContext.registryVersion,
+      selected_skills: fixedContext.selectedSkills,
+      senior_review: fixedContext.seniorReview
+    },
     worker_count: workItems.length, inventory_count: inventory.length, plan: planner.data, worker_results: compactWorkers,
     jev: jev.data, senior: senior.data, secretary: secretary.data
   };
@@ -230,7 +248,11 @@ async function main() {
     const fixedContext = await loadInstructionBundle("PTAの個人情報とサイト修正を検証する", config);
     return console.log(JSON.stringify({ ok: true, policy: config.policyName, version: config.version, readOnly: config.runtime.readOnly,
       models: config.models, defaultWorkers: clampWorkerCount(config.limits.defaultWorkers, config), maxWorkers: config.limits.maxWorkers,
-      aiSystem: { registryVersion: fixedContext.registryVersion, selectedSkills: fixedContext.selectedSkills } }, null, 2));
+      aiSystem: {
+        registryVersion: fixedContext.registryVersion,
+        selectedSkills: fixedContext.selectedSkills,
+        seniorReview: fixedContext.seniorReview
+      } }, null, 2));
   }
   if (!args.task) throw new Error("--task is required. Use --help for usage.");
   if (!config.runtime.readOnly) throw new Error("Refusing to run: fixed policy requires runtime.readOnly=true.");

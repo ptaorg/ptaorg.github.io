@@ -1,176 +1,314 @@
 {
-  "version": 2,
+  "version": 3,
   "defaultSkills": [
     "fact-check"
+  ],
+  "selectionRules": [
+    {
+      "id": "school-collects-pta-fees",
+      "priority": 100,
+      "match": {
+        "allOf": ["pta", "会費"],
+        "anyOf": ["学校徴収", "学校が徴収", "学校で徴収", "学校納付金", "口座振替", "抱き合わせ", "抱合せ"]
+      },
+      "skills": [
+        "pta-membership",
+        "school-fee-collection",
+        "school-pta-personal-data",
+        "teacher-pta-involvement"
+      ]
+    },
+    {
+      "id": "school-uses-or-provides-data-for-pta",
+      "priority": 95,
+      "match": {
+        "allOf": ["pta", "学校"],
+        "anyOf": ["個人情報", "名簿", "氏名", "学級", "クラス", "児童情報", "生徒情報", "保護者情報", "口座情報"]
+      },
+      "skills": [
+        "school-pta-personal-data",
+        "pta-membership",
+        "personal-data-purpose-ledger"
+      ]
+    },
+    {
+      "id": "pta-officer-selection-with-school-context",
+      "priority": 90,
+      "match": {
+        "allOf": ["pta"],
+        "anyOf": ["役員選出", "委員選出", "役員くじ", "役員歴", "地区委員", "クラス委員"]
+      },
+      "skills": [
+        "pta-officer-selection",
+        "pta-membership",
+        "school-pta-personal-data"
+      ]
+    },
+    {
+      "id": "pta-bylaw-membership-design",
+      "priority": 85,
+      "match": {
+        "allOf": ["pta"],
+        "anyOf": ["会則", "規約", "細則", "入会届", "退会届", "入会申込", "退会規定"]
+      },
+      "skills": [
+        "pta-membership",
+        "pta-bylaws-membership-rules"
+      ]
+    },
+    {
+      "id": "school-pta-delegation",
+      "priority": 85,
+      "match": {
+        "allOf": ["pta", "学校"],
+        "anyOf": ["委任", "委託", "受任", "契約", "事務代行", "覚書", "協定"]
+      },
+      "skills": [
+        "school-pta-delegation-contract",
+        "teacher-pta-involvement"
+      ]
+    },
+    {
+      "id": "school-facility-pta-use",
+      "priority": 80,
+      "match": {
+        "allOf": ["pta"],
+        "anyOf": ["学校施設", "施設利用", "校舎", "教室", "学校敷地", "pta室", "ＰＴＡ室"]
+      },
+      "skills": [
+        "school-facility-public-private",
+        "social-education-pta"
+      ]
+    },
+    {
+      "id": "social-education-pta-position",
+      "priority": 80,
+      "match": {
+        "allOf": ["pta"],
+        "anyOf": ["社会教育", "家庭教育", "社会教育関係団体", "生涯学習", "pta連合会", "ＰＴＡ連合会"]
+      },
+      "skills": [
+        "social-education-pta"
+      ]
+    },
+    {
+      "id": "administrative-oversight-procedure",
+      "priority": 80,
+      "match": {
+        "anyOf": ["情報公開", "開示請求", "不開示", "審査請求", "住民監査請求", "監査請求", "監査委員"]
+      },
+      "skills": [
+        "administrative-oversight",
+        "primary-source-research"
+      ]
+    },
+    {
+      "id": "personal-data-purpose-ledger-review",
+      "priority": 80,
+      "match": {
+        "anyOf": ["個人情報ファイル簿", "利用目的", "目的外利用", "事務登録簿", "保有個人情報", "旧条例"]
+      },
+      "skills": [
+        "personal-data-purpose-ledger",
+        "school-pta-personal-data"
+      ]
+    },
+    {
+      "id": "public-private-funds-review",
+      "priority": 80,
+      "match": {
+        "anyOf": ["公金", "私金", "学校徴収金", "学校口座", "預り金", "pta口座", "ＰＴＡ口座"]
+      },
+      "skills": [
+        "public-private-funds",
+        "school-fee-collection"
+      ]
+    },
+    {
+      "id": "administrative-inquiry-draft",
+      "priority": 75,
+      "match": {
+        "anyOf": ["照会文", "質問状", "照会メール", "再照会", "教育委員会に照会", "根拠を回答"]
+      },
+      "skills": [
+        "administrative-inquiry-drafting",
+        "municipal-response-analysis"
+      ]
+    },
+    {
+      "id": "pta-dissolution-or-restructure",
+      "priority": 75,
+      "match": {
+        "allOf": ["pta"],
+        "anyOf": ["解散", "休会", "再編", "縮小", "コア型", "後継組織", "組織再設計"]
+      },
+      "skills": [
+        "pta-dissolution-restructuring",
+        "pta-bylaws-membership-rules"
+      ]
+    }
   ],
   "skills": [
     {
       "id": "primary-source-research",
       "path": "skills/primary-source-research.md",
-      "keywords": [
-        "調査",
-        "一次資料",
-        "行政資料",
-        "原資料",
-        "資料を探",
-        "深掘り",
-        "research",
-        "source"
-      ]
+      "keywords": ["調査", "一次資料", "行政資料", "原資料", "資料を探", "深掘り", "research", "source"]
     },
     {
       "id": "legal-analysis",
       "path": "skills/legal-analysis.md",
-      "keywords": [
-        "法令",
-        "法律",
-        "判例",
-        "違法",
-        "適法",
-        "法的",
-        "個人情報",
-        "地方自治法",
-        "民法",
-        "社会教育法",
-        "学校教育法",
-        "legal",
-        "privacy"
-      ]
+      "keywords": ["法令", "法律", "判例", "違法", "適法", "法的", "個人情報", "地方自治法", "民法", "社会教育法", "学校教育法", "legal", "privacy"],
+      "seniorReview": ["legal_interpretation"]
     },
     {
       "id": "municipal-response-analysis",
       "path": "skills/municipal-response-analysis.md",
-      "keywords": [
-        "教育委員会",
-        "自治体",
-        "行政回答",
-        "照会",
-        "回答書",
-        "学校",
-        "市教委",
-        "県教委"
-      ]
+      "keywords": ["教育委員会", "自治体", "行政回答", "照会", "回答書", "学校", "市教委", "県教委", "自治体比較", "比較表"]
     },
     {
       "id": "pta-structure-analysis",
       "path": "skills/pta-structure-analysis.md",
-      "keywords": [
-        "PTA",
-        "任意加入",
-        "入会",
-        "退会",
-        "会費",
-        "公私分離",
-        "学校徴収",
-        "教職員",
-        "学校施設",
-        "役員選出"
-      ]
+      "domain": "pta",
+      "fallback": true,
+      "keywords": ["PTA", "任意加入", "入会", "退会", "会費", "公私分離", "学校徴収", "教職員", "学校施設", "役員選出"]
+    },
+    {
+      "id": "pta-membership",
+      "path": "skills/pta-membership.md",
+      "domain": "pta",
+      "keywords": ["任意加入", "会員資格", "自動加入", "みなし加入", "入会意思", "入会申込", "非会員", "退会"],
+      "seniorReview": ["legal_interpretation"]
+    },
+    {
+      "id": "school-pta-personal-data",
+      "path": "skills/school-pta-personal-data.md",
+      "domain": "pta",
+      "keywords": ["学校からPTA", "学校→PTA", "個人情報", "名簿提供", "児童情報", "生徒情報", "保護者情報", "役員歴"],
+      "seniorReview": ["privacy_personal_data", "legal_interpretation"]
+    },
+    {
+      "id": "school-fee-collection",
+      "path": "skills/school-fee-collection.md",
+      "domain": "pta",
+      "keywords": ["学校徴収", "PTA会費", "学校納付金", "口座振替", "抱き合わせ", "抱合せ", "未納管理", "返金", "送金"],
+      "seniorReview": ["financial_analysis", "legal_interpretation"]
+    },
+    {
+      "id": "teacher-pta-involvement",
+      "path": "skills/teacher-pta-involvement.md",
+      "domain": "pta",
+      "keywords": ["教職員", "校長", "教頭", "学校事務", "PTA事務", "校務分掌", "職務命令", "勤務時間"],
+      "seniorReview": ["legal_interpretation"]
+    },
+    {
+      "id": "school-facility-public-private",
+      "path": "skills/school-facility-public-private.md",
+      "domain": "pta",
+      "keywords": ["学校施設", "施設利用", "校舎", "教室", "学校敷地", "PTA室", "公私分離"],
+      "seniorReview": ["legal_interpretation"]
+    },
+    {
+      "id": "social-education-pta",
+      "path": "skills/social-education-pta.md",
+      "domain": "pta",
+      "keywords": ["社会教育", "家庭教育", "社会教育関係団体", "生涯学習", "PTA連合会", "行政支援"],
+      "seniorReview": ["legal_interpretation"]
+    },
+    {
+      "id": "administrative-oversight",
+      "path": "skills/administrative-oversight.md",
+      "domain": "pta",
+      "keywords": ["情報公開", "開示請求", "不開示", "審査請求", "住民監査請求", "監査請求", "行政監視"],
+      "seniorReview": ["legal_interpretation"]
+    },
+    {
+      "id": "pta-officer-selection",
+      "path": "skills/pta-officer-selection.md",
+      "domain": "pta",
+      "keywords": ["役員選出", "委員選出", "役員くじ", "役員歴", "地区委員", "クラス委員"],
+      "seniorReview": ["legal_interpretation", "privacy_personal_data"]
+    },
+    {
+      "id": "pta-bylaws-membership-rules",
+      "path": "skills/pta-bylaws-membership-rules.md",
+      "domain": "pta",
+      "keywords": ["会則", "規約", "細則", "入会届", "退会届", "規約改正", "退会規定"],
+      "seniorReview": ["legal_interpretation"]
+    },
+    {
+      "id": "school-pta-delegation-contract",
+      "path": "skills/school-pta-delegation-contract.md",
+      "domain": "pta",
+      "keywords": ["委任", "委託", "受任", "契約", "事務代行", "覚書", "協定"],
+      "seniorReview": ["legal_interpretation"]
+    },
+    {
+      "id": "administrative-inquiry-drafting",
+      "path": "skills/administrative-inquiry-drafting.md",
+      "domain": "pta",
+      "keywords": ["照会文", "質問状", "照会メール", "再照会", "根拠を回答"],
+      "seniorReview": ["legal_interpretation"]
+    },
+    {
+      "id": "personal-data-purpose-ledger",
+      "path": "skills/personal-data-purpose-ledger.md",
+      "domain": "pta",
+      "keywords": ["個人情報ファイル簿", "利用目的", "目的外利用", "事務登録簿", "保有個人情報", "旧条例"],
+      "seniorReview": ["privacy_personal_data", "legal_interpretation"]
+    },
+    {
+      "id": "public-private-funds",
+      "path": "skills/public-private-funds.md",
+      "domain": "pta",
+      "keywords": ["公金", "私金", "学校徴収金", "学校口座", "預り金", "PTA口座", "会計区分"],
+      "seniorReview": ["financial_analysis", "legal_interpretation"]
+    },
+    {
+      "id": "pta-dissolution-restructuring",
+      "path": "skills/pta-dissolution-restructuring.md",
+      "domain": "pta",
+      "keywords": ["解散", "休会", "再編", "縮小", "コア型", "後継組織", "組織再設計"],
+      "seniorReview": ["legal_interpretation"]
     },
     {
       "id": "website-article",
       "path": "skills/website-article.md",
-      "keywords": [
-        "論考",
-        "記事",
-        "掲載案",
-        "HTML",
-        "サイト記事",
-        "ptaorg.com",
-        "journal"
-      ]
+      "keywords": ["論考", "記事", "掲載案", "HTML", "サイト記事", "ptaorg.com", "journal"]
     },
     {
       "id": "website-edit",
       "path": "skills/website-edit.md",
-      "keywords": [
-        "修正",
-        "編集",
-        "変更",
-        "GitHub",
-        "commit",
-        "push",
-        "PR",
-        "マージ",
-        "実装"
-      ]
+      "keywords": ["修正", "編集", "変更", "GitHub", "commit", "push", "PR", "マージ", "実装"]
     },
     {
       "id": "publish-verification",
       "path": "skills/publish-verification.md",
-      "keywords": [
-        "公開確認",
-        "ブラウザ確認",
-        "404",
-        "Pages",
-        "deploy",
-        "表示確認"
-      ]
+      "keywords": ["公開確認", "ブラウザ確認", "404", "Pages", "deploy", "表示確認"]
     },
     {
       "id": "fact-check",
       "path": "skills/fact-check.md",
-      "keywords": [
-        "確認",
-        "検証",
-        "ファクトチェック",
-        "URL",
-        "出典",
-        "数字",
-        "日付"
-      ]
+      "keywords": ["確認", "検証", "ファクトチェック", "URL", "出典", "数字", "日付"]
     },
     {
       "id": "email-investigation",
       "path": "skills/email-investigation.md",
-      "keywords": [
-        "Gmail",
-        "メール",
-        "受信",
-        "返信",
-        "スレッド",
-        "添付",
-        "email",
-        "mail"
-      ]
+      "keywords": ["Gmail", "メール", "受信", "返信", "スレッド", "添付", "email", "mail"]
     },
     {
       "id": "drive-investigation",
       "path": "skills/drive-investigation.md",
-      "keywords": [
-        "Google Drive",
-        "Drive",
-        "ドライブ",
-        "Google Docs",
-        "Google Sheets",
-        "Google Slides",
-        "ファイルを探"
-      ]
+      "keywords": ["Google Drive", "Drive", "ドライブ", "Google Docs", "Google Sheets", "Google Slides", "ファイルを探"]
     },
     {
       "id": "pdf-analysis",
       "path": "skills/pdf-analysis.md",
-      "keywords": [
-        "PDF",
-        "ページ",
-        "頁",
-        "スクリーンショット",
-        "添付資料"
-      ]
+      "keywords": ["PDF", "ページ", "頁", "スクリーンショット", "添付資料"]
     },
     {
       "id": "github-review",
       "path": "skills/github-review.md",
-      "keywords": [
-        "GitHub",
-        "PR",
-        "pull request",
-        "差分",
-        "Actions",
-        "CI",
-        "commit",
-        "branch"
-      ]
+      "keywords": ["GitHub", "PR", "pull request", "差分", "Actions", "CI", "commit", "branch"]
     }
   ]
 }

@@ -11,6 +11,14 @@
 
 Sol / Luna は固定された役割区分です。実際のOpenAI APIモデルIDは `tools/jev/config.json` に一元化し、公式APIで利用可能性を確認したIDだけを設定します。
 
+## Skill routing
+
+- `SKILL_REGISTRY.json` の default Skillを先に読み込む。
+- 複数論点が同時に現れる既知パターンは `selectionRules` で専門Skill束を先に確保する。
+- その後にkeyword一致を加え、汎用 `pta-structure-analysis` は専門Skillより後のfallbackとして扱う。
+- 最大Skill数は `tools/jev/config.json` の `maxSkillCount` を超えない。
+- 選択Skillに `seniorReview` がある場合、その審査要件をタスクの決定的リスクへ加える。
+
 ## Planner
 
 - タスクを独立した作業単位に分解する。
