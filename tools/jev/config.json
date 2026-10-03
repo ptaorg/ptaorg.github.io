@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "policyName": "PTA JEV fixed orchestration",
   "models": {
     "planner": "gpt-6.1-sol",
@@ -80,7 +80,8 @@
     "requiredDocs": [
       "CORE_INSTRUCTIONS.md",
       "ORCHESTRATION.md",
-      "QUALITY_STANDARD.md"
+      "QUALITY_STANDARD.md",
+      "CONTEXT_ENGINE.md"
     ]
   },
   "modelPolicy": {
@@ -92,5 +93,12 @@
       "secretary": "sol"
     },
     "apiVerifiedOn": "2026-10-04"
+  },
+  "contextEngine": {
+    "enabled": true,
+    "vaultEnv": "PTA_CONTEXT_VAULT",
+    "routeConfig": "06_AI_SYSTEM/CONTEXT_ROUTES.json",
+    "maxNotes": 10,
+    "maxChars": 50000
   }
 }
