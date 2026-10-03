@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "policyName": "PTA JEV fixed orchestration",
+  "models": {
+    "planner": "gpt-5.6-sol",
+    "worker": "gpt-5.6-luna",
+    "jev": "gpt-5.6-luna",
+    "senior": "gpt-5.6-sol",
+    "secretary": "gpt-5.6-sol"
+  },
+  "reasoning": {
+    "planner": "high",
+    "worker": "medium",
+    "jev": "medium",
+    "senior": "high",
+    "secretary": "medium"
+  },
+  "limits": {
+    "defaultWorkers": 8,
+    "maxWorkers": 50,
+    "maxInventoryEntries": 2500,
+    "maxContextCharsPerWorker": 160000,
+    "maxPlannerOutputTokens": 7000,
+    "maxWorkerOutputTokens": 5000,
+    "maxJevOutputTokens": 9000,
+    "maxSeniorOutputTokens": 7000,
+    "maxSecretaryOutputTokens": 5000
+  },
+  "files": {
+    "extensions": [
+      ".html",
+      ".htm",
+      ".md",
+      ".txt",
+      ".json",
+      ".js",
+      ".mjs",
+      ".cjs",
+      ".css",
+      ".xml",
+      ".yml",
+      ".yaml"
+    ],
+    "excludeDirectories": [
+      ".git",
+      "node_modules",
+      "_site",
+      "source-pdfs"
+    ]
+  },
+  "approval": {
+    "alwaysHuman": [
+      "external_send",
+      "publish",
+      "delete",
+      "git_push",
+      "git_merge",
+      "deploy",
+      "financial_action",
+      "credential_change",
+      "repository_write"
+    ],
+    "seniorReview": [
+      "legal_interpretation",
+      "privacy_personal_data",
+      "public_claim",
+      "repository_write",
+      "financial_analysis"
+    ]
+  },
+  "runtime": {
+    "storeResponses": false,
+    "readOnly": true
+  }
+}
