@@ -46,7 +46,7 @@ $env:OPENAI_API_KEY="..."
 npm run jev:run -- --task "サイト全体を品質監査する" --scope . --workers 8
 ```
 
-Use `--out result.json` only when a persistent local result file is wanted. The API key is read only from `OPENAI_API_KEY` and must never be committed.
+Results are written to standard output only; the read-only runtime does not create result files. The API key is read only from `OPENAI_API_KEY` and must never be committed.
 
 ## Data flow
 
