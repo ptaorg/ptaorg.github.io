@@ -80,6 +80,44 @@ for (const marker of [
   }
 }
 
+
+
+const aiSystemFiles = [
+  "ai-system/README.md",
+  "ai-system/CORE_INSTRUCTIONS.md",
+  "ai-system/ORCHESTRATION.md",
+  "ai-system/QUALITY_STANDARD.md",
+  "ai-system/SKILL_REGISTRY.json",
+];
+for (const rel of aiSystemFiles) read(rel);
+
+let skillRegistry = {};
+try {
+  skillRegistry = JSON.parse(read("ai-system/SKILL_REGISTRY.json") || "{}");
+} catch (error) {
+  errors.push(`ai-system/SKILL_REGISTRY.json: invalid JSON: ${error.message}`);
+}
+const skillIds = new Set((skillRegistry.skills || []).map((skill) => skill.id));
+for (const requiredSkill of [
+  "primary-source-research",
+  "legal-analysis",
+  "municipal-response-analysis",
+  "pta-structure-analysis",
+  "website-article",
+  "website-edit",
+  "publish-verification",
+  "fact-check",
+]) {
+  if (!skillIds.has(requiredSkill)) errors.push(`ai-system/SKILL_REGISTRY.json: missing required skill "${requiredSkill}"`);
+}
+for (const skill of skillRegistry.skills || []) {
+  if (!skill.path) {
+    errors.push(`ai-system/SKILL_REGISTRY.json: skill "${skill.id || "(unknown)"}" has no path`);
+    continue;
+  }
+  read(path.posix.join("ai-system", skill.path));
+}
+
 read("SITE_STRUCTURE.md");
 read("docs/maintenance.md");
 
