@@ -14,12 +14,8 @@ const origin = 'https://ptaorg.com';
 const hosts = new Set(['ptaorg.com', 'www.ptaorg.com', 'ptaorg.github.io']);
 const isTelemetry = url => (url.hostname === 'analytics.google.com' || /(^|\.)google-analytics\.com$/.test(url.hostname)) && /\/collect$/.test(url.pathname);
 const list = value => value == null ? [] : Array.isArray(value) ? value : [value];
-// Reviewed against dcb043a1305b53ff1458a85b4bab0d6010d57bf8. Exact findings only,
-// one occurrence each. When repaired, a stale entry fails CI until removed.
-export const knownIssues = [
-  { code: 'sitemap-target', file: 'sitemap-research.xml', detail: 'https://ptaorg.com/research.html: non-indexable target', reason: 'Existing supplementary sitemap still lists the retired research redirect; site fix deferred.' },
-  { code: 'fragment', file: 'guide-board-print.html', detail: '/school-pta-separation.html#submit-to-board', reason: 'Existing print toolbar links to a removed section; site fix deferred.' },
-];
+// Known-site baselines are exact and temporary. Keep this list empty when all known issues are repaired.
+export const knownIssues = [];
 export function applyKnownIssues(findings, entries = knownIssues) {
   for (const entry of entries) {
     const matches = findings.filter(f => f.code === entry.code && f.file === entry.file && f.detail === entry.detail && f.severity === 'error');
