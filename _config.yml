@@ -6,6 +6,7 @@ exclude:
   - scripts/
   - tests/
   - tools/
+  - ai-system/
   - node_modules/
   - package-lock.json
   - package.json

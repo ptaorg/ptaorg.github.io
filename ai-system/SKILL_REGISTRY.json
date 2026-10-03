@@ -1,0 +1,176 @@
+{
+  "version": 2,
+  "defaultSkills": [
+    "fact-check"
+  ],
+  "skills": [
+    {
+      "id": "primary-source-research",
+      "path": "skills/primary-source-research.md",
+      "keywords": [
+        "調査",
+        "一次資料",
+        "行政資料",
+        "原資料",
+        "資料を探",
+        "深掘り",
+        "research",
+        "source"
+      ]
+    },
+    {
+      "id": "legal-analysis",
+      "path": "skills/legal-analysis.md",
+      "keywords": [
+        "法令",
+        "法律",
+        "判例",
+        "違法",
+        "適法",
+        "法的",
+        "個人情報",
+        "地方自治法",
+        "民法",
+        "社会教育法",
+        "学校教育法",
+        "legal",
+        "privacy"
+      ]
+    },
+    {
+      "id": "municipal-response-analysis",
+      "path": "skills/municipal-response-analysis.md",
+      "keywords": [
+        "教育委員会",
+        "自治体",
+        "行政回答",
+        "照会",
+        "回答書",
+        "学校",
+        "市教委",
+        "県教委"
+      ]
+    },
+    {
+      "id": "pta-structure-analysis",
+      "path": "skills/pta-structure-analysis.md",
+      "keywords": [
+        "PTA",
+        "任意加入",
+        "入会",
+        "退会",
+        "会費",
+        "公私分離",
+        "学校徴収",
+        "教職員",
+        "学校施設",
+        "役員選出"
+      ]
+    },
+    {
+      "id": "website-article",
+      "path": "skills/website-article.md",
+      "keywords": [
+        "論考",
+        "記事",
+        "掲載案",
+        "HTML",
+        "サイト記事",
+        "ptaorg.com",
+        "journal"
+      ]
+    },
+    {
+      "id": "website-edit",
+      "path": "skills/website-edit.md",
+      "keywords": [
+        "修正",
+        "編集",
+        "変更",
+        "GitHub",
+        "commit",
+        "push",
+        "PR",
+        "マージ",
+        "実装"
+      ]
+    },
+    {
+      "id": "publish-verification",
+      "path": "skills/publish-verification.md",
+      "keywords": [
+        "公開確認",
+        "ブラウザ確認",
+        "404",
+        "Pages",
+        "deploy",
+        "表示確認"
+      ]
+    },
+    {
+      "id": "fact-check",
+      "path": "skills/fact-check.md",
+      "keywords": [
+        "確認",
+        "検証",
+        "ファクトチェック",
+        "URL",
+        "出典",
+        "数字",
+        "日付"
+      ]
+    },
+    {
+      "id": "email-investigation",
+      "path": "skills/email-investigation.md",
+      "keywords": [
+        "Gmail",
+        "メール",
+        "受信",
+        "返信",
+        "スレッド",
+        "添付",
+        "email",
+        "mail"
+      ]
+    },
+    {
+      "id": "drive-investigation",
+      "path": "skills/drive-investigation.md",
+      "keywords": [
+        "Google Drive",
+        "Drive",
+        "ドライブ",
+        "Google Docs",
+        "Google Sheets",
+        "Google Slides",
+        "ファイルを探"
+      ]
+    },
+    {
+      "id": "pdf-analysis",
+      "path": "skills/pdf-analysis.md",
+      "keywords": [
+        "PDF",
+        "ページ",
+        "頁",
+        "スクリーンショット",
+        "添付資料"
+      ]
+    },
+    {
+      "id": "github-review",
+      "path": "skills/github-review.md",
+      "keywords": [
+        "GitHub",
+        "PR",
+        "pull request",
+        "差分",
+        "Actions",
+        "CI",
+        "commit",
+        "branch"
+      ]
+    }
+  ]
+}

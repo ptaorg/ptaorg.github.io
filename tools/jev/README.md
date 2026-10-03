@@ -4,14 +4,16 @@ This directory fixes the OpenAI-only multi-agent workflow used for PTA work. **J
 
 ## Fixed hierarchy
 
-1. Planner / manager — `gpt-5.6-sol`
-2. Parallel workers — `gpt-5.6-luna`
-3. JEV triage — `gpt-5.6-luna`
-4. Senior review — `gpt-5.6-sol`
-5. Secretary / decision brief — `gpt-5.6-sol`
+1. Planner / manager — Sol role (API default `gpt-6.1-sol`)
+2. Parallel workers — Luna role (API default `gpt-6-luna`)
+3. JEV triage — Luna role (API default `gpt-6-luna`)
+4. Senior review — Sol role (API default `gpt-6.1-sol`)
+5. Secretary / decision brief — Sol role (API default `gpt-6.1-sol`)
 6. Human — final approval for side effects
 
 The defaults are stored in `config.json`. The worker count defaults to 8 and is hard-capped at 50. Increasing the number of workers does not change the escalation policy.
+
+The canonical operating instructions live under `ai-system/`. At runtime the orchestrator always loads the core instructions, orchestration contract, and quality standard, then deterministically selects up to the configured number of task Skills from `ai-system/SKILL_REGISTRY.json`. The selected Skill IDs are included in the result for auditability.
 
 ## Safety boundary
 
@@ -48,6 +50,8 @@ npm run jev:run -- --task "サイト全体を品質監査する" --scope . --wor
 
 Results are written to standard output only; the read-only runtime does not create result files. The API key is read only from `OPENAI_API_KEY` and must never be committed.
 
+`npm run jev:check` also validates that the fixed AI instruction bundle and registry can be loaded.
+
 ## Data flow
 
 ```text
@@ -65,4 +69,4 @@ Workers return structured findings with severity, risk, confidence, evidence, re
 
 ## OpenAI API
 
-The implementation uses the Responses API with Structured Outputs and `store: false`. Model IDs are centralized in `config.json`; do not scatter model names across scripts.
+The implementation uses the Responses API with Structured Outputs and `store: false`. Role classes are fixed as Sol/Luna. API model IDs are centralized in `config.json`; do not scatter model names across scripts. The defaults were verified against the public OpenAI API model/pricing listing on 2026-10-04.

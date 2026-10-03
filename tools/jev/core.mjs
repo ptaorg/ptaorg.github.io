@@ -27,6 +27,36 @@ export function classifyRisk(text) {
   return { sideEffects, seniorReview, requiresHumanApproval: sideEffects.length > 0, requiresSeniorReview: seniorReview.length > 0 || sideEffects.length > 0 };
 }
 
+
+export function selectSkills(task, registry, maxSkills = 6) {
+  const skills = Array.isArray(registry?.skills) ? registry.skills : [];
+  const byId = new Map(skills.map((skill) => [skill.id, skill]));
+  const selected = [];
+  const seen = new Set();
+
+  function add(skill) {
+    if (!skill || seen.has(skill.id) || selected.length >= maxSkills) return;
+    seen.add(skill.id);
+    selected.push(skill);
+  }
+
+  for (const id of registry?.defaultSkills ?? []) add(byId.get(id));
+
+  const haystack = String(task ?? "").toLowerCase();
+  const scored = skills.map((skill, index) => {
+    const keywords = Array.isArray(skill.keywords) ? skill.keywords : [];
+    const score = keywords.reduce((count, keyword) => {
+      const needle = String(keyword).toLowerCase();
+      return count + (needle && haystack.includes(needle) ? 1 : 0);
+    }, 0);
+    return { skill, score, index };
+  }).filter((x) => x.score > 0)
+    .sort((a, b) => b.score - a.score || a.index - b.index);
+
+  for (const { skill } of scored) add(skill);
+  return selected;
+}
+
 export function clampWorkerCount(value, config) {
   const parsed = Number.parseInt(String(value ?? config.limits.defaultWorkers), 10);
   if (!Number.isFinite(parsed) || parsed < 1) return config.limits.defaultWorkers;

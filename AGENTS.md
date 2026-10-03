@@ -20,16 +20,20 @@ ptaorg.com は、PTAの任意加入、学校とPTAの公私分離、個人情報
 
 ## AI作業の固定オーケストレーション
 
-大量調査・品質監査・複数ファイル分析では、`tools/jev/` の固定ポリシーを基準にします。JEVはモデル名ではなく、低コストの一次選別・重複排除・圧縮・エスカレーションを担当する役割です。
+AI運用の正本は `ai-system/` とします。共通原則は `CORE_INSTRUCTIONS.md`、役割分担は `ORCHESTRATION.md`、完成条件は `QUALITY_STANDARD.md`、個別Skillの選択は `SKILL_REGISTRY.json` を基準にします。AI運用ルールを別ファイルへ重複定義せず、変更はこの正本へ集約します。
+
+大量調査・品質監査・複数ファイル分析では、`tools/jev/` の固定ポリシーを実行基盤とします。JEVはモデル名ではなく、低コストの一次選別・重複排除・圧縮・エスカレーションを担当する役割です。実行時はタスク内容から必要なSkillを決定的に選択し、固定指示とともにPlanner / Worker / JEV / Senior / Secretaryへ渡します。
 
 標準階層は次のとおりです。
 
-1. Planner / Manager: GPT-5.6 Sol
-2. Parallel Workers: GPT-5.6 Luna
-3. JEV triage: GPT-5.6 Luna
-4. Senior review: GPT-5.6 Sol
-5. Secretary / decision brief: GPT-5.6 Sol
+1. Planner / Manager: Sol role（API既定: `gpt-6.1-sol`）
+2. Parallel Workers: Luna role（API既定: `gpt-6-luna`）
+3. JEV triage: Luna role（API既定: `gpt-6-luna`）
+4. Senior review: Sol role（API既定: `gpt-6.1-sol`）
+5. Secretary / decision brief: Sol role（API既定: `gpt-6.1-sol`）
 6. Human: 副作用を伴う最終判断
+
+モデルの役割（Sol / Luna）は固定し、APIの実モデルIDは `tools/jev/config.json` に一元化します。APIモデルIDを変更するときはOpenAI公式の利用可能モデルを確認し、コード内へ分散記述しません。
 
 原則として、Workerの出力は構造化し、JEVが重複・ノイズを除去してから上位モデルへ渡します。確信度0.90未満、severityまたはriskが2以上、法令・個人情報・対外公表・金銭判断などはJEVだけで完結させず、上位審査へ送ります。
 

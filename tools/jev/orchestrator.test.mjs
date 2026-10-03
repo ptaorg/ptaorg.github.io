@@ -9,7 +9,8 @@ import {
   classifyRisk,
   extractOutputText,
   loadConfig,
-  prefilterWorkerResults
+  prefilterWorkerResults,
+  selectSkills
 } from "./orchestrator.mjs";
 
 const config = {
@@ -76,14 +77,29 @@ test("classifyRisk does not treat discussion of public information as a publish 
 });
 
 
+
+
+test("selectSkills keeps fact-check baseline and adds deterministic matches", () => {
+  const registry = {
+    defaultSkills: ["fact-check"],
+    skills: [
+      { id: "legal-analysis", path: "skills/legal.md", keywords: ["法令", "個人情報"] },
+      { id: "website-edit", path: "skills/edit.md", keywords: ["修正", "push"] },
+      { id: "fact-check", path: "skills/fact.md", keywords: ["確認"] }
+    ]
+  };
+  const selected = selectSkills("個人情報の法令を確認してサイトを修正", registry, 3);
+  assert.deepEqual(selected.map((x) => x.id), ["fact-check", "legal-analysis", "website-edit"]);
+});
+
 test("fixed config pins the OpenAI model hierarchy", async () => {
   const fixed = await loadConfig();
   assert.deepEqual(fixed.models, {
-    planner: "gpt-5.6-sol",
-    worker: "gpt-5.6-luna",
-    jev: "gpt-5.6-luna",
-    senior: "gpt-5.6-sol",
-    secretary: "gpt-5.6-sol"
+    planner: "gpt-6.1-sol",
+    worker: "gpt-6-luna",
+    jev: "gpt-6-luna",
+    senior: "gpt-6.1-sol",
+    secretary: "gpt-6.1-sol"
   });
 });
 
@@ -92,4 +108,9 @@ test("fixed config keeps runtime read-only and repository writes human-gated", a
   assert.equal(fixed.runtime.readOnly, true);
   assert.equal(fixed.runtime.storeResponses, false);
   assert.ok(fixed.approval.alwaysHuman.includes("repository_write"));
+  assert.equal(fixed.aiSystem.directory, "ai-system");
+  assert.equal(fixed.aiSystem.registry, "SKILL_REGISTRY.json");
+  assert.ok(fixed.limits.maxSkillCount >= 1);
+  assert.equal(fixed.modelPolicy.roles.planner, "sol");
+  assert.equal(fixed.modelPolicy.roles.worker, "luna");
 });

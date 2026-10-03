@@ -6,16 +6,56 @@ import { fileURLToPath } from "node:url";
 import { plannerSchema, workerSchema, jevSchema, seniorSchema, secretarySchema } from "./schemas.mjs";
 import {
   buildInventory, callOpenAI, clampWorkerCount, classifyRisk, extractOutputText,
-  mapLimit, prefilterWorkerResults, readContext
+  mapLimit, prefilterWorkerResults, readContext, selectSkills
 } from "./core.mjs";
 
-export { buildInventory, clampWorkerCount, classifyRisk, extractOutputText, prefilterWorkerResults } from "./core.mjs";
+export { buildInventory, clampWorkerCount, classifyRisk, extractOutputText, prefilterWorkerResults, selectSkills } from "./core.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
+const REPO_ROOT = path.resolve(HERE, "../..");
 const CONFIG_PATH = path.join(HERE, "config.json");
 
 export async function loadConfig(configPath = CONFIG_PATH) {
   return JSON.parse(await fs.readFile(configPath, "utf8"));
+}
+
+export async function loadSkillRegistry(config, repoRoot = REPO_ROOT) {
+  const systemRoot = path.resolve(repoRoot, config.aiSystem.directory);
+  const registryPath = path.resolve(systemRoot, config.aiSystem.registry);
+  if (registryPath !== systemRoot && !registryPath.startsWith(systemRoot + path.sep)) {
+    throw new Error("AI skill registry escapes ai-system directory.");
+  }
+  return JSON.parse(await fs.readFile(registryPath, "utf8"));
+}
+
+export async function loadInstructionBundle(task, config, repoRoot = REPO_ROOT) {
+  const systemRoot = path.resolve(repoRoot, config.aiSystem.directory);
+  const registry = await loadSkillRegistry(config, repoRoot);
+  const selected = selectSkills(task, registry, config.limits.maxSkillCount);
+  const requested = [
+    ...config.aiSystem.requiredDocs.map((rel) => ({ label: rel, rel })),
+    ...selected.map((skill) => ({ label: `skill:${skill.id}`, rel: skill.path }))
+  ];
+
+  const sections = [];
+  for (const item of requested) {
+    const abs = path.resolve(systemRoot, item.rel);
+    if (abs !== systemRoot && !abs.startsWith(systemRoot + path.sep)) {
+      throw new Error(`AI instruction path escapes ai-system directory: ${item.rel}`);
+    }
+    const content = await fs.readFile(abs, "utf8");
+    sections.push(`## ${item.label}\n${content.trim()}`);
+  }
+
+  const text = sections.join("\n\n");
+  if (text.length > config.limits.maxInstructionChars) {
+    throw new Error(`Fixed AI instruction bundle exceeds maxInstructionChars (${text.length}).`);
+  }
+  return { text, selectedSkills: selected.map((skill) => skill.id), registryVersion: registry.version };
+}
+
+function fixedInstructions(base, bundle) {
+  return `${base}\n\nFIXED AI SYSTEM (authoritative repository guidance):\n${bundle.text}`;
 }
 
 function parseArgs(argv) {
@@ -37,19 +77,20 @@ function usage() {
 }
 
 async function runPipeline({ task, scope, workers, config, apiKey }) {
+  const fixedContext = await loadInstructionBundle(task, config);
   const inventory = await buildInventory(scope, config);
   const taskRisk = classifyRisk(task);
   const inventoryText = inventory.map((x) => `${x.path}\t${x.bytes}`).join("\n");
 
   const planner = await callOpenAI({
     apiKey, model: config.models.planner, reasoning: config.reasoning.planner,
-    instructions: [
+    instructions: fixedInstructions([
       "You are the planning manager for a read-only multi-agent workflow.",
       `Create at most ${workers} independent work items.`,
       "Use only exact repository paths from the supplied inventory; use an empty paths array when files are unnecessary.",
       "Do not perform or authorize side effects. Any write/send/publish/delete/push/merge/deploy/payment/credential request must be marked requires_human_approval=true.",
       "Prefer partitioning that reduces duplicated reading while still allowing independent verification."
-    ].join(" "),
+    ].join(" "), fixedContext),
     input: `TASK:\n${task}\n\nDETERMINISTIC RISK FLAGS:\n${JSON.stringify(taskRisk)}\n\nFILE INVENTORY (path<TAB>bytes):\n${inventoryText}`,
     schema: plannerSchema, schemaName: "jev_plan", maxOutputTokens: config.limits.maxPlannerOutputTokens, store: config.runtime.storeResponses
   });
@@ -66,14 +107,14 @@ async function runPipeline({ task, scope, workers, config, apiKey }) {
     const deterministicRisk = classifyRisk(`${task}\n${item.objective}`);
     const response = await callOpenAI({
       apiKey, model: config.models.worker, reasoning: config.reasoning.worker,
-      instructions: [
+      instructions: fixedInstructions([
         "You are a focused AI worker. Inspect only the assigned objective and supplied file contents.",
         "Report concrete evidence, not impressions. Do not invent URLs, files, laws, facts, or test results.",
         "severity: 0 informational, 1 minor, 2 material, 3 critical. risk: 0 low, 1 limited, 2 significant, 3 high-impact.",
         "If legal/privacy/public-claim/financial interpretation is involved, set requires_senior_review=true.",
         "If any action would write, send, publish, delete, push, merge, deploy, pay, or change credentials, set requires_human_approval=true.",
         "This worker is read-only and must never claim that a change was executed."
-      ].join(" "),
+      ].join(" "), fixedContext),
       input: `GLOBAL TASK:\n${task}\n\nWORK ITEM:\n${JSON.stringify(item)}\n\nDETERMINISTIC RISK FLAGS:\n${JSON.stringify(deterministicRisk)}\n\nCONTEXT:${context || "\n(no file context)"}`,
       schema: workerSchema, schemaName: "jev_worker_result", maxOutputTokens: config.limits.maxWorkerOutputTokens, store: config.runtime.storeResponses
     });
@@ -108,13 +149,14 @@ async function runPipeline({ task, scope, workers, config, apiKey }) {
 
   const jev = await callOpenAI({
     apiKey, model: config.models.jev, reasoning: config.reasoning.jev,
-    instructions: [
+    instructions: fixedInstructions([
       "You are JEV, the fixed triage and compression layer. You are not the final expert.",
       "Deduplicate overlapping findings, merge evidence, discard unsupported/noise findings, and route only meaningful issues upward.",
+      "Classify findings operationally as KEEP, DROP, DUPLICATE, CONFLICT, VERIFY, or ESCALATE before choosing the normalized route.",
       "Route to senior when confidence < 0.90, risk >= 2, severity >= 2, or specialist judgment is required.",
       "Route to human whenever a side effect is proposed or a worker requires human approval.",
       "Never downgrade a human-approval requirement. Never claim an action was executed."
-    ].join(" "),
+    ].join(" "), fixedContext),
     input: `GLOBAL TASK:\n${task}\n\nWORKER RESULTS:\n${JSON.stringify(compactWorkers)}`,
     schema: jevSchema, schemaName: "jev_triage", maxOutputTokens: config.limits.maxJevOutputTokens, store: config.runtime.storeResponses
   });
@@ -142,12 +184,12 @@ async function runPipeline({ task, scope, workers, config, apiKey }) {
   let senior = { data: { summary: "No senior review required.", reviewed: [] } };
   if (seniorInput.length) senior = await callOpenAI({
     apiKey, model: config.models.senior, reasoning: config.reasoning.senior,
-    instructions: [
+    instructions: fixedInstructions([
       "You are the senior reviewer. Validate material, uncertain, legal, privacy, public-claim, financial, or side-effect issues.",
       "Be conservative about unsupported claims and distinguish evidence from inference.",
       "Any external send, publication, deletion, repository write/push/merge, deployment, payment, or credential change must remain a human decision.",
       "You may accept, revise, discard, or escalate to human. You do not execute actions."
-    ].join(" "),
+    ].join(" "), fixedContext),
     input: `GLOBAL TASK:\n${task}\n\nJEV ESCALATIONS:\n${JSON.stringify(seniorInput)}`,
     schema: seniorSchema, schemaName: "jev_senior_review", maxOutputTokens: config.limits.maxSeniorOutputTokens, store: config.runtime.storeResponses
   });
@@ -157,11 +199,11 @@ async function runPipeline({ task, scope, workers, config, apiKey }) {
 
   const secretary = await callOpenAI({
     apiKey, model: config.models.secretary, reasoning: config.reasoning.secretary,
-    instructions: [
+    instructions: fixedInstructions([
       "You are the secretary layer. Produce a concise decision brief from the completed pipeline.",
       "Do not add new factual claims. Clearly separate completed analysis from items requiring human decision.",
       "The runtime is read-only, so never say a file, email, publication, push, merge, deployment, payment, or credential change was executed."
-    ].join(" "),
+    ].join(" "), fixedContext),
     input: `GLOBAL TASK:\n${task}\n\nPLAN:\n${JSON.stringify(planner.data)}\n\nJEV:\n${JSON.stringify(jev.data)}\n\nSENIOR:\n${JSON.stringify(senior.data)}\n\nRUNTIME POLICY:\n${JSON.stringify(config.runtime)}`,
     schema: secretarySchema, schemaName: "jev_secretary_brief", maxOutputTokens: config.limits.maxSecretaryOutputTokens, store: config.runtime.storeResponses
   });
@@ -174,6 +216,7 @@ async function runPipeline({ task, scope, workers, config, apiKey }) {
 
   return {
     policy: config.policyName, version: config.version, runtime: config.runtime, task, scope: path.resolve(scope), models: config.models,
+    ai_system: { registry_version: fixedContext.registryVersion, selected_skills: fixedContext.selectedSkills },
     worker_count: workItems.length, inventory_count: inventory.length, plan: planner.data, worker_results: compactWorkers,
     jev: jev.data, senior: senior.data, secretary: secretary.data
   };
@@ -184,8 +227,10 @@ async function main() {
   if (args.help) return console.log(usage());
   const config = await loadConfig();
   if (args.check) {
+    const fixedContext = await loadInstructionBundle("PTAの個人情報とサイト修正を検証する", config);
     return console.log(JSON.stringify({ ok: true, policy: config.policyName, version: config.version, readOnly: config.runtime.readOnly,
-      models: config.models, defaultWorkers: clampWorkerCount(config.limits.defaultWorkers, config), maxWorkers: config.limits.maxWorkers }, null, 2));
+      models: config.models, defaultWorkers: clampWorkerCount(config.limits.defaultWorkers, config), maxWorkers: config.limits.maxWorkers,
+      aiSystem: { registryVersion: fixedContext.registryVersion, selectedSkills: fixedContext.selectedSkills } }, null, 2));
   }
   if (!args.task) throw new Error("--task is required. Use --help for usage.");
   if (!config.runtime.readOnly) throw new Error("Refusing to run: fixed policy requires runtime.readOnly=true.");

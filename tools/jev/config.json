@@ -1,12 +1,12 @@
 {
-  "version": 1,
+  "version": 3,
   "policyName": "PTA JEV fixed orchestration",
   "models": {
-    "planner": "gpt-5.6-sol",
-    "worker": "gpt-5.6-luna",
-    "jev": "gpt-5.6-luna",
-    "senior": "gpt-5.6-sol",
-    "secretary": "gpt-5.6-sol"
+    "planner": "gpt-6.1-sol",
+    "worker": "gpt-6-luna",
+    "jev": "gpt-6-luna",
+    "senior": "gpt-6.1-sol",
+    "secretary": "gpt-6.1-sol"
   },
   "reasoning": {
     "planner": "high",
@@ -24,7 +24,9 @@
     "maxWorkerOutputTokens": 5000,
     "maxJevOutputTokens": 9000,
     "maxSeniorOutputTokens": 7000,
-    "maxSecretaryOutputTokens": 5000
+    "maxSecretaryOutputTokens": 5000,
+    "maxInstructionChars": 70000,
+    "maxSkillCount": 6
   },
   "files": {
     "extensions": [
@@ -71,5 +73,24 @@
   "runtime": {
     "storeResponses": false,
     "readOnly": true
+  },
+  "aiSystem": {
+    "directory": "ai-system",
+    "registry": "SKILL_REGISTRY.json",
+    "requiredDocs": [
+      "CORE_INSTRUCTIONS.md",
+      "ORCHESTRATION.md",
+      "QUALITY_STANDARD.md"
+    ]
+  },
+  "modelPolicy": {
+    "roles": {
+      "planner": "sol",
+      "worker": "luna",
+      "jev": "luna",
+      "senior": "sol",
+      "secretary": "sol"
+    },
+    "apiVerifiedOn": "2026-10-04"
   }
 }
