@@ -2,12 +2,14 @@
 
 ## 固定階層
 
-1. Planner / Manager — GPT-5.6 Sol
-2. Parallel Workers — GPT-5.6 Luna
-3. JEV triage — GPT-5.6 Luna
-4. Senior review — GPT-5.6 Sol
-5. Secretary / decision brief — GPT-5.6 Sol
+1. Planner / Manager — Sol role
+2. Parallel Workers — Luna role
+3. JEV triage — Luna role
+4. Senior review — Sol role
+5. Secretary / decision brief — Sol role
 6. Human — 副作用を伴う最終判断
+
+Sol / Luna は固定された役割区分です。実際のOpenAI APIモデルIDは `tools/jev/config.json` に一元化し、公式APIで利用可能性を確認したIDだけを設定します。
 
 ## Planner
 
