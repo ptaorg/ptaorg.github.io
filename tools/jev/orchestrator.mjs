@@ -58,7 +58,7 @@ async function runPipeline({ task, scope, workers, config, apiKey }) {
   const workItems = planner.data.work_items.slice(0, workers).map((item) => ({
     ...item,
     paths: item.paths.filter((p) => validPaths.has(p)),
-    requires_human_approval: item.requires_human_approval || classifyRisk(item.objective).requiresHumanApproval
+    requires_human_approval: item.requires_human_approval || taskRisk.requiresHumanApproval || classifyRisk(item.objective).requiresHumanApproval
   }));
 
   const workerCalls = await mapLimit(workItems, workers, async (item) => {
@@ -80,13 +80,32 @@ async function runPipeline({ task, scope, workers, config, apiKey }) {
     response.data.task_id = item.id;
     for (const finding of response.data.findings) {
       const risk = classifyRisk(`${finding.finding}\n${finding.recommended_action}`);
-      finding.requires_human_approval ||= risk.requiresHumanApproval || item.requires_human_approval;
-      finding.requires_senior_review ||= risk.requiresSeniorReview || item.risk === "high";
+      finding.requires_human_approval ||= risk.requiresHumanApproval || deterministicRisk.requiresHumanApproval || item.requires_human_approval;
+      finding.requires_senior_review ||= risk.requiresSeniorReview || deterministicRisk.requiresSeniorReview || item.risk === "high";
     }
     return response.data;
   });
 
   const compactWorkers = prefilterWorkerResults(workerCalls);
+  const mandatoryHumanIssues = [];
+  const mandatorySeniorIssues = [];
+  for (const result of compactWorkers) for (const finding of result.findings ?? []) {
+    const fixedIssue = {
+      title: finding.finding,
+      source_task_ids: [result.task_id],
+      summary: finding.finding,
+      evidence: (finding.evidence ?? []).map((x) => `${x.path}: ${x.detail}`),
+      severity: finding.severity,
+      risk: finding.risk,
+      confidence: finding.confidence,
+      route: finding.requires_human_approval ? "human" : "senior",
+      reason: finding.requires_human_approval ? "Fixed human-approval gate from worker result." : "Fixed senior-review gate from worker result.",
+      recommended_action: finding.recommended_action
+    };
+    if (finding.requires_human_approval) mandatoryHumanIssues.push(fixedIssue);
+    if (finding.requires_human_approval || finding.requires_senior_review) mandatorySeniorIssues.push(fixedIssue);
+  }
+
   const jev = await callOpenAI({
     apiKey, model: config.models.jev, reasoning: config.reasoning.jev,
     instructions: [
@@ -115,6 +134,11 @@ async function runPipeline({ task, scope, workers, config, apiKey }) {
   }
 
   const seniorInput = jev.data.issues.filter((x) => x.route === "senior" || x.route === "human");
+  const seniorKeys = new Set(seniorInput.map((x) => `${x.source_task_ids.join("|")}::${x.title}`));
+  for (const issue of mandatorySeniorIssues) {
+    const key = `${issue.source_task_ids.join("|")}::${issue.title}`;
+    if (!seniorKeys.has(key)) { seniorInput.push(issue); seniorKeys.add(key); }
+  }
   let senior = { data: { summary: "No senior review required.", reviewed: [] } };
   if (seniorInput.length) senior = await callOpenAI({
     apiKey, model: config.models.senior, reasoning: config.reasoning.senior,
@@ -128,7 +152,7 @@ async function runPipeline({ task, scope, workers, config, apiKey }) {
     schema: seniorSchema, schemaName: "jev_senior_review", maxOutputTokens: config.limits.maxSeniorOutputTokens, store: config.runtime.storeResponses
   });
 
-  const forcedHumanTitles = new Set(jev.data.issues.filter((x) => x.route === "human").map((x) => x.title));
+  const forcedHumanTitles = new Set([...jev.data.issues.filter((x) => x.route === "human").map((x) => x.title), ...mandatoryHumanIssues.map((x) => x.title)]);
   for (const review of senior.data.reviewed ?? []) if (forcedHumanTitles.has(review.title)) review.decision = "human";
 
   const secretary = await callOpenAI({
@@ -143,7 +167,8 @@ async function runPipeline({ task, scope, workers, config, apiKey }) {
   });
 
   const secretaryHumanTitles = new Set(secretary.data.needs_human.map((x) => x.title));
-  for (const issue of jev.data.issues.filter((x) => x.route === "human")) if (!secretaryHumanTitles.has(issue.title)) {
+  const requiredHumanIssues = [...jev.data.issues.filter((x) => x.route === "human"), ...mandatoryHumanIssues];
+  for (const issue of requiredHumanIssues) if (!secretaryHumanTitles.has(issue.title)) {
     secretary.data.needs_human.push({ title: issue.title, decision_needed: issue.recommended_action, reason: `Fixed approval gate: ${issue.reason}` });
   }
 
