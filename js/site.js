@@ -39,6 +39,9 @@
   }
 
   function addGlobalNav(){
+    document.querySelectorAll('.global-ppc-nav').forEach(function(link){
+      link.textContent = '個人情報保護委員会（PPC）';
+    });
     var path = (window.location.pathname || '/').replace(/\/+$/,'') || '/';
     var schoolLinks = [
       ['/framework.html','学校とPTAの境界'],
