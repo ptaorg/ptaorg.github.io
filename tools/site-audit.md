@@ -65,10 +65,8 @@ npm run check:browser -- --site-dir _site --report /tmp/site-audit
 レポートは `audit.json`。各問題にコード、ファイル、詳細、ブラウザ幅を含める。
 公開除外HTMLの件数とブラウザ訪問記録も保存する。
 エラーがあれば終了コード1、警告のみなら0。summaryと各ブラウザ訪問に両件数を分けて記録する。
-既存サイトの未修正問題はaudit-site.mjsのknownIssuesに2件だけ明示している。
-確認元はdcb043a1305b53ff1458a85b4bab0d6010d57bf8。
-対象はsitemap-research.xmlの旧research.html掲載と、guide-board-print.htmlの古いアンカー。
-コード・ファイル・詳細が完全一致し1件だけの場合に限り、理由付き警告にする。
+既存サイトの未修正問題を一時的に許容する場合は、audit-site.mjs の knownIssues に
+コード・ファイル・詳細を完全一致で登録する。2026-10-04時点では既知問題の登録は0件。
 別のリンクや新たな問題、件数増加は失敗。解決して登録だけ残った場合も失敗とし、
 同じ変更で不要な登録を削除する。分類単位・ページ単位の包括的な免除は行わない。
 原始検出はauditStatic、既知問題の適用はapplyKnownIssuesに分離し、両方を回帰テストする。
