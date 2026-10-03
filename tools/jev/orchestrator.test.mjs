@@ -10,6 +10,7 @@ import {
   extractOutputText,
   loadConfig,
   loadInstructionBundle,
+  normalizeJevIssueRoutes,
   prefilterWorkerResults,
   selectPlannerInventory,
   selectSkills
@@ -124,6 +125,55 @@ test("fixed config caps planner inventory before API use", async () => {
   assert.equal(fixed.limits.maxPlannerInventoryEntries, 320);
 });
 
+
+
+test("normalizeJevIssueRoutes does not spread one human issue across the same task", () => {
+  const issues = [
+    {
+      title: "Static configuration finding",
+      summary: "Read-only settings are inspected without making changes.",
+      recommended_action: "Continue static inspection only.",
+      source_task_ids: ["task-1"],
+      severity: 1,
+      risk: 1,
+      confidence: 0.99,
+      route: "complete"
+    },
+    {
+      title: "Publication action",
+      summary: "A public release is proposed.",
+      recommended_action: "公開して反映する。",
+      source_task_ids: ["task-1"],
+      severity: 1,
+      risk: 1,
+      confidence: 0.99,
+      route: "complete"
+    }
+  ];
+  normalizeJevIssueRoutes(issues);
+  assert.equal(issues[0].route, "complete");
+  assert.equal(issues[1].route, "human");
+});
+
+test("normalizeJevIssueRoutes never downgrades an existing human route", () => {
+  const issues = [{
+    title: "Human-gated finding",
+    summary: "Static wording after a fixed approval gate.",
+    recommended_action: "No action is executed.",
+    source_task_ids: ["task-1"],
+    severity: 1,
+    risk: 1,
+    confidence: 0.99,
+    route: "human"
+  }];
+  normalizeJevIssueRoutes(issues);
+  assert.equal(issues[0].route, "human");
+});
+
+test("negative side-effect wording is not itself a human action", () => {
+  const risk = classifyRisk("外部送信、公開、ファイル変更はしない。静的確認だけ行う。");
+  assert.equal(risk.requiresHumanApproval, false);
+});
 
 test("Senior compact instruction bundle keeps core quality rules and omits orchestration repetition", async () => {
   const fixed = await loadConfig();
