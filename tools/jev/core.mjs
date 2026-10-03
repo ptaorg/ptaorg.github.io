@@ -86,6 +86,100 @@ export async function buildInventory(root, config) {
   return out;
 }
 
+const PLANNER_EVIDENCE_PATHS = new Set([
+  "cases.html",
+  "report.html",
+  "timeline-issues.html",
+  "claim-evidence-ledger.html",
+  "administrative-materials.html",
+  "data/board-responses.json",
+  "data/site-search-index.js",
+  "js/document-data.js"
+]);
+
+const SKILL_PATH_ALIASES = {
+  "fact-check": ["claim", "evidence", "timeline", "report", "source", "data"],
+  "primary-source-research": ["administrative", "materials", "document", "source", "data", "board-responses"],
+  "legal-analysis": ["legal", "privacy", "ppc", "law", "civil", "autonomy", "social-education", "school-education"],
+  "municipal-response-analysis": ["cases", "board-responses", "response", "municipal", "education", "administrative"],
+  "pta-structure-analysis": ["pta", "membership", "fee", "collection", "personnel", "facilities", "school"],
+  "website-article": ["journal", "article", "html"],
+  "website-edit": ["site", "github", "scripts", "tools", "html", "js"],
+  "publish-verification": ["audit", "site", "pages", "browser"],
+  "github-review": ["github", "workflow", "actions", "tools", "scripts"]
+};
+
+const TASK_PATH_ALIAS_RULES = [
+  [/個人情報|privacy|personal data/i, ["privacy", "ppc", "personal-data", "third-party", "nonmember"]],
+  [/会費|学校徴収|徴収|fee|collection/i, ["fee", "collection", "dues", "school-fee"]],
+  [/任意加入|入会|退会|membership|opt.?in/i, ["membership", "optin", "join", "withdraw"]],
+  [/教職員|職員|teacher|staff/i, ["personnel", "teacher", "staff"]],
+  [/学校施設|施設|facility/i, ["facilities", "facility"]],
+  [/社会教育|social education/i, ["social-education"]],
+  [/情報公開|開示|disclosure/i, ["disclosure", "information-request"]],
+  [/住民監査|監査|audit/i, ["audit", "resident-audit"]],
+  [/松山|自治体|教育委員会|市教委|県教委|行政回答|回答書/i, ["cases", "board-responses", "response", "municipal", "timeline", "claim-evidence", "administrative"]],
+  [/JEV|Context Engine|文脈エンジン|AI運用/i, ["jev", "context-engine", "ai-system", "orchestration", "model-routing"]],
+  [/サイト|GitHub|記事|論考|HTML|PR\b/i, ["journal", "site", "github", "html"]]
+];
+
+function plannerInventoryTerms(task, selectedSkills = []) {
+  const terms = new Set(contextTerms(task));
+  for (const skill of selectedSkills) {
+    for (const alias of SKILL_PATH_ALIASES[skill] ?? []) terms.add(alias);
+  }
+  for (const [pattern, aliases] of TASK_PATH_ALIAS_RULES) {
+    if (!pattern.test(String(task ?? ""))) continue;
+    for (const alias of aliases) terms.add(alias);
+  }
+  return [...terms].map((term) => String(term).normalize("NFKC").toLowerCase()).filter(Boolean);
+}
+
+export function selectPlannerInventory(inventory, task, selectedSkills = [], maxEntries = 320) {
+  if (!Array.isArray(inventory) || inventory.length <= maxEntries) return [...(inventory ?? [])];
+  const terms = plannerInventoryTerms(task, selectedSkills);
+  const scored = inventory.map((entry) => {
+    const normalized = String(entry.path ?? "").normalize("NFKC").toLowerCase();
+    let score = PLANNER_EVIDENCE_PATHS.has(entry.path) ? 1000 : 0;
+    for (const term of terms) {
+      if (!term || !normalized.includes(term)) continue;
+      score += 20 + Math.min(term.length, 20);
+    }
+    if (!normalized.includes("/")) score += 2;
+    return { entry, score };
+  });
+
+  const selected = scored.filter((item) => item.score > 0)
+    .sort((a, b) => b.score - a.score || a.entry.path.localeCompare(b.entry.path))
+    .slice(0, maxEntries);
+  const seen = new Set(selected.map((item) => item.entry.path));
+
+  if (selected.length < maxEntries) {
+    const groups = new Map();
+    for (const item of scored) {
+      if (seen.has(item.entry.path)) continue;
+      const top = item.entry.path.includes("/") ? item.entry.path.split("/")[0] : "(root)";
+      if (!groups.has(top)) groups.set(top, []);
+      groups.get(top).push(item);
+    }
+    for (const group of groups.values()) group.sort((a, b) => a.entry.path.localeCompare(b.entry.path));
+    const names = [...groups.keys()].sort();
+    let progressed = true;
+    while (selected.length < maxEntries && progressed) {
+      progressed = false;
+      for (const name of names) {
+        const next = groups.get(name)?.shift();
+        if (!next) continue;
+        selected.push(next);
+        seen.add(next.entry.path);
+        progressed = true;
+        if (selected.length >= maxEntries) break;
+      }
+    }
+  }
+  return selected.map((item) => item.entry);
+}
+
 export function extractOutputText(payload) {
   if (typeof payload?.output_text === "string" && payload.output_text.trim()) return payload.output_text;
   const parts = [];
