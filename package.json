@@ -9,7 +9,7 @@
     "check:site-js-version": "node scripts/check-site-js-version.js 97",
     "check:content": "node scripts/check-content-consistency.js",
     "check:metadata": "node scripts/enhance-public-pages.js --check",
-    "check:all": "npm run check:harness && npm run check:site && npm run check:metadata && npm run check:content && npm run check:pages-boundary && npm run check:generated && npm run check:site-js-version && npm run check:url-ledger && npm run check:nav && npm run test:jev",
+    "check:all": "npm run check:harness && npm run check:site && npm run check:metadata && npm run check:content && npm run check:pages-boundary && npm run check:generated && npm run check:site-js-version && npm run check:url-ledger && npm run check:nav && npm run test:jev && npm run test:context",
     "report:site-js-version": "node scripts/report-site-js-version.js",
     "sync:materials": "node scripts/sync-school-materials.js --dry-run",
     "sync:materials:write": "node scripts/sync-school-materials.js --write",
@@ -33,7 +33,9 @@
     "test:audit": "node --test tools/audit-site.test.mjs",
     "jev:check": "node tools/jev/orchestrator.mjs --check",
     "jev:run": "node tools/jev/orchestrator.mjs",
-    "test:jev": "node --test tools/jev/orchestrator.test.mjs"
+    "test:jev": "node --test tools/jev/orchestrator.test.mjs",
+    "context:query": "node tools/context-engine/query.mjs",
+    "test:context": "node --test tools/context-engine/context-engine.test.mjs"
   },
   "devDependencies": {
     "fast-xml-parser": "5.11.1",
