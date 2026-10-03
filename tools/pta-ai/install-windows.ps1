@@ -24,4 +24,4 @@ Write-Host ('Installed: ' + $cmdPath)
 Write-Host ('Runs: ' + $runsDir)
 Write-Host 'Open a new terminal, then use:'
 Write-Host '  pta-ai --check'
-Write-Host '  pta-ai "松山市の最新状況を整理"'
+Write-Host '  pta-ai "your task"'
