@@ -119,6 +119,16 @@ test("selectPlannerInventory caps planner input and preserves evidence spine", (
   assert.ok(paths.includes("fee-collection.html"));
 });
 
+test("administrative negotiation tasks load the legal escort skill", async () => {
+  const fixed = await loadConfig();
+  const bundle = await loadInstructionBundle(
+    "教育委員会への再照会文を作成し、根拠資料が示されない場合は情報公開請求へ切り替える",
+    fixed
+  );
+  assert.ok(bundle.selectedSkills.includes("administrative-legal-escort"));
+  assert.ok(bundle.selectedSkills.includes("fact-check"));
+});
+
 test("fixed config caps planner inventory before API use", async () => {
   const fixed = await loadConfig();
   assert.equal(fixed.limits.maxPlannerInventoryEntries, 320);

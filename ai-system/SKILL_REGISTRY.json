@@ -1,9 +1,27 @@
 {
-  "version": 2,
+  "version": 3,
   "defaultSkills": [
     "fact-check"
   ],
   "skills": [
+    {
+      "id": "administrative-legal-escort",
+      "path": "skills/administrative-legal-escort.md",
+      "keywords": [
+        "行政交渉",
+        "法理エスコート",
+        "照会文",
+        "再照会",
+        "是正要請",
+        "改善要請",
+        "行政回答",
+        "開示請求",
+        "情報公開請求",
+        "根拠規程",
+        "根拠資料",
+        "ご教示"
+      ]
+    },
     {
       "id": "primary-source-research",
       "path": "skills/primary-source-research.md",
