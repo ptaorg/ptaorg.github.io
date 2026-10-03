@@ -107,6 +107,10 @@ for (const requiredSkill of [
   "website-edit",
   "publish-verification",
   "fact-check",
+  "email-investigation",
+  "drive-investigation",
+  "pdf-analysis",
+  "github-review",
 ]) {
   if (!skillIds.has(requiredSkill)) errors.push(`ai-system/SKILL_REGISTRY.json: missing required skill "${requiredSkill}"`);
 }
