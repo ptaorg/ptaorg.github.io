@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-24",
+  "updated": "2026-10-04",
   "default": {
     "sitemap": "index",
     "search": "index"
@@ -131,6 +131,56 @@
       "sitemap": "reference",
       "search": "reference",
       "successor": "/membership.html"
+    },
+    {
+      "url": "/kit/education-board/",
+      "role": "audience-guide",
+      "sitemap": "index",
+      "search": "index",
+      "successor": null,
+      "audience": "教育委員会向け",
+      "permanent": true,
+      "purpose": "PTA実務移行キットの最新版・配布資料・根拠・履歴への恒久入口"
+    },
+    {
+      "url": "/kit/school-leaders/",
+      "role": "audience-guide",
+      "sitemap": "index",
+      "search": "index",
+      "successor": null,
+      "audience": "校長会・学校管理職向け",
+      "permanent": true,
+      "purpose": "PTA実務移行キットの最新版・配布資料・根拠・履歴への恒久入口"
+    },
+    {
+      "url": "/kit/federation/",
+      "role": "audience-guide",
+      "sitemap": "index",
+      "search": "index",
+      "successor": null,
+      "audience": "PTA連合会向け",
+      "permanent": true,
+      "purpose": "PTA実務移行キットの最新版・配布資料・根拠・履歴への恒久入口"
+    },
+    {
+      "url": "/kit/unit-pta/",
+      "role": "audience-guide",
+      "sitemap": "index",
+      "search": "index",
+      "successor": null,
+      "audience": "単位PTA向け",
+      "permanent": true,
+      "purpose": "PTA実務移行キットの最新版・配布資料・根拠・履歴への恒久入口"
+    },
+    {
+      "url": "/kit/parents/",
+      "role": "audience-guide",
+      "sitemap": "index",
+      "search": "index",
+      "successor": null,
+      "audience": "保護者向け",
+      "permanent": true,
+      "purpose": "PTA実務移行キットの最新版・配布資料・根拠・履歴への恒久入口"
     }
   ],
   "prefix_rules": [
@@ -172,6 +222,13 @@
     {
       "prefix": "/pta-open-system/",
       "role": "internal/development",
+      "sitemap": "exclude",
+      "search": "exclude",
+      "successor": null
+    },
+    {
+      "prefix": "/assets/kit/",
+      "role": "source-archive",
       "sitemap": "exclude",
       "search": "exclude",
       "successor": null

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>保護者向けプロトタイプ v0.1</title><style>
+:root{--ink:#202c35;--muted:#59656c;--accent:#244b5b;--rule:#bac4c9;--wash:#f1f4f5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#f1f2f1;font-family:"Noto Sans CJK JP","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.95}
+main{max-width:980px;margin:36px auto 60px;padding:48px 64px 56px;background:white;border-top:7px solid var(--accent)}
+header{margin-bottom:25px;border-bottom:1px solid var(--rule);padding-bottom:22px}.edition{font-size:13px;letter-spacing:.08em;color:var(--muted);margin:0 0 12px}h1{font-size:30px;line-height:1.55;margin:0 0 14px;letter-spacing:.015em}h1 small{font-size:21px;font-weight:500;display:block;margin-top:6px}.meta{font-size:13px;margin:0;color:var(--muted)}
+section{margin-top:44px}h2{font-size:24px;line-height:1.55;margin:0 0 20px;padding:0 0 11px;border-bottom:2px solid var(--accent)}h2 .no{font-size:14px;display:block;color:var(--muted);letter-spacing:.12em;margin-bottom:5px}h3{font-size:18px;line-height:1.6;margin:26px 0 10px}p{margin:0 0 15px;overflow-wrap:anywhere}strong{font-weight:700}a{color:#184a65;text-underline-offset:.18em;overflow-wrap:anywhere}ul,ol{padding-left:1.45em;margin:10px 0 20px}li{margin:5px 0}.ref{font-size:12px;color:var(--muted);white-space:normal;margin-left:.5em}.ref a{text-decoration:none}.principle{border-left:4px solid var(--accent);padding:13px 18px;margin:22px 0;background:var(--wash);break-inside:avoid}.principle p:last-child{margin-bottom:0}.note{font-size:13px;line-height:1.8;color:#46535b}.evidence{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:14px 0;margin:20px 0;break-inside:avoid}.evidence .label{font-size:12px;font-weight:700;letter-spacing:.08em;margin-bottom:7px}.evidence p:last-child{margin-bottom:0}
+figure{margin:24px 0}figcaption{font-size:13px;margin:10px 0;color:var(--muted)}.logic{list-style:none;counter-reset:step;margin:0;padding:0;border-top:1px solid var(--rule)}.logic li{position:relative;margin:0;padding:10px 10px 10px 41px;border-bottom:1px solid var(--rule);line-height:1.6;break-inside:avoid}.logic li::before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;left:5px;top:10px;font-size:13px;color:var(--accent);font-weight:700}.logic li+li::after{content:"↓";position:absolute;left:13px;top:-13px;background:white;font-size:12px;line-height:17px}.logic small{display:block;color:var(--muted);font-size:13px;margin-top:3px}
+table{border-collapse:collapse;width:100%;margin:16px 0 22px;font-size:14px;line-height:1.75;table-layout:fixed}caption{text-align:left;font-weight:700;font-size:15px;padding-bottom:9px}th,td{border:1px solid var(--rule);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:var(--wash);font-weight:700}thead{display:table-header-group}tr{break-inside:avoid}.comparison th:first-child{width:19%}.services th:first-child{width:22%}.services{font-size:13px}.check th:first-child{width:24%}.duo{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}.duo>div{padding:17px 18px 5px}.duo>div+div{border-left:1px solid var(--rule)}.duo h3{margin:0 0 14px}.duo ol{font-size:14px;line-height:1.7}.duo li{margin:0 0 12px;break-inside:avoid}.handoff{display:grid;grid-template-columns:1fr 1fr;gap:20px}.handoff>div{border-top:2px solid var(--accent);padding-top:10px}.handoff h3{margin:0 0 9px}.sources{font-size:13px;line-height:1.7}.sources li{padding:9px 0;border-bottom:1px solid var(--rule);margin:0;break-inside:avoid}.sources .url{display:block;font-size:11px;margin-top:4px}.appendix{border-top:2px solid var(--rule);padding-top:17px;margin-top:32px;font-size:13px}footer{margin-top:40px;border-top:1px solid var(--rule);padding-top:15px;font-size:12px;color:var(--muted)}
+@media(max-width:700px){body{font-size:15px;line-height:1.9}main{margin:0;padding:25px 19px 40px;border-top-width:5px}h1{font-size:25px}h1 small{font-size:18px}h2{font-size:21px}h3{font-size:17px}section{margin-top:33px}th,td{padding:8px;font-size:13px}.duo,.handoff{grid-template-columns:1fr}.duo>div+div{border-left:0;border-top:1px solid var(--rule)}.duo>div{padding:16px 10px 4px}.responsive thead{display:none}.responsive tbody tr{display:block;border-top:1px solid var(--rule);padding:8px 0}.responsive tbody th,.responsive tbody td{display:block;width:100%;border:0;padding:5px 8px}.responsive tbody th{font-size:14px}.responsive td::before{content:attr(data-label)"：";font-weight:700;color:#374c58}.responsive{border-bottom:1px solid var(--rule)}.sources .url{font-size:11px}.principle{padding:11px 13px}}
+
+@media print{html{scroll-behavior:auto}body{background:white;color:#111;font-size:10.5pt;line-height:1.75}main{max-width:none;margin:0;padding:0;border:0}header{padding-bottom:10px;margin-bottom:16px}h1{font-size:22pt}h1 small{font-size:15pt}.edition,.meta{font-size:9pt}section{margin-top:24px}.print-start{break-before:page}h2{font-size:16pt;margin-bottom:13px;padding-bottom:7px;break-after:avoid}h2 .no{font-size:9pt}h3{font-size:11.5pt;margin-top:18px;break-after:avoid}p{margin-bottom:10px;orphans:3;widows:3}li{orphans:2;widows:2}table{font-size:9.3pt;line-height:1.65}th,td{padding:7px 8px}.services{font-size:9pt}.ref,.note{font-size:8.8pt}.principle{margin:15px 0;padding:10px 13px;background:#f5f5f5;border-left-color:#333}.evidence{padding:10px 0;margin:14px 0}a{color:#111;text-decoration:underline}.logic li{padding-top:8px;padding-bottom:8px}.logic small{font-size:9pt}.logic li::before{top:8px}.logic li+li::after{background:white}.duo ol{font-size:9.5pt}.duo{break-inside:avoid}.handoff{gap:15px}.sources{font-size:8.6pt;line-height:1.65}.sources .url{font-size:8pt}.sources li{padding:7px 0}.sources strong{font-size:9pt}.appendix,footer{font-size:9pt}.screen-only{display:none}figure{break-inside:avoid}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+.diagram{border-top:2px solid var(--accent);border-bottom:1px solid var(--rule);padding:18px 12px;line-height:1.65}
+.diagram h3{margin:0 0 12px;font-size:17px}.diagram p{margin:12px 0 0;font-size:14px}
+.boundary{display:grid;grid-template-columns:1fr 150px 1fr;gap:12px}.boundary>div{padding:5px 8px}.boundary .bridge{align-self:center;text-align:center;font-weight:700;font-size:14px}.bridge span{display:block;font-size:28px}
+.two-routes{display:grid;grid-template-columns:1fr 1fr;gap:22px}.two-routes>div+div{border-left:1px solid var(--rule);padding-left:22px}
+.diagram-flow{list-style:none;margin:0;padding:0}.diagram-flow li{margin:0;text-align:center;padding:9px 6px;border:1px solid var(--rule);background:white;break-inside:avoid}.diagram-flow li+li::before{content:"↓";display:block;margin-top:-11px;margin-bottom:4px;color:var(--accent);font-weight:700;background:white}
+.diagram-flow li+li{margin-top:16px}.diagram-flow small{display:block;font-size:12px;color:var(--muted)}
+.diagram .result{margin-top:16px;padding-top:12px;border-top:1px solid var(--rule);font-weight:700}
+.inline-cooperation{margin-top:18px;text-align:center;border-top:1px dashed var(--rule);padding-top:12px}
+nav.contents{font-size:14px;border-bottom:1px solid var(--rule);padding-bottom:18px}nav.contents ol{columns:2;column-gap:26px}nav.contents li{break-inside:avoid}
+.template{border-top:1px solid var(--rule);padding-top:16px}.fill{color:#374c58;font-weight:600}
+.form-fields th{width:25%}.worksheet{font-size:12px}.worksheet th:first-child{width:18%}.worksheet td{min-height:42px}.worksheet .blank{display:block;min-height:30px}
+.parent-letter p{line-height:1.85}.faq dt{font-weight:700;margin-top:22px}.faq dd{margin:7px 0 17px}
+.status{font-size:13px;border-top:1px solid var(--rule);padding-top:12px;margin-top:20px}
+@media(max-width:700px){.boundary,.two-routes{grid-template-columns:1fr}.boundary .bridge{padding:15px}.two-routes>div+div{border-left:0;padding-left:0;border-top:1px solid var(--rule);padding-top:18px}nav.contents ol{columns:1}.worksheet .blank{min-height:20px}}
+@media print{.diagram{padding:12px 8px;font-size:9.3pt}.diagram h3{font-size:11pt}.diagram p{font-size:9pt}.diagram-flow small{font-size:8.5pt}.diagram .result{margin-top:10px}.boundary{grid-template-columns:1fr 100px 1fr}.boundary .bridge{font-size:9pt}.two-routes{gap:14px}.two-routes>div+div{padding-left:14px}.worksheet{font-size:8pt}.worksheet th,.worksheet td{padding:6px 5px}.worksheet .blank{min-height:28px}.template-section{break-before:page}.template-section:first-of-type{break-before:auto}.parent-letter{font-size:11pt}.status{font-size:9pt}}
+
+.diagram svg{display:block;width:100%;max-width:360px;height:auto;margin:0 auto;color:#202c35;font-family:inherit}
+.diagram svg text{fill:currentColor;font-family:inherit;font-size:20px}.diagram svg .svg-heading{font-size:22px;font-weight:700}
+.diagram svg rect,.diagram svg path,.diagram svg line{stroke:#202c35}.diagram svg rect{fill:white}
+.diagram .bridge{font-size:16px}.diagram .svg-single{max-width:360px;margin:0 auto}
+@media print{.diagram svg text{fill:#111}.diagram svg rect,.diagram svg path,.diagram svg line{stroke:#111}.diagram .bridge{font-size:10.5pt}}
+
+/* 図解補強：色に依存しない方式対比と、独立した4処理 */
+.method-comparison{margin:18px 0;border-top:1px solid var(--rule)}
+.method-row{padding:14px 0;border-bottom:1px solid var(--rule);break-inside:avoid}.method-row p:last-child{margin-bottom:0}
+.equation{font-size:17px;line-height:1.9;overflow-wrap:anywhere}
+.separate-processes{display:grid;grid-template-columns:1fr 1fr;margin:16px 0;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
+.separate-processes>div{padding:14px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);break-inside:avoid}
+.separate-processes dt{font-weight:700;line-height:1.65}.separate-processes dd{margin:9px 0 0;line-height:1.8}
+@media(max-width:700px){.separate-processes{grid-template-columns:1fr}.equation{font-size:16px}}
+@media print{#fig2{break-inside:auto}.method-row,.separate-processes>div{break-inside:avoid}.equation{font-size:11pt}}
+
+/* v0.3.1：画面での可読性のみ調整。印刷の最終組版は未実施。 */
+@media screen{
+ section{scroll-margin-top:22px}h3{margin-top:30px;margin-bottom:12px}
+ .note{padding:10px 12px;border-left:2px solid var(--rule);background:#fafbfb}
+ .template-section>.note:first-of-type{margin-bottom:22px}
+ .faq dt{border-top:1px solid var(--rule);padding-top:14px;margin-top:26px}
+ .faq dd{margin-top:10px;margin-bottom:22px;line-height:1.9}
+ .worksheet{font-size:14px}.worksheet th,.worksheet td{font-size:14px;padding:10px;line-height:1.75}
+ .worksheet th:first-child{width:18%}.worksheet thead th:nth-child(2){width:30%}
+ .worksheet thead th:nth-child(3),.worksheet thead th:nth-child(6){width:17%}
+ .worksheet thead th:nth-child(4),.worksheet thead th:nth-child(5){width:9%}
+ .worksheet .blank{min-height:44px;margin-top:8px;border-bottom:1px dotted var(--rule)}
+ .worksheet .tracking-check th,.worksheet .tracking-check td{border-top:2px solid var(--accent)}
+ .worksheet .tracking-check th{border-left:4px solid var(--accent)}
+}
+@media screen and (max-width:900px){
+ .boundary{grid-template-columns:1fr}.boundary .bridge{padding:12px}
+ .worksheet thead{display:none}.worksheet tbody tr{display:block;border-top:1px solid var(--rule);padding:8px 0}
+ .worksheet tbody th:first-child,.worksheet tbody th,.worksheet tbody td{display:block;width:100%;border:0;padding:8px 10px}
+ .worksheet tbody td::before{content:attr(data-label)"：";font-weight:700;color:#374c58}
+ .worksheet .tracking-check{border-top:2px solid var(--accent)}
+ .worksheet .tracking-check th:first-child{border-left:4px solid var(--accent)}
+}
+
+@media screen{
+ #fig2 .diagram>.result:first-child{margin:0 0 16px;padding:0 0 14px;border-top:0;border-bottom:2px solid var(--accent);font-size:18px;line-height:1.75}
+ #fig2 .method-comparison{margin:0 0 24px;border-top:0}
+ #fig2 .method-row{padding:12px 0 16px}
+ #fig2 .method-row>p:first-child{margin-top:0;font-size:15px}
+ #fig2 .diagram .equation{font-size:18px;line-height:1.9;margin:8px 0 12px}
+ #fig2 .two-routes{padding-top:16px;border-top:1px solid var(--rule)}
+ .separate-processes dt{font-size:16px}.separate-processes dd{font-size:16px}
+ .separate-processes dd a{display:inline-block;white-space:nowrap}
+}
+@media screen and (max-width:700px){
+ #fig2 .diagram>.result:first-child{font-size:17px}
+ #fig2 .diagram .equation{font-size:17px}
+ .separate-processes dd{font-size:15px}
+}
+
+@media screen and (max-width:700px){
+ .responsive tbody th:first-child{width:100%}
+}
+@media screen{
+ .worksheet small{font-size:inherit}
+ .worksheet thead th:nth-child(3){width:14%}
+ .worksheet thead th:nth-child(4){width:10%}
+ .worksheet thead th:nth-child(5){width:12%}
+ .worksheet thead th:nth-child(6){width:16%}
+ .diagram .equation .formula-term{display:inline-block;white-space:nowrap}
+}
+
+/* 読者別印刷プロトタイプ：共通正本の本文・図から派生 */
+html{scroll-behavior:auto}body{background:#e9eceb;font-size:16px;line-height:1.8;color:#202c35}main{max-width:none;border:0;background:none;margin:0;padding:0}
+.page{width:210mm;min-height:297mm;margin:24px auto;padding:16mm 17mm;background:#fff;border:1px solid #c4ccce;display:flex;flex-direction:column;position:relative}
+.page-body{flex:1}.running{font-size:11px;border-bottom:1px solid #84979f;margin:0 0 18px;padding-bottom:8px;display:flex;justify-content:space-between;gap:12px}
+.page h2{font-size:25px;margin:0 0 20px}.page h3{font-size:17px;margin:22px 0 9px}.page p{margin:0 0 12px}.page figure{margin:18px 0}.page-footer{border-top:1px solid #bac4c9;padding-top:8px;margin-top:20px;font-size:11px;display:flex;justify-content:space-between;gap:8px}
+.cover{border-top:8px solid #244b5b}.cover .series{font-size:15px;letter-spacing:.1em;margin:14mm 0 12mm}.cover h1{font-size:36px;line-height:1.5}.cover .audience{font-size:24px;font-weight:700;margin-top:14px}.cover .cover-message{font-size:24px;line-height:1.75;border-left:4px solid #244b5b;padding-left:20px;margin:25mm 0 16mm}.cover .cover-meta{margin-top:18mm;font-size:14px}
+.lead{font-size:19px;font-weight:700;border-left:4px solid #244b5b;padding:10px 14px;background:#f6f7f7}.note{font-size:13px;line-height:1.7;color:#43535c;padding:8px 10px;border-left:2px solid #bdc7cb;background:#fafafa}.basis-label{font-size:12px;display:block;font-weight:700;letter-spacing:.04em}.law{border-top:3px double #53666e;padding-top:12px}.policy{border-left:4px solid #53666e;padding:8px 14px;background:#f7f7f7}
+.page table{font-size:14px;line-height:1.65;margin:14px 0 18px}.page th,.page td{padding:8px 10px}.page table th:first-child{width:25%}.page .sources{font-size:12px;line-height:1.65}.page .sources .url{font-size:10px}.page .sources li{padding:8px 0}.page .ref{font-size:11px}
+.page .diagram p{font-size:14px}.page .diagram svg{max-width:290px}.page .diagram .svg-single{max-width:290px}.page .boundary{grid-template-columns:1fr 90px 1fr;gap:8px}.page .boundary .bridge{font-size:14px}.page .two-routes{gap:16px}.page .two-routes>div+div{padding-left:16px}.page .method-row{padding:10px 0}.page .method-row p{margin:6px 0}.page .equation{font-size:17px!important;font-weight:700}.page .diagram-flow{font-size:14px}.page .diagram-flow li{padding:7px 6px;margin:0}.page .diagram-flow li+li{margin-top:12px}.page .diagram-flow li+li::before{margin-top:-12px;margin-bottom:3px}.compact-method .two-routes{margin-top:16px}.compact-method .result{margin-top:0;border-top:0;padding:0 0 10px;border-bottom:2px solid #53666e;font-size:17px!important}
+.page .duo>div{padding:13px 14px 4px}.page .duo ol{font-size:14px;line-height:1.7}.page .separate-processes dt{font-size:16px}.page .separate-processes dd{font-size:14px}.page .separate-processes{margin-bottom:14px}.page .separate-processes>div{padding:11px}.page .faq dt{font-size:15px;margin-top:18px;padding-top:10px}.page .faq dd{font-size:14px;margin:8px 0 14px}.page .write-line{display:block;min-height:32px;border-bottom:1px dotted #888}.page .inspection th:first-child{width:29%}.page .inspection small{font-size:inherit}.page .tracking-check th{border-left:4px solid #244b5b}.page .tracking-check th,.page .tracking-check td{border-top:2px solid #244b5b}
+.qr-section{margin-top:24px}.qr-layout{display:grid;grid-template-columns:32mm 1fr;gap:16px;align-items:start}.qr-placeholder{width:28mm;height:28mm;border:1px dashed #555;display:flex;align-items:center;justify-content:center;text-align:center;padding:2mm;font-size:11px;line-height:1.5;background:white}.qr-layout p{font-size:13px}.url-placeholder{border-bottom:1px dotted #aaa;padding-bottom:8px;overflow-wrap:anywhere}
+.support-flow{list-style:none;counter-reset:support;margin:0;padding:0}.support-flow li{counter-increment:support;padding:14px 14px 14px 55px;border-top:1px solid #888;position:relative;line-height:1.7}.support-flow li::before{content:counter(support,decimal-leading-zero);position:absolute;left:10px;top:14px;font-weight:700}.support-flow li+li::after{content:'↓';position:absolute;left:20px;top:-15px;background:white}
+.school-leaders .page h2{border-bottom-width:4px}.school-leaders .decision{font-size:18px;font-weight:700}.school-leaders .inspection caption{font-size:16px}.federation .support-flow li{border-left:2px solid #697f86}.unit-pta .cover-message{font-weight:500}.unit-pta .page h2{line-height:1.65}.parents .page h2{font-size:25px}.parents .page p{font-size:16px;line-height:1.9}.parents .cover{border-top-width:5px}.parents .cover h1{font-size:28px}.parents .cover .series{margin:0 0 14px}.parents .parent-cover-intro{font-size:17px}.parents .page .note{font-size:13px;line-height:1.65}.parents .page table{font-size:14px}.parents .page .sources{font-size:12px}.parents .qr-layout p{font-size:12px;line-height:1.6}.parents .page .plain-principle{font-size:14px;border-left:3px solid #53666e;padding-left:10px}
+@media screen and (max-width:900px){.page{width:calc(100% - 32px);min-height:0;margin:16px;padding:28px}.page .boundary{grid-template-columns:1fr}.cover .cover-message{margin:50px 0}.cover .cover-meta{margin-top:40px}.page .diagram svg{max-width:320px}.page .diagram .svg-single{max-width:320px}}
+@media screen and (max-width:700px){.page{width:100%;margin:0;padding:24px 20px;border-left:0;border-right:0;border-bottom:4px solid #e9eceb}.page h2{font-size:22px}.cover h1{font-size:29px}.cover .audience{font-size:22px}.cover .cover-message{font-size:21px}.running{flex-direction:column;gap:4px}.page-footer{font-size:10px}.page .two-routes{grid-template-columns:1fr}.page .two-routes>div+div{border-left:0;padding-left:0;border-top:1px solid #bac4c9;padding-top:15px}.page .responsive tbody th:first-child{width:100%}.page .separate-processes{grid-template-columns:1fr}.page .qr-layout{grid-template-columns:1fr}.page .diagram{padding:14px 8px}.page .diagram .equation{font-size:16px!important}.page .responsive tbody td::before{content:attr(data-label)'：'}.page .responsive tbody td[data-label='']::before{content:''}}
+
+@media print{body{background:white;font-size:10pt;line-height:1.65}main{padding:0;margin:0}.page{width:180mm;min-height:266mm;height:auto;margin:0;padding:0;border:0;break-after:page;box-shadow:none}.page:last-child{break-after:auto}.page-body{flex:1}.page h2{font-size:17pt;margin:0 0 13px;padding-bottom:8px}.page h3{font-size:11.5pt;margin:16px 0 7px}.page p{margin:0 0 9px}.running{font-size:8pt;margin-bottom:12px;padding-bottom:6px;flex-direction:row}.page-footer{font-size:8pt;margin-top:10px;padding-top:7px}.cover .series{margin:15mm 0 12mm;font-size:11pt}.cover h1{font-size:25pt}.cover .audience{font-size:18pt}.cover .cover-message{font-size:18pt;margin:28mm 0 18mm;padding-left:18px}.cover .cover-meta{font-size:10pt;margin-top:20mm}.unit-pta .cover .series{margin:2mm 0 4mm}.unit-pta .cover .cover-message{font-size:16pt;margin:5mm 0 5mm}.unit-pta .cover .cover-meta{margin-top:4mm}.unit-pta .cover table{font-size:9.3pt;line-height:1.5}.lead{font-size:12pt;padding:9px 12px}.page .note{font-size:8.7pt;line-height:1.6;padding:5px 8px}.page table{font-size:9.3pt;line-height:1.55;margin:10px 0 12px}.page th,.page td{padding:6px 8px}.page .core-table th,.page .core-table td{padding:3px 8px}.page caption{font-size:10pt}.page figure{margin:13px 0;break-inside:avoid}.page .diagram{padding:10px 8px}.page .diagram p{font-size:9.7pt}.page .diagram h3{font-size:11pt}.page .diagram svg{max-width:255px}.page .diagram .svg-single{max-width:255px}.page .boundary{grid-template-columns:1fr 80px 1fr;gap:8px}.page .boundary .bridge{font-size:10pt}.page .two-routes{grid-template-columns:1fr 1fr;gap:14px}.page .two-routes>div+div{border-left:1px solid #bac4c9;padding-left:14px}.page .equation{font-size:11.3pt!important}.page .diagram-flow{font-size:9.7pt}.page .method-row{padding:8px 0}.formula-term{display:inline-block;white-space:nowrap}.page .compact-method .result{font-size:11.5pt!important}.page .duo{grid-template-columns:1fr 1fr}.page .duo>div{padding:10px 12px 0}.page .duo ol{font-size:9.7pt}.page .duo li{margin-bottom:8px}.page .separate-processes{grid-template-columns:1fr 1fr}.page .separate-processes dt{font-size:10.5pt}.page .separate-processes dd{font-size:9.7pt;line-height:1.55}.page .separate-processes>div{padding:9px}.page .ref{font-size:8pt}.page figcaption{font-size:8.6pt;line-height:1.6;margin:8px 0}.page .faq dt{font-size:10.5pt;margin-top:14px}.page .faq dd{font-size:10pt}.page .sources{font-size:8.7pt;line-height:1.55}.school-leaders .page:last-child .sources,.federation .page:last-child .sources,.unit-pta .page:last-child .sources{columns:2;column-gap:18px}.page .sources .url{font-size:8pt}.page .sources li{padding:6px 0}.page .inspection small{font-size:inherit}.page .sources strong{font-size:9.5pt}.qr-layout{grid-template-columns:32mm 1fr;gap:12px}.qr-layout p{font-size:9pt}.qr-placeholder{font-size:8pt}.qr-section{break-inside:avoid;margin-top:14px}.qr-section h3{margin-top:10px}#master-reference h3{margin-top:10px;margin-bottom:5px}.support-flow li{padding-top:11px;padding-bottom:11px}h2,h3,caption{break-after:avoid}tr,.principle,.evidence,.method-row{break-inside:avoid}p{orphans:3;widows:3}.parents .page h2{font-size:17pt}.parents .page p{font-size:10.7pt;line-height:1.75}.parents .cover h1{font-size:22pt}.parents .page .note{font-size:8.7pt}.parents .page .plain-principle{font-size:9.7pt}.parents .page table{font-size:9.7pt}.parents .qr-layout p{font-size:8.7pt}.parents .cover .series{margin:0 0 14px}.page .responsive thead{display:table-header-group}.page .responsive tbody tr{display:table-row;border:0;padding:0}.page .responsive tbody th,.page .responsive tbody td{display:table-cell;border:1px solid #bac4c9;padding:6px 8px}.page .responsive tbody th:first-child{width:25%}.page .responsive tbody td::before{content:none}.page .inspection tbody th:first-child{width:29%}.page .parents .responsive tbody th:first-child{width:25%}.screen-only{display:none}}
+@page{
+ size:A4 portrait;margin:15mm;
+ @top-left{content:"PTA実務移行キット｜保護者向け";font-family:"Noto Sans CJK JP","Yu Gothic",Meiryo,sans-serif;font-size:8pt;color:#333;vertical-align:middle}
+ @top-right{content:"Audience prototype v0.1";font-family:sans-serif;font-size:8pt;color:#333;vertical-align:middle}
+ @bottom-left{content:"PTA適正化推進委員会｜2026年10月4日｜Based on Master v0.3.1";font-family:"Noto Sans CJK JP","Yu Gothic",Meiryo,sans-serif;font-size:8pt;color:#333;vertical-align:middle}
+ @bottom-right{content:counter(page) " / " counter(pages);font-family:sans-serif;font-size:8pt;color:#333;vertical-align:middle}
+}
+
+/* A4印刷レイアウト監査 release v0.2 (2026-10-04)
+   Audience prototype v0.1 / Based on Master v0.3.1 は維持。
+   現環境に既存Chromium実行ファイルがなく、実印刷プレビュー未確認。
+   A4縦・倍率100%を想定。ブラウザ標準のURL・日時ヘッダーはオフ。
+   下記余白内のヘッダー・ページ番号はCSSページ余白ボックスで指定。
+   実際のページ数・分断・余白ボックス対応は利用環境で要表示確認。
+   固定高さやoverflowによる本文の切捨て、PDF・実QR生成は行わない。 */
+@media print{
+ :root{--ink:#111;--muted:#333;--accent:#222;--rule:#777;--wash:#f4f4f4}
+ /* 固定ページ枠を通常の文書フローへ戻し、追加の断片が必要でも本文を残す。 */
+ main>.page{display:block;width:auto;min-height:0;height:auto;margin:0;padding:0;
+  break-before:auto;break-after:auto;break-inside:auto;
+  page-break-before:auto;page-break-after:auto;page-break-inside:auto;overflow:visible}
+ main>.page+.page{break-before:page;page-break-before:always}
+ main>.page:last-child{break-after:auto;page-break-after:auto}
+ .page-body{display:block;flex:none;min-height:0;overflow:visible}
+ /* 画面用の静的節番号は印刷せず、余白ボックスの実ページ番号を使う。 */
+ .page>.running,.page>.page-footer{display:none}
+ .page h1,.page h2,.page h3,.page caption,.page .basis-label{
+  break-after:avoid;page-break-after:avoid;break-inside:avoid;page-break-inside:avoid}
+ .page p{orphans:3;widows:3}
+ .page li{orphans:2;widows:2}
+ .page figure,.page #fig2,.page .duo,.page .separate-processes{
+  break-inside:avoid;page-break-inside:avoid}
+ .page figcaption{break-before:avoid;page-break-before:avoid}
+ /* 長い一般表は行単位で継続可能。短い配布用様式・点検票は表全体を保持。 */
+ .page table{break-inside:auto;page-break-inside:auto}
+ .page table.inspection,.page table.write-table,.page table.form-fields{
+  break-inside:avoid;page-break-inside:avoid}
+ .page thead{display:table-header-group;break-after:avoid;page-break-after:avoid}
+ .page tfoot{display:table-footer-group}
+ .page tr,.page .inspection tr,.page .method-row,.page .principle,.page .evidence,
+ .page .template>ol>li,.page .support-flow>li,.page .sources>li{
+  break-inside:avoid;page-break-inside:avoid}
+ .page .faq-pair{break-inside:avoid;page-break-inside:avoid}
+ .page .faq dt{break-after:avoid;page-break-after:avoid}
+ .page .faq dd{break-before:avoid;page-break-before:avoid}
+ /* 最終ページのQR予定欄は説明・URL欄と一体で扱う。実QRは未生成。 */
+ .page .qr-section{break-inside:avoid;page-break-inside:avoid;margin-top:12px}
+ .page .qr-section h3{margin-top:0;break-after:avoid;page-break-after:avoid}
+ .page .qr-layout{break-inside:avoid;page-break-inside:avoid}
+ .page .qr-placeholder{width:28mm;height:28mm;border:1px dashed #444;background:#fff}
+ .page .url-placeholder{margin-bottom:6px;padding-bottom:6px}
+ .page .qr-layout p:last-child{margin-bottom:0}
+ /* 白黒では見出し語、線種、線幅で用途を区別する。 */
+ .page,.page a{color:#111}
+ .page .note{color:#333;background:#fff;border-left-color:#555}
+ .page .principle,.page .policy{background:#f7f7f7;border-left-color:#222}
+ .page .law{border-top:3px double #222}
+ .page th{background:#f4f4f4}
+ .page th,.page td,.page .two-routes>div+div{border-color:#777}
+ .page .tracking-check th{border-left:4px solid #222}
+ .page .tracking-check th,.page .tracking-check td{border-top:2px solid #222}
+ .page .diagram,.page .duo,.page .compact-method .result{border-color:#555}
+ .page .support-flow li{border-color:#555}
+}
+</style>
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://ptaorg.com/assets/kit/audience-prototypes-v0.2-20261004/pta-kit-parents.html">
+</head><body class="parents"><main><article class="page cover" id="page-1"><div class="running"><span>PTA実務移行キット｜保護者向け</span><span>Audience v0.1 ／ Master v0.3.1</span></div><div class="page-body"><p class="series">PTA適正化推進委員会　シリーズ資料</p><h1>PTA実務移行キット<br>保護者向け</h1><p>Audience prototype v0.1 ／ Based on Master v0.3.1</p><p class="lead">PTAに入りたい人が、PTAへ直接申し込みます。</p><p>この資料は、任意加入、会員情報の管理、会費の集め方を説明する<strong>配布文の編集用プロトタイプ</strong>です。〔学校名〕・〔PTA名〕で変更が決定したことを示すものではありません。実際に使うときは、決定内容・日付・条件を記入してください。</p><h3>この資料で分かること</h3><p>PTAと学校の違い、希望する場合の申込み、会費と情報の扱い、問い合わせ先を説明します。</p><figure class="diagram"><h3>入学の手続と、PTAへの申込みは別です</h3><div class="two-routes"><div><strong>学校</strong><p>入学・学校の書類提出<br>↓<br>学校教育に必要な情報・連絡</p></div><div><strong>PTA</strong><p>加入を希望する人<br>↓<br>PTAへ直接申込み<br>↓<br>PTAが承諾<br>↓<br>加入した会員として登録</p></div></div><figcaption>学校の情報からPTA会員を作りません。希望者の申込みとPTAの承諾から登録します。Master 第3・4章から派生。</figcaption></figure><p><strong>加入を希望しない方は、申込みや非加入届の提出は必要ありません。</strong>PTAは加入した会員の情報を管理します。「加入しなかった人」の名簿は作りません。加入しない理由を回答していただく必要もありません。</p><p>無回答、沈黙、入学・在籍、学校への書類提出を加入扱いにしません。全員に加入・非加入の回答を求めず、申込みのない人を追跡しません。</p><p>学校とPTAは別の団体です。必要な活動では、適切な手続を整えて協力できます。</p></div><div class="page-footer"><span>PTA適正化推進委員会｜2026年10月4日</span><span>1 / 3</span></div></article><article class="page" id="page-2"><div class="running"><span>PTA実務移行キット｜保護者向け</span><span>Audience v0.1 ／ Master v0.3.1</span></div><div class="page-body"><h2>希望する場合に、確認して申し込む</h2><p><strong>入学しただけでは、PTAへの加入にはなりません。</strong>加入を希望する方は、活動内容、会則、会費、加入期間、退会方法を確認し、PTAへ直接お申し込みください。紙、〔Web・メール等の用意した方法〕から選べます。PTAが加入を承諾し、その通知をお送りします。学校へ出す書類や、学校連絡のための登録とは別の手続です。</p><p><strong>PTAへの加入・非加入によって、子どもの学校教育上の取扱いは変わりません。</strong>学校教育に必要な連絡は全家庭へ届きます。学校教育の手続にPTA加入状況を持ち込みません。PTAの独自の催しかどうかは、名前だけでなく、誰が実施し、誰が参加するか、学校行事との関係や費用などの実態で区別します。学校教育の活動を名前だけ「PTA行事」に変える扱いにはせず、独自の催しは参加方法や費用を別に案内します。</p><table class="responsive "><caption>配布時に確定する案内</caption><thead><tr><th scope="col">項目</th><th scope="col">決定した条件・申込先</th></tr></thead><tbody><tr><th scope="row">団体・会則</th><td data-label="決定した条件・申込先">PTA名〔　　　　　　〕／学校名〔　　　　　　〕<br>活動・会則の版／入手先〔　　　　　　　　　〕</td></tr><tr><th scope="row">期間・会費</th><td data-label="決定した条件・申込先">加入期間・更新〔　　　　　　　　　〕<br>会費〔　　　円〕／単位〔個人・世帯等〕</td></tr><tr><th scope="row">申込み・承諾</th><td data-label="決定した条件・申込先">申込開始日〔　　　　　　〕<br>直接申込先〔紙・Web・メール等　　　　　　〕<br>PTAの承諾通知方法〔　　　　　　　　　〕</td></tr><tr><th scope="row">支払・退会</th><td data-label="決定した条件・申込先">支払方法・期限／代替方法〔　　　　　　　　〕<br>途中加入・退会・返金の条件〔　　　　　　　　〕</td></tr></tbody></table><p>会費はPTAが会員へ案内し、PTAが集めます。会費の金額、対象期間、退会・返金の条件を申し込む前に確認してください。支払方法の登録だけで加入になるものではありません。</p><p>PTAは必要な会員情報を本人から受け取って管理します。学校の保護者名簿をPTA会員台帳として使いません。情報の使いみち、保存期間、訂正等の窓口は、PTAが確定した「PTA会員情報の取扱いについて」で確認できます。</p><p class="plain-principle">学校から情報をPTAへ渡すかどうかは、学校側で業務・目的・必要性などを確認する別の処理です。一つの同意や署名で、加入・情報取扱い・支払・学校からの提供をまとめて代わりにしません。</p><p class="plain-principle">保護者の同意や委任状、PTAからの依頼だけで、学校に新しい権限や教職員の仕事が生まれるわけではありません。</p></div><div class="page-footer"><span>PTA適正化推進委員会｜2026年10月4日</span><span>2 / 3</span></div></article><article class="page" id="page-3"><div class="running"><span>PTA実務移行キット｜保護者向け</span><span>Audience v0.1 ／ Master v0.3.1</span></div><div class="page-body"><h2>問い合わせ先と、明日できること</h2><p>現在のPTAへの加入・退会・会費・PTAが持つ情報については、下記のPTA窓口へご連絡ください。退会理由の記載は求めません。退会後の請求停止や返金は、事前に示す条件に従いPTAが処理します。</p><p>学校が行った徴収、学校が持つ情報の利用・提供、教職員が行った処理については、学校又は教育委員会の窓口へお問い合わせください。過去の会費についても、誰が行った処理かに応じて窓口を分け、PTAに学校側の説明責任を負わせません。</p><table class="responsive "><caption>内容ごとに窓口を分けます</caption><thead><tr><th scope="col">内容</th><th scope="col">問い合わせ先</th></tr></thead><tbody><tr><th scope="row">PTAの現在の加入・退会・会費・PTA保有情報</th><td data-label="問い合わせ先">〔PTA担当・連絡先・紙で連絡する方法〕<br><span class="write-line">　　　　　　　　　　　　　　</span></td></tr><tr><th scope="row">学校が行った徴収・学校保有情報の利用提供・教職員の処理・学校教育上の取扱い</th><td data-label="問い合わせ先">〔学校又は教育委員会担当・連絡先〕<br><span class="write-line">　　　　　　　　　　　　　　</span></td></tr></tbody></table><h3>明日から何をするか</h3><p>加入を希望する場合は、活動・会則・会費・期間・退会・情報取扱いを確認し、PTAへ直接申し込みます。希望しない場合は非加入届を出す必要はありません。分からない処理は、上の内容別窓口へ問い合わせます。</p><h3>主要根拠と共通正本</h3><div id="master-reference"><p class="note">Master v0.3.1 第3～7章・実務ひな形集の保護者説明が編集元です。加入の基本は民法第521・522条（S03）、情報の扱いは個人情報保護法とPPC 2026年3月資料（S06・S07）。自己徴収・非会員一覧を作らない構成は本キットの実務設計です。</p><ul class="sources"><li>民法：<a href="https://laws.e-gov.go.jp/law/129AC0000000089">https://laws.e-gov.go.jp/law/129AC0000000089</a></li><li>個人情報保護法：<a href="https://laws.e-gov.go.jp/law/415AC0000000057">https://laws.e-gov.go.jp/law/415AC0000000057</a></li><li>PPC資料：<a href="https://www.ppc.go.jp/files/pdf/202603_school_pta_pd_point.pdf">https://www.ppc.go.jp/files/pdf/202603_school_pta_pd_point.pdf</a></li></ul></div><section class="qr-section"><h3>最新版・一次資料・更新履歴</h3><div class="qr-layout"><div class="qr-placeholder" aria-label="QRコード配置予定領域">QRコード<br>公開URL確定後に配置</div><div><p>公開先は将来のptaorg.com配下の安定した固定URLです。現時点では未確定です。</p><p class="url-placeholder">固定URL文字列：〔公開URL確定後に併記〕</p><p class="note">1冊1個、25～30mm角以上・余白・白黒対応を想定。第三者短縮URL・動的QRサービスは使いません。実QRは未生成です。</p></div></div></section></div><div class="page-footer"><span>PTA適正化推進委員会｜2026年10月4日</span><span>3 / 3</span></div></article></main></body></html>

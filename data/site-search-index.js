@@ -4176,6 +4176,36 @@ window.PTA_SITE_SEARCH_INDEX = [
     "current-canonical"
   ],
   [
+    "PTA実務移行キット｜教育委員会向け",
+    "/kit/education-board/",
+    "学校側のPTA関係処理を点検し、学校とPTAの境界を整理するための実務資料です。Audience prototype v0.1 / Based on Master v0.3.1。最新版HTML・根拠・更新履歴への恒久入口。",
+    "audience-guide"
+  ],
+  [
+    "PTA実務移行キット｜PTA連合会向け",
+    "/kit/federation/",
+    "加盟PTAが学校依存型から自立運営型へ移行できるよう、標準モデル・様式・支援方法を整理した資料です。Audience prototype v0.1 / Based on Master v0.3.1。最新版HTML・根拠・更新履歴への恒久入口。",
+    "audience-guide"
+  ],
+  [
+    "PTA実務移行キット｜保護者向け",
+    "/kit/parents/",
+    "学校への入学とPTA加入の違い、加入申込み、会費、個人情報、問い合わせ先を簡潔に確認できる資料です。Audience prototype v0.1 / Based on Master v0.3.1。最新版HTML・根拠・更新履歴への恒久入口。",
+    "audience-guide"
+  ],
+  [
+    "PTA実務移行キット｜校長会・学校管理職向け",
+    "/kit/school-leaders/",
+    "学校が現在行っているPTA関係処理を棚卸しし、学校業務とPTA内部事務を切り分けるための実務資料です。Audience prototype v0.1 / Based on Master v0.3.1。最新版HTML・根拠・更新履歴への恒久入口。",
+    "audience-guide"
+  ],
+  [
+    "PTA実務移行キット｜単位PTA向け",
+    "/kit/unit-pta/",
+    "PTA自身が加入受付、会員管理、会費徴収、役員選出を行える運営へ移行するための実務資料です。Audience prototype v0.1 / Based on Master v0.3.1。最新版HTML・根拠・更新履歴への恒久入口。",
+    "audience-guide"
+  ],
+  [
     "久留米市28答申第2号｜学校からPTAへの個人情報提供・利用停止請求",
     "/kurume-28-toushin2-pta-personal-information.html",
     "久留米市情報公開・個人情報保護審査会28答申第2号（2016年7月15日）を、学校からPTAへの個人情報提供、提供停止・利用停止請求、教育委員会の是正通知、運用変更、審査会判断の順に一次資料ベースで整理します。",

@@ -39,3 +39,19 @@
 6. 台帳の次段階では、個人情報、会費徴収、教職員関与、学校施設、教育委員会回答、全国資料館へ同じ分類を拡張する。
 
 最終更新: 2026-09-20
+
+## PTA実務移行キットの恒久資料入口
+
+| URL | 対象読者 | 区分 | 役割・検索 |
+|---|---|---|---|
+| `/kit/education-board/` | 教育委員会向け | audience-guide | 恒久入口（index） |
+| `/kit/school-leaders/` | 校長会・学校管理職向け | audience-guide | 恒久入口（index） |
+| `/kit/federation/` | PTA連合会向け | audience-guide | 恒久入口（index） |
+| `/kit/unit-pta/` | 単位PTA向け | audience-guide | 恒久入口（index） |
+| `/kit/parents/` | 保護者向け | audience-guide | 恒久入口（index） |
+
+5URLはキットの最新版HTML・配布資料・根拠・更新履歴への恒久入口です。既存の解説ページを置き換えません。一度印刷物に使用した入口は削除・別用途へ転用せず、改訂時は版を固定した成果物へのリンクと履歴を更新します。移転が必要でも旧URLから同じ読者向け入口への到達を維持します。
+
+初回公開資料は **Audience prototype v0.1 / Based on Master v0.3.1**。`audience-prototypes v0.2` はA4印刷レイアウトを調整した配布パッケージの版であり、資料本文の正式版番号にはしません。成果物は `assets/kit/audience-prototypes-v0.2-20261004/` にまとめて保存します。本文・図・CSSは基準ZIPと同一とし、HTMLのheadに公開用robots（noindex, follow）・自己canonicalだけを追加しています。Markdown・CSVは同一バイトです。
+
+`/assets/kit/` はsource-archiveとして検索・sitemapから除外し、検索の入口を5つの恒久ページに集約します。旧版の成果物を新しい内容で黙って上書きしません。PDFとQRは未作成です。
