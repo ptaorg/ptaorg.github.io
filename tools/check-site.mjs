@@ -1,7 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { execSync } from "node:child_process";
-import { runAudit } from "./audit-site.mjs";
+import YAML from "yaml";
+import { runAudit, publicationFilter } from "./audit-site.mjs";
 
 const root = process.cwd();
 const errors = [];
@@ -280,6 +281,15 @@ function checkInternalFragments() {
 function checkInternalRefs() {
   const tracked = trackedFiles();
   const trackedLower = new Map([...tracked].map((file) => [file.toLowerCase(), file]));
+  const publishable = publicationFilter(YAML.parse(read("_config.yml")) || {});
+  const jekyllMarkdownSource = (ref) => {
+    if (!/\.html?$/i.test(ref)) return null;
+    for (const ext of [".md", ".markdown"]) {
+      const source = ref.replace(/\.html?$/i, ext);
+      if (tracked.has(source) && publishable(source)) return source;
+    }
+    return null;
+  };
   const scanFiles = walk().filter((file) => {
     if (!/\.(html|css|js|xml|json|webmanifest)$/i.test(file)) return false;
     if (/^(scripts|tools)\//.test(file)) return false;
@@ -304,7 +314,7 @@ function checkInternalRefs() {
         if (pattern === patterns[1] && /\.js$/i.test(file) && /\bnew\s+$/i.test(text.slice(0, match.index))) continue;
         const ref = normalizeInternalRef(match[1], file);
         if (!ref) continue;
-        if (tracked.has(ref) || tracked.has(`${ref}/index.html`)) continue;
+        if (tracked.has(ref) || tracked.has(`${ref}/index.html`) || jekyllMarkdownSource(ref)) continue;
         const exact = trackedLower.get(ref.toLowerCase());
         const bucket = exact ? caseMismatches : missing;
         const key = exact ? `${ref} -> ${exact}` : ref;
