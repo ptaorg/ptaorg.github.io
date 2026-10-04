@@ -86,9 +86,12 @@ function sourceFindingRef(taskId, findingId) {
 
 function collectMandatoryFindingIndex(workerResults) {
   const index = new Map();
+  const seenRefs = new Set();
   for (const result of workerResults ?? []) for (const finding of result.findings ?? []) {
-    if (!finding.requires_human_approval && !finding.requires_senior_review) continue;
     const ref = sourceFindingRef(result.task_id, finding.id);
+    if (seenRefs.has(ref)) throw new Error(`Duplicate worker finding reference: ${ref}`);
+    seenRefs.add(ref);
+    if (!finding.requires_human_approval && !finding.requires_senior_review) continue;
     index.set(ref, {
       ref,
       task_id: result.task_id,
@@ -104,6 +107,19 @@ function uniqueStrings(values) {
   return [...new Set(values.filter(Boolean))];
 }
 
+export function normalizeJevIssueRoutes(issues, mandatoryFindingIndex = new Map()) {
+  for (const issue of issues ?? []) {
+    const risk = classifyRisk(`${issue.title}\n${issue.summary}\n${issue.recommended_action}`);
+    const inherited = (issue.source_finding_refs ?? []).map((ref) => mandatoryFindingIndex.get(ref)).filter(Boolean);
+    const inheritedHuman = inherited.some((item) => item.human_required);
+    const inheritedSenior = inherited.some((item) => item.senior_required);
+    if (issue.route === "human" || risk.requiresHumanApproval || inheritedHuman) issue.route = "human";
+    else if (inheritedSenior) issue.route = "senior";
+    else if ((risk.requiresSeniorReview || issue.confidence < 0.9 || issue.risk >= 2 || issue.severity >= 2) && issue.route === "complete") issue.route = "senior";
+  }
+  return issues;
+}
+
 export function buildSeniorReviewPacket(issues, workerResults) {
   const mandatory = collectMandatoryFindingIndex(workerResults);
   const coveredMandatoryRefs = new Set();
@@ -111,11 +127,15 @@ export function buildSeniorReviewPacket(issues, workerResults) {
   let jevIndex = 0;
 
   for (const issue of issues ?? []) {
-    const refs = Array.isArray(issue.source_finding_refs) ? issue.source_finding_refs : [];
+    const refs = uniqueStrings(Array.isArray(issue.source_finding_refs) ? issue.source_finding_refs : []);
     const inherited = refs.map((ref) => mandatory.get(ref)).filter(Boolean);
     const shouldReview = issue.route === "senior" || issue.route === "human" || inherited.length > 0;
     if (!shouldReview) continue;
-    for (const item of inherited) coveredMandatoryRefs.add(item.ref);
+    // A model-provided ref identifies content to copy; it does not prove coverage.
+    const findings = inherited.map((item) => item.finding);
+    const severity = Math.max(issue.severity, ...findings.map((finding) => finding.severity));
+    const risk = Math.max(issue.risk, ...findings.map((finding) => finding.risk));
+    const confidence = Math.min(issue.confidence, ...findings.map((finding) => finding.confidence));
 
     const humanRequired = issue.route === "human" || inherited.some((item) => item.human_required);
     const reviewReasons = [];
@@ -123,26 +143,29 @@ export function buildSeniorReviewPacket(issues, workerResults) {
     else if (issue.route === "senior") reviewReasons.push("jev_senior");
     if (inherited.some((item) => item.human_required)) reviewReasons.push("worker_human");
     if (inherited.some((item) => item.senior_required && !item.human_required)) reviewReasons.push("worker_senior");
-    if (issue.confidence < 0.9) reviewReasons.push("low_confidence");
-    if (issue.risk >= 2) reviewReasons.push("high_risk");
-    if (issue.severity >= 2) reviewReasons.push("material_severity");
+    if (confidence < 0.9) reviewReasons.push("low_confidence");
+    if (risk >= 2) reviewReasons.push("high_risk");
+    if (severity >= 2) reviewReasons.push("material_severity");
 
     jevIndex += 1;
     packet.push({
       issue_id: `JEV-${String(jevIndex).padStart(3, "0")}`,
       title: issue.title,
-      summary: issue.summary,
-      evidence: issue.evidence,
-      severity: issue.severity,
-      risk: issue.risk,
-      confidence: issue.confidence,
-      source_task_ids: issue.source_task_ids,
-      recommended_action: issue.recommended_action,
+      summary: uniqueStrings([issue.summary, ...findings.map((finding) => finding.finding)]).join(" | "),
+      evidence: uniqueStrings([...(issue.evidence ?? []), ...findings.flatMap((finding) =>
+        (finding.evidence ?? []).map((entry) => `${entry.path}: ${entry.detail}`)
+      )]),
+      severity,
+      risk,
+      confidence,
+      source_task_ids: uniqueStrings([...(issue.source_task_ids ?? []), ...inherited.map((item) => item.task_id)]),
+      recommended_action: uniqueStrings([issue.recommended_action, ...findings.map((finding) => finding.recommended_action)]).join(" | "),
       gates: {
         human_required: humanRequired,
         review_reasons: uniqueStrings(reviewReasons)
       }
     });
+    for (const item of inherited) coveredMandatoryRefs.add(item.ref);
   }
 
   const fallbackByTask = new Map();
@@ -276,7 +299,10 @@ async function runPipeline({ task, scope, workers, config, apiKey, vault }) {
   });
 
   const workerCalls = workerResponses.map((response) => response.data);
+  // Reject ID collisions before content deduplication can hide an invalid worker result.
+  collectMandatoryFindingIndex(workerCalls);
   const compactWorkers = prefilterWorkerResults(workerCalls);
+  const mandatoryFindingIndex = collectMandatoryFindingIndex(compactWorkers);
   const jevWorkerResults = compactWorkers.map((result) => ({
     ...result,
     findings: (result.findings ?? []).map((finding) => ({
@@ -316,16 +342,7 @@ async function runPipeline({ task, scope, workers, config, apiKey, vault }) {
     schema: jevSchema, schemaName: "jev_triage", maxOutputTokens: config.limits.maxJevOutputTokens, store: config.runtime.storeResponses
   });
 
-  const mandatoryFindingIndex = collectMandatoryFindingIndex(compactWorkers);
-  for (const issue of jev.data.issues) {
-    const risk = classifyRisk(`${issue.title}\n${issue.summary}\n${issue.recommended_action}`);
-    const inherited = (issue.source_finding_refs ?? []).map((ref) => mandatoryFindingIndex.get(ref)).filter(Boolean);
-    const inheritedHuman = inherited.some((item) => item.human_required);
-    const inheritedSenior = inherited.some((item) => item.senior_required);
-    if (risk.requiresHumanApproval || inheritedHuman) issue.route = "human";
-    else if (inheritedSenior) issue.route = "senior";
-    else if ((risk.requiresSeniorReview || issue.confidence < 0.9 || issue.risk >= 2 || issue.severity >= 2) && issue.route === "complete") issue.route = "senior";
-  }
+  normalizeJevIssueRoutes(jev.data.issues, mandatoryFindingIndex);
 
   const seniorInput = buildSeniorReviewPacket(jev.data.issues, compactWorkers);
   let senior = { data: { summary: "No senior review required.", reviewed: [] } };
