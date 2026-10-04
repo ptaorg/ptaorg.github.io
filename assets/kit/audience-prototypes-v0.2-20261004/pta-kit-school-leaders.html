@@ -176,6 +176,242 @@ html{scroll-behavior:auto}body{background:#e9eceb;font-size:16px;line-height:1.8
  .page .diagram,.page .duo,.page .compact-method .result{border-color:#555}
  .page .support-flow li{border-color:#555}
 }
+
+
+/* Audience visual redesign v0.3
+   Content, legal reasoning, figures and QR payloads are unchanged.
+   The visual language follows the earlier opt-in explainer: one clear idea per page,
+   stronger hierarchy, generous whitespace, and reader-specific emphasis. */
+body{
+  --theme:#244b5b;--theme-deep:#173844;--theme-soft:#edf3f5;--theme-faint:#f7f9fa;
+  --theme-line:#aebdc4;--paper:#fff;--ink2:#1a2831;--muted2:#66747c;
+  color:var(--ink2);background:#e6eaeb;font-family:"Noto Sans CJK JP","Yu Gothic",Meiryo,sans-serif;
+}
+body.education-board{--theme:#173f63;--theme-deep:#102f4d;--theme-soft:#edf3f8;--theme-faint:#f7fafc;--theme-line:#a9bccb}
+body.school-leaders{--theme:#315548;--theme-deep:#233f36;--theme-soft:#eef4f0;--theme-faint:#f8faf8;--theme-line:#adbbb4}
+body.federation{--theme:#1f6260;--theme-deep:#164847;--theme-soft:#eaf5f4;--theme-faint:#f7fbfa;--theme-line:#a8c1bf}
+body.unit-pta{--theme:#9a5036;--theme-deep:#6f3725;--theme-soft:#f8eee9;--theme-faint:#fcf8f5;--theme-line:#ceb7ad}
+body.parents{--theme:#28627c;--theme-deep:#1d485b;--theme-soft:#edf6f9;--theme-faint:#f8fbfc;--theme-line:#aec8d3}
+
+.page{
+  border:0;background:var(--paper);box-shadow:0 12px 34px rgba(23,39,48,.10);
+  padding:17mm 18mm 16mm;
+}
+.running{
+  border:0;border-bottom:1px solid var(--theme-line);padding:0 0 7px;margin-bottom:20px;
+  color:var(--muted2);letter-spacing:.025em;
+}
+.page-footer{border-color:var(--theme-line);color:var(--muted2)}
+.page h2{
+  border:0;padding:0 0 12px 16px;margin-bottom:24px;position:relative;
+  font-size:26px;line-height:1.45;letter-spacing:.01em;color:var(--theme-deep);
+}
+.page h2::before{
+  content:"";position:absolute;left:0;top:.15em;width:5px;height:1.45em;background:var(--theme);
+}
+.page h2::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--theme-line);
+}
+.page h3{color:var(--theme-deep);font-size:18px;line-height:1.55}
+.page p{line-height:1.85}
+.page a{color:var(--theme-deep);text-decoration-thickness:1px}
+
+.cover{
+  border:0;overflow:hidden;position:relative;
+  background:
+    linear-gradient(135deg,var(--paper) 0 68%,var(--theme-soft) 68% 100%);
+}
+.cover::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:7px;background:var(--theme);
+}
+.cover .running{border-bottom-color:var(--theme-line)}
+.cover .series{
+  margin:8mm 0 8mm;color:var(--theme);font-size:12px;font-weight:700;
+  letter-spacing:.18em;
+}
+.cover h1{
+  font-size:43px;line-height:1.28;letter-spacing:-.025em;color:var(--theme-deep);
+  margin:0 0 12px;font-weight:800;
+}
+.cover .audience{
+  display:inline-block;margin:0 0 10px;padding:5px 10px;border:1px solid var(--theme);
+  color:var(--theme-deep);font-size:19px;font-weight:700;letter-spacing:.02em;background:rgba(255,255,255,.78);
+}
+.cover .audience + p,
+.cover h1 + p:not(.audience){
+  color:var(--muted2);font-size:11px;line-height:1.55;letter-spacing:.04em;
+}
+.cover .cover-message{
+  border:0;background:none;padding:0;margin:18mm 0 12mm;max-width:88%;
+  color:var(--theme-deep);font-size:29px;line-height:1.6;font-weight:800;letter-spacing:-.012em;
+}
+.cover .cover-message::after{
+  content:"";display:block;width:54px;height:4px;margin-top:16px;background:var(--theme);
+}
+.cover .cover-meta{
+  margin-top:12mm;padding-top:10px;border-top:1px solid var(--theme-line);
+  color:var(--muted2);font-size:12px;line-height:1.75;
+}
+
+.lead{
+  border:0;background:var(--theme-soft);padding:15px 17px;margin:18px 0 22px;
+  color:var(--theme-deep);font-size:19px;line-height:1.75;font-weight:750;
+}
+.principle{
+  border:0;border-top:3px solid var(--theme);background:var(--theme-faint);
+  padding:15px 17px;margin:22px 0;
+}
+.note{
+  border:0;border-left:3px solid var(--theme-line);background:var(--theme-faint);
+  padding:9px 12px;color:#4f5e65;
+}
+.evidence,.law{border-color:var(--theme-line)}
+.policy{border-left-color:var(--theme);background:var(--theme-faint)}
+
+.page table{
+  border-collapse:separate;border-spacing:0;border-top:2px solid var(--theme);
+  border-bottom:1px solid var(--theme-line);background:#fff;
+}
+.page th,.page td{
+  border:0;border-bottom:1px solid #d8dfe2;padding:9px 11px;
+}
+.page thead th{
+  background:var(--theme-soft);color:var(--theme-deep);font-weight:750;
+}
+.page tbody th{background:var(--theme-faint);color:var(--theme-deep)}
+.page tbody tr:last-child th,.page tbody tr:last-child td{border-bottom:0}
+
+.diagram{
+  border:0;background:var(--theme-faint);padding:20px 18px;border-radius:12px;
+}
+.diagram h3{font-size:18px;color:var(--theme-deep)}
+.diagram svg{color:var(--theme-deep)}
+.diagram svg rect,.diagram svg path,.diagram svg line{stroke:var(--theme-deep)}
+.diagram-flow li{
+  border:1px solid var(--theme-line);background:#fff;border-radius:8px;padding:10px 8px;
+}
+.diagram-flow li+li::before{color:var(--theme);background:var(--theme-faint)}
+.diagram .result{
+  border-top:0;border-left:4px solid var(--theme);background:#fff;
+  padding:11px 13px;margin-top:14px;color:var(--theme-deep);
+}
+.two-routes>div+div{border-left-color:var(--theme-line)}
+.method-comparison{border-top-color:var(--theme-line)}
+.method-row{border-bottom-color:var(--theme-line)}
+.separate-processes{border-color:var(--theme-line)}
+.separate-processes>div{border-color:var(--theme-line);background:#fff}
+#fig2 .diagram>.result:first-child{
+  border-bottom-color:var(--theme)!important;color:var(--theme-deep);
+}
+
+.faq dt{
+  color:var(--theme-deep);border-top:1px solid var(--theme-line);padding-top:14px;
+}
+.support-flow li{border-top-color:var(--theme-line)}
+.support-flow li::before{color:var(--theme);font-weight:800}
+.handoff>div{border-top-color:var(--theme)}
+
+.qr-section{
+  margin-top:28px;padding-top:18px;border-top:2px solid var(--theme);
+}
+.qr-section h3{margin-top:0}
+.qr-layout{grid-template-columns:34mm 1fr;gap:18px;align-items:center}
+.qr-code{
+  width:28mm;height:28mm;background:#fff;padding:1.5mm;border:1px solid var(--theme-line);
+  border-radius:8px;
+}
+.url-placeholder{
+  border:0;background:var(--theme-soft);padding:7px 10px;border-radius:6px;
+  font-weight:700;
+}
+
+/* Reader-specific personality */
+.education-board .cover h1,.education-board .cover-message{max-width:82%}
+.education-board .page h2{font-weight:800}
+.education-board .law{border-top:4px double var(--theme)}
+.education-board .basis-label{color:var(--theme)}
+
+.school-leaders .decision{
+  background:var(--theme-soft);border-left:5px solid var(--theme);padding:11px 14px;
+  color:var(--theme-deep);font-size:19px!important;
+}
+.school-leaders .inspection caption{color:var(--theme-deep);font-size:17px}
+.school-leaders .tracking-check th,
+.school-leaders .tracking-check td{border-top-color:var(--theme)!important}
+.school-leaders .tracking-check th{border-left-color:var(--theme)!important}
+
+.federation .support-flow{
+  border-left:2px solid var(--theme-line);margin-left:15px;
+}
+.federation .support-flow li{
+  border-left:0;padding-left:58px;
+}
+.federation .support-flow li::before{
+  width:34px;height:34px;border:2px solid var(--theme);border-radius:50%;
+  display:grid;place-items:center;left:-18px;top:8px;background:#fff;
+}
+.federation .support-flow li+li::after{display:none}
+
+.unit-pta .cover{
+  background:linear-gradient(135deg,#fff 0 64%,var(--theme-soft) 64% 100%);
+}
+.unit-pta .cover .cover-message{font-size:30px;max-width:84%}
+.unit-pta .core-table{margin-top:18px}
+.unit-pta .page h2{font-weight:800}
+.unit-pta .lead{font-size:20px}
+.unit-pta .diagram{padding:22px 20px}
+.unit-pta .page tbody th{background:#fff8f4}
+
+.parents .page{padding:18mm 19mm}
+.parents .cover{background:linear-gradient(140deg,#fff 0 66%,var(--theme-soft) 66% 100%)}
+.parents .cover h1{font-size:39px!important;line-height:1.35}
+.parents .lead{
+  font-size:23px;line-height:1.65;padding:17px 18px;border-radius:10px;
+}
+.parents .page h2{font-size:27px}
+.parents .page p{font-size:17px;line-height:1.95}
+.parents .diagram{padding:22px;border-radius:14px}
+.parents .plain-principle{
+  border:0!important;background:var(--theme-soft);padding:12px 14px!important;
+  font-size:15px!important;font-weight:700;color:var(--theme-deep);
+}
+
+/* Mobile keeps hierarchy but removes "paper on desk" chrome. */
+@media screen and (max-width:700px){
+  body{background:#fff}
+  .page{box-shadow:none;padding:26px 20px;border-bottom:7px solid var(--theme-soft)}
+  .page h2{font-size:23px;padding-left:13px}
+  .cover::before{width:5px}
+  .cover h1{font-size:32px}
+  .cover .cover-message,.unit-pta .cover .cover-message{max-width:100%;font-size:23px;margin:36px 0 26px}
+  .cover .audience{font-size:17px}
+  .diagram{border-radius:8px;padding:16px 11px}
+  .qr-layout{grid-template-columns:1fr;gap:12px}
+  .qr-code{width:31mm;height:31mm}
+  .page table{border-top-width:2px}
+}
+
+/* Print: retain the hierarchy without relying on color or screen effects. */
+@media print{
+  body{background:#fff!important}
+  .page{box-shadow:none!important}
+  .cover{background:#fff!important}
+  .cover::before{width:4px;background:#222}
+  .cover .series,.cover h1,.cover .audience,.cover .cover-message,.page h2,.page h3,
+  .lead,.decision{color:#111!important}
+  .cover .audience{border-color:#555}
+  .cover .cover-message::after{background:#333}
+  .page h2::before{background:#333}
+  .page h2::after,.running,.page-footer{border-color:#aaa}
+  .lead,.principle,.note,.policy,.diagram,.page thead th,.page tbody th,.url-placeholder{
+    background:#f5f5f5!important;
+  }
+  .page table{border-top-color:#444}
+  .diagram,.qr-code{border-color:#aaa}
+  .diagram .result{border-left-color:#444}
+  .qr-code{padding:1mm;border-radius:0}
+}
+
 </style>
 <meta name="robots" content="noindex, follow">
 <link rel="canonical" href="https://ptaorg.com/assets/kit/audience-prototypes-v0.2-20261004/pta-kit-school-leaders.html">
