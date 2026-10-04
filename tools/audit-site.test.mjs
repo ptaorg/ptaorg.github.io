@@ -31,6 +31,15 @@ test('valid site passes; URL encoding, exclusions, inert markup and srcset are u
   assert.deepEqual(srcsetUrls('data:image/png;base64,AA 1x, two.png 2x'), ['data:image/png;base64,AA', 'two.png']);
   assert.deepEqual([...documentInfo('<script>"<p id=fake>"</script><!-- <p id=fake> --><template><p id=fake></template><p id=real>').ids], ['real']);
 });
+test('source publication model recognizes HTML outputs generated from publishable Markdown', t => {
+  const { root, write, html } = fixture(t);
+  write('notes.md', '# Notes');
+  write('docs/hidden.md', '# Hidden');
+  write('index.html', html.replace('</body>', '<a href="/notes.html">notes</a><a href="/docs/hidden.html">hidden</a></body>'));
+  const refs = auditStatic(root).findings.filter(f => f.code === 'internal-reference');
+  assert.equal(refs.length, 1);
+  assert.match(refs[0].detail, /docs\/hidden\.html/);
+});
 test('detects broken links, assets, fragments, case mismatches, duplicate IDs and metadata', t => {
   const { root, write, html } = fixture(t);
   write('index.html', html.replace('</body>', '<a href="//ptaorg.com/missing.pdf">bad</a><a href="#absent">bad</a><img src="Photo.png"><img srcset="missing.png 1x, other.png 2x"><p id="ok"></p></body>').replace('</head>', '<meta name=description content=""></head>'));
