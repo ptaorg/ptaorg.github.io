@@ -412,6 +412,23 @@ body.parents{--theme:#28627c;--theme-deep:#1d485b;--theme-soft:#edf6f9;--theme-f
   .qr-code{padding:1mm;border-radius:0}
 }
 
+
+
+/* v0.3.1 visual hotfix: keep the parent edition within a 390px viewport. */
+@media screen and (max-width:700px){
+  .parents .page{
+    width:100%!important;
+    max-width:100%!important;
+    margin:0!important;
+    padding:26px 20px!important;
+  }
+  .parents .cover h1{font-size:31px!important;line-height:1.38}
+  .parents .lead{font-size:19px;line-height:1.7}
+  .parents .cover .series,
+  .parents .cover p,
+  .parents .page p{max-width:100%;overflow-wrap:anywhere}
+}
+
 </style>
 <meta name="robots" content="noindex, follow">
 <link rel="canonical" href="https://ptaorg.com/assets/kit/audience-prototypes-v0.2-20261004/pta-kit-parents.html">
