@@ -38,6 +38,7 @@ export const jevSchema = obj({
   issues: arr(obj({
     title: str,
     source_task_ids: arr(str),
+    source_finding_refs: arr(str),
     summary: str,
     evidence: arr(str),
     severity: score,
@@ -52,6 +53,7 @@ export const jevSchema = obj({
 export const seniorSchema = obj({
   summary: str,
   reviewed: arr(obj({
+    issue_id: str,
     title: str,
     decision: { type: "string", enum: ["accept", "revise", "human", "discard"] },
     rationale: str,
