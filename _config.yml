@@ -34,3 +34,11 @@ exclude:
   - one-time-admin-materials-pr.yml
   - simplify-compliance-copy.yml
   - pta-open-system/
+
+# Jekyll also renders the kit's preserved Markdown into companion HTML.
+# Supply discovery metadata only within this versioned artifact area.
+defaults:
+  - scope:
+      path: assets/kit
+    values:
+      description: PTA実務移行キットの基準版に付属する要確認事項・制作計画の記録です。法理・根拠の共通正本はMaster v0.3.1です。

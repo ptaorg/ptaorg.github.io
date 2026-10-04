@@ -1,0 +1,244 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PTA実務移行ひな形集</title><style>
+:root{--ink:#202c35;--muted:#59656c;--accent:#244b5b;--rule:#bac4c9;--wash:#f1f4f5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#f1f2f1;font-family:"Noto Sans CJK JP","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.95}
+main{max-width:980px;margin:36px auto 60px;padding:48px 64px 56px;background:white;border-top:7px solid var(--accent)}
+header{margin-bottom:25px;border-bottom:1px solid var(--rule);padding-bottom:22px}.edition{font-size:13px;letter-spacing:.08em;color:var(--muted);margin:0 0 12px}h1{font-size:30px;line-height:1.55;margin:0 0 14px;letter-spacing:.015em}h1 small{font-size:21px;font-weight:500;display:block;margin-top:6px}.meta{font-size:13px;margin:0;color:var(--muted)}
+section{margin-top:44px}h2{font-size:24px;line-height:1.55;margin:0 0 20px;padding:0 0 11px;border-bottom:2px solid var(--accent)}h2 .no{font-size:14px;display:block;color:var(--muted);letter-spacing:.12em;margin-bottom:5px}h3{font-size:18px;line-height:1.6;margin:26px 0 10px}p{margin:0 0 15px;overflow-wrap:anywhere}strong{font-weight:700}a{color:#184a65;text-underline-offset:.18em;overflow-wrap:anywhere}ul,ol{padding-left:1.45em;margin:10px 0 20px}li{margin:5px 0}.ref{font-size:12px;color:var(--muted);white-space:normal;margin-left:.5em}.ref a{text-decoration:none}.principle{border-left:4px solid var(--accent);padding:13px 18px;margin:22px 0;background:var(--wash);break-inside:avoid}.principle p:last-child{margin-bottom:0}.note{font-size:13px;line-height:1.8;color:#46535b}.evidence{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:14px 0;margin:20px 0;break-inside:avoid}.evidence .label{font-size:12px;font-weight:700;letter-spacing:.08em;margin-bottom:7px}.evidence p:last-child{margin-bottom:0}
+figure{margin:24px 0}figcaption{font-size:13px;margin:10px 0;color:var(--muted)}.logic{list-style:none;counter-reset:step;margin:0;padding:0;border-top:1px solid var(--rule)}.logic li{position:relative;margin:0;padding:10px 10px 10px 41px;border-bottom:1px solid var(--rule);line-height:1.6;break-inside:avoid}.logic li::before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;left:5px;top:10px;font-size:13px;color:var(--accent);font-weight:700}.logic li+li::after{content:"↓";position:absolute;left:13px;top:-13px;background:white;font-size:12px;line-height:17px}.logic small{display:block;color:var(--muted);font-size:13px;margin-top:3px}
+table{border-collapse:collapse;width:100%;margin:16px 0 22px;font-size:14px;line-height:1.75;table-layout:fixed}caption{text-align:left;font-weight:700;font-size:15px;padding-bottom:9px}th,td{border:1px solid var(--rule);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:var(--wash);font-weight:700}thead{display:table-header-group}tr{break-inside:avoid}.comparison th:first-child{width:19%}.services th:first-child{width:22%}.services{font-size:13px}.check th:first-child{width:24%}.duo{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}.duo>div{padding:17px 18px 5px}.duo>div+div{border-left:1px solid var(--rule)}.duo h3{margin:0 0 14px}.duo ol{font-size:14px;line-height:1.7}.duo li{margin:0 0 12px;break-inside:avoid}.handoff{display:grid;grid-template-columns:1fr 1fr;gap:20px}.handoff>div{border-top:2px solid var(--accent);padding-top:10px}.handoff h3{margin:0 0 9px}.sources{font-size:13px;line-height:1.7}.sources li{padding:9px 0;border-bottom:1px solid var(--rule);margin:0;break-inside:avoid}.sources .url{display:block;font-size:11px;margin-top:4px}.appendix{border-top:2px solid var(--rule);padding-top:17px;margin-top:32px;font-size:13px}footer{margin-top:40px;border-top:1px solid var(--rule);padding-top:15px;font-size:12px;color:var(--muted)}
+@media(max-width:700px){body{font-size:15px;line-height:1.9}main{margin:0;padding:25px 19px 40px;border-top-width:5px}h1{font-size:25px}h1 small{font-size:18px}h2{font-size:21px}h3{font-size:17px}section{margin-top:33px}th,td{padding:8px;font-size:13px}.duo,.handoff{grid-template-columns:1fr}.duo>div+div{border-left:0;border-top:1px solid var(--rule)}.duo>div{padding:16px 10px 4px}.responsive thead{display:none}.responsive tbody tr{display:block;border-top:1px solid var(--rule);padding:8px 0}.responsive tbody th,.responsive tbody td{display:block;width:100%;border:0;padding:5px 8px}.responsive tbody th{font-size:14px}.responsive td::before{content:attr(data-label)"：";font-weight:700;color:#374c58}.responsive{border-bottom:1px solid var(--rule)}.sources .url{font-size:11px}.principle{padding:11px 13px}}
+@page{size:A4;margin:17mm 17mm 18mm;@bottom-center{content:counter(page);font-size:9pt;color:#555}}
+@media print{html{scroll-behavior:auto}body{background:white;color:#111;font-size:10.5pt;line-height:1.75}main{max-width:none;margin:0;padding:0;border:0}header{padding-bottom:10px;margin-bottom:16px}h1{font-size:22pt}h1 small{font-size:15pt}.edition,.meta{font-size:9pt}section{margin-top:24px}.print-start{break-before:page}h2{font-size:16pt;margin-bottom:13px;padding-bottom:7px;break-after:avoid}h2 .no{font-size:9pt}h3{font-size:11.5pt;margin-top:18px;break-after:avoid}p{margin-bottom:10px;orphans:3;widows:3}li{orphans:2;widows:2}table{font-size:9.3pt;line-height:1.65}th,td{padding:7px 8px}.services{font-size:9pt}.ref,.note{font-size:8.8pt}.principle{margin:15px 0;padding:10px 13px;background:#f5f5f5;border-left-color:#333}.evidence{padding:10px 0;margin:14px 0}a{color:#111;text-decoration:underline}.logic li{padding-top:8px;padding-bottom:8px}.logic small{font-size:9pt}.logic li::before{top:8px}.logic li+li::after{background:white}.duo ol{font-size:9.5pt}.duo{break-inside:avoid}.handoff{gap:15px}.sources{font-size:8.6pt;line-height:1.65}.sources .url{font-size:8pt}.sources li{padding:7px 0}.sources strong{font-size:9pt}.appendix,footer{font-size:9pt}.screen-only{display:none}figure{break-inside:avoid}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+.diagram{border-top:2px solid var(--accent);border-bottom:1px solid var(--rule);padding:18px 12px;line-height:1.65}
+.diagram h3{margin:0 0 12px;font-size:17px}.diagram p{margin:12px 0 0;font-size:14px}
+.boundary{display:grid;grid-template-columns:1fr 150px 1fr;gap:12px}.boundary>div{padding:5px 8px}.boundary .bridge{align-self:center;text-align:center;font-weight:700;font-size:14px}.bridge span{display:block;font-size:28px}
+.two-routes{display:grid;grid-template-columns:1fr 1fr;gap:22px}.two-routes>div+div{border-left:1px solid var(--rule);padding-left:22px}
+.diagram-flow{list-style:none;margin:0;padding:0}.diagram-flow li{margin:0;text-align:center;padding:9px 6px;border:1px solid var(--rule);background:white;break-inside:avoid}.diagram-flow li+li::before{content:"↓";display:block;margin-top:-11px;margin-bottom:4px;color:var(--accent);font-weight:700;background:white}
+.diagram-flow li+li{margin-top:16px}.diagram-flow small{display:block;font-size:12px;color:var(--muted)}
+.diagram .result{margin-top:16px;padding-top:12px;border-top:1px solid var(--rule);font-weight:700}
+.inline-cooperation{margin-top:18px;text-align:center;border-top:1px dashed var(--rule);padding-top:12px}
+nav.contents{font-size:14px;border-bottom:1px solid var(--rule);padding-bottom:18px}nav.contents ol{columns:2;column-gap:26px}nav.contents li{break-inside:avoid}
+.template{border-top:1px solid var(--rule);padding-top:16px}.fill{color:#374c58;font-weight:600}
+.form-fields th{width:25%}.worksheet{font-size:12px}.worksheet th:first-child{width:18%}.worksheet td{min-height:42px}.worksheet .blank{display:block;min-height:30px}
+.parent-letter p{line-height:1.85}.faq dt{font-weight:700;margin-top:22px}.faq dd{margin:7px 0 17px}
+.status{font-size:13px;border-top:1px solid var(--rule);padding-top:12px;margin-top:20px}
+@media(max-width:700px){.boundary,.two-routes{grid-template-columns:1fr}.boundary .bridge{padding:15px}.two-routes>div+div{border-left:0;padding-left:0;border-top:1px solid var(--rule);padding-top:18px}nav.contents ol{columns:1}.worksheet .blank{min-height:20px}}
+@media print{.diagram{padding:12px 8px;font-size:9.3pt}.diagram h3{font-size:11pt}.diagram p{font-size:9pt}.diagram-flow small{font-size:8.5pt}.diagram .result{margin-top:10px}.boundary{grid-template-columns:1fr 100px 1fr}.boundary .bridge{font-size:9pt}.two-routes{gap:14px}.two-routes>div+div{padding-left:14px}.worksheet{font-size:8pt}.worksheet th,.worksheet td{padding:6px 5px}.worksheet .blank{min-height:28px}.template-section{break-before:page}.template-section:first-of-type{break-before:auto}.parent-letter{font-size:11pt}.status{font-size:9pt}}
+
+.diagram svg{display:block;width:100%;max-width:360px;height:auto;margin:0 auto;color:#202c35;font-family:inherit}
+.diagram svg text{fill:currentColor;font-family:inherit;font-size:20px}.diagram svg .svg-heading{font-size:22px;font-weight:700}
+.diagram svg rect,.diagram svg path,.diagram svg line{stroke:#202c35}.diagram svg rect{fill:white}
+.diagram .bridge{font-size:16px}.diagram .svg-single{max-width:360px;margin:0 auto}
+@media print{.diagram svg text{fill:#111}.diagram svg rect,.diagram svg path,.diagram svg line{stroke:#111}.diagram .bridge{font-size:10.5pt}}
+
+/* v0.3.1：画面での可読性のみ調整。印刷の最終組版は未実施。 */
+@media screen{
+ section{scroll-margin-top:22px}h3{margin-top:30px;margin-bottom:12px}
+ .note{padding:10px 12px;border-left:2px solid var(--rule);background:#fafbfb}
+ .template-section>.note:first-of-type{margin-bottom:22px}
+ .faq dt{border-top:1px solid var(--rule);padding-top:14px;margin-top:26px}
+ .faq dd{margin-top:10px;margin-bottom:22px;line-height:1.9}
+ .worksheet{font-size:14px}.worksheet th,.worksheet td{font-size:14px;padding:10px;line-height:1.75}
+ .worksheet th:first-child{width:18%}.worksheet thead th:nth-child(2){width:30%}
+ .worksheet thead th:nth-child(3),.worksheet thead th:nth-child(6){width:17%}
+ .worksheet thead th:nth-child(4),.worksheet thead th:nth-child(5){width:9%}
+ .worksheet .blank{min-height:44px;margin-top:8px;border-bottom:1px dotted var(--rule)}
+ .worksheet .tracking-check th,.worksheet .tracking-check td{border-top:2px solid var(--accent)}
+ .worksheet .tracking-check th{border-left:4px solid var(--accent)}
+}
+@media screen and (max-width:900px){
+ .boundary{grid-template-columns:1fr}.boundary .bridge{padding:12px}
+ .worksheet thead{display:none}.worksheet tbody tr{display:block;border-top:1px solid var(--rule);padding:8px 0}
+ .worksheet tbody th:first-child,.worksheet tbody th,.worksheet tbody td{display:block;width:100%;border:0;padding:8px 10px}
+ .worksheet tbody td::before{content:attr(data-label)"：";font-weight:700;color:#374c58}
+ .worksheet .tracking-check{border-top:2px solid var(--accent)}
+ .worksheet .tracking-check th:first-child{border-left:4px solid var(--accent)}
+}
+
+@media screen and (max-width:700px){
+ .responsive tbody th:first-child{width:100%}
+}
+@media screen{
+ .worksheet small{font-size:inherit}
+ .worksheet thead th:nth-child(3){width:14%}
+ .worksheet thead th:nth-child(4){width:10%}
+ .worksheet thead th:nth-child(5){width:12%}
+ .worksheet thead th:nth-child(6){width:16%}
+ .diagram .equation .formula-term{display:inline-block;white-space:nowrap}
+}
+</style>
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://ptaorg.com/assets/kit/audience-prototypes-v0.2-20261004/pta-transition-implementation-templates.html">
+</head><body><main><header><p class="edition">PTA適正化推進委員会　｜　実務移行キット v0.3.1</p><h1>PTA実務移行ひな形集<small>通知・点検票・説明文・加入申込み・承諾・FAQ</small></h1><p class="meta">2026年10月4日　｜　地域の規則とPTAの決定を補って使用する改訂・実装案</p></header><nav class="contents" aria-label="ひな形目次"><strong>使う順序</strong><ol><li><a href="#notice">教育委員会通知</a></li><li><a href="#checklist">学校の現状点検</a></li><li><a href="#officers">PTA役員への説明</a></li><li><a href="#parents">保護者への説明</a></li><li><a href="#application">加入申込みの記録</a></li><li><a href="#acceptance">受付・承諾通知</a></li><li><a href="#faq">FAQ</a></li><li><a href="#member-privacy">PTA会員情報の取扱い説明</a></li><li><a href="#service-reference">自己徴収の参考比較</a></li></ol><p><a href="pta-school-boundary-transition-guide.html">法理・制度・移行ガイドへ</a>／<a href="evidence-matrix.csv">根拠表</a>／<a href="open-issues.md">要確認事項</a></p></nav><p>教育委員会内部で方針を整理し、校長・学校事務職員、PTA役員へ説明して現行運用を棚卸しします。PTAが会則・受付・台帳・自己徴収を準備し、保護者へ事前に説明して、明示的オプトイン加入とPTA自己徴収を始めます。既存7種の実務文書をこの順序で使い、PTA会員情報の取扱い説明を加入案内に添えて使用できます。</p>
+<div class="principle"><p><strong>全家庭を会員／非会員へ二分管理しない。</strong><br>学校は学校業務のために必要な保護者等の情報を管理する。PTAは希望者から直接申込みを受け、承諾した会員を登録する。申込みがない人はPTAで登録せず、学校がPTAのために非会員を特定しない。</p></div>
+<p>ひな形は本キットの実務設計です。空欄を確定し、地域の所掌事務・服務・会計・施設の規則とPTAの会則を照合します。法令上の規律と採用する運用方針、学校側の決定とPTA自身の決定を分け、必要な協力を続ける条件を整えます。根拠の原文・評価・限界は本文と根拠表に対応させています。</p><section id="notice" class="template-section"><h2>1　教育委員会 → 学校長通知ひな形</h2>
+<p class="note">発出前の編集用案です。「法令上の規律」と「教育委員会が採用する運用方針」を分けています。〔　〕を埋め、地域の規則と権限を確認した後に、教育委員会の決裁を経て使用してください。PTAの会則・会費・活動の決定はPTA自身が行います。根拠：<a href="pta-school-boundary-transition-guide.html#ch11">本文第11章</a>、根拠表M12～M19・M25～M31・M34・M36。</p>
+<div class="template">
+<p class="fill">〔文書番号〕<br>〔発出年月日〕<br>各〔市町村立〕学校長　様<br>〔教育委員会・発出権限者〕</p>
+<h3>学校とPTAの役割及びPTA関係事務の点検・移行について（通知案）</h3>
+<p>学校とPTAが必要な場面で協力しながら、それぞれの責任に基づき業務を行えるよう、学校側のPTA関係処理を点検します。各校において、次の事項を確認し、現状と是正・移行計画を〔報告期限〕までに〔担当課〕へ報告してください。</p>
+<h3>一　基本的な考え方</h3>
+<p>PTAは学校とは別主体の任意団体です。教育目的を共有することと、主体、権限、情報、会計が一体であることは別です。社会教育法第2条・第10条等を踏まえ、PTA内部の運営と学校の所掌事務・業務を区別してください。学校の業務は授業だけに限られないため、具体的な学校処理の根拠を個別に確認します。</p>
+<h3>二　法令上の規律を踏まえた点検</h3>
+<ol>
+<li><strong>加入意思：</strong>PTA加入について、本人の加入意思とPTA側の受付・承諾を確認できる運用になっているか、案内・手順を点検してください。会則の定めだけで個々の加入合意があったと扱わず、会費・期間等の条件が本人へ示されることを確認します。学校が会員を判別するために個々の申込記録や一覧を取得する調査にはせず、学校手続とPTA手続の混同を解消してください。消費者契約法の検討では、契約成立と成立した条項の有効性を分けてください。</li>
+<li><strong>個人情報：</strong>個人情報保護法第61条等による学校側の所掌事務・業務、利用目的、連携の必要性、目的内外を先に確認し、目的外の場合に法令又は第69条第2項等を検討してください。本人同意や委任状だけで学校の権限を補えると扱わないでください。個人情報保護委員会（PPC）2026年3月資料等の「臨時的」の説明を踏まえ、反復継続する会員管理を毎年度の同意で処理しないでください。</li>
+<li><strong>徴収・会計：</strong>学校徴収金にPTA会費を含める処理、学校口座での保管、未納管理、返金、PTAへの送金を点検してください。資金所有者、保管主体、口座契約、出納権限、地域の徴収金制度を記録し、公金と学校私費会計を一括して判断しないでください。</li>
+<li><strong>教職員：</strong>地方公務員法第34条・第35条等及び任命権者の規則に照らし、公務、勤務時間内外、職務専念義務、兼職兼業等を確認してください。無報酬、PTAからの依頼、保護者の委任によって当然に職務となるとは扱わないでください。</li>
+<li><strong>施設：</strong>社会教育法第44条・第45条、学校教育法第137条等と地域の施設・財産管理制度に基づき、利用の根拠、許可権限、使用条件、費用・減免を確認してください。</li>
+</ol>
+<h3>三　今回採用する学校側の運用方針（決裁時に確定）</h3>
+<p>以下は法令の文言をそのまま転載した全国一律の義務ではなく、〔教育委員会名〕が学校側について採用する方針案です。地域の条件を確認し、採用内容と切替日を決定してください。</p>
+<ol>
+<li><strong>任意加入・明示的オプトイン：</strong>PTAへの加入案内と学校手続を区別します。無回答、未提出、入学、在籍、学校書類提出をPTA加入とみなす学校側の運用を終了します。全家庭へ「加入する／加入しない」の回答を求めず、希望者がPTAへ直接申し込む経路を案内します。</li>
+<li><strong>会員管理：</strong>学校がPTAの加入受付・会員確定・台帳作成を担っている処理を点検し、不適切又は根拠不明な処理を終了・是正します。学校名簿をPTA会員名簿に使わず、学校がPTAのために非会員や未提出者を特定する処理を終了対象にします。担任・学校職員による催促、再提出依頼、電話等の追跡、全員回答・非加入届の要求も点検してください。加入受付・会員管理は、PTAが自らの会則に基づき決定する事項です。</li>
+<li><strong>学校教育上の取扱い：</strong>学校教育の管理項目にPTA加入属性を持ち込まず、加入・非加入を理由に児童生徒の取扱いを変えません。学校からの必要な連絡は全家庭へ届けます。PTA独自事業かどうかは名称だけでなく、実施主体・対象者・時間・場所・学校行事との関係・参加方法・費用・学校職員の関与等の実態から整理します。学校教育上の活動を名称だけ付け替える取扱いにしないでください。</li>
+<li><strong>学校側の徴収等からの退出：</strong>学校が行っているPTA会費の請求・徴収、未納管理、返金、送金、学校口座・学校徴収システム利用を点検し、不適切又は根拠不明な処理を終了・是正してください。学校側の各処理の終了・切替日を〔処理別の切替日〕として計画に整理します。この変更をPTAへ説明し、PTAが自らの会則に基づいて徴収方法・担当・口座等を自主的に決定するための協議を行います。PTAに徴収サービスや内部運営を命令する通知にはしません。旧残高・過払い・未納は権利者と根拠を個別に確認し、一括移管や一律返金指示で処理しません。明らかな不適切処理や根拠に重大な疑義がある処理は次の実行前に確認・是正してください。</li>
+<li><strong>役員・教職員：</strong>学校によるPTA役員候補の抽出・選出事務を点検し、不適切又は根拠不明な処理を終了・是正します。学校の全在籍情報から候補を抽出しません。役員選出はPTAが自らの会則・会員台帳に基づいて決定する事項です。学校の職位を理由とする当然役員や恒常的なPTA内部事務を見直し、必要な学校連絡担当を別に整理します。教職員本人の加入・就任意思と服務上の手続は別に確認します。教職員名簿転用・給与控除の根拠も点検します。</li>
+<li><strong>必要な協力：</strong>PTA案内の配布、共同活動、施設、印刷機、鍵、連絡ツールは利用制度・文責・任意性・窓口・費用・事故時責任を明確にします。協力を一律に断つ方針ではありません。学校連絡を受けるためにPTA登録を必須にしません。</li>
+</ol>
+<h3>四　現状調査、是正・移行及び報告</h3>
+<p>別添の現状点検票に、各処理の「現状／根拠／担当／次回実行日／是正方法」を記入してください。「保護者同意あり」の記載だけで点検済みとしないでください。学校側の利用目的文書、校務分掌、徴収契約、口座・設備の利用条件等の資料名と確認日を記録します。</p>
+<p>〔説明会日〕に校長・学校事務職員へ説明し、〔PTA役員説明期限〕までにPTA役員との説明・協議を行ってください。学校側は〔学校側処理の終了・切替日〕を決定して説明し、PTA側は自ら決めた加入受付・会員管理・徴収の準備と開始予定日を共有します。保護者への説明も学校側の処理変更とPTA側の新しい運営を分け、必要な協議を行ってください。準備の遅れを理由に不適切な請求・情報利用等を継続しないでください。必要な学校業務まで停止しないよう切り分けます。</p>
+<p>報告には、点検票、学校側の処理別根拠、停止・切替日、旧会費清算の方法、施設・連絡協力の条件、説明予定を添付してください。会員台帳や非会員一覧を報告用に新たに取得せず、原則として業務手順と資料名で報告し、個人情報が必要な個別案件は担当課と取扱いを確認します。〔再点検日〕に実施結果を報告してください。</p>
+<p class="fill">根拠となる地域の条例・規則・要領：〔名称・条項・施行日〕<br>報告先・相談窓口：〔担当課／連絡先／提出方法〕<br>学校側の実施責任者：〔　〕<br>添付：現状点検票、PTA役員向け説明案、保護者向け説明案</p>
+</div>
+</section><section id="checklist" class="template-section"><h2>2　校長・学校向け現状点検チェックリスト</h2>
+<p>学校の実際の処理を、書類・口座・システム・校務分掌と照合します。PTAの全会員名簿を学校へ提出させる調査ではありません。根拠欄には法令・条例・規則・要領・契約・許可等の資料名、条項、確認日を記載し、同意だけで適法扱いしません。根拠未確認は「要確認」と書き、次回実行前の確認担当を決めます。PTAの決定が必要な事項は「PTAへ協議」と記入します。</p>
+<p class="fill">学校名：〔　〕　点検日：〔　〕　校長：〔　〕　学校事務担当：〔　〕<br>教育委員会担当・報告期限：〔　〕　切替予定日：〔　〕　再点検日：〔　〕</p>
+<table class="responsive worksheet"><caption>現状／根拠／担当／次回実行日／是正方法（記入用）</caption><thead><tr><th>点検項目</th><th>現状</th><th>根拠</th><th>担当</th><th>次回実行日</th><th>是正方法</th></tr></thead><tbody><tr><th scope="row">1　入会申込み</th><td data-label="現状"><small>提出先、意思表示、紙・Web・メールの記録。全員回答や非加入届を要求していないか。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">2　承諾</th><td data-label="現状"><small>承諾権限、通知・到達、開始日。受付自動返信と区別しているか。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">3　会員確定</th><td data-label="現状"><small>PTAが申込み＋承諾から確定。学校名簿との突合せ・非会員一覧がないか。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">4　学校→PTA情報提供</th><td data-label="現状"><small>学校側の根拠業務、61条の目的、必要性、目的内外、69条等。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">5　学校情報のPTA目的利用</th><td data-label="現状"><small>学校名簿、役員歴、兄弟情報等の庁内利用。提供なしでも目的を確認。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">6　会費請求</th><td data-label="現状"><small>加入合意、請求者、対象・金額・期間。学校在籍のみの請求がないか。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">7　学校徴収</th><td data-label="現状"><small>一括振替・収納窓口・学校納入金との混在。主体・権限・契約。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">8　未納管理</th><td data-label="現状"><small>担当、保管先、督促者、児童生徒・担任への依存。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">9　返金</th><td data-label="現状"><small>権利者、過払い・退会条件、承認者、送金先、記録。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">10　PTAへの送金</th><td data-label="現状"><small>出納権限、加入根拠・金額、旧残高の権利者、二重送金防止。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">11　学校口座</th><td data-label="現状"><small>名義・契約・資金所有者・保管主体・操作権限。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">12　学校徴収システム</th><td data-label="現状"><small>PTA会費の項目登録、請求・データ出力・停止設定、契約条件。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">13　役員候補抽出</th><td data-label="現状"><small>PTA会員台帳による選出。学校の全在籍名簿等を使っていないか。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">14　教職員のPTA事務</th><td data-label="現状"><small>内部事務の内容・時間・校務分掌・職務命令・職専免等。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">15　PTA役職</th><td data-label="現状"><small>校長・教頭等の当然就任、本人の就任意思、兼職手続等。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">16　教職員本人の加入</th><td data-label="現状"><small>自動加入、本人申込み・PTA承諾、教職員名簿の転用。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">17　PTA会費の給与控除</th><td data-label="現状"><small>給与支払主体、控除の根拠規程・対象・本人意思・停止手順。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">18　学校施設</th><td data-label="現状"><small>利用制度、許可権限、用途・時間、料金・減免、事故責任。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">19　印刷機・備品</th><td data-label="現状"><small>利用許可、消耗品・費用、個人情報の残留、担当。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">20　鍵</th><td data-label="現状"><small>交付記録、保管・複製・返却、立入時間・防犯責任。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">21　連絡ツール</th><td data-label="現状"><small>学校とPTAの発信主体・権限・窓口、任意性、学校連絡の独立。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">22　学校教育上の処理</th><td data-label="現状"><small>PTA加入属性を持ち込んでいないか。必要な学校連絡は全家庭へ。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr><th scope="row">23　旧情報・記録の清算</th><td data-label="現状"><small>保存義務、証拠保全、利用停止、不要情報の削除、アクセス解除。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr><tr id="check-tracking" class="tracking-check"><th scope="row">24　加入申込未提出者の把握・催促・追跡</th><td data-label="現状"><small>学校がPTA加入申込の未提出者一覧を作っていないか。PTAが学校の全名簿と申込者を突合していないか。担任・学校職員による催促、再提出依頼、電話・個別連絡がないか。全員回答・非加入届を要求していないか。</small><br>記入：<span class="blank">〔　〕</span></td><td data-label="根拠"><span class="blank">〔　〕</span></td><td data-label="担当"><span class="blank">〔　〕</span></td><td data-label="次回実行日"><span class="blank">〔　〕</span></td><td data-label="是正方法"><span class="blank">〔　〕</span></td></tr></tbody></table>
+<p>是正方法欄には「停止する処理／PTA側の受入準備／旧情報・資金の清算／必要な協力を続ける条件／完了日」を具体的に記入します。根拠に疑義がある処理は、移行予定日を待たず次の実行前に教育委員会へ相談してください。学校教育に必要な安全管理等まで停止しません。</p>
+<p>添付する資料名・保管場所：〔　〕<br>未解決事項と相談先：〔　〕<br>実施後の確認日・確認者：〔　〕</p>
+<p class="note">根拠：<a href="pta-school-boundary-transition-guide.html#ch6">本文第6章</a>・<a href="pta-school-boundary-transition-guide.html#ch7">第7章</a>・<a href="pta-school-boundary-transition-guide.html#ch8">第8章</a>・<a href="pta-school-boundary-transition-guide.html#ch12">第12章</a>。給与控除、職種別の服務、地域の口座・施設制度は要確認です。</p>
+<p><strong>24番の正常な状態：</strong>希望者だけがPTAへ直接申し込む。申込みのない人についてPTA側で処理しない。未提出者一覧の作成・学校名簿との突合せ・学校職員による催促や追跡をしない。既にPTAへ届いた申込みの不足項目をPTAが本人へ確認する処理は、未提出家庭の追跡とは区別する。</p></section><section id="officers" class="template-section"><h2>3　PTA役員向け説明「学校に依存しないPTA運営への移行」</h2>
+<div class="template"><p class="fill">〔PTA名〕役員の皆様へ　〔説明日〕<br>説明・協議窓口：〔教育委員会・学校側の担当〕／PTA側窓口：〔　〕</p>
+<h3>学校との協力を続けながら、会員とお金を自分で管理する団体へ</h3>
+<p>今回の移行は、学校との協力をやめることではありません。PTA自身が会員を把握し、自分のお金を管理できる団体になるための変更です。学校とPTAが別主体としてそれぞれ責任を持つことで、加入の確認、役員交代、会計の引継ぎを分かりやすくします。</p>
+<p>学校に在籍しているだけでPTA加入とはなりません。PTAが活動、会則、会費、期間、退会方法を説明し、希望者がPTAへ申し込み、PTAが承諾します。この記録から会員台帳を作れば、学校の全保護者名簿を使う必要はなくなります。加入しなかった人を特定したり、理由を追跡したりする必要もありません。</p>
+<table class="responsive"><caption>PTA自身が担う事務と最低限の準備</caption><thead><tr><th>事務</th><th>準備するもの</th></tr></thead><tbody>
+<tr><th scope="row">加入案内</th><td data-label="準備">団体名、任意性、活動・会則・会費・期間、直接申込先、PTA窓口</td></tr>
+<tr><th scope="row">加入申込み</th><td data-label="準備">紙・Web・メールから選べる方法、本人意思と提示条件の記録</td></tr>
+<tr><th scope="row">承諾</th><td data-label="準備">会則上の承諾者、承諾通知、開始日・到達の確認</td></tr>
+<tr><th scope="row">会員台帳</th><td data-label="準備">会員ID、本人連絡先、申込み・承諾、条件版、開始・終了、閲覧権限</td></tr>
+<tr><th scope="row">会費請求</th><td data-label="準備">会員だけを対象とする金額・期間・期日、世帯課金との対応</td></tr>
+<tr><th scope="row">入金確認</th><td data-label="準備">PTA口座・決済契約、照合担当、会計帳簿、二重入金の処理</td></tr>
+<tr><th scope="row">未納対応</th><td data-label="準備">本人への連絡と代替支払方法。担任・子どもを窓口にしない</td></tr>
+<tr><th scope="row">退会</th><td data-label="準備">PTAへの連絡窓口、終了日、次回請求・定期決済停止、権限解除</td></tr>
+<tr><th scope="row">返金</th><td data-label="準備">提示した条件、過払い確認、承認者、返金記録</td></tr>
+<tr><th scope="row">役員選出</th><td data-label="準備">会員台帳と会則による候補・本人就任意思。全学校名簿を使わない</td></tr>
+<tr><th scope="row">PTA内部連絡</th><td data-label="準備">PTAの会員用連絡先・ツール、発信担当、保存・引継ぎ</td></tr>
+</tbody></table>
+<p>自己徴収は、役員が全て手作業で処理することではありません。PTA口座への振込、PTA契約の決済サービス等から、規模と負担に合う方法を選べます。台帳管理・請求判断・未納・退会・返金の責任はPTAに置き、契約先や役員の権限を明確にします。加入と支払登録は分けてください。</p>
+<p>会員が減る場合は、実際の会員数・会費収入・担い手に合わせて活動と予算を見直します。学校に不可欠な費用は学校側の制度で点検し、任意団体の会費で補う前提をそのまま残しません。学校名簿や自動加入へ戻すことを対策にしません。</p>
+<p>学校との協力、学校施設、印刷機、連絡ツールは、利用目的・条件・許可・文責を確認して続けることができます。教職員が個人として加入する場合も本人の申込みとPTAの承諾を記録し、公務上の連絡担当とPTA役職を分けて整理します。</p>
+<h3>切替日までにPTAで決めること</h3>
+<p>〔総会等の決定日〕までに会則・会費・加入期間・退会と返金の条件、承諾権限、情報管理担当、徴収方法を決めます。〔準備確認日〕までに、架空の申込みで受付→承諾→台帳→請求→入金→退会時停止を確認します。〔保護者説明日〕に説明し、〔申込開始日〕と〔自己徴収開始日〕へ進みます。過去の契約や旧会費の清算は、学校・教育委員会と根拠を確認して別に扱います。</p>
+<p>役員交代時は、会則・条件版、台帳、請求・会計、口座・ツール権限、保存期限、問合せ対応を引き継ぎ、旧担当者のアクセスを解除します。学校の担当者がいなくても回る手順を残してください。</p>
+</div><p class="note">参照：<a href="pta-school-boundary-transition-guide.html#ch3">本文第3章</a>・<a href="pta-school-boundary-transition-guide.html#ch13">第13章</a>。この説明は移行の設計案です。PTAの会則・会費・予算はPTA自身で決定してください。</p>
+</section><section id="parents" class="template-section"><h2>4　保護者向け説明「PTAの運営方法が変わります」</h2>
+<p class="note">以下が配布文の案です。〔　〕を確定し、会則・会費・日程の案内と一緒に使用してください。配布先は全家庭としても、加入・非加入の全員回答や非加入届は求めません。A4で1～2頁程度を想定していますが、実際の印刷頁数は未確認です。</p>
+<div class="template parent-letter">
+<p class="fill">〔年月日〕<br>保護者の皆様へ<br>〔PTA名〕　〔代表者〕<br>〔学校側の周知文を併記する場合は、発信者と内容を分けて記載〕</p>
+<h3>PTAの運営方法が変わります</h3>
+<p>PTAは、学校とは別の、参加を希望する人が加入して活動する任意団体です。これからは、PTAが加入申込みを受け付け、自分の会員情報を管理し、会費を集める方法に変わります。学校とPTAは、必要な場面で引き続き協力します。</p>
+<p><strong>入学しただけでは、PTAへの加入にはなりません。</strong>加入を希望する方は、活動内容、会則、会費、加入期間、退会方法を確認し、PTAへ直接お申し込みください。紙、〔Web・メール等の用意した方法〕から選べます。PTAが加入を承諾し、その通知をお送りします。学校へ出す書類や、学校連絡のための登録とは別の手続です。</p>
+<p><strong>加入を希望しない方は、申込みや非加入届の提出は必要ありません。</strong>PTAは加入した会員の情報を管理します。「加入しなかった人」の名簿は作りません。加入しない理由を回答していただく必要もありません。</p>
+<p><strong>PTAへの加入・非加入によって、子どもの学校教育上の取扱いは変わりません。</strong>学校教育に必要な連絡は全家庭へ届きます。学校教育の手続にPTA加入状況を持ち込みません。PTAの独自の催しかどうかは、名前だけでなく、誰が実施し、誰が参加するか、学校行事との関係や費用などの実態で区別します。学校教育の活動を名前だけ「PTA行事」に変える扱いにはせず、独自の催しは参加方法や費用を別に案内します。</p>
+<p><strong>会費は、PTAが会員へ案内し、PTAが集めます。</strong>〔切替日〕以後の会費は学校の納入金と分け、〔PTA口座への振込／PTA契約の決済方法／その他〕でお支払いください。スマートフォンやカードを利用しない方の方法は〔代替方法〕です。会費の金額、支払期限、途中加入・退会時の扱いは下記の案内をご確認ください。支払方法の登録だけで加入になるものではありません。</p>
+<p>PTAは、申込みに必要な情報を本人から受け取り、加入の受付・承諾、会員への連絡、会費、活動のために管理します。学校の全保護者名簿を会員台帳として使いません。詳しい使いみち、管理方法、保存期間、訂正等の窓口は<a href="#member-privacy">「PTA会員情報の取扱いについて」</a>（配布時は別添説明文）に記載します。</p>
+<p>現在のPTAへの加入・退会・会費・PTAが持つ情報については、下記のPTA窓口へご連絡ください。退会理由の記載は求めません。退会後の請求停止や返金は、事前に示す条件に従いPTAが処理します。</p>
+<p>学校が行った徴収、学校が持つ情報の利用・提供、教職員が行った処理については、学校又は教育委員会の窓口へお問い合わせください。過去の会費についても、誰が行った処理かに応じて窓口を分け、PTAに学校側の説明責任を負わせません。</p>
+<p class="fill">活動内容・会則：〔参照方法・版・入手先〕<br>
+加入期間：〔開始日・終了日／更新方法〕<br>会費：〔金額・個人又は世帯等の単位〕<br>
+申込み開始日・直接申込先：〔　〕<br>PTAからの承諾通知方法：〔　〕<br>
+会費支払方法・期限：〔　〕<br>退会・途中加入・返金の条件：〔　〕<br>
+現在のPTA加入・退会・会費・PTA保有情報の窓口：〔PTA担当・メール等・紙で連絡する方法〕<br>
+学校が行った徴収・学校保有情報の利用提供・教職員の処理・学校教育上の取扱いの窓口：〔学校又は教育委員会の担当・連絡先〕</p>
+</div>
+<p class="note">参照：<a href="pta-school-boundary-transition-guide.html#ch3">本文第3章</a>・<a href="pta-school-boundary-transition-guide.html#ch4">第4章</a>・<a href="pta-school-boundary-transition-guide.html#ch5">第5章</a>。学校配布の可否・方法は地域の基準を確認し、PTA文書と学校文書の発信者を明確にしてください。</p>
+</section><section id="application" class="template-section"><h2>5　加入申込みの記録（紙・Web・メール共通例）</h2>
+<p>この様式は希望者がPTAへ直接申し込むための例です。加入しない人の回答は集めません。紙の署名を唯一の方法とせず、本人の意思表示と提示条件を確認できる記録を残します。加入資格を個人単位にするか等は会則で明確にし、会費の世帯単位と混同しません。〔　〕はPTAが事前に決定・記入する項目です。空欄のまま募集を開始しないでください。</p>
+<h3>最低限確認する事項</h3><p class="note">加入申込み、PTA自身の会員情報の取扱い、会費・決済登録、学校からの情報提供は、それぞれの目的・範囲で確認します。<a href="pta-school-boundary-transition-guide.html#fig-consent-separation">補助図A「4つの意思確認を混ぜない」</a>を参照してください。</p><ul><li>誰が、いつ、どのPTAへ加入意思を示したか。</li><li>どの条件・会則・会費を前提にした申込みか。</li><li>PTAが加入を受け入れたこと。</li></ul>
+<h3>推奨する証跡管理</h3><p>申込ID、承諾日時、担当者、承諾通知、通知の到達確認、会員開始日は、規模・方法に応じて管理する推奨事項です。専用台帳や別々の書類を全て作る法的義務という意味ではありません。紙一枚の申込みにPTAの受付・承諾を記入する、又は申込みと承諾のメールを条件説明と一緒に保存する方法でも、確認できる事項は共用できます。</p>
+<p class="note">民法第97条の到達による意思表示の効力と、到達確認の証拠を別に保存する実務は区別します。本人確認はなりすまし等の具体的な必要性に応じ、過度な身分証の収集を前提にしません。記録方法にかかわらず、単なる受付を承諾に置き換えないでください。</p><div class="template">
+<h3>〔PTA名〕　加入申込み</h3>
+<p>〔PTA名〕は〔学校名〕とは別の任意団体です。加入するかどうかは本人が決めます。入学・在籍・学校提出書類や無回答を加入申込みと扱いません。この申込みは学校の手続や支払方法の登録とは別です。PTAが加入を受け入れたことを確認できるようにし、会員として登録します。以下の通知例を用いる場合は、申込み受付と承諾を区別します。</p>
+<table class="responsive form-fields"><caption>申込み前に示す条件</caption><tbody>
+<tr><th scope="row">団体・活動</th><td data-label="条件">PTA名・代表者・窓口：〔　〕／活動概要：〔　〕</td></tr>
+<tr><th scope="row">会則</th><td data-label="条件">〔版・決定日〕／全文の入手先：〔紙添付・URL等〕／役員選出、会員の権利義務：〔要点〕</td></tr>
+<tr><th scope="row">会費</th><td data-label="条件">〔金額〕／〔個人・世帯等の課金単位〕／〔対象期間・期日・方法〕／途中加入：〔条件〕</td></tr>
+<tr><th scope="row">加入期間・更新</th><td data-label="条件">〔開始日・終了日又は開始の条件〕／更新：〔次期にも改めて希望者が申込む等、決定した方式〕</td></tr>
+<tr><th scope="row">退会・返金</th><td data-label="条件">退会連絡先：〔　〕／終了日・次回請求停止：〔　〕／未経過分等の返金条件：〔　〕。理由の記載は求めません。</td></tr>
+<tr><th scope="row">受付・承諾</th><td data-label="条件">直接申込先：〔　〕／PTA内で承諾を行う担当・条件：〔　〕／承諾通知方法・目安：〔　〕。受付自動返信だけでは承諾ではありません。</td></tr>
+<tr><th scope="row">個人情報の利用目的</th><td data-label="条件">加入受付・承諾、会員台帳、会員への連絡、会費請求・照合・退会・返金、会則に基づく役員選出及び〔具体的活動〕。児童生徒情報は必要な活動と項目を説明し、必要な範囲だけ本人・適切な代理人から直接取得します。</td></tr>
+<tr><th scope="row">取扱い・保存</th><td data-label="条件">管理責任者：〔　〕／閲覧担当：〔　〕／保存期間：〔申込受付・契約記録・連絡名簿・会計ごとの期間と終了後の処理〕／委託先・扱う項目：〔　〕／訂正・問合せ窓口：〔　〕。別目的の提供等が必要な場合は法令に応じて別に検討し、学校名簿利用の包括同意にしません。</td></tr>
+</tbody></table>
+<h3>本人が記入・送信する項目</h3>
+<p>申込者氏名：〔　〕<br>本人への連絡先：〔メール／電話／紙での連絡方法〕<br>申込日時：〔　〕<br>加入資格の確認に必要な最小項目：〔PTAの会則に応じて設定〕<br>児童生徒情報：〔必要な活動・理由がある場合だけ、その項目を設定。教職員本人用は不要〕</p>
+<p><strong>□ 私は、上記の会則・会費・期間・退会・個人情報の説明を確認し、〔PTA名〕への加入を申し込みます。</strong></p>
+<p>紙では本人がチェック又は同趣旨の文を記入し、Webでは未選択のチェック欄を本人が選択します。メールでは上記の加入意思を示す文と必要項目を送信します。選択欄は初期選択にしません。空欄・未送信・無回答を加入として処理しません。</p>
+<p class="note">これはひな形であり、実際に送信するフォームではありません。PTAが定めた情報取扱いの説明を示すことと、学校に保有情報を使わせる同意を求めることは別です。銀行口座・カード情報は、加入が成立した後に必要な決済手続で本人が金融機関・決済先へ登録し、加入用紙に学校口座情報を記入させません。</p>
+</div>
+<table class="responsive"><caption>媒体が違っても保存するものは共通</caption><thead><tr><th>媒体</th><th>申込み記録</th><th>PTA側の確認</th></tr></thead><tbody>
+<tr><th scope="row">紙</th><td data-label="記録">本人記入・意思表示、申込日、提示条件版。原本又は安全に保管した写し</td><td data-label="確認">PTAが受領日を記録。学校が提出者一覧を作らない</td></tr>
+<tr><th scope="row">Web</th><td data-label="記録">未選択から本人が選択した意思、送信時刻、必要項目、当時示した条件を確認できる保存資料・版</td><td data-label="確認">PTAの受付管理。実装時に自動返信と承諾を分け、アクセス権を限定</td></tr>
+<tr><th scope="row">メール</th><td data-label="記録">本人の加入申込み文、必要項目、日時、案内した条件版</td><td data-label="確認">PTAが不明点を本人へ確認し、別途承諾通知を送る</td></tr>
+</tbody></table>
+<p>PTA側は、最低限の事項を確認できる申込みと受入れの記録を保存し、推奨証跡は運用規模に応じて追加します。申込み段階の記録と成立後の会員台帳を区別し、未承諾記録を「非会員一覧」に転用しません。教職員本人も必要な条件を示した同じ構造で扱い、職員名簿から自動登録しません。</p>
+<p class="note">参照：<a href="pta-school-boundary-transition-guide.html#ch4">本文第4章</a>・<a href="pta-school-boundary-transition-guide.html#ch5">第5章</a>・根拠表M05～M11・M35・M37。</p>
+</section><section id="acceptance" class="template-section"><h2>6　受付通知とPTAによる承諾通知（別文書の例）</h2>
+<p>受付の通知と加入を認める意思表示は分けます。自動処理で承諾する場合も、会則・受付手順に基づくPTAの承諾であることと、その条件を明確にしてください。本例は別途承諾を通知する推奨方式です。最低限の確認事項と推奨証跡は<a href="#application">第5章</a>の二段階を参照してください。申込ID等の管理欄を使わない小規模PTAでは、申込者・申込日・条件を確認できる紙やメールを共用できます。</p>
+<div class="template"><h3>6-1　申込み受付通知（承諾ではない）</h3>
+<p>件名：〔PTA名〕加入申込みを受け付けました<br>〔申込者名〕様</p>
+<p>〔受付日時〕に加入申込みを受け付けました。申込IDを用いる場合は〔　〕です（任意）。<strong>このメール／文書は受付の通知であり、加入の承諾通知ではありません。</strong>PTAが申込み内容を確認し、〔通知予定日〕までに別途ご連絡します。情報の修正や申込みの取扱いについてのご相談は、〔PTA窓口〕へご連絡ください。</p>
+<p class="fill">〔PTA名・受付担当・連絡先〕</p></div>
+<div class="template"><h3>6-2　PTAによる加入承諾通知</h3>
+<p>件名：〔PTA名〕加入承諾のお知らせ<br>〔申込者名〕様</p>
+<p>〔PTA名〕は、〔申込者名・申込日〕の加入申込みを、会則に基づき承諾します。提示した条件は、会則〔版・日付〕、会費〔金額・単位・期間〕、加入期間〔開始の条件・終了日〕、退会・返金〔条件又は同時添付した説明文の版〕です。</p>
+<p>この承諾通知の到達により加入の合意を確認し、会員開始日は〔通知到達日以後の開始日又は定めた条件〕として登録します。会員IDを用いる場合は〔　〕です（任意）。会費の支払案内は〔別途通知／同時添付〕します。決済方法の登録は加入とは別の手続です。</p>
+<p>記載に誤りがある場合又は退会を希望する場合は、〔PTA窓口〕へご連絡ください。退会理由の記載は求めません。請求停止・返金は上記の条件に従ってPTAが処理します。学校へ退会届を提出する必要はありません。</p>
+<p class="fill">〔通知日〕／〔決定日時・担当者等を管理する場合の記録欄（任意）〕<br>〔PTA名・代表者又は承諾担当・連絡先〕</p>
+</div>
+<p>PTA側は、誰のどの申込みを受け入れたか、条件と合わせて確認できる記録を保存します。決定日時・担当者・送信交付記録・到達確認・会員開始日等は推奨証跡として、必要な範囲で整理します。不達の場合は直接連絡先を確認し、学校の全名簿を取得して追跡しません。申込み受付日を無条件に会員開始日にしないでください。通知到達と資格開始の関係は、会則・案内・台帳で矛盾させません。</p>
+<p class="note">参照：<a href="pta-school-boundary-transition-guide.html#ch4">本文第4章</a>・民法第97条・第522条（S03）、根拠表M07・M37。すべての契約が同じ通知方式を法的に要求されるという趣旨ではなく、本キットの記録方法の例です。</p>
+</section><section id="faq" class="template-section"><h2>7　FAQ（説明会・問合せ用）</h2><p>短い回答と本文の参照先を示します。地域の規則や個別の契約・清算条件は、回答前に確認してください。未確認の運用を確認済みとは扱いません。</p><dl class="faq"><dt>Q1　PTAがなくなりませんか。</dt><dd>この移行はPTAの廃止を求めるものではありません。希望する人が加入し、自分の会員とお金を管理して、必要な活動で学校と協力できる形にします。 <a href="pta-school-boundary-transition-guide.html#ch1">本文第1章</a></dd><dt>Q2　加入者が減ったらどうしますか。</dt><dd>PTAが会員数・会費収入・担い手に合わせて活動と予算を見直します。学校に不可欠な費用は学校側の制度で整理し、学校名簿や自動加入を補う方法に戻しません。 <a href="pta-school-boundary-transition-guide.html#ch7">本文第7章</a></dd><dt>Q3　非会員の子どもは不利益を受けますか。</dt><dd>加入・非加入を理由に学校教育上の取扱いを変えません。そのために非会員一覧を作るのではなく、学校教育の処理にPTA加入状況を持ち込まない設計です。PTA独自事業かどうかは名称だけでなく実施の実態で整理し、学校教育と切り分けて参加・費用条件を案内します。 <a href="pta-school-boundary-transition-guide.html#ch3">本文第3章</a></dd><dt>Q4　学校からPTAのお知らせを配布できますか。</dt><dd>配布協力は、学校側の業務・配布基準を確認して判断します。PTAの文責、任意性、直接申込先・窓口を示し、学校から加入を求める文書と誤認されないようにします。 <a href="pta-school-boundary-transition-guide.html#ch5">本文第5章</a></dd><dt>Q5　教職員はPTA会員になれますか。</dt><dd>教職員であることだけでPTA会員にはなりません。教職員を会員とする会則の場合も、個々の本人の申込みとPTAの承諾による個人としての加入を整理します。T＝Teacherだから行政組織の学校が会員になる、という意味ではありません。服務上の条件は別に確認します。 <a href="pta-school-boundary-transition-guide.html#ch8">本文第8章</a></dd><dt>Q6　校長・教頭はPTA役員になれますか。</dt><dd>職位だけで当然に役員とせず、会則、本人の就任意思、公務との区別、職専免・兼職等の手続を確認します。本キットは学校側の連絡担当とPTA内部役職を分ける方針です。一律禁止・一律許可とは断定しません。 <a href="pta-school-boundary-transition-guide.html#ch8">本文第8章</a></dd><dt>Q7　学校が会費を集めないと運営できません。</dt><dd>PTA口座への銀行振込、口座振替、オンライン決済、PTAが受け取る現金等から選べます。特定サービスの導入は前提ではありません。会員台帳から請求し、PTAが入金・未納・退会・返金を管理する簡素な手順を先に決め、費用と作業量に合う方法を選びます。 <a href="pta-school-boundary-transition-guide.html#ch7">本文第7章</a></dd><dt>Q8　毎年同意を取れば学校名簿をPTAへ渡せますか。</dt><dd>同意だけで判断できません。学校側の業務、第61条等による利用目的、必要性、目的内外を先に確認します。PPCは本人同意等による目的外提供を臨時的な規定と説明しており、恒常的会員管理を毎年度の同意で処理しません。 <a href="pta-school-boundary-transition-guide.html#ch6">本文第6章</a></dd><dt>Q9　委任状があれば学校が会費を集められますか。</dt><dd>委任状があることだけで、学校の所掌事務・権限や教職員の職務が生じるわけではありません。まず学校側に、その事務を行う法令・制度上の根拠があるかを確認する必要があります。本キットでは、PTA会費はPTA自身が徴収する方式へ移行します。 <a href="pta-school-boundary-transition-guide.html#ch6">本文第6章</a></dd><dt>Q10　PTAは学校施設を使えなくなりますか。</dt><dd>適切な制度・許可・条件に基づく利用を整理できます。学校教育への支障、管理権限、費用・減免、利用時間、事故時責任等を確認します。分離は協力を断つことではありません。 <a href="pta-school-boundary-transition-guide.html#ch8">本文第8章</a></dd><dt>Q11　学校の印刷機や連絡システムは使えますか。</dt><dd>施設とは別に設備・契約・配信の条件を確認します。使用許可、費用、閲覧権限、文責、鍵や情報の管理を整理し、学校の連絡を受けるためにPTAへ登録する仕組みにしません。全国一律の可否は示していません。 <a href="pta-school-boundary-transition-guide.html#ch8">本文第8章</a></dd><dt>Q12　非会員情報をPTAが持つ必要はありますか。</dt><dd>通常の会員管理には不要です。申込みと承諾から会員を登録し、申込みのない人は登録しません。学校名簿との差分や非会員一覧は作りません。公開イベント等の希望者情報は別目的の参加者記録として必要な範囲だけ扱い、非会員一覧に転用しません。 <a href="pta-school-boundary-transition-guide.html#ch3">本文第3章</a></dd><dt>Q13　全家庭へ案内するにはどうすればよいですか。</dt><dd>学校の配布協力を基準に従って相談する、掲示・公開案内を使う等、個人名簿をPTAに渡さない周知を検討します。希望者だけがPTAへ直接申し込み、全家庭の回答や非加入届を集めません。学校による未提出者の特定・催促・追跡も求めません。 <a href="pta-school-boundary-transition-guide.html#ch5">本文第5章</a></dd><dt>Q14　支払登録やフォームの自動返信があれば会員ですか。</dt><dd>支払登録、申込み受付、PTAの承諾は別です。単なる受付自動返信は承諾と扱いません。PTAの決定として承諾内容・通知・開始日を記録します。 <a href="pta-school-boundary-transition-guide.html#ch4">本文第4章</a></dd><dt>Q15　教職員の会費を給与から引けますか。</dt><dd>今回、給与控除の地域・職種別の根拠は未確認です。給与支払主体、控除の根拠規程、本人意思、請求停止等を点検してください。本人の加入申込みだけで給与控除の根拠ができるとは扱いません。 <a href="pta-school-boundary-transition-guide.html#ch8">本文第8章</a></dd><dt>Q16　以前の会費は全員に返すのですか。</dt><dd>一律の結論は示していません。当時の加入合意、会則、請求・支払、過払い、資金の権利者を個別に確認します。新規加入の正常化と旧会費の清算を分けます。学校が行った徴収等は学校・教育委員会へ、PTAの処理はPTAへ確認し、必要な証拠を保存します。 <a href="pta-school-boundary-transition-guide.html#ch7">本文第7章</a></dd></dl></section><section id="member-privacy" class="template-section"><h2>8　PTA会員情報の取扱いについて</h2>
+<p class="note">PTAが本人へ配布する説明文のひな形です。〔　〕は実際の会則、活動、決済・委託契約、保存方針に合わせて記入してください。学校の個人情報取扱い説明と別文書として示します。根拠：<a href="pta-school-boundary-transition-guide.html#ch5">本文第5章</a>、S06・S07／根拠表M11。</p>
+<div class="template"><p class="fill">〔PTA名〕／〔説明文の版・制定又は改定日〕<br>情報管理責任者：〔役職・連絡先〕</p>
+<h3>1　取得・管理する主体</h3><p>会員情報を取得・管理する主体は〔PTA名〕です。学校とは別の団体として、加入希望者から直接申込みを受け付け、加入を受け入れた会員の情報を管理します。学校の全保護者名簿や非会員・未加入者・申込みのない人の一覧を、会員管理のために取得・作成・保有しません。学校の名簿との突合せや未提出者の追跡も行いません。</p>
+<h3>2　利用目的と取得項目</h3><p>情報は次の目的と必要な範囲で利用します。目的と項目を案内時に示し、活動上の理由がない情報は集めません。</p>
+<table class="responsive"><caption>PTAの利用目的・取得項目（実際に扱うものだけを確定）</caption><thead><tr><th>利用目的</th><th>取得する項目</th></tr></thead><tbody>
+<tr><th scope="row">加入受付・承諾・会員管理</th><td data-label="取得項目">氏名、本人連絡先、申込日・加入意思、提示した会則・条件・会費、PTAの受入れ、期間・退会。加入資格に必要な項目：〔　〕。ID等の追加証跡は必要に応じて管理。</td></tr>
+<tr><th scope="row">会費請求・入金照合・返金</th><td data-label="取得項目">課金単位・対象期間・金額、支払状況、必要な取引番号、請求停止・返金記録。口座・カード情報は決済手続で本人が登録し、PTAが保有する項目は契約に応じて〔　〕。</td></tr>
+<tr><th scope="row">PTA内部連絡・役員選出</th><td data-label="取得項目">会員本人の連絡先、会則に基づく選出に必要な会員情報、本人の就任意思。実際の項目：〔　〕。</td></tr>
+<tr><th scope="row">会員が参加する具体的活動</th><td data-label="取得項目">〔活動名・必要項目・必要な理由〕。児童生徒情報は必要な場合だけ本人・適切な代理人から直接取得し、目的を説明します。</td></tr>
+</tbody></table>
+<p>加入申込みの受付記録と、加入成立後の会員台帳は区別します。未承諾の申込みを非会員一覧へ転用しません。公開イベント等の参加者記録はその事業の別目的・保存期間で管理し、会員管理用の非会員名簿にしません。</p>
+<h3>3　会費請求・決済と委託先</h3><p>会費はPTAの会員台帳から請求し、〔PTA口座への振込／口座振替／オンライン決済／PTAによる現金受領等〕で扱います。特定サービスを必須にせず、選んだ方法と代替方法を案内します。学校の徴収口座情報は流用しません。</p>
+<p>情報の処理を委託する場合は、〔委託先名・委託業務・渡す項目・保存先〕を示します。PTAが委託先の安全管理、閲覧権限、再委託、事故連絡、契約終了時の返却・削除等を契約と運用で確認し、必要な監督を行います。金融機関・決済業者が独自に取得する情報との区分も案内します。会員情報を別目的で学校や第三者へ渡す場合は、法令上必要な確認・手続を別途行い、この説明文を包括的な提供同意にしません。</p>
+<h3>4　アクセス権限・安全管理</h3><p>閲覧・更新できる担当は〔役職・人数・担当範囲〕です。会員台帳を全役員や全会員へ一括公開せず、担当業務に必要な範囲で権限を設定します。紙は〔施錠保管場所・持出ルール〕、電子データは〔保管サービス・認証・端末・バックアップの管理方法〕で保管します。</p>
+<p>役員交代・担当終了時は権限を解除し、管理記録を引き継ぎます。私物端末や個人アカウントへ無管理で残さず、誤送信・紛失・漏えいを防ぐ手順を〔　〕とします。事故の連絡先は〔　〕です。事故発生時には影響を確認し、法令上必要な報告・本人通知等を行います。</p>
+<h3>5　保存期間と退会後の取扱い</h3><table class="responsive"><caption>目的ごとに決める保存期間</caption><thead><tr><th>記録</th><th>保存期間・終了後の処理</th></tr></thead><tbody>
+<tr><th scope="row">申込み受付・未承諾記録</th><td data-label="保存">〔期間・理由・受付終了後の削除方法〕</td></tr>
+<tr><th scope="row">加入合意・会則条件の記録</th><td data-label="保存">〔期間・権利関係確認等の理由・削除方法〕</td></tr>
+<tr><th scope="row">連絡名簿・活動用情報</th><td data-label="保存">〔期間・退会又は活動終了後の利用停止・削除方法〕</td></tr>
+<tr><th scope="row">請求・入金・返金・会計記録</th><td data-label="保存">〔保存根拠・期間・清算後の削除方法〕</td></tr>
+</tbody></table><p>退会後は会員向け連絡・新規請求を停止し、定期決済にも反映します。必要な清算や契約・会計の確認記録は目的と期間を限定して保存し、活動用名簿として使い続けません。委託先、複製、端末、バックアップについても削除・利用停止の手順を決めます。保存年数は法令・会則・契約と必要性に応じて確定し、この様式で一律年数を指定しません。</p>
+<h3>6　訂正・削除等のご相談と窓口</h3><p>PTAが保有する本人情報の内容確認、訂正、削除、利用停止等を希望する場合は、下記へご相談ください。本人確認は必要な範囲で行い、法令・保存の必要性に応じて対応を説明します。退会の連絡だけで全ての契約・会計記録を直ちに消去すると約束するものではありません。</p>
+<p class="fill">PTA保有情報の問合せ窓口：〔担当・連絡先・紙で連絡する方法〕<br>学校が保有する情報の利用・提供、学校徴収、教職員の処理について：〔学校又は教育委員会の窓口〕</p>
+</div><p class="note">この説明文は、PTAが実際の取扱いを確定して使用する案です。委託先契約・保存期間・安全管理等を確認済みとするものではありません。<a href="open-issues.md">要確認事項</a>を参照してください。</p></section><section id="service-reference" class="template-section"><h2>参考資料　自己徴収の実装例・料金比較</h2><p>制度説明の中心は、加入申込み・承諾からPTAが自ら会員を管理し、自己徴収することです。以下はv0.1の確認時点の料金・機能と計算例を保全して移した参考資料です。新規検索・契約・試用は行っていません。価格の現行性や導入適合性を保証せず、特定サービスを推奨しません。</p><h3>v0.1で確認したサービスの参考比較</h3>
+<p>以下は2026年10月4日に公開公式資料で確認した内容です。全PプランはPiitaの特別プランで、別の決済サービスではありません。料金の比較だけで採用を決めず、団体審査、退会後の請求停止、会員記録の出力、役員交代、障害時の代替を確認します。<span class="ref"><a href="pta-school-boundary-transition-guide.html#S15">S15</a>・<a href="pta-school-boundary-transition-guide.html#S16">S16</a>・<a href="pta-school-boundary-transition-guide.html#S17">S17</a>・<a href="pta-school-boundary-transition-guide.html#S18">S18</a>・<a href="pta-school-boundary-transition-guide.html#S19">S19</a>／根拠表 M20～M22</span></p>
+<table class="responsive services"><caption>公式情報で確認した料金・機能と、導入前の確認事項</caption><thead><tr><th>比較軸</th><th>Piita通常</th><th>Piita全Pプラン</th><th>月額パンダ</th></tr></thead><tbody>
+<tr><th scope="row">導入費・固定費</th><td data-label="Piita通常">会員登録無料。年額9,800円（税込）。追加費用の有無は契約確認。</td><td data-label="全P">専用経路で登録。年間利用料無料。試用後の対象機能と条件を確認。</td><td data-label="月額パンダ">初期・月額0円。口座登録はネット500円／紙1,000円（FAQの税表示要確認）。</td></tr>
+<tr><th scope="row">決済費用</th><td data-label="Piita通常">会費の6％。PTA口座への送金275円／回。会員又はPTA負担を選択。</td><td data-label="全P">同じ6％・送金275円／回。固定費無料は手数料無料を意味しない。</td><td data-label="月額パンダ">（売上の3.5％＋成功1件100円）に消費税。登録料・送金等は別途確認。</td></tr>
+<tr><th scope="row">支払方法</th><td data-label="Piita通常">カード・銀行振込。</td><td data-label="全P">カード・銀行振込。</td><td data-label="月額パンダ">カード・口座振替。未回収時にコンビニ・PayPay対応との案内。</td></tr>
+<tr><th scope="row">加入受付・台帳</th><td data-label="Piita通常">会員承認・名簿・CSV機能を案内。加入申込みと承諾の証跡は実際の設定を確認。</td><td data-label="全P">入会手続・集金に特化。会員登録と保護者登録の区別、出力範囲は確認が必要。</td><td data-label="月額パンダ">支払登録・顧客管理。PTA加入契約の記録は別途設計。</td></tr>
+<tr><th scope="row">入金・未納</th><td data-label="Piita通常">支払確認・未納管理を案内。連絡や請求判断はPTAが行う。</td><td data-label="全P">集金確認が可能。未納連絡・管理権限の範囲は確認。</td><td data-label="月額パンダ">カード・振替結果を同一画面で確認。未回収の代替決済を案内。</td></tr>
+<tr><th scope="row">退会・返金・会計連携</th><td data-label="Piita通常">退会即時停止、返金手数料、会計ソフト連携は未確定。CSVだけで連携済みとしない。</td><td data-label="全P">同左。退会済みの会員が請求対象に残らないか確認。</td><td data-label="月額パンダ">同左。定期請求の停止締切、決済後返金の手順を確認。</td></tr>
+<tr><th scope="row">情報管理・役員負担</th><td data-label="Piita通常">カード情報非保存等を案内。契約上の委託・保存・削除・権限は確認。手集計を減らせる可能性。</td><td data-label="全P">非会員の「保護者登録」機能は本キットの会員管理には用いない。会員だけで運用可能な設定は要確認。学校連絡の必須導線にしない。</td><td data-label="月額パンダ">カード情報は決済代行会社管理との案内。加入台帳との二重管理・引継ぎを試算。</td></tr>
+</tbody></table>
+<p class="note">Piitaの銀行振込では支払いごとの振込先が発行されます。家庭が利用する金融機関側の振込手数料は別途確認が必要です。月額パンダの料率は提供者公式の3.5％を記載しました。全国PTA連絡協議会側の比較にある3.4％との条件差は未確定です。</p>
+<h3>総費用と事務量を同じ条件で試算する</h3>
+<p>例えば、100世帯が会費2,000円を年1回払い、決済費をPTAが負担するとします。Piitaの公開料金では決済費12,000円と送金1回275円、通常プランならさらに年額9,800円で、計22,075円です。全Pプランなら計12,275円です。月額パンダの公開基本式では（200,000円×3.5％＋100件×100円）×1.10＝18,700円ですが、口座登録料等を含まないため、導入初年度の総費用は確定しません。これは本キットの計算例で、見積書ではありません。<span class="ref"><a href="pta-school-boundary-transition-guide.html#S15">S15</a>・<a href="pta-school-boundary-transition-guide.html#S16">S16</a>・<a href="pta-school-boundary-transition-guide.html#S17">S17</a>・<a href="pta-school-boundary-transition-guide.html#S18">S18</a>・<a href="pta-school-boundary-transition-guide.html#S19">S19</a>／根拠表 M23</span></p>
+<p>年1回の振込なら、会計担当が会員IDで照合する簡素な運用も可能です。分割徴収は家計の選択肢になりますが、成功1件ごとの手数料があるサービスでは費用と照合作業が増えます。会員数、回数、現金代替の件数、役員の作業時間を同じ前提で比較します。会員数が減る場合は支出を見直し、学校に不可欠な費用をPTA会費で補う前提も学校側で点検します。</p>
+</section><footer>PTA適正化推進委員会／実務移行キット v0.3.1／2026-10-04<br>2HTMLの1440px・390px・820px表示を既存Chromiumで確認。印刷・印刷プレビュー・改ページ・頁数は未確認です。PDFは未作成。</footer></main></body></html>

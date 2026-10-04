@@ -101,7 +101,18 @@ export function auditStatic(root, siteDir) {
   const add = (code, file, detail, severity = 'error') => findings.push({ code, file, detail, severity });
   const resolve = url => {
     const file = decodeURIComponent(url.pathname).replace(/^\//, '');
-    return publicSet.has(file) ? file : publicSet.has(file + (file.endsWith('/') || !file ? '' : '/') + 'index.html') ? file + (file.endsWith('/') || !file ? '' : '/') + 'index.html' : file;
+    if (publicSet.has(file)) return file;
+    const index = file + (file.endsWith('/') || !file ? '' : '/') + 'index.html';
+    if (publicSet.has(index)) return index;
+    // In source-only audits, model GitHub Pages/Jekyll output for publishable Markdown.
+    // Built-site audits still require the generated .html file to exist in _site.
+    if (!siteDir && /\.html?$/i.test(file)) {
+      for (const ext of ['.md', '.markdown']) {
+        const source = file.replace(/\.html?$/i, ext);
+        if (publicSet.has(source)) return source;
+      }
+    }
+    return file;
   };
   const checkRef = (raw, file, base, fragment = false) => {
     if (!raw || /^(data:|blob:|mailto:|tel:|javascript:)/i.test(raw)) return;
