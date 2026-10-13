@@ -4016,7 +4016,7 @@
   </url>
   <url>
     <loc>https://ptaorg.com/journal.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -4041,6 +4041,12 @@
   <url>
     <loc>https://ptaorg.com/journal/kawasaki-pta-fee-school-duty.html</loc>
     <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/journal/matsuyama-pta-fee-unification-20261013.html</loc>
+    <lastmod>2026-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
