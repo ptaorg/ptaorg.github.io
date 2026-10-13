@@ -4149,7 +4149,7 @@ window.PTA_SITE_SEARCH_INDEX = [
     "100の屁理屈と循環論法――滋賀県PTA住民監査請求は行政の急所を突いた",
     "/journal/shiga-pta-audit-circular-reasoning-20261013.html",
     "滋賀県PTA会費徴収住民監査請求を検証。三者契約、旧自治省行政実例、東京高裁判決の援助制度、地方自治法235条の4、個人情報保護法61条、学校徴収金DX資料の変化を原資料から分析。",
-    "current-canonical"
+    "research-record"
   ],
   [
     "すでに「2割近く」がPTA非加入だった――2020年の新宿区審議会が問うた名簿提供",
