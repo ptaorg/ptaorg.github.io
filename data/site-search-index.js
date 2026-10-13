@@ -4044,6 +4044,12 @@ window.PTA_SITE_SEARCH_INDEX = [
     "research-record"
   ],
   [
+    "公会計化の名で、なぜPTA会費まで集めるのか",
+    "/journal/matsuyama-pta-fee-unification-20261013.html",
+    "学校徴収金の公会計化とPTA会費は別問題。松山市の徴収一元化事業、2021年の「法的に可能な範囲」、2023年誤徴収、2026年公式回答を検証し、所掌事務と権限から公私分離を論じる。",
+    "current-canonical"
+  ],
+  [
     "「運営優良PTA」は何を保証するのか――個人情報保護委員会（PPC）の公的規律と文科省・日本総研調査の間にある空白",
     "/journal/mext-jri-pta-good-practice-legal-scope.html",
     "文科省・日本総研の運営優良PTA事例を、個人情報保護委員会（PPC）が公立学校側に求める所掌事務、利用目的、恒常的処理の審査順序と比較し、「優良」という評価の法的射程を検証します。",
