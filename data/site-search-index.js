@@ -1230,6 +1230,696 @@ window.PTA_SITE_SEARCH_INDEX = [
     "source-archive"
   ],
   [
+    "一倉小学校 PTA関連資料",
+    "/archive/kagoshima/school-001-es/",
+    "一倉小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "中名小学校 PTA関連資料",
+    "/archive/kagoshima/school-002-es/",
+    "中名小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "中山小学校 PTA関連資料",
+    "/archive/kagoshima/school-003-es/",
+    "中山小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "中洲小学校 PTA関連資料",
+    "/archive/kagoshima/school-004-es/",
+    "中洲小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "中郡小学校 PTA関連資料",
+    "/archive/kagoshima/school-005-es/",
+    "中郡小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "伊敷中学校 PTA関連資料",
+    "/archive/kagoshima/school-006-jhs/",
+    "伊敷中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "伊敷台中学校 PTA関連資料",
+    "/archive/kagoshima/school-007-jhs/",
+    "伊敷台中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "伊敷台小学校 PTA関連資料",
+    "/archive/kagoshima/school-008-es/",
+    "伊敷台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "伊敷小学校 PTA関連資料",
+    "/archive/kagoshima/school-009-es/",
+    "伊敷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "八幡小学校 PTA関連資料",
+    "/archive/kagoshima/school-010-es/",
+    "八幡小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "前之浜小学校 PTA関連資料",
+    "/archive/kagoshima/school-011-es/",
+    "前之浜小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "南中学校 PTA関連資料",
+    "/archive/kagoshima/school-012-jhs/",
+    "南中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "南小学校 PTA関連資料",
+    "/archive/kagoshima/school-013-es/",
+    "南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "南方小学校 PTA関連資料",
+    "/archive/kagoshima/school-014-es/",
+    "南方小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "原良小学校 PTA関連資料",
+    "/archive/kagoshima/school-015-es/",
+    "原良小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "吉田北中学校 PTA関連資料",
+    "/archive/kagoshima/school-016-jhs/",
+    "吉田北中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "吉田南中学校 PTA関連資料",
+    "/archive/kagoshima/school-017-jhs/",
+    "吉田南中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "吉田小学校 PTA関連資料",
+    "/archive/kagoshima/school-018-es/",
+    "吉田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "吉野中学校 PTA関連資料",
+    "/archive/kagoshima/school-019-jhs/",
+    "吉野中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "吉野小学校 PTA関連資料",
+    "/archive/kagoshima/school-020-es/",
+    "吉野小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "吉野東中学校 PTA関連資料",
+    "/archive/kagoshima/school-021-jhs/",
+    "吉野東中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "吉野東小学校 PTA関連資料",
+    "/archive/kagoshima/school-022-es/",
+    "吉野東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "名山小学校 PTA関連資料",
+    "/archive/kagoshima/school-023-es/",
+    "名山小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "向陽小学校 PTA関連資料",
+    "/archive/kagoshima/school-024-es/",
+    "向陽小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "和田中学校 PTA関連資料",
+    "/archive/kagoshima/school-025-jhs/",
+    "和田中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "和田小学校 PTA関連資料",
+    "/archive/kagoshima/school-026-es/",
+    "和田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "喜入中学校 PTA関連資料",
+    "/archive/kagoshima/school-027-jhs/",
+    "喜入中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "喜入小学校 PTA関連資料",
+    "/archive/kagoshima/school-028-es/",
+    "喜入小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "坂元中学校 PTA関連資料",
+    "/archive/kagoshima/school-029-jhs/",
+    "坂元中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "坂元台小学校 PTA関連資料",
+    "/archive/kagoshima/school-030-es/",
+    "坂元台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "坂元小学校 PTA関連資料",
+    "/archive/kagoshima/school-031-es/",
+    "坂元小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "城南小学校 PTA関連資料",
+    "/archive/kagoshima/school-032-es/",
+    "城南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "城西中学校 PTA関連資料",
+    "/archive/kagoshima/school-033-jhs/",
+    "城西中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大明丘小学校 PTA関連資料",
+    "/archive/kagoshima/school-034-es/",
+    "大明丘小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "大龍小学校 PTA関連資料",
+    "/archive/kagoshima/school-035-es/",
+    "大龍小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "天保山中学校 PTA関連資料",
+    "/archive/kagoshima/school-036-jhs/",
+    "天保山中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "宇宿小学校 PTA関連資料",
+    "/archive/kagoshima/school-037-es/",
+    "宇宿小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "宮小学校 PTA関連資料",
+    "/archive/kagoshima/school-038-es/",
+    "宮小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "宮川小学校 PTA関連資料",
+    "/archive/kagoshima/school-039-es/",
+    "宮川小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "小山田小学校 PTA関連資料",
+    "/archive/kagoshima/school-040-es/",
+    "小山田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "山下小学校 PTA関連資料",
+    "/archive/kagoshima/school-041-es/",
+    "山下小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "川上小学校 PTA関連資料",
+    "/archive/kagoshima/school-042-es/",
+    "川上小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "平川小学校 PTA関連資料",
+    "/archive/kagoshima/school-043-es/",
+    "平川小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "広木小学校 PTA関連資料",
+    "/archive/kagoshima/school-044-es/",
+    "広木小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "明和中学校 PTA関連資料",
+    "/archive/kagoshima/school-045-jhs/",
+    "明和中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "明和小学校 PTA関連資料",
+    "/archive/kagoshima/school-046-es/",
+    "明和小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "星峯中学校 PTA関連資料",
+    "/archive/kagoshima/school-047-jhs/",
+    "星峯中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "星峯東小学校 PTA関連資料",
+    "/archive/kagoshima/school-048-es/",
+    "星峯東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "星峯西小学校 PTA関連資料",
+    "/archive/kagoshima/school-049-es/",
+    "星峯西小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "春山小学校 PTA関連資料",
+    "/archive/kagoshima/school-050-es/",
+    "春山小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "本名小学校 PTA関連資料",
+    "/archive/kagoshima/school-051-es/",
+    "本名小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "本城小学校 PTA関連資料",
+    "/archive/kagoshima/school-052-es/",
+    "本城小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "東昌小学校 PTA関連資料",
+    "/archive/kagoshima/school-053-es/",
+    "東昌小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "東桜島中学校 PTA関連資料",
+    "/archive/kagoshima/school-054-jhs/",
+    "東桜島中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "東桜島小学校 PTA関連資料",
+    "/archive/kagoshima/school-055-es/",
+    "東桜島小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "東谷山中学校 PTA関連資料",
+    "/archive/kagoshima/school-056-jhs/",
+    "東谷山中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "東谷山小学校 PTA関連資料",
+    "/archive/kagoshima/school-057-es/",
+    "東谷山小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "松元中学校 PTA関連資料",
+    "/archive/kagoshima/school-058-jhs/",
+    "松元中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "松元小学校 PTA関連資料",
+    "/archive/kagoshima/school-059-es/",
+    "松元小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "松原小学校 PTA関連資料",
+    "/archive/kagoshima/school-060-es/",
+    "松原小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "桜丘中学校 PTA関連資料",
+    "/archive/kagoshima/school-061-jhs/",
+    "桜丘中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "桜丘東小学校 PTA関連資料",
+    "/archive/kagoshima/school-062-es/",
+    "桜丘東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "桜丘西小学校 PTA関連資料",
+    "/archive/kagoshima/school-063-es/",
+    "桜丘西小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "桜峰小学校 PTA関連資料",
+    "/archive/kagoshima/school-064-es/",
+    "桜峰小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "桜島中学校 PTA関連資料",
+    "/archive/kagoshima/school-065-jhs/",
+    "桜島中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "桜洲小学校 PTA関連資料",
+    "/archive/kagoshima/school-066-es/",
+    "桜洲小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "武中学校 PTA関連資料",
+    "/archive/kagoshima/school-067-jhs/",
+    "武中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "武小学校 PTA関連資料",
+    "/archive/kagoshima/school-068-es/",
+    "武小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "武岡中学校 PTA関連資料",
+    "/archive/kagoshima/school-069-jhs/",
+    "武岡中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "武岡台小学校 PTA関連資料",
+    "/archive/kagoshima/school-070-es/",
+    "武岡台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "河頭中学校 PTA関連資料",
+    "/archive/kagoshima/school-071-jhs/",
+    "河頭中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "清和小学校 PTA関連資料",
+    "/archive/kagoshima/school-072-es/",
+    "清和小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "清水中学校 PTA関連資料",
+    "/archive/kagoshima/school-073-jhs/",
+    "清水中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "清水小学校 PTA関連資料",
+    "/archive/kagoshima/school-074-es/",
+    "清水小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "瀬々串小学校 PTA関連資料",
+    "/archive/kagoshima/school-075-es/",
+    "瀬々串小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "牟礼岡小学校 PTA関連資料",
+    "/archive/kagoshima/school-076-es/",
+    "牟礼岡小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "犬迫小学校 PTA関連資料",
+    "/archive/kagoshima/school-077-es/",
+    "犬迫小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "玉江小学校 PTA関連資料",
+    "/archive/kagoshima/school-078-es/",
+    "玉江小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "玉龍中学校 PTA関連資料",
+    "/archive/kagoshima/school-079-jhs/",
+    "玉龍中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "生見小学校 PTA関連資料",
+    "/archive/kagoshima/school-080-es/",
+    "生見小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "田上小学校 PTA関連資料",
+    "/archive/kagoshima/school-081-es/",
+    "田上小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "甲南中学校 PTA関連資料",
+    "/archive/kagoshima/school-082-jhs/",
+    "甲南中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "甲東中学校 PTA関連資料",
+    "/archive/kagoshima/school-083-jhs/",
+    "甲東中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "皆与志小学校 PTA関連資料",
+    "/archive/kagoshima/school-084-es/",
+    "皆与志小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "皇徳寺中学校 PTA関連資料",
+    "/archive/kagoshima/school-085-jhs/",
+    "皇徳寺中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "皇徳寺小学校 PTA関連資料",
+    "/archive/kagoshima/school-086-es/",
+    "皇徳寺小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "石谷小学校 PTA関連資料",
+    "/archive/kagoshima/school-087-es/",
+    "石谷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "福平中学校 PTA関連資料",
+    "/archive/kagoshima/school-088-jhs/",
+    "福平中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "福平小学校 PTA関連資料",
+    "/archive/kagoshima/school-089-es/",
+    "福平小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "紫原中学校 PTA関連資料",
+    "/archive/kagoshima/school-090-jhs/",
+    "紫原中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "紫原小学校 PTA関連資料",
+    "/archive/kagoshima/school-091-es/",
+    "紫原小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "緑丘中学校 PTA関連資料",
+    "/archive/kagoshima/school-092-jhs/",
+    "緑丘中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "花尾小学校 PTA関連資料",
+    "/archive/kagoshima/school-093-es/",
+    "花尾小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "花野小学校 PTA関連資料",
+    "/archive/kagoshima/school-094-es/",
+    "花野小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "草牟田小学校 PTA関連資料",
+    "/archive/kagoshima/school-095-es/",
+    "草牟田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "荒田小学校 PTA関連資料",
+    "/archive/kagoshima/school-096-es/",
+    "荒田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "西伊敷小学校 PTA関連資料",
+    "/archive/kagoshima/school-097-es/",
+    "西伊敷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "西田小学校 PTA関連資料",
+    "/archive/kagoshima/school-098-es/",
+    "西田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "西紫原中学校 PTA関連資料",
+    "/archive/kagoshima/school-099-jhs/",
+    "西紫原中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "西紫原小学校 PTA関連資料",
+    "/archive/kagoshima/school-100-es/",
+    "西紫原小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "西谷山小学校 PTA関連資料",
+    "/archive/kagoshima/school-101-es/",
+    "西谷山小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "西陵中学校 PTA関連資料",
+    "/archive/kagoshima/school-102-jhs/",
+    "西陵中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "西陵小学校 PTA関連資料",
+    "/archive/kagoshima/school-103-es/",
+    "西陵小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "谷山中学校 PTA関連資料",
+    "/archive/kagoshima/school-104-jhs/",
+    "谷山中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "谷山北中学校 PTA関連資料",
+    "/archive/kagoshima/school-105-jhs/",
+    "谷山北中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "谷山小学校 PTA関連資料",
+    "/archive/kagoshima/school-106-es/",
+    "谷山小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "郡山中学校 PTA関連資料",
+    "/archive/kagoshima/school-107-jhs/",
+    "郡山中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "郡山小学校 PTA関連資料",
+    "/archive/kagoshima/school-108-es/",
+    "郡山小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "錦江台小学校 PTA関連資料",
+    "/archive/kagoshima/school-109-es/",
+    "錦江台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "錫山小中学校 PTA関連資料",
+    "/archive/kagoshima/school-110-jhs/",
+    "錫山小中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "長田中学校 PTA関連資料",
+    "/archive/kagoshima/school-111-jhs/",
+    "長田中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "鴨池中学校 PTA関連資料",
+    "/archive/kagoshima/school-112-jhs/",
+    "鴨池中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "鴨池小学校 PTA関連資料",
+    "/archive/kagoshima/school-113-es/",
+    "鴨池小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "黒神中学校 PTA関連資料",
+    "/archive/kagoshima/school-114-jhs/",
+    "黒神中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
+    "黒神小学校 PTA関連資料",
+    "/archive/kagoshima/school-115-es/",
+    "黒神小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+    "source-archive"
+  ],
+  [
     "大井小学校 PTA関連資料",
     "/archive/kameoka/school-001-es/",
     "大井小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
