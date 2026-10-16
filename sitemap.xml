@@ -4016,7 +4016,7 @@
   </url>
   <url>
     <loc>https://ptaorg.com/journal.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -4089,6 +4089,12 @@
   <url>
     <loc>https://ptaorg.com/journal/pta-fee-collection-legal-analysis.html</loc>
     <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/journal/pta-fee-delegation-origin-local-government-law-20261016.html</loc>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

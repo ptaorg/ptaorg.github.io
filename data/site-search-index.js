@@ -4092,6 +4092,12 @@ window.PTA_SITE_SEARCH_INDEX = [
     "research-record"
   ],
   [
+    "PTA会費はいつ「学校の仕事」になったのか――委任方式の成立史と地方自治法235条の4",
+    "/journal/pta-fee-delegation-origin-local-government-law-20261016.html",
+    "学校徴収金とPTA会費の法的区別を出発点に、1983年大阪府会計基準、2005年東京都規則、文科省委託システム研究、2012年文科省・総務省交渉、全国監査を検証。委任・校務分掌・公金外現金処理の根拠を問い直す。",
+    "research-record"
+  ],
+  [
     "PTA適正化の最終地点",
     "/journal/pta-final-point-ptf.html",
     "PTA適正化の最終地点は「会費をどう適法に集めるか」の先にある。固定会費型PTAが構造的に抱える緊張を分析し、年会費・恒常財産・役員ノルマ・学校資源利用を置かない最小構造フォーラム（PTF）という基底形の制度設計を提示します。",
