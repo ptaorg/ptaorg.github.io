@@ -3,7 +3,7 @@
   "municipality": "鹿児島市",
   "prefecture": "鹿児島県",
   "schoolName": "錫山小中学校",
-  "schoolType": "中学校",
+  "schoolType": "小中学校",
   "slug": "school-110-jhs",
   "basePath": "/archive/kagoshima/school-110-jhs/",
   "canonical": "https://ptaorg.com/archive/kagoshima/school-110-jhs/",
@@ -30,6 +30,6 @@
   "lastReviewed": "2026-10-02",
   "nationalArchive": {
     "order": 18110,
-    "group": "鹿児島市・中学校"
+    "group": "鹿児島市・小中学校"
   }
 }
