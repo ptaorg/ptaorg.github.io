@@ -44,8 +44,7 @@
   }
   function makeTileLayer() {
     return L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors',
-      noWrap: true
+      attribution: '&copy; OpenStreetMap contributors'
     });
   }
   function injectMapStyles() {

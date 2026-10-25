@@ -1,0 +1,114 @@
+{
+  "version": 4,
+  "policyName": "PTA JEV fixed orchestration",
+  "models": {
+    "planner": "gpt-6.1-sol",
+    "worker": "gpt-6-luna",
+    "jev": "gpt-6-luna",
+    "senior": "gpt-6.1-sol",
+    "secretary": "gpt-6.1-sol"
+  },
+  "reasoning": {
+    "planner": "high",
+    "worker": "medium",
+    "jev": "medium",
+    "senior": "high",
+    "secretary": "medium"
+  },
+  "limits": {
+    "defaultWorkers": 8,
+    "maxWorkers": 50,
+    "maxInventoryEntries": 2500,
+    "maxPlannerInventoryEntries": 320,
+    "maxContextCharsPerWorker": 24000,
+    "maxPlannerOutputTokens": 7000,
+    "maxWorkerOutputTokens": 5000,
+    "maxJevOutputTokens": 9000,
+    "maxSeniorOutputTokens": 7000,
+    "maxSecretaryOutputTokens": 5000,
+    "maxInstructionChars": 70000,
+    "maxSkillCount": 6
+  },
+  "files": {
+    "extensions": [
+      ".html",
+      ".htm",
+      ".md",
+      ".txt",
+      ".json",
+      ".js",
+      ".mjs",
+      ".cjs",
+      ".css",
+      ".xml",
+      ".yml",
+      ".yaml"
+    ],
+    "excludeDirectories": [
+      ".git",
+      "node_modules",
+      "_site",
+      "source-pdfs"
+    ]
+  },
+  "approval": {
+    "alwaysHuman": [
+      "external_send",
+      "publish",
+      "delete",
+      "git_push",
+      "git_merge",
+      "deploy",
+      "financial_action",
+      "credential_change",
+      "repository_write"
+    ],
+    "seniorReview": [
+      "legal_interpretation",
+      "privacy_personal_data",
+      "public_claim",
+      "repository_write",
+      "financial_analysis"
+    ]
+  },
+  "runtime": {
+    "storeResponses": false,
+    "readOnly": true
+  },
+  "aiSystem": {
+    "directory": "ai-system",
+    "registry": "SKILL_REGISTRY.json",
+    "requiredDocs": [
+      "CORE_INSTRUCTIONS.md",
+      "ORCHESTRATION.md",
+      "QUALITY_STANDARD.md",
+      "CONTEXT_ENGINE.md"
+    ]
+  },
+  "modelPolicy": {
+    "roles": {
+      "planner": "sol",
+      "worker": "luna",
+      "jev": "luna",
+      "senior": "sol",
+      "secretary": "sol"
+    },
+    "apiVerifiedOn": "2026-10-04"
+  },
+  "contextEngine": {
+    "enabled": true,
+    "vaultEnv": "PTA_CONTEXT_VAULT",
+    "routeConfig": "06_AI_SYSTEM/CONTEXT_ROUTES.json",
+    "maxNotes": 10,
+    "maxChars": 16000
+  },
+  "seniorContext": {
+    "requiredDocs": [
+      "CORE_INSTRUCTIONS.md",
+      "QUALITY_STANDARD.md"
+    ],
+    "maxSkillCount": 3,
+    "maxVaultNotes": 6,
+    "maxVaultChars": 8000
+  }
+}

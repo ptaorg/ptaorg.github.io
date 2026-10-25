@@ -21,8 +21,8 @@
       ['fee','会費徴収','/fee-collection.html'],
       ['withdrawal','退会・非加入','/guide-parent.html#parent-withdrawal']
     ]},
-    ppc: {title:'個人情報・PPC', items:[
-      ['ppc','PPC資料','/ppc-points.html'],
+    ppc: {title:'個人情報・個人情報保護委員会（PPC）', items:[
+      ['ppc','個人情報保護委員会（PPC）資料','/ppc-points.html'],
       ['privacy','個人情報','/privacy.html'],
       ['kurume','久留米市28答申第2号',KURUME_URL],
       ['membership','加入手続き','/membership.html'],
@@ -61,7 +61,7 @@
     ]},
     generic: {title:'サイト内の現在地', items:[
       ['optin','オプトイン','/pta-membership-optin.html'],
-      ['ppc','PPC資料','/ppc-points.html'],
+      ['ppc','個人情報保護委員会（PPC）資料','/ppc-points.html'],
       ['board','教育委員会回答','/board-responses.html'],
       ['law','論点別','/law-map.html'],
       ['docs','根拠資料','/documents.html'],

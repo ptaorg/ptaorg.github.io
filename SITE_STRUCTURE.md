@@ -92,3 +92,9 @@ JavaScriptは、検索、ナビゲーション開閉、地図、補助表示な�
 同じ本文を複数ページに複製しないこと。中核テーゼ（入会申込書なし＋学校管理口座での引落し→学校自身による目的外利用→61条→69条2項＝臨時的規定）の正本は `framework.html` に置きます。
 
 最終更新: 2026-07-17
+
+## PTA実務移行キットの資料入口
+
+`kit/{education-board,school-leaders,federation,unit-pta,parents}/index.html` は読者別キットの恒久入口です。既存の任意加入・立場別解説を置き換えず、最新版資料・主要根拠・履歴を案内します。5つの公開URLと永続運用は `URL_LEDGER.md`／`data/url-ledger.json` で管理します。
+
+版を固定した配布成果物は `assets/kit/audience-prototypes-v0.2-20261004/` に集約します。検索とsitemapは入口ページを収録し、成果物の保存領域を除外します。HTMLの公開用メタデータ以外は基準版を保持し、法理解説の正本はMaster v0.3.1とします。

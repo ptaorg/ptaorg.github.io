@@ -4706,7 +4706,7 @@
   </url>
   <url>
     <loc>https://ptaorg.com/journal.html</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -4731,6 +4731,18 @@
   <url>
     <loc>https://ptaorg.com/journal/kawasaki-pta-fee-school-duty.html</loc>
     <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/journal/matsuyama-pta-fee-unification-20261013.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/journal/mext-jri-pta-good-practice-legal-scope.html</loc>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -4767,6 +4779,12 @@
   <url>
     <loc>https://ptaorg.com/journal/pta-fee-collection-legal-analysis.html</loc>
     <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/journal/pta-fee-delegation-origin-local-government-law-20261016.html</loc>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -4819,8 +4837,50 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ptaorg.com/journal/school-pta-fee-public-duty-mic-mext-ppc-20261016.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/journal/setagaya-pta-information-separation.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/journal/shiga-pta-audit-circular-reasoning-20261013.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/journal/shinjuku-2020-pta-nonmember-data.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/journal/social-education-law-pta-boundary.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/journal/tamano-chuo-pta-establishment.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ptaorg.com/journal/third-party-consent.html</loc>
     <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/journal/why-pta-membership-freedom-fails.html</loc>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -4839,6 +4899,36 @@
   <url>
     <loc>https://ptaorg.com/key-materials.html</loc>
     <lastmod>2026-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/kit/education-board/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/kit/federation/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/kit/parents/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/kit/school-leaders/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/kit/unit-pta/</loc>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -4874,7 +4964,7 @@
   </url>
   <url>
     <loc>https://ptaorg.com/ppc-points.html</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

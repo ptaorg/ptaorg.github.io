@@ -151,7 +151,7 @@ window.PTA_DOCUMENTS = {
     ]
   },
   "ppc-personal-info": {
-    title: "PPC個人情報資料の要点",
+    title: "個人情報保護委員会（PPC）個人情報資料の要点",
     documentName: "公立学校とPTAの間で個人情報のやり取りをするためのポイント",
     issuer: "個人情報保護委員会",
     date: "令和8年（2026年）3月",

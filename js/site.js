@@ -143,6 +143,95 @@
     document.querySelectorAll('.mobile-overlay').forEach(markCurrent);
   }
 
+  function installDesktopSearchPanel(){
+    document.querySelectorAll('.site-header .nav-container > .header-search').forEach(function(box,index){
+      if (box.dataset.desktopSearchReady === '1') return;
+      var input = box.querySelector('.search-input');
+      var dropdown = box.querySelector('.search-results-dropdown');
+      if (!input || !dropdown) return;
+
+      box.dataset.desktopSearchReady = '1';
+      box.classList.add('search-launcher-ready');
+
+      var panelId = 'desktopSiteSearchPanel-' + index;
+      var trigger = document.createElement('button');
+      trigger.type = 'button';
+      trigger.className = 'desktop-search-trigger';
+      trigger.setAttribute('aria-expanded','false');
+      trigger.setAttribute('aria-controls',panelId);
+      trigger.setAttribute('aria-label','サイト内検索を開く');
+      trigger.innerHTML =
+        '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4.2-4.2"></path></svg>' +
+        '<span class="desktop-search-trigger-text">検索</span>';
+
+      var panel = document.createElement('div');
+      panel.id = panelId;
+      panel.className = 'desktop-search-panel';
+      panel.hidden = true;
+
+      var panelHead = document.createElement('div');
+      panelHead.className = 'desktop-search-panel-head';
+      panelHead.innerHTML =
+        '<div><strong>サイト内検索</strong><span>論考・行政資料・自治体回答を横断して探せます</span></div>';
+
+      var close = document.createElement('button');
+      close.type = 'button';
+      close.className = 'desktop-search-close';
+      close.setAttribute('aria-label','検索を閉じる');
+      close.textContent = '×';
+      panelHead.appendChild(close);
+
+      var field = document.createElement('div');
+      field.className = 'desktop-search-field';
+      var originalIcon = box.querySelector(':scope > svg');
+      if (originalIcon) {
+        originalIcon.setAttribute('aria-hidden','true');
+        field.appendChild(originalIcon);
+      }
+      input.placeholder = '例：会費徴収、個人情報、任意加入、学校施設';
+      field.appendChild(input);
+      field.appendChild(dropdown);
+
+      panel.appendChild(panelHead);
+      panel.appendChild(field);
+      box.appendChild(trigger);
+      box.appendChild(panel);
+
+      function setOpen(open){
+        panel.hidden = !open;
+        box.classList.toggle('is-search-open',open);
+        trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        trigger.setAttribute('aria-label', open ? 'サイト内検索を閉じる' : 'サイト内検索を開く');
+        if (open) {
+          window.setTimeout(function(){ input.focus(); }, 0);
+        } else {
+          dropdown.classList.remove('is-open');
+        }
+      }
+
+      trigger.addEventListener('click',function(){
+        setOpen(panel.hidden);
+      });
+      close.addEventListener('click',function(){
+        setOpen(false);
+        trigger.focus();
+      });
+      box.addEventListener('keydown',function(ev){
+        if (ev.key === 'Escape' && !panel.hidden) {
+          ev.preventDefault();
+          setOpen(false);
+          trigger.focus();
+        }
+      });
+      document.addEventListener('click',function(ev){
+        if (!panel.hidden && !box.contains(ev.target)) setOpen(false);
+      });
+      window.addEventListener('resize',function(){
+        if (window.innerWidth <= 860 && !panel.hidden) setOpen(false);
+      });
+    });
+  }
+
   function installMobileSearch(){
     var overlay = document.getElementById('mobileOverlay');
     if (!overlay || overlay.querySelector('[data-mobile-site-search]')) return;
@@ -251,7 +340,7 @@
       '<p>学校が名簿ファイルをPTAへ提供していなくても、学校が保有する情報をPTA内部事務のために検索・照合・抽出・連絡・徴収へ使えば、学校自身による「利用」という境界問題が生じます。個人情報保護法69条は、利用目的以外の目的のために保有個人情報を「自ら利用し、又は提供」することを原則として制限しています。</p>' +
       '<p><strong>典型例：</strong>学校在籍者とPTA入会届の提出者を照合して未提出者を割り出す、学年・学級・学籍番号等を使って担任が提出を督促する、学校保有情報からPTA会員・非会員を判別する、学校口座情報を使ってPTA会費の対象登録・引落し・未納管理を行う、登校班・地区班・旗振り当番をPTA目的で編成する、学校連絡アプリでPTA配信対象者を抽出する、といった処理です。</p>' +
       '<p>さらに、教職員が職務上知り得た家庭・児童・保護者情報をPTA内部事務へ用いる場面では、学校組織としての61条・69条の整理とは別に、個人情報保護法67条の従事者義務も確認する必要があります。</p>' +
-      '<p><strong>確認の中心は、「誰に渡したか」だけでなく「誰の事務のために、誰の情報・システム・職員を使ったか」です。</strong> この視点で見ると、入会、名簿、会費、会計、当番、連絡、教職員労務は、すべて同じ「学校とPTAの境界」の問題としてつながります。具体例と67条・懲戒等の射程は<a href="/ppc-school-pta-personal-data.html#internal-use-examples">PPC資料17ページ詳細解説</a>で整理しています。</p>';
+      '<p><strong>確認の中心は、「誰に渡したか」だけでなく「誰の事務のために、誰の情報・システム・職員を使ったか」です。</strong> この視点で見ると、入会、名簿、会費、会計、当番、連絡、教職員労務は、すべて同じ「学校とPTAの境界」の問題としてつながります。具体例と67条・懲戒等の射程は<a href="/ppc-school-pta-personal-data.html#internal-use-examples">個人情報保護委員会（PPC）資料17ページ詳細解説</a>で整理しています。</p>';
     steps.insertAdjacentElement('beforebegin', block);
   }
 
@@ -354,6 +443,7 @@
 
   load('/js/seo-analytics-v104.js?v=20260919-1', 'seo-analytics-v104');
   load('/js/site-core-v90.js?v=99', 'site-core-v90', function(){
+    installDesktopSearchPanel();
     installMobileSearch();
     load('/js/current-location-nav.js?v=20260823-10', 'current-location-nav', installCoreEssayEntrances);
   });

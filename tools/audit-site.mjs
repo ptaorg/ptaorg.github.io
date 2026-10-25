@@ -14,12 +14,8 @@ const origin = 'https://ptaorg.com';
 const hosts = new Set(['ptaorg.com', 'www.ptaorg.com', 'ptaorg.github.io']);
 const isTelemetry = url => (url.hostname === 'analytics.google.com' || /(^|\.)google-analytics\.com$/.test(url.hostname)) && /\/collect$/.test(url.pathname);
 const list = value => value == null ? [] : Array.isArray(value) ? value : [value];
-// Reviewed against dcb043a1305b53ff1458a85b4bab0d6010d57bf8. Exact findings only,
-// one occurrence each. When repaired, a stale entry fails CI until removed.
-export const knownIssues = [
-  { code: 'sitemap-target', file: 'sitemap-research.xml', detail: 'https://ptaorg.com/research.html: non-indexable target', reason: 'Existing supplementary sitemap still lists the retired research redirect; site fix deferred.' },
-  { code: 'fragment', file: 'guide-board-print.html', detail: '/school-pta-separation.html#submit-to-board', reason: 'Existing print toolbar links to a removed section; site fix deferred.' },
-];
+// Known-site baselines are exact and temporary. Keep this list empty when all known issues are repaired.
+export const knownIssues = [];
 export function applyKnownIssues(findings, entries = knownIssues) {
   for (const entry of entries) {
     const matches = findings.filter(f => f.code === entry.code && f.file === entry.file && f.detail === entry.detail && f.severity === 'error');
@@ -105,7 +101,18 @@ export function auditStatic(root, siteDir) {
   const add = (code, file, detail, severity = 'error') => findings.push({ code, file, detail, severity });
   const resolve = url => {
     const file = decodeURIComponent(url.pathname).replace(/^\//, '');
-    return publicSet.has(file) ? file : publicSet.has(file + (file.endsWith('/') || !file ? '' : '/') + 'index.html') ? file + (file.endsWith('/') || !file ? '' : '/') + 'index.html' : file;
+    if (publicSet.has(file)) return file;
+    const index = file + (file.endsWith('/') || !file ? '' : '/') + 'index.html';
+    if (publicSet.has(index)) return index;
+    // In source-only audits, model GitHub Pages/Jekyll output for publishable Markdown.
+    // Built-site audits still require the generated .html file to exist in _site.
+    if (!siteDir && /\.html?$/i.test(file)) {
+      for (const ext of ['.md', '.markdown']) {
+        const source = file.replace(/\.html?$/i, ext);
+        if (publicSet.has(source)) return source;
+      }
+    }
+    return file;
   };
   const checkRef = (raw, file, base, fragment = false) => {
     if (!raw || /^(data:|blob:|mailto:|tel:|javascript:)/i.test(raw)) return;
