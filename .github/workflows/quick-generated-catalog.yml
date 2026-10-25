@@ -26,3 +26,11 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run check:generated
+      - name: Show generated sitemap diff on failure
+        if: failure()
+        run: |
+          npm run generate:schools
+          npm run generate:archive
+          npm run enhance:pages
+          npm run generate:sitemap
+          git --no-pager diff -- sitemap.xml | head -120
