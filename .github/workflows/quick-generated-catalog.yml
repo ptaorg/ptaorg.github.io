@@ -8,9 +8,6 @@ on:
       - "scripts/generate-sitemap.js"
       - "scripts/generate-search-index.js"
       - "scripts/check-generated-files.js"
-  push:
-    branches:
-      - fix/archive-catalog-order-20261026
 
 permissions:
   contents: read
