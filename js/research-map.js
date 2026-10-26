@@ -190,3 +190,117 @@
   }
   render();
 })();
+
+
+/* Supplementary October 2026 cross-jurisdiction survey.
+   Read-only, public-data-only index. The 29-region base map is not reclassified
+   as a map of violations or legal findings. */
+(async function renderNationalPTASurvey() {
+  "use strict";
+  const anchor = document.getElementById("research-results");
+  if (!anchor) return;
+  let survey;
+  try {
+    const response = await fetch("/data/research-survey-20261026.json");
+    if (!response.ok) return;
+    survey = await response.json();
+    if (!Array.isArray(survey.records) || survey.records.length !== 48) return;
+  } catch (_) {
+    return; // The original static map and region list remain usable.
+  }
+  const mk = (tag, text, cls) => {
+    const el = document.createElement(tag);
+    if (text != null) el.textContent = String(text);
+    if (cls) el.className = cls;
+    return el;
+  };
+  const section = mk("section", null, "research-survey");
+  section.id = "national-primary-survey";
+  section.append(mk("h2", "PTA内部事務の公務化・全国横断一次調査"));
+  section.append(mk("p", "2026年10月26日確認版。48主体を登録し、そのうち39主体で一次資料の該当箇所を確認。47都道府県・20指定都市の固定対象67主体では33主体の原本確認にとどまり、全国全件の検証は未完了です。"));
+  section.append(mk("p", "確認済みは制度説明・資料の該当箇所を意味します。違法性の認定、全校実態の確認、現行制度の完全確認を意味しません。受領した非公表の回答原文・メールURL・添付資料は公開していません。", "research-notice"));
+  const controls = mk("div", null, "research-survey-filters");
+  const searchLabel = mk("label", "48主体内を検索");
+  const search = document.createElement("input");
+  search.type = "search";
+  search.placeholder = "自治体・規則・制度類型・資料名";
+  search.setAttribute("aria-label", "全国一次調査の検索");
+  searchLabel.append(search);
+  const statusLabel = mk("label", "資料確認状況");
+  const evidence = document.createElement("select");
+  evidence.setAttribute("aria-label", "全国一次調査の資料確認状況");
+  ["すべて", "原本確認", "公式本文確認・原本保存未了", "検索本文のみ", "候補資料"].forEach((name, i) => {
+    const option = document.createElement("option");
+    option.value = i ? name : "";
+    option.textContent = name;
+    evidence.append(option);
+  });
+  statusLabel.append(evidence);
+  controls.append(searchLabel, statusLabel);
+  section.append(controls);
+  const resultCount = mk("p", "", "research-survey-result");
+  resultCount.setAttribute("role", "status");
+  section.append(resultCount);
+  const list = mk("div", null, "research-survey-list");
+  section.append(list);
+  anchor.parentNode.insertBefore(section, anchor);
+  const normalize = (s) => String(s || "").normalize("NFKC").replace(/\s/g, "").toLowerCase();
+  const related = new Map();
+  document.querySelectorAll("#research-results [data-region]").forEach((item) => {
+    const title = item.querySelector("h3");
+    const link = title && title.querySelector("a");
+    related.set(title?.textContent.trim(), link ? link.getAttribute("href") : "#region-" + item.dataset.region);
+  });
+  function render() {
+    const word = normalize(search.value);
+    const found = survey.records.filter((r) =>
+      (!evidence.value || r.evidence === evidence.value) &&
+      (!word || normalize([r.prefecture, r.name, r.schoolType, r.scheme, r.activity, r.document, r.legalAssessment, r.sourceIds].join(" ")).includes(word))
+    );
+    resultCount.textContent = found.length + "主体を表示 ／ 全48主体・一次資料該当部分確認39主体";
+    list.replaceChildren();
+    for (const r of found) {
+      const item = mk("article", null, "research-region");
+      const heading = mk("h3");
+      const url = related.get(r.prefecture + " " + r.name);
+      if (url) {
+        const link = mk("a", r.prefecture + " " + r.name);
+        link.href = url;
+        heading.append(link);
+      } else {
+        heading.textContent = r.prefecture + " " + r.name;
+      }
+      item.append(heading);
+      item.append(mk("p", r.schoolType + " ／ " + r.evidence + " ／ 最終確認 " + r.reviewed));
+      if (r.publicDetails) {
+        if (r.scheme) item.append(mk("p", "制度類型（探索上の分類）： " + r.scheme));
+        if (r.activity) item.append(mk("p", "対象事務： " + r.activity));
+        const details = mk("details");
+        details.append(mk("summary", "根拠資料・法的検証・未確認事項"));
+        if (r.document) details.append(mk("p", "資料： " + r.document));
+        if (r.dateNote) details.append(mk("p", "制度時点： " + r.dateNote));
+        if (r.publicPosition) details.append(mk("p", "資料に示された位置づけ： " + r.publicPosition));
+        if (r.legalAssessment) details.append(mk("p", "独立評価： " + r.legalAssessment));
+        if (r.outstanding) details.append(mk("p", "未解明事項： " + r.outstanding));
+        if (r.periodLimitation) details.append(mk("p", "現行性の留保： " + r.periodLimitation));
+        if (r.sourceIds) details.append(mk("p", "出典台帳ID： " + r.sourceIds));
+        if (r.sourceUrls?.length) {
+          const ul = mk("ul");
+          for (const src of r.sourceUrls) {
+            const li = mk("li"), a = mk("a", "公開一次資料を開く");
+            a.href = src; a.target = "_blank"; a.rel = "noopener noreferrer";
+            li.append(a); ul.append(li);
+          }
+          details.append(ul);
+        } else details.append(mk("p", "公開用リンクは未登録。原本の公開状況と利用許諾を別途確認します。"));
+        item.append(details);
+      } else {
+        item.append(mk("p", r.notice || "非公表受領資料を含むため詳細は掲載していません。"));
+      }
+      list.append(item);
+    }
+  }
+  search.addEventListener("input", render);
+  evidence.addEventListener("change", render);
+  render();
+})();
