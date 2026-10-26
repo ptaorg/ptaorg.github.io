@@ -53,10 +53,10 @@ try {
     await page.waitForSelector('#national-primary-survey .research-region');
     assert.equal(await page.locator('#national-primary-survey .research-region').count(), 48, 'survey record count');
     await page.locator('.research-survey-filters input').fill('川崎市');
-    assert.equal(await page.locator('#national-primary-survey .research-region').count(), 1, 'survey search');
+    assert.equal(await page.locator('#national-primary-survey .research-region:visible').count(), 1, 'survey search');
     await page.locator('.research-survey-filters input').fill('');
     await page.locator('.research-survey-filters select').selectOption('原本確認');
-    assert.equal(await page.locator('#national-primary-survey .research-region').count(), 39, 'survey evidence filter');
+    assert.equal(await page.locator('#national-primary-survey .research-region:visible').count(), 39, 'survey evidence filter');
     await page.locator('.research-survey-filters select').selectOption('');
     assert.equal(await page.locator('#national-primary-survey .research-region').count(), 48);
     assert.equal(await page.locator('#national-primary-survey a[href*="mail.google.com"]').count(), 0, 'no private mail links');
