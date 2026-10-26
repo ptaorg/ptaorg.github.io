@@ -239,6 +239,13 @@
       "sitemap": "exclude",
       "search": "exclude",
       "successor": null
+    },
+    {
+      "prefix": "/research/",
+      "role": "research-record",
+      "sitemap": "index",
+      "search": "index",
+      "successor": null
     }
   ]
 }

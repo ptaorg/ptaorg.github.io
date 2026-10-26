@@ -34,6 +34,13 @@ jobs:
         if: ${{ !cancelled() }}
         run: npx playwright install --with-deps chromium
 
+      - name: Test research map interactions at desktop and mobile widths
+        if: ${{ !cancelled() }}
+        run: |
+          node scripts/test-research-map.mjs
+          npm install --prefix "${RUNNER_TEMP}/research-map-deps" --no-save leaflet@1.9.4
+          RESEARCH_LEAFLET_ROOT="${RUNNER_TEMP}/research-map-deps/node_modules/leaflet" node scripts/test-research-map.mjs
+
       - name: Test audit detection
         if: ${{ !cancelled() }}
         run: npm run test:audit

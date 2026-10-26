@@ -46,6 +46,7 @@
         [36.2, 137.8],
         5,
       );
+      map.fitBounds([[24, 122], [46, 146]], { padding: [15, 15], maxZoom: 5 });
       const layer = L.layerGroup().addTo(map);
       const tiles = L.tileLayer(
         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -179,7 +180,11 @@
       if (params.has(k) && el) el.value = params.get(k);
     }
     form.addEventListener("input", render);
-    form.addEventListener("change", render);
+    // Search input already renders on every input event. Re-rendering on blur
+    // would remove a marker between pointerdown/up and swallow its first click.
+    form.addEventListener("change", (event) => {
+      if (event.target.id !== fields.query) render();
+    });
     form.addEventListener("submit", (e) => e.preventDefault());
     form.addEventListener("reset", () => setTimeout(render, 0));
   }

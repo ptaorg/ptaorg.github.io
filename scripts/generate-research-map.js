@@ -69,7 +69,7 @@ function buildIndex(data = load(), schools = listSchoolData(), legacy = []) {
         id: "archive-" + s.citySlug,
         schoolMunicipality: s.municipality,
         prefecture: s.prefecture,
-        name: s.municipality.replace(s.prefecture, ""),
+        name: s.citySlug === "sagamihara" ? "相模原市" : s.municipality.replace(s.prefecture, ""),
         url: null,
         themes: [],
         status: "source-catalog",
@@ -103,6 +103,13 @@ function buildIndex(data = load(), schools = listSchoolData(), legacy = []) {
   }
   for (const m of legacy) {
     if (!regions.some(r => r.prefecture === m.prefecture && r.name === m.name)) regions.push(m);
+  }
+  const codes = {"宮城県":"04","福島県":"07","埼玉県":"11","東京都":"13","神奈川県":"14","富山県":"16","静岡県":"22","愛知県":"23","滋賀県":"25","京都府":"26","大阪府":"27","兵庫県":"28","広島県":"34","愛媛県":"38","鹿児島県":"46"};
+  for (const m of regions) {
+    m.prefectureCode ||= codes[m.prefecture] || null;
+    m.type ||= m.name === m.prefecture ? "都道府県" : m.name.endsWith("区") ? "特別区" : m.name.endsWith("町") ? "町" : "市";
+    m.updated ||= data.updated;
+    m.boardResponses = responses.filter(r => r.prefecture === m.prefecture && r.municipality === m.name).map(r => ({title:r.municipality + " 教育委員会回答",url:r.url,date:r.date || "日付未登録"}));
   }
   return {
     version: 1,

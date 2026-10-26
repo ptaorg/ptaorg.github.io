@@ -925,7 +925,7 @@
         },
         {
           "title": "個人情報保護法61条",
-          "text": "学校教育費のため取得した加入者・口座情報をPTA会費に使う必要性と利用目的を個別に確認する。"
+          "text": "学校教育のために取得した児童生徒・保護者の情報や口座情報を、PTA会費処理に利用する必要性と利用目的を個別に確認する。"
         },
         {
           "title": "個人情報保護法69条",
@@ -3005,7 +3005,11 @@
             }
           ]
         }
-      ]
+      ],
+      "prefectureCode": "27",
+      "type": "市",
+      "updated": "2026-10-26",
+      "boardResponses": []
     },
     {
       "id": "archive-hikone",
@@ -3430,7 +3434,11 @@
             }
           ]
         }
-      ]
+      ],
+      "prefectureCode": "25",
+      "type": "市",
+      "updated": "2026-10-26",
+      "boardResponses": []
     },
     {
       "id": "archive-hirakata",
@@ -4352,7 +4360,11 @@
             }
           ]
         }
-      ]
+      ],
+      "prefectureCode": "27",
+      "type": "市",
+      "updated": "2026-10-26",
+      "boardResponses": []
     },
     {
       "id": "archive-imizu",
@@ -4644,7 +4656,11 @@
             }
           ]
         }
-      ]
+      ],
+      "prefectureCode": "16",
+      "type": "市",
+      "updated": "2026-10-26",
+      "boardResponses": []
     },
     {
       "id": "archive-iwaki",
@@ -4856,7 +4872,11 @@
             }
           ]
         }
-      ]
+      ],
+      "prefectureCode": "07",
+      "type": "市",
+      "updated": "2026-10-26",
+      "boardResponses": []
     },
     {
       "id": "archive-kameoka",
@@ -5094,7 +5114,11 @@
             }
           ]
         }
-      ]
+      ],
+      "prefectureCode": "26",
+      "type": "市",
+      "updated": "2026-10-26",
+      "boardResponses": []
     },
     {
       "id": "archive-koka",
@@ -5794,7 +5818,11 @@
             }
           ]
         }
-      ]
+      ],
+      "prefectureCode": "25",
+      "type": "市",
+      "updated": "2026-10-26",
+      "boardResponses": []
     },
     {
       "id": "archive-kuki",
@@ -6225,7 +6253,11 @@
             }
           ]
         }
-      ]
+      ],
+      "prefectureCode": "11",
+      "type": "市",
+      "updated": "2026-10-26",
+      "boardResponses": []
     },
     {
       "id": "archive-ota",
@@ -7311,13 +7343,17 @@
             }
           ]
         }
-      ]
+      ],
+      "prefectureCode": "13",
+      "type": "特別区",
+      "updated": "2026-10-26",
+      "boardResponses": []
     },
     {
       "id": "archive-sagamihara",
       "schoolMunicipality": "相模原",
       "prefecture": "神奈川県",
-      "name": "相模原",
+      "name": "相模原市",
       "url": null,
       "themes": [],
       "status": "source-catalog",
@@ -8658,7 +8694,11 @@
             }
           ]
         }
-      ]
+      ],
+      "prefectureCode": "14",
+      "type": "市",
+      "updated": "2026-10-26",
+      "boardResponses": []
     },
     {
       "id": "archive-toyohashi",
@@ -13123,7 +13163,11 @@
             }
           ]
         }
-      ]
+      ],
+      "prefectureCode": "23",
+      "type": "市",
+      "updated": "2026-10-26",
+      "boardResponses": []
     },
     {
       "id": "catalog-nagakute",
@@ -13144,7 +13188,10 @@
         "既存全国資料館に自治体別資料の所在を掲載。研究ノートと学校別JSONの統合は未完了。制度・運用の確認済みを意味しません。"
       ],
       "flags": {},
-      "schools": []
+      "schools": [],
+      "type": "市",
+      "updated": "2026-10-26",
+      "boardResponses": []
     },
     {
       "id": "catalog-ibaraki",
@@ -13165,7 +13212,10 @@
         "既存全国資料館に自治体別資料の所在を掲載。研究ノートと学校別JSONの統合は未完了。制度・運用の確認済みを意味しません。"
       ],
       "flags": {},
-      "schools": []
+      "schools": [],
+      "type": "市",
+      "updated": "2026-10-26",
+      "boardResponses": []
     },
     {
       "id": "catalog-sendai",
@@ -13186,7 +13236,10 @@
         "既存全国資料館に自治体別資料の所在を掲載。研究ノートと学校別JSONの統合は未完了。制度・運用の確認済みを意味しません。"
       ],
       "flags": {},
-      "schools": []
+      "schools": [],
+      "type": "市",
+      "updated": "2026-10-26",
+      "boardResponses": []
     },
     {
       "id": "catalog-fuso",
@@ -13207,7 +13260,10 @@
         "既存全国資料館に自治体別資料の所在を掲載。研究ノートと学校別JSONの統合は未完了。制度・運用の確認済みを意味しません。"
       ],
       "flags": {},
-      "schools": []
+      "schools": [],
+      "type": "町",
+      "updated": "2026-10-26",
+      "boardResponses": []
     },
     {
       "id": "catalog-kagoshima",
@@ -13228,7 +13284,10 @@
         "既存全国資料館に自治体別資料の所在を掲載。研究ノートと学校別JSONの統合は未完了。制度・運用の確認済みを意味しません。"
       ],
       "flags": {},
-      "schools": []
+      "schools": [],
+      "type": "市",
+      "updated": "2026-10-26",
+      "boardResponses": []
     },
     {
       "id": "catalog-kanagawa",
@@ -13246,7 +13305,10 @@
         "既存全国資料館に自治体別資料の所在を掲載。研究ノートと学校別JSONの統合は未完了。制度・運用の確認済みを意味しません。"
       ],
       "flags": {},
-      "schools": []
+      "schools": [],
+      "type": "都道府県",
+      "updated": "2026-10-26",
+      "boardResponses": []
     },
     {
       "id": "catalog-saitama",
@@ -13264,7 +13326,10 @@
         "既存全国資料館に自治体別資料の所在を掲載。研究ノートと学校別JSONの統合は未完了。制度・運用の確認済みを意味しません。"
       ],
       "flags": {},
-      "schools": []
+      "schools": [],
+      "type": "都道府県",
+      "updated": "2026-10-26",
+      "boardResponses": []
     }
   ]
 }

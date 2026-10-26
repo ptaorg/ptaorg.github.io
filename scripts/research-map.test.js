@@ -30,3 +30,13 @@ test('legacy prefecture-prefixed municipality groups all schools under one autho
   assert.equal(index.municipalities[0].schoolMunicipality, '滋賀県甲賀市');
   assert.equal(index.municipalities[0].schools.length, 2);
 });
+
+test('legacy catalog-only regions remain accessible without duplicate research region', () => {
+  const region = {id:'example',prefecture:'神奈川県',name:'横浜市',schoolMunicipality:'横浜市',themes:[],flags:{}};
+  const legacy = [{...region,id:'catalog-example',catalogUrl:'/national-archive.html#national-list'}, {id:'catalog-sendai',prefecture:'宮城県',name:'仙台市',schoolMunicipality:'仙台市',themes:[],flags:{},schools:[],catalogUrl:'/national-archive.html#national-list'}];
+  const index=buildIndex({updated:'2026-10-26',municipalities:[region]},[],legacy);
+  assert.equal(index.municipalities.length,2);
+  assert.equal(index.municipalities[0].id,'example');
+  assert.equal(index.municipalities[1].catalogUrl,'/national-archive.html#national-list');
+  assert.equal(index.municipalities[1].prefectureCode,'04');
+});
