@@ -128,9 +128,37 @@ function chrome() {
     footer: h.match(/<footer class="footer">[\s\S]*?<\/footer>/)[0],
   };
 }
+function renderPathways(url) {
+  const isMap = url === "/research-map.html";
+  const mapHref = isMap ? "#research-filters" : "/research-map.html";
+  const mapLabel = isMap ? "このページ：全国PTA研究マップ" : "関連ページ：全国PTA研究マップ";
+  const mapAction = isMap ? "自治体・制度の検索へ進む →" : "全国PTA研究マップを開く →";
+  const shortcuts = isMap
+    ? `<p class="research-pathways__shortcuts">厚木市の例：<a href="/research/atsugi.html">自治体研究ノート</a> ／ <a href="/national-archive.html#atsugi-schools">学校別36校一覧</a></p>`
+    : `<p class="research-pathways__shortcuts"><a href="#schools">この自治体の学校別資料の登録状況を見る</a> ／ <a href="/research-map.html">全国マップへ戻る</a></p>`;
+  return `<nav class="research-pathways" aria-label="自治体研究と学校別一次資料の選び方">
+    <strong class="research-pathways__heading">調べたい内容から探す</strong>
+    <p class="research-pathways__description">自治体の制度・行政回答と学校別の実物文書は、役割を分けて掲載しています。</p>
+    <div class="research-pathways__grid">
+      <a class="research-pathways__card research-pathways__card--primary" href="${mapHref}">
+        <span class="research-pathways__label">${mapLabel}</span>
+        <span class="research-pathways__title">自治体の制度・行政回答を調べる</span>
+        <span class="research-pathways__detail">委任・学校徴収・個人情報・監査・制度変更を自治体別に比較</span>
+        <span class="research-pathways__action">${mapAction}</span>
+      </a>
+      <a class="research-pathways__card" href="/national-archive.html#archive-map">
+        <span class="research-pathways__label">関連ページ：全国資料館</span>
+        <span class="research-pathways__title">学校別の一次資料を探す</span>
+        <span class="research-pathways__detail">入会届・会則・会費徴収資料・画像・元PDFなどの原本所在を確認</span>
+        <span class="research-pathways__action">学校別資料館を開く →</span>
+      </a>
+    </div>${shortcuts}
+  </nav>`;
+}
+
 function page(title, url, body, map = false) {
   const c = chrome();
-  return `<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${e(title)} | PTA適正化推進委員会</title><meta name="description" content="${e(title)}。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。"><link rel="canonical" href="https://ptaorg.com${url}"><link rel="stylesheet" href="/css/site.css?v=20260814-3"><link rel="stylesheet" href="/css/global-nav.css?v=20260906-2"><link rel="stylesheet" href="/css/editorial.css?v=20260719"><link rel="stylesheet" href="/css/pages/research-map.css?v=1">${map ? '<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">' : ""}</head><body data-reviewed="${e(load().updated)}">${c.header}${c.mobile}<main id="main-content" class="research-main wrap"><p class="research-breadcrumb"><a href="/research-index.html">根拠資料・調査方法</a> / <a href="/research-map.html">全国PTA研究マップ</a></p><h1>${e(title)}</h1>${body}</main>${c.footer}${map ? '<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="/js/research-map.js?v=1" defer></script>' : ""}<script src="/data/site-search-index.js?v=20260809-2"></script><script src="/js/site.js?v=97"></script></body></html>\n`;
+  return `<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${e(title)} | PTA適正化推進委員会</title><meta name="description" content="${e(title)}。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。"><link rel="canonical" href="https://ptaorg.com${url}"><link rel="stylesheet" href="/css/site.css?v=20260814-3"><link rel="stylesheet" href="/css/global-nav.css?v=20260906-2"><link rel="stylesheet" href="/css/editorial.css?v=20260719"><link rel="stylesheet" href="/css/pages/research-map.css?v=1"><link rel="stylesheet" href="/css/research-pathways.css?v=20261027">${map ? '<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">' : ""}</head><body data-reviewed="${e(load().updated)}">${c.header}${c.mobile}<main id="main-content" class="research-main wrap"><p class="research-breadcrumb"><a href="/research-index.html">根拠資料・調査方法</a> / <a href="/research-map.html">全国PTA研究マップ</a></p><h1>${e(title)}</h1>${renderPathways(url)}${body}</main>${c.footer}${map ? '<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="/js/research-map.js?v=1" defer></script>' : ""}<script src="/data/site-search-index.js?v=20260809-2"></script><script src="/js/site.js?v=97"></script></body></html>\n`;
 }
 const paras = (a) => (a || []).map((t) => `<p>${e(t)}</p>`).join("\n");
 const links = (a) =>
