@@ -29,7 +29,10 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.city.kawasaki.jp/880/cmsfiles/contents/0000134/134260/031116gian35siryo.pdf",
+        "https://www.city.kawasaki.jp/templates/outline/cmsfiles/contents/0000140/140964/R6.4.1PTAyoukou.pdf"
+      ],
       "scheme": "C・D",
       "activity": "会費収納、PTA口座入金。督促等除外",
       "publicPosition": "規則改正案に校務と明記。市への委任",
@@ -48,7 +51,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.pref.shiga.lg.jp/documents/8874/5627358_1.pdf"
+      ],
       "scheme": "B・D・E",
       "activity": "会費徴収、収納通知、未納連絡",
       "publicPosition": "県は委任により県業務と説明。監査は特段の事情＋指揮監督で35条違反否定",
@@ -78,7 +83,10 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.city.nagoya.jp/_res/projects/default_project/_page_/001/048/414/pta_qa_unnei.pdf",
+        "https://voices.city.nagoya.jp/faq/detail.aspx?id=43973"
+      ],
       "scheme": "B・D",
       "activity": "徴収、PTA口座振込、契約記載事務",
       "publicPosition": "教職員としての委任業務と説明",
@@ -97,7 +105,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.city.osaka.lg.jp/kyoiku/cmsfiles/contents/0000669/669109/kaikeikizyun.pdf"
+      ],
       "scheme": "B・D",
       "activity": "学校徴収金と会費の併徴",
       "publicPosition": "会計基準上の処理。公務性の上位根拠までは未記載",
@@ -116,7 +126,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.city.matsuyama.ehime.jp/wagamachi/detail/3816.html"
+      ],
       "scheme": "B・D",
       "activity": "入力、口座振替、再振替案内、送金",
       "publicPosition": "校務とは区別すべきと認識しつつ実施",
@@ -157,7 +169,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.city.hamamatsu.shizuoka.jp/documents/5902/r6_taio_2025_17145_marked.pdf"
+      ],
       "scheme": "F",
       "activity": "PTA業務（細目は追加確認）",
       "publicPosition": "監査が職専免手続の欠落を指摘、承認実施へ",
@@ -176,7 +190,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://cgi.city.yokohama.lg.jp/shimin/kouchou/search/data/37004955.html"
+      ],
       "scheme": "D（従来）",
       "activity": "会費併徴、会計管理",
       "publicPosition": "従来の市民の声は併徴を方法の一つと説明",
@@ -195,7 +211,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.city.sapporo.jp/kansa/f02keka/documents/juukankekka_r808.pdf"
+      ],
       "scheme": "E",
       "activity": "PTA共済会関連事務（会費会計一般とは区別）",
       "publicPosition": "監査は学校教育法37条の裁量内と判断",
@@ -225,7 +243,10 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://iwatsuki-ch.spec.ed.jp/wysiwyg/file/download/108/4377",
+        "https://kawagoe-th.spec.ed.jp/zennichi/wysiwyg/file/download/16/4930"
+      ],
       "scheme": "B・D（学校資料）",
       "activity": "徴収、支出、契約、預金・帳簿管理",
       "publicPosition": "PTA会計規程が校長への権限委任を規定",
@@ -244,7 +265,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.pref.kanagawa.jp/documents/16411/r8_ikkatu.pdf"
+      ],
       "scheme": "B・D",
       "activity": "団体会計の徴収・執行・決算",
       "publicPosition": "私費会計基準で校長受任を想定",
@@ -263,7 +286,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.reiki.metro.tokyo.lg.jp/reiki/reiki_honbun/g101RG00002049.html"
+      ],
       "scheme": "C・D",
       "activity": "団体会費の収納・管理・支出",
       "publicPosition": "管理規則が処理事務と分掌職員を規定",
@@ -282,7 +307,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.pref.iwate.jp/_res/projects/default_project/_page_/001/026/756/r1_houkokusyo.pdf"
+      ],
       "scheme": "B・D",
       "activity": "PTA・同窓会団体徴収金",
       "publicPosition": "監査は適切な委任更新を要求",
@@ -301,7 +328,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.pref.toyama.jp/documents/25/030129r1gaibukansasotikekka.pdf"
+      ],
       "scheme": "B・D",
       "activity": "団体会計",
       "publicPosition": "監査指摘後に委任契約を整備",
@@ -320,7 +349,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.pref.shimane.lg.jp/education/kyoiku/iinkai/kanri/index.data/080922.rule.pdf"
+      ],
       "scheme": "B・D・E",
       "activity": "団体会計全般、会費徴収・決算",
       "publicPosition": "学校として受任、校長管理、担当職員指定",
@@ -339,7 +370,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.pref.nagano.lg.jp/koho/kensei/koho/hotline/202307/hot_2307-1.html"
+      ],
       "scheme": "F",
       "activity": "総会企画・印刷配布・会計等PTA係",
       "publicPosition": "指定団体として職専免で関与",
@@ -358,7 +391,9 @@
       "evidence": "検索本文のみ",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.pref.nara.jp/secure/118350/26-13-1.pdf"
+      ],
       "scheme": "F候補",
       "activity": "学校関係団体の職・事務",
       "publicPosition": "公務ではない公益的業務との通知検索結果",
@@ -377,7 +412,10 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.pref.aichi.jp/uploaded/attachment/38563.pdf",
+        "https://www.pref.aichi.jp/uploaded/attachment/562448.pdf"
+      ],
       "scheme": "B・D・E",
       "activity": "PTA会計処理",
       "publicPosition": "2013監査で校務、2025会議で学校処理を説明",
@@ -396,7 +434,10 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.pref.gifu.lg.jp/uploaded/attachment/15214.pdf",
+        "https://www.pref.gifu.lg.jp/uploaded/attachment/440861.pdf"
+      ],
       "scheme": "B・D・E",
       "activity": "PTA予決算・契約・収納・印鑑等",
       "publicPosition": "校長への委任、県システムで会費徴収",
@@ -415,7 +456,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.pref.miyazaki.lg.jp/documents/2712/000138332.pdf"
+      ],
       "scheme": "D候補",
       "activity": "PTA等団体徴収金",
       "publicPosition": "学校諸費として処理",
@@ -434,7 +477,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.pref.saga.lg.jp/kiji00320015/3_20015_391083_up_4rtwrt66.pdf"
+      ],
       "scheme": "C・D",
       "activity": "PTA団体徴収金、決算",
       "publicPosition": "県マニュアルが校長・担当者処理を予定",
@@ -453,7 +498,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.city.akita.lg.jp/_res/projects/default_project/_page_/001/046/857/ex-result2025-juumin.pdf"
+      ],
       "scheme": "G・D（監査認定）",
       "activity": "会費請求通知作成・配布",
       "publicPosition": "契約なしでも一体処理・利便等により支出違法とまでいえないと監査",
@@ -472,7 +519,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.city.sendai.jp/kansa-somu/shise/reki/kansa/sekyu/jireshu/documents/kekka7_r0524.pdf"
+      ],
       "scheme": "B",
       "activity": "会費徴収事務等",
       "publicPosition": "無償契約履行費用を市が負担との監査上説明",
@@ -491,7 +540,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.city.chiba.jp/kyoiku/kyoikusomu/somu/documents/1114watakusihikaikei.pdf"
+      ],
       "scheme": "B・D・E",
       "activity": "PTA後援会等団体費会計",
       "publicPosition": "校長統括、職員が校務分掌で処理",
@@ -510,7 +561,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.city.hashimoto.lg.jp/section/reiki_honbun/r282RG00001642.html"
+      ],
       "scheme": "B・D・E",
       "activity": "PTA等準公金の会計・保管",
       "publicPosition": "校長承認と職員指定",
@@ -529,7 +582,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.city.oshu.iwate.jp/section/reiki_int/reiki_honbun/r204RG00000397.html"
+      ],
       "scheme": "B・D",
       "activity": "団体徴収金・決算",
       "publicPosition": "校長の書面受任",
@@ -548,7 +603,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.city.uonuma.lg.jp/reiki/reiki_honbun/r043RG00001412.html"
+      ],
       "scheme": "B・D",
       "activity": "PTA・後援会預り金管理",
       "publicPosition": "学校で管理する関係団体預り金と規定",
@@ -567,7 +624,9 @@
       "evidence": "公式本文確認・原本保存未了",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.city.kodaira.tokyo.jp/reiki/reiki_honbun/g135RG00000349.html"
+      ],
       "scheme": "C・D",
       "activity": "団体会費収納・管理・支出",
       "publicPosition": "管理規則に校長・分掌職員処理",
@@ -586,7 +645,9 @@
       "evidence": "検索本文のみ",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www1.g-reiki.net/fuefuki/reiki_honbun/r092RG00000219.html"
+      ],
       "scheme": "C・D候補",
       "activity": "団体徴収金収納・管理・支出",
       "publicPosition": "管理規則に処理事務",
@@ -605,7 +666,9 @@
       "evidence": "検索本文のみ",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www1.g-reiki.net/town.mitane/reiki_honbun/r240RG00001014.html"
+      ],
       "scheme": "B・D候補",
       "activity": "団体徴収金・会計",
       "publicPosition": "校長受任・会計職員指定",
@@ -624,7 +687,9 @@
       "evidence": "検索本文のみ",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www1.g-reiki.net/city.yasugi/reiki_honbun/r072RG00001955.html"
+      ],
       "scheme": "B・D候補",
       "activity": "団体徴収金、会費徴収・報告",
       "publicPosition": "校長受任",
@@ -643,7 +708,9 @@
       "evidence": "検索本文のみ",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www1.g-reiki.net/city.minato.tokyo/reiki_honbun/g104RG00000533.html"
+      ],
       "scheme": "C・D候補",
       "activity": "学校関係団体会費",
       "publicPosition": "管理規則に処理事務",
@@ -662,7 +729,9 @@
       "evidence": "検索本文のみ",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www1.g-reiki.net/city.fuchu.tokyo/reiki_honbun/g130RG00000224.html"
+      ],
       "scheme": "C・D候補",
       "activity": "学校関係団体会費",
       "publicPosition": "管理規則に事務統括",
@@ -681,7 +750,9 @@
       "evidence": "公式本文確認・原本保存未了",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.city.akishima.lg.jp/reiki/reiki_honbun/g131RG00000282.html"
+      ],
       "scheme": "C・D",
       "activity": "団体徴収金会計計画等",
       "publicPosition": "管理規則と訓令の併用",
@@ -700,7 +771,10 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.pref.osaka.lg.jp/documents/15756/r3houkoku.pdf",
+        "https://www.pref.osaka.lg.jp/o070060/johokokai/jigyo1/toshin131.html"
+      ],
       "scheme": "B・D／職務外の過去答申",
       "activity": "PTA・同窓会会計、別の後援会会計",
       "publicPosition": "2021監査は団体徴収金。過去答申131号の特定後援会は職務外",
@@ -719,7 +793,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.city.kobe.lg.jp/documents/9602/gakkou-choushuukin.pdf"
+      ],
       "scheme": "B・D",
       "activity": "PTA会費徴収その他事務",
       "publicPosition": "要綱27条2項で学校園処理可",
@@ -738,7 +814,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.pref.wakayama.lg.jp/gijiroku/p041191.html"
+      ],
       "scheme": "B・E（2012答弁）",
       "activity": "PTA会計",
       "publicPosition": "学校長が命じた公務と答弁、規則整備予定",
@@ -757,7 +835,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.pref.yamagata.jp/sm/kenkoho/pdf/koho2634_20150331.pdf"
+      ],
       "scheme": "校務外・勤務時間外原則／別種学校は職務扱い",
       "activity": "学校関係団体事務",
       "publicPosition": "高校は団体雇用職員中心、兼務教職員は勤務時間外原則。産技短大等は職務範疇と説明",
@@ -776,7 +856,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.pref.mie.lg.jp/common/content/001181409.pdf"
+      ],
       "scheme": "B・D",
       "activity": "PTA後援会等学校関係団体経費",
       "publicPosition": "監査が取扱要領3条を掲載",
@@ -795,7 +877,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.it-mirai-h.ibk.ed.jp/wysiwyg/file/download/1/2043"
+      ],
       "scheme": "B・D（学校資料）",
       "activity": "徴収、執行、通帳現金・帳簿保管、事務職員委嘱",
       "publicPosition": "PTA経理規程が校長への委任を規定",
@@ -814,7 +898,9 @@
       "evidence": "候補資料",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.pref.yamanashi.jp/kyouikusom/jimushori.html"
+      ],
       "scheme": "分類未確定",
       "activity": "PTA・積立金会計",
       "publicPosition": "不適正処理後の緊急点検・手引",
@@ -833,7 +919,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.city.niigata.lg.jp/shisei/gyoseiunei/sonota/fuzokukikankonwakai/fuzokukikan/sechikikan/kyoiku/chiiki_edu/iin/kaisaijisseki/syakaikyouiku36.files/20240724houkoku1-1.pdf"
+      ],
       "scheme": "B・D",
       "activity": "集金支出、通帳管理",
       "publicPosition": "指定都市会議回答が委任契約を説明",
@@ -852,7 +940,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.city.niigata.lg.jp/shisei/gyoseiunei/sonota/fuzokukikankonwakai/fuzokukikan/sechikikan/kyoiku/chiiki_edu/iin/kaisaijisseki/syakaikyouiku36.files/20240724houkoku1-1.pdf"
+      ],
       "scheme": "B・D",
       "activity": "会費の学校納付金との併徴",
       "publicPosition": "PTA依頼により学校徴収と市回答",
@@ -871,7 +961,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.city.niigata.lg.jp/shisei/gyoseiunei/sonota/fuzokukikankonwakai/fuzokukikan/sechikikan/kyoiku/chiiki_edu/iin/kaisaijisseki/syakaikyouiku36.files/20240724houkoku1-1.pdf"
+      ],
       "scheme": "PTA自身の会計処理が基本",
       "activity": "会計事務・徴収方法確認",
       "publicPosition": "PTA等で処理することが基本と市回答",
@@ -890,7 +982,9 @@
       "evidence": "原本確認",
       "reviewed": "2026-10-26",
       "publicDetails": true,
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.city.niigata.lg.jp/shisei/gyoseiunei/sonota/fuzokukikankonwakai/fuzokukikan/sechikikan/kyoiku/chiiki_edu/iin/kaisaijisseki/syakaikyouiku36.files/20240724houkoku1-1.pdf"
+      ],
       "scheme": "D",
       "activity": "会費の併徴、入会者確認",
       "publicPosition": "学校が入会確認後引落しと市回答",
