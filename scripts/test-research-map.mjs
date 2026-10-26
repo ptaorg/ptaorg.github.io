@@ -50,6 +50,9 @@ try {
     }
     await page.goto(origin + '/research-map.html');
     await page.waitForFunction(() => document.querySelector('#research-result-status').textContent.includes('地域 ／'));
+    assert.equal(await page.locator('main .research-pathways__card').count(), 2, 'two clearly named destinations');
+    assert.equal(await page.locator('main .research-pathways__card[href="#research-filters"]').count(), 1);
+    assert.equal(await page.locator('main .research-pathways__card[href="/national-archive.html#archive-map"]').count(), 1);
     await page.waitForSelector('#national-primary-survey .research-region');
     assert.equal(await page.locator('#national-primary-survey .research-region').count(), 48, 'survey record count');
     await page.locator('.research-survey-filters input').fill('川崎市');
@@ -114,6 +117,8 @@ try {
     const note = index.municipalities.find(m => m.url && m.themes.includes(theme));
     await page.locator(`[data-region="${note.id}"] h3 a`).click();
     await page.waitForURL(origin + note.url);
+    assert.equal(await page.locator('main .research-pathways__card').count(), 2, 'municipality note navigation');
+    assert.equal(await page.locator('main .research-pathways__shortcuts a[href="#schools"]').count(), 1);
     assert.equal(await page.locator('h1').count(), 1);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `${width}px note overflow`);
     await readableScreenshot(`/tmp/pta-research-note-${width}${process.env.RESEARCH_JAPANESE_FONT ? "-jp" : ""}.png`);
@@ -139,6 +144,9 @@ try {
     }
 
     await page.goto(origin + '/national-archive.html');
+    assert.equal(await page.locator('main .research-pathways__card').count(), 2, 'archive highlights both entrances');
+    assert.equal(await page.locator('main .research-pathways__card[href="/research-map.html"]').count(), 1);
+    assert.equal(await page.locator('main .research-pathways__shortcuts a[href="/research/atsugi.html"]').count(), 1);
     assert.equal(await page.locator('[data-research-map]').count(), 1);
     assert.equal(await page.locator('a[href="/research-map.html"]').count() > 0, true);
     assert.deepEqual(errors, [], `${width}px JavaScript errors`);
@@ -146,6 +154,7 @@ try {
     const noJS = await browser.newPage({ javaScriptEnabled: false, viewport: { width, height: 950 } });
     await noJS.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
     await noJS.goto(origin + '/research-map.html');
+    assert.equal(await noJS.locator('main .research-pathways__card').count(), 2, 'navigation works without JavaScript');
     assert.equal(await noJS.locator('[data-region]').count(), index.municipalities.length);
     assert.equal(await noJS.locator('#national-primary-survey .survey-record').count(), 48, 'static national survey readable without JavaScript');
     await noJS.goto(origin + '/research/osaka.html');
