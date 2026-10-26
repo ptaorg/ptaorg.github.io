@@ -1,4 +1,35 @@
 @layer feature {
+  /* An existing school's municipal research link should be discoverable without
+     changing school data, assessment text, or document publication status. */
+  .archive-school-page .archive-research-note {
+    margin: 0 0 34px;
+    padding: 17px 21px;
+    border-left: 5px solid #196b86;
+    border-radius: 8px;
+    background: #edf5f8;
+    color: #344d61;
+    line-height: 1.85;
+  }
+  .archive-school-page .archive-research-note::before {
+    content: "この学校から自治体全体の研究へ";
+    display: block;
+    margin-bottom: 6px;
+    color: #23485e;
+    font-size: .86rem;
+    font-weight: 800;
+  }
+  .archive-school-page .archive-research-note a {
+    color: #075c80;
+    font-size: 1.05rem;
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .archive-school-page .archive-research-note a:focus-visible {
+    outline: 3px solid #bd7727;
+    outline-offset: 3px;
+  }
+
   /* 全国資料館・学校別ページ用CSS */
 
   body.archive-school-document {
