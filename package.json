@@ -9,7 +9,7 @@
     "check:site-js-version": "node scripts/check-site-js-version.js 97",
     "check:content": "node scripts/check-content-consistency.js",
     "check:metadata": "node scripts/enhance-public-pages.js --check",
-    "check:all": "npm run check:harness && npm run check:site && npm run check:metadata && npm run check:content && npm run check:pages-boundary && npm run check:generated && npm run check:site-js-version && npm run check:url-ledger && npm run check:nav && npm run test:jev && npm run test:context && npm run test:pta-ai",
+    "check:all": "npm run check:research && npm run check:survey && npm run test:research && npm run check:harness && npm run check:site && npm run check:metadata && npm run check:content && npm run check:pages-boundary && npm run check:generated && npm run check:site-js-version && npm run check:url-ledger && npm run check:nav && npm run test:jev && npm run test:context && npm run test:pta-ai",
     "report:site-js-version": "node scripts/report-site-js-version.js",
     "sync:materials": "node scripts/sync-school-materials.js --dry-run",
     "sync:materials:write": "node scripts/sync-school-materials.js --write",
@@ -17,7 +17,7 @@
     "generate:archive": "node scripts/generate-national-archive.js",
     "generate:sitemap": "node scripts/generate-sitemap.js",
     "generate:search": "node scripts/generate-search-index.js",
-    "generate:all": "npm run generate:schools && npm run sync:nav && npm run generate:archive && npm run enhance:pages && npm run generate:sitemap && npm run generate:search",
+    "generate:all": "npm run generate:schools && npm run sync:nav && npm run generate:archive && npm run generate:research && npm run enhance:pages && npm run generate:sitemap && npm run generate:search",
     "enhance:pages": "node scripts/enhance-public-pages.js",
     "maintenance:bump-site-js:dry-run": "node scripts/bump-site-js-version.js 97 --dry-run",
     "maintenance:bump-site-js": "node scripts/bump-site-js-version.js",
@@ -37,7 +37,11 @@
     "context:query": "node tools/context-engine/query.mjs",
     "test:context": "node --test tools/context-engine/context-engine.test.mjs",
     "pta-ai": "node tools/pta-ai/run.mjs",
-    "test:pta-ai": "node --test tools/pta-ai/pta-ai.test.mjs"
+    "test:pta-ai": "node --test tools/pta-ai/pta-ai.test.mjs",
+    "check:research": "node scripts/check-research-map.js",
+    "generate:research": "node scripts/generate-research-map.js",
+    "test:research": "node --test scripts/research-map.test.js",
+    "check:survey": "node scripts/check-research-survey.js"
   },
   "devDependencies": {
     "fast-xml-parser": "5.11.1",

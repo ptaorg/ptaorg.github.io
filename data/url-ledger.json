@@ -181,6 +181,13 @@
       "audience": "保護者向け",
       "permanent": true,
       "purpose": "PTA実務移行キットの最新版・配布資料・根拠・履歴への恒久入口"
+    },
+    {
+      "url": "/research-map.html",
+      "role": "source-archive",
+      "sitemap": "index",
+      "search": "index",
+      "successor": null
     }
   ],
   "prefix_rules": [
@@ -231,6 +238,13 @@
       "role": "source-archive",
       "sitemap": "exclude",
       "search": "exclude",
+      "successor": null
+    },
+    {
+      "prefix": "/research/",
+      "role": "research-record",
+      "sitemap": "index",
+      "search": "index",
       "successor": null
     }
   ]

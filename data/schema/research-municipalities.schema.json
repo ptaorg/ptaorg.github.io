@@ -1,0 +1,299 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "自治体別PTA研究データ",
+  "type": "object",
+  "required": [
+    "version",
+    "updated",
+    "municipalities"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "updated": {
+      "type": "string",
+      "minLength": 1
+    },
+    "municipalities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "prefectureCode",
+          "prefecture",
+          "name",
+          "type",
+          "coordinateNote",
+          "url",
+          "schoolMunicipality",
+          "status",
+          "updated",
+          "aliases",
+          "themes",
+          "summary",
+          "system",
+          "unknowns",
+          "comparisons",
+          "coordinates",
+          "sources",
+          "timeline",
+          "legal",
+          "articles",
+          "flags"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "prefectureCode": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(0[1-9]|[1-3][0-9]|4[0-7])$"
+          },
+          "prefecture": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "coordinateNote": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^/research/[a-z0-9-]+\\.html$"
+          },
+          "schoolMunicipality": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "minLength": 1,
+            "enum": [
+              "published-research",
+              "source-catalog"
+            ]
+          },
+          "updated": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "themes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "summary": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "system": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "unknowns": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "comparisons": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "coordinates": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "number"
+            }
+          },
+          "sources": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title",
+                "publisher",
+                "url",
+                "verification",
+                "kind"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "publisher": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "url": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "date": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "verification": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "kind": {
+                  "enum": [
+                    "primary",
+                    "article"
+                  ]
+                }
+              }
+            }
+          },
+          "timeline": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "date",
+                "title",
+                "text",
+                "sourceId"
+              ],
+              "properties": {
+                "date": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sourceId": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "legal": {
+            "type": "array",
+            "minItems": 7,
+            "maxItems": 7,
+            "items": {
+              "type": "object",
+              "required": [
+                "title",
+                "text"
+              ],
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "articles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "title",
+                "url"
+              ],
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "url": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "flags": {
+            "type": "object",
+            "required": [
+              "administrativeResponse",
+              "audit",
+              "improvement"
+            ],
+            "properties": {
+              "administrativeResponse": {
+                "enum": [
+                  "confirmed",
+                  "unconfirmed"
+                ]
+              },
+              "audit": {
+                "enum": [
+                  "confirmed",
+                  "unconfirmed"
+                ]
+              },
+              "improvement": {
+                "enum": [
+                  "confirmed",
+                  "unconfirmed"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
