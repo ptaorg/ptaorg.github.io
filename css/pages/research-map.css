@@ -118,3 +118,36 @@
     padding: 12px 16px;
   }
 }
+
+
+/* 2026 national primary survey: supplementary to the existing research map. */
+.research-survey-filters {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+  gap: 16px;
+  padding: 18px;
+  background: #f2f5f7;
+  border: 1px solid #d5dfe5;
+}
+.research-survey-filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 700;
+}
+.research-survey-filters input, .research-survey-filters select {
+  width: 100%;
+  min-height: 44px;
+  background: #fff;
+  border: 1px solid #8397a3;
+  border-radius: 3px;
+  padding: 9px;
+  font: inherit;
+}
+.research-survey-result { font-weight: 700; }
+.research-survey .research-region { padding: 12px 0 20px; }
+.research-survey .research-region details { padding: 0 12px; background: #f8fafb; }
+.research-survey .research-region summary { font-weight: 700; }
+@media (max-width: 650px) {
+  .research-survey-filters { grid-template-columns: 1fr; }
+}
