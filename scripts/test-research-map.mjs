@@ -50,6 +50,16 @@ try {
     }
     await page.goto(origin + '/research-map.html');
     await page.waitForFunction(() => document.querySelector('#research-result-status').textContent.includes('地域 ／'));
+    await page.waitForSelector('#national-primary-survey .research-region');
+    assert.equal(await page.locator('#national-primary-survey .research-region').count(), 48, 'survey record count');
+    await page.locator('.research-survey-filters input').fill('川崎市');
+    assert.equal(await page.locator('#national-primary-survey .research-region').count(), 1, 'survey search');
+    await page.locator('.research-survey-filters input').fill('');
+    await page.locator('.research-survey-filters select').selectOption('原本確認');
+    assert.equal(await page.locator('#national-primary-survey .research-region').count(), 39, 'survey evidence filter');
+    await page.locator('.research-survey-filters select').selectOption('');
+    assert.equal(await page.locator('#national-primary-survey .research-region').count(), 48);
+    assert.equal(await page.locator('#national-primary-survey a[href*="mail.google.com"]').count(), 0, 'no private mail links');
     if (process.env.RESEARCH_LEAFLET_ROOT) {
       await page.waitForSelector('.leaflet-interactive');
       const expected = new Set(index.municipalities.filter(m => m.coordinates).map(m => m.coordinates.join(','))).size;
