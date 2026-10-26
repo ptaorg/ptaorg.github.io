@@ -55,3 +55,7 @@
 初回公開資料は **Audience prototype v0.1 / Based on Master v0.3.1**。`audience-prototypes v0.2` はA4印刷レイアウトを調整した配布パッケージの版であり、資料本文の正式版番号にはしません。成果物は `assets/kit/audience-prototypes-v0.2-20261004/` にまとめて保存します。本文・図・CSSは基準ZIPと同一とし、HTMLのheadに公開用robots（noindex, follow）・自己canonicalだけを追加しています。Markdown・CSVは同一バイトです。
 
 `/assets/kit/` はsource-archiveとして検索・sitemapから除外し、検索の入口を5つの恒久ページに集約します。旧版の成果物を新しい内容で黙って上書きしません。PDFとQRは未作成です。
+
+## 全国研究の地域入口
+
+`/research-map.html` は地域・テーマから既存資産へ進む `source-archive`、`/research/{id}.html` は自治体別の研究記録です。既存の学校別URL、行政回答、論考を移転せず参照します。生成された研究ノートは検索・サイトマップの対象です。

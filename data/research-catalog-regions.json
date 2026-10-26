@@ -1,0 +1,143 @@
+[
+  {
+    "id": "catalog-nagakute",
+    "prefectureCode": "23",
+    "prefecture": "愛知県",
+    "name": "長久手市",
+    "schoolMunicipality": "長久手市",
+    "url": null,
+    "themes": [],
+    "status": "source-catalog",
+    "coordinates": [
+      35.1842,
+      137.0488
+    ],
+    "coordinateNote": "既存全国資料館の概略座標を継承。県域の座標未登録地域も一覧に保持。",
+    "catalogUrl": "/national-archive.html#national-list",
+    "summary": [
+      "既存全国資料館に自治体別資料の所在を掲載。研究ノートと学校別JSONの統合は未完了。制度・運用の確認済みを意味しません。"
+    ],
+    "flags": {},
+    "schools": []
+  },
+  {
+    "id": "catalog-ibaraki",
+    "prefectureCode": "27",
+    "prefecture": "大阪府",
+    "name": "茨木市",
+    "schoolMunicipality": "茨木市",
+    "url": null,
+    "themes": [],
+    "status": "source-catalog",
+    "coordinates": [
+      34.8164,
+      135.5683
+    ],
+    "coordinateNote": "既存全国資料館の概略座標を継承。県域の座標未登録地域も一覧に保持。",
+    "catalogUrl": "/national-archive.html#national-list",
+    "summary": [
+      "既存全国資料館に自治体別資料の所在を掲載。研究ノートと学校別JSONの統合は未完了。制度・運用の確認済みを意味しません。"
+    ],
+    "flags": {},
+    "schools": []
+  },
+  {
+    "id": "catalog-sendai",
+    "prefectureCode": "04",
+    "prefecture": "宮城県",
+    "name": "仙台市",
+    "schoolMunicipality": "仙台市",
+    "url": null,
+    "themes": [],
+    "status": "source-catalog",
+    "coordinates": [
+      38.2682,
+      140.8694
+    ],
+    "coordinateNote": "既存全国資料館の概略座標を継承。県域の座標未登録地域も一覧に保持。",
+    "catalogUrl": "/national-archive.html#national-list",
+    "summary": [
+      "既存全国資料館に自治体別資料の所在を掲載。研究ノートと学校別JSONの統合は未完了。制度・運用の確認済みを意味しません。"
+    ],
+    "flags": {},
+    "schools": []
+  },
+  {
+    "id": "catalog-fuso",
+    "prefectureCode": "23",
+    "prefecture": "愛知県",
+    "name": "扶桑町",
+    "schoolMunicipality": "扶桑町",
+    "url": null,
+    "themes": [],
+    "status": "source-catalog",
+    "coordinates": [
+      35.3583,
+      136.9111
+    ],
+    "coordinateNote": "既存全国資料館の概略座標を継承。県域の座標未登録地域も一覧に保持。",
+    "catalogUrl": "/national-archive.html#national-list",
+    "summary": [
+      "既存全国資料館に自治体別資料の所在を掲載。研究ノートと学校別JSONの統合は未完了。制度・運用の確認済みを意味しません。"
+    ],
+    "flags": {},
+    "schools": []
+  },
+  {
+    "id": "catalog-kagoshima",
+    "prefectureCode": "46",
+    "prefecture": "鹿児島県",
+    "name": "鹿児島市",
+    "schoolMunicipality": "鹿児島市",
+    "url": null,
+    "themes": [],
+    "status": "source-catalog",
+    "coordinates": [
+      31.5967,
+      130.5572
+    ],
+    "coordinateNote": "既存全国資料館の概略座標を継承。県域の座標未登録地域も一覧に保持。",
+    "catalogUrl": "/national-archive.html#national-list",
+    "summary": [
+      "既存全国資料館に自治体別資料の所在を掲載。研究ノートと学校別JSONの統合は未完了。制度・運用の確認済みを意味しません。"
+    ],
+    "flags": {},
+    "schools": []
+  },
+  {
+    "id": "catalog-kanagawa",
+    "prefectureCode": "14",
+    "prefecture": "神奈川県",
+    "name": "神奈川県",
+    "schoolMunicipality": "神奈川県",
+    "url": null,
+    "themes": [],
+    "status": "source-catalog",
+    "coordinates": null,
+    "coordinateNote": "既存全国資料館の概略座標を継承。県域の座標未登録地域も一覧に保持。",
+    "catalogUrl": "/national-archive.html#national-list",
+    "summary": [
+      "既存全国資料館に自治体別資料の所在を掲載。研究ノートと学校別JSONの統合は未完了。制度・運用の確認済みを意味しません。"
+    ],
+    "flags": {},
+    "schools": []
+  },
+  {
+    "id": "catalog-saitama",
+    "prefectureCode": "11",
+    "prefecture": "埼玉県",
+    "name": "埼玉県",
+    "schoolMunicipality": "埼玉県",
+    "url": null,
+    "themes": [],
+    "status": "source-catalog",
+    "coordinates": null,
+    "coordinateNote": "既存全国資料館の概略座標を継承。県域の座標未登録地域も一覧に保持。",
+    "catalogUrl": "/national-archive.html#national-list",
+    "summary": [
+      "既存全国資料館に自治体別資料の所在を掲載。研究ノートと学校別JSONの統合は未完了。制度・運用の確認済みを意味しません。"
+    ],
+    "flags": {},
+    "schools": []
+  }
+]

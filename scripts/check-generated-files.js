@@ -10,6 +10,9 @@ const GENERATED_SCHOOL_FILES = listSchoolData().map((record) =>
 );
 const GENERATED_FILES = [
   "national-archive.html",
+  "research-map.html",
+  "data/research-map-index.json",
+  ...JSON.parse(fs.readFileSync(path.join(ROOT, "data/research-municipalities.json"), "utf8")).municipalities.map((record) => record.url.replace(/^\/+/, "")),
   ...GENERATED_SCHOOL_FILES,
   "sitemap.xml",
   "data/site-search-index.js"
@@ -39,6 +42,7 @@ function main() {
     for (const script of [
       "scripts/generate-school-pages.js",
       "scripts/generate-national-archive.js",
+      "scripts/generate-research-map.js",
       "scripts/enhance-public-pages.js",
       "scripts/generate-sitemap.js",
       "scripts/generate-search-index.js"

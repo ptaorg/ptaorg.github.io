@@ -133,7 +133,7 @@
   <p class="archive-caution"><strong>表示上の注意：</strong>「資料未掲載」は当サイトに資料がない状態であり、「文書不存在」ではありません。「未評価」は分析未実施であり、「問題なし」を意味しません。「重大リスク」「問題あり」等は掲載資料に基づく当委員会の分析で、行政機関や裁判所による法的判断ではありません。</p>
 </div></div></section>
 
-<section class="section" id="archive-map"><div class="wrap"><p class="archive-section-number">02 / 掲載地域</p><h2 class="title">資料取得・掲載自治体マップ</h2><p class="lead">地図のピンは資料の掲載地域を示します。ピンの数は全国のPTAや問題件数の統計ではありません。詳細は地図だけでなく、下の自治体別資料と原本リンクで確認してください。</p><div class="map" id="archiveJapanMap" aria-label="PTA資料を掲載している自治体の地図"></div></div></section>
+<section class="section" id="archive-map"><div class="wrap"><p class="archive-section-number">02 / 掲載地域</p><h2 class="title">資料取得・掲載自治体マップ</h2><p class="lead">地図のピンは資料の掲載地域を示します。ピンの数は全国のPTAや問題件数の統計ではありません。詳細は地図だけでなく、下の自治体別資料と原本リンクで確認してください。</p><p><a href="/research-map.html">全国PTA制度・運用研究マップで、自治体研究と学校別資料を検索する</a></p><div class="map" id="archiveJapanMap" data-research-map aria-label="PTA資料を掲載している自治体の地図"></div></div></section>
 <!-- ATSUGI_ARCHIVE_START -->
     <!-- 厚木市 学校一覧 -->
     <section class="atsugi-schools-section" id="atsugi-schools">
@@ -670,10 +670,9 @@ function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;',
 function materialHtml(m){return `<article class="archive-material-record"><h4><a href="${esc(m[3])}" target="_blank" rel="noopener">${esc(m[0])}</a> <span class="archive-record-state">資料確認済み</span></h4><p class="archive-record-meta">${esc(m[1])}</p><p class="archive-record-point">${esc(m[2])}</p><p class="archive-record-link"><a href="${esc(m[3])}" target="_blank" rel="noopener">原本を開く</a></p></article>`;}
 function cityHtml(c){const materials=c.materials&&c.materials.length?c.materials.map(materialHtml).join(''):`<article class="archive-material-record"><h4><a href="${esc(c.folder)}" target="_blank" rel="noopener">${esc(c.name)} 資料フォルダ</a> <span class="archive-record-state">学校別整理中</span></h4><p class="archive-record-meta">学校別整理前の資料</p><p class="archive-record-point">学校別の整理は順次追加します。原本資料フォルダから学校別PDF・資料を確認できます。</p><p class="archive-record-link"><a href="${esc(c.folder)}" target="_blank" rel="noopener">原本フォルダを開く</a></p></article>`;return `<div class="city-visible"><h3 class="title">${esc(c.name)} PTA関連資料</h3><p class="lead">${esc(c.summary)}</p></div><details class="city-fold"><summary>${esc(c.name)} の学校別資料を開く</summary><div class="fold-body"><div class="group"><h4>確認資料</h4><div class="archive-material-records">${materials}</div></div><p class="archive-folder-link"><a href="${esc(c.folder)}" target="_blank" rel="noopener">${esc(c.name)} の原本フォルダを開く</a></p></div></details>`;}
 function renderArchive(){document.getElementById('archiveList').innerHTML=cities.filter(c=>c.type!=='atsugi').map(cityHtml).join('');}
-function initMap(){const el=document.getElementById('archiveJapanMap');if(!el)return;if(!window.L){el.innerHTML='<div style="padding:20px">地図を読み込めませんでした。自治体リストをご確認ください。</div>';return;}const coords={'神奈川県厚木市':[35.4431,139.3622],'広島県広島市':[34.3853,132.4553],'愛知県長久手市':[35.1842,137.0488],'福島県いわき市':[37.0504,140.8877],'大阪府茨木市':[34.8164,135.5683],'京都府亀岡市':[35.0356,135.5739],'埼玉県久喜市':[36.0621,139.6672],'滋賀県甲賀市':[34.9656,136.1692],'鹿児島県鹿児島市':[31.5967,130.5572],'富山県射水市':[36.7299,137.0520],'宮城県仙台市':[38.2682,140.8694],'埼玉県川口市':[35.8079,139.7238],'神奈川県相模原市':[35.5714,139.3736],'東京都大田区':[35.5614,139.7161],'大阪府大東市':[34.7139,135.6231],'滋賀県彦根市':[35.2744,136.2597],'愛知県扶桑町':[35.3583,136.9111],'愛知県豊橋市':[34.7692,137.3914]};const map=L.map(el,{scrollWheelZoom:false}).setView([36.2,137.8],5);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);cities.forEach(c=>{if(!coords[c.name])return;L.marker(coords[c.name]).addTo(map).bindPopup(`<strong>${esc(c.name)}</strong><br>${esc(c.summary)}<br><a href="${esc(c.folder)}">資料を開く</a>`);});}
 window.addEventListener('DOMContentLoaded',renderArchive);
-window.addEventListener('load',initMap);
 </script>
+<script defer src="/js/research-map.js?v=20261026"></script>
 <script src="/data/site-search-index.js?v=20260809-2"></script>
 <script src="/js/site.js?v=97"></script>
 </body>

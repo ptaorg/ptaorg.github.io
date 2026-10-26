@@ -1,3 +1,4 @@
+const { renderResearchNoteLink } = require("./research-note-link");
 const fs = require("fs");
 const path = require("path");
 const { renderMaterialSchoolPage } = require("./render-material-school-page");
@@ -293,7 +294,7 @@ ${chrome.mobile}
       </div>
       <p>${escapeHtml(renderSummary(record))}</p>
     </header>
-
+${renderResearchNoteLink(record) ? `    ${renderResearchNoteLink(record)}\n` : ""}
     <section class="archive-section">
       <h2>資料確認状況</h2>
       <div class="archive-grid">

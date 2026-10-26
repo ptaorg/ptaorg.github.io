@@ -1,3 +1,4 @@
+const { renderResearchNoteLink } = require("./research-note-link");
 const fs = require("fs");
 const path = require("path");
 const {
@@ -81,7 +82,7 @@ ${chrome.mobile}<nav class="breadcrumb" aria-label="現在地"><div class="wrap"
     <h1>${escapeHtml(record.schoolName)} PTA関連資料</h1>
     <p>${escapeHtml(record.summary || "学校別に確認できるPTA関連資料を、そのまま探せる形で整理しています。")}</p>
   </header>
-
+${renderResearchNoteLink(record) ? `    ${renderResearchNoteLink(record)}\n` : ""}
   <section class="archive-section">
     <h2>このページについて</h2>
     <div class="archive-grid">

@@ -4386,6 +4386,78 @@ window.PTA_SITE_SEARCH_INDEX = [
     "research-record"
   ],
   [
+    "全国PTA制度・運用研究マップ",
+    "/research-map.html",
+    "全国PTA制度・運用研究マップ。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
+    "source-archive"
+  ],
+  [
+    "厚木市 PTA制度・運用研究ノート",
+    "/research/atsugi.html",
+    "厚木市 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
+    "current-canonical"
+  ],
+  [
+    "広島市 PTA制度・運用研究ノート",
+    "/research/hiroshima.html",
+    "広島市 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
+    "current-canonical"
+  ],
+  [
+    "兵庫県 PTA制度・運用研究ノート",
+    "/research/hyogo.html",
+    "兵庫県 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
+    "current-canonical"
+  ],
+  [
+    "川口市 PTA制度・運用研究ノート",
+    "/research/kawaguchi.html",
+    "川口市 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
+    "current-canonical"
+  ],
+  [
+    "川崎市 PTA制度・運用研究ノート",
+    "/research/kawasaki.html",
+    "川崎市 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
+    "current-canonical"
+  ],
+  [
+    "松山市 PTA制度・運用研究ノート",
+    "/research/matsuyama.html",
+    "松山市 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
+    "current-canonical"
+  ],
+  [
+    "西宮市 PTA制度・運用研究ノート",
+    "/research/nishinomiya.html",
+    "西宮市 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
+    "current-canonical"
+  ],
+  [
+    "大阪市 PTA制度・運用研究ノート",
+    "/research/osaka.html",
+    "大阪市 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
+    "current-canonical"
+  ],
+  [
+    "滋賀県 PTA制度・運用研究ノート",
+    "/research/shiga.html",
+    "滋賀県 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
+    "current-canonical"
+  ],
+  [
+    "静岡県 PTA制度・運用研究ノート",
+    "/research/shizuoka.html",
+    "静岡県 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
+    "current-canonical"
+  ],
+  [
+    "横浜市 PTA制度・運用研究ノート",
+    "/research/yokohama.html",
+    "横浜市 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
+    "current-canonical"
+  ],
+  [
     "正しいPTA運営とは何か｜学校とPTAの公私分離",
     "/school-pta-separation.html",
     "自動加入、オプトアウト、学校徴収金との抱合せ徴収、学校名簿利用、教職員によるPTA会計・役員就任などを、学校とPTAの公私分離という一つの構造から整理します。",

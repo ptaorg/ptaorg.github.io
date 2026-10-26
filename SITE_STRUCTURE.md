@@ -98,3 +98,7 @@ JavaScriptは、検索、ナビゲーション開閉、地図、補助表示な�
 `kit/{education-board,school-leaders,federation,unit-pta,parents}/index.html` は読者別キットの恒久入口です。既存の任意加入・立場別解説を置き換えず、最新版資料・主要根拠・履歴を案内します。5つの公開URLと永続運用は `URL_LEDGER.md`／`data/url-ledger.json` で管理します。
 
 版を固定した配布成果物は `assets/kit/audience-prototypes-v0.2-20261004/` に集約します。検索とsitemapは入口ページを収録し、成果物の保存領域を除外します。HTMLの公開用メタデータ以外は基準版を保持し、法理解説の正本はMaster v0.3.1とします。
+
+## 全国PTA制度・運用研究マップ
+
+`research-map.html` は自治体研究・既存学校別資料・横断研究の共通入口です。`data/research-municipalities.json` を編集し、`npm run generate:research` で `research/*.html` と共通地図索引を出力します。学校件数・学校URL・公開状態は `data/schools/` から導出し、原本URLを追加公開しません。既存全国資料館も同じ地図索引とクライアントを利用します。詳しい追加・確認手順は `docs/RESEARCH_MAP.md` を参照してください。
