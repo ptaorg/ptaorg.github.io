@@ -147,6 +147,7 @@ try {
     await noJS.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
     await noJS.goto(origin + '/research-map.html');
     assert.equal(await noJS.locator('[data-region]').count(), index.municipalities.length);
+    assert.equal(await noJS.locator('#national-primary-survey .survey-record').count(), 48, 'static national survey readable without JavaScript');
     await noJS.goto(origin + '/research/osaka.html');
     assert.ok(await noJS.locator('main').textContent());
     assert.equal(await noJS.locator('h2').count() >= 8, true);
