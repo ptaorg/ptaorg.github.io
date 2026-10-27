@@ -589,7 +589,7 @@
 
     /* 簡易パンくず */
     if (isHome) return;
-    var existing = document.querySelector('.breadcrumb-bar');
+    var existing = document.querySelector('.breadcrumb-bar, .breadcrumb, .breadcrumbs, .research-breadcrumb');
     if (existing) {
       var st = window.getComputedStyle(existing);
       if (st && st.display !== 'none' && existing.offsetParent !== null) return;

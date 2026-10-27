@@ -1,6 +1,30 @@
+/* Pure search selection shared with regression tests; no source data is mutated. */
+(function (root) {
+  "use strict";
+  const normalize = (s) => String(s || "").normalize("NFKC").replace(/\s/g, "").toLowerCase();
+  function selection(m, filters = {}) {
+    const query = normalize(filters.query);
+    const all = m.schools || [];
+    const eligible = all.filter(s => (!filters.school || s.type === filters.school) &&
+      (!filters.publication || s.documents.some(d => d.status === filters.publication)));
+    const identityMatch = query && normalize(m.prefecture + m.name).includes(query);
+    const schoolMatches = all.filter(s => normalize([s.name, ...(s.documents || []).map(d => d.title)].join(" ")).includes(query));
+    const { schools, ...region } = m;
+    const regionMatch = !query || identityMatch || normalize(JSON.stringify(region)).includes(query);
+    // A school/document match narrows the list; a municipality name intentionally keeps all eligible schools.
+    const schoolQuery = !!query && !identityMatch && schoolMatches.length > 0;
+    const selected = schoolQuery ? eligible.filter(s => schoolMatches.includes(s)) : regionMatch ? eligible : [];
+    return { schools: selected, matched: regionMatch || schoolMatches.length > 0, schoolQuery };
+  }
+  const api = { normalize, selection };
+  if (typeof module !== "undefined" && module.exports) module.exports = api;
+  if (root) root.PTAResearchSearch = api;
+})(typeof window === "undefined" ? null : window);
+
 /* Shared by the research map and national archive. Text is always inserted as text. */
 (async function () {
   "use strict";
+  if (typeof document === "undefined") return;
   const containers = [...document.querySelectorAll("[data-research-map]")];
   if (!containers.length) return;
   const form = document.getElementById("research-filters"),
@@ -29,11 +53,9 @@
     improvement: "research-improvement",
   };
   const value = (k) => document.getElementById(fields[k])?.value || "";
-  const normalize = (s) =>
-    String(s || "")
-      .normalize("NFKC")
-      .replace(/\s/g, "")
-      .toLowerCase();
+  const selection = (m) => window.PTAResearchSearch.selection(m, {
+    query: value("query"), school: value("school"), publication: value("publication"),
+  });
   const flags = {
     response: "administrativeResponse",
     audit: "audit",
@@ -61,14 +83,7 @@
       tiles.addTo(map);
       maps.push({ map, layer });
     }
-  function selectedSchools(m) {
-    return m.schools.filter(
-      (s) =>
-        (!value("school") || s.type === value("school")) &&
-        (!value("publication") ||
-          s.documents.some((d) => d.status === value("publication"))),
-    );
-  }
+  function selectedSchools(m) { return selection(m).schools; }
   function match(m) {
     if (value("mode") === "自治体研究" && !m.url) return false;
     if (value("mode") === "学校別資料" && !m.schools.length) return false;
@@ -76,7 +91,7 @@
       return false;
     if (value("city") && m.name !== value("city")) return false;
     if (value("theme") && !m.themes.includes(value("theme"))) return false;
-    if ((value("school") || value("publication")) && !selectedSchools(m).length)
+    if ((value("school") || value("publication") || value("mode") === "学校別資料" || selection(m).schoolQuery) && !selectedSchools(m).length)
       return false;
     for (const [field, key] of Object.entries(flags)) {
       if (!value(field)) continue;
@@ -86,10 +101,7 @@
         (field === "response" && m.boardResponses?.length > 0);
       if ((value(field) === "掲載確認") !== confirmed) return false;
     }
-    return (
-      !value("query") ||
-      normalize(JSON.stringify(m)).includes(normalize(value("query")))
-    );
+    return selection(m).matched;
   }
   function popup(m) {
     const box = document.createElement("div"),
@@ -100,8 +112,8 @@
     p.textContent =
       (m.url ? "研究ノートあり" : m.catalogUrl ? "既存資料館に所在掲載" : "学校別資料目録") +
       " ／ " +
-      m.schools.length +
-      "校";
+      selectedSchools(m).length +
+      "校（登録全" + m.schools.length + "校）";
     box.append(p);
     const a = document.createElement("a");
     a.href =
@@ -130,7 +142,11 @@
       el.id = "region-" + m.id;
       el.hidden = !found.includes(m);
       const details = el.querySelector("details");
-      if (details && value("mode") === "学校別資料") details.open = true;
+      if (details) {
+        details.open = value("mode") === "学校別資料" || selection(m).schoolQuery;
+        const summary = details.querySelector("summary");
+        if (summary) summary.textContent = "学校別一次資料（表示 " + selectedSchools(m).length + "校 ／ 登録全 " + m.schools.length + "校）";
+      }
       const visible = new Set(selectedSchools(m).map((s) => s.url));
       for (const li of el.querySelectorAll("[data-school-url]"))
         li.hidden = !visible.has(li.dataset.schoolUrl);
@@ -140,7 +156,13 @@
         found.length +
         "地域 ／ " +
         found.reduce((n, m) => n + selectedSchools(m).length, 0) +
-        "校（資料・研究の登録件数）";
+        "校（表示対象。原本公開済みの件数ではありません）";
+    const empty = document.getElementById("research-empty");
+    if (empty) empty.hidden = found.length > 0;
+    const scope = document.getElementById("research-query-scope");
+    if (scope) scope.textContent = found.some(m => selection(m).schoolQuery)
+      ? "学校名・文書名に一致する学校を表示しています。自治体の登録全校は各一覧のリンクで確認できます。"
+      : "自治体・研究の一致に基づく登録校を表示しています。学校名・文書名で検索すると該当学校へ絞り込みます。";
     for (const { map, layer } of maps) {
       layer.clearLayers();
       const positions = new Map();
@@ -152,14 +174,24 @@
       for (const group of positions.values()) {
         const box = document.createElement("div");
         for (const m of group) box.append(popup(m));
-        L.circleMarker(group[0].coordinates, {
+        const marker = L.circleMarker(group[0].coordinates, {
           radius: group.length > 1 ? 11 : 8,
           color: group.some((m) => m.url) ? "#145f77" : "#65758b",
           fillOpacity: 0.8,
           weight: 2,
-        })
-          .addTo(layer)
-          .bindPopup(box);
+        }).addTo(layer).bindPopup(box);
+        const element = marker.getElement();
+        if (element) {
+          element.setAttribute("tabindex", "0");
+          element.setAttribute("role", "button");
+          element.setAttribute("aria-label", group.map(m => m.prefecture + " " + m.name).join("、") + "の資料・研究を開く");
+          element.addEventListener("keydown", event => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault(); marker.openPopup();
+              box.querySelector("a")?.focus();
+            }
+          });
+        }
       }
     }
     if (form) {
@@ -196,6 +228,7 @@
    JS enhances it with search and status filtering without republishing sources. */
 (function filterNationalPTASurvey() {
   "use strict";
+  if (typeof document === "undefined") return;
   const section = document.getElementById("national-primary-survey");
   if (!section) return;
   const input = section.querySelector(".research-survey-filters input");

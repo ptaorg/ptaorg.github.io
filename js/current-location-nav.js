@@ -197,6 +197,8 @@
 
   function init(){
     injectKurumeEvidence();
+    // Detail pages already have a static trail and their own return links.
+    if (/^\/(archive|research)\//.test(path)) return;
     document.body.classList.add('current-location-enabled');
     if (document.querySelector('.current-location-sidebar')) return;
 
