@@ -78,6 +78,21 @@ try {
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `${width}px horizontal overflow`);
     assert.ok(await page.locator('#research-map-message').textContent());
 
+    assert.equal(await page.evaluate(() => !!(document.querySelector('#research-results').compareDocumentPosition(document.querySelector('#national-primary-survey')) & Node.DOCUMENT_POSITION_FOLLOWING)), true, 'results precede independent survey');
+    await page.locator('#research-query').fill('安行小学校');
+    assert.equal(await visible().count(), 1);
+    assert.equal(await page.locator('[data-region]:visible [data-school-url]:visible').count(), 1, 'school name narrows the municipality to one school');
+    await page.reload();
+    await page.waitForFunction(() => document.querySelector('#research-query').value === '安行小学校');
+    assert.equal(await page.locator('[data-region]:visible [data-school-url]:visible').count(), 1, 'school search survives reload');
+    await page.locator('#research-school').selectOption('中学校');
+    assert.equal(await visible().count(), 0, 'school type cannot broaden a school-name search');
+    assert.equal(await page.locator('#research-empty').isVisible(), true);
+    await page.locator('#research-school').selectOption('');
+    await page.locator('#research-query').fill('該当なし999');
+    assert.equal(await visible().count(), 0);
+    await page.locator('button[type=reset]').click();
+    await page.waitForFunction(total => document.querySelectorAll('[data-region]:not([hidden])').length === total, index.municipalities.length);
     await page.locator('#research-query').fill('川口市');
     assert.equal(await visible().count(), 1);
     assert.match(await visible().textContent(), /川口市/);
@@ -117,8 +132,8 @@ try {
     const note = index.municipalities.find(m => m.url && m.themes.includes(theme));
     await page.locator(`[data-region="${note.id}"] h3 a`).click();
     await page.waitForURL(origin + note.url);
-    assert.equal(await page.locator('main .research-pathways__card').count(), 2, 'municipality note navigation');
-    assert.equal(await page.locator('main .research-pathways__shortcuts a[href="#schools"]').count(), 1);
+    assert.equal(await page.locator('main .research-pathways__card').count(), 0, 'note does not repeat national entry cards');
+    assert.equal(await page.locator('main .research-note-links a[href="#schools"]').count(), 1);
     assert.equal(await page.locator('h1').count(), 1);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `${width}px note overflow`);
     await readableScreenshot(`/tmp/pta-research-note-${width}${process.env.RESEARCH_JAPANESE_FONT ? "-jp" : ""}.png`);
@@ -149,6 +164,31 @@ try {
     assert.equal(await page.locator('main .research-pathways__shortcuts a[href="/research/atsugi.html"]').count(), 1);
     assert.equal(await page.locator('[data-research-map]').count(), 1);
     assert.equal(await page.locator('a[href="/research-map.html"]').count() > 0, true);
+    const firstSchool = index.municipalities.find(m => m.schools.length).schools[0];
+    await page.goto(origin + firstSchool.url);
+    await page.waitForSelector('html[data-loc-ready="1"]');
+    assert.equal(await page.locator('.breadcrumb, .breadcrumb-bar, .breadcrumbs, .loc-trail').count(), 1, 'one school breadcrumb');
+    assert.equal(await page.locator('.current-location-compact, .current-location-sidebar').count(), 0, 'no duplicate current-location panel on school pages');
+    for (const [guide, kits] of [
+      ['guide-parent.html', ['parents']],
+      ['guide-pta.html', ['unit-pta', 'federation']],
+      ['guide-board.html', ['education-board', 'school-leaders']],
+    ]) {
+      await page.goto(origin + '/' + guide);
+      for (const kit of kits) {
+        await page.locator('.kit-direct-links a[href="/kit/' + kit + '/"]').click();
+        await page.waitForURL(origin + '/kit/' + kit + '/');
+        assert.match(await page.locator('h1').textContent(), /PTA実務移行キット/);
+        await page.goBack();
+      }
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, guide + ' overflow');
+    }
+    await page.goto(origin + '/submit-to-board.html');
+    const headings = await page.locator('.section h2').evaluateAll(nodes => nodes.map(node => ({ color: getComputedStyle(node).color, background: getComputedStyle(node).backgroundColor })));
+    assert.equal(headings.length, 4);
+    assert.equal(await page.locator('.primary-brief h2').evaluate(node => getComputedStyle(node).color), 'rgb(23, 32, 51)', 'primary heading also retains dark text');
+    assert.ok(headings.every(h => h.color === 'rgb(23, 32, 51)' && h.background === 'rgba(0, 0, 0, 0)'), 'section headings retain readable dark text');
+    await readableScreenshot(`/tmp/pta-submit-${width}.png`);
     assert.deepEqual(errors, [], `${width}px JavaScript errors`);
     await page.close();
     const noJS = await browser.newPage({ javaScriptEnabled: false, viewport: { width, height: 950 } });

@@ -442,9 +442,9 @@
   }
 
   load('/js/seo-analytics-v104.js?v=20260919-1', 'seo-analytics-v104');
-  load('/js/site-core-v90.js?v=99', 'site-core-v90', function(){
+  load('/js/site-core-v90.js?v=100', 'site-core-v90', function(){
     installDesktopSearchPanel();
     installMobileSearch();
-    load('/js/current-location-nav.js?v=20260823-10', 'current-location-nav', installCoreEssayEntrances);
+    load('/js/current-location-nav.js?v=20261028', 'current-location-nav', installCoreEssayEntrances);
   });
 })();

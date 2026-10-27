@@ -40,3 +40,14 @@ test('legacy catalog-only regions remain accessible without duplicate research r
   assert.equal(index.municipalities[1].catalogUrl,'/national-archive.html#national-list');
   assert.equal(index.municipalities[1].prefectureCode,'04');
 });
+
+test('school-name queries retain only matching schools and intersect with filters', () => {
+  const { selection } = require('../js/research-map.js');
+  const index = require('../data/research-map-index.json');
+  const city = index.municipalities.find(m => m.name === '川口市');
+  assert.deepEqual(selection(city, {query:'安行小学校'}).schools.map(s => s.name), ['安行小学校']);
+  assert.equal(selection(city, {query:'川口市'}).schools.length, city.schools.length);
+  assert.equal(selection(city, {query:'安行小学校', school:'中学校'}).schools.length, 0);
+  assert.equal(selection(city, {query:'該当なし999'}).matched, false);
+  assert.equal(selection(city, {query:''}).schools.length, city.schools.length);
+});
