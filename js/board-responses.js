@@ -188,6 +188,7 @@
   }
 
   function initSearch() {
+    if (document.getElementById('board-response-search')) return;
     const input = document.getElementById('muniSearch'); if (!input) return;
     input.addEventListener('input', function () {
       const q = this.value.trim();

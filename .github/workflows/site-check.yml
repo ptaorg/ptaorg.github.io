@@ -41,6 +41,10 @@ jobs:
           npm install --prefix "${RUNNER_TEMP}/research-map-deps" --no-save leaflet@1.9.4
           RESEARCH_LEAFLET_ROOT="${RUNNER_TEMP}/research-map-deps/node_modules/leaflet" node scripts/test-research-map.mjs
 
+      - name: Test response supplements at desktop and mobile widths
+        if: ${{ !cancelled() }}
+        run: RESEARCH_LEAFLET_ROOT="${{ runner.temp }}/research-map-deps/node_modules/leaflet" node scripts/test-board-updates.mjs
+
       - name: Test audit detection
         if: ${{ !cancelled() }}
         run: npm run test:audit

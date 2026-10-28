@@ -1,0 +1,15 @@
+.board-updates article{padding:24px 0;border-bottom:1px solid #cbd5e1;overflow-wrap:anywhere}
+.board-updates h3{color:#143b5d;font-size:1.2rem;margin:0 0 12px}
+.board-updates h4{font-size:1rem;margin:18px 0 8px}
+.board-updates details{padding:12px 16px;border-left:3px solid #176b80;background:#f4f8fa}
+.board-updates summary{cursor:pointer;font-weight:700}
+.board-updates .board-source{font-size:.88rem;color:#475569}
+#board-response-search{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin:24px 0}
+#board-response-search label{display:flex;flex-direction:column;gap:6px;font-weight:700;min-width:0}
+#board-response-search input,#board-response-search select,#board-response-search button{font:inherit;min-height:44px;padding:9px;border:1px solid #8297a9;border-radius:4px;background:#fff;color:#172033;width:100%;box-sizing:border-box}
+#board-response-search button{width:auto;justify-self:start;padding:9px 20px}
+#board-query-status{font-weight:700}
+.board-updates [hidden],.response-item[hidden],.type-section[hidden],.prefecture-group[hidden],.region-block[hidden],.municipality-list li[hidden]{display:none!important}
+@media(max-width:700px){#board-response-search{grid-template-columns:1fr}}
+
+.board-responses-editorial section[hidden]{display:none!important}
