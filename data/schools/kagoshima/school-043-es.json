@@ -1,0 +1,28 @@
+{
+  "pageMode": "materials",
+  "municipality": "鹿児島市",
+  "prefecture": "鹿児島県",
+  "schoolName": "平川小学校",
+  "schoolType": "小学校",
+  "slug": "school-043-es",
+  "basePath": "/archive/kagoshima/school-043-es/",
+  "canonical": "https://ptaorg.com/archive/kagoshima/school-043-es/",
+  "ogImage": "/assets/og-image-popc-en.png",
+  "summary": "鹿児島市の保存資料を学校別に整理した一次資料アーカイブです。",
+  "description": "平川小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
+  "sourceSummary": "Google Drive「全国資料」とローカル保存資料を学校名で統合し、重複を整理した索引を基礎にしています。元ファイルは公開可否確認後に順次掲載します。",
+  "documents": [
+    {
+      "year": "",
+      "category": "PDF原資料",
+      "title": "小６５ 平川小.pdf",
+      "source": "ローカル保存資料／全国資料（Google Drive）",
+      "publicationStatus": "公開前確認中"
+    }
+  ],
+  "lastReviewed": "2026-10-02",
+  "nationalArchive": {
+    "order": 18043,
+    "group": "鹿児島市・小学校"
+  }
+}
