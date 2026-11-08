@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { execSync } from "node:child_process";
 import YAML from "yaml";
-import { runAudit, publicationFilter } from "./audit-site.mjs";
+import { runAudit, publicationFilter, isCompanionSite } from "./audit-site.mjs";
 
 const root = process.cwd();
 const errors = [];
@@ -74,7 +74,7 @@ function normalizeInternalRef(raw, baseFile) {
     } catch {
       return null;
     }
-    if (!internalHosts.has(url.hostname)) return null;
+    if (!internalHosts.has(url.hostname) || isCompanionSite(url)) return null;
     ref = `${url.pathname}${url.search}${url.hash}`;
   }
   if (ref.startsWith("//")) return null;

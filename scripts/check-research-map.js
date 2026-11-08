@@ -73,8 +73,27 @@ function main() {
   const { buildIndex } = require('./generate-research-map');
   const index = buildIndex(data, schools);
   const indexedSchools = index.municipalities.flatMap(m => m.schools);
-  assert.equal(indexedSchools.length, schools.length, 'every existing school must remain indexed');
-  assert.equal(new Set(indexedSchools.map(s => s.url)).size, schools.length, 'no duplicate school entries');
+  const existing = indexedSchools.filter(s => s.url.startsWith('/archive/'));
+  assert.equal(existing.length, schools.length, 'every existing school must remain indexed');
+  assert.equal(new Set(indexedSchools.map(s => s.url)).size, indexedSchools.length, 'no duplicate school entries');
+  for (const [id, count] of [['ichinomiya', 61], ['kakamigahara', 26]]) {
+    const municipality = index.municipalities.find(m => m.id === id);
+    assert.equal(municipality.schools.length, count);
+    for (const school of municipality.schools) {
+      assert.ok(school.url.startsWith(municipality.url + '#school-'));
+      checkUrl(school.url, school.name);
+    }
+  }
+  const cohorts = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/school-evidence-cohorts.json'), 'utf8'));
+  for (const school of cohorts.ichinomiya) {
+    for (const document of school.documents) {
+      assert.equal(new URL(document.url).origin, 'https://ichinomiya.schoolweb.ne.jp');
+      assert.equal(typeof document.verified, 'boolean');
+    }
+  }
+  for (const school of cohorts.kakamigahara) {
+    assert.ok(school.documents.every(document => !document.url && document.verified === undefined));
+  }
   for (const school of schools) {
     const owner = index.municipalities.find(m => m.schools.some(s => s.url === school.basePath));
     assert.equal(owner.prefecture, school.prefecture);

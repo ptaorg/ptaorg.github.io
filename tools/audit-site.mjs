@@ -12,6 +12,10 @@ import { XMLParser, XMLValidator } from 'fast-xml-parser';
 
 const origin = 'https://ptaorg.com';
 const hosts = new Set(['ptaorg.com', 'www.ptaorg.com', 'ptaorg.github.io']);
+// The school index is served by the separately built ichinomiya-pta-report repository.
+export const isCompanionSite = url => url.origin === 'https://ptaorg.github.io'
+  && url.pathname === '/ichinomiya-pta-report/schools/';
+
 const isTelemetry = url => (url.hostname === 'analytics.google.com' || /(^|\.)google-analytics\.com$/.test(url.hostname)) && /\/collect$/.test(url.pathname);
 const list = value => value == null ? [] : Array.isArray(value) ? value : [value];
 // Known-site baselines are exact and temporary. Keep this list empty when all known issues are repaired.
@@ -118,7 +122,7 @@ export function auditStatic(root, siteDir) {
     if (!raw || /^(data:|blob:|mailto:|tel:|javascript:)/i.test(raw)) return;
     try {
       const url = new URL(raw, base);
-      if (!hosts.has(url.hostname)) return;
+      if (!hosts.has(url.hostname) || isCompanionSite(url)) return;
       const target = resolve(url);
       if (!publicSet.has(target)) return add('internal-reference', file, `${raw} -> unpublished or missing: ${target}`);
       if (fragment && url.hash && /\.html?$/i.test(target)) {

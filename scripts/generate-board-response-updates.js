@@ -20,7 +20,7 @@ function render(data) {
   return `<!-- board-response-updates:start -->
 <section id="response-updates" class="board-updates"><div class="wrap reading-body">
 <h2>追加回答・対応状況（2025–2026年）</h2>
-<p>更新 ${esc(data.reviewedAt)}。従来の72件の公開本文・個別URLは保存し、受領資料から確認した要約を追補しています。今回の${records.length}件のうち、実質回答（一部回答を含む）${definite.length}件、回答未了・資料確認待ち等${records.length - definite.length}件。実質回答による新規掲載自治体は${added.size}です。追補は初回回答を意味せず、同一回答の両アカウント受信・再送・パスワード通知は別回答として数えません。</p>
+<p>更新 ${esc(data.reviewedAt)}。従来の72件の公開本文・個別URLは保存し、受領資料から確認した要約を追補しています。今回の${records.length}件のうち、実質回答（一部回答を含む）${definite.length}件、実質未回答・資料確認待ち等${records.length - definite.length}件。実質回答による新規掲載自治体は${added.size}です。追補は初回回答を意味せず、同一回答の両アカウント受信・再送・パスワード通知は別回答として数えません。</p>
 <p>本文原文の公開と要約掲載は区別します。以下は受領メール及び取得できた添付資料の確認に基づく要約です。本文未取得の添付資料は内容を推定せず、未確認と明示しています。メール本文・個人名・メールアドレス・未公開添付資料を公開するものではありません。資料未読・検討中・今後の予定を実施済みの事実と扱いません。</p>
 <p>学校・教育委員会と任意団体PTAは別主体です。まず事務の帰属と学校側の具体的な所掌事務・権限を確認し、次に個人情報保護法61条の利用目的、69条の利用・提供の制限を検討します。委任・同意・慣例だけで校務性や適法性を確定せず、各回答と独立した研究上の確認事項を分けています。<a href="https://www.ppc.go.jp/personalinfo/legal/guidelines_administrative/">検討基準：個人情報保護委員会ガイドライン5-1・5-5</a></p>
 <form id="board-response-search" role="search"><label>自治体・部署・回答内容・論点<input id="board-query" type="search" placeholder="厚木市、委任、61条…"></label><label>論点<select id="board-topic"><option value="">すべて</option>${options(topics)}</select></label><label>回答状況<select id="board-status"><option value="">すべて</option><option>従来公開本文</option>${options(statuses)}</select></label><button type="reset">条件を解除</button></form>

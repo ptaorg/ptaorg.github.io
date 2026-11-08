@@ -4410,6 +4410,18 @@ window.PTA_SITE_SEARCH_INDEX = [
     "research-record"
   ],
   [
+    "一宮市 PTA制度・運用研究ノート",
+    "/research/ichinomiya.html",
+    "一宮市 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
+    "research-record"
+  ],
+  [
+    "各務原市 PTA制度・運用研究ノート",
+    "/research/kakamigahara.html",
+    "各務原市 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
+    "research-record"
+  ],
+  [
     "川口市 PTA制度・運用研究ノート",
     "/research/kawaguchi.html",
     "川口市 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",

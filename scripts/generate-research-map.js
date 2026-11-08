@@ -1,3 +1,4 @@
+const { cohortIndex, cohortDetails } = require('./school-evidence-cohorts');
 const fs = require("fs");
 const path = require("path");
 const {
@@ -47,17 +48,9 @@ function buildIndex(data = load(), schools = listSchoolData(), legacy = []) {
   const responses = JSON.parse(
     fs.readFileSync(path.join(ROOT, "data/board-responses.json"), "utf8"),
   ).responses;
-  const regions = data.municipalities.map((m) => ({
-    ...m,
-    schools: [],
-    boardResponses: responses
-      .filter((r) => r.prefecture === m.prefecture && r.municipality === m.name)
-      .map((r) => ({
-        title: r.municipality + " 教育委員会回答",
-        url: r.url,
-        date: r.date || "日付未登録",
-      })),
-  }));
+  const linkedUpdates = new Set(['update-016', 'update-015', 'update-014', 'update-013', 'update-012', 'update-20261102', 'update-20261106']);
+  const updates = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/board-response-updates.json'), 'utf8')).records;
+  const regions = data.municipalities.map((m) => ({ ...m, schools: cohortIndex(m) }));
   for (const s of schools) {
     let m = regions.find(
       (m) =>
@@ -110,6 +103,13 @@ function buildIndex(data = load(), schools = listSchoolData(), legacy = []) {
     m.type ||= m.name === m.prefecture ? "都道府県" : m.name.endsWith("区") ? "特別区" : m.name.endsWith("町") ? "町" : "市";
     m.updated ||= data.updated;
     m.boardResponses = responses.filter(r => r.prefecture === m.prefecture && r.municipality === m.name).map(r => ({title:r.municipality + " 教育委員会回答",url:r.url,date:r.date || "日付未登録"}));
+    for (const r of updates.filter(r => linkedUpdates.has(r.id) && r.prefecture === m.prefecture && r.municipality === m.name)) {
+      m.boardResponses.push({
+        title: r.date + ' ' + r.municipality + ' ' + r.status,
+        url: '/board-responses.html#' + r.id,
+        date: r.date,
+      });
+    }
   }
   return {
     version: 1,
@@ -173,7 +173,7 @@ function renderRegion(m, index) {
   return page(
     m.name + " PTA制度・運用研究ノート",
     m.url,
-    `<p>${e(m.prefecture)} ／ ${e(m.type)} ／ 更新 ${e(m.updated)}</p><p>研究テーマ：${m.themes.map(e).join("、")}</p><p class="research-notice">資料目録と法的評価を分離しています。以下の検証状況は資料ごとに表示し、既存記事での確認と原本の独立再検証を区別します。</p><section><h2>研究要約</h2>${paras(m.summary)}</section><section><h2>制度・運用の概要</h2>${paras(m.system)}</section><section><h2>調査・行政対応の時系列</h2><ol>${m.timeline.map((t) => `<li><strong>${e(t.date)} ${e(t.title)}</strong><p>${e(t.text)}</p>${t.sourceId ? `<a href="#source-${e(t.sourceId)}">根拠資料</a>` : ""}</li>`).join("")}</ol></section><section><h2>一次資料・確認状況</h2>${m.sources.map((s) => `<article id="source-${e(s.id)}"><h3><a href="${e(s.url)}">${e(s.title)}</a></h3><p>${e(s.publisher)} ／ ${e(s.date || "日付未確認")} ／ ${e(s.kind)}</p><p>確認状況：${e(s.verification)}</p></article>`).join("")}</section><section><h2>当委員会の法的分析</h2>${m.legal.map((s) => `<h3>${e(s.title)}</h3><p>${e(s.text)}</p>`).join("")}</section><section id="schools"><h2>関連学校別一次資料アーカイブ（${m.schools.length}校）</h2><p>各校の資料・評価・公開状態は既存ページで確認してください。学校本文や未公開原本を複製しません。</p>${schoolList(m)}</section><section><h2>研究ノート・行政回答への導線</h2>${links([...m.articles, ...(m.boardResponses || [])])}</section><section><h2>未解明事項</h2><ul>${m.unknowns.map((t) => `<li>${e(t)}</li>`).join("")}</ul></section><section><h2>関連自治体比較・全国横断研究</h2>${links(
+    `<p>${e(m.prefecture)} ／ ${e(m.type)} ／ 更新 ${e(m.updated)}</p><p>研究テーマ：${m.themes.map(e).join("、")}</p><p class="research-notice">資料目録と法的評価を分離しています。以下の検証状況は資料ごとに表示し、既存記事での確認と原本の独立再検証を区別します。</p><section><h2>研究要約</h2>${paras(m.summary)}</section><section><h2>制度・運用の概要</h2>${paras(m.system)}</section><section><h2>調査・行政対応の時系列</h2><ol>${m.timeline.map((t) => `<li><strong>${e(t.date)} ${e(t.title)}</strong><p>${e(t.text)}</p>${t.sourceId ? `<a href="#source-${e(t.sourceId)}">根拠資料</a>` : ""}</li>`).join("")}</ol></section><section><h2>一次資料・確認状況</h2>${m.sources.map((s) => `<article id="source-${e(s.id)}"><h3><a href="${e(s.url)}">${e(s.title)}</a></h3><p>${e(s.publisher)} ／ ${e(s.date || "日付未確認")} ／ ${e(s.kind)}</p><p>確認状況：${e(s.verification)}</p></article>`).join("")}</section><section><h2>当委員会の法的分析</h2>${m.legal.map((s) => `<h3>${e(s.title)}</h3><p>${e(s.text)}</p>`).join("")}</section><section id="schools"><h2>関連学校別一次資料アーカイブ（${m.schools.length}校）</h2><p>各校の資料・評価・公開状態は既存ページで確認してください。学校本文や未公開原本を複製しません。</p>${schoolList(m)}${cohortDetails(m.id)}</section><section id="administrative-responses"><h2>行政回答・関連資料</h2>${links([...m.articles, ...(m.boardResponses || [])])}</section><section><h2>未解明事項</h2><ul>${m.unknowns.map((t) => `<li>${e(t)}</li>`).join("")}</ul></section><section><h2>関連自治体比較・全国横断研究</h2>${links(
       (m.comparisons || [])
         .map((id) => index.municipalities.find((x) => x.id === id))
         .filter(Boolean)
