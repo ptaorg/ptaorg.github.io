@@ -72,6 +72,8 @@ export function pagePath(file) {
 }
 export function documentInfo(text) {
   const nodes = [];
+  const bodyTag = text.match(/<body\b[^>]*>/i)?.[0] || "";
+  const duplicateReviewed = (bodyTag.match(/\sdata-reviewed\s*=/gi) || []).length > 1;
   function visit(node) {
     if (node.tagName) nodes.push({ tag: node.tagName, attrs: Object.fromEntries(node.attrs.map(a => [a.name, a.value])), line: node.sourceCodeLocation?.startLine });
     for (const child of node.childNodes || []) visit(child);
@@ -79,7 +81,7 @@ export function documentInfo(text) {
   }
   visit(parse(text, { sourceCodeLocationInfo: true }));
   const metas = name => nodes.filter(n => n.tag === 'meta' && n.attrs.name?.toLowerCase() === name);
-  return { nodes, metas, ids: new Set(nodes.map(n => n.attrs.id).filter(Boolean)),
+  return { nodes, metas, duplicateReviewed, ids: new Set(nodes.map(n => n.attrs.id).filter(Boolean)),
     canonical: nodes.filter(n => n.tag === 'link' && n.attrs.rel?.toLowerCase().split(/\s+/).includes('canonical')),
     redirect: nodes.some(n => n.tag === 'meta' && n.attrs['http-equiv']?.toLowerCase() === 'refresh'),
     noindex: metas('robots').some(n => /\b(noindex|none)\b/i.test(n.attrs.content || '')) };
@@ -186,6 +188,7 @@ export function auditStatic(root, siteDir) {
     if (!isPublic) continue;
     const url = origin + pagePath(file);
     const ids = new Set();
+    if (doc.duplicateReviewed) add("duplicate-attribute", file, "Repeated data-reviewed on body");
     for (const node of doc.nodes) {
       if (node.attrs.id && ids.has(node.attrs.id)) add('duplicate-id', file, `${node.attrs.id} at line ${node.line}`);
       if (node.attrs.id) ids.add(node.attrs.id);

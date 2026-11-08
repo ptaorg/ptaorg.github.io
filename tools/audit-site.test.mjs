@@ -47,6 +47,12 @@ test('detects broken links, assets, fragments, case mismatches, duplicate IDs an
   const codes = auditStatic(root).findings.map(f => f.code);
   for (const code of ['internal-reference', 'fragment', 'duplicate-id', 'meta-description', 'asset-signature']) assert.ok(codes.includes(code), code);
 });
+test('duplicate body review dates are flagged before HTML parsing discards them', t => {
+  const { root, write } = fixture(t);
+  write('research.html', '<meta name=robots content=noindex><body data-reviewed="2026-01-01" data-reviewed="2026-01-02">本文</body>');
+  assert.equal(auditStatic(root).findings.filter(f => f.code === 'duplicate-attribute' && f.file === 'research.html').length, 1);
+});
+
 test('sitemap and robots mismatches fail, including previously unlisted HTML', t => {
   const { root, write, html } = fixture(t);
   write('unlisted.html', html.replace('https://ptaorg.com/', 'https://ptaorg.com/unlisted.html'));

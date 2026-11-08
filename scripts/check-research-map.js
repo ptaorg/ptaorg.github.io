@@ -61,7 +61,9 @@ function validateData(data, checkFiles = true) {
     for (const t of m.timeline) assert.ok(sourceIds.has(t.sourceId), `${m.id}: unknown timeline source ${t.sourceId}`);
     if (checkFiles) {
       checkUrl(m.url, m.id);
-      for (const source of [...m.sources, ...m.articles]) checkUrl(source.url, `${m.id}/${source.title}`);
+      for (const source of [...m.sources, ...m.articles]) {
+        if (source.url !== null) checkUrl(source.url, `${m.id}/${source.title}`);
+      }
     }
   }
   for (const m of data.municipalities) for (const id of m.comparisons) assert.ok(ids.has(id) && id !== m.id, `${m.id}: invalid comparison ${id}`);
@@ -85,6 +87,19 @@ function main() {
     }
   }
   const cohorts = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/school-evidence-cohorts.json'), 'utf8'));
+  for (const school of [...cohorts.ichinomiya, ...cohorts.kakamigahara]) {
+    if (school.analysis) {
+      assert.equal(school.analysis.length, 6, `${school.name}: legal evaluation order`);
+      assert.ok(school.analysis.every(text => typeof text === 'string' && text.trim()));
+    }
+    for (const doc of [...school.documents, ...(school.disclosureFindings || [])]) {
+      if (doc.originalChecked) {
+        assert.match(doc.locator, /頁/);
+        assert.ok(doc.summary && doc.unknown, `${school.name}: original finding and uncertainty must be separate`);
+        assert.ok(!doc.url, `${school.name}: internal original must not be linked`);
+      }
+    }
+  }
   for (const school of cohorts.ichinomiya) {
     for (const document of school.documents) {
       assert.equal(new URL(document.url).origin, 'https://ichinomiya.schoolweb.ne.jp');
