@@ -170,17 +170,33 @@
   padding-inline-start: 1.3rem;
 }
 .school-evidence .evidence-documents > li {
-  padding-block: .65rem;
+  padding-block: .85rem;
+}
+.school-evidence .evidence-documents > li + li {
+  border-top: 1px solid #d5dfe5;
 }
 .school-evidence .evidence-documents p {
   margin: .35rem 0;
 }
 .school-evidence .evidence-source {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-weight: 700;
   padding-block: .35rem;
 }
 .school-evidence .evidence-meta {
   color: #415365;
   font-size: .95rem;
+}
+.evidence-progress ul {
+  margin: 0;
+  padding-inline-start: 1.25rem;
+}
+.school-evidence .evidence-status {
+  color: #193c50;
+  font-weight: 700;
+}
+.research-main #fee-collection-transition {
+  scroll-margin-top: 6rem;
 }

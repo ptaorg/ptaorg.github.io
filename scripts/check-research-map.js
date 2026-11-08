@@ -95,7 +95,8 @@ function main() {
     for (const doc of [...school.documents, ...(school.disclosureFindings || [])]) {
       if (doc.originalChecked) {
         assert.match(doc.locator, /頁/);
-        assert.ok(doc.summary && doc.unknown, `${school.name}: original finding and uncertainty must be separate`);
+        assert.ok(doc.unknown, `${school.name}: uncertainty must be recorded`);
+        assert.equal(Boolean(doc.summary), doc.textVerified !== false, `${school.name}: a concrete finding must match the text verification status`);
         assert.ok(!doc.url, `${school.name}: internal original must not be linked`);
       }
     }
@@ -107,7 +108,7 @@ function main() {
     }
   }
   for (const school of cohorts.kakamigahara) {
-    assert.ok(school.documents.every(document => !document.url && document.verified === undefined));
+    assert.ok(school.documents.every(document => !document.url && document.verified === undefined && typeof document.textVerified === 'boolean'));
   }
   for (const school of schools) {
     const owner = index.municipalities.find(m => m.schools.some(s => s.url === school.basePath));

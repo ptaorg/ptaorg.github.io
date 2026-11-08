@@ -169,11 +169,25 @@ function schoolList(m) {
     ? `<ul>${m.schools.map((s) => `<li data-school-url="${e(s.url)}" data-school-type="${e(s.type)}"><a href="${e(s.url)}">${e(s.name)}</a>（${e(s.type)}）</li>`).join("")}</ul>`
     : "<p>既存mainの学校別アーカイブに、この設置主体に一致する登録はありません。資料不存在を意味しません。</p>";
 }
+function renderYokohamaTransition(m) {
+  const milestoneIds = new Set(["old-answer", "oct-notice", "nov-answer"]);
+  const timeline = m.timeline.filter(t => milestoneIds.has(t.sourceId));
+  return `<section id="fee-collection-transition" aria-labelledby="fee-collection-title" class="research-notice">
+<h2 id="fee-collection-title">教学第1453号とPTA会費徴収の見直し</h2>
+<ol>${timeline.map(t => `<li><strong>${e(t.date)} ${e(t.title)}</strong><p>${e(t.text)}</p><a href="#source-${e(t.sourceId)}">資料と確認範囲</a></li>`).join("")}</ol>
+<h3>当委員会の評価</h3>
+<p>学校・教育委員会は公的主体で、PTAは外部の任意団体です。会費の徴収・督促・経理は原則として団体に帰属します。通知は、この事務の区分が併徴で不明瞭になる問題を示し、団体が徴収を担う方向を明確にしました。学校が公務として関与する場合は具体的な所掌事務・権限を確認し、その上で個人情報保護法61条の利用目的と69条の利用・提供制限、教職員の服務と会計処理を検証します。</p>
+<p><a href="https://www.ppc.go.jp/all_faq_index/faq7-q3-3-2/">個人情報保護委員会Q&amp;A（69条2項の臨時的な利用・提供）</a></p>
+<h3>移行実績の確認状況</h3>
+<p>学校別の移行日、移行済み校数、併徴が続く学校の有無は未確認です。通知の写しと11月2日回答で確認した範囲は、移行の依頼と方針の説明までです。</p>
+<p><a href="/board-responses.html#update-20261102">11月2日の教育委員会回答（要約）</a> ／ <a href="/pta-school-processing.html">学校による外部団体事務処理の横断研究</a></p>
+</section>`;
+}
 function renderRegion(m, index) {
   return page(
     m.name + " PTA制度・運用研究ノート",
     m.url,
-    `<p>${e(m.prefecture)} ／ ${e(m.type)} ／ 更新 ${e(m.updated)}</p><p>研究テーマ：${m.themes.map(e).join("、")}</p><p class="research-notice">資料目録と法的評価を分離しています。以下の検証状況は資料ごとに表示し、既存記事での確認と原本の独立再検証を区別します。</p><section><h2>研究要約</h2>${paras(m.summary)}</section><section><h2>制度・運用の概要</h2>${paras(m.system)}</section><section><h2>調査・行政対応の時系列</h2><ol>${m.timeline.map((t) => `<li><strong>${e(t.date)} ${e(t.title)}</strong><p>${e(t.text)}</p>${t.sourceId ? `<a href="#source-${e(t.sourceId)}">根拠資料</a>` : ""}</li>`).join("")}</ol></section><section><h2>一次資料・確認状況</h2>${m.sources.map((s) => `<article id="source-${e(s.id)}"><h3>${s.url ? `<a href="${e(s.url)}">${e(s.title)}</a>` : e(s.title)}</h3><p>${e(s.publisher)} ／ ${e(s.date || "日付未確認")} ／ ${e(s.kind)}</p><p>確認状況：${e(s.verification)}</p></article>`).join("")}</section><section><h2>当委員会の法的分析</h2>${m.legal.map((s) => `<h3>${e(s.title)}</h3><p>${e(s.text)}</p>`).join("")}</section><section id="schools"><h2>関連学校別一次資料アーカイブ（${m.schools.length}校）</h2><p>各校の資料・評価・公開状態は既存ページで確認してください。学校本文や未公開原本を複製しません。</p>${schoolList(m)}${cohortDetails(m.id)}</section><section id="administrative-responses"><h2>行政回答・関連資料</h2>${links([...m.articles, ...(m.boardResponses || [])])}</section><section><h2>未解明事項</h2><ul>${m.unknowns.map((t) => `<li>${e(t)}</li>`).join("")}</ul></section><section><h2>関連自治体比較・全国横断研究</h2>${links(
+    `<p>${e(m.prefecture)} ／ ${e(m.type)} ／ 更新 ${e(m.updated)}</p><p>研究テーマ：${m.themes.map(e).join("、")}</p><p class="research-notice">資料目録と法的評価を分離しています。以下の検証状況は資料ごとに表示し、既存記事での確認と原本の独立再検証を区別します。</p>${m.id === "yokohama" ? renderYokohamaTransition(m) : ""}<section><h2>研究要約</h2>${paras(m.summary)}</section><section><h2>制度・運用の概要</h2>${paras(m.system)}</section><section><h2>調査・行政対応の時系列</h2><ol>${m.timeline.map((t) => `<li><strong>${e(t.date)} ${e(t.title)}</strong><p>${e(t.text)}</p>${t.sourceId ? `<a href="#source-${e(t.sourceId)}">根拠資料</a>` : ""}</li>`).join("")}</ol></section><section><h2>一次資料・確認状況</h2>${m.sources.map((s) => `<article id="source-${e(s.id)}"><h3>${s.url ? `<a href="${e(s.url)}">${e(s.title)}</a>` : e(s.title)}</h3><p>${e(s.publisher)} ／ ${e(s.date || "日付未確認")} ／ ${e(s.kind)}</p><p>確認状況：${e(s.verification)}</p></article>`).join("")}</section><section><h2>当委員会の法的分析</h2>${m.legal.map((s) => `<h3>${e(s.title)}</h3><p>${e(s.text)}</p>`).join("")}</section><section id="schools"><h2>関連学校別一次資料アーカイブ（${m.schools.length}校）</h2><p>各校の資料・評価・公開状態は既存ページで確認してください。学校本文や未公開原本を複製しません。</p>${schoolList(m)}${cohortDetails(m.id)}</section><section id="administrative-responses"><h2>行政回答・関連資料</h2>${links([...m.articles, ...(m.boardResponses || [])])}</section><section><h2>未解明事項</h2><ul>${m.unknowns.map((t) => `<li>${e(t)}</li>`).join("")}</ul></section><section><h2>関連自治体比較・全国横断研究</h2>${links(
       (m.comparisons || [])
         .map((id) => index.municipalities.find((x) => x.id === id))
         .filter(Boolean)
