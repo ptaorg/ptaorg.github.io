@@ -37,7 +37,7 @@ ${school.documents.length ? `<ul>${school.documents.map(doc => `<li>
 ${doc.summary ? `<p>${e(doc.summary)}</p>` : ''}
 ${doc.url ? `<p><a href="${e(doc.url)}">学校公式の掲載資料を開く</a></p>` : ''}
 </li>`).join('')}</ul>` : '<p>この索引で参照できる個別文書はありません。</p>'}
-<p><a href="#schools">学校別索引へ戻る</a> ／ <a href="#administrative-responses">自治体の行政回答・関連資料</a></p>
+${school.disclosureFindings?.length ? `<h4>開示原本で確認した記載と確認事項</h4><ul>${school.disclosureFindings.map(doc => `<li><strong>${e(doc.title)}</strong> ／ ${e(doc.locator)}<p>${e(doc.summary)}</p></li>`).join('')}</ul>\n` : ''}<p><a href="#schools">学校別索引へ戻る</a> ／ <a href="#administrative-responses">自治体の行政回答・関連資料</a></p>
 </section>`).join('\n')}`;
 }
 
