@@ -747,7 +747,7 @@
       "type": "都道府県",
       "aliases": [],
       "coordinates": [
-        35.0,
+        35,
         135.87
       ],
       "coordinateNote": "自治体・県域を選択するための概略代表位置。学校所在地ではなく、学校座標を推測したものではありません。",
@@ -1507,6 +1507,15 @@
           "date": null,
           "kind": "primary",
           "verification": "専用サイトで確認済みと記録。"
+        },
+        {
+          "id": "settlements-report-20261108",
+          "title": "一宮市立小中学校のPTA決算書を読む（公開用抜粋画像・指摘50件）",
+          "url": "/journal/ichinomiya-pta-settlements-20261108.html",
+          "publisher": "PTA適正化推進委員会",
+          "date": "2026-11-08",
+          "kind": "article",
+          "verification": "開示資料に基づく論考。原本PDFの個別照合、会計証憑、学校側の法令上の権限および実運用は独立検証の継続事項。画像は公開用抜粋であり原本ではない。"
         }
       ],
       "timeline": [
@@ -1551,6 +1560,10 @@
         {
           "title": "教育委員会回答の検索",
           "url": "/board-responses.html?boardQuery=一宮市#response-updates"
+        },
+        {
+          "title": "一宮市立小中学校のPTA決算書を読む",
+          "url": "/journal/ichinomiya-pta-settlements-20261108.html"
         }
       ],
       "unknowns": [
