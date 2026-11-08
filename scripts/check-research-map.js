@@ -91,6 +91,13 @@ function main() {
     if (school.analysis) {
       assert.equal(school.analysis.length, 6, `${school.name}: legal evaluation order`);
       assert.ok(school.analysis.every(text => typeof text === 'string' && text.trim()));
+      for (const section of ['facts', 'unknowns', 'followUp']) {
+        assert.ok(school.evaluation?.[section]?.trim(), `${school.name}: missing evaluation section ${section}`);
+      }
+      for (const source of school.evaluation.sources || []) {
+        assert.ok(source.title?.trim());
+        assert.match(new URL(source.url).origin, /^https:\/\/(?:edu-kakamigahara\.com|www\.city\.kakamigahara\.lg\.jp)$/);
+      }
     }
     for (const doc of [...school.documents, ...(school.disclosureFindings || [])]) {
       if (doc.originalChecked) {
@@ -108,6 +115,7 @@ function main() {
     }
   }
   for (const school of cohorts.kakamigahara) {
+    assert.ok(school.analysis, `${school.name}: evaluation or documented limits required`);
     assert.ok(school.documents.every(document => !document.url && document.verified === undefined && typeof document.textVerified === 'boolean'));
   }
   for (const school of schools) {
