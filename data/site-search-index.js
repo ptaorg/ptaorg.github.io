@@ -1,11 +1,5 @@
 window.PTA_SITE_SEARCH_INDEX = [
   [
-    "一宮市立小中学校のPTA決算書を読む",
-    "/journal/ichinomiya-pta-settlements-20261108.html",
-    "一宮市の開示資料に基づく21校42件の決算書・指摘50件。学校経費への支出と校長の会計受任について記載上の事実と未確認事項を分けて検証。",
-    "research-record"
-  ],
-  [
     "PTA適正化推進委員会｜任意加入と学校・PTA分離の一次資料",
     "/index.html",
     "PTA問題を、学校とPTAの境界、任意加入、会費徴収、個人情報、教職員関与から整理し、一次資料と分析を区別して確認する資料サイトです。",
@@ -4035,6 +4029,12 @@ window.PTA_SITE_SEARCH_INDEX = [
     "重点論考",
     "/journal/core-papers.html",
     "PTA問題を、加入契約、学校保有情報、会費徴収、教職員関与、教育行政の責任という制度構造から読むための重点論考と一次資料への入口です。",
+    "research-record"
+  ],
+  [
+    "一宮市立小中学校のPTA決算書を読む",
+    "/journal/ichinomiya-pta-settlements-20261108.html",
+    "一宮市への情報公開請求で入手した市立小中学校21校のPTA決算書42件を全件点検。建物修繕費の負担、協力費による学校経費の肩代わり、校長のPTA会計受任など指摘50件を、公開用抜粋画像と法令の該当性とともに示す。",
     "research-record"
   ],
   [
