@@ -145,7 +145,7 @@ function renderSourceEvidence(record) {
       ? renderSourceChip({ href: images[0].src, label: `資料画像あり（${images.length}枚）`, present: true })
       : renderSourceChip({ label: "資料画像未掲載", present: false }),
     pdfs.length
-      ? renderSourceChip({ href: pdfs[0].href, label: `元PDFあり（${pdfs.length}件）`, present: true })
+      ? renderSourceChip({ href: pdfs[0].href, label: `掲載PDF・関連PDF（${pdfs.length}件）`, present: true })
       : renderSourceChip({ label: "元PDF未掲載", present: false }),
     links.length
       ? renderSourceChip({ href: links[0].url, label: `一次資料URLあり（${links.length}件）`, present: true })
@@ -156,7 +156,7 @@ function renderSourceEvidence(record) {
       ? `<li><strong>確認資料</strong><span>${documents.map(escapeHtml).join("、")}</span></li>`
       : `<li><strong>確認資料</strong><span>未確認</span></li>`,
     `<li><strong>資料画像</strong><span>${images.length ? `${images.length}枚を掲載` : "未掲載"}</span></li>`,
-    `<li><strong>元PDF</strong><span>${pdfs.length ? pdfs.map((link) => `<a href="${escapeHtml(link.href)}">${escapeHtml(link.label)}</a>`).join("、") : "未掲載"}</span></li>`,
+    `<li><strong>掲載PDF・関連PDF</strong><span>${pdfs.length ? pdfs.map((link) => `<a href="${escapeHtml(link.href)}">${escapeHtml(link.label)}</a>`).join("、") : "未掲載"}</span></li>`,
     `<li><strong>一次資料URL</strong><span>${links.length ? links.map((link) => `<a href="${escapeHtml(link.url)}">${escapeHtml(link.label || "一次資料URL")}</a>`).join("、") : "未確認"}</span></li>`
   ];
   return `<div class="archive-source-status">${chips.join("")}</div>
@@ -167,7 +167,7 @@ function renderSourceEvidence(record) {
 
 function renderImages(record) {
   const images = sourceImages(record);
-  if (!images.length) return `      <p class="archive-muted">資料画像は未掲載です。資料画像を掲載する場合は、個人情報・印影・口座情報・QRコード等を確認し、必要な伏せ処理を行います。</p>`;
+  if (!images.length) return `      <p class="archive-muted">資料画像は未掲載です。掲載可否は資料ごとに確認します。</p>`;
   return images.map((image, index) => {
     const dimensions = imageDimensions(image.src);
     const size = dimensions ? ` width="${dimensions.width}" height="${dimensions.height}"` : "";
@@ -235,7 +235,8 @@ function renderSchoolPage(record) {
   const fallbackDescription = `${record.schoolName}のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。`;
   const description = record.ogDescription || record.description || renderSummary(record) || fallbackDescription;
   const ogDescription = record.ogDescription || description;
-  const documentName = meaningfulDocuments(record).join("、") || "確認資料なし";
+  const documents = meaningfulDocuments(record);
+  const documentName = documents.join("、") || "本文を確認した資料名は未登録";
   const applicationStatus = record.materials.applicationFormStatus || record.materials.hasApplicationForm || "未確認";
   const pdfCount = pdfLinks(record).length;
   const pdfStatus = displayPdfStatus(record.materials.pdfStatus, pdfCount);
@@ -301,7 +302,7 @@ ${renderResearchNoteLink(record) ? `    ${renderResearchNoteLink(record)}\n` : "
         <div class="archive-box"><div class="archive-label">自治体</div><div class="archive-value">${escapeHtml(record.municipality)}</div></div>
         <div class="archive-box"><div class="archive-label">学校区分</div><div class="archive-value">${escapeHtml(record.schoolType)}</div></div>
         <div class="archive-box archive-status-card ${escapeHtml(statusClass)}"><div class="archive-label">評価状況</div><div class="archive-value">${escapeHtml(statusLabel)}</div></div>
-        <div class="archive-box"><div class="archive-label">確認資料</div><div class="archive-value">${escapeHtml(documentName)}</div></div>
+        <div class="archive-box"><div class="archive-label">本文確認の記録</div><div class="archive-value">${escapeHtml(documentName)}</div></div>
         <div class="archive-box"><div class="archive-label">入会申込書</div><div class="archive-value">${escapeHtml(applicationStatus)}</div></div>
         <div class="archive-box"><div class="archive-label">PDF</div><div class="archive-value">${escapeHtml(pdfStatus)}</div></div>
       </div>

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-26",
+  "updated": "2026-11-08",
   "themes": [
     "PTA任意加入",
     "入会申込書・加入意思確認",
@@ -195,10 +195,11 @@
         "制度是正・改善事例"
       ],
       "status": "published-research",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "summary": [
         "2025年8月8日の公開回答は、PTAを任意加入団体とし、家庭の意思が十分に反映されず情報が適正に扱われない場合には法令違反の可能性があると説明する。一方、協力停止の予定はないと回答した。",
-        "学校別資料と市の回答は性格が異なる。市の一般見解から各校の情報提供・運用変更を推定せず、学校別一次資料の確認を重ねる。後続の個人情報請求・審査に関する研究も関連資料として接続する。"
+        "学校別資料と市の回答は性格が異なる。市の一般見解から各校の情報提供・運用変更を推定せず、学校別一次資料の確認を重ねる。後続の個人情報請求・審査に関する研究も関連資料として接続する。",
+        "11月2日付の市長部局の回答は、市立学校での個人情報取扱い・事務分担は教育委員会が判断すると説明しています。学校別実態の回答は示されていません。"
       ],
       "system": [
         "公開回答は、全校長が参加する会議で任意加入を周知しているとするが、入会申込書導入の全校実施や是正完了を示すものではない。",
@@ -280,7 +281,8 @@
       ],
       "unknowns": [
         "2026年の全校調査・学校別改善発表を、日付・発出主体・原本で整理すること。",
-        "各校の情報提供先、提供項目、利用目的、停止・削除の実施記録。"
+        "各校の情報提供先、提供項目、利用目的、停止・削除の実施記録。",
+        "11月2日の市長部局回答で未回答だった、2014年度申出後の是正内容、再発防止と全校調査の状況。"
       ],
       "articles": [
         {
@@ -961,7 +963,13 @@
         "nishinomiya"
       ],
       "schools": [],
-      "boardResponses": []
+      "boardResponses": [
+        {
+          "title": "2026-10-14 川崎市 追加正式回答",
+          "url": "/board-responses.html#update-013",
+          "date": "2026-10-14"
+        }
+      ]
     },
     {
       "id": "yokohama",
@@ -987,10 +995,11 @@
         "制度是正・改善事例"
       ],
       "status": "published-research",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "summary": [
         "2025年12月1日付学教第1965号通知は、PTAの任意団体性、入会意思確認、個人情報、未加入家庭への教育的配慮、会費納入、学校関与を一式で点検する資料である。既存記事には通知本文・別紙画像・一式PDFが掲載されている。",
-        "通知の加入届・同意書様式は、加入意思と情報取扱いを確認する実務資料として読める。一方、書面による徴収承諾は、学校側が恒常的にPTA会費を扱える公法上の根拠を自動的に示すものではない。"
+        "通知の加入届・同意書様式は、加入意思と情報取扱いを確認する実務資料として読める。一方、書面による徴収承諾は、学校側が恒常的にPTA会費を扱える公法上の根拠を自動的に示すものではない。",
+        "11月2日回答で、PTA自身が会費徴収・会計管理を担う方針へ見直し、移行中と説明しました。"
       ],
       "system": [
         "別紙は、任意加入の説明と加入届等による意思確認、非加入家庭の子どもに不利益を与えない配慮を求める。個人情報と会費納入にも点検事項を置く。",
@@ -1023,6 +1032,33 @@
           "publisher": "PTA適正化推進委員会",
           "kind": "article",
           "verification": "既存公開ページの本文・出典リンクを確認。今回の統合では外部原本の独立再照合は未実施。"
+        },
+        {
+          "id": "old-answer",
+          "title": "市民の声「学校とPTAの関わりについて」",
+          "url": "https://cgi.city.yokohama.lg.jp/shimin/kouchou/search/data/37004955.html",
+          "publisher": "横浜市",
+          "date": "2026-01-09",
+          "kind": "primary",
+          "verification": "市の公表本文を確認。日付は公表内容基準日。"
+        },
+        {
+          "id": "nov-answer",
+          "title": "2026年11月2日 横浜市教育委員会回答の要約",
+          "url": "/board-responses.html#update-20261102",
+          "publisher": "横浜市教育委員会",
+          "date": "2026-11-02",
+          "kind": "article",
+          "verification": "11月2日受領メールの本文を確認。行政回答の公開要約。"
+        },
+        {
+          "id": "oct-notice",
+          "title": "教学第1453号「PTA会費の徴収方法の見直しについて（依頼）」",
+          "url": null,
+          "publisher": "横浜市教育委員会事務局 学校支援・地域連携課長",
+          "date": "2026-10-19",
+          "kind": "primary",
+          "verification": "写し1頁の文書番号、日付、宛先、依頼本文を確認。公開用原本URLは未確認。"
         }
       ],
       "timeline": [
@@ -1031,6 +1067,24 @@
           "title": "学教第1965号通知",
           "text": "学校とPTAが加入方法・活動内容を再確認する点検事項と様式を示す。",
           "sourceId": "notice"
+        },
+        {
+          "date": "2026-01-09",
+          "title": "従前の公表回答",
+          "text": "保護者の振込手数料等を減らす観点から、学校納入金との併徴も一つの方法と説明。",
+          "sourceId": "old-answer"
+        },
+        {
+          "date": "2026-10-19",
+          "title": "徴収方法の見直しを依頼",
+          "text": "教学第1453号の通知本文では、学校長・校長代理に対し、PTA自身の責任と判断による経理を原則とし、併徴によって事務の区分が不明瞭になる懸念を示したうえで、PTA自身が徴収する方法へ進めるよう依頼した。",
+          "sourceId": "oct-notice"
+        },
+        {
+          "date": "2026-11-02",
+          "title": "移行方針を回答",
+          "text": "自己徴収への移行中と説明。準公金取扱要領等は内部統制・管理手続を定めるもので、取扱権限を創設しないと整理。",
+          "sourceId": "nov-answer"
         }
       ],
       "legal": [
@@ -1044,7 +1098,7 @@
         },
         {
           "title": "学校側の所掌事務・権限",
-          "text": "学校とPTAの連携・意思確認を求める通知と、学校がPTA固有事務を処理する法令上の権限を区別する。"
+          "text": "協力関係や徴収方法の通知と、学校が団体の内部事務を処理する公法上の権限を区別する。準公金取扱要領等を内部統制と整理した市の回答を踏まえ、学校が例外的に処理を続ける場合は所掌事務、授権条項とその適用理由を個別に確認する。"
         },
         {
           "title": "個人情報保護法61条",
@@ -1052,7 +1106,7 @@
         },
         {
           "title": "個人情報保護法69条",
-          "text": "学校側の適法な所掌事務と利用目的を確認した後、目的内利用・提供と目的外利用・提供を分ける。本人同意があることだけで学校側の権限や恒常的な情報処理の適法性を確定しない。"
+          "text": "所掌事務と61条の利用目的を確かめ、学校内部での利用と団体への提供を分ける。69条2項の目的外利用・提供は臨時的な場合の例外であり、恒常的に扱う場合の利用目的の特定に置き換えられない。"
         },
         {
           "title": "会計・服務・給与支出",
@@ -1065,7 +1119,8 @@
       ],
       "unknowns": [
         "通知後の各校の加入届導入・未提出者取扱いと非加入者除外の実施状況。",
-        "後続通知と学校徴収見直しの確定内容・施行日・対象範囲。"
+        "後続通知と学校徴収見直しの確定内容・施行日・対象範囲。",
+        "10月19日付通知の公開用原本URL、学校ごとの切替期限・実施状況、従前の徴収等の具体的な授権条項。"
       ],
       "articles": [
         {
@@ -1088,7 +1143,13 @@
         "kawasaki"
       ],
       "schools": [],
-      "boardResponses": []
+      "boardResponses": [
+        {
+          "title": "2026-11-02 横浜市 方針変更・移行中",
+          "url": "/board-responses.html#update-20261102",
+          "date": "2026-11-02"
+        }
+      ]
     },
     {
       "id": "matsuyama",
@@ -1238,7 +1299,13 @@
         "atsugi"
       ],
       "schools": [],
-      "boardResponses": []
+      "boardResponses": [
+        {
+          "title": "2026-10-06 松山市 追加正式回答",
+          "url": "/board-responses.html#update-012",
+          "date": "2026-10-06"
+        }
+      ]
     },
     {
       "id": "shiga",
@@ -2145,7 +2212,7 @@
         "学校保有個人情報の利用・提供"
       ],
       "status": "published-research",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "summary": [
         "2026年3月30日通知と4月9日公式回答は、任意加入、本人からの情報取得、自己徴収の方向を検討できる既存公開資料である。市の方針と各校の実施を分け、学校別アーカイブを通じて確認する。"
       ],
@@ -2179,6 +2246,15 @@
           "publisher": "PTA適正化推進委員会",
           "kind": "article",
           "verification": "既存公開ページの本文・出典リンクを確認。今回の統合では外部原本の独立再照合は未実施。"
+        },
+        {
+          "id": "oct-answer",
+          "title": "2026年10月26日 厚木市教育委員会回答の要約",
+          "url": "/board-responses.html#update-016",
+          "publisher": "厚木市教育委員会",
+          "date": "2026-10-26",
+          "kind": "article",
+          "verification": "受領メールを照合。質問3は回答延期。"
         }
       ],
       "timeline": [
@@ -2193,6 +2269,12 @@
           "title": "実態調査回答",
           "text": "慣例による徴収と根拠・責任分担を市が説明した資料。",
           "sourceId": "response"
+        },
+        {
+          "date": "2026-10-26",
+          "title": "全校調査の範囲とガイドライン策定を回答",
+          "text": "本人同意なしの外部提供が調査対象。学校内部の目的外利用は対象外。自主徴収等のガイドラインを策定中で、物品提供・寄附の回答は11月30日予定。",
+          "sourceId": "oct-answer"
         }
       ],
       "legal": [
@@ -2714,7 +2796,13 @@
           ]
         }
       ],
-      "boardResponses": []
+      "boardResponses": [
+        {
+          "title": "2026-10-26 厚木市 一部回答・追加回答予定",
+          "url": "/board-responses.html#update-016",
+          "date": "2026-10-26"
+        }
+      ]
     },
     {
       "id": "hyogo",
@@ -2937,7 +3025,1480 @@
         "osaka"
       ],
       "schools": [],
+      "boardResponses": [
+        {
+          "title": "2026-10-19 西宮市 追加正式回答",
+          "url": "/board-responses.html#update-014",
+          "date": "2026-10-19"
+        }
+      ]
+    },
+    {
+      "id": "ichinomiya",
+      "name": "一宮市",
+      "prefecture": "愛知県",
+      "prefectureCode": "23",
+      "type": "市",
+      "aliases": [
+        "愛知県一宮市"
+      ],
+      "coordinates": [
+        35.3,
+        136.8
+      ],
+      "coordinateNote": "市の概略代表位置。学校所在地とは異なります。",
+      "url": "/research/ichinomiya.html",
+      "schoolMunicipality": "一宮市",
+      "themes": [
+        "PTA任意加入",
+        "PTA会費の学校徴収",
+        "情報公開・審査請求",
+        "委任契約による公務化"
+      ],
+      "status": "source-catalog",
+      "updated": "2026-11-08",
+      "summary": [
+        "市立小学校42校・中学校19校の索引。公開用33出典のうち本文の指定箇所確認は29件、旧表示記録のみは4件。",
+        "開示資料は59校分の年度別フォルダでPDF522ファイルの所在を確認。学校ごとに令和6・7年度の所在件数を示します。本文を読了した数は別に管理します。"
+      ],
+      "system": [
+        "学校公開資料の年度・該当箇所と、開示取得資料の記録は別系統で管理します。旧台帳の436参照・直接ファイル候補149件は探索上の記録です。原表全文を再取得できておらず、原本確認数には算入しません。"
+      ],
+      "sources": [
+        {
+          "id": "public-snapshot",
+          "title": "一宮市 学校別資料の公開用予備版",
+          "url": "https://ptaorg.github.io/ichinomiya-pta-report/schools/",
+          "publisher": "PTA適正化推進委員会",
+          "date": "2026-11-02",
+          "kind": "article",
+          "verification": "2026年11月8日に外部URLとして再検査。ptaorg.comの専用サイトに転送され、HTTP 200。これは索引ページへの到達確認。個々のSchoolWeb原本の本文確認とは別。"
+        },
+        {
+          "id": "ppc",
+          "title": "公立学校とPTAの間で個人情報のやり取りをするためのポイント",
+          "url": "https://www.ppc.go.jp/files/pdf/202603_school_pta_pd_point.pdf",
+          "publisher": "個人情報保護委員会",
+          "date": "2026-03",
+          "kind": "primary",
+          "verification": "公立学校側の所掌事務、利用目的、利用・提供の確認順序を示す。"
+        },
+        {
+          "id": "public-city-25",
+          "title": "教育文化部の定期監査及び行政監査結果報告（2020年3月2日）",
+          "url": "https://www.city.ichinomiya.aichi.jp/_res/projects/default_project/_page_/001/013/146/01kouhyou8.pdf",
+          "publisher": "一宮市",
+          "date": null,
+          "kind": "primary",
+          "verification": "専用サイトで確認済みと記録。"
+        },
+        {
+          "id": "public-city-26",
+          "title": "学校関係団体が実施する事業に係る兼職兼業等の取扱い及び学校における会計処理の適正化について（2012年5月9日）",
+          "url": "https://www.mext.go.jp/content/20221011-mxt_syoto01_02.pdf",
+          "publisher": "文部科学省",
+          "date": null,
+          "kind": "primary",
+          "verification": "専用サイトで確認済みと記録。"
+        },
+        {
+          "id": "public-city-28",
+          "title": "教育部の定期監査及び行政監査結果報告（2024年2月22日）",
+          "url": "https://www.city.ichinomiya.aichi.jp/_res/projects/default_project/_page_/001/013/146/5kouhyou10.pdf",
+          "publisher": "一宮市",
+          "date": null,
+          "kind": "primary",
+          "verification": "専用サイトで確認済みと記録。"
+        },
+        {
+          "id": "public-city-29",
+          "title": "公立小・中学校のウェブサイト（一宮市・2026年3月3日更新）",
+          "url": "https://www.city.ichinomiya.aichi.jp/shisei/shingikai/1009998/1001591.html",
+          "publisher": "一宮市",
+          "date": null,
+          "kind": "primary",
+          "verification": "専用サイトで確認済みと記録。"
+        },
+        {
+          "id": "settlements-report-20261108",
+          "title": "一宮市立小中学校のPTA決算書を読む（公開用抜粋画像・指摘50件）",
+          "url": "/journal/ichinomiya-pta-settlements-20261108.html",
+          "publisher": "PTA適正化推進委員会",
+          "date": "2026-11-08",
+          "kind": "article",
+          "verification": "開示資料に基づく論考。原本PDFの個別照合、会計証憑、学校側の法令上の権限および実運用は独立検証の継続事項。画像は公開用抜粋であり原本ではない。"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-11-02",
+          "title": "公開用予備版",
+          "text": "専用サイトに学校別索引と公開用出典を掲載。",
+          "sourceId": "public-snapshot"
+        }
+      ],
+      "legal": [
+        {
+          "title": "主体の分離",
+          "text": "公立学校・教育委員会と、任意加入の私的団体は別主体です。"
+        },
+        {
+          "title": "事務の帰属",
+          "text": "入退会、会費徴収・未納管理、役員選出、団体会計は原則として団体固有の事務です。"
+        },
+        {
+          "title": "学校の所掌事務・権限",
+          "text": "学校側が実際に担う作業を特定し、その作業を公務として行う具体的な授権規定と例外の適用を確認します。委任契約や校務分掌だけで公法上の権限は生じません。"
+        },
+        {
+          "title": "個人情報保護法61条",
+          "text": "学校の所掌事務・業務の範囲を確かめた後、個人情報の保有の必要性と具体的な利用目的を確認します。"
+        },
+        {
+          "title": "個人情報保護法69条",
+          "text": "学校内部の利用と外部提供を分け、目的外の利用・提供があれば、臨時的な例外に当たるかと各号の要件を確認します。"
+        },
+        {
+          "title": "服務・会計",
+          "text": "担当者、勤務時間、職務命令、口座名義、督促、返金、送金と記録を分けて確認します。"
+        },
+        {
+          "title": "総合評価",
+          "text": "公開資料の時点、学校ごとの徴収額、契約当事者を個別に比較します。"
+        }
+      ],
+      "articles": [
+        {
+          "title": "教育委員会回答の検索",
+          "url": "/board-responses.html?boardQuery=一宮市#response-updates"
+        },
+        {
+          "title": "一宮市立小中学校のPTA決算書を読む",
+          "url": "/journal/ichinomiya-pta-settlements-20261108.html"
+        }
+      ],
+      "unknowns": [
+        "開示資料と公開資料の年度・徴収額・処理主体の差分の確定。"
+      ],
+      "comparisons": [
+        "atsugi",
+        "yokohama"
+      ],
+      "flags": {
+        "administrativeResponse": "unconfirmed",
+        "audit": "confirmed",
+        "improvement": "unconfirmed"
+      },
+      "schools": [
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "宮西小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310131",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "貴船小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310142",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "神山小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310132",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "大志小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310143",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "向山小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310144",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "葉栗小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310133",
+          "documents": [
+            {
+              "title": "学校ガイド学校徴収金",
+              "status": "旧表示記録あり・本文は再確認待ち"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "西成小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310145",
+          "documents": [
+            {
+              "title": "学校納入金",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            },
+            {
+              "title": "PTA",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "瀬部小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310146",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "赤見小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310147",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "浅野小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310148",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "丹陽小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310134",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "丹陽西小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310149",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "丹陽南小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310150",
+          "documents": [
+            {
+              "title": "ＰＴＡ規約改正について",
+              "status": "旧表示記録あり・本文は再確認待ち"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "浅井南小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310135",
+          "documents": [
+            {
+              "title": "学校の集金",
+              "status": "旧表示記録あり・本文は再確認待ち"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "浅井北小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310151",
+          "documents": [
+            {
+              "title": "浅井北小学校ガイド(学校徴収金)",
+              "status": "旧表示記録あり・本文は再確認待ち"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "北方小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310152",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "大和東小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310136",
+          "documents": [
+            {
+              "title": "1月31日(金) PTA活動について【PTA会長さんより】",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "大和西小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310153",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "今伊勢小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310154",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "奥小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310137",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "萩原小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310155",
+          "documents": [
+            {
+              "title": "５　学校の集金について",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "中島小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310138",
+          "documents": [
+            {
+              "title": "４．学校徴収金",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "千秋小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310156",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "千秋南小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310157",
+          "documents": [
+            {
+              "title": "4-2学校徴収金",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            },
+            {
+              "title": "6-2PTA",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "富士小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310158",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "末広小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310159",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "西成東小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310139",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "今伊勢西小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310140",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "葉栗北小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310160",
+          "documents": [
+            {
+              "title": "学校徴収金",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "大和南小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310161",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "浅井中小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310162",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "千秋東小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310163",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "起小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310164",
+          "documents": [
+            {
+              "title": "４．学校徴収金",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "三条小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310165",
+          "documents": [
+            {
+              "title": "４．学校徴収金三条小",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "小信中島小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310166",
+          "documents": [
+            {
+              "title": "学校徴収金",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "朝日東小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310167",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "朝日西小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310168",
+          "documents": [
+            {
+              "title": "４．学校徴収金",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "開明小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310169",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "大徳小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310170",
+          "documents": [
+            {
+              "title": "学校徴収金(小）大徳小",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "黒田小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310171",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "木曽川西小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-0001",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "木曽川東小学校",
+          "type": "小学校",
+          "url": "/research/ichinomiya.html#school-2310172",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "北部中学校",
+          "type": "中学校",
+          "url": "/research/ichinomiya.html#school-2320058",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "中部中学校",
+          "type": "中学校",
+          "url": "/research/ichinomiya.html#school-2320059",
+          "documents": [
+            {
+              "title": "PTA・協力会総会、学年保護者会、公開授業のご案内【4/11配信内容】",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "南部中学校",
+          "type": "中学校",
+          "url": "/research/ichinomiya.html#school-2320060",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "葉栗中学校",
+          "type": "中学校",
+          "url": "/research/ichinomiya.html#school-2320061",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "西成中学校",
+          "type": "中学校",
+          "url": "/research/ichinomiya.html#school-2320062",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "丹陽中学校",
+          "type": "中学校",
+          "url": "/research/ichinomiya.html#school-2320063",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "浅井中学校",
+          "type": "中学校",
+          "url": "/research/ichinomiya.html#school-2320064",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "北方中学校",
+          "type": "中学校",
+          "url": "/research/ichinomiya.html#school-2320065",
+          "documents": [
+            {
+              "title": "「tetoru」を活用したメール配信について（2025年4月9日）",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "大和中学校",
+          "type": "中学校",
+          "url": "/research/ichinomiya.html#school-2320066",
+          "documents": [
+            {
+              "title": "PTA関係のお願いとお知らせ（2023年4月7日）",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            },
+            {
+              "title": "集金（1年生）の内訳について（2023年4月12日）",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "今伊勢中学校",
+          "type": "中学校",
+          "url": "/research/ichinomiya.html#school-2320067",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "奥中学校",
+          "type": "中学校",
+          "url": "/research/ichinomiya.html#school-2320068",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "萩原中学校",
+          "type": "中学校",
+          "url": "/research/ichinomiya.html#school-2320069",
+          "documents": [
+            {
+              "title": "R8.学校徴収金",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "千秋中学校",
+          "type": "中学校",
+          "url": "/research/ichinomiya.html#school-2320070",
+          "documents": [
+            {
+              "title": "令和７年度PTA臨時総会（書面開催）案内・要項・議案書web掲載用",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            },
+            {
+              "title": "令和７年度PTA臨時総会（書面総会）結果のお知らせ",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "西成東部中学校",
+          "type": "中学校",
+          "url": "/research/ichinomiya.html#school-2320071",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "大和南中学校",
+          "type": "中学校",
+          "url": "/research/ichinomiya.html#school-2320072",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "尾西第一中学校",
+          "type": "中学校",
+          "url": "/research/ichinomiya.html#school-2320073",
+          "documents": [
+            {
+              "title": "学校徴収金",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            },
+            {
+              "title": "第2学年通信 No.1 百花繚乱（2026年4月9日）",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "尾西第二中学校",
+          "type": "中学校",
+          "url": "/research/ichinomiya.html#school-2320074",
+          "documents": [
+            {
+              "title": "４．学校徴収金(中)",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            }
+          ]
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "尾西第三中学校",
+          "type": "中学校",
+          "url": "/research/ichinomiya.html#school-2320075",
+          "documents": []
+        },
+        {
+          "prefecture": "愛知県",
+          "municipality": "一宮市",
+          "name": "木曽川中学校",
+          "type": "中学校",
+          "url": "/research/ichinomiya.html#school-2320076",
+          "documents": [
+            {
+              "title": "令和5年度 PTA総会開催（書面決議）について",
+              "status": "本文の指定箇所を確認（引継ぎ記録）"
+            }
+          ]
+        }
+      ],
       "boardResponses": []
+    },
+    {
+      "id": "kakamigahara",
+      "name": "各務原市",
+      "prefecture": "岐阜県",
+      "prefectureCode": "21",
+      "type": "市",
+      "aliases": [
+        "岐阜県各務原市"
+      ],
+      "coordinates": [
+        35.4,
+        136.85
+      ],
+      "coordinateNote": "市の概略代表位置。学校所在地とは異なります。",
+      "url": "/research/kakamigahara.html",
+      "schoolMunicipality": "各務原市",
+      "themes": [
+        "PTA任意加入",
+        "PTA会費の学校徴収",
+        "情報公開・審査請求",
+        "委任契約による公務化"
+      ],
+      "status": "source-catalog",
+      "updated": "2026-11-08",
+      "summary": [
+        "市立26校の索引。提出資料一覧は小中25校を対象とし、うち21校の契約書等を記録しています。"
+      ],
+      "system": [
+        "令和7年度の入会申込書等は1校、会費入り徴収案内は18校、委任契約書等は21校が提出されたと既存報告書が整理しています。提出なしは該当欄の記録です。個々の運用は各校資料で確認します。"
+      ],
+      "sources": [
+        {
+          "id": "roster",
+          "title": "各務原市立学校紹介",
+          "url": "https://www.city.kakamigahara.lg.jp/kodomo/gakkou/1022425.html",
+          "publisher": "各務原市",
+          "date": "2024-07-12",
+          "kind": "primary",
+          "verification": "市立小学校17校、中学校8校、特別支援学校1校を掲載。"
+        },
+        {
+          "id": "reply",
+          "title": "2026年11月6日 各務原市教育委員会の返信要約",
+          "url": "/board-responses.html#update-20261106",
+          "publisher": "各務原市教育委員会",
+          "date": "2026-11-06",
+          "kind": "article",
+          "verification": "受領メール本文を照合した公開用要約。"
+        },
+        {
+          "id": "ppc",
+          "title": "公立学校とPTAの間で個人情報のやり取りをするためのポイント",
+          "url": "https://www.ppc.go.jp/files/pdf/202603_school_pta_pd_point.pdf",
+          "publisher": "個人情報保護委員会",
+          "date": "2026-03",
+          "kind": "primary",
+          "verification": "公立学校側の所掌事務、利用目的、利用・提供の確認順序を示す。"
+        },
+        {
+          "id": "audit-2023",
+          "title": "2023年12月26日 定期監査・行政監査",
+          "url": "https://www.city.kakamigahara.lg.jp/_res/projects/default_project/_page_/001/008/393/2023.teikan3.pdf",
+          "publisher": "各務原市監査委員",
+          "date": "2023-12-26",
+          "kind": "primary",
+          "verification": "公開原本で監査対象校と学校徴収金に関する着眼点を確認。"
+        },
+        {
+          "id": "audit-2024",
+          "title": "2024年12月26日 定期監査・行政監査",
+          "url": "https://www.city.kakamigahara.lg.jp/_res/projects/default_project/_page_/001/008/393/reiwa3kai.pdf",
+          "publisher": "各務原市監査委員",
+          "date": "2024-12-26",
+          "kind": "primary",
+          "verification": "公開原本で監査対象校と学校徴収金に関する着眼点を確認。"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-11-06",
+          "title": "照会への返信",
+          "text": "青少年教育課は任意団体の運営を理由に回答を辞退。学校側の所掌事務・具体的運用に関する実質的な回答は示されなかった。",
+          "sourceId": "reply"
+        }
+      ],
+      "legal": [
+        {
+          "title": "主体の分離",
+          "text": "公立学校・教育委員会と、任意加入の私的団体は別主体です。"
+        },
+        {
+          "title": "事務の帰属",
+          "text": "入退会、会費徴収・未納管理、役員選出、団体会計は原則として団体固有の事務です。"
+        },
+        {
+          "title": "学校の所掌事務・権限",
+          "text": "学校側が実際に担う作業を特定し、その作業を公務として行う具体的な授権規定と例外の適用を確認します。委任契約や校務分掌だけで公法上の権限は生じません。"
+        },
+        {
+          "title": "個人情報保護法61条",
+          "text": "学校の所掌事務・業務の範囲を確かめた後、個人情報の保有の必要性と具体的な利用目的を確認します。"
+        },
+        {
+          "title": "個人情報保護法69条",
+          "text": "学校内部の利用と外部提供を分け、目的外の利用・提供があれば、臨時的な例外に当たるかと各号の要件を確認します。"
+        },
+        {
+          "title": "服務・会計",
+          "text": "担当者、勤務時間、職務命令、口座名義、督促、返金、送金と記録を分けて確認します。"
+        },
+        {
+          "title": "総合評価",
+          "text": "市の提出一覧、契約書、学校の実際の処理、教育委員会による権限の説明を別々に評価します。"
+        }
+      ],
+      "articles": [
+        {
+          "title": "教育委員会回答の検索",
+          "url": "/board-responses.html?boardQuery=各務原市#response-updates"
+        }
+      ],
+      "unknowns": [
+        "各校の受任権限、勤務時間・担当、個人情報の利用・提供の範囲、回答後の監督・是正状況。"
+      ],
+      "comparisons": [
+        "atsugi",
+        "yokohama"
+      ],
+      "flags": {
+        "administrativeResponse": "unconfirmed",
+        "audit": "confirmed",
+        "improvement": "unconfirmed"
+      },
+      "schools": [
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "那加第一小学校",
+          "type": "小学校",
+          "url": "/research/kakamigahara.html#school-1",
+          "documents": [
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "那加第二小学校",
+          "type": "小学校",
+          "url": "/research/kakamigahara.html#school-2",
+          "documents": [
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "那加第三小学校",
+          "type": "小学校",
+          "url": "/research/kakamigahara.html#school-3",
+          "documents": [
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "尾崎小学校",
+          "type": "小学校",
+          "url": "/research/kakamigahara.html#school-4",
+          "documents": []
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "稲羽西小学校",
+          "type": "小学校",
+          "url": "/research/kakamigahara.html#school-5",
+          "documents": []
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "稲羽東小学校",
+          "type": "小学校",
+          "url": "/research/kakamigahara.html#school-6",
+          "documents": []
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "川島小学校",
+          "type": "小学校",
+          "url": "/research/kakamigahara.html#school-7",
+          "documents": [
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "鵜沼第一小学校",
+          "type": "小学校",
+          "url": "/research/kakamigahara.html#school-8",
+          "documents": [
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "鵜沼第二小学校",
+          "type": "小学校",
+          "url": "/research/kakamigahara.html#school-9",
+          "documents": [
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "鵜沼第三小学校",
+          "type": "小学校",
+          "url": "/research/kakamigahara.html#school-10",
+          "documents": [
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "緑苑小学校",
+          "type": "小学校",
+          "url": "/research/kakamigahara.html#school-11",
+          "documents": [
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "八木山小学校",
+          "type": "小学校",
+          "url": "/research/kakamigahara.html#school-12",
+          "documents": [
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "入会申込書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "入会申込書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "陵南小学校",
+          "type": "小学校",
+          "url": "/research/kakamigahara.html#school-13",
+          "documents": [
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "各務小学校",
+          "type": "小学校",
+          "url": "/research/kakamigahara.html#school-14",
+          "documents": [
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "蘇原第一小学校",
+          "type": "小学校",
+          "url": "/research/kakamigahara.html#school-15",
+          "documents": [
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "蘇原第二小学校",
+          "type": "小学校",
+          "url": "/research/kakamigahara.html#school-16",
+          "documents": [
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "中央小学校",
+          "type": "小学校",
+          "url": "/research/kakamigahara.html#school-17",
+          "documents": [
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "那加中学校",
+          "type": "中学校",
+          "url": "/research/kakamigahara.html#school-18",
+          "documents": [
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "桜丘中学校",
+          "type": "中学校",
+          "url": "/research/kakamigahara.html#school-19",
+          "documents": [
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "稲羽中学校",
+          "type": "中学校",
+          "url": "/research/kakamigahara.html#school-20",
+          "documents": []
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "川島中学校",
+          "type": "中学校",
+          "url": "/research/kakamigahara.html#school-21",
+          "documents": [
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "鵜沼中学校",
+          "type": "中学校",
+          "url": "/research/kakamigahara.html#school-22",
+          "documents": [
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "緑陽中学校",
+          "type": "中学校",
+          "url": "/research/kakamigahara.html#school-23",
+          "documents": [
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "入会申込書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "蘇原中学校",
+          "type": "中学校",
+          "url": "/research/kakamigahara.html#school-24",
+          "documents": [
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "中央中学校",
+          "type": "中学校",
+          "url": "/research/kakamigahara.html#school-25",
+          "documents": [
+            {
+              "title": "入会案内・説明書等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "学校徴収金案内等",
+              "status": "開示原本の具体的記載を確認"
+            },
+            {
+              "title": "業務委任契約書等",
+              "status": "開示原本の具体的記載を確認"
+            }
+          ]
+        },
+        {
+          "prefecture": "岐阜県",
+          "municipality": "各務原市",
+          "name": "各務原特別支援学校",
+          "type": "特別支援学校",
+          "url": "/research/kakamigahara.html#school-26",
+          "documents": []
+        }
+      ],
+      "boardResponses": [
+        {
+          "title": "2026-11-06 各務原市 回答辞退・実質未回答",
+          "url": "/board-responses.html#update-20261106",
+          "date": "2026-11-06"
+        }
+      ]
     },
     {
       "id": "archive-daito",
@@ -3008,7 +4569,7 @@
       ],
       "prefectureCode": "27",
       "type": "市",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "boardResponses": []
     },
     {
@@ -3437,7 +4998,7 @@
       ],
       "prefectureCode": "25",
       "type": "市",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "boardResponses": []
     },
     {
@@ -4363,7 +5924,7 @@
       ],
       "prefectureCode": "27",
       "type": "市",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "boardResponses": []
     },
     {
@@ -4659,7 +6220,7 @@
       ],
       "prefectureCode": "16",
       "type": "市",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "boardResponses": []
     },
     {
@@ -4875,7 +6436,7 @@
       ],
       "prefectureCode": "07",
       "type": "市",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "boardResponses": []
     },
     {
@@ -5117,7 +6678,7 @@
       ],
       "prefectureCode": "26",
       "type": "市",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "boardResponses": []
     },
     {
@@ -5821,7 +7382,7 @@
       ],
       "prefectureCode": "25",
       "type": "市",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "boardResponses": []
     },
     {
@@ -6256,7 +7817,7 @@
       ],
       "prefectureCode": "11",
       "type": "市",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "boardResponses": []
     },
     {
@@ -7346,7 +8907,7 @@
       ],
       "prefectureCode": "13",
       "type": "特別区",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "boardResponses": []
     },
     {
@@ -8697,7 +10258,7 @@
       ],
       "prefectureCode": "14",
       "type": "市",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "boardResponses": []
     },
     {
@@ -13166,7 +14727,7 @@
       ],
       "prefectureCode": "23",
       "type": "市",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "boardResponses": []
     },
     {
@@ -13190,7 +14751,7 @@
       "flags": {},
       "schools": [],
       "type": "市",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "boardResponses": []
     },
     {
@@ -13214,7 +14775,7 @@
       "flags": {},
       "schools": [],
       "type": "市",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "boardResponses": []
     },
     {
@@ -13238,7 +14799,7 @@
       "flags": {},
       "schools": [],
       "type": "市",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "boardResponses": []
     },
     {
@@ -13262,7 +14823,7 @@
       "flags": {},
       "schools": [],
       "type": "町",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "boardResponses": []
     },
     {
@@ -13286,7 +14847,7 @@
       "flags": {},
       "schools": [],
       "type": "市",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "boardResponses": []
     },
     {
@@ -13307,7 +14868,7 @@
       "flags": {},
       "schools": [],
       "type": "都道府県",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "boardResponses": []
     },
     {
@@ -13328,7 +14889,7 @@
       "flags": {},
       "schools": [],
       "type": "都道府県",
-      "updated": "2026-10-26",
+      "updated": "2026-11-08",
       "boardResponses": []
     }
   ]

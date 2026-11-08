@@ -170,7 +170,7 @@
                   "minLength": 1
                 },
                 "url": {
-                  "type": "string",
+                  "type": ["string", "null"],
                   "minLength": 1
                 },
                 "date": {

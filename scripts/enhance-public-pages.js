@@ -306,8 +306,17 @@ function addJsonLd(html, rel, url, name, description, reviewDate) {
 }
 
 function markProseMode(html, reviewDate) {
-  if (/<body\b[^>]*data-content-mode=/i.test(html)) return html;
-  return html.replace(/<body\b([^>]*)>/i, `<body data-content-mode="prose" data-reviewed="${reviewDate}"$1>`);
+  return html.replace(/<body\b([^>]*)>/i, (_, attrs) => {
+    let found = false;
+    const cleaned = attrs.replace(/\s+data-reviewed\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+)/gi, attribute => {
+      if (found) return "";
+      found = true;
+      return attribute;
+    });
+    const mode = /\sdata-content-mode\s*=/i.test(cleaned) ? "" : ' data-content-mode="prose"';
+    const date = found || !mode ? "" : ` data-reviewed="${reviewDate}"`;
+    return `<body${mode}${date}${cleaned}>`;
+  });
 }
 
 function enhance(filePath, checkOnly) {

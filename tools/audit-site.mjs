@@ -12,6 +12,10 @@ import { XMLParser, XMLValidator } from 'fast-xml-parser';
 
 const origin = 'https://ptaorg.com';
 const hosts = new Set(['ptaorg.com', 'www.ptaorg.com', 'ptaorg.github.io']);
+// The school index is served by the separately built ichinomiya-pta-report repository.
+export const isCompanionSite = url => url.origin === 'https://ptaorg.github.io'
+  && url.pathname === '/ichinomiya-pta-report/schools/';
+
 const isTelemetry = url => (url.hostname === 'analytics.google.com' || /(^|\.)google-analytics\.com$/.test(url.hostname)) && /\/collect$/.test(url.pathname);
 const list = value => value == null ? [] : Array.isArray(value) ? value : [value];
 // Known-site baselines are exact and temporary. Keep this list empty when all known issues are repaired.
@@ -68,6 +72,8 @@ export function pagePath(file) {
 }
 export function documentInfo(text) {
   const nodes = [];
+  const bodyTag = text.match(/<body\b[^>]*>/i)?.[0] || "";
+  const duplicateReviewed = (bodyTag.match(/\sdata-reviewed\s*=/gi) || []).length > 1;
   function visit(node) {
     if (node.tagName) nodes.push({ tag: node.tagName, attrs: Object.fromEntries(node.attrs.map(a => [a.name, a.value])), line: node.sourceCodeLocation?.startLine });
     for (const child of node.childNodes || []) visit(child);
@@ -75,7 +81,7 @@ export function documentInfo(text) {
   }
   visit(parse(text, { sourceCodeLocationInfo: true }));
   const metas = name => nodes.filter(n => n.tag === 'meta' && n.attrs.name?.toLowerCase() === name);
-  return { nodes, metas, ids: new Set(nodes.map(n => n.attrs.id).filter(Boolean)),
+  return { nodes, metas, duplicateReviewed, ids: new Set(nodes.map(n => n.attrs.id).filter(Boolean)),
     canonical: nodes.filter(n => n.tag === 'link' && n.attrs.rel?.toLowerCase().split(/\s+/).includes('canonical')),
     redirect: nodes.some(n => n.tag === 'meta' && n.attrs['http-equiv']?.toLowerCase() === 'refresh'),
     noindex: metas('robots').some(n => /\b(noindex|none)\b/i.test(n.attrs.content || '')) };
@@ -118,7 +124,7 @@ export function auditStatic(root, siteDir) {
     if (!raw || /^(data:|blob:|mailto:|tel:|javascript:)/i.test(raw)) return;
     try {
       const url = new URL(raw, base);
-      if (!hosts.has(url.hostname)) return;
+      if (!hosts.has(url.hostname) || isCompanionSite(url)) return;
       const target = resolve(url);
       if (!publicSet.has(target)) return add('internal-reference', file, `${raw} -> unpublished or missing: ${target}`);
       if (fragment && url.hash && /\.html?$/i.test(target)) {
@@ -182,6 +188,7 @@ export function auditStatic(root, siteDir) {
     if (!isPublic) continue;
     const url = origin + pagePath(file);
     const ids = new Set();
+    if (doc.duplicateReviewed) add("duplicate-attribute", file, "Repeated data-reviewed on body");
     for (const node of doc.nodes) {
       if (node.attrs.id && ids.has(node.attrs.id)) add('duplicate-id', file, `${node.attrs.id} at line ${node.line}`);
       if (node.attrs.id) ids.add(node.attrs.id);

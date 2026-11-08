@@ -1,3 +1,4 @@
+const { cohortIndex, cohortDetails } = require('./school-evidence-cohorts');
 const fs = require("fs");
 const path = require("path");
 const {
@@ -47,17 +48,9 @@ function buildIndex(data = load(), schools = listSchoolData(), legacy = []) {
   const responses = JSON.parse(
     fs.readFileSync(path.join(ROOT, "data/board-responses.json"), "utf8"),
   ).responses;
-  const regions = data.municipalities.map((m) => ({
-    ...m,
-    schools: [],
-    boardResponses: responses
-      .filter((r) => r.prefecture === m.prefecture && r.municipality === m.name)
-      .map((r) => ({
-        title: r.municipality + " 教育委員会回答",
-        url: r.url,
-        date: r.date || "日付未登録",
-      })),
-  }));
+  const linkedUpdates = new Set(['update-016', 'update-015', 'update-014', 'update-013', 'update-012', 'update-20261102', 'update-20261106']);
+  const updates = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/board-response-updates.json'), 'utf8')).records;
+  const regions = data.municipalities.map((m) => ({ ...m, schools: cohortIndex(m) }));
   for (const s of schools) {
     let m = regions.find(
       (m) =>
@@ -110,6 +103,13 @@ function buildIndex(data = load(), schools = listSchoolData(), legacy = []) {
     m.type ||= m.name === m.prefecture ? "都道府県" : m.name.endsWith("区") ? "特別区" : m.name.endsWith("町") ? "町" : "市";
     m.updated ||= data.updated;
     m.boardResponses = responses.filter(r => r.prefecture === m.prefecture && r.municipality === m.name).map(r => ({title:r.municipality + " 教育委員会回答",url:r.url,date:r.date || "日付未登録"}));
+    for (const r of updates.filter(r => linkedUpdates.has(r.id) && r.prefecture === m.prefecture && r.municipality === m.name)) {
+      m.boardResponses.push({
+        title: r.date + ' ' + r.municipality + ' ' + r.status,
+        url: '/board-responses.html#' + r.id,
+        date: r.date,
+      });
+    }
   }
   return {
     version: 1,
@@ -159,7 +159,7 @@ function renderPathways(url) {
 
 function page(title, url, body, map = false) {
   const c = chrome();
-  return `<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${e(title)} | PTA適正化推進委員会</title><meta name="description" content="${e(title)}。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。"><link rel="canonical" href="https://ptaorg.com${url}"><link rel="stylesheet" href="/css/site.css?v=20260814-3"><link rel="stylesheet" href="/css/global-nav.css?v=20260906-2"><link rel="stylesheet" href="/css/editorial.css?v=20260719"><link rel="stylesheet" href="/css/pages/research-map.css?v=1"><link rel="stylesheet" href="/css/research-pathways.css?v=20261027">${map ? '<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">' : ""}</head><body data-reviewed="${e(load().updated)}">${c.header}${c.mobile}<main id="main-content" class="research-main wrap"><nav class="research-breadcrumb" aria-label="パンくず"><a href="/">トップ</a> / <a href="/research-index.html">根拠資料・調査方法</a> / ${map ? `<span aria-current="page">全国PTA研究マップ</span>` : `<a href="/research-map.html">全国PTA研究マップ</a> / <span aria-current="page">${e(title)}</span>`}</nav><h1>${e(title)}</h1>${renderPathways(url)}${body}</main>${c.footer}${map ? '<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="/js/research-map.js?v=20261028" defer></script>' : ""}<script src="/data/site-search-index.js?v=20260809-2"></script><script src="/js/site.js?v=97"></script></body></html>\n`;
+  return `<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${e(title)} | PTA適正化推進委員会</title><meta name="description" content="${e(title)}。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。"><link rel="canonical" href="https://ptaorg.com${url}"><link rel="stylesheet" href="/css/site.css?v=20260814-3"><link rel="stylesheet" href="/css/global-nav.css?v=20260906-2"><link rel="stylesheet" href="/css/editorial.css?v=20260719"><link rel="stylesheet" href="/css/pages/research-map.css?v=2"><link rel="stylesheet" href="/css/research-pathways.css?v=20261027">${map ? '<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">' : ""}</head><body data-reviewed="${e(load().updated)}">${c.header}${c.mobile}<main id="main-content" class="research-main wrap"><nav class="research-breadcrumb" aria-label="パンくず"><a href="/">トップ</a> / <a href="/research-index.html">根拠資料・調査方法</a> / ${map ? `<span aria-current="page">全国PTA研究マップ</span>` : `<a href="/research-map.html">全国PTA研究マップ</a> / <span aria-current="page">${e(title)}</span>`}</nav><h1>${e(title)}</h1>${renderPathways(url)}${body}</main>${c.footer}${map ? '<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="/js/research-map.js?v=20261028" defer></script>' : ""}<script src="/data/site-search-index.js?v=20260809-2"></script><script src="/js/site.js?v=97"></script></body></html>\n`;
 }
 const paras = (a) => (a || []).map((t) => `<p>${e(t)}</p>`).join("\n");
 const links = (a) =>
@@ -169,11 +169,25 @@ function schoolList(m) {
     ? `<ul>${m.schools.map((s) => `<li data-school-url="${e(s.url)}" data-school-type="${e(s.type)}"><a href="${e(s.url)}">${e(s.name)}</a>（${e(s.type)}）</li>`).join("")}</ul>`
     : "<p>既存mainの学校別アーカイブに、この設置主体に一致する登録はありません。資料不存在を意味しません。</p>";
 }
+function renderYokohamaTransition(m) {
+  const milestoneIds = new Set(["old-answer", "oct-notice", "nov-answer"]);
+  const timeline = m.timeline.filter(t => milestoneIds.has(t.sourceId));
+  return `<section id="fee-collection-transition" aria-labelledby="fee-collection-title" class="research-notice">
+<h2 id="fee-collection-title">教学第1453号とPTA会費徴収の見直し</h2>
+<ol>${timeline.map(t => `<li><strong>${e(t.date)} ${e(t.title)}</strong><p>${e(t.text)}</p><a href="#source-${e(t.sourceId)}">資料と確認範囲</a></li>`).join("")}</ol>
+<h3>当委員会の評価</h3>
+<p>学校・教育委員会は公的主体で、PTAは外部の任意団体です。会費の徴収・督促・経理は原則として団体に帰属します。通知は、この事務の区分が併徴で不明瞭になる問題を示し、団体が徴収を担う方向を明確にしました。学校が公務として関与する場合は具体的な所掌事務・権限を確認し、その上で個人情報保護法61条の利用目的と69条の利用・提供制限、教職員の服務と会計処理を検証します。</p>
+<p><a href="https://www.ppc.go.jp/all_faq_index/faq7-q3-3-2/">個人情報保護委員会Q&amp;A（69条2項の臨時的な利用・提供）</a></p>
+<h3>移行実績の確認状況</h3>
+<p>学校別の移行日、移行済み校数、併徴が続く学校の有無は未確認です。通知の写しと11月2日回答で確認した範囲は、移行の依頼と方針の説明までです。</p>
+<p><a href="/board-responses.html#update-20261102">11月2日の教育委員会回答（要約）</a> ／ <a href="/pta-school-processing.html">学校による外部団体事務処理の横断研究</a></p>
+</section>`;
+}
 function renderRegion(m, index) {
   return page(
     m.name + " PTA制度・運用研究ノート",
     m.url,
-    `<p>${e(m.prefecture)} ／ ${e(m.type)} ／ 更新 ${e(m.updated)}</p><p>研究テーマ：${m.themes.map(e).join("、")}</p><p class="research-notice">資料目録と法的評価を分離しています。以下の検証状況は資料ごとに表示し、既存記事での確認と原本の独立再検証を区別します。</p><section><h2>研究要約</h2>${paras(m.summary)}</section><section><h2>制度・運用の概要</h2>${paras(m.system)}</section><section><h2>調査・行政対応の時系列</h2><ol>${m.timeline.map((t) => `<li><strong>${e(t.date)} ${e(t.title)}</strong><p>${e(t.text)}</p>${t.sourceId ? `<a href="#source-${e(t.sourceId)}">根拠資料</a>` : ""}</li>`).join("")}</ol></section><section><h2>一次資料・確認状況</h2>${m.sources.map((s) => `<article id="source-${e(s.id)}"><h3><a href="${e(s.url)}">${e(s.title)}</a></h3><p>${e(s.publisher)} ／ ${e(s.date || "日付未確認")} ／ ${e(s.kind)}</p><p>確認状況：${e(s.verification)}</p></article>`).join("")}</section><section><h2>当委員会の法的分析</h2>${m.legal.map((s) => `<h3>${e(s.title)}</h3><p>${e(s.text)}</p>`).join("")}</section><section id="schools"><h2>関連学校別一次資料アーカイブ（${m.schools.length}校）</h2><p>各校の資料・評価・公開状態は既存ページで確認してください。学校本文や未公開原本を複製しません。</p>${schoolList(m)}</section><section><h2>研究ノート・行政回答への導線</h2>${links([...m.articles, ...(m.boardResponses || [])])}</section><section><h2>未解明事項</h2><ul>${m.unknowns.map((t) => `<li>${e(t)}</li>`).join("")}</ul></section><section><h2>関連自治体比較・全国横断研究</h2>${links(
+    `<p>${e(m.prefecture)} ／ ${e(m.type)} ／ 更新 ${e(m.updated)}</p><p>研究テーマ：${m.themes.map(e).join("、")}</p><p class="research-notice">資料目録と法的評価を分離しています。以下の検証状況は資料ごとに表示し、既存記事での確認と原本の独立再検証を区別します。</p>${m.id === "yokohama" ? renderYokohamaTransition(m) : ""}<section><h2>研究要約</h2>${paras(m.summary)}</section><section><h2>制度・運用の概要</h2>${paras(m.system)}</section><section><h2>調査・行政対応の時系列</h2><ol>${m.timeline.map((t) => `<li><strong>${e(t.date)} ${e(t.title)}</strong><p>${e(t.text)}</p>${t.sourceId ? `<a href="#source-${e(t.sourceId)}">根拠資料</a>` : ""}</li>`).join("")}</ol></section><section><h2>一次資料・確認状況</h2>${m.sources.map((s) => `<article id="source-${e(s.id)}"><h3>${s.url ? `<a href="${e(s.url)}">${e(s.title)}</a>` : e(s.title)}</h3><p>${e(s.publisher)} ／ ${e(s.date || "日付未確認")} ／ ${e(s.kind)}</p><p>確認状況：${e(s.verification)}</p></article>`).join("")}</section><section><h2>当委員会の法的分析</h2>${m.legal.map((s) => `<h3>${e(s.title)}</h3><p>${e(s.text)}</p>`).join("")}</section><section id="schools"><h2>関連学校別一次資料アーカイブ（${m.schools.length}校）</h2><p>各校の資料・評価・公開状態は既存ページで確認してください。学校本文や未公開原本を複製しません。</p>${schoolList(m)}${cohortDetails(m.id)}</section><section id="administrative-responses"><h2>行政回答・関連資料</h2>${links([...m.articles, ...(m.boardResponses || [])])}</section><section><h2>未解明事項</h2><ul>${m.unknowns.map((t) => `<li>${e(t)}</li>`).join("")}</ul></section><section><h2>関連自治体比較・全国横断研究</h2>${links(
       (m.comparisons || [])
         .map((id) => index.municipalities.find((x) => x.id === id))
         .filter(Boolean)
