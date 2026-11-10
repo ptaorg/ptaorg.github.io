@@ -1,58 +1,57 @@
-@layer page {
+
   /* Shared by 3 pages. Extracted from duplicated inline CSS. */
-  .page-banner {
+  .legacy .page-banner {
     display: none;
   }
-  .pg-main {
+  .legacy .pg-main {
     max-width: 920px;
   }
-  .pg-main .section-kicker,
+  .legacy .pg-main .section-kicker,.legacy 
   .pg-main .editorial-brief-band {
     display: none;
   }
-  .pg-main .editorial-brief,
-  .pg-main .editorial-panel,
-  .pg-main .alert,
-  .pg-main .source-lens-item,
+  .legacy .pg-main .editorial-brief,.legacy 
+  .pg-main .editorial-panel,.legacy 
+  .pg-main .alert,.legacy 
+  .pg-main .source-lens-item,.legacy 
   .pg-main .faq-item {
     border-radius: 0;
     box-shadow: none;
   }
-  .pg-main .editorial-brief {
+  .legacy .pg-main .editorial-brief {
     padding: 0;
     background: #fff;
     border: 0;
   }
-  .pg-main .editorial-brief-body {
+  .legacy .pg-main .editorial-brief-body {
     padding: 0;
   }
-  .pg-main .editorial-brief-grid,
+  .legacy .pg-main .editorial-brief-grid,.legacy 
   .pg-main .source-lens-grid {
     display: block;
   }
-  .pg-main .editorial-brief-point,
+  .legacy .pg-main .editorial-brief-point,.legacy 
   .pg-main .source-lens-item {
     padding: 18px 0;
     border: 0;
     border-bottom: 1px solid var(--line);
     background: #fff;
   }
-  .pg-main .editorial-brief-point > span {
+  .legacy .pg-main .editorial-brief-point > span {
     display: none;
   }
-  .pg-main .faq-list {
+  .legacy .pg-main .faq-list {
     gap: 0;
     border-top: 1px solid var(--line);
   }
-  .pg-main .faq-item {
+  .legacy .pg-main .faq-item {
     border: 0;
     border-bottom: 1px solid var(--line);
   }
-  .pg-main .faq-q {
+  .legacy .pg-main .faq-q {
     padding: 18px 0;
   }
-  .pg-main .faq-a {
+  .legacy .pg-main .faq-a {
     padding-left: 0;
     padding-right: 0;
   }
-}

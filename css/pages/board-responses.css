@@ -1,14 +1,14 @@
-@layer page {
+
   /* Consolidated page styles for board-responses.html */
   /* Page-specific styles for board-responses.html */
-  .compact-hero-section {
+  .legacy .compact-hero-section {
     background: linear-gradient(135deg, #061a33 0%, #092646 58%, #0f345a 100%);
     color: #fff;
     padding: 44px 0 38px;
     text-align: center;
     border-bottom: 5px solid var(--gold);
   }
-  .compact-hero-section .hero-kicker {
+  .legacy .compact-hero-section .hero-kicker {
     display: inline-block;
     font-size: 0.72rem;
     font-weight: 900;
@@ -20,7 +20,7 @@
     border-radius: 999px;
     margin-bottom: 16px;
   }
-  .compact-hero-section h1 {
+  .legacy .compact-hero-section h1 {
     font-family: "Noto Serif JP", serif;
     font-size: clamp(1.55rem, 3vw, 2.25rem);
     font-weight: 900;
@@ -28,70 +28,70 @@
     margin: 0;
     color: #fff;
   }
-  .response-trends-section {
+  .legacy .response-trends-section {
     background: #fff;
     padding: 52px 0 44px;
     border-bottom: 1px solid var(--line);
   }
-  .dataset-scope-section {
+  .legacy .dataset-scope-section {
     background: #f6f8fb;
     padding: 34px 0 30px;
     border-bottom: 1px solid var(--line);
   }
-  .dataset-scope-section .reading-body {
+  .legacy .dataset-scope-section .reading-body {
     max-width: 920px;
   }
-  .dataset-scope-section h2 {
+  .legacy .dataset-scope-section h2 {
     font-family: "Noto Serif JP", serif;
     font-size: 1.25rem;
     line-height: 1.5;
     color: var(--navy);
     margin: 0 0 12px;
   }
-  .dataset-scope-section p {
+  .legacy .dataset-scope-section p {
     margin: 0 0 0.8em;
     font-size: 0.92rem;
     line-height: 1.9;
     color: #334155;
   }
-  .dataset-scope-section p:last-child {
+  .legacy .dataset-scope-section p:last-child {
     margin-bottom: 0;
   }
-  .response-trends-section .reading-body {
+  .legacy .response-trends-section .reading-body {
     max-width: 960px;
   }
-  .reading-body p {
+  .legacy .reading-body p {
     font-size: 0.96rem;
     line-height: 2.05;
     color: #273449;
     margin: 0 0 1.05em;
   }
-  .reading-body h2,
+  .legacy .reading-body h2,.legacy 
   .trend-group h3 {
     font-family: "Noto Serif JP", serif;
     color: var(--navy);
   }
-  .reading-body h2 {
+  .legacy .reading-body h2 {
     font-size: 1.55rem;
     line-height: 1.45;
     margin: 0 0 18px;
   }
-  .trend-group {
+  .legacy .trend-group {
     margin-top: 26px;
     padding-top: 18px;
     border-top: 1px solid #dbe4ee;
   }
-  .trend-group h3 {
+  .legacy .trend-group h3 {
     font-size: 1.12rem;
     line-height: 1.5;
     margin: 0 0 14px;
   }
-  .trend-example-list {
+  .legacy .trend-example-list {
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  .trend-example-list li {
+  .legacy .trend-example-list li {
     margin: 0 0 12px;
     padding: 0 0 12px 1.1em;
     position: relative;
@@ -100,7 +100,7 @@
     color: #334155;
     font-size: 0.94rem;
   }
-  .trend-example-list li::before {
+  .legacy .trend-example-list li::before {
     content: "・";
     position: absolute;
     left: 0;
@@ -108,22 +108,22 @@
     color: var(--navy);
     font-weight: 900;
   }
-  .trend-example-list a {
+  .legacy .trend-example-list a {
     color: var(--navy);
     font-weight: 900;
     text-decoration: none;
     border-bottom: 1px solid rgba(30, 58, 95, 0.3);
   }
-  .trend-example-list a:hover {
+  .legacy .trend-example-list a:hover {
     color: var(--orange);
     border-bottom-color: var(--orange);
   }
-  .map-section {
+  .legacy .map-section {
     background: #fff;
     padding: 56px 0 48px;
     border-bottom: 1px solid var(--line);
   }
-  #responseMap {
+  .legacy #responseMap {
     height: 520px;
     border-radius: var(--radius);
     border: 1px solid var(--line);
@@ -132,16 +132,16 @@
     background: #e5e7eb;
     overflow: hidden;
   }
-  .leaflet-container {
+  .legacy .leaflet-container {
     max-width: 100%;
     overflow: hidden;
   }
-  .map-note {
+  .legacy .map-note {
     font-size: 0.82rem;
     color: var(--text-soft);
     margin-top: 10px;
   }
-  .map-index-link {
+  .legacy .map-index-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -155,27 +155,27 @@
     text-decoration: none;
     transition: opacity 0.15s;
   }
-  .map-index-link:hover {
+  .legacy .map-index-link:hover {
     opacity: 0.82;
   }
-  .municipality-index-section {
+  .legacy .municipality-index-section {
     background: var(--bg);
     padding: 64px 0 56px;
   }
-  .index-map-layout {
+  .legacy .index-map-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 360px;
     gap: 28px;
     align-items: start;
   }
-  .index-main {
+  .legacy .index-main {
     min-width: 0;
   }
-  .region-map-panel {
+  .legacy .region-map-panel {
     display: grid;
     gap: 14px;
   }
-  .region-map-card {
+  .legacy .region-map-card {
     background: #fff;
     border: 1px solid #dbe4ee;
     border-radius: 14px;
@@ -183,13 +183,13 @@
     box-shadow: var(--shadow-sm);
     overflow: hidden;
   }
-  .region-map-card h3 {
+  .legacy .region-map-card h3 {
     font-family: "Noto Serif JP", serif;
     font-size: 0.95rem;
     color: var(--navy);
     margin: 0 0 8px;
   }
-  .region-map {
+  .legacy .region-map {
     height: 220px;
     width: 100%;
     box-sizing: border-box;
@@ -198,10 +198,10 @@
     background: #eef2f7;
     overflow: hidden;
   }
-  .muni-search-wrap {
+  .legacy .muni-search-wrap {
     margin: 24px 0 32px;
   }
-  #muniSearch {
+  .legacy #muniSearch {
     width: 100%;
     max-width: 480px;
     padding: 10px 16px;
@@ -212,14 +212,14 @@
     outline: none;
     background: #fff;
   }
-  #muniSearch:focus {
+  .legacy #muniSearch:focus {
     border-color: var(--navy);
   }
-  #regionIndex .region-block {
+  .legacy #regionIndex .region-block {
     margin-bottom: 40px;
     scroll-margin-top: 80px;
   }
-  #regionIndex .region-heading {
+  .legacy #regionIndex .region-heading {
     font-family: "Noto Serif JP", serif;
     font-size: 1.1rem;
     font-weight: 900;
@@ -228,10 +228,10 @@
     border-bottom: 2px solid var(--navy);
     margin-bottom: 18px;
   }
-  #regionIndex .prefecture-group {
+  .legacy #regionIndex .prefecture-group {
     margin-bottom: 18px;
   }
-  #regionIndex .pref-heading {
+  .legacy #regionIndex .pref-heading {
     font-size: 0.82rem;
     font-weight: 900;
     color: var(--text-soft);
@@ -240,7 +240,7 @@
     padding-left: 10px;
     border-left: 3px solid var(--gold);
   }
-  #regionIndex .municipality-list {
+  .legacy #regionIndex .municipality-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -248,7 +248,7 @@
     flex-wrap: wrap;
     gap: 6px;
   }
-  #regionIndex .muni-link {
+  .legacy #regionIndex .muni-link {
     display: inline-flex;
     align-items: center;
     gap: 4px;
@@ -265,12 +265,12 @@
       border-color 0.14s;
     white-space: nowrap;
   }
-  #regionIndex .muni-link:hover {
+  .legacy #regionIndex .muni-link:hover {
     background: var(--navy);
     color: #fff;
     border-color: var(--navy);
   }
-  #regionIndex .muni-count {
+  .legacy #regionIndex .muni-count {
     font-size: 0.72rem;
     background: var(--gold);
     color: #fff;
@@ -279,14 +279,14 @@
     font-weight: 900;
     line-height: 1.3;
   }
-  .response-bodies-section {
+  .legacy .response-bodies-section {
     background: #fff;
     padding: 64px 0 72px;
   }
-  #responseBodiesContent .type-section {
+  .legacy #responseBodiesContent .type-section {
     margin-bottom: 60px;
   }
-  #responseBodiesContent .type-heading {
+  .legacy #responseBodiesContent .type-heading {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -298,7 +298,7 @@
     border-bottom: 2px solid var(--navy);
     margin-bottom: 20px;
   }
-  .type-label-badge {
+  .legacy .type-label-badge {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -311,26 +311,26 @@
     font-weight: 900;
     flex-shrink: 0;
   }
-  .response-item {
+  .legacy .response-item {
     background: #fffdf8;
     border: 1px solid #e8dfc9;
     border-radius: 12px;
     padding: 20px 22px;
     margin-bottom: 14px;
   }
-  .response-muni-name {
+  .legacy .response-muni-name {
     font-family: "Noto Serif JP", serif;
     font-size: 1.05rem;
     font-weight: 900;
     color: var(--navy);
     margin-bottom: 4px;
   }
-  .response-meta {
+  .legacy .response-meta {
     font-size: 0.82rem;
     color: var(--text-soft);
     margin-bottom: 10px;
   }
-  .response-item details summary {
+  .legacy .response-item details summary {
     cursor: pointer;
     list-style: none;
     font-size: 0.88rem;
@@ -339,13 +339,13 @@
     padding: 6px 0;
     user-select: none;
   }
-  .response-item details summary::-webkit-details-marker {
+  .legacy .response-item details summary::-webkit-details-marker {
     display: none;
   }
-  .response-item details[open] summary {
+  .legacy .response-item details[open] summary {
     margin-bottom: 10px;
   }
-  .response-body {
+  .legacy .response-body {
     font-size: 0.91rem;
     line-height: 1.85;
     color: var(--text);
@@ -353,70 +353,70 @@
     border-top: 1px solid var(--line);
     padding-top: 12px;
   }
-  .back-to-index {
+  .legacy .back-to-index {
     margin-top: 14px;
     font-size: 0.8rem;
   }
-  .back-to-index a {
+  .legacy .back-to-index a {
     color: var(--navy);
     text-decoration: none;
     font-weight: 700;
   }
-  .back-to-index a:hover {
+  .legacy .back-to-index a:hover {
     text-decoration: underline;
   }
-  .excluded-section {
+  .legacy .excluded-section {
     background: var(--bg);
     padding: 46px 0;
     border-top: 1px solid var(--line);
   }
-  .caution-section {
+  .legacy .caution-section {
     background: #fff;
     padding: 40px 0;
     border-top: 1px solid var(--line);
   }
-  .caution-section p {
+  .legacy .caution-section p {
     font-size: 0.86rem;
     color: var(--text-soft);
     line-height: 1.8;
     max-width: 860px;
   }
-  .footer-contact-masked {
+  .legacy .footer-contact-masked {
     color: rgba(255, 255, 255, 0.72);
     font-size: 0.9rem;
     line-height: 1.8;
   }
-  .manual-map-pin-layer {
+  .legacy .manual-map-pin-layer {
     display: none;
   }
   @media (max-width: 980px) {
-    .index-map-layout {
+    .legacy .index-map-layout {
       grid-template-columns: 1fr;
     }
-    .region-map-panel {
+    .legacy .region-map-panel {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
   @media (max-width: 680px) {
-    .compact-hero-section {
+    .legacy .compact-hero-section {
       padding: 36px 0 32px;
     }
-    #responseMap {
+    .legacy #responseMap {
       height: 360px;
     }
-    .region-map-panel {
+    .legacy .region-map-panel {
       grid-template-columns: 1fr;
     }
-    .region-map {
+    .legacy .region-map {
       height: 260px;
     }
-    .response-item {
+    .legacy .response-item {
       padding: 16px 14px;
     }
   }
 
   /* Page-specific styles for board-responses.html */
-  .board-responses-editorial {
+  .legacy .board-responses-editorial {
     --board-ink: #182635;
     --board-muted: #5b6875;
     --board-navy: #17324d;
@@ -427,7 +427,7 @@
     color: var(--board-ink);
   }
 
-  .board-responses-editorial .compact-hero-section {
+  .legacy .board-responses-editorial .compact-hero-section {
     position: relative;
     padding: clamp(58px, 7vw, 82px) 0 clamp(54px, 6vw, 72px);
     background: var(--board-paper);
@@ -436,17 +436,17 @@
     border-top: 1px solid #e1ddd2;
     border-bottom: 1px solid #d8d4c9;
   }
-  .board-responses-editorial .compact-hero-section::before {
+  .legacy .board-responses-editorial .compact-hero-section::before {
     content: "";
     position: absolute;
     inset: 0 auto 0 0;
     width: 5px;
     background: var(--board-gold);
   }
-  .board-responses-editorial .compact-hero-section .wrap {
+  .legacy .board-responses-editorial .compact-hero-section .wrap {
     width: min(calc(100% - 48px), 920px);
   }
-  .board-responses-editorial .compact-hero-section .hero-kicker {
+  .legacy .board-responses-editorial .compact-hero-section .hero-kicker {
     display: block;
     width: fit-content;
     margin: 0 0 20px;
@@ -459,7 +459,7 @@
     text-transform: none;
     letter-spacing: 0.12em;
   }
-  .board-responses-editorial .compact-hero-section h1 {
+  .legacy .board-responses-editorial .compact-hero-section h1 {
     max-width: 18em;
     margin: 0 0 22px;
     color: var(--board-navy);
@@ -467,14 +467,14 @@
     line-height: 1.25;
     letter-spacing: -0.03em;
   }
-  .board-responses-editorial .compact-hero-section p {
+  .legacy .board-responses-editorial .compact-hero-section p {
     max-width: 49rem;
     margin: 0;
     color: #354657;
     font-size: clamp(0.98rem, 1.35vw, 1.06rem);
     line-height: 2;
   }
-  .board-response-index {
+  .legacy .board-response-index {
     width: min(calc(100% - 48px), 920px);
     margin: 0 auto;
     padding: 17px 0;
@@ -485,43 +485,43 @@
     border-bottom: 1px solid var(--board-line);
     font-size: 0.82rem;
   }
-  .board-response-index span {
+  .legacy .board-response-index span {
     color: var(--board-muted);
     font-weight: 700;
     letter-spacing: 0.08em;
   }
-  .board-response-index a {
+  .legacy .board-response-index a {
     color: var(--board-navy);
     text-decoration: none;
     border-bottom: 1px solid transparent;
   }
-  .board-response-index a:hover,
+  .legacy .board-response-index a:hover,.legacy 
   .board-response-index a:focus-visible {
     border-bottom-color: currentColor;
   }
-  .board-responses-editorial #dataset-scope,
-  .board-responses-editorial #response-trends,
-  .board-responses-editorial #response-map-section,
-  .board-responses-editorial #municipality-index,
-  .board-responses-editorial #response-bodies,
-  .board-responses-editorial #excluded-responses,
+  .legacy .board-responses-editorial #dataset-scope,.legacy 
+  .board-responses-editorial #response-trends,.legacy 
+  .board-responses-editorial #response-map-section,.legacy 
+  .board-responses-editorial #municipality-index,.legacy 
+  .board-responses-editorial #response-bodies,.legacy 
+  .board-responses-editorial #excluded-responses,.legacy 
   .board-responses-editorial #data-download {
     scroll-margin-top: 92px;
   }
-  .board-responses-editorial .response-trends-section .reading-body,
-  .board-responses-editorial .dataset-scope-section .reading-body,
-  .board-responses-editorial .response-bodies-section > .wrap,
-  .board-responses-editorial .excluded-section > .wrap,
+  .legacy .board-responses-editorial .response-trends-section .reading-body,.legacy 
+  .board-responses-editorial .dataset-scope-section .reading-body,.legacy 
+  .board-responses-editorial .response-bodies-section > .wrap,.legacy 
+  .board-responses-editorial .excluded-section > .wrap,.legacy 
   .board-responses-editorial .caution-section > .wrap {
     width: min(calc(100% - 40px), 920px);
   }
-  .board-responses-editorial #responseMap,
-  .board-responses-editorial .region-map,
+  .legacy .board-responses-editorial #responseMap,.legacy 
+  .board-responses-editorial .region-map,.legacy 
   .board-responses-editorial .region-map-card {
     border-radius: 0;
     box-shadow: none;
   }
-  .board-responses-editorial .map-index-link {
+  .legacy .board-responses-editorial .map-index-link {
     display: inline;
     padding: 0;
     background: transparent;
@@ -530,25 +530,25 @@
     text-decoration: underline;
     text-underline-offset: 0.18em;
   }
-  .board-responses-editorial .region-map-panel {
+  .legacy .board-responses-editorial .region-map-panel {
     gap: 22px;
   }
-  .board-responses-editorial .region-map-card {
+  .legacy .board-responses-editorial .region-map-card {
     padding: 0 0 20px;
     background: transparent;
     border: 0;
     border-bottom: 1px solid #cfd8e2;
   }
-  .board-responses-editorial #muniSearch {
+  .legacy .board-responses-editorial #muniSearch {
     max-width: 100%;
     border-radius: 0;
     border-width: 0 0 2px;
     padding: 12px 2px;
   }
-  .board-responses-editorial #regionIndex .municipality-list {
+  .legacy .board-responses-editorial #regionIndex .municipality-list {
     display: block;
   }
-  .board-responses-editorial #regionIndex .muni-link {
+  .legacy .board-responses-editorial #regionIndex .muni-link {
     display: inline;
     margin-right: 1em;
     padding: 0;
@@ -561,40 +561,40 @@
     line-height: 2.2;
     white-space: normal;
   }
-  .board-responses-editorial #regionIndex .muni-link:hover {
+  .legacy .board-responses-editorial #regionIndex .muni-link:hover {
     background: transparent;
     color: #9a4c00;
   }
-  .board-responses-editorial #regionIndex .muni-count {
+  .legacy .board-responses-editorial #regionIndex .muni-count {
     padding: 0;
     background: transparent;
     color: #64748b;
     border-radius: 0;
     font-weight: 700;
   }
-  .board-responses-editorial .type-label-badge {
+  .legacy .board-responses-editorial .type-label-badge {
     display: none;
   }
-  .board-responses-editorial .response-meta {
+  .legacy .board-responses-editorial .response-meta {
     margin: 0 0 7px;
     line-height: 1.8;
   }
-  .board-responses-editorial .mask-note {
+  .legacy .board-responses-editorial .mask-note {
     color: #725500;
     font-weight: 700;
   }
-  .board-responses-editorial .response-topics {
+  .legacy .board-responses-editorial .response-topics {
     margin: 0 0 9px;
     color: #40505e;
     font-size: 0.8rem;
     line-height: 1.85;
   }
-  .board-responses-editorial .response-topics strong {
+  .legacy .board-responses-editorial .response-topics strong {
     margin-right: 0.65em;
     color: var(--board-muted);
     font-weight: 700;
   }
-  .board-responses-editorial .response-item {
+  .legacy .board-responses-editorial .response-item {
     margin: 0;
     padding: 24px 0;
     background: transparent;
@@ -602,44 +602,44 @@
     border-bottom: 1px solid #cfd8e2;
     border-radius: 0;
   }
-  .board-responses-editorial .response-item:first-of-type {
+  .legacy .board-responses-editorial .response-item:first-of-type {
     border-top: 1px solid #cfd8e2;
   }
-  .board-responses-editorial .response-item details summary {
+  .legacy .board-responses-editorial .response-item details summary {
     padding: 8px 0;
     text-decoration: underline;
     text-underline-offset: 0.18em;
   }
-  .board-responses-editorial .trend-example-list a,
+  .legacy .board-responses-editorial .trend-example-list a,.legacy 
   .board-responses-editorial .back-to-index a {
     text-decoration: underline;
     text-underline-offset: 0.18em;
     border-bottom: 0;
   }
-  .board-responses-editorial main a:hover {
+  .legacy .board-responses-editorial .legacy-main a:hover {
     transform: none;
     box-shadow: none;
   }
   @media (max-width: 680px) {
-    .board-responses-editorial .compact-hero-section .wrap,
-    .board-response-index,
-    .board-responses-editorial .response-trends-section .reading-body,
-    .board-responses-editorial .dataset-scope-section .reading-body,
-    .board-responses-editorial .response-bodies-section > .wrap,
-    .board-responses-editorial .excluded-section > .wrap,
+    .legacy .board-responses-editorial .compact-hero-section .wrap,.legacy 
+    .board-response-index,.legacy 
+    .board-responses-editorial .response-trends-section .reading-body,.legacy 
+    .board-responses-editorial .dataset-scope-section .reading-body,.legacy 
+    .board-responses-editorial .response-bodies-section > .wrap,.legacy 
+    .board-responses-editorial .excluded-section > .wrap,.legacy 
     .board-responses-editorial .caution-section > .wrap {
       width: min(calc(100% - 30px), 920px);
     }
-    .board-response-index {
+    .legacy .board-response-index {
       gap: 8px 16px;
     }
-    .board-response-index span {
+    .legacy .board-response-index span {
       width: 100%;
     }
   }
 
   /* 2026-09-06: chapter heading labels outside main */
-  .board-responses-editorial > section:not(.compact-hero-section) h2 {
+  .legacy .board-responses-editorial > section:not(.compact-hero-section) h2 {
     display: inline-block !important;
     width: max-content !important;
     max-width: 100% !important;
@@ -659,7 +659,7 @@
   }
 
   @media (max-width: 640px) {
-    .board-responses-editorial > section:not(.compact-hero-section) h2 {
+    .legacy .board-responses-editorial > section:not(.compact-hero-section) h2 {
       margin: 1.4rem 0 .85rem !important;
       padding: 6px 9px 7px !important;
       font-size: .98rem !important;
@@ -668,12 +668,10 @@
   }
 
   @media print {
-    .board-responses-editorial > section:not(.compact-hero-section) h2 {
+    .legacy .board-responses-editorial > section:not(.compact-hero-section) h2 {
       background: #fff !important;
       color: #111 !important;
       border-color: #777 !important;
       box-shadow: none !important;
     }
   }
-
-}

@@ -1,0 +1,287 @@
+/* Theme layer for ported pages, loaded after the scoped legacy CSS.
+   The page title block, table of contents and side boxes are rebuilt by the port (scripts/port/frame.py);
+   this file restyles the legacy body so it reads as part of the new design. Body text is untouched. */
+
+/* ---- base ---- */
+#main .legacy,#main .legacy-body{font-family:var(--sans)!important;color:var(--ink)!important;background:transparent!important;font-size:1rem;line-height:1.95;min-height:0!important;margin:0!important;padding:0!important;display:block;letter-spacing:normal}
+#main .legacy-body .legacy-main{background:transparent!important;padding-top:0!important;margin-top:0!important;min-height:0!important}
+#main .legacy-body :is(.wrap,.wrap-narrow,.container,.inner,.page-body,.journal-article-wrap,.essay-shell,.research-main){max-width:none!important;width:auto!important;padding-left:0!important;padding-right:0!important;margin-left:0!important;margin-right:0!important}
+#main .legacy-wide .legacy-body :is(.wrap,.wrap-narrow,.container,.inner,.research-main){max-width:calc(var(--container) + var(--gutter)*2)!important;margin:0 auto!important;padding-left:var(--gutter)!important;padding-right:var(--gutter)!important}
+#main .legacy-body section,#main .legacy-body article{background:transparent!important;background-image:none!important;box-shadow:none!important;color:inherit!important;padding-left:0!important;padding-right:0!important}
+#main .legacy-body section{padding-top:10px!important;padding-bottom:10px!important;margin:0!important;border:0!important;min-height:0!important}
+#main .legacy-body p,#main .legacy-body li{color:var(--ink)}
+#main .legacy-body a{color:var(--link);text-underline-offset:.2em}
+#main .legacy-body img{max-width:100%;height:auto}
+#main .legacy-body .legacy-toc{display:none!important}
+#main .legacy-body .legacy-hero-rest{background:none!important;color:var(--ink)!important;padding:0 0 12px!important;min-height:0!important;border:0!important;text-align:left!important}
+#main .legacy-body .legacy-hero-rest *{color:inherit}
+#main .legacy-body .legacy-hero-rest::before,#main .legacy-body .legacy-hero-rest::after{display:none!important}
+
+/* ---- headings: one system ---- */
+#main .legacy-body h2{font-family:var(--serif)!important;font-size:clamp(1.3rem,2.3vw,1.6rem)!important;font-weight:700!important;line-height:1.5!important;color:var(--ink)!important;background:none!important;box-shadow:none!important;border:0!important;border-left:5px solid var(--navy-deep)!important;border-bottom:1px solid var(--line)!important;border-radius:0!important;padding:2px 0 10px 14px!important;margin:40px 0 18px!important;display:block!important;text-align:left!important;letter-spacing:.01em!important;text-transform:none!important}
+#main .legacy-body h2::before,#main .legacy-body h2::after{display:none!important}
+#main .legacy-body :is(.card,[class*="card"],[class*="-item"],[class*="box"]) h2{font-size:1.15rem!important;border-left-width:4px!important;margin:4px 0 10px!important}
+#main .legacy-body h3{font-family:var(--sans)!important;font-size:1.12rem!important;font-weight:700!important;line-height:1.6!important;color:var(--ink)!important;background:none!important;border:0!important;border-left:3px solid var(--gold-line)!important;padding:0 0 0 10px!important;margin:28px 0 10px!important;text-transform:none!important;letter-spacing:normal!important}
+#main .legacy-body h3::before,#main .legacy-body h3::after{display:none!important}
+#main .legacy-body :is(.card,[class*="card"],[class*="-item"],[class*="box"],li,td,th) h3{border-left:0!important;padding-left:0!important;margin:2px 0 6px!important;font-size:1.02rem!important}
+#main .legacy-body h4{font-size:1rem!important;font-weight:700!important;color:var(--navy)!important;margin:20px 0 6px!important}
+#main .legacy-body :is([class*="kicker"],[class*="eyebrow"],.section-label,.page-kicker,.label-sm){display:inline-block!important;font-size:.75rem!important;font-weight:700!important;letter-spacing:0!important;text-transform:none!important;color:var(--navy)!important;background:var(--tint)!important;border:0!important;border-radius:3px!important;padding:3px 10px!important;margin:0 0 6px!important;font-family:var(--sans)!important}
+#main .legacy-body :is([class*="kicker"],[class*="eyebrow"])::before,#main .legacy-body :is([class*="kicker"],[class*="eyebrow"])::after{display:none!important}
+
+/* ---- cards ---- */
+#main .legacy-body :is(.card,[class$="-card"],[class*="-card "],.archive-box,.archive-material-item,.archive-evidence-card,.meta-card,.faq-item,.doc-item,.article-card,.step,.principle,.check-item,.scope-item,.case-block,.survey-record,.board-update-record,.research-region,.editorial-panel,.cl20-item){background:#fff!important;border:1px solid var(--line)!important;border-radius:var(--radius)!important;box-shadow:var(--shadow)!important;color:var(--ink)!important}
+#main .legacy-body :is(.archive-material-item,.archive-evidence-card,.doc-item,.article-card,.survey-record,.board-update-record,.research-region,.case-block){padding:16px 18px!important;margin:0 0 12px!important}
+#main .legacy-body .archive-material-list{display:grid!important;gap:10px!important}
+#main .legacy-body .archive-grid,#main .legacy-body .meta-grid{display:grid!important;grid-template-columns:repeat(auto-fill,minmax(160px,1fr))!important;gap:10px!important}
+#main .legacy-body :is(.archive-box,.meta-card){padding:12px 14px!important;text-align:left!important}
+#main .legacy-body :is(.archive-label,.lb){font-size:.75rem!important;font-weight:700!important;color:var(--ink-sub)!important;letter-spacing:0!important;text-transform:none!important}
+#main .legacy-body :is(.archive-value,.vl){font-size:1.05rem!important;font-weight:700!important;color:var(--ink)!important}
+#main .legacy-body .archive-material-item>.archive-label{display:inline-block!important;background:#E5EFF6!important;color:var(--k-primary)!important;border-radius:3px!important;padding:2px 10px!important;margin:0 0 4px!important}
+#main .legacy-body .archive-muted{display:inline-block;font-size:.78rem!important;font-weight:700;color:var(--c-caution)!important;background:var(--c-caution-bg)!important;border-radius:3px;padding:2px 10px}
+#main .legacy-body p.archive-muted,#main .legacy-body .archive-section>p.archive-muted{display:block;background:none!important;color:var(--ink-sub)!important;font-weight:400;padding:0}
+
+/* ---- callouts (notes, key points, warnings) ---- */
+#main .legacy-body :is(.note,.notice,.evidence-box,.callout,.thesis-callout,.point,.key-point,.summary-box,.lead-box,.info-box,.alert,[class*="callout"],[class*="-note"]:not(.archive-research-note),blockquote){background:#F7F9FB!important;border:0!important;border-left:4px solid var(--navy)!important;border-radius:0 var(--radius) var(--radius) 0!important;padding:14px 18px!important;margin:18px 0!important;color:var(--ink)!important;box-shadow:none!important;font-style:normal}
+#main .legacy-body :is(.warning,.caution,.alert-warning,[class*="caution"],[class*="warning"],.evidence-box){background:#FBF6E9!important;border-left-color:#C9A227!important}
+#main .legacy-body :is(.danger,.alert-danger,[class*="danger"]){background:#FDF1EF!important;border-left-color:#B03A2E!important}
+#main .legacy-body .archive-research-note{background:var(--tint)!important;border-radius:6px;padding:12px 16px!important;font-weight:500}
+
+/* ---- tables ---- */
+#main .legacy-body table{width:100%;border-collapse:collapse!important;font-size:.9rem!important;background:#fff!important;border:1px solid var(--line)!important;border-radius:var(--radius);margin:14px 0 18px!important}
+#main .legacy-body :is(th,td){border:0!important;border-bottom:1px solid var(--line)!important;padding:10px 12px!important;text-align:left;vertical-align:top;color:var(--ink)!important;background:transparent!important}
+#main .legacy-body thead th,#main .legacy-body tr:first-child>th{background:var(--paper-alt)!important;font-size:.82rem!important;color:var(--ink-sub)!important;font-weight:700}
+#main .legacy-body tbody th{font-weight:700;background:#FAFBFC!important}
+
+/* ---- buttons and chips ---- */
+#main .legacy-body :is(.archive-print-button,.archive-download){color:#fff!important}
+#main .legacy-body :is(.btn,.button,[class^="btn-"],[class*=" btn-"],.b-gold,.b-line,.cta-btn,.pdf-btn,a.primary,a.secondary){display:inline-flex!important;align-items:center;gap:8px;border-radius:4px!important;padding:10px 18px!important;font-weight:700!important;font-size:.9rem!important;text-decoration:none!important;border:1px solid var(--navy-deep)!important;background:#fff!important;color:var(--navy-deep)!important;box-shadow:none!important;line-height:1.4!important}
+#main .legacy-body :is(.btn-navy,.btn-primary,.b-gold,.cta-btn,.primary){background:var(--navy-deep)!important;color:#fff!important}
+#main .legacy-body :is(.btn,.button,[class^="btn-"],.b-gold,.b-line):hover{background:var(--tint)!important;color:var(--navy-deep)!important}
+#main .legacy-body :is(.tag,.badge,.chip,.pill,.tag-row>span,.eval-badge,.archive-tag,.archive-source-chip){display:inline-block!important;background:var(--tint)!important;color:var(--navy)!important;border:0!important;border-radius:3px!important;padding:2px 10px!important;font-size:.76rem!important;font-weight:700!important;line-height:1.6!important;box-shadow:none!important}
+#main .legacy-body .tag-row{display:flex!important;flex-wrap:wrap;gap:6px;margin:0 0 10px!important}
+
+/* ---- bands that used dark/colored full-width backgrounds ---- */
+#main .legacy-body :is(.cta-band,[class*="band"],[class*="banner"],.page-banner,.support-band-legacy){background:var(--tint)!important;color:var(--ink)!important;border:0!important;border-radius:8px!important;padding:18px 20px!important;margin:24px 0!important;box-shadow:none!important}
+#main .legacy-body :is(.cta-band,[class*="band"],[class*="banner"]) :is(p,strong,span,h2,h3){color:var(--ink)!important}
+#main .legacy-body .nav-bottom,#main .legacy-body .rel-grid{display:flex!important;flex-wrap:wrap;gap:10px;margin:16px 0!important}
+#main .legacy-body .rel-grid a,#main .legacy-body .nav-bottom a{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:6px;padding:10px 14px;background:#fff;font-weight:700;font-size:.88rem;text-decoration:none}
+
+/* ---- board response body ---- */
+#main .legacy-body .body-card{background:#fff!important;border:1px solid var(--line)!important;border-left:4px solid var(--k-response)!important;border-radius:0 var(--radius) var(--radius) 0!important;padding:18px 22px!important;white-space:pre-wrap;line-height:2;font-size:.95rem!important}
+#main .legacy-body .q-line{display:block;font-weight:700;margin-bottom:6px}
+
+/* ---- FAQ ---- */
+#main .legacy-body .faq-item{padding:0!important;margin:0 0 10px!important;overflow:hidden}
+#main .legacy-body .faq-q{padding:14px 18px!important;font-weight:700;background:#fff!important;color:var(--ink)!important}
+#main .legacy-body .faq-a{padding:0 18px!important}
+
+/* ---- leftovers of legacy chrome ---- */
+#main .legacy .scroll-top-button,#main .legacy :is(.support-strip,.loc-trail,.current-location-breadcrumb){display:none!important}
+@media (max-width:760px){
+  #main .legacy-body h2{margin-top:30px!important}
+  #main .legacy-body table{display:block;overflow-x:auto}
+}
+@media print{.search-panel,.article-side,.detail-side,.pager,.readmore,.article-notice{display:none!important}.article-layout{grid-template-columns:1fr}}
+#main .legacy-body .meta-card{display:block!important}
+#main .legacy-body .meta-card :is(.lb,.vl){display:block!important;width:auto!important;text-align:left!important;writing-mode:horizontal-tb!important}
+#main .legacy-body .meta-grid{border:0!important}
+#main .legacy-wide{overflow-x:auto}
+
+
+/* v0.6 — restore card breathing room lost when legacy .legacy selectors were unwrapped */
+#main .article-main .legacy-body :is(.pdf-card,.doc-card,.article-card,.archive-material-item,.archive-evidence-card,.archive-box,.meta-card,.research-region,.survey-record,.board-update-record,.case-block){
+  box-sizing:border-box!important;
+  min-width:0;
+  padding:22px 24px!important;
+  margin-bottom:18px!important;
+  overflow-wrap:break-word;
+}
+#main .article-main .legacy-body :is(.pdf-card,.doc-card,.article-card,.archive-material-item,.archive-evidence-card,.archive-box,.meta-card) > :first-child{margin-top:0!important}
+#main .article-main .legacy-body :is(.pdf-card,.doc-card,.article-card,.archive-material-item,.archive-evidence-card) > :last-child{margin-bottom:0!important}
+#main .article-main .legacy-body .pdf-grid{
+  display:grid!important;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))!important;
+  gap:20px!important;
+  align-items:stretch;
+  margin:24px 0!important;
+}
+#main .article-main .legacy-body .pdf-card{
+  display:flex!important;
+  flex-direction:column;
+  gap:12px;
+}
+#main .article-main .legacy-body .pdf-card h3{margin:0!important;line-height:1.6!important}
+#main .article-main .legacy-body .pdf-card p{margin:0 0 8px!important;line-height:1.85!important}
+#main .article-main .legacy-body .pdf-card a{align-self:flex-start;margin-top:auto}
+#main .article-main .legacy-body .pdf-icon{line-height:1.2;margin:0 0 4px!important}
+#main .article-main .legacy-body :is(.archive-grid,.meta-grid){
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))!important;
+  gap:18px!important;
+}
+#main .article-main .legacy-body :is(.wrap,.wrap-narrow,.container,.inner,.page-body,.journal-article-wrap,.essay-shell,.research-main){min-width:0!important;max-width:none!important}
+@media(max-width:760px){
+  #main .article-main .legacy-body :is(.pdf-card,.doc-card,.article-card,.archive-material-item,.archive-evidence-card,.archive-box,.meta-card,.research-region,.survey-record,.board-update-record,.case-block){padding:18px 20px!important}
+  #main .article-main .legacy-body .pdf-grid{grid-template-columns:minmax(0,1fr)!important;gap:16px!important}
+}
+
+
+/* v0.7 — imported documents must fill the available article column.
+   Original narrow wrappers and centered root shells previously survived. */
+#main .article-main > .legacy,
+#main .article-main > .legacy .legacy-body,
+#main .article-main > .legacy .legacy-main,
+#main .article-main > .legacy .legacy-main > section {
+  box-sizing:border-box!important;
+  display:block;
+  width:100%!important;
+  max-width:none!important;
+  min-width:0!important;
+  margin-left:0!important;
+  margin-right:0!important;
+}
+#main .article-main .legacy-body :is(
+  .wrap,.wrap-narrow,.container,.inner,.page-body,
+  .journal-article-wrap,.essay-shell,.research-main,
+  .container-narrow,.content-wrap,.article-body
+){
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:none!important;
+  min-width:0!important;
+  margin-left:0!important;
+  margin-right:0!important;
+}
+#main .article-main .legacy-body .legacy-main > section{
+  padding-top:26px!important;
+  padding-bottom:26px!important;
+}
+#main .article-main .legacy-body :is(
+  .thesis-lead-section,.thesis-section,.pdf-section,.soudan-section
+) > :is(.wrap,.wrap-narrow,.container) {
+  margin-inline:0!important;
+}
+/* Restore padding stripped from cards by the migration reset. */
+#main .article-main .legacy-body .thesis-lead {
+  background:#fff!important;
+  border:1px solid var(--line)!important;
+  border-top:5px solid var(--gold-line)!important;
+  border-radius:12px!important;
+  box-shadow:var(--shadow)!important;
+  padding:28px 32px!important;
+  margin-bottom:22px!important;
+}
+#main .article-main .legacy-body .thesis-lead > h2{
+  margin:0 0 16px!important;
+}
+#main .article-main .legacy-body .thesis-lead > p {
+  max-width:none!important;
+}
+#main .article-main .legacy-body :is(
+  .thesis-grid,.cards-grid,.card-grid,.resource-grid,.steps-grid
+){
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr))!important;
+  gap:20px!important;
+}
+#main .article-main .legacy-body :is(
+  .thesis-card,.step-card,.case-card,.resource-card,.research-card
+){
+  min-width:0!important;
+  padding:22px 24px!important;
+  overflow-wrap:break-word;
+}
+@media(max-width:760px){
+  #main .article-main .legacy-body .thesis-lead{padding:20px!important}
+  #main .article-main .legacy-body .legacy-main > section{
+    padding-top:18px!important;
+    padding-bottom:18px!important;
+  }
+}
+
+
+/* v0.9 — prevent the prose-mode reset from collapsing card interiors.
+   The migrated documents kept their borders but lost left/right padding. */
+#main .article-main .legacy-body :is(
+  .act-card,.stat-card,.thesis-card,.step-card,
+  .case-card,.resource-card,.research-card,.documents-card,
+  .related-link-card,.board-guide-card,.cat-doc-item,
+  .archive-school-card,.yokomusubi-card,.ref-item,
+  .cl20-item,.scope-item,.check-item,.principle
+){
+  box-sizing:border-box!important;
+  padding:24px 28px!important;
+  min-width:0!important;
+  overflow-wrap:break-word;
+}
+#main .article-main .legacy-body :is(
+  .act-grid,.stat-grid,.thesis-grid,.resource-grid,.card-grid,
+  .documents-grid,.related-links-grid
+){
+  gap:18px!important;
+}
+#main .article-main .legacy-body .act-card > :first-child,
+#main .article-main .legacy-body .stat-card > :first-child{margin-top:0!important}
+#main .article-main .legacy-body .act-card > :last-child,
+#main .article-main .legacy-body .stat-card > :last-child{margin-bottom:0!important}
+#main .article-main .legacy-body .act-card .num{
+  display:block;
+  margin:0 0 8px!important;
+  padding:0!important;
+}
+#main .article-main .legacy-body .act-card strong{
+  display:block;
+  margin:0 0 10px!important;
+}
+#main .article-main .legacy-body .act-card p{
+  margin:0!important;
+  line-height:1.85!important;
+}
+/* Keep all imported article roots flush with the text column rather than
+   applying the original centered 900px shell a second time. */
+#main .article-layout .article-main,
+#main .article-main > .legacy,
+#main .article-main > .legacy .legacy-body,
+#main .article-main > .legacy .legacy-main{
+  min-width:0!important;
+  width:100%!important;
+  max-width:none!important;
+  margin-left:0!important;
+  margin-right:0!important;
+}
+#main .article-main > .legacy .legacy-main{
+  padding-left:0!important;
+  padding-right:0!important;
+}
+@media(max-width:760px){
+  #main .article-main .legacy-body :is(
+    .act-card,.stat-card,.thesis-card,.step-card,
+    .case-card,.resource-card,.research-card,.documents-card,
+    .related-link-card,.board-guide-card,.cat-doc-item,
+    .archive-school-card,.yokomusubi-card,.ref-item,
+    .cl20-item,.scope-item,.check-item,.principle
+  ){padding:20px!important}
+}
+
+
+/* Imported about-page card groups: opt out of prose.css's forced block list. */
+#main .article-main .legacy-body .act-grid{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:20px!important;
+  border-top:0!important;
+}
+#main .article-main .legacy-body .stat-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:18px!important;
+  border-top:0!important;
+}
+@media(max-width:1100px){
+  #main .article-main .legacy-body .act-grid{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+}
+@media(max-width:760px){
+  #main .article-main .legacy-body .stat-grid{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+}

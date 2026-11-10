@@ -1,5 +1,5 @@
-@layer page {
-  :root {
+
+  .legacy {
     --support-navy: #0f2742;
     --support-gold: #d4af37;
     --support-ink: #172033;
@@ -10,12 +10,12 @@
     --support-paypay: #ff0033;
   }
 
-  .support-page {
+  .legacy .support-page {
     background: var(--support-soft);
     color: var(--support-ink);
   }
 
-  .support-hero {
+  .legacy .support-hero {
     position: relative;
     overflow: hidden;
     padding: 86px 0 82px;
@@ -24,7 +24,7 @@
     color: #fff;
   }
 
-  .support-hero::before {
+  .legacy .support-hero::before {
     position: absolute;
     inset: 0;
     background:
@@ -34,17 +34,17 @@
         rgba(5, 17, 31, 0.64),
         rgba(124, 45, 18, 0.22)
       ),
-      url("/assets/slides/1.jpg") center / cover;
+      url("../assets/slides/1.jpg") center / cover;
     content: "";
     filter: saturate(1.05);
   }
 
-  .support-hero .wrap {
+  .legacy .support-hero .wrap {
     position: relative;
     z-index: 1;
   }
 
-  .support-kicker {
+  .legacy .support-kicker {
     display: inline-flex;
     align-items: center;
     margin-bottom: 18px;
@@ -59,7 +59,7 @@
     text-transform: uppercase;
   }
 
-  .support-hero h1 {
+  .legacy .support-hero h1 {
     margin: 0 0 18px;
     color: #fff;
     font-family: "Noto Serif JP", serif;
@@ -67,7 +67,7 @@
     line-height: 1.35;
   }
 
-  .support-hero p {
+  .legacy .support-hero p {
     max-width: 820px;
     margin: 0 0 12px;
     color: rgba(255, 255, 255, 0.9);
@@ -75,14 +75,14 @@
     line-height: 2;
   }
 
-  .support-actions {
+  .legacy .support-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
     margin-top: 26px;
   }
 
-  .support-actions .bank-hero,
+  .legacy .support-actions .bank-hero,.legacy 
   .support-actions .paypay-hero {
     display: inline-flex;
     align-items: center;
@@ -95,27 +95,27 @@
     text-decoration: none;
   }
 
-  .support-page .support-actions .bank-hero {
+  .legacy .support-page .support-actions .bank-hero {
     border-color: var(--support-gold);
     background: var(--support-gold);
     color: #102b49;
   }
 
-  .support-page .support-actions .paypay-hero {
+  .legacy .support-page .support-actions .paypay-hero {
     border-color: var(--support-paypay);
     background: var(--support-paypay);
     box-shadow: 0 10px 28px rgba(255, 0, 51, 0.3);
     color: #fff;
   }
 
-  .support-payment-section {
+  .legacy .support-payment-section {
     position: relative;
     z-index: 3;
     margin-top: -36px;
     padding-bottom: 18px;
   }
 
-  .support-payment-shell {
+  .legacy .support-payment-shell {
     width: min(calc(100% - 32px), 1120px);
     margin: auto;
     padding: 30px;
@@ -125,55 +125,55 @@
     box-shadow: 0 24px 56px rgba(15, 39, 66, 0.18);
   }
 
-  .support-payment-head {
+  .legacy .support-payment-head {
     margin-bottom: 22px;
     text-align: center;
   }
 
-  .support-payment-head .support-kicker {
+  .legacy .support-payment-head .support-kicker {
     margin-bottom: 10px;
     border-color: #e4c46a;
     background: #fff4d6;
     color: #7c5a00;
   }
 
-  .support-payment-head h2 {
+  .legacy .support-payment-head h2 {
     margin: 0 0 8px;
     color: var(--support-navy);
     font-family: "Noto Serif JP", serif;
     font-size: clamp(1.65rem, 3vw, 2.35rem);
   }
 
-  .support-payment-head p {
+  .legacy .support-payment-head p {
     margin: 0;
     color: var(--support-muted);
   }
 
-  .support-payment-grid {
+  .legacy .support-payment-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
 
-  .support-payment-card {
+  .legacy .support-payment-card {
     padding: 24px;
     border: 1px solid var(--support-line);
     border-radius: 17px;
     background: #f8fafc;
   }
 
-  .support-payment-card h3 {
+  .legacy .support-payment-card h3 {
     margin: 0 0 16px;
     color: var(--support-navy);
     font-size: 1.25rem;
   }
 
-  .support-payment-card--paypay {
+  .legacy .support-payment-card--paypay {
     border-color: #ffc2cf;
     background: #fff5f7;
   }
 
-  .bank-line {
+  .legacy .bank-line {
     padding-top: 14px;
     border-top: 1px solid #e5e7eb;
     color: var(--support-navy);
@@ -182,14 +182,14 @@
     line-height: 1.95;
   }
 
-  .bank-line small {
+  .legacy .bank-line small {
     display: block;
     margin-top: 4px;
     color: var(--support-muted);
     font-weight: 700;
   }
 
-  .transfer-example {
+  .legacy .transfer-example {
     margin-top: 14px;
     padding: 12px 14px;
     border-radius: 10px;
@@ -198,14 +198,14 @@
     line-height: 1.7;
   }
 
-  .paypay-note {
+  .legacy .paypay-note {
     padding-top: 14px;
     border-top: 1px solid #e5e7eb;
     color: var(--support-muted);
     line-height: 1.8;
   }
 
-  .support-page .paypay-button {
+  .legacy .support-page .paypay-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -221,20 +221,20 @@
     text-decoration: none;
   }
 
-  .support-main {
+  .legacy .support-main {
     padding: 34px 0 72px;
   }
 
-  .support-layout {
+  .legacy .support-layout {
     display: block;
   }
 
-  .support-layout > div {
+  .legacy .support-layout > div {
     max-width: 920px;
     margin: auto;
   }
 
-  .support-panel {
+  .legacy .support-panel {
     margin-bottom: 24px;
     padding: 30px 34px;
     border: 1px solid var(--support-line);
@@ -244,7 +244,7 @@
     box-shadow: 0 14px 34px rgba(15, 39, 66, 0.06);
   }
 
-  .support-panel h2 {
+  .legacy .support-panel h2 {
     margin: 0 0 14px;
     color: var(--support-navy);
     font-family: "Noto Serif JP", serif;
@@ -252,13 +252,13 @@
     line-height: 1.45;
   }
 
-  .support-panel p {
+  .legacy .support-panel p {
     margin: 0.65em 0;
     color: #334155;
     line-height: 2;
   }
 
-  .achievement-list {
+  .legacy .achievement-list {
     display: grid;
     gap: 12px;
     margin: 18px 0 0;
@@ -266,7 +266,7 @@
     list-style: none;
   }
 
-  .achievement-list li {
+  .legacy .achievement-list li {
     position: relative;
     padding: 14px 16px 14px 48px;
     border: 1px solid #e2e8f0;
@@ -275,7 +275,7 @@
     line-height: 1.8;
   }
 
-  .achievement-list li::before {
+  .legacy .achievement-list li::before {
     position: absolute;
     left: 18px;
     color: #15803d;
@@ -284,13 +284,13 @@
     font-weight: 900;
   }
 
-  .use-table {
+  .legacy .use-table {
     width: 100%;
     margin-top: 18px;
     border-collapse: collapse;
   }
 
-  .use-table th,
+  .legacy .use-table th,.legacy 
   .use-table td {
     padding: 15px 16px;
     border: 1px solid var(--support-line);
@@ -299,25 +299,25 @@
     vertical-align: top;
   }
 
-  .use-table th {
+  .legacy .use-table th {
     width: 34%;
     background: #eef4fa;
     color: var(--support-navy);
   }
 
-  .support-promise {
+  .legacy .support-promise {
     border-left-color: #16a34a;
     background: #f0fdf4;
   }
 
-  .support-back {
+  .legacy .support-back {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
     margin-top: 22px;
   }
 
-  .support-page .support-back a {
+  .legacy .support-page .support-back a {
     color: #0f4c81;
     font-weight: 900;
     text-decoration: underline;
@@ -325,60 +325,59 @@
   }
 
   @media (max-width: 760px) {
-    .support-hero {
+    .legacy .support-hero {
       padding: 62px 0;
     }
 
-    .support-payment-section {
+    .legacy .support-payment-section {
       margin-top: -22px;
     }
 
-    .support-payment-shell {
+    .legacy .support-payment-shell {
       padding: 22px 16px;
     }
 
-    .support-payment-grid {
+    .legacy .support-payment-grid {
       grid-template-columns: 1fr;
     }
 
-    .support-payment-card {
+    .legacy .support-payment-card {
       padding: 20px 17px;
     }
 
-    .support-main {
+    .legacy .support-main {
       padding-bottom: 58px;
     }
   }
 
   @media (max-width: 640px) {
-    .support-hero h1 br {
+    .legacy .support-hero h1 br {
       display: none;
     }
 
-    .support-actions .bank-hero,
+    .legacy .support-actions .bank-hero,.legacy 
     .support-actions .paypay-hero {
       width: 100%;
     }
 
-    .support-panel {
+    .legacy .support-panel {
       padding: 22px 18px;
     }
 
-    .use-table,
-    .use-table tbody,
-    .use-table tr,
-    .use-table th,
+    .legacy .use-table,.legacy 
+    .use-table tbody,.legacy 
+    .use-table tr,.legacy 
+    .use-table th,.legacy 
     .use-table td {
       display: block;
     }
 
-    .use-table th {
+    .legacy .use-table th {
       width: auto;
       border-bottom: 0;
     }
 
-    .use-table tr {
+    .legacy .use-table tr {
       margin-bottom: 14px;
     }
   }
-}

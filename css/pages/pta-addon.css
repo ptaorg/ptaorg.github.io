@@ -1,6 +1,6 @@
-@layer page {
+
   /* Page-specific styles for pta-addon.html */
-  body {
+  .legacy {
     margin: 0;
     font-family:
       -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", Meiryo,
@@ -9,29 +9,28 @@
     background: #f5f7fb;
     line-height: 1.8;
   }
-  * {
+  .legacy * {
     box-sizing: border-box;
   }
-  header {
+  .legacy header {
     background: linear-gradient(135deg, #0b2d4a, #0f3d63 58%, #176c72);
     color: #fff;
     padding: 54px 20px 50px;
     border-bottom: 5px solid #d4af37;
   }
-  .wrap,
-  main {
+  .legacy .wrap,.legacy .legacy-main {
     max-width: 1040px;
     margin: 0 auto;
   }
-  .crumb {
+  .legacy .crumb {
     margin: 0 0 20px;
     font-size: 14px;
     color: #dbeafe;
   }
-  .crumb a {
+  .legacy .crumb a {
     color: #fff;
   }
-  .kicker {
+  .legacy .kicker {
     display: inline-flex;
     padding: 5px 12px;
     border: 1px solid rgba(255, 255, 255, 0.35);
@@ -42,31 +41,31 @@
     letter-spacing: 0.09em;
     text-transform: uppercase;
   }
-  main {
+  .legacy .legacy-main {
     padding: 34px 20px 68px;
   }
-  h1 {
+  .legacy h1 {
     font-size: clamp(30px, 5vw, 46px);
     line-height: 1.35;
     margin: 12px 0 12px;
   }
-  h2 {
+  .legacy h2 {
     font-size: clamp(21px, 3vw, 27px);
     line-height: 1.5;
     color: #0f3d63;
     margin: 0 0 14px;
   }
-  h3 {
+  .legacy h3 {
     font-size: 17px;
     color: #0f3d63;
     margin: 0 0 7px;
   }
-  .lead {
+  .legacy .lead {
     font-size: 17px;
     max-width: 820px;
     margin: 0;
   }
-  .card {
+  .legacy .card {
     background: #fff;
     border: 1px solid #dbe4ee;
     border-radius: 16px;
@@ -74,13 +73,13 @@
     margin: 20px 0;
     box-shadow: 0 8px 26px rgba(15, 61, 99, 0.07);
   }
-  .actions {
+  .legacy .actions {
     display: flex;
     flex-wrap: wrap;
     gap: 11px;
     margin-top: 24px;
   }
-  .button {
+  .legacy .button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -92,49 +91,49 @@
     text-decoration: none;
     font-weight: 900;
   }
-  .button.secondary {
+  .legacy .button.secondary {
     background: transparent;
     color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.5);
   }
-  .grid {
+  .legacy .grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 14px;
     margin-top: 18px;
   }
-  .mini {
+  .legacy .mini {
     background: #f8fafc;
     border: 1px solid #dbe4ee;
     border-radius: 12px;
     padding: 17px;
   }
-  .mini strong {
+  .legacy .mini strong {
     display: block;
     color: #0f3d63;
     margin-bottom: 5px;
   }
-  .mini span {
+  .legacy .mini span {
     display: block;
     color: #475569;
     font-size: 14px;
     line-height: 1.75;
   }
-  .steps {
+  .legacy .steps {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 12px;
     counter-reset: step;
     margin-top: 18px;
   }
-  .step {
+  .legacy .step {
     position: relative;
     background: #f8fafc;
     border-top: 4px solid #176c72;
     border-radius: 10px;
     padding: 18px 15px;
   }
-  .step::before {
+  .legacy .step::before {
     counter-increment: step;
     content: counter(step);
     display: grid;
@@ -147,62 +146,62 @@
     font-weight: 900;
     margin-bottom: 10px;
   }
-  .step strong {
+  .legacy .step strong {
     display: block;
     color: #0f3d63;
     margin-bottom: 5px;
   }
-  .step span {
+  .legacy .step span {
     font-size: 14px;
     color: #475569;
     line-height: 1.7;
   }
-  .table-wrap {
+  .legacy .table-wrap {
     overflow-x: auto;
     margin-top: 18px;
   }
-  table {
+  .legacy table {
     width: 100%;
     border-collapse: collapse;
     min-width: 680px;
     background: #fff;
   }
-  th,
+  .legacy th,.legacy 
   td {
     border: 1px solid #dbe4ee;
     padding: 12px 14px;
     text-align: left;
     vertical-align: top;
   }
-  th {
+  .legacy th {
     background: #eaf2f8;
     color: #0f3d63;
     font-size: 14px;
   }
-  td {
+  .legacy td {
     font-size: 14px;
     color: #334155;
   }
-  ul {
+  .legacy ul {
     padding-left: 1.3em;
   }
-  .check-list li {
+  .legacy .check-list li {
     margin: 0.5em 0;
   }
-  .note {
+  .legacy .note {
     background: #fff7ed;
     border-left: 5px solid #b45309;
   }
-  .ok {
+  .legacy .ok {
     background: #ecfdf5;
     border-left: 5px solid #0f766e;
   }
-  .links {
+  .legacy .links {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
   }
-  .links a {
+  .legacy .links a {
     display: block;
     background: #eef6ff;
     border: 1px solid #bfdbfe;
@@ -210,51 +209,50 @@
     padding: 16px;
     text-decoration: none;
   }
-  .links span {
+  .legacy .links span {
     display: block;
     color: #475569;
     font-size: 13px;
     font-weight: 500;
     margin-top: 4px;
   }
-  a {
+  .legacy a {
     color: #0f3d63;
     font-weight: 700;
   }
-  footer {
+  .legacy footer {
     background: #0b2239;
     color: #dbeafe;
     padding: 24px 20px;
     text-align: center;
     font-size: 13px;
   }
-  footer a {
+  .legacy footer a {
     color: #fff;
     margin: 0 6px;
   }
   @media (max-width: 820px) {
-    .grid,
+    .legacy .grid,.legacy 
     .steps {
       grid-template-columns: 1fr 1fr;
     }
   }
   @media (max-width: 560px) {
-    header {
+    .legacy header {
       padding: 38px 18px 36px;
     }
-    main {
+    .legacy .legacy-main {
       padding: 24px 16px 50px;
     }
-    .card {
+    .legacy .card {
       padding: 21px 18px;
     }
-    .grid,
-    .steps,
+    .legacy .grid,.legacy 
+    .steps,.legacy 
     .links {
       grid-template-columns: 1fr;
     }
-    .actions .button {
+    .legacy .actions .button {
       width: 100%;
     }
   }
-}

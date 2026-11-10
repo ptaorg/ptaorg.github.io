@@ -1,12 +1,12 @@
-@layer page {
+
   /* Consolidated page styles for PTA運営適正化ガイドブック_第4版_改訂本文.html */
   /* Page-specific styles for PTA運営適正化ガイドブック_第4版_改訂本文.html */
-  * {
+  .legacy * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  body {
+  .legacy {
     font-family:
       "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
     font-size: 14px;
@@ -17,41 +17,41 @@
     margin: 0 auto;
     padding: 40px 50px;
   }
-  a {
+  .legacy a {
     color: #1a4a8a;
     text-decoration: underline;
     word-break: break-all;
   }
-  a:hover {
+  .legacy a:hover {
     color: #c0392b;
   }
 
-  .cover {
+  .legacy .cover {
     text-align: center;
     border: 3px double #1a4a8a;
     padding: 50px 30px 44px;
     margin-bottom: 50px;
     position: relative;
   }
-  .cover-kamon {
+  .legacy .cover-kamon {
     font-size: 40px;
     color: #1a4a8a;
     margin-bottom: 18px;
   }
-  .cover-label {
+  .legacy .cover-label {
     font-size: 11px;
     color: #555;
     letter-spacing: 0.3em;
     margin-bottom: 6px;
   }
-  .cover-org {
+  .legacy .cover-org {
     font-size: 13px;
     color: #1a4a8a;
     font-weight: 700;
     letter-spacing: 0.15em;
     margin-bottom: 28px;
   }
-  .cover-title {
+  .legacy .cover-title {
     font-family: "Noto Serif JP", "Yu Mincho", serif;
     font-size: 26px;
     color: #1a4a8a;
@@ -60,13 +60,13 @@
     line-height: 1.55;
     margin-bottom: 12px;
   }
-  .cover-subtitle {
+  .legacy .cover-subtitle {
     font-size: 13px;
     color: #555;
     letter-spacing: 0.08em;
     margin-bottom: 28px;
   }
-  .cover-tag {
+  .legacy .cover-tag {
     display: inline-block;
     border: 1px solid #1a4a8a;
     color: #1a4a8a;
@@ -75,7 +75,7 @@
     letter-spacing: 0.15em;
     margin: 0 4px;
   }
-  .cover-edition {
+  .legacy .cover-edition {
     position: absolute;
     bottom: 14px;
     right: 20px;
@@ -83,12 +83,12 @@
     color: #666;
   }
 
-  .section-break {
+  .legacy .section-break {
     border-top: 2px solid #1a4a8a;
     margin: 52px 0 36px;
     padding-top: 36px;
   }
-  .section-title {
+  .legacy .section-title {
     text-align: center;
     font-size: 16px;
     font-weight: 700;
@@ -98,7 +98,7 @@
     border-bottom: 2px solid #1a4a8a;
     color: #1a4a8a;
   }
-  h2 {
+  .legacy h2 {
     font-size: 17px;
     font-weight: 700;
     color: #1a4a8a;
@@ -108,7 +108,7 @@
     background: #f0f4ff;
     line-height: 1.55;
   }
-  h3 {
+  .legacy h3 {
     font-size: 15px;
     font-weight: 700;
     margin: 28px 0 10px;
@@ -116,36 +116,36 @@
     border-left: 3px solid #5b7ec9;
     color: #1a3060;
   }
-  p {
+  .legacy p {
     margin-bottom: 12px;
     text-align: justify;
   }
-  p.lead {
+  .legacy p.lead {
     font-size: 15px;
     line-height: 2.05;
     margin-bottom: 18px;
   }
-  a {
+  .legacy a {
     color: #1a4a8a;
   }
 
-  .toc-item {
+  .legacy .toc-item {
     display: flex;
     align-items: baseline;
     padding: 6px 0;
     border-bottom: 1px dotted #ccc;
   }
-  .toc-num {
+  .legacy .toc-num {
     font-weight: 700;
     min-width: 36px;
     color: #1a4a8a;
     font-size: 13px;
   }
-  .toc-text {
+  .legacy .toc-text {
     flex: 1;
     font-size: 13px;
   }
-  .toc-sub {
+  .legacy .toc-sub {
     display: flex;
     align-items: baseline;
     padding: 4px 0 4px 36px;
@@ -153,13 +153,13 @@
     font-size: 12px;
     color: #444;
   }
-  .toc-kana {
+  .legacy .toc-kana {
     min-width: 28px;
     color: #666;
     font-size: 11px;
   }
 
-  .law-cite {
+  .legacy .law-cite {
     background: #f8f5e8;
     border-left: 4px solid #c8a800;
     padding: 12px 16px;
@@ -168,21 +168,21 @@
     color: #333;
     line-height: 1.85;
   }
-  .law-cite-title {
+  .legacy .law-cite-title {
     font-weight: 700;
     color: #7a6200;
     margin-bottom: 5px;
     font-size: 11px;
     letter-spacing: 0.1em;
   }
-  .law-cite-link {
+  .legacy .law-cite-link {
     font-size: 11px;
     color: #1a4a8a;
     margin-top: 6px;
     display: block;
   }
 
-  .principle-box {
+  .legacy .principle-box {
     border: 3px solid #1a4a8a;
     border-radius: 4px;
     padding: 20px 26px;
@@ -190,7 +190,7 @@
     background: #e8efff;
     text-align: center;
   }
-  .principle-box p {
+  .legacy .principle-box p {
     font-size: 15px;
     font-weight: 700;
     color: #1a3060;
@@ -199,14 +199,14 @@
     margin-bottom: 0;
   }
 
-  .risk-box {
+  .legacy .risk-box {
     border: 3px solid #c0392b;
     border-radius: 4px;
     padding: 18px 22px;
     margin: 22px 0;
     background: #fff0f0;
   }
-  .risk-box-title {
+  .legacy .risk-box-title {
     font-weight: 700;
     font-size: 13px;
     background: #c0392b;
@@ -216,14 +216,14 @@
     margin-bottom: 12px;
     letter-spacing: 0.1em;
   }
-  .risk-item {
+  .legacy .risk-item {
     display: flex;
     align-items: flex-start;
     margin-bottom: 9px;
     font-size: 13px;
     line-height: 1.8;
   }
-  .risk-item::before {
+  .legacy .risk-item::before {
     content: "⚠";
     margin-right: 8px;
     color: #c0392b;
@@ -231,14 +231,14 @@
     margin-top: 1px;
   }
 
-  .case-box {
+  .legacy .case-box {
     border: 2px solid #8b5e00;
     border-radius: 4px;
     padding: 16px 20px;
     margin: 18px 0;
     background: #fffbf0;
   }
-  .case-box-title {
+  .legacy .case-box-title {
     font-weight: 700;
     font-size: 12px;
     background: #8b5e00;
@@ -248,14 +248,14 @@
     margin-bottom: 12px;
     letter-spacing: 0.1em;
   }
-  .case-item {
+  .legacy .case-item {
     display: flex;
     align-items: flex-start;
     margin-bottom: 8px;
     font-size: 13px;
     line-height: 1.8;
   }
-  .case-item::before {
+  .legacy .case-item::before {
     content: "▶";
     margin-right: 8px;
     color: #8b5e00;
@@ -264,14 +264,14 @@
     margin-top: 4px;
   }
 
-  .social-box {
+  .legacy .social-box {
     border: 2px solid #6a1a6a;
     border-radius: 4px;
     padding: 16px 20px;
     margin: 18px 0;
     background: #fbf0fb;
   }
-  .social-box-title {
+  .legacy .social-box-title {
     font-weight: 700;
     font-size: 12px;
     background: #6a1a6a;
@@ -282,14 +282,14 @@
     letter-spacing: 0.1em;
   }
 
-  .mext-box {
+  .legacy .mext-box {
     border: 2px solid #1a6a1a;
     border-radius: 4px;
     padding: 16px 20px;
     margin: 18px 0;
     background: #f0fbf0;
   }
-  .mext-box-title {
+  .legacy .mext-box-title {
     font-weight: 700;
     font-size: 12px;
     background: #1a6a1a;
@@ -300,14 +300,14 @@
     letter-spacing: 0.1em;
   }
 
-  .judgment-box {
+  .legacy .judgment-box {
     border: 2px solid #5a3a00;
     border-radius: 4px;
     padding: 16px 20px;
     margin: 18px 0;
     background: #fdf6ee;
   }
-  .judgment-box-title {
+  .legacy .judgment-box-title {
     font-weight: 700;
     font-size: 12px;
     background: #5a3a00;
@@ -318,14 +318,14 @@
     letter-spacing: 0.1em;
   }
 
-  .paradox-box {
+  .legacy .paradox-box {
     border: 2px solid #1a4a8a;
     border-radius: 4px;
     padding: 16px 20px;
     margin: 18px 0;
     background: #f0f4ff;
   }
-  .paradox-box-title {
+  .legacy .paradox-box-title {
     font-weight: 700;
     font-size: 12px;
     background: #1a4a8a;
@@ -336,14 +336,14 @@
     letter-spacing: 0.1em;
   }
 
-  .ppc-box {
+  .legacy .ppc-box {
     border: 2px solid #1a5a6a;
     border-radius: 4px;
     padding: 16px 20px;
     margin: 18px 0;
     background: #f0fafb;
   }
-  .ppc-box-title {
+  .legacy .ppc-box-title {
     font-weight: 700;
     font-size: 12px;
     background: #1a5a6a;
@@ -354,14 +354,14 @@
     letter-spacing: 0.1em;
   }
 
-  .check-box {
+  .legacy .check-box {
     border: 1.5px solid #1a4a8a;
     border-radius: 4px;
     padding: 16px 20px;
     margin: 18px 0;
     background: #f5f8ff;
   }
-  .check-box-title {
+  .legacy .check-box-title {
     font-weight: 700;
     font-size: 12px;
     background: #1a4a8a;
@@ -371,14 +371,14 @@
     margin-bottom: 12px;
     letter-spacing: 0.1em;
   }
-  .check-item {
+  .legacy .check-item {
     display: flex;
     align-items: flex-start;
     margin-bottom: 7px;
     font-size: 13px;
     line-height: 1.75;
   }
-  .check-item::before {
+  .legacy .check-item::before {
     content: "□";
     margin-right: 10px;
     color: #1a4a8a;
@@ -387,14 +387,14 @@
     margin-top: 1px;
   }
 
-  .notice-box {
+  .legacy .notice-box {
     border: 2px solid #c0392b;
     border-radius: 4px;
     padding: 14px 18px;
     margin: 18px 0;
     background: #fff8f8;
   }
-  .notice-box-title {
+  .legacy .notice-box-title {
     font-weight: 700;
     font-size: 12px;
     background: #c0392b;
@@ -405,14 +405,14 @@
     letter-spacing: 0.1em;
   }
 
-  .info-box {
+  .legacy .info-box {
     border: 1.5px solid #2980b9;
     border-radius: 4px;
     padding: 14px 18px;
     margin: 18px 0;
     background: #f0f7ff;
   }
-  .info-box-title {
+  .legacy .info-box-title {
     font-weight: 700;
     font-size: 12px;
     background: #2980b9;
@@ -423,7 +423,7 @@
     letter-spacing: 0.1em;
   }
 
-  .division-box {
+  .legacy .division-box {
     display: flex;
     gap: 0;
     margin: 18px 0;
@@ -431,19 +431,19 @@
     border-radius: 4px;
     overflow: hidden;
   }
-  .division-col {
+  .legacy .division-col {
     flex: 1;
     padding: 14px 16px;
     font-size: 13px;
   }
-  .division-col:first-child {
+  .legacy .division-col:first-child {
     background: #f5f8ff;
     border-right: 1px solid #ccc;
   }
-  .division-col:last-child {
+  .legacy .division-col:last-child {
     background: #fff8f8;
   }
-  .division-col-title {
+  .legacy .division-col-title {
     font-weight: 700;
     font-size: 12px;
     display: block;
@@ -451,33 +451,33 @@
     padding-bottom: 5px;
     border-bottom: 1px solid #ccc;
   }
-  .div-ok {
+  .legacy .div-ok {
     color: #1a6a1a;
   }
-  .div-ng {
+  .legacy .div-ng {
     color: #c0392b;
   }
 
-  .flow-box {
+  .legacy .flow-box {
     border: 1.5px solid #1a4a8a;
     border-radius: 4px;
     padding: 16px 20px;
     margin: 18px 0;
     background: #f0f5ff;
   }
-  .flow-box-title {
+  .legacy .flow-box-title {
     font-weight: 700;
     font-size: 12px;
     color: #1a4a8a;
     margin-bottom: 14px;
   }
-  .flow-step {
+  .legacy .flow-step {
     display: flex;
     align-items: flex-start;
     margin-bottom: 10px;
     font-size: 13px;
   }
-  .flow-num {
+  .legacy .flow-num {
     font-weight: 700;
     color: #fff;
     background: #1a4a8a;
@@ -492,19 +492,19 @@
     flex-shrink: 0;
     margin-top: 2px;
   }
-  .flow-arrow {
+  .legacy .flow-arrow {
     text-align: center;
     color: #1a4a8a;
     font-size: 16px;
     margin: 4px 0 4px 34px;
   }
 
-  .qa-item {
+  .legacy .qa-item {
     margin-bottom: 20px;
     border-bottom: 1px dotted #ccc;
     padding-bottom: 16px;
   }
-  .qa-q {
+  .legacy .qa-q {
     font-weight: 700;
     color: #1a4a8a;
     margin-bottom: 6px;
@@ -512,7 +512,7 @@
     gap: 8px;
     font-size: 14px;
   }
-  .qa-q-label {
+  .legacy .qa-q-label {
     background: #1a4a8a;
     color: #fff;
     font-size: 11px;
@@ -521,42 +521,42 @@
     align-self: flex-start;
     margin-top: 2px;
   }
-  .qa-a {
+  .legacy .qa-a {
     padding-left: 16px;
     border-left: 3px solid #ccd8f0;
     font-size: 13px;
     line-height: 1.85;
   }
-  .qa-a-label {
+  .legacy .qa-a-label {
     font-weight: 700;
     color: #c0392b;
     margin-right: 6px;
   }
 
-  ul.list {
+  .legacy ul.list {
     margin: 8px 0 14px 1.5em;
     list-style: none;
   }
-  ul.list li {
+  .legacy ul.list li {
     margin-bottom: 6px;
     font-size: 13px;
     padding-left: 1em;
     position: relative;
   }
-  ul.list li::before {
+  .legacy ul.list li::before {
     content: "・";
     position: absolute;
     left: -0.2em;
     color: #1a4a8a;
   }
 
-  .form-example {
+  .legacy .form-example {
     border: 1px solid #999;
     padding: 18px 20px;
     margin: 18px 0;
     font-size: 13px;
   }
-  .form-example-title {
+  .legacy .form-example-title {
     text-align: center;
     font-weight: 700;
     font-size: 14px;
@@ -564,24 +564,24 @@
     padding-bottom: 8px;
     border-bottom: 1px solid #ccc;
   }
-  .form-row {
+  .legacy .form-row {
     display: flex;
     align-items: baseline;
     margin-bottom: 10px;
     gap: 10px;
   }
-  .form-label {
+  .legacy .form-label {
     min-width: 120px;
     color: #555;
     font-size: 12px;
     flex-shrink: 0;
   }
-  .form-line {
+  .legacy .form-line {
     flex: 1;
     border-bottom: 1px solid #999;
     min-height: 20px;
   }
-  .form-note {
+  .legacy .form-note {
     font-size: 11px;
     color: #555;
     margin-top: 10px;
@@ -589,35 +589,35 @@
     border-top: 1px dotted #ccc;
   }
 
-  .rule-box {
+  .legacy .rule-box {
     border: 1px solid #aaa;
     padding: 16px 20px;
     margin: 14px 0;
     font-size: 13px;
     background: #fafafa;
   }
-  .rule-box-title {
+  .legacy .rule-box-title {
     font-weight: 700;
     font-size: 12px;
     color: #555;
     margin-bottom: 10px;
   }
-  .rule-article {
+  .legacy .rule-article {
     margin-bottom: 10px;
   }
-  .rule-article-num {
+  .legacy .rule-article-num {
     font-weight: 700;
     color: #1a4a8a;
   }
 
-  .ref-box {
+  .legacy .ref-box {
     border: 1px solid #bbb;
     background: #f9f9f9;
     padding: 14px 18px;
     margin: 18px 0;
     font-size: 12px;
   }
-  .ref-box-title {
+  .legacy .ref-box-title {
     font-weight: 700;
     font-size: 12px;
     color: #444;
@@ -625,13 +625,13 @@
     padding-bottom: 6px;
     border-bottom: 1px dotted #ccc;
   }
-  .ref-item {
+  .legacy .ref-item {
     margin-bottom: 7px;
     padding-left: 1em;
     position: relative;
     line-height: 1.75;
   }
-  .ref-item::before {
+  .legacy .ref-item::before {
     content: "▷";
     position: absolute;
     left: 0;
@@ -640,71 +640,71 @@
     top: 3px;
   }
 
-  strong {
+  .legacy strong {
     font-weight: 700;
   }
-  em.warn {
+  .legacy em.warn {
     font-style: normal;
     font-weight: 700;
     color: #c0392b;
   }
-  em.blue {
+  .legacy em.blue {
     font-style: normal;
     font-weight: 700;
     color: #1a4a8a;
   }
-  em.green {
+  .legacy em.green {
     font-style: normal;
     font-weight: 700;
     color: #1a6a1a;
   }
 
   @media print {
-    body {
+    .legacy {
       padding: 20px 30px;
     }
-    .section-break {
+    .legacy .section-break {
       page-break-before: always;
       border-top: none;
     }
-    h2 {
+    .legacy h2 {
       page-break-after: avoid;
     }
-    .check-box,
-    .notice-box,
-    .case-box,
+    .legacy .check-box,.legacy 
+    .notice-box,.legacy 
+    .case-box,.legacy 
     .risk-box {
       page-break-inside: avoid;
     }
   }
   @media (max-width: 600px) {
-    body {
+    .legacy {
       padding: 20px 18px;
     }
-    .division-box {
+    .legacy .division-box {
       flex-direction: column;
     }
-    .division-col:first-child {
+    .legacy .division-col:first-child {
       border-right: none;
       border-bottom: 1px solid #ccc;
     }
   }
 
   /* Page-specific styles for PTA運営適正化ガイドブック_第4版_改訂本文.html */
-  .guidebook-editorial .cover-tag {
+  .legacy .guidebook-editorial .cover-tag {
     display: none;
   }
-  .guidebook-editorial .principle-box,
-  .guidebook-editorial .risk-box,
-  .guidebook-editorial .case-box,
-  .guidebook-editorial .social-box,
-  .guidebook-editorial .mext-box,
-  .guidebook-editorial .judgment-box,
-  .guidebook-editorial .paradox-box,
-  .guidebook-editorial .ppc-box,
-  .guidebook-editorial .check-box,
-  .guidebook-editorial .notice-box,
-  .guidebook-editorial .info-box,
+  .legacy .guidebook-editorial .principle-box,.legacy 
+  .guidebook-editorial .risk-box,.legacy 
+  .guidebook-editorial .case-box,.legacy 
+  .guidebook-editorial .social-box,.legacy 
+  .guidebook-editorial .mext-box,.legacy 
+  .guidebook-editorial .judgment-box,.legacy 
+  .guidebook-editorial .paradox-box,.legacy 
+  .guidebook-editorial .ppc-box,.legacy 
+  .guidebook-editorial .check-box,.legacy 
+  .guidebook-editorial .notice-box,.legacy 
+  .guidebook-editorial .info-box,.legacy 
   .guidebook-editorial .flow-box {
     background: #fff;
     border: 0;
@@ -712,15 +712,15 @@
     border-radius: 0;
     padding: 16px 0 16px 20px;
   }
-  .guidebook-editorial .risk-box-title,
-  .guidebook-editorial .case-box-title,
-  .guidebook-editorial .social-box-title,
-  .guidebook-editorial .mext-box-title,
-  .guidebook-editorial .judgment-box-title,
-  .guidebook-editorial .paradox-box-title,
-  .guidebook-editorial .ppc-box-title,
-  .guidebook-editorial .check-box-title,
-  .guidebook-editorial .notice-box-title,
+  .legacy .guidebook-editorial .risk-box-title,.legacy 
+  .guidebook-editorial .case-box-title,.legacy 
+  .guidebook-editorial .social-box-title,.legacy 
+  .guidebook-editorial .mext-box-title,.legacy 
+  .guidebook-editorial .judgment-box-title,.legacy 
+  .guidebook-editorial .paradox-box-title,.legacy 
+  .guidebook-editorial .ppc-box-title,.legacy 
+  .guidebook-editorial .check-box-title,.legacy 
+  .guidebook-editorial .notice-box-title,.legacy 
   .guidebook-editorial .info-box-title {
     display: block;
     padding: 0 0 7px;
@@ -728,12 +728,11 @@
     color: #1a3060;
     letter-spacing: 0.04em;
   }
-  .guidebook-editorial .risk-item::before,
+  .legacy .guidebook-editorial .risk-item::before,.legacy 
   .guidebook-editorial .case-item::before {
     content: "—";
     color: #64748b;
   }
-  .guidebook-editorial .flow-num {
+  .legacy .guidebook-editorial .flow-num {
     border-radius: 2px;
   }
-}

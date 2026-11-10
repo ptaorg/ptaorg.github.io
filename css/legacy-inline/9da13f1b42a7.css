@@ -1,0 +1,14 @@
+
+.legacy .research-part{margin-top:3.5rem!important;padding-top:1rem;border-top:2px solid #c9d8dd}
+.legacy .research-method-note{font-size:.92rem;color:#485a65}
+.legacy .research-table-wrap{max-width:100%;overflow-x:auto;margin:1.4rem 0 2rem}
+.legacy .research-table{border-collapse:collapse;width:100%;min-width:620px;font-size:.9rem;line-height:1.7}
+.legacy .research-table th,.legacy .research-table td{border:1px solid #d3e1e5;padding:.7rem .85rem;vertical-align:top;text-align:left}
+.legacy .research-table th{background:#eff5f6;color:#173650}
+.legacy .research-step{padding-left:.6em;border-left:3px solid #087f78}
+.legacy .article-citations{font-size:.75em;white-space:nowrap}
+.legacy .article-citations a{margin:0 .08em}
+.legacy .research-sources{font-size:.87rem;line-height:1.75;overflow-wrap:anywhere;padding-left:2rem}
+.legacy .research-sources li{margin:0 0 .65rem;scroll-margin-top:7rem}
+.legacy .research-source-grade{font-size:.78em;padding:.1em .3em;background:#eef3f5;border-radius:3px}
+@media(max-width:640px){.legacy .research-table{min-width:570px;font-size:.82rem}.legacy .research-sources{padding-left:1.3rem}}

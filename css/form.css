@@ -1,21 +1,21 @@
-@layer feature {
+
   /* PTA適正化推進委員会 提出用書式 */
 
-  .form-page {
+  .legacy .form-page {
     background: #eef2f7;
   }
 
-  .form-hero {
+  .legacy .form-hero {
     background: linear-gradient(135deg, #0a192f, #1e3a5f);
     color: #fff;
     padding: 54px 0 48px;
   }
 
-  .form-hero .wrap {
+  .legacy .form-hero .wrap {
     max-width: 960px;
   }
 
-  .form-kicker {
+  .legacy .form-kicker {
     color: var(--gold-lt);
     font-size: 0.76rem;
     font-weight: 900;
@@ -24,7 +24,7 @@
     text-transform: uppercase;
   }
 
-  .form-hero h1 {
+  .legacy .form-hero h1 {
     color: #fff;
     font-family: "Noto Serif JP", serif;
     font-size: clamp(1.75rem, 4vw, 2.7rem);
@@ -32,23 +32,23 @@
     margin: 0 0 14px;
   }
 
-  .form-hero p {
+  .legacy .form-hero p {
     color: rgba(255, 255, 255, 0.84);
     line-height: 1.9;
     margin: 0;
     max-width: 780px;
   }
 
-  .form-main {
+  .legacy .form-main {
     padding: 54px 0 76px;
   }
 
-  .form-wrap {
+  .legacy .form-wrap {
     margin-inline: auto;
     width: min(calc(100% - 40px), 920px);
   }
 
-  .form-intro {
+  .legacy .form-intro {
     background: #fff;
     border: 1px solid #dbe4ee;
     border-left: 6px solid var(--gold);
@@ -58,24 +58,24 @@
     padding: 24px 26px;
   }
 
-  .form-intro p {
+  .legacy .form-intro p {
     color: #475569;
     line-height: 1.9;
     margin: 0 0 14px;
   }
 
-  .form-intro p:last-child {
+  .legacy .form-intro p:last-child {
     margin-bottom: 0;
   }
 
-  .form-actions {
+  .legacy .form-actions {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
   }
 
-  .print-button {
+  .legacy .print-button {
     background: var(--navy);
     border: 0;
     border-radius: 999px;
@@ -85,17 +85,17 @@
     padding: 10px 18px;
   }
 
-  .print-button:hover {
+  .legacy .print-button:hover {
     background: #ea580c;
   }
 
-  .form-back-link {
+  .legacy .form-back-link {
     color: var(--navy);
     font-size: 0.9rem;
     font-weight: 800;
   }
 
-  .form-sheet {
+  .legacy .form-sheet {
     background: #fff;
     border: 1px solid #cbd5e1;
     box-shadow: 0 16px 40px rgba(5, 17, 31, 0.1);
@@ -103,17 +103,17 @@
     padding: 48px 52px 54px;
   }
 
-  .form-date-line {
+  .legacy .form-date-line {
     margin: 0 0 26px;
     text-align: right;
   }
 
-  .form-addressee {
+  .legacy .form-addressee {
     font-size: 1.05rem;
     margin: 0 0 28px;
   }
 
-  .form-title {
+  .legacy .form-title {
     color: var(--navy);
     font-family: "Noto Serif JP", serif;
     font-size: 1.55rem;
@@ -122,7 +122,7 @@
     text-align: center;
   }
 
-  .form-subtitle {
+  .legacy .form-subtitle {
     border-bottom: 2px solid var(--navy);
     color: var(--navy);
     font-size: 1.05rem;
@@ -130,28 +130,28 @@
     padding-bottom: 6px;
   }
 
-  .form-sheet > p {
+  .legacy .form-sheet > p {
     line-height: 1.95;
   }
 
-  .form-numbered-list {
+  .legacy .form-numbered-list {
     margin: 0 0 24px;
     padding-left: 1.45rem;
   }
 
-  .form-numbered-list li {
+  .legacy .form-numbered-list li {
     line-height: 1.85;
     margin-bottom: 10px;
   }
 
-  .form-table {
+  .legacy .form-table {
     border-collapse: collapse;
     margin: 24px 0;
     table-layout: fixed;
     width: 100%;
   }
 
-  .form-table th,
+  .legacy .form-table th,.legacy 
   .form-table td {
     border: 1px solid #94a3b8;
     padding: 11px 13px;
@@ -159,25 +159,25 @@
     vertical-align: top;
   }
 
-  .form-table th {
+  .legacy .form-table th {
     background: #f1f5f9;
     font-weight: 800;
     width: 9.5rem;
   }
 
-  .form-cell-tall {
+  .legacy .form-cell-tall {
     height: 74px;
   }
 
-  .form-cell-signature {
+  .legacy .form-cell-signature {
     text-align: right;
   }
 
-  .form-table-signer {
+  .legacy .form-table-signer {
     margin-top: 38px;
   }
 
-  .form-note {
+  .legacy .form-note {
     background: #fffaf0;
     border-left: 4px solid var(--gold);
     color: #475569;
@@ -187,25 +187,25 @@
   }
 
   @media (max-width: 640px) {
-    .form-hero {
+    .legacy .form-hero {
       padding: 42px 0 38px;
     }
-    .form-main {
+    .legacy .form-main {
       padding: 34px 0 54px;
     }
-    .form-wrap {
+    .legacy .form-wrap {
       width: min(calc(100% - 24px), 920px);
     }
-    .form-intro {
+    .legacy .form-intro {
       padding: 20px 18px;
     }
-    .form-sheet {
+    .legacy .form-sheet {
       padding: 30px 20px 36px;
     }
-    .form-table th {
+    .legacy .form-table th {
       width: 6.8rem;
     }
-    .form-table th,
+    .legacy .form-table th,.legacy 
     .form-table td {
       padding: 9px 8px;
     }
@@ -216,40 +216,39 @@
       size: A4;
       margin: 14mm;
     }
-    .site-header,
-    .mobile-overlay,
-    .footer,
+    .legacy .site-header,.legacy 
+    .mobile-overlay,.legacy 
+    .footer,.legacy 
     .no-print {
       display: none;
     }
-    body.form-page {
+    .legacy.form-page {
       background: #fff;
       font-size: 10.5pt;
       padding-top: 0;
     }
-    .form-main {
+    .legacy .form-main {
       padding: 0;
     }
-    .form-wrap {
+    .legacy .form-wrap {
       width: 100%;
     }
-    .form-sheet {
+    .legacy .form-sheet {
       border: 0;
       box-shadow: none;
       padding: 0;
     }
-    .form-title {
+    .legacy .form-title {
       font-size: 17pt;
     }
-    .form-table {
+    .legacy .form-table {
       page-break-inside: avoid;
     }
-    .form-table tr {
+    .legacy .form-table tr {
       page-break-inside: avoid;
     }
-    .form-note {
+    .legacy .form-note {
       background: transparent;
       border: 1px solid #999;
     }
   }
-}

@@ -1,5 +1,5 @@
 /* fee-collection.html: PTA fee and school-charge collection review */
-body.fee-editorial {
+.legacy.fee-editorial {
   --fee-ink: #202f3f;
   --fee-navy: #0b2a4a;
   --fee-navy-2: #18466f;
@@ -13,7 +13,7 @@ body.fee-editorial {
   background: var(--fee-paper);
 }
 
-body.fee-editorial .page-hero {
+.legacy.fee-editorial .page-hero {
   position: relative;
   min-height: 0;
   overflow: hidden;
@@ -25,7 +25,7 @@ body.fee-editorial .page-hero {
   border-bottom: 0;
 }
 
-body.fee-editorial .page-hero::after {
+.legacy.fee-editorial .page-hero::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -36,7 +36,7 @@ body.fee-editorial .page-hero::after {
   background-size: 48px 48px;
 }
 
-body.fee-editorial .page-hero-inner {
+.legacy.fee-editorial .page-hero-inner {
   position: relative;
   z-index: 1;
   width: min(calc(100% - 40px), 960px);
@@ -45,7 +45,7 @@ body.fee-editorial .page-hero-inner {
   padding: clamp(62px, 8vw, 92px) 0 clamp(54px, 7vw, 78px);
 }
 
-body.fee-editorial .page-hero-kicker {
+.legacy.fee-editorial .page-hero-kicker {
   display: block;
   width: fit-content;
   margin: 0 0 16px;
@@ -62,7 +62,7 @@ body.fee-editorial .page-hero-kicker {
   text-transform: none;
 }
 
-body.fee-editorial .page-hero h1 {
+.legacy.fee-editorial .page-hero h1 {
   max-width: 18em;
   margin: 0;
   color: #fff;
@@ -74,12 +74,12 @@ body.fee-editorial .page-hero h1 {
   text-wrap: balance;
 }
 
-body.fee-editorial .page-hero h1 em {
+.legacy.fee-editorial .page-hero h1 em {
   color: #f1d477;
   font-style: normal;
 }
 
-body.fee-editorial .page-hero-inner > p:not(.fee-meta) {
+.legacy.fee-editorial .page-hero-inner > p:not(.fee-meta) {
   max-width: 76ch;
   margin: 26px 0 0;
   color: rgba(255, 255, 255, 0.96);
@@ -88,7 +88,7 @@ body.fee-editorial .page-hero-inner > p:not(.fee-meta) {
   line-height: 1.95;
 }
 
-body.fee-editorial .fee-hero-note {
+.legacy.fee-editorial .fee-hero-note {
   max-width: 76ch;
   margin: 26px 0 0;
   padding: 4px 0 4px 22px;
@@ -98,7 +98,7 @@ body.fee-editorial .fee-hero-note {
   line-height: 1.95;
 }
 
-body.fee-editorial .fee-meta {
+.legacy.fee-editorial .fee-meta {
   max-width: none;
   margin: 24px 0 0;
   padding-top: 16px;
@@ -109,7 +109,7 @@ body.fee-editorial .fee-meta {
   line-height: 1.7;
 }
 
-body.fee-editorial .fee-doc {
+.legacy.fee-editorial .fee-doc {
   display: block;
   width: min(calc(100% - 40px), 920px);
   max-width: none;
@@ -117,7 +117,7 @@ body.fee-editorial .fee-doc {
   padding: 54px 0 96px;
 }
 
-body.fee-editorial .fee-doc > section {
+.legacy.fee-editorial .fee-doc > section {
   margin: 0;
   padding: 54px 0 62px;
   color: var(--fee-ink);
@@ -129,11 +129,11 @@ body.fee-editorial .fee-doc > section {
   scroll-margin-top: 104px;
 }
 
-body.fee-editorial .fee-doc > section:first-child {
+.legacy.fee-editorial .fee-doc > section:first-child {
   border-top: 2px solid var(--fee-navy);
 }
 
-body.fee-editorial .section-kicker {
+.legacy.fee-editorial .section-kicker {
   display: block !important;
   width: auto;
   margin: 0 0 10px;
@@ -149,7 +149,7 @@ body.fee-editorial .section-kicker {
   text-transform: none;
 }
 
-body.fee-editorial .fee-doc h2 {
+.legacy.fee-editorial .fee-doc h2 {
   position: static;
   margin: 0 0 28px;
   padding: 0 0 16px;
@@ -164,11 +164,11 @@ body.fee-editorial .fee-doc h2 {
   text-wrap: balance;
 }
 
-body.fee-editorial .fee-doc h2::before {
+.legacy.fee-editorial .fee-doc h2::before {
   display: none;
 }
 
-body.fee-editorial .fee-doc h3 {
+.legacy.fee-editorial .fee-doc h3 {
   margin: 34px 0 14px;
   padding: 0;
   color: var(--fee-navy-2);
@@ -178,18 +178,18 @@ body.fee-editorial .fee-doc h3 {
   line-height: 1.65;
 }
 
-body.fee-editorial .fee-doc :where(p, li, td, th, summary) {
+.legacy.fee-editorial .fee-doc :where(p, li, td, th, summary) {
   color: var(--fee-ink);
   font-size: 1rem;
   line-height: 1.98;
 }
 
-body.fee-editorial .fee-doc > section > p {
+.legacy.fee-editorial .fee-doc > section > p {
   max-width: none;
   margin: 0 0 18px;
 }
 
-body.fee-editorial .fee-doc a {
+.legacy.fee-editorial .fee-doc a {
   color: #075ca3;
   font-weight: 700;
   text-decoration: underline;
@@ -197,14 +197,12 @@ body.fee-editorial .fee-doc a {
   text-underline-offset: 4px;
 }
 
-body.fee-editorial .fee-doc a:hover {
+.legacy.fee-editorial .fee-doc a:hover {
   color: #003f73;
   text-decoration-color: currentcolor;
 }
 
-body.fee-editorial .fee-verdict,
-body.fee-editorial .fee-law-note,
-body.fee-editorial .fee-inference {
+.legacy.fee-editorial .fee-verdict,.legacy.fee-editorial .fee-law-note,.legacy.fee-editorial .fee-inference {
   margin: 28px 0;
   padding: 22px 25px;
   background: var(--fee-soft);
@@ -214,37 +212,33 @@ body.fee-editorial .fee-inference {
   box-shadow: none;
 }
 
-body.fee-editorial .fee-inference {
+.legacy.fee-editorial .fee-inference {
   background: #fffdf4;
   border-left-color: var(--fee-gold);
 }
 
-body.fee-editorial :where(.fee-verdict, .fee-law-note, .fee-inference) p {
+.legacy.fee-editorial :where(.fee-verdict, .fee-law-note, .fee-inference) p {
   max-width: none;
   margin: 0;
   line-height: 1.98;
 }
 
-body.fee-editorial :where(.fee-verdict, .fee-law-note, .fee-inference) strong {
+.legacy.fee-editorial :where(.fee-verdict, .fee-law-note, .fee-inference) strong {
   color: var(--fee-navy);
 }
 
-body.fee-editorial .fee-keyline {
+.legacy.fee-editorial .fee-keyline {
   max-width: none;
   margin: 28px 0 0;
   padding: 3px 0 3px 20px;
   border-left: 4px solid var(--fee-gold);
 }
 
-body.fee-editorial .fee-keyline strong {
+.legacy.fee-editorial .fee-keyline strong {
   color: var(--fee-navy);
 }
 
-body.fee-editorial .fee-test-order,
-body.fee-editorial .fee-documents,
-body.fee-editorial .fee-route,
-body.fee-editorial .fee-transition,
-body.fee-editorial .fee-mext-points {
+.legacy.fee-editorial .fee-test-order,.legacy.fee-editorial .fee-documents,.legacy.fee-editorial .fee-route,.legacy.fee-editorial .fee-transition,.legacy.fee-editorial .fee-mext-points {
   margin: 28px 0 0;
   padding: 0;
   border-top: 1px solid var(--fee-line);
@@ -252,7 +246,7 @@ body.fee-editorial .fee-mext-points {
   counter-reset: fee-step;
 }
 
-body.fee-editorial :where(.fee-test-order, .fee-documents, .fee-route, .fee-transition, .fee-mext-points) > li {
+.legacy.fee-editorial :where(.fee-test-order, .fee-documents, .fee-route, .fee-transition, .fee-mext-points) > li {
   position: relative;
   min-height: 62px;
   margin: 0;
@@ -261,7 +255,7 @@ body.fee-editorial :where(.fee-test-order, .fee-documents, .fee-route, .fee-tran
   counter-increment: fee-step;
 }
 
-body.fee-editorial :where(.fee-test-order, .fee-documents, .fee-route, .fee-transition, .fee-mext-points) > li::before {
+.legacy.fee-editorial :where(.fee-test-order, .fee-documents, .fee-route, .fee-transition, .fee-mext-points) > li::before {
   content: counter(fee-step, decimal-leading-zero);
   position: absolute;
   top: 22px;
@@ -275,7 +269,7 @@ body.fee-editorial :where(.fee-test-order, .fee-documents, .fee-route, .fee-tran
   letter-spacing: 0.03em;
 }
 
-body.fee-editorial :where(.fee-test-order, .fee-documents, .fee-route, .fee-transition, .fee-mext-points) strong {
+.legacy.fee-editorial :where(.fee-test-order, .fee-documents, .fee-route, .fee-transition, .fee-mext-points) strong {
   display: block;
   margin: 0;
   color: var(--fee-navy);
@@ -283,7 +277,7 @@ body.fee-editorial :where(.fee-test-order, .fee-documents, .fee-route, .fee-tran
   line-height: 1.75;
 }
 
-body.fee-editorial :where(.fee-test-order, .fee-documents, .fee-route, .fee-transition, .fee-mext-points) span {
+.legacy.fee-editorial :where(.fee-test-order, .fee-documents, .fee-route, .fee-transition, .fee-mext-points) span {
   display: block;
   margin-top: 5px;
   color: var(--fee-muted);
@@ -291,7 +285,7 @@ body.fee-editorial :where(.fee-test-order, .fee-documents, .fee-route, .fee-tran
   line-height: 1.85;
 }
 
-body.fee-editorial .fee-table-wrap {
+.legacy.fee-editorial .fee-table-wrap {
   max-width: 100%;
   margin: 28px 0;
   overflow-x: auto;
@@ -300,26 +294,26 @@ body.fee-editorial .fee-table-wrap {
   -webkit-overflow-scrolling: touch;
 }
 
-body.fee-editorial .fee-table-wrap:focus-visible {
+.legacy.fee-editorial .fee-table-wrap:focus-visible {
   outline: 3px solid rgba(7, 92, 163, 0.35);
   outline-offset: 4px;
 }
 
-body.fee-editorial :where(.fee-comparison, .fee-check-table) {
+.legacy.fee-editorial :where(.fee-comparison, .fee-check-table) {
   width: 100%;
   margin: 0;
   border-collapse: collapse;
   table-layout: fixed;
 }
 
-body.fee-editorial :where(.fee-comparison, .fee-check-table) th {
+.legacy.fee-editorial :where(.fee-comparison, .fee-check-table) th {
   color: var(--fee-navy);
   font-weight: 900;
   text-align: left;
   vertical-align: top;
 }
 
-body.fee-editorial :where(.fee-comparison, .fee-check-table) thead th {
+.legacy.fee-editorial :where(.fee-comparison, .fee-check-table) thead th {
   padding: 13px 14px;
   background: #f1f4f7;
   border: 0;
@@ -329,8 +323,7 @@ body.fee-editorial :where(.fee-comparison, .fee-check-table) thead th {
   letter-spacing: 0.03em;
 }
 
-body.fee-editorial :where(.fee-comparison, .fee-check-table) tbody th,
-body.fee-editorial :where(.fee-comparison, .fee-check-table) tbody td {
+.legacy.fee-editorial :where(.fee-comparison, .fee-check-table) tbody th,.legacy.fee-editorial :where(.fee-comparison, .fee-check-table) tbody td {
   padding: 15px 14px;
   background: transparent;
   border: 0;
@@ -339,18 +332,18 @@ body.fee-editorial :where(.fee-comparison, .fee-check-table) tbody td {
   overflow-wrap: anywhere;
 }
 
-body.fee-editorial :where(.fee-comparison, .fee-check-table) tbody th {
+.legacy.fee-editorial :where(.fee-comparison, .fee-check-table) tbody th {
   width: 20%;
   font-size: 0.9rem;
 }
 
-body.fee-editorial :where(.fee-comparison, .fee-check-table) tbody td {
+.legacy.fee-editorial :where(.fee-comparison, .fee-check-table) tbody td {
   color: var(--fee-ink);
   font-size: 0.91rem;
   line-height: 1.82;
 }
 
-body.fee-editorial .fee-paths {
+.legacy.fee-editorial .fee-paths {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0;
@@ -359,7 +352,7 @@ body.fee-editorial .fee-paths {
   border-bottom: 1px solid var(--fee-line);
 }
 
-body.fee-editorial .fee-path {
+.legacy.fee-editorial .fee-path {
   min-width: 0;
   margin: 0;
   padding: 26px 30px;
@@ -369,19 +362,19 @@ body.fee-editorial .fee-path {
   box-shadow: none;
 }
 
-body.fee-editorial .fee-path:nth-child(odd) {
+.legacy.fee-editorial .fee-path:nth-child(odd) {
   border-right: 1px solid var(--fee-line);
 }
 
-body.fee-editorial .fee-path:nth-child(-n + 2) {
+.legacy.fee-editorial .fee-path:nth-child(-n + 2) {
   border-bottom: 1px solid var(--fee-line);
 }
 
-body.fee-editorial .fee-paths-two .fee-path {
+.legacy.fee-editorial .fee-paths-two .fee-path {
   border-bottom: 0;
 }
 
-body.fee-editorial .fee-path-label {
+.legacy.fee-editorial .fee-path-label {
   margin: 0 0 9px;
   color: #7d672a;
   font-size: 0.72rem;
@@ -390,28 +383,28 @@ body.fee-editorial .fee-path-label {
   letter-spacing: 0.08em;
 }
 
-body.fee-editorial .fee-path h3 {
+.legacy.fee-editorial .fee-path h3 {
   margin: 0 0 10px;
   color: var(--fee-navy);
   font-size: 1.04rem;
   line-height: 1.65;
 }
 
-body.fee-editorial .fee-path p:last-child {
+.legacy.fee-editorial .fee-path p:last-child {
   margin: 0;
   color: var(--fee-muted);
   font-size: 0.92rem;
   line-height: 1.88;
 }
 
-body.fee-editorial .fee-sources {
+.legacy.fee-editorial .fee-sources {
   margin: 28px 0 0;
   padding: 0;
   border-top: 2px solid var(--fee-navy);
   list-style: none;
 }
 
-body.fee-editorial .fee-sources li {
+.legacy.fee-editorial .fee-sources li {
   display: grid;
   grid-template-columns: minmax(210px, 0.82fr) minmax(0, 1.4fr);
   gap: 8px 28px;
@@ -420,31 +413,31 @@ body.fee-editorial .fee-sources li {
   border-bottom: 1px solid var(--fee-line);
 }
 
-body.fee-editorial .fee-sources strong {
+.legacy.fee-editorial .fee-sources strong {
   grid-row: 1 / span 2;
   color: var(--fee-navy);
   font-size: 0.94rem;
   line-height: 1.75;
 }
 
-body.fee-editorial .fee-sources span {
+.legacy.fee-editorial .fee-sources span {
   color: var(--fee-muted);
   font-size: 0.91rem;
   line-height: 1.82;
 }
 
-body.fee-editorial .fee-sources a {
+.legacy.fee-editorial .fee-sources a {
   width: fit-content;
   font-size: 0.87rem;
   line-height: 1.7;
   overflow-wrap: anywhere;
 }
 
-body.fee-editorial .fee-action-line {
+.legacy.fee-editorial .fee-action-line {
   margin: 30px 0 0 !important;
 }
 
-body.fee-editorial .fee-action {
+.legacy.fee-editorial .fee-action {
   display: inline-block;
   padding: 12px 18px;
   color: #fff !important;
@@ -456,17 +449,17 @@ body.fee-editorial .fee-action {
   line-height: 1.6;
 }
 
-body.fee-editorial .fee-action:hover {
+.legacy.fee-editorial .fee-action:hover {
   color: #fff !important;
   background: var(--fee-navy-2);
 }
 
-body.fee-editorial .fee-faq-list {
+.legacy.fee-editorial .fee-faq-list {
   margin: 28px 0 0;
   border-top: 2px solid var(--fee-navy);
 }
 
-body.fee-editorial .fee-faq-list details {
+.legacy.fee-editorial .fee-faq-list details {
   margin: 0;
   padding: 0;
   background: transparent;
@@ -475,7 +468,7 @@ body.fee-editorial .fee-faq-list details {
   border-radius: 0;
 }
 
-body.fee-editorial .fee-faq-list summary {
+.legacy.fee-editorial .fee-faq-list summary {
   position: relative;
   padding: 20px 38px 20px 0;
   color: var(--fee-navy);
@@ -484,11 +477,11 @@ body.fee-editorial .fee-faq-list summary {
   list-style: none;
 }
 
-body.fee-editorial .fee-faq-list summary::-webkit-details-marker {
+.legacy.fee-editorial .fee-faq-list summary::-webkit-details-marker {
   display: none;
 }
 
-body.fee-editorial .fee-faq-list summary::after {
+.legacy.fee-editorial .fee-faq-list summary::after {
   content: "＋";
   position: absolute;
   top: 20px;
@@ -499,11 +492,11 @@ body.fee-editorial .fee-faq-list summary::after {
   line-height: 1.7;
 }
 
-body.fee-editorial .fee-faq-list details[open] summary::after {
+.legacy.fee-editorial .fee-faq-list details[open] summary::after {
   content: "−";
 }
 
-body.fee-editorial .fee-faq-list details p {
+.legacy.fee-editorial .fee-faq-list details p {
   max-width: none;
   margin: 0;
   padding: 0 36px 22px 0;
@@ -513,136 +506,127 @@ body.fee-editorial .fee-faq-list details p {
 }
 
 @media (max-width: 760px) {
-  body.fee-editorial .page-hero-inner {
+  .legacy.fee-editorial .page-hero-inner {
     width: min(calc(100% - 30px), 960px);
     padding-block: 48px 44px;
   }
 
-  body.fee-editorial .page-hero-kicker {
+  .legacy.fee-editorial .page-hero-kicker {
     font-size: 0.69rem;
   }
 
-  body.fee-editorial .page-hero h1 {
+  .legacy.fee-editorial .page-hero h1 {
     font-size: clamp(1.86rem, 10vw, 2.55rem);
     line-height: 1.37;
   }
 
-  body.fee-editorial .page-hero-inner > p:not(.fee-meta) {
+  .legacy.fee-editorial .page-hero-inner > p:not(.fee-meta) {
     margin-top: 22px;
     font-size: 0.98rem;
     line-height: 1.9;
   }
 
-  body.fee-editorial .fee-hero-note {
+  .legacy.fee-editorial .fee-hero-note {
     margin-top: 22px;
     padding-left: 16px;
     font-size: 0.91rem;
   }
 
-  body.fee-editorial .fee-meta {
+  .legacy.fee-editorial .fee-meta {
     font-size: 0.7rem;
   }
 
-  body.fee-editorial .fee-doc {
+  .legacy.fee-editorial .fee-doc {
     width: min(calc(100% - 30px), 920px);
     padding-block: 38px 70px;
   }
 
-  body.fee-editorial .fee-doc > section {
+  .legacy.fee-editorial .fee-doc > section {
     padding-block: 44px 50px;
   }
 
-  body.fee-editorial .fee-doc h2 {
+  .legacy.fee-editorial .fee-doc h2 {
     margin-bottom: 23px;
     padding-bottom: 14px;
     font-size: 1.46rem;
   }
 
-  body.fee-editorial .fee-doc h3 {
+  .legacy.fee-editorial .fee-doc h3 {
     margin-top: 30px;
     font-size: 1.08rem;
   }
 
-  body.fee-editorial .fee-doc :where(p, li, td, th, summary) {
+  .legacy.fee-editorial .fee-doc :where(p, li, td, th, summary) {
     font-size: 0.96rem;
     line-height: 1.94;
   }
 
-  body.fee-editorial :where(.fee-verdict, .fee-law-note, .fee-inference) {
+  .legacy.fee-editorial :where(.fee-verdict, .fee-law-note, .fee-inference) {
     padding: 19px 17px 19px 20px;
   }
 
-  body.fee-editorial .fee-keyline {
+  .legacy.fee-editorial .fee-keyline {
     padding-left: 16px;
   }
 
-  body.fee-editorial :where(.fee-test-order, .fee-documents, .fee-route, .fee-transition, .fee-mext-points) > li {
+  .legacy.fee-editorial :where(.fee-test-order, .fee-documents, .fee-route, .fee-transition, .fee-mext-points) > li {
     padding: 21px 0 21px 45px;
   }
 
-  body.fee-editorial :where(.fee-test-order, .fee-documents, .fee-route, .fee-transition, .fee-mext-points) > li::before {
+  .legacy.fee-editorial :where(.fee-test-order, .fee-documents, .fee-route, .fee-transition, .fee-mext-points) > li::before {
     top: 21px;
     width: 32px;
     font-size: 0.9rem;
   }
 
-  body.fee-editorial .fee-paths {
+  .legacy.fee-editorial .fee-paths {
     grid-template-columns: 1fr;
   }
 
-  body.fee-editorial .fee-path,
-  body.fee-editorial .fee-path:nth-child(odd),
-  body.fee-editorial .fee-path:nth-child(-n + 2),
-  body.fee-editorial .fee-paths-two .fee-path {
+  .legacy.fee-editorial .fee-path,.legacy.fee-editorial .fee-path:nth-child(odd),.legacy.fee-editorial .fee-path:nth-child(-n + 2),.legacy.fee-editorial .fee-paths-two .fee-path {
     padding: 22px 0;
     border: 0;
     border-bottom: 1px solid var(--fee-line);
   }
 
-  body.fee-editorial .fee-path:last-child,
-  body.fee-editorial .fee-paths-two .fee-path:last-child {
+  .legacy.fee-editorial .fee-path:last-child,.legacy.fee-editorial .fee-paths-two .fee-path:last-child {
     border-bottom: 0;
   }
 
-  body.fee-editorial .fee-sources li {
+  .legacy.fee-editorial .fee-sources li {
     grid-template-columns: 1fr;
     gap: 7px;
     padding: 20px 0;
   }
 
-  body.fee-editorial .fee-sources strong {
+  .legacy.fee-editorial .fee-sources strong {
     grid-row: auto;
   }
 
-  body.fee-editorial .fee-table-wrap {
+  .legacy.fee-editorial .fee-table-wrap {
     overflow: visible;
   }
 
-  body.fee-editorial :where(.fee-comparison, .fee-check-table),
-  body.fee-editorial :where(.fee-comparison, .fee-check-table) tbody,
-  body.fee-editorial :where(.fee-comparison, .fee-check-table) tr,
-  body.fee-editorial :where(.fee-comparison, .fee-check-table) th,
-  body.fee-editorial :where(.fee-comparison, .fee-check-table) td {
+  .legacy.fee-editorial :where(.fee-comparison, .fee-check-table),.legacy.fee-editorial :where(.fee-comparison, .fee-check-table) tbody,.legacy.fee-editorial :where(.fee-comparison, .fee-check-table) tr,.legacy.fee-editorial :where(.fee-comparison, .fee-check-table) th,.legacy.fee-editorial :where(.fee-comparison, .fee-check-table) td {
     display: block;
     width: 100%;
   }
 
-  body.fee-editorial :where(.fee-comparison, .fee-check-table) {
+  .legacy.fee-editorial :where(.fee-comparison, .fee-check-table) {
     table-layout: fixed;
     white-space: normal;
   }
 
-  body.fee-editorial :where(.fee-comparison, .fee-check-table) thead {
+  .legacy.fee-editorial :where(.fee-comparison, .fee-check-table) thead {
     display: none;
   }
 
-  body.fee-editorial :where(.fee-comparison, .fee-check-table) tbody tr {
+  .legacy.fee-editorial :where(.fee-comparison, .fee-check-table) tbody tr {
     padding: 18px 0;
     border-bottom: 1px solid var(--fee-line);
   }
 
-  body.fee-editorial :where(.fee-comparison, .fee-check-table) tbody th,
-  body.fee-editorial :where(.fee-comparison, .fee-check-table) tbody td {
+  .legacy.fee-editorial :where(.fee-comparison, .fee-check-table) tbody th,.legacy.fee-editorial :where(.fee-comparison, .fee-check-table) tbody td {
     width: 100%;
     padding: 5px 0;
     border: 0;
@@ -650,16 +634,12 @@ body.fee-editorial .fee-faq-list details p {
     overflow-wrap: anywhere;
   }
 
-  body.fee-editorial :where(.fee-comparison, .fee-check-table) tbody th {
+  .legacy.fee-editorial :where(.fee-comparison, .fee-check-table) tbody th {
     margin-bottom: 4px;
     font-size: 0.98rem;
   }
 
-  body.fee-editorial .fee-comparison td:nth-child(2)::before,
-  body.fee-editorial .fee-comparison td:nth-child(3)::before,
-  body.fee-editorial .fee-comparison td[data-label]::before,
-  body.fee-editorial .fee-check-table td:nth-child(2)::before,
-  body.fee-editorial .fee-check-table td:nth-child(3)::before {
+  .legacy.fee-editorial .fee-comparison td:nth-child(2)::before,.legacy.fee-editorial .fee-comparison td:nth-child(3)::before,.legacy.fee-editorial .fee-comparison td[data-label]::before,.legacy.fee-editorial .fee-check-table td:nth-child(2)::before,.legacy.fee-editorial .fee-check-table td:nth-child(3)::before {
     display: block;
     margin-bottom: 2px;
     color: var(--fee-muted);
@@ -669,36 +649,36 @@ body.fee-editorial .fee-faq-list details p {
     letter-spacing: 0.04em;
   }
 
-  body.fee-editorial .fee-comparison td:nth-child(2)::before {
+  .legacy.fee-editorial .fee-comparison td:nth-child(2)::before {
     content: "学校が扱う教育活動関係費";
   }
 
-  body.fee-editorial .fee-comparison td:nth-child(3)::before {
+  .legacy.fee-editorial .fee-comparison td:nth-child(3)::before {
     content: "PTA会費";
   }
 
-  body.fee-editorial .fee-comparison td[data-label]::before {
+  .legacy.fee-editorial .fee-comparison td[data-label]::before {
     content: attr(data-label);
   }
 
-  body.fee-editorial .fee-check-table td:nth-child(2)::before {
+  .legacy.fee-editorial .fee-check-table td:nth-child(2)::before {
     content: "確認する文書・事実";
   }
 
-  body.fee-editorial .fee-check-table td:nth-child(3)::before {
+  .legacy.fee-editorial .fee-check-table td:nth-child(3)::before {
     content: "未整理の兆候";
   }
 
-  body.fee-editorial .fee-faq-list summary {
+  .legacy.fee-editorial .fee-faq-list summary {
     padding-right: 32px;
     font-size: 0.96rem;
   }
 
-  body.fee-editorial .fee-faq-list details p {
+  .legacy.fee-editorial .fee-faq-list details p {
     padding-right: 0;
   }
 
-  body.fee-editorial .fee-action {
+  .legacy.fee-editorial .fee-action {
     display: block;
     width: 100%;
     text-align: center;
@@ -706,40 +686,36 @@ body.fee-editorial .fee-faq-list details p {
 }
 
 @media print {
-  body.fee-editorial .support-strip,
-  body.fee-editorial .site-header,
-  body.fee-editorial .mobile-overlay,
-  body.fee-editorial .footer,
-  body.fee-editorial .fee-action-line {
+  .legacy.fee-editorial .support-strip,.legacy.fee-editorial .site-header,.legacy.fee-editorial .mobile-overlay,.legacy.fee-editorial .footer,.legacy.fee-editorial .fee-action-line {
     display: none !important;
   }
 
-  body.fee-editorial .page-hero {
+  .legacy.fee-editorial .page-hero {
     color: #000;
     background: #fff;
     border-top: 0;
     border-bottom: 2px solid #000;
   }
 
-  body.fee-editorial .page-hero::after {
+  .legacy.fee-editorial .page-hero::after {
     display: none;
   }
 
-  body.fee-editorial .page-hero :where(h1, h1 em, p, .fee-hero-note, .fee-meta, .page-hero-kicker) {
+  .legacy.fee-editorial .page-hero :where(h1, h1 em, p, .fee-hero-note, .fee-meta, .page-hero-kicker) {
     color: #000;
     border-color: #777;
   }
 
-  body.fee-editorial .fee-doc {
+  .legacy.fee-editorial .fee-doc {
     width: 100%;
     padding: 0;
   }
 
-  body.fee-editorial .fee-doc > section {
+  .legacy.fee-editorial .fee-doc > section {
     break-inside: auto;
   }
 
-  body.fee-editorial :where(.fee-verdict, .fee-law-note, .fee-inference, .fee-path, table, details) {
+  .legacy.fee-editorial :where(.fee-verdict, .fee-law-note, .fee-inference, .fee-path, table, details) {
     break-inside: avoid;
   }
 }

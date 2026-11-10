@@ -1,15 +1,15 @@
-@layer page {
+
   /* Shared by 3 pages. Extracted from duplicated inline CSS. */
-  .return-nav {
+  .legacy .return-nav {
     background: #eef3fa;
     padding: 0 24px 56px;
     text-align: center;
   }
-  .return-nav .wrap {
+  .legacy .return-nav .wrap {
     display: flex;
     justify-content: center;
   }
-  .return-button {
+  .legacy .return-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -23,31 +23,30 @@
     text-decoration: none;
     box-shadow: 0 10px 24px rgba(18, 52, 90, 0.1);
   }
-  .return-button:hover {
+  .legacy .return-button:hover {
     background: var(--navy);
     color: #fff;
   }
   @media (max-width: 560px) {
-    .explainer-grid,
-    .visual-sticky,
-    .visual-panel,
+    .legacy .explainer-grid,.legacy 
+    .visual-sticky,.legacy 
+    .visual-panel,.legacy 
     .step-list {
       min-width: 0;
     }
-    .visual-sticky,
-    .visual-panel,
+    .legacy .visual-sticky,.legacy 
+    .visual-panel,.legacy 
     .step-list {
       width: 100%;
     }
-    .stage {
+    .legacy .stage {
       width: 100%;
       max-width: 500px;
     }
-    .return-nav {
+    .legacy .return-nav {
       padding: 0 16px 42px;
     }
-    .return-button {
+    .legacy .return-button {
       width: 100%;
     }
   }
-}

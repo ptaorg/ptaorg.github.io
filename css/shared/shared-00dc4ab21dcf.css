@@ -1,31 +1,31 @@
-@layer page {
+
   /* Shared by 3 pages. Extracted from duplicated inline CSS. */
-  .fee-editorial .issue-hero-inner {
+  .legacy .fee-editorial .issue-hero-inner {
     grid-template-columns: 1fr;
     max-width: 960px;
   }
-  .fee-editorial .issue-hero-toc,
+  .legacy .fee-editorial .issue-hero-toc,.legacy 
   .fee-editorial .related-links-section {
     display: none;
   }
-  .fee-editorial .issue-content {
+  .legacy .fee-editorial .issue-content {
     grid-template-columns: 1fr;
     max-width: 960px;
   }
-  .fee-editorial .section-eyebrow,
-  .fee-editorial .section-kicker,
+  .legacy .fee-editorial .section-eyebrow,.legacy 
+  .fee-editorial .section-kicker,.legacy 
   .fee-editorial .editorial-brief-band {
     display: none;
   }
-  .fee-editorial .triple-problem,
+  .legacy .fee-editorial .triple-problem,.legacy 
   .fee-editorial .transition-options {
     display: block;
   }
-  .fee-editorial .triple-card,
-  .fee-editorial .trans-card,
-  .fee-editorial .double-commission,
-  .fee-editorial .alert-block,
-  .fee-editorial .law-quote-block,
+  .legacy .fee-editorial .triple-card,.legacy 
+  .fee-editorial .trans-card,.legacy 
+  .fee-editorial .double-commission,.legacy 
+  .fee-editorial .alert-block,.legacy 
+  .fee-editorial .law-quote-block,.legacy 
   .fee-editorial .mext-quote {
     margin: 0;
     padding: 22px 0;
@@ -36,15 +36,14 @@
     background: #fff;
     transform: none;
   }
-  .fee-editorial .triple-law,
-  .fee-editorial .trans-label,
+  .legacy .fee-editorial .triple-law,.legacy 
+  .fee-editorial .trans-label,.legacy 
   .fee-editorial .req-law {
     padding: 0;
     background: transparent;
     border-radius: 0;
   }
-  .fee-editorial .req-step-num {
+  .legacy .fee-editorial .req-step-num {
     border-radius: 0;
     box-shadow: none;
   }
-}

@@ -1,22 +1,22 @@
-@layer feature {
-  .submission-main {
+
+  .legacy .submission-main {
     background: #fff;
     color: #1f2f3f;
   }
 
-  .submission-hero {
+  .legacy .submission-hero {
     background: linear-gradient(135deg, #071a30 0%, #102d4f 70%, #173f66 100%);
     border-bottom: 1px solid #071a30;
     padding: 76px 0 68px;
     color: #fff;
   }
 
-  .submission-wrap {
+  .legacy .submission-wrap {
     width: min(calc(100% - 40px), 920px);
     margin-inline: auto;
   }
 
-  .submission-eyebrow {
+  .legacy .submission-eyebrow {
     display: block;
     margin: 0 0 18px;
     color: #f2dfa4;
@@ -25,7 +25,7 @@
     letter-spacing: 0.08em;
   }
 
-  .submission-hero h1 {
+  .legacy .submission-hero h1 {
     margin: 0 0 22px;
     color: #fff;
     font-family: "Noto Serif JP", serif;
@@ -35,7 +35,7 @@
     letter-spacing: -0.02em;
   }
 
-  .submission-hero p {
+  .legacy .submission-hero p {
     max-width: 860px;
     margin: 0;
     color: rgba(255, 255, 255, 0.88);
@@ -44,16 +44,16 @@
   }
 
   /* 冒頭の丸いショートカットは置かない */
-  .submission-links {
+  .legacy .submission-links {
     display: none;
   }
 
-  .submission-body {
+  .legacy .submission-body {
     padding: 64px 0 96px;
   }
 
   /* ページ本文はカードではなく連続する章として表示する */
-  .submission-section {
+  .legacy .submission-section {
     margin: 0;
     padding: 40px 0 48px;
     background: transparent;
@@ -63,11 +63,11 @@
     box-shadow: none;
   }
 
-  .submission-section:first-child {
+  .legacy .submission-section:first-child {
     border-top: 2px solid #17324f;
   }
 
-  .submission-section h2 {
+  .legacy .submission-section h2 {
     margin: 0 0 18px;
     padding: 0 0 12px;
     border: 0;
@@ -78,31 +78,31 @@
     line-height: 1.55;
   }
 
-  .submission-section h3 {
+  .legacy .submission-section h3 {
     margin: 30px 0 10px;
     color: #17324f;
     font-size: 1.05rem;
     line-height: 1.6;
   }
 
-  .submission-section p,
+  .legacy .submission-section p,.legacy 
   .submission-section li {
     color: #334155;
     font-size: 0.96rem;
     line-height: 1.95;
   }
 
-  .submission-section p {
+  .legacy .submission-section p {
     margin: 0 0 15px;
   }
 
-  .submission-section ul,
+  .legacy .submission-section ul,.legacy 
   .submission-section ol {
     margin: 12px 0 0;
     padding-left: 1.4em;
   }
 
-  .submission-note {
+  .legacy .submission-note {
     margin: 22px 0 0;
     padding: 18px 20px;
     background: #f7f3e8;
@@ -114,14 +114,14 @@
     line-height: 1.9;
   }
 
-  .submission-grid,
-  .evidence-grade-grid,
+  .legacy .submission-grid,.legacy 
+  .evidence-grade-grid,.legacy 
   .submission-source-list {
     display: block;
     margin-top: 20px;
   }
 
-  .submission-card,
+  .legacy .submission-card,.legacy 
   .evidence-grade {
     margin: 0;
     padding: 20px 0;
@@ -132,12 +132,12 @@
     box-shadow: none;
   }
 
-  .submission-card:first-child,
+  .legacy .submission-card:first-child,.legacy 
   .evidence-grade:first-child {
     border-top: 1px solid #dbe4ee;
   }
 
-  .submission-card strong,
+  .legacy .submission-card strong,.legacy 
   .evidence-grade strong {
     display: block;
     margin: 0 0 6px;
@@ -147,7 +147,7 @@
     line-height: 1.6;
   }
 
-  .submission-card span,
+  .legacy .submission-card span,.legacy 
   .evidence-grade span {
     display: block;
     color: #475569;
@@ -155,21 +155,21 @@
     line-height: 1.85;
   }
 
-  .submission-table-wrap {
+  .legacy .submission-table-wrap {
     margin-top: 18px;
     overflow-x: auto;
     border: 1px solid #dbe4ee;
     border-radius: 0;
   }
 
-  .submission-table {
+  .legacy .submission-table {
     width: 100%;
     min-width: 760px;
     border-collapse: collapse;
     background: #fff;
   }
 
-  .submission-table th,
+  .legacy .submission-table th,.legacy 
   .submission-table td {
     padding: 14px 15px;
     border-bottom: 1px solid #e2e8f0;
@@ -179,39 +179,39 @@
     line-height: 1.8;
   }
 
-  .submission-table th {
+  .legacy .submission-table th {
     background: #17324f;
     color: #fff;
     font-weight: 900;
   }
 
-  .submission-table tr:last-child td {
+  .legacy .submission-table tr:last-child td {
     border-bottom: 0;
   }
 
-  .evidence-table {
+  .legacy .evidence-table {
     min-width: 1080px;
   }
 
-  .evidence-table th,
+  .legacy .evidence-table th,.legacy 
   .evidence-table td {
     font-size: 0.86rem;
     line-height: 1.8;
   }
 
-  .evidence-table td:first-child {
+  .legacy .evidence-table td:first-child {
     min-width: 210px;
     color: #17324f;
     font-weight: 800;
   }
 
-  .evidence-table a {
+  .legacy .evidence-table a {
     color: #174a7c;
     font-weight: 800;
   }
 
   /* 文例は文書本文として区別し、装飾カードにはしない */
-  .submission-template {
+  .legacy .submission-template {
     margin: 16px 0 30px;
     padding: 22px 24px;
     white-space: pre-wrap;
@@ -227,7 +227,7 @@
     box-shadow: none;
   }
 
-  .submission-source-list a {
+  .legacy .submission-source-list a {
     display: block;
     margin: 0;
     padding: 16px 0;
@@ -243,40 +243,39 @@
     text-underline-offset: 0.18em;
   }
 
-  .submission-source-list a:first-child {
+  .legacy .submission-source-list a:first-child {
     border-top: 1px solid #dbe4ee;
   }
 
-  .submission-main main a:hover {
+  .legacy .submission-main .legacy-main a:hover {
     transform: none;
     box-shadow: none;
   }
 
-  .submission-main a:focus-visible {
+  .legacy .submission-main a:focus-visible {
     outline: 3px solid #d7b452;
     outline-offset: 3px;
   }
 
   @media (max-width: 820px) {
-    .submission-wrap {
+    .legacy .submission-wrap {
       width: min(calc(100% - 30px), 920px);
     }
 
-    .submission-hero {
+    .legacy .submission-hero {
       padding: 58px 0 54px;
     }
 
-    .submission-body {
+    .legacy .submission-body {
       padding: 48px 0 72px;
     }
 
-    .submission-section {
+    .legacy .submission-section {
       padding: 32px 0 40px;
     }
 
-    .submission-template {
+    .legacy .submission-template {
       padding: 18px 16px;
       font-size: 0.86rem;
     }
   }
-}

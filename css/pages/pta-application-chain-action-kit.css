@@ -1,37 +1,37 @@
-@layer page {
+
   /* Page-specific styles for pta-application-chain-action-kit.html */
-  body {
+  .legacy {
     margin: 0;
     background: #f4f7fb;
     color: #172033;
     font-family: "Noto Sans JP", system-ui, sans-serif;
     line-height: 1.8;
   }
-  header {
+  .legacy header {
     background: linear-gradient(135deg, #061a33, #0b2746 60%, #0f345a);
     color: #fff;
     padding: 40px 24px;
     border-bottom: 5px solid #d4af37;
   }
-  main {
+  .legacy .legacy-main {
     max-width: 980px;
     margin: auto;
     padding: 34px 24px;
   }
-  h1 {
+  .legacy h1 {
     font-family: "Noto Serif JP", serif;
     font-size: 2rem;
     line-height: 1.35;
     margin: 0 0 10px;
   }
-  h2 {
+  .legacy h2 {
     font-family: "Noto Serif JP", serif;
     border-left: 6px solid #d4af37;
     padding-left: 14px;
     margin-top: 36px;
     color: #0b2746;
   }
-  .box {
+  .legacy .box {
     background: #fff;
     border: 1px solid #d8e0ec;
     border-radius: 14px;
@@ -39,7 +39,7 @@
     margin: 18px 0;
     box-shadow: 0 8px 22px rgba(18, 52, 90, 0.08);
   }
-  pre {
+  .legacy pre {
     white-space: pre-wrap;
     font-family: inherit;
     background: #f8fafc;
@@ -48,7 +48,7 @@
     padding: 18px;
     font-size: 0.95rem;
   }
-  button,
+  .legacy button,.legacy 
   a.btn {
     display: inline-flex;
     border: 0;
@@ -61,37 +61,36 @@
     cursor: pointer;
     margin: 6px 6px 6px 0;
   }
-  .btn.gold,
+  .legacy .btn.gold,.legacy 
   button.gold {
     background: #ffd000;
     color: #0b2746;
   }
-  .check p {
+  .legacy .check p {
     margin: 0.2em 0;
   }
-  footer {
+  .legacy footer {
     padding: 24px;
     color: #586274;
     text-align: center;
   }
   @media print {
-    header .actions,
-    button,
+    .legacy header .actions,.legacy 
+    button,.legacy 
     a.btn {
       display: none;
     }
-    body {
+    .legacy {
       background: #fff;
     }
-    main {
+    .legacy .legacy-main {
       max-width: none;
     }
-    .box {
+    .legacy .box {
       box-shadow: none;
       break-inside: avoid;
     }
-    h2 {
+    .legacy h2 {
       break-after: avoid;
     }
   }
-}

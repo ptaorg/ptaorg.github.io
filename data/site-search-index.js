@@ -1,4501 +1,4501 @@
 window.PTA_SITE_SEARCH_INDEX = [
   [
     "PTA適正化推進委員会｜任意加入と学校・PTA分離の一次資料",
-    "/index.html",
+    (window.__ROOT||"")+"index.html",
     "PTA問題を、学校とPTAの境界、任意加入、会費徴収、個人情報、教職員関与から整理し、一次資料と分析を区別して確認する資料サイトです。",
     "current-canonical"
   ],
   [
     "団体概要",
-    "/about.html",
+    (window.__ROOT||"")+"about.html",
     "PTA適正化推進委員会の団体概要。活動目的、主な活動内容、掲載資料の実績、所在地・連絡先、行政登録情報、資料の引用・転載ポリシーを掲載しています。",
     "current-canonical"
   ],
   [
     "行政資料・通知資料",
-    "/administrative-materials.html",
+    (window.__ROOT||"")+"administrative-materials.html",
     "PTAの任意加入、個人情報、会費徴収、教職員関与、学校施設利用を検証するため、法令、行政通知、公的資料、政府答弁、監査資料を発出主体・使いどころ・確認状況とともに整理しています。",
     "current-canonical"
   ],
   [
     "相川小学校 PTA関連資料・評価",
-    "/archive/atsugi/aikawa-es/",
+    (window.__ROOT||"")+"archive/atsugi/aikawa-es/",
     "学校説明会の流れでPTA説明・役員決めへ移行した相談記録を確認。任意加入と学校関与に重大な確認事項があります。",
     "source-archive"
   ],
   [
     "相川中学校 PTA関連資料・評価",
-    "/archive/atsugi/aikawa-jhs/",
+    (window.__ROOT||"")+"archive/atsugi/aikawa-jhs/",
     "学校連絡手段、口座振替、教職員関与が複合して確認されます。学校とPTAの分離について重大な確認事項があります。",
     "source-archive"
   ],
   [
     "愛甲小学校 PTA関連資料・評価",
-    "/archive/atsugi/aiko-es/",
+    (window.__ROOT||"")+"archive/atsugi/aiko-es/",
     "愛甲小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "厚木第二小学校 PTA関連資料・評価",
-    "/archive/atsugi/atsugi-daini-es/",
+    (window.__ROOT||"")+"archive/atsugi/atsugi-daini-es/",
     "厚木第二小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "厚木小学校 PTA関連資料・評価",
-    "/archive/atsugi/atsugi-es/",
+    (window.__ROOT||"")+"archive/atsugi/atsugi-es/",
     "PTA会員確認カードとみられる資料を確認。入会契約の成立を基礎づける申込・承諾の記録は資料上確認できません。",
     "source-archive"
   ],
   [
     "厚木中学校 PTA関連資料・評価",
-    "/archive/atsugi/atsugi-jhs/",
+    (window.__ROOT||"")+"archive/atsugi/atsugi-jhs/",
     "厚木中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "依知小学校 PTA関連資料・評価",
-    "/archive/atsugi/echi-es/",
+    (window.__ROOT||"")+"archive/atsugi/echi-es/",
     "PTAカード提出をもって加入扱いとされる資料を確認。入会申込書は資料上確認できず、任意性に重大な確認事項があります。",
     "source-archive"
   ],
   [
     "依知中学校 PTA関連資料・評価",
-    "/archive/atsugi/echi-jhs/",
+    (window.__ROOT||"")+"archive/atsugi/echi-jhs/",
     "依知中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "依知南小学校 PTA関連資料・評価",
-    "/archive/atsugi/echi-minami-es/",
+    (window.__ROOT||"")+"archive/atsugi/echi-minami-es/",
     "依知南小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "藤塚中学校 PTA関連資料・評価",
-    "/archive/atsugi/fujizuka-jhs/",
+    (window.__ROOT||"")+"archive/atsugi/fujizuka-jhs/",
     "藤塚中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "林中学校 PTA関連資料・評価",
-    "/archive/atsugi/hayashi-jhs/",
+    (window.__ROOT||"")+"archive/atsugi/hayashi-jhs/",
     "林中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "飯山小学校 PTA関連資料・評価",
-    "/archive/atsugi/iiyama-es/",
+    (window.__ROOT||"")+"archive/atsugi/iiyama-es/",
     "飯山小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "上依知小学校 PTA関連資料・評価",
-    "/archive/atsugi/kamiechi-es/",
+    (window.__ROOT||"")+"archive/atsugi/kamiechi-es/",
     "上依知小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "上荻野小学校 PTA関連資料・評価",
-    "/archive/atsugi/kamiogino-es/",
+    (window.__ROOT||"")+"archive/atsugi/kamiogino-es/",
     "PTA会員カードに、提出をもってPTA入会・継続とする旨が確認されます。入会申込書との分離確認が必要です。",
     "source-archive"
   ],
   [
     "北小学校 PTA関連資料・評価",
-    "/archive/atsugi/kita-es/",
+    (window.__ROOT||"")+"archive/atsugi/kita-es/",
     "北小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "小鮎小学校 PTA関連資料・評価",
-    "/archive/atsugi/koayu-es/",
+    (window.__ROOT||"")+"archive/atsugi/koayu-es/",
     "小鮎小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "小鮎中学校 PTA関連資料・評価",
-    "/archive/atsugi/koayu-jhs/",
+    (window.__ROOT||"")+"archive/atsugi/koayu-jhs/",
     "小鮎中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "緑ケ丘小学校 PTA関連資料・評価",
-    "/archive/atsugi/midorigaoka-es/",
+    (window.__ROOT||"")+"archive/atsugi/midorigaoka-es/",
     "緑ケ丘小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "毛利台小学校 PTA関連資料・評価",
-    "/archive/atsugi/moridai-es/",
+    (window.__ROOT||"")+"archive/atsugi/moridai-es/",
     "毛利台小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "森の里小学校 PTA関連資料・評価",
-    "/archive/atsugi/morinosato-es/",
+    (window.__ROOT||"")+"archive/atsugi/morinosato-es/",
     "森の里小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "森の里中学校 PTA関連資料・評価",
-    "/archive/atsugi/morinosato-jhs/",
+    (window.__ROOT||"")+"archive/atsugi/morinosato-jhs/",
     "森の里中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "睦合東中学校 PTA関連資料・評価",
-    "/archive/atsugi/mutsuai-higashi-jhs/",
+    (window.__ROOT||"")+"archive/atsugi/mutsuai-higashi-jhs/",
     "睦合東中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "睦合中学校 PTA関連資料・評価",
-    "/archive/atsugi/mutsuai-jhs/",
+    (window.__ROOT||"")+"archive/atsugi/mutsuai-jhs/",
     "睦合中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "南毛利小学校 PTA関連資料・評価",
-    "/archive/atsugi/nanmori-es/",
+    (window.__ROOT||"")+"archive/atsugi/nanmori-es/",
     "南毛利小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "南毛利中学校 PTA関連資料・評価",
-    "/archive/atsugi/nanmori-jhs/",
+    (window.__ROOT||"")+"archive/atsugi/nanmori-jhs/",
     "南毛利中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "荻野小学校 PTA関連資料・評価",
-    "/archive/atsugi/ogino-es/",
+    (window.__ROOT||"")+"archive/atsugi/ogino-es/",
     "荻野小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "荻野中学校 PTA関連資料・評価",
-    "/archive/atsugi/ogino-jhs/",
+    (window.__ROOT||"")+"archive/atsugi/ogino-jhs/",
     "荻野中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "三田小学校 PTA関連資料・評価",
-    "/archive/atsugi/sanda-es/",
+    (window.__ROOT||"")+"archive/atsugi/sanda-es/",
     "三田小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "清水小学校 PTA関連資料・評価",
-    "/archive/atsugi/shimizu-es/",
+    (window.__ROOT||"")+"archive/atsugi/shimizu-es/",
     "清水小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "玉川小学校 PTA関連資料・評価",
-    "/archive/atsugi/tamagawa-es/",
+    (window.__ROOT||"")+"archive/atsugi/tamagawa-es/",
     "玉川小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "玉川中学校 PTA関連資料・評価",
-    "/archive/atsugi/tamagawa-jhs/",
+    (window.__ROOT||"")+"archive/atsugi/tamagawa-jhs/",
     "玉川中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "鳶尾小学校 PTA関連資料・評価",
-    "/archive/atsugi/tobio-es/",
+    (window.__ROOT||"")+"archive/atsugi/tobio-es/",
     "鳶尾小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "戸田小学校 PTA関連資料・評価",
-    "/archive/atsugi/toda-es/",
+    (window.__ROOT||"")+"archive/atsugi/toda-es/",
     "戸田小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "東名中学校 PTA関連資料・評価",
-    "/archive/atsugi/tomei-jhs/",
+    (window.__ROOT||"")+"archive/atsugi/tomei-jhs/",
     "東名中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "戸室小学校 PTA関連資料・評価",
-    "/archive/atsugi/tomuro-es/",
+    (window.__ROOT||"")+"archive/atsugi/tomuro-es/",
     "戸室小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "妻田小学校 PTA関連資料・評価",
-    "/archive/atsugi/tsumada-es/",
+    (window.__ROOT||"")+"archive/atsugi/tsumada-es/",
     "妻田小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
     "source-archive"
   ],
   [
     "住道北小学校 PTA関連資料",
-    "/archive/daito/school-001-es/",
+    (window.__ROOT||"")+"archive/daito/school-001-es/",
     "住道北小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
     "source-archive"
   ],
   [
     "南郷小学校 PTA関連資料",
-    "/archive/daito/school-002-es/",
+    (window.__ROOT||"")+"archive/daito/school-002-es/",
     "南郷小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
     "source-archive"
   ],
   [
     "四条小学校 PTA関連資料",
-    "/archive/daito/school-003-es/",
+    (window.__ROOT||"")+"archive/daito/school-003-es/",
     "四条小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
     "source-archive"
   ],
   [
     "中央中学校 PTA関連資料",
-    "/archive/hikone/school-001-jhs/",
+    (window.__ROOT||"")+"archive/hikone/school-001-jhs/",
     "中央中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "亀山小学校 PTA関連資料",
-    "/archive/hikone/school-002-es/",
+    (window.__ROOT||"")+"archive/hikone/school-002-es/",
     "亀山小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "佐和山小学校 PTA関連資料",
-    "/archive/hikone/school-003-es/",
+    (window.__ROOT||"")+"archive/hikone/school-003-es/",
     "佐和山小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "南中学校 PTA関連資料",
-    "/archive/hikone/school-004-jhs/",
+    (window.__ROOT||"")+"archive/hikone/school-004-jhs/",
     "南中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "城北小学校 PTA関連資料",
-    "/archive/hikone/school-005-es/",
+    (window.__ROOT||"")+"archive/hikone/school-005-es/",
     "城北小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "城南小学校 PTA関連資料",
-    "/archive/hikone/school-006-es/",
+    (window.__ROOT||"")+"archive/hikone/school-006-es/",
     "城南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "城東小学校 PTA関連資料",
-    "/archive/hikone/school-007-es/",
+    (window.__ROOT||"")+"archive/hikone/school-007-es/",
     "城東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "城西小学校 PTA関連資料",
-    "/archive/hikone/school-008-es/",
+    (window.__ROOT||"")+"archive/hikone/school-008-es/",
     "城西小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "城陽小学校 PTA関連資料",
-    "/archive/hikone/school-009-es/",
+    (window.__ROOT||"")+"archive/hikone/school-009-es/",
     "城陽小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "平田小学校 PTA関連資料",
-    "/archive/hikone/school-010-es/",
+    (window.__ROOT||"")+"archive/hikone/school-010-es/",
     "平田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "彦根中学校 PTA関連資料",
-    "/archive/hikone/school-011-jhs/",
+    (window.__ROOT||"")+"archive/hikone/school-011-jhs/",
     "彦根中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "旭森小学校 PTA関連資料",
-    "/archive/hikone/school-012-es/",
+    (window.__ROOT||"")+"archive/hikone/school-012-es/",
     "旭森小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東中学校 PTA関連資料",
-    "/archive/hikone/school-013-jhs/",
+    (window.__ROOT||"")+"archive/hikone/school-013-jhs/",
     "東中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "河瀬小学校 PTA関連資料",
-    "/archive/hikone/school-014-es/",
+    (window.__ROOT||"")+"archive/hikone/school-014-es/",
     "河瀬小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "稲枝中学校 PTA関連資料",
-    "/archive/hikone/school-015-jhs/",
+    (window.__ROOT||"")+"archive/hikone/school-015-jhs/",
     "稲枝中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "稲枝北小学校 PTA関連資料",
-    "/archive/hikone/school-016-es/",
+    (window.__ROOT||"")+"archive/hikone/school-016-es/",
     "稲枝北小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "稲枝東小学校 PTA関連資料",
-    "/archive/hikone/school-017-es/",
+    (window.__ROOT||"")+"archive/hikone/school-017-es/",
     "稲枝東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "稲枝西小学校 PTA関連資料",
-    "/archive/hikone/school-018-es/",
+    (window.__ROOT||"")+"archive/hikone/school-018-es/",
     "稲枝西小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "若葉小学校 PTA関連資料",
-    "/archive/hikone/school-019-es/",
+    (window.__ROOT||"")+"archive/hikone/school-019-es/",
     "若葉小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "西中学校 PTA関連資料",
-    "/archive/hikone/school-020-jhs/",
+    (window.__ROOT||"")+"archive/hikone/school-020-jhs/",
     "西中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "金城小学校 PTA関連資料",
-    "/archive/hikone/school-021-es/",
+    (window.__ROOT||"")+"archive/hikone/school-021-es/",
     "金城小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "高宮小学校 PTA関連資料",
-    "/archive/hikone/school-022-es/",
+    (window.__ROOT||"")+"archive/hikone/school-022-es/",
     "高宮小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "鳥居本中学校 PTA関連資料",
-    "/archive/hikone/school-023-jhs/",
+    (window.__ROOT||"")+"archive/hikone/school-023-jhs/",
     "鳥居本中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "鳥居本小学校 PTA関連資料",
-    "/archive/hikone/school-024-es/",
+    (window.__ROOT||"")+"archive/hikone/school-024-es/",
     "鳥居本小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "さだ中学校 PTA関連資料",
-    "/archive/hirakata/school-001-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-001-jhs/",
     "さだ中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "さだ小学校 PTA関連資料",
-    "/archive/hirakata/school-002-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-002-es/",
     "さだ小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "さだ東小学校 PTA関連資料",
-    "/archive/hirakata/school-003-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-003-es/",
     "さだ東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "さだ西小学校 PTA関連資料",
-    "/archive/hirakata/school-004-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-004-es/",
     "さだ西小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "中学校 PTA関連資料",
-    "/archive/hirakata/school-005-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-005-jhs/",
     "中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "中宮中学校 PTA関連資料",
-    "/archive/hirakata/school-006-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-006-jhs/",
     "中宮中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "中宮小学校 PTA関連資料",
-    "/archive/hirakata/school-007-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-007-es/",
     "中宮小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "五常小学校 PTA関連資料",
-    "/archive/hirakata/school-008-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-008-es/",
     "五常小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "交北小学校 PTA関連資料",
-    "/archive/hirakata/school-009-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-009-es/",
     "交北小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "令和７年度 伊加賀小学校 PTA関連資料",
-    "/archive/hirakata/school-010-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-010-es/",
     "令和７年度 伊加賀小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "伊加賀小学校 PTA関連資料",
-    "/archive/hirakata/school-011-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-011-es/",
     "伊加賀小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "小中学校 PTA関連資料",
-    "/archive/hirakata/school-012-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-012-jhs/",
     "小中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "小倉小学校 PTA関連資料",
-    "/archive/hirakata/school-013-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-013-es/",
     "小倉小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "小学校 PTA関連資料",
-    "/archive/hirakata/school-014-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-014-es/",
     "小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "山之上小学校 PTA関連資料",
-    "/archive/hirakata/school-015-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-015-es/",
     "山之上小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "山田中学校 PTA関連資料",
-    "/archive/hirakata/school-016-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-016-jhs/",
     "山田中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "山田小学校 PTA関連資料",
-    "/archive/hirakata/school-017-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-017-es/",
     "山田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "山田東小学校 PTA関連資料",
-    "/archive/hirakata/school-018-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-018-es/",
     "山田東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "川越小学校 PTA関連資料",
-    "/archive/hirakata/school-019-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-019-es/",
     "川越小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "平野小学校 PTA関連資料",
-    "/archive/hirakata/school-020-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-020-es/",
     "平野小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "招提中学校 PTA関連資料",
-    "/archive/hirakata/school-021-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-021-jhs/",
     "招提中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "招提北中学校 PTA関連資料",
-    "/archive/hirakata/school-022-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-022-jhs/",
     "招提北中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "招提小学校 PTA関連資料",
-    "/archive/hirakata/school-023-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-023-es/",
     "招提小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "明倫小学校 PTA関連資料",
-    "/archive/hirakata/school-024-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-024-es/",
     "明倫小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "春日小学校 PTA関連資料",
-    "/archive/hirakata/school-025-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-025-es/",
     "春日小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "杉中学校 PTA関連資料",
-    "/archive/hirakata/school-026-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-026-jhs/",
     "杉中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東香里中学校 PTA関連資料",
-    "/archive/hirakata/school-027-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-027-jhs/",
     "東香里中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東香里小学校 PTA関連資料",
-    "/archive/hirakata/school-028-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-028-es/",
     "東香里小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "枚方中学校 PTA関連資料",
-    "/archive/hirakata/school-029-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-029-jhs/",
     "枚方中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "枚方小学校 PTA関連資料",
-    "/archive/hirakata/school-030-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-030-es/",
     "枚方小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "枚方市立小中学校 PTA関連資料",
-    "/archive/hirakata/school-031-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-031-jhs/",
     "枚方市立小中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "枚方第二小学校 PTA関連資料",
-    "/archive/hirakata/school-032-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-032-es/",
     "枚方第二小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "桜丘中学校 PTA関連資料",
-    "/archive/hirakata/school-033-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-033-jhs/",
     "桜丘中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "桜丘北小学校 PTA関連資料",
-    "/archive/hirakata/school-034-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-034-es/",
     "桜丘北小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "桜丘小学校 PTA関連資料",
-    "/archive/hirakata/school-035-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-035-es/",
     "桜丘小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "楠葉中学校 PTA関連資料",
-    "/archive/hirakata/school-036-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-036-jhs/",
     "楠葉中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "楠葉西中学校 PTA関連資料",
-    "/archive/hirakata/school-037-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-037-jhs/",
     "楠葉西中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "樟葉北小学校 PTA関連資料",
-    "/archive/hirakata/school-038-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-038-es/",
     "樟葉北小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "樟葉南小学校 PTA関連資料",
-    "/archive/hirakata/school-039-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-039-es/",
     "樟葉南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "樟葉小学校 PTA関連資料",
-    "/archive/hirakata/school-040-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-040-es/",
     "樟葉小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "樟葉西小学校 PTA関連資料",
-    "/archive/hirakata/school-041-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-041-es/",
     "樟葉西小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "殿山第一小学校 PTA関連資料",
-    "/archive/hirakata/school-042-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-042-es/",
     "殿山第一小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "殿山第二小学校 PTA関連資料",
-    "/archive/hirakata/school-043-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-043-es/",
     "殿山第二小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "氷室小学校 PTA関連資料",
-    "/archive/hirakata/school-044-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-044-es/",
     "氷室小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "津田中学校 PTA関連資料",
-    "/archive/hirakata/school-045-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-045-jhs/",
     "津田中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "津田南小学校 PTA関連資料",
-    "/archive/hirakata/school-046-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-046-es/",
     "津田南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "津田小学校 PTA関連資料",
-    "/archive/hirakata/school-047-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-047-es/",
     "津田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "渚西中学校 PTA関連資料",
-    "/archive/hirakata/school-048-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-048-jhs/",
     "渚西中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "牧野小学校 PTA関連資料",
-    "/archive/hirakata/school-049-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-049-es/",
     "牧野小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "田口山小学校 PTA関連資料",
-    "/archive/hirakata/school-050-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-050-es/",
     "田口山小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "磯島小学校 PTA関連資料",
-    "/archive/hirakata/school-051-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-051-es/",
     "磯島小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "禁野小学校 PTA関連資料",
-    "/archive/hirakata/school-052-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-052-es/",
     "禁野小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "第一中学校 PTA関連資料",
-    "/archive/hirakata/school-053-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-053-jhs/",
     "第一中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "第三中学校 PTA関連資料",
-    "/archive/hirakata/school-054-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-054-jhs/",
     "第三中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "第二中学校 PTA関連資料",
-    "/archive/hirakata/school-055-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-055-jhs/",
     "第二中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "第四中学校 PTA関連資料",
-    "/archive/hirakata/school-056-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-056-jhs/",
     "第四中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "船橋小学校 PTA関連資料",
-    "/archive/hirakata/school-057-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-057-es/",
     "船橋小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "菅原小学校 PTA関連資料",
-    "/archive/hirakata/school-058-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-058-es/",
     "菅原小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "菅原東小学校 PTA関連資料",
-    "/archive/hirakata/school-059-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-059-es/",
     "菅原東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "藤阪小学校 PTA関連資料",
-    "/archive/hirakata/school-060-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-060-es/",
     "藤阪小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "西牧野小学校 PTA関連資料",
-    "/archive/hirakata/school-061-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-061-es/",
     "西牧野小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "西長尾小学校 PTA関連資料",
-    "/archive/hirakata/school-062-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-062-es/",
     "西長尾小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "長尾中学校 PTA関連資料",
-    "/archive/hirakata/school-063-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-063-jhs/",
     "長尾中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "長尾小学校 PTA関連資料",
-    "/archive/hirakata/school-064-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-064-es/",
     "長尾小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "長尾西中学校 PTA関連資料",
-    "/archive/hirakata/school-065-jhs/",
+    (window.__ROOT||"")+"archive/hirakata/school-065-jhs/",
     "長尾西中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "開成小学校 PTA関連資料",
-    "/archive/hirakata/school-066-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-066-es/",
     "開成小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "香里小学校 PTA関連資料",
-    "/archive/hirakata/school-067-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-067-es/",
     "香里小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "香陽小学校 PTA関連資料",
-    "/archive/hirakata/school-068-es/",
+    (window.__ROOT||"")+"archive/hirakata/school-068-es/",
     "香陽小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "上安小学校 PTA関連資料",
-    "/archive/hiroshima/school-001-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-001-es/",
     "上安小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "中島小学校 PTA関連資料",
-    "/archive/hiroshima/school-002-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-002-es/",
     "中島小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "中筋小学校 PTA関連資料",
-    "/archive/hiroshima/school-003-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-003-es/",
     "中筋小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "五日内観音小学校 PTA関連資料",
-    "/archive/hiroshima/school-004-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-004-es/",
     "五日内観音小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "五日市北小学校 PTA関連資料",
-    "/archive/hiroshima/school-005-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-005-es/",
     "五日市北小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "五月が丘小学校 PTA関連資料",
-    "/archive/hiroshima/school-006-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-006-es/",
     "五月が丘小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "伴南小学校 PTA関連資料",
-    "/archive/hiroshima/school-007-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-007-es/",
     "伴南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "伴小学校 PTA関連資料",
-    "/archive/hiroshima/school-008-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-008-es/",
     "伴小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "伴東小学校 PTA関連資料",
-    "/archive/hiroshima/school-009-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-009-es/",
     "伴東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "八木小学校 PTA関連資料",
-    "/archive/hiroshima/school-010-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-010-es/",
     "八木小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "千田小学校 PTA関連資料",
-    "/archive/hiroshima/school-011-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-011-es/",
     "千田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "原南小学校 PTA関連資料",
-    "/archive/hiroshima/school-012-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-012-es/",
     "原南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "原小学校 PTA関連資料",
-    "/archive/hiroshima/school-013-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-013-es/",
     "原小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "吉島小学校 PTA関連資料",
-    "/archive/hiroshima/school-014-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-014-es/",
     "吉島小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "基町小学校 PTA関連資料",
-    "/archive/hiroshima/school-015-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-015-es/",
     "基町小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大塚小学校 PTA関連資料",
-    "/archive/hiroshima/school-016-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-016-es/",
     "大塚小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大町小学校 PTA関連資料",
-    "/archive/hiroshima/school-017-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-017-es/",
     "大町小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "安北小学校 PTA関連資料",
-    "/archive/hiroshima/school-018-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-018-es/",
     "安北小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "安小学校 PTA関連資料",
-    "/archive/hiroshima/school-019-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-019-es/",
     "安小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "安東小学校 PTA関連資料",
-    "/archive/hiroshima/school-020-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-020-es/",
     "安東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "安西小学校 PTA関連資料",
-    "/archive/hiroshima/school-021-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-021-es/",
     "安西小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "山本小学校 PTA関連資料",
-    "/archive/hiroshima/school-022-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-022-es/",
     "山本小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "川内小学校 PTA関連資料",
-    "/archive/hiroshima/school-023-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-023-es/",
     "川内小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "幟町小学校 PTA関連資料",
-    "/archive/hiroshima/school-024-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-024-es/",
     "幟町小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "広瀬小学校 PTA関連資料",
-    "/archive/hiroshima/school-025-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-025-es/",
     "広瀬小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "春日野小学校 PTA関連資料",
-    "/archive/hiroshima/school-026-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-026-es/",
     "春日野小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "木川小学校 PTA関連資料",
-    "/archive/hiroshima/school-027-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-027-es/",
     "木川小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東野小学校 PTA関連資料",
-    "/archive/hiroshima/school-028-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-028-es/",
     "東野小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "梅林小学校 PTA関連資料",
-    "/archive/hiroshima/school-029-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-029-es/",
     "梅林小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "毘沙門小学校 PTA関連資料",
-    "/archive/hiroshima/school-030-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-030-es/",
     "毘沙門小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "江波小学校 PTA関連資料",
-    "/archive/hiroshima/school-031-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-031-es/",
     "江波小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "河内小学校 PTA関連資料",
-    "/archive/hiroshima/school-032-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-032-es/",
     "河内小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "白鳥小学校 PTA関連資料",
-    "/archive/hiroshima/school-033-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-033-es/",
     "白鳥小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "祇園小学校 PTA関連資料",
-    "/archive/hiroshima/school-034-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-034-es/",
     "祇園小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "神崎小学校 PTA関連資料",
-    "/archive/hiroshima/school-035-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-035-es/",
     "神崎小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "竹屋小学校 PTA関連資料",
-    "/archive/hiroshima/school-036-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-036-es/",
     "竹屋小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "緑井小学校 PTA関連資料",
-    "/archive/hiroshima/school-037-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-037-es/",
     "緑井小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "美鈴が丘小学校 PTA関連資料",
-    "/archive/hiroshima/school-038-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-038-es/",
     "美鈴が丘小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "舟入小学校 PTA関連資料",
-    "/archive/hiroshima/school-039-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-039-es/",
     "舟入小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "袋町小学校 PTA関連資料",
-    "/archive/hiroshima/school-040-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-040-es/",
     "袋町小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "長束東小学校 PTA関連資料",
-    "/archive/hiroshima/school-041-es/",
+    (window.__ROOT||"")+"archive/hiroshima/school-041-es/",
     "長束東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "下村小学校 PTA関連資料",
-    "/archive/imizu/school-001-es/",
+    (window.__ROOT||"")+"archive/imizu/school-001-es/",
     "下村小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "中太閤山小学校 PTA関連資料",
-    "/archive/imizu/school-002-es/",
+    (window.__ROOT||"")+"archive/imizu/school-002-es/",
     "中太閤山小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "作道小学校 PTA関連資料",
-    "/archive/imizu/school-003-es/",
+    (window.__ROOT||"")+"archive/imizu/school-003-es/",
     "作道小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "堀岡小学校 PTA関連資料",
-    "/archive/imizu/school-004-es/",
+    (window.__ROOT||"")+"archive/imizu/school-004-es/",
     "堀岡小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "塚原小学校 PTA関連資料",
-    "/archive/imizu/school-005-es/",
+    (window.__ROOT||"")+"archive/imizu/school-005-es/",
     "塚原小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "射北中学校 PTA関連資料",
-    "/archive/imizu/school-006-jhs/",
+    (window.__ROOT||"")+"archive/imizu/school-006-jhs/",
     "射北中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "小杉小学校 PTA関連資料",
-    "/archive/imizu/school-007-es/",
+    (window.__ROOT||"")+"archive/imizu/school-007-es/",
     "小杉小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "新湊中学校 PTA関連資料",
-    "/archive/imizu/school-008-jhs/",
+    (window.__ROOT||"")+"archive/imizu/school-008-jhs/",
     "新湊中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "新湊南中学校 PTA関連資料",
-    "/archive/imizu/school-009-jhs/",
+    (window.__ROOT||"")+"archive/imizu/school-009-jhs/",
     "新湊南中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "新湊小学校 PTA関連資料",
-    "/archive/imizu/school-010-es/",
+    (window.__ROOT||"")+"archive/imizu/school-010-es/",
     "新湊小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東明小学校 PTA関連資料",
-    "/archive/imizu/school-011-es/",
+    (window.__ROOT||"")+"archive/imizu/school-011-es/",
     "東明小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "歌の森小学校 PTA関連資料",
-    "/archive/imizu/school-012-es/",
+    (window.__ROOT||"")+"archive/imizu/school-012-es/",
     "歌の森小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "片口小学校 PTA関連資料",
-    "/archive/imizu/school-013-es/",
+    (window.__ROOT||"")+"archive/imizu/school-013-es/",
     "片口小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "金子小学校 PTA関連資料",
-    "/archive/imizu/school-014-es/",
+    (window.__ROOT||"")+"archive/imizu/school-014-es/",
     "金子小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "金山小学校 PTA関連資料",
-    "/archive/imizu/school-015-es/",
+    (window.__ROOT||"")+"archive/imizu/school-015-es/",
     "金山小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "中央台北小学校 PTA関連資料",
-    "/archive/iwaki/school-001-es/",
+    (window.__ROOT||"")+"archive/iwaki/school-001-es/",
     "中央台北小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
     "source-archive"
   ],
   [
     "中央台南小学校 PTA関連資料",
-    "/archive/iwaki/school-002-es/",
+    (window.__ROOT||"")+"archive/iwaki/school-002-es/",
     "中央台南小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
     "source-archive"
   ],
   [
     "中央台東小学校 PTA関連資料",
-    "/archive/iwaki/school-003-es/",
+    (window.__ROOT||"")+"archive/iwaki/school-003-es/",
     "中央台東小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
     "source-archive"
   ],
   [
     "四倉小学校 PTA関連資料",
-    "/archive/iwaki/school-004-es/",
+    (window.__ROOT||"")+"archive/iwaki/school-004-es/",
     "四倉小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
     "source-archive"
   ],
   [
     "夏井小学校 PTA関連資料",
-    "/archive/iwaki/school-005-es/",
+    (window.__ROOT||"")+"archive/iwaki/school-005-es/",
     "夏井小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
     "source-archive"
   ],
   [
     "平第一小学校 PTA関連資料",
-    "/archive/iwaki/school-006-es/",
+    (window.__ROOT||"")+"archive/iwaki/school-006-es/",
     "平第一小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
     "source-archive"
   ],
   [
     "平第三小学校 PTA関連資料",
-    "/archive/iwaki/school-007-es/",
+    (window.__ROOT||"")+"archive/iwaki/school-007-es/",
     "平第三小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
     "source-archive"
   ],
   [
     "平第二小学校 PTA関連資料",
-    "/archive/iwaki/school-008-es/",
+    (window.__ROOT||"")+"archive/iwaki/school-008-es/",
     "平第二小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
     "source-archive"
   ],
   [
     "平第五小学校 PTA関連資料",
-    "/archive/iwaki/school-009-es/",
+    (window.__ROOT||"")+"archive/iwaki/school-009-es/",
     "平第五小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
     "source-archive"
   ],
   [
     "平第六小学校 PTA関連資料",
-    "/archive/iwaki/school-010-es/",
+    (window.__ROOT||"")+"archive/iwaki/school-010-es/",
     "平第六小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
     "source-archive"
   ],
   [
     "平第四小学校 PTA関連資料",
-    "/archive/iwaki/school-011-es/",
+    (window.__ROOT||"")+"archive/iwaki/school-011-es/",
     "平第四小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
     "source-archive"
   ],
   [
     "草野小学校 PTA関連資料",
-    "/archive/iwaki/school-012-es/",
+    (window.__ROOT||"")+"archive/iwaki/school-012-es/",
     "草野小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
     "source-archive"
   ],
   [
     "豊間小学校 PTA関連資料",
-    "/archive/iwaki/school-013-es/",
+    (window.__ROOT||"")+"archive/iwaki/school-013-es/",
     "豊間小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
     "source-archive"
   ],
   [
     "赤井小学校 PTA関連資料",
-    "/archive/iwaki/school-014-es/",
+    (window.__ROOT||"")+"archive/iwaki/school-014-es/",
     "赤井小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
     "source-archive"
   ],
   [
     "高久小学校 PTA関連資料",
-    "/archive/iwaki/school-015-es/",
+    (window.__ROOT||"")+"archive/iwaki/school-015-es/",
     "高久小学校のPTA関連一次資料を学校別に整理したアーカイブです。",
     "source-archive"
   ],
   [
     "大井小学校 PTA関連資料",
-    "/archive/kameoka/school-001-es/",
+    (window.__ROOT||"")+"archive/kameoka/school-001-es/",
     "大井小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "安詳小学校 PTA関連資料",
-    "/archive/kameoka/school-002-es/",
+    (window.__ROOT||"")+"archive/kameoka/school-002-es/",
     "安詳小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "詳徳小学校 PTA関連資料",
-    "/archive/kameoka/school-003-es/",
+    (window.__ROOT||"")+"archive/kameoka/school-003-es/",
     "詳徳小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "保津小学校 PTA関連資料",
-    "/archive/kameoka/school-004-es/",
+    (window.__ROOT||"")+"archive/kameoka/school-004-es/",
     "保津小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "千代川小学校 PTA関連資料",
-    "/archive/kameoka/school-005-es/",
+    (window.__ROOT||"")+"archive/kameoka/school-005-es/",
     "千代川小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大成中学校 PTA関連資料",
-    "/archive/kameoka/school-006-jhs/",
+    (window.__ROOT||"")+"archive/kameoka/school-006-jhs/",
     "大成中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "南桑中学校 PTA関連資料",
-    "/archive/kameoka/school-007-jhs/",
+    (window.__ROOT||"")+"archive/kameoka/school-007-jhs/",
     "南桑中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "亀岡中学校 PTA関連資料",
-    "/archive/kameoka/school-008-jhs/",
+    (window.__ROOT||"")+"archive/kameoka/school-008-jhs/",
     "亀岡中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "吉川小学校 PTA関連資料",
-    "/archive/kameoka/school-009-es/",
+    (window.__ROOT||"")+"archive/kameoka/school-009-es/",
     "吉川小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "亀岡川東学園 PTA関連資料",
-    "/archive/kameoka/school-010-other/",
+    (window.__ROOT||"")+"archive/kameoka/school-010-other/",
     "亀岡川東学園のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "南つつじが丘小学校 PTA関連資料",
-    "/archive/kameoka/school-011-es/",
+    (window.__ROOT||"")+"archive/kameoka/school-011-es/",
     "南つつじが丘小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東別院小学校 PTA関連資料",
-    "/archive/kameoka/school-012-es/",
+    (window.__ROOT||"")+"archive/kameoka/school-012-es/",
     "東別院小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "稗田野小学校 PTA関連資料",
-    "/archive/kameoka/school-013-es/",
+    (window.__ROOT||"")+"archive/kameoka/school-013-es/",
     "稗田野小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "城西小学校 PTA関連資料",
-    "/archive/kameoka/school-014-es/",
+    (window.__ROOT||"")+"archive/kameoka/school-014-es/",
     "城西小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "つつじが丘小学校 PTA関連資料",
-    "/archive/kameoka/school-015-es/",
+    (window.__ROOT||"")+"archive/kameoka/school-015-es/",
     "つつじが丘小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "曽我部小学校 PTA関連資料",
-    "/archive/kameoka/school-016-es/",
+    (window.__ROOT||"")+"archive/kameoka/school-016-es/",
     "曽我部小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "亀岡小学校 PTA関連資料",
-    "/archive/kameoka/school-017-es/",
+    (window.__ROOT||"")+"archive/kameoka/school-017-es/",
     "亀岡小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "上青木小学校 PTA関連資料",
-    "/archive/kawaguchi/school-001-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-001-es/",
     "上青木小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "仲町小学校 PTA関連資料",
-    "/archive/kawaguchi/school-002-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-002-es/",
     "仲町小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "元郷南小学校 PTA関連資料",
-    "/archive/kawaguchi/school-003-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-003-es/",
     "元郷南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "元郷小学校 PTA関連資料",
-    "/archive/kawaguchi/school-004-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-004-es/",
     "元郷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "前川東小学校 PTA関連資料",
-    "/archive/kawaguchi/school-005-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-005-es/",
     "前川東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "十二月田小学校 PTA関連資料",
-    "/archive/kawaguchi/school-006-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-006-es/",
     "十二月田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "原町小学校 PTA関連資料",
-    "/archive/kawaguchi/school-007-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-007-es/",
     "原町小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "在家小学校 PTA関連資料",
-    "/archive/kawaguchi/school-008-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-008-es/",
     "在家小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "安行小学校 PTA関連資料",
-    "/archive/kawaguchi/school-009-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-009-es/",
     "安行小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "安行東小学校 PTA関連資料",
-    "/archive/kawaguchi/school-010-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-010-es/",
     "安行東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "差間小学校 PTA関連資料",
-    "/archive/kawaguchi/school-011-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-011-es/",
     "差間小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "幸町小学校 PTA関連資料",
-    "/archive/kawaguchi/school-012-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-012-es/",
     "幸町小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "慈林小学校 PTA関連資料",
-    "/archive/kawaguchi/school-013-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-013-es/",
     "慈林小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "戸塚小学校 PTA関連資料",
-    "/archive/kawaguchi/school-014-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-014-es/",
     "戸塚小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "新郷南小学校 PTA関連資料",
-    "/archive/kawaguchi/school-015-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-015-es/",
     "新郷南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "新郷小学校 PTA関連資料",
-    "/archive/kawaguchi/school-016-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-016-es/",
     "新郷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "新郷東小学校 PTA関連資料",
-    "/archive/kawaguchi/school-017-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-017-es/",
     "新郷東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "朝日東小学校 PTA関連資料",
-    "/archive/kawaguchi/school-018-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-018-es/",
     "朝日東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "朝日西小学校 PTA関連資料",
-    "/archive/kawaguchi/school-019-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-019-es/",
     "朝日西小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "本町小学校 PTA関連資料",
-    "/archive/kawaguchi/school-020-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-020-es/",
     "本町小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東本郷小学校 PTA関連資料",
-    "/archive/kawaguchi/school-021-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-021-es/",
     "東本郷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東領家小学校 PTA関連資料",
-    "/archive/kawaguchi/school-022-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-022-es/",
     "東領家小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "柳崎小学校 PTA関連資料",
-    "/archive/kawaguchi/school-023-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-023-es/",
     "柳崎小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "根岸小学校 PTA関連資料",
-    "/archive/kawaguchi/school-024-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-024-es/",
     "根岸小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "神根小学校 PTA関連資料",
-    "/archive/kawaguchi/school-025-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-025-es/",
     "神根小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "神根東小学校 PTA関連資料",
-    "/archive/kawaguchi/school-026-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-026-es/",
     "神根東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "舟戸小学校 PTA関連資料",
-    "/archive/kawaguchi/school-027-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-027-es/",
     "舟戸小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "芝中央小学校 PTA関連資料",
-    "/archive/kawaguchi/school-028-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-028-es/",
     "芝中央小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "芝南小学校 PTA関連資料",
-    "/archive/kawaguchi/school-029-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-029-es/",
     "芝南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "芝富士小学校 PTA関連資料",
-    "/archive/kawaguchi/school-030-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-030-es/",
     "芝富士小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "芝樋ノ爪小学校 PTA関連資料",
-    "/archive/kawaguchi/school-031-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-031-es/",
     "芝樋ノ爪小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "芝西小学校 PTA関連資料",
-    "/archive/kawaguchi/school-032-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-032-es/",
     "芝西小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "青木中央小学校 PTA関連資料",
-    "/archive/kawaguchi/school-033-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-033-es/",
     "青木中央小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "青木北小学校 PTA関連資料",
-    "/archive/kawaguchi/school-034-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-034-es/",
     "青木北小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "青木南小学校 PTA関連資料",
-    "/archive/kawaguchi/school-035-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-035-es/",
     "青木南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "領家小学校 PTA関連資料",
-    "/archive/kawaguchi/school-036-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-036-es/",
     "領家小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "飯仲小学校 PTA関連資料",
-    "/archive/kawaguchi/school-037-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-037-es/",
     "飯仲小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "飯塚小学校 PTA関連資料",
-    "/archive/kawaguchi/school-038-es/",
+    (window.__ROOT||"")+"archive/kawaguchi/school-038-es/",
     "飯塚小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "伴谷小学校 PTA関連資料",
-    "/archive/koka/school-001-es/",
+    (window.__ROOT||"")+"archive/koka/school-001-es/",
     "伴谷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "伴谷東小学校 PTA関連資料",
-    "/archive/koka/school-002-es/",
+    (window.__ROOT||"")+"archive/koka/school-002-es/",
     "伴谷東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "佐山小学校 PTA関連資料",
-    "/archive/koka/school-003-es/",
+    (window.__ROOT||"")+"archive/koka/school-003-es/",
     "佐山小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "信楽中学校 PTA関連資料",
-    "/archive/koka/school-004-jhs/",
+    (window.__ROOT||"")+"archive/koka/school-004-jhs/",
     "信楽中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "信楽小学校 PTA関連資料",
-    "/archive/koka/school-005-es/",
+    (window.__ROOT||"")+"archive/koka/school-005-es/",
     "信楽小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "土山中学校 PTA関連資料",
-    "/archive/koka/school-006-jhs/",
+    (window.__ROOT||"")+"archive/koka/school-006-jhs/",
     "土山中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "土山小学校 PTA関連資料",
-    "/archive/koka/school-007-es/",
+    (window.__ROOT||"")+"archive/koka/school-007-es/",
     "土山小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "城山中学校 PTA関連資料",
-    "/archive/koka/school-008-jhs/",
+    (window.__ROOT||"")+"archive/koka/school-008-jhs/",
     "城山中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "多羅尾小学校 PTA関連資料",
-    "/archive/koka/school-009-es/",
+    (window.__ROOT||"")+"archive/koka/school-009-es/",
     "多羅尾小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大原小学校 PTA関連資料",
-    "/archive/koka/school-010-es/",
+    (window.__ROOT||"")+"archive/koka/school-010-es/",
     "大原小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大野小学校 PTA関連資料",
-    "/archive/koka/school-011-es/",
+    (window.__ROOT||"")+"archive/koka/school-011-es/",
     "大野小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "小原小学校 PTA関連資料",
-    "/archive/koka/school-012-es/",
+    (window.__ROOT||"")+"archive/koka/school-012-es/",
     "小原小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "希望ケ丘小学校 PTA関連資料",
-    "/archive/koka/school-013-es/",
+    (window.__ROOT||"")+"archive/koka/school-013-es/",
     "希望ケ丘小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "朝宮小学校 PTA関連資料",
-    "/archive/koka/school-014-es/",
+    (window.__ROOT||"")+"archive/koka/school-014-es/",
     "朝宮小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "柏木小学校 PTA関連資料",
-    "/archive/koka/school-015-es/",
+    (window.__ROOT||"")+"archive/koka/school-015-es/",
     "柏木小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "水口中学校 PTA関連資料",
-    "/archive/koka/school-016-jhs/",
+    (window.__ROOT||"")+"archive/koka/school-016-jhs/",
     "水口中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "水口小学校 PTA関連資料",
-    "/archive/koka/school-017-es/",
+    (window.__ROOT||"")+"archive/koka/school-017-es/",
     "水口小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "油日小学校 PTA関連資料",
-    "/archive/koka/school-018-es/",
+    (window.__ROOT||"")+"archive/koka/school-018-es/",
     "油日小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "甲南中学校 PTA関連資料",
-    "/archive/koka/school-019-jhs/",
+    (window.__ROOT||"")+"archive/koka/school-019-jhs/",
     "甲南中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "甲南中部小学校 PTA関連資料",
-    "/archive/koka/school-020-es/",
+    (window.__ROOT||"")+"archive/koka/school-020-es/",
     "甲南中部小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "甲南第一小学校 PTA関連資料",
-    "/archive/koka/school-021-es/",
+    (window.__ROOT||"")+"archive/koka/school-021-es/",
     "甲南第一小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "甲南第三小学校 PTA関連資料",
-    "/archive/koka/school-022-es/",
+    (window.__ROOT||"")+"archive/koka/school-022-es/",
     "甲南第三小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "甲南第二小学校 PTA関連資料",
-    "/archive/koka/school-023-es/",
+    (window.__ROOT||"")+"archive/koka/school-023-es/",
     "甲南第二小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "甲賀中学校 PTA関連資料",
-    "/archive/koka/school-024-jhs/",
+    (window.__ROOT||"")+"archive/koka/school-024-jhs/",
     "甲賀中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "綾野小学校 PTA関連資料",
-    "/archive/koka/school-025-es/",
+    (window.__ROOT||"")+"archive/koka/school-025-es/",
     "綾野小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "貴生川小学校 PTA関連資料",
-    "/archive/koka/school-026-es/",
+    (window.__ROOT||"")+"archive/koka/school-026-es/",
     "貴生川小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "雲井小学校 PTA関連資料",
-    "/archive/koka/school-027-es/",
+    (window.__ROOT||"")+"archive/koka/school-027-es/",
     "雲井小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "埼玉県久喜市 PTA関連資料｜学校別PDF整理",
-    "/archive/kuki/",
+    (window.__ROOT||"")+"archive/kuki/",
     "埼玉県久喜市の学校別PTA関連PDFを、学校名、原本ファイル名、ページ数で整理した資料ページです。",
     "source-archive"
   ],
   [
     "久喜中学校 PTA関連資料",
-    "/archive/kuki/school-001-jhs/",
+    (window.__ROOT||"")+"archive/kuki/school-001-jhs/",
     "久喜中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "久喜北小学校 PTA関連資料",
-    "/archive/kuki/school-002-es/",
+    (window.__ROOT||"")+"archive/kuki/school-002-es/",
     "久喜北小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "久喜南中学校 PTA関連資料",
-    "/archive/kuki/school-003-jhs/",
+    (window.__ROOT||"")+"archive/kuki/school-003-jhs/",
     "久喜南中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "久喜小学校 PTA関連資料",
-    "/archive/kuki/school-004-es/",
+    (window.__ROOT||"")+"archive/kuki/school-004-es/",
     "久喜小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "久喜東中学校 PTA関連資料",
-    "/archive/kuki/school-005-jhs/",
+    (window.__ROOT||"")+"archive/kuki/school-005-jhs/",
     "久喜東中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "久喜東小学校 PTA関連資料",
-    "/archive/kuki/school-006-es/",
+    (window.__ROOT||"")+"archive/kuki/school-006-es/",
     "久喜東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "久喜波中学校 PTA関連資料",
-    "/archive/kuki/school-007-jhs/",
+    (window.__ROOT||"")+"archive/kuki/school-007-jhs/",
     "久喜波中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大東中学校 PTA関連資料",
-    "/archive/kuki/school-008-jhs/",
+    (window.__ROOT||"")+"archive/kuki/school-008-jhs/",
     "大東中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "太田小学校 PTA関連資料",
-    "/archive/kuki/school-009-es/",
+    (window.__ROOT||"")+"archive/kuki/school-009-es/",
     "太田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "小林小学校 PTA関連資料",
-    "/archive/kuki/school-010-es/",
+    (window.__ROOT||"")+"archive/kuki/school-010-es/",
     "小林小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "本町小学校 PTA関連資料",
-    "/archive/kuki/school-011-es/",
+    (window.__ROOT||"")+"archive/kuki/school-011-es/",
     "本町小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "栗橋南小学校 PTA関連資料",
-    "/archive/kuki/school-012-es/",
+    (window.__ROOT||"")+"archive/kuki/school-012-es/",
     "栗橋南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "栗橋小学校 PTA関連資料",
-    "/archive/kuki/school-013-es/",
+    (window.__ROOT||"")+"archive/kuki/school-013-es/",
     "栗橋小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "栗橋東中中学校 PTA関連資料",
-    "/archive/kuki/school-014-jhs/",
+    (window.__ROOT||"")+"archive/kuki/school-014-jhs/",
     "栗橋東中中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "栗橋西中学校 PTA関連資料",
-    "/archive/kuki/school-015-jhs/",
+    (window.__ROOT||"")+"archive/kuki/school-015-jhs/",
     "栗橋西中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "栗橋西小学校 PTA関連資料",
-    "/archive/kuki/school-016-es/",
+    (window.__ROOT||"")+"archive/kuki/school-016-es/",
     "栗橋西小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "栢間小学校 PTA関連資料",
-    "/archive/kuki/school-017-es/",
+    (window.__ROOT||"")+"archive/kuki/school-017-es/",
     "栢間小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "桜田小学校 PTA関連資料",
-    "/archive/kuki/school-018-es/",
+    (window.__ROOT||"")+"archive/kuki/school-018-es/",
     "桜田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "江面小学校 PTA関連資料",
-    "/archive/kuki/school-019-es/",
+    (window.__ROOT||"")+"archive/kuki/school-019-es/",
     "江面小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "清久小学校 PTA関連資料",
-    "/archive/kuki/school-020-es/",
+    (window.__ROOT||"")+"archive/kuki/school-020-es/",
     "清久小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "砂原小学校 PTA関連資料",
-    "/archive/kuki/school-021-es/",
+    (window.__ROOT||"")+"archive/kuki/school-021-es/",
     "砂原小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "菖蒲中中学校 PTA関連資料",
-    "/archive/kuki/school-022-jhs/",
+    (window.__ROOT||"")+"archive/kuki/school-022-jhs/",
     "菖蒲中中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "菖蒲小学校 PTA関連資料",
-    "/archive/kuki/school-023-es/",
+    (window.__ROOT||"")+"archive/kuki/school-023-es/",
     "菖蒲小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "菖蒲東小学校 PTA関連資料",
-    "/archive/kuki/school-024-es/",
+    (window.__ROOT||"")+"archive/kuki/school-024-es/",
     "菖蒲東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "青毛小学校 PTA関連資料",
-    "/archive/kuki/school-025-es/",
+    (window.__ROOT||"")+"archive/kuki/school-025-es/",
     "青毛小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "青葉小学校 PTA関連資料",
-    "/archive/kuki/school-026-es/",
+    (window.__ROOT||"")+"archive/kuki/school-026-es/",
     "青葉小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "鷲宮中学校 PTA関連資料",
-    "/archive/kuki/school-027-jhs/",
+    (window.__ROOT||"")+"archive/kuki/school-027-jhs/",
     "鷲宮中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "鷲宮小学校 PTA関連資料",
-    "/archive/kuki/school-028-es/",
+    (window.__ROOT||"")+"archive/kuki/school-028-es/",
     "鷲宮小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "鷲宮東中学校 PTA関連資料",
-    "/archive/kuki/school-029-jhs/",
+    (window.__ROOT||"")+"archive/kuki/school-029-jhs/",
     "鷲宮東中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "鷲宮西中学校 PTA関連資料",
-    "/archive/kuki/school-030-jhs/",
+    (window.__ROOT||"")+"archive/kuki/school-030-jhs/",
     "鷲宮西中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "おなづか小学校 PTA関連資料",
-    "/archive/ota/school-001-es/",
+    (window.__ROOT||"")+"archive/ota/school-001-es/",
     "おなづか小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "中富小学校 PTA関連資料",
-    "/archive/ota/school-002-es/",
+    (window.__ROOT||"")+"archive/ota/school-002-es/",
     "中富小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "久原小学校 PTA関連資料",
-    "/archive/ota/school-003-es/",
+    (window.__ROOT||"")+"archive/ota/school-003-es/",
     "久原小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "仲六郷小学校 PTA関連資料",
-    "/archive/ota/school-004-es/",
+    (window.__ROOT||"")+"archive/ota/school-004-es/",
     "仲六郷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "入新井第一小学校 PTA関連資料",
-    "/archive/ota/school-005-es/",
+    (window.__ROOT||"")+"archive/ota/school-005-es/",
     "入新井第一小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "入新井第二小学校 PTA関連資料",
-    "/archive/ota/school-006-es/",
+    (window.__ROOT||"")+"archive/ota/school-006-es/",
     "入新井第二小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "入新井第五小学校 PTA関連資料",
-    "/archive/ota/school-007-es/",
+    (window.__ROOT||"")+"archive/ota/school-007-es/",
     "入新井第五小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "入新井第四小学校 PTA関連資料",
-    "/archive/ota/school-008-es/",
+    (window.__ROOT||"")+"archive/ota/school-008-es/",
     "入新井第四小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "六郷中学校 PTA関連資料",
-    "/archive/ota/school-009-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-009-jhs/",
     "六郷中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "六郷小学校 PTA関連資料",
-    "/archive/ota/school-010-es/",
+    (window.__ROOT||"")+"archive/ota/school-010-es/",
     "六郷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "出雲中学校 PTA関連資料",
-    "/archive/ota/school-011-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-011-jhs/",
     "出雲中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "出雲小学校 PTA関連資料",
-    "/archive/ota/school-012-es/",
+    (window.__ROOT||"")+"archive/ota/school-012-es/",
     "出雲小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "北糀谷小学校 PTA関連資料",
-    "/archive/ota/school-013-es/",
+    (window.__ROOT||"")+"archive/ota/school-013-es/",
     "北糀谷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "千鳥小学校 PTA関連資料",
-    "/archive/ota/school-014-es/",
+    (window.__ROOT||"")+"archive/ota/school-014-es/",
     "千鳥小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "南六郷中学校 PTA関連資料",
-    "/archive/ota/school-015-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-015-jhs/",
     "南六郷中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "南六郷小学校 PTA関連資料",
-    "/archive/ota/school-016-es/",
+    (window.__ROOT||"")+"archive/ota/school-016-es/",
     "南六郷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "南蒲小学校 PTA関連資料",
-    "/archive/ota/school-017-es/",
+    (window.__ROOT||"")+"archive/ota/school-017-es/",
     "南蒲小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "多摩川小学校 PTA関連資料",
-    "/archive/ota/school-018-es/",
+    (window.__ROOT||"")+"archive/ota/school-018-es/",
     "多摩川小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大森東小学校 PTA関連資料",
-    "/archive/ota/school-019-es/",
+    (window.__ROOT||"")+"archive/ota/school-019-es/",
     "大森東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大森第一中学校 PTA関連資料",
-    "/archive/ota/school-020-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-020-jhs/",
     "大森第一中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大森第一小学校 PTA関連資料",
-    "/archive/ota/school-021-es/",
+    (window.__ROOT||"")+"archive/ota/school-021-es/",
     "大森第一小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大森第七中学校 PTA関連資料",
-    "/archive/ota/school-022-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-022-jhs/",
     "大森第七中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大森第三中学校 PTA関連資料",
-    "/archive/ota/school-023-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-023-jhs/",
     "大森第三中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大森第三小学校 PTA関連資料",
-    "/archive/ota/school-024-es/",
+    (window.__ROOT||"")+"archive/ota/school-024-es/",
     "大森第三小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大森第二中学校 PTA関連資料",
-    "/archive/ota/school-025-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-025-jhs/",
     "大森第二中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大森第五小学校 PTA関連資料",
-    "/archive/ota/school-026-es/",
+    (window.__ROOT||"")+"archive/ota/school-026-es/",
     "大森第五小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大森第八中学校 PTA関連資料",
-    "/archive/ota/school-027-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-027-jhs/",
     "大森第八中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大森第六中学校 PTA関連資料",
-    "/archive/ota/school-028-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-028-jhs/",
     "大森第六中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大森第十中学校 PTA関連資料",
-    "/archive/ota/school-029-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-029-jhs/",
     "大森第十中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大森第四中学校 PTA関連資料",
-    "/archive/ota/school-030-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-030-jhs/",
     "大森第四中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大森第四小学校 PTA関連資料",
-    "/archive/ota/school-031-es/",
+    (window.__ROOT||"")+"archive/ota/school-031-es/",
     "大森第四小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "安方中学校 PTA関連資料",
-    "/archive/ota/school-032-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-032-jhs/",
     "安方中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "小池小学校 PTA関連資料",
-    "/archive/ota/school-033-es/",
+    (window.__ROOT||"")+"archive/ota/school-033-es/",
     "小池小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "山王小学校 PTA関連資料",
-    "/archive/ota/school-034-es/",
+    (window.__ROOT||"")+"archive/ota/school-034-es/",
     "山王小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "嶺町小学校 PTA関連資料",
-    "/archive/ota/school-035-es/",
+    (window.__ROOT||"")+"archive/ota/school-035-es/",
     "嶺町小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "御園中学校 PTA関連資料",
-    "/archive/ota/school-036-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-036-jhs/",
     "御園中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "徳持小学校 PTA関連資料",
-    "/archive/ota/school-037-es/",
+    (window.__ROOT||"")+"archive/ota/school-037-es/",
     "徳持小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "志茂田中学校 PTA関連資料",
-    "/archive/ota/school-038-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-038-jhs/",
     "志茂田中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "志茂田小学校 PTA関連資料",
-    "/archive/ota/school-039-es/",
+    (window.__ROOT||"")+"archive/ota/school-039-es/",
     "志茂田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "新宿小学校 PTA関連資料",
-    "/archive/ota/school-040-es/",
+    (window.__ROOT||"")+"archive/ota/school-040-es/",
     "新宿小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東六郷小学校 PTA関連資料",
-    "/archive/ota/school-041-es/",
+    (window.__ROOT||"")+"archive/ota/school-041-es/",
     "東六郷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東糀谷小学校 PTA関連資料",
-    "/archive/ota/school-042-es/",
+    (window.__ROOT||"")+"archive/ota/school-042-es/",
     "東糀谷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東蒲中学校 PTA関連資料",
-    "/archive/ota/school-043-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-043-jhs/",
     "東蒲中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東蒲小学校 PTA関連資料",
-    "/archive/ota/school-044-es/",
+    (window.__ROOT||"")+"archive/ota/school-044-es/",
     "東蒲小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東調布中学校 PTA関連資料",
-    "/archive/ota/school-045-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-045-jhs/",
     "東調布中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東調布第一小学校 PTA関連資料",
-    "/archive/ota/school-046-es/",
+    (window.__ROOT||"")+"archive/ota/school-046-es/",
     "東調布第一小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "松仙小学校 PTA関連資料",
-    "/archive/ota/school-047-es/",
+    (window.__ROOT||"")+"archive/ota/school-047-es/",
     "松仙小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "梅田小学校 PTA関連資料",
-    "/archive/ota/school-048-es/",
+    (window.__ROOT||"")+"archive/ota/school-048-es/",
     "梅田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "池上小学校 PTA関連資料",
-    "/archive/ota/school-049-es/",
+    (window.__ROOT||"")+"archive/ota/school-049-es/",
     "池上小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "池上第二小学校 PTA関連資料",
-    "/archive/ota/school-050-es/",
+    (window.__ROOT||"")+"archive/ota/school-050-es/",
     "池上第二小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "池雪小学校 PTA関連資料",
-    "/archive/ota/school-051-es/",
+    (window.__ROOT||"")+"archive/ota/school-051-es/",
     "池雪小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "洗足池小学校 PTA関連資料",
-    "/archive/ota/school-052-es/",
+    (window.__ROOT||"")+"archive/ota/school-052-es/",
     "洗足池小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "田園調布中学校 PTA関連資料",
-    "/archive/ota/school-053-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-053-jhs/",
     "田園調布中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "田園調布小学校 PTA関連資料",
-    "/archive/ota/school-054-es/",
+    (window.__ROOT||"")+"archive/ota/school-054-es/",
     "田園調布小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "相生小学校 PTA関連資料",
-    "/archive/ota/school-055-es/",
+    (window.__ROOT||"")+"archive/ota/school-055-es/",
     "相生小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "矢口中学校 PTA関連資料",
-    "/archive/ota/school-056-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-056-jhs/",
     "矢口中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "矢口小学校 PTA関連資料",
-    "/archive/ota/school-057-es/",
+    (window.__ROOT||"")+"archive/ota/school-057-es/",
     "矢口小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "矢口東小学校 PTA関連資料",
-    "/archive/ota/school-058-es/",
+    (window.__ROOT||"")+"archive/ota/school-058-es/",
     "矢口東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "矢口西小学校 PTA関連資料",
-    "/archive/ota/school-059-es/",
+    (window.__ROOT||"")+"archive/ota/school-059-es/",
     "矢口西小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "石川台中学校 PTA関連資料",
-    "/archive/ota/school-060-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-060-jhs/",
     "石川台中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "糀谷中学校 PTA関連資料",
-    "/archive/ota/school-061-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-061-jhs/",
     "糀谷中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "羽田中学校 PTA関連資料",
-    "/archive/ota/school-062-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-062-jhs/",
     "羽田中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "羽田小学校 PTA関連資料",
-    "/archive/ota/school-063-es/",
+    (window.__ROOT||"")+"archive/ota/school-063-es/",
     "羽田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "萩中小学校 PTA関連資料",
-    "/archive/ota/school-064-es/",
+    (window.__ROOT||"")+"archive/ota/school-064-es/",
     "萩中小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "蒲田中学校 PTA関連資料",
-    "/archive/ota/school-065-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-065-jhs/",
     "蒲田中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "蓮沼中学校 PTA関連資料",
-    "/archive/ota/school-066-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-066-jhs/",
     "蓮沼中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "西六郷小学校 PTA関連資料",
-    "/archive/ota/school-067-es/",
+    (window.__ROOT||"")+"archive/ota/school-067-es/",
     "西六郷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "調布大塚小学校 PTA関連資料",
-    "/archive/ota/school-068-es/",
+    (window.__ROOT||"")+"archive/ota/school-068-es/",
     "調布大塚小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "貝塚中学校 PTA関連資料",
-    "/archive/ota/school-069-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-069-jhs/",
     "貝塚中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "赤松小学校 PTA関連資料",
-    "/archive/ota/school-070-es/",
+    (window.__ROOT||"")+"archive/ota/school-070-es/",
     "赤松小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "道塚小学校 PTA関連資料",
-    "/archive/ota/school-071-es/",
+    (window.__ROOT||"")+"archive/ota/school-071-es/",
     "道塚小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "都南小学校 PTA関連資料",
-    "/archive/ota/school-072-es/",
+    (window.__ROOT||"")+"archive/ota/school-072-es/",
     "都南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "開桜小学校 PTA関連資料",
-    "/archive/ota/school-073-es/",
+    (window.__ROOT||"")+"archive/ota/school-073-es/",
     "開桜小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "雪谷中学校 PTA関連資料",
-    "/archive/ota/school-074-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-074-jhs/",
     "雪谷中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "雪谷小学校 PTA関連資料",
-    "/archive/ota/school-075-es/",
+    (window.__ROOT||"")+"archive/ota/school-075-es/",
     "雪谷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "馬込中学校 PTA関連資料",
-    "/archive/ota/school-076-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-076-jhs/",
     "馬込中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "馬込小学校 PTA関連資料",
-    "/archive/ota/school-077-es/",
+    (window.__ROOT||"")+"archive/ota/school-077-es/",
     "馬込小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "馬込東中学校 PTA関連資料",
-    "/archive/ota/school-078-jhs/",
+    (window.__ROOT||"")+"archive/ota/school-078-jhs/",
     "馬込東中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "馬込第三小学校 PTA関連資料",
-    "/archive/ota/school-079-es/",
+    (window.__ROOT||"")+"archive/ota/school-079-es/",
     "馬込第三小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "馬込第二小学校 PTA関連資料",
-    "/archive/ota/school-080-es/",
+    (window.__ROOT||"")+"archive/ota/school-080-es/",
     "馬込第二小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "高畑小学校 PTA関連資料",
-    "/archive/ota/school-081-es/",
+    (window.__ROOT||"")+"archive/ota/school-081-es/",
     "高畑小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "くぬぎ台小学校 PTA関連資料",
-    "/archive/sagamihara/school-001-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-001-es/",
     "くぬぎ台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "もえぎ台小学校 PTA関連資料",
-    "/archive/sagamihara/school-002-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-002-es/",
     "もえぎ台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "上溝中学校 PTA関連資料",
-    "/archive/sagamihara/school-003-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-003-jhs/",
     "上溝中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "上溝南中学校 PTA関連資料",
-    "/archive/sagamihara/school-004-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-004-jhs/",
     "上溝南中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "上溝南小学校 PTA関連資料",
-    "/archive/sagamihara/school-005-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-005-es/",
     "上溝南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "上溝小学校 PTA関連資料",
-    "/archive/sagamihara/school-006-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-006-es/",
     "上溝小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "上鶴間中学校 PTA関連資料",
-    "/archive/sagamihara/school-007-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-007-jhs/",
     "上鶴間中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "上鶴間小学校 PTA関連資料",
-    "/archive/sagamihara/school-008-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-008-es/",
     "上鶴間小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "並木小学校 PTA関連資料",
-    "/archive/sagamihara/school-009-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-009-es/",
     "並木小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "中央中学校 PTA関連資料",
-    "/archive/sagamihara/school-010-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-010-jhs/",
     "中央中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "中央小学校 PTA関連資料",
-    "/archive/sagamihara/school-011-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-011-es/",
     "中央小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "中沢中学校 PTA関連資料",
-    "/archive/sagamihara/school-012-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-012-jhs/",
     "中沢中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "中野中学校 PTA関連資料",
-    "/archive/sagamihara/school-013-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-013-jhs/",
     "中野中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "中野小学校 PTA関連資料",
-    "/archive/sagamihara/school-014-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-014-es/",
     "中野小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "串川中学校 PTA関連資料",
-    "/archive/sagamihara/school-015-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-015-jhs/",
     "串川中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "串川小学校 PTA関連資料",
-    "/archive/sagamihara/school-016-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-016-es/",
     "串川小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "九沢小学校 PTA関連資料",
-    "/archive/sagamihara/school-017-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-017-es/",
     "九沢小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "二本松小学校 PTA関連資料",
-    "/archive/sagamihara/school-018-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-018-es/",
     "二本松小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "作の口小学校 PTA関連資料",
-    "/archive/sagamihara/school-019-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-019-es/",
     "作の口小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "光が丘小学校 PTA関連資料",
-    "/archive/sagamihara/school-020-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-020-es/",
     "光が丘小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "共和中学校 PTA関連資料",
-    "/archive/sagamihara/school-021-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-021-jhs/",
     "共和中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "共和小学校 PTA関連資料",
-    "/archive/sagamihara/school-022-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-022-es/",
     "共和小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "内出中学校 PTA関連資料",
-    "/archive/sagamihara/school-023-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-023-jhs/",
     "内出中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "内郷中学校 PTA関連資料",
-    "/archive/sagamihara/school-024-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-024-jhs/",
     "内郷中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "内郷小学校 PTA関連資料",
-    "/archive/sagamihara/school-025-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-025-es/",
     "内郷小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "北相中学校 PTA関連資料",
-    "/archive/sagamihara/school-026-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-026-jhs/",
     "北相中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "千木良小学校 PTA関連資料",
-    "/archive/sagamihara/school-027-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-027-es/",
     "千木良小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "南大野小学校 PTA関連資料",
-    "/archive/sagamihara/school-028-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-028-es/",
     "南大野小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "双葉小学校 PTA関連資料",
-    "/archive/sagamihara/school-029-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-029-es/",
     "双葉小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "向陽小学校 PTA関連資料",
-    "/archive/sagamihara/school-030-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-030-es/",
     "向陽小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "夢の丘小学校 PTA関連資料",
-    "/archive/sagamihara/school-031-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-031-es/",
     "夢の丘小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大島小学校 PTA関連資料",
-    "/archive/sagamihara/school-032-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-032-es/",
     "大島小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大沢中学校 PTA関連資料",
-    "/archive/sagamihara/school-033-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-033-jhs/",
     "大沢中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大沢小学校 PTA関連資料",
-    "/archive/sagamihara/school-034-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-034-es/",
     "大沢小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大沼小学校 PTA関連資料",
-    "/archive/sagamihara/school-035-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-035-es/",
     "大沼小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大野北中学校 PTA関連資料",
-    "/archive/sagamihara/school-036-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-036-jhs/",
     "大野北中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大野北小学校 PTA関連資料",
-    "/archive/sagamihara/school-037-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-037-es/",
     "大野北小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大野南中学校 PTA関連資料",
-    "/archive/sagamihara/school-038-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-038-jhs/",
     "大野南中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大野台中央小学校 PTA関連資料",
-    "/archive/sagamihara/school-039-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-039-es/",
     "大野台中央小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大野台中学校 PTA関連資料",
-    "/archive/sagamihara/school-040-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-040-jhs/",
     "大野台中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大野台小学校 PTA関連資料",
-    "/archive/sagamihara/school-041-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-041-es/",
     "大野台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大野小学校 PTA関連資料",
-    "/archive/sagamihara/school-042-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-042-es/",
     "大野小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "宮上小学校 PTA関連資料",
-    "/archive/sagamihara/school-043-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-043-es/",
     "宮上小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "富士見小学校 PTA関連資料",
-    "/archive/sagamihara/school-044-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-044-es/",
     "富士見小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "小山中学校 PTA関連資料",
-    "/archive/sagamihara/school-045-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-045-jhs/",
     "小山中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "小山小学校 PTA関連資料",
-    "/archive/sagamihara/school-046-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-046-es/",
     "小山小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "川尻小学校 PTA関連資料",
-    "/archive/sagamihara/school-047-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-047-es/",
     "川尻小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "広田小学校 PTA関連資料",
-    "/archive/sagamihara/school-048-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-048-es/",
     "広田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "広陵小学校 PTA関連資料",
-    "/archive/sagamihara/school-049-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-049-es/",
     "広陵小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "弥栄中学校 PTA関連資料",
-    "/archive/sagamihara/school-050-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-050-jhs/",
     "弥栄中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "弥栄小学校 PTA関連資料",
-    "/archive/sagamihara/school-051-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-051-es/",
     "弥栄小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "当麻田小学校 PTA関連資料",
-    "/archive/sagamihara/school-052-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-052-es/",
     "当麻田小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "新宿小学校 PTA関連資料",
-    "/archive/sagamihara/school-053-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-053-es/",
     "新宿小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "新町中学校 PTA関連資料",
-    "/archive/sagamihara/school-054-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-054-jhs/",
     "新町中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "新磯小学校 PTA関連資料",
-    "/archive/sagamihara/school-055-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-055-es/",
     "新磯小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "旭中学校 PTA関連資料",
-    "/archive/sagamihara/school-056-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-056-jhs/",
     "旭中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "旭小学校 PTA関連資料",
-    "/archive/sagamihara/school-057-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-057-es/",
     "旭小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "星が丘小学校 PTA関連資料",
-    "/archive/sagamihara/school-058-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-058-es/",
     "星が丘小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東林中学校 PTA関連資料",
-    "/archive/sagamihara/school-059-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-059-jhs/",
     "東林中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東林小学校 PTA関連資料",
-    "/archive/sagamihara/school-060-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-060-es/",
     "東林小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "根小屋小学校 PTA関連資料",
-    "/archive/sagamihara/school-061-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-061-es/",
     "根小屋小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "桂北小学校 PTA関連資料",
-    "/archive/sagamihara/school-062-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-062-es/",
     "桂北小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "桜台小学校 PTA関連資料",
-    "/archive/sagamihara/school-063-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-063-es/",
     "桜台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "横山小学校 PTA関連資料",
-    "/archive/sagamihara/school-064-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-064-es/",
     "横山小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "橋本小学校 PTA関連資料",
-    "/archive/sagamihara/school-065-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-065-es/",
     "橋本小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "津久井中央小学校 PTA関連資料",
-    "/archive/sagamihara/school-066-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-066-es/",
     "津久井中央小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "淵野辺小学校 PTA関連資料",
-    "/archive/sagamihara/school-067-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-067-es/",
     "淵野辺小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "淵野辺東小学校 PTA関連資料",
-    "/archive/sagamihara/school-068-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-068-es/",
     "淵野辺東小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "清新中学校 PTA関連資料",
-    "/archive/sagamihara/school-069-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-069-jhs/",
     "清新中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "清新小学校 PTA関連資料",
-    "/archive/sagamihara/school-070-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-070-es/",
     "清新小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "湘南小学校 PTA関連資料",
-    "/archive/sagamihara/school-071-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-071-es/",
     "湘南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "田名中学校 PTA関連資料",
-    "/archive/sagamihara/school-072-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-072-jhs/",
     "田名中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "田名北小学校 PTA関連資料",
-    "/archive/sagamihara/school-073-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-073-es/",
     "田名北小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "田名小学校 PTA関連資料",
-    "/archive/sagamihara/school-074-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-074-es/",
     "田名小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "由野台中学校 PTA関連資料",
-    "/archive/sagamihara/school-075-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-075-jhs/",
     "由野台中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "相原中学校 PTA関連資料",
-    "/archive/sagamihara/school-076-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-076-jhs/",
     "相原中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "相原小学校 PTA関連資料",
-    "/archive/sagamihara/school-077-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-077-es/",
     "相原小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "相模丘中学校 PTA関連資料",
-    "/archive/sagamihara/school-078-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-078-jhs/",
     "相模丘中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "相模台中学校 PTA関連資料",
-    "/archive/sagamihara/school-079-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-079-jhs/",
     "相模台中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "相模台小学校 PTA関連資料",
-    "/archive/sagamihara/school-080-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-080-es/",
     "相模台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "相武台中学校 PTA関連資料",
-    "/archive/sagamihara/school-081-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-081-jhs/",
     "相武台中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "相武台小学校 PTA関連資料",
-    "/archive/sagamihara/school-082-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-082-es/",
     "相武台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "相陽中学校 PTA関連資料",
-    "/archive/sagamihara/school-083-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-083-jhs/",
     "相陽中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "緑が丘中学校 PTA関連資料",
-    "/archive/sagamihara/school-084-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-084-jhs/",
     "緑が丘中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "緑台小学校 PTA関連資料",
-    "/archive/sagamihara/school-085-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-085-es/",
     "緑台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "若松小学校 PTA関連資料",
-    "/archive/sagamihara/school-086-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-086-es/",
     "若松小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "若草中学校 PTA関連資料",
-    "/archive/sagamihara/school-087-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-087-jhs/",
     "若草中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "若草小学校 PTA関連資料",
-    "/archive/sagamihara/school-088-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-088-es/",
     "若草小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "藤野中学校 PTA関連資料",
-    "/archive/sagamihara/school-089-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-089-jhs/",
     "藤野中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "藤野北小学校 PTA関連資料",
-    "/archive/sagamihara/school-090-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-090-es/",
     "藤野北小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "藤野南小学校 PTA関連資料",
-    "/archive/sagamihara/school-091-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-091-es/",
     "藤野南小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "藤野小学校 PTA関連資料",
-    "/archive/sagamihara/school-092-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-092-es/",
     "藤野小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "谷口中学校 PTA関連資料",
-    "/archive/sagamihara/school-093-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-093-jhs/",
     "谷口中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "谷口台小学校 PTA関連資料",
-    "/archive/sagamihara/school-094-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-094-es/",
     "谷口台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "谷口小学校 PTA関連資料",
-    "/archive/sagamihara/school-095-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-095-es/",
     "谷口小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "陽光台小学校 PTA関連資料",
-    "/archive/sagamihara/school-096-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-096-es/",
     "陽光台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "鵜野森中学校 PTA関連資料",
-    "/archive/sagamihara/school-097-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-097-jhs/",
     "鵜野森中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "鶴の台小学校 PTA関連資料",
-    "/archive/sagamihara/school-098-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-098-es/",
     "鶴の台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "鶴園小学校 PTA関連資料",
-    "/archive/sagamihara/school-099-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-099-es/",
     "鶴園小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "鹿島台小学校 PTA関連資料",
-    "/archive/sagamihara/school-100-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-100-es/",
     "鹿島台小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "麻溝台中学校 PTA関連資料",
-    "/archive/sagamihara/school-101-jhs/",
+    (window.__ROOT||"")+"archive/sagamihara/school-101-jhs/",
     "麻溝台中学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "麻溝小学校 PTA関連資料",
-    "/archive/sagamihara/school-102-es/",
+    (window.__ROOT||"")+"archive/sagamihara/school-102-es/",
     "麻溝小学校のPTA関連一次資料を、保存されている資料単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大清水小学校 PTA関連資料",
-    "/archive/toyohashi/ooshimizu-es/",
+    (window.__ROOT||"")+"archive/toyohashi/ooshimizu-es/",
     "大清水小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "鷹丘小学校 PTA関連資料",
-    "/archive/toyohashi/school-001-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-001-es/",
     "鷹丘小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "高豊中学校 PTA関連資料",
-    "/archive/toyohashi/school-002-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-002-jhs/",
     "高豊中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "高根小学校 PTA関連資料",
-    "/archive/toyohashi/school-003-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-003-es/",
     "高根小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "高師小学校 PTA関連資料",
-    "/archive/toyohashi/school-004-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-004-es/",
     "高師小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "高師台中学校 PTA関連資料",
-    "/archive/toyohashi/school-005-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-005-jhs/",
     "高師台中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "飯村小学校 PTA関連資料",
-    "/archive/toyohashi/school-006-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-006-es/",
     "飯村小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "青陵中学校 PTA関連資料",
-    "/archive/toyohashi/school-007-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-007-jhs/",
     "青陵中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "野依小学校 PTA関連資料",
-    "/archive/toyohashi/school-008-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-008-es/",
     "野依小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "賀茂小学校 PTA関連資料",
-    "/archive/toyohashi/school-009-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-009-es/",
     "賀茂小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "豊岡中学校 PTA関連資料",
-    "/archive/toyohashi/school-010-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-010-jhs/",
     "豊岡中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "豊小学校 PTA関連資料",
-    "/archive/toyohashi/school-011-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-011-es/",
     "豊小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "豊城中学校 PTA関連資料",
-    "/archive/toyohashi/school-012-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-012-jhs/",
     "豊城中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "豊南小学校 PTA関連資料",
-    "/archive/toyohashi/school-013-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-013-es/",
     "豊南小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "谷川小学校 PTA関連資料",
-    "/archive/toyohashi/school-014-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-014-es/",
     "谷川小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "西郷小学校 PTA関連資料",
-    "/archive/toyohashi/school-015-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-015-es/",
     "西郷小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "花田小学校 PTA関連資料",
-    "/archive/toyohashi/school-016-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-016-es/",
     "花田小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "芦原小学校 PTA関連資料",
-    "/archive/toyohashi/school-017-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-017-es/",
     "芦原小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "老津小学校 PTA関連資料",
-    "/archive/toyohashi/school-018-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-018-es/",
     "老津小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "羽田中学校 PTA関連資料",
-    "/archive/toyohashi/school-019-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-019-jhs/",
     "羽田中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "羽根井小学校 PTA関連資料",
-    "/archive/toyohashi/school-020-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-020-es/",
     "羽根井小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "細谷小学校 PTA関連資料",
-    "/archive/toyohashi/school-021-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-021-es/",
     "細谷小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "章南中学校 PTA関連資料",
-    "/archive/toyohashi/school-022-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-022-jhs/",
     "章南中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "福岡小学校 PTA関連資料",
-    "/archive/toyohashi/school-023-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-023-es/",
     "福岡小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "磯辺小学校 PTA関連資料",
-    "/archive/toyohashi/school-024-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-024-es/",
     "磯辺小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "石巻小学校 PTA関連資料",
-    "/archive/toyohashi/school-025-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-025-es/",
     "石巻小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "石巻中学校 PTA関連資料",
-    "/archive/toyohashi/school-026-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-026-jhs/",
     "石巻中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "玉川小学校 PTA関連資料",
-    "/archive/toyohashi/school-027-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-027-es/",
     "玉川小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "牟呂小学校 PTA関連資料",
-    "/archive/toyohashi/school-028-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-028-es/",
     "牟呂小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "牟呂中学校 PTA関連資料",
-    "/archive/toyohashi/school-029-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-029-jhs/",
     "牟呂中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "牛川小学校 PTA関連資料",
-    "/archive/toyohashi/school-030-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-030-es/",
     "牛川小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "津田小学校 PTA関連資料",
-    "/archive/toyohashi/school-031-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-031-es/",
     "津田小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "汐田小学校 PTA関連資料",
-    "/archive/toyohashi/school-032-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-032-es/",
     "汐田小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "植田小学校 PTA関連資料",
-    "/archive/toyohashi/school-033-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-033-es/",
     "植田小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "栄小学校 PTA関連資料",
-    "/archive/toyohashi/school-034-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-034-es/",
     "栄小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "松葉小学校 PTA関連資料",
-    "/archive/toyohashi/school-035-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-035-es/",
     "松葉小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "松山小学校 PTA関連資料",
-    "/archive/toyohashi/school-036-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-036-es/",
     "松山小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東陽中学校 PTA関連資料",
-    "/archive/toyohashi/school-037-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-037-jhs/",
     "東陽中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東陵中学校 PTA関連資料",
-    "/archive/toyohashi/school-038-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-038-jhs/",
     "東陵中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東部中学校 PTA関連資料",
-    "/archive/toyohashi/school-039-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-039-jhs/",
     "東部中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "東田小学校 PTA関連資料",
-    "/archive/toyohashi/school-040-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-040-es/",
     "東田小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "杉山小学校 PTA関連資料",
-    "/archive/toyohashi/school-041-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-041-es/",
     "杉山小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "本郷中学校 PTA関連資料",
-    "/archive/toyohashi/school-042-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-042-jhs/",
     "本郷中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "旭小学校 PTA関連資料",
-    "/archive/toyohashi/school-043-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-043-es/",
     "旭小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "新川小学校 PTA関連資料",
-    "/archive/toyohashi/school-044-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-044-es/",
     "新川小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "幸小学校 PTA関連資料",
-    "/archive/toyohashi/school-045-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-045-es/",
     "幸小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "岩西小学校 PTA関連資料",
-    "/archive/toyohashi/school-046-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-046-es/",
     "岩西小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "岩田小学校 PTA関連資料",
-    "/archive/toyohashi/school-047-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-047-es/",
     "岩田小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "小沢小学校 PTA関連資料",
-    "/archive/toyohashi/school-048-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-048-es/",
     "小沢小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "富士見小学校 PTA関連資料",
-    "/archive/toyohashi/school-049-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-049-es/",
     "富士見小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "天伯小学校 PTA関連資料",
-    "/archive/toyohashi/school-050-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-050-es/",
     "天伯小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大村小学校 PTA関連資料",
-    "/archive/toyohashi/school-052-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-052-es/",
     "大村小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "大崎小学校 PTA関連資料",
-    "/archive/toyohashi/school-053-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-053-es/",
     "大崎小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "多米小学校 PTA関連資料",
-    "/archive/toyohashi/school-054-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-054-es/",
     "多米小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "向山小学校 PTA関連資料",
-    "/archive/toyohashi/school-055-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-055-es/",
     "向山小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "吉田方小学校 PTA関連資料",
-    "/archive/toyohashi/school-056-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-056-es/",
     "吉田方小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "南陽中学校 PTA関連資料",
-    "/archive/toyohashi/school-057-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-057-jhs/",
     "南陽中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "南部中学校 PTA関連資料",
-    "/archive/toyohashi/school-058-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-058-jhs/",
     "南部中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "南稜中学校 PTA関連資料",
-    "/archive/toyohashi/school-059-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-059-jhs/",
     "南稜中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "北部中学校 PTA関連資料",
-    "/archive/toyohashi/school-060-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-060-jhs/",
     "北部中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "前芝小学校 PTA関連資料",
-    "/archive/toyohashi/school-061-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-061-es/",
     "前芝小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "前芝中学校 PTA関連資料",
-    "/archive/toyohashi/school-062-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-062-jhs/",
     "前芝中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "八町小学校 PTA関連資料",
-    "/archive/toyohashi/school-063-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-063-es/",
     "八町小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "五並中学校 PTA関連資料",
-    "/archive/toyohashi/school-064-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-064-jhs/",
     "五並中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "二川小学校 PTA関連資料",
-    "/archive/toyohashi/school-065-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-065-es/",
     "二川小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "二川南小学校 PTA関連資料",
-    "/archive/toyohashi/school-066-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-066-es/",
     "二川南小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "二川中学校 PTA関連資料",
-    "/archive/toyohashi/school-067-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-067-jhs/",
     "二川中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "中野小学校 PTA関連資料",
-    "/archive/toyohashi/school-068-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-068-es/",
     "中野小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "中部中学校 PTA関連資料",
-    "/archive/toyohashi/school-069-jhs/",
+    (window.__ROOT||"")+"archive/toyohashi/school-069-jhs/",
     "中部中学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "下条小学校 PTA関連資料",
-    "/archive/toyohashi/school-070-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-070-es/",
     "下条小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "下地小学校 PTA関連資料",
-    "/archive/toyohashi/school-071-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-071-es/",
     "下地小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "つつじが丘小学校 PTA関連資料",
-    "/archive/toyohashi/school-072-es/",
+    (window.__ROOT||"")+"archive/toyohashi/school-072-es/",
     "つつじが丘小学校のPTA関連一次資料を、保存されているファイル単位で整理した学校別アーカイブです。",
     "source-archive"
   ],
   [
     "PTA運営チェック",
-    "/audit/",
+    (window.__ROOT||"")+"audit/",
     "PTAの入会手続、会費徴収、個人情報、役員選出、学校関与について、立場別に確認できるセルフチェックツールです。",
     "current-canonical"
   ],
   [
     "教育委員会・学校管理職向け提出要旨｜学校とPTAの境界を点検する",
-    "/board-brief.html",
+    (window.__ROOT||"")+"board-brief.html",
     "学校とPTAの公私分離、任意加入、個人情報、PTA会費徴収、教職員関与、学校施設・システム利用について、教育委員会・学校管理職向けにA4・5ページで整理した提出要旨。",
     "current-canonical"
   ],
   [
     "教育委員会・学校向け｜入会申込書がないと学校関与の何が崩れるのか",
-    "/board-pta-chain.html",
+    (window.__ROOT||"")+"board-pta-chain.html",
     "教育委員会・学校向けに、入会申込書がない場合に名簿提供・会費徴収・学校連絡網・教職員関与・施設利用の根拠がどう崩れるかを整理します。",
     "current-canonical"
   ],
   [
     "全国教育委員会への照会結果",
-    "/board-responses.html",
+    (window.__ROOT||"")+"board-responses.html",
     "PTA入会、会費徴収、個人情報、教職員関与、学校施設利用について、各地の教育委員会等からの回答本文を公開用にマスキングして掲載しています。",
     "source-archive"
   ],
   [
     "【三重県】PTAに関する回答(全文)",
-    "/board-responses/01-mie.html",
+    (window.__ROOT||"")+"board-responses/01-mie.html",
     "三重県によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:会費徴収・委任、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【京都府亀岡市】PTAに関する回答(全文)",
-    "/board-responses/02-kyoto-kameoka.html",
+    (window.__ROOT||"")+"board-responses/02-kyoto-kameoka.html",
     "京都府亀岡市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【京都府京都市】PTAに関する回答(全文)",
-    "/board-responses/03-kyoto-kyoto.html",
+    (window.__ROOT||"")+"board-responses/03-kyoto-kyoto.html",
     "京都府京都市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【兵庫県】PTAに関する回答(全文)",
-    "/board-responses/04-hyogo.html",
+    (window.__ROOT||"")+"board-responses/04-hyogo.html",
     "兵庫県によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【兵庫県宝塚市】PTAに関する回答(全文)",
-    "/board-responses/05-hyogo-takarazuka.html",
+    (window.__ROOT||"")+"board-responses/05-hyogo-takarazuka.html",
     "兵庫県宝塚市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【兵庫県西宮市】PTAに関する回答(全文)",
-    "/board-responses/06-hyogo-nishinomiya.html",
+    (window.__ROOT||"")+"board-responses/06-hyogo-nishinomiya.html",
     "兵庫県西宮市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【兵庫県西脇市】PTAに関する回答(全文)",
-    "/board-responses/07-hyogo-nishiwaki.html",
+    (window.__ROOT||"")+"board-responses/07-hyogo-nishiwaki.html",
     "兵庫県西脇市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【北海道厚岸町】PTAに関する回答(全文)",
-    "/board-responses/08-hokkaido-akkeshi.html",
+    (window.__ROOT||"")+"board-responses/08-hokkaido-akkeshi.html",
     "北海道厚岸町によるPTA関連照会への回答本文(個人情報等マスキング済み)。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【北海道厚沢部町】PTAに関する回答(全文)",
-    "/board-responses/09-hokkaido-assabu.html",
+    (window.__ROOT||"")+"board-responses/09-hokkaido-assabu.html",
     "北海道厚沢部町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【千葉県鎌ケ谷市】PTAに関する回答(全文)",
-    "/board-responses/10-chiba-kamagaya.html",
+    (window.__ROOT||"")+"board-responses/10-chiba-kamagaya.html",
     "千葉県鎌ケ谷市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【千葉県鴨川市】PTAに関する回答(全文)",
-    "/board-responses/11-chiba-kamogawa.html",
+    (window.__ROOT||"")+"board-responses/11-chiba-kamogawa.html",
     "千葉県鴨川市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【埼玉県三郷市】PTAに関する回答(全文)",
-    "/board-responses/12-saitama-misato.html",
+    (window.__ROOT||"")+"board-responses/12-saitama-misato.html",
     "埼玉県三郷市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【埼玉県川口市】PTAに関する回答(全文)",
-    "/board-responses/13-saitama-kawaguchi.html",
+    (window.__ROOT||"")+"board-responses/13-saitama-kawaguchi.html",
     "埼玉県川口市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、学校施設利用。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【埼玉県東秩父村】PTAに関する回答(全文)",
-    "/board-responses/14-saitama-higashichichibu.html",
+    (window.__ROOT||"")+"board-responses/14-saitama-higashichichibu.html",
     "埼玉県東秩父村によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【埼玉県白岡市】PTAに関する回答(全文)",
-    "/board-responses/15-saitama-shiraoka.html",
+    (window.__ROOT||"")+"board-responses/15-saitama-shiraoka.html",
     "埼玉県白岡市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【埼玉県越谷市】PTAに関する回答(全文)",
-    "/board-responses/16-saitama-koshigaya.html",
+    (window.__ROOT||"")+"board-responses/16-saitama-koshigaya.html",
     "埼玉県越谷市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【大分県】PTAに関する回答(全文)",
-    "/board-responses/17-oita.html",
+    (window.__ROOT||"")+"board-responses/17-oita.html",
     "大分県によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【大阪市】PTAに関する回答(全文)",
-    "/board-responses/18-osaka-osaka.html",
+    (window.__ROOT||"")+"board-responses/18-osaka-osaka.html",
     "大阪市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、学校施設利用。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【大阪府堺市】PTAに関する回答(全文)",
-    "/board-responses/19-osaka-sakai.html",
+    (window.__ROOT||"")+"board-responses/19-osaka-sakai.html",
     "大阪府堺市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:教職員関与、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【大阪府大阪市】PTAに関する回答(全文)",
-    "/board-responses/20-osaka-osaka.html",
+    (window.__ROOT||"")+"board-responses/20-osaka-osaka.html",
     "大阪府大阪市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【大阪府教育庁】PTAに関する回答(全文)",
-    "/board-responses/21-osaka-kyoikucho.html",
+    (window.__ROOT||"")+"board-responses/21-osaka-kyoikucho.html",
     "大阪府教育庁によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【大阪府東大阪市】PTAに関する回答(全文)",
-    "/board-responses/22-osaka-higashiosaka.html",
+    (window.__ROOT||"")+"board-responses/22-osaka-higashiosaka.html",
     "大阪府東大阪市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:会費徴収・委任、個人情報・名簿、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【大阪府茨木市】PTAに関する回答(全文)",
-    "/board-responses/23-osaka-ibaraki.html",
+    (window.__ROOT||"")+"board-responses/23-osaka-ibaraki.html",
     "大阪府茨木市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【宮城県仙台市（職務専念義務・PTA会費徴収事務）】PTAに関する回答(全文)",
-    "/board-responses/24-miyagi-sendai.html",
+    (window.__ROOT||"")+"board-responses/24-miyagi-sendai.html",
     "宮城県仙台市（職務専念義務・PTA会費徴収事務）によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【宮城県南三陸町】PTAに関する回答(全文)",
-    "/board-responses/25-miyagi-minamisanriku.html",
+    (window.__ROOT||"")+"board-responses/25-miyagi-minamisanriku.html",
     "宮城県南三陸町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【宮城県大崎市】PTAに関する回答(全文)",
-    "/board-responses/26-miyagi-osaki.html",
+    (window.__ROOT||"")+"board-responses/26-miyagi-osaki.html",
     "宮城県大崎市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【宮城県白石市】PTAに関する回答(全文)",
-    "/board-responses/27-miyagi-shiroishi.html",
+    (window.__ROOT||"")+"board-responses/27-miyagi-shiroishi.html",
     "宮城県白石市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【山梨県西桂町教育委員会】PTAに関する回答(全文)",
-    "/board-responses/28-yamanashi-nishikatsura.html",
+    (window.__ROOT||"")+"board-responses/28-yamanashi-nishikatsura.html",
     "山梨県西桂町教育委員会によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【岐阜県東白川村】PTAに関する回答(全文)",
-    "/board-responses/29-gifu-higashishirakawa.html",
+    (window.__ROOT||"")+"board-responses/29-gifu-higashishirakawa.html",
     "岐阜県東白川村によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【岡山県岡山市】PTAに関する回答(全文)",
-    "/board-responses/30-okayama-okayama.html",
+    (window.__ROOT||"")+"board-responses/30-okayama-okayama.html",
     "岡山県岡山市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【徳島県徳島市】PTAに関する回答(全文)",
-    "/board-responses/31-tokushima-tokushima.html",
+    (window.__ROOT||"")+"board-responses/31-tokushima-tokushima.html",
     "徳島県徳島市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【愛知県刈谷市】PTAに関する回答(全文)",
-    "/board-responses/32-aichi-kariya.html",
+    (window.__ROOT||"")+"board-responses/32-aichi-kariya.html",
     "愛知県刈谷市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【愛知県愛西市】PTAに関する回答(全文)",
-    "/board-responses/33-aichi-aisai.html",
+    (window.__ROOT||"")+"board-responses/33-aichi-aisai.html",
     "愛知県愛西市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【愛知県江南市教育委員会】PTAに関する回答(全文)",
-    "/board-responses/34-aichi-konan.html",
+    (window.__ROOT||"")+"board-responses/34-aichi-konan.html",
     "愛知県江南市教育委員会によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【愛知県犬山市】PTAに関する回答(全文)",
-    "/board-responses/35-aichi-inuyama.html",
+    (window.__ROOT||"")+"board-responses/35-aichi-inuyama.html",
     "愛知県犬山市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【愛知県蒲郡市】PTAに関する回答(全文)",
-    "/board-responses/36-aichi-gamagori.html",
+    (window.__ROOT||"")+"board-responses/36-aichi-gamagori.html",
     "愛知県蒲郡市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【愛知県豊橋市】PTAに関する回答(全文)",
-    "/board-responses/37-aichi-toyohashi.html",
+    (window.__ROOT||"")+"board-responses/37-aichi-toyohashi.html",
     "愛知県豊橋市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【愛知県豊田市】PTAに関する回答(全文)",
-    "/board-responses/38-aichi-toyota.html",
+    (window.__ROOT||"")+"board-responses/38-aichi-toyota.html",
     "愛知県豊田市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【新潟県魚沼市】PTAに関する回答(全文)",
-    "/board-responses/39-niigata-uonuma.html",
+    (window.__ROOT||"")+"board-responses/39-niigata-uonuma.html",
     "新潟県魚沼市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【東京都三鷹市】PTAに関する回答(全文)",
-    "/board-responses/40-tokyo-mitaka.html",
+    (window.__ROOT||"")+"board-responses/40-tokyo-mitaka.html",
     "東京都三鷹市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【東京都中央区】PTAに関する回答(全文)",
-    "/board-responses/41-tokyo-chuo.html",
+    (window.__ROOT||"")+"board-responses/41-tokyo-chuo.html",
     "東京都中央区によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【東京都多摩市】PTAに関する回答(全文)",
-    "/board-responses/42-tokyo-tama.html",
+    (window.__ROOT||"")+"board-responses/42-tokyo-tama.html",
     "東京都多摩市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【東京都町田市】PTAに関する回答(全文)",
-    "/board-responses/43-tokyo-machida.html",
+    (window.__ROOT||"")+"board-responses/43-tokyo-machida.html",
     "東京都町田市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【栃木県さくら市】PTAに関する回答(全文)",
-    "/board-responses/44-tochigi-sakura.html",
+    (window.__ROOT||"")+"board-responses/44-tochigi-sakura.html",
     "栃木県さくら市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【栃木県日光市】PTAに関する回答(全文)",
-    "/board-responses/45-tochigi-nikko.html",
+    (window.__ROOT||"")+"board-responses/45-tochigi-nikko.html",
     "栃木県日光市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【椎葉村教育委員会】PTAに関する回答(全文)",
-    "/board-responses/46-miyazaki-shiiba.html",
+    (window.__ROOT||"")+"board-responses/46-miyazaki-shiiba.html",
     "椎葉村教育委員会によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【沖縄県座間味村】PTAに関する回答(全文)",
-    "/board-responses/47-okinawa-zamami.html",
+    (window.__ROOT||"")+"board-responses/47-okinawa-zamami.html",
     "沖縄県座間味村によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【滋賀県】PTAに関する回答(全文)",
-    "/board-responses/48-shiga.html",
+    (window.__ROOT||"")+"board-responses/48-shiga.html",
     "滋賀県によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【熊本県山江村】PTAに関する回答(全文)",
-    "/board-responses/49-kumamoto-yamae.html",
+    (window.__ROOT||"")+"board-responses/49-kumamoto-yamae.html",
     "熊本県山江村によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【神奈川県小田原市】PTAに関する回答(全文)",
-    "/board-responses/50-kanagawa-odawara.html",
+    (window.__ROOT||"")+"board-responses/50-kanagawa-odawara.html",
     "神奈川県小田原市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【神奈川県平塚市】PTAに関する回答(全文)",
-    "/board-responses/51-kanagawa-hiratsuka.html",
+    (window.__ROOT||"")+"board-responses/51-kanagawa-hiratsuka.html",
     "神奈川県平塚市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【神奈川県相模原市】PTAに関する回答(全文)",
-    "/board-responses/52-kanagawa-sagamihara.html",
+    (window.__ROOT||"")+"board-responses/52-kanagawa-sagamihara.html",
     "神奈川県相模原市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【神奈川県逗子市】PTAに関する回答(全文)",
-    "/board-responses/53-kanagawa-zushi.html",
+    (window.__ROOT||"")+"board-responses/53-kanagawa-zushi.html",
     "神奈川県逗子市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【福岡県中間市】PTAに関する回答(全文)",
-    "/board-responses/54-fukuoka-nakama.html",
+    (window.__ROOT||"")+"board-responses/54-fukuoka-nakama.html",
     "福岡県中間市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【福岡県小竹町】PTAに関する回答(全文)",
-    "/board-responses/55-fukuoka-kotake.html",
+    (window.__ROOT||"")+"board-responses/55-fukuoka-kotake.html",
     "福岡県小竹町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【福岡県広川町】PTAに関する回答(全文)",
-    "/board-responses/56-fukuoka-hirokawa.html",
+    (window.__ROOT||"")+"board-responses/56-fukuoka-hirokawa.html",
     "福岡県広川町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【福島県三春町】PTAに関する回答(全文)",
-    "/board-responses/57-fukushima-miharu.html",
+    (window.__ROOT||"")+"board-responses/57-fukushima-miharu.html",
     "福島県三春町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【福島県只見町】PTAに関する回答(全文)",
-    "/board-responses/58-fukushima-tadami.html",
+    (window.__ROOT||"")+"board-responses/58-fukushima-tadami.html",
     "福島県只見町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【福島県国見町】PTAに関する回答(全文)",
-    "/board-responses/59-fukushima-kunimi.html",
+    (window.__ROOT||"")+"board-responses/59-fukushima-kunimi.html",
     "福島県国見町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【福島県富岡町】PTAに関する回答(全文)",
-    "/board-responses/60-fukushima-tomioka.html",
+    (window.__ROOT||"")+"board-responses/60-fukushima-tomioka.html",
     "福島県富岡町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【福島県須賀川市】PTAに関する回答(全文)",
-    "/board-responses/61-fukushima-sukagawa.html",
+    (window.__ROOT||"")+"board-responses/61-fukushima-sukagawa.html",
     "福島県須賀川市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【茨城県利根町】PTAに関する回答(全文)",
-    "/board-responses/62-ibaraki-tone.html",
+    (window.__ROOT||"")+"board-responses/62-ibaraki-tone.html",
     "茨城県利根町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【茨城県阿見市】PTAに関する回答(全文)",
-    "/board-responses/63-ibaraki-ami.html",
+    (window.__ROOT||"")+"board-responses/63-ibaraki-ami.html",
     "茨城県阿見市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、学校施設利用。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【長崎県小値賀町】PTAに関する回答(全文)",
-    "/board-responses/64-nagasaki-ojika.html",
+    (window.__ROOT||"")+"board-responses/64-nagasaki-ojika.html",
     "長崎県小値賀町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【長崎県雲仙市】PTAに関する回答(全文)",
-    "/board-responses/65-nagasaki-unzen.html",
+    (window.__ROOT||"")+"board-responses/65-nagasaki-unzen.html",
     "長崎県雲仙市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【長野県安曇野市】PTAに関する回答(全文)",
-    "/board-responses/66-nagano-azumino.html",
+    (window.__ROOT||"")+"board-responses/66-nagano-azumino.html",
     "長野県安曇野市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【長野県木祖村】PTAに関する回答(全文)",
-    "/board-responses/67-nagano-kiso.html",
+    (window.__ROOT||"")+"board-responses/67-nagano-kiso.html",
     "長野県木祖村によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教職員関与、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【長野県茅野市】PTAに関する回答(全文)",
-    "/board-responses/68-nagano-chino.html",
+    (window.__ROOT||"")+"board-responses/68-nagano-chino.html",
     "長野県茅野市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【青森県横浜町】PTAに関する回答(全文)",
-    "/board-responses/69-aomori-yokohama.html",
+    (window.__ROOT||"")+"board-responses/69-aomori-yokohama.html",
     "青森県横浜町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、会費徴収・委任、個人情報・名簿、教委指導・是正。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【静岡県静岡市】PTAに関する回答(全文)",
-    "/board-responses/70-shizuoka-shizuoka.html",
+    (window.__ROOT||"")+"board-responses/70-shizuoka-shizuoka.html",
     "静岡県静岡市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【高知県いの町】PTAに関する回答(全文)",
-    "/board-responses/71-kochi-ino.html",
+    (window.__ROOT||"")+"board-responses/71-kochi-ino.html",
     "高知県いの町によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "【鹿児島県鹿児島市】PTAに関する回答(全文)",
-    "/board-responses/72-kagoshima-kagoshima.html",
+    (window.__ROOT||"")+"board-responses/72-kagoshima-kagoshima.html",
     "鹿児島県鹿児島市によるPTA関連照会への回答本文(個人情報等マスキング済み)。論点:入会意思確認、みなし加入、会費徴収・委任、個人情報・名簿、教職員関与。一次資料として全文を公開しています。",
     "source-archive"
   ],
   [
     "判例検証の基準｜結論・認定事実・射程を分けて読む",
-    "/case-reading.html",
+    (window.__ROOT||"")+"case-reading.html",
     "PTA関連の判例・裁判例を、資料状況、請求原因、当事者、認定事実、判断対象、未判断事項、射程に分け、現在の学校・PTA文書へ照合するための検証基準です。",
     "current-canonical"
   ],
   [
     "PTA関連裁判例・判例の詳細整理",
-    "/cases.html",
+    (window.__ROOT||"")+"cases.html",
     "熊本PTA訴訟、鹿児島県立高校教員の会費返還訴訟、コサージュ事件、退会・会費返還事例、自治会退会最高裁判決を、事件番号、請求、認定事実、判断、射程、資料状況に分けて詳しく解説します。",
     "current-canonical"
   ],
   [
     "根拠台帳",
-    "/claim-evidence-ledger.html",
+    (window.__ROOT||"")+"claim-evidence-ledger.html",
     "PTAの各論点について、法令、行政資料、学校文書、教育委員会回答、提出文例を対応させた根拠台帳です。",
     "current-canonical"
   ],
   [
     "実物資料から読むPTA運用",
-    "/compliance.html",
+    (window.__ROOT||"")+"compliance.html",
     "PTA運用に関する匿名加工済みの実物資料13点を、資料から確認できること、未確認事項、制度上の確認、見直しの方向に分けて読み解きます。",
     "current-canonical"
   ],
   [
     "お問い合わせ・情報提供",
-    "/contact.html",
+    (window.__ROOT||"")+"contact.html",
     "PTA文書、学校配布物、教育委員会回答、会費徴収、個人情報、学校関与などに関する情報提供・お問い合わせの案内です。",
     "current-canonical"
   ],
   [
     "全国PTA一次資料",
-    "/document.html",
+    (window.__ROOT||"")+"document.html",
     "全国から収集したPTA関係の一次資料を、原資料と解説を併せて閲覧するページです。",
     "current-canonical"
   ],
   [
     "資料・文例索引",
-    "/documents.html",
+    (window.__ROOT||"")+"documents.html",
     "PTA適正化に関する一次資料、法的根拠、提出用ひな形、回答データベース、行政通知への入口を一覧で案内します。旧documents.html?id=形式のURLにも対応します。",
     "current-canonical"
   ],
   [
     "教育委員会向け分離指針",
-    "/edu-board-separation.html",
+    (window.__ROOT||"")+"edu-board-separation.html",
     "教育委員会が、学校とPTAの役割分担、入会、会費、個人情報、教職員関与、施設利用の基準を整理する実務指針です。",
     "current-canonical"
   ],
   [
     "学校のPTA関与と教育委員会の確認責任",
-    "/education-board-responsibility.html",
+    (window.__ROOT||"")+"education-board-responsibility.html",
     "PTA内部への介入と学校管理上の確認を区別し、教育委員会が学校の情報利用、会費徴収、教職員関与、連絡手段、施設利用を点検する根拠と是正基準を示します。",
     "current-canonical"
   ],
   [
     "資料検証チェックリスト｜原本保全から照会事項まで",
-    "/evidence-checklist.html",
+    (window.__ROOT||"")+"evidence-checklist.html",
     "PTA関連資料を受け取ったときに、原本保全、作成主体、日付、対象、学校関与、入会、個人情報、会費、教職員関与、施設利用を確認し、未確認事項と照会先まで記録する検証手順です。",
     "current-canonical"
   ],
   [
     "PTAによる学校施設の目的外使用｜学校教育法137条と公私の境界",
-    "/facilities.html",
+    (window.__ROOT||"")+"facilities.html",
     "PTAが学校の教室・PTA室・印刷設備等を利用する場合の法的整理。学校教育法137条、目的外使用、許可・負担・公私分離の観点から、学校施設利用の根拠と確認資料を解説します。",
     "current-canonical"
   ],
   [
     "PTA会費を学校が徴収してよいのか｜学校徴収金・口座振替・未納管理の法的整理",
-    "/fee-collection.html",
+    (window.__ROOT||"")+"fee-collection.html",
     "PTA会費を学校が学校徴収金と一緒に集める運用を、加入意思、口座振替、学校保有情報、未納管理、会計・決裁の観点から整理。学校徴収金との違いと確認すべき文書を解説します。",
     "current-canonical"
   ],
   [
     "教育委員会宛 照会書（書式）",
-    "/forms/pta-kyouiku-iinkai-shokaisho.html",
+    (window.__ROOT||"")+"forms/pta-kyouiku-iinkai-shokaisho.html",
     "学校とPTAの関わりについて、学校管理運営上の事実関係を教育委員会へ確認するための印刷用書式です。",
     "current-canonical"
   ],
   [
     "PTA退会通知書（書式）",
-    "/forms/pta-taikai-todoke.html",
+    (window.__ROOT||"")+"forms/pta-taikai-todoke.html",
     "現会員本人が、学校を介さずPTAへ直接、退会日と退会意思を伝えるための印刷用書式です。児童生徒情報、退会理由、住所、押印は求めません。",
     "current-canonical"
   ],
   [
     "PTA問題グランドフレームワーク",
-    "/framework.html",
+    (window.__ROOT||"")+"framework.html",
     "PTA問題を、制度史・三層構造・個人情報保護法・会費・教職員関与・施設利用・出口設計まで一体で整理するグランドフレームワークです。",
     "current-canonical"
   ],
   [
     "教育委員会・学校管理職向けガイド",
-    "/guide-board.html",
+    (window.__ROOT||"")+"guide-board.html",
     "PTAの任意加入、学校徴収金、個人情報、教職員関与、学校施設利用を、教育委員会・学校管理職が確認する学校管理上の事項として整理します。",
     "audience-guide"
   ],
   [
     "PTAの入会・退会・会費・個人情報｜保護者向け確認ガイド",
-    "/guide-parent.html",
+    (window.__ROOT||"")+"guide-parent.html",
     "PTAへの入会は任意です。入会意思の確認、退会手続、会費、個人情報、非会員の扱いなど、保護者が学校・PTAとの関係で確認したいポイントを実務的に整理します。",
     "audience-guide"
   ],
   [
     "PTA役員の方へ",
-    "/guide-pta.html",
+    (window.__ROOT||"")+"guide-pta.html",
     "PTA役員が学校に依存しない運営へ移行するために、入会申込、会費徴収、個人情報、学校施設利用、教職員関与を整理する実務ガイドです。",
     "audience-guide"
   ],
   [
     "研究者・記者の方へ",
-    "/guide-research.html",
+    (window.__ROOT||"")+"guide-research.html",
     "PTA問題を一次資料で検証する研究者・記者向けの方法論ページ。資料検証、法令、行政回答、学校文書、論考、引用時の確認事項を整理します。",
     "audience-guide"
   ],
   [
     "PTA運営適正化ガイドライン｜文部科学省・個人情報保護委員会（PPC）等の公的資料から整理",
-    "/guideline.html",
+    (window.__ROOT||"")+"guideline.html",
     "文部科学省・個人情報保護委員会等の公的資料と法令を参照し、PTAの任意加入、退会、個人情報、会費徴収、学校関与を整理した当委員会作成の実務ガイドラインです。",
     "current-canonical"
   ],
   [
     "論考・調査報告",
-    "/journal.html",
+    (window.__ROOT||"")+"journal.html",
     "PTA会費徴収、学校とPTAの公私分離、個人情報保護、入会手続などに関する論考・調査報告を掲載しています。",
     "current-canonical"
   ],
   [
     "PTAと消費者契約法——事業者性・任意加入の説明・退会と会費返還を条文から整理",
-    "/journal/consumer-contract.html",
+    (window.__ROOT||"")+"journal/consumer-contract.html",
     "PTAは消費者契約法の「事業者」に当たるのか。消費者庁逐条解説の例示、3条の説明義務、4条の誤認・困惑、10条の不利益条項、退会制限や会費返還、熊本PTA裁判の教訓までを条文に沿って整理します。",
     "research-record"
   ],
   [
     "重点論考",
-    "/journal/core-papers.html",
+    (window.__ROOT||"")+"journal/core-papers.html",
     "PTA問題を、加入契約、学校保有情報、会費徴収、教職員関与、教育行政の責任という制度構造から読むための重点論考と一次資料への入口です。",
     "research-record"
   ],
   [
     "一宮市立小中学校のPTA決算書を読む",
-    "/journal/ichinomiya-pta-settlements-20261108.html",
+    (window.__ROOT||"")+"journal/ichinomiya-pta-settlements-20261108.html",
     "一宮市への情報公開請求で入手した市立小中学校21校のPTA決算書42件を全件点検。建物修繕費の負担、協力費による学校経費の肩代わり、校長のPTA会計受任など指摘50件を、公開用抜粋画像と法令の該当性とともに示す。",
     "research-record"
   ],
   [
     "司法が突きつける現実——熊本PTA裁判と鹿児島地裁が示した「慣例の終わり」",
-    "/journal/judicial-reality-pta-cases.html",
+    (window.__ROOT||"")+"journal/judicial-reality-pta-cases.html",
     "熊本PTA裁判（地裁は請求棄却・高裁で和解）は何を確定させ、何を確定させなかったのか。黙示の同意の限界、和解が各地の教育委員会通知を動かした経緯、判例引用時の正確性まで、PTA裁判例の実務的な読み方を整理します。",
     "research-record"
   ],
   [
     "学校によるPTA会費徴収はどこまで制度化できるか——川崎市型を「最強の反証例」として検証する",
-    "/journal/kawasaki-pta-fee-school-duty.html",
+    (window.__ROOT||"")+"journal/kawasaki-pta-fee-school-duty.html",
     "教育委員会規則でPTA会費収納を校務として明文化した川崎市を、学校によるPTA会費徴収の最も強い制度化例として検証します。委任・同意だけでは足りないという審査順序、個人情報保護法61条、地方教育行政法21条・33条、教職員の職務、PTA自己徴収との比較を整理します。",
     "research-record"
   ],
   [
     "公会計化の名で、なぜPTA会費まで集めるのか",
-    "/journal/matsuyama-pta-fee-unification-20261013.html",
-    "学校徴収金の公会計化とPTA会費は別問題。松山市の徴収一元化事業、2021年の「法的に可能な範囲」、2023年誤徴収、2026年公式回答を検証し、所掌事務と権限から公私分離を論じる。",
+    (window.__ROOT||"")+"journal/matsuyama-pta-fee-unification-20261013.html",
+    "松山市のPTA会費学校徴収を検証。2026年11月9日の回答536による仕分口座・地方自治法235条の4の説明修正、学校職員の関与、個人情報利用、根拠法令の未提示を往復メールから整理。",
     "research-record"
   ],
   [
     "「運営優良PTA」は何を保証するのか――個人情報保護委員会（PPC）の公的規律と文科省・日本総研調査の間にある空白",
-    "/journal/mext-jri-pta-good-practice-legal-scope.html",
+    (window.__ROOT||"")+"journal/mext-jri-pta-good-practice-legal-scope.html",
     "文科省・日本総研の運営優良PTA事例を、個人情報保護委員会（PPC）が公立学校側に求める所掌事務、利用目的、恒常的処理の審査順序と比較し、「優良」という評価の法的射程を検証します。",
     "research-record"
   ],
   [
     "「PTA業務は公務ではない」とする文科省通話記録の読み方",
-    "/journal/mext-not-public.html",
+    (window.__ROOT||"")+"journal/mext-not-public.html",
     "令和8年1月22日の文部科学省教職員制度課との通話記録として旧サイトに掲載していた内容を移植。公式通知・文書回答とは区別し、学校とPTAの連絡調整とPTA内部事務をどう読み分けるか整理します。",
     "research-record"
   ],
   [
     "給食費公会計化がPTA会費を制度へ巻き込んだ——美咲町学校徴収金管理規則の構造",
-    "/journal/misaki-public-accounting-pta-fee.html",
+    (window.__ROOT||"")+"journal/misaki-public-accounting-pta-fee.html",
     "岡山県美咲町が2026年3月に制定した学校徴収金管理規則を、同日制定の学校給食費条例、公会計と私費会計の条文差、人口・学校規模から分析します。給食費公会計化の制度設計にPTA会費徴収を巻き込み、従来慣行を学校・教職員の事務として固定した構造を検証します。",
     "research-record"
   ],
   [
     "PTA非会員情報・協力金・学校名簿の問題",
-    "/journal/nonmember-info.html",
+    (window.__ROOT||"")+"journal/nonmember-info.html",
     "PTAに入らない家庭を学校名簿で特定し、協力金を依頼し、記念品や当番で区別する——その運用は何が問題か。学校保有情報の目的外利用、個人情報保護委員会資料、非会員児童の平等、「数えなくても回る」事業設計までを整理します。",
     "research-record"
   ],
   [
     "PTAオプトアウト加入の成立要件と実務リスク",
-    "/journal/optout-invalidity.html",
+    (window.__ROOT||"")+"journal/optout-invalidity.html",
     "「非加入届を出さない限りPTA会員」というオプトアウト方式・みなし加入は成立するのか。民法の申込みと承諾、黙示の合意の限界、会費・名簿・学校関与に連鎖するリスク、オプトインへの移行手順までを整理します。",
     "research-record"
   ],
   [
     "PTAをめぐる行政会議録・議事録――加入・会費・個人情報・学校関与に関する12資料",
-    "/journal/pta-administrative-minutes.html",
+    (window.__ROOT||"")+"journal/pta-administrative-minutes.html",
     "PTAの任意加入、会費徴収、個人情報、教職員関与、学校施設・学校事務との関係が行政内部で議論された教育委員会・地方議会・社会教育委員会等の会議録12件を整理します。",
     "research-record"
   ],
   [
     "学校徴収金とPTA会費の不可分徴収——給食費と一緒の引き落としはなぜ問題か（総合的法的分析）",
-    "/journal/pta-fee-collection-legal-analysis.html",
+    (window.__ROOT||"")+"journal/pta-fee-collection-legal-analysis.html",
     "PTA会費が給食費・教材費と同じ通知・同じ口座で引き落とされる「不可分徴収」を、契約法・行政会計・服務法制・個人情報の四領域から総合分析。委任契約の限界、教職員と保護者を守る分離の設計、移行の手順までを整理します。",
     "research-record"
   ],
   [
     "PTA会費はいつ「学校の仕事」になったのか――委任方式の成立史と地方自治法235条の4",
-    "/journal/pta-fee-delegation-origin-local-government-law-20261016.html",
+    (window.__ROOT||"")+"journal/pta-fee-delegation-origin-local-government-law-20261016.html",
     "学校徴収金とPTA会費の法的区別を出発点に、1983年大阪府会計基準、2005年東京都規則、文科省委託システム研究、2012年文科省・総務省交渉、全国監査を検証。委任・校務分掌・公金外現金処理の根拠を問い直す。",
     "research-record"
   ],
   [
     "PTA適正化の最終地点",
-    "/journal/pta-final-point-ptf.html",
+    (window.__ROOT||"")+"journal/pta-final-point-ptf.html",
     "PTA適正化の最終地点は「会費をどう適法に集めるか」の先にある。固定会費型PTAが構造的に抱える緊張を分析し、年会費・恒常財産・役員ノルマ・学校資源利用を置かない最小構造フォーラム（PTF）という基底形の制度設計を提示します。",
     "research-record"
   ],
   [
     "PTA運営の法的構造と教育行政の確認責任",
-    "/journal/pta-legal-structure-education-administration.html",
+    (window.__ROOT||"")+"journal/pta-legal-structure-education-administration.html",
     "PTAの任意性と学校・PTAの公私分離を軸に、会費徴収、個人情報、教職員関与、学校施設及び教育行政の確認責任を法令・判例の射程に沿って整理する基幹論考です。",
     "research-record"
   ],
   [
     "参考文献・引用法令・判例一覧（総覧）",
-    "/journal/pta-legal-structure-references.html",
+    (window.__ROOT||"")+"journal/pta-legal-structure-references.html",
     "『PTA運営の法的構造と教育行政の確認責任』で参照・引用した法令、判例、裁判資料、学術・実務資料を整理した総覧です。",
     "research-record"
   ],
   [
     "PTA加入はなぜ「オプトイン」なのか",
-    "/journal/pta-membership-optin-record.html",
+    (window.__ROOT||"")+"journal/pta-membership-optin-record.html",
     "民法522条・95条、消費者契約法4条・10条、個人情報保護法を接続し、PTA加入のオプトイン、全員提出型チェック欄、会員資格・会費・個人情報を一本の論理線で整理します。",
     "research-record"
   ],
   [
     "地方公務員法35条とPTA事務｜教職員は勤務時間中にどこまで関与できるか",
-    "/journal/pta-shokumu-sennen-gimu.html",
+    (window.__ROOT||"")+"journal/pta-shokumu-sennen-gimu.html",
     "PTA会費・会計・会員名簿・役員選出などを教職員が勤務時間中に処理できるかを、地方公務員法35条、昭和39年旧自治省行政実例、文科省資料、中央教育審議会、2020年標準職務通知、2025年公会計化通知、2026年滋賀県監査から検証します。一次資料PDFと原資料画像も掲載。",
     "research-record"
   ],
   [
     "現行法体系と整合するPTA運営の基本モデル――明示的加入意思表示とPTA自己徴収の統一理論",
-    "/journal/pta-unified-legal-theory.html",
+    (window.__ROOT||"")+"journal/pta-unified-legal-theory.html",
     "PTAへの加入、会員情報、会費債権、徴収、未納管理、教職員労務、会計を一つの連続した処理として分析し、明示的な加入意思表示とPTA自身による会費徴収を統一して論証します。",
     "research-record"
   ],
   [
     "川崎市モデルも横浜市モデルも「詰み」——学校代行維持論の構造的限界",
-    "/journal/school-collection-model-comparison.html",
+    (window.__ROOT||"")+"journal/school-collection-model-comparison.html",
     "学校によるPTA会費徴収を維持する二つの制度設計——委任を制度化する川崎市型と、加入届・同意を徹底する横浜市型——を比較し、双方が行き着く構造的限界と、個人情報保護委員会資料以降の出口（分離）を整理します。",
     "research-record"
   ],
   [
     "学校徴収金とPTA会費を分ける理由",
-    "/journal/school-fee-separation.html",
+    (window.__ROOT||"")+"journal/school-fee-separation.html",
     "給食費・教材費とPTA会費を同じ通知・同じ口座・同じ未納管理で扱うと何が壊れるのか。意思確認・会計・服務・個人情報・子どもの立場の五つの観点から混在の問題を整理し、通知・口座・未納管理を分ける実装手順と申入書につなぎます。",
     "research-record"
   ],
   [
     "学校はなぜPTA会費を徴収できると考えてきたのか――総務省と文部科学省の対立、学校徴収金の公務化論、そしてPPC",
-    "/journal/school-pta-fee-public-duty-mic-mext-ppc-20261016.html",
+    (window.__ROOT||"")+"journal/school-pta-fee-public-duty-mic-mext-ppc-20261016.html",
     "2009～2012年の総務省・文科省の交渉原記録、2025年学校徴収金公会計化・校務DXチェックリスト、2026年個人情報保護委員会資料を横断し、PTA内部事務を学校が担う所掌事務・権限を問い直す。",
     "research-record"
   ],
   [
     "世田谷区のPTA改革はどこまで進んだのか――学校保有情報の遮断が、PTAの入退会の自由を実質的に保障する仕組み",
-    "/journal/setagaya-pta-information-separation.html",
+    (window.__ROOT||"")+"journal/setagaya-pta-information-separation.html",
     "世田谷区の2025年11月の学務課長答弁と学校モール改修、各校PTA実務を検証し、学校情報の利用・提供の遮断がPTAの自由加入に及ぼす構造的効果を論じる。",
     "research-record"
   ],
   [
     "100の屁理屈と循環論法――滋賀県PTA住民監査請求は行政の急所を突いた",
-    "/journal/shiga-pta-audit-circular-reasoning-20261013.html",
+    (window.__ROOT||"")+"journal/shiga-pta-audit-circular-reasoning-20261013.html",
     "滋賀県PTA会費徴収住民監査請求を検証。三者契約、旧自治省行政実例、東京高裁判決の援助制度、地方自治法235条の4、個人情報保護法61条、学校徴収金DX資料の変化を原資料から分析。",
     "research-record"
   ],
   [
     "すでに「2割近く」がPTA非加入だった――2020年の新宿区審議会が問うた名簿提供",
-    "/journal/shinjuku-2020-pta-nonmember-data.html",
+    (window.__ROOT||"")+"journal/shinjuku-2020-pta-nonmember-data.html",
     "2020年1月16日の新宿区審議会で示された「新入児童・生徒の2割近く」の文脈、非加入家庭を含む毎年度の名簿提供案、継続審議と後続39会議の追跡を一次資料で検証。学校情報とPTA会員情報の分離を、他自治体・現行法61条・69条と比較して論じます。",
     "research-record"
   ],
   [
     "PTAは「学校のこと」なのか――社会教育法が示す教育委員会・学校・PTAの境界",
-    "/journal/social-education-law-pta-boundary.html",
+    (window.__ROOT||"")+"journal/social-education-law-pta-boundary.html",
     "教育委員会がPTA問題を「各学校の判断」と整理する場面を、社会教育法2条、5条、10～12条、44～47条から検証。学校教育、社会教育行政、PTA内部事務、学校施設管理を分けて読みます。",
     "research-record"
   ],
   [
     "新設校のPTAは誰がつくるのか——玉野中央中学校の準備資料を読む",
-    "/journal/tamano-chuo-pta-establishment.html",
+    (window.__ROOT||"")+"journal/tamano-chuo-pta-establishment.html",
     "玉野中央中学校のPTA設立準備を一次資料の画像とともに検証。入会届・自由意思の明文化、学校による会計・会費額の検討、個人情報保護規定の削除、学級費への付け替えの論点を、決定事項・発言・未確認事項に分けて分析します。",
     "research-record"
   ],
   [
     "学校経由の第三者提供同意とPTA名簿",
-    "/journal/third-party-consent.html",
+    (window.__ROOT||"")+"journal/third-party-consent.html",
     "学校書類に「PTAへの情報提供に同意します」の欄を置けば名簿提供は適法になるのか。同意の特定性・任意性・撤回、加入意思との分離、FAQ Q3-3-2の「臨時的」の壁、直接取得という本筋までを整理します。",
     "research-record"
   ],
   [
     "なぜPTAの入退会の自由は守られないのか――学校による会費徴収、「第二の財布」、働き方改革、そして行政権限から読み解く構造的問題",
-    "/journal/why-pta-membership-freedom-fails.html",
+    (window.__ROOT||"")+"journal/why-pta-membership-freedom-fails.html",
     "なぜPTAの任意加入は実現しないのか。学校による全世帯への接点、一括徴収、東京都PTA協議会調査、名古屋市の第二の財布、働き方改革、PPCの所掌事務論をつなぎ、学校・PTAの実質分離と保護者の自由な選択を論じる。",
     "research-record"
   ],
   [
     "働き方改革から見たPTA会費代理徴収の限界",
-    "/journal/work-style-reform.html",
+    (window.__ROOT||"")+"journal/work-style-reform.html",
     "教員の働き方改革はPTA事務を「効率化して残す」のではなく「学校業務から外す」方向を指す。中教審の3分類、学校徴収金の公会計化、地方公務員法35条、DX化の落とし穴から、PTA会費代理徴収の限界と分離への手順を整理します。",
     "research-record"
   ],
   [
     "横浜市教育委員会通知「学教第1965号」の意義",
-    "/journal/yokohama-notice-1965.html",
+    (window.__ROOT||"")+"journal/yokohama-notice-1965.html",
     "横浜市教育委員会通知 学教第1965号を、通知本文と別紙の一式として、PTA任意加入、入会届、個人情報同意、会費説明、非加入家庭配慮の根拠資料として整理します。",
     "research-record"
   ],
   [
     "最重要資料5件｜PTA運営を一次資料で確認する",
-    "/key-materials.html",
+    (window.__ROOT||"")+"key-materials.html",
     "PTA運営を確認する際に参照頻度の高い行政通知、公的資料、法令本文を、加入意思、個人情報、教職員関与、会費徴収、基本法令の判断線と、対象、射程、実物文書との照合事項に沿って整理しています。",
     "current-canonical"
   ],
   [
     "PTA実務移行キット｜教育委員会向け",
-    "/kit/education-board/",
+    (window.__ROOT||"")+"kit/education-board/",
     "学校側のPTA関係処理を点検し、学校とPTAの境界を整理するための実務資料です。Audience prototype v0.1 / Based on Master v0.3.1。最新版HTML・根拠・更新履歴への恒久入口。",
     "audience-guide"
   ],
   [
     "PTA実務移行キット｜PTA連合会向け",
-    "/kit/federation/",
+    (window.__ROOT||"")+"kit/federation/",
     "加盟PTAが学校依存型から自立運営型へ移行できるよう、標準モデル・様式・支援方法を整理した資料です。Audience prototype v0.1 / Based on Master v0.3.1。最新版HTML・根拠・更新履歴への恒久入口。",
     "audience-guide"
   ],
   [
     "PTA実務移行キット｜保護者向け",
-    "/kit/parents/",
+    (window.__ROOT||"")+"kit/parents/",
     "学校への入学とPTA加入の違い、加入申込み、会費、個人情報、問い合わせ先を簡潔に確認できる資料です。Audience prototype v0.1 / Based on Master v0.3.1。最新版HTML・根拠・更新履歴への恒久入口。",
     "audience-guide"
   ],
   [
     "PTA実務移行キット｜校長会・学校管理職向け",
-    "/kit/school-leaders/",
+    (window.__ROOT||"")+"kit/school-leaders/",
     "学校が現在行っているPTA関係処理を棚卸しし、学校業務とPTA内部事務を切り分けるための実務資料です。Audience prototype v0.1 / Based on Master v0.3.1。最新版HTML・根拠・更新履歴への恒久入口。",
     "audience-guide"
   ],
   [
     "PTA実務移行キット｜単位PTA向け",
-    "/kit/unit-pta/",
+    (window.__ROOT||"")+"kit/unit-pta/",
     "PTA自身が加入受付、会員管理、会費徴収、役員選出を行える運営へ移行するための実務資料です。Audience prototype v0.1 / Based on Master v0.3.1。最新版HTML・根拠・更新履歴への恒久入口。",
     "audience-guide"
   ],
   [
     "久留米市28答申第2号｜学校からPTAへの個人情報提供・利用停止請求",
-    "/kurume-28-toushin2-pta-personal-information.html",
+    (window.__ROOT||"")+"kurume-28-toushin2-pta-personal-information.html",
     "久留米市情報公開・個人情報保護審査会28答申第2号（2016年7月15日）を、学校からPTAへの個人情報提供、提供停止・利用停止請求、教育委員会の是正通知、運用変更、審査会判断の順に一次資料ベースで整理します。",
     "current-canonical"
   ],
   [
     "PTA運営の法制度マップ｜公私分離を五つの処理で検証",
-    "/law-map.html",
+    (window.__ROOT||"")+"law-map.html",
     "PTAの加入、個人情報、会費、教職員、学校施設を一つの処理連鎖として検証。法令の適用範囲、確認文書、公私分離の是正基準を公式一次資料とともに整理します。",
     "current-canonical"
   ],
   [
     "PTAの会員資格と入会手続｜任意加入・会費・個人情報・学校との関係",
-    "/membership.html",
+    (window.__ROOT||"")+"membership.html",
     "PTAの会員資格と入会手続を起点に、任意加入、会費、個人情報、学校との公私分離、制度移行を整理します。",
     "current-canonical"
   ],
   [
     "全国資料館｜自治体別PTA実物文書アーカイブ",
-    "/national-archive.html",
+    (window.__ROOT||"")+"national-archive.html",
     "自治体・学校ごとのPTA入会案内、申込書、会費徴収、個人情報、役員選出等の実物文書を、資料画像・元PDF・原本URLとともに確認できます。未掲載・不存在・未評価を区別して読むための基準も掲載しています。",
     "source-archive"
   ],
   [
     "PTA事務と教員の職務専念義務・職専免｜教職員関与の法的整理",
-    "/personnel.html",
+    (window.__ROOT||"")+"personnel.html",
     "教員・教職員がPTA会費徴収、会計、名簿、連絡等のPTA内部事務を行う場合を、地方公務員法35条、職務専念義務、職専免、校務との区別から整理し、確認すべき根拠を解説します。",
     "current-canonical"
   ],
   [
     "公立学校とPTAの個人情報｜PPC資料を61条・69条から読む",
-    "/ppc-points.html",
+    (window.__ROOT||"")+"ppc-points.html",
     "公立学校とPTAの個人情報を、個人情報保護委員会（PPC）の令和8年3月資料と公式Q&Aから解説。法第61条の所掌事務・利用目的、法第69条第2項の臨時性、学校によるPTA会費徴収を確認します。",
     "current-canonical"
   ],
   [
     "個人情報保護委員会（PPC）「公立学校とPTAの個人情報」17ページ詳細解説 | 教委・学校・PTA向け",
-    "/ppc-school-pta-personal-data.html",
+    (window.__ROOT||"")+"ppc-school-pta-personal-data.html",
     "個人情報保護委員会の2026年3月資料を逐ページで解説。学校からPTAへの提供だけでなく、学校内部でのPTA目的利用、61条・67条・69条、本人同意、従事者義務まで整理します。",
     "current-canonical"
   ],
   [
     "サイトの個人情報取扱方針",
-    "/privacy-policy.html",
+    (window.__ROOT||"")+"privacy-policy.html",
     "PTA適正化推進委員会が、問い合わせ、情報提供、アクセス解析等を通じて取り扱う個人情報の利用目的、公開時の配慮、保管、第三者提供、問い合わせ先を定めます。",
     "current-canonical"
   ],
   [
     "学校とPTAの個人情報のやり取り｜個人情報保護法61条・69条と個人情報保護委員会（PPC）資料",
-    "/privacy.html",
+    (window.__ROOT||"")+"privacy.html",
     "学校が保有する保護者・児童生徒情報をPTA事務に利用・提供する場合を、個人情報保護法61条・69条、利用目的、本人同意、個人情報保護委員会（PPC）資料から整理。学校とPTAの情報分離を解説します。",
     "current-canonical"
   ],
   [
     "PTA適正化とは何か｜学校とPTAを分離する運営構造",
-    "/proper-management.html",
+    (window.__ROOT||"")+"proper-management.html",
     "PTA適正化とは、明示的な加入意思表示とPTA自身による会費徴収を徹底し、学校がPTAの会員・非会員を把握しない運営へ改めることです。",
     "current-canonical"
   ],
   [
     "プライバシーポリシー | PTA加入・会員管理アドオン",
-    "/pta-addon-privacy.html",
+    (window.__ROOT||"")+"pta-addon-privacy.html",
     "PTA加入・会員管理アドオンは、PTAへの加入を希望する方だけの申込情報を、利用者自身のGoogleスプレッドシート上で管理するためのツールです。",
     "current-canonical"
   ],
   [
     "利用規約 | PTA加入・会員管理アドオン",
-    "/pta-addon-terms.html",
+    (window.__ROOT||"")+"pta-addon-terms.html",
     "本アドオンは、PTAへの加入を希望する方だけの申込情報を、利用者自身のGoogleスプレッドシート上で管理するための補助ツールです。",
     "current-canonical"
   ],
   [
     "PTA加入・会員管理アドオン",
-    "/pta-addon.html",
+    (window.__ROOT||"")+"pta-addon.html",
     "PTAへの加入を希望する方だけの申込情報を、受付・会員確定・名簿反映に分けて管理するGoogle Sheetsアドオン。導入準備、初期設定、役割分担を整理します。",
     "current-canonical"
   ],
   [
     "PTA入会申込書がない場合の確認シート・文例",
-    "/pta-application-chain-action-kit.html",
+    (window.__ROOT||"")+"pta-application-chain-action-kit.html",
     "PTA入会申込書がない場合に保護者が学校・PTA・教育委員会へ確認するための文例とチェックシート。印刷してPDF保存できます。",
     "current-canonical"
   ],
   [
     "入会申込書がないと何が崩れるのか｜保護者ができる確認と文例",
-    "/pta-application-chain.html",
+    (window.__ROOT||"")+"pta-application-chain.html",
     "PTA入会申込書がない場合に、会員資格・会費徴収・学校名簿・教職員関与・施設利用の根拠がどう連鎖するかを説明し、保護者が学校・PTA・教育委員会へ確認するための文例を提供します。",
     "current-canonical"
   ],
   [
     "PTAは「学校のお手伝い」をやめなければ生き残れない",
-    "/pta-future.html",
+    (window.__ROOT||"")+"pta-future.html",
     "会費と無償労働を前提にした学校支援型PTAから、任意参加・自主活動・学校との公私分離を基本とするPTAへの再設計を提言します。",
     "current-canonical"
   ],
   [
     "PTAは誰が作ったのか――「自主的団体」の成立史",
-    "/pta-history.html",
+    (window.__ROOT||"")+"pta-history.html",
     "GHQ・CIE、米国教育使節団、文部省によるPTA普及と、学校後援会的運営が残った経緯を公的資料から検証します。",
     "current-canonical"
   ],
   [
     "PTA加入は自動加入・沈黙だけでは成立しない | オプトイン原則と申込みの法的整理",
-    "/pta-membership-optin.html",
+    (window.__ROOT||"")+"pta-membership-optin.html",
     "PTA加入は、入学や沈黙ではなく本人の申込みとPTAの承諾から始まります。民法521条・522条、個人情報保護法61条・69条、個人情報保護委員会（PPC）資料を区別して読み、オプトアウト、学校名簿、会費徴収を本文で詳しく整理します。",
     "research-record"
   ],
   [
     "PTA加入・会員管理テンプレート β版",
-    "/pta-membership-template.html",
+    (window.__ROOT||"")+"pta-membership-template.html",
     "PTA加入を任意の申込として扱い、学校名簿に依存せずに加入意思・重要事項同意・会費確認・会員確定を整理するためのテンプレートです。",
     "current-canonical"
   ],
   [
     "PTA役員向け｜入会申込書がないとPTA運営の何が崩れるのか",
-    "/pta-officer-chain.html",
+    (window.__ROOT||"")+"pta-officer-chain.html",
     "PTA役員向けに、入会申込書がない場合に会員名簿・会費徴収・役員選出・個人情報・学校依存・会計説明がどう崩れるかを整理します。",
     "current-canonical"
   ],
   [
     "PTA内部事務の学校処理 全国法的整合性調査",
-    "/pta-school-processing.html",
+    (window.__ROOT||"")+"pta-school-processing.html",
     "PTAから学校への委任、本人同意、校長判断、学校徴収金・準公金・私費会計規程を根拠に、公立学校がPTA内部事務を恒常処理する制度を全国比較。公法上の受任権限、地方公務員法35条、学校教育法37条、個人情報保護法61条・69条の順で検証します。",
     "current-canonical"
   ],
   [
     "学校とPTAの運用実例を点検する",
-    "/reality.html",
+    (window.__ROOT||"")+"reality.html",
     "学校とPTAの境界で問題になりやすい入会、会費、個人情報、教職員関与、施設利用を、再現例と実物文書の確認手順から点検します。",
     "current-canonical"
   ],
   [
     "PTA運営の法的構造と是正基準",
-    "/report.html",
+    (window.__ROOT||"")+"report.html",
     "PTAの明示的オプトイン、個人情報、会費徴収、教職員関与、施設利用を一つの運用構造として検証し、学校とPTAの完全分離に必要な是正基準を示す総合分析レポートです。",
     "current-canonical"
   ],
   [
     "根拠資料・調査方法",
-    "/research-index.html",
+    (window.__ROOT||"")+"research-index.html",
     "PTA問題を一次資料で検証するため、法制度、行政回答、学校・PTA文書、判例、制度史、資料確認の基準を整理しています。",
     "research-record"
   ],
   [
     "全国PTA制度・運用研究マップ",
-    "/research-map.html",
+    (window.__ROOT||"")+"research-map.html",
     "全国PTA制度・運用研究マップ。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
     "source-archive"
   ],
   [
     "厚木市 PTA制度・運用研究ノート",
-    "/research/atsugi.html",
+    (window.__ROOT||"")+"research/atsugi.html",
     "厚木市 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
     "research-record"
   ],
   [
     "広島市 PTA制度・運用研究ノート",
-    "/research/hiroshima.html",
+    (window.__ROOT||"")+"research/hiroshima.html",
     "広島市 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
     "research-record"
   ],
   [
     "兵庫県 PTA制度・運用研究ノート",
-    "/research/hyogo.html",
+    (window.__ROOT||"")+"research/hyogo.html",
     "兵庫県 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
     "research-record"
   ],
   [
     "川口市 PTA制度・運用研究ノート",
-    "/research/kawaguchi.html",
+    (window.__ROOT||"")+"research/kawaguchi.html",
     "川口市 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
     "research-record"
   ],
   [
     "川崎市 PTA制度・運用研究ノート",
-    "/research/kawasaki.html",
+    (window.__ROOT||"")+"research/kawasaki.html",
     "川崎市 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
     "research-record"
   ],
   [
     "松山市 PTA制度・運用研究ノート",
-    "/research/matsuyama.html",
+    (window.__ROOT||"")+"research/matsuyama.html",
     "松山市 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
     "research-record"
   ],
   [
     "西宮市 PTA制度・運用研究ノート",
-    "/research/nishinomiya.html",
+    (window.__ROOT||"")+"research/nishinomiya.html",
     "西宮市 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
     "research-record"
   ],
   [
     "大阪市 PTA制度・運用研究ノート",
-    "/research/osaka.html",
+    (window.__ROOT||"")+"research/osaka.html",
     "大阪市 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
     "research-record"
   ],
   [
     "滋賀県 PTA制度・運用研究ノート",
-    "/research/shiga.html",
+    (window.__ROOT||"")+"research/shiga.html",
     "滋賀県 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
     "research-record"
   ],
   [
     "静岡県 PTA制度・運用研究ノート",
-    "/research/shizuoka.html",
+    (window.__ROOT||"")+"research/shizuoka.html",
     "静岡県 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
     "research-record"
   ],
   [
     "横浜市 PTA制度・運用研究ノート",
-    "/research/yokohama.html",
+    (window.__ROOT||"")+"research/yokohama.html",
     "横浜市 PTA制度・運用研究ノート。確認事実・資料の所在・行政説明・法的分析・未解明事項を区別して読む全国PTA研究アーカイブ。",
     "research-record"
   ],
   [
     "正しいPTA運営とは何か｜学校とPTAの公私分離",
-    "/school-pta-separation.html",
+    (window.__ROOT||"")+"school-pta-separation.html",
     "自動加入、オプトアウト、学校徴収金との抱合せ徴収、学校名簿利用、教職員によるPTA会計・役員就任などを、学校とPTAの公私分離という一つの構造から整理します。",
     "current-canonical"
   ],
   [
     "提出文書キット",
-    "/submission-kit.html",
+    (window.__ROOT||"")+"submission-kit.html",
     "PTAの入会、会費、個人情報、学校関与を学校・PTA・教育委員会へ確認するための提出文例、確認表、根拠資料を整理します。",
     "current-canonical"
   ],
   [
     "教育委員会へ提出する資料｜各地でPTA適正化に取り組む方へ",
-    "/submit-to-board.html",
+    (window.__ROOT||"")+"submit-to-board.html",
     "全国各地でPTAの適正化に取り組む方が、地域の事実資料とA4・5ページの提出要旨、詳細資料を組み合わせ、学校とPTAの公私分離、任意加入、個人情報、会費徴収、教職員関与について教育委員会へ事実確認・根拠確認・運用見直しを求めるための提出資料と手順を案内します。",
     "current-canonical"
   ],
   [
     "応援・寄付のお願い",
-    "/support.html",
+    (window.__ROOT||"")+"support.html",
     "PTA適正化推進委員会の調査、資料取得、資料整理、Web公開、教育委員会・学校への働きかけを継続するための支援ページです。",
     "current-canonical"
   ],
   [
     "PTA制度史と現在の学校関与｜慣行を根拠にしないための読解",
-    "/timeline-issues.html",
+    (window.__ROOT||"")+"timeline-issues.html",
     "戦後のPTA結成促進、社会教育法による団体自治、急速な普及が残した理念と実態のずれをたどり、任意加入、個人情報、会費徴収、教職員関与、学校施設利用を現在の文書で点検します。",
     "current-canonical"
   ],
   [
     "PTA制度史",
-    "/timeline.html",
+    (window.__ROOT||"")+"timeline.html",
     "戦後のPTA導入から現在までを、文部科学省資料、法令、裁判例、自治体通知とともにたどり、任意加入・学校関与・会費・個人情報の変遷を整理します。",
     "current-canonical"
   ]

@@ -1,5 +1,5 @@
-@layer page {
-  :root {
+
+  .legacy {
     --ppc-navy: #12365b;
     --ppc-blue: #087aa6;
     --ppc-green: #2d6f4e;
@@ -10,23 +10,23 @@
     --ppc-pale: #f3f7fa;
   }
 
-  .ppc-explainer-page {
+  .legacy .ppc-explainer-page {
     margin: 0;
     background: #fff;
     color: var(--ppc-ink);
     font-family: "Noto Sans JP", sans-serif;
   }
-  .ppc-explainer-page *,
-  .ppc-explainer-page *::before,
+  .legacy .ppc-explainer-page *,.legacy 
+  .ppc-explainer-page *::before,.legacy 
   .ppc-explainer-page *::after {
     box-sizing: border-box;
   }
-  .ppc-wrap {
+  .legacy .ppc-wrap {
     width: min(calc(100% - 48px), 1120px);
     margin-inline: auto;
   }
 
-  .ppc-hero {
+  .legacy .ppc-hero {
     padding: 82px 0 68px;
     border-bottom: 8px solid var(--ppc-orange);
     background:
@@ -34,14 +34,14 @@
       #12365b;
     color: #fff;
   }
-  .ppc-eyebrow {
+  .legacy .ppc-eyebrow {
     margin: 0 0 16px;
     color: #bce9f2;
     font-size: 0.8rem;
     font-weight: 900;
     letter-spacing: 0.1em;
   }
-  .ppc-hero h1 {
+  .legacy .ppc-hero h1 {
     max-width: 1000px;
     margin: 0;
     font-family: "Noto Serif JP", serif;
@@ -49,50 +49,50 @@
     font-weight: 900;
     line-height: 1.28;
   }
-  .ppc-hero h1 em {
+  .legacy .ppc-hero h1 em {
     color: #ffd48a;
     font-style: normal;
   }
-  .ppc-lead {
+  .legacy .ppc-lead {
     max-width: 900px;
     margin: 26px 0 0;
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.04rem;
     line-height: 2;
   }
-  .ppc-meta {
+  .legacy .ppc-meta {
     max-width: 950px;
     margin: 30px 0 0;
     border-top: 1px solid rgba(255, 255, 255, 0.28);
   }
-  .ppc-meta > div {
+  .legacy .ppc-meta > div {
     display: grid;
     grid-template-columns: 110px 1fr;
     gap: 18px;
     padding: 10px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
-  .ppc-meta dt,
+  .legacy .ppc-meta dt,.legacy 
   .ppc-meta dd {
     margin: 0;
     font-size: 0.82rem;
     line-height: 1.65;
   }
-  .ppc-meta dt {
+  .legacy .ppc-meta dt {
     color: #ffd48a;
     font-weight: 900;
   }
-  .ppc-meta dd {
+  .legacy .ppc-meta dd {
     color: rgba(255, 255, 255, 0.82);
   }
-  .ppc-actions {
+  .legacy .ppc-actions {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 10px;
     margin-top: 28px;
   }
-  .ppc-button {
+  .legacy .ppc-button {
     display: inline-block;
     padding: 12px 18px;
     border: 1px solid #fff;
@@ -102,11 +102,11 @@
     font-weight: 900;
     text-decoration: none;
   }
-  .ppc-button--light {
+  .legacy .ppc-button--light {
     background: transparent;
     color: #fff;
   }
-  .ppc-text-link {
+  .legacy .ppc-text-link {
     padding: 10px 4px;
     color: #fff;
     font-size: 0.83rem;
@@ -114,15 +114,15 @@
     text-underline-offset: 4px;
   }
 
-  .ppc-jump {
+  .legacy .ppc-jump {
     border-bottom: 1px solid var(--ppc-line);
     background: #f7fafc;
   }
-  .ppc-jump .ppc-wrap {
+  .legacy .ppc-jump .ppc-wrap {
     display: flex;
     overflow-x: auto;
   }
-  .ppc-jump a {
+  .legacy .ppc-jump a {
     flex: 0 0 auto;
     padding: 15px 17px;
     border-right: 1px solid var(--ppc-line);
@@ -132,23 +132,23 @@
     text-decoration: none;
     white-space: nowrap;
   }
-  .ppc-jump a:first-child {
+  .legacy .ppc-jump a:first-child {
     border-left: 1px solid var(--ppc-line);
   }
 
-  .ppc-section {
+  .legacy .ppc-section {
     padding: 68px 0;
     border-bottom: 1px solid var(--ppc-line);
     scroll-margin-top: 96px;
   }
-  .ppc-section-label {
+  .legacy .ppc-section-label {
     margin: 0 0 10px;
     color: var(--ppc-orange);
     font-size: 0.75rem;
     font-weight: 900;
     letter-spacing: 0.1em;
   }
-  .ppc-section h2,
+  .legacy .ppc-section h2,.legacy 
   .ppc-sources h2 {
     max-width: 950px;
     margin: 0 0 24px;
@@ -157,30 +157,30 @@
     font-size: clamp(1.65rem, 3vw, 2.45rem);
     line-height: 1.45;
   }
-  .ppc-section > p:not(.ppc-section-label),
-  .ppc-section > .ppc-key-note,
+  .legacy .ppc-section > p:not(.ppc-section-label),.legacy 
+  .ppc-section > .ppc-key-note,.legacy 
   .ppc-sources p {
     max-width: 880px;
     margin: 0 0 18px;
     line-height: 2;
   }
-  .ppc-section h3 {
+  .legacy .ppc-section h3 {
     color: var(--ppc-navy);
     line-height: 1.55;
   }
-  .ppc-section ul,
+  .legacy .ppc-section ul,.legacy 
   .ppc-section ol {
     max-width: 960px;
   }
 
-  .ppc-summary-list {
+  .legacy .ppc-summary-list {
     counter-reset: summary;
     margin: 30px 0;
     padding: 0;
     border-top: 3px solid var(--ppc-navy);
     list-style: none;
   }
-  .ppc-summary-list li {
+  .legacy .ppc-summary-list li {
     counter-increment: summary;
     display: grid;
     grid-template-columns: 48px minmax(250px, 370px) 1fr;
@@ -189,30 +189,30 @@
     padding: 20px 0;
     border-bottom: 1px solid var(--ppc-line);
   }
-  .ppc-summary-list li::before {
+  .legacy .ppc-summary-list li::before {
     content: counter(summary, decimal-leading-zero);
     color: var(--ppc-orange);
     font-family: "Noto Serif JP", serif;
     font-size: 1.1rem;
     font-weight: 900;
   }
-  .ppc-summary-list strong {
+  .legacy .ppc-summary-list strong {
     color: var(--ppc-navy);
     line-height: 1.7;
   }
-  .ppc-summary-list span {
+  .legacy .ppc-summary-list span {
     color: var(--ppc-muted);
     font-size: 0.92rem;
     line-height: 1.85;
   }
-  .ppc-key-note {
+  .legacy .ppc-key-note {
     margin-top: 28px !important;
     padding: 18px 0 18px 20px;
     border-left: 5px solid var(--ppc-orange);
     background: linear-gradient(90deg, #fff5e9, rgba(255, 245, 233, 0));
   }
 
-  .ppc-boundaries {
+  .legacy .ppc-boundaries {
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-width: 960px;
@@ -220,66 +220,66 @@
     border-top: 3px solid var(--ppc-navy);
     border-bottom: 1px solid var(--ppc-line);
   }
-  .ppc-boundaries section {
+  .legacy .ppc-boundaries section {
     padding: 24px 28px 24px 0;
   }
-  .ppc-boundaries section + section {
+  .legacy .ppc-boundaries section + section {
     padding-left: 28px;
     border-left: 1px solid var(--ppc-line);
   }
-  .ppc-boundaries h3 {
+  .legacy .ppc-boundaries h3 {
     margin: 0 0 14px;
     font-size: 1.08rem;
   }
-  .ppc-boundaries ul {
+  .legacy .ppc-boundaries ul {
     margin: 0;
     padding-left: 1.25rem;
   }
-  .ppc-boundaries li {
+  .legacy .ppc-boundaries li {
     margin: 0.55em 0;
     line-height: 1.8;
   }
-  .ppc-source-separation {
+  .legacy .ppc-source-separation {
     padding-top: 18px;
     border-top: 1px solid var(--ppc-line);
     color: var(--ppc-muted);
     font-size: 0.9rem;
   }
-  .ppc-source-separation span {
+  .legacy .ppc-source-separation span {
     color: var(--ppc-navy);
     font-weight: 900;
   }
-  .ppc-source-separation span + span {
+  .legacy .ppc-source-separation span + span {
     color: var(--ppc-orange);
   }
 
-  .ppc-page-list {
+  .legacy .ppc-page-list {
     counter-reset: pages;
     margin: 34px 0 0;
     padding: 0;
     border-top: 4px solid var(--ppc-navy);
     list-style: none;
   }
-  .ppc-page-list > li {
+  .legacy .ppc-page-list > li {
     margin: 0;
     padding: 0;
     border-bottom: 1px solid var(--ppc-line);
     scroll-margin-top: 100px;
   }
-  .ppc-page-list article {
+  .legacy .ppc-page-list article {
     display: grid;
     grid-template-columns: minmax(260px, 34%) 1fr;
     gap: 16px 34px;
     padding: 30px 0;
   }
-  .ppc-page-list header {
+  .legacy .ppc-page-list header {
     grid-row: 1 / span 3;
     display: grid;
     grid-template-columns: 58px 1fr;
     gap: 16px;
     align-content: start;
   }
-  .ppc-page-list header > span {
+  .legacy .ppc-page-list header > span {
     display: grid;
     place-items: center;
     width: 48px;
@@ -290,35 +290,35 @@
     font-size: 1.2rem;
     font-weight: 900;
   }
-  .ppc-page-list header p {
+  .legacy .ppc-page-list header p {
     margin: 0 0 4px;
     color: var(--ppc-orange);
     font-size: 0.73rem;
     font-weight: 900;
     letter-spacing: 0.08em;
   }
-  .ppc-page-list h3 {
+  .legacy .ppc-page-list h3 {
     margin: 0;
     font-size: 1.12rem;
   }
-  .ppc-page-list article > p {
+  .legacy .ppc-page-list article > p {
     margin: 0;
     color: var(--ppc-muted);
     font-size: 0.92rem;
     line-height: 1.9;
   }
-  .ppc-page-list article > p strong {
+  .legacy .ppc-page-list article > p strong {
     color: var(--ppc-ink);
   }
 
-  .ppc-decision-list {
+  .legacy .ppc-decision-list {
     counter-reset: decision;
     margin: 30px 0;
     padding: 0;
     border-top: 3px solid var(--ppc-navy);
     list-style: none;
   }
-  .ppc-decision-list li {
+  .legacy .ppc-decision-list li {
     counter-increment: decision;
     display: grid;
     grid-template-columns: 54px minmax(280px, 410px) 1fr;
@@ -327,59 +327,59 @@
     padding: 20px 0;
     border-bottom: 1px solid var(--ppc-line);
   }
-  .ppc-decision-list li::before {
+  .legacy .ppc-decision-list li::before {
     content: counter(decision, decimal-leading-zero);
     color: var(--ppc-orange);
     font-family: "Noto Serif JP", serif;
     font-size: 1.1rem;
     font-weight: 900;
   }
-  .ppc-decision-list strong {
+  .legacy .ppc-decision-list strong {
     color: var(--ppc-navy);
     line-height: 1.75;
   }
-  .ppc-decision-list span {
+  .legacy .ppc-decision-list span {
     color: var(--ppc-muted);
     font-size: 0.9rem;
     line-height: 1.85;
   }
 
-  .ppc-case-list {
+  .legacy .ppc-case-list {
     max-width: 960px;
     margin-top: 30px;
     border-top: 3px solid var(--ppc-navy);
   }
-  .ppc-case-list article {
+  .legacy .ppc-case-list article {
     display: grid;
     grid-template-columns: minmax(220px, 30%) 1fr;
     gap: 30px;
     padding: 24px 0;
     border-bottom: 1px solid var(--ppc-line);
   }
-  .ppc-case-list h3,
+  .legacy .ppc-case-list h3,.legacy 
   .ppc-case-list p {
     margin: 0;
   }
-  .ppc-case-list h3 {
+  .legacy .ppc-case-list h3 {
     font-size: 1.05rem;
   }
-  .ppc-case-list p {
+  .legacy .ppc-case-list p {
     color: var(--ppc-muted);
     font-size: 0.92rem;
     line-height: 1.9;
   }
 
-  .ppc-role-table-wrap {
+  .legacy .ppc-role-table-wrap {
     overflow-x: auto;
     margin-top: 30px;
   }
-  .ppc-role-table {
+  .legacy .ppc-role-table {
     width: 100%;
     min-width: 900px;
     border-collapse: collapse;
     font-size: 0.88rem;
   }
-  .ppc-role-table th,
+  .legacy .ppc-role-table th,.legacy 
   .ppc-role-table td {
     padding: 16px;
     border: 1px solid var(--ppc-line);
@@ -387,39 +387,39 @@
     vertical-align: top;
     line-height: 1.8;
   }
-  .ppc-role-table thead th {
+  .legacy .ppc-role-table thead th {
     background: var(--ppc-navy);
     color: #fff;
   }
-  .ppc-role-table tbody th {
+  .legacy .ppc-role-table tbody th {
     width: 120px;
     background: var(--ppc-pale);
     color: var(--ppc-navy);
   }
 
-  .ppc-faq {
+  .legacy .ppc-faq {
     max-width: 940px;
     margin: 30px 0 0;
     border-top: 3px solid var(--ppc-navy);
   }
-  .ppc-faq > div {
+  .legacy .ppc-faq > div {
     padding: 22px 0;
     border-bottom: 1px solid var(--ppc-line);
   }
-  .ppc-faq dt {
+  .legacy .ppc-faq dt {
     margin: 0 0 8px;
     color: var(--ppc-navy);
     font-weight: 900;
     line-height: 1.75;
   }
-  .ppc-faq dd {
+  .legacy .ppc-faq dd {
     margin: 0;
     color: var(--ppc-muted);
     font-size: 0.93rem;
     line-height: 1.9;
   }
 
-  .ppc-records {
+  .legacy .ppc-records {
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-width: 960px;
@@ -427,76 +427,76 @@
     border-top: 3px solid var(--ppc-navy);
     border-bottom: 1px solid var(--ppc-line);
   }
-  .ppc-records section {
+  .legacy .ppc-records section {
     padding: 24px 28px 24px 0;
   }
-  .ppc-records section + section {
+  .legacy .ppc-records section + section {
     padding-left: 28px;
     border-left: 1px solid var(--ppc-line);
   }
-  .ppc-records h3 {
+  .legacy .ppc-records h3 {
     margin: 0 0 14px;
   }
-  .ppc-records ul {
+  .legacy .ppc-records ul {
     margin: 0;
     padding-left: 1.2rem;
   }
-  .ppc-records li {
+  .legacy .ppc-records li {
     margin: 0.45em 0;
     line-height: 1.8;
   }
 
-  .ppc-sources {
+  .legacy .ppc-sources {
     padding: 64px 0;
     background: var(--ppc-pale);
   }
-  .ppc-sources ol {
+  .legacy .ppc-sources ol {
     max-width: 960px;
     margin: 0;
     padding-left: 1.4rem;
   }
-  .ppc-sources li {
+  .legacy .ppc-sources li {
     margin: 0.7em 0;
     color: var(--ppc-muted);
     font-size: 0.88rem;
     line-height: 1.85;
   }
-  .ppc-sources a,
+  .legacy .ppc-sources a,.legacy 
   .ppc-disclaimer a {
     color: #075394;
     font-weight: 800;
   }
-  .ppc-citation {
+  .legacy .ppc-citation {
     margin-top: 28px !important;
     padding-top: 20px;
     border-top: 1px solid var(--ppc-line);
     font-size: 0.9rem;
   }
-  .ppc-disclaimer {
+  .legacy .ppc-disclaimer {
     color: var(--ppc-muted);
     font-size: 0.83rem;
   }
 
   @media (max-width: 820px) {
-    .ppc-summary-list li,
+    .legacy .ppc-summary-list li,.legacy 
     .ppc-decision-list li {
       grid-template-columns: 45px 1fr;
     }
-    .ppc-summary-list span,
+    .legacy .ppc-summary-list span,.legacy 
     .ppc-decision-list span {
       grid-column: 2;
     }
-    .ppc-page-list article {
+    .legacy .ppc-page-list article {
       grid-template-columns: 1fr;
     }
-    .ppc-page-list header {
+    .legacy .ppc-page-list header {
       grid-row: auto;
     }
-    .ppc-boundaries,
+    .legacy .ppc-boundaries,.legacy 
     .ppc-records {
       grid-template-columns: 1fr;
     }
-    .ppc-boundaries section + section,
+    .legacy .ppc-boundaries section + section,.legacy 
     .ppc-records section + section {
       padding-left: 0;
       border-top: 1px solid var(--ppc-line);
@@ -505,34 +505,33 @@
   }
 
   @media (max-width: 620px) {
-    .ppc-wrap {
+    .legacy .ppc-wrap {
       width: min(calc(100% - 32px), 1120px);
     }
-    .ppc-hero {
+    .legacy .ppc-hero {
       padding: 56px 0 50px;
     }
-    .ppc-lead {
+    .legacy .ppc-lead {
       font-size: 0.95rem;
     }
-    .ppc-meta > div,
+    .legacy .ppc-meta > div,.legacy 
     .ppc-case-list article {
       grid-template-columns: 1fr;
       gap: 5px;
     }
-    .ppc-summary-list li,
+    .legacy .ppc-summary-list li,.legacy 
     .ppc-decision-list li {
       grid-template-columns: 1fr;
       gap: 7px;
     }
-    .ppc-summary-list span,
+    .legacy .ppc-summary-list span,.legacy 
     .ppc-decision-list span {
       grid-column: auto;
     }
-    .ppc-section {
+    .legacy .ppc-section {
       padding: 50px 0;
     }
-    .ppc-page-list article {
+    .legacy .ppc-page-list article {
       padding: 25px 0;
     }
   }
-}

@@ -1,22 +1,22 @@
-@layer page {
+
   /* Page-specific styles for starter-kit/downloads.html */
-  .download-grid {
+  .legacy .download-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 16px;
   }
-  .download-card {
+  .legacy .download-card {
     background: #fff;
     border: 1px solid #dbe3ef;
     border-radius: 16px;
     padding: 22px;
     box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
   }
-  .download-card h2 {
+  .legacy .download-card h2 {
     margin-top: 0;
     color: #17345c;
   }
-  .dl-btn {
+  .legacy .dl-btn {
     display: inline-block;
     background: #17345c;
     color: #fff;
@@ -26,12 +26,12 @@
     text-decoration: none;
     margin: 6px 6px 6px 0;
   }
-  .dl-btn.sub {
+  .legacy .dl-btn.sub {
     background: #fff;
     color: #17345c;
     border: 1px solid #17345c;
   }
-  .note {
+  .legacy .note {
     background: #ecfdf5;
     border: 1px solid #a7f3d0;
     color: #065f46;
@@ -40,7 +40,7 @@
     font-weight: 800;
     line-height: 1.75;
   }
-  .sha {
+  .legacy .sha {
     font-size: 0.78rem;
     word-break: break-all;
     background: #f8fafc;
@@ -49,7 +49,7 @@
     padding: 10px;
     line-height: 1.55;
   }
-  .status {
+  .legacy .status {
     display: inline-block;
     padding: 3px 10px;
     border-radius: 999px;
@@ -59,4 +59,3 @@
     font-size: 0.72rem;
     font-weight: 900;
   }
-}

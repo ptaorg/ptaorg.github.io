@@ -1,6 +1,6 @@
-@layer page {
+
   /* Page-specific styles for archive/kuki/index.html */
-  :root {
+  .legacy {
     --navy: #0b2a4a;
     --gold: #d4af37;
     --line: #d8dee8;
@@ -9,10 +9,10 @@
     --muted: #64748b;
     --blue: #064f88;
   }
-  * {
+  .legacy * {
     box-sizing: border-box;
   }
-  body {
+  .legacy {
     margin: 0;
     background: var(--bg);
     color: var(--text);
@@ -21,80 +21,80 @@
       sans-serif;
     line-height: 1.9;
   }
-  .wrap {
+  .legacy .wrap {
     width: min(100% - 32px, 1120px);
     margin: auto;
   }
-  .header {
+  .legacy .header {
     background: #fff;
     border-bottom: 1px solid var(--line);
   }
-  .nav {
+  .legacy .nav {
     height: 64px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .logo {
+  .legacy .logo {
     font-weight: 900;
     color: var(--navy);
     text-decoration: none;
   }
-  .navlinks {
+  .legacy .navlinks {
     display: flex;
     gap: 16px;
     font-weight: 800;
     font-size: 0.92rem;
   }
-  .navlinks a {
+  .legacy .navlinks a {
     text-decoration: none;
     color: var(--navy);
   }
-  .hero {
+  .legacy .hero {
     background: linear-gradient(135deg, #09213f, #123d67);
     color: #fff;
     padding: 52px 0;
     border-bottom: 6px solid var(--gold);
   }
-  .hero h1 {
+  .legacy .hero h1 {
     font-family: serif;
     font-size: clamp(1.85rem, 3.4vw, 2.8rem);
     line-height: 1.25;
     margin: 0 0 14px;
   }
-  .hero p {
+  .legacy .hero p {
     max-width: 920px;
     color: rgba(255, 255, 255, 0.92);
   }
-  .section {
+  .legacy .section {
     padding: 42px 0;
     border-bottom: 1px solid var(--line);
   }
-  .white {
+  .legacy .white {
     background: #fff;
   }
-  .kicker {
+  .legacy .kicker {
     font-weight: 900;
     letter-spacing: 0.12em;
     color: #8a6700;
     margin-bottom: 8px;
     font-size: 0.9rem;
   }
-  .hero .kicker {
+  .legacy .hero .kicker {
     color: #f8e39b;
   }
-  .title {
+  .legacy .title {
     font-family: serif;
     color: var(--navy);
     font-size: clamp(1.32rem, 2vw, 1.9rem);
     line-height: 1.45;
     margin: 0 0 12px;
   }
-  .lead {
+  .legacy .lead {
     max-width: 950px;
     line-height: 2.05;
   }
-  .notice {
+  .legacy .notice {
     background: #fff7ed;
     border: 1px solid #fed7aa;
     border-left: 8px solid #ea580c;
@@ -103,82 +103,81 @@
     margin: 24px 0;
     line-height: 2;
   }
-  .stats {
+  .legacy .stats {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px;
     margin: 22px 0;
   }
-  .stat {
+  .legacy .stat {
     background: #fff;
     border: 1px solid var(--line);
     border-radius: 14px;
     padding: 14px;
   }
-  .stat strong {
+  .legacy .stat strong {
     display: block;
     color: var(--navy);
     font-size: 1.45rem;
     line-height: 1;
   }
-  .stat span {
+  .legacy .stat span {
     font-size: 0.82rem;
     color: var(--muted);
     font-weight: 800;
   }
-  .doc-list {
+  .legacy .doc-list {
     display: grid;
     gap: 12px;
   }
-  .doc {
+  .legacy .doc {
     background: #fff;
     border: 1px solid var(--line);
     border-left: 6px solid var(--gold);
     border-radius: 14px;
     padding: 16px;
   }
-  .doc h3 {
+  .legacy .doc h3 {
     margin: 0 0 6px;
     color: var(--navy);
     font-size: 1.1rem;
   }
-  .meta {
+  .legacy .meta {
     font-size: 0.84rem;
     color: #64748b;
     font-weight: 800;
     word-break: break-all;
   }
-  .point {
+  .legacy .point {
     background: #f8fafc;
     border: 1px solid #e5e7eb;
     border-radius: 10px;
     padding: 9px 11px;
     font-size: 0.9rem;
   }
-  .footer {
+  .legacy .footer {
     background: #071a2d;
     color: #fff;
     padding: 32px 0;
   }
-  .footer a {
+  .legacy .footer a {
     color: #f8e39b;
   }
   @media (max-width: 760px) {
-    .navlinks {
+    .legacy .navlinks {
       display: none;
     }
-    .stats {
+    .legacy .stats {
       grid-template-columns: 1fr;
     }
-    .hero {
+    .legacy .hero {
       padding: 38px 0;
     }
   }
-}
 
   /* Simplified primary navigation: keep the six core destinations accessible on small screens. */
   @media (max-width: 900px) {
-    .header .nav {
+    .legacy .header .nav {
       height: auto;
       min-height: 64px;
       flex-direction: column;
@@ -186,10 +185,10 @@
       gap: 6px;
       padding: 10px 0;
     }
-    .header .logo {
+    .legacy .header .logo {
       text-align: center;
     }
-    .header .navlinks {
+    .legacy .header .navlinks {
       display: flex;
       overflow-x: auto;
       gap: 6px;
@@ -197,7 +196,7 @@
       scrollbar-width: thin;
       -webkit-overflow-scrolling: touch;
     }
-    .header .navlinks a {
+    .legacy .header .navlinks a {
       flex: 0 0 auto;
       white-space: nowrap;
       padding: 5px 8px;
