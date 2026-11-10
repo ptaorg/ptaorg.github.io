@@ -750,3 +750,89 @@ body[data-page="home"] #map{margin-top:40px;margin-bottom:56px}
 .home-issues .hc-issue-list svg{width:32px;height:32px;color:var(--navy)}
 .home-issues .hc-issue-list a>strong{font-size:.8rem;color:var(--ink-sub)}
 .home-issues .hc-issue-copy{font-size:.85rem;line-height:1.7}.home-issues .hc-issue-copy b{display:block;font-size:1rem;margin-bottom:8px}
+
+/* Homepage palette: a distinct accent and surface for each reading route. */
+body[data-page="home"] .hero {
+  background: linear-gradient(115deg, #fff1db, #fff9ed 48%, #e7f4f2);
+}
+body[data-page="home"] .hero-photo::before {
+  background: linear-gradient(90deg, #fff9ed, #fff9ed9c 22%, transparent 64%);
+}
+body[data-page="home"] .hero-rule {
+  width: 76px;
+  height: 5px;
+  border: 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #bd4d21 33%, #17766d 33% 66%, #6954a4 66%);
+}
+body[data-page="home"] .hero .button-primary { background: #a8401c; color: #fff; }
+body[data-page="home"] .hero .button-primary:hover { background: #803013; }
+body[data-page="home"] .hero .button-secondary {
+  color: #075951;
+  background: #e2f5f1;
+  border: 1px solid #18766d;
+}
+body[data-page="home"] .hero .button-secondary:hover { background: #c5eae2; }
+
+.audience-entry a:nth-child(1), .home-issues .hc-issue-list a:nth-child(1) {
+  --route-accent: #a8401c; --route-surface: #ffede1; --route-hover: #ffdeca;
+}
+.audience-entry a:nth-child(2), .home-issues .hc-issue-list a:nth-child(3) {
+  --route-accent: #08635c; --route-surface: #dff4ee; --route-hover: #c8ebe1;
+}
+.audience-entry a:nth-child(3), .home-issues .hc-issue-list a:nth-child(4) {
+  --route-accent: #554092; --route-surface: #eee8fb; --route-hover: #e1d7f7;
+}
+.home-issues .hc-issue-list a:nth-child(2) {
+  --route-accent: #835c03; --route-surface: #fff2c9; --route-hover: #f9e5a4;
+}
+.home-issues .hc-issue-list a:nth-child(5) {
+  --route-accent: #20578d; --route-surface: #e4f1ff; --route-hover: #d0e6fa;
+}
+.audience-entry a, .home-issues .hc-issue-list a {
+  color: var(--route-accent);
+  background: var(--route-surface);
+  border-color: var(--route-accent);
+  border-top-width: 4px;
+}
+.audience-entry a:hover, .home-issues .hc-issue-list a:hover {
+  color: var(--route-accent);
+  background: var(--route-hover);
+  border-color: var(--route-accent);
+}
+.home-issues .hc-issue-list a > strong,
+.home-issues .hc-issue-list a svg { color: var(--route-accent); }
+
+body[data-page="home"] .search-panel {
+  background: linear-gradient(115deg, #104f57, #08655f 48%, #403166);
+}
+.home-updates .news-list li {
+  border-top: 3px solid #6954a4;
+  background: #f6f1ff;
+}
+.home-updates .news-list li:nth-child(2) {
+  border-top-color: #bd4d21;
+  background: #fff5e9;
+}
+.home-updates .news-list li:nth-child(3) {
+  border-top-color: #17766d;
+  background: #eaf8f4;
+}
+#map, .explore-map {
+  --map-off: #dce8ec;
+  --map-on: #2b7b82;
+  --map-on-hover: #10545e;
+}
+#map .japan-map, .explore-map .list-map { background: #eaf6fa; }
+.explore-map .map-card-title { background: #def2ef; color: #075951; }
+.explore-map .list-map .prefecture.has-data { fill: #a9d6d5; }
+:is(#map, .explore-map) :is(.map-pin, .legend-pin) { --pin-color: #b4412c; }
+:is(#map, .explore-map) :is(.map-pin-resp, .legend-pin.resp) { --pin-color: #65439d; }
+.explore-map :is(.map-pin-school, .legend-pin.school) { --pin-color: #1c5e93; }
+:is(#map, .explore-map) :is(.map-pin, .map-pin-resp, .map-pin-school) { fill: var(--pin-color); }
+:is(#map, .explore-map) .legend-pin { background: var(--pin-color); }
+@media (max-width: 760px) {
+  body[data-page="home"] .hero-photo::before {
+    background: linear-gradient(180deg, transparent 55%, #fff1db);
+  }
+}
