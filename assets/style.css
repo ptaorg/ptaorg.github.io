@@ -657,3 +657,46 @@ html{scroll-padding-top:calc(var(--header-h) + 18px)}
 .migration-home :is(img,svg){max-width:100%;height:auto}
 .migration-home :is(.hc-eyebrow,.hc-kicker,.core-kicker){color:var(--ink-sub);font-size:.875rem}
 .migration-home :is(.relationship-grid,.relationship-actors,.hc-issue-grid,.hc-audience-grid){display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr))}
+
+/* Restore images removed unintentionally during 2026-11-10 site migration.
+   This only changes visual treatment; URLs, article text and evidence files stay untouched. */
+.brand-mark {
+  display:block;
+  flex:0 0 auto;
+  background: url("/assets/popc-logo.png") center / contain no-repeat !important;
+  color:transparent !important;
+}
+.brand-mark use {display:none}
+.footer-badge::before {
+  content:"";
+  display:inline-block;
+  flex:0 0 72px;
+  width:72px;
+  height:32px;
+  vertical-align:middle;
+  background:url("/assets/yokomusubi.png") center / contain no-repeat;
+}
+.hero-ornament {
+  background:url("/assets/img/hero-building.webp") center / cover no-repeat !important;
+}
+.hero-ornament::after {display:none !important}
+.hero-ornament::before {
+  background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.7) 18%,rgba(255,255,255,0) 52%) !important;
+}
+.paper-ornament,
+.article-visual.paper-ornament,
+.feature-ornament.paper-ornament {
+  background:url("/assets/img/research-book.webp") center / cover no-repeat !important;
+}
+.paper-ornament::before,.paper-ornament::after {display:none !important}
+body[data-section="journal"] .article-visual.paper-ornament,
+body[data-section="roles"] .article-visual.paper-ornament {
+  background-image:url("/assets/slides/1.jpg") !important;
+}
+@media (max-width:760px) {
+  .brand-mark {display:block !important;width:30px;height:27px;flex-basis:30px}
+  .hero-ornament::before {
+    background:linear-gradient(180deg,rgba(255,255,255,0) 45%,#fff 100%) !important;
+  }
+  .article-visual.paper-ornament {display:block !important;aspect-ratio:16/9;order:-1}
+}
