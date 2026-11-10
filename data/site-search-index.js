@@ -4038,6 +4038,12 @@ window.PTA_SITE_SEARCH_INDEX = [
     "research-record"
   ],
   [
+    "松山市のPTA会費公的徴収と「仕分口座」説明変更に関する調査報告",
+    (window.__ROOT||"")+"journal/matsuyama-pta-fee-sorting-account-report-20261111.html",
+    "松山市がPTA会費を校納金として市の口座振替で徴収する仕組みと、2026年10月6日・11月9日の回答の違いを一次資料で検証。仕分口座の実態、地方自治法235条の4第2項、徴収権限、個人情報、職員の職務、追及すべき質問と開示請求対象を示す。",
+    "research-record"
+  ],
+  [
     "司法が突きつける現実——熊本PTA裁判と鹿児島地裁が示した「慣例の終わり」",
     (window.__ROOT||"")+"journal/judicial-reality-pta-cases.html",
     "熊本PTA裁判（地裁は請求棄却・高裁で和解）は何を確定させ、何を確定させなかったのか。黙示の同意の限界、和解が各地の教育委員会通知を動かした経緯、判例引用時の正確性まで、PTA裁判例の実務的な読み方を整理します。",
