@@ -197,8 +197,14 @@
       list.innerHTML=ranked.map(m=>{const sub=(m.themes||[]).slice(0,3).join('・')||`学校別資料 ${(m.schools||[]).length}校`;return `<li><a href="${regionLink(m.id)}"><strong>${esc(m.name)}</strong><span>${esc(sub)}</span>${icon('chevron')}</a></li>`;}).join('');
     }
     const news=document.querySelector('[data-journal-list]');
-    if(news){const items=(data.journal.articles||[]).slice(0,5);
-      news.innerHTML=items.length?items.map(a=>`<li><time datetime="${esc(a.published||a.modified||'')}">${esc(a.published||a.modified||'')}</time><a href="${esc(safeSourceLink(a.url))}">${esc(a.title)}</a></li>`).join(''):'<li>論考データが同期されていません。</li>';}
+    if(news){
+      const date=a=>a.modified||a.published||'';
+      const items=[...(data.journal.articles||[])].sort((a,b)=>date(b).localeCompare(date(a))).slice(0,3);
+      news.innerHTML=items.length?items.map(a=>{
+        const updated=!!(a.modified&&a.published&&a.modified>a.published);
+        return `<li><div class="update-meta"><span class="label label-analysis">当委員会の論考</span><span class="update-kind">${updated?'更新':'新規公開'}</span><time datetime="${esc(date(a))}">${esc(date(a))}</time></div><h3><a href="${esc(safeSourceLink(a.url))}">${esc(a.title)}</a></h3>${a.description?`<p>${esc(a.description)}</p>`:''}</li>`;
+      }).join(''):'<li>論考データを読み込めませんでした。論考一覧をご覧ください。</li>';
+    }
   }
 
   /* ---------- explore ---------- */
@@ -219,7 +225,7 @@
     return `<article class="result-row"><span class="row-icon">${icon('book')}</span><div class="row-body">${label('ページ','analysis')}<h3><a href="${href}">${esc(p.title)}</a></h3><p>${esc(p.desc)}</p></div><a class="row-go" href="${href}" aria-label="${esc(p.title)}">${icon('chevron')}</a></article>`;
   }
   function renderExplorer(){
-    const mc=document.querySelector('.explore-map details');if(mc&&window.innerWidth<1040)mc.removeAttribute('open');
+
     const form=document.getElementById('explore-form');const q=document.getElementById('query');const pref=document.getElementById('prefecture');const type=document.getElementById('school-type');const topic=document.getElementById('topic');
     const tabs=[...document.querySelectorAll('[data-tab]')];const out=document.getElementById('results');const empty=document.getElementById('empty-results');
     PREFS.filter(p=>prefsWithData().includes(p)).forEach(p=>pref.add(new Option(p,p)));
@@ -298,6 +304,7 @@
         <div class="detail-main">
           <section class="detail-section" id="overview"><h2>${icon('list')}調査の概要</h2>
             ${(m.summary||[]).map(t=>`<p>${esc(t)}</p>`).join('')||'<p>この地域は学校別資料の索引のみを登録しています。教育委員会の回答や研究ノートが登録された時点で、ここに概要を掲載します。</p>'}
+            <div class="municipality-overview"><section><h3>行政回答の登録状況</h3><p>${resp.length?`公開索引に${resp.length}件を登録しています。`:'現在の索引に公開済み回答の登録はありません。未回答を意味するものではありません。'} <a href="#responses">回答・原資料を確認する</a></p></section><section><h3>未確認事項</h3>${(m.unknowns||[]).length?`<ul>${m.unknowns.map(u=>`<li>${esc(u)}</li>`).join('')}</ul>`:'<p>この索引には未確認事項の記載がありません。</p>'}</section></div>
             <div class="stat-tiles">${stat('doc','行政の回答',resp.length,'#responses')}${stat('folder','学校の資料',schools.length,'#schools')}${stat('scale','原資料',primary.length,'#responses')}${stat('book','論考・分析',writings.length,'#analysis')}</div>
             ${(m.themes||[]).length?`<div class="theme-row"><span>主な論点</span>${m.themes.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div>`:''}
             ${(m.system||[]).length?`<h3>制度の整理</h3>${m.system.map(t=>`<p>${esc(t)}</p>`).join('')}`:''}

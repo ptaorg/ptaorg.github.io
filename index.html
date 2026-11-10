@@ -7,7 +7,7 @@
   <meta name="description" content="PTAは学校とは別の任意加入団体です。会費、個人情報、教職員の関与について、全国の行政回答と公文書から制度と実務を検証します。">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap">
-  <link rel="stylesheet" href="assets/style.css?v=20261110-photo-visible-4"><script defer src="assets/app.js"></script>
+  <link rel="stylesheet" href="assets/style.css?v=20261111-navigation"><script defer src="assets/app.js?v=20261111-navigation"></script>
   <meta property="og:image" content="https://ptaorg.com/assets/og-image-popc-en.png">
   <meta property="og:url" content="https://ptaorg.com/">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
@@ -109,12 +109,18 @@ gtag('config', 'G-0D18ZSSLMH');
         <h1>PTAは、学校とは別の<br>任意加入団体です。</h1>
         <p class="hero-lead">学校と外部団体の境界、会費、個人情報、教職員の関与。<br>全国の行政回答と公文書から、制度と実務を検証します。</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="framework.html">調査の考え方<svg aria-hidden="true"><use href="#i-out"/></svg></a>
-          <a class="button button-secondary" href="explore.html">全国の資料を見る<svg aria-hidden="true"><use href="#i-chevron"/></svg></a>
+          <a class="button button-primary" href="guide-parent.html">保護者向けガイドを見る<svg aria-hidden="true"><use href="#i-out"/></svg></a>
+          <a class="button button-secondary" href="board-responses.html">教育委員会回答を見る<svg aria-hidden="true"><use href="#i-chevron"/></svg></a>
         </div>
       </div>
     </section>
 
+
+    <nav class="container audience-entry" aria-label="立場別の入口">
+      <a href="guide-parent.html"><strong>保護者の方</strong><span>加入・退会・会費を確認する →</span></a>
+      <a href="guide-pta.html"><strong>PTA役員の方</strong><span>会員管理・会計・運営を見直す →</span></a>
+      <a href="guide-board.html"><strong>学校・教育委員会の方</strong><span>学校の事務・権限を確認する →</span></a>
+    </nav>
     <div class="container">
       <form class="search-panel" action="explore.html" method="get" role="search" data-search-panel>
         <div class="search-panel-title"><svg aria-hidden="true"><use href="#i-search"/></svg><div><h2>資料・記録を検索する</h2><p>全国の調査・通知・回答・<br class="pc-only">学校資料を横断検索できます。</p></div></div>
@@ -129,6 +135,26 @@ gtag('config', 'G-0D18ZSSLMH');
         <div class="search-panel-side"><a href="explore.html">詳細検索<svg aria-hidden="true"><use href="#i-chevron"/></svg></a><a href="#map">日本地図から探す<svg aria-hidden="true"><use href="#i-chevron"/></svg></a></div>
       </form>
 
+      <section class="block" id="map" aria-labelledby="map-title">
+        <div class="block-head"><h2 id="map-title">全国の調査</h2><a class="more-link" href="explore.html?tab=municipality">全国一覧を見る<svg aria-hidden="true"><use href="#i-chevron"/></svg></a></div>
+        <div class="map-layout">
+          <figure class="map-figure">
+            <div class="japan-map" data-japan-map role="img" aria-label="公開索引のある都道府県を示した日本地図"></div>
+            <figcaption><span class="legend-swatch" aria-hidden="true"></span>公開索引のある都道府県　<span class="legend-pin" aria-hidden="true"></span>自治体の調査　<span class="legend-pin resp" aria-hidden="true"></span>教育委員会の回答　<span class="map-hint">地図または都道府県の一覧から都道府県を選択</span></figcaption>
+          </figure>
+          <div class="pref-picker">
+            <h3>都道府県から探す</h3>
+            <div class="pref-grid" data-pref-grid></div>
+            <p class="pref-note" data-pref-note></p>
+          </div>
+        </div>
+      </section>
+      <section class="block home-updates" aria-labelledby="latest-title">
+        <div class="block-head"><h2 id="latest-title">最新の論考・更新</h2><a class="more-link" href="journal.html">論考一覧へ →</a></div>
+        <p class="section-lead">当委員会の論考・分析。新規公開と更新を区別して掲載しています。</p>
+        <ol class="news-list" data-journal-list><li class="loading-text">読み込み中…</li></ol>
+      </section>
+<section class="block home-issues" aria-labelledby="issues-title"><div class="block-head"><h2 id="issues-title">5つの論点から探す</h2></div><div class="hc-issue-list"><a href="membership.html"><strong>1</strong><svg aria-hidden="true" class="hc-icon hc-issue-icon"><use href="assets/icons/home-symbols.svg#membership"></use></svg><span class="hc-issue-copy"><b>入会手続</b>本人の加入申込みを確認できるか</span></a><a href="fee-collection.html"><strong>2</strong><svg aria-hidden="true" class="hc-icon hc-issue-icon"><use href="assets/icons/home-symbols.svg#fee"></use></svg><span class="hc-issue-copy"><b>会費徴収</b>PTA会費と学校徴収金が分かれているか</span></a><a href="privacy.html"><strong>3</strong><svg aria-hidden="true" class="hc-icon hc-issue-icon"><use href="assets/icons/home-symbols.svg#privacy"></use></svg><span class="hc-issue-copy"><b>個人情報</b>取得元、利用目的、提供先が説明されているか</span></a><a href="personnel.html"><strong>4</strong><svg aria-hidden="true" class="hc-icon hc-issue-icon"><use href="assets/icons/home-symbols.svg#staff"></use></svg><span class="hc-issue-copy"><b>教職員の関与</b>勤務時間中のPTA事務に根拠があるか</span></a><a href="facilities.html"><strong>5</strong><svg aria-hidden="true" class="hc-icon hc-issue-icon"><use href="assets/icons/home-symbols.svg#facility"></use></svg><span class="hc-issue-copy"><b>学校施設・媒体</b>学校の資源とPTA内部事務が分離されているか</span></a></div></section>
       <nav class="category-bar" aria-label="資料の種類">
         <a href="explore.html?tab=municipality"><svg aria-hidden="true"><use href="#i-home"/></svg><span><strong>全国調査</strong><small>自治体・学校別の調査</small></span></a>
         <a href="explore.html?tab=school"><svg aria-hidden="true"><use href="#i-folder"/></svg><span><strong>学校の資料</strong><small>規約・決算書・公開文書</small></span></a>
@@ -152,7 +178,7 @@ gtag('config', 'G-0D18ZSSLMH');
                 <a class="text-link" href="journal/pta-legal-structure-education-administration.html">論考を見る<svg aria-hidden="true"><use href="#i-chevron"/></svg></a>
               </div>
             </article>
-            <dl class="stat-row"><div><svg aria-hidden="true"><use href="#i-doc"/></svg><span class="stat-txt"><dt>行政回答</dt><dd><span data-stat="responses">—</span><em>件</em></dd></span></div><div><svg aria-hidden="true"><use href="#i-folder"/></svg><span class="stat-txt"><dt>学校の資料</dt><dd><span data-stat="schools">—</span><em>件</em></dd></span></div><div><svg aria-hidden="true"><use href="#i-home"/></svg><span class="stat-txt"><dt>自治体の調査</dt><dd><span data-stat="regions">—</span><em>件</em></dd></span></div><div><svg aria-hidden="true"><use href="#i-book"/></svg><span class="stat-txt"><dt>論考・分析</dt><dd><span data-stat="journal">—</span><em>件</em></dd></span></div></dl>
+            <dl class="stat-row"><div><svg aria-hidden="true"><use href="#i-doc"/></svg><span class="stat-txt"><dt>行政回答</dt><dd><span data-stat="responses">—</span><em>件</em></dd></span></div><div><svg aria-hidden="true"><use href="#i-folder"/></svg><span class="stat-txt"><dt>学校資料の登録校</dt><dd><span data-stat="schools">—</span><em>校</em></dd></span></div><div><svg aria-hidden="true"><use href="#i-home"/></svg><span class="stat-txt"><dt>自治体の調査</dt><dd><span data-stat="regions">—</span><em>件</em></dd></span></div><div><svg aria-hidden="true"><use href="#i-book"/></svg><span class="stat-txt"><dt>論考・分析</dt><dd><span data-stat="journal">—</span><em>件</em></dd></span></div></dl><p class="stat-note">当サイトの公開索引への登録数です。回答は件数、学校資料は学校数を表示しています。</p>
           </section>
           <section class="block" aria-labelledby="regions-title">
             <h2 class="rule-title" id="regions-title">自治体別の研究記録</h2>
@@ -174,23 +200,9 @@ gtag('config', 'G-0D18ZSSLMH');
             <li><a href="explore.html?topic=privacy">個人情報の利用・提供<svg aria-hidden="true"><use href="#i-chevron"/></svg></a></li>
             <li><a href="explore.html?topic=staff">教職員の関与<svg aria-hidden="true"><use href="#i-chevron"/></svg></a></li>
           </ul></section>
-          <section class="side-box"><h2><svg aria-hidden="true"><use href="#i-pen"/></svg>最新の論考</h2><ol class="news-list" data-journal-list><li class="loading-text">読み込み中…</li></ol><a class="side-more" href="journal.html">論考一覧へ<svg aria-hidden="true"><use href="#i-chevron"/></svg></a></section>
+
         </aside>
       </div>
-      <section class="block" id="map" aria-labelledby="map-title">
-        <div class="block-head"><h2 id="map-title">全国の調査</h2><a class="more-link" href="explore.html?tab=municipality">全国一覧を見る<svg aria-hidden="true"><use href="#i-chevron"/></svg></a></div>
-        <div class="map-layout">
-          <figure class="map-figure">
-            <div class="japan-map" data-japan-map role="img" aria-label="公開索引のある都道府県を示した日本地図"></div>
-            <figcaption><span class="legend-swatch" aria-hidden="true"></span>公開索引のある都道府県　<span class="legend-pin" aria-hidden="true"></span>自治体の調査　<span class="legend-pin resp" aria-hidden="true"></span>教育委員会の回答　<span class="map-hint">地図または右の一覧から都道府県を選択</span></figcaption>
-          </figure>
-          <div class="pref-picker">
-            <h3>都道府県から探す</h3>
-            <div class="pref-grid" data-pref-grid></div>
-            <p class="pref-note" data-pref-note></p>
-          </div>
-        </div>
-      </section>
       <div class="home-bottom-space"></div>
     </div>
     <section aria-label="学校とPTAの境界・調査資料">
@@ -203,7 +215,7 @@ gtag('config', 'G-0D18ZSSLMH');
 <p>PTAは、その加入記録に基づいて会員名簿を作り、会則・決議に基づく会費を会員に請求します。連絡先などの個人情報も、利用目的を示して本人から必要な範囲で取得し、PTA自身が管理します。学校の在籍名簿を、そのままPTAの会員名簿や会費の請求先にすることはできません。</p>
 <p>加入時の説明や規約の内容は、消費者契約法との関係も検討します。これは名簿作成や会費徴収に続く「最後の手順」ではなく、加入契約の内容を確かめる別の論点です。</p>
 </div><div class="hc-core-foot"><div><span class="hc-source-badge hc-source-badge--primary">一次資料</span><p>法令、個人情報保護委員会FAQ</p></div><div><span class="hc-source-badge hc-source-badge--analysis">分析</span><p>当委員会による法的整理・実務上の問題点</p></div><a class="hc-core-link" href="journal/pta-membership-optin-record.html">重点論考を読む <span aria-hidden="true">→</span></a></div></div></section>
-<section class="hc-section hc-issues"><div class="home-wrap"><p class="hc-kicker">Five issues</p><h2>境界が曖昧だと、何が起きるか</h2><p class="hc-section-lead">任意加入、会費、個人情報、教職員関与、学校資源の問題は別々の問題ではありません。学校とPTAという別主体の境界が曖昧なまま運用されることで、五つの論点が連鎖して生じます。</p><div class="hc-boundary-prose"><p>加入の確認に続いて整理するのが、会員情報と会費の取扱いです。会員が誰かを確定することと、その会員に対して誰が請求し、どの口座で収納するかは、一続きの運営上の問題です。学校から配られた書類や学校納入金の引落しだけでは、PTAへの加入手続とPTA会費の請求根拠を読み取れない場合があります。入会申込み、会員確定、請求、収納の各段階で、担当する主体と根拠資料を確認します。</p><p>個人情報については、学校が教育のために持つ情報と、PTAが会員管理のために必要とする情報を分けて考えます。確認するのは同意欄の有無だけではありません。取得元、利用目的、提供先に加え、どの事務のために、どの範囲の情報を、どれだけの期間扱うのかを、実際の書類と運用に照らして調べます。</p><p>教職員の関与と学校施設・媒体の利用も、同じ区別から検討します。会員管理や会計を誰が担うのか、勤務時間・学校口座・設備・連絡ツールをどう使っているのかを具体化し、学校側が示す根拠と手続を確認します。以下の各論では、この確認を論点ごとに掘り下げます。</p></div><div class="hc-issue-list"><a href="membership.html"><strong>1</strong><svg aria-hidden="true" class="hc-icon hc-issue-icon"><use href="assets/icons/home-symbols.svg#membership"></use></svg><span class="hc-issue-copy"><b>入会手続</b>本人の加入申込みを確認できるか</span></a><a href="fee-collection.html"><strong>2</strong><svg aria-hidden="true" class="hc-icon hc-issue-icon"><use href="assets/icons/home-symbols.svg#fee"></use></svg><span class="hc-issue-copy"><b>会費徴収</b>PTA会費と学校徴収金が分かれているか</span></a><a href="privacy.html"><strong>3</strong><svg aria-hidden="true" class="hc-icon hc-issue-icon"><use href="assets/icons/home-symbols.svg#privacy"></use></svg><span class="hc-issue-copy"><b>個人情報</b>取得元、利用目的、提供先が説明されているか</span></a><a href="personnel.html"><strong>4</strong><svg aria-hidden="true" class="hc-icon hc-issue-icon"><use href="assets/icons/home-symbols.svg#staff"></use></svg><span class="hc-issue-copy"><b>教職員の関与</b>勤務時間中のPTA事務に根拠があるか</span></a><a href="facilities.html"><strong>5</strong><svg aria-hidden="true" class="hc-icon hc-issue-icon"><use href="assets/icons/home-symbols.svg#facility"></use></svg><span class="hc-issue-copy"><b>学校施設・媒体</b>学校の資源とPTA内部事務が分離されているか</span></a></div></div></section>
+<section class="hc-section hc-issues"><div class="home-wrap"><p class="hc-kicker">Five issues</p><h2>境界が曖昧だと、何が起きるか</h2><p class="hc-section-lead">任意加入、会費、個人情報、教職員関与、学校資源の問題は別々の問題ではありません。学校とPTAという別主体の境界が曖昧なまま運用されることで、五つの論点が連鎖して生じます。</p><div class="hc-boundary-prose"><p>加入の確認に続いて整理するのが、会員情報と会費の取扱いです。会員が誰かを確定することと、その会員に対して誰が請求し、どの口座で収納するかは、一続きの運営上の問題です。学校から配られた書類や学校納入金の引落しだけでは、PTAへの加入手続とPTA会費の請求根拠を読み取れない場合があります。入会申込み、会員確定、請求、収納の各段階で、担当する主体と根拠資料を確認します。</p><p>個人情報については、学校が教育のために持つ情報と、PTAが会員管理のために必要とする情報を分けて考えます。確認するのは同意欄の有無だけではありません。取得元、利用目的、提供先に加え、どの事務のために、どの範囲の情報を、どれだけの期間扱うのかを、実際の書類と運用に照らして調べます。</p><p>教職員の関与と学校施設・媒体の利用も、同じ区別から検討します。会員管理や会計を誰が担うのか、勤務時間・学校口座・設備・連絡ツールをどう使っているのかを具体化し、学校側が示す根拠と手続を確認します。以下の各論では、この確認を論点ごとに掘り下げます。</p></div></div></section>
 <section aria-labelledby="school-processing-entry-title" class="core-essay-entrance" id="school-processing-entry"><p class="core-kicker">National Legal Review · 全国比較</p><h2 id="school-processing-entry-title">PTA内部事務を、学校はどこまで処理できるのか</h2><p class="core-intro">全国の自治体では、PTAからの委任、本人同意、校長判断、学校徴収金・準公金・私費会計規程などを根拠に、学校が会費徴収や会計、加入書類・個人情報の取扱いに関与する制度があります。</p><p class="core-thesis">本調査は「委任があるか」から始めません。まず、そのPTA事務を学校が公務として受任できる公法上・組織法上の根拠を確認し、その後に委任、校長の掌理、教職員の職務、個人情報保護法61条・69条を順に検証します。川崎市、大阪市、滋賀県、橋本市、神戸市、島根県など優先15自治体を同じ基準で比較しています。</p><article class="core-essay-item"><p class="core-no">全国法的整合性調査</p><h3><a href="pta-school-processing.html">PTA内部事務の学校処理――委任・本人同意・学校徴収金規程はどこまで根拠になるか</a></h3><p>自治体等が示す正当化論を最も有利な形で整理し、公法上の事務根拠、受任権限、教職員の職務、個人情報保護法61条まで同じ順序で検証します。規則や要綱が詳しいこと自体を「良い」「適法」と評価せず、根拠の明文化と上位法との整合性を別軸で示します。</p><a class="core-read" href="pta-school-processing.html">全国比較を読む →</a></article></section>
 <section aria-labelledby="core-essays-entry-title" class="core-essay-entrance" id="core-essays-entry"><p class="core-kicker">Core Analysis · 成立史と再設計</p><h2 id="core-essays-entry-title">PTAは、なぜこうなったのか。<br/>そして、これからどうするのか。</h2><p class="core-intro">任意加入、個人情報、会費徴収、教職員関与を個別に検討するだけでは、現在のPTAがなぜ学校とここまで一体化したのかは見えません。成立の経緯と、これからの組織設計を一続きで読むための主要論考です。</p><p class="core-thesis">民主的・自主的な社会教育団体として構想されたPTAが、なぜ「学校単位で当然に存在し、保護者が会費と労働力を提供する組織」になったのか。その経路を確認し、学校のお手伝いを存在理由にしないPTAへ組み替える道筋を示します。</p><article class="core-essay-item"><p class="core-no">01 / 成立史</p><h3><a href="pta-history.html">PTAは誰が作ったのか――「自主的団体」の成立史</a></h3><p>GHQ・CIE、米国教育使節団、文部省による全国的な普及と、旧父兄会・学校後援会の構造が残った経緯を、公的資料からたどります。「自主的な団体を上から普及させる」という出発点の矛盾を検証します。</p><a class="core-read" href="pta-history.html">本文を読む →</a></article><article class="core-essay-item"><p class="core-no">02 / これからのPTA</p><h3><a href="pta-future.html">PTAは「学校のお手伝い」をやめなければ生き残れない</a></h3><p>会費に加えて無償労働まで求める学校支援型から、「やりたい人がいるから活動する」自主参加型へ。学校支援を禁止するのではなく、学校支援をPTAの義務・存在理由にしない再設計を提言します。</p><a class="core-read" href="pta-future.html">本文を読む →</a></article><p class="core-journal-more"><a href="journal.html">その他の論考・調査報告を見る →</a></p></section>
 <section class="hc-section hc-audience" id="audience-gateway"><div class="home-wrap" id="roles"><p class="hc-kicker">読み手が違っても、基準は同じ</p><h2>立場が違っても、確認する基準は同じです</h2><p class="hc-section-lead">保護者、PTA役員、学校・教育委員会、研究者・記者では、最初に確認する資料が異なります。しかし、本文で示した判断の基準は共通しています。学校への在籍とPTA加入を分け、会費・個人情報・教職員の事務・学校施設の利用について、誰が何を根拠に扱っているのかを確認します。</p><div class="hc-audience-prose"><p><a href="guide-parent.html"><strong>保護者</strong></a>は、加入・退会・会費・個人情報の扱いから確認してください。</p><p><a href="guide-pta.html"><strong>PTA役員</strong></a>は、会員管理、会計、役員選出などをPTA自身の事務として担えているかを点検してください。</p><p><a href="guide-board.html"><strong>学校・教育委員会</strong></a>は、学校の公務とPTA内部事務を分け、情報・会計・教職員・学校資源の関与について根拠と手続を確認してください。</p><p><a href="guide-research.html"><strong>研究者・記者</strong></a>は、回答本文、原資料、作成主体、日付を確認し、当委員会の分析と一次資料を分けて読んでください。</p></div></div></section>
