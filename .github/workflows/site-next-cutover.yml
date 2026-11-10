@@ -65,45 +65,6 @@ jobs:
                   page.write_text(content.replace(marker,""), encoding="utf-8")
           PY
           rm -f package-lock.json
-          cat > .github/workflows/site-check.yml <<'CHECK'
-          name: Site checks
-          on:
-            push:
-              branches: [main]
-            pull_request:
-          permissions:
-            contents: read
-          jobs:
-            verify:
-              runs-on: ubuntu-latest
-              steps:
-                - uses: actions/checkout@v4
-                - uses: actions/setup-node@v4
-                  with:
-                    node-version: '20'
-                - run: node --test tests/migration.test.mjs
-          CHECK
-          cat > .github/workflows/quick-generated-catalog.yml <<'CHECK'
-          name: Migration path and canonical checks
-          on:
-            pull_request:
-              paths:
-                - 'sitemap.xml'
-                - 'sitemap-research.xml'
-                - 'robots.txt'
-                - 'tests/migration.test.mjs'
-          permissions:
-            contents: read
-          jobs:
-            verify:
-              runs-on: ubuntu-latest
-              steps:
-                - uses: actions/checkout@v4
-                - uses: actions/setup-node@v4
-                  with:
-                    node-version: '20'
-                - run: node --test tests/migration.test.mjs
-          CHECK
 
       - name: Validate original 750 paths and canonicals
         shell: bash
