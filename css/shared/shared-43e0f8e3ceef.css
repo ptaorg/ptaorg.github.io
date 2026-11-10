@@ -1,6 +1,6 @@
-@layer page {
+
   /* Shared by 2 pages. Extracted from duplicated inline CSS. */
-  body {
+  .legacy {
     margin: 0;
     font-family:
       -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", Meiryo,
@@ -9,35 +9,34 @@
     background: #f5f7fb;
     line-height: 1.9;
   }
-  header {
+  .legacy header {
     background: #0f3d63;
     color: #fff;
     padding: 34px 20px;
   }
-  main {
+  .legacy .legacy-main {
     max-width: 920px;
     margin: 0 auto;
     padding: 28px 20px 56px;
     background: #fff;
   }
-  h1 {
+  .legacy h1 {
     font-size: 28px;
     margin: 0;
   }
-  h2 {
+  .legacy h2 {
     font-size: 20px;
     color: #0f3d63;
     margin-top: 30px;
   }
-  a {
+  .legacy a {
     color: #0f3d63;
     font-weight: 700;
   }
-  footer {
+  .legacy footer {
     background: #0b2239;
     color: #dbeafe;
     padding: 20px;
     text-align: center;
     font-size: 13px;
   }
-}

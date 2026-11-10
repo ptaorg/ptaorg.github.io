@@ -1,5 +1,5 @@
 /* proper-management.html: administrative brief / text-first layout */
-  body.proper-management-editorial {
+  .legacy.proper-management-editorial {
     --pm-ink: #202f3f;
     --pm-navy: #0b2a4a;
     --pm-navy-2: #18466f;
@@ -12,15 +12,15 @@
     background: var(--pm-paper);
   }
 
-  body.proper-management-editorial .breadcrumb-bar {
+  .legacy.proper-management-editorial .breadcrumb-bar {
     display: none;
   }
 
-  body.proper-management-editorial main {
+  .legacy.proper-management-editorial .legacy-main {
     background: var(--pm-paper);
   }
 
-  body.proper-management-editorial .pm-hero {
+  .legacy.proper-management-editorial .pm-hero {
     position: relative;
     overflow: hidden;
     color: #fff;
@@ -31,7 +31,7 @@
     border-bottom: 0;
   }
 
-  body.proper-management-editorial .pm-hero::after {
+  .legacy.proper-management-editorial .pm-hero::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -42,7 +42,7 @@
     background-size: 48px 48px;
   }
 
-  body.proper-management-editorial .pm-hero-inner {
+  .legacy.proper-management-editorial .pm-hero-inner {
     position: relative;
     z-index: 1;
     width: min(calc(100% - 40px), 960px);
@@ -51,7 +51,7 @@
     padding: clamp(62px, 8vw, 92px) 0 clamp(54px, 7vw, 78px);
   }
 
-  body.proper-management-editorial .pm-kicker {
+  .legacy.proper-management-editorial .pm-kicker {
     display: block;
     width: fit-content;
     margin: 0 0 16px;
@@ -67,7 +67,7 @@
     letter-spacing: 0.1em;
   }
 
-  body.proper-management-editorial .pm-title {
+  .legacy.proper-management-editorial .pm-title {
     max-width: 17em;
     margin: 0;
     color: #fff;
@@ -79,11 +79,11 @@
     text-wrap: balance;
   }
 
-  body.proper-management-editorial .pm-title span {
+  .legacy.proper-management-editorial .pm-title span {
     color: #f1d477;
   }
 
-  body.proper-management-editorial .pm-lead {
+  .legacy.proper-management-editorial .pm-lead {
     max-width: 76ch;
     margin: 26px 0 0;
     color: rgba(255, 255, 255, 0.96);
@@ -92,7 +92,7 @@
     line-height: 1.95;
   }
 
-  body.proper-management-editorial .pm-hero-note {
+  .legacy.proper-management-editorial .pm-hero-note {
     max-width: 76ch;
     margin: 26px 0 0;
     padding: 4px 0 4px 22px;
@@ -106,7 +106,7 @@
     line-height: 1.95;
   }
 
-  body.proper-management-editorial .pm-meta {
+  .legacy.proper-management-editorial .pm-meta {
     max-width: none;
     margin: 24px 0 0;
     padding-top: 16px;
@@ -116,15 +116,14 @@
     line-height: 1.7;
   }
 
-  body.proper-management-editorial .pm-wrap {
+  .legacy.proper-management-editorial .pm-wrap {
     width: min(calc(100% - 40px), 920px);
     max-width: none;
     margin-inline: auto;
     padding: 54px 0 96px;
   }
 
-  body.proper-management-editorial .pm-section,
-  body.proper-management-editorial .pm-link-band {
+  .legacy.proper-management-editorial .pm-section,.legacy.proper-management-editorial .pm-link-band {
     margin: 0;
     padding: 54px 0 62px;
     background: var(--pm-paper);
@@ -135,11 +134,11 @@
     scroll-margin-top: 104px;
   }
 
-  body.proper-management-editorial .pm-section:first-child {
+  .legacy.proper-management-editorial .pm-section:first-child {
     border-top: 2px solid var(--pm-navy);
   }
 
-  body.proper-management-editorial .pm-section-number {
+  .legacy.proper-management-editorial .pm-section-number {
     max-width: none;
     margin: 0 0 10px;
     padding: 0;
@@ -150,8 +149,7 @@
     letter-spacing: 0.1em;
   }
 
-  body.proper-management-editorial .pm-section h2,
-  body.proper-management-editorial .pm-link-band h2 {
+  .legacy.proper-management-editorial .pm-section h2,.legacy.proper-management-editorial .pm-link-band h2 {
     margin: 0 0 28px;
     padding: 0 0 16px;
     color: var(--pm-navy);
@@ -165,7 +163,7 @@
     text-wrap: balance;
   }
 
-  body.proper-management-editorial .pm-section h3 {
+  .legacy.proper-management-editorial .pm-section h3 {
     margin: 34px 0 14px;
     color: var(--pm-navy-2);
     font-size: 1.18rem;
@@ -173,23 +171,18 @@
     line-height: 1.65;
   }
 
-  body.proper-management-editorial .pm-section p,
-  body.proper-management-editorial .pm-section li,
-  body.proper-management-editorial .pm-section td,
-  body.proper-management-editorial .pm-link-band p {
+  .legacy.proper-management-editorial .pm-section p,.legacy.proper-management-editorial .pm-section li,.legacy.proper-management-editorial .pm-section td,.legacy.proper-management-editorial .pm-link-band p {
     color: var(--pm-ink);
     font-size: 1.01rem;
     line-height: 2;
   }
 
-  body.proper-management-editorial .pm-section p,
-  body.proper-management-editorial .pm-link-band p {
+  .legacy.proper-management-editorial .pm-section p,.legacy.proper-management-editorial .pm-link-band p {
     max-width: none;
     margin: 0 0 18px;
   }
 
-  body.proper-management-editorial .pm-section a,
-  body.proper-management-editorial .pm-link-band a {
+  .legacy.proper-management-editorial .pm-section a,.legacy.proper-management-editorial .pm-link-band a {
     color: #075ca3;
     font-weight: 700;
     text-decoration: underline;
@@ -197,15 +190,12 @@
     text-underline-offset: 4px;
   }
 
-  body.proper-management-editorial .pm-section a:hover,
-  body.proper-management-editorial .pm-section a:focus-visible,
-  body.proper-management-editorial .pm-link-band a:hover,
-  body.proper-management-editorial .pm-link-band a:focus-visible {
+  .legacy.proper-management-editorial .pm-section a:hover,.legacy.proper-management-editorial .pm-section a:focus-visible,.legacy.proper-management-editorial .pm-link-band a:hover,.legacy.proper-management-editorial .pm-link-band a:focus-visible {
     color: #9b4b00;
     text-decoration-color: currentColor;
   }
 
-  body.proper-management-editorial .pm-definition {
+  .legacy.proper-management-editorial .pm-definition {
     margin: 0 0 30px;
     padding: 26px 0;
     color: var(--pm-navy);
@@ -217,12 +207,12 @@
     line-height: 1.72;
   }
 
-  body.proper-management-editorial .pm-definition em {
+  .legacy.proper-management-editorial .pm-definition em {
     color: #9b4b00;
     font-style: normal;
   }
 
-  body.proper-management-editorial .pm-conclusion {
+  .legacy.proper-management-editorial .pm-conclusion {
     margin: 30px 0 0;
     padding: 22px 24px 22px 28px;
     background: var(--pm-soft);
@@ -230,25 +220,25 @@
     border-left: 5px solid var(--pm-gold);
   }
 
-  body.proper-management-editorial .pm-conclusion p {
+  .legacy.proper-management-editorial .pm-conclusion p {
     margin: 0;
     color: var(--pm-navy);
     font-size: 1.04rem;
     line-height: 1.95;
   }
 
-  body.proper-management-editorial .pm-conclusion strong {
+  .legacy.proper-management-editorial .pm-conclusion strong {
     color: var(--pm-navy);
     font-weight: 900;
   }
 
-  body.proper-management-editorial .pm-boundary {
+  .legacy.proper-management-editorial .pm-boundary {
     margin: 30px 0;
     border-top: 2px solid var(--pm-navy);
     border-bottom: 1px solid var(--pm-line);
   }
 
-  body.proper-management-editorial .pm-boundary-row {
+  .legacy.proper-management-editorial .pm-boundary-row {
     display: grid;
     grid-template-columns: 112px minmax(0, 1fr);
     gap: 22px;
@@ -257,11 +247,11 @@
     border-bottom: 1px solid var(--pm-line);
   }
 
-  body.proper-management-editorial .pm-boundary-row:last-child {
+  .legacy.proper-management-editorial .pm-boundary-row:last-child {
     border-bottom: 0;
   }
 
-  body.proper-management-editorial .pm-boundary-label {
+  .legacy.proper-management-editorial .pm-boundary-label {
     color: var(--pm-navy);
     font-size: 0.78rem;
     font-weight: 900;
@@ -269,53 +259,52 @@
     letter-spacing: 0.08em;
   }
 
-  body.proper-management-editorial .pm-boundary-row strong,
-  body.proper-management-editorial .pm-boundary-row span {
+  .legacy.proper-management-editorial .pm-boundary-row strong,.legacy.proper-management-editorial .pm-boundary-row span {
     display: block;
   }
 
-  body.proper-management-editorial .pm-boundary-row strong {
+  .legacy.proper-management-editorial .pm-boundary-row strong {
     margin-bottom: 7px;
     color: var(--pm-navy);
     font-size: 1.04rem;
     line-height: 1.7;
   }
 
-  body.proper-management-editorial .pm-boundary-row span {
+  .legacy.proper-management-editorial .pm-boundary-row span {
     color: #3b4d5f;
     font-size: 0.96rem;
     line-height: 1.9;
   }
 
-  body.proper-management-editorial .pm-boundary-row--stop {
+  .legacy.proper-management-editorial .pm-boundary-row--stop {
     background: linear-gradient(90deg, rgba(189, 146, 40, 0.09), transparent 74%);
   }
 
-  body.proper-management-editorial .pm-keyline {
+  .legacy.proper-management-editorial .pm-keyline {
     margin: 28px 0 0;
     padding: 4px 0 4px 22px;
     border-left: 4px solid var(--pm-gold);
   }
 
-  body.proper-management-editorial .pm-keyline strong {
+  .legacy.proper-management-editorial .pm-keyline strong {
     color: var(--pm-navy);
   }
 
-  body.proper-management-editorial figure {
+  .legacy.proper-management-editorial figure {
     margin: 28px 0 34px;
     padding: 22px 0;
     border-top: 1px solid var(--pm-line);
     border-bottom: 1px solid var(--pm-line);
   }
 
-  body.proper-management-editorial figure img {
+  .legacy.proper-management-editorial figure img {
     display: block;
     width: 100%;
     height: auto;
     margin-inline: auto;
   }
 
-  body.proper-management-editorial .pm-rule-list {
+  .legacy.proper-management-editorial .pm-rule-list {
     display: block;
     margin: 0;
     padding: 0;
@@ -324,7 +313,7 @@
     border-top: 1px solid var(--pm-line);
   }
 
-  body.proper-management-editorial .pm-rule-list li {
+  .legacy.proper-management-editorial .pm-rule-list li {
     position: relative;
     margin: 0;
     padding: 25px 0 25px 58px;
@@ -336,7 +325,7 @@
     counter-increment: pmrule;
   }
 
-  body.proper-management-editorial .pm-rule-list li::before {
+  .legacy.proper-management-editorial .pm-rule-list li::before {
     content: counter(pmrule, decimal-leading-zero);
     position: absolute;
     top: 27px;
@@ -353,31 +342,30 @@
     letter-spacing: 0.06em;
   }
 
-  body.proper-management-editorial .pm-rule-list strong,
-  body.proper-management-editorial .pm-rule-list span {
+  .legacy.proper-management-editorial .pm-rule-list strong,.legacy.proper-management-editorial .pm-rule-list span {
     display: block;
   }
 
-  body.proper-management-editorial .pm-rule-list strong {
+  .legacy.proper-management-editorial .pm-rule-list strong {
     margin-bottom: 7px;
     color: var(--pm-navy);
     font-size: 1.04rem;
     line-height: 1.7;
   }
 
-  body.proper-management-editorial .pm-rule-list span {
+  .legacy.proper-management-editorial .pm-rule-list span {
     color: #3b4d5f;
     font-size: 0.97rem;
     line-height: 1.95;
   }
 
-  body.proper-management-editorial .pm-steps {
+  .legacy.proper-management-editorial .pm-steps {
     display: block;
     margin: 0;
     border-top: 1px solid var(--pm-line);
   }
 
-  body.proper-management-editorial .pm-step {
+  .legacy.proper-management-editorial .pm-step {
     margin: 0;
     padding: 23px 0;
     background: var(--pm-paper);
@@ -386,25 +374,24 @@
     border-radius: 0;
   }
 
-  body.proper-management-editorial .pm-step strong,
-  body.proper-management-editorial .pm-step span {
+  .legacy.proper-management-editorial .pm-step strong,.legacy.proper-management-editorial .pm-step span {
     display: block;
   }
 
-  body.proper-management-editorial .pm-step strong {
+  .legacy.proper-management-editorial .pm-step strong {
     margin-bottom: 7px;
     color: var(--pm-navy);
     font-size: 1.04rem;
     line-height: 1.7;
   }
 
-  body.proper-management-editorial .pm-step span {
+  .legacy.proper-management-editorial .pm-step span {
     color: #3b4d5f;
     font-size: 0.97rem;
     line-height: 1.95;
   }
 
-  body.proper-management-editorial .pm-table-wrap {
+  .legacy.proper-management-editorial .pm-table-wrap {
     width: 100%;
     margin: 26px 0 0;
     overflow-x: auto;
@@ -413,7 +400,7 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  body.proper-management-editorial .pm-table {
+  .legacy.proper-management-editorial .pm-table {
     width: 100%;
     margin: 0;
     border: 0;
@@ -423,8 +410,7 @@
     box-shadow: none;
   }
 
-  body.proper-management-editorial .pm-table th,
-  body.proper-management-editorial .pm-table td {
+  .legacy.proper-management-editorial .pm-table th,.legacy.proper-management-editorial .pm-table td {
     padding: 17px 18px;
     border: 0;
     border-bottom: 1px solid var(--pm-line);
@@ -432,12 +418,11 @@
     vertical-align: top;
   }
 
-  body.proper-management-editorial .pm-table tr:last-child th,
-  body.proper-management-editorial .pm-table tr:last-child td {
+  .legacy.proper-management-editorial .pm-table tr:last-child th,.legacy.proper-management-editorial .pm-table tr:last-child td {
     border-bottom: 0;
   }
 
-  body.proper-management-editorial .pm-table th {
+  .legacy.proper-management-editorial .pm-table th {
     width: 132px;
     color: var(--pm-navy);
     background: var(--pm-soft);
@@ -447,24 +432,23 @@
     white-space: nowrap;
   }
 
-  body.proper-management-editorial .pm-table td {
+  .legacy.proper-management-editorial .pm-table td {
     color: #34475a;
     font-size: 0.96rem;
     line-height: 1.9;
   }
 
-  body.proper-management-editorial .pm-link-band {
+  .legacy.proper-management-editorial .pm-link-band {
     padding-bottom: 0;
   }
 
-  body.proper-management-editorial .pm-actions {
+  .legacy.proper-management-editorial .pm-actions {
     display: block;
     margin: 20px 0 0;
     border-top: 1px solid var(--pm-line);
   }
 
-  body.proper-management-editorial .pm-actions a,
-  body.proper-management-editorial .pm-actions a.secondary {
+  .legacy.proper-management-editorial .pm-actions a,.legacy.proper-management-editorial .pm-actions a.secondary {
     display: block;
     width: auto;
     margin: 0;
@@ -483,140 +467,129 @@
     text-underline-offset: 4px;
   }
 
-  body.proper-management-editorial main a:hover {
+  .legacy.proper-management-editorial .legacy-main a:hover {
     transform: none;
     box-shadow: none;
   }
 
   @media (max-width: 720px) {
-    body.proper-management-editorial .pm-hero-inner,
-    body.proper-management-editorial .pm-wrap {
+    .legacy.proper-management-editorial .pm-hero-inner,.legacy.proper-management-editorial .pm-wrap {
       width: min(calc(100% - 28px), 920px);
     }
 
-    body.proper-management-editorial .pm-hero-inner {
+    .legacy.proper-management-editorial .pm-hero-inner {
       padding-block: 46px 52px;
     }
 
-    body.proper-management-editorial .pm-title {
+    .legacy.proper-management-editorial .pm-title {
       max-width: none;
       font-size: clamp(1.85rem, 9vw, 2.5rem);
     }
 
-    body.proper-management-editorial .pm-lead {
+    .legacy.proper-management-editorial .pm-lead {
       margin-top: 20px;
       font-size: 0.99rem;
       line-height: 1.9;
     }
 
-    body.proper-management-editorial .pm-hero-note {
+    .legacy.proper-management-editorial .pm-hero-note {
       margin-top: 22px;
       padding-left: 16px;
       font-size: 0.93rem;
     }
 
-    body.proper-management-editorial .pm-meta {
+    .legacy.proper-management-editorial .pm-meta {
       font-size: 0.7rem;
     }
 
-    body.proper-management-editorial .pm-wrap {
+    .legacy.proper-management-editorial .pm-wrap {
       padding-block: 38px 70px;
     }
 
-    body.proper-management-editorial .pm-section,
-    body.proper-management-editorial .pm-link-band {
+    .legacy.proper-management-editorial .pm-section,.legacy.proper-management-editorial .pm-link-band {
       padding-block: 44px 50px;
     }
 
-    body.proper-management-editorial .pm-section h2,
-    body.proper-management-editorial .pm-link-band h2 {
+    .legacy.proper-management-editorial .pm-section h2,.legacy.proper-management-editorial .pm-link-band h2 {
       margin-bottom: 23px;
       padding-bottom: 14px;
       font-size: 1.48rem;
     }
 
-    body.proper-management-editorial .pm-section p,
-    body.proper-management-editorial .pm-section li,
-    body.proper-management-editorial .pm-link-band p {
+    .legacy.proper-management-editorial .pm-section p,.legacy.proper-management-editorial .pm-section li,.legacy.proper-management-editorial .pm-link-band p {
       font-size: 0.97rem;
       line-height: 1.95;
     }
 
-    body.proper-management-editorial .pm-definition {
+    .legacy.proper-management-editorial .pm-definition {
       padding-block: 22px;
       font-size: 1.18rem;
     }
 
-    body.proper-management-editorial .pm-conclusion {
+    .legacy.proper-management-editorial .pm-conclusion {
       padding: 20px 17px 20px 21px;
     }
 
-    body.proper-management-editorial .pm-conclusion p {
+    .legacy.proper-management-editorial .pm-conclusion p {
       font-size: 0.98rem;
     }
 
-    body.proper-management-editorial .pm-boundary-row {
+    .legacy.proper-management-editorial .pm-boundary-row {
       grid-template-columns: 1fr;
       gap: 7px;
       padding: 20px 0;
     }
 
-    body.proper-management-editorial .pm-boundary-label {
+    .legacy.proper-management-editorial .pm-boundary-label {
       font-size: 0.72rem;
     }
 
-    body.proper-management-editorial .pm-boundary-row--stop {
+    .legacy.proper-management-editorial .pm-boundary-row--stop {
       padding-inline: 12px;
     }
 
-    body.proper-management-editorial .pm-keyline {
+    .legacy.proper-management-editorial .pm-keyline {
       padding-left: 16px;
     }
 
-    body.proper-management-editorial .pm-rule-list li {
+    .legacy.proper-management-editorial .pm-rule-list li {
       padding: 22px 0 22px 46px;
     }
 
-    body.proper-management-editorial .pm-rule-list li::before {
+    .legacy.proper-management-editorial .pm-rule-list li::before {
       top: 24px;
     }
 
-    body.proper-management-editorial .pm-rule-list strong,
-    body.proper-management-editorial .pm-step strong {
+    .legacy.proper-management-editorial .pm-rule-list strong,.legacy.proper-management-editorial .pm-step strong {
       font-size: 1rem;
     }
 
-    body.proper-management-editorial .pm-table-wrap {
+    .legacy.proper-management-editorial .pm-table-wrap {
       overflow: visible;
     }
 
-    body.proper-management-editorial .pm-table,
-    body.proper-management-editorial .pm-table tbody,
-    body.proper-management-editorial .pm-table tr,
-    body.proper-management-editorial .pm-table th,
-    body.proper-management-editorial .pm-table td {
+    .legacy.proper-management-editorial .pm-table,.legacy.proper-management-editorial .pm-table tbody,.legacy.proper-management-editorial .pm-table tr,.legacy.proper-management-editorial .pm-table th,.legacy.proper-management-editorial .pm-table td {
       display: block;
       width: 100%;
     }
 
-    body.proper-management-editorial .pm-table tr {
+    .legacy.proper-management-editorial .pm-table tr {
       padding: 17px 0 19px;
       border-bottom: 1px solid var(--pm-line);
     }
 
-    body.proper-management-editorial .pm-table tr:last-child {
+    .legacy.proper-management-editorial .pm-table tr:last-child {
       border-bottom: 0;
     }
 
-    body.proper-management-editorial .pm-table th,
-    body.proper-management-editorial .pm-table td {
+    .legacy.proper-management-editorial .pm-table th,.legacy.proper-management-editorial .pm-table td {
       padding: 0;
       border: 0;
       background: var(--pm-paper);
       white-space: normal;
     }
 
-    body.proper-management-editorial .pm-table th {
+    .legacy.proper-management-editorial .pm-table th {
       margin-bottom: 7px;
     }
   }

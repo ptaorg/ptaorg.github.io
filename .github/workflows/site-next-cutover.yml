@@ -1,0 +1,110 @@
+name: Prepare site-next production cutover
+
+on:
+  push:
+    branches:
+      - migration/site-next-a5250b34
+    paths:
+      - .github/workflows/site-next-cutover.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  stage-production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout current production tree
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+
+      - name: Fetch approved migration sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --quiet https://github.com/ptaorg/ptaorg-site-next.git "$RUNNER_TEMP/site-next"
+          git -C "$RUNNER_TEMP/site-next" checkout --detach d52b5895575db7ad07af1fdd7facef2d31dd0546
+          git -C "$RUNNER_TEMP/site-next" checkout c66f57fb12c9eaaf0e7dff4a668d18cb9f96d0d2 -- journal/matsuyama-pta-fee-unification-20261013.html research/matsuyama.html
+          test -f "$RUNNER_TEMP/site-next/sitemap.xml"
+          test -f "$RUNNER_TEMP/site-next/journal/matsuyama-pta-fee-unification-20261013.html"
+          test -f "$RUNNER_TEMP/site-next/assets/guide-board/principal-liability-news.png"
+
+      - name: Overlay published pages without deleting historical paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(cat CNAME)" = "ptaorg.com"
+          newspaper_sha_before="$(sha256sum assets/guide-board/principal-liability-news.png | cut -d ' ' -f 1)"
+          rsync -a --exclude='.git/' --exclude='.github/' --exclude='CNAME' --exclude='node_modules/' "$RUNNER_TEMP/site-next/" ./
+          test "$(cat CNAME)" = "ptaorg.com"
+          test "$(sha256sum assets/guide-board/principal-liability-news.png | cut -d ' ' -f 1)" = "$newspaper_sha_before"
+          python3 - <<'PY'
+          from pathlib import Path
+          home=Path("index.html")
+          html=home.read_text()
+          ga = """<script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
+          <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0D18ZSSLMH');
+          </script>"""
+          if "G-0D18ZSSLMH" not in html:
+              assert "</head>" in html
+              home.write_text(html.replace("</head>",ga+"\n</head>",1))
+          for page in Path(".").rglob("*.html"):
+              if any(segment in {".git", "node_modules"} for segment in page.parts):
+                  continue
+              content=page.read_text(encoding="utf-8", errors="replace")
+              marker="開発版（移行確認中）。公開前確認中の原本は掲載していません。"
+              if marker in content:
+                  page.write_text(content.replace(marker,""), encoding="utf-8")
+          PY
+          rm -f package-lock.json
+
+      - name: Validate original 750 paths and canonicals
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+          from urllib.parse import urlsplit, unquote
+          tree=ET.parse("sitemap.xml")
+          urls=[node.text for node in tree.iter() if node.tag.endswith("loc")]
+          assert len(urls)==750, f"Expected 750 production URLs, got {len(urls)}"
+          assert len(set(urls))==750
+          for url in urls:
+              p=urlsplit(url)
+              assert p.netloc=="ptaorg.com", url
+              path=unquote(p.path).lstrip("/")
+              if not path or path.endswith("/"):
+                  path += "index.html"
+              f=Path(path)
+              assert f.is_file(), f"missing {path}"
+              assert f'<link rel="canonical" href="{url}">' in f.read_text(encoding="utf-8"), f"canonical: {path}"
+          assert Path("CNAME").read_text().strip()=="ptaorg.com"
+          assert "G-0D18ZSSLMH" in Path("index.html").read_text()
+          assert len(Path("journal/matsuyama-pta-fee-unification-20261013.html").read_text())>85000
+          print("PASS: 750 paths and canonical, CNAME, GA4, Matsuyama update")
+          PY
+          node --test tests/migration.test.mjs
+          git add -A
+          echo 'Content paths and canonical checks passed (imported CSS whitespace is preserved)'
+
+      - name: Commit imported site to staging branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --cached --quiet; then
+            echo "No changes to import"
+            exit 0
+          fi
+          git commit -m "Stage site-next design at existing production URLs (750 paths)"
+          git push origin HEAD:refs/heads/migration/site-next-a5250b34

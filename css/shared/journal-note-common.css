@@ -1,6 +1,6 @@
-@layer page {
+
   /* Shared by 7 pages. Extracted from duplicated inline CSS. */
-  .chapter-flow {
+  .legacy .chapter-flow {
     border: 1px solid #c7d7eb;
     border-left: 6px solid #0a192f;
     background: #f8fbff;
@@ -8,8 +8,7 @@
     margin: 22px 0;
     line-height: 1.9;
   }
-  .chapter-flow ol {
+  .legacy .chapter-flow ol {
     margin: 10px 0 0;
     padding-left: 1.4em;
   }
-}

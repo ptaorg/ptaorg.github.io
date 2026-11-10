@@ -116,7 +116,7 @@
       showError('資料IDが指定されていません。全国資料ページから資料を選択してください。');
       return;
     }
-    fetch('/assets/data/national-materials.json',{cache:'no-store'})
+    fetch((window.__ROOT||"")+'assets/data/national-materials.json',{cache:'no-store'})
       .then(function(response){
         if(!response.ok)throw new Error('台帳データを取得できませんでした。');
         return response.json();

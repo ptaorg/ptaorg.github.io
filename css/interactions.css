@@ -1,7 +1,7 @@
-@layer interactions {
+
   /* Interaction and compatibility rules shared across the public site. */
   /* PTA site visual consistency — Chromium audit revision 2026-07-11 */
-  :root {
+  .legacy {
     --site-prose-width: 1040px;
     --site-reading-width: 920px;
     --site-line: #d7e0e9;
@@ -10,27 +10,27 @@
     --site-muted: #526174;
   }
 
-  html {
+  .legacy {
     font-size: 16px;
   }
-  body {
+  .legacy {
     min-width: 320px;
   }
-  main {
+  .legacy .legacy-main {
     min-width: 0;
   }
-  main :where(p, li, td, th, dd, blockquote) {
+  .legacy .legacy-main :where(p, li, td, th, dd, blockquote) {
     overflow-wrap: anywhere;
   }
-  main :where(img, svg, video, iframe) {
+  .legacy .legacy-main :where(img, svg, video, iframe) {
     max-width: 100%;
     height: auto;
   }
-  main :where(pre, code) {
+  .legacy .legacy-main :where(pre, code) {
     white-space: pre-wrap;
     overflow-wrap: anywhere;
   }
-  :where(
+  .legacy :where(
     .table-wrap,
     .edu-table-wrap,
     .responsive-table,
@@ -44,30 +44,30 @@
     overscroll-behavior-inline: contain;
     -webkit-overflow-scrolling: touch;
   }
-  :where(.gl-tpl-pre, pre, .code-block) {
+  .legacy :where(.gl-tpl-pre, pre, .code-block) {
     max-width: 100%;
     overflow: auto;
   }
 
   /* Shared reading baseline. Page-specific headings and lead text may remain larger. */
-  main :where(p, li, dd, blockquote) {
+  .legacy .legacy-main :where(p, li, dd, blockquote) {
     line-height: 1.9;
   }
-  main :where(h2) {
+  .legacy .legacy-main :where(h2) {
     line-height: 1.45;
   }
-  main :where(h3) {
+  .legacy .legacy-main :where(h3) {
     line-height: 1.55;
   }
 
   /* Guideline: one continuous document width and one visual grammar. */
-  body.guideline-editorial {
+  .legacy.guideline-editorial {
     background: #fff;
   }
-  body.guideline-editorial main {
+  .legacy.guideline-editorial .legacy-main {
     background: #fff;
   }
-  body.guideline-editorial main > section {
+  .legacy.guideline-editorial .legacy-main > section {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -75,51 +75,43 @@
     border-top: 1px solid var(--site-line);
     border-bottom: 0;
   }
-  body.guideline-editorial main > section:first-of-type {
+  .legacy.guideline-editorial .legacy-main > section:first-of-type {
     border-top: 0;
   }
-  body.guideline-editorial .gl-wrap,
-  body.guideline-editorial main > section > .wrap,
-  body.guideline-editorial main > .wrap {
+  .legacy.guideline-editorial .gl-wrap,.legacy.guideline-editorial .legacy-main > section > .wrap,.legacy.guideline-editorial .legacy-main > .wrap {
     width: min(calc(100% - 48px), var(--site-prose-width));
     max-width: var(--site-prose-width);
     margin-inline: auto;
     padding: 56px 0;
     background: transparent;
   }
-  body.guideline-editorial main > .wrap:first-child {
+  .legacy.guideline-editorial .legacy-main > .wrap:first-child {
     padding: 26px 0 30px;
   }
-  body.guideline-editorial main > .wrap:first-child > div {
+  .legacy.guideline-editorial .legacy-main > .wrap:first-child > div {
     border-radius: 0;
     box-shadow: none;
   }
-  body.guideline-editorial .page-banner {
+  .legacy.guideline-editorial .page-banner {
     margin: 0;
     min-height: 250px;
     border-radius: 0;
   }
-  body.guideline-editorial .page-banner-content {
+  .legacy.guideline-editorial .page-banner-content {
     width: min(calc(100% - 48px), var(--site-prose-width));
     margin-inline: auto;
     padding: 54px 0;
   }
-  body.guideline-editorial .section-kicker,
-  body.guideline-editorial .page-banner-kicker,
-  body.guideline-editorial .gl-principle-num {
+  .legacy.guideline-editorial .section-kicker,.legacy.guideline-editorial .page-banner-kicker,.legacy.guideline-editorial .gl-principle-num {
     text-transform: none;
     letter-spacing: 0.04em;
   }
-  body.guideline-editorial .gl-problem-grid,
-  body.guideline-editorial .gl-principle-grid,
-  body.guideline-editorial .gl-pack-grid {
+  .legacy.guideline-editorial .gl-problem-grid,.legacy.guideline-editorial .gl-principle-grid,.legacy.guideline-editorial .gl-pack-grid {
     display: block;
     margin-top: 28px;
     border-top: 2px solid #1e3a5f;
   }
-  body.guideline-editorial .gl-problem-card,
-  body.guideline-editorial .gl-principle-card,
-  body.guideline-editorial .gl-pack-card {
+  .legacy.guideline-editorial .gl-problem-card,.legacy.guideline-editorial .gl-principle-card,.legacy.guideline-editorial .gl-pack-card {
     display: block;
     margin: 0;
     padding: 22px 0;
@@ -130,139 +122,123 @@
     border-radius: 0;
     box-shadow: none;
   }
-  body.guideline-editorial .gl-problem-icon,
-  body.guideline-editorial .gl-principle-icon {
+  .legacy.guideline-editorial .gl-problem-icon,.legacy.guideline-editorial .gl-principle-icon {
     display: none;
   }
-  body.guideline-editorial .gl-principle-title,
-  body.guideline-editorial .gl-principle-desc,
-  body.guideline-editorial .gl-principle-law {
+  .legacy.guideline-editorial .gl-principle-title,.legacy.guideline-editorial .gl-principle-desc,.legacy.guideline-editorial .gl-principle-law {
     color: var(--site-ink);
   }
-  body.guideline-editorial .gl-principle-title,
-  body.guideline-editorial .gl-problem-title,
-  body.guideline-editorial .gl-panel-heading,
-  body.guideline-editorial .gl-box h4 {
+  .legacy.guideline-editorial .gl-principle-title,.legacy.guideline-editorial .gl-problem-title,.legacy.guideline-editorial .gl-panel-heading,.legacy.guideline-editorial .gl-box h4 {
     font-size: 1.08rem;
     line-height: 1.55;
   }
-  body.guideline-editorial .gl-principle-desc,
-  body.guideline-editorial .gl-problem-desc,
-  body.guideline-editorial .gl-box p,
-  body.guideline-editorial .gl-box li,
-  body.guideline-editorial .gl-request-body p,
-  body.guideline-editorial .gl-pack-card p {
+  .legacy.guideline-editorial .gl-principle-desc,.legacy.guideline-editorial .gl-problem-desc,.legacy.guideline-editorial .gl-box p,.legacy.guideline-editorial .gl-box li,.legacy.guideline-editorial .gl-request-body p,.legacy.guideline-editorial .gl-pack-card p {
     font-size: 0.98rem;
     line-height: 1.9;
   }
-  body.guideline-editorial .gl-box,
-  body.guideline-editorial .gl-request-item,
-  body.guideline-editorial .gl-pack-lead,
-  body.guideline-editorial .gl-notice,
-  body.guideline-editorial .gl-ng-box {
+  .legacy.guideline-editorial .gl-box,.legacy.guideline-editorial .gl-request-item,.legacy.guideline-editorial .gl-pack-lead,.legacy.guideline-editorial .gl-notice,.legacy.guideline-editorial .gl-ng-box {
     border-radius: 0;
     box-shadow: none;
   }
-  body.guideline-editorial .gl-box {
+  .legacy.guideline-editorial .gl-box {
     padding: 20px 0 20px 20px;
     background: #f8fafc;
     border: 0;
     border-left: 4px solid #d4af37;
   }
-  body.guideline-editorial .gl-request-list {
+  .legacy.guideline-editorial .gl-request-list {
     gap: 0;
   }
-  body.guideline-editorial .gl-request-item {
+  .legacy.guideline-editorial .gl-request-item {
     padding: 20px 0;
     background: transparent;
     border: 0;
     border-bottom: 1px solid var(--site-line);
   }
-  body.guideline-editorial .gl-tpl-item {
+  .legacy.guideline-editorial .gl-tpl-item {
     margin: 0;
     border: 0;
     border-bottom: 1px solid var(--site-line);
     border-radius: 0;
   }
-  body.guideline-editorial .gl-tpl-btn {
+  .legacy.guideline-editorial .gl-tpl-btn {
     padding: 18px 0;
     background: transparent;
   }
-  body.guideline-editorial .gl-tpl-body {
+  .legacy.guideline-editorial .gl-tpl-body {
     padding: 0 0 22px;
   }
-  body.guideline-editorial .gl-law-cite,
-  body.guideline-editorial .gl-pack-basis li {
+  .legacy.guideline-editorial .gl-law-cite,.legacy.guideline-editorial .gl-pack-basis li {
     font-size: 0.84rem;
   }
 
   /* Education-board separation guide: readable type and fewer dashboard cards. */
-  .edu-page {
+  .legacy .edu-page {
     padding: 0;
     background: #fff;
   }
-  .edu-layout {
+  .legacy .edu-layout {
     width: min(calc(100% - 48px), var(--site-prose-width));
     max-width: var(--site-prose-width);
     margin-inline: auto;
   }
-  .edu-toc {
+  .legacy .edu-toc {
     display: none;
   }
-  .edu-article {
+  .legacy .edu-article {
     max-width: var(--site-reading-width);
     margin-inline: auto;
     border-radius: 0;
     box-shadow: none;
   }
-  .edu-article section {
+  .legacy .edu-article section {
     margin: 0;
     padding: 48px 0;
     border-bottom: 1px solid var(--site-line);
   }
-  .edu-article :where(p, li, td, th) {
+  .legacy .edu-article :where(p, li, td, th) {
     font-size: 0.98rem;
     line-height: 1.9;
   }
-  .edu-core,
-  .notice-model,
-  .transition-item,
-  .flow-item,
-  .script-box,
-  .law-explain-item,
-  .edu-voices-card,
-  .edu-final,
-  .reference-list a,
+  .legacy .edu-core,.legacy 
+  .notice-model,.legacy 
+  .transition-item,.legacy 
+  .flow-item,.legacy 
+  .script-box,.legacy 
+  .law-explain-item,.legacy 
+  .edu-voices-card,.legacy 
+  .edu-final,.legacy 
+  .reference-list a,.legacy 
   .separation {
     border-radius: 0;
     box-shadow: none;
   }
-  .transition-list,
-  .flow-list,
-  .law-explain,
+  .legacy .transition-list,.legacy 
+  .flow-list,.legacy 
+  .law-explain,.legacy 
   .edu-voices-summary {
     gap: 0;
   }
-  .transition-item,
-  .flow-item,
-  .law-explain-item,
+  .legacy .transition-item,.legacy 
+  .flow-item,.legacy 
+  .law-explain-item,.legacy 
   .edu-voices-card {
     background: transparent;
     border: 0;
     border-bottom: 1px solid var(--site-line);
     padding: 18px 0;
   }
-  .reference-list a {
+  .legacy .reference-list a {
     background: transparent;
     border: 0;
     border-bottom: 1px solid var(--site-line);
     padding: 13px 0;
   }
-  .edu-voices-terms,
+  .legacy .edu-voices-terms,.legacy 
   .edu-voices-note {
     font-size: 0.88rem;
   }
-  .edu-table-wrap,
+  .legacy .edu-table-wrap,.legacy 
   .edu-voices-table-wrap {
     max-width: 100%;
     overflow-x: auto;
@@ -270,7 +246,7 @@
   }
 
   /* Fourth-edition long-form guidebook: remove print-page narrowness on screen. */
-  body.guidebook-editorial {
+  .legacy.guidebook-editorial {
     width: auto;
     max-width: none;
     margin: 0;
@@ -279,16 +255,16 @@
     background: #f5f8fb;
     font-size: 16px;
   }
-  body.guidebook-editorial > * {
+  .legacy.guidebook-editorial > * {
     width: min(calc(100% - 48px), var(--site-reading-width));
     margin-left: auto;
     margin-right: auto;
   }
-  body.guidebook-editorial .cover {
+  .legacy.guidebook-editorial .cover {
     margin-top: 48px;
     background: #fff;
   }
-  body.guidebook-editorial
+  .legacy.guidebook-editorial
     :where(
       p,
       li,
@@ -306,14 +282,14 @@
     font-size: 0.96rem;
     line-height: 1.9;
   }
-  body.guidebook-editorial h2 {
+  .legacy.guidebook-editorial h2 {
     margin-top: 48px;
     background: transparent;
     border-left: 0;
     border-bottom: 2px solid #1a4a8a;
     padding: 0 0 10px;
   }
-  body.guidebook-editorial
+  .legacy.guidebook-editorial
     :where(
       .principle-box,
       .risk-box,
@@ -337,13 +313,13 @@
   }
 
   /* Education-board responsibility essay: list, not dashboard. */
-  body.thesis-page .thesis-grid {
+  .legacy.thesis-page .thesis-grid {
     display: block;
     max-width: var(--site-reading-width);
     margin: 28px auto 0;
     border-top: 2px solid #1e3a5f;
   }
-  body.thesis-page .thesis-card {
+  .legacy.thesis-page .thesis-card {
     display: grid;
     grid-template-columns: 52px minmax(0, 1fr);
     gap: 0 18px;
@@ -354,17 +330,16 @@
     border-radius: 0;
     box-shadow: none;
   }
-  body.thesis-page .thesis-card > span {
+  .legacy.thesis-page .thesis-card > span {
     grid-row: 1 / span 2;
   }
-  body.thesis-page .thesis-callout,
-  body.thesis-page .editorial-bluebar {
+  .legacy.thesis-page .thesis-callout,.legacy.thesis-page .editorial-bluebar {
     border-radius: 0;
     box-shadow: none;
   }
 
   /* Remove avoidable hover motion and card lift on reading pages. */
-  body
+  .legacy
     :where(
       .article-card,
       .doc-item,
@@ -378,10 +353,10 @@
 
   /* Small-screen header and reading baseline. */
   @media (max-width: 760px) {
-    .support-strip {
+    .legacy .support-strip {
       min-height: 44px;
     }
-    .support-strip-inner {
+    .legacy .support-strip-inner {
       width: min(calc(100% - 24px), 1120px);
       min-height: 44px;
       display: grid;
@@ -390,22 +365,22 @@
       gap: 10px;
       padding: 6px 0;
     }
-    .support-strip-label {
+    .legacy .support-strip-label {
       display: none;
     }
-    .support-strip-text {
+    .legacy .support-strip-text {
       min-width: 0;
       margin: 0;
       font-size: 0;
       line-height: 1.35;
     }
-    .support-strip-text::after {
+    .legacy .support-strip-text::after {
       content: "調査・資料公開へのご支援をお願いします。";
       font-size: 12.8px;
       line-height: 1.35;
       font-weight: 700;
     }
-    .support-strip-link {
+    .legacy .support-strip-link {
       margin: 0;
       padding: 7px 11px;
       border-radius: 999px;
@@ -413,166 +388,160 @@
       line-height: 1.2;
       white-space: nowrap;
     }
-    .nav-container {
+    .legacy .nav-container {
       min-height: 68px;
       width: min(calc(100% - 24px), 1240px);
     }
-    .logo {
+    .legacy .logo {
       gap: 8px;
       font-size: 0.9rem;
     }
-    .logo img {
+    .legacy .logo img {
       width: 40px;
       height: 40px;
     }
-    main :where(p, li, dd, blockquote) {
+    .legacy .legacy-main :where(p, li, dd, blockquote) {
       font-size: 15px;
       line-height: 1.85;
     }
-    main :where(td, th) {
+    .legacy .legacy-main :where(td, th) {
       font-size: 13.5px;
       line-height: 1.65;
     }
-    main :where(figcaption, .caption, .source-note, .meta, .ac-date) {
+    .legacy .legacy-main :where(figcaption, .caption, .source-note, .meta, .ac-date) {
       font-size: 13px;
       line-height: 1.65;
     }
-    body.guideline-editorial .gl-wrap,
-    body.guideline-editorial main > section > .wrap,
-    body.guideline-editorial main > .wrap,
-    body.guideline-editorial .page-banner-content,
-    .edu-layout,
-    body.guidebook-editorial > * {
+    .legacy.guideline-editorial .gl-wrap,.legacy.guideline-editorial .legacy-main > section > .wrap,.legacy.guideline-editorial .legacy-main > .wrap,.legacy.guideline-editorial .page-banner-content,.legacy 
+    .edu-layout,.legacy.guidebook-editorial > * {
       width: min(calc(100% - 28px), var(--site-prose-width));
       max-width: none;
     }
-    body.guideline-editorial .gl-wrap,
-    body.guideline-editorial main > section > .wrap {
+    .legacy.guideline-editorial .gl-wrap,.legacy.guideline-editorial .legacy-main > section > .wrap {
       padding: 40px 0;
     }
-    body.guideline-editorial .page-banner {
+    .legacy.guideline-editorial .page-banner {
       min-height: 220px;
     }
-    body.guideline-editorial .page-banner-content {
+    .legacy.guideline-editorial .page-banner-content {
       padding: 42px 0;
     }
-    body.guideline-editorial .section-title {
+    .legacy.guideline-editorial .section-title {
       font-size: 1.55rem;
       line-height: 1.45;
     }
-    .edu-article {
+    .legacy .edu-article {
       padding-left: 0;
       padding-right: 0;
     }
-    .edu-article section {
+    .legacy .edu-article section {
       padding: 38px 0;
     }
-    body.guidebook-editorial {
+    .legacy.guidebook-editorial {
       font-size: 15px;
     }
-    body.guidebook-editorial .cover {
+    .legacy.guidebook-editorial .cover {
       margin-top: 24px;
       padding: 32px 18px;
     }
-    body.guidebook-editorial .cover-title {
+    .legacy.guidebook-editorial .cover-title {
       font-size: 1.5rem;
     }
-    body.guidebook-editorial .division-box {
+    .legacy.guidebook-editorial .division-box {
       display: block;
     }
-    body.guidebook-editorial .division-col:first-child {
+    .legacy.guidebook-editorial .division-col:first-child {
       border-right: 0;
       border-bottom: 1px solid var(--site-line);
     }
-    body.thesis-page .thesis-card {
+    .legacy.thesis-page .thesis-card {
       grid-template-columns: 38px minmax(0, 1fr);
       gap: 0 12px;
     }
   }
 
   /* Sitewide orange hover states */
-  :root {
+  .legacy {
     --hover-orange: #f97316;
     --hover-orange-deep: #ea580c;
     --hover-orange-soft: #fff7ed;
     --hover-orange-line: #fed7aa;
   }
 
-  a:hover,
-  .article-body a:hover,
-  .pta-report-container a:hover,
-  .report-content-wrap a:hover,
-  .case-body a:hover,
-  .case-actions a:hover,
-  .source-note a:hover,
-  .related-link-card:hover strong,
-  .related-link-card:hover span,
-  .case-anchor-link:hover,
-  .report-toc a:hover,
+  .legacy a:hover,.legacy 
+  .article-body a:hover,.legacy 
+  .pta-report-container a:hover,.legacy 
+  .report-content-wrap a:hover,.legacy 
+  .case-body a:hover,.legacy 
+  .case-actions a:hover,.legacy 
+  .source-note a:hover,.legacy 
+  .related-link-card:hover strong,.legacy 
+  .related-link-card:hover span,.legacy 
+  .case-anchor-link:hover,.legacy 
+  .report-toc a:hover,.legacy 
   .footer a:hover {
     color: var(--hover-orange-deep);
   }
 
-  .site-header .nav-link:hover,
-  .site-header .nav-link.active,
-  .nav-link:hover,
+  .legacy .site-header .nav-link:hover,.legacy 
+  .site-header .nav-link.active,.legacy 
+  .nav-link:hover,.legacy 
   .nav-link.active {
     color: #fff;
     background: var(--hover-orange);
     border-color: rgba(255, 255, 255, 0.28);
   }
 
-  .site-header .logo:hover,
+  .legacy .site-header .logo:hover,.legacy 
   .site-header .logo:hover span {
     color: #fff7ed;
   }
 
-  .site-header .mega-col a:hover,
-  .mega-col a:hover,
-  .mobile-link:hover,
-  .case-anchor-link:hover,
+  .legacy .site-header .mega-col a:hover,.legacy 
+  .mega-col a:hover,.legacy 
+  .mobile-link:hover,.legacy 
+  .case-anchor-link:hover,.legacy 
   .report-toc a:hover {
     color: var(--hover-orange-deep);
     background: var(--hover-orange-soft);
     border-color: var(--hover-orange-line);
   }
 
-  .btn-navy:hover,
-  .btn-soft:hover,
-  .btn-outline:hover,
-  .btn-dl:hover,
-  .related-link-card:hover,
-  .visual-card:hover,
-  .card:hover,
+  .legacy .btn-navy:hover,.legacy 
+  .btn-soft:hover,.legacy 
+  .btn-outline:hover,.legacy 
+  .btn-dl:hover,.legacy 
+  .related-link-card:hover,.legacy 
+  .visual-card:hover,.legacy 
+  .card:hover,.legacy 
   .case-card:hover {
     border-color: var(--hover-orange);
     box-shadow: 0 12px 28px rgba(249, 115, 22, 0.18);
   }
 
-  .btn-gold:hover,
-  .support-strip-link:hover,
-  .footer-support a:hover,
-  a.btn-navy:hover,
-  a.btn-soft:hover,
-  a.btn-outline:hover,
+  .legacy .btn-gold:hover,.legacy 
+  .support-strip-link:hover,.legacy 
+  .footer-support a:hover,.legacy 
+  a.btn-navy:hover,.legacy 
+  a.btn-soft:hover,.legacy 
+  a.btn-outline:hover,.legacy 
   a.btn-dl:hover {
     background: var(--hover-orange-deep);
     color: #fff;
     border-color: var(--hover-orange-deep);
   }
 
-  .case-anchor-link:hover span,
+  .legacy .case-anchor-link:hover span,.legacy 
   .mega-col a:hover::before {
     color: var(--hover-orange-deep);
   }
 
   /* Sitewide hero layout normalization */
-  html,
-  body {
+  .legacy,.legacy {
     overflow-x: hidden;
   }
 
-  .page-banner {
+  .legacy .page-banner {
     position: relative;
     display: flex;
     align-items: center;
@@ -588,7 +557,7 @@
     background-color: #0a192f;
     isolation: isolate;
   }
-  .page-banner::before {
+  .legacy .page-banner::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -600,7 +569,7 @@
       rgba(5, 17, 31, 0.24) 100%
     );
   }
-  .page-banner-content {
+  .legacy .page-banner-content {
     position: relative;
     z-index: 1;
     width: min(calc(100% - 40px), 1120px);
@@ -609,22 +578,22 @@
     padding: 72px 0;
     color: #fff;
   }
-  .page-banner-kicker,
-  .page-banner-title,
-  .page-banner-content p,
+  .legacy .page-banner-kicker,.legacy 
+  .page-banner-title,.legacy 
+  .page-banner-content p,.legacy 
   .page-banner-content .subtitle {
     color: #fff;
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.34);
   }
-  .page-banner-kicker {
+  .legacy .page-banner-kicker {
     color: #f4e7a6;
   }
-  .page-banner-title {
+  .legacy .page-banner-title {
     font-weight: 900;
     line-height: 1.22;
   }
 
-  .admin-materials-hero {
+  .legacy .admin-materials-hero {
     position: relative;
     display: block;
     width: 100%;
@@ -643,7 +612,7 @@
       ),
       url("../assets/slides/1.jpg") center/cover no-repeat;
   }
-  .admin-materials-hero > * {
+  .legacy .admin-materials-hero > * {
     position: relative;
     z-index: 1;
     width: min(calc(100% - 40px), 1120px);
@@ -651,27 +620,27 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .admin-materials-hero .admin-materials-kicker,
+  .legacy .admin-materials-hero .admin-materials-kicker,.legacy 
   .admin-materials-kicker {
     color: #f4e7a6;
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.32);
   }
-  .admin-materials-hero h1,
-  .admin-materials-hero .admin-materials-subtitle,
+  .legacy .admin-materials-hero h1,.legacy 
+  .admin-materials-hero .admin-materials-subtitle,.legacy 
   .admin-materials-hero p:not(.admin-materials-kicker) {
     color: #fff;
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.34);
   }
-  .admin-materials-hero h1 {
+  .legacy .admin-materials-hero h1 {
     font-size: clamp(2.05rem, 4vw, 3.25rem);
     line-height: 1.18;
     margin-top: 0;
   }
 
-  .page-hero:not(.page-hero--photo),
-  .issue-hero:not(.page-hero--photo),
-  .journal-hero,
-  .article-hero,
+  .legacy .page-hero:not(.page-hero--photo),.legacy 
+  .issue-hero:not(.page-hero--photo),.legacy 
+  .journal-hero,.legacy 
+  .article-hero,.legacy 
   .thesis-hero {
     width: 100%;
     max-width: none;
@@ -680,9 +649,7 @@
   }
 
   /* guide-board: JS later adds guide-board-direct-fixed and old CSS turns every section white. Keep the photo hero exempt. */
-  body.guide-board-direct-fixed section.page-hero--photo,
-  body.guide-board-direct-fixed .page-hero.page-hero--photo,
-  body.guide-board-direct-fixed .page-hero--photo {
+  .legacy.guide-board-direct-fixed section.page-hero--photo,.legacy.guide-board-direct-fixed .page-hero.page-hero--photo,.legacy.guide-board-direct-fixed .page-hero--photo {
     display: block;
     position: relative;
     width: 100vw;
@@ -697,7 +664,7 @@
     color: #fff;
     background: #0a192f;
   }
-  body.guide-board-direct-fixed .page-hero--photo .page-hero-bg-img {
+  .legacy.guide-board-direct-fixed .page-hero--photo .page-hero-bg-img {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -705,7 +672,7 @@
     z-index: 0;
     display: block;
   }
-  body.guide-board-direct-fixed .page-hero--photo .page-hero-bg-img img {
+  .legacy.guide-board-direct-fixed .page-hero--photo .page-hero-bg-img img {
     display: block;
     width: 100%;
     height: 100%;
@@ -714,7 +681,7 @@
     opacity: 1;
     filter: none;
   }
-  body.guide-board-direct-fixed .page-hero--photo .page-hero-bg-img::after {
+  .legacy.guide-board-direct-fixed .page-hero--photo .page-hero-bg-img::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -726,8 +693,7 @@
       rgba(5, 17, 31, 0.18) 100%
     );
   }
-  body.guide-board-direct-fixed .page-hero--photo > :not(.page-hero-bg-img),
-  body.guide-board-direct-fixed .page-hero--photo .page-hero-inner {
+  .legacy.guide-board-direct-fixed .page-hero--photo > :not(.page-hero-bg-img),.legacy.guide-board-direct-fixed .page-hero--photo .page-hero-inner {
     position: relative;
     z-index: 2;
     width: min(calc(100% - 40px), 1080px);
@@ -739,42 +705,39 @@
     color: #fff;
     background: transparent;
   }
-  body.guide-board-direct-fixed .page-hero--photo h1,
-  body.guide-board-direct-fixed .page-hero--photo p,
-  body.guide-board-direct-fixed .page-hero--photo .section-lead {
+  .legacy.guide-board-direct-fixed .page-hero--photo h1,.legacy.guide-board-direct-fixed .page-hero--photo p,.legacy.guide-board-direct-fixed .page-hero--photo .section-lead {
     color: #fff;
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.34);
   }
 
   @media (max-width: 760px) {
-    .page-banner {
+    .legacy .page-banner {
       min-height: 280px;
     }
-    .page-banner-content {
+    .legacy .page-banner-content {
       width: min(calc(100% - 28px), 1120px);
       padding: 48px 0;
     }
-    .admin-materials-hero {
+    .legacy .admin-materials-hero {
       min-height: 280px;
       padding: 48px 0;
     }
-    .admin-materials-hero > * {
+    .legacy .admin-materials-hero > * {
       width: min(calc(100% - 28px), 1120px);
     }
-    body.guide-board-direct-fixed .page-hero--photo {
+    .legacy.guide-board-direct-fixed .page-hero--photo {
       min-height: 300px;
     }
-    body.guide-board-direct-fixed .page-hero--photo .page-hero-bg-img img {
+    .legacy.guide-board-direct-fixed .page-hero--photo .page-hero-bg-img img {
       min-height: 300px;
     }
-    body.guide-board-direct-fixed .page-hero--photo > :not(.page-hero-bg-img),
-    body.guide-board-direct-fixed .page-hero--photo .page-hero-inner {
+    .legacy.guide-board-direct-fixed .page-hero--photo > :not(.page-hero-bg-img),.legacy.guide-board-direct-fixed .page-hero--photo .page-hero-inner {
       width: min(calc(100% - 28px), 1080px);
       padding-top: 44px;
       padding-bottom: 52px;
     }
   }
-  .wrap .box,
+  .legacy .wrap .box,.legacy 
   .wrap > .grid > .card {
     margin-left: 0;
     margin-right: 0;
@@ -785,8 +748,7 @@
     border-radius: 0;
     box-shadow: none;
   }
-  .wrap > .grid {
+  .legacy .wrap > .grid {
     gap: 0;
     border-top: 2px solid #17324f;
   }
-}

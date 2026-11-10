@@ -31,7 +31,7 @@
     status = document.getElementById("research-result-status");
   let data;
   try {
-    const response = await fetch("/data/research-map-index.json");
+    const response = await fetch((window.__ROOT||"")+"data/research-map-index.json");
     if (!response.ok) throw Error("index");
     data = await response.json();
   } catch (_) {
@@ -120,7 +120,7 @@
       (value("mode") !== "学校別資料" && m.url) || m.catalogUrl ||
       (form
         ? "#region-" + m.id
-        : "/research-map.html?city=" + encodeURIComponent(m.name));
+        : (window.__ROOT||"")+"research-map.html?city=" + encodeURIComponent(m.name));
     a.textContent =
       m.url && value("mode") !== "学校別資料"
         ? "自治体研究ノートを読む"

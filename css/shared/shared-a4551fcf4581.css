@@ -1,60 +1,59 @@
-@layer page {
+
   /* Shared by 3 pages. Extracted from duplicated inline CSS. */
-  .page-banner {
+  .legacy .page-banner {
     display: none;
   }
-  .pg {
+  .legacy .pg {
     max-width: 920px;
   }
-  .pg .section-kicker {
+  .legacy .pg .section-kicker {
     display: none;
   }
-  .pg .safes,
+  .legacy .pg .safes,.legacy 
   .pg .source-lens-grid {
     display: block;
   }
-  .pg .safe-box,
-  .pg .wall,
-  .pg .alert,
-  .pg .source-lens-item,
+  .legacy .pg .safe-box,.legacy 
+  .pg .wall,.legacy 
+  .pg .alert,.legacy 
+  .pg .source-lens-item,.legacy 
   .pg .faq-item {
     border-radius: 0;
     box-shadow: none;
   }
-  .pg .safe-box,
+  .legacy .pg .safe-box,.legacy 
   .pg .source-lens-item {
     padding: 22px 0;
     border: 0;
     border-bottom: 1px solid var(--line);
     background: #fff;
   }
-  .pg .wall {
+  .legacy .pg .wall {
     padding: 20px 0;
     background: #fff;
     border: 0;
     border-top: 2px solid var(--navy);
     border-bottom: 1px solid var(--line);
   }
-  .pg .wall-label,
+  .legacy .pg .wall-label,.legacy 
   .pg .badge {
     padding: 0;
     background: transparent;
     color: inherit;
     border-radius: 0;
   }
-  .pg .faq-list {
+  .legacy .pg .faq-list {
     gap: 0;
     border-top: 1px solid var(--line);
   }
-  .pg .faq-item {
+  .legacy .pg .faq-item {
     border: 0;
     border-bottom: 1px solid var(--line);
   }
-  .pg .faq-q {
+  .legacy .pg .faq-q {
     padding: 18px 0;
   }
-  .pg .faq-a {
+  .legacy .pg .faq-a {
     padding-left: 0;
     padding-right: 0;
   }
-}

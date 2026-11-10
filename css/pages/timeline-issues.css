@@ -1,5 +1,5 @@
-@layer page {
-  .ti-page {
+
+  .legacy .ti-page {
     --ti-ink: #10283e;
     --ti-body: #27394b;
     --ti-muted: #657384;
@@ -11,16 +11,16 @@
     color: var(--ti-body);
   }
 
-  .ti-page main {
+  .legacy .ti-page .legacy-main {
     background: #fff;
   }
 
-  .ti-page .ti-wrap {
+  .legacy .ti-page .ti-wrap {
     width: min(calc(100% - 48px), 1040px);
     margin-inline: auto;
   }
 
-  .ti-page .ti-hero {
+  .legacy .ti-page .ti-hero {
     position: relative;
     padding: 76px 0 68px;
     border-top: 4px solid var(--ti-accent);
@@ -29,13 +29,13 @@
     color: var(--ti-ink);
   }
 
-  .ti-page .ti-hero::before,
+  .legacy .ti-page .ti-hero::before,.legacy 
   .ti-page .ti-hero::after {
     content: none;
   }
 
-  .ti-page .ti-kicker,
-  .ti-page .ti-section-label,
+  .legacy .ti-page .ti-kicker,.legacy 
+  .ti-page .ti-section-label,.legacy 
   .ti-page .ti-section-number {
     margin: 0 0 14px;
     color: var(--ti-accent);
@@ -44,7 +44,7 @@
     letter-spacing: 0.13em;
   }
 
-  .ti-page .ti-hero h1 {
+  .legacy .ti-page .ti-hero h1 {
     max-width: 920px;
     margin: 0;
     color: var(--ti-ink);
@@ -55,7 +55,7 @@
     letter-spacing: 0.015em;
   }
 
-  .ti-page .ti-hero-lead {
+  .legacy .ti-page .ti-hero-lead {
     max-width: 880px;
     margin: 24px 0 0;
     color: #263e52;
@@ -64,7 +64,7 @@
     line-height: 2;
   }
 
-  .ti-page .ti-hero-thesis {
+  .legacy .ti-page .ti-hero-thesis {
     max-width: 880px;
     margin: 28px 0 0;
     padding: 18px 0 18px 22px;
@@ -75,7 +75,7 @@
     line-height: 1.95;
   }
 
-  .ti-page .ti-hero-thesis strong {
+  .legacy .ti-page .ti-hero-thesis strong {
     display: block;
     margin-bottom: 4px;
     color: var(--ti-ink);
@@ -83,38 +83,38 @@
     font-size: 1.08rem;
   }
 
-  .ti-page .ti-intro,
-  .ti-page .ti-history,
-  .ti-page .ti-logic,
-  .ti-page .ti-section,
+  .legacy .ti-page .ti-intro,.legacy 
+  .ti-page .ti-history,.legacy 
+  .ti-page .ti-logic,.legacy 
+  .ti-page .ti-section,.legacy 
   .ti-page .ti-sources {
     border-bottom: 1px solid var(--ti-line);
   }
 
-  .ti-page .ti-intro {
+  .legacy .ti-page .ti-intro {
     padding: 68px 0 64px;
   }
 
-  .ti-page .ti-history {
+  .legacy .ti-page .ti-history {
     padding: 68px 0 70px;
   }
 
-  .ti-page .ti-logic {
+  .legacy .ti-page .ti-logic {
     padding: 64px 0 60px;
   }
 
-  .ti-page .ti-section {
+  .legacy .ti-page .ti-section {
     padding: 64px 0 66px;
   }
 
-  .ti-page .ti-sources {
+  .legacy .ti-page .ti-sources {
     padding: 62px 0 60px;
   }
 
-  .ti-page .ti-intro h2,
-  .ti-page .ti-history h2,
-  .ti-page .ti-logic h2,
-  .ti-page .ti-section h2,
+  .legacy .ti-page .ti-intro h2,.legacy 
+  .ti-page .ti-history h2,.legacy 
+  .ti-page .ti-logic h2,.legacy 
+  .ti-page .ti-section h2,.legacy 
   .ti-page .ti-sources h2 {
     max-width: 900px;
     margin: 0 0 22px;
@@ -125,10 +125,10 @@
     line-height: 1.5;
   }
 
-  .ti-page .ti-intro > p:not(.ti-section-label):not(.ti-intro-follow),
-  .ti-page .ti-section-lead,
-  .ti-page .ti-logic > p:not(.ti-section-label),
-  .ti-page .ti-section > p:not(.ti-section-number):not(.ti-section-conclusion),
+  .legacy .ti-page .ti-intro > p:not(.ti-section-label):not(.ti-intro-follow),.legacy 
+  .ti-page .ti-section-lead,.legacy 
+  .ti-page .ti-logic > p:not(.ti-section-label),.legacy 
+  .ti-page .ti-section > p:not(.ti-section-number):not(.ti-section-conclusion),.legacy 
   .ti-page .ti-sources > p:not(.ti-section-label) {
     max-width: 900px;
     margin: 0 0 22px;
@@ -137,24 +137,24 @@
     line-height: 2.05;
   }
 
-  .ti-page main a {
+  .legacy .ti-page .legacy-main a {
     color: #0e5878;
     text-decoration-color: #9ebdca;
     text-decoration-thickness: 1px;
     text-underline-offset: 0.18em;
   }
 
-  .ti-page main a:hover {
+  .legacy .ti-page .legacy-main a:hover {
     color: var(--ti-accent);
     text-decoration-color: var(--ti-accent);
   }
 
-  .ti-page .ti-reading-bounds {
+  .legacy .ti-page .ti-reading-bounds {
     margin: 36px 0 0;
     border-top: 2px solid var(--ti-ink);
   }
 
-  .ti-page .ti-reading-bounds > div {
+  .legacy .ti-page .ti-reading-bounds > div {
     display: grid;
     grid-template-columns: 250px minmax(0, 1fr);
     gap: 30px;
@@ -162,20 +162,20 @@
     border-bottom: 1px solid var(--ti-line);
   }
 
-  .ti-page .ti-reading-bounds dt {
+  .legacy .ti-page .ti-reading-bounds dt {
     color: var(--ti-accent);
     font-size: 0.82rem;
     font-weight: 900;
     letter-spacing: 0.08em;
   }
 
-  .ti-page .ti-reading-bounds dd {
+  .legacy .ti-page .ti-reading-bounds dd {
     margin: 0;
     color: var(--ti-body);
     line-height: 1.9;
   }
 
-  .ti-page .ti-reading-bounds dd strong {
+  .legacy .ti-page .ti-reading-bounds dd strong {
     display: block;
     margin-bottom: 6px;
     color: var(--ti-ink);
@@ -183,11 +183,11 @@
     font-size: 1.08rem;
   }
 
-  .ti-page .ti-reading-bounds dd span {
+  .legacy .ti-page .ti-reading-bounds dd span {
     display: block;
   }
 
-  .ti-page .ti-intro-follow {
+  .legacy .ti-page .ti-intro-follow {
     max-width: 900px;
     margin: 30px 0 0;
     padding-left: 20px;
@@ -196,12 +196,12 @@
     line-height: 2;
   }
 
-  .ti-page .ti-history-line {
+  .legacy .ti-page .ti-history-line {
     position: relative;
     margin-top: 38px;
   }
 
-  .ti-page .ti-history-line::before {
+  .legacy .ti-page .ti-history-line::before {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -211,7 +211,7 @@
     content: "";
   }
 
-  .ti-page .ti-history-entry {
+  .legacy .ti-page .ti-history-entry {
     position: relative;
     display: grid;
     grid-template-columns: 145px minmax(0, 1fr);
@@ -219,17 +219,17 @@
     padding: 0 0 52px;
   }
 
-  .ti-page .ti-history-entry:last-child {
+  .legacy .ti-page .ti-history-entry:last-child {
     padding-bottom: 12px;
   }
 
-  .ti-page .ti-history-marker {
+  .legacy .ti-page .ti-history-marker {
     position: relative;
     padding-right: 28px;
     text-align: right;
   }
 
-  .ti-page .ti-history-marker::after {
+  .legacy .ti-page .ti-history-marker::after {
     position: absolute;
     top: 9px;
     right: -7px;
@@ -242,7 +242,7 @@
     content: "";
   }
 
-  .ti-page .ti-history-marker span {
+  .legacy .ti-page .ti-history-marker span {
     display: block;
     color: var(--ti-ink);
     font-family: "Noto Serif JP", serif;
@@ -250,7 +250,7 @@
     font-weight: 900;
   }
 
-  .ti-page .ti-history-marker small {
+  .legacy .ti-page .ti-history-marker small {
     display: block;
     margin-top: 5px;
     color: var(--ti-muted);
@@ -259,11 +259,11 @@
     letter-spacing: 0.06em;
   }
 
-  .ti-page .ti-history-body {
+  .legacy .ti-page .ti-history-body {
     min-width: 0;
   }
 
-  .ti-page .ti-history-body h3 {
+  .legacy .ti-page .ti-history-body h3 {
     margin: -3px 0 12px;
     color: var(--ti-ink);
     font-family: "Noto Serif JP", serif;
@@ -271,45 +271,45 @@
     line-height: 1.65;
   }
 
-  .ti-page .ti-history-body p {
+  .legacy .ti-page .ti-history-body p {
     margin: 0;
     color: var(--ti-body);
     line-height: 2;
   }
 
-  .ti-page .ti-history-body p + p {
+  .legacy .ti-page .ti-history-body p + p {
     margin-top: 12px;
   }
 
-  .ti-page .ti-history-caution {
+  .legacy .ti-page .ti-history-caution {
     margin: 36px 0 0 179px;
     padding: 20px 0 4px 22px;
     border-left: 4px solid var(--ti-accent);
   }
 
-  .ti-page .ti-history-caution strong {
+  .legacy .ti-page .ti-history-caution strong {
     display: block;
     margin-bottom: 6px;
     color: var(--ti-ink);
     font-family: "Noto Serif JP", serif;
   }
 
-  .ti-page .ti-history-caution p {
+  .legacy .ti-page .ti-history-caution p {
     margin: 0;
     color: #45586a;
     line-height: 1.9;
   }
 
-  .ti-page .ti-logic {
+  .legacy .ti-page .ti-logic {
     background: linear-gradient(90deg, transparent 0, transparent 20px, var(--ti-wash) 20px, var(--ti-wash) calc(100% - 20px), transparent calc(100% - 20px));
   }
 
-  .ti-page .ti-logic-list {
+  .legacy .ti-page .ti-logic-list {
     margin: 34px 0 0;
     border-top: 2px solid var(--ti-ink);
   }
 
-  .ti-page .ti-logic-list > div {
+  .legacy .ti-page .ti-logic-list > div {
     display: grid;
     grid-template-columns: minmax(250px, 0.8fr) minmax(0, 1.4fr);
     gap: 34px;
@@ -317,24 +317,24 @@
     border-bottom: 1px solid #cdd4da;
   }
 
-  .ti-page .ti-logic-list dt {
+  .legacy .ti-page .ti-logic-list dt {
     color: var(--ti-ink);
     font-family: "Noto Serif JP", serif;
     font-weight: 900;
     line-height: 1.75;
   }
 
-  .ti-page .ti-logic-list dd {
+  .legacy .ti-page .ti-logic-list dd {
     margin: 0;
     color: var(--ti-body);
     line-height: 1.9;
   }
 
-  .ti-page .ti-list {
+  .legacy .ti-page .ti-list {
     padding-bottom: 84px;
   }
 
-  .ti-page .ti-section h3,
+  .legacy .ti-page .ti-section h3,.legacy 
   .ti-page .ti-document-map h3 {
     margin: 32px 0 14px;
     color: var(--ti-ink);
@@ -343,14 +343,14 @@
     line-height: 1.65;
   }
 
-  .ti-page .ti-section ul {
+  .legacy .ti-page .ti-section ul {
     margin: 18px 0 0;
     padding: 0;
     list-style: none;
     border-top: 1px solid var(--ti-line);
   }
 
-  .ti-page .ti-section li {
+  .legacy .ti-page .ti-section li {
     position: relative;
     padding: 17px 16px 17px 31px;
     border-bottom: 1px solid var(--ti-line);
@@ -358,7 +358,7 @@
     line-height: 1.85;
   }
 
-  .ti-page .ti-section li::before {
+  .legacy .ti-page .ti-section li::before {
     position: absolute;
     top: 1.6em;
     left: 7px;
@@ -369,7 +369,7 @@
     content: "";
   }
 
-  .ti-page .ti-section-conclusion {
+  .legacy .ti-page .ti-section-conclusion {
     max-width: 900px;
     margin: 28px 0 0;
     padding: 2px 0 2px 20px;
@@ -378,31 +378,31 @@
     line-height: 2;
   }
 
-  .ti-page .ti-document-map {
+  .legacy .ti-page .ti-document-map {
     margin-top: 42px;
     padding-top: 4px;
   }
 
-  .ti-page .ti-document-map > p {
+  .legacy .ti-page .ti-document-map > p {
     margin: 0 0 18px;
     color: var(--ti-body);
     line-height: 1.9;
   }
 
-  .ti-page .ti-table-wrap {
+  .legacy .ti-page .ti-table-wrap {
     width: 100%;
     overflow-x: auto;
     border-top: 2px solid var(--ti-ink);
     border-bottom: 1px solid var(--ti-line);
   }
 
-  .ti-page .ti-table-wrap table {
+  .legacy .ti-page .ti-table-wrap table {
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
   }
 
-  .ti-page .ti-table-wrap th,
+  .legacy .ti-page .ti-table-wrap th,.legacy 
   .ti-page .ti-table-wrap td {
     padding: 16px 18px;
     border-bottom: 1px solid var(--ti-line);
@@ -411,7 +411,7 @@
     line-height: 1.75;
   }
 
-  .ti-page .ti-table-wrap th {
+  .legacy .ti-page .ti-table-wrap th {
     background: #eef1f2;
     color: var(--ti-ink);
     font-size: 0.82rem;
@@ -419,18 +419,18 @@
     letter-spacing: 0.04em;
   }
 
-  .ti-page .ti-table-wrap th:first-child,
+  .legacy .ti-page .ti-table-wrap th:first-child,.legacy 
   .ti-page .ti-table-wrap td:first-child {
     width: 34%;
     color: var(--ti-ink);
     font-weight: 700;
   }
 
-  .ti-page .ti-table-wrap tbody tr:last-child td {
+  .legacy .ti-page .ti-table-wrap tbody tr:last-child td {
     border-bottom: 0;
   }
 
-  .ti-page .ti-note {
+  .legacy .ti-page .ti-note {
     margin: 38px 0 0;
     padding: 21px 0 21px 22px;
     border-left: 5px solid var(--ti-accent);
@@ -439,59 +439,59 @@
     line-height: 1.95;
   }
 
-  .ti-page .ti-note strong {
+  .legacy .ti-page .ti-note strong {
     color: var(--ti-ink);
   }
 
   @media (max-width: 760px) {
-    .ti-page .ti-wrap {
+    .legacy .ti-page .ti-wrap {
       width: min(calc(100% - 28px), 1040px);
     }
 
-    .ti-page .ti-hero {
+    .legacy .ti-page .ti-hero {
       padding: 52px 0 46px;
     }
 
-    .ti-page .ti-hero h1 {
+    .legacy .ti-page .ti-hero h1 {
       font-size: clamp(2rem, 10vw, 2.75rem);
     }
 
-    .ti-page .ti-hero-lead {
+    .legacy .ti-page .ti-hero-lead {
       margin-top: 20px;
       line-height: 1.9;
     }
 
-    .ti-page .ti-hero-thesis {
+    .legacy .ti-page .ti-hero-thesis {
       padding: 15px 0 15px 16px;
     }
 
-    .ti-page .ti-intro,
-    .ti-page .ti-history,
-    .ti-page .ti-logic,
-    .ti-page .ti-section,
+    .legacy .ti-page .ti-intro,.legacy 
+    .ti-page .ti-history,.legacy 
+    .ti-page .ti-logic,.legacy 
+    .ti-page .ti-section,.legacy 
     .ti-page .ti-sources {
       padding-top: 48px;
       padding-bottom: 48px;
     }
 
-    .ti-page .ti-reading-bounds > div,
+    .legacy .ti-page .ti-reading-bounds > div,.legacy 
     .ti-page .ti-logic-list > div {
       grid-template-columns: 1fr;
       gap: 9px;
       padding: 18px 0;
     }
 
-    .ti-page .ti-history-line::before {
+    .legacy .ti-page .ti-history-line::before {
       left: 9px;
     }
 
-    .ti-page .ti-history-entry {
+    .legacy .ti-page .ti-history-entry {
       grid-template-columns: 1fr;
       gap: 14px;
       padding: 0 0 44px 30px;
     }
 
-    .ti-page .ti-history-marker {
+    .legacy .ti-page .ti-history-marker {
       display: flex;
       gap: 12px;
       align-items: baseline;
@@ -499,60 +499,59 @@
       text-align: left;
     }
 
-    .ti-page .ti-history-marker::after {
+    .legacy .ti-page .ti-history-marker::after {
       top: 7px;
       right: auto;
       left: -27px;
     }
 
-    .ti-page .ti-history-marker small {
+    .legacy .ti-page .ti-history-marker small {
       margin-top: 0;
     }
 
-    .ti-page .ti-history-caution {
+    .legacy .ti-page .ti-history-caution {
       margin-left: 30px;
       padding-left: 16px;
     }
 
-    .ti-page .ti-logic {
+    .legacy .ti-page .ti-logic {
       background: var(--ti-wash);
     }
 
-    .ti-page .ti-table-wrap table {
+    .legacy .ti-page .ti-table-wrap table {
       min-width: 720px;
     }
 
-    .ti-page .ti-table-wrap th,
+    .legacy .ti-page .ti-table-wrap th,.legacy 
     .ti-page .ti-table-wrap td {
       padding: 14px;
     }
 
-    .ti-page .ti-note {
+    .legacy .ti-page .ti-note {
       margin-top: 30px;
       padding-left: 16px;
     }
   }
 
   @media print {
-    .ti-page .ti-hero {
+    .legacy .ti-page .ti-hero {
       padding: 32px 0;
       border-top-color: #777;
       background: #fff;
     }
 
-    .ti-page .ti-history-entry,
-    .ti-page .ti-section,
-    .ti-page .ti-sources,
+    .legacy .ti-page .ti-history-entry,.legacy 
+    .ti-page .ti-section,.legacy 
+    .ti-page .ti-sources,.legacy 
     .ti-page .ti-document-map {
       break-inside: avoid;
     }
 
-    .ti-page .ti-list {
+    .legacy .ti-page .ti-list {
       padding-bottom: 0;
     }
 
-    .ti-page a {
+    .legacy .ti-page a {
       color: inherit;
     }
   }
-}

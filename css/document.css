@@ -1,17 +1,17 @@
-@layer document {
+
   /* Site-wide open content layout.
    Cards are reserved for controls and genuinely self-contained interactive UI. */
-  :root {
+  .legacy {
     --open-content-line: #d7e0e9;
     --open-content-strong: #17324f;
   }
 
-  body:has(main) {
+  .legacy:has(.legacy-main) {
     background: #fff;
   }
 
   /* Standalone Google Sites examples do not use a <main> wrapper. */
-  .wrap > .box,
+  .legacy .wrap > .box,.legacy 
   .wrap > .grid > .card {
     margin-left: 0;
     margin-right: 0;
@@ -22,13 +22,13 @@
     border-radius: 0;
     box-shadow: none;
   }
-  .wrap > .grid {
+  .legacy .wrap > .grid {
     gap: 0;
     border-top: 2px solid var(--open-content-strong);
   }
 
-  body
-    main
+  .legacy
+    .legacy-main
     :is(
       .card,
       .article-card,
@@ -85,8 +85,8 @@
     transform: none;
   }
 
-  body
-    main
+  .legacy
+    .legacy-main
     :is(
       .card,
       .article-card,
@@ -121,8 +121,8 @@
     padding: 22px 0;
   }
 
-  body
-    main
+  .legacy
+    .legacy-main
     :is(
       .cards,
       .card-grid,
@@ -149,7 +149,7 @@
   }
 
   /* Notes still need emphasis, but not a floating container. */
-  body main :is(.note, .source-note, .thesis-callout) {
+  .legacy .legacy-main :is(.note, .source-note, .thesis-callout) {
     margin: 24px 0;
     padding: 16px 0 16px 20px;
     background: transparent;
@@ -160,8 +160,8 @@
     transform: none;
   }
 
-  body
-    main
+  .legacy
+    .legacy-main
     :is(
       .editorial-panel,
       .editorial-section,
@@ -176,8 +176,8 @@
     box-shadow: none;
   }
 
-  body
-    main
+  .legacy
+    .legacy-main
     :is(
       .card,
       .article-card,
@@ -205,7 +205,7 @@
   }
 
   /* School archive heroes remain strong headers, but open to the viewport edges. */
-  .archive-school-page > .archive-hero {
+  .legacy .archive-school-page > .archive-hero {
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
     padding-left: max(24px, calc((100vw - 1080px) / 2));
@@ -215,8 +215,8 @@
   }
 
   /* Interactive and data-entry surfaces intentionally keep their boundaries. */
-  body
-    main
+  .legacy
+    .legacy-main
     :is(
       form,
       .form-sheet,
@@ -235,15 +235,15 @@
   }
 
   @media (max-width: 760px) {
-    body main :is(.body-card, .archive-section) {
+    .legacy .legacy-main :is(.body-card, .archive-section) {
       padding-left: 0;
       padding-right: 0;
     }
   }
 
   /* Page-specific content patterns found by the complete sitemap audit. */
-  body
-    main
+  .legacy
+    .legacy-main
     :is(
       .step,
       .parent-openchat-link,
@@ -275,8 +275,8 @@
     transform: none;
   }
 
-  body
-    main
+  .legacy
+    .legacy-main
     :is(
       .parent-openchat-link,
       .faq-item,
@@ -292,7 +292,7 @@
     border-bottom: 1px solid var(--open-content-line);
   }
 
-  .doc-list > .doc {
+  .legacy .doc-list > .doc {
     margin: 0;
     padding: 20px 0;
     background: transparent;
@@ -302,8 +302,8 @@
     box-shadow: none;
   }
 
-  body
-    main
+  .legacy
+    .legacy-main
     :is(.check-list, .ed-resource-list, .checklist-grid-20)
     > :where(li, div) {
     background: transparent;
@@ -311,13 +311,13 @@
     box-shadow: none;
   }
 
-  body main .links > a {
+  .legacy .legacy-main .links > a {
     background: transparent;
     border-radius: 0;
     box-shadow: none;
   }
 
-  body main :is(.box, .sources, .admin-box, .sha, .case-placeholder) {
+  .legacy .legacy-main :is(.box, .sources, .admin-box, .sha, .case-placeholder) {
     background: transparent;
     border: 0;
     border-bottom: 1px solid var(--open-content-line);
@@ -325,28 +325,24 @@
     box-shadow: none;
   }
 
-  body:is(
+  .legacy:is(
       .cases-editorial,
       .guide-pta-editorial,
       .guideline-editorial,
       .personnel-editorial
     )
-    main
+    .legacy-main
     div:not([class]) {
     border-radius: 0;
     box-shadow: none;
   }
 
-  body.cases-editorial main div:not([class]) {
+  .legacy.cases-editorial .legacy-main div:not([class]) {
     background: transparent;
   }
 
-  body main figure,
-  body.thesis-page main li,
-  body.guide-pta-editorial main li,
-  body.reality-editorial main div:not([class]) {
+  .legacy .legacy-main figure,.legacy.thesis-page .legacy-main li,.legacy.guide-pta-editorial .legacy-main li,.legacy.reality-editorial .legacy-main div:not([class]) {
     background: transparent;
     border-radius: 0;
     box-shadow: none;
   }
-}

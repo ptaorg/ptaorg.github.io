@@ -1,72 +1,72 @@
-@layer page {
+
   /* Page-specific styles for framework.html */
-  .support-strip {
+  .legacy .support-strip {
     background: linear-gradient(90deg, #0a192f 0%, #1e3a5f 58%, #2d5a8e 100%);
     color: #fff;
     border-bottom: 1px solid rgba(212, 175, 55, 0.42);
   }
-  .support-strip-inner,
+  .legacy .support-strip-inner,.legacy 
   .support-strip-text {
     color: #fff;
   }
-  .site-header {
+  .legacy .site-header {
     background: linear-gradient(90deg, #0a192f 0%, #1e3a5f 58%, #2d5a8e 100%);
     border-bottom: 3px solid #d4af37;
   }
-  .site-header .nav-container {
+  .legacy .site-header .nav-container {
     background: transparent;
   }
-  .site-header .logo,
-  .site-header .logo span,
+  .legacy .site-header .logo,.legacy 
+  .site-header .logo span,.legacy 
   .site-header .nav-link {
     color: #fff;
   }
-  .site-header .hamburger span {
+  .legacy .site-header .hamburger span {
     background: #fff;
   }
 
   /* framework.html: dark header contrast overrides.
      site.js injects some priority links with !important colors, so this
      page must explicitly restore accessible contrast on the dark header. */
-  .thesis-page .site-header .logo,
-  .thesis-page .site-header .logo span,
-  .thesis-page .site-header .nav-link,
+  .legacy .thesis-page .site-header .logo,.legacy 
+  .thesis-page .site-header .logo span,.legacy 
+  .thesis-page .site-header .nav-link,.legacy 
   .thesis-page .site-header .core-history-nav {
     color: #fff !important;
   }
-  .thesis-page .site-header .core-history-nav {
+  .legacy .thesis-page .site-header .core-history-nav {
     border-bottom-color: rgba(255, 255, 255, 0.78) !important;
   }
-  .thesis-page .site-header .nav-link-priority {
+  .legacy .thesis-page .site-header .nav-link-priority {
     color: #0a192f !important;
     background: #f4e7a6 !important;
     border: 1px solid #d4af37 !important;
   }
-  .thesis-page .site-header .nav-link-priority:hover {
+  .legacy .thesis-page .site-header .nav-link-priority:hover {
     color: #0a192f !important;
     background: #fff2b8 !important;
   }
 
   /* Prevent 100vw from including the browser scrollbar on this page. */
-  .thesis-page .page-hero--photo {
+  .legacy .thesis-page .page-hero--photo {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
   }
 
   /* このページ専用: 表・確度ラベル・目次 */
-  .fw-table-wrap {
+  .legacy .fw-table-wrap {
     overflow-x: auto;
     margin: 26px 0;
   }
-  .fw-table {
+  .legacy .fw-table {
     width: 100%;
     border-collapse: collapse;
     background: #fff;
     font-size: 0.92rem;
     line-height: 1.7;
   }
-  .fw-table th {
+  .legacy .fw-table th {
     background: #1e3a5f;
     color: #fff;
     font-weight: 700;
@@ -74,15 +74,15 @@
     text-align: left;
     white-space: nowrap;
   }
-  .fw-table td {
+  .legacy .fw-table td {
     border-bottom: 1px solid #dbe4ee;
     padding: 10px 14px;
     vertical-align: top;
   }
-  .fw-table tr:nth-child(even) td {
+  .legacy .fw-table tr:nth-child(even) td {
     background: #f8fafc;
   }
-  .fw-label {
+  .legacy .fw-label {
     display: inline-block;
     font-size: 0.72rem;
     font-weight: 900;
@@ -93,27 +93,27 @@
     vertical-align: middle;
     white-space: nowrap;
   }
-  .fw-label-est {
+  .legacy .fw-label-est {
     background: #e6f0e8;
     color: #14532d;
     border: 1px solid #bbdcc3;
   }
-  .fw-label-fact {
+  .legacy .fw-label-fact {
     background: #e8eef7;
     color: #1e3a5f;
     border: 1px solid #c3d3ea;
   }
-  .fw-label-ana {
+  .legacy .fw-label-ana {
     background: #fdf3e0;
     color: #92400e;
     border: 1px solid #f3ddb0;
   }
-  .fw-label-claim {
+  .legacy .fw-label-claim {
     background: #fbeaea;
     color: #991b1b;
     border: 1px solid #f0c8c8;
   }
-  .fw-toc {
+  .legacy .fw-toc {
     background: #f8fafc;
     border: 1px solid #dbe4ee;
     border-left: 5px solid #1e3a5f;
@@ -121,23 +121,23 @@
     padding: 20px 24px;
     margin: 30px 0;
   }
-  .fw-toc ol {
+  .legacy .fw-toc ol {
     margin: 8px 0 0;
     padding-left: 1.4em;
     columns: 2;
     column-gap: 36px;
   }
-  .fw-toc ol li {
+  .legacy .fw-toc ol li {
     margin: 4px 0;
     font-size: 0.94rem;
     break-inside: avoid;
   }
   @media (max-width: 720px) {
-    .fw-toc ol {
+    .legacy .fw-toc ol {
       columns: 1;
     }
   }
-  .fw-thesis-box {
+  .legacy .fw-thesis-box {
     background: #0a192f;
     color: #fff;
     border-radius: 14px;
@@ -145,21 +145,20 @@
     margin: 30px 0;
     line-height: 2;
   }
-  .fw-thesis-box strong {
+  .legacy .fw-thesis-box strong {
     color: #f0d488;
   }
-  .fw-thesis-box p {
+  .legacy .fw-thesis-box p {
     margin: 0;
     font-size: 1.02rem;
   }
 
   /* prose/editorial rules load after this page stylesheet on framework.html.
      Force the dark thesis box to keep light body text. */
-  .thesis-page .fw-thesis-box,
+  .legacy .thesis-page .fw-thesis-box,.legacy 
   .thesis-page .fw-thesis-box p {
     color: #f8fafc !important;
   }
-  .thesis-page .fw-thesis-box strong {
+  .legacy .thesis-page .fw-thesis-box strong {
     color: #f6d778 !important;
   }
-}

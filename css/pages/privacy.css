@@ -1,12 +1,12 @@
-@layer page {
+
   /* Consolidated page styles for privacy.html */
   /* Page-specific styles for privacy.html */
-  .pg {
+  .legacy .pg {
     width: min(calc(100% - 40px), 900px);
     margin-inline: auto;
     padding: 56px 0 96px;
   }
-  .pg h2 {
+  .legacy .pg h2 {
     font-family: "Noto Serif JP", serif;
     font-size: clamp(1.45rem, 2.4vw, 1.95rem);
     color: var(--navy);
@@ -14,7 +14,7 @@
     padding-bottom: 10px;
     border-bottom: 3px solid var(--gold);
   }
-  .pg h3 {
+  .legacy .pg h3 {
     font-size: 1.02rem;
     font-weight: 800;
     color: var(--navy);
@@ -22,39 +22,39 @@
     padding-left: 12px;
     border-left: 4px solid var(--gold);
   }
-  .pg p {
+  .legacy .pg p {
     color: var(--text);
     line-height: 1.9;
     margin-bottom: 14px;
     font-size: 0.97rem;
   }
-  .pg section {
+  .legacy .pg section {
     margin-bottom: 64px;
   }
-  .flow-row {
+  .legacy .flow-row {
     display: flex;
     align-items: stretch;
     gap: 0;
     margin: 28px 0;
   }
-  .flow-node {
+  .legacy .flow-node {
     flex: 1;
     border-radius: 14px;
     padding: 22px 18px;
     text-align: center;
   }
-  .flow-node h4 {
+  .legacy .flow-node h4 {
     font-family: "Noto Serif JP", serif;
     font-size: 1rem;
     font-weight: 900;
     margin-bottom: 6px;
   }
-  .flow-node p {
+  .legacy .flow-node p {
     font-size: 0.84rem;
     line-height: 1.65;
     margin: 0;
   }
-  .flow-arrow {
+  .legacy .flow-arrow {
     display: flex;
     align-items: center;
     padding: 0 10px;
@@ -62,29 +62,29 @@
     font-size: 1.4rem;
     flex-shrink: 0;
   }
-  .fn-school {
+  .legacy .fn-school {
     background: #dbeafe;
     border: 1.5px solid #93c5fd;
   }
-  .fn-school h4 {
+  .legacy .fn-school h4 {
     color: #1e3a8a;
   }
-  .fn-block {
+  .legacy .fn-block {
     background: #fee2e2;
     border: 2px solid #fca5a5;
     position: relative;
   }
-  .fn-block h4 {
+  .legacy .fn-block h4 {
     color: #7f1d1d;
   }
-  .fn-pta {
+  .legacy .fn-pta {
     background: #f0fdf4;
     border: 1.5px solid #86efac;
   }
-  .fn-pta h4 {
+  .legacy .fn-pta h4 {
     color: #14532d;
   }
-  .block-x {
+  .legacy .block-x {
     position: absolute;
     top: -16px;
     left: 50%;
@@ -99,64 +99,64 @@
     font-size: 1rem;
     font-weight: 900;
   }
-  .ok-arrow {
+  .legacy .ok-arrow {
     color: #15803d;
     font-size: 1rem;
     margin: 0 6px;
   }
-  .result-row {
+  .legacy .result-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px;
     margin: 18px 0;
   }
-  .result-ok {
+  .legacy .result-ok {
     background: #f0fdf4;
     border: 1px solid #bbf7d0;
     border-left: 4px solid #15803d;
     border-radius: var(--radius);
     padding: 16px 18px;
   }
-  .result-ng {
+  .legacy .result-ng {
     background: #fff5f5;
     border: 1px solid #fecaca;
     border-left: 4px solid #b91c1c;
     border-radius: var(--radius);
     padding: 16px 18px;
   }
-  .result-label {
+  .legacy .result-label {
     font-size: 0.72rem;
     font-weight: 900;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     margin-bottom: 8px;
   }
-  .result-ok .result-label {
+  .legacy .result-ok .result-label {
     color: #15803d;
   }
-  .result-ng .result-label {
+  .legacy .result-ng .result-label {
     color: #b91c1c;
   }
-  .result-ok p,
+  .legacy .result-ok p,.legacy 
   .result-ng p {
     font-size: 0.88rem;
     line-height: 1.7;
     margin: 0;
     color: var(--text);
   }
-  .steps {
+  .legacy .steps {
     display: flex;
     flex-direction: column;
     gap: 0;
     margin: 20px 0;
   }
-  .step-r {
+  .legacy .step-r {
     display: flex;
     gap: 16px;
     position: relative;
     padding-bottom: 24px;
   }
-  .step-r::before {
+  .legacy .step-r::before {
     content: "";
     position: absolute;
     left: 19px;
@@ -165,10 +165,10 @@
     width: 2px;
     background: linear-gradient(180deg, var(--gold) 0%, transparent 100%);
   }
-  .step-r:last-child::before {
+  .legacy .step-r:last-child::before {
     display: none;
   }
-  .step-num {
+  .legacy .step-num {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -181,55 +181,55 @@
     flex-shrink: 0;
     z-index: 1;
   }
-  .step-body {
+  .legacy .step-body {
     background: #fff;
     border: 1px solid var(--line);
     border-radius: var(--radius);
     padding: 18px 20px;
     flex: 1;
   }
-  .step-body strong {
+  .legacy .step-body strong {
     display: block;
     font-size: 0.97rem;
     color: var(--navy);
     margin-bottom: 5px;
   }
-  .step-body p {
+  .legacy .step-body p {
     margin: 0;
     font-size: 0.88rem;
     color: var(--text-soft);
     line-height: 1.75;
   }
   @media (max-width: 700px) {
-    .flow-row {
+    .legacy .flow-row {
       flex-direction: column;
     }
-    .flow-arrow {
+    .legacy .flow-arrow {
       transform: rotate(90deg);
       padding: 4px 0;
       justify-content: center;
     }
-    .result-row {
+    .legacy .result-row {
       grid-template-columns: 1fr;
     }
   }
 
-  .page-hero {
+  .legacy .page-hero {
     position: relative;
     overflow: hidden;
   }
-  .page-hero-bg-img {
+  .legacy .page-hero-bg-img {
     position: absolute;
     inset: 0;
     z-index: 0;
   }
-  .page-hero-bg-img img {
+  .legacy .page-hero-bg-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: brightness(1.05);
   }
-  .page-hero-bg-img::after {
+  .legacy .page-hero-bg-img::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -240,67 +240,67 @@
       rgba(5, 17, 31, 0.05) 100%
     );
   }
-  .page-hero-inner {
+  .legacy .page-hero-inner {
     position: relative;
     z-index: 1;
   }
 
   /* ↓ Photo hero overrides — keep white text on photo background ↓ */
-  .page-hero {
+  .legacy .page-hero {
     background: transparent;
     border-top: none;
     border-bottom: none;
   }
-  .page-hero h1 {
+  .legacy .page-hero h1 {
     color: #fff;
   }
-  .page-hero h1 em {
+  .legacy .page-hero h1 em {
     color: var(--gold-lt);
   }
-  .page-hero p {
+  .legacy .page-hero p {
     color: rgba(255, 255, 255, 0.88);
   }
-  .page-hero-kicker {
+  .legacy .page-hero-kicker {
     background: rgba(212, 175, 55, 0.18);
     border: 1px solid rgba(212, 175, 55, 0.4);
     color: var(--gold-lt);
   }
-  .hero-actions .btn-outline {
+  .legacy .hero-actions .btn-outline {
     color: #fff;
     border-color: rgba(255, 255, 255, 0.5);
   }
-  .hero-actions .btn-outline:hover {
+  .legacy .hero-actions .btn-outline:hover {
     background: rgba(255, 255, 255, 0.12);
     border-color: rgba(255, 255, 255, 0.8);
   }
 
   /* Page-specific styles for privacy.html */
-  .privacy-editorial {
+  .legacy .privacy-editorial {
     background: #fff;
   }
-  .privacy-editorial .hero-actions,
-  .privacy-editorial .page-hero-kicker,
-  .privacy-editorial .section-kicker,
-  .privacy-editorial .pg figure,
-  .privacy-editorial .flow-row,
-  .privacy-editorial .result-row,
+  .legacy .privacy-editorial .hero-actions,.legacy 
+  .privacy-editorial .page-hero-kicker,.legacy 
+  .privacy-editorial .section-kicker,.legacy 
+  .privacy-editorial .pg figure,.legacy 
+  .privacy-editorial .flow-row,.legacy 
+  .privacy-editorial .result-row,.legacy 
   .privacy-editorial .alert-danger {
     display: none;
   }
-  .privacy-editorial .pg {
+  .legacy .privacy-editorial .pg {
     width: min(calc(100% - 40px), 920px);
   }
-  .privacy-editorial .pg section {
+  .legacy .privacy-editorial .pg section {
     margin-bottom: 0;
     padding: 42px 0;
     border-bottom: 1px solid #cfd8e2;
   }
-  .privacy-editorial .pg h2 {
+  .legacy .privacy-editorial .pg h2 {
     border-bottom: 0;
     padding-bottom: 0;
     line-height: 1.5;
   }
-  .privacy-editorial .editorial-panel,
+  .legacy .privacy-editorial .editorial-panel,.legacy 
   .privacy-editorial .source-lens-panel {
     margin: 0;
     padding: 42px 0;
@@ -310,11 +310,11 @@
     box-shadow: none;
     background: #fff;
   }
-  .privacy-editorial .source-lens-grid {
+  .legacy .privacy-editorial .source-lens-grid {
     display: block;
     border-top: 1px solid #dbe4ee;
   }
-  .privacy-editorial .source-lens-item {
+  .legacy .privacy-editorial .source-lens-item {
     padding: 18px 0;
     border: 0;
     border-bottom: 1px solid #dbe4ee;
@@ -322,49 +322,49 @@
     box-shadow: none;
     background: #fff;
   }
-  .privacy-editorial .steps {
+  .legacy .privacy-editorial .steps {
     border-top: 1px solid #dbe4ee;
   }
-  .privacy-editorial .step-r {
+  .legacy .privacy-editorial .step-r {
     display: grid;
     grid-template-columns: 44px minmax(0, 1fr);
     gap: 14px;
     padding: 20px 0;
     border-bottom: 1px solid #dbe4ee;
   }
-  .privacy-editorial .step-r::before {
+  .legacy .privacy-editorial .step-r::before {
     display: none;
   }
-  .privacy-editorial .step-num {
+  .legacy .privacy-editorial .step-num {
     width: 34px;
     height: 34px;
     border-radius: 0;
     background: var(--navy);
   }
-  .privacy-editorial .step-body {
+  .legacy .privacy-editorial .step-body {
     padding: 0;
     border: 0;
     border-radius: 0;
     box-shadow: none;
     background: #fff;
   }
-  .privacy-editorial .privacy-faq-section {
+  .legacy .privacy-editorial .privacy-faq-section {
     scroll-margin-top: 90px;
   }
-  .privacy-editorial .privacy-faq-intro {
+  .legacy .privacy-editorial .privacy-faq-intro {
     max-width: 780px;
     margin: 0 0 26px;
     color: var(--text-soft);
   }
-  .privacy-editorial .privacy-faq-list {
+  .legacy .privacy-editorial .privacy-faq-list {
     border-top: 2px solid var(--navy);
   }
-  .privacy-editorial .privacy-faq-item {
+  .legacy .privacy-editorial .privacy-faq-item {
     scroll-margin-top: 90px;
     padding: 30px 0 32px;
     border-bottom: 1px solid var(--line);
   }
-  .privacy-editorial .privacy-faq-item h3 {
+  .legacy .privacy-editorial .privacy-faq-item h3 {
     display: grid;
     grid-template-columns: 42px minmax(0, 1fr);
     gap: 12px;
@@ -377,7 +377,7 @@
     font-size: clamp(1.05rem, 1.8vw, 1.22rem);
     line-height: 1.65;
   }
-  .privacy-editorial .privacy-faq-mark {
+  .legacy .privacy-editorial .privacy-faq-mark {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -391,29 +391,29 @@
     font-weight: 900;
     line-height: 1;
   }
-  .privacy-editorial .privacy-faq-answer {
+  .legacy .privacy-editorial .privacy-faq-answer {
     margin-left: 54px;
     padding-left: 18px;
     border-left: 4px solid var(--gold);
   }
-  .privacy-editorial .privacy-faq-answer p {
+  .legacy .privacy-editorial .privacy-faq-answer p {
     margin: 0 0 13px;
     color: var(--text);
     line-height: 1.9;
   }
-  .privacy-editorial .privacy-faq-answer p:last-child {
+  .legacy .privacy-editorial .privacy-faq-answer p:last-child {
     margin-bottom: 0;
   }
-  .privacy-editorial .privacy-faq-answer > p:first-child > strong:first-child {
+  .legacy .privacy-editorial .privacy-faq-answer > p:first-child > strong:first-child {
     color: #7a5700;
   }
-  .privacy-editorial .privacy-faq-check {
+  .legacy .privacy-editorial .privacy-faq-check {
     padding-top: 12px;
     border-top: 1px dashed var(--line);
     color: var(--text-soft);
     font-size: 0.92rem;
   }
-  .privacy-editorial .privacy-faq-source {
+  .legacy .privacy-editorial .privacy-faq-source {
     margin: 30px 0 0;
     padding: 20px 0 0;
     border-top: 1px solid var(--line);
@@ -421,8 +421,8 @@
     font-size: 0.9rem;
     line-height: 1.85;
   }
-  .privacy-editorial .btn-soft,
-  .privacy-editorial .btn-navy,
+  .legacy .privacy-editorial .btn-soft,.legacy 
+  .privacy-editorial .btn-navy,.legacy 
   .privacy-editorial .ed-link-buttons a {
     display: inline;
     padding: 0;
@@ -434,23 +434,22 @@
     text-underline-offset: 0.18em;
   }
   @media (max-width: 620px) {
-    .privacy-editorial .privacy-faq-item h3 {
+    .legacy .privacy-editorial .privacy-faq-item h3 {
       grid-template-columns: 36px minmax(0, 1fr);
       gap: 9px;
     }
-    .privacy-editorial .privacy-faq-mark {
+    .legacy .privacy-editorial .privacy-faq-mark {
       width: 34px;
     }
-    .privacy-editorial .privacy-faq-answer {
+    .legacy .privacy-editorial .privacy-faq-answer {
       margin-left: 0;
       padding-left: 14px;
     }
   }
-}
 
-@layer page {
-  /* 2026-08-12: source-led administrative reading layout */
-  .privacy-editorial {
+/* 2026-08-12: source-led administrative reading layout */
+
+.legacy .privacy-editorial {
     --privacy-ink: #182635;
     --privacy-muted: #5b6875;
     --privacy-navy: #17324d;
@@ -461,7 +460,7 @@
     color: var(--privacy-ink);
   }
 
-  .privacy-editorial .privacy-hero {
+.legacy .privacy-editorial .privacy-hero {
     min-height: 0;
     padding: clamp(58px, 7vw, 82px) 0 clamp(54px, 6vw, 72px);
     background: var(--privacy-paper);
@@ -470,7 +469,7 @@
     border-bottom: 1px solid #d8d4c9;
   }
 
-  .privacy-editorial .privacy-hero::before {
+.legacy .privacy-editorial .privacy-hero::before {
     content: "";
     position: absolute;
     inset: 0 auto 0 0;
@@ -478,11 +477,11 @@
     background: var(--privacy-gold);
   }
 
-  .privacy-editorial .privacy-hero::after {
+.legacy .privacy-editorial .privacy-hero::after {
     display: none;
   }
 
-  .privacy-editorial .privacy-hero .page-hero-inner {
+.legacy .privacy-editorial .privacy-hero .page-hero-inner {
     width: min(calc(100% - 48px), 920px);
     min-height: 0;
     margin-inline: auto;
@@ -490,7 +489,7 @@
     display: block;
   }
 
-  .privacy-editorial .privacy-hero .page-hero-kicker {
+.legacy .privacy-editorial .privacy-hero .page-hero-kicker {
     display: block;
     width: fit-content;
     margin: 0 0 20px;
@@ -505,7 +504,7 @@
     letter-spacing: 0.12em;
   }
 
-  .privacy-editorial .privacy-hero h1 {
+.legacy .privacy-editorial .privacy-hero h1 {
     max-width: 16em;
     margin: 0 0 22px;
     color: var(--privacy-navy);
@@ -515,12 +514,12 @@
     text-shadow: none;
   }
 
-  .privacy-editorial .privacy-hero h1 em {
+.legacy .privacy-editorial .privacy-hero h1 em {
     color: inherit;
     font-style: normal;
   }
 
-  .privacy-editorial .privacy-hero > .page-hero-inner > p {
+.legacy .privacy-editorial .privacy-hero > .page-hero-inner > p {
     max-width: 48rem;
     margin: 0;
     color: #354657;
@@ -530,14 +529,14 @@
     text-shadow: none;
   }
 
-  .privacy-editorial .privacy-hero .hero-actions {
+.legacy .privacy-editorial .privacy-hero .hero-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 8px 22px;
     margin: 24px 0 0;
   }
 
-  .privacy-editorial .privacy-hero .hero-actions a {
+.legacy .privacy-editorial .privacy-hero .hero-actions a {
     display: inline;
     min-height: 0;
     padding: 0;
@@ -553,7 +552,7 @@
     text-underline-offset: 0.2em;
   }
 
-  .privacy-index {
+.legacy .privacy-index {
     width: min(calc(100% - 48px), 920px);
     margin: 0 auto;
     padding: 17px 0;
@@ -565,30 +564,30 @@
     font-size: 0.82rem;
   }
 
-  .privacy-index span {
+.legacy .privacy-index span {
     color: var(--privacy-muted);
     font-weight: 700;
     letter-spacing: 0.08em;
   }
 
-  .privacy-index a {
+.legacy .privacy-index a {
     color: var(--privacy-navy);
     text-decoration: none;
     border-bottom: 1px solid transparent;
   }
 
-  .privacy-index a:hover,
+.legacy .privacy-index a:hover,.legacy 
   .privacy-index a:focus-visible {
     border-bottom-color: currentColor;
   }
 
-  .privacy-editorial .pg {
+.legacy .privacy-editorial .pg {
     width: min(calc(100% - 48px), 920px);
     max-width: 920px;
     padding: 0 0 88px;
   }
 
-  .privacy-editorial .privacy-opening {
+.legacy .privacy-editorial .privacy-opening {
     max-width: 76ch;
     margin: 0 !important;
     padding: 40px 0 40px 22px !important;
@@ -603,18 +602,18 @@
     line-height: 2 !important;
   }
 
-  .privacy-editorial .pg section {
+.legacy .privacy-editorial .pg section {
     scroll-margin-top: 96px;
     margin: 0;
     padding: clamp(48px, 6vw, 68px) 0;
     border-bottom: 1px solid var(--privacy-line);
   }
 
-  .privacy-editorial .pg section#handling-routes {
+.legacy .privacy-editorial .pg section#handling-routes {
     padding-top: 42px;
   }
 
-  .privacy-editorial .pg h2 {
+.legacy .privacy-editorial .pg h2 {
     max-width: 25em;
     margin: 0 0 24px;
     padding: 0;
@@ -626,7 +625,7 @@
     letter-spacing: -0.018em;
   }
 
-  .privacy-editorial .pg h3 {
+.legacy .privacy-editorial .pg h3 {
     margin: 40px 0 14px;
     padding: 0 0 9px;
     border: 0;
@@ -636,7 +635,7 @@
     line-height: 1.55;
   }
 
-  .privacy-editorial .pg p,
+.legacy .privacy-editorial .pg p,.legacy 
   .privacy-editorial .pg li {
     max-width: 76ch;
     color: var(--privacy-ink);
@@ -644,12 +643,12 @@
     line-height: 2;
   }
 
-  .privacy-editorial .pg a {
+.legacy .privacy-editorial .pg a {
     text-decoration-thickness: 1px;
     text-underline-offset: 0.2em;
   }
 
-  .privacy-editorial .law-quote {
+.legacy .privacy-editorial .law-quote {
     margin: 28px 0;
     padding: 20px 0 20px 24px;
     border: 0;
@@ -661,20 +660,20 @@
     line-height: 1.95;
   }
 
-  .privacy-editorial .law-quote-label {
+.legacy .privacy-editorial .law-quote-label {
     margin-bottom: 9px;
     color: var(--privacy-muted);
     font-size: 0.76rem;
     letter-spacing: 0.05em;
   }
 
-  .privacy-editorial .editorial-panel,
+.legacy .privacy-editorial .editorial-panel,.legacy 
   .privacy-editorial .source-lens-panel {
     padding: clamp(48px, 6vw, 68px) 0 !important;
     border-bottom: 1px solid var(--privacy-line) !important;
   }
 
-  .privacy-editorial .ed-link-buttons {
+.legacy .privacy-editorial .ed-link-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 8px 22px;
@@ -683,24 +682,24 @@
     border-top: 1px solid var(--privacy-line);
   }
 
-  .privacy-editorial #privacy-sources ul {
+.legacy .privacy-editorial #privacy-sources ul {
     margin: 28px 0 0;
     padding: 0;
     list-style: none;
     border-top: 2px solid var(--privacy-navy);
   }
 
-  .privacy-editorial #privacy-sources li {
+.legacy .privacy-editorial #privacy-sources li {
     padding: 20px 0;
     border-bottom: 1px solid var(--privacy-line);
   }
 
-  .privacy-editorial .source-lens-grid {
+.legacy .privacy-editorial .source-lens-grid {
     margin-top: 28px;
     border-top: 2px solid var(--privacy-navy) !important;
   }
 
-  .privacy-editorial .source-lens-item {
+.legacy .privacy-editorial .source-lens-item {
     display: grid;
     grid-template-columns: 150px minmax(0, 1fr);
     gap: 22px;
@@ -708,38 +707,38 @@
     border-bottom: 1px solid var(--privacy-line) !important;
   }
 
-  .privacy-editorial .source-lens-item strong {
+.legacy .privacy-editorial .source-lens-item strong {
     color: var(--privacy-navy);
     font-size: 0.86rem;
     line-height: 1.7;
   }
 
-  .privacy-editorial .source-lens-item p {
+.legacy .privacy-editorial .source-lens-item p {
     margin: 0;
     color: #405060;
     font-size: 0.92rem;
     line-height: 1.85;
   }
 
-  .privacy-editorial .source-note {
+.legacy .privacy-editorial .source-note {
     margin-top: 22px;
     color: var(--privacy-muted);
     font-size: 0.9rem;
   }
 
-  .privacy-editorial .steps {
+.legacy .privacy-editorial .steps {
     margin: 28px 0;
     border-top: 2px solid var(--privacy-navy);
   }
 
-  .privacy-editorial .step-r {
+.legacy .privacy-editorial .step-r {
     grid-template-columns: 44px minmax(0, 1fr);
     gap: 16px;
     padding: 22px 0;
     border-bottom: 1px solid var(--privacy-line);
   }
 
-  .privacy-editorial .step-num {
+.legacy .privacy-editorial .step-num {
     width: 34px;
     height: 34px;
     border: 1px solid #91a0ad;
@@ -749,29 +748,29 @@
     font-size: 0.8rem;
   }
 
-  .privacy-editorial .step-body strong {
+.legacy .privacy-editorial .step-body strong {
     margin-bottom: 7px;
     color: var(--privacy-navy);
     font-size: 1rem;
   }
 
-  .privacy-editorial .step-body p {
+.legacy .privacy-editorial .step-body p {
     color: #425264;
     font-size: 0.92rem;
     line-height: 1.85;
   }
 
-  .privacy-editorial .privacy-faq-list {
+.legacy .privacy-editorial .privacy-faq-list {
     margin-top: 28px;
     border-top: 2px solid var(--privacy-navy);
   }
 
-  .privacy-editorial .privacy-faq-item {
+.legacy .privacy-editorial .privacy-faq-item {
     padding: 30px 0 32px !important;
     border-bottom: 1px solid var(--privacy-line) !important;
   }
 
-  .privacy-editorial .privacy-faq-mark {
+.legacy .privacy-editorial .privacy-faq-mark {
     justify-content: flex-start;
     width: auto;
     min-height: 0;
@@ -781,32 +780,31 @@
     font-size: 0.72rem;
   }
 
-  .privacy-editorial .privacy-faq-answer {
+.legacy .privacy-editorial .privacy-faq-answer {
     border-left-color: var(--privacy-gold);
   }
 
-  @media (max-width: 760px) {
-    .privacy-editorial .privacy-hero .page-hero-inner,
-    .privacy-index,
+@media (max-width: 760px) {
+    .legacy .privacy-editorial .privacy-hero .page-hero-inner,.legacy 
+    .privacy-index,.legacy 
     .privacy-editorial .pg {
       width: min(calc(100% - 36px), 920px);
     }
 
-    .privacy-index {
+    .legacy .privacy-index {
       gap: 8px 16px;
     }
 
-    .privacy-index span {
+    .legacy .privacy-index span {
       width: 100%;
     }
 
-    .privacy-editorial .source-lens-item {
+    .legacy .privacy-editorial .source-lens-item {
       grid-template-columns: 1fr;
       gap: 6px;
     }
 
-    .privacy-editorial .privacy-opening {
+    .legacy .privacy-editorial .privacy-opening {
       padding-left: 16px !important;
     }
   }
-}

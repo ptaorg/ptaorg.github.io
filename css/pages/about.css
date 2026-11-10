@@ -1,6 +1,6 @@
-@layer page {
+
   /* Page-specific styles for about.html */
-  :root {
+  .legacy {
     --navy: #1e3a5f;
     --navy-deep: #0b2545;
     --gold: #d4af37;
@@ -9,20 +9,20 @@
     --text: #273449;
     --soft: #64748b;
   }
-  * {
+  .legacy * {
     box-sizing: border-box;
   }
-  body {
+  .legacy {
     margin: 0;
     font-family: "Noto Sans JP", sans-serif;
     background: #f2f5f9;
     color: var(--text);
     line-height: 1.95;
   }
-  a {
+  .legacy a {
     color: var(--navy);
   }
-  .site-head {
+  .legacy .site-head {
     background: var(--navy-deep);
     padding: 14px 22px;
     display: flex;
@@ -31,7 +31,7 @@
     gap: 12px;
     flex-wrap: wrap;
   }
-  .site-head .brand {
+  .legacy .site-head .brand {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -40,16 +40,16 @@
     font-weight: 900;
     font-size: 1rem;
   }
-  .site-head img {
+  .legacy .site-head img {
     height: 34px;
     width: auto;
   }
-  .head-links {
+  .legacy .head-links {
     display: flex;
     gap: 6px;
     flex-wrap: wrap;
   }
-  .head-links a {
+  .legacy .head-links a {
     color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
     font-size: 0.8rem;
@@ -58,10 +58,10 @@
     border-radius: 999px;
     border: 1px solid rgba(255, 255, 255, 0.25);
   }
-  .head-links a:hover {
+  .legacy .head-links a:hover {
     background: rgba(255, 255, 255, 0.12);
   }
-  .hero {
+  .legacy .hero {
     background: linear-gradient(135deg, #061a33 0%, #092646 58%, #0f345a 100%);
     border-bottom: 5px solid var(--gold);
     color: #fff;
@@ -69,7 +69,7 @@
     position: relative;
     overflow: hidden;
   }
-  .hero::after {
+  .legacy .hero::after {
     content: "";
     position: absolute;
     right: -80px;
@@ -83,26 +83,26 @@
       transparent 70%
     );
   }
-  .hero-inner {
+  .legacy .hero-inner {
     max-width: 900px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
   }
-  .crumbs {
+  .legacy .crumbs {
     font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.6);
     margin-bottom: 16px;
   }
-  .crumbs a {
+  .legacy .crumbs a {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
   }
-  .crumbs a:hover {
+  .legacy .crumbs a:hover {
     color: #fff;
     text-decoration: underline;
   }
-  .kicker {
+  .legacy .kicker {
     display: inline-block;
     font-size: 0.72rem;
     font-weight: 900;
@@ -115,19 +115,19 @@
     border-radius: 999px;
     margin-bottom: 14px;
   }
-  .hero h1 {
+  .legacy .hero h1 {
     font-family: "Noto Serif JP", serif;
     font-size: clamp(1.4rem, 3.6vw, 2.05rem);
     font-weight: 900;
     line-height: 1.5;
     margin: 0 0 14px;
   }
-  .hero-meta {
+  .legacy .hero-meta {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
   }
-  .hero-meta span {
+  .legacy .hero-meta span {
     font-size: 0.78rem;
     font-weight: 700;
     color: #fff;
@@ -136,23 +136,23 @@
     padding: 4px 12px;
     border-radius: 999px;
   }
-  .hero-meta .hm-gold {
+  .legacy .hero-meta .hm-gold {
     color: #0b2545;
     background: var(--gold);
     border-color: var(--gold);
   }
-  main {
+  .legacy .legacy-main {
     max-width: 900px;
     margin: 0 auto;
     padding: 34px 22px 60px;
   }
-  .tag-row {
+  .legacy .tag-row {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
     margin: 0 0 26px;
   }
-  .tag-row span {
+  .legacy .tag-row span {
     font-size: 0.78rem;
     font-weight: 700;
     color: var(--navy);
@@ -162,7 +162,7 @@
     border-radius: 6px;
     padding: 4px 12px;
   }
-  h2.sec {
+  .legacy h2.sec {
     font-family: "Noto Serif JP", serif;
     font-size: 1.25rem;
     color: var(--navy);
@@ -171,46 +171,46 @@
     gap: 12px;
     margin: 38px 0 18px;
   }
-  h2.sec::before {
+  .legacy h2.sec::before {
     content: "";
     width: 26px;
     height: 3px;
     background: var(--gold);
     flex-shrink: 0;
   }
-  h2.sec::after {
+  .legacy h2.sec::after {
     content: "";
     flex: 1;
     height: 1px;
     background: var(--line);
   }
-  .meta-grid {
+  .legacy .meta-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 12px;
     margin: 0 0 8px;
   }
-  .meta-card {
+  .legacy .meta-card {
     background: #fff;
     border: 1px solid var(--line);
     border-radius: 12px;
     padding: 14px 16px;
     box-shadow: 0 1px 3px rgba(11, 37, 69, 0.06);
   }
-  .meta-card .lb {
+  .legacy .meta-card .lb {
     font-size: 0.72rem;
     font-weight: 900;
     letter-spacing: 0.08em;
     color: var(--soft);
     margin-bottom: 4px;
   }
-  .meta-card .vl {
+  .legacy .meta-card .vl {
     font-size: 0.92rem;
     font-weight: 700;
     color: var(--navy);
     word-break: break-all;
   }
-  .body-card {
+  .legacy .body-card {
     background: #fffdf8;
     border: 1px solid #e8dfc9;
     border-left: 5px solid var(--gold);
@@ -221,7 +221,7 @@
     word-break: break-word;
     box-shadow: 0 2px 10px rgba(11, 37, 69, 0.05);
   }
-  .body-card .q-line {
+  .legacy .body-card .q-line {
     display: block;
     font-weight: 900;
     color: var(--navy);
@@ -232,7 +232,7 @@
     margin: 14px 0 6px;
     white-space: normal;
   }
-  .note {
+  .legacy .note {
     background: #fff;
     border: 1px dashed #c8d6e5;
     border-radius: 12px;
@@ -241,12 +241,12 @@
     color: var(--soft);
     margin: 24px 0;
   }
-  .rel-grid {
+  .legacy .rel-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 12px;
   }
-  .rel-grid a {
+  .legacy .rel-grid a {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -264,16 +264,16 @@
       transform 0.15s,
       border-color 0.15s;
   }
-  .rel-grid a::after {
+  .legacy .rel-grid a::after {
     content: "→";
     color: var(--gold);
     font-weight: 900;
   }
-  .rel-grid a:hover {
+  .legacy .rel-grid a:hover {
     transform: translateY(-2px);
     border-color: var(--gold);
   }
-  .cta-band {
+  .legacy .cta-band {
     background: linear-gradient(135deg, #0b2545, #1e3a5f);
     border-radius: 16px;
     padding: 26px 28px;
@@ -285,66 +285,66 @@
     gap: 16px;
     flex-wrap: wrap;
   }
-  .cta-band p {
+  .legacy .cta-band p {
     margin: 0;
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.85);
   }
-  .cta-band strong {
+  .legacy .cta-band strong {
     display: block;
     font-family: "Noto Serif JP", serif;
     font-size: 1.05rem;
     color: #fff;
     margin-bottom: 4px;
   }
-  .cta-btns {
+  .legacy .cta-btns {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
   }
-  .cta-btns a {
+  .legacy .cta-btns a {
     font-size: 0.85rem;
     font-weight: 900;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 8px;
   }
-  .cta-btns .b-gold {
+  .legacy .cta-btns .b-gold {
     background: var(--gold);
     color: #0b2545;
   }
-  .cta-btns .b-gold:hover {
+  .legacy .cta-btns .b-gold:hover {
     background: var(--gold-lt);
   }
-  .cta-btns .b-line {
+  .legacy .cta-btns .b-line {
     border: 1px solid rgba(255, 255, 255, 0.4);
     color: #fff;
   }
-  .cta-btns .b-line:hover {
+  .legacy .cta-btns .b-line:hover {
     background: rgba(255, 255, 255, 0.12);
   }
-  .nav-bottom {
+  .legacy .nav-bottom {
     margin-top: 30px;
     font-size: 0.88rem;
     display: flex;
     gap: 18px;
     flex-wrap: wrap;
   }
-  .nav-bottom a {
+  .legacy .nav-bottom a {
     color: var(--navy);
     font-weight: 700;
     text-decoration: none;
   }
-  .nav-bottom a:hover {
+  .legacy .nav-bottom a:hover {
     text-decoration: underline;
   }
-  .site-foot {
+  .legacy .site-foot {
     background: var(--navy-deep);
     color: rgba(255, 255, 255, 0.75);
     padding: 30px 22px;
     margin-top: 50px;
   }
-  .foot-inner {
+  .legacy .foot-inner {
     max-width: 900px;
     margin: 0 auto;
     display: flex;
@@ -354,36 +354,36 @@
     flex-wrap: wrap;
     font-size: 0.8rem;
   }
-  .foot-inner a {
+  .legacy .foot-inner a {
     color: var(--gold);
     text-decoration: none;
   }
-  .foot-inner a:hover {
+  .legacy .foot-inner a:hover {
     text-decoration: underline;
   }
-  .foot-brand {
+  .legacy .foot-brand {
     font-weight: 900;
     color: #fff;
     font-size: 0.9rem;
   }
   @media (max-width: 640px) {
-    .hero {
+    .legacy .hero {
       padding: 36px 18px 32px;
     }
-    main {
+    .legacy .legacy-main {
       padding: 26px 16px 50px;
     }
-    .body-card {
+    .legacy .body-card {
       padding: 20px 16px;
     }
   }
-  .stat-grid {
+  .legacy .stat-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 14px;
     margin: 0 0 8px;
   }
-  .stat-card {
+  .legacy .stat-card {
     background: linear-gradient(160deg, #fff, #f6f9fc);
     border: 1px solid var(--line);
     border-top: 4px solid var(--gold);
@@ -392,56 +392,56 @@
     text-align: center;
     box-shadow: 0 2px 8px rgba(11, 37, 69, 0.06);
   }
-  .stat-num {
+  .legacy .stat-num {
     font-family: "Noto Serif JP", serif;
     font-size: 2rem;
     font-weight: 900;
     color: var(--navy);
   }
-  .stat-label {
+  .legacy .stat-label {
     font-size: 0.82rem;
     color: var(--soft);
     margin-top: 4px;
     font-weight: 700;
   }
-  .stat-note {
+  .legacy .stat-note {
     font-size: 0.78rem;
     color: #94a3b8;
     margin: 10px 0 0;
   }
-  .act-grid {
+  .legacy .act-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 12px;
   }
-  .act-card {
+  .legacy .act-card {
     background: #fff;
     border: 1px solid var(--line);
     border-radius: 12px;
     padding: 18px 20px;
     box-shadow: 0 1px 3px rgba(11, 37, 69, 0.06);
   }
-  .act-card .num {
+  .legacy .act-card .num {
     font-family: "Noto Serif JP", serif;
     font-weight: 900;
     color: var(--gold);
     font-size: 1.1rem;
   }
-  .act-card strong {
+  .legacy .act-card strong {
     display: block;
     color: var(--navy);
     font-size: 0.95rem;
     margin: 2px 0 6px;
   }
-  .act-card p {
+  .legacy .act-card p {
     margin: 0;
     font-size: 0.85rem;
     color: var(--soft);
   }
-  .act-card a {
+  .legacy .act-card a {
     font-weight: 700;
   }
-  .info-table {
+  .legacy .info-table {
     width: 100%;
     border-collapse: collapse;
     background: #fff;
@@ -451,7 +451,7 @@
     font-size: 0.9rem;
     box-shadow: 0 1px 3px rgba(11, 37, 69, 0.06);
   }
-  .info-table th {
+  .legacy .info-table th {
     width: 9.5em;
     text-align: left;
     background: #eef2f7;
@@ -461,8 +461,7 @@
     border-bottom: 1px solid var(--line);
     vertical-align: top;
   }
-  .info-table td {
+  .legacy .info-table td {
     padding: 12px 16px;
     border-bottom: 1px solid #eef2f7;
   }
-}

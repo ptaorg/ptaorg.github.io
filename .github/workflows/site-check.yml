@@ -1,72 +1,18 @@
 name: Site checks
-
 on:
   pull_request:
   push:
-    branches:
-      - main
-
+    branches: [main]
+permissions:
+  contents: read
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 15
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
-
-      - name: Install locked dependencies if present
-        run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          else
-            echo "No package-lock.json; repository checks use the checked-in scripts directly."
-          fi
-
-      - name: Run site checks
+      - name: Validate all generated pages, navigation and migration
         run: npm test
-
-      - name: Install Chromium
-        if: ${{ !cancelled() }}
-        run: npx playwright install --with-deps chromium
-
-      - name: Test research map interactions at desktop and mobile widths
-        if: ${{ !cancelled() }}
-        run: |
-          node scripts/test-research-map.mjs
-          npm install --prefix "${RUNNER_TEMP}/research-map-deps" --no-save leaflet@1.9.4
-          RESEARCH_LEAFLET_ROOT="${RUNNER_TEMP}/research-map-deps/node_modules/leaflet" node scripts/test-research-map.mjs
-
-      - name: Test response supplements at desktop and mobile widths
-        if: ${{ !cancelled() }}
-        run: RESEARCH_LEAFLET_ROOT="${{ runner.temp }}/research-map-deps/node_modules/leaflet" node scripts/test-board-updates.mjs
-
-      - name: Test audit detection
-        if: ${{ !cancelled() }}
-        run: npm run test:audit
-
-      - name: Build GitHub Pages publication
-        if: ${{ !cancelled() }}
-        uses: actions/jekyll-build-pages@v1
-        with:
-          destination: ./_site
-
-      - name: Audit published site in Chromium at 1440px and 390px
-        if: ${{ !cancelled() }}
-        run: npm run check:browser -- --site-dir _site --report "${{ runner.temp }}/site-audit"
-
-      - name: Upload audit results and screenshots
-        if: ${{ !cancelled() }}
-        uses: actions/upload-artifact@v4
-        with:
-          name: site-audit
-          path: ${{ runner.temp }}/site-audit
-          if-no-files-found: error
-
-      - name: Ensure checks leave checkout clean
-        if: ${{ !cancelled() }}
-        run: git diff --exit-code

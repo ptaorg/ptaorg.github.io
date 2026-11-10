@@ -4,7 +4,7 @@
  * Controls, forms, maps, source images and alert boxes remain framed.
  */
 
-body[data-content-mode="prose"] {
+.legacy[data-content-mode="prose"] {
   --prose-ink: #1f2d3d;
   --prose-muted: #5d6b79;
   --prose-line: #d7e0e9;
@@ -13,16 +13,16 @@ body[data-content-mode="prose"] {
   color: var(--prose-ink);
 }
 
-body[data-content-mode="prose"] :where(p, li, dd) {
+.legacy[data-content-mode="prose"] :where(p, li, dd) {
   text-wrap: pretty;
 }
 
-body[data-content-mode="prose"] :where(main, body > article, section) > p {
+.legacy[data-content-mode="prose"] :where(.legacy-main, body > article, section) > p {
   max-width: 78ch;
 }
 
 /* Information cards become continuous document rows. */
-body[data-content-mode="prose"]
+.legacy[data-content-mode="prose"]
   :where(
     .card,
     [class$="-card"],
@@ -62,7 +62,7 @@ body[data-content-mode="prose"]
   transition: none !important;
 }
 
-body[data-content-mode="prose"]
+.legacy[data-content-mode="prose"]
   :where(
     .card,
     [class$="-card"],
@@ -98,7 +98,7 @@ body[data-content-mode="prose"]
 }
 
 /* Repeated card grids read from top to bottom instead of as a portal dashboard. */
-body[data-content-mode="prose"]
+.legacy[data-content-mode="prose"]
   :where([class$="-grid"], [class*="-grid "], .grid):not(header *, footer *, nav *, form *, .region-map, .map-grid, .hc-hero-grid) {
   display: block !important;
   grid-template-columns: none !important;
@@ -107,7 +107,7 @@ body[data-content-mode="prose"]
 }
 
 /* Compact facts retain a label/value relationship without floating cards. */
-body[data-content-mode="prose"]
+.legacy[data-content-mode="prose"]
   :where(.meta-card, .archive-box, .archive-evidence-card) {
   display: grid !important;
   grid-template-columns: minmax(8rem, 0.32fr) minmax(0, 1fr) !important;
@@ -115,7 +115,7 @@ body[data-content-mode="prose"]
   align-items: baseline;
 }
 
-body[data-content-mode="prose"]
+.legacy[data-content-mode="prose"]
   :where(.meta-card, .archive-box, .archive-evidence-card)
   :where(.lb, .archive-label) {
   color: var(--prose-muted) !important;
@@ -123,20 +123,20 @@ body[data-content-mode="prose"]
   letter-spacing: 0.04em;
 }
 
-body[data-content-mode="prose"] .archive-status-card {
+.legacy[data-content-mode="prose"] .archive-status-card {
   border-left: 4px solid #b42318 !important;
   padding-left: 1rem !important;
 }
 
 /* Source text is a quotation-like reading block, not a raised card. */
-body[data-content-mode="prose"] .body-card {
+.legacy[data-content-mode="prose"] .body-card {
   white-space: pre-wrap;
   border-left: 4px solid #d4af37 !important;
   padding-left: 1.25rem !important;
 }
 
 /* Related links become a compact source list. */
-body[data-content-mode="prose"] .rel-grid > a {
+.legacy[data-content-mode="prose"] .rel-grid > a {
   display: flex !important;
   justify-content: space-between;
   gap: 1rem;
@@ -151,7 +151,7 @@ body[data-content-mode="prose"] .rel-grid > a {
 }
 
 /* Notes and alerts remain distinguishable, but lose the floating-card effect. */
-body[data-content-mode="prose"]
+.legacy[data-content-mode="prose"]
   :where(
     .notice,
     .note,
@@ -166,7 +166,7 @@ body[data-content-mode="prose"]
 }
 
 /* Real source material and tools are intentionally left intact. */
-body[data-content-mode="prose"]
+.legacy[data-content-mode="prose"]
   :where(figure, table, form, .region-map-card, .support-payment-card, .cta-band) {
   max-width: 100%;
 }
@@ -177,9 +177,7 @@ body[data-content-mode="prose"]
  * the generic repeated-grid rule above. They still stack on narrow screens.
  */
 @media (min-width: 769px) {
-  body[data-content-mode="prose"].personnel-editorial .scope-grid,
-  body[data-content-mode="prose"].facilities-editorial .safes,
-  body[data-content-mode="prose"].fee-editorial .transition-options {
+  .legacy[data-content-mode="prose"].personnel-editorial .scope-grid,.legacy[data-content-mode="prose"].facilities-editorial .safes,.legacy[data-content-mode="prose"].fee-editorial .transition-options {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 0 !important;
@@ -188,7 +186,7 @@ body[data-content-mode="prose"]
     border-bottom: 1px solid var(--prose-line) !important;
   }
 
-  body[data-content-mode="prose"].fee-editorial .triple-problem {
+  .legacy[data-content-mode="prose"].fee-editorial .triple-problem {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 0 !important;
@@ -197,10 +195,7 @@ body[data-content-mode="prose"]
     border-bottom: 1px solid var(--prose-line) !important;
   }
 
-  body[data-content-mode="prose"].personnel-editorial .scope-grid > *,
-  body[data-content-mode="prose"].facilities-editorial .safes > *,
-  body[data-content-mode="prose"].fee-editorial .transition-options > *,
-  body[data-content-mode="prose"].fee-editorial .triple-problem > * {
+  .legacy[data-content-mode="prose"].personnel-editorial .scope-grid > *,.legacy[data-content-mode="prose"].facilities-editorial .safes > *,.legacy[data-content-mode="prose"].fee-editorial .transition-options > *,.legacy[data-content-mode="prose"].fee-editorial .triple-problem > * {
     margin: 0 !important;
     padding: 1.5rem 1.75rem !important;
     background: transparent !important;
@@ -209,16 +204,13 @@ body[data-content-mode="prose"]
     box-shadow: none !important;
   }
 
-  body[data-content-mode="prose"].personnel-editorial .scope-grid > * + *,
-  body[data-content-mode="prose"].facilities-editorial .safes > * + *,
-  body[data-content-mode="prose"].fee-editorial .transition-options > * + *,
-  body[data-content-mode="prose"].fee-editorial .triple-problem > * + * {
+  .legacy[data-content-mode="prose"].personnel-editorial .scope-grid > * + *,.legacy[data-content-mode="prose"].facilities-editorial .safes > * + *,.legacy[data-content-mode="prose"].fee-editorial .transition-options > * + *,.legacy[data-content-mode="prose"].fee-editorial .triple-problem > * + * {
     border-left: 1px solid var(--prose-line) !important;
   }
 }
 
 @media (max-width: 700px) {
-  body[data-content-mode="prose"]
+  .legacy[data-content-mode="prose"]
     :where(.meta-card, .archive-box, .archive-evidence-card) {
     grid-template-columns: 1fr !important;
     gap: 0.25rem !important;
@@ -230,14 +222,14 @@ body[data-content-mode="prose"]
  * Do not let the generic prose-mode "flatten all *-grid classes" rule
  * turn this 8-item matrix into a long vertical card stack.
  */
-body[data-content-mode="prose"] .psc-case-viz-grid {
+.legacy[data-content-mode="prose"] .psc-case-viz-grid {
   display: grid !important;
   grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
   gap: 8px !important;
   border-top: 0 !important;
 }
 
-body[data-content-mode="prose"] .psc-case-viz-step {
+.legacy[data-content-mode="prose"] .psc-case-viz-step {
   grid-column: auto !important;
   min-width: 0 !important;
   min-height: 0 !important;
@@ -249,46 +241,46 @@ body[data-content-mode="prose"] .psc-case-viz-step {
   box-shadow: none !important;
 }
 
-body[data-content-mode="prose"] .psc-case-viz-step::after {
+.legacy[data-content-mode="prose"] .psc-case-viz-step::after {
   content: none !important;
   display: none !important;
 }
 
-body[data-content-mode="prose"] .psc-case-viz-state {
+.legacy[data-content-mode="prose"] .psc-case-viz-state {
   max-width: 100%;
   white-space: normal !important;
 }
 
 @media (max-width: 760px) {
-  body[data-content-mode="prose"] .psc-case-viz-grid {
+  .legacy[data-content-mode="prose"] .psc-case-viz-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 }
 
 @media (max-width: 430px) {
-  body[data-content-mode="prose"] .psc-case-viz-grid {
+  .legacy[data-content-mode="prose"] .psc-case-viz-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 
-  body[data-content-mode="prose"] .psc-case-viz-step {
+  .legacy[data-content-mode="prose"] .psc-case-viz-step {
     padding: 9px 8px !important;
   }
 }
 
 @media print {
-  body[data-content-mode="prose"]
+  .legacy[data-content-mode="prose"]
     :where(.card, [class$="-card"], [class*="-card "]) {
     break-inside: avoid;
   }
 }
 
 /* Site-wide reading highlights: heading rule + inline emphasis marker. */
-body[data-content-mode="prose"] {
+.legacy[data-content-mode="prose"] {
   --prose-highlight-gold: #c89b18;
   --prose-highlight-soft: rgba(212, 175, 55, 0.24);
 }
 
-body[data-content-mode="prose"] main h3::after {
+.legacy[data-content-mode="prose"] .legacy-main h3::after {
   content: "";
   display: block;
   width: 4.75rem;
@@ -298,7 +290,7 @@ body[data-content-mode="prose"] main h3::after {
   background: var(--prose-highlight-gold);
 }
 
-body[data-content-mode="prose"] main :where(
+.legacy[data-content-mode="prose"] .legacy-main :where(
   .support-payment-card,
   .region-map-card,
   .search-results-dropdown,
@@ -309,7 +301,7 @@ body[data-content-mode="prose"] main :where(
   display: none;
 }
 
-body[data-content-mode="prose"] main :where(p, li, dd) > strong {
+.legacy[data-content-mode="prose"] .legacy-main :where(p, li, dd) > strong {
   background-image: linear-gradient(
     to top,
     var(--prose-highlight-soft) 0,
@@ -321,7 +313,7 @@ body[data-content-mode="prose"] main :where(p, li, dd) > strong {
   box-decoration-break: clone;
 }
 
-body[data-content-mode="prose"] main :where(
+.legacy[data-content-mode="prose"] .legacy-main :where(
   .psc-audit-status,
   .psc-audit-badge,
   .badge,
@@ -337,7 +329,7 @@ body[data-content-mode="prose"] main :where(
 }
 
 @media (max-width: 700px) {
-  body[data-content-mode="prose"] main h3::after {
+  .legacy[data-content-mode="prose"] .legacy-main h3::after {
     width: 3.75rem;
     height: 2px;
     margin-top: 0.34rem;
@@ -345,16 +337,16 @@ body[data-content-mode="prose"] main :where(
 }
 
 @media print {
-  body[data-content-mode="prose"] main h3::after {
+  .legacy[data-content-mode="prose"] .legacy-main h3::after {
     background: #666;
   }
-  body[data-content-mode="prose"] main :where(p, li, dd) > strong {
+  .legacy[data-content-mode="prose"] .legacy-main :where(p, li, dd) > strong {
     background-image: none;
   }
 }
 
 /* Site-wide chapter heading labels: compact, text-width, and distinct from cards/tools. */
-body[data-content-mode="prose"] main h2:not(:where(
+.legacy[data-content-mode="prose"] .legacy-main h2:not(:where(
   .hero h2,
   nav h2,
   form h2,
@@ -392,7 +384,7 @@ body[data-content-mode="prose"] main h2:not(:where(
 }
 
 @media (max-width: 640px) {
-  body[data-content-mode="prose"] main h2:not(:where(
+  .legacy[data-content-mode="prose"] .legacy-main h2:not(:where(
     .hero h2,
     nav h2,
     form h2,
@@ -420,7 +412,7 @@ body[data-content-mode="prose"] main h2:not(:where(
 }
 
 @media print {
-  body[data-content-mode="prose"] main h2:not(:where(
+  .legacy[data-content-mode="prose"] .legacy-main h2:not(:where(
     .hero h2,
     nav h2,
     form h2,
@@ -447,7 +439,7 @@ body[data-content-mode="prose"] main h2:not(:where(
 }
 
 /* Site-wide footer normalization */
-body[data-content-mode="prose"] footer {
+.legacy[data-content-mode="prose"] footer {
   box-sizing: border-box !important;
   margin-top: 48px !important;
   padding: 0 20px !important;
@@ -457,7 +449,7 @@ body[data-content-mode="prose"] footer {
   box-shadow: none !important;
 }
 
-body[data-content-mode="prose"] footer :where(
+.legacy[data-content-mode="prose"] footer :where(
   .footer-inner,
   .essay-footer-inner,
   .submit-footer-inner,
@@ -472,38 +464,38 @@ body[data-content-mode="prose"] footer :where(
   color: #dbe6f2 !important;
 }
 
-body[data-content-mode="prose"] footer :where(p, li, span, small) {
+.legacy[data-content-mode="prose"] footer :where(p, li, span, small) {
   color: #dbe6f2 !important;
 }
 
-body[data-content-mode="prose"] footer :where(strong, .foot-brand, .submit-footer-title) {
+.legacy[data-content-mode="prose"] footer :where(strong, .foot-brand, .submit-footer-title) {
   color: #fff !important;
 }
 
-body[data-content-mode="prose"] footer a {
+.legacy[data-content-mode="prose"] footer a {
   color: #fff !important;
   text-decoration-color: rgba(255,255,255,.48) !important;
   text-underline-offset: 3px;
 }
 
-body[data-content-mode="prose"] footer a:hover {
+.legacy[data-content-mode="prose"] footer a:hover {
   color: #f3d36a !important;
   text-decoration-color: #f3d36a !important;
 }
 
-body[data-content-mode="prose"] footer .footer-governance {
+.legacy[data-content-mode="prose"] footer .footer-governance {
   margin-top: 18px !important;
   padding-top: 16px !important;
   border-top: 1px solid rgba(255,255,255,.16) !important;
 }
 
 @media (max-width: 640px) {
-  body[data-content-mode="prose"] footer {
+  .legacy[data-content-mode="prose"] footer {
     margin-top: 36px !important;
     padding-inline: 16px !important;
   }
 
-  body[data-content-mode="prose"] footer :where(
+  .legacy[data-content-mode="prose"] footer :where(
     .footer-inner,
     .essay-footer-inner,
     .submit-footer-inner,
@@ -515,13 +507,13 @@ body[data-content-mode="prose"] footer .footer-governance {
 }
 
 @media print {
-  body[data-content-mode="prose"] footer {
+  .legacy[data-content-mode="prose"] footer {
     border-top: 1px solid #777 !important;
     background: #fff !important;
     color: #111 !important;
   }
 
-  body[data-content-mode="prose"] footer * {
+  .legacy[data-content-mode="prose"] footer * {
     color: #111 !important;
   }
 }
@@ -529,7 +521,7 @@ body[data-content-mode="prose"] footer .footer-governance {
 
 
 /* Editorial panels are article sections, not tool/card panels. */
-body[data-content-mode="prose"] main .editorial-panel > h2 {
+.legacy[data-content-mode="prose"] .legacy-main .editorial-panel > h2 {
   display: inline-block !important;
   width: max-content !important;
   max-width: 100% !important;
@@ -549,7 +541,7 @@ body[data-content-mode="prose"] main .editorial-panel > h2 {
 }
 
 @media (max-width: 640px) {
-  body[data-content-mode="prose"] main .editorial-panel > h2 {
+  .legacy[data-content-mode="prose"] .legacy-main .editorial-panel > h2 {
     margin: 1.4rem 0 .85rem !important;
     padding: 6px 9px 7px !important;
     font-size: .98rem !important;
@@ -558,7 +550,7 @@ body[data-content-mode="prose"] main .editorial-panel > h2 {
 }
 
 @media print {
-  body[data-content-mode="prose"] main .editorial-panel > h2 {
+  .legacy[data-content-mode="prose"] .legacy-main .editorial-panel > h2 {
     background: #fff !important;
     color: #111 !important;
     border-color: #777 !important;

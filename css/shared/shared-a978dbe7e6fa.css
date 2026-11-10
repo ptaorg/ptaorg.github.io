@@ -1,6 +1,6 @@
-@layer page {
+
   /* Shared by 3 pages. Extracted from duplicated inline CSS. */
-  .source-box {
+  .legacy .source-box {
     border: 1px solid #dbe4ee;
     border-left: 6px solid #d4af37;
     background: #fffdf5;
@@ -8,11 +8,11 @@
     margin: 24px 0;
     line-height: 1.9;
   }
-  .source-box a,
+  .legacy .source-box a,.legacy 
   .journal-action-links a {
     font-weight: 800;
   }
-  .source-note {
+  .legacy .source-note {
     border: 1px solid #c7d7eb;
     border-left: 6px solid #0a192f;
     background: #f8fbff;
@@ -20,15 +20,14 @@
     margin: 24px 0;
     line-height: 1.9;
   }
-  .check-list {
+  .legacy .check-list {
     display: grid;
     gap: 12px;
     margin: 20px 0;
   }
-  .check-list li {
+  .legacy .check-list li {
     background: #f8fbff;
     border: 1px solid #dbe4ee;
     border-radius: 10px;
     padding: 12px 14px;
   }
-}

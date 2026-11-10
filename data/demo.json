@@ -1,0 +1,660 @@
+{
+  "demo": true,
+  "description": "公開済み索引から抽出した画面確認用の抜粋。未公開文書原本は含まない。",
+  "map": {
+    "version": "demo",
+    "municipalities": [
+      {
+        "id": "osaka",
+        "name": "大阪市",
+        "prefecture": "大阪府",
+        "url": "/research/osaka.html",
+        "themes": [],
+        "summary": [],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 0
+      },
+      {
+        "id": "kawaguchi",
+        "name": "川口市",
+        "prefecture": "埼玉県",
+        "url": "/research/kawaguchi.html",
+        "themes": [],
+        "summary": [
+          "2025年8月8日の公開回答ではPTAを任意加入団体とし、法令違反の可能性にも言及しています。各学校の運用状況は個別の一次資料で確認する必要があります。"
+        ],
+        "schools": [
+          {
+            "name": "上青木小学校",
+            "url": "/archive/kawaguchi/school-001-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "上青木小学校.pdf",
+                "status": "公開前確認中"
+              }
+            ]
+          },
+          {
+            "name": "仲町小学校",
+            "url": "/archive/kawaguchi/school-002-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "仲町小学校 0626.m4a",
+                "status": "公開前確認中"
+              },
+              {
+                "title": "仲町小学校.pdf",
+                "status": "公開前確認中"
+              }
+            ]
+          },
+          {
+            "name": "元郷南小学校",
+            "url": "/archive/kawaguchi/school-003-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "元郷南小学校.pdf",
+                "status": "公開前確認中"
+              }
+            ]
+          },
+          {
+            "name": "安行小学校",
+            "url": "/archive/kawaguchi/school-009-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "安行小学校.pdf",
+                "status": "公開前確認中"
+              },
+              {
+                "title": "安行小学校1023.m4a",
+                "status": "公開前確認中"
+              }
+            ]
+          }
+        ],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 38
+      },
+      {
+        "id": "kawasaki",
+        "name": "川崎市",
+        "prefecture": "神奈川県",
+        "url": "/research/kawasaki.html",
+        "themes": [],
+        "summary": [
+          "2021年の学校管理運営規則改正に関連し、PTA会費の委任収納と学校の公務の範囲を検討します。"
+        ],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 0
+      },
+      {
+        "id": "yokohama",
+        "name": "横浜市",
+        "prefecture": "神奈川県",
+        "url": "/research/yokohama.html",
+        "themes": [],
+        "summary": [
+          "2025年12月1日付学教第1965号通知を中心に、任意加入と個人情報、会費納入、学校関与の実務を検討します。"
+        ],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 0
+      },
+      {
+        "id": "matsuyama",
+        "name": "松山市",
+        "prefecture": "愛媛県",
+        "url": "/research/matsuyama.html",
+        "themes": [],
+        "summary": [],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 0
+      },
+      {
+        "id": "shiga",
+        "name": "滋賀県",
+        "prefecture": "滋賀県",
+        "url": "/research/shiga.html",
+        "themes": [],
+        "summary": [],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 0
+      },
+      {
+        "id": "shizuoka",
+        "name": "静岡県",
+        "prefecture": "静岡県",
+        "url": "/research/shizuoka.html",
+        "themes": [],
+        "summary": [],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 0
+      },
+      {
+        "id": "hiroshima",
+        "name": "広島市",
+        "prefecture": "広島県",
+        "url": "/research/hiroshima.html",
+        "themes": [],
+        "summary": [],
+        "schools": [
+          {
+            "name": "上安小学校",
+            "url": "/archive/hiroshima/school-001-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "上安小学校_01.pdf",
+                "status": "公開前確認中"
+              }
+            ]
+          }
+        ],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 41
+      },
+      {
+        "id": "atsugi",
+        "name": "厚木市",
+        "prefecture": "神奈川県",
+        "url": "/research/atsugi.html",
+        "themes": [],
+        "summary": [
+          "2026年3月30日通知と4月9日公式回答などを起点に、加入意思・学校会費徴収・学校保有情報を区別して確認します。"
+        ],
+        "schools": [
+          {
+            "name": "相川小学校",
+            "url": "/archive/atsugi/aikawa-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "相川小学校 相談受付記録_01.pdf",
+                "status": "既存学校ページで確認"
+              }
+            ]
+          },
+          {
+            "name": "相川中学校",
+            "url": "/archive/atsugi/aikawa-jhs/",
+            "type": "中学校",
+            "documents": [
+              {
+                "title": "相川中学校 会議録_04.pdf",
+                "status": "既存学校ページで確認"
+              }
+            ]
+          },
+          {
+            "name": "厚木小学校",
+            "url": "/archive/atsugi/atsugi-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "厚木小学校_06.pdf",
+                "status": "既存学校ページで確認"
+              }
+            ]
+          }
+        ],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 36
+      },
+      {
+        "id": "hyogo",
+        "name": "兵庫県",
+        "prefecture": "兵庫県",
+        "url": "/research/hyogo.html",
+        "themes": [],
+        "summary": [],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 0
+      },
+      {
+        "id": "nishinomiya",
+        "name": "西宮市",
+        "prefecture": "兵庫県",
+        "url": "/research/nishinomiya.html",
+        "themes": [],
+        "summary": [],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 0
+      },
+      {
+        "id": "archive-daito",
+        "name": "大東市",
+        "prefecture": "大阪府",
+        "url": null,
+        "themes": [],
+        "summary": [],
+        "schools": [
+          {
+            "name": "住道北小学校",
+            "url": "/archive/daito/school-001-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "④【住道北小学校】学校徴収金案内文書.pdf",
+                "status": "公開前確認中"
+              },
+              {
+                "title": "⑥【住道北小学校】校務分掌表.pdf",
+                "status": "公開前確認中"
+              }
+            ]
+          }
+        ],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 3
+      },
+      {
+        "id": "archive-hikone",
+        "name": "彦根市",
+        "prefecture": "滋賀県",
+        "url": null,
+        "themes": [],
+        "summary": [],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 24
+      },
+      {
+        "id": "archive-hirakata",
+        "name": "枚方市",
+        "prefecture": "大阪府",
+        "url": null,
+        "themes": [],
+        "summary": [],
+        "schools": [
+          {
+            "name": "さだ中学校",
+            "url": "/archive/hirakata/school-001-jhs/",
+            "type": "中学校",
+            "documents": [
+              {
+                "title": "18 さだ中",
+                "status": "公開前確認中"
+              }
+            ]
+          },
+          {
+            "name": "さだ小学校",
+            "url": "/archive/hirakata/school-002-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "３ さだ小",
+                "status": "公開前確認中"
+              }
+            ]
+          },
+          {
+            "name": "さだ東小学校",
+            "url": "/archive/hirakata/school-003-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "34 さだ東小（PTAは解散）",
+                "status": "公開前確認中"
+              }
+            ]
+          }
+        ],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 68
+      },
+      {
+        "id": "archive-imizu",
+        "name": "射水市",
+        "prefecture": "富山県",
+        "url": null,
+        "themes": [],
+        "summary": [
+          "射水市の学校別一次資料を探すための地域索引です。各文書の公開状態を確認してください。"
+        ],
+        "schools": [
+          {
+            "name": "下村小学校",
+            "url": "/archive/imizu/school-001-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "11-1 下村小学校.pdf",
+                "status": "公開前確認中"
+              }
+            ]
+          },
+          {
+            "name": "中太閤山小学校",
+            "url": "/archive/imizu/school-002-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "08-1 中太閤山小学校.pdf",
+                "status": "公開前確認中"
+              },
+              {
+                "title": "08-2 中太閤山小学校.pdf",
+                "status": "公開前確認中"
+              }
+            ]
+          },
+          {
+            "name": "作道小学校",
+            "url": "/archive/imizu/school-003-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "05-1 作道小学校.pdf",
+                "status": "公開前確認中"
+              },
+              {
+                "title": "05-2 作道小学校.pdf",
+                "status": "公開前確認中"
+              }
+            ]
+          },
+          {
+            "name": "堀岡小学校",
+            "url": "/archive/imizu/school-004-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "03-2 堀岡小学校.pdf",
+                "status": "公開前確認中"
+              }
+            ]
+          },
+          {
+            "name": "塚原小学校",
+            "url": "/archive/imizu/school-005-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "01-1 塚原小学校.pdf",
+                "status": "公開前確認中"
+              },
+              {
+                "title": "01-2 塚原小学校.pdf",
+                "status": "公開前確認中"
+              }
+            ]
+          }
+        ],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 15
+      },
+      {
+        "id": "archive-iwaki",
+        "name": "いわき市",
+        "prefecture": "福島県",
+        "url": null,
+        "themes": [],
+        "summary": [],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 15
+      },
+      {
+        "id": "archive-kameoka",
+        "name": "亀岡市",
+        "prefecture": "京都府",
+        "url": null,
+        "themes": [],
+        "summary": [],
+        "schools": [
+          {
+            "name": "大井小学校",
+            "url": "/archive/kameoka/school-001-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "007_大井小学校.pdf",
+                "status": "公開前確認中"
+              }
+            ]
+          }
+        ],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 17
+      },
+      {
+        "id": "archive-koka",
+        "name": "甲賀市",
+        "prefecture": "滋賀県",
+        "url": null,
+        "themes": [],
+        "summary": [],
+        "schools": [
+          {
+            "name": "伴谷小学校",
+            "url": "/archive/koka/school-001-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "1-1-1_伴谷小_PTA総会資料.pdf",
+                "status": "公開前確認中"
+              },
+              {
+                "title": "1-4-1_伴谷小_学校徴収金案内.pdf",
+                "status": "公開前確認中"
+              }
+            ]
+          },
+          {
+            "name": "伴谷東小学校",
+            "url": "/archive/koka/school-002-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "6-1-1_伴谷東小_PTA総会資料.pdf",
+                "status": "公開前確認中"
+              },
+              {
+                "title": "6-4-1_伴谷東小_学校徴収金案内.pdf",
+                "status": "公開前確認中"
+              }
+            ]
+          }
+        ],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 27
+      },
+      {
+        "id": "archive-kuki",
+        "name": "久喜市",
+        "prefecture": "埼玉県",
+        "url": null,
+        "themes": [],
+        "summary": [],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 30
+      },
+      {
+        "id": "archive-ota",
+        "name": "大田区",
+        "prefecture": "東京都",
+        "url": null,
+        "themes": [],
+        "summary": [],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 81
+      },
+      {
+        "id": "archive-sagamihara",
+        "name": "相模原市",
+        "prefecture": "神奈川県",
+        "url": null,
+        "themes": [],
+        "summary": [],
+        "schools": [
+          {
+            "name": "くぬぎ台小学校",
+            "url": "/archive/sagamihara/school-001-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "034くぬぎ台小学校.pdf",
+                "status": "公開前確認中"
+              }
+            ]
+          },
+          {
+            "name": "もえぎ台小学校",
+            "url": "/archive/sagamihara/school-002-es/",
+            "type": "小学校",
+            "documents": [
+              {
+                "title": "054もえぎ台小学校.pdf",
+                "status": "公開前確認中"
+              }
+            ]
+          },
+          {
+            "name": "上溝中学校",
+            "url": "/archive/sagamihara/school-003-jhs/",
+            "type": "中学校",
+            "documents": [
+              {
+                "title": "502上溝中学校.pdf",
+                "status": "公開前確認中"
+              }
+            ]
+          }
+        ],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 102
+      },
+      {
+        "id": "archive-toyohashi",
+        "name": "豊橋市",
+        "prefecture": "愛知県",
+        "url": null,
+        "themes": [],
+        "summary": [],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 72
+      },
+      {
+        "id": "catalog-nagakute",
+        "name": "長久手市",
+        "prefecture": "愛知県",
+        "url": null,
+        "themes": [],
+        "summary": [],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 0
+      },
+      {
+        "id": "catalog-ibaraki",
+        "name": "茨木市",
+        "prefecture": "大阪府",
+        "url": null,
+        "themes": [],
+        "summary": [],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 0
+      },
+      {
+        "id": "catalog-sendai",
+        "name": "仙台市",
+        "prefecture": "宮城県",
+        "url": null,
+        "themes": [],
+        "summary": [],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 0
+      },
+      {
+        "id": "catalog-fuso",
+        "name": "扶桑町",
+        "prefecture": "愛知県",
+        "url": null,
+        "themes": [],
+        "summary": [],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 0
+      },
+      {
+        "id": "catalog-kagoshima",
+        "name": "鹿児島市",
+        "prefecture": "鹿児島県",
+        "url": null,
+        "themes": [],
+        "summary": [],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 0
+      },
+      {
+        "id": "catalog-kanagawa",
+        "name": "神奈川県",
+        "prefecture": "神奈川県",
+        "url": null,
+        "themes": [],
+        "summary": [],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 0
+      },
+      {
+        "id": "catalog-saitama",
+        "name": "埼玉県",
+        "prefecture": "埼玉県",
+        "url": null,
+        "themes": [],
+        "summary": [],
+        "schools": [],
+        "sampleOnly": true,
+        "publishedIndexSchoolCount": 0
+      }
+    ]
+  },
+  "responses": {
+    "responses": [
+      {
+        "no": 1,
+        "municipality": "三重県",
+        "prefecture": "三重県",
+        "date": "2025年10月10日",
+        "topics": [
+          "会費徴収・委任",
+          "教委指導・是正"
+        ],
+        "url": "https://ptaorg.com/board-responses/01-mie.html"
+      },
+      {
+        "no": 2,
+        "municipality": "京都府亀岡市",
+        "prefecture": "京都府",
+        "date": "2025/09/01",
+        "topics": [
+          "入会意思確認",
+          "みなし加入",
+          "会費徴収・委任",
+          "個人情報・名簿"
+        ],
+        "url": "https://ptaorg.com/board-responses/02-kyoto-kameoka.html"
+      }
+    ]
+  }
+}
