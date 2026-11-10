@@ -700,3 +700,9 @@ body[data-section="roles"] .article-visual.paper-ornament {
   }
   .article-visual.paper-ornament {display:block !important;aspect-ratio:16/9;order:-1}
 }
+
+/* Explicit image photo instead of CSS line art (2026-11-10 mobile fix). */
+.hero-photo{position:absolute;inset:0 0 0 auto;width:min(52%,760px);height:100%;overflow:hidden;z-index:0;background:#e8eef5 url("/assets/slides/1.jpg") center / cover no-repeat}
+.hero-photo img{display:block;position:relative;width:100%;height:100%;object-fit:cover;object-position:center;max-width:none;z-index:0}
+.hero-photo::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.62) 18%,rgba(255,255,255,0) 55%);z-index:1;pointer-events:none}
+@media(max-width:760px){.hero-photo{position:relative;inset:auto;width:100%;height:190px}.hero-photo::before{background:linear-gradient(180deg,rgba(255,255,255,0) 55%,#fff 100%)}.article-visual:not(.article-visual-map){display:block!important;aspect-ratio:16/9;order:-1}}
