@@ -1,0 +1,48 @@
+name: Restore site images
+on:
+  push:
+    branches:
+      - restore/site-images-20261110
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  restore-images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Copy previously published image files from original site-next
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --quiet --depth 1 https://github.com/ptaorg/ptaorg-site-next.git "$RUNNER_TEMP/next"
+          mkdir -p assets/img
+          cp "$RUNNER_TEMP/next/assets/img/hero-building.webp" assets/img/hero-building.webp
+          cp "$RUNNER_TEMP/next/assets/img/research-book.webp" assets/img/research-book.webp
+          test -s assets/img/hero-building.webp
+          test -s assets/img/research-book.webp
+          file assets/img/hero-building.webp assets/img/research-book.webp
+          git add assets/img/hero-building.webp assets/img/research-book.webp
+      - name: Verify 750 production URLs and article content routing
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --test tests/migration.test.mjs
+          npm test
+          grep -q 'hero-building.webp' assets/style.css
+          grep -q 'research-book.webp' assets/style.css
+      - name: Commit image restoration
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --cached --quiet; then
+            git commit -m "Restore original hero-building and research-book imagery"
+            git push origin HEAD:restore/site-images-20261110
+          fi
