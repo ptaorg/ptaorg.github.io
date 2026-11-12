@@ -395,6 +395,12 @@ function notice(html){
 function transform(original,rel){
  let html=notice(original);
  html=guides(html,rel);
+ if(rel==='guide-parent.html'){
+  html=html.replace(/<(p|div) class="(?:section-kicker|lead-kicker)(?: [^"]*)?">([\s\S]*?)<\/\1>\s*/g,(all,tag,body)=>{
+   const plain=body.replace(/<[^>]+>/g,'').trim();
+   return /(?:一次資料|当委員会の分析)/.test(plain)?all:'';
+  });
+ }
  if(original!==html&&!html.includes('phase3-guide-chapters.css')){
   const base='../'.repeat(rel.split('/').length-1);
   const link='<link rel="stylesheet" href="'+base+'css/phase3-guide-chapters.css?v=20261113-final">';
