@@ -16,5 +16,10 @@ for(const rel of changed){
  if(expected!==actual)throw Error("School generation changed content beyond approved duplicate section/TOC: "+rel);
  schoolCount++;
 }
-if(schoolCount<1)throw Error("No school page update detected");
+if(schoolCount===0){
+ for(const rel of require("../scripts/phase1-regenerate-school-cards.cjs").getEntries()){
+  const html=fs.readFileSync(rel,"utf8");
+  if(html.includes('<h2 id="sec-1">このページについて</h2>')||!html.includes('<span id="sec-1"'))throw Error("Previously generated school page needs migration: "+rel);
+ }
+}
 console.log("Validated "+schoolCount+" school pages and "+changed.filter(x=>core.has(x)).length+" shared chrome pages; no unintended file changes.");

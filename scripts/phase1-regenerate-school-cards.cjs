@@ -40,7 +40,7 @@ function main(){
   fs.writeFileSync(file,next,"utf8");count++;
  }
  console.log("Updated "+count+" generated school pages; retained source titles, documents, links, and #sec-1 anchors.");
- if(count<1)throw Error("No page required migration (possibly already applied)");
+ if(!entries.every(rel=>!fs.readFileSync(path.join(ROOT,rel),"utf8").includes('<h2 id="sec-1">このページについて</h2>')))throw Error("Duplicate school summary block still present");
 }
 if(require.main===module)main();
 module.exports={transform,getEntries};
