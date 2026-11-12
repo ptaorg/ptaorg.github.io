@@ -19,7 +19,7 @@ async function command(method,params={}){
 async function evalPage(expression){
  const o=await command("Runtime.evaluate",{expression,returnByValue:true,awaitPromise:true});
  if(o.exceptionDetails)throw Error("Browser evaluation exception: "+o.exceptionDetails.text);
- return o.result.result.value;
+ return o.result.value;
 }
 async function pageAt(url,width,height){
   await command("Emulation.setDeviceMetricsOverride",{width,height,deviceScaleFactor:1,mobile:width<600});
