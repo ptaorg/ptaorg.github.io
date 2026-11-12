@@ -141,7 +141,7 @@ function candidates(src){
 function sourceInParagraph(body){
  const stripped=body.replace(/<[^>]*>/g,' ').replace(/&(?:nbsp|thinsp);/g,' ');
  const found=[];
- for(const source of SOURCES)if(patterns.get(source.key).test(stripped))found.push(source);
+ for(const source of SOURCES){const re=patterns.get(source.key);re.lastIndex=0;if(re.test(stripped))found.push(source);}
  // Existing direct links within the paragraph already establish the source.
  return found.filter(s=>!body.includes('href="'+s.url+'"'));
 }
@@ -158,14 +158,16 @@ function citations(src,base){
   const near=p.body.replace(/<[^>]*>/g,' ').trim();
   if(near.length>2500||/<(?:blockquote|pre|code|script|style|textarea)\b/i.test(p.body))continue;
   for(const source of sources)if(!used.has(source.key))used.set(source.key,source);
-  const tags=sources.map(s=>'<sup class="phase6-ref"><a href="#phase6-source-'+s.key+'" aria-label="'+q(s.name)+'の出典へ">注'+(SOURCES.findIndex(x=>x.key===s.key)+1)+'</a></sup>').join('');
+  const tags=sources.map(s=>'<sup class="phase6-ref"><a href="#phase6-source-'+s.key+'" aria-label="'+q(s.name)+'の出典へ">注__'+s.key+'__</a></sup>').join('');
   // Add after a paragraph or list item's original text, without modifying even a single original character.
   changes.push({at:articleStart+p.end,html:' '+tags,count:sources.length});
  }
  if(!changes.length)return {html:src,count:0,used:[]};
  let updated=src;
  for(let i=changes.length-1;i>=0;i--){const c=changes[i];updated=updated.slice(0,c.at)+c.html+updated.slice(c.at)}
- const ordered=SOURCES.filter(s=>used.has(s.key)),refList=ordered.map(s=>{
+ const ordered=SOURCES.filter(s=>used.has(s.key));
+ ordered.forEach((s,i)=>updated=updated.replaceAll('注__'+s.key+'__','注'+(i+1)));
+ const refList=ordered.map(s=>{
   const agency=s.agency||'国（法令原文：e-Gov法令検索）',issued=s.date.includes('年')?s.date:s.date;
   return '<li id="phase6-source-'+s.key+'"><strong>'+q(s.name)+'</strong> <span class="phase6-source-meta">発行・掲載：'+q(agency)+'／日付：'+q(issued)+'／資料番号：'+q(s.number)+'／最終確認：2026-11-13</span> <a href="'+s.url+'" target="_blank" rel="noopener noreferrer">公式原文（'+q(s.agency||'e-Gov')+'）</a></li>';
  }).join('\n');
