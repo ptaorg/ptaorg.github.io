@@ -1,25 +1,25 @@
 .legacy .research-main {
   max-width: 1120px;
   padding-top: 40px;
-  padding-bottom: 70px;
-  color: #182c40;
+  padding-bottom: 72px;
+  color: var(--navy-deep);
 }
 .legacy .research-main h1 {
-  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  font-size: clamp(var(--fs-h1), 4vw, var(--fs-h1));
   line-height: 1.5;
-  margin: 18px 0 26px;
+  margin: 20px 0 28px;
 }
 .legacy .research-main h2 {
-  font-size: 1.6rem;
-  border-bottom: 2px solid #176b80;
+  font-size: var(--fs-h2);
+  border-bottom: 2px solid var(--navy-deep);
   padding-bottom: 12px;
   margin: 40px 0 20px;
 }
 .legacy .research-main h3 {
-  font-size: 1.15rem;
+  font-size: var(--fs-h3);
   margin: 24px 0 12px;
 }
-.legacy .research-main p,.legacy 
+.legacy .research-main p,.legacy
 .research-main li {
   line-height: 1.95;
   overflow-wrap: anywhere;
@@ -28,75 +28,75 @@
   margin: 32px 0;
 }
 .legacy .research-main a {
-  color: #075d80;
+  color: var(--navy-deep);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 .legacy .research-intro {
-  font-size: 1.12rem;
+  font-size: var(--fs-h3);
 }
 .legacy .research-notice {
-  border-left: 4px solid #176b80;
-  padding: 16px 22px;
-  background: #eef5f7;
+  border-left: 4px solid var(--navy-deep);
+  padding: 16px 24px;
+  background: var(--paper-alt);
 }
 .legacy .research-breadcrumb {
-  font-size: 0.9rem;
+  font-size: var(--fs-body);
 }
 .legacy #research-filters {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   padding: 24px;
-  background: #f2f5f7;
-  border: 1px solid #d5dfe5;
+  background: var(--paper-alt);
+  border: 1px solid var(--line);
 }
 .legacy #research-filters label {
   display: flex;
   flex-direction: column;
-  gap: 7px;
-  font-size: 0.9rem;
+  gap: 8px;
+  font-size: var(--fs-body);
   font-weight: 700;
 }
 .legacy #research-filters label:first-child {
   grid-column: 1/-1;
 }
-.legacy #research-filters input,.legacy 
-#research-filters select,.legacy 
+.legacy #research-filters input,.legacy
+#research-filters select,.legacy
 #research-filters button {
   font: inherit;
   min-height: 44px;
   padding: 8px;
-  border: 1px solid #8397a3;
-  border-radius: 3px;
-  background: #fff;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
   max-width: 100%;
   width: 100%;
 }
 .legacy #research-filters button {
   align-self: end;
   cursor: pointer;
-  color: #075d80;
+  color: var(--navy-deep);
 }
 .legacy .research-map {
   height: 460px;
-  border: 1px solid #b6c6d0;
-  background: #eaf0f4;
+  border: 1px solid var(--line-strong);
+  background: var(--paper-alt);
   z-index: 0;
 }
 .legacy .research-region {
-  padding: 12px 0 25px;
-  border-bottom: 1px solid #c6d5dd;
+  padding: 12px 0 24px;
+  border-bottom: 1px solid var(--line-strong);
 }
 .legacy .research-region details {
-  margin-top: 14px;
+  margin-top: 16px;
 }
 .legacy .research-region summary {
   cursor: pointer;
-  padding: 10px 0;
+  padding: 12px 0;
 }
 .legacy .research-main :focus-visible {
-  outline: 3px solid #bd5e16;
+  outline: 3px solid var(--navy);
   outline-offset: 3px;
 }
 .legacy [hidden] {
@@ -125,28 +125,28 @@
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
   gap: 16px;
-  padding: 18px;
-  background: #f2f5f7;
-  border: 1px solid #d5dfe5;
+  padding: 20px;
+  background: var(--paper-alt);
+  border: 1px solid var(--line);
 }
 .legacy .research-survey-filters label {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   font-weight: 700;
 }
 .legacy .research-survey-filters input,.legacy  .research-survey-filters select {
   width: 100%;
   min-height: 44px;
-  background: #fff;
-  border: 1px solid #8397a3;
-  border-radius: 3px;
-  padding: 9px;
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  padding: 8px;
   font: inherit;
 }
 .legacy .research-survey-result { font-weight: 700; }
 .legacy .research-survey .research-region { padding: 12px 0 20px; }
-.legacy .research-survey .research-region details { padding: 0 12px; background: #f8fafb; }
+.legacy .research-survey .research-region details { padding: 0 12px; background: var(--paper); }
 .legacy .research-survey .research-region summary { font-weight: 700; }
 @media (max-width: 650px) {
   .legacy .research-survey-filters { grid-template-columns: 1fr; }

@@ -1,50 +1,50 @@
 
   /* Page-specific styles for framework.html */
   .legacy .support-strip {
-    background: linear-gradient(90deg, #0a192f 0%, #1e3a5f 58%, #2d5a8e 100%);
-    color: #fff;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.42);
+    background: var(--navy-deep);
+    color: var(--paper);
+    border-bottom: 1px solid color-mix(in srgb,var(--gold) 42%,transparent);
   }
-  .legacy .support-strip-inner,.legacy 
+  .legacy .support-strip-inner,.legacy
   .support-strip-text {
-    color: #fff;
+    color: var(--paper);
   }
   .legacy .site-header {
-    background: linear-gradient(90deg, #0a192f 0%, #1e3a5f 58%, #2d5a8e 100%);
-    border-bottom: 3px solid #d4af37;
+    background: var(--navy-deep);
+    border-bottom: 3px solid var(--gold);
   }
   .legacy .site-header .nav-container {
     background: transparent;
   }
-  .legacy .site-header .logo,.legacy 
-  .site-header .logo span,.legacy 
+  .legacy .site-header .logo,.legacy
+  .site-header .logo span,.legacy
   .site-header .nav-link {
-    color: #fff;
+    color: var(--paper);
   }
   .legacy .site-header .hamburger span {
-    background: #fff;
+    background: var(--paper);
   }
 
   /* framework.html: dark header contrast overrides.
      site.js injects some priority links with !important colors, so this
      page must explicitly restore accessible contrast on the dark header. */
-  .legacy .thesis-page .site-header .logo,.legacy 
-  .thesis-page .site-header .logo span,.legacy 
-  .thesis-page .site-header .nav-link,.legacy 
+  .legacy .thesis-page .site-header .logo,.legacy
+  .thesis-page .site-header .logo span,.legacy
+  .thesis-page .site-header .nav-link,.legacy
   .thesis-page .site-header .core-history-nav {
-    color: #fff !important;
+    color: var(--paper) !important;
   }
   .legacy .thesis-page .site-header .core-history-nav {
-    border-bottom-color: rgba(255, 255, 255, 0.78) !important;
+    border-bottom-color: color-mix(in srgb,var(--paper) 78%,transparent) !important;
   }
   .legacy .thesis-page .site-header .nav-link-priority {
-    color: #0a192f !important;
-    background: #f4e7a6 !important;
-    border: 1px solid #d4af37 !important;
+    color: var(--navy-deep) !important;
+    background: var(--tint-strong) !important;
+    border: 1px solid var(--gold) !important;
   }
   .legacy .thesis-page .site-header .nav-link-priority:hover {
-    color: #0a192f !important;
-    background: #fff2b8 !important;
+    color: var(--navy-deep) !important;
+    background: var(--paper-alt) !important;
   }
 
   /* Prevent 100vw from including the browser scrollbar on this page. */
@@ -57,69 +57,69 @@
   /* このページ専用: 表・確度ラベル・目次 */
   .legacy .fw-table-wrap {
     overflow-x: auto;
-    margin: 26px 0;
+    margin: 28px 0;
   }
   .legacy .fw-table {
     width: 100%;
     border-collapse: collapse;
-    background: #fff;
-    font-size: 0.92rem;
+    background: var(--paper);
+    font-size: var(--fs-body);
     line-height: 1.7;
   }
   .legacy .fw-table th {
-    background: #1e3a5f;
-    color: #fff;
+    background: var(--navy-deep);
+    color: var(--paper);
     font-weight: 700;
-    padding: 10px 14px;
+    padding: 12px 16px;
     text-align: left;
     white-space: nowrap;
   }
   .legacy .fw-table td {
-    border-bottom: 1px solid #dbe4ee;
-    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+    padding: 12px 16px;
     vertical-align: top;
   }
   .legacy .fw-table tr:nth-child(even) td {
-    background: #f8fafc;
+    background: var(--paper);
   }
   .legacy .fw-label {
     display: inline-block;
-    font-size: 0.72rem;
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.06em;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     padding: 2px 8px;
-    margin-right: 6px;
+    margin-right: 8px;
     vertical-align: middle;
     white-space: nowrap;
   }
   .legacy .fw-label-est {
-    background: #e6f0e8;
-    color: #14532d;
-    border: 1px solid #bbdcc3;
+    background: var(--paper-alt);
+    color: var(--navy-deep);
+    border: 1px solid var(--line-strong);
   }
   .legacy .fw-label-fact {
-    background: #e8eef7;
-    color: #1e3a5f;
-    border: 1px solid #c3d3ea;
+    background: var(--paper-alt);
+    color: var(--navy-deep);
+    border: 1px solid var(--line-strong);
   }
   .legacy .fw-label-ana {
-    background: #fdf3e0;
-    color: #92400e;
-    border: 1px solid #f3ddb0;
+    background: var(--paper-alt);
+    color: var(--c-caution);
+    border: 1px solid var(--line-strong);
   }
   .legacy .fw-label-claim {
-    background: #fbeaea;
-    color: #991b1b;
-    border: 1px solid #f0c8c8;
+    background: var(--paper-alt);
+    color: var(--c-caution);
+    border: 1px solid var(--line-strong);
   }
   .legacy .fw-toc {
-    background: #f8fafc;
-    border: 1px solid #dbe4ee;
-    border-left: 5px solid #1e3a5f;
-    border-radius: 0 12px 12px 0;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--navy-deep);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
     padding: 20px 24px;
-    margin: 30px 0;
+    margin: 32px 0;
   }
   .legacy .fw-toc ol {
     margin: 8px 0 0;
@@ -129,7 +129,7 @@
   }
   .legacy .fw-toc ol li {
     margin: 4px 0;
-    font-size: 0.94rem;
+    font-size: var(--fs-body);
     break-inside: avoid;
   }
   @media (max-width: 720px) {
@@ -138,27 +138,27 @@
     }
   }
   .legacy .fw-thesis-box {
-    background: #0a192f;
-    color: #fff;
-    border-radius: 14px;
-    padding: 28px 30px;
-    margin: 30px 0;
+    background: var(--navy-deep);
+    color: var(--paper);
+    border-radius: var(--radius-md);
+    padding: 28px 32px;
+    margin: 32px 0;
     line-height: 2;
   }
   .legacy .fw-thesis-box strong {
-    color: #f0d488;
+    color: var(--tint-strong);
   }
   .legacy .fw-thesis-box p {
     margin: 0;
-    font-size: 1.02rem;
+    font-size: var(--fs-body);
   }
 
   /* prose/editorial rules load after this page stylesheet on framework.html.
      Force the dark thesis box to keep light body text. */
-  .legacy .thesis-page .fw-thesis-box,.legacy 
+  .legacy .thesis-page .fw-thesis-box,.legacy
   .thesis-page .fw-thesis-box p {
-    color: #f8fafc !important;
+    color: var(--paper) !important;
   }
   .legacy .thesis-page .fw-thesis-box strong {
-    color: #f6d778 !important;
+    color: var(--tint-strong) !important;
   }

@@ -1,18 +1,18 @@
 
   .legacy .case-reading-page {
-    --cr-ink: #10283e;
-    --cr-body: #293b4c;
-    --cr-muted: #667586;
-    --cr-line: #d8dde2;
-    --cr-paper: #f6f3ed;
-    --cr-wash: #f2f5f6;
-    --cr-accent: #c7531f;
-    background: #fff;
+    --cr-ink: var(--navy-deep);
+    --cr-body: var(--navy-deep);
+    --cr-muted: var(--navy-mid);
+    --cr-line: var(--paper-alt);
+    --cr-paper: var(--paper-alt);
+    --cr-wash: var(--paper-alt);
+    --cr-accent: var(--navy);
+    background: var(--paper);
     color: var(--cr-body);
   }
 
   .legacy .case-reading-page .legacy-main {
-    background: #fff;
+    background: var(--paper);
   }
 
   .legacy .case-reading-page .cr-wrap {
@@ -23,16 +23,16 @@
   .legacy .case-reading-page .cr-hero {
     padding: 76px 0 68px;
     border-top: 4px solid var(--cr-accent);
-    border-bottom: 1px solid #d7d2c9;
+    border-bottom: 1px solid var(--line-strong);
     background: var(--cr-paper);
     color: var(--cr-ink);
   }
 
-  .legacy .case-reading-page .cr-kicker,.legacy 
+  .legacy .case-reading-page .cr-kicker,.legacy
   .case-reading-page .cr-section-label {
-    margin: 0 0 14px;
+    margin: 0 0 16px;
     color: var(--cr-accent);
-    font-size: 0.78rem;
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.13em;
   }
@@ -42,7 +42,7 @@
     margin: 0;
     color: var(--cr-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(2.35rem, 5vw, 4.2rem);
+    font-size: clamp(var(--fs-h1), 5vw, var(--fs-h1));
     font-weight: 900;
     line-height: 1.25;
     letter-spacing: 0.015em;
@@ -51,8 +51,8 @@
   .legacy .case-reading-page .cr-hero-lead {
     max-width: 880px;
     margin: 24px 0 0;
-    color: #263e52;
-    font-size: clamp(1rem, 1.45vw, 1.12rem);
+    color: var(--navy-deep);
+    font-size: clamp(var(--fs-body), 1.45vw, var(--fs-h3));
     font-weight: 700;
     line-height: 2;
   }
@@ -60,70 +60,70 @@
   .legacy .case-reading-page .cr-hero-thesis {
     max-width: 900px;
     margin: 28px 0 0;
-    padding: 18px 0 18px 22px;
-    border-top: 1px solid #d7d2c9;
-    border-bottom: 1px solid #d7d2c9;
+    padding: 20px 0 20px 24px;
+    border-top: 1px solid var(--line-strong);
+    border-bottom: 1px solid var(--line-strong);
     border-left: 4px solid var(--cr-accent);
-    color: #34495b;
+    color: var(--navy-deep);
     line-height: 1.95;
   }
 
   .legacy .case-reading-page .cr-hero-thesis strong {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     color: var(--cr-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: 1.08rem;
+    font-size: var(--fs-h3);
   }
 
-  .legacy .case-reading-page .cr-premise,.legacy 
-  .case-reading-page .cr-layers,.legacy 
-  .case-reading-page .cr-protocol,.legacy 
-  .case-reading-page .cr-axes,.legacy 
-  .case-reading-page .cr-sources,.legacy 
-  .case-reading-page .cr-ledger,.legacy 
-  .case-reading-page .cr-practice,.legacy 
-  .case-reading-page .cr-inquiry,.legacy 
+  .legacy .case-reading-page .cr-premise,.legacy
+  .case-reading-page .cr-layers,.legacy
+  .case-reading-page .cr-protocol,.legacy
+  .case-reading-page .cr-axes,.legacy
+  .case-reading-page .cr-sources,.legacy
+  .case-reading-page .cr-ledger,.legacy
+  .case-reading-page .cr-practice,.legacy
+  .case-reading-page .cr-inquiry,.legacy
   .case-reading-page .cr-next {
-    padding: 66px 0 68px;
+    padding: 68px 0 68px;
     border-bottom: 1px solid var(--cr-line);
   }
 
-  .legacy .case-reading-page .cr-premise h2,.legacy 
-  .case-reading-page .cr-layers h2,.legacy 
-  .case-reading-page .cr-protocol h2,.legacy 
-  .case-reading-page .cr-axes h2,.legacy 
-  .case-reading-page .cr-sources h2,.legacy 
-  .case-reading-page .cr-ledger h2,.legacy 
-  .case-reading-page .cr-practice h2,.legacy 
-  .case-reading-page .cr-inquiry h2,.legacy 
+  .legacy .case-reading-page .cr-premise h2,.legacy
+  .case-reading-page .cr-layers h2,.legacy
+  .case-reading-page .cr-protocol h2,.legacy
+  .case-reading-page .cr-axes h2,.legacy
+  .case-reading-page .cr-sources h2,.legacy
+  .case-reading-page .cr-ledger h2,.legacy
+  .case-reading-page .cr-practice h2,.legacy
+  .case-reading-page .cr-inquiry h2,.legacy
   .case-reading-page .cr-next h2 {
     max-width: 900px;
-    margin: 0 0 22px;
+    margin: 0 0 24px;
     color: var(--cr-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(1.7rem, 3.1vw, 2.45rem);
+    font-size: clamp(var(--fs-h2), 3.1vw, var(--fs-h1));
     font-weight: 900;
     line-height: 1.5;
   }
 
-  .legacy .case-reading-page .cr-premise > p:not(.cr-section-label),.legacy 
-  .case-reading-page .cr-section-lead,.legacy 
-  .case-reading-page .cr-protocol > p:not(.cr-section-label),.legacy 
-  .case-reading-page .cr-sources > p:not(.cr-section-label),.legacy 
-  .case-reading-page .cr-ledger > p:not(.cr-section-label),.legacy 
-  .case-reading-page .cr-practice > p:not(.cr-section-label),.legacy 
-  .case-reading-page .cr-inquiry > p:not(.cr-section-label),.legacy 
+  .legacy .case-reading-page .cr-premise > p:not(.cr-section-label),.legacy
+  .case-reading-page .cr-section-lead,.legacy
+  .case-reading-page .cr-protocol > p:not(.cr-section-label),.legacy
+  .case-reading-page .cr-sources > p:not(.cr-section-label),.legacy
+  .case-reading-page .cr-ledger > p:not(.cr-section-label),.legacy
+  .case-reading-page .cr-practice > p:not(.cr-section-label),.legacy
+  .case-reading-page .cr-inquiry > p:not(.cr-section-label),.legacy
   .case-reading-page .cr-next > p:not(.cr-section-label) {
     max-width: 900px;
-    margin: 0 0 22px;
+    margin: 0 0 24px;
     color: var(--cr-body);
     line-height: 2.05;
   }
 
   .legacy .case-reading-page .legacy-main a {
-    color: #0e5878;
-    text-decoration-color: #9ebdca;
+    color: var(--navy-deep);
+    text-decoration-color: var(--ink-sub);
     text-decoration-thickness: 1px;
     text-underline-offset: 0.18em;
   }
@@ -136,22 +136,22 @@
   .legacy .case-reading-page .cr-notice {
     max-width: 900px;
     margin: 32px 0 0;
-    padding: 20px 0 20px 22px;
+    padding: 20px 0 20px 24px;
     border-left: 5px solid var(--cr-accent);
-    background: #fbf5ed;
+    background: var(--paper-alt);
     color: var(--cr-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: 1.05rem;
+    font-size: var(--fs-body);
     font-weight: 700;
     line-height: 1.85;
   }
 
   .legacy .case-reading-page .cr-layers {
-    background: linear-gradient(90deg, transparent 0, transparent 20px, var(--cr-wash) 20px, var(--cr-wash) calc(100% - 20px), transparent calc(100% - 20px));
+    background: var(--paper-alt);
   }
 
   .legacy .case-reading-page .cr-layer-list {
-    margin: 38px 0 0;
+    margin: 40px 0 0;
     border-top: 2px solid var(--cr-ink);
   }
 
@@ -159,8 +159,8 @@
     display: grid;
     grid-template-columns: minmax(220px, 0.65fr) minmax(0, 1.5fr);
     gap: 36px;
-    padding: 23px 0;
-    border-bottom: 1px solid #cdd4da;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--line-strong);
   }
 
   .legacy .case-reading-page .cr-layer-list dt {
@@ -175,7 +175,7 @@
     min-width: 36px;
     color: var(--cr-accent);
     font-family: "Noto Sans JP", sans-serif;
-    font-size: 0.78rem;
+    font-size: var(--fs-small);
     letter-spacing: 0.08em;
   }
 
@@ -187,7 +187,7 @@
 
   .legacy .case-reading-page .case-flow {
     counter-reset: case-flow;
-    margin: 34px 0 0;
+    margin: 36px 0 0;
     padding: 0;
     list-style: none;
     border-top: 2px solid var(--cr-ink);
@@ -196,7 +196,7 @@
   .legacy .case-reading-page .case-flow li {
     counter-increment: case-flow;
     position: relative;
-    padding: 20px 12px 20px 58px;
+    padding: 20px 12px 20px 60px;
     border-bottom: 1px solid var(--cr-line);
     color: var(--cr-body);
     line-height: 1.9;
@@ -210,33 +210,33 @@
     color: var(--cr-accent);
     content: counter(case-flow, decimal-leading-zero);
     font-family: "Noto Serif JP", serif;
-    font-size: 0.9rem;
+    font-size: var(--fs-body);
     font-weight: 900;
   }
 
   .legacy .case-reading-page .case-flow strong {
     color: var(--cr-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: 1.04rem;
+    font-size: var(--fs-body);
   }
 
   .legacy .case-reading-page .cr-axis-list {
-    margin: 34px 0 0;
+    margin: 36px 0 0;
     border-top: 2px solid var(--cr-ink);
   }
 
   .legacy .case-reading-page .cr-axis-list > div {
     display: grid;
     grid-template-columns: 190px minmax(0, 1fr);
-    gap: 34px;
-    padding: 21px 0;
+    gap: 36px;
+    padding: 20px 0;
     border-bottom: 1px solid var(--cr-line);
   }
 
   .legacy .case-reading-page .cr-axis-list dt {
     color: var(--cr-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: 1.06rem;
+    font-size: var(--fs-h3);
     font-weight: 900;
   }
 
@@ -252,21 +252,21 @@
 
   .legacy .case-reading-page .cr-axis-follow {
     max-width: 900px;
-    margin: 30px 0 0;
+    margin: 32px 0 0;
     padding-left: 20px;
     border-left: 4px solid var(--cr-accent);
-    color: #405468;
+    color: var(--navy-deep);
     line-height: 2;
   }
 
-  .legacy .case-reading-page .cr-sources,.legacy 
+  .legacy .case-reading-page .cr-sources,.legacy
   .case-reading-page .cr-inquiry {
-    background: linear-gradient(90deg, transparent 0, transparent 20px, #f7f7f5 20px, #f7f7f5 calc(100% - 20px), transparent calc(100% - 20px));
+    background: var(--paper-alt);
   }
 
   .legacy .case-reading-page .cr-table-wrap {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 32px;
     overflow-x: auto;
     border-top: 2px solid var(--cr-ink);
     border-bottom: 1px solid var(--cr-line);
@@ -278,9 +278,9 @@
     table-layout: fixed;
   }
 
-  .legacy .case-reading-page .cr-table-wrap th,.legacy 
+  .legacy .case-reading-page .cr-table-wrap th,.legacy
   .case-reading-page .cr-table-wrap td {
-    padding: 16px 18px;
+    padding: 16px 20px;
     border-bottom: 1px solid var(--cr-line);
     text-align: left;
     vertical-align: top;
@@ -288,33 +288,33 @@
   }
 
   .legacy .case-reading-page .cr-table-wrap th {
-    background: #edf1f2;
+    background: var(--paper-alt);
     color: var(--cr-ink);
-    font-size: 0.82rem;
+    font-size: var(--fs-body);
     font-weight: 900;
     letter-spacing: 0.035em;
   }
 
-  .legacy .case-reading-page .cr-source-table th:first-child,.legacy 
+  .legacy .case-reading-page .cr-source-table th:first-child,.legacy
   .case-reading-page .cr-source-table td:first-child {
     width: 24%;
   }
 
-  .legacy .case-reading-page .cr-source-table th:nth-child(2),.legacy 
+  .legacy .case-reading-page .cr-source-table th:nth-child(2),.legacy
   .case-reading-page .cr-source-table td:nth-child(2) {
     width: 37%;
   }
 
-  .legacy .case-reading-page .cr-ledger-table th:first-child,.legacy 
-  .case-reading-page .cr-ledger-table td:first-child,.legacy 
-  .case-reading-page .cr-document-map th:first-child,.legacy 
+  .legacy .case-reading-page .cr-ledger-table th:first-child,.legacy
+  .case-reading-page .cr-ledger-table td:first-child,.legacy
+  .case-reading-page .cr-document-map th:first-child,.legacy
   .case-reading-page .cr-document-map td:first-child {
     width: 29%;
     color: var(--cr-ink);
     font-weight: 700;
   }
 
-  .legacy .case-reading-page .cr-table-wrap tbody tr:last-child th,.legacy 
+  .legacy .case-reading-page .cr-table-wrap tbody tr:last-child th,.legacy
   .case-reading-page .cr-table-wrap tbody tr:last-child td {
     border-bottom: 0;
   }
@@ -324,12 +324,12 @@
     margin: 28px 0 0;
     padding-left: 20px;
     border-left: 4px solid var(--cr-accent);
-    color: #405468;
+    color: var(--navy);
     line-height: 1.95;
   }
 
   .legacy .case-reading-page .cr-caution-list {
-    margin: 30px 0 0;
+    margin: 32px 0 0;
     padding: 0;
     list-style: none;
     border-top: 2px solid var(--cr-ink);
@@ -337,7 +337,7 @@
 
   .legacy .case-reading-page .cr-caution-list li {
     position: relative;
-    padding: 17px 14px 17px 32px;
+    padding: 16px 16px 16px 32px;
     border-bottom: 1px solid var(--cr-line);
     color: var(--cr-body);
     line-height: 1.85;
@@ -355,19 +355,19 @@
   }
 
   .legacy .case-reading-page .cr-document-map {
-    margin-top: 46px;
+    margin-top: 48px;
   }
 
   .legacy .case-reading-page .cr-document-map h3 {
     margin: 0;
     color: var(--cr-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: 1.3rem;
+    font-size: var(--fs-h3);
     line-height: 1.6;
   }
 
   .legacy .case-reading-page .cr-inquiry-order {
-    margin: 38px 0 0;
+    margin: 40px 0 0;
     padding: 0;
     list-style: none;
     border-top: 2px solid var(--cr-ink);
@@ -376,16 +376,16 @@
   .legacy .case-reading-page .cr-inquiry-order li {
     display: grid;
     grid-template-columns: 54px minmax(0, 1fr);
-    gap: 18px;
+    gap: 20px;
     padding: 20px 0;
-    border-bottom: 1px solid #cdd4da;
+    border-bottom: 1px solid var(--line-strong);
   }
 
   .legacy .case-reading-page .cr-inquiry-order > li > span {
-    padding-top: 3px;
+    padding-top: 4px;
     color: var(--cr-accent);
     font-family: "Noto Serif JP", serif;
-    font-size: 0.86rem;
+    font-size: var(--fs-body);
     font-weight: 900;
   }
 
@@ -393,11 +393,11 @@
     display: block;
     color: var(--cr-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: 1.04rem;
+    font-size: var(--fs-body);
   }
 
   .legacy .case-reading-page .cr-inquiry-order p {
-    margin: 5px 0 0;
+    margin: 4px 0 0;
     color: var(--cr-body);
     line-height: 1.85;
   }
@@ -412,11 +412,11 @@
     }
 
     .legacy .case-reading-page .cr-hero {
-      padding: 52px 0 46px;
+      padding: 52px 0 48px;
     }
 
     .legacy .case-reading-page .cr-hero h1 {
-      font-size: clamp(2.05rem, 11vw, 2.8rem);
+      font-size: clamp(var(--fs-h1), 11vw, var(--fs-h1));
     }
 
     .legacy .case-reading-page .cr-hero-lead {
@@ -425,32 +425,32 @@
     }
 
     .legacy .case-reading-page .cr-hero-thesis {
-      padding: 15px 0 15px 16px;
+      padding: 16px 0 16px 16px;
     }
 
-    .legacy .case-reading-page .cr-premise,.legacy 
-    .case-reading-page .cr-layers,.legacy 
-    .case-reading-page .cr-protocol,.legacy 
-    .case-reading-page .cr-axes,.legacy 
-    .case-reading-page .cr-sources,.legacy 
-    .case-reading-page .cr-ledger,.legacy 
-    .case-reading-page .cr-practice,.legacy 
-    .case-reading-page .cr-inquiry,.legacy 
+    .legacy .case-reading-page .cr-premise,.legacy
+    .case-reading-page .cr-layers,.legacy
+    .case-reading-page .cr-protocol,.legacy
+    .case-reading-page .cr-axes,.legacy
+    .case-reading-page .cr-sources,.legacy
+    .case-reading-page .cr-ledger,.legacy
+    .case-reading-page .cr-practice,.legacy
+    .case-reading-page .cr-inquiry,.legacy
     .case-reading-page .cr-next {
       padding: 48px 0;
     }
 
-    .legacy .case-reading-page .cr-layers,.legacy 
-    .case-reading-page .cr-sources,.legacy 
+    .legacy .case-reading-page .cr-layers,.legacy
+    .case-reading-page .cr-sources,.legacy
     .case-reading-page .cr-inquiry {
-      background: #f7f7f5;
+      background: var(--paper);
     }
 
-    .legacy .case-reading-page .cr-layer-list > div,.legacy 
+    .legacy .case-reading-page .cr-layer-list > div,.legacy
     .case-reading-page .cr-axis-list > div {
       grid-template-columns: 1fr;
       gap: 8px;
-      padding: 18px 0;
+      padding: 20px 0;
     }
 
     .legacy .case-reading-page .case-flow li {
@@ -466,27 +466,27 @@
       min-width: 760px;
     }
 
-    .legacy .case-reading-page .cr-table-wrap th,.legacy 
+    .legacy .case-reading-page .cr-table-wrap th,.legacy
     .case-reading-page .cr-table-wrap td {
-      padding: 14px;
+      padding: 16px;
     }
 
     .legacy .case-reading-page .cr-inquiry-order li {
       grid-template-columns: 42px minmax(0, 1fr);
-      gap: 10px;
+      gap: 12px;
     }
   }
 
   @media print {
     .legacy .case-reading-page .cr-hero {
       padding: 32px 0;
-      border-top-color: #777;
-      background: #fff;
+      border-top-color: var(--navy-mid);
+      background: var(--paper);
     }
 
-    .legacy .case-reading-page .cr-layer-list > div,.legacy 
-    .case-reading-page .cr-table-wrap,.legacy 
-    .case-reading-page .cr-document-map,.legacy 
+    .legacy .case-reading-page .cr-layer-list > div,.legacy
+    .case-reading-page .cr-table-wrap,.legacy
+    .case-reading-page .cr-document-map,.legacy
     .case-reading-page .cr-inquiry-order li {
       break-inside: avoid;
     }

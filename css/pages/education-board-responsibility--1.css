@@ -1,14 +1,14 @@
 /* Education-board responsibility: text-first administrative paper */
 .legacy .board-responsibility-editorial {
-  --board-ink: #1f2d3d;
-  --board-navy: #0b2a4a;
-  --board-navy-2: #173f67;
-  --board-muted: #607080;
-  --board-line: #d6dee7;
-  --board-gold: #c59a2d;
-  --board-orange: #b95716;
-  --board-paper: #ffffff;
-  --board-soft: #f5f7fa;
+  --board-ink: var(--navy-deep);
+  --board-navy: var(--navy-deep);
+  --board-navy-2: var(--navy-deep);
+  --board-muted: var(--navy-mid);
+  --board-line: var(--paper-alt);
+  --board-gold: var(--navy-deep);
+  --board-orange: var(--navy);
+  --board-paper: var(--paper);
+  --board-soft: var(--paper);
   color: var(--board-ink);
   background: var(--board-paper);
 }
@@ -25,10 +25,10 @@
 .legacy .board-responsibility-editorial .board-hero {
   position: relative;
   overflow: hidden;
-  color: #fff;
+  color: var(--paper);
   background:
-    radial-gradient(circle at 84% 16%, rgba(197, 154, 45, 0.2), transparent 31rem),
-    linear-gradient(128deg, #081d33 0%, #0d3154 58%, #164b78 100%);
+    radial-gradient(circle at 84% 16%, color-mix(in srgb,var(--navy-deep) 20%,transparent), transparent 31rem),
+    linear-gradient(128deg, var(--navy-deep) 0%, var(--navy-deep) 58%, var(--navy-deep) 100%);
   border-top: 3px solid var(--board-gold);
 }
 
@@ -38,22 +38,22 @@
   content: "";
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    linear-gradient(color-mix(in srgb,var(--paper) 2.5%,transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb,var(--paper) 2.5%,transparent) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
 .legacy .board-responsibility-editorial .board-hero .board-shell {
   position: relative;
   z-index: 1;
-  padding-block: clamp(58px, 7vw, 84px);
+  padding-block: clamp(60px, 7vw, 84px);
 }
 
 .legacy .board-responsibility-editorial .board-eyebrow {
   max-width: none;
-  margin: 0 0 14px;
-  color: #f4d77e;
-  font-size: 0.78rem;
+  margin: 0 0 16px;
+  color: var(--tint-strong);
+  font-size: var(--fs-small);
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.12em;
@@ -62,9 +62,9 @@
 .legacy .board-responsibility-editorial .board-hero h1 {
   max-width: 19em;
   margin: 0;
-  color: #fff;
+  color: var(--paper);
   font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
-  font-size: clamp(2rem, 4.6vw, 3.15rem);
+  font-size: clamp(var(--fs-h1), 4.6vw, var(--fs-h1));
   font-weight: 900;
   line-height: 1.38;
   letter-spacing: 0.01em;
@@ -74,30 +74,30 @@
 .legacy .board-responsibility-editorial .board-deck {
   max-width: 75ch;
   margin: 24px 0 0;
-  color: rgba(255, 255, 255, 0.94);
-  font-size: clamp(1rem, 1.55vw, 1.1rem);
+  color: color-mix(in srgb,var(--paper) 94%,transparent);
+  font-size: clamp(var(--fs-body), 1.55vw, var(--fs-h3));
   font-weight: 500;
   line-height: 1.95;
 }
 
 .legacy .board-responsibility-editorial .board-meta {
   max-width: none;
-  margin: 22px 0 0;
-  padding-top: 17px;
-  color: rgba(255, 255, 255, 0.7);
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-  font-size: 0.78rem;
+  margin: 24px 0 0;
+  padding-top: 16px;
+  color: color-mix(in srgb,var(--paper) 70%,transparent);
+  border-top: 1px solid color-mix(in srgb,var(--paper) 18%,transparent);
+  font-size: var(--fs-small);
   line-height: 1.7;
 }
 
 .legacy .board-responsibility-editorial .board-shell--document {
-  padding-block: 42px 96px;
+  padding-block: 44px 96px;
 }
 
 .legacy .board-responsibility-editorial .board-toc {
   width: 100%;
   margin: 0 0 64px;
-  padding: 0 0 22px;
+  padding: 0 0 24px;
   border: 0;
   border-bottom: 1px solid var(--board-line);
   background: transparent;
@@ -107,7 +107,7 @@
 .legacy .board-responsibility-editorial .board-toc-title {
   margin: 0 0 12px;
   color: var(--board-navy);
-  font-size: 0.72rem;
+  font-size: var(--fs-small);
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.1em;
@@ -116,7 +116,7 @@
 .legacy .board-responsibility-editorial .board-toc ol {
   display: flex;
   flex-wrap: wrap;
-  gap: 9px 24px;
+  gap: 8px 24px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -129,15 +129,15 @@
 
 .legacy .board-responsibility-editorial .board-toc a {
   color: var(--board-muted);
-  font-size: 0.9rem;
+  font-size: var(--fs-body);
   font-weight: 500;
   line-height: 1.7;
   text-decoration: underline;
-  text-decoration-color: rgba(11, 42, 74, 0.28);
+  text-decoration-color: color-mix(in srgb,var(--navy-deep) 28%,transparent);
   text-underline-offset: 5px;
 }
 
-.legacy .board-responsibility-editorial .board-toc a:hover,.legacy 
+.legacy .board-responsibility-editorial .board-toc a:hover,.legacy
 .board-responsibility-editorial .board-toc a:focus-visible {
   color: var(--board-navy);
   text-decoration-color: var(--board-gold);
@@ -149,7 +149,7 @@
 }
 
 .legacy .board-responsibility-editorial .board-document > section {
-  margin: 0 0 78px;
+  margin: 0 0 80px;
 }
 
 .legacy .board-responsibility-editorial .board-document > section:last-child {
@@ -158,9 +158,9 @@
 
 .legacy .board-responsibility-editorial .board-section-number {
   max-width: none;
-  margin: 0 0 10px;
-  color: #7a6530;
-  font-size: 0.75rem;
+  margin: 0 0 12px;
+  color: var(--gold);
+  font-size: var(--fs-small);
   font-weight: 900;
   line-height: 1.6;
   letter-spacing: 0.08em;
@@ -168,11 +168,11 @@
 
 .legacy .board-responsibility-editorial .board-document h2 {
   margin: 0 0 28px;
-  padding-top: 22px;
+  padding-top: 24px;
   color: var(--board-navy);
   border-top: 2px solid var(--board-navy);
   font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
-  font-size: clamp(1.55rem, 3vw, 2.05rem);
+  font-size: clamp(var(--fs-h2), 3vw, var(--fs-h1));
   font-weight: 900;
   line-height: 1.48;
   letter-spacing: 0.01em;
@@ -180,43 +180,43 @@
 }
 
 .legacy .board-responsibility-editorial .board-document h3 {
-  margin: 34px 0 14px;
+  margin: 36px 0 16px;
   padding: 0;
   color: var(--board-navy-2);
   border: 0;
   font-family: "Noto Sans JP", sans-serif;
-  font-size: clamp(1.08rem, 2vw, 1.28rem);
+  font-size: clamp(var(--fs-h3), 2vw, var(--fs-h3));
   font-weight: 900;
   line-height: 1.6;
 }
 
-.legacy .board-responsibility-editorial .board-document p,.legacy 
-.board-responsibility-editorial .board-document li,.legacy 
-.board-responsibility-editorial .board-document dd,.legacy 
-.board-responsibility-editorial .board-document dt,.legacy 
-.board-responsibility-editorial .board-document td,.legacy 
+.legacy .board-responsibility-editorial .board-document p,.legacy
+.board-responsibility-editorial .board-document li,.legacy
+.board-responsibility-editorial .board-document dd,.legacy
+.board-responsibility-editorial .board-document dt,.legacy
+.board-responsibility-editorial .board-document td,.legacy
 .board-responsibility-editorial .board-document th {
   color: var(--board-ink);
-  font-size: 1.01rem;
+  font-size: var(--fs-body);
   line-height: 2;
 }
 
 .legacy .board-responsibility-editorial .board-document p {
   max-width: none;
-  margin: 0 0 18px;
+  margin: 0 0 20px;
 }
 
 .legacy .board-responsibility-editorial .board-document a {
-  color: #075ca3;
+  color: var(--navy-deep);
   font-weight: 600;
   text-decoration: underline;
-  text-decoration-color: rgba(7, 92, 163, 0.32);
+  text-decoration-color: color-mix(in srgb,var(--navy-deep) 32%,transparent);
   text-underline-offset: 4px;
 }
 
-.legacy .board-responsibility-editorial .board-document a:hover,.legacy 
+.legacy .board-responsibility-editorial .board-document a:hover,.legacy
 .board-responsibility-editorial .board-document a:focus-visible {
-  color: #a04f00;
+  color: var(--c-caution);
   text-decoration-color: currentColor;
 }
 
@@ -227,7 +227,7 @@
 
 .legacy .board-responsibility-editorial .board-verdict {
   margin: 0 0 28px;
-  padding: 24px 26px 24px 30px;
+  padding: 24px 28px 24px 32px;
   border: 0;
   border-left: 5px solid var(--board-gold);
   background: var(--board-soft);
@@ -236,7 +236,7 @@
 .legacy .board-responsibility-editorial .board-verdict p {
   margin: 0;
   color: var(--board-navy);
-  font-size: clamp(1.03rem, 1.8vw, 1.14rem);
+  font-size: clamp(var(--fs-body), 1.8vw, var(--fs-h3));
   font-weight: 500;
   line-height: 1.95;
 }
@@ -247,7 +247,7 @@
 
 .legacy .board-responsibility-editorial .board-table-wrap {
   width: 100%;
-  margin: 28px 0 30px;
+  margin: 28px 0 32px;
   overflow-x: auto;
   border-top: 2px solid var(--board-navy);
   border-bottom: 1px solid var(--board-line);
@@ -260,13 +260,13 @@
   margin: 0;
   border: 0;
   border-collapse: collapse;
-  background: #fff;
+  background: var(--paper);
   box-shadow: none;
 }
 
-.legacy .board-responsibility-editorial .board-table th,.legacy 
+.legacy .board-responsibility-editorial .board-table th,.legacy
 .board-responsibility-editorial .board-table td {
-  padding: 15px 16px;
+  padding: 16px 16px;
   border: 0;
   border-bottom: 1px solid var(--board-line);
   vertical-align: top;
@@ -275,14 +275,14 @@
 
 .legacy .board-responsibility-editorial .board-table th {
   color: var(--board-navy);
-  background: #edf2f7;
-  font-size: 0.86rem;
+  background: var(--paper-alt);
+  font-size: var(--fs-body);
   font-weight: 900;
   line-height: 1.7;
 }
 
 .legacy .board-responsibility-editorial .board-table td {
-  font-size: 0.92rem;
+  font-size: var(--fs-body);
   line-height: 1.85;
 }
 
@@ -296,7 +296,7 @@
 
 .legacy .board-responsibility-editorial .board-subsection {
   margin: 0;
-  padding: 0 0 34px;
+  padding: 0 0 36px;
   border-bottom: 1px solid var(--board-line);
 }
 
@@ -311,12 +311,12 @@
 
 .legacy .board-responsibility-editorial .board-source-line {
   max-width: none;
-  margin: 0 0 18px;
-  padding: 12px 15px;
-  color: #415466;
-  border-left: 3px solid #7f96aa;
-  background: #f7f9fb;
-  font-size: 0.84rem;
+  margin: 0 0 20px;
+  padding: 12px 16px;
+  color: var(--navy);
+  border-left: 3px solid var(--line-strong);
+  background: var(--paper);
+  font-size: var(--fs-body);
   line-height: 1.85;
 }
 
@@ -327,15 +327,15 @@
 .legacy .board-responsibility-editorial .board-evaluation {
   max-width: none;
   margin-top: 24px;
-  padding: 16px 18px;
+  padding: 16px 20px;
   border-left: 4px solid var(--board-orange);
-  background: #fff8f2;
+  background: var(--paper);
 }
 
 .legacy .board-responsibility-editorial .board-axis {
   margin: 0;
-  padding: 0 0 36px 22px;
-  border-left: 3px solid #c9d4df;
+  padding: 0 0 36px 24px;
+  border-left: 3px solid var(--line-strong);
   border-bottom: 1px solid var(--board-line);
 }
 
@@ -351,8 +351,8 @@
 .legacy .board-responsibility-editorial .board-axis-label {
   max-width: none;
   margin: 32px 0 4px;
-  color: #7a6530;
-  font-size: 0.72rem;
+  color: var(--gold);
+  font-size: var(--fs-small);
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.08em;
@@ -390,7 +390,7 @@
 }
 
 .legacy .board-responsibility-editorial .board-process {
-  margin: 30px 0 28px;
+  margin: 32px 0 28px;
   padding: 0;
   list-style: none;
   counter-reset: board-process;
@@ -400,7 +400,7 @@
   position: relative;
   min-height: 54px;
   margin: 0;
-  padding: 22px 0 22px 70px;
+  padding: 24px 0 24px 72px;
   border-top: 1px solid var(--board-line);
   counter-increment: board-process;
 }
@@ -415,11 +415,11 @@
   left: 0;
   width: 42px;
   height: 42px;
-  color: #fff;
+  color: var(--paper);
   background: var(--board-navy);
   border-radius: 50%;
   content: counter(board-process, decimal-leading-zero);
-  font-size: 0.75rem;
+  font-size: var(--fs-small);
   font-weight: 900;
   line-height: 42px;
   text-align: center;
@@ -427,8 +427,8 @@
 
 .legacy .board-responsibility-editorial .board-process > li > strong {
   display: block;
-  margin-bottom: 7px;
-  font-size: 1.03rem;
+  margin-bottom: 8px;
+  font-size: var(--fs-body);
   line-height: 1.7;
 }
 
@@ -444,7 +444,7 @@
 
 .legacy .board-responsibility-editorial .board-source-list li {
   margin: 0;
-  padding: 15px 0;
+  padding: 16px 0;
   border-top: 1px solid var(--board-line);
 }
 
@@ -455,11 +455,11 @@
 .legacy .board-responsibility-editorial .board-limit-note {
   max-width: none;
   margin: 28px 0 0;
-  padding: 20px 22px;
-  color: #4f5f6e;
+  padding: 20px 24px;
+  color: var(--navy-deep);
   border: 1px solid var(--board-line);
-  background: #fbfcfd;
-  font-size: 0.88rem;
+  background: var(--paper);
+  font-size: var(--fs-body);
   line-height: 1.9;
 }
 
@@ -486,18 +486,18 @@
 
 .legacy .board-responsibility-editorial .board-next a {
   display: block;
-  padding: 19px 2px;
+  padding: 20px 2px;
   color: var(--board-navy);
   text-decoration: none;
 }
 
-.legacy .board-responsibility-editorial .board-next a:hover,.legacy 
+.legacy .board-responsibility-editorial .board-next a:hover,.legacy
 .board-responsibility-editorial .board-next a:focus-visible {
-  color: #9b4c00;
-  background: #faf7ef;
+  color: var(--c-caution);
+  background: var(--paper-alt);
 }
 
-.legacy .board-responsibility-editorial .board-next strong,.legacy 
+.legacy .board-responsibility-editorial .board-next strong,.legacy
 .board-responsibility-editorial .board-next span {
   display: block;
 }
@@ -509,7 +509,7 @@
 
 .legacy .board-responsibility-editorial .board-next span {
   color: var(--board-muted);
-  font-size: 0.86rem;
+  font-size: var(--fs-body);
   line-height: 1.7;
 }
 
@@ -523,18 +523,18 @@
   }
 
   .legacy .board-responsibility-editorial .board-hero h1 {
-    font-size: clamp(1.85rem, 8.7vw, 2.6rem);
+    font-size: clamp(var(--fs-h1), 8.7vw, var(--fs-h1));
     line-height: 1.42;
   }
 
   .legacy .board-responsibility-editorial .board-deck {
     margin-top: 20px;
-    font-size: 0.98rem;
+    font-size: var(--fs-body);
     line-height: 1.9;
   }
 
   .legacy .board-responsibility-editorial .board-meta {
-    font-size: 0.72rem;
+    font-size: var(--fs-small);
   }
 
   .legacy .board-responsibility-editorial .board-shell--document {
@@ -548,32 +548,32 @@
   .legacy .board-responsibility-editorial .board-toc ol {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 7px 18px;
+    gap: 8px 20px;
   }
 
   .legacy .board-responsibility-editorial .board-document > section {
-    margin-bottom: 62px;
+    margin-bottom: 64px;
   }
 
   .legacy .board-responsibility-editorial .board-document h2 {
-    padding-top: 18px;
-    font-size: clamp(1.42rem, 7vw, 1.85rem);
+    padding-top: 20px;
+    font-size: clamp(var(--fs-h2), 7vw, var(--fs-h1));
   }
 
   .legacy .board-responsibility-editorial .board-document h3 {
-    font-size: 1.08rem;
+    font-size: var(--fs-h3);
   }
 
-  .legacy .board-responsibility-editorial .board-document p,.legacy 
-  .board-responsibility-editorial .board-document li,.legacy 
-  .board-responsibility-editorial .board-document dd,.legacy 
+  .legacy .board-responsibility-editorial .board-document p,.legacy
+  .board-responsibility-editorial .board-document li,.legacy
+  .board-responsibility-editorial .board-document dd,.legacy
   .board-responsibility-editorial .board-document dt {
-    font-size: 0.97rem;
+    font-size: var(--fs-body);
     line-height: 1.95;
   }
 
   .legacy .board-responsibility-editorial .board-verdict {
-    padding: 20px 18px 20px 21px;
+    padding: 20px 20px 20px 20px;
   }
 
   .legacy .board-responsibility-editorial .board-axis {
@@ -585,7 +585,7 @@
   }
 
   .legacy .board-responsibility-editorial .board-limit-note {
-    padding: 17px 16px;
+    padding: 16px 16px;
   }
 }
 
@@ -595,11 +595,11 @@
   }
 
   .legacy .board-responsibility-editorial .board-hero h1 {
-    font-size: 1.82rem;
+    font-size: var(--fs-h1);
   }
 
   .legacy .board-responsibility-editorial .board-process > li {
-    padding: 19px 0 19px 52px;
+    padding: 20px 0 20px 52px;
   }
 
   .legacy .board-responsibility-editorial .board-process > li::before {
@@ -611,30 +611,30 @@
 }
 
 @media print {
-  .legacy .board-responsibility-editorial .support-strip,.legacy 
-  .board-responsibility-editorial .site-header,.legacy 
-  .board-responsibility-editorial .mobile-overlay,.legacy 
-  .board-responsibility-editorial .footer,.legacy 
+  .legacy .board-responsibility-editorial .support-strip,.legacy
+  .board-responsibility-editorial .site-header,.legacy
+  .board-responsibility-editorial .mobile-overlay,.legacy
+  .board-responsibility-editorial .footer,.legacy
   .board-responsibility-editorial .board-next {
     display: none !important;
   }
 
   .legacy .board-responsibility-editorial .board-hero {
-    color: #000;
-    background: #fff;
+    color: var(--ink);
+    background: var(--paper);
     border-top: 0;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid var(--navy-deep);
   }
 
   .legacy .board-responsibility-editorial .board-hero::after {
     display: none;
   }
 
-  .legacy .board-responsibility-editorial .board-hero h1,.legacy 
-  .board-responsibility-editorial .board-deck,.legacy 
-  .board-responsibility-editorial .board-meta,.legacy 
+  .legacy .board-responsibility-editorial .board-hero h1,.legacy
+  .board-responsibility-editorial .board-deck,.legacy
+  .board-responsibility-editorial .board-meta,.legacy
   .board-responsibility-editorial .board-eyebrow {
-    color: #000;
+    color: var(--ink);
   }
 
   .legacy .board-responsibility-editorial .board-shell {
@@ -646,7 +646,7 @@
   }
 
   .legacy .board-responsibility-editorial .board-document a {
-    color: #000;
+    color: var(--ink);
   }
 
   .legacy .board-responsibility-editorial .board-document > section {

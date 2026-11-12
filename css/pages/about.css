@@ -1,13 +1,13 @@
 
   /* Page-specific styles for about.html */
   .legacy {
-    --navy: #1e3a5f;
-    --navy-deep: #0b2545;
-    --gold: #d4af37;
-    --gold-lt: #e8c96a;
-    --line: #dbe4ee;
-    --text: #273449;
-    --soft: #64748b;
+
+
+
+    --gold-lt: var(--navy-deep);
+
+    --text: var(--navy-deep);
+    --soft: var(--navy-mid);
   }
   .legacy * {
     box-sizing: border-box;
@@ -15,7 +15,7 @@
   .legacy {
     margin: 0;
     font-family: "Noto Sans JP", sans-serif;
-    background: #f2f5f9;
+    background: var(--paper-alt);
     color: var(--text);
     line-height: 1.95;
   }
@@ -24,7 +24,7 @@
   }
   .legacy .site-head {
     background: var(--navy-deep);
-    padding: 14px 22px;
+    padding: 16px 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -34,11 +34,11 @@
   .legacy .site-head .brand {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    color: #fff;
+    gap: 12px;
+    color: var(--paper);
     text-decoration: none;
     font-weight: 900;
-    font-size: 1rem;
+    font-size: var(--fs-body);
   }
   .legacy .site-head img {
     height: 34px;
@@ -46,26 +46,26 @@
   }
   .legacy .head-links {
     display: flex;
-    gap: 6px;
+    gap: 8px;
     flex-wrap: wrap;
   }
   .legacy .head-links a {
-    color: rgba(255, 255, 255, 0.85);
+    color: color-mix(in srgb,var(--paper) 85%,transparent);
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: var(--fs-small);
     font-weight: 700;
-    padding: 6px 12px;
-    border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 8px 12px;
+    border-radius: var(--radius-md);
+    border: 1px solid color-mix(in srgb,var(--paper) 25%,transparent);
   }
   .legacy .head-links a:hover {
-    background: rgba(255, 255, 255, 0.12);
+    background: color-mix(in srgb,var(--paper) 12%,transparent);
   }
   .legacy .hero {
-    background: linear-gradient(135deg, #061a33 0%, #092646 58%, #0f345a 100%);
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-deep) 58%, var(--navy-deep) 100%);
     border-bottom: 5px solid var(--gold);
-    color: #fff;
-    padding: 46px 22px 40px;
+    color: var(--paper);
+    padding: 48px 24px 40px;
     position: relative;
     overflow: hidden;
   }
@@ -79,7 +79,7 @@
     border-radius: 50%;
     background: radial-gradient(
       circle,
-      rgba(212, 175, 55, 0.16),
+      color-mix(in srgb,var(--navy-deep) 16%,transparent),
       transparent 70%
     );
   }
@@ -90,37 +90,37 @@
     z-index: 1;
   }
   .legacy .crumbs {
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.6);
+    font-size: var(--fs-small);
+    color: color-mix(in srgb,var(--paper) 60%,transparent);
     margin-bottom: 16px;
   }
   .legacy .crumbs a {
-    color: rgba(255, 255, 255, 0.8);
+    color: color-mix(in srgb,var(--paper) 80%,transparent);
     text-decoration: none;
   }
   .legacy .crumbs a:hover {
-    color: #fff;
+    color: var(--paper);
     text-decoration: underline;
   }
   .legacy .kicker {
     display: inline-block;
-    font-size: 0.72rem;
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--gold);
-    background: rgba(212, 175, 55, 0.14);
-    border: 1px solid rgba(212, 175, 55, 0.35);
+    background: color-mix(in srgb,var(--navy-deep) 14%,transparent);
+    border: 1px solid color-mix(in srgb,var(--gold) 35%,transparent);
     padding: 4px 16px;
-    border-radius: 999px;
-    margin-bottom: 14px;
+    border-radius: var(--radius-md);
+    margin-bottom: 16px;
   }
   .legacy .hero h1 {
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(1.4rem, 3.6vw, 2.05rem);
+    font-size: clamp(var(--fs-h2), 3.6vw, var(--fs-h1));
     font-weight: 900;
     line-height: 1.5;
-    margin: 0 0 14px;
+    margin: 0 0 16px;
   }
   .legacy .hero-meta {
     display: flex;
@@ -128,48 +128,48 @@
     flex-wrap: wrap;
   }
   .legacy .hero-meta span {
-    font-size: 0.78rem;
+    font-size: var(--fs-small);
     font-weight: 700;
-    color: #fff;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: var(--paper);
+    background: color-mix(in srgb,var(--paper) 10%,transparent);
+    border: 1px solid color-mix(in srgb,var(--paper) 22%,transparent);
     padding: 4px 12px;
-    border-radius: 999px;
+    border-radius: var(--radius-md);
   }
   .legacy .hero-meta .hm-gold {
-    color: #0b2545;
+    color: var(--navy-deep);
     background: var(--gold);
     border-color: var(--gold);
   }
   .legacy .legacy-main {
     max-width: 900px;
     margin: 0 auto;
-    padding: 34px 22px 60px;
+    padding: 36px 24px 60px;
   }
   .legacy .tag-row {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-    margin: 0 0 26px;
+    margin: 0 0 28px;
   }
   .legacy .tag-row span {
-    font-size: 0.78rem;
+    font-size: var(--fs-small);
     font-weight: 700;
     color: var(--navy);
-    background: #fff;
-    border: 1px solid #c8d6e5;
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
     border-left: 3px solid var(--gold);
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     padding: 4px 12px;
   }
   .legacy h2.sec {
     font-family: "Noto Serif JP", serif;
-    font-size: 1.25rem;
+    font-size: var(--fs-h3);
     color: var(--navy);
     display: flex;
     align-items: center;
     gap: 12px;
-    margin: 38px 0 18px;
+    margin: 40px 0 20px;
   }
   .legacy h2.sec::before {
     content: "";
@@ -191,53 +191,53 @@
     margin: 0 0 8px;
   }
   .legacy .meta-card {
-    background: #fff;
+    background: var(--paper);
     border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 14px 16px;
-    box-shadow: 0 1px 3px rgba(11, 37, 69, 0.06);
+    border-radius: var(--radius-md);
+    padding: 16px 16px;
+    box-shadow: none;
   }
   .legacy .meta-card .lb {
-    font-size: 0.72rem;
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.08em;
     color: var(--soft);
     margin-bottom: 4px;
   }
   .legacy .meta-card .vl {
-    font-size: 0.92rem;
+    font-size: var(--fs-body);
     font-weight: 700;
     color: var(--navy);
     word-break: break-all;
   }
   .legacy .body-card {
-    background: #fffdf8;
-    border: 1px solid #e8dfc9;
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
     border-left: 5px solid var(--gold);
-    border-radius: 14px;
-    padding: 26px 28px;
-    font-size: 0.94rem;
+    border-radius: var(--radius-md);
+    padding: 28px 28px;
+    font-size: var(--fs-body);
     white-space: pre-wrap;
     word-break: break-word;
-    box-shadow: 0 2px 10px rgba(11, 37, 69, 0.05);
+    box-shadow: none;
   }
   .legacy .body-card .q-line {
     display: block;
     font-weight: 900;
     color: var(--navy);
-    background: #eef2f7;
+    background: var(--paper-alt);
     border-left: 4px solid var(--navy);
-    border-radius: 0 8px 8px 0;
-    padding: 6px 12px;
-    margin: 14px 0 6px;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 8px 12px;
+    margin: 16px 0 8px;
     white-space: normal;
   }
   .legacy .note {
-    background: #fff;
-    border: 1px dashed #c8d6e5;
-    border-radius: 12px;
+    background: var(--paper);
+    border: 1px dashed var(--line-strong);
+    border-radius: var(--radius-md);
     padding: 16px 20px;
-    font-size: 0.83rem;
+    font-size: var(--fs-body);
     color: var(--soft);
     margin: 24px 0;
   }
@@ -251,15 +251,15 @@
     justify-content: space-between;
     align-items: center;
     gap: 8px;
-    background: #fff;
+    background: var(--paper);
     border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 14px 18px;
-    font-size: 0.88rem;
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    font-size: var(--fs-body);
     font-weight: 700;
     color: var(--navy);
     text-decoration: none;
-    box-shadow: 0 1px 3px rgba(11, 37, 69, 0.06);
+    box-shadow: none;
     transition:
       transform 0.15s,
       border-color 0.15s;
@@ -274,11 +274,11 @@
     border-color: var(--gold);
   }
   .legacy .cta-band {
-    background: linear-gradient(135deg, #0b2545, #1e3a5f);
-    border-radius: 16px;
-    padding: 26px 28px;
-    margin-top: 38px;
-    color: #fff;
+    background: var(--navy-deep);
+    border-radius: var(--radius-md);
+    padding: 28px 28px;
+    margin-top: 40px;
+    color: var(--paper);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -287,47 +287,47 @@
   }
   .legacy .cta-band p {
     margin: 0;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.85);
+    font-size: var(--fs-body);
+    color: color-mix(in srgb,var(--paper) 85%,transparent);
   }
   .legacy .cta-band strong {
     display: block;
     font-family: "Noto Serif JP", serif;
-    font-size: 1.05rem;
-    color: #fff;
+    font-size: var(--fs-body);
+    color: var(--paper);
     margin-bottom: 4px;
   }
   .legacy .cta-btns {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     flex-wrap: wrap;
   }
   .legacy .cta-btns a {
-    font-size: 0.85rem;
+    font-size: var(--fs-body);
     font-weight: 900;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 8px;
+    padding: 12px 20px;
+    border-radius: var(--radius-md);
   }
   .legacy .cta-btns .b-gold {
     background: var(--gold);
-    color: #0b2545;
+    color: var(--navy-deep);
   }
   .legacy .cta-btns .b-gold:hover {
     background: var(--gold-lt);
   }
   .legacy .cta-btns .b-line {
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    color: #fff;
+    border: 1px solid color-mix(in srgb,var(--paper) 40%,transparent);
+    color: var(--paper);
   }
   .legacy .cta-btns .b-line:hover {
-    background: rgba(255, 255, 255, 0.12);
+    background: color-mix(in srgb,var(--paper) 12%,transparent);
   }
   .legacy .nav-bottom {
-    margin-top: 30px;
-    font-size: 0.88rem;
+    margin-top: 32px;
+    font-size: var(--fs-body);
     display: flex;
-    gap: 18px;
+    gap: 20px;
     flex-wrap: wrap;
   }
   .legacy .nav-bottom a {
@@ -340,9 +340,9 @@
   }
   .legacy .site-foot {
     background: var(--navy-deep);
-    color: rgba(255, 255, 255, 0.75);
-    padding: 30px 22px;
-    margin-top: 50px;
+    color: color-mix(in srgb,var(--paper) 75%,transparent);
+    padding: 32px 24px;
+    margin-top: 52px;
   }
   .legacy .foot-inner {
     max-width: 900px;
@@ -350,9 +350,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
     flex-wrap: wrap;
-    font-size: 0.8rem;
+    font-size: var(--fs-small);
   }
   .legacy .foot-inner a {
     color: var(--gold);
@@ -363,15 +363,15 @@
   }
   .legacy .foot-brand {
     font-weight: 900;
-    color: #fff;
-    font-size: 0.9rem;
+    color: var(--paper);
+    font-size: var(--fs-body);
   }
   @media (max-width: 640px) {
     .legacy .hero {
-      padding: 36px 18px 32px;
+      padding: 36px 20px 32px;
     }
     .legacy .legacy-main {
-      padding: 26px 16px 50px;
+      padding: 28px 16px 52px;
     }
     .legacy .body-card {
       padding: 20px 16px;
@@ -380,34 +380,34 @@
   .legacy .stat-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 14px;
+    gap: 16px;
     margin: 0 0 8px;
   }
   .legacy .stat-card {
-    background: linear-gradient(160deg, #fff, #f6f9fc);
+    background: var(--paper-alt);
     border: 1px solid var(--line);
     border-top: 4px solid var(--gold);
-    border-radius: 14px;
-    padding: 22px 18px;
+    border-radius: var(--radius-md);
+    padding: 24px 20px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(11, 37, 69, 0.06);
+    box-shadow: none;
   }
   .legacy .stat-num {
     font-family: "Noto Serif JP", serif;
-    font-size: 2rem;
+    font-size: var(--fs-h1);
     font-weight: 900;
     color: var(--navy);
   }
   .legacy .stat-label {
-    font-size: 0.82rem;
+    font-size: var(--fs-body);
     color: var(--soft);
     margin-top: 4px;
     font-weight: 700;
   }
   .legacy .stat-note {
-    font-size: 0.78rem;
-    color: #94a3b8;
-    margin: 10px 0 0;
+    font-size: var(--fs-small);
+    color: var(--ink-sub);
+    margin: 12px 0 0;
   }
   .legacy .act-grid {
     display: grid;
@@ -415,27 +415,27 @@
     gap: 12px;
   }
   .legacy .act-card {
-    background: #fff;
+    background: var(--paper);
     border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 18px 20px;
-    box-shadow: 0 1px 3px rgba(11, 37, 69, 0.06);
+    border-radius: var(--radius-md);
+    padding: 20px 20px;
+    box-shadow: none;
   }
   .legacy .act-card .num {
     font-family: "Noto Serif JP", serif;
     font-weight: 900;
     color: var(--gold);
-    font-size: 1.1rem;
+    font-size: var(--fs-h3);
   }
   .legacy .act-card strong {
     display: block;
     color: var(--navy);
-    font-size: 0.95rem;
-    margin: 2px 0 6px;
+    font-size: var(--fs-body);
+    margin: 2px 0 8px;
   }
   .legacy .act-card p {
     margin: 0;
-    font-size: 0.85rem;
+    font-size: var(--fs-body);
     color: var(--soft);
   }
   .legacy .act-card a {
@@ -444,17 +444,17 @@
   .legacy .info-table {
     width: 100%;
     border-collapse: collapse;
-    background: #fff;
+    background: var(--paper);
     border: 1px solid var(--line);
-    border-radius: 12px;
+    border-radius: var(--radius-md);
     overflow: hidden;
-    font-size: 0.9rem;
-    box-shadow: 0 1px 3px rgba(11, 37, 69, 0.06);
+    font-size: var(--fs-body);
+    box-shadow: none;
   }
   .legacy .info-table th {
     width: 9.5em;
     text-align: left;
-    background: #eef2f7;
+    background: var(--paper-alt);
     color: var(--navy);
     padding: 12px 16px;
     font-weight: 900;
@@ -463,5 +463,5 @@
   }
   .legacy .info-table td {
     padding: 12px 16px;
-    border-bottom: 1px solid #eef2f7;
+    border-bottom: 1px solid var(--line);
   }

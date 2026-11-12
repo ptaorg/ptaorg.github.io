@@ -1,13 +1,13 @@
 /* Report page: text-first editorial layout */
 .legacy .report-editorial {
-  --report-ink: #1f2d3d;
-  --report-navy: #0b2a4a;
-  --report-navy-2: #173f67;
-  --report-muted: #607080;
-  --report-line: #d6dee7;
-  --report-gold: #c59a2d;
-  --report-paper: #ffffff;
-  --report-soft: #f5f7fa;
+  --report-ink: var(--navy-deep);
+  --report-navy: var(--navy-deep);
+  --report-navy-2: var(--navy-deep);
+  --report-muted: var(--navy-mid);
+  --report-line: var(--paper-alt);
+  --report-gold: var(--navy-deep);
+  --report-paper: var(--paper);
+  --report-soft: var(--paper);
   color: var(--report-ink);
   background: var(--report-paper);
 }
@@ -24,10 +24,10 @@
 .legacy .report-editorial .report-hero {
   position: relative;
   overflow: hidden;
-  color: #fff;
+  color: var(--paper);
   background:
-    radial-gradient(circle at 84% 18%, rgba(197, 154, 45, 0.18), transparent 32rem),
-    linear-gradient(128deg, #081d33 0%, #0d3154 58%, #164b78 100%);
+    radial-gradient(circle at 84% 18%, color-mix(in srgb,var(--navy-deep) 18%,transparent), transparent 32rem),
+    linear-gradient(128deg, var(--navy-deep) 0%, var(--navy-deep) 58%, var(--navy-deep) 100%);
   border-top: 3px solid var(--report-gold);
 }
 
@@ -37,8 +37,8 @@
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    linear-gradient(color-mix(in srgb,var(--paper) 2.5%,transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb,var(--paper) 2.5%,transparent) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
@@ -50,9 +50,9 @@
 
 .legacy .report-editorial .report-eyebrow {
   max-width: none;
-  margin: 0 0 14px;
-  color: #f4d77e;
-  font-size: 0.78rem;
+  margin: 0 0 16px;
+  color: var(--tint-strong);
+  font-size: var(--fs-small);
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.12em;
@@ -61,9 +61,9 @@
 .legacy .report-editorial .report-hero h1 {
   max-width: 16em;
   margin: 0;
-  color: #fff;
+  color: var(--paper);
   font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
-  font-size: clamp(2rem, 5vw, 3.35rem);
+  font-size: clamp(var(--fs-h1), 5vw, var(--fs-h1));
   font-weight: 900;
   line-height: 1.34;
   letter-spacing: 0.01em;
@@ -72,9 +72,9 @@
 
 .legacy .report-editorial .report-deck {
   max-width: 72ch;
-  margin: 26px 0 0;
-  color: rgba(255, 255, 255, 0.94);
-  font-size: clamp(1rem, 1.6vw, 1.12rem);
+  margin: 28px 0 0;
+  color: color-mix(in srgb,var(--paper) 94%,transparent);
+  font-size: clamp(var(--fs-body), 1.6vw, var(--fs-h3));
   font-weight: 500;
   line-height: 1.95;
 }
@@ -82,21 +82,21 @@
 .legacy .report-editorial .report-meta {
   max-width: none;
   margin: 24px 0 0;
-  padding-top: 18px;
-  color: rgba(255, 255, 255, 0.7);
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-  font-size: 0.78rem;
+  padding-top: 20px;
+  color: color-mix(in srgb,var(--paper) 70%,transparent);
+  border-top: 1px solid color-mix(in srgb,var(--paper) 18%,transparent);
+  font-size: var(--fs-small);
   line-height: 1.7;
 }
 
 .legacy .report-editorial .report-shell--document {
-  padding-block: 42px 96px;
+  padding-block: 44px 96px;
 }
 
 .legacy .report-editorial .report-toc {
   width: 100%;
   margin: 0 0 64px;
-  padding: 0 0 22px;
+  padding: 0 0 24px;
   border: 0;
   border-bottom: 1px solid var(--report-line);
   background: transparent;
@@ -106,7 +106,7 @@
 .legacy .report-editorial .report-toc-title {
   margin: 0 0 12px;
   color: var(--report-navy);
-  font-size: 0.72rem;
+  font-size: var(--fs-small);
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.1em;
@@ -115,7 +115,7 @@
 .legacy .report-editorial .report-toc ol {
   display: flex;
   flex-wrap: wrap;
-  gap: 9px 24px;
+  gap: 8px 24px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -128,15 +128,15 @@
 
 .legacy .report-editorial .report-toc a {
   color: var(--report-muted);
-  font-size: 0.9rem;
+  font-size: var(--fs-body);
   font-weight: 500;
   line-height: 1.7;
   text-decoration: underline;
-  text-decoration-color: rgba(11, 42, 74, 0.28);
+  text-decoration-color: color-mix(in srgb,var(--navy-deep) 28%,transparent);
   text-underline-offset: 5px;
 }
 
-.legacy .report-editorial .report-toc a:hover,.legacy 
+.legacy .report-editorial .report-toc a:hover,.legacy
 .report-editorial .report-toc a:focus-visible {
   color: var(--report-navy);
   text-decoration-color: var(--report-gold);
@@ -157,9 +157,9 @@
 
 .legacy .report-editorial .report-section-number {
   max-width: none;
-  margin: 0 0 10px;
-  color: #7a6530;
-  font-size: 0.75rem;
+  margin: 0 0 12px;
+  color: var(--gold);
+  font-size: var(--fs-small);
   font-weight: 900;
   line-height: 1.6;
   letter-spacing: 0.08em;
@@ -167,11 +167,11 @@
 
 .legacy .report-editorial .report-document h2 {
   margin: 0 0 28px;
-  padding-top: 22px;
+  padding-top: 24px;
   color: var(--report-navy);
   border-top: 2px solid var(--report-navy);
   font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
-  font-size: clamp(1.55rem, 3vw, 2.05rem);
+  font-size: clamp(var(--fs-h2), 3vw, var(--fs-h1));
   font-weight: 900;
   line-height: 1.48;
   letter-spacing: 0.01em;
@@ -179,39 +179,39 @@
 }
 
 .legacy .report-editorial .report-document h3 {
-  margin: 34px 0 14px;
+  margin: 36px 0 16px;
   padding: 0;
   color: var(--report-navy-2);
   border: 0;
   font-family: "Noto Sans JP", sans-serif;
-  font-size: clamp(1.08rem, 2vw, 1.28rem);
+  font-size: clamp(var(--fs-h3), 2vw, var(--fs-h3));
   font-weight: 900;
   line-height: 1.55;
 }
 
-.legacy .report-editorial .report-document p,.legacy 
+.legacy .report-editorial .report-document p,.legacy
 .report-editorial .report-document li {
   color: var(--report-ink);
-  font-size: 1.01rem;
+  font-size: var(--fs-body);
   line-height: 2;
 }
 
 .legacy .report-editorial .report-document p {
   max-width: none;
-  margin: 0 0 18px;
+  margin: 0 0 20px;
 }
 
 .legacy .report-editorial .report-document a {
-  color: #075ca3;
+  color: var(--navy-deep);
   font-weight: 600;
   text-decoration: underline;
-  text-decoration-color: rgba(7, 92, 163, 0.32);
+  text-decoration-color: color-mix(in srgb,var(--navy-deep) 32%,transparent);
   text-underline-offset: 4px;
 }
 
-.legacy .report-editorial .report-document a:hover,.legacy 
+.legacy .report-editorial .report-document a:hover,.legacy
 .report-editorial .report-document a:focus-visible {
-  color: #a04f00;
+  color: var(--c-caution);
   text-decoration-color: currentColor;
 }
 
@@ -222,7 +222,7 @@
 
 .legacy .report-editorial .report-verdict {
   margin: 0 0 28px;
-  padding: 24px 26px 24px 30px;
+  padding: 24px 28px 24px 32px;
   border: 0;
   border-left: 5px solid var(--report-gold);
   background: var(--report-soft);
@@ -231,14 +231,14 @@
 .legacy .report-editorial .report-verdict p {
   margin: 0;
   color: var(--report-navy);
-  font-size: clamp(1.03rem, 1.8vw, 1.14rem);
+  font-size: clamp(var(--fs-body), 1.8vw, var(--fs-h3));
   font-weight: 500;
   line-height: 1.95;
 }
 
 .legacy .report-editorial .report-table-wrap {
   width: 100%;
-  margin: 28px 0 30px;
+  margin: 28px 0 32px;
   overflow-x: auto;
   border-top: 2px solid var(--report-navy);
   border-bottom: 1px solid var(--report-line);
@@ -250,7 +250,7 @@
   min-width: 700px;
   border-collapse: collapse;
   color: var(--report-ink);
-  font-size: 0.91rem;
+  font-size: var(--fs-body);
   line-height: 1.75;
 }
 
@@ -258,9 +258,9 @@
   min-width: 920px;
 }
 
-.legacy .report-editorial .report-table th,.legacy 
+.legacy .report-editorial .report-table th,.legacy
 .report-editorial .report-table td {
-  padding: 15px 16px;
+  padding: 16px 16px;
   border: 0;
   border-bottom: 1px solid var(--report-line);
   text-align: left;
@@ -269,8 +269,8 @@
 
 .legacy .report-editorial .report-table thead th {
   color: var(--report-navy);
-  background: #eef2f6;
-  font-size: 0.79rem;
+  background: var(--paper-alt);
+  font-size: var(--fs-small);
   font-weight: 900;
   line-height: 1.6;
   letter-spacing: 0.03em;
@@ -289,7 +289,7 @@
 
 .legacy .report-editorial .report-axis {
   margin: 0;
-  padding: 46px 0 34px;
+  padding: 48px 0 36px;
   border-bottom: 1px solid var(--report-line);
 }
 
@@ -300,8 +300,8 @@
 .legacy .report-editorial .report-axis-label {
   max-width: none;
   margin: 0 0 4px;
-  color: #806921;
-  font-size: 0.72rem;
+  color: var(--gold);
+  font-size: var(--fs-small);
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.1em;
@@ -310,17 +310,17 @@
 .legacy .report-editorial .report-axis h3 {
   margin-top: 0;
   font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
-  font-size: clamp(1.28rem, 2.4vw, 1.6rem);
+  font-size: clamp(var(--fs-h3), 2.4vw, var(--fs-h2));
   line-height: 1.55;
 }
 
 .legacy .report-editorial .report-source-line {
   max-width: none;
   margin: 0 0 24px;
-  padding: 10px 0 12px;
+  padding: 12px 0 12px;
   color: var(--report-muted);
   border-bottom: 1px solid var(--report-line);
-  font-size: 0.82rem;
+  font-size: var(--fs-body);
   line-height: 1.8;
 }
 
@@ -333,43 +333,43 @@
 }
 
 .legacy .report-editorial .report-analysis {
-  margin: 26px 0 0;
-  padding: 4px 0 4px 22px;
+  margin: 28px 0 0;
+  padding: 4px 0 4px 24px;
   border-left: 4px solid var(--report-gold);
 }
 
 .legacy .report-editorial .report-analysis p {
   margin: 0;
-  color: #27394c;
+  color: var(--ink-sub);
 }
 
 .legacy .report-editorial .report-counterpoint {
-  margin: 30px 0;
-  padding: 22px 0;
-  border-top: 1px solid #b9c6d4;
-  border-bottom: 1px solid #b9c6d4;
+  margin: 32px 0;
+  padding: 24px 0;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
   background: transparent;
 }
 
 .legacy .report-editorial .report-counterpoint p {
   margin: 0;
-  color: #3e4d5e;
-  font-size: 0.94rem;
+  color: var(--navy-deep);
+  font-size: var(--fs-body);
   line-height: 1.95;
 }
 
 .legacy .report-editorial .report-limit-note {
   max-width: none;
   margin-top: 24px;
-  padding: 18px 0 0;
+  padding: 20px 0 0;
   color: var(--report-muted);
   border-top: 1px solid var(--report-line);
-  font-size: 0.9rem;
+  font-size: var(--fs-body);
   line-height: 1.9;
 }
 
 .legacy .report-editorial .report-principles {
-  margin: 10px 0 38px;
+  margin: 12px 0 40px;
   padding: 0;
   list-style: none;
   counter-reset: report-principle;
@@ -379,7 +379,7 @@
 .legacy .report-editorial .report-principles > li {
   position: relative;
   margin: 0;
-  padding: 24px 0 24px 58px;
+  padding: 24px 0 24px 60px;
   counter-increment: report-principle;
   border-bottom: 1px solid var(--report-line);
 }
@@ -389,8 +389,8 @@
   position: absolute;
   top: 25px;
   left: 0;
-  color: #8a7126;
-  font-size: 0.82rem;
+  color: var(--gold);
+  font-size: var(--fs-body);
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.06em;
@@ -398,20 +398,20 @@
 
 .legacy .report-editorial .report-principles > li > strong {
   display: block;
-  margin-bottom: 7px;
-  font-size: 1.03rem;
+  margin-bottom: 8px;
+  font-size: var(--fs-body);
   line-height: 1.65;
 }
 
 .legacy .report-editorial .report-principles > li > p {
   margin: 0;
-  color: #3d4d5e;
-  font-size: 0.96rem;
+  color: var(--navy-deep);
+  font-size: var(--fs-body);
   line-height: 1.9;
 }
 
 .legacy .report-editorial .report-sources {
-  margin: 22px 0 0;
+  margin: 24px 0 0;
   padding: 0;
   list-style: none;
   border-top: 1px solid var(--report-line);
@@ -421,8 +421,8 @@
   margin: 0;
   padding: 16px 0;
   border-bottom: 1px solid var(--report-line);
-  color: #3d4d5e;
-  font-size: 0.9rem;
+  color: var(--navy);
+  font-size: var(--fs-body);
   line-height: 1.85;
 }
 
@@ -449,28 +449,28 @@
   text-decoration: none;
 }
 
-.legacy .report-editorial .report-next a strong,.legacy 
+.legacy .report-editorial .report-next a strong,.legacy
 .report-editorial .report-next a span {
   display: block;
 }
 
 .legacy .report-editorial .report-next a strong {
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   color: var(--report-navy);
-  font-size: 1rem;
+  font-size: var(--fs-body);
   line-height: 1.65;
 }
 
 .legacy .report-editorial .report-next a span {
   color: var(--report-muted);
-  font-size: 0.88rem;
+  font-size: var(--fs-body);
   font-weight: 400;
   line-height: 1.75;
 }
 
-.legacy .report-editorial .report-next a:hover strong,.legacy 
+.legacy .report-editorial .report-next a:hover strong,.legacy
 .report-editorial .report-next a:focus-visible strong {
-  color: #a04f00;
+  color: var(--c-caution);
 }
 
 @media (max-width: 760px) {
@@ -479,27 +479,27 @@
   }
 
   .legacy .report-editorial .report-hero .report-shell {
-    padding-block: 48px 54px;
+    padding-block: 48px 56px;
   }
 
   .legacy .report-editorial .report-hero h1 {
     max-width: none;
-    font-size: clamp(1.85rem, 9vw, 2.5rem);
+    font-size: clamp(var(--fs-h1), 9vw, var(--fs-h1));
   }
 
   .legacy .report-editorial .report-deck {
     margin-top: 20px;
-    font-size: 0.98rem;
+    font-size: var(--fs-body);
     line-height: 1.9;
   }
 
   .legacy .report-editorial .report-meta {
     margin-top: 20px;
-    font-size: 0.72rem;
+    font-size: var(--fs-small);
   }
 
   .legacy .report-editorial .report-shell--document {
-    padding-block: 30px 68px;
+    padding-block: 32px 68px;
   }
 
   .legacy .report-editorial .report-toc {
@@ -507,11 +507,11 @@
   }
 
   .legacy .report-editorial .report-toc ol {
-    gap: 8px 18px;
+    gap: 8px 20px;
   }
 
   .legacy .report-editorial .report-toc a {
-    font-size: 0.84rem;
+    font-size: var(--fs-body);
   }
 
   .legacy .report-editorial .report-document > section {
@@ -519,35 +519,35 @@
   }
 
   .legacy .report-editorial .report-document h2 {
-    margin-bottom: 22px;
-    padding-top: 18px;
-    font-size: 1.5rem;
+    margin-bottom: 24px;
+    padding-top: 20px;
+    font-size: var(--fs-h2);
   }
 
-  .legacy .report-editorial .report-document p,.legacy 
+  .legacy .report-editorial .report-document p,.legacy
   .report-editorial .report-document li {
-    font-size: 0.97rem;
+    font-size: var(--fs-body);
     line-height: 1.95;
   }
 
   .legacy .report-editorial .report-verdict {
-    padding: 20px 18px 20px 22px;
+    padding: 20px 20px 20px 24px;
   }
 
   .legacy .report-editorial .report-verdict p {
-    font-size: 0.99rem;
+    font-size: var(--fs-body);
   }
 
   .legacy .report-editorial .report-axis {
-    padding-block: 38px 28px;
+    padding-block: 40px 28px;
   }
 
   .legacy .report-editorial .report-axis h3 {
-    font-size: 1.28rem;
+    font-size: var(--fs-h3);
   }
 
   .legacy .report-editorial .report-source-line {
-    font-size: 0.78rem;
+    font-size: var(--fs-small);
   }
 
   .legacy .report-editorial .report-analysis {
@@ -555,12 +555,12 @@
   }
 
   .legacy .report-editorial .report-table {
-    font-size: 0.84rem;
+    font-size: var(--fs-body);
   }
 
-  .legacy .report-editorial .report-table th,.legacy 
+  .legacy .report-editorial .report-table th,.legacy
   .report-editorial .report-table td {
-    padding: 13px 14px;
+    padding: 12px 16px;
   }
 
   .legacy .report-editorial .report-principles > li {
@@ -569,33 +569,33 @@
 }
 
 @media print {
-  .legacy .report-editorial .site-header,.legacy 
-  .report-editorial .support-strip,.legacy 
-  .report-editorial .mobile-overlay,.legacy 
-  .report-editorial .footer,.legacy 
-  .report-editorial .report-toc,.legacy 
+  .legacy .report-editorial .site-header,.legacy
+  .report-editorial .support-strip,.legacy
+  .report-editorial .mobile-overlay,.legacy
+  .report-editorial .footer,.legacy
+  .report-editorial .report-toc,.legacy
   .report-editorial .report-next {
     display: none !important;
   }
 
   .legacy .report-editorial .report-hero {
-    color: #000;
-    background: #fff;
-    border-top-color: #000;
+    color: var(--ink);
+    background: var(--paper);
+    border-top-color: var(--navy-deep);
   }
 
   .legacy .report-editorial .report-hero::after {
     display: none;
   }
 
-  .legacy .report-editorial .report-hero h1,.legacy 
-  .report-editorial .report-eyebrow,.legacy 
-  .report-editorial .report-deck,.legacy 
+  .legacy .report-editorial .report-hero h1,.legacy
+  .report-editorial .report-eyebrow,.legacy
+  .report-editorial .report-deck,.legacy
   .report-editorial .report-meta {
-    color: #000;
+    color: var(--ink);
   }
 
-  .legacy .report-editorial .report-shell,.legacy 
+  .legacy .report-editorial .report-shell,.legacy
   .report-editorial .report-document {
     width: 100%;
     max-width: none;
@@ -605,8 +605,8 @@
     padding-block: 28px 0;
   }
 
-  .legacy .report-editorial .report-document > section,.legacy 
-  .report-editorial .report-axis,.legacy 
+  .legacy .report-editorial .report-document > section,.legacy
+  .report-editorial .report-axis,.legacy
   .report-editorial .report-table-wrap {
     break-inside: avoid;
   }

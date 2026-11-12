@@ -1,56 +1,56 @@
 
   .legacy .reality-editorial {
-    --reality-ink: #17283b;
-    --reality-navy: #0f2a46;
-    --reality-blue: #315d83;
-    --reality-gold: #a77a22;
-    --reality-line: #ccd6df;
-    --reality-soft-line: #dfe6ec;
-    --reality-muted: #f4f6f8;
-    --reality-paper: #fffdf7;
-    --reality-alert: #8a2f24;
+    --reality-ink: var(--navy-deep);
+    --reality-navy: var(--navy-deep);
+    --reality-blue: var(--navy-deep);
+    --reality-gold: var(--navy-deep);
+    --reality-line: var(--tint-strong);
+    --reality-soft-line: var(--paper-alt);
+    --reality-muted: var(--paper-alt);
+    --reality-paper: var(--paper);
+    --reality-alert: var(--navy);
     color: var(--reality-ink);
-    background: #fff;
+    background: var(--paper);
   }
 
   .legacy .reality-editorial .reality-hero {
     position: relative;
     isolation: isolate;
     padding: 76px 0 68px;
-    color: #fff;
+    color: var(--paper);
     background:
       linear-gradient(90deg, rgba(7, 24, 42, 0.94), rgba(7, 24, 42, 0.73)),
       url("../../assets/slides/1.jpg") center 42% / cover;
   }
 
-  .legacy .reality-editorial .reality-hero .wrap,.legacy 
-  .reality-editorial .reality-intro,.legacy 
-  .reality-editorial .reality-section > .wrap,.legacy 
+  .legacy .reality-editorial .reality-hero .wrap,.legacy
+  .reality-editorial .reality-intro,.legacy
+  .reality-editorial .reality-section > .wrap,.legacy
   .reality-editorial .reality-summary > .wrap {
     width: min(calc(100% - 40px), 920px);
     margin-inline: auto;
   }
 
-  .legacy .reality-editorial .reality-hero-kicker,.legacy 
+  .legacy .reality-editorial .reality-hero-kicker,.legacy
   .reality-editorial .section-label {
-    margin: 0 0 14px;
+    margin: 0 0 16px;
     color: var(--reality-gold);
     font-family: "Noto Sans JP", sans-serif;
-    font-size: 0.76rem;
+    font-size: var(--fs-small);
     font-weight: 800;
     letter-spacing: 0.08em;
   }
 
   .legacy .reality-editorial .reality-hero-kicker {
-    color: #f1d890;
+    color: var(--tint-strong);
   }
 
   .legacy .reality-editorial .reality-hero h1 {
     max-width: 800px;
     margin: 0;
-    color: #fff;
+    color: var(--paper);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(2rem, 5vw, 3.3rem);
+    font-size: clamp(var(--fs-h1), 5vw, var(--fs-h1));
     font-weight: 900;
     letter-spacing: -0.025em;
     line-height: 1.28;
@@ -59,54 +59,54 @@
   .legacy .reality-editorial .reality-hero-lead {
     max-width: 760px;
     margin: 24px 0 0;
-    color: rgba(255, 255, 255, 0.88);
-    font-size: clamp(0.96rem, 1.6vw, 1.08rem);
+    color: color-mix(in srgb,var(--paper) 88%,transparent);
+    font-size: clamp(var(--fs-body), 1.6vw, var(--fs-h3));
     line-height: 2;
   }
 
   .legacy .reality-editorial .reality-hero-meta {
-    margin: 26px 0 0;
-    color: rgba(255, 255, 255, 0.66);
-    font-size: 0.76rem;
+    margin: 28px 0 0;
+    color: color-mix(in srgb,var(--paper) 66%,transparent);
+    font-size: var(--fs-small);
     letter-spacing: 0.03em;
   }
 
   .legacy .reality-editorial .legacy-main {
-    background: #fff;
+    background: var(--paper);
   }
 
   .legacy .reality-editorial .reality-intro {
-    padding: 58px 0 52px;
+    padding: 60px 0 52px;
   }
 
-  .legacy .reality-editorial .reality-intro h2,.legacy 
-  .reality-editorial .reality-section h2,.legacy 
+  .legacy .reality-editorial .reality-intro h2,.legacy
+  .reality-editorial .reality-section h2,.legacy
   .reality-editorial .reality-summary h2 {
     margin: 0 0 20px;
     color: var(--reality-navy);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(1.45rem, 3.3vw, 2.15rem);
+    font-size: clamp(var(--fs-h2), 3.3vw, var(--fs-h1));
     font-weight: 900;
     letter-spacing: -0.015em;
     line-height: 1.5;
     text-wrap: balance;
   }
 
-  .legacy .reality-editorial .reality-section h2,.legacy 
+  .legacy .reality-editorial .reality-section h2,.legacy
   .reality-editorial .reality-summary h2 {
-    padding-left: 18px;
+    padding-left: 20px;
     border-left: 4px solid var(--reality-gold);
   }
 
-  .legacy .reality-editorial .reality-intro > p:not(.section-label),.legacy 
-  .reality-editorial .reality-section p,.legacy 
+  .legacy .reality-editorial .reality-intro > p:not(.section-label),.legacy
+  .reality-editorial .reality-section p,.legacy
   .reality-editorial .reality-summary p {
-    color: #33465a;
+    color: var(--navy-deep);
     line-height: 2;
   }
 
   .legacy .reality-editorial .reality-intro > p:not(.section-label) {
-    margin: 0 0 14px;
+    margin: 0 0 16px;
   }
 
   .legacy .reality-editorial .page-index {
@@ -114,16 +114,16 @@
     flex-wrap: wrap;
     gap: 0;
     margin-top: 32px;
-    padding: 14px 0;
+    padding: 16px 0;
     border-top: 1px solid var(--reality-line);
     border-bottom: 1px solid var(--reality-line);
   }
 
   .legacy .reality-editorial .page-index a {
     position: relative;
-    padding: 6px 22px 6px 0;
+    padding: 8px 24px 8px 0;
     color: var(--reality-blue);
-    font-size: 0.82rem;
+    font-size: var(--fs-body);
     font-weight: 700;
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
@@ -133,7 +133,7 @@
     content: "/";
     position: absolute;
     right: 10px;
-    color: #9eabb7;
+    color: var(--ink-sub);
     font-weight: 400;
   }
 
@@ -149,23 +149,23 @@
 
   .legacy .reality-editorial .reality-section-lead {
     max-width: 810px;
-    margin: 0 0 30px;
-    color: #3e5267;
-    font-size: 1rem;
+    margin: 0 0 32px;
+    color: var(--navy-deep);
+    font-size: var(--fs-body);
   }
 
-  .legacy .reality-editorial .reality-section h3,.legacy 
+  .legacy .reality-editorial .reality-section h3,.legacy
   .reality-editorial .reality-summary h3 {
-    margin: 34px 0 14px;
+    margin: 36px 0 16px;
     color: var(--reality-navy);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(1.08rem, 2vw, 1.3rem);
+    font-size: clamp(var(--fs-h3), 2vw, var(--fs-h3));
     font-weight: 800;
     line-height: 1.55;
   }
 
   .legacy .reality-editorial .method-list {
-    margin: 26px 0 42px;
+    margin: 28px 0 44px;
     padding: 0;
     border-top: 1px solid var(--reality-line);
     counter-reset: method;
@@ -175,9 +175,9 @@
   .legacy .reality-editorial .method-list li {
     display: grid;
     grid-template-columns: 42px minmax(150px, 210px) 1fr;
-    gap: 14px;
+    gap: 16px;
     align-items: start;
-    padding: 18px 0;
+    padding: 20px 0;
     border-bottom: 1px solid var(--reality-line);
     counter-increment: method;
   }
@@ -186,7 +186,7 @@
     content: counter(method, decimal-leading-zero);
     color: var(--reality-gold);
     font-family: "Noto Serif JP", serif;
-    font-size: 0.84rem;
+    font-size: var(--fs-body);
     font-weight: 900;
   }
 
@@ -196,8 +196,8 @@
   }
 
   .legacy .reality-editorial .method-list span {
-    color: #465a6d;
-    font-size: 0.92rem;
+    color: var(--navy-deep);
+    font-size: var(--fs-body);
     line-height: 1.85;
   }
 
@@ -206,36 +206,36 @@
     overflow-x: auto;
     border-top: 2px solid var(--reality-navy);
     border-bottom: 1px solid var(--reality-line);
-    background: #fff;
+    background: var(--paper);
     -webkit-overflow-scrolling: touch;
   }
 
   .legacy .reality-editorial table {
     width: 100%;
     border-collapse: collapse;
-    color: #263a4e;
-    font-size: 0.88rem;
+    color: var(--navy-deep);
+    font-size: var(--fs-body);
   }
 
-  .legacy .reality-editorial .evidence-table,.legacy 
-  .reality-editorial .route-table,.legacy 
+  .legacy .reality-editorial .evidence-table,.legacy
+  .reality-editorial .route-table,.legacy
   .reality-editorial .cross-table {
     min-width: 720px;
   }
 
   .legacy .reality-editorial thead th {
-    padding: 13px 15px;
-    background: #edf1f4;
-    color: #23394f;
-    font-size: 0.76rem;
+    padding: 12px 16px;
+    background: var(--paper-alt);
+    color: var(--navy-deep);
+    font-size: var(--fs-small);
     font-weight: 800;
     letter-spacing: 0.02em;
     text-align: left;
   }
 
-  .legacy .reality-editorial tbody th,.legacy 
+  .legacy .reality-editorial tbody th,.legacy
   .reality-editorial tbody td {
-    padding: 15px;
+    padding: 16px;
     border-top: 1px solid var(--reality-soft-line);
     line-height: 1.75;
     text-align: left;
@@ -248,54 +248,54 @@
   }
 
   .legacy .reality-editorial .reconstruction {
-    margin: 30px 0;
-    border: 1px solid #d7cfb8;
+    margin: 32px 0;
+    border: 1px solid var(--line-strong);
     border-left: 5px solid var(--reality-gold);
     background: var(--reality-paper);
   }
 
   .legacy .reality-editorial .reconstruction figcaption {
-    padding: 11px 20px;
-    border-bottom: 1px solid #ded7c3;
-    color: #675528;
-    font-size: 0.75rem;
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--line-strong);
+    color: var(--gold);
+    font-size: var(--fs-small);
     line-height: 1.65;
   }
 
   .legacy .reality-editorial .reconstruction figcaption strong {
     margin-right: 8px;
-    color: #765719;
+    color: var(--gold);
   }
 
   .legacy .reality-editorial .reconstruction-paper {
-    padding: 24px 26px 26px;
+    padding: 24px 28px 28px;
     font-family: "Noto Serif JP", serif;
   }
 
   .legacy .reality-editorial .reconstruction-paper p {
-    margin: 7px 0;
-    color: #2f352f;
-    font-size: 0.9rem;
+    margin: 8px 0;
+    color: var(--ink);
+    font-size: var(--fs-body);
     line-height: 1.9;
   }
 
   .legacy .reality-editorial .reconstruction-paper .reconstruction-title {
     margin: 0 0 16px;
-    color: #1d2e40;
-    font-size: 1.04rem;
+    color: var(--navy-deep);
+    font-size: var(--fs-body);
     font-weight: 900;
   }
 
   .legacy .reality-editorial .sample-fees {
     max-width: 520px;
-    margin: 10px 0 16px;
+    margin: 12px 0 16px;
     font-family: "Noto Sans JP", sans-serif;
   }
 
-  .legacy .reality-editorial .sample-fees th,.legacy 
+  .legacy .reality-editorial .sample-fees th,.legacy
   .reality-editorial .sample-fees td {
-    padding: 9px 12px;
-    border: 1px solid #d8d4c8;
+    padding: 8px 12px;
+    border: 1px solid var(--line-strong);
   }
 
   .legacy .reality-editorial .sample-fees td {
@@ -304,7 +304,7 @@
   }
 
   .legacy .reality-editorial .sample-fees tr:last-child {
-    background: #f2eee3;
+    background: var(--paper-alt);
   }
 
   .legacy .reality-editorial .reconstruction-paper .reconstruction-alert {
@@ -313,36 +313,36 @@
     font-weight: 800;
   }
 
-  .legacy .reality-editorial .check-block,.legacy 
-  .reality-editorial .document-sequence,.legacy 
+  .legacy .reality-editorial .check-block,.legacy
+  .reality-editorial .document-sequence,.legacy
   .reality-editorial .record-rule {
     margin: 32px 0;
-    padding: 4px 0 10px;
+    padding: 4px 0 12px;
     border-top: 1px solid var(--reality-line);
     border-bottom: 1px solid var(--reality-line);
   }
 
-  .legacy .reality-editorial .check-block h3,.legacy 
-  .reality-editorial .document-sequence h3,.legacy 
+  .legacy .reality-editorial .check-block h3,.legacy
+  .reality-editorial .document-sequence h3,.legacy
   .reality-editorial .record-rule h3 {
     margin-top: 20px;
   }
 
-  .legacy .reality-editorial .check-block ul,.legacy 
+  .legacy .reality-editorial .check-block ul,.legacy
   .reality-editorial .document-sequence ol {
     margin: 0 0 16px;
     padding-left: 1.4rem;
   }
 
-  .legacy .reality-editorial .check-block li,.legacy 
+  .legacy .reality-editorial .check-block li,.legacy
   .reality-editorial .document-sequence li {
     margin: 8px 0;
-    padding-left: 5px;
-    color: #33485c;
+    padding-left: 4px;
+    color: var(--navy-deep);
     line-height: 1.85;
   }
 
-  .legacy .reality-editorial .document-sequence li::marker,.legacy 
+  .legacy .reality-editorial .document-sequence li::marker,.legacy
   .reality-editorial .check-block li::marker {
     color: var(--reality-gold);
     font-weight: 800;
@@ -352,39 +352,39 @@
     margin: 32px 0 0;
     padding: 20px 24px;
     border-left: 5px solid var(--reality-navy);
-    background: #eef2f5;
+    background: var(--paper-alt);
   }
 
   .legacy .reality-editorial .basis-note .basis-label {
-    margin: 0 0 7px;
+    margin: 0 0 8px;
     color: var(--reality-blue);
-    font-size: 0.74rem;
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.05em;
   }
 
   .legacy .reality-editorial .basis-note p {
     margin: 0;
-    color: #2e4256;
-    font-size: 0.91rem;
+    color: var(--navy-deep);
+    font-size: var(--fs-body);
   }
 
   .legacy .reality-editorial .basis-note p + p {
     margin-top: 12px;
   }
 
-  .legacy .reality-editorial .basis-note a,.legacy 
-  .reality-editorial .detail-link a,.legacy 
-  .reality-editorial .source-list a,.legacy 
+  .legacy .reality-editorial .basis-note a,.legacy
+  .reality-editorial .detail-link a,.legacy
+  .reality-editorial .source-list a,.legacy
   .reality-editorial .next-links a {
-    color: #245d8a;
+    color: var(--navy);
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
   }
 
   .legacy .reality-editorial .detail-link {
-    margin: 22px 0 0;
-    font-size: 0.88rem;
+    margin: 24px 0 0;
+    font-size: var(--fs-body);
     font-weight: 800;
     text-align: right;
   }
@@ -401,37 +401,37 @@
   .legacy .reality-editorial .sample-record > div {
     display: grid;
     grid-template-columns: 160px 1fr;
-    border-top: 1px solid #d8d4c8;
+    border-top: 1px solid var(--line-strong);
   }
 
   .legacy .reality-editorial .sample-record > div:last-child {
-    border-bottom: 1px solid #d8d4c8;
+    border-bottom: 1px solid var(--line-strong);
   }
 
-  .legacy .reality-editorial .sample-record dt,.legacy 
+  .legacy .reality-editorial .sample-record dt,.legacy
   .reality-editorial .sample-record dd {
     margin: 0;
-    padding: 10px 12px;
-    color: #2c3c4b;
-    font-size: 0.86rem;
+    padding: 12px 12px;
+    color: var(--navy-deep);
+    font-size: var(--fs-body);
     line-height: 1.7;
   }
 
   .legacy .reality-editorial .sample-record dt {
-    background: #f2eee3;
+    background: var(--paper-alt);
     font-weight: 800;
   }
 
   .legacy .reality-editorial .record-rule {
-    margin-top: 38px;
+    margin-top: 40px;
   }
 
   .legacy .reality-editorial .record-rule p {
-    margin: 0 0 14px;
+    margin: 0 0 16px;
   }
 
   .legacy .reality-editorial .source-list {
-    margin: 30px 0 0;
+    margin: 32px 0 0;
     padding: 0;
     border-top: 2px solid var(--reality-navy);
     list-style: none;
@@ -445,11 +445,11 @@
     display: grid;
     grid-template-columns: minmax(230px, 1fr) minmax(280px, 1.25fr);
     gap: 24px;
-    padding: 18px 0;
+    padding: 20px 0;
     text-decoration: none;
   }
 
-  .legacy .reality-editorial .source-list a:hover strong,.legacy 
+  .legacy .reality-editorial .source-list a:hover strong,.legacy
   .reality-editorial .source-list a:focus-visible strong {
     text-decoration: underline;
     text-underline-offset: 4px;
@@ -457,13 +457,13 @@
 
   .legacy .reality-editorial .source-list strong {
     color: var(--reality-navy);
-    font-size: 0.9rem;
+    font-size: var(--fs-body);
     line-height: 1.7;
   }
 
   .legacy .reality-editorial .source-list span {
-    color: #536678;
-    font-size: 0.84rem;
+    color: var(--navy);
+    font-size: var(--fs-body);
     line-height: 1.75;
   }
 
@@ -471,13 +471,13 @@
     margin: 24px 0 0;
     padding-left: 16px;
     border-left: 3px solid var(--reality-gold);
-    font-size: 0.86rem;
+    font-size: var(--fs-body);
   }
 
   .legacy .reality-editorial .reality-summary {
-    padding: 62px 0 66px;
+    padding: 64px 0 68px;
     border-top: 1px solid var(--reality-line);
-    background: #e9eef2;
+    background: var(--paper-alt);
   }
 
   .legacy .reality-editorial .reality-summary > .wrap > p:not(.section-label) {
@@ -490,14 +490,14 @@
     flex-wrap: wrap;
     gap: 0;
     margin-top: 28px;
-    padding-top: 18px;
-    border-top: 1px solid #bfcbd5;
+    padding-top: 20px;
+    border-top: 1px solid var(--line-strong);
   }
 
   .legacy .reality-editorial .next-links a {
     position: relative;
-    padding: 5px 25px 5px 0;
-    font-size: 0.86rem;
+    padding: 4px 24px 4px 0;
+    font-size: var(--fs-body);
     font-weight: 800;
   }
 
@@ -505,33 +505,33 @@
     content: "/";
     position: absolute;
     right: 11px;
-    color: #8796a4;
+    color: var(--ink-sub);
     font-weight: 400;
   }
 
-  .legacy .reality-editorial a:focus-visible,.legacy 
+  .legacy .reality-editorial a:focus-visible,.legacy
   .reality-editorial [tabindex="0"]:focus-visible {
-    outline: 3px solid #df9e28;
+    outline: 3px solid var(--gold);
     outline-offset: 3px;
   }
 
   @media (max-width: 720px) {
-    .legacy .reality-editorial .reality-hero .wrap,.legacy 
-    .reality-editorial .reality-intro,.legacy 
-    .reality-editorial .reality-section > .wrap,.legacy 
+    .legacy .reality-editorial .reality-hero .wrap,.legacy
+    .reality-editorial .reality-intro,.legacy
+    .reality-editorial .reality-section > .wrap,.legacy
     .reality-editorial .reality-summary > .wrap {
       width: min(calc(100% - 30px), 920px);
     }
 
     .legacy .reality-editorial .reality-hero {
-      padding: 58px 0 52px;
+      padding: 60px 0 52px;
       background:
         linear-gradient(90deg, rgba(7, 24, 42, 0.95), rgba(7, 24, 42, 0.77)),
         url("../../assets/slides/1.jpg") center / cover;
     }
 
     .legacy .reality-editorial .reality-intro {
-      padding: 46px 0 44px;
+      padding: 48px 0 44px;
     }
 
     .legacy .reality-editorial .reality-section {
@@ -549,12 +549,12 @@
 
     .legacy .reality-editorial .source-list a {
       grid-template-columns: 1fr;
-      gap: 5px;
+      gap: 4px;
     }
 
-    .legacy .reality-editorial .reconstruction-paper,.legacy 
+    .legacy .reality-editorial .reconstruction-paper,.legacy
     .reality-editorial .basis-note {
-      padding: 19px 17px;
+      padding: 20px 16px;
     }
 
     .legacy .reality-editorial .detail-link {
@@ -563,13 +563,13 @@
   }
 
   @media (max-width: 480px) {
-    .legacy .reality-editorial .page-index a,.legacy 
+    .legacy .reality-editorial .page-index a,.legacy
     .reality-editorial .next-links a {
       width: 100%;
       padding-right: 0;
     }
 
-    .legacy .reality-editorial .page-index a::after,.legacy 
+    .legacy .reality-editorial .page-index a::after,.legacy
     .reality-editorial .next-links a::after {
       display: none;
     }
@@ -579,7 +579,7 @@
     }
 
     .legacy .reality-editorial .sample-record dd {
-      padding-top: 6px;
+      padding-top: 8px;
     }
   }
 

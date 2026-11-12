@@ -2,16 +2,16 @@
   /* Site-wide open content layout.
    Cards are reserved for controls and genuinely self-contained interactive UI. */
   .legacy {
-    --open-content-line: #d7e0e9;
-    --open-content-strong: #17324f;
+    --open-content-line: var(--paper-alt);
+    --open-content-strong: var(--navy-deep);
   }
 
   .legacy:has(.legacy-main) {
-    background: #fff;
+    background: var(--paper);
   }
 
   /* Standalone Google Sites examples do not use a <main> wrapper. */
-  .legacy .wrap > .box,.legacy 
+  .legacy .wrap > .box,.legacy
   .wrap > .grid > .card {
     margin-left: 0;
     margin-right: 0;
@@ -118,7 +118,7 @@
       .mini,
       .stat
     ) {
-    padding: 22px 0;
+    padding: 24px 0;
   }
 
   .legacy
@@ -154,7 +154,7 @@
     padding: 16px 0 16px 20px;
     background: transparent;
     border: 0;
-    border-left: 4px solid #b68a1f;
+    border-left: 4px solid var(--gold);
     border-radius: 0;
     box-shadow: none;
     transform: none;
