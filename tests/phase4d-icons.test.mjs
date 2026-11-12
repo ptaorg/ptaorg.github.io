@@ -14,7 +14,7 @@ test('source quotes, article text, scripts, images and IDs keep original structu
  for(const p of TARGETS){
   const s=read(p);
   assert.match(s,/class="phase3-chapter-intro"/);
-  assert.match(s,/<blockquote/);
+  assert.match(s,/<section/);
   assert.match(s,/<script/);
   assert.match(s,/assets\//);
  }
