@@ -1,12 +1,12 @@
 
   .legacy.ri-editorial {
-    --ri-ink: #182635;
-    --ri-muted: #5b6875;
-    --ri-navy: #17324d;
-    --ri-gold: #b98b2f;
-    --ri-paper: #f5f3ed;
-    --ri-line: #cfd8df;
-    background: #fff;
+    --ri-ink: var(--navy-deep);
+    --ri-muted: var(--navy-mid);
+    --ri-navy: var(--navy-deep);
+    --ri-gold: var(--navy-deep);
+    --ri-paper: var(--paper-alt);
+    --ri-line: var(--tint-strong);
+    background: var(--paper);
     color: var(--ri-ink);
   }
 
@@ -25,11 +25,11 @@
 
   .legacy.ri-editorial .ri-hero {
     position: relative;
-    padding: clamp(58px, 7vw, 82px) 0 clamp(54px, 6vw, 72px);
+    padding: clamp(60px, 7vw, 84px) 0 clamp(56px, 6vw, 72px);
     background: var(--ri-paper);
     color: var(--ri-ink);
-    border-top: 1px solid #e1ddd2;
-    border-bottom: 1px solid #d8d4c9;
+    border-top: 1px solid var(--line-strong);
+    border-bottom: 1px solid var(--line-strong);
   }
 
   .legacy.ri-editorial .ri-hero::before {
@@ -43,20 +43,20 @@
   .legacy.ri-editorial .ri-kicker {
     width: fit-content;
     margin: 0 0 20px;
-    padding: 0 0 7px;
+    padding: 0 0 8px;
     color: var(--ri-navy);
     border-bottom: 2px solid var(--ri-gold);
-    font-size: 0.78rem;
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.12em;
   }
 
   .legacy.ri-editorial .ri-hero h1 {
     max-width: 18em;
-    margin: 0 0 22px;
+    margin: 0 0 24px;
     color: var(--ri-navy);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(2.15rem, 4.3vw, 3.45rem);
+    font-size: clamp(var(--fs-h1), 4.3vw, var(--fs-h1));
     line-height: 1.25;
     letter-spacing: -0.03em;
   }
@@ -64,8 +64,8 @@
   .legacy.ri-editorial .ri-hero > .ri-wrap > p:not(.ri-kicker):not(.ri-hero-meta) {
     max-width: 49rem;
     margin: 0;
-    color: #354657;
-    font-size: clamp(0.98rem, 1.35vw, 1.06rem);
+    color: var(--navy-deep);
+    font-size: clamp(var(--fs-body), 1.35vw, var(--fs-h3));
     font-weight: 500;
     line-height: 2;
   }
@@ -73,15 +73,15 @@
   .legacy.ri-editorial .ri-hero-meta {
     max-width: 49rem;
     margin: 20px 0 0;
-    padding-top: 13px;
-    color: #66717c;
-    border-top: 1px solid #d8d4c9;
-    font-size: 0.78rem;
+    padding-top: 12px;
+    color: var(--ink-sub);
+    border-top: 1px solid var(--line-strong);
+    font-size: var(--fs-small);
     line-height: 1.7;
   }
 
   .legacy.ri-editorial .ri-toc {
-    background: #fff;
+    background: var(--paper);
     border-bottom: 1px solid var(--ri-line);
   }
 
@@ -89,23 +89,23 @@
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    gap: 0 22px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    gap: 0 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   .legacy.ri-editorial .ri-toc span {
     color: var(--ri-muted);
-    font-size: 0.78rem;
+    font-size: var(--fs-small);
     font-weight: 800;
     letter-spacing: 0.08em;
   }
 
   .legacy.ri-editorial .ri-toc a {
-    padding: 5px 0;
+    padding: 4px 0;
     color: var(--ri-navy);
     border-bottom: 1px solid transparent;
-    font-size: 0.82rem;
+    font-size: var(--fs-body);
     font-weight: 800;
     text-decoration: none;
   }
@@ -115,7 +115,7 @@
   }
 
   .legacy.ri-editorial .ri-section {
-    padding: 58px 0;
+    padding: 60px 0;
     border-bottom: 1px solid var(--ri-line);
   }
 
@@ -126,8 +126,8 @@
 
   .legacy.ri-editorial .ri-section-number {
     margin: 0 0 12px;
-    color: #8a6700;
-    font-size: 0.78rem;
+    color: var(--gold);
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.04em;
   }
@@ -136,15 +136,15 @@
     margin: 0 0 20px;
     color: var(--ri-navy);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(1.45rem, 2.8vw, 2rem);
+    font-size: clamp(var(--fs-h2), 2.8vw, var(--fs-h1));
     line-height: 1.45;
   }
 
   .legacy.ri-editorial .ri-section > p:not(.ri-section-number):not(.ri-emphasis),.legacy.ri-editorial .ri-step > p:not(.ri-step-label) {
     max-width: 52rem;
-    margin: 0 0 18px;
-    color: #334155;
-    font-size: 0.96rem;
+    margin: 0 0 20px;
+    color: var(--navy-deep);
+    font-size: var(--fs-body);
     line-height: 2.08;
   }
 
@@ -154,11 +154,11 @@
 
   .legacy.ri-editorial .ri-emphasis {
     margin: 28px 0 0;
-    padding: 18px 20px;
-    color: #172b43;
-    background: #f4f7fb;
+    padding: 20px 20px;
+    color: var(--navy-deep);
+    background: var(--paper);
     border-left: 4px solid var(--ri-gold);
-    font-size: 0.92rem;
+    font-size: var(--fs-body);
     line-height: 2;
   }
 
@@ -179,7 +179,7 @@
     display: grid;
     grid-template-columns: 190px minmax(0, 1fr);
     gap: 24px;
-    padding: 17px 0 17px 46px;
+    padding: 16px 0 16px 48px;
     counter-increment: ri-criterion;
     border-bottom: 1px solid var(--ri-line);
   }
@@ -189,8 +189,8 @@
     position: absolute;
     top: 18px;
     left: 0;
-    color: #8a6700;
-    font-size: 0.76rem;
+    color: var(--gold);
+    font-size: var(--fs-small);
     font-weight: 900;
   }
 
@@ -200,33 +200,33 @@
   }
 
   .legacy.ri-editorial .ri-criteria span {
-    color: #475569;
-    font-size: 0.9rem;
+    color: var(--navy-deep);
+    font-size: var(--fs-body);
     line-height: 1.9;
   }
 
   .legacy.ri-editorial .ri-step {
-    padding: 32px 0 10px;
+    padding: 32px 0 12px;
     border-top: 2px solid var(--ri-navy);
   }
 
   .legacy.ri-editorial .ri-step + .ri-step {
-    margin-top: 34px;
+    margin-top: 36px;
   }
 
   .legacy.ri-editorial .ri-step-label {
     margin: 0 0 8px;
-    color: #8a6700;
-    font-size: 0.74rem;
+    color: var(--gold);
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.06em;
   }
 
   .legacy.ri-editorial .ri-step h3 {
-    margin: 0 0 14px;
+    margin: 0 0 16px;
     color: var(--ri-navy);
     font-family: "Noto Serif JP", serif;
-    font-size: 1.18rem;
+    font-size: var(--fs-h3);
     line-height: 1.55;
   }
 
@@ -247,14 +247,14 @@
     grid-template-columns: 250px minmax(0, 1fr);
     gap: 24px;
     align-items: baseline;
-    padding: 15px 0;
+    padding: 16px 0;
     color: var(--ri-navy);
     text-decoration: none;
   }
 
   .legacy.ri-editorial .ri-source-list strong {
     font-family: "Noto Serif JP", serif;
-    font-size: 0.96rem;
+    font-size: var(--fs-body);
     line-height: 1.7;
     text-decoration: underline;
     text-decoration-thickness: 1px;
@@ -262,13 +262,13 @@
   }
 
   .legacy.ri-editorial .ri-source-list span {
-    color: #536170;
-    font-size: 0.86rem;
+    color: var(--navy);
+    font-size: var(--fs-body);
     line-height: 1.8;
   }
 
   .legacy.ri-editorial .ri-source-list a:hover strong,.legacy.ri-editorial .ri-source-list a:focus-visible strong {
-    color: #8a4b12;
+    color: var(--navy);
   }
 
   .legacy.ri-editorial .ri-records {
@@ -291,8 +291,8 @@
 
   .legacy.ri-editorial .ri-records dd {
     margin: 0;
-    color: #475569;
-    font-size: 0.9rem;
+    color: var(--navy-deep);
+    font-size: var(--fs-body);
     line-height: 1.9;
   }
 
@@ -318,16 +318,16 @@
     }
 
     .legacy.ri-editorial .ri-section {
-      padding: 46px 0;
+      padding: 48px 0;
     }
 
     .legacy.ri-editorial .ri-criteria li,.legacy.ri-editorial .ri-source-list a,.legacy.ri-editorial .ri-records > div {
       grid-template-columns: 1fr;
-      gap: 5px;
+      gap: 4px;
     }
 
     .legacy.ri-editorial .ri-criteria li {
-      padding-left: 38px;
+      padding-left: 40px;
     }
 
     .legacy.ri-editorial .ri-emphasis {

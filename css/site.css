@@ -5,10 +5,10 @@
    PTA適正化推進委員会 — Global Stylesheet v3
    =================================================== */
   .legacy {
-    --navy: var(--navy-deep);
+
     --navy-2: var(--navy-deep);
     --navy-3: var(--navy-deep);
-    --gold: var(--navy-deep);
+
     --gold-lt: var(--tint-strong);
     --cream: var(--paper-alt);
     --red: var(--navy);
@@ -17,10 +17,10 @@
     --blue: var(--navy-mid);
     --text: var(--navy-deep);
     --text-soft: var(--navy-deep);
-    --line: var(--paper-alt);
+
     --bg: var(--paper);
     --surface: var(--paper);
-    --radius: 16px;
+
     --radius-sm: 10px;
     --shadow-sm: 0 4px 16px color-mix(in srgb,var(--navy-deep) 7%,transparent);
     --shadow-md: 0 12px 36px color-mix(in srgb,var(--navy-deep) 12%,transparent);
@@ -36,8 +36,8 @@
     --color-surface-soft: var(--paper);
     --transition: var(--t);
   }
-  .legacy *,.legacy 
-  *::before,.legacy 
+  .legacy *,.legacy
+  *::before,.legacy
   *::after {
     box-sizing: border-box;
     margin: 0;
@@ -61,9 +61,9 @@
     max-width: 100%;
     display: block;
   }
-  .legacy button,.legacy 
-  input,.legacy 
-  select,.legacy 
+  .legacy button,.legacy
+  input,.legacy
+  select,.legacy
   textarea {
     font: inherit;
   }
@@ -222,7 +222,7 @@
     border-radius: var(--radius-md);
     transition: var(--t);
   }
-  .legacy .nav-link:hover,.legacy 
+  .legacy .nav-link:hover,.legacy
   .nav-link.active {
     color: var(--gold);
     background: color-mix(in srgb,var(--navy-deep) 9%,transparent);
@@ -261,14 +261,14 @@
     right: 0;
     transform: translateY(10px);
   }
-  .legacy .nav-item:hover .mega-menu,.legacy 
+  .legacy .nav-item:hover .mega-menu,.legacy
   .nav-item.is-open .mega-menu {
     display: grid;
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
   }
-  .legacy .desktop-nav .nav-item.has-dropdown:nth-last-of-type(-n + 2):hover .mega-menu,.legacy 
+  .legacy .desktop-nav .nav-item.has-dropdown:nth-last-of-type(-n + 2):hover .mega-menu,.legacy
   .desktop-nav
     .nav-item.has-dropdown:nth-last-of-type(-n + 2).is-open
     .mega-menu {
@@ -1006,7 +1006,7 @@
     color: var(--text);
     margin-bottom: 16px;
   }
-  .legacy .pta-report-container ul,.legacy 
+  .legacy .pta-report-container ul,.legacy
   .pta-report-container ol {
     margin: 0 0 16px 20px;
     font-size: var(--fs-body);
@@ -1086,7 +1086,7 @@
     line-height: 1.7;
     vertical-align: top;
   }
-  .legacy .source-type-table tbody tr:last-child th,.legacy 
+  .legacy .source-type-table tbody tr:last-child th,.legacy
   .source-type-table tbody tr:last-child td {
     border-bottom: none;
   }
@@ -1543,10 +1543,10 @@
   }
 
   /* Accordion badges */
-  .legacy .badge-jishu,.legacy 
-  .badge-iinkai,.legacy 
-  .badge-misei,.legacy 
-  .badge-special,.legacy 
+  .legacy .badge-jishu,.legacy
+  .badge-iinkai,.legacy
+  .badge-misei,.legacy
+  .badge-special,.legacy
   .badge-violation {
     display: inline-block;
     font-size: var(--fs-small);
@@ -1660,7 +1660,7 @@
    ================================================= */
   @media (max-width: 600px) {
     /* .pg ページ共通の2カラムインライングリッドを1カラム化 */
-    .legacy [style*="grid-template-columns:1fr 1fr"],.legacy 
+    .legacy [style*="grid-template-columns:1fr 1fr"],.legacy
     [style*="grid-template-columns: 1fr 1fr"] {
       grid-template-columns: 1fr;
     }
@@ -1677,7 +1677,7 @@
       overflow-x: auto;
       white-space: nowrap;
     }
-    .legacy .check-table th,.legacy 
+    .legacy .check-table th,.legacy
     .check-table td {
       padding: 8px 12px;
     }
@@ -1870,7 +1870,7 @@
     line-height: 1.32;
   }
 
-  .legacy .officer-visual-lead,.legacy 
+  .legacy .officer-visual-lead,.legacy
   .officer-visual-note {
     max-width: 860px;
     line-height: 1.9;
@@ -2038,12 +2038,12 @@
   }
 
   @media (max-width: 860px) {
-    .legacy .officer-visual-card,.legacy 
+    .legacy .officer-visual-card,.legacy
     .officer-visual-card:nth-child(even) {
       grid-template-columns: 1fr;
     }
 
-    .legacy .officer-visual-card:nth-child(even) .officer-visual-text,.legacy 
+    .legacy .officer-visual-card:nth-child(even) .officer-visual-text,.legacy
     .officer-visual-card:nth-child(even) .officer-visual-figure {
       order: initial;
     }
@@ -2067,7 +2067,7 @@
       border-radius: var(--radius-md);
     }
 
-    .legacy .officer-visual-related a,.legacy 
+    .legacy .officer-visual-related a,.legacy
     .officer-visual-cta-links a {
       width: 100%;
       justify-content: center;
@@ -2132,7 +2132,7 @@
     line-height: 1.45;
   }
 
-  .legacy .guidebook-text-body .gb-chapter-meta,.legacy 
+  .legacy .guidebook-text-body .gb-chapter-meta,.legacy
   .guidebook-text-body .gb-chapter-state {
     display: inline-flex;
     align-items: center;
@@ -2415,7 +2415,7 @@
   }
 
   @media (max-width: 860px) {
-    .legacy .officer-first-check-grid,.legacy 
+    .legacy .officer-first-check-grid,.legacy
     .officer-visual-cta-with-image {
       grid-template-columns: 1fr;
     }
@@ -2493,7 +2493,7 @@
     z-index: 1;
   }
 
-  .legacy .page-hero--photo h1,.legacy 
+  .legacy .page-hero--photo h1,.legacy
   .page-hero--photo p {
     color: var(--paper);
     text-shadow: 0 2px 10px color-mix(in srgb,var(--navy-deep) 42%,transparent);
@@ -2563,10 +2563,10 @@
     text-decoration: none;
   }
 
-  .legacy .document-brief-hero,.legacy 
-  .document-summary-card,.legacy 
-  .document-point-list,.legacy 
-  .document-original,.legacy 
+  .legacy .document-brief-hero,.legacy
+  .document-summary-card,.legacy
+  .document-point-list,.legacy
+  .document-original,.legacy
   .document-list-panel {
     background: var(--paper);
     border: 1px solid var(--line);
@@ -2639,16 +2639,16 @@
     margin-top: 20px;
   }
 
-  .legacy .document-summary-card,.legacy 
-  .document-point-list,.legacy 
-  .document-original,.legacy 
+  .legacy .document-summary-card,.legacy
+  .document-point-list,.legacy
+  .document-original,.legacy
   .document-list-panel {
     padding: clamp(24px, 4vw, 32px);
   }
 
-  .legacy .document-summary-card h2,.legacy 
-  .document-point-list h2,.legacy 
-  .document-original h2,.legacy 
+  .legacy .document-summary-card h2,.legacy
+  .document-point-list h2,.legacy
+  .document-original h2,.legacy
   .document-list-panel h2 {
     color: var(--navy);
     font-family: "Noto Serif JP", serif;
@@ -2657,20 +2657,20 @@
     margin: 0 0 16px;
   }
 
-  .legacy .document-summary-card ul,.legacy 
+  .legacy .document-summary-card ul,.legacy
   .document-point-list ul {
     padding-left: 1.2rem;
     margin: 0;
   }
 
-  .legacy .document-summary-card li,.legacy 
+  .legacy .document-summary-card li,.legacy
   .document-point-list li {
     margin: 8px 0;
     line-height: 1.8;
   }
 
-  .legacy .document-point-list p,.legacy 
-  .document-original p,.legacy 
+  .legacy .document-point-list p,.legacy
+  .document-original p,.legacy
   .document-list-panel p {
     color: var(--text);
     line-height: 1.85;
@@ -2770,27 +2770,27 @@
   }
 
   /* === Parent guide document-first flow === */
-  .legacy .parent-lead-story,.legacy 
-  .parent-pattern-list,.legacy 
-  .parent-example-section,.legacy 
-  .parent-document-check,.legacy 
-  .parent-check-app,.legacy 
+  .legacy .parent-lead-story,.legacy
+  .parent-pattern-list,.legacy
+  .parent-example-section,.legacy
+  .parent-document-check,.legacy
+  .parent-check-app,.legacy
   .parent-next-action {
     padding: 4.25rem 0;
   }
 
-  .legacy .parent-lead-story,.legacy 
-  .parent-example-section,.legacy 
+  .legacy .parent-lead-story,.legacy
+  .parent-example-section,.legacy
   .parent-next-action {
     background: var(--paper);
   }
 
-  .legacy .parent-pattern-list,.legacy 
+  .legacy .parent-pattern-list,.legacy
   .parent-document-check {
     background: var(--paper);
   }
 
-  .legacy .parent-flow-inner,.legacy 
+  .legacy .parent-flow-inner,.legacy
   .parent-lead-story-inner {
     width: min(calc(100% - 2.5rem), 1040px);
     margin: 0 auto;
@@ -2813,7 +2813,7 @@
     text-transform: uppercase;
   }
 
-  .legacy .parent-lead-story h2,.legacy 
+  .legacy .parent-lead-story h2,.legacy
   .parent-check-app-card h2 {
     margin: 0 0 1rem;
     color: var(--navy, var(--navy-deep));
@@ -2822,8 +2822,8 @@
     line-height: 1.35;
   }
 
-  .legacy .parent-lead-story p,.legacy 
-  .parent-example-text p,.legacy 
+  .legacy .parent-lead-story p,.legacy
+  .parent-example-text p,.legacy
   .parent-check-app-card p {
     color: var(--text, var(--navy-deep));
     line-height: 1.95;
@@ -2853,7 +2853,7 @@
     background: var(--paper);
   }
 
-  .legacy .parent-pattern-item span,.legacy 
+  .legacy .parent-pattern-item span,.legacy
   .parent-checklist span {
     display: inline-flex;
     align-items: center;
@@ -2867,7 +2867,7 @@
     font-weight: 900;
   }
 
-  .legacy .parent-pattern-item p,.legacy 
+  .legacy .parent-pattern-item p,.legacy
   .parent-checklist p {
     margin: 0.12rem 0 0;
     color: var(--text, var(--navy-deep));
@@ -3008,7 +3008,7 @@
     box-shadow: none;
   }
 
-  .legacy .parent-check-app-card h2,.legacy 
+  .legacy .parent-check-app-card h2,.legacy
   .parent-check-app-card p {
     color: var(--paper);
   }
@@ -3075,10 +3075,10 @@
   }
 
   @media (max-width: 900px) {
-    .legacy .parent-pattern-grid,.legacy 
-    .parent-example-case,.legacy 
-    .parent-checklist,.legacy 
-    .parent-check-app-card,.legacy 
+    .legacy .parent-pattern-grid,.legacy
+    .parent-example-case,.legacy
+    .parent-checklist,.legacy
+    .parent-check-app-card,.legacy
     .parent-related-links {
       grid-template-columns: 1fr;
     }
@@ -3089,23 +3089,23 @@
   }
 
   @media (max-width: 640px) {
-    .legacy .parent-lead-story,.legacy 
-    .parent-pattern-list,.legacy 
-    .parent-example-section,.legacy 
-    .parent-document-check,.legacy 
-    .parent-check-app,.legacy 
+    .legacy .parent-lead-story,.legacy
+    .parent-pattern-list,.legacy
+    .parent-example-section,.legacy
+    .parent-document-check,.legacy
+    .parent-check-app,.legacy
     .parent-next-action {
       padding: 3rem 0;
     }
 
-    .legacy .parent-flow-inner,.legacy 
-    .parent-lead-story-inner,.legacy 
-    .parent-example-case,.legacy 
+    .legacy .parent-flow-inner,.legacy
+    .parent-lead-story-inner,.legacy
+    .parent-example-case,.legacy
     .parent-check-app-card {
       width: min(calc(100% - 1.5rem), 1040px);
     }
 
-    .legacy .parent-example-case,.legacy 
+    .legacy .parent-example-case,.legacy
     .parent-check-app-card {
       padding: 1.1rem;
       border-radius: var(--radius-md);
@@ -3213,14 +3213,14 @@
   .legacy .editorial-panel--gold {
     border-left-color: var(--gold);
   }
-  .legacy .editorial-panel h2,.legacy 
+  .legacy .editorial-panel h2,.legacy
   .editorial-section h2 {
     font-family: "Noto Serif JP", serif;
     color: var(--navy);
     font-weight: 900;
     line-height: 1.45;
   }
-  .legacy .editorial-panel p,.legacy 
+  .legacy .editorial-panel p,.legacy
   .editorial-section p {
     line-height: 2.05;
   }
@@ -3345,12 +3345,12 @@
   .legacy .editorial-link-list a:hover {
     background: var(--paper);
   }
-  .legacy .documents-page .documents-card,.legacy 
+  .legacy .documents-page .documents-card,.legacy
   .admin-materials-page .pdf-card {
     box-shadow: none;
   }
   @media (max-width: 720px) {
-    .legacy .editorial-panel,.legacy 
+    .legacy .editorial-panel,.legacy
     .editorial-section {
       padding: 24px 20px;
       border-radius: var(--radius-md);
@@ -3375,7 +3375,7 @@
   }
 
   /* Stage3: proper-management / archive readability refinements */
-  .legacy .proper-management-page .pm-main,.legacy 
+  .legacy .proper-management-page .pm-main,.legacy
   .national-archive-page .legacy-main {
     background: var(--paper-alt);
   }
@@ -3485,11 +3485,11 @@
   .legacy .homepage-method-note strong {
     color: var(--navy);
   }
-  .legacy .entry-section .entry-section-kicker,.legacy 
+  .legacy .entry-section .entry-section-kicker,.legacy
   .feature-duo-section .section-kicker {
     letter-spacing: 0.12em;
   }
-  .legacy .entry-section .entry-section-lead,.legacy 
+  .legacy .entry-section .entry-section-lead,.legacy
   .feature-duo-section .section-lead {
     max-width: 900px;
     line-height: 2;
@@ -3697,10 +3697,10 @@
     font-size: var(--fs-body);
     line-height: 1.75;
   }
-  .legacy .parent-editorial-brief,.legacy 
-  .pta-editorial-brief,.legacy 
-  .fee-editorial-brief,.legacy 
-  .personnel-editorial-brief,.legacy 
+  .legacy .parent-editorial-brief,.legacy
+  .pta-editorial-brief,.legacy
+  .fee-editorial-brief,.legacy
+  .personnel-editorial-brief,.legacy
   .facilities-editorial-brief {
     width: min(1120px, calc(100% - 40px));
   }
@@ -3726,24 +3726,24 @@
   }
 
   /* Stage9: case / reality editorial caution blocks */
-  .legacy .case-caution-note,.legacy 
+  .legacy .case-caution-note,.legacy
   .reality-reading-note {
     margin: 32px 0 40px;
     border-left: 6px solid var(--blue);
     background: var(--paper-alt);
     box-shadow: none;
   }
-  .legacy .case-caution-note h2,.legacy 
+  .legacy .case-caution-note h2,.legacy
   .reality-reading-note h2 {
     background: var(--navy-deep);
     color: var(--c-caution-bg);
   }
-  .legacy .case-caution-note p,.legacy 
+  .legacy .case-caution-note p,.legacy
   .reality-reading-note p {
     color: var(--text);
     font-size: var(--fs-body);
   }
-  .legacy .reality-page .problem-note-text strong,.legacy 
+  .legacy .reality-page .problem-note-text strong,.legacy
   .case-caution-note strong {
     color: var(--navy);
   }
@@ -3754,14 +3754,14 @@
    カード増殖ではなく本文・章見出し・資料ブロックの見え方を整える。
    =================================================== */
   .legacy {
-    --paper: var(--paper);
+
     --paper-soft: var(--paper);
-    --ink: var(--navy-deep);
+
     --muted: var(--navy-mid);
     --rule: var(--line);
     --deep: var(--navy-deep);
     --deep-2: var(--navy-deep);
-    --accent: var(--navy-deep);
+
     --accent-soft: var(--paper-alt);
   }
   .legacy {
@@ -3773,14 +3773,14 @@
   .legacy::selection {
     background: color-mix(in srgb,var(--navy-deep) 35%,transparent);
   }
-  .legacy .wrap,.legacy 
-  .container,.legacy 
-  .nav-container,.legacy 
-  .footer-inner,.legacy 
+  .legacy .wrap,.legacy
+  .container,.legacy
+  .nav-container,.legacy
+  .footer-inner,.legacy
   .copyright {
     width: min(calc(100% - 48px), 1180px);
   }
-  .legacy .wrap-narrow,.legacy 
+  .legacy .wrap-narrow,.legacy
   .container-narrow {
     width: min(calc(100% - 48px), 900px);
   }
@@ -3812,7 +3812,7 @@
     border-radius: var(--radius-md);
     color: var(--navy-deep);
   }
-  .legacy .nav-link:hover,.legacy 
+  .legacy .nav-link:hover,.legacy
   .nav-link.active {
     background: var(--paper-alt);
     color: var(--navy-deep);
@@ -3822,8 +3822,8 @@
     border: 1px solid color-mix(in srgb,var(--navy) 15%,transparent);
     box-shadow: none;
   }
-  .legacy .btn-outline,.legacy 
-  .btn-soft,.legacy 
+  .legacy .btn-outline,.legacy
+  .btn-soft,.legacy
   .btn-navy {
     box-shadow: none;
   }
@@ -3898,34 +3898,34 @@
       linear-gradient(90deg, color-mix(in srgb,var(--navy-deep) 4.5%,transparent) 1px, transparent 1px);
     background-size: 42px 42px;
   }
-  .legacy .page-hero-kicker,.legacy 
-  .section-kicker,.legacy 
+  .legacy .page-hero-kicker,.legacy
+  .section-kicker,.legacy
   .section-eyebrow {
     background: var(--paper);
     border: 1px solid color-mix(in srgb,var(--navy-deep) 12%,transparent);
     color: var(--navy-deep);
     box-shadow: none;
   }
-  .legacy .page-hero h1,.legacy 
+  .legacy .page-hero h1,.legacy
   .section-title {
     letter-spacing: 0.015em;
     color: var(--navy-deep);
   }
-  .legacy .page-hero p,.legacy 
+  .legacy .page-hero p,.legacy
   .section-lead {
     color: var(--navy-deep);
     line-height: 2;
     font-size: var(--fs-body);
   }
-  .legacy .lead-section,.legacy 
-  .board-guide-section,.legacy 
-  .issue-section,.legacy 
+  .legacy .lead-section,.legacy
+  .board-guide-section,.legacy
+  .issue-section,.legacy
   .documents-section {
     position: relative;
   }
-  .legacy .lead-section::before,.legacy 
-  .board-guide-section::before,.legacy 
-  .issue-section::before,.legacy 
+  .legacy .lead-section::before,.legacy
+  .board-guide-section::before,.legacy
+  .issue-section::before,.legacy
   .documents-section::before {
     content: "";
     display: block;
@@ -3936,11 +3936,11 @@
   }
 
   /* Editorial components: stronger chapter identity, gentler panels */
-  .legacy .editorial-bluebar,.legacy 
-  .editorial-toc-title,.legacy 
-  .editorial-brief-band,.legacy 
-  .homepage-method-statement,.legacy 
-  .case-caution-note h2,.legacy 
+  .legacy .editorial-bluebar,.legacy
+  .editorial-toc-title,.legacy
+  .editorial-brief-band,.legacy
+  .homepage-method-statement,.legacy
+  .case-caution-note h2,.legacy
   .reality-reading-note h2 {
     background: var(--navy-deep);
   }
@@ -3948,16 +3948,16 @@
     border-radius: var(--radius-md);
     box-shadow: none;
   }
-  .legacy .editorial-panel,.legacy 
-  .editorial-section,.legacy 
-  .editorial-brief,.legacy 
-  .timeline-reading-note,.legacy 
-  .case-caution-note,.legacy 
+  .legacy .editorial-panel,.legacy
+  .editorial-section,.legacy
+  .editorial-brief,.legacy
+  .timeline-reading-note,.legacy
+  .case-caution-note,.legacy
   .reality-reading-note {
     border-color: color-mix(in srgb,var(--c-caution) 11%,transparent);
     box-shadow: none;
   }
-  .legacy .editorial-panel,.legacy 
+  .legacy .editorial-panel,.legacy
   .editorial-section {
     border-radius: var(--radius-md);
   }
@@ -3966,14 +3966,14 @@
     border-left-color: var(--deep);
     border-radius: var(--radius-md);
   }
-  .legacy .editorial-flow li::before,.legacy 
+  .legacy .editorial-flow li::before,.legacy
   .homepage-reading-flow li::before {
     background: var(--navy-deep);
     color: var(--paper);
     border: 0;
   }
-  .legacy .editorial-matrix,.legacy 
-  .editorial-flow,.legacy 
+  .legacy .editorial-matrix,.legacy
+  .editorial-flow,.legacy
   .editorial-toc {
     border-color: color-mix(in srgb,var(--navy-deep) 12%,transparent);
     box-shadow: none;
@@ -3981,62 +3981,62 @@
   .legacy .editorial-matrix-term {
     background: var(--paper-alt);
   }
-  .legacy .editorial-warning,.legacy 
+  .legacy .editorial-warning,.legacy
   .alert-warning {
     background: var(--paper-alt);
   }
 
   /* Cards and resource blocks: consistent, quieter, not portal-like */
-  .legacy .card,.legacy 
-  .pdf-card,.legacy 
-  .related-link-card,.legacy 
-  .board-guide-card,.legacy 
-  .documents-card,.legacy 
-  .cat-doc-item,.legacy 
-  .archive-school-card,.legacy 
-  .yokomusubi-card,.legacy 
-  .ref-item,.legacy 
-  .case-block,.legacy 
-  .case-item,.legacy 
-  .risk-item,.legacy 
-  .scope-item,.legacy 
-  .check-item,.legacy 
-  .pm-compare-item,.legacy 
-  .editorial-brief-point,.legacy 
+  .legacy .card,.legacy
+  .pdf-card,.legacy
+  .related-link-card,.legacy
+  .board-guide-card,.legacy
+  .documents-card,.legacy
+  .cat-doc-item,.legacy
+  .archive-school-card,.legacy
+  .yokomusubi-card,.legacy
+  .ref-item,.legacy
+  .case-block,.legacy
+  .case-item,.legacy
+  .risk-item,.legacy
+  .scope-item,.legacy
+  .check-item,.legacy
+  .pm-compare-item,.legacy
+  .editorial-brief-point,.legacy
   .homepage-method-body {
     border: 1px solid color-mix(in srgb,var(--c-caution) 11%,transparent);
     border-radius: var(--radius-md);
     box-shadow: none;
   }
-  .legacy .card:hover,.legacy 
-  .pdf-card:hover,.legacy 
-  .related-link-card:hover,.legacy 
-  .board-guide-card:hover,.legacy 
-  .documents-card:hover,.legacy 
-  .archive-school-card:hover,.legacy 
+  .legacy .card:hover,.legacy
+  .pdf-card:hover,.legacy
+  .related-link-card:hover,.legacy
+  .board-guide-card:hover,.legacy
+  .documents-card:hover,.legacy
+  .archive-school-card:hover,.legacy
   .cat-doc-item:hover {
     transform: translateY(-2px);
     box-shadow: none;
   }
-  .legacy .archive-school-card,.legacy 
-  .pdf-card,.legacy 
-  .related-link-card,.legacy 
-  .board-guide-card,.legacy 
-  .documents-card,.legacy 
+  .legacy .archive-school-card,.legacy
+  .pdf-card,.legacy
+  .related-link-card,.legacy
+  .board-guide-card,.legacy
+  .documents-card,.legacy
   .cat-doc-item {
     background: var(--paper-alt);
   }
-  .legacy .archive-school-card h3,.legacy 
-  .pdf-card h3,.legacy 
-  .related-link-card h3,.legacy 
-  .board-guide-card h3,.legacy 
+  .legacy .archive-school-card h3,.legacy
+  .pdf-card h3,.legacy
+  .related-link-card h3,.legacy
+  .board-guide-card h3,.legacy
   .documents-card h3 {
     color: var(--navy-deep);
     line-height: 1.55;
   }
-  .legacy .archive-evidence-links a,.legacy 
-  .editorial-link-list a,.legacy 
-  .related-link-card a,.legacy 
+  .legacy .archive-evidence-links a,.legacy
+  .editorial-link-list a,.legacy
+  .related-link-card a,.legacy
   .pdf-download-button {
     text-underline-offset: 3px;
   }
@@ -4057,14 +4057,14 @@
     color: var(--paper);
     font-weight: 900;
   }
-  .legacy th,.legacy 
+  .legacy th,.legacy
   td {
     padding: 12px 16px;
     border-bottom: 1px solid color-mix(in srgb,var(--navy-deep) 9%,transparent);
     vertical-align: top;
     line-height: 1.8;
   }
-  .legacy tr:last-child th,.legacy 
+  .legacy tr:last-child th,.legacy
   tr:last-child td {
     border-bottom: 0;
   }
@@ -4086,13 +4086,13 @@
     > section:not([class]) {
     scroll-margin-top: 96px;
   }
-  .legacy .gb-chapter,.legacy 
+  .legacy .gb-chapter,.legacy
   .chapter-content {
     border-radius: var(--radius-md);
     box-shadow: none;
   }
-  .legacy .faq-item,.legacy 
-  .faq-trigger,.legacy 
+  .legacy .faq-item,.legacy
+  .faq-trigger,.legacy
   .faq-q {
     border-radius: var(--radius-md);
   }
@@ -4113,21 +4113,21 @@
     color: var(--navy-deep);
     letter-spacing: 0.02em;
   }
-  .legacy .hero-content-wrap p,.legacy 
+  .legacy .hero-content-wrap p,.legacy
   .lead-section p {
     line-height: 2.05;
   }
-  .legacy .fieldcase-section video,.legacy 
-  .fieldcase-section .video-frame,.legacy 
+  .legacy .fieldcase-section video,.legacy
+  .fieldcase-section .video-frame,.legacy
   .video-frame {
     border-radius: var(--radius-md);
     box-shadow: none;
     border: 1px solid color-mix(in srgb,var(--navy-deep) 12%,transparent);
     overflow: hidden;
   }
-  .legacy .entry-section,.legacy 
-  .feature-duo-section,.legacy 
-  .proper-section,.legacy 
+  .legacy .entry-section,.legacy
+  .feature-duo-section,.legacy
+  .proper-section,.legacy
   .updates-section {
     padding-top: 84px;
     padding-bottom: 84px;
@@ -4152,17 +4152,17 @@
   }
 
   /* Accessibility / focus */
-  .legacy a:focus-visible,.legacy 
-  button:focus-visible,.legacy 
-  input:focus-visible,.legacy 
+  .legacy a:focus-visible,.legacy
+  button:focus-visible,.legacy
+  input:focus-visible,.legacy
   summary:focus-visible {
     outline: 3px solid color-mix(in srgb,var(--gold) 85%,transparent);
     outline-offset: 3px;
     border-radius: var(--radius-md);
   }
   @media (prefers-reduced-motion: reduce) {
-    .legacy *,.legacy 
-    *::before,.legacy 
+    .legacy *,.legacy
+    *::before,.legacy
     *::after {
       transition: none;
       scroll-behavior: auto;
@@ -4171,12 +4171,12 @@
   }
 
   @media (max-width: 900px) {
-    .legacy .wrap,.legacy 
-    .container,.legacy 
-    .nav-container,.legacy 
-    .footer-inner,.legacy 
-    .copyright,.legacy 
-    .wrap-narrow,.legacy 
+    .legacy .wrap,.legacy
+    .container,.legacy
+    .nav-container,.legacy
+    .footer-inner,.legacy
+    .copyright,.legacy
+    .wrap-narrow,.legacy
     .container-narrow {
       width: min(calc(100% - 28px), 100%);
     }
@@ -4196,7 +4196,7 @@
       overflow-x: auto;
       white-space: normal;
     }
-    .legacy th,.legacy 
+    .legacy th,.legacy
     td {
       min-width: 180px;
     }
@@ -4402,7 +4402,7 @@
     font-size: var(--fs-body);
     line-height: 1.75;
   }
-  .legacy .compact-source-table table,.legacy 
+  .legacy .compact-source-table table,.legacy
   .compact-source-table .source-type-table {
     margin-top: 16px;
   }
@@ -4545,7 +4545,7 @@
     margin-bottom: 24px;
     color: var(--navy-deep);
   }
-  .legacy .hero-flash--support,.legacy 
+  .legacy .hero-flash--support,.legacy
   .hero-flash {
     background: var(--paper);
     border-color: var(--line-strong);
@@ -4698,7 +4698,7 @@
   }
 
   /* Stage20 thesis essay */
-  .legacy .thesis-page .thesis-lead-section,.legacy 
+  .legacy .thesis-page .thesis-lead-section,.legacy
   .thesis-page .thesis-section {
     padding: 64px 0;
     background: var(--paper);
@@ -4715,7 +4715,7 @@
     padding: 36px 36px;
     box-shadow: none;
   }
-  .legacy .thesis-page .thesis-lead h2,.legacy 
+  .legacy .thesis-page .thesis-lead h2,.legacy
   .thesis-page .thesis-section h2 {
     font-family: "Noto Serif JP", serif;
     color: var(--navy);
@@ -4724,7 +4724,7 @@
     margin: 0 0 20px;
     font-size: clamp(var(--fs-h2), 2.4vw, var(--fs-h1));
   }
-  .legacy .thesis-page .thesis-lead p,.legacy 
+  .legacy .thesis-page .thesis-lead p,.legacy
   .thesis-page .thesis-section p {
     font-size: var(--fs-body);
     line-height: 2.05;
@@ -4933,7 +4933,7 @@
   .legacy .ed-resource-panel .section-kicker {
     color: var(--navy);
   }
-  .legacy .ed-resource-panel h2,.legacy 
+  .legacy .ed-resource-panel h2,.legacy
   .ed-resource-panel .section-title {
     color: var(--navy);
   }
@@ -4994,70 +4994,70 @@
 
   /* 2026-06-17: remove decorative labels site-wide.
    Keep real form labels and table field names; hide only ornamental/category chips. */
-  .legacy .page-hero-kicker,.legacy 
-  .issue-hero-eyebrow,.legacy 
-  .journal-eyebrow,.legacy 
-  .section-kicker,.legacy 
-  .section-eyebrow,.legacy 
-  .hero-kicker,.legacy 
-  .admin-materials-kicker,.legacy 
-  .page-banner-kicker,.legacy 
-  .audit-hero-eyebrow,.legacy 
-  .intro-section-kicker,.legacy 
-  .mode-card-kicker,.legacy 
-  .banner-eyebrow,.legacy 
-  .assessment-kicker,.legacy 
-  .contact-kicker,.legacy 
-  .support-kicker,.legacy 
-  .submission-eyebrow,.legacy 
-  .doc-pack-label,.legacy 
-  .action-pack-label,.legacy 
-  .rlc-label,.legacy 
-  .case-kicker,.legacy 
-  .case-badge,.legacy 
-  .toc-label,.legacy 
-  .ce-label,.legacy 
-  .inline-source-badge,.legacy 
-  .fieldcase-kicker,.legacy 
-  .video-section-kicker,.legacy 
-  .reality-section-kicker,.legacy 
-  .entry-section-kicker,.legacy 
-  .homepage-method-label,.legacy 
-  .officer-visual-label,.legacy 
-  .officer-source-pdf-label,.legacy 
-  .law-quote-label,.legacy 
-  .lq-label,.legacy 
-  .lc-kicker,.legacy 
-  .support-strip-label,.legacy 
-  .home-photo-hero-kicker,.legacy 
-  .proper-kicker,.legacy 
-  .proper-card-img-label,.legacy 
-  .home-support-spot-label,.legacy 
-  .home-compact-kicker,.legacy 
-  .parent-lead-kicker,.legacy 
-  .parent-case-label,.legacy 
-  .reality-hero-kicker,.legacy 
-  .section-badge,.legacy 
-  .doc-mockup-label,.legacy 
-  .law-box-label,.legacy 
-  .incident-box-label,.legacy 
-  .rel-card-kicker,.legacy 
-  .tl-tag,.legacy 
-  .ac-tags,.legacy 
-  .ac-cat,.legacy 
-  .article-card .ac-meta span[style*="border-radius"],.legacy 
-  .update-tag,.legacy 
-  .law-tags,.legacy 
-  .acc-sum-badges,.legacy 
-  .badge-jishu,.legacy 
-  .badge-iinkai,.legacy 
-  .badge-misei,.legacy 
-  .badge-special,.legacy 
-  .badge-violation,.legacy 
-  .hero-count-label,.legacy 
-  .placeholder-label,.legacy 
-  .archive-kicker,.legacy 
-  .archive-source-status,.legacy 
+  .legacy .page-hero-kicker,.legacy
+  .issue-hero-eyebrow,.legacy
+  .journal-eyebrow,.legacy
+  .section-kicker,.legacy
+  .section-eyebrow,.legacy
+  .hero-kicker,.legacy
+  .admin-materials-kicker,.legacy
+  .page-banner-kicker,.legacy
+  .audit-hero-eyebrow,.legacy
+  .intro-section-kicker,.legacy
+  .mode-card-kicker,.legacy
+  .banner-eyebrow,.legacy
+  .assessment-kicker,.legacy
+  .contact-kicker,.legacy
+  .support-kicker,.legacy
+  .submission-eyebrow,.legacy
+  .doc-pack-label,.legacy
+  .action-pack-label,.legacy
+  .rlc-label,.legacy
+  .case-kicker,.legacy
+  .case-badge,.legacy
+  .toc-label,.legacy
+  .ce-label,.legacy
+  .inline-source-badge,.legacy
+  .fieldcase-kicker,.legacy
+  .video-section-kicker,.legacy
+  .reality-section-kicker,.legacy
+  .entry-section-kicker,.legacy
+  .homepage-method-label,.legacy
+  .officer-visual-label,.legacy
+  .officer-source-pdf-label,.legacy
+  .law-quote-label,.legacy
+  .lq-label,.legacy
+  .lc-kicker,.legacy
+  .support-strip-label,.legacy
+  .home-photo-hero-kicker,.legacy
+  .proper-kicker,.legacy
+  .proper-card-img-label,.legacy
+  .home-support-spot-label,.legacy
+  .home-compact-kicker,.legacy
+  .parent-lead-kicker,.legacy
+  .parent-case-label,.legacy
+  .reality-hero-kicker,.legacy
+  .section-badge,.legacy
+  .doc-mockup-label,.legacy
+  .law-box-label,.legacy
+  .incident-box-label,.legacy
+  .rel-card-kicker,.legacy
+  .tl-tag,.legacy
+  .ac-tags,.legacy
+  .ac-cat,.legacy
+  .article-card .ac-meta span[style*="border-radius"],.legacy
+  .update-tag,.legacy
+  .law-tags,.legacy
+  .acc-sum-badges,.legacy
+  .badge-jishu,.legacy
+  .badge-iinkai,.legacy
+  .badge-misei,.legacy
+  .badge-special,.legacy
+  .badge-violation,.legacy
+  .hero-count-label,.legacy
+  .placeholder-label,.legacy
+  .archive-kicker,.legacy
+  .archive-source-status,.legacy
   .mobile-link > span {
     display: none;
   }
@@ -5126,7 +5126,7 @@
     color: color-mix(in srgb,var(--paper) 86%,transparent);
     font-weight: 600;
   }
-  .legacy .page-hero--photo .btn-outline,.legacy 
+  .legacy .page-hero--photo .btn-outline,.legacy
   .page-hero--photo .btn-outline-white {
     color: var(--paper);
     border-color: color-mix(in srgb,var(--paper) 55%,transparent);
@@ -5330,7 +5330,7 @@
     border-left-color: var(--pta-redbrown, var(--navy));
     background: var(--paper-alt);
   }
-  .legacy .parent-page .case-card:nth-child(1)::before,.legacy 
+  .legacy .parent-page .case-card:nth-child(1)::before,.legacy
   .parent-page .case-card:nth-child(1) .case-tag {
     background: var(--pta-redbrown, var(--navy));
   }
@@ -5341,7 +5341,7 @@
     border-left-color: var(--gold, var(--gold));
     background: var(--paper-alt);
   }
-  .legacy .parent-page .case-card:nth-child(2)::before,.legacy 
+  .legacy .parent-page .case-card:nth-child(2)::before,.legacy
   .parent-page .case-card:nth-child(2) .case-tag {
     background: var(--navy-deep);
   }
@@ -5356,7 +5356,7 @@
     border-left-color: var(--navy, var(--navy-deep));
     background: var(--paper-alt);
   }
-  .legacy .parent-page .case-card:nth-child(4)::before,.legacy 
+  .legacy .parent-page .case-card:nth-child(4)::before,.legacy
   .parent-page .case-card:nth-child(4) .case-tag {
     background: var(--navy, var(--navy-deep));
   }
@@ -5427,7 +5427,7 @@
     font-size: clamp(var(--fs-h1), 3.1vw, var(--fs-h1)) !important;
     line-height: 1.32 !important;
   }
-  .legacy .page-hero p,.legacy 
+  .legacy .page-hero p,.legacy
   .page-hero--photo p {
     font-size: var(--type-lead);
     line-height: 1.9;
@@ -5443,43 +5443,43 @@
   }
 
   /* Homepage text hero */
-  .legacy .home-text-hero h1,.legacy 
+  .legacy .home-text-hero h1,.legacy
   .home-photo-hero-title {
     font-size: var(--type-hero-title) !important;
     line-height: 1.38 !important;
     letter-spacing: -0.012em !important;
   }
-  .legacy .home-text-hero p,.legacy 
+  .legacy .home-text-hero p,.legacy
   .home-photo-hero-lead {
     font-size: var(--fs-body);
     line-height: 1.88;
   }
 
   /* Common large headings in article/list pages */
-  .legacy .journal-page .page-hero h1,.legacy 
-  .parent-page .page-hero h1,.legacy 
-  .board-page .page-hero h1,.legacy 
-  .pta-page .page-hero h1,.legacy 
+  .legacy .journal-page .page-hero h1,.legacy
+  .parent-page .page-hero h1,.legacy
+  .board-page .page-hero h1,.legacy
+  .pta-page .page-hero h1,.legacy
   .simple-hero h1 {
     font-size: var(--type-page-title) !important;
     line-height: 1.38 !important;
   }
-  .legacy .journal-intro h2,.legacy 
-  .panel h2,.legacy 
-  .article-title,.legacy 
-  .guide-section h2,.legacy 
-  .content-section h2,.legacy 
+  .legacy .journal-intro h2,.legacy
+  .panel h2,.legacy
+  .article-title,.legacy
+  .guide-section h2,.legacy
+  .content-section h2,.legacy
   .feature-section h2 {
     font-size: var(--type-section-title) !important;
     line-height: 1.48 !important;
   }
 
   /* Card titles */
-  .legacy .audience-gateway-card h3,.legacy 
-  .action-pack-card h3,.legacy 
-  .article-card h3,.legacy 
-  .ac-title,.legacy 
-  .case-subject,.legacy 
+  .legacy .audience-gateway-card h3,.legacy
+  .action-pack-card h3,.legacy
+  .article-card h3,.legacy
+  .ac-title,.legacy
+  .case-subject,.legacy
   .card h3 {
     font-size: var(--type-card-title) !important;
     line-height: 1.52 !important;
@@ -5492,9 +5492,9 @@
   .legacy .nav-link {
     font-size: var(--fs-body);
   }
-  .legacy .btn-gold,.legacy 
-  .btn-navy,.legacy 
-  .btn-outline,.legacy 
+  .legacy .btn-gold,.legacy
+  .btn-navy,.legacy
+  .btn-outline,.legacy
   .btn-soft {
     font-size: var(--fs-body);
   }
@@ -5508,12 +5508,12 @@
       --type-card-title: 1rem;
       --type-lead: 0.92rem;
     }
-    .legacy .page-hero,.legacy 
+    .legacy .page-hero,.legacy
     .page-hero--photo {
       padding-top: 40px;
       padding-bottom: 40px;
     }
-    .legacy .section-kicker,.legacy 
+    .legacy .section-kicker,.legacy
     .page-hero-kicker {
       font-size: var(--fs-small);
     }
@@ -5658,13 +5658,13 @@
     border: 1px solid color-mix(in srgb,var(--gold) 58%,transparent);
     box-shadow: inset 0 -2px 0 color-mix(in srgb,var(--navy-deep) 34%,transparent);
   }
-  .legacy .desktop-nav .nav-link.nav-link-priority:hover,.legacy 
+  .legacy .desktop-nav .nav-link.nav-link-priority:hover,.legacy
   .desktop-nav .nav-link.nav-link-priority:focus-visible {
     color: var(--navy-deep);
     background: var(--paper-alt);
     border-color: var(--gold);
   }
-  .legacy .desktop-nav > a.nav-link.nav-link-priority.is-here,.legacy 
+  .legacy .desktop-nav > a.nav-link.nav-link-priority.is-here,.legacy
   .desktop-nav > a.nav-link.nav-link-priority[aria-current="page"] {
     color: var(--navy-deep) !important;
     background: var(--paper-alt);
@@ -5699,7 +5699,7 @@
     padding: 8px 2px 12px;
     line-height: 1.5;
   }
-  .legacy .mega-link strong,.legacy 
+  .legacy .mega-link strong,.legacy
   .mega-link span {
     display: block;
   }
@@ -5713,7 +5713,7 @@
     font-size: var(--fs-small);
     font-weight: 500;
   }
-  .legacy .mega-link:hover strong,.legacy 
+  .legacy .mega-link:hover strong,.legacy
   .mega-link:focus-visible strong {
     color: var(--gold);
   }
@@ -5780,8 +5780,8 @@
     transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
   }
 
-  .legacy .search-launcher-ready > .desktop-search-trigger:hover,.legacy 
-  .search-launcher-ready > .desktop-search-trigger:focus-visible,.legacy 
+  .legacy .search-launcher-ready > .desktop-search-trigger:hover,.legacy
+  .search-launcher-ready > .desktop-search-trigger:focus-visible,.legacy
   .search-launcher-ready.is-search-open > .desktop-search-trigger {
     border-color: var(--gold);
     background: var(--paper);
@@ -5834,7 +5834,7 @@
     border-bottom: 1px solid var(--line);
   }
 
-  .legacy .desktop-search-panel-head strong,.legacy 
+  .legacy .desktop-search-panel-head strong,.legacy
   .desktop-search-panel-head span {
     display: block;
   }
@@ -5865,7 +5865,7 @@
     cursor: pointer;
   }
 
-  .legacy .desktop-search-close:hover,.legacy 
+  .legacy .desktop-search-close:hover,.legacy
   .desktop-search-close:focus-visible {
     border-color: var(--navy-deep);
     color: var(--navy-deep);

@@ -8,25 +8,25 @@
   }
   .legacy .pg h2 {
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(1.45rem, 2.4vw, 1.95rem);
+    font-size: clamp(var(--fs-h2), 2.4vw, var(--fs-h1));
     color: var(--navy);
     margin: 0 0 12px;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     border-bottom: 3px solid var(--gold);
   }
   .legacy .pg h3 {
-    font-size: 1.02rem;
+    font-size: var(--fs-body);
     font-weight: 800;
     color: var(--navy);
-    margin: 28px 0 10px;
+    margin: 28px 0 12px;
     padding-left: 12px;
     border-left: 4px solid var(--gold);
   }
   .legacy .pg p {
     color: var(--text);
     line-height: 1.9;
-    margin-bottom: 14px;
-    font-size: 0.97rem;
+    margin-bottom: 16px;
+    font-size: var(--fs-body);
   }
   .legacy .pg section {
     margin-bottom: 64px;
@@ -39,50 +39,50 @@
   }
   .legacy .flow-node {
     flex: 1;
-    border-radius: 14px;
-    padding: 22px 18px;
+    border-radius: var(--radius-md);
+    padding: 24px 20px;
     text-align: center;
   }
   .legacy .flow-node h4 {
     font-family: "Noto Serif JP", serif;
-    font-size: 1rem;
+    font-size: var(--fs-body);
     font-weight: 900;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .legacy .flow-node p {
-    font-size: 0.84rem;
+    font-size: var(--fs-body);
     line-height: 1.65;
     margin: 0;
   }
   .legacy .flow-arrow {
     display: flex;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 12px;
     color: var(--text-soft);
-    font-size: 1.4rem;
+    font-size: var(--fs-h2);
     flex-shrink: 0;
   }
   .legacy .fn-school {
-    background: #dbeafe;
-    border: 1.5px solid #93c5fd;
+    background: var(--paper-alt);
+    border: 1.5px solid var(--line-strong);
   }
   .legacy .fn-school h4 {
-    color: #1e3a8a;
+    color: var(--navy-deep);
   }
   .legacy .fn-block {
-    background: #fee2e2;
-    border: 2px solid #fca5a5;
+    background: var(--paper-alt);
+    border: 2px solid var(--line-strong);
     position: relative;
   }
   .legacy .fn-block h4 {
-    color: #7f1d1d;
+    color: var(--c-caution);
   }
   .legacy .fn-pta {
-    background: #f0fdf4;
-    border: 1.5px solid #86efac;
+    background: var(--paper-alt);
+    border: 1.5px solid var(--line-strong);
   }
   .legacy .fn-pta h4 {
-    color: #14532d;
+    color: var(--navy-deep);
   }
   .legacy .block-x {
     position: absolute;
@@ -91,55 +91,55 @@
     transform: translateX(-50%);
     width: 32px;
     height: 32px;
-    background: #b91c1c;
+    background: var(--navy);
     border-radius: 50%;
-    color: #fff;
+    color: var(--paper);
     display: grid;
     place-items: center;
-    font-size: 1rem;
+    font-size: var(--fs-body);
     font-weight: 900;
   }
   .legacy .ok-arrow {
-    color: #15803d;
-    font-size: 1rem;
-    margin: 0 6px;
+    color: var(--navy-deep);
+    font-size: var(--fs-body);
+    margin: 0 8px;
   }
   .legacy .result-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin: 18px 0;
+    gap: 16px;
+    margin: 20px 0;
   }
   .legacy .result-ok {
-    background: #f0fdf4;
-    border: 1px solid #bbf7d0;
-    border-left: 4px solid #15803d;
+    background: var(--paper-alt);
+    border: 1px solid var(--line-strong);
+    border-left: 4px solid var(--navy-deep);
     border-radius: var(--radius);
-    padding: 16px 18px;
+    padding: 16px 20px;
   }
   .legacy .result-ng {
-    background: #fff5f5;
-    border: 1px solid #fecaca;
-    border-left: 4px solid #b91c1c;
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    border-left: 4px solid var(--navy);
     border-radius: var(--radius);
-    padding: 16px 18px;
+    padding: 16px 20px;
   }
   .legacy .result-label {
-    font-size: 0.72rem;
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     margin-bottom: 8px;
   }
   .legacy .result-ok .result-label {
-    color: #15803d;
+    color: var(--navy-deep);
   }
   .legacy .result-ng .result-label {
-    color: #b91c1c;
+    color: var(--c-caution);
   }
-  .legacy .result-ok p,.legacy 
+  .legacy .result-ok p,.legacy
   .result-ng p {
-    font-size: 0.88rem;
+    font-size: var(--fs-body);
     line-height: 1.7;
     margin: 0;
     color: var(--text);
@@ -163,7 +163,7 @@
     top: 44px;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(180deg, var(--gold) 0%, transparent 100%);
+    background: var(--paper-alt);
   }
   .legacy .step-r:last-child::before {
     display: none;
@@ -172,31 +172,31 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--navy), var(--navy-3));
-    color: #fff;
+    background: var(--navy-deep);
+    color: var(--paper);
     display: grid;
     place-items: center;
     font-weight: 900;
-    font-size: 0.95rem;
+    font-size: var(--fs-body);
     flex-shrink: 0;
     z-index: 1;
   }
   .legacy .step-body {
-    background: #fff;
+    background: var(--paper);
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    padding: 18px 20px;
+    padding: 20px 20px;
     flex: 1;
   }
   .legacy .step-body strong {
     display: block;
-    font-size: 0.97rem;
+    font-size: var(--fs-body);
     color: var(--navy);
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
   .legacy .step-body p {
     margin: 0;
-    font-size: 0.88rem;
+    font-size: var(--fs-body);
     color: var(--text-soft);
     line-height: 1.75;
   }
@@ -235,9 +235,9 @@
     inset: 0;
     background: linear-gradient(
       160deg,
-      rgba(5, 17, 31, 0.32) 0%,
-      rgba(5, 17, 31, 0.14) 60%,
-      rgba(5, 17, 31, 0.05) 100%
+      color-mix(in srgb,var(--navy-deep) 32%,transparent) 0%,
+      color-mix(in srgb,var(--navy-deep) 14%,transparent) 60%,
+      color-mix(in srgb,var(--navy-deep) 5%,transparent) 100%
     );
   }
   .legacy .page-hero-inner {
@@ -252,38 +252,38 @@
     border-bottom: none;
   }
   .legacy .page-hero h1 {
-    color: #fff;
+    color: var(--paper);
   }
   .legacy .page-hero h1 em {
     color: var(--gold-lt);
   }
   .legacy .page-hero p {
-    color: rgba(255, 255, 255, 0.88);
+    color: color-mix(in srgb,var(--paper) 88%,transparent);
   }
   .legacy .page-hero-kicker {
-    background: rgba(212, 175, 55, 0.18);
-    border: 1px solid rgba(212, 175, 55, 0.4);
+    background: color-mix(in srgb,var(--navy-deep) 18%,transparent);
+    border: 1px solid color-mix(in srgb,var(--gold) 40%,transparent);
     color: var(--gold-lt);
   }
   .legacy .hero-actions .btn-outline {
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.5);
+    color: var(--paper);
+    border-color: color-mix(in srgb,var(--paper) 50%,transparent);
   }
   .legacy .hero-actions .btn-outline:hover {
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(255, 255, 255, 0.8);
+    background: color-mix(in srgb,var(--paper) 12%,transparent);
+    border-color: color-mix(in srgb,var(--paper) 80%,transparent);
   }
 
   /* Page-specific styles for privacy.html */
   .legacy .privacy-editorial {
-    background: #fff;
+    background: var(--paper);
   }
-  .legacy .privacy-editorial .hero-actions,.legacy 
-  .privacy-editorial .page-hero-kicker,.legacy 
-  .privacy-editorial .section-kicker,.legacy 
-  .privacy-editorial .pg figure,.legacy 
-  .privacy-editorial .flow-row,.legacy 
-  .privacy-editorial .result-row,.legacy 
+  .legacy .privacy-editorial .hero-actions,.legacy
+  .privacy-editorial .page-hero-kicker,.legacy
+  .privacy-editorial .section-kicker,.legacy
+  .privacy-editorial .pg figure,.legacy
+  .privacy-editorial .flow-row,.legacy
+  .privacy-editorial .result-row,.legacy
   .privacy-editorial .alert-danger {
     display: none;
   }
@@ -292,45 +292,45 @@
   }
   .legacy .privacy-editorial .pg section {
     margin-bottom: 0;
-    padding: 42px 0;
-    border-bottom: 1px solid #cfd8e2;
+    padding: 44px 0;
+    border-bottom: 1px solid var(--line-strong);
   }
   .legacy .privacy-editorial .pg h2 {
     border-bottom: 0;
     padding-bottom: 0;
     line-height: 1.5;
   }
-  .legacy .privacy-editorial .editorial-panel,.legacy 
+  .legacy .privacy-editorial .editorial-panel,.legacy
   .privacy-editorial .source-lens-panel {
     margin: 0;
-    padding: 42px 0;
+    padding: 44px 0;
     border: 0;
-    border-bottom: 1px solid #cfd8e2;
+    border-bottom: 1px solid var(--line-strong);
     border-radius: 0;
     box-shadow: none;
-    background: #fff;
+    background: var(--paper);
   }
   .legacy .privacy-editorial .source-lens-grid {
     display: block;
-    border-top: 1px solid #dbe4ee;
+    border-top: 1px solid var(--line);
   }
   .legacy .privacy-editorial .source-lens-item {
-    padding: 18px 0;
+    padding: 20px 0;
     border: 0;
-    border-bottom: 1px solid #dbe4ee;
+    border-bottom: 1px solid var(--line);
     border-radius: 0;
     box-shadow: none;
-    background: #fff;
+    background: var(--paper);
   }
   .legacy .privacy-editorial .steps {
-    border-top: 1px solid #dbe4ee;
+    border-top: 1px solid var(--line);
   }
   .legacy .privacy-editorial .step-r {
     display: grid;
     grid-template-columns: 44px minmax(0, 1fr);
-    gap: 14px;
+    gap: 16px;
     padding: 20px 0;
-    border-bottom: 1px solid #dbe4ee;
+    border-bottom: 1px solid var(--line);
   }
   .legacy .privacy-editorial .step-r::before {
     display: none;
@@ -346,14 +346,14 @@
     border: 0;
     border-radius: 0;
     box-shadow: none;
-    background: #fff;
+    background: var(--paper);
   }
   .legacy .privacy-editorial .privacy-faq-section {
     scroll-margin-top: 90px;
   }
   .legacy .privacy-editorial .privacy-faq-intro {
     max-width: 780px;
-    margin: 0 0 26px;
+    margin: 0 0 28px;
     color: var(--text-soft);
   }
   .legacy .privacy-editorial .privacy-faq-list {
@@ -361,7 +361,7 @@
   }
   .legacy .privacy-editorial .privacy-faq-item {
     scroll-margin-top: 90px;
-    padding: 30px 0 32px;
+    padding: 32px 0 32px;
     border-bottom: 1px solid var(--line);
   }
   .legacy .privacy-editorial .privacy-faq-item h3 {
@@ -369,12 +369,12 @@
     grid-template-columns: 42px minmax(0, 1fr);
     gap: 12px;
     align-items: start;
-    margin: 0 0 18px;
+    margin: 0 0 20px;
     padding: 0;
     border: 0;
     color: var(--navy);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(1.05rem, 1.8vw, 1.22rem);
+    font-size: clamp(var(--fs-body), 1.8vw, var(--fs-h3));
     line-height: 1.65;
   }
   .legacy .privacy-editorial .privacy-faq-mark {
@@ -385,19 +385,19 @@
     min-height: 30px;
     margin-top: 2px;
     background: var(--navy);
-    color: #fff;
+    color: var(--paper);
     font-family: "Noto Sans JP", sans-serif;
-    font-size: 0.76rem;
+    font-size: var(--fs-small);
     font-weight: 900;
     line-height: 1;
   }
   .legacy .privacy-editorial .privacy-faq-answer {
-    margin-left: 54px;
-    padding-left: 18px;
+    margin-left: 56px;
+    padding-left: 20px;
     border-left: 4px solid var(--gold);
   }
   .legacy .privacy-editorial .privacy-faq-answer p {
-    margin: 0 0 13px;
+    margin: 0 0 12px;
     color: var(--text);
     line-height: 1.9;
   }
@@ -405,24 +405,24 @@
     margin-bottom: 0;
   }
   .legacy .privacy-editorial .privacy-faq-answer > p:first-child > strong:first-child {
-    color: #7a5700;
+    color: var(--c-caution);
   }
   .legacy .privacy-editorial .privacy-faq-check {
     padding-top: 12px;
     border-top: 1px dashed var(--line);
     color: var(--text-soft);
-    font-size: 0.92rem;
+    font-size: var(--fs-body);
   }
   .legacy .privacy-editorial .privacy-faq-source {
-    margin: 30px 0 0;
+    margin: 32px 0 0;
     padding: 20px 0 0;
     border-top: 1px solid var(--line);
     color: var(--text-soft);
-    font-size: 0.9rem;
+    font-size: var(--fs-body);
     line-height: 1.85;
   }
-  .legacy .privacy-editorial .btn-soft,.legacy 
-  .privacy-editorial .btn-navy,.legacy 
+  .legacy .privacy-editorial .btn-soft,.legacy
+  .privacy-editorial .btn-navy,.legacy
   .privacy-editorial .ed-link-buttons a {
     display: inline;
     padding: 0;
@@ -436,37 +436,37 @@
   @media (max-width: 620px) {
     .legacy .privacy-editorial .privacy-faq-item h3 {
       grid-template-columns: 36px minmax(0, 1fr);
-      gap: 9px;
+      gap: 8px;
     }
     .legacy .privacy-editorial .privacy-faq-mark {
       width: 34px;
     }
     .legacy .privacy-editorial .privacy-faq-answer {
       margin-left: 0;
-      padding-left: 14px;
+      padding-left: 16px;
     }
   }
 
 /* 2026-08-12: source-led administrative reading layout */
 
 .legacy .privacy-editorial {
-    --privacy-ink: #182635;
-    --privacy-muted: #5b6875;
-    --privacy-navy: #17324d;
-    --privacy-gold: #b98b2f;
-    --privacy-paper: #f5f3ed;
-    --privacy-line: #cfd8df;
-    background: #fff;
+    --privacy-ink: var(--navy-deep);
+    --privacy-muted: var(--navy-mid);
+    --privacy-navy: var(--navy-deep);
+    --privacy-gold: var(--navy-deep);
+    --privacy-paper: var(--paper-alt);
+    --privacy-line: var(--tint-strong);
+    background: var(--paper);
     color: var(--privacy-ink);
   }
 
 .legacy .privacy-editorial .privacy-hero {
     min-height: 0;
-    padding: clamp(58px, 7vw, 82px) 0 clamp(54px, 6vw, 72px);
+    padding: clamp(60px, 7vw, 84px) 0 clamp(56px, 6vw, 72px);
     background: var(--privacy-paper);
     color: var(--privacy-ink);
-    border-top: 1px solid #e1ddd2;
-    border-bottom: 1px solid #d8d4c9;
+    border-top: 1px solid var(--line-strong);
+    border-bottom: 1px solid var(--line-strong);
   }
 
 .legacy .privacy-editorial .privacy-hero::before {
@@ -493,22 +493,22 @@
     display: block;
     width: fit-content;
     margin: 0 0 20px;
-    padding: 0 0 7px;
+    padding: 0 0 8px;
     border: 0;
     border-bottom: 2px solid var(--privacy-gold);
     border-radius: 0;
     background: transparent;
     color: var(--privacy-navy);
-    font-size: 0.76rem;
+    font-size: var(--fs-small);
     font-weight: 800;
     letter-spacing: 0.12em;
   }
 
 .legacy .privacy-editorial .privacy-hero h1 {
     max-width: 16em;
-    margin: 0 0 22px;
+    margin: 0 0 24px;
     color: var(--privacy-navy);
-    font-size: clamp(2.2rem, 4.6vw, 3.7rem);
+    font-size: clamp(var(--fs-h1), 4.6vw, var(--fs-h1));
     line-height: 1.2;
     letter-spacing: -0.035em;
     text-shadow: none;
@@ -522,8 +522,8 @@
 .legacy .privacy-editorial .privacy-hero > .page-hero-inner > p {
     max-width: 48rem;
     margin: 0;
-    color: #354657;
-    font-size: clamp(0.98rem, 1.35vw, 1.06rem);
+    color: var(--navy-deep);
+    font-size: clamp(var(--fs-body), 1.35vw, var(--fs-h3));
     font-weight: 400;
     line-height: 2;
     text-shadow: none;
@@ -532,7 +532,7 @@
 .legacy .privacy-editorial .privacy-hero .hero-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px 22px;
+    gap: 8px 24px;
     margin: 24px 0 0;
   }
 
@@ -545,7 +545,7 @@
     background: transparent;
     box-shadow: none;
     color: var(--privacy-navy);
-    font-size: 0.86rem;
+    font-size: var(--fs-body);
     font-weight: 700;
     text-decoration: underline;
     text-decoration-thickness: 1px;
@@ -555,13 +555,13 @@
 .legacy .privacy-index {
     width: min(calc(100% - 48px), 920px);
     margin: 0 auto;
-    padding: 17px 0;
+    padding: 16px 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 8px 22px;
+    gap: 8px 24px;
     align-items: baseline;
     border-bottom: 1px solid var(--privacy-line);
-    font-size: 0.82rem;
+    font-size: var(--fs-body);
   }
 
 .legacy .privacy-index span {
@@ -576,7 +576,7 @@
     border-bottom: 1px solid transparent;
   }
 
-.legacy .privacy-index a:hover,.legacy 
+.legacy .privacy-index a:hover,.legacy
   .privacy-index a:focus-visible {
     border-bottom-color: currentColor;
   }
@@ -590,14 +590,14 @@
 .legacy .privacy-editorial .privacy-opening {
     max-width: 76ch;
     margin: 0 !important;
-    padding: 40px 0 40px 22px !important;
+    padding: 40px 0 40px 24px !important;
     border: 0 !important;
     border-left: 4px solid var(--privacy-gold) !important;
     border-radius: 0 !important;
     background: transparent !important;
-    box-shadow: none !important;
+    box-shadow: none;
     color: var(--privacy-navy) !important;
-    font-size: clamp(1.02rem, 1.5vw, 1.1rem) !important;
+    font-size: clamp(var(--fs-body), 1.5vw, var(--fs-h3)) !important;
     font-weight: 600;
     line-height: 2 !important;
   }
@@ -610,7 +610,7 @@
   }
 
 .legacy .privacy-editorial .pg section#handling-routes {
-    padding-top: 42px;
+    padding-top: 44px;
   }
 
 .legacy .privacy-editorial .pg h2 {
@@ -620,26 +620,26 @@
     border: 0;
     color: var(--privacy-navy);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(1.65rem, 3vw, 2.25rem);
+    font-size: clamp(var(--fs-h2), 3vw, var(--fs-h1));
     line-height: 1.42;
     letter-spacing: -0.018em;
   }
 
 .legacy .privacy-editorial .pg h3 {
-    margin: 40px 0 14px;
-    padding: 0 0 9px;
+    margin: 40px 0 16px;
+    padding: 0 0 8px;
     border: 0;
-    border-bottom: 1px solid #9eacb8;
+    border-bottom: 1px solid var(--line-strong);
     color: var(--privacy-navy);
-    font-size: clamp(1.06rem, 2vw, 1.24rem);
+    font-size: clamp(var(--fs-h3), 2vw, var(--fs-h3));
     line-height: 1.55;
   }
 
-.legacy .privacy-editorial .pg p,.legacy 
+.legacy .privacy-editorial .pg p,.legacy
   .privacy-editorial .pg li {
     max-width: 76ch;
     color: var(--privacy-ink);
-    font-size: 1rem;
+    font-size: var(--fs-body);
     line-height: 2;
   }
 
@@ -656,18 +656,18 @@
     border-radius: 0;
     background: transparent;
     box-shadow: none;
-    color: #354657;
+    color: var(--navy-deep);
     line-height: 1.95;
   }
 
 .legacy .privacy-editorial .law-quote-label {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
     color: var(--privacy-muted);
-    font-size: 0.76rem;
+    font-size: var(--fs-small);
     letter-spacing: 0.05em;
   }
 
-.legacy .privacy-editorial .editorial-panel,.legacy 
+.legacy .privacy-editorial .editorial-panel,.legacy
   .privacy-editorial .source-lens-panel {
     padding: clamp(48px, 6vw, 68px) 0 !important;
     border-bottom: 1px solid var(--privacy-line) !important;
@@ -676,9 +676,9 @@
 .legacy .privacy-editorial .ed-link-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px 22px;
+    gap: 8px 24px;
     margin-top: 24px;
-    padding-top: 18px;
+    padding-top: 20px;
     border-top: 1px solid var(--privacy-line);
   }
 
@@ -702,28 +702,28 @@
 .legacy .privacy-editorial .source-lens-item {
     display: grid;
     grid-template-columns: 150px minmax(0, 1fr);
-    gap: 22px;
-    padding: 18px 0 !important;
+    gap: 24px;
+    padding: 20px 0 !important;
     border-bottom: 1px solid var(--privacy-line) !important;
   }
 
 .legacy .privacy-editorial .source-lens-item strong {
     color: var(--privacy-navy);
-    font-size: 0.86rem;
+    font-size: var(--fs-body);
     line-height: 1.7;
   }
 
 .legacy .privacy-editorial .source-lens-item p {
     margin: 0;
-    color: #405060;
-    font-size: 0.92rem;
+    color: var(--navy);
+    font-size: var(--fs-body);
     line-height: 1.85;
   }
 
 .legacy .privacy-editorial .source-note {
-    margin-top: 22px;
+    margin-top: 24px;
     color: var(--privacy-muted);
-    font-size: 0.9rem;
+    font-size: var(--fs-body);
   }
 
 .legacy .privacy-editorial .steps {
@@ -734,29 +734,29 @@
 .legacy .privacy-editorial .step-r {
     grid-template-columns: 44px minmax(0, 1fr);
     gap: 16px;
-    padding: 22px 0;
+    padding: 24px 0;
     border-bottom: 1px solid var(--privacy-line);
   }
 
 .legacy .privacy-editorial .step-num {
     width: 34px;
     height: 34px;
-    border: 1px solid #91a0ad;
+    border: 1px solid var(--line-strong);
     border-radius: 0;
     background: transparent;
     color: var(--privacy-navy);
-    font-size: 0.8rem;
+    font-size: var(--fs-small);
   }
 
 .legacy .privacy-editorial .step-body strong {
-    margin-bottom: 7px;
+    margin-bottom: 8px;
     color: var(--privacy-navy);
-    font-size: 1rem;
+    font-size: var(--fs-body);
   }
 
 .legacy .privacy-editorial .step-body p {
-    color: #425264;
-    font-size: 0.92rem;
+    color: var(--navy-deep);
+    font-size: var(--fs-body);
     line-height: 1.85;
   }
 
@@ -766,7 +766,7 @@
   }
 
 .legacy .privacy-editorial .privacy-faq-item {
-    padding: 30px 0 32px !important;
+    padding: 32px 0 32px !important;
     border-bottom: 1px solid var(--privacy-line) !important;
   }
 
@@ -777,7 +777,7 @@
     margin-top: 0.42em;
     background: transparent;
     color: var(--privacy-muted);
-    font-size: 0.72rem;
+    font-size: var(--fs-small);
   }
 
 .legacy .privacy-editorial .privacy-faq-answer {
@@ -785,8 +785,8 @@
   }
 
 @media (max-width: 760px) {
-    .legacy .privacy-editorial .privacy-hero .page-hero-inner,.legacy 
-    .privacy-index,.legacy 
+    .legacy .privacy-editorial .privacy-hero .page-hero-inner,.legacy
+    .privacy-index,.legacy
     .privacy-editorial .pg {
       width: min(calc(100% - 36px), 920px);
     }
@@ -801,7 +801,7 @@
 
     .legacy .privacy-editorial .source-lens-item {
       grid-template-columns: 1fr;
-      gap: 6px;
+      gap: 8px;
     }
 
     .legacy .privacy-editorial .privacy-opening {
