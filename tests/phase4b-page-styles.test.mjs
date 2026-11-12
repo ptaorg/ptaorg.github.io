@@ -2,7 +2,7 @@ import test from 'node:test';import assert from 'node:assert/strict';
 import fs from 'node:fs';import path from 'node:path';
 import {createRequire} from 'node:module';
 const require=createRequire(import.meta.url);
-const {TARGETS,CORE,process}=require('../scripts/phase4b-page-styles.cjs');
+const {TARGETS,CORE,normalizeFile}=require('../scripts/phase4b-page-styles.cjs');
 const base=path.resolve(import.meta.dirname,'..');
 const read=p=>fs.readFileSync(path.join(base,p),'utf8');
 test('shared legacy CSS does not introduce circular or nonsemantic core variables',()=>{
@@ -13,7 +13,7 @@ test('shared legacy CSS does not introduce circular or nonsemantic core variable
  assert.match(edit,/--color-accent\s*:\s*var\(--gold\)/);
  for(const file of [...CORE,...TARGETS]){
   const css=read(file);
-  assert.equal(process(css,file),css,file+' is not normalized');
+  assert.equal(normalizeFile(css,file),css,file+' is not normalized');
  }
 });
 test('major page CSS use shared tokens without accidental self-reference',()=>{
