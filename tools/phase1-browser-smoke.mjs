@@ -53,7 +53,8 @@ try{
   requireResult(v.nowrap==="nowrap","mobile menu can wrap "+width);
   await snap("home-"+width+".png",".migration-home");
   await pageAt("/audit/",width,width===390?844:900);
-  v=await evalPage(`(()=>{const q=s=>document.querySelector(s),images=[...document.querySelectorAll(".mode-card-image img")];return {grid:getComputedStyle(q(".mode-grid")).gridTemplateColumns.split(" ").length,photo:getComputedStyle(q(".mode-card-image")).display,checks:getComputedStyle(q(".mode-check-list")).display,images:images.length,loaded:images.filter(i=>i.complete&&i.naturalWidth>0).length,meta:q(".page-meta")?.innerText}})()`);
+  v=await evalPage(`(()=>{const q=s=>document.querySelector(s),images=[...document.querySelectorAll(".mode-card-image img")];return {grid:getComputedStyle(q(".mode-grid")).gridTemplateColumns.trim().split(/\\s+/).length,gridCSS:getComputedStyle(q(".mode-grid")).gridTemplateColumns,gridDisplay:getComputedStyle(q(".mode-grid")).display,innerWidth:window.innerWidth,clientWidth:document.documentElement.clientWidth,bodyWidth:document.body.clientWidth,deviceScaleFactor:window.devicePixelRatio,photo:getComputedStyle(q(".mode-card-image")).display,checks:getComputedStyle(q(".mode-check-list")).display,images:images.length,loaded:images.filter(i=>i.complete&&i.naturalWidth>0).length,meta:q(".page-meta")?.innerText}})()`);
+  console.log("AUDIT GRID DETAILS",width,JSON.stringify(v));
   requireResult(v.images===3&&v.loaded===3,"audit photos not loaded "+width+" "+JSON.stringify(v));
   requireResult(v.photo!=="none"&&v.checks!=="none","audit photos/checklist hidden "+width+" "+JSON.stringify(v));
   requireResult(v.grid===(width===390?1:3),"audit card grid not responsive "+width+" "+JSON.stringify(v));
