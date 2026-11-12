@@ -4,14 +4,16 @@
 const fs=require('node:fs'),path=require('node:path'),root=path.resolve(__dirname,'..');
 const {TARGETS,CORE}=require('./phase4b-page-styles.cjs');
 const changed=new Set([...TARGETS,...CORE]);
+const {FILES:maintained}=require('./phase4c-normalize-maintained.cjs');
+const phase4c=new Set(maintained);
 const baseline=new Set(['assets/style.css','css/site.css','css/editorial.css','css/prose.css','css/journal-article.css','css/shared/editorial-page-common.css']);
-const all=new Set([...changed,...baseline]);
+const all=new Set([...changed,...baseline,...phase4c]);
 const SKIP=new Set(['.git','_site','node_modules','assets','css','data','js','scripts','tools','tests','docs','.github','partials','ai-system','source-candidates','pta-open-system','starter-kit']);
 function transform(html){
  return html.replace(/(<link\b[^>]*\bhref=")([^"]+)(")/g,(whole,left,raw,right)=>{
   const pathPart=raw.replace(/^(?:\.\.\/|\.\/|\/)+/,'').split('?')[0];
   if(!all.has(pathPart))return whole;
-  const version=changed.has(pathPart)?'20261113-phase4b':'20261113-phase4';
+  const version=phase4c.has(pathPart)?'20261113-phase4c':changed.has(pathPart)?'20261113-phase4b':'20261113-phase4';
   return left+raw.split('?')[0]+'?v='+version+right;
  });
 }
@@ -35,4 +37,4 @@ function main(){
  if(check&&changedPages)throw Error('Page CSS version references stale on '+changedPages+' pages');
 }
 if(require.main===module)main();
-module.exports={transform,all,changed};
+module.exports={transform,all,changed,phase4c};
