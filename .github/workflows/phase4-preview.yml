@@ -1,0 +1,42 @@
+name: Phase 4 design-system verification (temporary)
+on:
+  push:
+    branches: [refactor/phase4-design-system-20261113]
+permissions:
+  contents: write
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Normalize common CSS
+        run: node scripts/phase4-normalize-design.cjs
+      - name: Test normalized design and exact asset URLs
+        run: |
+          npm test
+          node scripts/phase4-normalize-design.cjs --check
+          node tools/phase4-design-verify.mjs
+          git diff --check
+      - name: Browser check at two breakpoints
+        run: node tools/phase4-browser-smoke.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase4-editorial-screenshots
+          path: phase4-screenshots/*.png
+          if-no-files-found: ignore
+      - name: Commit checked CSS on feature branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/style.css css/site.css css/editorial.css css/prose.css css/journal-article.css css/shared/editorial-page-common.css
+          if ! git diff --cached --quiet; then
+            git commit -m "Normalize primary shared stylesheet typography, palette and spacing"
+            git push origin HEAD:refactor/phase4-design-system-20261113
+          fi
