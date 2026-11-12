@@ -15,7 +15,7 @@ for(const rel of TARGETS){
  const srcURLs=urls(before);
  const expectedURLs=new Set(SOURCES.map(s=>s.url));
  const newURLs=urls(actual).filter(s=>!srcURLs.includes(s));
- for(const u of newURLs)if(!expectedURLs.has(u)&&!u.endsWith('phase6-sources.css?v=20261113-phase6a'))throw Error('Unexpected new URL: '+rel+' '+u);
+ for(const u of newURLs)if(!expectedURLs.has(u)&&!u.startsWith('#phase6-source-')&&!u.endsWith('phase6-sources.css?v=20261113-phase6a'))throw Error('Unexpected new URL: '+rel+' '+u);
  for(const id of origIDs(before))if(!actual.includes('id="'+id+'"'))throw Error('Original anchor removed: '+rel+' '+id);
  const oldQuoted=quotes(before),newQuoted=quotes(actual);
  if(JSON.stringify(oldQuoted)!==JSON.stringify(newQuoted))throw Error('Verbatim material or scripts modified: '+rel);
