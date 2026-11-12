@@ -1,14 +1,14 @@
 /* fee-collection.html: PTA fee and school-charge collection review */
 .legacy.fee-editorial {
-  --fee-ink: #202f3f;
-  --fee-navy: #0b2a4a;
-  --fee-navy-2: #18466f;
-  --fee-muted: #5c6d7e;
-  --fee-line: #d5dee7;
-  --fee-line-strong: #9eacba;
-  --fee-gold: #bd9228;
-  --fee-paper: #fff;
-  --fee-soft: #f3f6f9;
+  --fee-ink: var(--navy-deep);
+  --fee-navy: var(--navy-deep);
+  --fee-navy-2: var(--navy-deep);
+  --fee-muted: var(--navy-mid);
+  --fee-line: var(--paper-alt);
+  --fee-line-strong: var(--line-strong);
+  --fee-gold: var(--navy-deep);
+  --fee-paper: var(--paper);
+  --fee-soft: var(--paper-alt);
   color: var(--fee-ink);
   background: var(--fee-paper);
 }
@@ -17,10 +17,10 @@
   position: relative;
   min-height: 0;
   overflow: hidden;
-  color: #fff;
+  color: var(--paper);
   background:
-    radial-gradient(circle at 84% 16%, rgba(189, 146, 40, 0.18), transparent 30rem),
-    linear-gradient(128deg, #081e34 0%, #0c3154 58%, #164a76 100%);
+    radial-gradient(circle at 84% 16%, color-mix(in srgb,var(--navy-deep) 18%,transparent), transparent 30rem),
+    linear-gradient(128deg, var(--navy-deep) 0%, var(--navy-deep) 58%, var(--navy-deep) 100%);
   border-top: 3px solid var(--fee-gold);
   border-bottom: 0;
 }
@@ -31,8 +31,8 @@
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.024) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.024) 1px, transparent 1px);
+    linear-gradient(color-mix(in srgb,var(--paper) 2.4%,transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb,var(--paper) 2.4%,transparent) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
@@ -42,20 +42,20 @@
   width: min(calc(100% - 40px), 960px);
   max-width: none;
   margin-inline: auto;
-  padding: clamp(62px, 8vw, 92px) 0 clamp(54px, 7vw, 78px);
+  padding: clamp(64px, 8vw, 92px) 0 clamp(56px, 7vw, 80px);
 }
 
 .legacy.fee-editorial .page-hero-kicker {
   display: block;
   width: fit-content;
   margin: 0 0 16px;
-  padding: 0 0 7px;
-  color: #f1d477;
+  padding: 0 0 8px;
+  color: var(--tint-strong);
   background: transparent;
   border: 0;
-  border-bottom: 1px solid rgba(241, 212, 119, 0.72);
+  border-bottom: 1px solid color-mix(in srgb,var(--line-strong) 72%,transparent);
   border-radius: 0;
-  font-size: 0.76rem;
+  font-size: var(--fs-small);
   font-weight: 900;
   line-height: 1.6;
   letter-spacing: 0.1em;
@@ -65,9 +65,9 @@
 .legacy.fee-editorial .page-hero h1 {
   max-width: 18em;
   margin: 0;
-  color: #fff;
+  color: var(--paper);
   font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
-  font-size: clamp(2rem, 5vw, 3.45rem);
+  font-size: clamp(var(--fs-h1), 5vw, var(--fs-h1));
   font-weight: 900;
   line-height: 1.32;
   letter-spacing: 0.01em;
@@ -75,26 +75,26 @@
 }
 
 .legacy.fee-editorial .page-hero h1 em {
-  color: #f1d477;
+  color: var(--tint-strong);
   font-style: normal;
 }
 
 .legacy.fee-editorial .page-hero-inner > p:not(.fee-meta) {
   max-width: 76ch;
-  margin: 26px 0 0;
-  color: rgba(255, 255, 255, 0.96);
-  font-size: clamp(1.04rem, 1.8vw, 1.18rem);
+  margin: 28px 0 0;
+  color: color-mix(in srgb,var(--paper) 96%,transparent);
+  font-size: clamp(var(--fs-body), 1.8vw, var(--fs-h3));
   font-weight: 600;
   line-height: 1.95;
 }
 
 .legacy.fee-editorial .fee-hero-note {
   max-width: 76ch;
-  margin: 26px 0 0;
-  padding: 4px 0 4px 22px;
-  color: rgba(255, 255, 255, 0.88);
+  margin: 28px 0 0;
+  padding: 4px 0 4px 24px;
+  color: color-mix(in srgb,var(--paper) 88%,transparent);
   border-left: 4px solid var(--fee-gold);
-  font-size: 0.96rem;
+  font-size: var(--fs-body);
   line-height: 1.95;
 }
 
@@ -102,9 +102,9 @@
   max-width: none;
   margin: 24px 0 0;
   padding-top: 16px;
-  color: rgba(255, 255, 255, 0.68);
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-  font-size: 0.76rem;
+  color: color-mix(in srgb,var(--paper) 68%,transparent);
+  border-top: 1px solid color-mix(in srgb,var(--paper) 18%,transparent);
+  font-size: var(--fs-small);
   font-weight: 400;
   line-height: 1.7;
 }
@@ -114,12 +114,12 @@
   width: min(calc(100% - 40px), 920px);
   max-width: none;
   margin-inline: auto;
-  padding: 54px 0 96px;
+  padding: 56px 0 96px;
 }
 
 .legacy.fee-editorial .fee-doc > section {
   margin: 0;
-  padding: 54px 0 62px;
+  padding: 56px 0 64px;
   color: var(--fee-ink);
   background: var(--fee-paper);
   border: 0;
@@ -136,13 +136,13 @@
 .legacy.fee-editorial .section-kicker {
   display: block !important;
   width: auto;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   padding: 0;
-  color: #7d672a;
+  color: var(--gold);
   background: transparent;
   border: 0;
   border-radius: 0;
-  font-size: 0.74rem;
+  font-size: var(--fs-small);
   font-weight: 900;
   line-height: 1.6;
   letter-spacing: 0.1em;
@@ -157,7 +157,7 @@
   border: 0;
   border-bottom: 2px solid var(--fee-navy);
   font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
-  font-size: clamp(1.52rem, 3vw, 2.05rem);
+  font-size: clamp(var(--fs-h2), 3vw, var(--fs-h1));
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.01em;
@@ -169,42 +169,42 @@
 }
 
 .legacy.fee-editorial .fee-doc h3 {
-  margin: 34px 0 14px;
+  margin: 36px 0 16px;
   padding: 0;
   color: var(--fee-navy-2);
   border: 0;
-  font-size: 1.18rem;
+  font-size: var(--fs-h3);
   font-weight: 900;
   line-height: 1.65;
 }
 
 .legacy.fee-editorial .fee-doc :where(p, li, td, th, summary) {
   color: var(--fee-ink);
-  font-size: 1rem;
+  font-size: var(--fs-body);
   line-height: 1.98;
 }
 
 .legacy.fee-editorial .fee-doc > section > p {
   max-width: none;
-  margin: 0 0 18px;
+  margin: 0 0 20px;
 }
 
 .legacy.fee-editorial .fee-doc a {
-  color: #075ca3;
+  color: var(--navy-deep);
   font-weight: 700;
   text-decoration: underline;
-  text-decoration-color: rgba(7, 92, 163, 0.34);
+  text-decoration-color: color-mix(in srgb,var(--navy-deep) 34%,transparent);
   text-underline-offset: 4px;
 }
 
 .legacy.fee-editorial .fee-doc a:hover {
-  color: #003f73;
+  color: var(--navy-deep);
   text-decoration-color: currentcolor;
 }
 
 .legacy.fee-editorial .fee-verdict,.legacy.fee-editorial .fee-law-note,.legacy.fee-editorial .fee-inference {
   margin: 28px 0;
-  padding: 22px 25px;
+  padding: 24px 24px;
   background: var(--fee-soft);
   border: 0;
   border-left: 4px solid var(--fee-navy-2);
@@ -213,7 +213,7 @@
 }
 
 .legacy.fee-editorial .fee-inference {
-  background: #fffdf4;
+  background: var(--paper);
   border-left-color: var(--fee-gold);
 }
 
@@ -230,7 +230,7 @@
 .legacy.fee-editorial .fee-keyline {
   max-width: none;
   margin: 28px 0 0;
-  padding: 3px 0 3px 20px;
+  padding: 4px 0 4px 20px;
   border-left: 4px solid var(--fee-gold);
 }
 
@@ -250,7 +250,7 @@
   position: relative;
   min-height: 62px;
   margin: 0;
-  padding: 22px 0 22px 58px;
+  padding: 24px 0 24px 60px;
   border-bottom: 1px solid var(--fee-line);
   counter-increment: fee-step;
 }
@@ -261,9 +261,9 @@
   top: 22px;
   left: 0;
   width: 38px;
-  color: #8b6e20;
+  color: var(--gold);
   font-family: "Noto Serif JP", serif;
-  font-size: 1.03rem;
+  font-size: var(--fs-body);
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.03em;
@@ -273,15 +273,15 @@
   display: block;
   margin: 0;
   color: var(--fee-navy);
-  font-size: 1rem;
+  font-size: var(--fs-body);
   line-height: 1.75;
 }
 
 .legacy.fee-editorial :where(.fee-test-order, .fee-documents, .fee-route, .fee-transition, .fee-mext-points) span {
   display: block;
-  margin-top: 5px;
+  margin-top: 4px;
   color: var(--fee-muted);
-  font-size: 0.94rem;
+  font-size: var(--fs-body);
   line-height: 1.85;
 }
 
@@ -295,7 +295,7 @@
 }
 
 .legacy.fee-editorial .fee-table-wrap:focus-visible {
-  outline: 3px solid rgba(7, 92, 163, 0.35);
+  outline: 3px solid color-mix(in srgb,var(--navy-deep) 35%,transparent);
   outline-offset: 4px;
 }
 
@@ -314,17 +314,17 @@
 }
 
 .legacy.fee-editorial :where(.fee-comparison, .fee-check-table) thead th {
-  padding: 13px 14px;
-  background: #f1f4f7;
+  padding: 12px 16px;
+  background: var(--paper-alt);
   border: 0;
   border-bottom: 1px solid var(--fee-line-strong);
-  font-size: 0.83rem;
+  font-size: var(--fs-body);
   line-height: 1.65;
   letter-spacing: 0.03em;
 }
 
 .legacy.fee-editorial :where(.fee-comparison, .fee-check-table) tbody th,.legacy.fee-editorial :where(.fee-comparison, .fee-check-table) tbody td {
-  padding: 15px 14px;
+  padding: 16px 16px;
   background: transparent;
   border: 0;
   border-bottom: 1px solid var(--fee-line);
@@ -334,12 +334,12 @@
 
 .legacy.fee-editorial :where(.fee-comparison, .fee-check-table) tbody th {
   width: 20%;
-  font-size: 0.9rem;
+  font-size: var(--fs-body);
 }
 
 .legacy.fee-editorial :where(.fee-comparison, .fee-check-table) tbody td {
   color: var(--fee-ink);
-  font-size: 0.91rem;
+  font-size: var(--fs-body);
   line-height: 1.82;
 }
 
@@ -355,7 +355,7 @@
 .legacy.fee-editorial .fee-path {
   min-width: 0;
   margin: 0;
-  padding: 26px 30px;
+  padding: 28px 32px;
   background: transparent;
   border: 0;
   border-radius: 0;
@@ -375,25 +375,25 @@
 }
 
 .legacy.fee-editorial .fee-path-label {
-  margin: 0 0 9px;
-  color: #7d672a;
-  font-size: 0.72rem;
+  margin: 0 0 8px;
+  color: var(--gold);
+  font-size: var(--fs-small);
   font-weight: 900;
   line-height: 1.6;
   letter-spacing: 0.08em;
 }
 
 .legacy.fee-editorial .fee-path h3 {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   color: var(--fee-navy);
-  font-size: 1.04rem;
+  font-size: var(--fs-body);
   line-height: 1.65;
 }
 
 .legacy.fee-editorial .fee-path p:last-child {
   margin: 0;
   color: var(--fee-muted);
-  font-size: 0.92rem;
+  font-size: var(--fs-body);
   line-height: 1.88;
 }
 
@@ -409,48 +409,48 @@
   grid-template-columns: minmax(210px, 0.82fr) minmax(0, 1.4fr);
   gap: 8px 28px;
   margin: 0;
-  padding: 22px 0;
+  padding: 24px 0;
   border-bottom: 1px solid var(--fee-line);
 }
 
 .legacy.fee-editorial .fee-sources strong {
   grid-row: 1 / span 2;
   color: var(--fee-navy);
-  font-size: 0.94rem;
+  font-size: var(--fs-body);
   line-height: 1.75;
 }
 
 .legacy.fee-editorial .fee-sources span {
   color: var(--fee-muted);
-  font-size: 0.91rem;
+  font-size: var(--fs-body);
   line-height: 1.82;
 }
 
 .legacy.fee-editorial .fee-sources a {
   width: fit-content;
-  font-size: 0.87rem;
+  font-size: var(--fs-body);
   line-height: 1.7;
   overflow-wrap: anywhere;
 }
 
 .legacy.fee-editorial .fee-action-line {
-  margin: 30px 0 0 !important;
+  margin: 32px 0 0 !important;
 }
 
 .legacy.fee-editorial .fee-action {
   display: inline-block;
-  padding: 12px 18px;
-  color: #fff !important;
+  padding: 12px 20px;
+  color: var(--paper) !important;
   background: var(--fee-navy);
   border: 1px solid var(--fee-navy);
   text-decoration: none !important;
-  font-size: 0.91rem;
+  font-size: var(--fs-body);
   font-weight: 900;
   line-height: 1.6;
 }
 
 .legacy.fee-editorial .fee-action:hover {
-  color: #fff !important;
+  color: var(--paper) !important;
   background: var(--fee-navy-2);
 }
 
@@ -470,7 +470,7 @@
 
 .legacy.fee-editorial .fee-faq-list summary {
   position: relative;
-  padding: 20px 38px 20px 0;
+  padding: 20px 40px 20px 0;
   color: var(--fee-navy);
   font-weight: 900;
   cursor: pointer;
@@ -486,8 +486,8 @@
   position: absolute;
   top: 20px;
   right: 3px;
-  color: #7d672a;
-  font-size: 1.1rem;
+  color: var(--gold);
+  font-size: var(--fs-h3);
   font-weight: 700;
   line-height: 1.7;
 }
@@ -499,9 +499,9 @@
 .legacy.fee-editorial .fee-faq-list details p {
   max-width: none;
   margin: 0;
-  padding: 0 36px 22px 0;
+  padding: 0 36px 24px 0;
   color: var(--fee-muted);
-  font-size: 0.94rem;
+  font-size: var(--fs-body);
   line-height: 1.9;
 }
 
@@ -512,57 +512,57 @@
   }
 
   .legacy.fee-editorial .page-hero-kicker {
-    font-size: 0.69rem;
+    font-size: var(--fs-small);
   }
 
   .legacy.fee-editorial .page-hero h1 {
-    font-size: clamp(1.86rem, 10vw, 2.55rem);
+    font-size: clamp(var(--fs-h1), 10vw, var(--fs-h1));
     line-height: 1.37;
   }
 
   .legacy.fee-editorial .page-hero-inner > p:not(.fee-meta) {
-    margin-top: 22px;
-    font-size: 0.98rem;
+    margin-top: 24px;
+    font-size: var(--fs-body);
     line-height: 1.9;
   }
 
   .legacy.fee-editorial .fee-hero-note {
-    margin-top: 22px;
+    margin-top: 24px;
     padding-left: 16px;
-    font-size: 0.91rem;
+    font-size: var(--fs-body);
   }
 
   .legacy.fee-editorial .fee-meta {
-    font-size: 0.7rem;
+    font-size: var(--fs-small);
   }
 
   .legacy.fee-editorial .fee-doc {
     width: min(calc(100% - 30px), 920px);
-    padding-block: 38px 70px;
+    padding-block: 40px 72px;
   }
 
   .legacy.fee-editorial .fee-doc > section {
-    padding-block: 44px 50px;
+    padding-block: 44px 52px;
   }
 
   .legacy.fee-editorial .fee-doc h2 {
-    margin-bottom: 23px;
-    padding-bottom: 14px;
-    font-size: 1.46rem;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    font-size: var(--fs-h2);
   }
 
   .legacy.fee-editorial .fee-doc h3 {
-    margin-top: 30px;
-    font-size: 1.08rem;
+    margin-top: 32px;
+    font-size: var(--fs-h3);
   }
 
   .legacy.fee-editorial .fee-doc :where(p, li, td, th, summary) {
-    font-size: 0.96rem;
+    font-size: var(--fs-body);
     line-height: 1.94;
   }
 
   .legacy.fee-editorial :where(.fee-verdict, .fee-law-note, .fee-inference) {
-    padding: 19px 17px 19px 20px;
+    padding: 20px 16px 20px 20px;
   }
 
   .legacy.fee-editorial .fee-keyline {
@@ -570,13 +570,13 @@
   }
 
   .legacy.fee-editorial :where(.fee-test-order, .fee-documents, .fee-route, .fee-transition, .fee-mext-points) > li {
-    padding: 21px 0 21px 45px;
+    padding: 20px 0 20px 44px;
   }
 
   .legacy.fee-editorial :where(.fee-test-order, .fee-documents, .fee-route, .fee-transition, .fee-mext-points) > li::before {
     top: 21px;
     width: 32px;
-    font-size: 0.9rem;
+    font-size: var(--fs-body);
   }
 
   .legacy.fee-editorial .fee-paths {
@@ -584,7 +584,7 @@
   }
 
   .legacy.fee-editorial .fee-path,.legacy.fee-editorial .fee-path:nth-child(odd),.legacy.fee-editorial .fee-path:nth-child(-n + 2),.legacy.fee-editorial .fee-paths-two .fee-path {
-    padding: 22px 0;
+    padding: 24px 0;
     border: 0;
     border-bottom: 1px solid var(--fee-line);
   }
@@ -595,7 +595,7 @@
 
   .legacy.fee-editorial .fee-sources li {
     grid-template-columns: 1fr;
-    gap: 7px;
+    gap: 8px;
     padding: 20px 0;
   }
 
@@ -622,13 +622,13 @@
   }
 
   .legacy.fee-editorial :where(.fee-comparison, .fee-check-table) tbody tr {
-    padding: 18px 0;
+    padding: 20px 0;
     border-bottom: 1px solid var(--fee-line);
   }
 
   .legacy.fee-editorial :where(.fee-comparison, .fee-check-table) tbody th,.legacy.fee-editorial :where(.fee-comparison, .fee-check-table) tbody td {
     width: 100%;
-    padding: 5px 0;
+    padding: 4px 0;
     border: 0;
     white-space: normal;
     overflow-wrap: anywhere;
@@ -636,14 +636,14 @@
 
   .legacy.fee-editorial :where(.fee-comparison, .fee-check-table) tbody th {
     margin-bottom: 4px;
-    font-size: 0.98rem;
+    font-size: var(--fs-body);
   }
 
   .legacy.fee-editorial .fee-comparison td:nth-child(2)::before,.legacy.fee-editorial .fee-comparison td:nth-child(3)::before,.legacy.fee-editorial .fee-comparison td[data-label]::before,.legacy.fee-editorial .fee-check-table td:nth-child(2)::before,.legacy.fee-editorial .fee-check-table td:nth-child(3)::before {
     display: block;
     margin-bottom: 2px;
     color: var(--fee-muted);
-    font-size: 0.68rem;
+    font-size: var(--fs-small);
     font-weight: 900;
     line-height: 1.6;
     letter-spacing: 0.04em;
@@ -671,7 +671,7 @@
 
   .legacy.fee-editorial .fee-faq-list summary {
     padding-right: 32px;
-    font-size: 0.96rem;
+    font-size: var(--fs-body);
   }
 
   .legacy.fee-editorial .fee-faq-list details p {
@@ -691,10 +691,10 @@
   }
 
   .legacy.fee-editorial .page-hero {
-    color: #000;
-    background: #fff;
+    color: var(--ink);
+    background: var(--paper);
     border-top: 0;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid var(--navy-deep);
   }
 
   .legacy.fee-editorial .page-hero::after {
@@ -702,8 +702,8 @@
   }
 
   .legacy.fee-editorial .page-hero :where(h1, h1 em, p, .fee-hero-note, .fee-meta, .page-hero-kicker) {
-    color: #000;
-    border-color: #777;
+    color: var(--ink);
+    border-color: var(--navy-mid);
   }
 
   .legacy.fee-editorial .fee-doc {

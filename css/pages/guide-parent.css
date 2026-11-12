@@ -6,18 +6,18 @@
     color: var(--text);
   }
   .legacy .parent-lead-mag {
-    background: #fff;
-    padding: 80px 0 70px;
+    background: var(--paper);
+    padding: 80px 0 72px;
   }
   .legacy .lead-kicker {
     display: inline-flex;
     align-items: center;
-    gap: 7px;
-    padding: 5px 13px;
-    border-radius: 999px;
-    background: rgba(5, 17, 31, 0.07);
+    gap: 8px;
+    padding: 4px 12px;
+    border-radius: var(--radius-md);
+    background: color-mix(in srgb,var(--navy-deep) 7%,transparent);
     color: var(--navy);
-    font-size: 0.76rem;
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.07em;
     text-transform: uppercase;
@@ -25,13 +25,13 @@
   }
   .legacy .parent-lead-mag h2 {
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+    font-size: clamp(var(--fs-h1), 3.6vw, var(--fs-h1));
     line-height: 1.32;
     color: var(--navy);
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
   .legacy .parent-lead-mag p {
-    font-size: 1.02rem;
+    font-size: var(--fs-body);
     line-height: 2.05;
     color: var(--text);
     margin: 0 0 16px;
@@ -43,13 +43,13 @@
     font-weight: 900;
     color: var(--navy);
     border-left: 6px solid var(--gold);
-    background: #fff7ed;
+    background: var(--paper);
     padding: 16px 20px;
-    border-radius: 0 14px 14px 0;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
     margin-top: 24px;
   }
   .legacy .case-section {
-    background: #fff;
+    background: var(--paper);
     padding: 80px 0;
   }
   .legacy .case-section .wrap-narrow {
@@ -59,66 +59,66 @@
   }
   .legacy .case-note {
     max-width: 840px;
-    margin: 14px auto 0;
+    margin: 16px auto 0;
     text-align: center;
-    font-size: 0.82rem;
+    font-size: var(--fs-body);
     color: var(--text-soft);
     line-height: 1.8;
   }
   .legacy .case-list {
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    margin-top: 42px;
+    gap: 20px;
+    margin-top: 44px;
   }
   .legacy .case-card {
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    background: #fff;
-    box-shadow: var(--shadow-sm);
+    background: var(--paper);
+    box-shadow: none;
     overflow: hidden;
     transition:
       box-shadow 0.2s,
       border-color 0.2s;
   }
   .legacy .case-card.is-open {
-    box-shadow: var(--shadow-md);
-    border-color: rgba(212, 175, 55, 0.55);
+    box-shadow: none;
+    border-color: color-mix(in srgb,var(--gold) 55%,transparent);
   }
   .legacy .case-top {
-    padding: 24px 26px 6px;
+    padding: 24px 28px 8px;
   }
   .legacy .case-meta {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     flex-wrap: wrap;
     margin-bottom: 12px;
   }
   .legacy .case-tag {
-    font-size: 0.7rem;
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.06em;
-    color: #fff;
+    color: var(--paper);
     background: var(--navy);
-    padding: 4px 11px;
-    border-radius: 999px;
+    padding: 4px 12px;
+    border-radius: var(--radius-md);
   }
   .legacy .case-from {
-    font-size: 0.76rem;
+    font-size: var(--fs-small);
     font-weight: 700;
     color: var(--text-soft);
   }
   .legacy .case-subject {
     font-family: "Noto Serif JP", serif;
     font-weight: 900;
-    font-size: 1.16rem;
+    font-size: var(--fs-h3);
     color: var(--navy);
     line-height: 1.55;
-    margin: 0 0 14px;
+    margin: 0 0 16px;
   }
   .legacy .case-summary {
-    font-size: 0.96rem;
+    font-size: var(--fs-body);
     line-height: 1.95;
     color: var(--text-soft);
     margin: 0;
@@ -134,7 +134,7 @@
     cursor: pointer;
     padding: 16px 24px;
     font-family: inherit;
-    font-size: 0.9rem;
+    font-size: var(--fs-body);
     font-weight: 900;
     color: var(--navy-3);
   }
@@ -172,36 +172,36 @@
     display: block;
   }
   .legacy .case-ans {
-    padding: 18px 26px 28px;
+    padding: 20px 28px 28px;
     border-top: 1px dashed var(--line);
   }
   .legacy .case-quote {
     background: var(--cream);
     border-left: 4px solid var(--gold);
-    border-radius: 0 12px 12px 0;
-    padding: 18px 20px;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 20px 20px;
     margin: 0;
   }
   .legacy .case-quote .qlabel {
     display: block;
-    font-size: 0.72rem;
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.08em;
-    color: #a9851f;
-    margin-bottom: 9px;
+    color: var(--gold);
+    margin-bottom: 8px;
   }
   .legacy .case-quote p {
     font-family: "Noto Serif JP", serif;
-    font-size: 0.96rem;
+    font-size: var(--fs-body);
     line-height: 2;
     color: var(--text);
-    margin: 0 0 13px;
+    margin: 0 0 12px;
   }
   .legacy .case-quote p:last-child {
     margin-bottom: 0;
   }
   .legacy .case-reply {
-    margin-top: 18px;
+    margin-top: 20px;
   }
   .legacy .case-valid {
     display: flex;
@@ -209,7 +209,7 @@
     gap: 8px;
     font-weight: 900;
     color: var(--navy);
-    font-size: 0.96rem;
+    font-size: var(--fs-body);
     line-height: 1.7;
     margin: 0 0 12px;
   }
@@ -220,7 +220,7 @@
     flex-shrink: 0;
   }
   .legacy .case-reply p {
-    font-size: 0.94rem;
+    font-size: var(--fs-body);
     line-height: 1.95;
     color: var(--text);
     margin: 0 0 12px;
@@ -228,15 +228,15 @@
   .legacy .case-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px 18px;
+    gap: 12px 20px;
     align-items: center;
     margin-top: 8px;
   }
   .legacy .case-more {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-size: 0.86rem;
+    gap: 8px;
+    font-size: var(--fs-body);
     font-weight: 900;
     color: var(--navy-3);
     text-decoration: none;
@@ -245,7 +245,7 @@
     text-decoration: underline;
   }
   .legacy .case-ask {
-    font-size: 0.84rem;
+    font-size: var(--fs-body);
     color: var(--text-soft);
   }
   .legacy .case-ask a {
@@ -254,11 +254,11 @@
   }
   .legacy .case-foot {
     text-align: center;
-    margin-top: 34px;
-    padding: 22px;
+    margin-top: 36px;
+    padding: 24px;
     border-radius: var(--radius);
-    background: #0f2742;
-    color: #fff;
+    background: var(--navy-deep);
+    color: var(--paper);
   }
   .legacy .case-foot p {
     line-height: 1.9;
@@ -270,36 +270,36 @@
   }
   .legacy .case-foot a {
     display: inline-flex;
-    padding: 9px 18px;
-    border-radius: 999px;
+    padding: 8px 20px;
+    border-radius: var(--radius-md);
     background: var(--gold);
     color: var(--navy);
     font-weight: 900;
     text-decoration: none;
   }
   .legacy .visual-section {
-    padding: 82px 0;
-    background: #f8fafc;
+    padding: 84px 0;
+    background: var(--paper);
   }
   .legacy .visual-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
-    margin-top: 42px;
+    margin-top: 44px;
   }
   .legacy .visual-card {
-    background: #fff;
+    background: var(--paper);
     border: 1px solid var(--line);
     border-radius: var(--radius);
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
     text-decoration: none;
     color: inherit;
     transition: var(--t);
   }
   .legacy .visual-card:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+    box-shadow: none;
   }
   .legacy .vc-visual {
     height: 170px;
@@ -309,28 +309,24 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 14px;
+    padding: 16px;
   }
   .legacy .vc-visual:after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(5, 17, 31, 0.2),
-      rgba(5, 17, 31, 0.55)
-    );
+    background: var(--paper-alt);
   }
   .legacy .vc-label {
     position: relative;
     z-index: 2;
     display: inline-flex;
-    padding: 5px 11px;
-    border-radius: 999px;
-    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: var(--radius-md);
+    font-size: var(--fs-small);
     font-weight: 900;
-    color: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    color: var(--paper);
+    box-shadow: none;
   }
   .legacy .vc-label-ok {
     background: var(--green);
@@ -342,52 +338,52 @@
     background: var(--red);
   }
   .legacy .vc-body {
-    padding: 22px;
+    padding: 24px;
   }
   .legacy .vc-title {
     font-family: "Noto Serif JP", serif;
     color: var(--navy);
     font-weight: 900;
-    font-size: 1.08rem;
+    font-size: var(--fs-h3);
     line-height: 1.45;
     margin-bottom: 8px;
   }
   .legacy .vc-desc {
-    font-size: 0.9rem;
+    font-size: var(--fs-body);
     color: var(--text-soft);
     line-height: 1.8;
     margin-bottom: 12px;
   }
   .legacy .vc-law {
     display: inline-flex;
-    font-size: 0.72rem;
+    font-size: var(--fs-small);
     font-weight: 900;
     color: var(--navy);
-    background: #f8fafc;
+    background: var(--paper);
     border: 1px solid var(--line);
-    border-radius: 999px;
-    padding: 3px 9px;
+    border-radius: var(--radius-md);
+    padding: 4px 8px;
     margin: 2px;
   }
   .legacy .mc-section {
-    background: linear-gradient(135deg, #1d4ed8, #2563eb);
-    padding: 78px 0;
-    color: #fff;
+    background: var(--navy-deep);
+    padding: 80px 0;
+    color: var(--paper);
   }
   .legacy .mc-panel {
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 16px;
+    background: color-mix(in srgb,var(--paper) 6%,transparent);
+    border: 1px solid color-mix(in srgb,var(--paper) 12%,transparent);
+    border-radius: var(--radius-md);
     padding: 32px;
   }
   .legacy .mc-meter {
     display: flex;
     align-items: center;
     gap: 16px;
-    padding: 14px 18px;
-    margin-bottom: 22px;
-    background: rgba(0, 0, 0, 0.18);
-    border-radius: 14px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    background: color-mix(in srgb,var(--navy-deep) 18%,transparent);
+    border-radius: var(--radius-md);
   }
   .legacy .mc-count {
     flex-shrink: 0;
@@ -400,16 +396,16 @@
     color: var(--navy);
     font-family: "Noto Serif JP", serif;
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: var(--fs-h2);
     transition: transform 0.25s ease;
   }
   .legacy .mc-count.pop {
     transform: scale(1.15);
   }
   .legacy .mc-meter-text {
-    font-size: 0.9rem;
+    font-size: var(--fs-body);
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9);
+    color: color-mix(in srgb,var(--paper) 90%,transparent);
   }
   .legacy .mc-meter-text b {
     color: var(--gold-lt);
@@ -417,7 +413,7 @@
   .legacy .mc-options {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     margin-bottom: 24px;
   }
   .legacy .mc-option {
@@ -425,40 +421,40 @@
     align-items: flex-start;
     gap: 12px;
     cursor: pointer;
-    padding: 14px 16px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
+    padding: 16px 16px;
+    background: color-mix(in srgb,var(--paper) 5%,transparent);
+    border: 1px solid color-mix(in srgb,var(--paper) 10%,transparent);
+    border-radius: var(--radius-md);
     transition: background 0.2s;
   }
   .legacy .mc-option:hover {
-    background: rgba(255, 255, 255, 0.09);
+    background: color-mix(in srgb,var(--paper) 9%,transparent);
   }
   .legacy .mc-option input {
-    margin-top: 3px;
+    margin-top: 4px;
     width: 16px;
     height: 16px;
     accent-color: var(--gold);
   }
   .legacy .mc-option strong {
     display: block;
-    color: #fff;
-    font-size: 0.95rem;
+    color: var(--paper);
+    font-size: var(--fs-body);
   }
   .legacy .mc-option span {
     display: block;
-    font-size: 0.82rem;
-    color: rgba(255, 255, 255, 0.66);
+    font-size: var(--fs-body);
+    color: color-mix(in srgb,var(--paper) 66%,transparent);
     margin-top: 2px;
   }
   .legacy .mc-button {
     width: 100%;
-    padding: 14px;
-    border-radius: 999px;
+    padding: 16px;
+    border-radius: var(--radius-md);
     background: var(--gold);
     color: var(--navy);
     font-weight: 900;
-    font-size: 1rem;
+    font-size: var(--fs-body);
     border: none;
     cursor: pointer;
     transition: opacity 0.2s;
@@ -469,37 +465,37 @@
   .legacy .mc-app-link {
     display: inline-flex;
     align-items: center;
-    gap: 7px;
+    gap: 8px;
     color: var(--gold-lt);
-    font-size: 0.9rem;
+    font-size: var(--fs-body);
     font-weight: 800;
     text-decoration: none;
-    border-bottom: 1px solid rgba(244, 231, 166, 0.45);
+    border-bottom: 1px solid color-mix(in srgb,var(--line-strong) 45%,transparent);
     padding-bottom: 1px;
   }
   .legacy .steps-section {
-    padding: 82px 0;
-    background: #fff;
+    padding: 84px 0;
+    background: var(--paper);
   }
   .legacy .steps-flow {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    margin-top: 30px;
+    gap: 20px;
+    margin-top: 32px;
   }
   .legacy .step-block {
-    background: #fff;
+    background: var(--paper);
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    box-shadow: var(--shadow-sm);
-    padding: 22px;
+    box-shadow: none;
+    padding: 24px;
   }
   .legacy .step-num {
     width: 44px;
     height: 44px;
-    border-radius: 999px;
+    border-radius: var(--radius-md);
     background: var(--navy);
-    color: #fff;
+    color: var(--paper);
     font-weight: 900;
     display: grid;
     place-items: center;
@@ -508,35 +504,35 @@
   .legacy .step-block h3 {
     font-family: "Noto Serif JP", serif;
     color: var(--navy);
-    font-size: 1.05rem;
+    font-size: var(--fs-body);
     line-height: 1.8;
     margin-bottom: 8px;
   }
   .legacy .step-block p {
-    font-size: 0.9rem;
+    font-size: var(--fs-body);
     color: var(--text-soft);
     line-height: 1.8;
   }
   .legacy .pdf-section {
-    background: #0f2742;
-    color: #fff;
-    padding: 82px 0;
+    background: var(--navy-deep);
+    color: var(--paper);
+    padding: 84px 0;
   }
   .legacy .pdf-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    margin-top: 34px;
+    gap: 20px;
+    margin-top: 36px;
   }
   .legacy .pdf-card {
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: color-mix(in srgb,var(--paper) 7%,transparent);
+    border: 1px solid color-mix(in srgb,var(--paper) 14%,transparent);
     border-radius: var(--radius);
     padding: 24px;
   }
   .legacy .pdf-icon {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
+    font-size: var(--fs-h2);
+    margin-bottom: 12px;
   }
   .legacy .pdf-card h3 {
     color: var(--gold-lt);
@@ -544,34 +540,34 @@
     margin-bottom: 8px;
   }
   .legacy .pdf-card p {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.76);
+    font-size: var(--fs-body);
+    color: color-mix(in srgb,var(--paper) 76%,transparent);
     line-height: 1.75;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .legacy .pdf-btn {
     display: inline-flex;
-    padding: 9px 16px;
-    border-radius: 999px;
+    padding: 8px 16px;
+    border-radius: var(--radius-md);
     background: var(--gold);
     color: var(--navy);
     font-weight: 900;
     text-decoration: none;
-    font-size: 0.86rem;
+    font-size: var(--fs-body);
   }
   .legacy .soudan-section {
-    padding: 82px 0;
-    background: #f8fafc;
+    padding: 84px 0;
+    background: var(--paper);
   }
   .legacy .soudan-box {
-    background: #fff;
+    background: var(--paper);
     border: 1px solid var(--line);
     border-left: 7px solid var(--gold);
-    border-radius: 0 18px 18px 0;
-    padding: 30px;
-    box-shadow: var(--shadow-sm);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 32px;
+    box-shadow: none;
     max-width: 900px;
-    margin: 34px auto 0;
+    margin: 36px auto 0;
   }
   .legacy .soudan-box p {
     line-height: 2;
@@ -585,19 +581,19 @@
     margin-top: 28px;
   }
   .legacy .faq-section {
-    background: #fff;
-    padding: 82px 0;
+    background: var(--paper);
+    padding: 84px 0;
   }
   .legacy .faq-list {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin-top: 34px;
+    margin-top: 36px;
   }
   .legacy .faq2-item {
-    background: #fff;
+    background: var(--paper);
     border: 1px solid var(--line);
-    border-radius: 16px;
+    border-radius: var(--radius-md);
     overflow: hidden;
   }
   .legacy .faq2-q {
@@ -605,7 +601,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 12px;
-    padding: 18px 22px;
+    padding: 20px 24px;
     cursor: pointer;
   }
   .legacy .faq2-q-text {
@@ -627,14 +623,14 @@
   }
   .legacy .faq2-a {
     display: none;
-    padding: 0 22px 20px;
+    padding: 0 24px 20px;
   }
   .legacy .faq2-item.is-open .faq2-a {
     display: block;
   }
   .legacy .faq2-a p {
     border-top: 1px solid var(--line);
-    padding-top: 14px;
+    padding-top: 16px;
     line-height: 1.9;
     color: var(--text-soft);
     margin: 0;
@@ -645,16 +641,16 @@
     color: var(--navy);
   }
   .legacy .howto-section {
-    padding: 82px 0;
-    background: #f8fafc;
+    padding: 84px 0;
+    background: var(--paper);
   }
   .legacy .section-label {
     display: inline-flex;
-    padding: 5px 13px;
-    border-radius: 999px;
-    background: rgba(5, 17, 31, 0.07);
+    padding: 4px 12px;
+    border-radius: var(--radius-md);
+    background: color-mix(in srgb,var(--navy-deep) 7%,transparent);
     color: var(--navy);
-    font-size: 0.76rem;
+    font-size: var(--fs-small);
     font-weight: 900;
     margin-bottom: 12px;
   }
@@ -665,44 +661,44 @@
   .legacy .howto-steps {
     display: grid;
     gap: 16px;
-    margin-top: 30px;
+    margin-top: 32px;
   }
   .legacy .howto-step {
     display: grid;
     grid-template-columns: 64px 1fr;
-    gap: 18px;
-    background: #fff;
+    gap: 20px;
+    background: var(--paper);
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    padding: 22px;
-    box-shadow: var(--shadow-sm);
+    padding: 24px;
+    box-shadow: none;
   }
   .legacy .howto-num {
     width: 52px;
     height: 52px;
-    border-radius: 999px;
+    border-radius: var(--radius-md);
     background: var(--navy);
-    color: #fff;
+    color: var(--paper);
     display: grid;
     place-items: center;
     font-weight: 900;
   }
   .legacy .howto-num span:first-child {
-    font-size: 0.65rem;
+    font-size: var(--fs-small);
     display: block;
     line-height: 1;
   }
   .legacy .howto-num span:last-child {
-    font-size: 1.05rem;
+    font-size: var(--fs-body);
     display: block;
     line-height: 1;
   }
   .legacy .howto-body h3 {
     font-family: "Noto Serif JP", serif;
     color: var(--navy);
-    font-size: 1.05rem;
+    font-size: var(--fs-body);
     line-height: 1.8;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .legacy .howto-body p {
     color: var(--text-soft);
@@ -711,22 +707,22 @@
   .legacy .howto-tip {
     display: inline-flex;
     margin-top: 8px;
-    color: #7a5c00;
-    background: #fff7ed;
-    border: 1px solid #fed7aa;
-    border-radius: 999px;
-    padding: 3px 10px;
-    font-size: 0.8rem;
+    color: var(--gold);
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-md);
+    padding: 4px 12px;
+    font-size: var(--fs-small);
     font-weight: 800;
   }
   @media (max-width: 900px) {
-    .legacy .visual-grid,.legacy 
-    .steps-flow,.legacy 
+    .legacy .visual-grid,.legacy
+    .steps-flow,.legacy
     .pdf-grid {
       grid-template-columns: 1fr;
     }
     .legacy .case-section .wrap-narrow {
-      padding: 0 18px;
+      padding: 0 20px;
     }
     .legacy .vc-visual {
       height: 150px;
@@ -735,15 +731,15 @@
       grid-template-columns: 1fr;
     }
     .legacy .mc-panel {
-      padding: 22px 16px;
+      padding: 24px 16px;
     }
   }
 
   .legacy .parent-openchat-section {
-    padding: 82px 0;
-    background: linear-gradient(180deg, #f2fbf7 0%, #f8fafc 100%);
-    border-top: 1px solid rgba(15, 39, 71, 0.08);
-    border-bottom: 1px solid rgba(15, 39, 71, 0.08);
+    padding: 84px 0;
+    background: var(--paper-alt);
+    border-top: 1px solid color-mix(in srgb,var(--navy-deep) 8%,transparent);
+    border-bottom: 1px solid color-mix(in srgb,var(--navy-deep) 8%,transparent);
   }
   .legacy .parent-openchat-intro {
     max-width: 800px;
@@ -751,8 +747,8 @@
     text-align: center;
   }
   .legacy .parent-openchat-intro .section-kicker {
-    background: rgba(6, 199, 85, 0.11);
-    color: #087b3f;
+    background: color-mix(in srgb,var(--navy-deep) 11%,transparent);
+    color: var(--navy-deep);
   }
   .legacy .parent-openchat-intro .section-lead {
     margin-left: auto;
@@ -761,22 +757,22 @@
   .legacy .parent-openchat-panel {
     display: grid;
     grid-template-columns: minmax(320px, 0.86fr) minmax(360px, 1.14fr);
-    gap: 34px;
+    gap: 36px;
     align-items: center;
-    margin-top: 38px;
-    padding: 30px;
-    background: #fff;
-    border: 1px solid rgba(15, 39, 71, 0.13);
-    border-radius: 22px;
-    box-shadow: 0 18px 44px rgba(5, 17, 31, 0.1);
+    margin-top: 40px;
+    padding: 32px;
+    background: var(--paper);
+    border: 1px solid color-mix(in srgb,var(--navy-deep) 13%,transparent);
+    border-radius: var(--radius-md);
+    box-shadow: none;
   }
   .legacy .parent-openchat-map-wrap {
     position: relative;
     min-width: 0;
-    padding: 22px;
-    background: #fff;
-    border: 1px solid rgba(15, 39, 71, 0.1);
-    border-radius: 18px;
+    padding: 24px;
+    background: var(--paper);
+    border: 1px solid color-mix(in srgb,var(--navy-deep) 10%,transparent);
+    border-radius: var(--radius-md);
     overflow: hidden;
   }
   .legacy .parent-openchat-map-heading {
@@ -784,7 +780,7 @@
     z-index: 1;
     margin: 0 0 8px;
     color: var(--navy);
-    font-size: 0.82rem;
+    font-size: var(--fs-body);
     font-weight: 900;
     letter-spacing: 0.06em;
   }
@@ -802,11 +798,11 @@
     outline: none;
   }
   .legacy .parent-openchat-region .region-shape {
-    stroke: #fff;
+    stroke: var(--paper);
     stroke-width: 3;
     stroke-linejoin: round;
     vector-effect: non-scaling-stroke;
-    filter: drop-shadow(0 3px 3px rgba(5, 17, 31, 0.2));
+    filter: drop-shadow(0 3px 3px color-mix(in srgb,var(--navy-deep) 20%,transparent));
     transform-box: fill-box;
     transform-origin: center;
     transition:
@@ -814,58 +810,58 @@
       filter 0.18s ease,
       opacity 0.18s ease;
   }
-  .legacy .parent-openchat-region:hover .region-shape,.legacy 
+  .legacy .parent-openchat-region:hover .region-shape,.legacy
   .parent-openchat-region:focus .region-shape {
     transform: translateY(-2px) scale(1.018);
-    filter: drop-shadow(0 7px 6px rgba(5, 17, 31, 0.24));
+    filter: drop-shadow(0 7px 6px color-mix(in srgb,var(--navy-deep) 24%,transparent));
   }
   .legacy .parent-openchat-region:focus-visible .region-shape {
-    stroke: #0f2747;
+    stroke: var(--navy-deep);
     stroke-width: 6;
   }
   .legacy .parent-openchat-region--hokkaido .region-shape {
-    fill: #8fc95d;
+    fill: var(--ink-sub);
   }
   .legacy .parent-openchat-region--tohoku .region-shape {
-    fill: #58b971;
+    fill: var(--ink-sub);
   }
   .legacy .parent-openchat-region--kanto .region-shape {
-    fill: #68bfb4;
+    fill: var(--ink-sub);
   }
   .legacy .parent-openchat-region--chubu .region-shape {
-    fill: #aaa0d8;
+    fill: var(--ink-sub);
   }
   .legacy .parent-openchat-region--kinki .region-shape {
-    fill: #efb34d;
+    fill: var(--gold);
   }
   .legacy .parent-openchat-region--chugoku .region-shape {
-    fill: #f28b3f;
+    fill: var(--c-caution);
   }
   .legacy .parent-openchat-region--chugoku .region-shape--shikoku {
-    fill: #ed7b68;
+    fill: var(--c-caution);
   }
   .legacy .parent-openchat-region--kyushu .region-shape {
-    fill: #ed8e91;
+    fill: var(--ink-sub);
   }
   .legacy .parent-openchat-links h3 {
     font-family: "Noto Serif JP", serif;
     color: var(--navy);
-    font-size: 1.25rem;
-    margin: 0 0 14px;
+    font-size: var(--fs-h3);
+    margin: 0 0 16px;
   }
   .legacy .parent-openchat-link-list {
     display: grid;
-    gap: 9px;
+    gap: 8px;
   }
   .legacy .parent-openchat-link {
     display: grid;
     grid-template-columns: 12px minmax(0, 1fr) 22px;
     gap: 12px;
     align-items: center;
-    padding: 12px 14px;
-    background: #fff;
+    padding: 12px 16px;
+    background: var(--paper);
     border: 1px solid var(--line);
-    border-radius: 12px;
+    border-radius: var(--radius-md);
     color: var(--navy);
     text-decoration: none;
     transition:
@@ -875,11 +871,11 @@
   }
   .legacy .parent-openchat-link:hover {
     transform: translateX(3px);
-    border-color: rgba(6, 199, 85, 0.55);
-    box-shadow: 0 8px 20px rgba(5, 17, 31, 0.08);
+    border-color: color-mix(in srgb,var(--navy-deep) 55%,transparent);
+    box-shadow: none;
   }
   .legacy .parent-openchat-link:focus-visible {
-    outline: 3px solid rgba(6, 199, 85, 0.35);
+    outline: 3px solid color-mix(in srgb,var(--navy-deep) 35%,transparent);
     outline-offset: 2px;
   }
   .legacy .parent-openchat-link-dot {
@@ -890,39 +886,39 @@
   }
   .legacy .parent-openchat-link strong {
     display: block;
-    font-size: 0.92rem;
+    font-size: var(--fs-body);
     line-height: 1.45;
   }
   .legacy .parent-openchat-link small {
     display: block;
     margin-top: 2px;
     color: var(--text-soft);
-    font-size: 0.72rem;
+    font-size: var(--fs-small);
     line-height: 1.4;
   }
   .legacy .parent-openchat-link svg {
     width: 20px;
     height: 20px;
-    color: #087b3f;
+    color: var(--navy-deep);
   }
   .legacy .parent-openchat-note {
     display: flex;
     gap: 12px;
     align-items: flex-start;
-    margin-top: 18px;
-    padding: 15px 17px;
-    background: #fff;
-    border: 1px solid rgba(15, 39, 71, 0.12);
-    border-radius: 14px;
+    margin-top: 20px;
+    padding: 16px 16px;
+    background: var(--paper);
+    border: 1px solid color-mix(in srgb,var(--navy-deep) 12%,transparent);
+    border-radius: var(--radius-md);
     color: var(--text-soft);
-    font-size: 0.82rem;
+    font-size: var(--fs-body);
     line-height: 1.75;
   }
   .legacy .parent-openchat-note svg {
     width: 22px;
     height: 22px;
     flex: 0 0 auto;
-    color: #087b3f;
+    color: var(--navy-deep);
     margin-top: 2px;
   }
   .legacy .parent-openchat-note p {
@@ -937,11 +933,11 @@
     }
     .legacy .parent-openchat-panel {
       grid-template-columns: 1fr;
-      padding: 22px;
+      padding: 24px;
       gap: 24px;
     }
     .legacy .parent-openchat-map-wrap {
-      padding: 18px;
+      padding: 20px;
     }
     .legacy .parent-openchat-map {
       width: min(100%, 360px);
@@ -952,15 +948,15 @@
   }
   @media (max-width: 520px) {
     .legacy .parent-openchat-section {
-      padding: 54px 0;
+      padding: 56px 0;
     }
     .legacy .parent-openchat-panel {
       margin-top: 28px;
       padding: 16px;
-      border-radius: 18px;
+      border-radius: var(--radius-md);
     }
     .legacy .parent-openchat-map-wrap {
-      padding: 14px 8px 12px;
+      padding: 16px 8px 12px;
     }
     .legacy .parent-openchat-map-heading {
       padding-left: 8px;
@@ -969,42 +965,42 @@
       width: min(100%, 300px);
     }
     .legacy .parent-openchat-link {
-      padding: 11px 12px;
+      padding: 12px 12px;
     }
     .legacy .parent-openchat-note {
-      padding: 13px 14px;
+      padding: 12px 16px;
     }
   }
   @media (prefers-reduced-motion: reduce) {
-    .legacy .parent-openchat-region .region-shape,.legacy 
+    .legacy .parent-openchat-region .region-shape,.legacy
     .parent-openchat-link {
       transition: none;
     }
   }
 
   .legacy .parent-chain-direct {
-    background: linear-gradient(180deg, #fff7ed 0%, #fff 100%);
-    padding: 42px 0;
-    border-top: 1px solid rgba(15, 39, 71, 0.06);
-    border-bottom: 1px solid rgba(15, 39, 71, 0.08);
+    background: var(--paper-alt);
+    padding: 44px 0;
+    border-top: 1px solid color-mix(in srgb,var(--navy-deep) 6%,transparent);
+    border-bottom: 1px solid color-mix(in srgb,var(--navy-deep) 8%,transparent);
   }
 
   .legacy .parent-chain-card {
-    background: #fff;
-    border: 1px solid rgba(15, 39, 71, 0.14);
-    border-left: 8px solid #b91c1c;
-    border-radius: 0 18px 18px 0;
-    box-shadow: 0 14px 34px rgba(5, 17, 31, 0.1);
-    padding: 28px 30px;
+    background: var(--paper);
+    border: 1px solid color-mix(in srgb,var(--navy-deep) 14%,transparent);
+    border-left: 8px solid var(--navy);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    box-shadow: none;
+    padding: 28px 32px;
   }
 
   .legacy .parent-chain-badge {
     display: inline-flex;
-    padding: 5px 12px;
-    border-radius: 999px;
-    background: rgba(185, 28, 28, 0.09);
-    color: #b91c1c;
-    font-size: 0.74rem;
+    padding: 4px 12px;
+    border-radius: var(--radius-md);
+    background: color-mix(in srgb,var(--navy) 9%,transparent);
+    color: var(--c-caution);
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.08em;
     margin-bottom: 12px;
@@ -1013,16 +1009,16 @@
   .legacy .parent-chain-card h2 {
     font-family: "Noto Serif JP", serif;
     color: var(--navy);
-    font-size: clamp(1.35rem, 2.5vw, 2rem);
+    font-size: clamp(var(--fs-h2), 2.5vw, var(--fs-h1));
     line-height: 1.45;
     margin: 0 0 12px;
   }
 
   .legacy .parent-chain-card p {
     color: var(--text);
-    font-size: 0.98rem;
+    font-size: var(--fs-body);
     line-height: 1.95;
-    margin: 0 0 18px;
+    margin: 0 0 20px;
   }
 
   .legacy .parent-chain-actions {
@@ -1043,8 +1039,8 @@
   }
 
   /* Page-specific styles for guide-parent.html */
-  .legacy .visual-grid,.legacy 
-  .steps-flow,.legacy 
+  .legacy .visual-grid,.legacy
+  .steps-flow,.legacy
   .pdf-grid {
     display: block;
     max-width: 900px;
@@ -1072,25 +1068,25 @@
     min-height: 150px;
     border-radius: 0;
   }
-  .legacy .step-block,.legacy 
+  .legacy .step-block,.legacy
   .pdf-card {
     border: 0;
     border-top: 1px solid var(--line);
     border-radius: 0;
     box-shadow: none;
     margin: 0;
-    padding: 22px 0;
+    padding: 24px 0;
   }
-  .legacy .step-block:last-child,.legacy 
+  .legacy .step-block:last-child,.legacy
   .pdf-card:last-child {
     border-bottom: 1px solid var(--line);
   }
-  .legacy .page-hero-kicker,.legacy 
-  .lead-kicker,.legacy 
+  .legacy .page-hero-kicker,.legacy
+  .lead-kicker,.legacy
   .section-kicker {
     text-transform: none;
     letter-spacing: 0.03em;
-    border-radius: 3px;
+    border-radius: var(--radius-sm);
   }
   @media (max-width: 700px) {
     .legacy .visual-card {
@@ -1105,16 +1101,16 @@
   .legacy .parent-page .mc-section {
     display: none;
   }
-  .legacy .parent-page .lead-kicker,.legacy 
-  .parent-page .section-kicker,.legacy 
+  .legacy .parent-page .lead-kicker,.legacy
+  .parent-page .section-kicker,.legacy
   .parent-page .section-label {
     display: none;
   }
-  .legacy .parent-page .case-section,.legacy 
-  .parent-page .visual-section,.legacy 
-  .parent-page .steps-section,.legacy 
-  .parent-page .soudan-section,.legacy 
-  .parent-page .faq-section,.legacy 
+  .legacy .parent-page .case-section,.legacy
+  .parent-page .visual-section,.legacy
+  .parent-page .steps-section,.legacy
+  .parent-page .soudan-section,.legacy
+  .parent-page .faq-section,.legacy
   .parent-page .howto-section {
     padding: 68px 0;
   }
@@ -1131,21 +1127,21 @@
     border-bottom: 1px solid var(--line);
     border-radius: 0;
     box-shadow: none;
-    background: #fff;
+    background: var(--paper);
   }
   .legacy .parent-page .case-card.is-open {
     box-shadow: none;
     border-color: var(--line);
   }
   .legacy .parent-page .case-top {
-    padding: 26px 0 8px;
+    padding: 28px 0 8px;
   }
   .legacy .parent-page .case-tag {
     padding: 0;
     background: transparent;
     color: var(--navy);
     border-radius: 0;
-    font-size: 0.78rem;
+    font-size: var(--fs-small);
   }
   .legacy .parent-page .case-toggle {
     justify-content: flex-start;
@@ -1159,9 +1155,9 @@
   .legacy .parent-page .case-quote {
     border-radius: 0;
   }
-  .legacy .parent-page .case-foot,.legacy 
-  .parent-page .soudan-box,.legacy 
-  .parent-page .faq2-item,.legacy 
+  .legacy .parent-page .case-foot,.legacy
+  .parent-page .soudan-box,.legacy
+  .parent-page .faq2-item,.legacy
   .parent-page .howto-step {
     border-radius: 0;
     box-shadow: none;
@@ -1175,10 +1171,10 @@
     border-bottom: 1px solid var(--line);
   }
   .legacy .parent-page .faq2-q {
-    padding: 18px 0;
+    padding: 20px 0;
   }
   .legacy .parent-page .faq2-a {
-    padding: 0 0 22px;
+    padding: 0 0 24px;
   }
   .legacy .parent-page .howto-steps {
     gap: 0;
@@ -1186,7 +1182,7 @@
   }
   .legacy .parent-page .howto-step {
     grid-template-columns: 52px 1fr;
-    padding: 22px 0;
+    padding: 24px 0;
     border: 0;
     border-bottom: 1px solid var(--line);
   }
@@ -1203,8 +1199,8 @@
   }
 
   .legacy .parent-boundary {
-    padding: 86px 0 92px;
-    background: #f7f8fa;
+    padding: 88px 0 92px;
+    background: var(--paper);
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
   }
@@ -1215,11 +1211,11 @@
   }
   .legacy .parent-boundary .editorial-brief-band {
     display: inline-block;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     padding-left: 12px;
     border-left: 4px solid var(--gold);
     color: var(--navy);
-    font-size: 0.78rem;
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.12em;
   }
@@ -1228,17 +1224,17 @@
     margin: 0 0 24px;
     color: var(--navy);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(1.85rem, 3.6vw, 2.75rem);
+    font-size: clamp(var(--fs-h1), 3.6vw, var(--fs-h1));
     line-height: 1.4;
   }
   .legacy .parent-boundary > .wrap-narrow > p {
-    margin: 0 0 22px;
+    margin: 0 0 24px;
     color: var(--text);
-    font-size: 1.02rem;
+    font-size: var(--fs-body);
     line-height: 2.05;
   }
   .legacy .parent-boundary-sequence {
-    margin: 34px 0;
+    margin: 36px 0;
     border-top: 2px solid var(--navy);
   }
   .legacy .parent-boundary-sequence p {
@@ -1247,15 +1243,15 @@
     gap: 12px;
     align-items: baseline;
     margin: 0;
-    padding: 17px 0;
+    padding: 16px 0;
     border-bottom: 1px solid var(--line);
     color: var(--text);
     line-height: 1.9;
   }
   .legacy .parent-boundary-sequence .parent-boundary-number {
-    color: #9a7414;
+    color: var(--gold);
     font-family: "Noto Serif JP", serif;
-    font-size: 1.35rem;
+    font-size: var(--fs-h2);
     font-weight: 900;
   }
   .legacy .parent-boundary-sequence strong {
@@ -1266,18 +1262,18 @@
     color: var(--text);
   }
   .legacy .parent-boundary-rule {
-    margin: 34px 0 42px;
+    margin: 36px 0 44px;
     padding: 24px 28px;
     border-left: 6px solid var(--gold);
-    background: #fff;
-    box-shadow: 0 8px 24px rgba(5, 17, 31, 0.06);
+    background: var(--paper);
+    box-shadow: none;
   }
-  .legacy .parent-boundary-rule h3,.legacy 
+  .legacy .parent-boundary-rule h3,.legacy
   .parent-boundary-subhead {
     margin: 0 0 12px;
     color: var(--navy);
     font-family: "Noto Serif JP", serif;
-    font-size: 1.3rem;
+    font-size: var(--fs-h3);
     line-height: 1.55;
   }
   .legacy .parent-boundary-rule p {
@@ -1307,7 +1303,7 @@
   }
   .legacy .parent-boundary-close {
     margin-bottom: 0 !important;
-    padding-top: 18px;
+    padding-top: 20px;
     border-top: 2px solid var(--navy);
     color: var(--navy) !important;
     font-weight: 900;
@@ -1318,14 +1314,14 @@
     max-width: 1000px;
     border-top: 2px solid var(--navy);
     border-bottom: 1px solid var(--line);
-    background: #fff;
+    background: var(--paper);
   }
   .legacy .parent-supplement-summary {
     display: grid;
     grid-template-columns: 112px 1fr auto;
     gap: 20px;
     align-items: center;
-    padding: 24px 18px;
+    padding: 24px 20px;
     color: var(--navy);
     cursor: pointer;
     list-style: none;
@@ -1336,7 +1332,7 @@
   .legacy .parent-supplement-summary::after {
     content: "+ 開く";
     color: var(--navy);
-    font-size: 0.86rem;
+    font-size: var(--fs-body);
     font-weight: 900;
     white-space: nowrap;
   }
@@ -1344,22 +1340,22 @@
     content: "− 閉じる";
   }
   .legacy .parent-supplement-label {
-    padding-left: 10px;
+    padding-left: 12px;
     border-left: 3px solid var(--gold);
     color: var(--text-soft);
-    font-size: 0.75rem;
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.08em;
   }
   .legacy .parent-supplement-summary strong {
     font-family: "Noto Serif JP", serif;
-    font-size: 1.12rem;
+    font-size: var(--fs-h3);
     line-height: 1.55;
   }
   .legacy .parent-supplement-summary > span:last-of-type {
     grid-column: 2;
     color: var(--text-soft);
-    font-size: 0.88rem;
+    font-size: var(--fs-body);
     line-height: 1.7;
   }
   .legacy .parent-supplement-body {
@@ -1368,14 +1364,14 @@
 
   @media (max-width: 700px) {
     .legacy .parent-boundary {
-      padding: 58px 0 64px;
+      padding: 60px 0 64px;
     }
     .legacy .parent-boundary .wrap-narrow {
-      padding: 0 18px;
+      padding: 0 20px;
     }
     .legacy .parent-boundary-sequence p {
       grid-template-columns: 30px 1fr;
-      gap: 8px 10px;
+      gap: 8px 12px;
     }
     .legacy .parent-boundary-sequence strong {
       grid-column: 2;
@@ -1385,13 +1381,13 @@
       grid-column: 2;
     }
     .legacy .parent-boundary-sequence p {
-      font-size: 0.94rem;
+      font-size: var(--fs-body);
     }
     .legacy .parent-boundary-number {
       grid-row: 1 / span 2;
     }
     .legacy .parent-boundary-rule {
-      padding: 20px 18px;
+      padding: 20px 20px;
     }
     .legacy .parent-boundary-questions div {
       display: block;
@@ -1400,11 +1396,11 @@
       margin-top: 8px;
     }
     .legacy .parent-supplement {
-      margin: 26px 18px 38px;
+      margin: 28px 20px 40px;
     }
     .legacy .parent-supplement-summary {
       grid-template-columns: 1fr auto;
-      gap: 8px 14px;
+      gap: 8px 16px;
       padding: 20px 4px;
     }
     .legacy .parent-supplement-label {

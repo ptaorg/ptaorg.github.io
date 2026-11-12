@@ -3,22 +3,22 @@
   .legacy {
     --color-primary: var(--navy-deep);
     --color-primary-strong: var(--navy-deep);
-    --color-accent: var(--navy-deep);
+    --color-accent: var(--gold);
     --color-accent-soft: var(--tint-strong);
     --color-bg: var(--paper);
     --color-surface: var(--paper);
     --color-text-main: var(--navy-deep);
     --color-text-muted: var(--navy-deep);
     --color-border: var(--line);
-    --color-danger: var(--navy);
-    --color-warning: var(--navy);
+    --color-danger: var(--c-caution);
+    --color-warning: var(--c-caution);
     --color-success: var(--navy-deep);
     --color-donate: var(--navy);
     --color-donate-deep: var(--navy);
 
-    --navy: var(--color-primary);
+
     --navy-2: var(--color-primary);
-    --gold: var(--color-accent);
+
     --gold-lt: var(--color-accent-soft);
     --cream: var(--paper-alt);
     --red: var(--color-danger);
@@ -26,7 +26,7 @@
     --green: var(--color-success);
     --text: var(--color-text-main);
     --text-soft: var(--color-text-muted);
-    --line: var(--color-border);
+
     --bg: var(--color-bg);
     --surface: var(--color-surface);
 
@@ -34,8 +34,8 @@
     --shadow-md: 0 8px 26px color-mix(in srgb,var(--navy-deep) 9%,transparent);
     --shadow-lg: 0 18px 46px color-mix(in srgb,var(--navy-deep) 13%,transparent);
   }
-  .legacy h2,.legacy 
-  h3,.legacy 
+  .legacy h2,.legacy
+  h3,.legacy
   .section-title {
     font-weight: 700;
     letter-spacing: 0.005em;
@@ -44,13 +44,13 @@
     font-weight: 700;
     letter-spacing: 0.08em;
   }
-  .legacy .article-body,.legacy 
-  .plain-prose-block,.legacy 
-  .chapter-content,.legacy 
+  .legacy .article-body,.legacy
+  .plain-prose-block,.legacy
+  .chapter-content,.legacy
   .officer-prose {
     line-height: 1.95;
   }
-  .legacy .thesis-section,.legacy 
+  .legacy .thesis-section,.legacy
   .thesis-lead-section {
     max-width: 100%;
   }
@@ -70,12 +70,12 @@
   .legacy .site-header .nav-container,.legacy:has(.officer-core-section) .site-header .nav-container,.legacy:has(.duty-section) .site-header .nav-container,.legacy:has(.scope-section) .site-header .nav-container,.legacy:has(.mou-section) .site-header .nav-container,.legacy:has(.yk-notice-section) .site-header .nav-container {
     background: transparent;
   }
-  .legacy .site-header .logo,.legacy 
-  .site-header .logo span,.legacy 
+  .legacy .site-header .logo,.legacy
+  .site-header .logo span,.legacy
   .site-header .nav-link,.legacy:has(.officer-core-section) .site-header .logo,.legacy:has(.officer-core-section) .site-header .logo span,.legacy:has(.officer-core-section) .site-header .nav-link,.legacy:has(.duty-section) .site-header .logo,.legacy:has(.duty-section) .site-header .logo span,.legacy:has(.duty-section) .site-header .nav-link,.legacy:has(.scope-section) .site-header .logo,.legacy:has(.scope-section) .site-header .logo span,.legacy:has(.scope-section) .site-header .nav-link,.legacy:has(.mou-section) .site-header .logo,.legacy:has(.mou-section) .site-header .logo span,.legacy:has(.mou-section) .site-header .nav-link,.legacy:has(.yk-notice-section) .site-header .logo,.legacy:has(.yk-notice-section) .site-header .logo span,.legacy:has(.yk-notice-section) .site-header .nav-link {
     color: var(--paper);
   }
-  .legacy .site-header .nav-link:hover,.legacy 
+  .legacy .site-header .nav-link:hover,.legacy
   .site-header .nav-link.active {
     color: var(--paper-alt);
     background: color-mix(in srgb,var(--paper) 10%,transparent);
@@ -199,7 +199,7 @@
     padding: 64px 0 72px;
     color: var(--paper);
   }
-  .legacy .page-hero--photo h1,.legacy 
+  .legacy .page-hero--photo h1,.legacy
   .page-hero--photo p {
     color: var(--paper);
     text-shadow: 0 2px 12px color-mix(in srgb,var(--navy-deep) 34%,transparent);
@@ -212,7 +212,7 @@
       width: min(100% - 28px, 980px);
       padding: 44px 0 52px;
     }
-    .legacy .page-hero--photo,.legacy 
+    .legacy .page-hero--photo,.legacy
     .page-hero--photo .page-hero-bg-img img {
       min-height: 300px;
     }
@@ -226,8 +226,8 @@
     font-size: var(--fs-body);
     padding: 8px 8px;
   }
-  .legacy .desktop-nav > a.nav-link[href$="proper-management.html"],.legacy 
-  .desktop-nav > a.nav-link[href$="edu-board-separation.html"],.legacy 
+  .legacy .desktop-nav > a.nav-link[href$="proper-management.html"],.legacy
+  .desktop-nav > a.nav-link[href$="edu-board-separation.html"],.legacy
   .desktop-nav > a.btn-gold[href$="audit/index.html"] {
     display: none;
   }
@@ -245,12 +245,12 @@
     border: 1px solid var(--line-strong);
     font-weight: 900;
   }
-  .legacy .mega-col a[href$="documents.html"],.legacy 
-  .mega-col a[href$="board-responses.html"],.legacy 
-  .mega-col a[href$="national-archive.html"],.legacy 
-  .mega-col a[href$="administrative-materials.html"],.legacy 
-  .mobile-link[href$="documents.html"],.legacy 
-  .mobile-link[href$="board-responses.html"],.legacy 
+  .legacy .mega-col a[href$="documents.html"],.legacy
+  .mega-col a[href$="board-responses.html"],.legacy
+  .mega-col a[href$="national-archive.html"],.legacy
+  .mega-col a[href$="administrative-materials.html"],.legacy
+  .mobile-link[href$="documents.html"],.legacy
+  .mobile-link[href$="board-responses.html"],.legacy
   .mobile-link[href$="national-archive.html"] {
     color: var(--color-donate-deep);
     background: var(--paper);
@@ -259,9 +259,9 @@
     padding: 8px 12px;
     font-weight: 900;
   }
-  .legacy .mega-col a[href$="documents.html"]::before,.legacy 
-  .mega-col a[href$="board-responses.html"]::before,.legacy 
-  .mega-col a[href$="national-archive.html"]::before,.legacy 
+  .legacy .mega-col a[href$="documents.html"]::before,.legacy
+  .mega-col a[href$="board-responses.html"]::before,.legacy
+  .mega-col a[href$="national-archive.html"]::before,.legacy
   .mega-col a[href$="administrative-materials.html"]::before {
     content: "重要 ";
     font-size: var(--fs-small);
@@ -327,8 +327,8 @@
   }
 
   /* Summary-first utilities: existing pages are unaffected until these classes are used. */
-  .legacy .conclusion-box,.legacy 
-  .key-takeaway,.legacy 
+  .legacy .conclusion-box,.legacy
+  .key-takeaway,.legacy
   .summary-first {
     margin: 24px 0 32px;
     padding: 24px 24px;
@@ -338,8 +338,8 @@
     border-radius: var(--radius-md);
     box-shadow: none;
   }
-  .legacy .conclusion-box .label,.legacy 
-  .key-takeaway .label,.legacy 
+  .legacy .conclusion-box .label,.legacy
+  .key-takeaway .label,.legacy
   .summary-first .label {
     display: inline-flex;
     align-items: center;
@@ -352,22 +352,22 @@
     font-weight: 900;
     letter-spacing: 0.08em;
   }
-  .legacy .conclusion-box h2,.legacy 
-  .conclusion-box h3,.legacy 
-  .key-takeaway h2,.legacy 
-  .key-takeaway h3,.legacy 
-  .summary-first h2,.legacy 
+  .legacy .conclusion-box h2,.legacy
+  .conclusion-box h3,.legacy
+  .key-takeaway h2,.legacy
+  .key-takeaway h3,.legacy
+  .summary-first h2,.legacy
   .summary-first h3 {
     margin: 0 0 12px;
     color: var(--color-primary);
     line-height: 1.55;
   }
-  .legacy .conclusion-box p:last-child,.legacy 
-  .key-takeaway p:last-child,.legacy 
+  .legacy .conclusion-box p:last-child,.legacy
+  .key-takeaway p:last-child,.legacy
   .summary-first p:last-child {
     margin-bottom: 0;
   }
-  .legacy .diagram-note,.legacy 
+  .legacy .diagram-note,.legacy
   .diagram-summary {
     margin-top: 12px;
     color: var(--color-text-muted);
@@ -375,14 +375,14 @@
     line-height: 1.8;
   }
   @media (max-width: 640px) {
-    .legacy .conclusion-box,.legacy 
-    .key-takeaway,.legacy 
+    .legacy .conclusion-box,.legacy
+    .key-takeaway,.legacy
     .summary-first {
       padding: 20px 20px;
       margin: 20px 0 24px;
       border-radius: var(--radius-md);
     }
-    .legacy .diagram-note,.legacy 
+    .legacy .diagram-note,.legacy
     .diagram-summary {
       font-size: var(--fs-body);
     }
@@ -437,64 +437,64 @@
     --hover-orange-soft: var(--paper);
     --hover-orange-line: var(--tint-strong);
   }
-  .legacy a:hover,.legacy 
-  .article-body a:hover,.legacy 
-  .pta-report-container a:hover,.legacy 
-  .report-content-wrap a:hover,.legacy 
-  .case-body a:hover,.legacy 
-  .case-actions a:hover,.legacy 
-  .source-note a:hover,.legacy 
-  .related-link-card:hover strong,.legacy 
-  .related-link-card:hover span,.legacy 
-  .case-anchor-link:hover,.legacy 
-  .report-toc a:hover,.legacy 
+  .legacy a:hover,.legacy
+  .article-body a:hover,.legacy
+  .pta-report-container a:hover,.legacy
+  .report-content-wrap a:hover,.legacy
+  .case-body a:hover,.legacy
+  .case-actions a:hover,.legacy
+  .source-note a:hover,.legacy
+  .related-link-card:hover strong,.legacy
+  .related-link-card:hover span,.legacy
+  .case-anchor-link:hover,.legacy
+  .report-toc a:hover,.legacy
   .footer a:hover {
     color: var(--hover-orange-deep);
   }
-  .legacy .site-header .nav-link:hover,.legacy 
-  .site-header .nav-link.active,.legacy 
-  .nav-link:hover,.legacy 
+  .legacy .site-header .nav-link:hover,.legacy
+  .site-header .nav-link.active,.legacy
+  .nav-link:hover,.legacy
   .nav-link.active {
     color: var(--paper);
     background: var(--hover-orange);
     border-color: color-mix(in srgb,var(--paper) 28%,transparent);
   }
-  .legacy .site-header .logo:hover,.legacy 
+  .legacy .site-header .logo:hover,.legacy
   .site-header .logo:hover span {
     color: var(--paper);
   }
-  .legacy .site-header .mega-col a:hover,.legacy 
-  .mega-col a:hover,.legacy 
-  .mobile-link:hover,.legacy 
-  .case-anchor-link:hover,.legacy 
+  .legacy .site-header .mega-col a:hover,.legacy
+  .mega-col a:hover,.legacy
+  .mobile-link:hover,.legacy
+  .case-anchor-link:hover,.legacy
   .report-toc a:hover {
     color: var(--hover-orange-deep);
     background: var(--hover-orange-soft);
     border-color: var(--hover-orange-line);
   }
-  .legacy .btn-navy:hover,.legacy 
-  .btn-soft:hover,.legacy 
-  .btn-outline:hover,.legacy 
-  .btn-dl:hover,.legacy 
-  .related-link-card:hover,.legacy 
-  .visual-card:hover,.legacy 
-  .card:hover,.legacy 
+  .legacy .btn-navy:hover,.legacy
+  .btn-soft:hover,.legacy
+  .btn-outline:hover,.legacy
+  .btn-dl:hover,.legacy
+  .related-link-card:hover,.legacy
+  .visual-card:hover,.legacy
+  .card:hover,.legacy
   .case-card:hover {
     border-color: var(--hover-orange);
     box-shadow: none;
   }
-  .legacy .btn-gold:hover,.legacy 
-  .support-strip-link:hover,.legacy 
-  .footer-support a:hover,.legacy 
-  a.btn-navy:hover,.legacy 
-  a.btn-soft:hover,.legacy 
-  a.btn-outline:hover,.legacy 
+  .legacy .btn-gold:hover,.legacy
+  .support-strip-link:hover,.legacy
+  .footer-support a:hover,.legacy
+  a.btn-navy:hover,.legacy
+  a.btn-soft:hover,.legacy
+  a.btn-outline:hover,.legacy
   a.btn-dl:hover {
     background: var(--hover-orange-deep);
     color: var(--paper);
     border-color: var(--hover-orange-deep);
   }
-  .legacy .case-anchor-link:hover span,.legacy 
+  .legacy .case-anchor-link:hover span,.legacy
   .mega-col a:hover::before {
     color: var(--hover-orange-deep);
   }

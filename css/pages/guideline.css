@@ -10,45 +10,45 @@
   .legacy .gl-role-choices {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 10px;
+    gap: 12px;
     width: min(100% - 40px, 1120px);
-    margin: 22px auto 0;
+    margin: 24px auto 0;
   }
   .legacy .gl-role-choices > p {
     grid-column: 1 / -1;
     margin: 0 0 -2px;
     color: var(--navy);
-    font-size: .84rem;
+    font-size: var(--fs-body);
     font-weight: 900;
     letter-spacing: .05em;
   }
   .legacy .gl-role-choices > a {
     display: block;
-    padding: 16px 18px;
+    padding: 16px 20px;
     border: 1px solid var(--line);
     border-left: 4px solid var(--gold);
-    background: #fff;
+    background: var(--paper);
     color: var(--navy);
-    font-size: .96rem;
+    font-size: var(--fs-body);
     font-weight: 900;
     line-height: 1.65;
     text-decoration: none;
   }
   .legacy .gl-role-choices > a small {
     display: block;
-    margin-top: 3px;
+    margin-top: 4px;
     color: var(--text);
-    font-size: .79rem;
+    font-size: var(--fs-small);
     font-weight: 700;
   }
-  .legacy .gl-role-choices > a:hover,.legacy 
+  .legacy .gl-role-choices > a:hover,.legacy
   .gl-role-choices > a:focus-visible {
     border-color: var(--navy);
     background: var(--navy);
-    color: #fff;
+    color: var(--paper);
   }
-  .legacy .gl-role-choices > a:hover small,.legacy 
-  .gl-role-choices > a:focus-visible small { color: #fff; }
+  .legacy .gl-role-choices > a:hover small,.legacy
+  .gl-role-choices > a:focus-visible small { color: var(--paper); }
 
   /* ===== 問題パターンカード ===== */
   .legacy .gl-problem-grid {
@@ -58,24 +58,24 @@
     margin-top: 36px;
   }
   .legacy .gl-problem-card {
-    background: #fff5f5;
-    border: 1px solid #fca5a5;
-    border-left: 4px solid #b91c1c;
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    border-left: 4px solid var(--navy);
     border-radius: var(--radius);
-    padding: 20px 18px;
+    padding: 20px 20px;
   }
   .legacy .gl-problem-icon {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
+    font-size: var(--fs-h2);
+    margin-bottom: 12px;
   }
   .legacy .gl-problem-title {
-    font-size: 0.95rem;
+    font-size: var(--fs-body);
     font-weight: 900;
-    color: #b91c1c;
+    color: var(--c-caution);
     margin-bottom: 8px;
   }
   .legacy .gl-problem-desc {
-    font-size: 0.86rem;
+    font-size: var(--fs-body);
     color: var(--text);
     line-height: 1.7;
   }
@@ -84,45 +84,45 @@
   .legacy .gl-principle-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 18px;
+    gap: 20px;
     margin-top: 36px;
   }
   .legacy .gl-principle-card {
-    background: linear-gradient(145deg, var(--navy) 0%, #1a3a52 100%);
+    background: var(--navy-deep);
     border-radius: var(--radius);
-    padding: 28px 22px;
-    color: #fff;
+    padding: 28px 24px;
+    color: var(--paper);
   }
   .legacy .gl-principle-num {
-    font-size: 0.68rem;
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.1em;
     color: var(--gold);
     text-transform: uppercase;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .legacy .gl-principle-icon {
-    font-size: 2rem;
+    font-size: var(--fs-h1);
     margin-bottom: 12px;
     display: block;
   }
   .legacy .gl-principle-title {
     font-family: "Noto Serif JP", serif;
-    font-size: 1.05rem;
+    font-size: var(--fs-body);
     font-weight: 900;
-    color: #fff;
-    margin-bottom: 10px;
+    color: var(--paper);
+    margin-bottom: 12px;
     line-height: 1.4;
   }
   .legacy .gl-principle-desc {
-    font-size: 0.87rem;
-    color: rgba(255, 255, 255, 0.82);
+    font-size: var(--fs-body);
+    color: color-mix(in srgb,var(--paper) 82%,transparent);
     line-height: 1.8;
   }
   .legacy .gl-principle-law {
     margin-top: 12px;
-    font-size: 0.76rem;
-    color: var(--gold-lt, #fcd34d);
+    font-size: var(--fs-small);
+    color: var(--gold-lt, var(--gold));
     font-weight: 700;
   }
 
@@ -131,8 +131,8 @@
     display: none;
   }
   .legacy .gl-tab-btn {
-    padding: 10px 18px;
-    font-size: 0.87rem;
+    padding: 12px 20px;
+    font-size: var(--fs-body);
     font-weight: 800;
     color: var(--text-soft);
     background: transparent;
@@ -155,86 +155,86 @@
   }
   .legacy .gl-tab-panel {
     display: block;
-    margin-top: 26px;
+    margin-top: 28px;
   }
   .legacy .gl-tab-panel + .gl-tab-panel {
     border-top: 1px solid var(--line);
-    padding-top: 30px;
+    padding-top: 32px;
   }
   .legacy .gl-panel-heading {
     font-family: "Noto Serif JP", serif;
-    font-size: 1.18rem;
+    font-size: var(--fs-h3);
     font-weight: 900;
     color: var(--navy);
     line-height: 1.5;
-    margin: 0 0 18px;
-    padding-left: 14px;
+    margin: 0 0 20px;
+    padding-left: 16px;
     border-left: 4px solid var(--gold);
   }
 
   /* ===== 実務ガイドライン内カード ===== */
   .legacy .gl-box {
-    background: #f8fafc;
+    background: var(--paper);
     border: 1px solid var(--line);
     border-left: 4px solid var(--gold);
     border-radius: var(--radius);
-    padding: 22px 24px;
+    padding: 24px 24px;
     margin-bottom: 20px;
   }
   .legacy .gl-box h4 {
-    font-size: 1rem;
+    font-size: var(--fs-body);
     font-weight: 900;
     color: var(--navy);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
-  .legacy .gl-box p,.legacy 
+  .legacy .gl-box p,.legacy
   .gl-box li {
-    font-size: 0.92rem;
+    font-size: var(--fs-body);
     color: var(--text);
     line-height: 1.8;
   }
-  .legacy .gl-box ul,.legacy 
+  .legacy .gl-box ul,.legacy
   .gl-box ol {
-    padding-left: 18px;
+    padding-left: 20px;
     margin: 8px 0;
   }
   .legacy .gl-ok {
-    color: #15803d;
+    color: var(--navy-deep);
     font-weight: 900;
   }
   .legacy .gl-ng {
-    color: #b91c1c;
+    color: var(--c-caution);
     font-weight: 900;
   }
   .legacy .gl-law-cite {
     display: inline-block;
-    font-size: 0.72rem;
+    font-size: var(--fs-small);
     font-weight: 700;
-    background: rgba(26, 58, 82, 0.08);
+    background: color-mix(in srgb,var(--navy-deep) 8%,transparent);
     color: var(--navy);
     padding: 2px 8px;
-    border-radius: 4px;
-    margin-left: 6px;
+    border-radius: var(--radius-sm);
+    margin-left: 8px;
     vertical-align: middle;
   }
   .legacy .gl-notice {
-    background: rgba(212, 175, 55, 0.1);
+    background: color-mix(in srgb,var(--navy-deep) 10%,transparent);
     border: 1px solid var(--gold);
     border-radius: var(--radius);
-    padding: 14px 18px;
+    padding: 16px 20px;
     margin-top: 16px;
-    font-size: 0.88rem;
+    font-size: var(--fs-body);
     color: var(--navy);
     line-height: 1.7;
   }
   .legacy .gl-ng-box {
-    background: #fff5f5;
-    border: 1px solid #fca5a5;
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
     border-radius: var(--radius);
-    padding: 14px 18px;
+    padding: 16px 20px;
     margin-top: 12px;
-    font-size: 0.88rem;
-    color: #7f1d1d;
+    font-size: var(--fs-body);
+    color: var(--c-caution);
     line-height: 1.7;
   }
 
@@ -249,12 +249,12 @@
   }
   .legacy .gl-request-item {
     display: flex;
-    gap: 18px;
+    gap: 20px;
     align-items: flex-start;
-    background: #fff;
+    background: var(--paper);
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    padding: 22px 24px;
+    padding: 24px 24px;
   }
   .legacy .gl-request-num {
     flex-shrink: 0;
@@ -265,18 +265,18 @@
     color: var(--gold);
     display: grid;
     place-items: center;
-    font-size: 0.9rem;
+    font-size: var(--fs-body);
     font-weight: 900;
   }
   .legacy .gl-request-body h3 {
-    font-size: 0.97rem;
+    font-size: var(--fs-body);
     font-weight: 900;
     color: var(--navy);
     line-height: 1.9;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .legacy .gl-request-body p {
-    font-size: 0.88rem;
+    font-size: var(--fs-body);
     color: var(--text);
     line-height: 1.75;
     margin: 0;
@@ -294,11 +294,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 22px;
-    background: #fff;
+    padding: 20px 24px;
+    background: var(--paper);
     border: none;
     cursor: pointer;
-    font-size: 0.95rem;
+    font-size: var(--fs-body);
     font-weight: 800;
     color: var(--navy);
     text-align: left;
@@ -321,7 +321,7 @@
   }
   .legacy .gl-tpl-body {
     display: none;
-    padding: 0 22px 22px;
+    padding: 0 24px 24px;
   }
   .legacy .gl-tpl-item.open .gl-tpl-body {
     display: block;
@@ -329,26 +329,26 @@
   .legacy .gl-tpl-pre {
     background: var(--bg);
     border: 1px solid var(--line);
-    border-radius: 8px;
-    padding: 18px 20px;
+    border-radius: var(--radius-md);
+    padding: 20px 20px;
     font-family: monospace;
-    font-size: 0.85rem;
+    font-size: var(--fs-body);
     line-height: 1.8;
     color: var(--text);
     white-space: pre-wrap;
     word-break: break-word;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
   .legacy .gl-copy-btn {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 7px 16px;
-    border-radius: 999px;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: var(--radius-md);
     border: 1.5px solid var(--navy);
     background: transparent;
     color: var(--navy);
-    font-size: 0.82rem;
+    font-size: var(--fs-body);
     font-weight: 800;
     cursor: pointer;
     transition:
@@ -357,23 +357,23 @@
   }
   .legacy .gl-copy-btn:hover {
     background: var(--navy);
-    color: #fff;
+    color: var(--paper);
   }
   .legacy .gl-copy-btn.copied {
-    background: #15803d;
-    border-color: #15803d;
-    color: #fff;
+    background: var(--navy-deep);
+    border-color: var(--navy-deep);
+    color: var(--paper);
   }
   .legacy .gl-pack-lead {
-    background: #fff;
+    background: var(--paper);
     border: 1px solid var(--line);
     border-left: 5px solid var(--navy);
     border-radius: 0 var(--radius) var(--radius) 0;
     padding: 20px 24px;
-    margin-top: 26px;
+    margin-top: 28px;
     color: var(--text);
     line-height: 1.9;
-    font-size: 0.95rem;
+    font-size: var(--fs-body);
   }
   .legacy .gl-pack-grid {
     display: grid;
@@ -382,11 +382,11 @@
     margin-top: 24px;
   }
   .legacy .gl-pack-card {
-    background: #fff;
+    background: var(--paper);
     border: 1px solid var(--line);
     border-top: 4px solid var(--gold);
-    border-radius: 10px;
-    padding: 20px 22px;
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -394,31 +394,31 @@
   .legacy .gl-pack-card h3 {
     margin: 0;
     color: var(--navy);
-    font-size: 1.04rem;
+    font-size: var(--fs-body);
     line-height: 1.5;
   }
   .legacy .gl-pack-card p {
     margin: 0;
     color: var(--text);
-    font-size: 0.91rem;
+    font-size: var(--fs-body);
     line-height: 1.85;
   }
   .legacy .gl-pack-basis {
     display: flex;
     flex-wrap: wrap;
-    gap: 7px;
+    gap: 8px;
     margin: 0;
     padding: 0;
     list-style: none;
   }
   .legacy .gl-pack-basis li {
-    background: #f8fafc;
-    border: 1px solid #dbe4ee;
-    border-radius: 999px;
-    color: #334155;
-    font-size: 0.76rem;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    color: var(--navy-deep);
+    font-size: var(--fs-small);
     font-weight: 800;
-    padding: 5px 9px;
+    padding: 4px 8px;
   }
   .legacy .gl-pack-action {
     display: flex;
@@ -432,14 +432,14 @@
     border: 1.5px solid var(--navy);
     color: var(--navy);
     text-decoration: none;
-    border-radius: 999px;
-    padding: 7px 12px;
-    font-size: 0.8rem;
+    border-radius: var(--radius-md);
+    padding: 8px 12px;
+    font-size: var(--fs-small);
     font-weight: 900;
   }
   .legacy .gl-pack-action a:hover {
     background: var(--navy);
-    color: #fff;
+    color: var(--paper);
   }
 
   @media (max-width: 800px) {
@@ -457,7 +457,7 @@
       width: min(100% - 28px, 1120px);
     }
     .legacy .gl-panel-heading {
-      font-size: 1.08rem;
+      font-size: var(--fs-h3);
     }
   }
 
@@ -477,44 +477,44 @@
   }
   .legacy.guideline-editorial .gl-problem-card,.legacy.guideline-editorial .gl-principle-card,.legacy.guideline-editorial .gl-box,.legacy.guideline-editorial .gl-ng-box,.legacy.guideline-editorial .gl-notice,.legacy.guideline-editorial .gl-request-item,.legacy.guideline-editorial .gl-pack-card {
     margin: 0;
-    padding: 22px 0;
-    background: #fff;
-    color: #26384e;
+    padding: 24px 0;
+    background: var(--paper);
+    color: var(--navy-deep);
     border: 0;
-    border-top: 1px solid #dbe4ee;
+    border-top: 1px solid var(--line);
     border-radius: 0;
     box-shadow: none;
   }
   .legacy.guideline-editorial .gl-problem-card:last-child,.legacy.guideline-editorial .gl-principle-card:last-child,.legacy.guideline-editorial .gl-box:last-child,.legacy.guideline-editorial .gl-pack-card:last-child {
-    border-bottom: 1px solid #dbe4ee;
+    border-bottom: 1px solid var(--line);
   }
   .legacy.guideline-editorial .gl-problem-icon,.legacy.guideline-editorial .gl-principle-icon {
     display: none;
   }
   .legacy.guideline-editorial .gl-problem-title,.legacy.guideline-editorial .gl-principle-title,.legacy.guideline-editorial .gl-principle-desc,.legacy.guideline-editorial .gl-principle-law {
-    color: #17345c;
+    color: var(--navy-deep);
   }
   .legacy.guideline-editorial .gl-principle-num {
-    color: #7a5a12;
+    color: var(--gold);
     text-transform: none;
     letter-spacing: 0.03em;
   }
   .legacy.guideline-editorial .gl-panel-heading {
     padding-left: 0;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     border-left: 0;
-    border-bottom: 2px solid #17345c;
+    border-bottom: 2px solid var(--navy-deep);
   }
   .legacy.guideline-editorial .gl-law-cite,.legacy.guideline-editorial .gl-pack-basis li,.legacy.guideline-editorial .gl-copy-btn,.legacy.guideline-editorial .gl-pack-action a {
-    border-radius: 3px;
+    border-radius: var(--radius-sm);
   }
   .legacy.guideline-editorial .gl-tpl-item,.legacy.guideline-editorial .gl-tpl-pre {
     border-radius: 0;
     box-shadow: none;
   }
   .legacy.guideline-editorial .gl-policy-note {
-    border-top: 3px solid #c6a34b;
-    border-bottom: 1px solid #c6a34b;
+    border-top: 3px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
     padding: 24px 0;
   }
   .legacy.guideline-editorial .legacy-main a:hover {
