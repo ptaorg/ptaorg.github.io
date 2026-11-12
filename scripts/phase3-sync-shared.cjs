@@ -71,6 +71,9 @@ function transform(original,rel){
  if(rel!=='index.html'&&rel!=='explore.html')html=html.replace(searchRX,'');
  if(html.includes('<aside class="article-side">'))html=sidebar(html,rel);
  if(html.includes('class="pager"')||html.includes('class="readmore"'))html=reading(html);
+ // Bust stale CSS and app caches after the shared UI migration, preserving paths.
+ html=html.replace(/(href="(?:\.\.\/)*assets\/style\.css)(?:\?v=[^"]*)?"/g,'$1?v=20261113-phase3"');
+ html=html.replace(/(src="(?:\.\.\/)*assets\/app\.js)(?:\?v=[^"]*)?"/g,'$1?v=20261113-phase3"');
  return html;
 }
 function walk(dir=root,out=[]){
