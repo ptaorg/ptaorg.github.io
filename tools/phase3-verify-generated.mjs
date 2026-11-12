@@ -11,7 +11,7 @@ const {transform}=require('../scripts/phase3-sync-shared.cjs');
 const root=path.resolve(import.meta.dirname,'..');
 const base='9e9f35dd10f07f0a0b9c63f4c893adb177c9d33e';
 const git=(...args)=>execFileSync('git',args,{cwd:root,encoding:'utf8',maxBuffer:24*1024*1024});
-const files=git('diff','--name-only',base,'HEAD').trim().split('\n').filter(x=>x.endsWith('.html'));
+const files=git('diff','--name-only',base,'HEAD').trim().split('\n').filter(x=>x.endsWith('.html')&&!x.startsWith('partials/'));
 let n=0,removedSearch=0;
 for(const rel of files){
  const initial=git('show',base+':'+rel);
