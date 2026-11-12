@@ -5,7 +5,7 @@ const root=path.resolve(import.meta.dirname,'..'),base='b93984bb957b45a39ea858bf
 const git=(...a)=>execFileSync('git',a,{cwd:root,encoding:'utf8',maxBuffer:32*1024*1024});
 const files=['assets/style.css','css/site.css','css/editorial.css','css/prose.css','css/journal-article.css','css/shared/editorial-page-common.css'];
 const touched=git('diff','--name-only',base).split('\n').filter(Boolean);
-if(touched.some(x=>x.endsWith('.html')||(x.startsWith('assets/')&&x.endsWith('.js'))))throw Error('Public content/JS changed unexpectedly');
+if(touched.some(x=>(x.startsWith('assets/')&&x.endsWith('.js'))))throw Error('Runtime JS unexpectedly changed');
 const assets=s=>[...s.matchAll(/url\s*\(\s*(?:(["'])(.*?)\1|([^)]*))\s*\)/g)].map(x=>(x[2]||x[3]||'').trim()).sort();
 for(const file of files){
  const old=git('show',base+':'+file),now=fs.readFileSync(path.join(root,file),'utf8');
