@@ -851,3 +851,18 @@ body[data-page="home"] .hero .button-secondary{background:var(--paper);color:var
  .home-practical-grid{grid-template-columns:1fr}
  .phase2-moved-notes .hc-evidence-grid,.phase2-moved-notes .hc-research-grid{grid-template-columns:1fr}
 }
+
+/* Phase 3: editorial navigation, a single search entry and a quieter footer. */
+.site-footer .footer-grid{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,.75fr);gap:clamp(18px,3vw,40px)}
+.site-footer .footer-col a{font-size:.9rem}
+.site-footer .footer-col h2{font-family:var(--serif)}
+main .search-panel-bar,main .search-panel-local{display:none!important}
+.article-side .side-box{background:var(--paper);box-shadow:none;border-color:var(--line)}
+.article-side .toc-list a{align-items:flex-start;font-size:.88rem;line-height:1.55}
+.article-side .toc-list a span:not(.toc-no){display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.article-side .side-box .side-links a{display:block;line-height:1.65}
+.next-read{margin-top:36px;padding:18px 20px;border-top:2px solid var(--gold);border-bottom:1px solid var(--line);background:var(--paper-alt)}
+.next-read h2{font-family:var(--serif);font-size:1.05rem;margin:0 0 8px;color:var(--navy-deep)}
+.next-read a{display:flex;align-items:center;gap:8px;font-weight:700;line-height:1.6;color:var(--navy);overflow-wrap:anywhere}
+.next-read .button{max-width:100%;width:auto;white-space:normal}
+@media(max-width:760px){.site-footer .footer-grid{grid-template-columns:1fr;gap:24px}.next-read{margin-block:24px}.next-read a{width:100%}}
