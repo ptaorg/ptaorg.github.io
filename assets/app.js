@@ -293,12 +293,6 @@
       </div>
     </section>
     <div class="container">
-      <form class="search-panel search-panel-local" action="explore.html" method="get" role="search">
-        <div class="search-panel-title">${icon('search')}<div><h2>資料・記録を検索する</h2><p>${esc(m.name)}に関する回答・学校資料・<br class="pc-only">論考を検索できます。</p></div></div>
-        <div class="search-panel-body"><div class="search-field"><label class="sr-only" for="local-q">キーワード</label>${icon('search')}<input type="search" id="local-q" name="q" value="${esc(m.name)}" autocomplete="off"><button type="submit">検索</button></div>
-          <div class="search-filters"><label>資料種別<select name="tab"><option value="">すべての資料</option><option value="school">学校の資料</option><option value="response">教育委員会の回答</option></select></label><label>論点<select name="topic" data-topic-select><option value="">すべて</option></select></label></div></div>
-        <div class="search-panel-side"><a href="explore.html">詳細検索${icon('chevron')}</a></div>
-      </form>
       <nav class="page-tabs" aria-label="このページの構成"><a href="#overview" class="is-active">概要</a><a href="#responses">行政回答・原資料</a><a href="#schools">学校別資料</a><a href="#analysis">関連する法的分析</a></nav>
       <div class="detail-layout">
         <div class="detail-main">
