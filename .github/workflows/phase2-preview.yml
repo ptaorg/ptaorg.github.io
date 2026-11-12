@@ -1,0 +1,28 @@
+name: Phase 2 homepage verification (temporary)
+on:
+  push:
+    branches: [refactor/phase2-home-20261113]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run project and phase 2 tests
+        run: |
+          npm test
+          node scripts/render-home-digest.mjs --check
+          git diff --check
+      - name: Check desktop and smartphone layouts with Chromium
+        run: node tools/phase2-browser-smoke.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase2-home-screenshots
+          path: phase2-screenshots/*.png
+          if-no-files-found: ignore
