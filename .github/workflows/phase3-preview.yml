@@ -1,0 +1,33 @@
+name: Phase 3 shared UI verification (temporary)
+on:
+  push:
+    branches: [refactor/phase3-shared-ui-20261113]
+permissions:
+  contents: write
+jobs:
+  verify-and-generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Synchronize static chrome, search panels and article navigation
+        run: |
+          node scripts/render-chrome.mjs
+          node scripts/phase3-sync-shared.cjs
+      - name: Validate content and generated HTML
+        run: |
+          npm test
+          node scripts/render-home-digest.mjs --check
+          git diff --check
+      - name: Commit verified generated HTML changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add '*.html'
+          if ! git diff --cached --quiet; then
+            git commit -m "Regenerate shared navigation and article UI without changing research prose"
+            git push origin HEAD:refactor/phase3-shared-ui-20261113
+          fi
