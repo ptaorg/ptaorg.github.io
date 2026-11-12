@@ -1,0 +1,29 @@
+/* Phase 3 final: reading structure only; content, citations and diagrams unchanged. */
+.phase3-guide-map{margin:0 0 28px;padding:20px 24px;border:1px solid var(--line);border-top:3px solid var(--gold);background:var(--paper);max-width:100%}
+.phase3-guide-map h2{font:700 1.2rem/1.5 var(--serif);color:var(--navy-deep);margin:0 0 14px}
+.phase3-guide-map>ol{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 22px}
+.phase3-guide-map li{margin:0;border-bottom:1px solid var(--line)}
+.phase3-guide-map a{padding:12px 0;display:flex;gap:12px;align-items:baseline;color:var(--navy-deep);font-size:.93rem;text-decoration:none;overflow-wrap:anywhere}
+.phase3-guide-map a:hover{text-decoration:underline}
+.phase3-guide-map a>span{color:var(--ink-sub);font-size:.82rem;white-space:nowrap}
+.phase3-guide-map a>strong{font-weight:600}
+.phase3-chapter-intro{margin:32px 0 22px;padding:18px 22px;border-left:3px solid var(--gold);border-bottom:1px solid var(--line);background:var(--paper-alt);font-size:.94rem;line-height:1.85}
+.phase3-chapter-index{font-family:var(--serif);font-size:1.06rem;color:var(--navy-deep);margin:0 0 8px}
+.phase3-chapter-index strong{margin-left:6px}
+.phase3-chapter-points{margin:10px 0 12px;padding:0 0 0 1.4em;max-width:42em;list-style:disc}
+.phase3-chapter-points li{padding:2px 0;max-width:42em}
+.phase3-chapter-intro nav{border-top:1px solid var(--line);padding-top:10px}
+.phase3-chapter-intro nav>p{font-weight:700;color:var(--ink-sub);margin:0 0 6px;font-size:.82rem}
+.phase3-chapter-intro nav ol{display:flex;flex-wrap:wrap;gap:6px 16px;list-style:none;padding:0;margin:0}
+.phase3-chapter-intro nav li{margin:0}
+.phase3-chapter-intro nav a{font-size:.89rem;color:var(--navy);text-decoration:underline;text-underline-offset:2px}
+.phase3-disclaimer{margin:28px auto 16px}
+.phase3-disclaimer .article-notice{font-size:.85rem;line-height:1.7;color:var(--ink-sub);padding:10px 0;margin:0;border:0;border-top:1px solid var(--line);background:transparent;box-shadow:none}
+.phase3-disclaimer .article-notice svg{display:none}
+@media(max-width:760px){
+ .phase3-guide-map{padding:16px}
+ .phase3-guide-map>ol{grid-template-columns:1fr}
+ .phase3-chapter-intro{margin:24px 0 18px;padding:14px 16px}
+ .phase3-chapter-intro nav ol{display:block}
+ .phase3-chapter-intro nav li{padding:4px 0}
+}
