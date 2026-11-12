@@ -1,14 +1,14 @@
 
   .legacy .submission-main {
-    background: #fff;
-    color: #1f2f3f;
+    background: var(--paper);
+    color: var(--navy-deep);
   }
 
   .legacy .submission-hero {
-    background: linear-gradient(135deg, #071a30 0%, #102d4f 70%, #173f66 100%);
-    border-bottom: 1px solid #071a30;
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-deep) 70%, var(--navy-deep) 100%);
+    border-bottom: 1px solid var(--navy-deep);
     padding: 76px 0 68px;
-    color: #fff;
+    color: var(--paper);
   }
 
   .legacy .submission-wrap {
@@ -18,18 +18,18 @@
 
   .legacy .submission-eyebrow {
     display: block;
-    margin: 0 0 18px;
-    color: #f2dfa4;
-    font-size: 0.78rem;
+    margin: 0 0 20px;
+    color: var(--tint-strong);
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.08em;
   }
 
   .legacy .submission-hero h1 {
-    margin: 0 0 22px;
-    color: #fff;
+    margin: 0 0 24px;
+    color: var(--paper);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    font-size: clamp(var(--fs-h1), 4.5vw, var(--fs-h1));
     font-weight: 900;
     line-height: 1.3;
     letter-spacing: -0.02em;
@@ -38,8 +38,8 @@
   .legacy .submission-hero p {
     max-width: 860px;
     margin: 0;
-    color: rgba(255, 255, 255, 0.88);
-    font-size: 1rem;
+    color: color-mix(in srgb,var(--paper) 88%,transparent);
+    font-size: var(--fs-body);
     line-height: 2;
   }
 
@@ -58,107 +58,107 @@
     padding: 40px 0 48px;
     background: transparent;
     border: 0;
-    border-top: 1px solid #cfd8e2;
+    border-top: 1px solid var(--line-strong);
     border-radius: 0;
     box-shadow: none;
   }
 
   .legacy .submission-section:first-child {
-    border-top: 2px solid #17324f;
+    border-top: 2px solid var(--navy-deep);
   }
 
   .legacy .submission-section h2 {
-    margin: 0 0 18px;
+    margin: 0 0 20px;
     padding: 0 0 12px;
     border: 0;
-    border-bottom: 2px solid #17324f;
-    color: #17324f;
+    border-bottom: 2px solid var(--navy-deep);
+    color: var(--navy-deep);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+    font-size: clamp(var(--fs-h2), 2.5vw, var(--fs-h1));
     line-height: 1.55;
   }
 
   .legacy .submission-section h3 {
-    margin: 30px 0 10px;
-    color: #17324f;
-    font-size: 1.05rem;
+    margin: 32px 0 12px;
+    color: var(--navy-deep);
+    font-size: var(--fs-body);
     line-height: 1.6;
   }
 
-  .legacy .submission-section p,.legacy 
+  .legacy .submission-section p,.legacy
   .submission-section li {
-    color: #334155;
-    font-size: 0.96rem;
+    color: var(--navy-deep);
+    font-size: var(--fs-body);
     line-height: 1.95;
   }
 
   .legacy .submission-section p {
-    margin: 0 0 15px;
+    margin: 0 0 16px;
   }
 
-  .legacy .submission-section ul,.legacy 
+  .legacy .submission-section ul,.legacy
   .submission-section ol {
     margin: 12px 0 0;
     padding-left: 1.4em;
   }
 
   .legacy .submission-note {
-    margin: 22px 0 0;
-    padding: 18px 20px;
-    background: #f7f3e8;
+    margin: 24px 0 0;
+    padding: 20px 20px;
+    background: var(--paper-alt);
     border: 0;
-    border-left: 5px solid #c6a34b;
+    border-left: 5px solid var(--gold);
     border-radius: 0;
-    color: #493b18;
-    font-size: 0.92rem;
+    color: var(--gold);
+    font-size: var(--fs-body);
     line-height: 1.9;
   }
 
-  .legacy .submission-grid,.legacy 
-  .evidence-grade-grid,.legacy 
+  .legacy .submission-grid,.legacy
+  .evidence-grade-grid,.legacy
   .submission-source-list {
     display: block;
     margin-top: 20px;
   }
 
-  .legacy .submission-card,.legacy 
+  .legacy .submission-card,.legacy
   .evidence-grade {
     margin: 0;
     padding: 20px 0;
     background: transparent;
     border: 0;
-    border-bottom: 1px solid #dbe4ee;
+    border-bottom: 1px solid var(--line);
     border-radius: 0;
     box-shadow: none;
   }
 
-  .legacy .submission-card:first-child,.legacy 
+  .legacy .submission-card:first-child,.legacy
   .evidence-grade:first-child {
-    border-top: 1px solid #dbe4ee;
+    border-top: 1px solid var(--line);
   }
 
-  .legacy .submission-card strong,.legacy 
+  .legacy .submission-card strong,.legacy
   .evidence-grade strong {
     display: block;
-    margin: 0 0 6px;
-    color: #17324f;
+    margin: 0 0 8px;
+    color: var(--navy-deep);
     font-family: "Noto Serif JP", serif;
-    font-size: 1rem;
+    font-size: var(--fs-body);
     line-height: 1.6;
   }
 
-  .legacy .submission-card span,.legacy 
+  .legacy .submission-card span,.legacy
   .evidence-grade span {
     display: block;
-    color: #475569;
-    font-size: 0.9rem;
+    color: var(--navy-deep);
+    font-size: var(--fs-body);
     line-height: 1.85;
   }
 
   .legacy .submission-table-wrap {
-    margin-top: 18px;
+    margin-top: 20px;
     overflow-x: auto;
-    border: 1px solid #dbe4ee;
+    border: 1px solid var(--line);
     border-radius: 0;
   }
 
@@ -166,22 +166,22 @@
     width: 100%;
     min-width: 760px;
     border-collapse: collapse;
-    background: #fff;
+    background: var(--paper);
   }
 
-  .legacy .submission-table th,.legacy 
+  .legacy .submission-table th,.legacy
   .submission-table td {
-    padding: 14px 15px;
-    border-bottom: 1px solid #e2e8f0;
+    padding: 16px 16px;
+    border-bottom: 1px solid var(--line);
     vertical-align: top;
     text-align: left;
-    font-size: 0.9rem;
+    font-size: var(--fs-body);
     line-height: 1.8;
   }
 
   .legacy .submission-table th {
-    background: #17324f;
-    color: #fff;
+    background: var(--navy-deep);
+    color: var(--paper);
     font-weight: 900;
   }
 
@@ -193,36 +193,36 @@
     min-width: 1080px;
   }
 
-  .legacy .evidence-table th,.legacy 
+  .legacy .evidence-table th,.legacy
   .evidence-table td {
-    font-size: 0.86rem;
+    font-size: var(--fs-body);
     line-height: 1.8;
   }
 
   .legacy .evidence-table td:first-child {
     min-width: 210px;
-    color: #17324f;
+    color: var(--navy-deep);
     font-weight: 800;
   }
 
   .legacy .evidence-table a {
-    color: #174a7c;
+    color: var(--navy-deep);
     font-weight: 800;
   }
 
   /* 文例は文書本文として区別し、装飾カードにはしない */
   .legacy .submission-template {
-    margin: 16px 0 30px;
-    padding: 22px 24px;
+    margin: 16px 0 32px;
+    padding: 24px 24px;
     white-space: pre-wrap;
     word-break: break-word;
-    background: #f8fafc;
-    border: 1px solid #cbd5e1;
-    border-left: 5px solid #17324f;
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    border-left: 5px solid var(--navy-deep);
     border-radius: 0;
-    color: #172033;
+    color: var(--navy-deep);
     font-family: "Noto Sans JP", system-ui, sans-serif;
-    font-size: 0.9rem;
+    font-size: var(--fs-body);
     line-height: 1.9;
     box-shadow: none;
   }
@@ -233,10 +233,10 @@
     padding: 16px 0;
     background: transparent;
     border: 0;
-    border-bottom: 1px solid #dbe4ee;
+    border-bottom: 1px solid var(--line);
     border-radius: 0;
-    color: #174a7c;
-    font-size: 0.91rem;
+    color: var(--navy);
+    font-size: var(--fs-body);
     font-weight: 800;
     line-height: 1.75;
     text-decoration: underline;
@@ -244,7 +244,7 @@
   }
 
   .legacy .submission-source-list a:first-child {
-    border-top: 1px solid #dbe4ee;
+    border-top: 1px solid var(--line);
   }
 
   .legacy .submission-main .legacy-main a:hover {
@@ -253,7 +253,7 @@
   }
 
   .legacy .submission-main a:focus-visible {
-    outline: 3px solid #d7b452;
+    outline: 3px solid var(--gold);
     outline-offset: 3px;
   }
 
@@ -263,7 +263,7 @@
     }
 
     .legacy .submission-hero {
-      padding: 58px 0 54px;
+      padding: 60px 0 56px;
     }
 
     .legacy .submission-body {
@@ -275,7 +275,7 @@
     }
 
     .legacy .submission-template {
-      padding: 18px 16px;
-      font-size: 0.86rem;
+      padding: 20px 16px;
+      font-size: var(--fs-body);
     }
   }

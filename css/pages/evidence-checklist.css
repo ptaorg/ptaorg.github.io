@@ -1,19 +1,19 @@
 
   .legacy.ec-page {
-    --ec-ink: #142b40;
-    --ec-body: #334657;
-    --ec-muted: #687582;
-    --ec-line: #d5dde3;
-    --ec-paper: #f5f2ea;
-    --ec-wash: #f5f7f7;
-    --ec-accent: #a96f16;
-    background: #fff;
+    --ec-ink: var(--navy-deep);
+    --ec-body: var(--navy-deep);
+    --ec-muted: var(--navy-mid);
+    --ec-line: var(--paper-alt);
+    --ec-paper: var(--paper-alt);
+    --ec-wash: var(--paper);
+    --ec-accent: var(--navy);
+    background: var(--paper);
     color: var(--ec-body);
   }
 
   .legacy.ec-page .legacy-main {
     display: block;
-    background: #fff;
+    background: var(--paper);
   }
 
   .legacy.ec-page .legacy-main [id] {
@@ -27,9 +27,9 @@
 
   .legacy.ec-page .ec-hero {
     position: relative;
-    padding: 70px 0 62px;
-    border-top: 1px solid #ded9cd;
-    border-bottom: 1px solid #d8d3c8;
+    padding: 72px 0 64px;
+    border-top: 1px solid var(--line-strong);
+    border-bottom: 1px solid var(--line-strong);
     background: var(--ec-paper);
     color: var(--ec-ink);
   }
@@ -43,16 +43,16 @@
   }
 
   .legacy.ec-page .ec-kicker,.legacy.ec-page .ec-section-number {
-    margin: 0 0 13px;
-    color: #865400;
-    font-size: 0.77rem;
+    margin: 0 0 12px;
+    color: var(--c-caution);
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.08em;
   }
 
   .legacy.ec-page .ec-kicker {
     width: fit-content;
-    padding-bottom: 7px;
+    padding-bottom: 8px;
     border-bottom: 2px solid var(--ec-accent);
     letter-spacing: 0.12em;
   }
@@ -62,7 +62,7 @@
     margin: 0;
     color: var(--ec-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(2.2rem, 4.8vw, 3.75rem);
+    font-size: clamp(var(--fs-h1), 4.8vw, var(--fs-h1));
     font-weight: 900;
     line-height: 1.28;
     letter-spacing: -0.025em;
@@ -70,21 +70,21 @@
 
   .legacy.ec-page .ec-hero-lead {
     max-width: 850px;
-    margin: 23px 0 0;
-    color: #2f4658;
-    font-size: clamp(1rem, 1.4vw, 1.08rem);
+    margin: 24px 0 0;
+    color: var(--navy-deep);
+    font-size: clamp(var(--fs-body), 1.4vw, var(--fs-h3));
     font-weight: 700;
     line-height: 2;
   }
 
   .legacy.ec-page .ec-hero-thesis {
     max-width: 900px;
-    margin: 27px 0 0;
-    padding: 17px 0 17px 21px;
-    border-top: 1px solid #d8d3c8;
-    border-bottom: 1px solid #d8d3c8;
+    margin: 28px 0 0;
+    padding: 16px 0 16px 20px;
+    border-top: 1px solid var(--line-strong);
+    border-bottom: 1px solid var(--line-strong);
     border-left: 4px solid var(--ec-accent);
-    color: #3a4c5c;
+    color: var(--navy-deep);
     line-height: 1.95;
   }
 
@@ -93,69 +93,69 @@
     margin-bottom: 4px;
     color: var(--ec-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: 1.07rem;
+    font-size: var(--fs-h3);
   }
 
   .legacy.ec-page .ec-hero-meta {
-    margin: 19px 0 0;
+    margin: 20px 0 0;
     color: var(--ec-muted);
-    font-size: 0.78rem;
+    font-size: var(--fs-small);
     line-height: 1.7;
   }
 
   .legacy.ec-page .ec-toc {
     border-bottom: 1px solid var(--ec-line);
-    background: #fff;
+    background: var(--paper);
   }
 
   .legacy.ec-page .ec-toc .ec-wrap {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    gap: 0 22px;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    gap: 0 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   .legacy.ec-page .ec-toc span {
     color: var(--ec-muted);
-    font-size: 0.77rem;
+    font-size: var(--fs-small);
     font-weight: 800;
     letter-spacing: 0.07em;
   }
 
   .legacy.ec-page .ec-toc a {
-    padding: 5px 0;
+    padding: 4px 0;
     border-bottom: 1px solid transparent;
     color: var(--ec-ink);
-    font-size: 0.82rem;
+    font-size: var(--fs-body);
     font-weight: 800;
     text-decoration: none;
   }
 
   .legacy.ec-page .ec-toc a:hover,.legacy.ec-page .ec-toc a:focus-visible {
     border-bottom-color: currentColor;
-    color: #7a4a00;
+    color: var(--c-caution);
   }
 
   .legacy.ec-page .ec-section {
     margin: 0;
-    padding: 62px 0 64px;
+    padding: 64px 0 64px;
     border-bottom: 1px solid var(--ec-line);
-    background: #fff;
+    background: var(--paper);
   }
 
   .legacy.ec-page .ec-section:last-child {
-    padding-bottom: 78px;
+    padding-bottom: 80px;
     border-bottom: 0;
   }
 
   .legacy.ec-page .ec-section h2 {
     max-width: 900px;
-    margin: 0 0 21px;
+    margin: 0 0 20px;
     color: var(--ec-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(1.62rem, 3vw, 2.3rem);
+    font-size: clamp(var(--fs-h2), 3vw, var(--fs-h1));
     font-weight: 900;
     line-height: 1.48;
   }
@@ -172,24 +172,24 @@
   }
 
   .legacy.ec-page .legacy-main a {
-    color: #0d5977;
-    text-decoration-color: #9ab9c5;
+    color: var(--navy-deep);
+    text-decoration-color: var(--ink-sub);
     text-decoration-thickness: 1px;
     text-underline-offset: 0.18em;
   }
 
   .legacy.ec-page .legacy-main a:hover,.legacy.ec-page .legacy-main a:focus-visible {
-    color: #8a4f00;
+    color: var(--c-caution);
     text-decoration-color: currentColor;
   }
 
   .legacy.ec-page .ec-emphasis {
     max-width: 900px;
-    margin: 29px 0 0;
-    padding: 19px 22px;
+    margin: 28px 0 0;
+    padding: 20px 24px;
     border-left: 4px solid var(--ec-accent);
-    background: #f4f7fa;
-    color: #3d5060;
+    background: var(--paper);
+    color: var(--navy-deep);
     line-height: 2;
   }
 
@@ -210,7 +210,7 @@
     display: grid;
     grid-template-columns: 250px minmax(0, 1fr);
     gap: 32px;
-    padding: 19px 0 19px 47px;
+    padding: 20px 0 20px 48px;
     counter-increment: ec-capture;
     border-bottom: 1px solid var(--ec-line);
   }
@@ -222,7 +222,7 @@
     color: var(--ec-accent);
     content: counter(ec-capture, decimal-leading-zero);
     font-family: "Noto Serif JP", serif;
-    font-size: 0.8rem;
+    font-size: var(--fs-small);
     font-weight: 900;
   }
 
@@ -233,29 +233,29 @@
   }
 
   .legacy.ec-page .ec-capture-flow span {
-    color: #4a5c6c;
-    font-size: 0.92rem;
+    color: var(--navy-deep);
+    font-size: var(--fs-body);
     line-height: 1.9;
   }
 
   .legacy.ec-page .ec-axis-list {
-    margin-top: 34px;
+    margin-top: 36px;
     border-top: 2px solid var(--ec-ink);
   }
 
   .legacy.ec-page .ec-axis {
     display: grid;
     grid-template-columns: 62px minmax(0, 1fr);
-    gap: 22px;
-    padding: 30px 0 32px;
+    gap: 24px;
+    padding: 32px 0 32px;
     border-bottom: 1px solid var(--ec-line);
   }
 
   .legacy.ec-page .ec-axis-number {
-    margin: 3px 0 0;
+    margin: 4px 0 0;
     color: var(--ec-accent);
     font-family: "Noto Serif JP", serif;
-    font-size: 0.84rem;
+    font-size: var(--fs-body);
     font-weight: 900;
   }
 
@@ -263,15 +263,15 @@
     margin: 0 0 12px;
     color: var(--ec-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: 1.22rem;
+    font-size: var(--fs-h3);
     line-height: 1.55;
   }
 
   .legacy.ec-page .ec-axis > div > p {
     max-width: 820px;
-    margin: 0 0 15px;
-    color: #435667;
-    font-size: 0.94rem;
+    margin: 0 0 16px;
+    color: var(--navy-deep);
+    font-size: var(--fs-body);
     line-height: 1.95;
   }
 
@@ -279,14 +279,14 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    border-top: 1px solid #e0e5e9;
+    border-top: 1px solid var(--line);
   }
 
   .legacy.ec-page .ec-axis li {
     position: relative;
     margin: 0;
-    padding: 10px 8px 10px 23px;
-    border-bottom: 1px solid #e0e5e9;
+    padding: 12px 8px 12px 24px;
+    border-bottom: 1px solid var(--line);
     color: var(--ec-body);
     line-height: 1.85;
   }
@@ -303,7 +303,7 @@
   }
 
   .legacy.ec-page .ec-result-list,.legacy.ec-page .ec-recipient-list {
-    margin: 31px 0 0;
+    margin: 32px 0 0;
     border-top: 2px solid var(--ec-ink);
   }
 
@@ -311,7 +311,7 @@
     display: grid;
     grid-template-columns: 250px minmax(0, 1fr);
     gap: 32px;
-    padding: 18px 0;
+    padding: 20px 0;
     border-bottom: 1px solid var(--ec-line);
   }
 
@@ -324,13 +324,13 @@
 
   .legacy.ec-page .ec-result-list dd,.legacy.ec-page .ec-recipient-list dd {
     margin: 0;
-    color: #465969;
+    color: var(--navy-deep);
     line-height: 1.9;
   }
 
   .legacy.ec-page .ec-table-wrap {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 32px;
     overflow-x: auto;
     border-top: 2px solid var(--ec-ink);
     border-bottom: 1px solid var(--ec-line);
@@ -343,12 +343,12 @@
     table-layout: fixed;
     border: 0 !important;
     border-radius: 0 !important;
-    background: #fff !important;
-    box-shadow: none !important;
+    background: var(--paper) !important;
+    box-shadow: none;
   }
 
   .legacy.ec-page .ec-table-wrap th,.legacy.ec-page .ec-table-wrap td {
-    padding: 15px 17px;
+    padding: 16px 16px;
     border-bottom: 1px solid var(--ec-line);
     text-align: left;
     vertical-align: top;
@@ -356,24 +356,24 @@
   }
 
   .legacy.ec-page .ec-table-wrap thead th {
-    background: #edf1f2 !important;
+    background: var(--paper-alt) !important;
     color: var(--ec-ink) !important;
-    font-size: 0.81rem;
+    font-size: var(--fs-body);
     font-weight: 900;
     letter-spacing: 0.03em;
   }
 
   .legacy.ec-page .ec-table-wrap tbody th {
-    background: #f7f8f8 !important;
+    background: var(--paper) !important;
     color: var(--ec-ink) !important;
-    font-size: 0.91rem;
+    font-size: var(--fs-body);
     font-weight: 800;
   }
 
   .legacy.ec-page .ec-table-wrap tbody td {
-    background: #fff !important;
-    color: #435667 !important;
-    font-size: 0.9rem;
+    background: var(--paper) !important;
+    color: var(--navy-deep) !important;
+    font-size: var(--fs-body);
   }
 
   .legacy.ec-page .ec-record-table th:first-child,.legacy.ec-page .ec-record-table td:first-child {
@@ -402,7 +402,7 @@
 
   .legacy.ec-page .ec-flow li {
     position: relative;
-    padding: 18px 8px 18px 52px;
+    padding: 20px 8px 20px 52px;
     counter-increment: ec-flow;
     border-bottom: 1px solid var(--ec-line);
     color: var(--ec-body);
@@ -416,22 +416,22 @@
     color: var(--ec-accent);
     content: counter(ec-flow, decimal-leading-zero);
     font-family: "Noto Serif JP", serif;
-    font-size: 0.82rem;
+    font-size: var(--fs-body);
     font-weight: 900;
   }
 
   .legacy.ec-page .ec-flow strong {
     color: var(--ec-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: 1.02rem;
+    font-size: var(--fs-body);
   }
 
   .legacy.ec-page .ec-note {
     max-width: 900px;
-    margin: 31px 0 0;
-    padding: 19px 21px;
+    margin: 32px 0 0;
+    padding: 20px 20px;
     border-left: 4px solid var(--ec-accent);
-    background: #fbf5e9;
+    background: var(--paper-alt);
     color: var(--ec-body);
     line-height: 1.95;
   }
@@ -446,15 +446,15 @@
     }
 
     .legacy.ec-page .ec-hero {
-      padding: 52px 0 46px;
+      padding: 52px 0 48px;
     }
 
     .legacy.ec-page .ec-hero h1 {
-      font-size: clamp(2.05rem, 11vw, 2.8rem);
+      font-size: clamp(var(--fs-h1), 11vw, var(--fs-h1));
     }
 
     .legacy.ec-page .ec-hero-thesis {
-      padding: 15px 0 15px 16px;
+      padding: 16px 0 16px 16px;
     }
 
     .legacy.ec-page .ec-toc .ec-wrap {
@@ -462,22 +462,22 @@
     }
 
     .legacy.ec-page .ec-section {
-      padding: 48px 0 50px;
+      padding: 48px 0 52px;
     }
 
     .legacy.ec-page .ec-capture-flow li,.legacy.ec-page .ec-result-list > div,.legacy.ec-page .ec-recipient-list > div {
       grid-template-columns: 1fr;
-      gap: 7px;
+      gap: 8px;
     }
 
     .legacy.ec-page .ec-capture-flow li {
-      padding-left: 42px;
+      padding-left: 44px;
     }
 
     .legacy.ec-page .ec-axis {
       grid-template-columns: 40px minmax(0, 1fr);
-      gap: 10px;
-      padding: 24px 0 26px;
+      gap: 12px;
+      padding: 24px 0 28px;
     }
 
     .legacy.ec-page .ec-axis li {
@@ -485,20 +485,20 @@
     }
 
     .legacy.ec-page .ec-table-wrap {
-      margin-right: -14px;
-      margin-left: -14px;
+      margin-right: -12px;
+      margin-left: -12px;
       width: calc(100% + 28px);
     }
 
     .legacy.ec-page .ec-table-wrap th,.legacy.ec-page .ec-table-wrap td {
-      padding: 13px 14px;
+      padding: 12px 16px;
     }
   }
 
   @media print {
     .legacy.ec-page .ec-hero {
       padding: 32px 0;
-      background: #fff;
+      background: var(--paper);
     }
 
     .legacy.ec-page .ec-toc {

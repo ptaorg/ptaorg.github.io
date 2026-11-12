@@ -1,7 +1,7 @@
 
   .legacy .km-page {
-    background: #ffffff;
-    color: #1d2c3b;
+    background: var(--paper);
+    color: var(--navy-deep);
   }
 
   .legacy .km-wrap {
@@ -11,29 +11,29 @@
 
   .legacy .km-hero {
     padding: 68px 0 0;
-    background: #f6f3ed;
-    border-top: 4px solid #d45d24;
-    border-bottom: 1px solid #ddd6ca;
-    color: #10283e;
+    background: var(--paper-alt);
+    border-top: 4px solid var(--navy);
+    border-bottom: 1px solid var(--line-strong);
+    color: var(--navy-deep);
   }
 
-  .legacy .km-kicker,.legacy 
-  .km-section-label,.legacy 
-  .km-source-type,.legacy 
+  .legacy .km-kicker,.legacy
+  .km-section-label,.legacy
+  .km-source-type,.legacy
   .km-priority-label {
     margin: 0;
-    color: #b64b1c;
-    font-size: 0.78rem;
+    color: var(--navy);
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.14em;
   }
 
   .legacy .km-hero h1 {
     max-width: 820px;
-    margin: 13px 0 18px;
-    color: #10283e;
+    margin: 12px 0 20px;
+    color: var(--navy-deep);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(2.25rem, 5vw, 3.65rem);
+    font-size: clamp(var(--fs-h1), 5vw, var(--fs-h1));
     font-weight: 900;
     letter-spacing: 0.015em;
     line-height: 1.32;
@@ -42,8 +42,8 @@
   .legacy .km-lead {
     max-width: 790px;
     margin: 0;
-    color: #31465a;
-    font-size: clamp(1rem, 1.9vw, 1.12rem);
+    color: var(--navy-deep);
+    font-size: clamp(var(--fs-body), 1.9vw, var(--fs-h3));
     font-weight: 500;
     line-height: 2;
   }
@@ -52,31 +52,31 @@
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     margin-top: 48px;
-    border-top: 1px solid #cec5b8;
+    border-top: 1px solid var(--line-strong);
   }
 
   .legacy .km-toc a {
     min-width: 0;
-    padding: 16px 18px 18px;
-    border-right: 1px solid #cec5b8;
-    color: #173f60;
-    font-size: 0.91rem;
+    padding: 16px 20px 20px;
+    border-right: 1px solid var(--line-strong);
+    color: var(--navy-deep);
+    font-size: var(--fs-body);
     font-weight: 800;
     line-height: 1.45;
     text-decoration: none;
   }
 
   .legacy .km-toc a:first-child {
-    border-left: 1px solid #cec5b8;
+    border-left: 1px solid var(--line-strong);
   }
 
-  .legacy .km-toc a:hover,.legacy 
-  .km-toc a:focus-visible,.legacy 
-  .km-links a:hover,.legacy 
-  .km-links a:focus-visible,.legacy 
-  .km-priority-links a:hover,.legacy 
+  .legacy .km-toc a:hover,.legacy
+  .km-toc a:focus-visible,.legacy
+  .km-links a:hover,.legacy
+  .km-links a:focus-visible,.legacy
+  .km-priority-links a:hover,.legacy
   .km-priority-links a:focus-visible {
-    color: #a73f16;
+    color: var(--c-caution);
     text-decoration-thickness: 2px;
     text-underline-offset: 0.22em;
   }
@@ -84,9 +84,9 @@
   .legacy .km-toc span {
     display: block;
     margin-bottom: 4px;
-    color: #b64b1c;
+    color: var(--c-caution);
     font-family: "Noto Serif JP", serif;
-    font-size: 0.78rem;
+    font-size: var(--fs-small);
   }
 
   .legacy .km-content {
@@ -98,38 +98,38 @@
   }
 
   .legacy .km-intro h2 {
-    margin: 10px 0 20px;
-    color: #173f60;
+    margin: 12px 0 20px;
+    color: var(--navy-deep);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(1.65rem, 3.5vw, 2.35rem);
+    font-size: clamp(var(--fs-h2), 3.5vw, var(--fs-h1));
     line-height: 1.5;
   }
 
-  .legacy .km-intro > p:not(.km-section-label),.legacy 
-  .km-priority p,.legacy 
-  .km-source-body > p:not(.km-source-type),.legacy 
-  .km-source li,.legacy 
+  .legacy .km-intro > p:not(.km-section-label),.legacy
+  .km-priority p,.legacy
+  .km-source-body > p:not(.km-source-type),.legacy
+  .km-source li,.legacy
   .km-note {
-    color: #2e4052;
+    color: var(--navy);
     line-height: 1.95;
   }
 
   .legacy .km-intro > p:not(.km-section-label) {
-    margin: 0 0 14px;
+    margin: 0 0 16px;
   }
 
   .legacy .km-priority {
-    margin-top: 38px;
-    padding: 28px 0 30px;
-    border-top: 1px solid #d8dfe5;
-    border-bottom: 1px solid #d8dfe5;
+    margin-top: 40px;
+    padding: 28px 0 32px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
   }
 
   .legacy .km-priority h3 {
     margin: 8px 0 12px;
-    color: #173f60;
+    color: var(--navy-deep);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(1.22rem, 2.6vw, 1.55rem);
+    font-size: clamp(var(--fs-h3), 2.6vw, var(--fs-h2));
     line-height: 1.55;
   }
 
@@ -137,52 +137,52 @@
     margin: 0;
   }
 
-  .legacy .km-priority-links,.legacy 
+  .legacy .km-priority-links,.legacy
   .km-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 9px 24px;
+    gap: 8px 24px;
   }
 
   .legacy .km-priority-links {
-    margin-top: 17px;
+    margin-top: 16px;
   }
 
-  .legacy .km-priority-links a,.legacy 
+  .legacy .km-priority-links a,.legacy
   .km-links a {
-    color: #15527e;
+    color: var(--navy-deep);
     font-weight: 900;
     text-decoration: underline;
-    text-decoration-color: #9bb8ca;
+    text-decoration-color: var(--ink-sub);
     text-underline-offset: 0.2em;
   }
 
-  .legacy .km-priority-links a::after,.legacy 
+  .legacy .km-priority-links a::after,.legacy
   .km-links a::after {
     content: " →";
-    color: #b64b1c;
+    color: var(--c-caution);
     text-decoration: none;
   }
 
   .legacy .km-list {
     margin-top: 72px;
-    border-top: 2px solid #173f60;
+    border-top: 2px solid var(--navy-deep);
   }
 
   .legacy .km-source {
     display: grid;
     grid-template-columns: 88px minmax(0, 1fr);
     gap: 28px;
-    padding: 52px 0 54px;
-    border-bottom: 1px solid #d8dfe5;
+    padding: 52px 0 56px;
+    border-bottom: 1px solid var(--line);
     scroll-margin-top: 108px;
   }
 
   .legacy .km-source-index {
     padding-top: 1px;
-    color: #c7a48f;
+    color: var(--navy);
     font-family: "Noto Serif JP", serif;
-    font-size: 2.65rem;
+    font-size: var(--fs-h1);
     font-weight: 700;
     line-height: 1;
   }
@@ -192,21 +192,21 @@
   }
 
   .legacy .km-source h2 {
-    margin: 0 0 17px;
-    color: #173f60;
+    margin: 0 0 16px;
+    color: var(--navy);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(1.45rem, 3vw, 2rem);
+    font-size: clamp(var(--fs-h2), 3vw, var(--fs-h1));
     line-height: 1.55;
   }
 
   .legacy .km-source-body > p:not(.km-source-type) {
-    margin: 0 0 18px;
+    margin: 0 0 20px;
   }
 
   .legacy .km-source h3 {
-    margin: 27px 0 9px;
-    color: #173f60;
-    font-size: 1rem;
+    margin: 28px 0 8px;
+    color: var(--navy);
+    font-size: var(--fs-body);
     font-weight: 900;
   }
 
@@ -220,18 +220,18 @@
   }
 
   .legacy .km-links {
-    margin-top: 22px;
+    margin-top: 24px;
   }
 
   .legacy .km-note {
-    margin: 42px 0 0;
+    margin: 44px 0 0;
     padding: 24px 0;
-    border-top: 1px solid #d45d24;
-    border-bottom: 1px solid #d45d24;
+    border-top: 1px solid var(--navy);
+    border-bottom: 1px solid var(--navy);
   }
 
   .legacy .km-note strong {
-    color: #9f3f18;
+    color: var(--c-caution);
   }
 
   @media (max-width: 760px) {
@@ -245,18 +245,18 @@
     }
 
     .legacy .km-toc a {
-      border-top: 1px solid #cec5b8;
+      border-top: 1px solid var(--line-strong);
     }
 
     .legacy .km-toc a:nth-child(odd) {
-      border-left: 1px solid #cec5b8;
+      border-left: 1px solid var(--line-strong);
     }
 
     .legacy .km-toc a:nth-child(even) {
-      border-right: 1px solid #cec5b8;
+      border-right: 1px solid var(--line-strong);
     }
 
-    .legacy .km-toc a:first-child,.legacy 
+    .legacy .km-toc a:first-child,.legacy
     .km-toc a:nth-child(2) {
       border-top: 0;
     }
@@ -266,22 +266,22 @@
     }
 
     .legacy .km-content {
-      padding: 50px 0 72px;
+      padding: 52px 0 72px;
     }
 
     .legacy .km-list {
-      margin-top: 58px;
+      margin-top: 60px;
     }
 
     .legacy .km-source {
       grid-template-columns: 1fr;
-      gap: 13px;
-      padding: 42px 0 44px;
+      gap: 12px;
+      padding: 44px 0 44px;
       scroll-margin-top: 82px;
     }
 
     .legacy .km-source-index {
-      font-size: 1.15rem;
+      font-size: var(--fs-h3);
       letter-spacing: 0.08em;
     }
   }
@@ -292,18 +292,18 @@
     }
 
     .legacy .km-hero h1 {
-      font-size: 2.1rem;
+      font-size: var(--fs-h1);
     }
 
     .legacy .km-toc a {
-      padding: 14px 12px 16px;
-      font-size: 0.84rem;
+      padding: 16px 12px 16px;
+      font-size: var(--fs-body);
     }
 
-    .legacy .km-priority-links,.legacy 
+    .legacy .km-priority-links,.legacy
     .km-links {
       align-items: flex-start;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
     }
   }

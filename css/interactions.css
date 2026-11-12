@@ -4,14 +4,14 @@
   .legacy {
     --site-prose-width: 1040px;
     --site-reading-width: 920px;
-    --site-line: #d7e0e9;
-    --site-soft: #f5f8fb;
-    --site-ink: #172033;
-    --site-muted: #526174;
+    --site-line: var(--paper-alt);
+    --site-soft: var(--paper);
+    --site-ink: var(--navy-deep);
+    --site-muted: var(--navy-mid);
   }
 
   .legacy {
-    font-size: 16px;
+    font-size: var(--fs-body);
   }
   .legacy {
     min-width: 320px;
@@ -62,16 +62,16 @@
 
   /* Guideline: one continuous document width and one visual grammar. */
   .legacy.guideline-editorial {
-    background: #fff;
+    background: var(--paper);
   }
   .legacy.guideline-editorial .legacy-main {
-    background: #fff;
+    background: var(--paper);
   }
   .legacy.guideline-editorial .legacy-main > section {
     width: 100%;
     margin: 0;
     padding: 0;
-    background: #fff;
+    background: var(--paper);
     border-top: 1px solid var(--site-line);
     border-bottom: 0;
   }
@@ -86,7 +86,7 @@
     background: transparent;
   }
   .legacy.guideline-editorial .legacy-main > .wrap:first-child {
-    padding: 26px 0 30px;
+    padding: 28px 0 32px;
   }
   .legacy.guideline-editorial .legacy-main > .wrap:first-child > div {
     border-radius: 0;
@@ -100,7 +100,7 @@
   .legacy.guideline-editorial .page-banner-content {
     width: min(calc(100% - 48px), var(--site-prose-width));
     margin-inline: auto;
-    padding: 54px 0;
+    padding: 56px 0;
   }
   .legacy.guideline-editorial .section-kicker,.legacy.guideline-editorial .page-banner-kicker,.legacy.guideline-editorial .gl-principle-num {
     text-transform: none;
@@ -109,12 +109,12 @@
   .legacy.guideline-editorial .gl-problem-grid,.legacy.guideline-editorial .gl-principle-grid,.legacy.guideline-editorial .gl-pack-grid {
     display: block;
     margin-top: 28px;
-    border-top: 2px solid #1e3a5f;
+    border-top: 2px solid var(--navy-deep);
   }
   .legacy.guideline-editorial .gl-problem-card,.legacy.guideline-editorial .gl-principle-card,.legacy.guideline-editorial .gl-pack-card {
     display: block;
     margin: 0;
-    padding: 22px 0;
+    padding: 24px 0;
     color: var(--site-ink);
     background: transparent;
     border: 0;
@@ -129,11 +129,11 @@
     color: var(--site-ink);
   }
   .legacy.guideline-editorial .gl-principle-title,.legacy.guideline-editorial .gl-problem-title,.legacy.guideline-editorial .gl-panel-heading,.legacy.guideline-editorial .gl-box h4 {
-    font-size: 1.08rem;
+    font-size: var(--fs-h3);
     line-height: 1.55;
   }
   .legacy.guideline-editorial .gl-principle-desc,.legacy.guideline-editorial .gl-problem-desc,.legacy.guideline-editorial .gl-box p,.legacy.guideline-editorial .gl-box li,.legacy.guideline-editorial .gl-request-body p,.legacy.guideline-editorial .gl-pack-card p {
-    font-size: 0.98rem;
+    font-size: var(--fs-body);
     line-height: 1.9;
   }
   .legacy.guideline-editorial .gl-box,.legacy.guideline-editorial .gl-request-item,.legacy.guideline-editorial .gl-pack-lead,.legacy.guideline-editorial .gl-notice,.legacy.guideline-editorial .gl-ng-box {
@@ -142,9 +142,9 @@
   }
   .legacy.guideline-editorial .gl-box {
     padding: 20px 0 20px 20px;
-    background: #f8fafc;
+    background: var(--paper);
     border: 0;
-    border-left: 4px solid #d4af37;
+    border-left: 4px solid var(--gold);
   }
   .legacy.guideline-editorial .gl-request-list {
     gap: 0;
@@ -162,20 +162,20 @@
     border-radius: 0;
   }
   .legacy.guideline-editorial .gl-tpl-btn {
-    padding: 18px 0;
+    padding: 20px 0;
     background: transparent;
   }
   .legacy.guideline-editorial .gl-tpl-body {
-    padding: 0 0 22px;
+    padding: 0 0 24px;
   }
   .legacy.guideline-editorial .gl-law-cite,.legacy.guideline-editorial .gl-pack-basis li {
-    font-size: 0.84rem;
+    font-size: var(--fs-body);
   }
 
   /* Education-board separation guide: readable type and fewer dashboard cards. */
   .legacy .edu-page {
     padding: 0;
-    background: #fff;
+    background: var(--paper);
   }
   .legacy .edu-layout {
     width: min(calc(100% - 48px), var(--site-prose-width));
@@ -197,48 +197,48 @@
     border-bottom: 1px solid var(--site-line);
   }
   .legacy .edu-article :where(p, li, td, th) {
-    font-size: 0.98rem;
+    font-size: var(--fs-body);
     line-height: 1.9;
   }
-  .legacy .edu-core,.legacy 
-  .notice-model,.legacy 
-  .transition-item,.legacy 
-  .flow-item,.legacy 
-  .script-box,.legacy 
-  .law-explain-item,.legacy 
-  .edu-voices-card,.legacy 
-  .edu-final,.legacy 
-  .reference-list a,.legacy 
+  .legacy .edu-core,.legacy
+  .notice-model,.legacy
+  .transition-item,.legacy
+  .flow-item,.legacy
+  .script-box,.legacy
+  .law-explain-item,.legacy
+  .edu-voices-card,.legacy
+  .edu-final,.legacy
+  .reference-list a,.legacy
   .separation {
     border-radius: 0;
     box-shadow: none;
   }
-  .legacy .transition-list,.legacy 
-  .flow-list,.legacy 
-  .law-explain,.legacy 
+  .legacy .transition-list,.legacy
+  .flow-list,.legacy
+  .law-explain,.legacy
   .edu-voices-summary {
     gap: 0;
   }
-  .legacy .transition-item,.legacy 
-  .flow-item,.legacy 
-  .law-explain-item,.legacy 
+  .legacy .transition-item,.legacy
+  .flow-item,.legacy
+  .law-explain-item,.legacy
   .edu-voices-card {
     background: transparent;
     border: 0;
     border-bottom: 1px solid var(--site-line);
-    padding: 18px 0;
+    padding: 20px 0;
   }
   .legacy .reference-list a {
     background: transparent;
     border: 0;
     border-bottom: 1px solid var(--site-line);
-    padding: 13px 0;
+    padding: 12px 0;
   }
-  .legacy .edu-voices-terms,.legacy 
+  .legacy .edu-voices-terms,.legacy
   .edu-voices-note {
-    font-size: 0.88rem;
+    font-size: var(--fs-body);
   }
-  .legacy .edu-table-wrap,.legacy 
+  .legacy .edu-table-wrap,.legacy
   .edu-voices-table-wrap {
     max-width: 100%;
     overflow-x: auto;
@@ -252,8 +252,8 @@
     margin: 0;
     padding: 0;
     color: var(--site-ink);
-    background: #f5f8fb;
-    font-size: 16px;
+    background: var(--paper);
+    font-size: var(--fs-body);
   }
   .legacy.guidebook-editorial > * {
     width: min(calc(100% - 48px), var(--site-reading-width));
@@ -262,7 +262,7 @@
   }
   .legacy.guidebook-editorial .cover {
     margin-top: 48px;
-    background: #fff;
+    background: var(--paper);
   }
   .legacy.guidebook-editorial
     :where(
@@ -279,15 +279,15 @@
       .rule-box,
       .ref-box
     ) {
-    font-size: 0.96rem;
+    font-size: var(--fs-body);
     line-height: 1.9;
   }
   .legacy.guidebook-editorial h2 {
     margin-top: 48px;
     background: transparent;
     border-left: 0;
-    border-bottom: 2px solid #1a4a8a;
-    padding: 0 0 10px;
+    border-bottom: 2px solid var(--navy-deep);
+    padding: 0 0 12px;
   }
   .legacy.guidebook-editorial
     :where(
@@ -317,13 +317,13 @@
     display: block;
     max-width: var(--site-reading-width);
     margin: 28px auto 0;
-    border-top: 2px solid #1e3a5f;
+    border-top: 2px solid var(--navy-deep);
   }
   .legacy.thesis-page .thesis-card {
     display: grid;
     grid-template-columns: 52px minmax(0, 1fr);
-    gap: 0 18px;
-    padding: 22px 0;
+    gap: 0 20px;
+    padding: 24px 0;
     background: transparent;
     border: 0;
     border-bottom: 1px solid var(--site-line);
@@ -362,8 +362,8 @@
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
       align-items: center;
-      gap: 10px;
-      padding: 6px 0;
+      gap: 12px;
+      padding: 8px 0;
     }
     .legacy .support-strip-label {
       display: none;
@@ -376,15 +376,15 @@
     }
     .legacy .support-strip-text::after {
       content: "調査・資料公開へのご支援をお願いします。";
-      font-size: 12.8px;
+      font-size: var(--fs-small);
       line-height: 1.35;
       font-weight: 700;
     }
     .legacy .support-strip-link {
       margin: 0;
-      padding: 7px 11px;
-      border-radius: 999px;
-      font-size: 11.8px;
+      padding: 8px 12px;
+      border-radius: var(--radius-md);
+      font-size: var(--fs-small);
       line-height: 1.2;
       white-space: nowrap;
     }
@@ -394,25 +394,25 @@
     }
     .legacy .logo {
       gap: 8px;
-      font-size: 0.9rem;
+      font-size: var(--fs-body);
     }
     .legacy .logo img {
       width: 40px;
       height: 40px;
     }
     .legacy .legacy-main :where(p, li, dd, blockquote) {
-      font-size: 15px;
+      font-size: var(--fs-body);
       line-height: 1.85;
     }
     .legacy .legacy-main :where(td, th) {
-      font-size: 13.5px;
+      font-size: var(--fs-body);
       line-height: 1.65;
     }
     .legacy .legacy-main :where(figcaption, .caption, .source-note, .meta, .ac-date) {
-      font-size: 13px;
+      font-size: var(--fs-body);
       line-height: 1.65;
     }
-    .legacy.guideline-editorial .gl-wrap,.legacy.guideline-editorial .legacy-main > section > .wrap,.legacy.guideline-editorial .legacy-main > .wrap,.legacy.guideline-editorial .page-banner-content,.legacy 
+    .legacy.guideline-editorial .gl-wrap,.legacy.guideline-editorial .legacy-main > section > .wrap,.legacy.guideline-editorial .legacy-main > .wrap,.legacy.guideline-editorial .page-banner-content,.legacy
     .edu-layout,.legacy.guidebook-editorial > * {
       width: min(calc(100% - 28px), var(--site-prose-width));
       max-width: none;
@@ -424,10 +424,10 @@
       min-height: 220px;
     }
     .legacy.guideline-editorial .page-banner-content {
-      padding: 42px 0;
+      padding: 44px 0;
     }
     .legacy.guideline-editorial .section-title {
-      font-size: 1.55rem;
+      font-size: var(--fs-h2);
       line-height: 1.45;
     }
     .legacy .edu-article {
@@ -435,17 +435,17 @@
       padding-right: 0;
     }
     .legacy .edu-article section {
-      padding: 38px 0;
+      padding: 40px 0;
     }
     .legacy.guidebook-editorial {
-      font-size: 15px;
+      font-size: var(--fs-body);
     }
     .legacy.guidebook-editorial .cover {
       margin-top: 24px;
-      padding: 32px 18px;
+      padding: 32px 20px;
     }
     .legacy.guidebook-editorial .cover-title {
-      font-size: 1.5rem;
+      font-size: var(--fs-h2);
     }
     .legacy.guidebook-editorial .division-box {
       display: block;
@@ -462,76 +462,76 @@
 
   /* Sitewide orange hover states */
   .legacy {
-    --hover-orange: #f97316;
-    --hover-orange-deep: #ea580c;
-    --hover-orange-soft: #fff7ed;
-    --hover-orange-line: #fed7aa;
+    --hover-orange: var(--navy);
+    --hover-orange-deep: var(--navy);
+    --hover-orange-soft: var(--paper);
+    --hover-orange-line: var(--tint-strong);
   }
 
-  .legacy a:hover,.legacy 
-  .article-body a:hover,.legacy 
-  .pta-report-container a:hover,.legacy 
-  .report-content-wrap a:hover,.legacy 
-  .case-body a:hover,.legacy 
-  .case-actions a:hover,.legacy 
-  .source-note a:hover,.legacy 
-  .related-link-card:hover strong,.legacy 
-  .related-link-card:hover span,.legacy 
-  .case-anchor-link:hover,.legacy 
-  .report-toc a:hover,.legacy 
+  .legacy a:hover,.legacy
+  .article-body a:hover,.legacy
+  .pta-report-container a:hover,.legacy
+  .report-content-wrap a:hover,.legacy
+  .case-body a:hover,.legacy
+  .case-actions a:hover,.legacy
+  .source-note a:hover,.legacy
+  .related-link-card:hover strong,.legacy
+  .related-link-card:hover span,.legacy
+  .case-anchor-link:hover,.legacy
+  .report-toc a:hover,.legacy
   .footer a:hover {
     color: var(--hover-orange-deep);
   }
 
-  .legacy .site-header .nav-link:hover,.legacy 
-  .site-header .nav-link.active,.legacy 
-  .nav-link:hover,.legacy 
+  .legacy .site-header .nav-link:hover,.legacy
+  .site-header .nav-link.active,.legacy
+  .nav-link:hover,.legacy
   .nav-link.active {
-    color: #fff;
+    color: var(--paper);
     background: var(--hover-orange);
-    border-color: rgba(255, 255, 255, 0.28);
+    border-color: color-mix(in srgb,var(--paper) 28%,transparent);
   }
 
-  .legacy .site-header .logo:hover,.legacy 
+  .legacy .site-header .logo:hover,.legacy
   .site-header .logo:hover span {
-    color: #fff7ed;
+    color: var(--paper);
   }
 
-  .legacy .site-header .mega-col a:hover,.legacy 
-  .mega-col a:hover,.legacy 
-  .mobile-link:hover,.legacy 
-  .case-anchor-link:hover,.legacy 
+  .legacy .site-header .mega-col a:hover,.legacy
+  .mega-col a:hover,.legacy
+  .mobile-link:hover,.legacy
+  .case-anchor-link:hover,.legacy
   .report-toc a:hover {
     color: var(--hover-orange-deep);
     background: var(--hover-orange-soft);
     border-color: var(--hover-orange-line);
   }
 
-  .legacy .btn-navy:hover,.legacy 
-  .btn-soft:hover,.legacy 
-  .btn-outline:hover,.legacy 
-  .btn-dl:hover,.legacy 
-  .related-link-card:hover,.legacy 
-  .visual-card:hover,.legacy 
-  .card:hover,.legacy 
+  .legacy .btn-navy:hover,.legacy
+  .btn-soft:hover,.legacy
+  .btn-outline:hover,.legacy
+  .btn-dl:hover,.legacy
+  .related-link-card:hover,.legacy
+  .visual-card:hover,.legacy
+  .card:hover,.legacy
   .case-card:hover {
     border-color: var(--hover-orange);
-    box-shadow: 0 12px 28px rgba(249, 115, 22, 0.18);
+    box-shadow: none;
   }
 
-  .legacy .btn-gold:hover,.legacy 
-  .support-strip-link:hover,.legacy 
-  .footer-support a:hover,.legacy 
-  a.btn-navy:hover,.legacy 
-  a.btn-soft:hover,.legacy 
-  a.btn-outline:hover,.legacy 
+  .legacy .btn-gold:hover,.legacy
+  .support-strip-link:hover,.legacy
+  .footer-support a:hover,.legacy
+  a.btn-navy:hover,.legacy
+  a.btn-soft:hover,.legacy
+  a.btn-outline:hover,.legacy
   a.btn-dl:hover {
     background: var(--hover-orange-deep);
-    color: #fff;
+    color: var(--paper);
     border-color: var(--hover-orange-deep);
   }
 
-  .legacy .case-anchor-link:hover span,.legacy 
+  .legacy .case-anchor-link:hover span,.legacy
   .mega-col a:hover::before {
     color: var(--hover-orange-deep);
   }
@@ -554,7 +554,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #0a192f;
+    background-color: var(--navy-deep);
     isolation: isolate;
   }
   .legacy .page-banner::before {
@@ -564,9 +564,9 @@
     z-index: 0;
     background: linear-gradient(
       90deg,
-      rgba(5, 17, 31, 0.78) 0%,
-      rgba(5, 17, 31, 0.55) 48%,
-      rgba(5, 17, 31, 0.24) 100%
+      color-mix(in srgb,var(--navy-deep) 78%,transparent) 0%,
+      color-mix(in srgb,var(--navy-deep) 55%,transparent) 48%,
+      color-mix(in srgb,var(--navy-deep) 24%,transparent) 100%
     );
   }
   .legacy .page-banner-content {
@@ -576,17 +576,17 @@
     max-width: 1120px;
     margin: 0 auto;
     padding: 72px 0;
-    color: #fff;
+    color: var(--paper);
   }
-  .legacy .page-banner-kicker,.legacy 
-  .page-banner-title,.legacy 
-  .page-banner-content p,.legacy 
+  .legacy .page-banner-kicker,.legacy
+  .page-banner-title,.legacy
+  .page-banner-content p,.legacy
   .page-banner-content .subtitle {
-    color: #fff;
-    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.34);
+    color: var(--paper);
+    text-shadow: 0 2px 14px color-mix(in srgb,var(--navy-deep) 34%,transparent);
   }
   .legacy .page-banner-kicker {
-    color: #f4e7a6;
+    color: var(--tint-strong);
   }
   .legacy .page-banner-title {
     font-weight: 900;
@@ -600,9 +600,9 @@
     max-width: none;
     min-height: 320px;
     margin: 0;
-    padding: 70px 0;
+    padding: 72px 0;
     overflow: hidden;
-    color: #fff;
+    color: var(--paper);
     background:
       linear-gradient(
         90deg,
@@ -620,27 +620,27 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .legacy .admin-materials-hero .admin-materials-kicker,.legacy 
+  .legacy .admin-materials-hero .admin-materials-kicker,.legacy
   .admin-materials-kicker {
-    color: #f4e7a6;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.32);
+    color: var(--tint-strong);
+    text-shadow: 0 2px 12px color-mix(in srgb,var(--navy-deep) 32%,transparent);
   }
-  .legacy .admin-materials-hero h1,.legacy 
-  .admin-materials-hero .admin-materials-subtitle,.legacy 
+  .legacy .admin-materials-hero h1,.legacy
+  .admin-materials-hero .admin-materials-subtitle,.legacy
   .admin-materials-hero p:not(.admin-materials-kicker) {
-    color: #fff;
-    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.34);
+    color: var(--paper);
+    text-shadow: 0 2px 14px color-mix(in srgb,var(--navy-deep) 34%,transparent);
   }
   .legacy .admin-materials-hero h1 {
-    font-size: clamp(2.05rem, 4vw, 3.25rem);
+    font-size: clamp(var(--fs-h1), 4vw, var(--fs-h1));
     line-height: 1.18;
     margin-top: 0;
   }
 
-  .legacy .page-hero:not(.page-hero--photo),.legacy 
-  .issue-hero:not(.page-hero--photo),.legacy 
-  .journal-hero,.legacy 
-  .article-hero,.legacy 
+  .legacy .page-hero:not(.page-hero--photo),.legacy
+  .issue-hero:not(.page-hero--photo),.legacy
+  .journal-hero,.legacy
+  .article-hero,.legacy
   .thesis-hero {
     width: 100%;
     max-width: none;
@@ -661,8 +661,8 @@
     padding: 0;
     overflow: hidden;
     border: 0;
-    color: #fff;
-    background: #0a192f;
+    color: var(--paper);
+    background: var(--navy-deep);
   }
   .legacy.guide-board-direct-fixed .page-hero--photo .page-hero-bg-img {
     position: absolute;
@@ -688,9 +688,9 @@
     z-index: 1;
     background: linear-gradient(
       90deg,
-      rgba(5, 17, 31, 0.78) 0%,
-      rgba(5, 17, 31, 0.52) 48%,
-      rgba(5, 17, 31, 0.18) 100%
+      color-mix(in srgb,var(--navy-deep) 78%,transparent) 0%,
+      color-mix(in srgb,var(--navy-deep) 52%,transparent) 48%,
+      color-mix(in srgb,var(--navy-deep) 18%,transparent) 100%
     );
   }
   .legacy.guide-board-direct-fixed .page-hero--photo > :not(.page-hero-bg-img),.legacy.guide-board-direct-fixed .page-hero--photo .page-hero-inner {
@@ -701,13 +701,13 @@
     margin-left: auto;
     margin-right: auto;
     padding-top: 68px;
-    padding-bottom: 74px;
-    color: #fff;
+    padding-bottom: 76px;
+    color: var(--paper);
     background: transparent;
   }
   .legacy.guide-board-direct-fixed .page-hero--photo h1,.legacy.guide-board-direct-fixed .page-hero--photo p,.legacy.guide-board-direct-fixed .page-hero--photo .section-lead {
-    color: #fff;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.34);
+    color: var(--paper);
+    text-shadow: 0 2px 12px color-mix(in srgb,var(--navy-deep) 34%,transparent);
   }
 
   @media (max-width: 760px) {
@@ -737,18 +737,18 @@
       padding-bottom: 52px;
     }
   }
-  .legacy .wrap .box,.legacy 
+  .legacy .wrap .box,.legacy
   .wrap > .grid > .card {
     margin-left: 0;
     margin-right: 0;
     padding: 20px 0;
     background: transparent;
     border: 0;
-    border-bottom: 1px solid #d7e0e9;
+    border-bottom: 1px solid var(--line);
     border-radius: 0;
     box-shadow: none;
   }
   .legacy .wrap > .grid {
     gap: 0;
-    border-top: 2px solid #17324f;
+    border-top: 2px solid var(--navy-deep);
   }

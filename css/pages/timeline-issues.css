@@ -1,18 +1,18 @@
 
   .legacy .ti-page {
-    --ti-ink: #10283e;
-    --ti-body: #27394b;
-    --ti-muted: #657384;
-    --ti-line: #d8dde2;
-    --ti-paper: #f6f3ed;
-    --ti-wash: #f4f6f7;
-    --ti-accent: #c7531f;
-    background: #fff;
+    --ti-ink: var(--navy-deep);
+    --ti-body: var(--navy-deep);
+    --ti-muted: var(--navy-mid);
+    --ti-line: var(--paper-alt);
+    --ti-paper: var(--paper-alt);
+    --ti-wash: var(--paper-alt);
+    --ti-accent: var(--navy);
+    background: var(--paper);
     color: var(--ti-body);
   }
 
   .legacy .ti-page .legacy-main {
-    background: #fff;
+    background: var(--paper);
   }
 
   .legacy .ti-page .ti-wrap {
@@ -24,22 +24,22 @@
     position: relative;
     padding: 76px 0 68px;
     border-top: 4px solid var(--ti-accent);
-    border-bottom: 1px solid #d7d2c9;
+    border-bottom: 1px solid var(--line-strong);
     background: var(--ti-paper);
     color: var(--ti-ink);
   }
 
-  .legacy .ti-page .ti-hero::before,.legacy 
+  .legacy .ti-page .ti-hero::before,.legacy
   .ti-page .ti-hero::after {
     content: none;
   }
 
-  .legacy .ti-page .ti-kicker,.legacy 
-  .ti-page .ti-section-label,.legacy 
+  .legacy .ti-page .ti-kicker,.legacy
+  .ti-page .ti-section-label,.legacy
   .ti-page .ti-section-number {
-    margin: 0 0 14px;
+    margin: 0 0 16px;
     color: var(--ti-accent);
-    font-size: 0.78rem;
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.13em;
   }
@@ -49,7 +49,7 @@
     margin: 0;
     color: var(--ti-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(2.25rem, 5vw, 4.15rem);
+    font-size: clamp(var(--fs-h1), 5vw, var(--fs-h1));
     font-weight: 900;
     line-height: 1.28;
     letter-spacing: 0.015em;
@@ -58,8 +58,8 @@
   .legacy .ti-page .ti-hero-lead {
     max-width: 880px;
     margin: 24px 0 0;
-    color: #263e52;
-    font-size: clamp(1rem, 1.45vw, 1.12rem);
+    color: var(--navy-deep);
+    font-size: clamp(var(--fs-body), 1.45vw, var(--fs-h3));
     font-weight: 700;
     line-height: 2;
   }
@@ -67,11 +67,11 @@
   .legacy .ti-page .ti-hero-thesis {
     max-width: 880px;
     margin: 28px 0 0;
-    padding: 18px 0 18px 22px;
-    border-top: 1px solid #d7d2c9;
-    border-bottom: 1px solid #d7d2c9;
+    padding: 20px 0 20px 24px;
+    border-top: 1px solid var(--line-strong);
+    border-bottom: 1px solid var(--line-strong);
     border-left: 4px solid var(--ti-accent);
-    color: #34495b;
+    color: var(--navy-deep);
     line-height: 1.95;
   }
 
@@ -80,13 +80,13 @@
     margin-bottom: 4px;
     color: var(--ti-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: 1.08rem;
+    font-size: var(--fs-h3);
   }
 
-  .legacy .ti-page .ti-intro,.legacy 
-  .ti-page .ti-history,.legacy 
-  .ti-page .ti-logic,.legacy 
-  .ti-page .ti-section,.legacy 
+  .legacy .ti-page .ti-intro,.legacy
+  .ti-page .ti-history,.legacy
+  .ti-page .ti-logic,.legacy
+  .ti-page .ti-section,.legacy
   .ti-page .ti-sources {
     border-bottom: 1px solid var(--ti-line);
   }
@@ -96,7 +96,7 @@
   }
 
   .legacy .ti-page .ti-history {
-    padding: 68px 0 70px;
+    padding: 68px 0 72px;
   }
 
   .legacy .ti-page .ti-logic {
@@ -104,42 +104,42 @@
   }
 
   .legacy .ti-page .ti-section {
-    padding: 64px 0 66px;
+    padding: 64px 0 68px;
   }
 
   .legacy .ti-page .ti-sources {
-    padding: 62px 0 60px;
+    padding: 64px 0 60px;
   }
 
-  .legacy .ti-page .ti-intro h2,.legacy 
-  .ti-page .ti-history h2,.legacy 
-  .ti-page .ti-logic h2,.legacy 
-  .ti-page .ti-section h2,.legacy 
+  .legacy .ti-page .ti-intro h2,.legacy
+  .ti-page .ti-history h2,.legacy
+  .ti-page .ti-logic h2,.legacy
+  .ti-page .ti-section h2,.legacy
   .ti-page .ti-sources h2 {
     max-width: 900px;
-    margin: 0 0 22px;
+    margin: 0 0 24px;
     color: var(--ti-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(1.65rem, 3.1vw, 2.45rem);
+    font-size: clamp(var(--fs-h2), 3.1vw, var(--fs-h1));
     font-weight: 900;
     line-height: 1.5;
   }
 
-  .legacy .ti-page .ti-intro > p:not(.ti-section-label):not(.ti-intro-follow),.legacy 
-  .ti-page .ti-section-lead,.legacy 
-  .ti-page .ti-logic > p:not(.ti-section-label),.legacy 
-  .ti-page .ti-section > p:not(.ti-section-number):not(.ti-section-conclusion),.legacy 
+  .legacy .ti-page .ti-intro > p:not(.ti-section-label):not(.ti-intro-follow),.legacy
+  .ti-page .ti-section-lead,.legacy
+  .ti-page .ti-logic > p:not(.ti-section-label),.legacy
+  .ti-page .ti-section > p:not(.ti-section-number):not(.ti-section-conclusion),.legacy
   .ti-page .ti-sources > p:not(.ti-section-label) {
     max-width: 900px;
-    margin: 0 0 22px;
+    margin: 0 0 24px;
     color: var(--ti-body);
-    font-size: 1rem;
+    font-size: var(--fs-body);
     line-height: 2.05;
   }
 
   .legacy .ti-page .legacy-main a {
-    color: #0e5878;
-    text-decoration-color: #9ebdca;
+    color: var(--navy-deep);
+    text-decoration-color: var(--ink-sub);
     text-decoration-thickness: 1px;
     text-underline-offset: 0.18em;
   }
@@ -157,14 +157,14 @@
   .legacy .ti-page .ti-reading-bounds > div {
     display: grid;
     grid-template-columns: 250px minmax(0, 1fr);
-    gap: 30px;
-    padding: 22px 0;
+    gap: 32px;
+    padding: 24px 0;
     border-bottom: 1px solid var(--ti-line);
   }
 
   .legacy .ti-page .ti-reading-bounds dt {
     color: var(--ti-accent);
-    font-size: 0.82rem;
+    font-size: var(--fs-body);
     font-weight: 900;
     letter-spacing: 0.08em;
   }
@@ -177,10 +177,10 @@
 
   .legacy .ti-page .ti-reading-bounds dd strong {
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     color: var(--ti-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: 1.08rem;
+    font-size: var(--fs-h3);
   }
 
   .legacy .ti-page .ti-reading-bounds dd span {
@@ -189,16 +189,16 @@
 
   .legacy .ti-page .ti-intro-follow {
     max-width: 900px;
-    margin: 30px 0 0;
+    margin: 32px 0 0;
     padding-left: 20px;
     border-left: 4px solid var(--ti-accent);
-    color: #34495b;
+    color: var(--navy-deep);
     line-height: 2;
   }
 
   .legacy .ti-page .ti-history-line {
     position: relative;
-    margin-top: 38px;
+    margin-top: 40px;
   }
 
   .legacy .ti-page .ti-history-line::before {
@@ -207,7 +207,7 @@
     bottom: 0;
     left: 145px;
     width: 1px;
-    background: #c7cfd6;
+    background: var(--tint-strong);
     content: "";
   }
 
@@ -215,7 +215,7 @@
     position: relative;
     display: grid;
     grid-template-columns: 145px minmax(0, 1fr);
-    gap: 34px;
+    gap: 36px;
     padding: 0 0 52px;
   }
 
@@ -235,10 +235,10 @@
     right: -7px;
     width: 13px;
     height: 13px;
-    border: 3px solid #fff;
+    border: 3px solid var(--paper);
     border-radius: 50%;
     background: var(--ti-accent);
-    box-shadow: 0 0 0 1px var(--ti-accent);
+    box-shadow: none;
     content: "";
   }
 
@@ -246,15 +246,15 @@
     display: block;
     color: var(--ti-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: 1.14rem;
+    font-size: var(--fs-h3);
     font-weight: 900;
   }
 
   .legacy .ti-page .ti-history-marker small {
     display: block;
-    margin-top: 5px;
+    margin-top: 4px;
     color: var(--ti-muted);
-    font-size: 0.74rem;
+    font-size: var(--fs-small);
     font-weight: 700;
     letter-spacing: 0.06em;
   }
@@ -264,10 +264,10 @@
   }
 
   .legacy .ti-page .ti-history-body h3 {
-    margin: -3px 0 12px;
+    margin: -4px 0 12px;
     color: var(--ti-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: clamp(1.18rem, 2.1vw, 1.48rem);
+    font-size: clamp(var(--fs-h3), 2.1vw, var(--fs-h2));
     line-height: 1.65;
   }
 
@@ -282,39 +282,39 @@
   }
 
   .legacy .ti-page .ti-history-caution {
-    margin: 36px 0 0 179px;
-    padding: 20px 0 4px 22px;
+    margin: 36px 0 0 180px;
+    padding: 20px 0 4px 24px;
     border-left: 4px solid var(--ti-accent);
   }
 
   .legacy .ti-page .ti-history-caution strong {
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     color: var(--ti-ink);
     font-family: "Noto Serif JP", serif;
   }
 
   .legacy .ti-page .ti-history-caution p {
     margin: 0;
-    color: #45586a;
+    color: var(--c-caution);
     line-height: 1.9;
   }
 
   .legacy .ti-page .ti-logic {
-    background: linear-gradient(90deg, transparent 0, transparent 20px, var(--ti-wash) 20px, var(--ti-wash) calc(100% - 20px), transparent calc(100% - 20px));
+    background: var(--paper-alt);
   }
 
   .legacy .ti-page .ti-logic-list {
-    margin: 34px 0 0;
+    margin: 36px 0 0;
     border-top: 2px solid var(--ti-ink);
   }
 
   .legacy .ti-page .ti-logic-list > div {
     display: grid;
     grid-template-columns: minmax(250px, 0.8fr) minmax(0, 1.4fr);
-    gap: 34px;
-    padding: 22px 0;
-    border-bottom: 1px solid #cdd4da;
+    gap: 36px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--line-strong);
   }
 
   .legacy .ti-page .ti-logic-list dt {
@@ -334,17 +334,17 @@
     padding-bottom: 84px;
   }
 
-  .legacy .ti-page .ti-section h3,.legacy 
+  .legacy .ti-page .ti-section h3,.legacy
   .ti-page .ti-document-map h3 {
-    margin: 32px 0 14px;
+    margin: 32px 0 16px;
     color: var(--ti-ink);
     font-family: "Noto Serif JP", serif;
-    font-size: 1.18rem;
+    font-size: var(--fs-h3);
     line-height: 1.65;
   }
 
   .legacy .ti-page .ti-section ul {
-    margin: 18px 0 0;
+    margin: 20px 0 0;
     padding: 0;
     list-style: none;
     border-top: 1px solid var(--ti-line);
@@ -352,7 +352,7 @@
 
   .legacy .ti-page .ti-section li {
     position: relative;
-    padding: 17px 16px 17px 31px;
+    padding: 16px 16px 16px 32px;
     border-bottom: 1px solid var(--ti-line);
     color: var(--ti-body);
     line-height: 1.85;
@@ -374,17 +374,17 @@
     margin: 28px 0 0;
     padding: 2px 0 2px 20px;
     border-left: 4px solid var(--ti-accent);
-    color: #405468;
+    color: var(--navy-deep);
     line-height: 2;
   }
 
   .legacy .ti-page .ti-document-map {
-    margin-top: 42px;
+    margin-top: 44px;
     padding-top: 4px;
   }
 
   .legacy .ti-page .ti-document-map > p {
-    margin: 0 0 18px;
+    margin: 0 0 20px;
     color: var(--ti-body);
     line-height: 1.9;
   }
@@ -402,9 +402,9 @@
     table-layout: fixed;
   }
 
-  .legacy .ti-page .ti-table-wrap th,.legacy 
+  .legacy .ti-page .ti-table-wrap th,.legacy
   .ti-page .ti-table-wrap td {
-    padding: 16px 18px;
+    padding: 16px 20px;
     border-bottom: 1px solid var(--ti-line);
     text-align: left;
     vertical-align: top;
@@ -412,14 +412,14 @@
   }
 
   .legacy .ti-page .ti-table-wrap th {
-    background: #eef1f2;
+    background: var(--paper-alt);
     color: var(--ti-ink);
-    font-size: 0.82rem;
+    font-size: var(--fs-body);
     font-weight: 900;
     letter-spacing: 0.04em;
   }
 
-  .legacy .ti-page .ti-table-wrap th:first-child,.legacy 
+  .legacy .ti-page .ti-table-wrap th:first-child,.legacy
   .ti-page .ti-table-wrap td:first-child {
     width: 34%;
     color: var(--ti-ink);
@@ -431,11 +431,11 @@
   }
 
   .legacy .ti-page .ti-note {
-    margin: 38px 0 0;
-    padding: 21px 0 21px 22px;
+    margin: 40px 0 0;
+    padding: 20px 0 20px 24px;
     border-left: 5px solid var(--ti-accent);
-    background: #fbf5ed;
-    color: #3e4f5f;
+    background: var(--paper-alt);
+    color: var(--navy-deep);
     line-height: 1.95;
   }
 
@@ -449,11 +449,11 @@
     }
 
     .legacy .ti-page .ti-hero {
-      padding: 52px 0 46px;
+      padding: 52px 0 48px;
     }
 
     .legacy .ti-page .ti-hero h1 {
-      font-size: clamp(2rem, 10vw, 2.75rem);
+      font-size: clamp(var(--fs-h1), 10vw, var(--fs-h1));
     }
 
     .legacy .ti-page .ti-hero-lead {
@@ -462,23 +462,23 @@
     }
 
     .legacy .ti-page .ti-hero-thesis {
-      padding: 15px 0 15px 16px;
+      padding: 16px 0 16px 16px;
     }
 
-    .legacy .ti-page .ti-intro,.legacy 
-    .ti-page .ti-history,.legacy 
-    .ti-page .ti-logic,.legacy 
-    .ti-page .ti-section,.legacy 
+    .legacy .ti-page .ti-intro,.legacy
+    .ti-page .ti-history,.legacy
+    .ti-page .ti-logic,.legacy
+    .ti-page .ti-section,.legacy
     .ti-page .ti-sources {
       padding-top: 48px;
       padding-bottom: 48px;
     }
 
-    .legacy .ti-page .ti-reading-bounds > div,.legacy 
+    .legacy .ti-page .ti-reading-bounds > div,.legacy
     .ti-page .ti-logic-list > div {
       grid-template-columns: 1fr;
-      gap: 9px;
-      padding: 18px 0;
+      gap: 8px;
+      padding: 20px 0;
     }
 
     .legacy .ti-page .ti-history-line::before {
@@ -487,8 +487,8 @@
 
     .legacy .ti-page .ti-history-entry {
       grid-template-columns: 1fr;
-      gap: 14px;
-      padding: 0 0 44px 30px;
+      gap: 16px;
+      padding: 0 0 44px 32px;
     }
 
     .legacy .ti-page .ti-history-marker {
@@ -510,7 +510,7 @@
     }
 
     .legacy .ti-page .ti-history-caution {
-      margin-left: 30px;
+      margin-left: 32px;
       padding-left: 16px;
     }
 
@@ -522,13 +522,13 @@
       min-width: 720px;
     }
 
-    .legacy .ti-page .ti-table-wrap th,.legacy 
+    .legacy .ti-page .ti-table-wrap th,.legacy
     .ti-page .ti-table-wrap td {
-      padding: 14px;
+      padding: 16px;
     }
 
     .legacy .ti-page .ti-note {
-      margin-top: 30px;
+      margin-top: 32px;
       padding-left: 16px;
     }
   }
@@ -536,13 +536,13 @@
   @media print {
     .legacy .ti-page .ti-hero {
       padding: 32px 0;
-      border-top-color: #777;
-      background: #fff;
+      border-top-color: var(--navy-mid);
+      background: var(--paper);
     }
 
-    .legacy .ti-page .ti-history-entry,.legacy 
-    .ti-page .ti-section,.legacy 
-    .ti-page .ti-sources,.legacy 
+    .legacy .ti-page .ti-history-entry,.legacy
+    .ti-page .ti-section,.legacy
+    .ti-page .ti-sources,.legacy
     .ti-page .ti-document-map {
       break-inside: avoid;
     }

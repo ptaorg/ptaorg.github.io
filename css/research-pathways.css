@@ -1,13 +1,13 @@
 /* Shared navigation between the nationwide research map and the existing school archive. */
 .legacy .research-pathways {
   width: min(calc(100% - 32px), 1120px);
-  margin: 22px auto 32px;
-  padding: 22px;
-  background: #ffffff;
-  border: 1px solid #c8d6df;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(15, 45, 72, .06);
-  color: #20364a;
+  margin: 24px auto 32px;
+  padding: 24px;
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  box-shadow: none;
+  color: var(--navy-deep);
 }
 .legacy .research-main > .research-pathways {
   width: 100%;
@@ -15,90 +15,90 @@
 }
 .legacy .research-pathways__heading {
   display: block;
-  font-size: 1.13rem;
+  font-size: var(--fs-h3);
   font-weight: 800;
   line-height: 1.55;
-  color: #123d5a;
+  color: var(--navy-deep);
 }
 .legacy .research-pathways__description {
-  margin: 3px 0 16px;
-  color: #4a5f71;
-  font-size: .93rem;
+  margin: 4px 0 16px;
+  color: var(--navy-deep);
+  font-size: var(--fs-body);
   line-height: 1.7;
 }
 .legacy .research-pathways__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  gap: 16px;
 }
 .legacy a.research-pathways__card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  padding: 18px 20px;
+  padding: 20px 20px;
   min-width: 0;
-  background: #f6f9fb;
-  border: 2px solid #d5e0e7;
-  border-radius: 9px;
-  color: #124d6c;
+  background: var(--paper);
+  border: 2px solid var(--line);
+  border-radius: var(--radius-md);
+  color: var(--navy-deep);
   text-decoration: none;
   line-height: 1.65;
   transition: border-color .15s ease, background-color .15s ease;
 }
 .legacy a.research-pathways__card--primary {
-  background: #edf5f8;
-  border-color: #23728c;
+  background: var(--paper-alt);
+  border-color: var(--navy-deep);
 }
-.legacy a.research-pathways__card:hover,.legacy 
+.legacy a.research-pathways__card:hover,.legacy
 a.research-pathways__card:focus-visible {
-  background: #e5f3f9;
-  border-color: #125b7a;
+  background: var(--paper-alt);
+  border-color: var(--navy-deep);
 }
 .legacy a.research-pathways__card:focus-visible {
-  outline: 3px solid #bd7727;
+  outline: 3px solid var(--navy);
   outline-offset: 3px;
 }
 .legacy .research-pathways__label {
   display: block;
-  font-size: .76rem;
+  font-size: var(--fs-small);
   font-weight: 800;
-  color: #3e6276;
+  color: var(--navy-deep);
 }
 .legacy .research-pathways__title {
   display: block;
-  font-size: 1.08rem;
+  font-size: var(--fs-h3);
   font-weight: 800;
-  color: #0b4d71;
+  color: var(--navy-deep);
   line-height: 1.5;
 }
 .legacy .research-pathways__detail {
   display: block;
-  color: #3b5064;
-  font-size: .89rem;
+  color: var(--navy-deep);
+  font-size: var(--fs-body);
 }
 .legacy .research-pathways__action {
   display: block;
   margin-top: auto;
-  font-size: .91rem;
+  font-size: var(--fs-body);
   font-weight: 800;
-  color: #075f85;
+  color: var(--navy-deep);
 }
 .legacy .research-pathways__shortcuts {
-  margin: 15px 0 0;
-  font-size: .91rem;
+  margin: 16px 0 0;
+  font-size: var(--fs-body);
   line-height: 1.75;
 }
 .legacy .research-pathways__shortcuts a {
-  color: #075d80;
+  color: var(--navy-deep);
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 @media (max-width: 650px) {
-  .legacy .research-pathways { padding: 17px; }
+  .legacy .research-pathways { padding: 16px; }
   .legacy .research-pathways__grid { grid-template-columns: 1fr; }
-  .legacy a.research-pathways__card { padding: 15px 16px; }
+  .legacy a.research-pathways__card { padding: 16px 16px; }
 }
 @media print {
   .legacy .research-pathways { display: none !important; }
