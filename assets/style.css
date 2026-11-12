@@ -60,7 +60,7 @@ svg{width:1em;height:1em;flex:none}
 .nav-search svg{width:1.1em;height:1.1em}
 .nav-cta{background:var(--navy-deep);color:#fff;text-decoration:none;font-size:.86rem;font-weight:700;padding:11px 18px;border-radius:4px;white-space:nowrap}
 .nav-cta:hover{background:var(--navy);color:#fff}
-.menu-button{display:none;align-items:center;gap:6px;background:none;border:1px solid var(--line-strong);border-radius:4px;padding:8px 12px;font:inherit;font-size:.85rem;font-weight:700;color:var(--navy);cursor:pointer}
+.menu-button{display:none;align-items:center;gap:6px;background:none;border:1px solid var(--line-strong);border-radius:4px;padding:8px 12px;font:inherit;font-size:.85rem;font-weight:700;color:var(--navy);cursor:pointer;white-space:nowrap;flex:0 0 auto;min-width:max-content}
 .menu-button svg{width:1.2em;height:1.2em}
 
 /* ---------- buttons, labels ---------- */
@@ -615,16 +615,7 @@ svg{width:1em;height:1em;flex:none}
 }
 html{scroll-padding-top:calc(var(--header-h) + 18px)}
 #main :target{scroll-margin-top:calc(var(--header-h) + 18px)}
-/* Use the verified existing ptaorg.com favicon instead of the placeholder building SVG. */
-.site-header .brand-mark{display:none}
-.site-header .brand::before{
-  content:"";
-  display:block;
-  flex:0 0 38px;
-  width:38px;
-  height:38px;
-  background:url("./favicon-192.png") center / contain no-repeat;
-}
+/* Use the restored logo once, without inserting a duplicate pseudo-element. */
 /* Sticky TOC and tab bars must sit below the fixed navigation, not behind it. */
 @media (min-width:1041px){
   .article-side{
@@ -657,6 +648,45 @@ html{scroll-padding-top:calc(var(--header-h) + 18px)}
 .migration-home :is(img,svg){max-width:100%;height:auto}
 .migration-home :is(.hc-eyebrow,.hc-kicker,.core-kicker){color:var(--ink-sub);font-size:.875rem}
 .migration-home :is(.relationship-grid,.relationship-actors,.hc-issue-grid,.hc-audience-grid){display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr))}
+
+/* Phase 1: readable layout for the retained research text, without changing its words or links. */
+.migration-home .home-wrap{width:100%;max-width:920px;margin-inline:auto}
+.migration-home :is(p,li){max-width:40em}
+.migration-home :is(.hc-lead,.hc-hero-note,.hc-boundary-prose,.hc-section-lead,.core-intro,.core-thesis){max-width:40em}
+.migration-home :is(.hc-actions,.hc-archive-actions,.hc-evidence-links){display:flex;flex-wrap:wrap;gap:12px;align-items:stretch;margin-block:16px}
+.migration-home .hc-button{display:inline-flex;flex-direction:column;justify-content:center;gap:3px;max-width:100%;padding:12px 18px;border:1px solid var(--navy);border-radius:4px;color:var(--navy);font-weight:700;text-decoration:none;background:var(--paper)}
+.migration-home .hc-button small{display:block;font-size:.875rem;font-weight:400;color:var(--ink-sub)}
+.migration-home .hc-button-primary{background:var(--navy-deep);color:var(--paper)}
+.migration-home .hc-button-primary small{color:var(--paper)}
+.migration-home .hc-button:hover{background:var(--tint);color:var(--navy)}
+.migration-home .hc-button-primary:hover{background:var(--navy);color:var(--paper)}
+.migration-home .hc-source-badge{display:inline-block;padding:2px 8px;border-left:3px solid var(--gold);font-size:.875rem;font-weight:700;background:var(--paper-alt)}
+.migration-home .hc-core-foot{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start;margin-top:22px;padding-top:14px;border-top:1px solid var(--line)}
+.migration-home .hc-core-foot p{margin:.3em 0}
+.migration-home .relationship-figure{width:100%;max-width:900px;margin:20px auto;padding:16px;border:1px solid var(--line);border-radius:4px}
+.migration-home .relationship-figure figcaption{font-weight:700;margin-bottom:12px}
+.migration-home .relationship-svg{display:block;width:100%;max-width:100%;height:auto;min-height:300px}
+.migration-home .relationship-svg.is-desktop{aspect-ratio:900/555}
+.migration-home .relationship-svg.is-mobile{display:none}
+.migration-home .figure-note{font-size:.875rem;color:var(--ink-sub)}
+.migration-home :is(.hc-evidence-grid,.hc-tool-grid,.hc-research-grid){display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:16px;margin-top:16px}
+.migration-home .hc-evidence-card{min-width:0;padding:16px;border-left:3px solid var(--gold);background:var(--paper-alt)}
+.migration-home .hc-evidence-links{margin-block:8px 0}
+.migration-home .hc-tool-grid a{display:block;padding:14px 16px;border-top:1px solid var(--line);text-decoration:none;font-weight:700;overflow-wrap:anywhere}
+.migration-home .hc-tool-grid a span{display:block;font-weight:400;color:var(--ink-sub);font-size:.875rem;margin-top:5px}
+.migration-home .hc-update-list{display:grid;gap:0}
+.migration-home .hc-update-list a{display:grid;grid-template-columns:minmax(6.5em,8em) minmax(0,1fr);gap:12px;padding:12px 0;border-top:1px solid var(--line);text-decoration:none}
+.migration-home .hc-update-list time{font-variant-numeric:tabular-nums;font-size:.875rem;color:var(--ink-sub)}
+.migration-home .core-essay-item{max-width:40em;padding:18px 0;border-top:1px solid var(--line)}
+.migration-home .core-essay-item .core-no{font-size:.875rem;color:var(--ink-sub)}
+.migration-home .core-essay-item .core-read{display:inline-block;margin-top:8px}
+.site-footer .support-button[href$="support.html"] svg{display:none}
+@media(max-width:760px){
+ .migration-home .relationship-svg.is-desktop{display:none}
+ .migration-home .relationship-svg.is-mobile{display:block;aspect-ratio:400/575;min-height:360px}
+ .migration-home .hc-actions{flex-direction:column;align-items:stretch}
+ .migration-home .hc-update-list a{grid-template-columns:1fr;gap:4px}
+}
 
 /* Restore images removed unintentionally during 2026-11-10 site migration.
    This only changes visual treatment; URLs, article text and evidence files stay untouched. */

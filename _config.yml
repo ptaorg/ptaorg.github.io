@@ -1,6 +1,7 @@
 # GitHub Pages build settings
 # Public HTML/CSS/JS assets remain available. Internal notes, scripts, and work files are excluded from the published site.
 exclude:
+  - partials/
   - docs/
   - source-candidates/
   - scripts/

@@ -47,7 +47,6 @@ ${docs.map((doc) => {
   const description = record.description || `${record.schoolName}のPTA関連一次資料を年度・資料種別ごとに整理した学校別アーカイブです。`;
   const ogImage = record.ogImage || "/assets/og-image-popc-en.png";
   const docs = Array.isArray(record.documents) ? record.documents : [];
-  const years = [...new Set(docs.map((doc) => doc.year).filter(Boolean))];
 
   return `<!DOCTYPE html>
 <html lang="ja">
@@ -83,17 +82,6 @@ ${chrome.mobile}<nav class="breadcrumb" aria-label="現在地"><div class="wrap"
     <p>${escapeHtml(record.summary || "学校別に確認できるPTA関連資料を、そのまま探せる形で整理しています。")}</p>
   </header>
 ${renderResearchNoteLink(record) ? `    ${renderResearchNoteLink(record)}\n` : ""}
-  <section class="archive-section">
-    <h2>このページについて</h2>
-    <div class="archive-grid">
-      <div class="archive-box"><div class="archive-label">自治体</div><div class="archive-value">${escapeHtml(record.municipality)}</div></div>
-      <div class="archive-box"><div class="archive-label">学校区分</div><div class="archive-value">${escapeHtml(record.schoolType)}</div></div>
-      <div class="archive-box"><div class="archive-label">確認年度</div><div class="archive-value">${escapeHtml(years.join("・") || "未整理")}</div></div>
-      <div class="archive-box"><div class="archive-label">資料件数</div><div class="archive-value">${docs.length}件</div></div>
-    </div>
-    <p>ここでは資料の所在と内容種別だけを整理します。</p>
-  </section>
-
   <section class="archive-section">
     <h2>資料一覧</h2>
     ${renderDocuments(record)}
