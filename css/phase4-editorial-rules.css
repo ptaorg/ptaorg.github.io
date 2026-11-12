@@ -1,0 +1,13 @@
+/* Shared reading surface, phase 4. Never replaces original research content. */
+:where(.article-main,.detail-main,.legacy-main,.journal-article) :where(p,li,dd,blockquote):not(.wide):not(.full-width){max-width:40em;overflow-wrap:break-word}
+:where(.article-main,.detail-main,.legacy-main,.journal-article) :where(p,li,dd){line-height:1.9}
+:where(.article-main,.detail-main,.legacy-main,.article-hero,.hero) h1{text-wrap:balance;word-break:auto-phrase;overflow-wrap:break-word}
+:where(.article-main,.detail-main,.legacy-main,.article-hero,.hero) :where(h2,h3){font-family:var(--serif);text-wrap:pretty}
+:where(.article-main,.detail-main,.legacy-main) :where(.law-quote,.statute-quote,.law-reference,.source-note,.document-note){border-left:3px solid var(--gold);padding-inline-start:16px;box-shadow:none}
+:where(.article-main,.detail-main,.legacy-main) :where(.label-primary,.label-response,.label-school){background:var(--tint);color:var(--navy)}
+:where(.article-main,.detail-main,.legacy-main) .label-analysis{background:var(--paper-alt);color:var(--ink-sub)}
+:where(.article-main,.detail-main,.legacy-main) .label-caution{background:var(--c-caution-bg);color:var(--c-caution)}
+@media(max-width:760px){
+ :where(.article-main,.detail-main,.legacy-main,.journal-article) :where(p,li,dd){max-width:100%}
+ :where(.article-main,.detail-main,.legacy-main) :where(pre,table,figure){max-width:100%;overflow-x:auto}
+}
