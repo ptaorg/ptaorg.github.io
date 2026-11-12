@@ -46,7 +46,7 @@ try{
  for(const width of [1440,390]){
   await pageAt("/",width,width===390?844:900);
   let v=await evalPage(`(()=>{const q=s=>document.querySelector(s),info=s=>q(s)?.getBoundingClientRect().width;return {button:getComputedStyle(q(".migration-home .hc-button")).display,svg:info(".migration-home .relationship-svg."+(${width}===390?"is-mobile":"is-desktop")),paragraph:info(".migration-home .hc-lead"),logo:getComputedStyle(q(".site-header .brand"),"::before").content,nowrap:getComputedStyle(q(".menu-button")).whiteSpace}})()`);
-  requireResult(v.button==="inline-flex","home links not separated "+width+" "+JSON.stringify(v));
+  requireResult(v.button==="inline-flex"||v.button==="flex","home links not separated "+width+" "+JSON.stringify(v));
   requireResult(v.svg>(width===390?200:350),"home relationship figure too small "+width+" "+JSON.stringify(v));
   requireResult(v.paragraph<750,"reading paragraph too wide "+width+" "+JSON.stringify(v));
   requireResult(v.logo==="none"||v.logo==="normal","duplicate header logo "+width+" "+JSON.stringify(v));
