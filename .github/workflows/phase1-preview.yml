@@ -13,11 +13,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Render shared chrome and material school pages
+      - name: Render shared chrome and port-aware school pages
         run: |
           node scripts/render-chrome.mjs
-          node scripts/generate-school-pages.js
-      - name: Protect preexisting school text and public URLs
+          node scripts/phase1-regenerate-school-cards.cjs
+      - name: Protect preexisting school text, anchors and public URLs
         run: node tools/phase1-verify-generated.mjs
       - name: Regression tests and whitespace validation
         run: |
