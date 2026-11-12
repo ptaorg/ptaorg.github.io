@@ -13,6 +13,7 @@ const CLASSES=new Set([
 const single=/<(span|div)\b([^>]*\bclass="([^"]+)"[^>]*)>(\s*)([✓✗📄📋✅❌])(\s*)<\/\1>/g;
 const ICON={
  '✓':{label:'チェック印',paths:'<path d="M20 6 9 17 4 12"/>'},
+ '✅':{label:'チェック印',paths:'<path d="M20 6 9 17 4 12"/>'},
  '✗':{label:'バツ印',paths:'<path d="M18 6 6 18"/><path d="M6 6 18 18"/>'}
 };
 function protectedContext(source,at){
