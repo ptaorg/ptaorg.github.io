@@ -1,0 +1,44 @@
+name: Phase 3 long guides and disclaimer verification (temporary)
+on:
+  push:
+    branches: [refactor/phase3-final-guides-20261113]
+permissions:
+  contents: write
+jobs:
+  validate-and-generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate 6-chapter reading aids and relocate fixed notices
+        run: node scripts/phase3-finish-guides.cjs
+      - name: Verify all static HTML, tests and normalized chapter guides
+        run: |
+          npm test
+          node scripts/phase3-finish-guides.cjs --check
+          node scripts/render-home-digest.mjs --check
+          git diff --check
+      - name: Verify exact approved transformations and original content anchors
+        run: node tools/phase3-final-verify.mjs
+      - name: Verify two responsive layouts and anchor navigation
+        run: node tools/phase3-final-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase3-final-screenshots
+          path: phase3-final-screenshots/*.png
+          if-no-files-found: ignore
+      - name: Commit only verified HTML changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add '*.html'
+          if ! git diff --cached --quiet; then
+            git commit -m "Add six chapter guides and relocate research notices without changing article prose"
+            git push origin HEAD:refactor/phase3-final-guides-20261113
+          fi
