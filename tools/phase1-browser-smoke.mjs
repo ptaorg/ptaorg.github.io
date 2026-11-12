@@ -37,7 +37,7 @@ async function snap(name,selector){
 }
 function requireResult(condition,message){assert.ok(condition,message);}
 try{
- await retry("http://127.0.0.1:8765/");
+ for(let i=0;i<80;i++){try{if((await fetch("http://127.0.0.1:8765/")).ok)break;}catch{}await sleep(200);}
  const target=await retry("http://127.0.0.1:9222/json/new?about:blank",{method:"PUT"});
  ws=new WebSocket(target.webSocketDebuggerUrl);
  await new Promise((res,rej)=>{ws.addEventListener("open",res,{once:true});ws.addEventListener("error",rej,{once:true});});
