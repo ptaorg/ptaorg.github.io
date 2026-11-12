@@ -33,9 +33,9 @@ function repairCoreAliases(css,file){
  return result;
 }
 function normalizeFile(css,file){
- if(CORE.includes(file))return repairCoreAliases(css,file);
+ if(CORE.includes(file))return repairCoreAliases(css,file).replace(/[ \t]+(?=\r?$)/gm,'');
  const rendered=normalize(css,file).text;
- return removeLocalOverrides(rendered);
+ return removeLocalOverrides(rendered).replace(/[ \t]+(?=\r?$)/gm,'');
 }
 function main(){
  const check=process.argv.includes('--check'),touched=[];
