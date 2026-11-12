@@ -9,7 +9,7 @@ const hdr=fs.readFileSync(path.join(root,'partials','header.html'),'utf8');
 const ftr=fs.readFileSync(path.join(root,'partials','footer.html'),'utf8').trim();
 const navRX=/<nav class="global-nav" id="global-nav" aria-label="メインナビゲーション">[\s\S]*?<\/nav>/;
 const footerRX=/<footer class="site-footer">[\s\S]*?<\/footer>/;
-const searchRX=/<div class="container">\s*<form class="search-panel search-panel-bar"\b[\s\S]*?<\/form>\s*<\/div>\s*/g;
+const searchRX=/<div class="container">\s*<form class="search-panel search-panel-bar"[\s\S]*?<\/form>\s*<\/div>\s*/g;
 const canonicalNav=hdr.match(navRX)?.[0];
 if(!canonicalNav)throw Error('Canonical navigation source missing');
 const curated={
