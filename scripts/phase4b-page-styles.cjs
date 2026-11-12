@@ -32,7 +32,7 @@ function repairCoreAliases(css,file){
  }
  return result;
 }
-function process(css,file){
+function normalizeFile(css,file){
  if(CORE.includes(file))return repairCoreAliases(css,file);
  const rendered=normalize(css,file).text;
  return removeLocalOverrides(rendered);
@@ -41,7 +41,7 @@ function main(){
  const check=process.argv.includes('--check'),touched=[];
  for(const file of [...CORE,...TARGETS]){
   const absolute=path.join(root,file),before=fs.readFileSync(absolute,'utf8');
-  const after=process(before,file);
+  const after=normalizeFile(before,file);
   if(before!==after){
    touched.push({file,before:stats(before),after:stats(after)});
    if(!check)fs.writeFileSync(absolute,after,'utf8');
@@ -54,4 +54,4 @@ function main(){
  if(/--paper\s*:\s*var\(--paper\)/.test(site)||/--line\s*:\s*var\(--color-border\)/.test(edit))throw Error('Circular theme alias still present');
 }
 if(require.main===module)main();
-module.exports={TARGETS,CORE,process,removeLocalOverrides};
+module.exports={TARGETS,CORE,normalizeFile,removeLocalOverrides};
