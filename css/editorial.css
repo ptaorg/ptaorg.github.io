@@ -1,26 +1,26 @@
 
   /* refine.css reset */
   .legacy {
-    --color-primary: #1e3a5f;
-    --color-primary-strong: #0a192f;
-    --color-accent: #d4af37;
-    --color-accent-soft: #f4e7a6;
-    --color-bg: #f4f6f9;
-    --color-surface: #ffffff;
-    --color-text-main: #1a1a1a;
-    --color-text-muted: #4b5563;
-    --color-border: #e5e7eb;
-    --color-danger: #b91c1c;
-    --color-warning: #c2410c;
-    --color-success: #15803d;
-    --color-donate: #f97316;
-    --color-donate-deep: #c2410c;
+    --color-primary: var(--navy-deep);
+    --color-primary-strong: var(--navy-deep);
+    --color-accent: var(--navy-deep);
+    --color-accent-soft: var(--tint-strong);
+    --color-bg: var(--paper);
+    --color-surface: var(--paper);
+    --color-text-main: var(--navy-deep);
+    --color-text-muted: var(--navy-deep);
+    --color-border: var(--line);
+    --color-danger: var(--navy);
+    --color-warning: var(--navy);
+    --color-success: var(--navy-deep);
+    --color-donate: var(--navy);
+    --color-donate-deep: var(--navy);
 
     --navy: var(--color-primary);
     --navy-2: var(--color-primary);
     --gold: var(--color-accent);
     --gold-lt: var(--color-accent-soft);
-    --cream: #f8f5ee;
+    --cream: var(--paper-alt);
     --red: var(--color-danger);
     --orange: var(--color-warning);
     --green: var(--color-success);
@@ -30,9 +30,9 @@
     --bg: var(--color-bg);
     --surface: var(--color-surface);
 
-    --shadow-sm: 0 3px 12px rgba(5, 17, 31, 0.06);
-    --shadow-md: 0 8px 26px rgba(5, 17, 31, 0.09);
-    --shadow-lg: 0 18px 46px rgba(5, 17, 31, 0.13);
+    --shadow-sm: 0 3px 12px color-mix(in srgb,var(--navy-deep) 6%,transparent);
+    --shadow-md: 0 8px 26px color-mix(in srgb,var(--navy-deep) 9%,transparent);
+    --shadow-lg: 0 18px 46px color-mix(in srgb,var(--navy-deep) 13%,transparent);
   }
   .legacy h2,.legacy 
   h3,.legacy 
@@ -63,14 +63,9 @@
   /* Header color unification: keep all modern pages on the navy header. */
   .legacy .site-header,.legacy:has(.officer-core-section) .site-header,.legacy:has(.duty-section) .site-header,.legacy:has(.scope-section) .site-header,.legacy:has(.mou-section) .site-header,.legacy:has(.yk-notice-section) .site-header {
     background-color: var(--color-primary-strong);
-    background-image: linear-gradient(
-      90deg,
-      var(--color-primary-strong) 0%,
-      var(--color-primary) 58%,
-      #2d5a8e 100%
-    );
+    background-image: none;
     border-bottom: 3px solid var(--color-accent);
-    box-shadow: 0 4px 18px rgba(5, 17, 31, 0.18);
+    box-shadow: none;
   }
   .legacy .site-header .nav-container,.legacy:has(.officer-core-section) .site-header .nav-container,.legacy:has(.duty-section) .site-header .nav-container,.legacy:has(.scope-section) .site-header .nav-container,.legacy:has(.mou-section) .site-header .nav-container,.legacy:has(.yk-notice-section) .site-header .nav-container {
     background: transparent;
@@ -78,41 +73,41 @@
   .legacy .site-header .logo,.legacy 
   .site-header .logo span,.legacy 
   .site-header .nav-link,.legacy:has(.officer-core-section) .site-header .logo,.legacy:has(.officer-core-section) .site-header .logo span,.legacy:has(.officer-core-section) .site-header .nav-link,.legacy:has(.duty-section) .site-header .logo,.legacy:has(.duty-section) .site-header .logo span,.legacy:has(.duty-section) .site-header .nav-link,.legacy:has(.scope-section) .site-header .logo,.legacy:has(.scope-section) .site-header .logo span,.legacy:has(.scope-section) .site-header .nav-link,.legacy:has(.mou-section) .site-header .logo,.legacy:has(.mou-section) .site-header .logo span,.legacy:has(.mou-section) .site-header .nav-link,.legacy:has(.yk-notice-section) .site-header .logo,.legacy:has(.yk-notice-section) .site-header .logo span,.legacy:has(.yk-notice-section) .site-header .nav-link {
-    color: #fff;
+    color: var(--paper);
   }
   .legacy .site-header .nav-link:hover,.legacy 
   .site-header .nav-link.active {
-    color: #fff2a8;
-    background: rgba(255, 255, 255, 0.1);
+    color: var(--paper-alt);
+    background: color-mix(in srgb,var(--paper) 10%,transparent);
   }
   .legacy .site-header .support-nav-link {
-    color: #fff;
-    background: rgba(249, 115, 22, 0.92);
-    border: 1px solid rgba(255, 255, 255, 0.24);
+    color: var(--paper);
+    background: color-mix(in srgb,var(--navy) 92%,transparent);
+    border: 1px solid color-mix(in srgb,var(--paper) 24%,transparent);
   }
   .legacy .site-header .support-nav-link:hover {
-    background: #ea580c;
-    color: #fff;
+    background: var(--navy);
+    color: var(--paper);
   }
   .legacy .site-header .btn-gold {
-    color: #fff;
+    color: var(--paper);
   }
   .legacy .site-header .header-search input {
-    background: rgba(255, 255, 255, 0.96);
-    border-color: rgba(255, 255, 255, 0.42);
+    background: color-mix(in srgb,var(--paper) 96%,transparent);
+    border-color: color-mix(in srgb,var(--paper) 42%,transparent);
   }
   .legacy .site-header .header-search svg {
     stroke: var(--color-primary);
   }
   .legacy .site-header .hamburger {
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(255, 255, 255, 0.32);
+    background: color-mix(in srgb,var(--paper) 12%,transparent);
+    border-color: color-mix(in srgb,var(--paper) 32%,transparent);
   }
   .legacy .site-header .hamburger span {
-    background: #fff;
+    background: var(--paper);
   }
   .legacy .site-header .mega-menu {
-    background: #fff;
+    background: var(--paper);
     color: var(--color-text-main);
   }
   .legacy .site-header .mega-col h4 {
@@ -126,34 +121,29 @@
   }
 
   .legacy .support-strip {
-    background: linear-gradient(
-      90deg,
-      var(--color-primary-strong) 0%,
-      var(--color-primary) 58%,
-      #2d5a8e 100%
-    );
-    color: #fff;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.42);
+    background: var(--navy-deep);
+    color: var(--paper);
+    border-bottom: 1px solid color-mix(in srgb,var(--gold) 42%,transparent);
   }
   .legacy .support-strip-inner {
-    color: #fff;
+    color: var(--paper);
   }
   .legacy .support-strip-label {
-    background: rgba(212, 175, 55, 0.16);
+    background: color-mix(in srgb,var(--navy-deep) 16%,transparent);
     color: var(--color-accent-soft);
-    border: 1px solid rgba(212, 175, 55, 0.38);
+    border: 1px solid color-mix(in srgb,var(--gold) 38%,transparent);
   }
   .legacy .support-strip-text {
-    color: rgba(255, 255, 255, 0.9);
+    color: color-mix(in srgb,var(--paper) 90%,transparent);
   }
   .legacy .support-strip-link {
-    background: #f97316;
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.24);
+    background: var(--navy);
+    color: var(--paper);
+    border: 1px solid color-mix(in srgb,var(--paper) 24%,transparent);
   }
   .legacy .support-strip-link:hover {
-    background: #ea580c;
-    color: #fff;
+    background: var(--navy);
+    color: var(--paper);
   }
 
   /* Photo hero hard fix: guide-pta.html, guide-board.html, personnel.html. */
@@ -171,7 +161,7 @@
     padding: 0;
     position: relative;
     overflow: hidden;
-    background: #0a192f;
+    background: var(--navy-deep);
     border-top: 0;
     border-bottom: 0;
   }
@@ -195,9 +185,9 @@
     inset: 0;
     background: linear-gradient(
       90deg,
-      rgba(5, 17, 31, 0.74) 0%,
-      rgba(5, 17, 31, 0.48) 46%,
-      rgba(5, 17, 31, 0.16) 100%
+      color-mix(in srgb,var(--navy-deep) 74%,transparent) 0%,
+      color-mix(in srgb,var(--navy-deep) 48%,transparent) 46%,
+      color-mix(in srgb,var(--navy-deep) 16%,transparent) 100%
     );
   }
   .legacy .page-hero--photo .page-hero-inner {
@@ -206,13 +196,13 @@
     width: min(100% - 40px, 980px);
     max-width: 980px;
     margin: 0 auto;
-    padding: 64px 0 70px;
-    color: #fff;
+    padding: 64px 0 72px;
+    color: var(--paper);
   }
   .legacy .page-hero--photo h1,.legacy 
   .page-hero--photo p {
-    color: #fff;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.34);
+    color: var(--paper);
+    text-shadow: 0 2px 12px color-mix(in srgb,var(--navy-deep) 34%,transparent);
   }
   .legacy .page-hero--photo h1 em {
     color: var(--color-accent-soft);
@@ -233,8 +223,8 @@
     gap: 0.48rem;
   }
   .legacy .nav-link {
-    font-size: 0.86rem;
-    padding: 7px 9px;
+    font-size: var(--fs-body);
+    padding: 8px 8px;
   }
   .legacy .desktop-nav > a.nav-link[href$="proper-management.html"],.legacy 
   .desktop-nav > a.nav-link[href$="edu-board-separation.html"],.legacy 
@@ -243,16 +233,16 @@
   }
   .legacy .btn-gold {
     background: var(--color-donate);
-    color: #fff;
-    box-shadow: 0 6px 18px rgba(249, 115, 22, 0.22);
+    color: var(--paper);
+    box-shadow: none;
   }
   .legacy .btn-gold:hover {
-    box-shadow: 0 10px 24px rgba(249, 115, 22, 0.34);
+    box-shadow: none;
   }
   .legacy .support-nav-link {
     color: var(--color-donate-deep);
-    background: #fff7ed;
-    border: 1px solid #fed7aa;
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
     font-weight: 900;
   }
   .legacy .mega-col a[href$="documents.html"],.legacy 
@@ -263,10 +253,10 @@
   .mobile-link[href$="board-responses.html"],.legacy 
   .mobile-link[href$="national-archive.html"] {
     color: var(--color-donate-deep);
-    background: #fff7ed;
-    border: 1px solid #fed7aa;
-    border-radius: 10px;
-    padding: 7px 10px;
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-md);
+    padding: 8px 12px;
     font-weight: 900;
   }
   .legacy .mega-col a[href$="documents.html"]::before,.legacy 
@@ -274,9 +264,9 @@
   .mega-col a[href$="national-archive.html"]::before,.legacy 
   .mega-col a[href$="administrative-materials.html"]::before {
     content: "重要 ";
-    font-size: 0.68rem;
+    font-size: var(--fs-small);
     letter-spacing: 0.06em;
-    color: #ea580c;
+    color: var(--c-caution);
   }
 
   /* Footer support block: move to top and use a clean orange panel. */
@@ -287,49 +277,49 @@
   .legacy .footer-support {
     order: -1;
     width: min(calc(100% - 40px), 1280px);
-    margin: 0 auto 34px;
-    padding: 22px 26px;
-    border-radius: 18px;
-    background: linear-gradient(135deg, #fb923c 0%, #f97316 54%, #ea580c 100%);
-    color: #fff;
+    margin: 0 auto 36px;
+    padding: 24px 28px;
+    border-radius: var(--radius-md);
+    background: var(--paper-alt);
+    color: var(--paper);
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    box-shadow: 0 18px 42px rgba(234, 88, 12, 0.28);
+    box-shadow: none;
   }
   .legacy .footer-support strong {
     display: block;
-    color: #fff;
-    font-size: 1.02rem;
+    color: var(--paper);
+    font-size: var(--fs-body);
     margin-bottom: 4px;
   }
   .legacy .footer-support p {
     margin: 0;
-    color: rgba(255, 255, 255, 0.92);
+    color: color-mix(in srgb,var(--paper) 92%,transparent);
   }
   .legacy .footer-support a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    padding: 10px 18px;
-    border-radius: 999px;
-    background: #fff;
-    color: #9a3412;
+    padding: 12px 20px;
+    border-radius: var(--radius-md);
+    background: var(--paper);
+    color: var(--c-caution);
     font-weight: 900;
     text-decoration: none;
-    box-shadow: 0 6px 18px rgba(154, 52, 18, 0.18);
+    box-shadow: none;
   }
   .legacy .footer-support a:hover {
-    color: #7c2d12;
+    color: var(--c-caution);
     transform: translateY(-1px);
   }
   @media (max-width: 860px) {
     .legacy .footer-support {
       align-items: flex-start;
       flex-direction: column;
-      padding: 20px 22px;
+      padding: 20px 24px;
     }
     .legacy .footer-support a {
       width: 100%;
@@ -340,17 +330,13 @@
   .legacy .conclusion-box,.legacy 
   .key-takeaway,.legacy 
   .summary-first {
-    margin: 24px 0 30px;
-    padding: 22px 24px;
-    background: linear-gradient(
-      135deg,
-      rgba(30, 58, 95, 0.06),
-      rgba(212, 175, 55, 0.08)
-    );
-    border: 1px solid rgba(30, 58, 95, 0.16);
+    margin: 24px 0 32px;
+    padding: 24px 24px;
+    background: var(--paper-alt);
+    border: 1px solid color-mix(in srgb,var(--navy-deep) 16%,transparent);
     border-left: 5px solid var(--color-accent);
-    border-radius: 14px;
-    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-md);
+    box-shadow: none;
   }
   .legacy .conclusion-box .label,.legacy 
   .key-takeaway .label,.legacy 
@@ -358,11 +344,11 @@
     display: inline-flex;
     align-items: center;
     margin: 0 0 8px;
-    padding: 3px 10px;
-    border-radius: 999px;
+    padding: 4px 12px;
+    border-radius: var(--radius-md);
     background: var(--color-primary);
-    color: #fff;
-    font-size: 0.74rem;
+    color: var(--paper);
+    font-size: var(--fs-small);
     font-weight: 900;
     letter-spacing: 0.08em;
   }
@@ -372,7 +358,7 @@
   .key-takeaway h3,.legacy 
   .summary-first h2,.legacy 
   .summary-first h3 {
-    margin: 0 0 10px;
+    margin: 0 0 12px;
     color: var(--color-primary);
     line-height: 1.55;
   }
@@ -383,22 +369,22 @@
   }
   .legacy .diagram-note,.legacy 
   .diagram-summary {
-    margin-top: 10px;
+    margin-top: 12px;
     color: var(--color-text-muted);
-    font-size: 0.88rem;
+    font-size: var(--fs-body);
     line-height: 1.8;
   }
   @media (max-width: 640px) {
     .legacy .conclusion-box,.legacy 
     .key-takeaway,.legacy 
     .summary-first {
-      padding: 18px 18px;
-      margin: 18px 0 24px;
-      border-radius: 12px;
+      padding: 20px 20px;
+      margin: 20px 0 24px;
+      border-radius: var(--radius-md);
     }
     .legacy .diagram-note,.legacy 
     .diagram-summary {
-      font-size: 0.84rem;
+      font-size: var(--fs-body);
     }
   }
 
@@ -416,7 +402,7 @@
   .legacy.guide-board-direct-fixed .gbv-two .gbv-scroll {
     overflow-x: visible;
     overflow-y: visible;
-    padding: 18px;
+    padding: 20px;
   }
   .legacy.guide-board-direct-fixed .gbv-two .gbv-scroll svg {
     display: block;
@@ -426,7 +412,7 @@
     height: auto;
   }
   .legacy.guide-board-direct-fixed .gbv-two .gbv-figure figcaption {
-    font-size: 0.88rem;
+    font-size: var(--fs-body);
     line-height: 1.8;
   }
 
@@ -446,10 +432,10 @@
 
   /* Sitewide orange hover states */
   .legacy {
-    --hover-orange: #f97316;
-    --hover-orange-deep: #ea580c;
-    --hover-orange-soft: #fff7ed;
-    --hover-orange-line: #fed7aa;
+    --hover-orange: var(--navy);
+    --hover-orange-deep: var(--navy);
+    --hover-orange-soft: var(--paper);
+    --hover-orange-line: var(--tint-strong);
   }
   .legacy a:hover,.legacy 
   .article-body a:hover,.legacy 
@@ -469,13 +455,13 @@
   .site-header .nav-link.active,.legacy 
   .nav-link:hover,.legacy 
   .nav-link.active {
-    color: #fff;
+    color: var(--paper);
     background: var(--hover-orange);
-    border-color: rgba(255, 255, 255, 0.28);
+    border-color: color-mix(in srgb,var(--paper) 28%,transparent);
   }
   .legacy .site-header .logo:hover,.legacy 
   .site-header .logo:hover span {
-    color: #fff7ed;
+    color: var(--paper);
   }
   .legacy .site-header .mega-col a:hover,.legacy 
   .mega-col a:hover,.legacy 
@@ -495,7 +481,7 @@
   .card:hover,.legacy 
   .case-card:hover {
     border-color: var(--hover-orange);
-    box-shadow: 0 12px 28px rgba(249, 115, 22, 0.18);
+    box-shadow: none;
   }
   .legacy .btn-gold:hover,.legacy 
   .support-strip-link:hover,.legacy 
@@ -505,7 +491,7 @@
   a.btn-outline:hover,.legacy 
   a.btn-dl:hover {
     background: var(--hover-orange-deep);
-    color: #fff;
+    color: var(--paper);
     border-color: var(--hover-orange-deep);
   }
   .legacy .case-anchor-link:hover span,.legacy 
@@ -517,11 +503,11 @@
    Applies only to personnel.html, facilities.html and fee-collection.html.
    Converts repeated card surfaces into an open administrative-paper layout. */
   .legacy.personnel-editorial,.legacy.facilities-editorial,.legacy.fee-editorial {
-    --editorial-rule: #d6dee8;
-    --editorial-rule-strong: #9aa9bb;
-    --editorial-ink: #1c304a;
-    --editorial-muted: #526276;
-    background: #fff;
+    --editorial-rule: var(--line);
+    --editorial-rule-strong: var(--line-strong);
+    --editorial-ink: var(--navy-deep);
+    --editorial-muted: var(--navy-mid);
+    background: var(--paper);
   }
 
   /* Hero: retain the image, remove badge-like framing and reduce visual weight. */
@@ -534,18 +520,18 @@
   .legacy.personnel-editorial .page-hero--photo .page-hero-inner,.legacy.facilities-editorial .page-hero--photo .page-hero-inner,.legacy.fee-editorial .page-hero--photo .page-hero-inner {
     width: min(calc(100% - 48px), 980px);
     max-width: 980px;
-    padding-top: 54px;
+    padding-top: 56px;
     padding-bottom: 60px;
   }
   .legacy.personnel-editorial .page-hero-kicker,.legacy.facilities-editorial .page-hero-kicker,.legacy.fee-editorial .page-hero-kicker,.legacy.fee-editorial .issue-hero-eyebrow {
     display: inline-block;
-    margin: 0 0 18px;
+    margin: 0 0 20px;
     padding: 0 0 8px;
     background: transparent;
     border: 0;
-    border-bottom: 1px solid rgba(244, 231, 166, 0.72);
+    border-bottom: 1px solid color-mix(in srgb,var(--line-strong) 72%,transparent);
     border-radius: 0;
-    color: #f4e7a6;
+    color: var(--tint-strong);
     letter-spacing: 0.08em;
     text-transform: none;
   }
@@ -578,7 +564,7 @@
   /* Sections are separated by whitespace and a fine rule, not containers. */
   .legacy.personnel-editorial .pg-main > section,.legacy.facilities-editorial .pg > section,.legacy.fee-editorial .issue-main > section {
     margin: 0;
-    padding: 0 0 70px;
+    padding: 0 0 72px;
     background: transparent;
     border: 0;
     border-radius: 0;
@@ -596,7 +582,7 @@
   .legacy.personnel-editorial .pg-main h2,.legacy.facilities-editorial .pg h2,.legacy.fee-editorial .issue-main h2 {
     position: relative;
     margin: 0 0 24px;
-    padding: 0 0 0 19px;
+    padding: 0 0 0 20px;
     border: 0;
     color: var(--editorial-ink);
     line-height: 1.48;
@@ -611,9 +597,9 @@
     background: var(--color-accent);
   }
   .legacy.personnel-editorial .pg-main h3,.legacy.facilities-editorial .pg h3,.legacy.fee-editorial .issue-main h3 {
-    margin: 36px 0 14px;
-    padding-left: 15px;
-    border-left: 3px solid #9aa9bb;
+    margin: 36px 0 16px;
+    padding-left: 16px;
+    border-left: 3px solid var(--line-strong);
     color: var(--editorial-ink);
   }
   .legacy.personnel-editorial .pg-main p,.legacy.facilities-editorial .pg p,.legacy.fee-editorial .issue-main p {
@@ -638,15 +624,15 @@
   }
   .legacy.personnel-editorial .editorial-brief-grid,.legacy.facilities-editorial .editorial-brief-grid,.legacy.fee-editorial .editorial-brief-grid {
     display: block;
-    margin-top: 26px;
+    margin-top: 28px;
     border-top: 1px solid var(--editorial-rule);
   }
   .legacy.personnel-editorial .editorial-brief-point,.legacy.facilities-editorial .editorial-brief-point,.legacy.fee-editorial .editorial-brief-point {
     display: grid;
     grid-template-columns: 42px minmax(0, 1fr);
-    column-gap: 18px;
+    column-gap: 20px;
     margin: 0;
-    padding: 22px 0;
+    padding: 24px 0;
     background: transparent;
     border: 0;
     border-bottom: 1px solid var(--editorial-rule);
@@ -657,26 +643,26 @@
     display: block;
     grid-row: 1 / span 2;
     font-family: "Noto Serif JP", serif;
-    font-size: 1.45rem;
+    font-size: var(--fs-h2);
     line-height: 1.2;
-    color: #a68118;
+    color: var(--gold);
     background: transparent;
     border: 0;
     border-radius: 0;
   }
   .legacy.personnel-editorial .editorial-brief-point > strong,.legacy.facilities-editorial .editorial-brief-point > strong,.legacy.fee-editorial .editorial-brief-point > strong {
     color: var(--editorial-ink);
-    font-size: 1rem;
+    font-size: var(--fs-body);
   }
   .legacy.personnel-editorial .editorial-brief-point > p,.legacy.facilities-editorial .editorial-brief-point > p,.legacy.fee-editorial .editorial-brief-point > p {
     grid-column: 2;
-    margin: 5px 0 0;
+    margin: 4px 0 0;
   }
 
   /* Definition rows and source rows. */
   .legacy.personnel-editorial .editorial-matrix,.legacy.personnel-editorial .ed-resource-list,.legacy.facilities-editorial .ed-resource-list,.legacy.personnel-editorial .source-lens-grid,.legacy.facilities-editorial .source-lens-grid,.legacy.fee-editorial .source-lens-grid {
     display: block;
-    margin: 26px 0 0;
+    margin: 28px 0 0;
     border-top: 1px solid var(--editorial-rule);
   }
   .legacy.personnel-editorial .editorial-matrix-row,.legacy.personnel-editorial .ed-resource-list > div,.legacy.facilities-editorial .ed-resource-list > div,.legacy.personnel-editorial .source-lens-item,.legacy.facilities-editorial .source-lens-item,.legacy.fee-editorial .source-lens-item {
@@ -719,7 +705,7 @@
   }
   .legacy.personnel-editorial .scope-ok,.legacy.personnel-editorial .scope-ng,.legacy.facilities-editorial .safe-box,.legacy.fee-editorial .trans-card,.legacy.fee-editorial .triple-card {
     margin: 0;
-    padding: 25px 28px;
+    padding: 24px 28px;
     background: transparent;
     border: 0;
     border-radius: 0;
@@ -735,12 +721,12 @@
 
   /* Steps become a document sequence, not stacked cards. */
   .legacy.fee-editorial .requirements,.legacy.fee-editorial .req-steps,.legacy.personnel-editorial .steps,.legacy.facilities-editorial .steps {
-    margin: 26px 0;
+    margin: 28px 0;
     border-top: 1px solid var(--editorial-rule);
   }
   .legacy.fee-editorial .req-step,.legacy.personnel-editorial .step-r,.legacy.facilities-editorial .step-r {
     margin: 0;
-    padding: 22px 0;
+    padding: 24px 0;
     background: transparent;
     border: 0;
     border-bottom: 1px solid var(--editorial-rule);
@@ -749,36 +735,36 @@
     transform: none;
   }
   .legacy.fee-editorial .req-step-num,.legacy.personnel-editorial .step-num,.legacy.facilities-editorial .step-num {
-    border-radius: 2px;
+    border-radius: var(--radius-sm);
     box-shadow: none;
   }
 
   /* Notes and quotations keep emphasis through a left rule only. */
   .legacy.personnel-editorial .alert,.legacy.facilities-editorial .alert,.legacy.personnel-editorial .law-quote,.legacy.facilities-editorial .law-quote,.legacy.fee-editorial .alert-block,.legacy.fee-editorial .law-quote-block,.legacy.fee-editorial .mext-quote,.legacy.facilities-editorial .wall,.legacy.fee-editorial .double-commission {
     margin: 28px 0;
-    padding: 21px 24px;
-    background: #f7f9fc;
+    padding: 20px 24px;
+    background: var(--c-caution-bg);
     border: 0;
-    border-left: 4px solid #57708f;
+    border-left: 4px solid var(--c-caution);
     border-radius: 0;
     box-shadow: none;
     text-align: left;
     transform: none;
   }
   .legacy.fee-editorial .alert-block.danger,.legacy.personnel-editorial .alert-danger,.legacy.facilities-editorial .wall {
-    background: #fffafa;
-    border-left-color: #a94442;
+    background: var(--c-caution-bg);
+    border-left-color: var(--c-caution);
   }
   .legacy.fee-editorial .alert-block.warning {
-    background: #fffdf5;
-    border-left-color: #aa7414;
+    background: var(--c-caution-bg);
+    border-left-color: var(--c-caution);
   }
   .legacy.fee-editorial .alert-block.success {
-    background: #f8fcf8;
-    border-left-color: #3f7e52;
+    background: var(--c-caution-bg);
+    border-left-color: var(--c-caution);
   }
   .legacy.fee-editorial .alert-block.info,.legacy.fee-editorial .law-quote-block,.legacy.fee-editorial .mext-quote {
-    border-left-color: #496b96;
+    border-left-color: var(--c-caution);
   }
 
   /* Labels are document labels, not pills. */
@@ -786,7 +772,7 @@
     display: block;
     width: auto;
     height: auto;
-    margin: 0 0 10px;
+    margin: 0 0 12px;
     padding: 0;
     background: transparent;
     border: 0;
@@ -803,13 +789,13 @@
     border-bottom: 1px solid var(--editorial-rule-strong);
   }
   .legacy.facilities-editorial .check-table th {
-    padding: 13px 14px;
-    background: #f4f7fa;
+    padding: 12px 16px;
+    background: var(--paper);
     color: var(--editorial-ink);
     border-bottom: 1px solid var(--editorial-rule-strong);
   }
   .legacy.facilities-editorial .check-table td {
-    padding: 14px;
+    padding: 16px;
     background: transparent;
     border-bottom: 1px solid var(--editorial-rule);
   }
@@ -838,7 +824,7 @@
     padding-right: 0;
   }
   .legacy.personnel-editorial .legacy-main figure,.legacy.facilities-editorial .legacy-main figure,.legacy.fee-editorial .legacy-main figure {
-    margin: 34px auto;
+    margin: 36px auto;
     padding: 0;
     background: transparent;
     border: 0;
@@ -863,16 +849,16 @@
     }
     .legacy.personnel-editorial .page-hero--photo .page-hero-inner,.legacy.facilities-editorial .page-hero--photo .page-hero-inner,.legacy.fee-editorial .page-hero--photo .page-hero-inner {
       width: min(calc(100% - 30px), 980px);
-      padding-top: 42px;
+      padding-top: 44px;
       padding-bottom: 48px;
     }
     .legacy.personnel-editorial .pg-main,.legacy.facilities-editorial .pg,.legacy.fee-editorial .issue-content {
       width: min(calc(100% - 30px), 980px);
-      padding-top: 54px;
-      padding-bottom: 82px;
+      padding-top: 56px;
+      padding-bottom: 84px;
     }
     .legacy.personnel-editorial .pg-main > section,.legacy.facilities-editorial .pg > section,.legacy.fee-editorial .issue-main > section {
-      padding-bottom: 54px;
+      padding-bottom: 56px;
     }
     .legacy.personnel-editorial .pg-main > section + section,.legacy.facilities-editorial .pg > section + section,.legacy.fee-editorial .issue-main > section + section {
       padding-top: 48px;
@@ -885,15 +871,15 @@
       border-top: 1px solid var(--editorial-rule);
     }
     .legacy.personnel-editorial .scope-ok,.legacy.personnel-editorial .scope-ng,.legacy.facilities-editorial .safe-box,.legacy.fee-editorial .trans-card,.legacy.fee-editorial .triple-card {
-      padding: 22px 0;
+      padding: 24px 0;
     }
     .legacy.personnel-editorial .editorial-matrix-row,.legacy.personnel-editorial .ed-resource-list > div,.legacy.facilities-editorial .ed-resource-list > div,.legacy.personnel-editorial .source-lens-item,.legacy.facilities-editorial .source-lens-item,.legacy.fee-editorial .source-lens-item {
       grid-template-columns: 1fr;
-      gap: 7px;
+      gap: 8px;
     }
     .legacy.personnel-editorial .editorial-brief-point,.legacy.facilities-editorial .editorial-brief-point,.legacy.fee-editorial .editorial-brief-point {
       grid-template-columns: 34px minmax(0, 1fr);
-      column-gap: 13px;
+      column-gap: 12px;
     }
     .legacy.facilities-editorial .check-table {
       display: block;
