@@ -164,7 +164,7 @@ function citations(src,base){
  }
  if(!changes.length)return {html:src,count:0,used:[]};
  let updated=src;
- for(let i=changes.length-1;i>=0;i--){const c=changes[i];updated=updated.slice(0,c.at)+c.html+updated.slice(c.at)}
+ for(const c of changes.slice().sort((a,b)=>b.at-a.at)){updated=updated.slice(0,c.at)+c.html+updated.slice(c.at)}
  const ordered=SOURCES.filter(s=>used.has(s.key));
  ordered.forEach((s,i)=>updated=updated.replaceAll('注__'+s.key+'__','注'+(i+1)));
  const refList=ordered.map(s=>{
