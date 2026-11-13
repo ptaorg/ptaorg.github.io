@@ -138,21 +138,26 @@ function candidates(src){
  }
  return out;
 }
-function sourceInParagraph(body){
+function sourceInParagraph(body,options={}){
  const stripped=body.replace(/<[^>]*>/g,' ').replace(/&(?:nbsp|thinsp);/g,' ');
  const found=[];
- for(const source of SOURCES){const re=patterns.get(source.key);re.lastIndex=0;if(re.test(stripped))found.push(source);}
+ for(const source of SOURCES){
+  const exact=patterns.get(source.key);exact.lastIndex=0;
+  const normal=exact.test(stripped);
+  const abbreviated=Boolean(options.allowNoDai&&source.key!=='ppc'&&source.key!=='mext'&&new RegExp(source.pattern+'\\s*(?:第)?[〇零一二三四五六七八九十百\\d０-９]{1,4}条(?:の[〇零一二三四五六七八九十\\d０-９]+)?','u').test(stripped));
+  if(normal||abbreviated)found.push(source);
+ }
  // Existing direct links within the paragraph already establish the source.
  return found.filter(s=>!body.includes('href="'+s.url+'"'));
 }
-function citations(src,base){
+function citations(src,base,options={}){
  if(src.includes('<!-- phase6-sources -->'))return {html:src,count:0,used:[]};
  const articleStart=src.indexOf('<div class="article-main">'),mainEnd=src.lastIndexOf('</main>');
  if(articleStart<0||mainEnd<=articleStart)throw Error('Article container not found: '+base);
  const section=src.slice(articleStart,mainEnd),paragraphs=candidates(section),used=new Map();
  const changes=[];
  for(const p of paragraphs){
-  const sources=sourceInParagraph(p.body);
+  const sources=sourceInParagraph(p.body,options);
   if(!sources.length)continue;
   // Do not add notes to navigation, link descriptions or reproduced text.
   const near=p.body.replace(/<[^>]*>/g,' ').trim();

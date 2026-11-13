@@ -41,7 +41,7 @@ window.LAW_DATA = {
     body: `
       <p>PTA加入は本来、保護者の自由な意思によるべきものです。学校生活上の不利益や心理的圧力を背景とした事実上の強制加入は、結社の自由の観点からも慎重な検討が必要です。</p>
       <div class="law-quote">集会、結社及び言論、出版その他一切の表現の自由は、これを保障する。</div>
-      <p><a href="https://elaws.e-gov.go.jp/document?lawid=321CONSTITUTION" target="_blank" rel="noopener noreferrer" class="egov-link">e-Govで条文を確認する</a></p>
+      <p><a href="https://laws.e-gov.go.jp/law/321CONSTITUTION" target="_blank" rel="noopener noreferrer" class="egov-link">e-Govで条文を確認する</a></p>
     `,
     evidence: [
       { label: 'オプトアウト問題ページ', url: '../membership.html' },
