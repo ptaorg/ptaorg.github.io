@@ -8,6 +8,9 @@ test('verified official source notes are reproducible and every note resolves on
   const refs=[...page.matchAll(/<sup class="phase6-ref"><a href="#phase6-source-([^"]+)"[^>]*>注(\d+)<\/a><\/sup>/g)];
   if(!refs.length)continue;
   pages++;total+=refs.length;
+  assert.doesNotMatch(page,/\bclass=\s*<sup\b/,'Broken nested HTML annotation in '+rel);
+  assert.doesNotMatch(page,/注__[a-z]+__/,'Unresolved annotation numbering in '+rel);
+  assert.equal((page.match(/<sup class="phase6-ref">/g)||[]).length,refs.length,'Malformed or overlapping citation spans '+rel);
   const sources=[...page.matchAll(/<li id="phase6-source-([^"]+)">/g)].map(x=>x[1]);
   assert.ok(page.includes('<!-- phase6-sources -->'),rel+' source list missing');
   assert.ok(page.includes('css/phase6-sources.css'),rel+' CSS missing');
@@ -18,7 +21,7 @@ test('verified official source notes are reproducible and every note resolves on
   }
  }
  assert.ok(pages>=8,'Too few researched articles linked: '+pages);
- assert.ok(total>=30,'Too few confirmed source references: '+total);
+ assert.equal(total,136,'Every insertion must remain a complete standalone footnote');
 });
 test('the official source registry contains only researched e-Gov and public-agency URLs',()=>{
  const urls=new Set();

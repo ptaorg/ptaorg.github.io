@@ -50,6 +50,7 @@ try{
    const m=await evalPage("(()=>{const q=s=>document.querySelector(s),sec=q('.phase6-sources'),notes=[...document.querySelectorAll('.phase6-ref a')],targets=notes.map(x=>document.getElementById(x.getAttribute('href').slice(1))),links=[...sec?.querySelectorAll('a[href^=\"https://\"]')||[]];return {page:location.pathname,width:innerWidth,h1:!!q('main h1'),source:!!sec,notes:notes.length,targetsOk:targets.every(Boolean),officialLinks:links.length,urlsOfficial:links.every(x=>/^https:\\/\\/(laws\\.e-gov\\.go\\.jp|www\\.ppc\\.go\\.jp|www\\.mext\\.go\\.jp)\\//.test(x.href)),sourceWidth:sec?.getBoundingClientRect().width||0,article:!!q('.article-main'),nav:!!q('.global-nav'),footer:!!q('.site-footer'),scroll:document.documentElement.scrollWidth,client:document.documentElement.clientWidth}})()");
    console.log("PHASE6",page,width,JSON.stringify(m));
    requireResult(m.h1&&m.article&&m.nav&&m.footer,"Missing original article or site chrome "+page);
+   if(page==="/guideline.html")requireResult(m.notes===5,"One guideline source note did not survive HTML parsing "+JSON.stringify(m));
    requireResult(m.scroll<=m.client+14,"Horizontal overflow "+page+" "+JSON.stringify(m));
    requireResult(m.source&&m.notes>=1&&m.targetsOk&&m.officialLinks>=1&&m.urlsOfficial,"Source references not usable "+page+" "+JSON.stringify(m));
    requireResult(m.sourceWidth>240,"Source section is not visible "+page);
