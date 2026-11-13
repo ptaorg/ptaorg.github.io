@@ -1,0 +1,5849 @@
+{
+  "checked_on": "2026-11-13",
+  "scope": [
+    "",
+    "journal",
+    "research"
+  ],
+  "html_pages": 117,
+  "unique_urls": 497,
+  "by_kind": {
+    "possible_404": 21,
+    "ok": 458,
+    "network_unverified": 6,
+    "restricted": 11,
+    "server_error": 1
+  },
+  "results": [
+    {
+      "url": "http://www.city.shibuya.tokyo.jp/eac/kansa/pdf/gyoseikansa20.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://www.city.shibuya.tokyo.jp/eac/kansa/pdf/gyoseikansa20.pdf",
+      "redirects": [
+        {
+          "from": "http://www.city.shibuya.tokyo.jp/eac/kansa/pdf/gyoseikansa20.pdf",
+          "to": "https://www.city.shibuya.tokyo.jp/eac/kansa/pdf/gyoseikansa20.pdf",
+          "status": 301
+        }
+      ]
+    },
+    {
+      "url": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:02c38bbf-0d7a-481f-97dd-9a5e8d813dc8",
+      "used_on": [
+        "membership.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:02c38bbf-0d7a-481f-97dd-9a5e8d813dc8",
+      "redirects": []
+    },
+    {
+      "url": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:088134b0-e2da-4dd6-b8b5-338cf4e677fa",
+      "used_on": [
+        "journal/school-pta-fee-public-duty-mic-mext-ppc-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:088134b0-e2da-4dd6-b8b5-338cf4e677fa",
+      "redirects": []
+    },
+    {
+      "url": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:1820c8eb-3533-49db-85cc-b0ea40f4980c",
+      "used_on": [
+        "journal/school-pta-fee-public-duty-mic-mext-ppc-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:1820c8eb-3533-49db-85cc-b0ea40f4980c",
+      "redirects": []
+    },
+    {
+      "url": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:42df0788-993f-44f8-93f9-215f3c0a1175",
+      "used_on": [
+        "journal/school-pta-fee-public-duty-mic-mext-ppc-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:42df0788-993f-44f8-93f9-215f3c0a1175",
+      "redirects": []
+    },
+    {
+      "url": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:d953e17e-720b-4942-bff2-70037fde4b39",
+      "used_on": [
+        "journal/school-pta-fee-public-duty-mic-mext-ppc-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:d953e17e-720b-4942-bff2-70037fde4b39",
+      "redirects": []
+    },
+    {
+      "url": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:dbc2feb3-6fe6-434d-b5f4-191d2e6de206",
+      "used_on": [
+        "journal/school-pta-fee-public-duty-mic-mext-ppc-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:dbc2feb3-6fe6-434d-b5f4-191d2e6de206",
+      "redirects": []
+    },
+    {
+      "url": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:e2ee7a23-66ed-4b8c-9396-a18428201dd0",
+      "used_on": [
+        "journal/school-pta-fee-public-duty-mic-mext-ppc-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:e2ee7a23-66ed-4b8c-9396-a18428201dd0",
+      "redirects": []
+    },
+    {
+      "url": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:fb3d74fa-bb98-4f1e-8a43-39cad3beff3a",
+      "used_on": [
+        "journal/school-pta-fee-public-duty-mic-mext-ppc-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:fb3d74fa-bb98-4f1e-8a43-39cad3beff3a",
+      "redirects": []
+    },
+    {
+      "url": "https://blog.pta-school-thinking.org/article/434577930.html",
+      "used_on": [
+        "cases.html"
+      ],
+      "occurrences": 1,
+      "kind": "network_unverified",
+      "status": 0,
+      "final": "https://blog.pta-school-thinking.org/article/434577930.html",
+      "redirects": [],
+      "error": "CERT_HAS_EXPIRED"
+    },
+    {
+      "url": "https://cgi.city.yokohama.lg.jp/shimin/kouchou/search/data/37003565.html",
+      "used_on": [
+        "edu-board-separation.html",
+        "guide-board.html"
+      ],
+      "occurrences": 2,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://cgi.city.yokohama.lg.jp/shimin/kouchou/search/data/37003565.html",
+      "redirects": []
+    },
+    {
+      "url": "https://cgi.city.yokohama.lg.jp/shimin/kouchou/search/data/37004619.html",
+      "used_on": [
+        "edu-board-separation.html",
+        "guide-board.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://cgi.city.yokohama.lg.jp/shimin/kouchou/search/data/37004619.html",
+      "redirects": []
+    },
+    {
+      "url": "https://cgi.city.yokohama.lg.jp/shimin/kouchou/search/data/37004955.html",
+      "used_on": [
+        "edu-board-separation.html",
+        "guide-board.html",
+        "research-map.html",
+        "journal/why-pta-membership-freedom-fails.html"
+      ],
+      "occurrences": 4,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://cgi.city.yokohama.lg.jp/shimin/kouchou/search/data/37004955.html",
+      "redirects": []
+    },
+    {
+      "url": "https://cgi.city.yokohama.lg.jp/somu/reiki/reiki_honbun/g202RG00000587.html",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://cgi.city.yokohama.lg.jp/somu/reiki/reiki_honbun/g202RG00000587.html",
+      "redirects": []
+    },
+    {
+      "url": "https://chiholog.net/chiholog",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "network_unverified",
+      "status": 0,
+      "final": "https://chiholog.net/chiholog",
+      "redirects": [],
+      "error": "ERR_TLS_CERT_ALTNAME_INVALID"
+    },
+    {
+      "url": "https://chiholog.net/yonalog",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "network_unverified",
+      "status": 0,
+      "final": "https://chiholog.net/yonalog",
+      "redirects": [],
+      "error": "ERR_TLS_CERT_ALTNAME_INVALID"
+    },
+    {
+      "url": "https://cir.nii.ac.jp/all?query-omitted",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 202,
+      "final": "https://cir.nii.ac.jp/all?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://crd.ndl.go.jp/reference/",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://crd.ndl.go.jp/reference/",
+      "redirects": []
+    },
+    {
+      "url": "https://crd.ndl.go.jp/reference/entry/index.php?query-omitted",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://crd.ndl.go.jp/reference/entry/index.php?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://dl.ndl.go.jp/pid/1341078/1/226",
+      "used_on": [
+        "journal/pta-shokumu-sennen-gimu.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://dl.ndl.go.jp/pid/1341078/1/226",
+      "redirects": []
+    },
+    {
+      "url": "https://dl.ndl.go.jp/pid/1341078/1/227",
+      "used_on": [
+        "personnel.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://dl.ndl.go.jp/pid/1341078/1/227",
+      "redirects": []
+    },
+    {
+      "url": "https://dl.ndl.go.jp/search/searchResult?query-omitted",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://dl.ndl.go.jp/search/searchResult?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeql1W4MG0hXaBWTLFw_BuB6AITcRhS1zh_gHbd_BYgM-uEcA/viewform",
+      "used_on": [
+        "pta-membership-template.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://docs.google.com/forms/d/e/1FAIpQLSeql1W4MG0hXaBWTLFw_BuB6AITcRhS1zh_gHbd_BYgM-uEcA/viewform",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/drive/folders/1tbfpjRNJIhwQypk1vsAOaE7_qwW-lrm5",
+      "used_on": [
+        "national-archive.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/drive/folders/1tbfpjRNJIhwQypk1vsAOaE7_qwW-lrm5",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/drive/u/0/folders/1o6hQ5aXFkw-B6vI9FS0K7qfzOWktWvqu",
+      "used_on": [
+        "pta-membership-template-admin.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://accounts.google.com/v3/signin/identifier?query-omitted",
+      "redirects": [
+        {
+          "from": "https://drive.google.com/drive/u/0/folders/1o6hQ5aXFkw-B6vI9FS0K7qfzOWktWvqu",
+          "to": "https://drive.google.com/drive/folders/1o6hQ5aXFkw-B6vI9FS0K7qfzOWktWvqu",
+          "status": 302
+        },
+        {
+          "from": "https://drive.google.com/drive/folders/1o6hQ5aXFkw-B6vI9FS0K7qfzOWktWvqu",
+          "to": "https://accounts.google.com/ServiceLogin?query-omitted",
+          "status": 302
+        },
+        {
+          "from": "https://accounts.google.com/ServiceLogin?query-omitted",
+          "to": "https://accounts.google.com/v3/signin/identifier?query-omitted",
+          "status": 302
+        }
+      ]
+    },
+    {
+      "url": "https://drive.google.com/file/d/12apE6kZr7Avlw9M8e5AjRaTx_a4TvakL/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/12apE6kZr7Avlw9M8e5AjRaTx_a4TvakL/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/12BSwOoXr2vWA_tjF_kKnCvv6ujKhMl6E/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/12BSwOoXr2vWA_tjF_kKnCvv6ujKhMl6E/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/12Ky2Gn8NgB6EQ-fYnTqUBjWjLD0f40ab/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/12Ky2Gn8NgB6EQ-fYnTqUBjWjLD0f40ab/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/13Hwfr4bO9QHSXhugYtgK-ly-p_deNoD3/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/13Hwfr4bO9QHSXhugYtgK-ly-p_deNoD3/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/15V938jEbtvNF1rZdYKARJuORx8ywNaqn/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/15V938jEbtvNF1rZdYKARJuORx8ywNaqn/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/16fc7z8h7-C5sg2kSh7ngHq2lIkPer6b3/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/16fc7z8h7-C5sg2kSh7ngHq2lIkPer6b3/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/16Ms_h1x44pP7t_s9byqCoInYZ88INe5q/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/16Ms_h1x44pP7t_s9byqCoInYZ88INe5q/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/17rVd-wyzAVHcYdkRsx6PrKcw9KveN-uG/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/17rVd-wyzAVHcYdkRsx6PrKcw9KveN-uG/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/18WmScmBf9wbDz6M2tS8eB_80E-efk3MA/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/18WmScmBf9wbDz6M2tS8eB_80E-efk3MA/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/19epvyTPxw30eN-zKLXWxOGq4Vt-7-2CH/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/19epvyTPxw30eN-zKLXWxOGq4Vt-7-2CH/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/19jtun33mSRMk61pZU_911OM_Tn1Qsrzp/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/19jtun33mSRMk61pZU_911OM_Tn1Qsrzp/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/19MSD024oVGw2r_5Rhe7MmWb3Ba1lv0ll/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/19MSD024oVGw2r_5Rhe7MmWb3Ba1lv0ll/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1AyEZQnwBS8HiwLR17DSyO5NlBkPKHZgZ/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1AyEZQnwBS8HiwLR17DSyO5NlBkPKHZgZ/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1BNc_UfyOJ-MwgHUV-Tk71JjB7D2W_A9p/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1BNc_UfyOJ-MwgHUV-Tk71JjB7D2W_A9p/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1CIe-uTUtp9a0kpA45wC1CQ8BpcqsmdTI/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1CIe-uTUtp9a0kpA45wC1CQ8BpcqsmdTI/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1d6gCZcJsznReHoc0RIRI3WPV8gq5ES_A/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1d6gCZcJsznReHoc0RIRI3WPV8gq5ES_A/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1DBjAE9GijR2VFATg9MLR3WMs1lj5Abol/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1DBjAE9GijR2VFATg9MLR3WMs1lj5Abol/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1dZ2Z3bZ3OegNkgBdQGPu7xebWYU9lCuK/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1dZ2Z3bZ3OegNkgBdQGPu7xebWYU9lCuK/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1f_Cb5pZEhNAQrnTscFaN4flsm3BoiAwe/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1f_Cb5pZEhNAQrnTscFaN4flsm3BoiAwe/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1F0Na0uEAXaI20VjQ0BvS7PoxFphs55E8/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1F0Na0uEAXaI20VjQ0BvS7PoxFphs55E8/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1GLiumLNnnRzCN77L4z3vvM7a29Q_NJiQ/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1GLiumLNnnRzCN77L4z3vvM7a29Q_NJiQ/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1guCFr3uBjpkalOw3wBf_Ujfgh_4Jg2cv/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1guCFr3uBjpkalOw3wBf_Ujfgh_4Jg2cv/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1I1rqUgKmJnVxassrndrDDrspdMZi8ANh/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1I1rqUgKmJnVxassrndrDDrspdMZi8ANh/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1iRlNQk_NbwDKF6C-gF1SlE-Q3btBow_1/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1iRlNQk_NbwDKF6C-gF1SlE-Q3btBow_1/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1kPyG1nOoDVorF2MZtIGU1LWcM1u3fb3N/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1kPyG1nOoDVorF2MZtIGU1LWcM1u3fb3N/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1ld3ohjpG4xkBOPAawquydkezkXMJTCeu/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1ld3ohjpG4xkBOPAawquydkezkXMJTCeu/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1m7PMnKzl1mwRZLrrMPdj8Kq4MeLWjgje/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1m7PMnKzl1mwRZLrrMPdj8Kq4MeLWjgje/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1n0DMvalWl2yKhQpHUoxM48HEEd_BHW7V/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1n0DMvalWl2yKhQpHUoxM48HEEd_BHW7V/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1N2UAO4p9vtY8pQrBcu-tj6AtZhuAeDOU/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1N2UAO4p9vtY8pQrBcu-tj6AtZhuAeDOU/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1NawTE-ZW9Ec1JfkMBru1IKYkwtmfThzl/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1NawTE-ZW9Ec1JfkMBru1IKYkwtmfThzl/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1OLuE5TbpcFAqPTh9QkhlXuAg815DR-bm/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1OLuE5TbpcFAqPTh9QkhlXuAg815DR-bm/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1pp1lpai5igf21UAd0wJVIZSwbWl6g_GX/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1pp1lpai5igf21UAd0wJVIZSwbWl6g_GX/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1QZ6atPTTz8gvspBIMUm8OTCoSTuBCTuM/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1QZ6atPTTz8gvspBIMUm8OTCoSTuBCTuM/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1sLQ9E3h0H4kLnPns5-BY_VOzyrtpd7GZ/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1sLQ9E3h0H4kLnPns5-BY_VOzyrtpd7GZ/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1TmRfeQ2sERQL5SvYC4X_MizO1_Em9-gb/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1TmRfeQ2sERQL5SvYC4X_MizO1_Em9-gb/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1UUq9w6s3yPn-mibTBC7gZkzh6LapGQzg/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1UUq9w6s3yPn-mibTBC7gZkzh6LapGQzg/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1vdHG6I-z5T5Bn5axpcPDZY7I4HQr0j5c/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1vdHG6I-z5T5Bn5axpcPDZY7I4HQr0j5c/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1vlXLNzJuk43151jiYIfPoO5y2x4XJTxC/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1vlXLNzJuk43151jiYIfPoO5y2x4XJTxC/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1w4ljJtSc5l4-vvHQcBc2yNA9Rq1wJz6z/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1w4ljJtSc5l4-vvHQcBc2yNA9Rq1wJz6z/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1x9ympDrdniTZ2TOtI1Vauu_4Gs94nM-t/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1x9ympDrdniTZ2TOtI1Vauu_4Gs94nM-t/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1XXriX5lfJsYA6-x9hpdRCOmlCPLHtgYh/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1XXriX5lfJsYA6-x9hpdRCOmlCPLHtgYh/view",
+      "redirects": []
+    },
+    {
+      "url": "https://drive.google.com/file/d/1y4b6pBVPgpIvBM1VDwWKUOzZ-OQHZiBk/view",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://drive.google.com/file/d/1y4b6pBVPgpIvBM1VDwWKUOzZ-OQHZiBk/view",
+      "redirects": []
+    },
+    {
+      "url": "https://elaws.jp/view/346M50000100033",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://elaws.jp/view/346M50000100033",
+      "redirects": []
+    },
+    {
+      "url": "https://gifu-city.schoolcms.net/gihoku-j/%E5%AD%A6%E6%A0%A1%E7%B4%8D%E5%85%A5%E9%87%91%E3%81%AE%E9%9B%86%E9%87%91%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/",
+      "used_on": [
+        "fee-collection.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://gifu-city.schoolcms.net/gihoku-j/%E5%AD%A6%E6%A0%A1%E7%B4%8D%E5%85%A5%E9%87%91%E3%81%AE%E9%9B%86%E9%87%91%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/",
+      "redirects": []
+    },
+    {
+      "url": "https://github.com/geolonia/japanese-prefectures",
+      "used_on": [
+        "404.html",
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html",
+        "about.html",
+        "administrative-materials.html",
+        "board-brief.html",
+        "board-pta-chain.html",
+        "board-responses.html",
+        "case-reading.html"
+      ],
+      "occurrences": 108,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://github.com/geolonia/japanese-prefectures",
+      "redirects": []
+    },
+    {
+      "url": "https://hachioji-sb.metro.ed.jp/keieikikakushitsu/files/R8tyosyukin-ichiran.pdf",
+      "used_on": [
+        "fee-collection.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://hachioji-sb.metro.ed.jp/keieikikakushitsu/files/R8tyosyukin-ichiran.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://info.gakko-mall.com/faq-cat/faq-teacher/",
+      "used_on": [
+        "journal/setagaya-pta-information-separation.html"
+      ],
+      "occurrences": 1,
+      "kind": "restricted",
+      "status": 403,
+      "final": "https://info.gakko-mall.com/faq-cat/faq-teacher/",
+      "redirects": []
+    },
+    {
+      "url": "https://inouenoemi.com/report/regular/2024-06-17%2000%3A00%3A00",
+      "used_on": [
+        "journal/pta-administrative-minutes.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://inouenoemi.com/report/regular/2024-06-17%2000%3A00%3A00",
+      "redirects": []
+    },
+    {
+      "url": "https://iwatsuki-ch.spec.ed.jp/wysiwyg/file/download/108/4377",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://iwatsuki-ch.spec.ed.jp/wysiwyg/file/download/108/4377",
+      "redirects": []
+    },
+    {
+      "url": "https://ja.wikibooks.org/wiki/%E5%9C%B0%E6%96%B9%E8%87%AA%E6%B2%BB%E6%B3%95%E7%AC%AC2%E6%9D%A1",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://ja.wikibooks.org/wiki/%E5%9C%B0%E6%96%B9%E8%87%AA%E6%B2%BB%E6%B3%95%E7%AC%AC2%E6%9D%A1",
+      "redirects": []
+    },
+    {
+      "url": "https://ja.wikipedia.org/wiki/%E7%86%8A%E6%9C%ACPTA%E8%A3%81%E5%88%A4",
+      "used_on": [
+        "journal/consumer-contract.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://ja.wikipedia.org/wiki/%E7%86%8A%E6%9C%ACPTA%E8%A3%81%E5%88%A4",
+      "redirects": []
+    },
+    {
+      "url": "https://kawagoe-th.spec.ed.jp/zennichi/wysiwyg/file/download/16/4930",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://kawagoe-th.spec.ed.jp/zennichi/wysiwyg/file/download/16/4930",
+      "redirects": []
+    },
+    {
+      "url": "https://kohoken.chobi.net/cgi-bin/case.cgi?query-omitted",
+      "used_on": [
+        "cases.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://kohoken.chobi.net/cgi-bin/case.cgi?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://kohoken.chobi.net/cgi-bin/folio.cgi?query-omitted",
+      "used_on": [
+        "cases.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://kohoken.chobi.net/cgi-bin/folio.cgi?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://kohoken.chobi.net/cgi-bin/folio.cgi?query-omitted",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://kohoken.chobi.net/cgi-bin/folio.cgi?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://kokkai.ndl.go.jp/",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://kokkai.ndl.go.jp/",
+      "redirects": []
+    },
+    {
+      "url": "https://kume-j.esnet.ed.jp/file/29796",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://kume-j.esnet.ed.jp/file/29796",
+      "redirects": []
+    },
+    {
+      "url": "https://kvoice.pref.fukuoka.lg.jp/voices/detail/?query-omitted",
+      "used_on": [
+        "edu-board-separation.html",
+        "guide-board.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://kvoice.pref.fukuoka.lg.jp/voices/search/",
+      "redirects": [
+        {
+          "from": "https://kvoice.pref.fukuoka.lg.jp/voices/detail/?query-omitted",
+          "to": "https://kvoice.pref.fukuoka.lg.jp/voices/",
+          "status": 302
+        },
+        {
+          "from": "https://kvoice.pref.fukuoka.lg.jp/voices/",
+          "to": "https://kvoice.pref.fukuoka.lg.jp/voices/search/",
+          "status": 302
+        }
+      ]
+    },
+    {
+      "url": "https://law-lib.jp/subjects/2/provisions/185",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "restricted",
+      "status": 403,
+      "final": "https://law-lib.jp/subjects/2/provisions/185",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/api/1/lawdata/323CO0000000267",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/api/1/lawdata/323CO0000000267",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/document?query-omitted",
+      "used_on": [
+        "edu-board-separation.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/document?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/document?query-omitted",
+      "used_on": [
+        "edu-board-separation.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/document?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/document?query-omitted",
+      "used_on": [
+        "edu-board-separation.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/document?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/document?query-omitted",
+      "used_on": [
+        "edu-board-separation.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/document?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/document?query-omitted",
+      "used_on": [
+        "edu-board-separation.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/document?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+      "used_on": [
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html",
+        "administrative-materials.html",
+        "cases.html",
+        "claim-evidence-ledger.html",
+        "compliance.html",
+        "fee-collection.html",
+        "guide-board.html",
+        "guide-parent.html"
+      ],
+      "occurrences": 27,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/law/129AC0000000089",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/321CONSTITUTION",
+      "used_on": [
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html",
+        "guideline.html",
+        "law-map.html",
+        "report.html",
+        "journal/matsuyama-pta-fee-unification-20261013.html",
+        "journal/pta-legal-structure-education-administration.html",
+        "journal/pta-legal-structure-references.html",
+        "journal/pta-unified-legal-theory.html"
+      ],
+      "occurrences": 8,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/law/321CONSTITUTION",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/322AC0000000026",
+      "used_on": [
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html",
+        "administrative-materials.html",
+        "compliance.html",
+        "education-board-responsibility.html",
+        "facilities.html",
+        "fee-collection.html",
+        "guide-board.html",
+        "guide-pta.html"
+      ],
+      "occurrences": 21,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/law/322AC0000000026",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/322AC0000000067",
+      "used_on": [
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html",
+        "education-board-responsibility.html",
+        "facilities.html",
+        "guide-board.html",
+        "law-map.html",
+        "ppc-points.html",
+        "report.html",
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 15,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/law/322AC0000000067",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/322AC0000000125",
+      "used_on": [
+        "school-pta-separation.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/law/322AC0000000125",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/323AC0000000109",
+      "used_on": [
+        "facilities.html",
+        "fee-collection.html",
+        "guide-board.html",
+        "law-map.html",
+        "report.html",
+        "journal/ichinomiya-pta-settlements-20261108.html",
+        "journal/pta-fee-collection-legal-analysis.html",
+        "journal/pta-legal-structure-education-administration.html"
+      ],
+      "occurrences": 11,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/law/323AC0000000109",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/324AC0000000207",
+      "used_on": [
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html",
+        "administrative-materials.html",
+        "education-board-responsibility.html",
+        "facilities.html",
+        "guide-board.html",
+        "guideline.html",
+        "law-map.html",
+        "personnel.html"
+      ],
+      "occurrences": 19,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/law/324AC0000000207",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/325AC0000000261",
+      "used_on": [
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html",
+        "administrative-materials.html",
+        "claim-evidence-ledger.html",
+        "compliance.html",
+        "education-board-responsibility.html",
+        "fee-collection.html",
+        "guide-board.html",
+        "law-map.html"
+      ],
+      "occurrences": 28,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/law/325AC0000000261",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/329AC0000000119",
+      "used_on": [
+        "journal/shiga-pta-audit-circular-reasoning-20261013.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/law/329AC0000000119",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/331AC0000000162",
+      "used_on": [
+        "education-board-responsibility.html",
+        "fee-collection.html",
+        "law-map.html",
+        "pta-school-processing.html",
+        "school-pta-separation.html",
+        "journal/kawasaki-pta-fee-school-duty.html",
+        "journal/misaki-public-accounting-pta-fee.html",
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 10,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/law/331AC0000000162",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/337AC0000000139",
+      "used_on": [
+        "school-pta-separation.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/law/337AC0000000139",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/412AC0000000061",
+      "used_on": [
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html",
+        "administrative-materials.html",
+        "guide-board.html",
+        "guide-pta.html",
+        "law-map.html",
+        "membership.html",
+        "report.html",
+        "school-pta-separation.html"
+      ],
+      "occurrences": 12,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/law/412AC0000000061",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/413AC0000000095",
+      "used_on": [
+        "journal/consumer-contract.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/law/413AC0000000095",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/415AC0000000057",
+      "used_on": [
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html",
+        "claim-evidence-ledger.html",
+        "compliance.html",
+        "education-board-responsibility.html",
+        "fee-collection.html",
+        "framework.html",
+        "guide-board.html",
+        "guide-parent.html"
+      ],
+      "occurrences": 28,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/law/415AC0000000057",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/415AC0000000057/",
+      "used_on": [
+        "pta-application-chain.html",
+        "submission-kit.html",
+        "journal/nonmember-info.html",
+        "journal/third-party-consent.html"
+      ],
+      "occurrences": 4,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/law/415AC0000000057/",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/418AC0000000120",
+      "used_on": [
+        "journal/pta-legal-structure-references.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/law/418AC0000000120",
+      "redirects": []
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/422AC1000000042",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://laws.e-gov.go.jp/law/422AC1000000042",
+      "redirects": []
+    },
+    {
+      "url": "https://line.me/ti/g2/dL3oYBZn8HwrnisEKWdFl_SUgqytFlMmWA1MPA?query-omitted",
+      "used_on": [
+        "guide-parent.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://line.me/ti/g2/dL3oYBZn8HwrnisEKWdFl_SUgqytFlMmWA1MPA?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://line.me/ti/g2/Nb7R44W6pdkfBCIN_MPeCcvrlNotwxIsYJNikA?query-omitted",
+      "used_on": [
+        "guide-parent.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://line.me/ti/g2/Nb7R44W6pdkfBCIN_MPeCcvrlNotwxIsYJNikA?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://line.me/ti/g2/PNMGi9UCO4jF7zdGdCUIXfgjcNqkZOKJhnbb2A?query-omitted",
+      "used_on": [
+        "guide-parent.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://line.me/ti/g2/PNMGi9UCO4jF7zdGdCUIXfgjcNqkZOKJhnbb2A?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://line.me/ti/g2/s3JxHp3Bsxv9mvk2EUjqFd3SprvyugKhSoyTcA?query-omitted",
+      "used_on": [
+        "guide-parent.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://line.me/ti/g2/s3JxHp3Bsxv9mvk2EUjqFd3SprvyugKhSoyTcA?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://line.me/ti/g2/Ugu4zD-83VtZU-Ctv60zoQ5zB3Dlhhvtiea8Aw?query-omitted",
+      "used_on": [
+        "guide-parent.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://line.me/ti/g2/Ugu4zD-83VtZU-Ctv60zoQ5zB3Dlhhvtiea8Aw?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://line.me/ti/g2/W7eZaMZ8HcylrnFBc8_MeoJIrC7pmWTLdyPgcA?query-omitted",
+      "used_on": [
+        "guide-parent.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://line.me/ti/g2/W7eZaMZ8HcylrnFBc8_MeoJIrC7pmWTLdyPgcA?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://line.me/ti/g2/YwLJzP8peaQrw11_2jUAs2hFXbNcfGH1wyT_WA?query-omitted",
+      "used_on": [
+        "guide-parent.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://line.me/ti/g2/YwLJzP8peaQrw11_2jUAs2hFXbNcfGH1wyT_WA?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://manabi-mirai.mext.go.jp/",
+      "used_on": [
+        "framework.html",
+        "journal/pta-final-point-ptf.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://manabi-mirai.mext.go.jp/",
+      "redirects": []
+    },
+    {
+      "url": "https://matsuyamapta.com/files/libs/2881/202404101426206735.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://matsuyamapta.com/files/libs/2881/202404101426206735.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://matsuyamapta.com/pages/25",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://matsuyamapta.com/pages/25",
+      "redirects": []
+    },
+    {
+      "url": "https://matsuyamapta.com/pages/27/",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://matsuyamapta.com/pages/27/",
+      "redirects": []
+    },
+    {
+      "url": "https://matsuzawashopta.jp/wp-content/uploads/2026/04/PTA_new_2026_01_Form.pdf",
+      "used_on": [
+        "journal/setagaya-pta-information-separation.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://matsuzawashopta.jp/wp-content/uploads/2026/04/PTA_new_2026_01_Form.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://matsuzawashopta.jp/wp-content/uploads/2026/04/PTA_new_2026_02_Fee.pdf",
+      "used_on": [
+        "journal/setagaya-pta-information-separation.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://matsuzawashopta.jp/wp-content/uploads/2026/04/PTA_new_2026_02_Fee.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I000010070495",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://ndlsearch.ndl.go.jp/books/R100000002-I000010070495",
+      "redirects": []
+    },
+    {
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000039-I1062414",
+      "used_on": [
+        "pta-history.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://ndlsearch.ndl.go.jp/books/R100000039-I1062414",
+      "redirects": []
+    },
+    {
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000039-I1341078",
+      "used_on": [
+        "journal/pta-shokumu-sennen-gimu.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://ndlsearch.ndl.go.jp/books/R100000039-I1341078",
+      "redirects": []
+    },
+    {
+      "url": "https://news.allabout.co.jp/articles/o/73578/?query-omitted",
+      "used_on": [
+        "guide-board.html"
+      ],
+      "occurrences": 1,
+      "kind": "restricted",
+      "status": 403,
+      "final": "https://news.allabout.co.jp/articles/o/73578/?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://newsdig.tbs.co.jp/articles/sbs/2613999?query-omitted",
+      "used_on": [
+        "guide-board.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://newsdig.tbs.co.jp/articles/sbs/2613999?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://note.com/hiroshisatoh",
+      "used_on": [
+        "404.html",
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html",
+        "about.html",
+        "administrative-materials.html",
+        "board-brief.html",
+        "board-pta-chain.html",
+        "board-responses.html",
+        "case-reading.html"
+      ],
+      "occurrences": 108,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://note.com/hiroshisatoh",
+      "redirects": []
+    },
+    {
+      "url": "https://note.com/hiroshisatoh/n/n1c39a5d99659",
+      "used_on": [
+        "school-pta-separation.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://note.com/hiroshisatoh/n/n1c39a5d99659",
+      "redirects": []
+    },
+    {
+      "url": "https://note.com/ptadiary/n/n33fc5b757ecd",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://note.com/ptadiary/n/n33fc5b757ecd",
+      "redirects": []
+    },
+    {
+      "url": "https://policies.google.com/privacy?query-omitted",
+      "used_on": [
+        "privacy-policy.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://policies.google.com/privacy?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://ptaorg.com/",
+      "used_on": [
+        "journal/matsuyama-pta-fee-unification-20261013.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://ptaorg.com/",
+      "redirects": []
+    },
+    {
+      "url": "https://ptaorg.com/board-responses.html",
+      "used_on": [
+        "journal/matsuyama-pta-fee-unification-20261013.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://ptaorg.com/board-responses.html",
+      "redirects": []
+    },
+    {
+      "url": "https://ptatokyo.com/%E5%8A%A0%E5%85%A5%E6%84%8F%E6%80%9D%E7%A2%BA%E8%AA%8D%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/",
+      "used_on": [
+        "journal/why-pta-membership-freedom-fails.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://ptatokyo.com/%E5%8A%A0%E5%85%A5%E6%84%8F%E6%80%9D%E7%A2%BA%E8%AA%8D%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/",
+      "redirects": []
+    },
+    {
+      "url": "https://ptatokyo.com/wp-content/uploads/2024/06/PTA%E5%AE%9F%E6%85%8B%E8%AA%BF%E6%9F%BB2022_%E9%9B%86%E8%A8%88%E5%A0%B1%E5%91%8A%E6%9B%B8.pdf",
+      "used_on": [
+        "journal/why-pta-membership-freedom-fails.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://ptatokyo.com/wp-content/uploads/2024/06/PTA%E5%AE%9F%E6%85%8B%E8%AA%BF%E6%9F%BB2022_%E9%9B%86%E8%A8%88%E5%A0%B1%E5%91%8A%E6%9B%B8.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://ptatokyo.com/wp-content/uploads/2024/06/PTA%E5%AE%9F%E6%85%8B%E8%AA%BF%E6%9F%BB2023_%E9%9B%86%E8%A8%88%E5%A0%B1%E5%91%8A%E6%9B%B8.pdf",
+      "used_on": [
+        "journal/why-pta-membership-freedom-fails.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://ptatokyo.com/wp-content/uploads/2024/06/PTA%E5%AE%9F%E6%85%8B%E8%AA%BF%E6%9F%BB2023_%E9%9B%86%E8%A8%88%E5%A0%B1%E5%91%8A%E6%9B%B8.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://qr.paypay.ne.jp/p2p01_rEGdJZNULtbfpsmj",
+      "used_on": [
+        "support.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://qr.paypay.ne.jp/p2p01_rEGdJZNULtbfpsmj",
+      "redirects": []
+    },
+    {
+      "url": "https://school.setagaya.ed.jp/kata/download/document/18251246?query-omitted",
+      "used_on": [
+        "journal/setagaya-pta-information-separation.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://school.setagaya.ed.jp/kata/download/document/18251246?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://school.setagaya.ed.jp/troka/download/document/18248741?query-omitted",
+      "used_on": [
+        "journal/setagaya-pta-information-separation.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://school.setagaya.ed.jp/troka/download/document/18248741?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://school.setagaya.ed.jp/troka/download/document/18282946?query-omitted",
+      "used_on": [
+        "journal/setagaya-pta-information-separation.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://school.setagaya.ed.jp/troka/download/document/18282946?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://smtrc.jp/useful/glossary/detail/n/4248",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://smtrc.jp/useful/glossary/detail?query-omitted",
+      "redirects": [
+        {
+          "from": "https://smtrc.jp/useful/glossary/detail/n/4248",
+          "to": "https://smtrc.jp/useful/glossary/detail?query-omitted",
+          "status": 301
+        }
+      ]
+    },
+    {
+      "url": "https://sukusuku.tokyo-np.co.jp/education/10240/",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://sukusuku.tokyo-np.co.jp/education/10240/",
+      "redirects": []
+    },
+    {
+      "url": "https://tools.google.com/dlpage/gaoptout?query-omitted",
+      "used_on": [
+        "privacy-policy.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://tools.google.com/dlpage/gaoptout?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://tsukuba.repo.nii.ac.jp/record/56033/files/TJLPS_1-1_02.pdf",
+      "used_on": [
+        "cases.html"
+      ],
+      "occurrences": 1,
+      "kind": "server_error",
+      "status": 503,
+      "final": "https://tsukuba.repo.nii.ac.jp/record/56033/files/TJLPS_1-1_02.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://voices.city.nagoya.jp/faq/detail.aspx?query-omitted",
+      "used_on": [
+        "edu-board-separation.html",
+        "fee-collection.html",
+        "guide-board.html",
+        "research-map.html"
+      ],
+      "occurrences": 4,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://voices.city.nagoya.jp/faq/detail.aspx?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://warp.da.ndl.go.jp/",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://warp.ndl.go.jp/",
+      "redirects": [
+        {
+          "from": "https://warp.da.ndl.go.jp/",
+          "to": "https://warp.ndl.go.jp/",
+          "status": 301
+        }
+      ]
+    },
+    {
+      "url": "https://warp.ndl.go.jp/en/web/20240108174506/https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo3/041/siryo/attach/1417145.htm",
+      "used_on": [
+        "journal/pta-shokumu-sennen-gimu.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://warp.ndl.go.jp/en/web/20240108174506/https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo3/041/siryo/attach/1417145.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://web.archive.org/",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://web.archive.org/",
+      "redirects": []
+    },
+    {
+      "url": "https://web.archive.org/web/20220302155535/https://www.city.matsuyama.ehime.jp/shisei/denshinyusatsu/gyoumuitaku/info/r3itaku/kounoukinsystem.html",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://web.archive.org/web/20220302155535/https://www.city.matsuyama.ehime.jp/shisei/denshinyusatsu/gyoumuitaku/info/r3itaku/kounoukinsystem.html",
+      "redirects": []
+    },
+    {
+      "url": "https://web.archive.org/web/20221129084455/https://matsuyamapta.com/pages/27/",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://web.archive.org/web/20221129084455/https://matsuyamapta.com/pages/27/",
+      "redirects": []
+    },
+    {
+      "url": "https://web.archive.org/web/20240613191404/https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo3/041/siryo/attach/1417145.htm",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://web.archive.org/web/20240613191404/https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo3/041/siryo/attach/1417145.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.astem.or.jp/uploads/attachment1_20120611_system.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.astem.or.jp/uploads/attachment1_20120611_system.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.caa.go.jp/policies/policy/consumer_system/consumer_contract_act/annotations",
+      "used_on": [
+        "report.html",
+        "journal/consumer-contract.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.caa.go.jp/policies/policy/consumer_system/consumer_contract_act/annotations",
+      "redirects": []
+    },
+    {
+      "url": "https://www.caa.go.jp/policies/policy/consumer_system/consumer_contract_act/annotations/",
+      "used_on": [
+        "administrative-materials.html",
+        "law-map.html",
+        "membership.html",
+        "journal/optout-invalidity.html"
+      ],
+      "occurrences": 4,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.caa.go.jp/policies/policy/consumer_system/consumer_contract_act/annotations/",
+      "redirects": []
+    },
+    {
+      "url": "https://www.caa.go.jp/policies/policy/consumer_system/consumer_contract_act/annotations/assets/consumer_system_cms203_230915_04.pdf",
+      "used_on": [
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html",
+        "journal/consumer-contract.html",
+        "journal/pta-unified-legal-theory.html"
+      ],
+      "occurrences": 3,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.caa.go.jp/policies/policy/consumer_system/consumer_contract_act/annotations/assets/consumer_system_cms203_230915_04.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.caa.go.jp/policies/policy/consumer_system/consumer_contract_act/annotations/assets/consumer_system_cms203_230915_12.pdf",
+      "used_on": [
+        "journal/pta-membership-optin-record.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.caa.go.jp/policies/policy/consumer_system/consumer_contract_act/annotations/assets/consumer_system_cms203_230915_12.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.caa.go.jp/policies/policy/consumer_system/consumer_contract_act/annotations/assets/consumer_system_cms203_230915_17.pdf",
+      "used_on": [
+        "journal/pta-unified-legal-theory.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.caa.go.jp/policies/policy/consumer_system/consumer_contract_act/annotations/assets/consumer_system_cms203_230915_17.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.cao.go.jp/bunken-suishin/doc/r05/r5_kekka_11_mext.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.cao.go.jp/bunken-suishin/doc/r05/r5_kekka_11_mext.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.cao.go.jp/bunken-suishin/kaigi/doc/teianbukai153/153gijigaiyou.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-unification-20261013.html",
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html",
+        "journal/shiga-pta-audit-circular-reasoning-20261013.html",
+        "journal/why-pta-membership-freedom-fails.html"
+      ],
+      "occurrences": 4,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.cao.go.jp/bunken-suishin/kaigi/doc/teianbukai153/153gijigaiyou.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.cao.go.jp/bunken-suishin/kaigi/doc/teianbukai153/153sanko01_5.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.cao.go.jp/bunken-suishin/kaigi/doc/teianbukai153/153sanko01_5.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.cao.go.jp/bunken-suishin/kaigi/doc/teianbukai157/157gijigaiyou.pdf",
+      "used_on": [
+        "journal/why-pta-membership-freedom-fails.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.cao.go.jp/bunken-suishin/kaigi/doc/teianbukai157/157gijigaiyou.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.cao.go.jp/bunken-suishin/teianbosyu/2023/teianbosyu_kekka.html",
+      "used_on": [
+        "journal/school-pta-fee-public-duty-mic-mext-ppc-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.cao.go.jp/bunken-suishin/teianbosyu/2023/teianbosyu_kekka.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.cao.go.jp/bunken-suishin/teianbosyu/doc/r05/ka2_07_mic.pdf",
+      "used_on": [
+        "journal/school-pta-fee-public-duty-mic-mext-ppc-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.cao.go.jp/bunken-suishin/teianbosyu/doc/r05/ka2_07_mic.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.cao.go.jp/bunken-suishin/teianbosyu/doc/r05/tb_r5fu_11mext_121.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.cao.go.jp/bunken-suishin/teianbosyu/doc/r05/tb_r5fu_11mext_121.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.cao.go.jp/bunken-suishin/teianbosyu/doc/r07/shi_98_cfa_283.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.cao.go.jp/bunken-suishin/teianbosyu/doc/r07/shi_98_cfa_283.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.cao.go.jp/consumer/history/01/kabusoshiki/kojin/doc/houkokusho.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.cao.go.jp/consumer/history/01/kabusoshiki/kojin/doc/houkokusho.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.cao.go.jp/consumer/iinkaikouhyou/2011/houkoku/201107_houkoku.html",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.cao.go.jp/consumer/iinkaikouhyou/2011/houkoku/201107_houkoku.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/fbea17f8-33d0-4a70-8ea6-84f3402bad73/15f5e496/20240711_policies_kokoseido_mushouka_23.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/fbea17f8-33d0-4a70-8ea6-84f3402bad73/15f5e496/20240711_policies_kokoseido_mushouka_23.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.akiruno.tokyo.jp/0000016929.html",
+      "used_on": [
+        "edu-board-separation.html",
+        "guide-board.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.akiruno.tokyo.jp/0000016929.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.akishima.lg.jp/reiki/reiki_honbun/g131RG00000282.html",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.akishima.lg.jp/reiki/reiki_honbun/g131RG00000282.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.akita.lg.jp/_res/projects/default_project/_page_/001/046/857/ex-result2025-juumin.pdf",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.akita.lg.jp/_res/projects/default_project/_page_/001/046/857/ex-result2025-juumin.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.anjo.aichi.jp/shisei/jouhou-hassin/2014koe/201404-2.html",
+      "used_on": [
+        "edu-board-separation.html",
+        "guide-board.html"
+      ],
+      "occurrences": 2,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://www.city.anjo.aichi.jp/shisei/jouhou-hassin/2014koe/201404-2.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.anjo.aichi.jp/shisei/jouhou-hassin/2022koe/0306.html",
+      "used_on": [
+        "edu-board-separation.html",
+        "guide-board.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.anjo.aichi.jp/shisei/jouhou-hassin/2022koe/0306.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.chiba.jp/kyoiku/kyoikusomu/somu/documents/1114watakusihikaikei.pdf",
+      "used_on": [
+        "fee-collection.html",
+        "research-map.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.chiba.jp/kyoiku/kyoikusomu/somu/documents/1114watakusihikaikei.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.chiba.jp/sogoseisaku/shichokoshitsu/kohokocho/shiminnokoe/r5-1974.html",
+      "used_on": [
+        "edu-board-separation.html",
+        "guide-board.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.chiba.jp/sogoseisaku/shichokoshitsu/kohokocho/shiminnokoe/r5-1974.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.fukuoka.lg.jp/kansajimu/kansa1/shisei/kansa/documents/27gyousei-jimu.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.fukuoka.lg.jp/kansajimu/kansa1/shisei/kansa/documents/27gyousei-jimu.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.fukuoka.lg.jp/kansajimu/kansa1/shisei/kansa/documents/tihouzitihou.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.fukuoka.lg.jp/kansajimu/kansa1/shisei/kansa/documents/tihouzitihou.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.fukushima.fukushima.jp/material/files/group/74/r6gyouseikannsahoukokusyo.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.fukushima.fukushima.jp/material/files/group/74/r6gyouseikannsahoukokusyo.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.funabashi.lg.jp/shisei/keikaku/008/p046969_d/fil/01_kangaekata.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://www.city.funabashi.lg.jp/shisei/keikaku/008/p046969_d/fil/01_kangaekata.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.hadano.kanagawa.jp/material/files/group/20/R5dai3kai.pdf",
+      "used_on": [
+        "journal/pta-administrative-minutes.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.hadano.kanagawa.jp/material/files/group/20/R5dai3kai.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.hamamatsu.shizuoka.jp/documents/5902/r6_taio_2025_17145_marked.pdf",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.hamamatsu.shizuoka.jp/documents/5902/r6_taio_2025_17145_marked.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.hashimoto.lg.jp/guide/kyoikuiinkai/kyoiku_somu/kyoikuiinkaigitou/kyoiku_kaigiroku/reiwa4nen/12855.html",
+      "used_on": [
+        "pta-school-processing.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.hashimoto.lg.jp/guide/kyoikuiinkai/kyoiku_somu/kyoikuiinkaigitou/kyoiku_kaigiroku/reiwa4nen/12855.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.hashimoto.lg.jp/material/files/group/62/R6gyouseikansa.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.hashimoto.lg.jp/material/files/group/62/R6gyouseikansa.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.hashimoto.lg.jp/section/reiki_honbun/r282RG00001642.html",
+      "used_on": [
+        "pta-school-processing.html",
+        "research-map.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.hashimoto.lg.jp/section/reiki_honbun/r282RG00001642.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.himeji.lg.jp/shisei/category/5-4-1-0-0-0-0-0-0-0.html",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.himeji.lg.jp/shisei/category/5-4-1-0-0-0-0-0-0-0.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.hiroshima.lg.jp/_res/projects/default_project/_page_/001/011/249/080803396.pdf",
+      "used_on": [
+        "journal/shinjuku-2020-pta-nonmember-data.html",
+        "research/hiroshima.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.hiroshima.lg.jp/_res/projects/default_project/_page_/001/011/249/080803396.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.hiroshima.lg.jp/shisei/keikaku-shingikai/1021766/1027359/1005999/1027361/1011249.html",
+      "used_on": [
+        "journal/shinjuku-2020-pta-nonmember-data.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.hiroshima.lg.jp/shisei/keikaku-shingikai/1021766/1027359/1005999/1027361/1011249.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.honjo.lg.jp/soshiki/kikakuzaisei/hisyo/shichohenotegami/yoseraretagoikentokaito/5_kyoiku_bunka_gakkokyoiku_shogaigakushu_supotsushinkonado/reiwa2nen/12038.html",
+      "used_on": [
+        "edu-board-separation.html",
+        "guide-board.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.honjo.lg.jp/soshiki/kikakuzaisei/hisyo/shichohenotegami/yoseraretagoikentokaito/5_kyoiku_bunka_gakkokyoiku_shogaigakushu_supotsushinkonado/reiwa2nen/12038.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.ichinomiya.aichi.jp/_res/projects/default_project/_page_/001/074/674/chirashi2.pdf",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.ichinomiya.aichi.jp/_res/projects/default_project/_page_/001/074/674/chirashi2.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/018/647/0908-0912_koukaiyou.pdf",
+      "used_on": [
+        "edu-board-separation.html",
+        "guide-board.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.ise.mie.jp/_res/projects/default_project/_page_/001/018/647/0908-0912_koukaiyou.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.itabashi.tokyo.jp/_res/projects/default_project/_page_/001/012/621/attach_15644_1.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.itabashi.tokyo.jp/_res/projects/default_project/_page_/001/012/621/attach_15644_1.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.kagoshima.lg.jp/gikai/seimuchousa/shigikai/koho/chosajiho/documents/chousajihou202106.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-unification-20261013.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.kagoshima.lg.jp/gikai/seimuchousa/shigikai/koho/chosajiho/documents/chousajihou202106.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/005/910/002026_22.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/005/910/002026_22.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/038/540/kaigiroku2.pdf",
+      "used_on": [
+        "journal/pta-administrative-minutes.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/038/540/kaigiroku2.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.kawaguchi.lg.jp/material/files/group/12/270813shingikai01.pdf",
+      "used_on": [
+        "journal/shinjuku-2020-pta-nonmember-data.html",
+        "research/kawaguchi.html"
+      ],
+      "occurrences": 2,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://www.city.kawaguchi.lg.jp/material/files/group/12/270813shingikai01.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.kawaguchi.lg.jp/soshiki/01030/030/7/h27shinngikekka/2959.html",
+      "used_on": [
+        "journal/shinjuku-2020-pta-nonmember-data.html"
+      ],
+      "occurrences": 1,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://www.city.kawaguchi.lg.jp/soshiki/01030/030/7/h27shinngikekka/2959.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.kawasaki.jp/170/cmsfiles/contents/0000135/135471/kouhou1832.pdf",
+      "used_on": [
+        "pta-school-processing.html",
+        "journal/kawasaki-pta-fee-school-duty.html",
+        "research/kawasaki.html"
+      ],
+      "occurrences": 3,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.kawasaki.jp/170/cmsfiles/contents/0000135/135471/kouhou1832.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.kawasaki.jp/880/cmsfiles/contents/0000134/134260/031116gian35siryo.pdf",
+      "used_on": [
+        "pta-school-processing.html",
+        "research-map.html",
+        "journal/kawasaki-pta-fee-school-duty.html",
+        "research/kawasaki.html"
+      ],
+      "occurrences": 4,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.kawasaki.jp/880/cmsfiles/contents/0000134/134260/031116gian35siryo.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.kawasaki.jp/880/cmsfiles/contents/0000134/134260/031116gijiroku.pdf",
+      "used_on": [
+        "fee-collection.html",
+        "pta-school-processing.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.kawasaki.jp/880/cmsfiles/contents/0000134/134260/031116gijiroku.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.kawasaki.jp/shisei/category/40-20-4-0-0-0-0-0-0-0.html",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.kawasaki.jp/shisei/category/40-20-4-0-0-0-0-0-0-0.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.kawasaki.jp/templates/outline/880/0000140964.html",
+      "used_on": [
+        "pta-school-processing.html",
+        "journal/kawasaki-pta-fee-school-duty.html",
+        "journal/pta-fee-collection-legal-analysis.html",
+        "research/kawasaki.html"
+      ],
+      "occurrences": 4,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.kawasaki.jp/templates/outline/880/0000140964.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.kawasaki.jp/templates/outline/cmsfiles/contents/0000140/140964/R6.4.1PTAyoukou.pdf",
+      "used_on": [
+        "fee-collection.html",
+        "research-map.html",
+        "journal/mext-jri-pta-good-practice-legal-scope.html"
+      ],
+      "occurrences": 3,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.kawasaki.jp/templates/outline/cmsfiles/contents/0000140/140964/R6.4.1PTAyoukou.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.kitakyushu.lg.jp/files/001225586.pdf",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.kitakyushu.lg.jp/files/001225586.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.kitamoto.lg.jp/soshiki/seisakusuisinbu/koushitsu/gyomu/4/15205.html",
+      "used_on": [
+        "edu-board-separation.html",
+        "guide-board.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.kitamoto.lg.jp/soshiki/seisakusuisinbu/koushitsu/gyomu/4/15205.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.kobe.lg.jp/documents/44981/14.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.kobe.lg.jp/documents/44981/14.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.kobe.lg.jp/documents/9602/gakkou-choushuukin.pdf",
+      "used_on": [
+        "pta-school-processing.html",
+        "research-map.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.kobe.lg.jp/documents/9602/gakkou-choushuukin.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176401.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html",
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.kochi.kochi.jp/uploaded/attachment/176401.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.kodaira.tokyo.jp/reiki/reiki_honbun/g135RG00000349.html",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.kodaira.tokyo.jp/reiki/reiki_honbun/g135RG00000349.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.kurume.fukuoka.jp/1100keikaku/2060jouhoukoukai/3040shinsakai/files/28toushin2.pdf",
+      "used_on": [
+        "kurume-28-toushin2-pta-personal-information.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.kurume.fukuoka.jp/1100keikaku/2060jouhoukoukai/3040shinsakai/files/28toushin2.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.kurume.fukuoka.jp/1100keikaku/2060jouhoukoukai/3040shinsakai/toushinsyo.html",
+      "used_on": [
+        "kurume-28-toushin2-pta-personal-information.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.kurume.fukuoka.jp/1100keikaku/2060jouhoukoukai/3040shinsakai/toushinsyo.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.kyoto.lg.jp/kansa/cmsfiles/contents/0000145/145927/733houkokusyo.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.kyoto.lg.jp/kansa/cmsfiles/contents/0000145/145927/733houkokusyo.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.kyoto.lg.jp/kyoiku/page/0000236566.html",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.kyoto.lg.jp/kyoiku/page/0000236566.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsue.lg.jp/soshikikarasagasu/shimimbu_shiminseikatsusodanka/koho_kocho/4/1/1_5/19768.html",
+      "used_on": [
+        "edu-board-separation.html",
+        "guide-board.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.matsue.lg.jp/soshikikarasagasu/shimimbu_shiminseikatsusodanka/koho_kocho/4/1/1_5/19768.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsusaka.mie.jp/uploaded/attachment/76941.pdf",
+      "used_on": [
+        "journal/pta-administrative-minutes.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.matsusaka.mie.jp/uploaded/attachment/76941.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsuyama.ehime.jp/bosyu/RFC_kounoukin.html",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://www.city.matsuyama.ehime.jp/bosyu/RFC_kounoukin.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsuyama.ehime.jp/kurashi/kosodate/kyoikuiinkai/teirei/kaigirokur3/R304teireikai.files/R0304teireikai.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-unification-20261013.html",
+        "research/matsuyama.html"
+      ],
+      "occurrences": 2,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://www.city.matsuyama.ehime.jp/kurashi/kosodate/kyoikuiinkai/teirei/kaigirokur3/R304teireikai.files/R0304teireikai.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsuyama.ehime.jp/kurashi/kosodate/kyoikuiinkai/teirei/kaigirokur4/R0404teireikai.files/r0404kaigiroku.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.matsuyama.ehime.jp/kurashi/kosodate/kyoikuiinkai/teirei/kaigirokur4/R0404teireikai.files/r0404kaigiroku.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsuyama.ehime.jp/kurashi/kosodate/kyoikuiinkai/teirei/kaigirokur5/R0504teireikai.files/R504teirei.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.matsuyama.ehime.jp/kurashi/kosodate/kyoikuiinkai/teirei/kaigirokur5/R0504teireikai.files/R504teirei.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsuyama.ehime.jp/kurashi/kosodate/kyoikukaigi/kyoikukaigi.files/20260219kaigiroku.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.matsuyama.ehime.jp/kurashi/kosodate/kyoikukaigi/kyoikukaigi.files/20260219kaigiroku.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsuyama.ehime.jp/kurashi/online/shimin/webkouza.html",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.matsuyama.ehime.jp/kurashi/online/shimin/webkouza.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsuyama.ehime.jp/shisei/denshinyusatsu/gyoumuitaku/info/r3itaku/kounoukinsystem.files/nyusatsusetsumeisyo.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://www.city.matsuyama.ehime.jp/shisei/denshinyusatsu/gyoumuitaku/info/r3itaku/kounoukinsystem.files/nyusatsusetsumeisyo.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsuyama.ehime.jp/shisei/denshinyusatsu/gyoumuitaku/info/r3itaku/kounoukinsystem.files/R30628shitsumonkaitou.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://www.city.matsuyama.ehime.jp/shisei/denshinyusatsu/gyoumuitaku/info/r3itaku/kounoukinsystem.files/R30628shitsumonkaitou.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsuyama.ehime.jp/shisei/kansa/houkatsugaibukansa.files/gaibuR6.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.matsuyama.ehime.jp/shisei/kansa/houkatsugaibukansa.files/gaibuR6.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsuyama.ehime.jp/shisei/keikaku/gyosei/jimujigyou/kyoiku.files/R5sheet-hokentaiiku_noname.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.matsuyama.ehime.jp/shisei/keikaku/gyosei/jimujigyou/kyoiku.files/R5sheet-hokentaiiku_noname.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsuyama.ehime.jp/shisei/keikaku/gyosei/jimujigyou/kyoiku.files/R6sheet-hokentaiiku.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.matsuyama.ehime.jp/shisei/keikaku/gyosei/jimujigyou/kyoiku.files/R6sheet-hokentaiiku.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsuyama.ehime.jp/shisei/keikaku/gyosei/jimujigyou/kyoiku.files/R7sheet-hokentaiiku.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.matsuyama.ehime.jp/shisei/keikaku/gyosei/jimujigyou/kyoiku.files/R7sheet-hokentaiiku.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsuyama.ehime.jp/shisei/keikaku/kodojohoka/shishin2019.files/R3actionplan.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-unification-20261013.html",
+        "research/matsuyama.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.matsuyama.ehime.jp/shisei/keikaku/kodojohoka/shishin2019.files/R3actionplan.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsuyama.ehime.jp/shisei/keikaku/sogokeikaku/7jisogokeikaku.files/jisshikeikaku2025_2.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.matsuyama.ehime.jp/shisei/keikaku/sogokeikaku/7jisogokeikaku.files/jisshikeikaku2025_2.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsuyama.ehime.jp/shisei/zaisei/yosan/2022_tosho_yosan.files/09_R4_shuyoujigyo.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.matsuyama.ehime.jp/shisei/zaisei/yosan/2022_tosho_yosan.files/09_R4_shuyoujigyo.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsuyama.ehime.jp/wagamachi/detail/3251.html",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html",
+        "journal/matsuyama-pta-fee-unification-20261013.html",
+        "research/matsuyama.html"
+      ],
+      "occurrences": 3,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.matsuyama.ehime.jp/wagamachi/detail/3251.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsuyama.ehime.jp/wagamachi/detail/3816.html",
+      "used_on": [
+        "research-map.html",
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.matsuyama.ehime.jp/wagamachi/detail/3816.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.matsuyama.ehime.jp/wagamachi/detail/index_iken.html",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.matsuyama.ehime.jp/wagamachi/detail/index_iken.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.miki.lg.jp/uploaded/attachment/27839.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.miki.lg.jp/uploaded/attachment/27839.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.minoh.lg.jp/edukanri/itaku/documents/shiryou1.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.minoh.lg.jp/edukanri/itaku/documents/shiryou1.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.minoh.lg.jp/edukanri/itaku/documents/siryou1.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.minoh.lg.jp/edukanri/itaku/documents/siryou1.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.minoh.lg.jp/edushien/gakkou_tyousyukin/documents/02-siyosho_1106new.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.minoh.lg.jp/edushien/gakkou_tyousyukin/documents/02-siyosho_1106new.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.minoh.lg.jp/kita-ele/documents/nyuugakusetumeikai.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.minoh.lg.jp/kita-ele/documents/nyuugakusetumeikai.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.mitaka.lg.jp/c_service/016/016845.html",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.mitaka.lg.jp/c_service/016/016845.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.mitaka.lg.jp/c_service/080/attached/attach_80968_1.pdf",
+      "used_on": [
+        "journal/pta-administrative-minutes.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.mitaka.lg.jp/c_service/080/attached/attach_80968_1.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.mitaka.lg.jp/c_service/117/attached/attach_117769_1.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.mitaka.lg.jp/c_service/117/attached/attach_117769_1.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.moriguchi.osaka.jp/kakukanoannai/kikakuzaiseibu/miryokusouzouhasshin/kocyo/shiminnokoe/shiminnnokoekaitou/shiminnokoe_2022/14112.html",
+      "used_on": [
+        "edu-board-separation.html",
+        "guide-board.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.moriguchi.osaka.jp/kakukanoannai/kikakuzaiseibu/miryokusouzouhasshin/kocyo/shiminnokoe/shiminnnokoekaitou/shiminnokoe_2022/14112.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.nagano.nagano.jp/documents/360/356021_1.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.nagano.nagano.jp/documents/360/356021_1.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.nagaokakyo.lg.jp/0000014152.html",
+      "used_on": [
+        "journal/pta-administrative-minutes.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.nagaokakyo.lg.jp/0000014152.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.nagaokakyo.lg.jp/0000015193.html",
+      "used_on": [
+        "journal/pta-administrative-minutes.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.nagaokakyo.lg.jp/0000015193.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.nagoya.jp/_res/projects/default_project/_page_/001/002/679/r6.zaiseikoukai.pdf",
+      "used_on": [
+        "journal/why-pta-membership-freedom-fails.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.nagoya.jp/_res/projects/default_project/_page_/001/002/679/r6.zaiseikoukai.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.nagoya.jp/_res/projects/default_project/_page_/001/016/997/pta-kara-gakkouenn-heno-buppintou-no-kifu-nikakaru-kangaekata.pdf",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html",
+        "journal/why-pta-membership-freedom-fails.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.nagoya.jp/_res/projects/default_project/_page_/001/016/997/pta-kara-gakkouenn-heno-buppintou-no-kifu-nikakaru-kangaekata.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.nagoya.jp/_res/projects/default_project/_page_/001/048/414/pta_qa_unnei.pdf",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.nagoya.jp/_res/projects/default_project/_page_/001/048/414/pta_qa_unnei.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.naha.okinawa.jp/_res/projects/default_project/_page_/001/004/657/20250801gyousei.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.naha.okinawa.jp/_res/projects/default_project/_page_/001/004/657/20250801gyousei.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.niigata.lg.jp/shisei/gyoseiunei/sonota/fuzokukikankonwakai/fuzokukikan/sechikikan/kyoiku/chiiki_edu/iin/kaisaijisseki/syakaikyouiku36.files/20240724houkoku1-1.pdf",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.niigata.lg.jp/shisei/gyoseiunei/sonota/fuzokukikankonwakai/fuzokukikan/sechikikan/kyoiku/chiiki_edu/iin/kaisaijisseki/syakaikyouiku36.files/20240724houkoku1-1.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.numazu.shizuoka.jp/opinion/kouhyo/doc/20.pdf",
+      "used_on": [
+        "edu-board-separation.html",
+        "guide-board.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.numazu.shizuoka.jp/opinion/kouhyo/doc/20.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.oita.oita.jp/o001/documents/kojinjyohohogohou69.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.oita.oita.jp/o001/documents/kojinjyohohogohou69.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.okayama.jp/shisei/0000008192.html",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.okayama.jp/shisei/0000008192.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.osaka.lg.jp/kyoiku/cmsfiles/contents/0000669/669109/kaikeikizyun.pdf",
+      "used_on": [
+        "pta-school-processing.html",
+        "research-map.html",
+        "research/osaka.html"
+      ],
+      "occurrences": 3,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.osaka.lg.jp/kyoiku/cmsfiles/contents/0000669/669109/kaikeikizyun.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.osaka.lg.jp/kyoiku/page/0000153602.html",
+      "used_on": [
+        "guide-board.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.osaka.lg.jp/kyoiku/page/0000153602.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.osaka.lg.jp/kyoiku/page/0000363518.html",
+      "used_on": [
+        "guide-board.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.osaka.lg.jp/kyoiku/page/0000363518.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.osaka.lg.jp/kyoiku/page/0000363983.html",
+      "used_on": [
+        "guide-board.html",
+        "journal/pta-administrative-minutes.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.osaka.lg.jp/kyoiku/page/0000363983.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.osaka.lg.jp/kyoiku/page/0000669109.html",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.osaka.lg.jp/kyoiku/page/0000669109.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.osaka.lg.jp/seisakukikakushitsu/page/0000659152.html",
+      "used_on": [
+        "edu-board-separation.html",
+        "guide-board.html"
+      ],
+      "occurrences": 2,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://www.city.osaka.lg.jp/seisakukikakushitsu/page/0000659152.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.osaka.lg.jp/somu/cmsfiles/contents/0000187/187843/20130328syuketusengen.pdf",
+      "used_on": [
+        "guide-board.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.osaka.lg.jp/somu/cmsfiles/contents/0000187/187843/20130328syuketusengen.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.osaka.lg.jp/somu/page/0000187843.html",
+      "used_on": [
+        "guide-board.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.osaka.lg.jp/somu/page/0000187843.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.oshu.iwate.jp/section/reiki_int/reiki_honbun/r204RG00000397.html",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.oshu.iwate.jp/section/reiki_int/reiki_honbun/r204RG00000397.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.saitama.lg.jp/003/003/002/p017082.html",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.saitama.lg.jp/003/003/002/p017082.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.sakai.lg.jp/shisei/sonota/jyorei/youkou/kyouiku/380210-12-1.html",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.sakai.lg.jp/shisei/sonota/jyorei/youkou/kyouiku/380210-12-1.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.sanuki.lg.jp/material/files/group/30/h27_report.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.sanuki.lg.jp/material/files/group/30/h27_report.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.sapporo.jp/kansa/f02keka/documents/juukankekka_r808.pdf",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.sapporo.jp/kansa/f02keka/documents/juukankekka_r808.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.sasebo.lg.jp/soumu/kouhou/tegami/iken_13686.html",
+      "used_on": [
+        "edu-board-separation.html",
+        "guide-board.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.sasebo.lg.jp/soumu/kouhou/tegami/iken_13686.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.sayama.saitama.jp/shisei/shingikai/singikailist/shakaikyouikuiin.files/R60524kaigiroku.pdf",
+      "used_on": [
+        "journal/pta-administrative-minutes.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.sayama.saitama.jp/shisei/shingikai/singikailist/shakaikyouikuiin.files/R60524kaigiroku.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.sendai.jp/kansa-somu/shise/reki/kansa/sekyu/jireshu/documents/kekka7_r0524.pdf",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.sendai.jp/kansa-somu/shise/reki/kansa/sekyu/jireshu/documents/kekka7_r0524.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.sendai.jp/kansa-somu/shise/reki/kansa/sekyu/jireshu/index.html",
+      "used_on": [
+        "journal/pta-fee-collection-legal-analysis.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.sendai.jp/kansa-somu/shise/reki/kansa/sekyu/jireshu/index.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.setagaya.lg.jp/02028/1713.html",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.setagaya.lg.jp/02028/1713.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.setagaya.lg.jp/documents/1984/r8-minnnademanabupta.pdf",
+      "used_on": [
+        "journal/setagaya-pta-information-separation.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.setagaya.lg.jp/documents/1984/r8-minnnademanabupta.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.setagaya.lg.jp/documents/30377/3-7.pdf",
+      "used_on": [
+        "journal/setagaya-pta-information-separation.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.setagaya.lg.jp/documents/30377/3-7.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.shimonoseki.lg.jp/uploaded/attachment/11212.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.shimonoseki.lg.jp/uploaded/attachment/11212.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-kukyoiyori/kukyoi-kukyoiyori-kiroku/r6kaigiroku/240611_7teirei.pdf",
+      "used_on": [
+        "journal/pta-administrative-minutes.html"
+      ],
+      "occurrences": 1,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-kukyoiyori/kukyoi-kukyoiyori-kiroku/r6kaigiroku/240611_7teirei.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.shinjuku.lg.jp/content/000279448.pdf",
+      "used_on": [
+        "journal/shinjuku-2020-pta-nonmember-data.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.shinjuku.lg.jp/content/000279448.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.shinjuku.lg.jp/content/000279449.pdf",
+      "used_on": [
+        "journal/shinjuku-2020-pta-nonmember-data.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.shinjuku.lg.jp/content/000279449.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.shinjuku.lg.jp/content/000280890.pdf",
+      "used_on": [
+        "journal/shinjuku-2020-pta-nonmember-data.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.shinjuku.lg.jp/content/000280890.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.shinjuku.lg.jp/shingi/index04.html",
+      "used_on": [
+        "journal/shinjuku-2020-pta-nonmember-data.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.shinjuku.lg.jp/shingi/index04.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.shinjuku.lg.jp/shingi/kuseijoho01_inf_30_4_00011.html",
+      "used_on": [
+        "journal/shinjuku-2020-pta-nonmember-data.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.shinjuku.lg.jp/shingi/kuseijoho01_inf_30_4_00011.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.shinjuku.lg.jp/shingi/kuseijoho01_inf_30_4_00012.html",
+      "used_on": [
+        "journal/shinjuku-2020-pta-nonmember-data.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.shinjuku.lg.jp/shingi/kuseijoho01_inf_30_4_00012.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.shinjuku.lg.jp/shingi/kuseijoho01_inf_30_4_00013.html",
+      "used_on": [
+        "journal/shinjuku-2020-pta-nonmember-data.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.shinjuku.lg.jp/shingi/kuseijoho01_inf_30_4_00013.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.shinjuku.lg.jp/shingi/kuseijoho01_inf_30_4_00015.html",
+      "used_on": [
+        "journal/shinjuku-2020-pta-nonmember-data.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.shinjuku.lg.jp/shingi/kuseijoho01_inf_30_4_00015.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.shizuoka.lg.jp/documents/51445/03_sotijoukyou_h30gyousei_r3teiki_r4zaienn_r4syussi_r4sitekan_r4gakkou.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.shizuoka.lg.jp/documents/51445/03_sotijoukyou_h30gyousei_r3teiki_r4zaienn_r4syussi_r4sitekan_r4gakkou.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.shizuoka.lg.jp/documents/58413/20260417006.pdf",
+      "used_on": [
+        "guide-board.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.shizuoka.lg.jp/documents/58413/20260417006.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.shizuoka.lg.jp/documents/8060/000892688.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://www.city.shizuoka.lg.jp/documents/8060/000892688.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.suginami.tokyo.jp/_res/projects/default_project/",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://www.city.suginami.tokyo.jp/_res/projects/default_project/",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.takamatsu.kagawa.jp/kurashi/kosodate/shouchugakkou/news/tyousyukinmanual.files/gakkoutyousyukinmanual.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.takamatsu.kagawa.jp/kurashi/kosodate/shouchugakkou/news/tyousyukinmanual.files/gakkoutyousyukinmanual.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.takaoka.toyama.jp/material/files/group/69/290327houkoku.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.takaoka.toyama.jp/material/files/group/69/290327houkoku.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.takashima.lg.jp/material/files/group/73/060620_kaigiroku.pdf",
+      "used_on": [
+        "journal/pta-administrative-minutes.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.takashima.lg.jp/material/files/group/73/060620_kaigiroku.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.tamano.lg.jp/site/kyouiku/50174.html",
+      "used_on": [
+        "journal/tamano-chuo-pta-establishment.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.tamano.lg.jp/site/kyouiku/50174.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.tamano.lg.jp/site/kyouiku/52131.html",
+      "used_on": [
+        "journal/tamano-chuo-pta-establishment.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.tamano.lg.jp/site/kyouiku/52131.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.tamano.lg.jp/uploaded/attachment/31136.pdf",
+      "used_on": [
+        "journal/tamano-chuo-pta-establishment.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.tamano.lg.jp/uploaded/attachment/31136.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.tamano.lg.jp/uploaded/attachment/35147.pdf",
+      "used_on": [
+        "journal/tamano-chuo-pta-establishment.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.tamano.lg.jp/uploaded/attachment/35147.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.tamano.lg.jp/uploaded/attachment/35910.pdf",
+      "used_on": [
+        "journal/tamano-chuo-pta-establishment.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.tamano.lg.jp/uploaded/attachment/35910.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.tamano.lg.jp/uploaded/attachment/36164.pdf",
+      "used_on": [
+        "journal/tamano-chuo-pta-establishment.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.tamano.lg.jp/uploaded/attachment/36164.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.tamano.lg.jp/uploaded/attachment/36530.pdf",
+      "used_on": [
+        "journal/tamano-chuo-pta-establishment.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.tamano.lg.jp/uploaded/attachment/36530.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.tamano.lg.jp/uploaded/attachment/36531.pdf",
+      "used_on": [
+        "journal/tamano-chuo-pta-establishment.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.tamano.lg.jp/uploaded/attachment/36531.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.tateyama.chiba.jp/files/300384303.pdf",
+      "used_on": [
+        "edu-board-separation.html",
+        "guide-board.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.tateyama.chiba.jp/files/300384303.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.tsukuba.lg.jp/material/files/group/152/R503choushuukin.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.tsukuba.lg.jp/material/files/group/152/R503choushuukin.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.uonuma.lg.jp/reiki/reiki_honbun/r043RG00001412.html",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.uonuma.lg.jp/reiki/reiki_honbun/r043RG00001412.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.yasu.lg.jp/soshiki/kouhouhisho/goiken/reiwa5/1680485605781.html",
+      "used_on": [
+        "edu-board-separation.html",
+        "guide-board.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.yasu.lg.jp/soshiki/kouhouhisho/goiken/reiwa5/1680485605781.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.yokohama.lg.jp/city-info/gyosei-kansa/kansa/kekka/kekka-gai.files/0078_20200221.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.yokohama.lg.jp/city-info/gyosei-kansa/kansa/kekka/kekka-gai.files/0078_20200221.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.yokote.lg.jp/_res/projects/default_project/_page_/001/003/227/r7-2teiki2.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.yokote.lg.jp/_res/projects/default_project/_page_/001/003/227/r7-2teiki2.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.city.yonezawa.yamagata.jp/soshiki/2/hisyo/4/3/8184.html",
+      "used_on": [
+        "edu-board-separation.html",
+        "guide-board.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.city.yonezawa.yamagata.jp/soshiki/2/hisyo/4/3/8184.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.courts.go.jp/app/files/hanrei_jp/261/052261_hanrei.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://www.courts.go.jp/app/files/hanrei_jp/261/052261_hanrei.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.courts.go.jp/app/files/hanrei_jp/345/052345_hanrei.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://www.courts.go.jp/app/files/hanrei_jp/345/052345_hanrei.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.courts.go.jp/assets/hanrei/hanrei-pdf-35246.pdf",
+      "used_on": [
+        "journal/shiga-pta-audit-circular-reasoning-20261013.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.courts.go.jp/assets/hanrei/hanrei-pdf-35246.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.courts.go.jp/assets/hanrei/hanrei-pdf-52387.pdf",
+      "used_on": [
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.courts.go.jp/assets/hanrei/hanrei-pdf-52387.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.courts.go.jp/hanrei/",
+      "used_on": [
+        "case-reading.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.courts.go.jp/hanrei/",
+      "redirects": []
+    },
+    {
+      "url": "https://www.courts.go.jp/hanrei/search1/index.html",
+      "used_on": [
+        "cases.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.courts.go.jp/hanrei/search1/index.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.digital.go.jp/resources/govdashboard/workstyle-reform-schools",
+      "used_on": [
+        "guide-board.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.digital.go.jp/resources/govdashboard/workstyle-reform-schools",
+      "redirects": []
+    },
+    {
+      "url": "https://www.digital.go.jp/resources/govdashboard/workstyle-reform-schools/description",
+      "used_on": [
+        "guide-board.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.digital.go.jp/resources/govdashboard/workstyle-reform-schools/description",
+      "redirects": []
+    },
+    {
+      "url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kks/182742.html",
+      "used_on": [
+        "pta-school-processing.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kks/182742.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.edu.pref.shizuoka.jp/numazu-ch/office/levy.html",
+      "used_on": [
+        "fee-collection.html",
+        "research/shizuoka.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.edu.pref.shizuoka.jp/numazu-ch/office/levy.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.it-mirai-h.ibk.ed.jp/wysiwyg/file/download/1/2043",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.it-mirai-h.ibk.ed.jp/wysiwyg/file/download/1/2043",
+      "redirects": []
+    },
+    {
+      "url": "https://www.jichiro.gr.jp/jichiken_kako/report/rep_aichi33/11/1107_jre/index.htm",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.jichiro.gr.jp/jichiken_kako/report/rep_aichi33/11/1107_jre/index.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.jichiro.gr.jp/jichiken_kako/report/rep_hyogo34/02/0225_ron/index.htm",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.jichiro.gr.jp/jichiken_kako/report/rep_hyogo34/02/0225_ron/index.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.jichiscope.com/ward/setagaya/kaigiroku/18331",
+      "used_on": [
+        "journal/setagaya-pta-information-separation.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.jichiscope.com/ward/setagaya/kaigiroku/18331",
+      "redirects": []
+    },
+    {
+      "url": "https://www.jichiscope.com/ward/setagaya/kaigiroku/18416",
+      "used_on": [
+        "journal/setagaya-pta-information-separation.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.jichiscope.com/ward/setagaya/kaigiroku/18416",
+      "redirects": []
+    },
+    {
+      "url": "https://www.jstage.jst.go.jp/article/keidaironshu/67/2/67_143/_pdf",
+      "used_on": [
+        "journal/school-pta-fee-public-duty-mic-mext-ppc-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.jstage.jst.go.jp/article/keidaironshu/67/2/67_143/_pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.kansa.metro.tokyo.lg.jp/PDF/02gyosei/21gyousei.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.kansa.metro.tokyo.lg.jp/documents/d/kansa/21gyousei",
+      "redirects": [
+        {
+          "from": "https://www.kansa.metro.tokyo.lg.jp/PDF/02gyosei/21gyousei.pdf",
+          "to": "https://www.kansa.metro.tokyo.lg.jp/documents/d/kansa/21gyousei",
+          "status": 301
+        }
+      ]
+    },
+    {
+      "url": "https://www.kyoiku1.metro.tokyo.lg.jp/static/reiki_int/reiki_honbun/g170RG00002049.html",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.kyoiku1.metro.tokyo.lg.jp/static/reiki_int/reiki_honbun/g170RG00002049.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.kyoiku1.metro.tokyo.lg.jp/static/reiki_int/reiki_kana/r_50_ka.html",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.kyoiku1.metro.tokyo.lg.jp/static/reiki_int/reiki_kana/r_50_ka.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.kyoto-u.ac.jp/uni_int/kitei/reiki_honbun/w002RG00000944.html",
+      "used_on": [
+        "journal/ichinomiya-pta-settlements-20261108.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.kyoto-u.ac.jp/uni_int/kitei/reiki_honbun/w002RG00000944.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/a_menu/ikusei/ptahyoushou/index.htm",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/a_menu/ikusei/ptahyoushou/index.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/a_menu/shotou/hatarakikata/__icsFiles/afieldfile/2019/03/18/1414498_1_1.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/a_menu/shotou/hatarakikata/__icsFiles/afieldfile/2019/03/18/1414498_1_1.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/a_menu/shotou/hatarakikata/index.htm",
+      "used_on": [
+        "administrative-materials.html",
+        "compliance.html",
+        "guide-board.html",
+        "reality.html",
+        "journal/pta-unified-legal-theory.html"
+      ],
+      "occurrences": 5,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/a_menu/shotou/hatarakikata/index.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/a_menu/shotou/hatarakikata/mext_00349.html",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/a_menu/shotou/hatarakikata/mext_00349.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/a_menu/shotou/jinji/1329576.htm",
+      "used_on": [
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html",
+        "administrative-materials.html",
+        "claim-evidence-ledger.html",
+        "key-materials.html",
+        "personnel.html"
+      ],
+      "occurrences": 5,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/a_menu/shotou/jinji/1329576.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/a_menu/shotou/jinji/mext_02032.html",
+      "used_on": [
+        "journal/pta-shokumu-sennen-gimu.html",
+        "journal/pta-unified-legal-theory.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/a_menu/shotou/jinji/mext_02032.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/a_menu/shotou/uneishien/detail/1296974.htm",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/a_menu/shotou/uneishien/detail/1296974.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/a_menu/shotou/zyouhou/detail/mext_00085.html",
+      "used_on": [
+        "journal/matsuyama-pta-fee-unification-20261013.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/a_menu/shotou/zyouhou/detail/mext_00085.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/a_menu/shotou/zyouhou/detail/mext_02597.html",
+      "used_on": [
+        "journal/matsuyama-pta-fee-unification-20261013.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/a_menu/shotou/zyouhou/detail/mext_02597.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/a_menu/shougai/katei/mext_00018.html",
+      "used_on": [
+        "journal/pta-unified-legal-theory.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/a_menu/shougai/katei/mext_00018.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/b_menu/boshu/mext_00077.html",
+      "used_on": [
+        "journal/school-pta-fee-public-duty-mic-mext-ppc-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "network_unverified",
+      "status": 0,
+      "final": "https://www.mext.go.jp/b_menu/boshu/mext_00077.html",
+      "redirects": [],
+      "error": "ETIMEDOUT"
+    },
+    {
+      "url": "https://www.mext.go.jp/b_menu/daijin/detail/mext_00584.html",
+      "used_on": [
+        "journal/social-education-law-pta-boundary.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/b_menu/daijin/detail/mext_00584.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/b_menu/hakusho/html/others/detail/1317738.htm",
+      "used_on": [
+        "pta-history.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/b_menu/hakusho/html/others/detail/1317738.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/b_menu/hakusho/html/others/detail/1317780.htm",
+      "used_on": [
+        "journal/social-education-law-pta-boundary.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/b_menu/hakusho/html/others/detail/1317780.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/b_menu/hakusho/html/others/detail/1317782.htm",
+      "used_on": [
+        "administrative-materials.html",
+        "pta-future.html",
+        "pta-history.html",
+        "timeline-issues.html"
+      ],
+      "occurrences": 4,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/b_menu/hakusho/html/others/detail/1317782.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/b_menu/hakusho/html/others/detail/1317998.htm",
+      "used_on": [
+        "pta-future.html",
+        "pta-history.html",
+        "timeline-issues.html"
+      ],
+      "occurrences": 3,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/b_menu/hakusho/html/others/detail/1317998.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/b_menu/hakusho/nc/mext_00095.html",
+      "used_on": [
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html",
+        "facilities.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/b_menu/hakusho/nc/mext_00095.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/b_menu/shingi/chousa/shotou/177/gijiroku/mext_00011.html",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/b_menu/shingi/chousa/shotou/177/gijiroku/mext_00011.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo3/041/siryo/attach/1417145.htm",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo3/041/siryo/attach/1417145.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo3/079/sonota/1412985.htm",
+      "used_on": [
+        "journal/pta-shokumu-sennen-gimu.html",
+        "journal/why-pta-membership-freedom-fails.html",
+        "journal/work-style-reform.html"
+      ],
+      "occurrences": 3,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo3/079/sonota/1412985.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/component/a_menu/education/detail/__icsFiles/afieldfile/2012/12/13/1327731_1.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/component/a_menu/education/detail/__icsFiles/afieldfile/2012/12/13/1327731_1.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/component/a_menu/education/detail/__icsFiles/afieldfile/2018/11/29/1411276_030.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/component/a_menu/education/detail/__icsFiles/afieldfile/2018/11/29/1411276_030.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/component/b_menu/shingi/toushin/__icsFiles/afieldfile/2019/03/08/1412993_1_1.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/component/b_menu/shingi/toushin/__icsFiles/afieldfile/2019/03/08/1412993_1_1.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/000373343.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/000373343.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/1415229-001.pdf",
+      "used_on": [
+        "journal/social-education-law-pta-boundary.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/1415229-001.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20200717-mxt_syoto01-000001234_4.pdf",
+      "used_on": [
+        "report.html",
+        "journal/pta-shokumu-sennen-gimu.html",
+        "journal/pta-unified-legal-theory.html",
+        "journal/why-pta-membership-freedom-fails.html"
+      ],
+      "occurrences": 4,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20200717-mxt_syoto01-000001234_4.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20201120-mxt_zaimu-000011189_1.pdf",
+      "used_on": [
+        "administrative-materials.html",
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html",
+        "journal/why-pta-membership-freedom-fails.html",
+        "journal/work-style-reform.html"
+      ],
+      "occurrences": 4,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20201120-mxt_zaimu-000011189_1.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20210513-mxt_zaimu-000014852_1.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20210513-mxt_zaimu-000014852_1.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20221011-mxt_syoto01_02.pdf",
+      "used_on": [
+        "administrative-materials.html",
+        "framework.html",
+        "report.html",
+        "school-pta-separation.html",
+        "journal/ichinomiya-pta-settlements-20261108.html",
+        "journal/pta-fee-collection-legal-analysis.html",
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html",
+        "journal/pta-unified-legal-theory.html"
+      ],
+      "occurrences": 9,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20221011-mxt_syoto01_02.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20221219-mxt_syoto01-15183231_1-2-2.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20221219-mxt_syoto01-15183231_1-2-2.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20230330-mxt_zaimu01-000027881_1.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20230330-mxt_zaimu01-000027881_1.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20230725-mext_zaimu-000031116_3.pdf",
+      "used_on": [
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20230725-mext_zaimu-000031116_3.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20230821-mxt_kenshoku-100003364_4.pdf",
+      "used_on": [
+        "fee-collection.html",
+        "framework.html",
+        "journal/pta-fee-collection-legal-analysis.html",
+        "journal/pta-shokumu-sennen-gimu.html"
+      ],
+      "occurrences": 4,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20230821-mxt_kenshoku-100003364_4.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20240122-mxt_zaimu-000033271_11.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20240122-mxt_zaimu-000033271_11.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20240930-mxt_jogai01-000033278_001.pdf",
+      "used_on": [
+        "fee-collection.html",
+        "journal/school-pta-fee-public-duty-mic-mext-ppc-20261016.html",
+        "journal/shiga-pta-audit-circular-reasoning-20261013.html",
+        "journal/why-pta-membership-freedom-fails.html"
+      ],
+      "occurrences": 4,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20240930-mxt_jogai01-000033278_001.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20240930-mxt_jogai01-000033278_005.pdf",
+      "used_on": [
+        "fee-collection.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20240930-mxt_jogai01-000033278_005.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20241113-mxt_syokyo02-000038759_15.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20241113-mxt_syokyo02-000038759_15.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20250207-mxt_hourei-000040175_1.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20250207-mxt_hourei-000040175_1.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20250324-mxt_zaimu-000041069.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20250324-mxt_zaimu-000041069.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20250616-mxt_zaimu-100002245_2.pdf",
+      "used_on": [
+        "administrative-materials.html",
+        "claim-evidence-ledger.html",
+        "education-board-responsibility.html",
+        "fee-collection.html",
+        "guide-board.html",
+        "guide-pta.html",
+        "key-materials.html",
+        "law-map.html"
+      ],
+      "occurrences": 20,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20250616-mxt_zaimu-100002245_2.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20250926-mxt_syoto01-000045031_04.pdf",
+      "used_on": [
+        "journal/why-pta-membership-freedom-fails.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20250926-mxt_syoto01-000045031_04.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20251020-mxt_syoto02-000045471_15.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20251020-mxt_syoto02-000045471_15.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20260306-mxt_shuukyo01-000048038_1.pdf",
+      "used_on": [
+        "fee-collection.html",
+        "journal/school-pta-fee-public-duty-mic-mext-ppc-20261016.html",
+        "journal/shiga-pta-audit-circular-reasoning-20261013.html",
+        "journal/why-pta-membership-freedom-fails.html"
+      ],
+      "occurrences": 4,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20260306-mxt_shuukyo01-000048038_1.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20260306-mxt_shuukyo01-000048038_3.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20260306-mxt_shuukyo01-000048038_3.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20260309-mxt_chisui02-000048049_3.pdf",
+      "used_on": [
+        "journal/social-education-law-pta-boundary.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20260309-mxt_chisui02-000048049_3.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20260709-mxt_chisui02-000050973_1.pdf",
+      "used_on": [
+        "journal/mext-jri-pta-good-practice-legal-scope.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20260709-mxt_chisui02-000050973_1.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20260814-mxt_chisui02-000050973_1.pdf",
+      "used_on": [
+        "journal/mext-jri-pta-good-practice-legal-scope.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mext.go.jp/content/20260814-mxt_chisui02-000050973_1.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mhlw.go.jp/bunya/kodomo/dv-soudanjo-kai-honbun5.html",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mhlw.go.jp/bunya/kodomo/dv-soudanjo-kai-honbun5.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mof.go.jp/about_mof/councils/fiscal_system_council/sub-of_fiscal_system/proceedings/index.html",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mof.go.jp/about_mof/councils/fiscal_system_council/sub-of_fiscal_system/proceedings/index.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mof.go.jp/about_mof/councils/fiscal_system_council/sub-of_fiscal_system/proceedings/material/zaiseia20231011/03.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.mof.go.jp/about_mof/councils/fiscal_system_council/sub-of_fiscal_system/proceedings/material/zaiseia20231011/03.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.nippon-pta.or.jp/history/advance/01/01-1-1",
+      "used_on": [
+        "pta-future.html",
+        "pta-history.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.nippon-pta.or.jp/history/advance/01/01-1-1",
+      "redirects": []
+    },
+    {
+      "url": "https://www.nippon-pta.or.jp/history/advance/01/01-1-2",
+      "used_on": [
+        "pta-future.html",
+        "pta-history.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.nippon-pta.or.jp/history/advance/01/01-1-2",
+      "redirects": []
+    },
+    {
+      "url": "https://www.nippon-pta.or.jp/history/advance/01/01-2-2",
+      "used_on": [
+        "pta-history.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.nippon-pta.or.jp/history/advance/01/01-2-2",
+      "redirects": []
+    },
+    {
+      "url": "https://www.nishi.or.jp/kosodate/kyoiku/shakaikyoiku/kanrensoshiki/ptakatudou.html",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.nishi.or.jp/kosodate/kyoiku/shakaikyoiku/kanrensoshiki/ptakatudou.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.nishi.or.jp/shisei/shinogaiyo/jimubunshou/jimu_kyouiku.html",
+      "used_on": [
+        "pta-school-processing.html",
+        "research/nishinomiya.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.nishi.or.jp/shisei/shinogaiyo/jimubunshou/jimu_kyouiku.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.oita-press.co.jp/1010000000/2021/06/26/JD0060372709",
+      "used_on": [
+        "guide-board.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.oita-press.co.jp/error404?query-omitted",
+      "redirects": [
+        {
+          "from": "https://www.oita-press.co.jp/1010000000/2021/06/26/JD0060372709",
+          "to": "https://www.oita-press.co.jp/error404?query-omitted",
+          "status": 302
+        }
+      ]
+    },
+    {
+      "url": "https://www.ooyasyo.edu.city.ebina.kanagawa.jp/pdf/pta/2025soukai.pdf",
+      "used_on": [
+        "journal/why-pta-membership-freedom-fails.html"
+      ],
+      "occurrences": 1,
+      "kind": "network_unverified",
+      "status": 0,
+      "final": "https://www.ooyasyo.edu.city.ebina.kanagawa.jp/pdf/pta/2025soukai.pdf",
+      "redirects": [],
+      "error": "CERT_HAS_EXPIRED"
+    },
+    {
+      "url": "https://www.ppc.go.jp/aboutus/minutes/2025/20260325/",
+      "used_on": [
+        "administrative-materials.html",
+        "journal/school-pta-fee-public-duty-mic-mext-ppc-20261016.html",
+        "journal/shiga-pta-audit-circular-reasoning-20261013.html"
+      ],
+      "occurrences": 3,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/aboutus/minutes/2025/20260325/",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/all_faq_index/faq1-q4-13/",
+      "used_on": [
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html",
+        "guide-board.html",
+        "ppc-points.html",
+        "ppc-school-pta-personal-data.html",
+        "privacy.html",
+        "pta-membership-optin.html",
+        "journal/pta-membership-optin-record.html"
+      ],
+      "occurrences": 7,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/all_faq_index/faq1-q4-13/",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/all_faq_index/faq1-q4-18/",
+      "used_on": [
+        "ppc-points.html",
+        "privacy.html",
+        "journal/pta-membership-optin-record.html"
+      ],
+      "occurrences": 3,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/all_faq_index/faq1-q4-18/",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/all_faq_index/faq7-q2-1-2/",
+      "used_on": [
+        "privacy.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/all_faq_index/faq7-q2-1-2/",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/all_faq_index/faq7-q3-3-10",
+      "used_on": [
+        "ppc-school-pta-personal-data.html",
+        "pta-membership-optin.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/all_faq_index/faq7-q3-3-10/",
+      "redirects": [
+        {
+          "from": "https://www.ppc.go.jp/all_faq_index/faq7-q3-3-10",
+          "to": "https://www.ppc.go.jp/all_faq_index/faq7-q3-3-10/",
+          "status": 302
+        }
+      ]
+    },
+    {
+      "url": "https://www.ppc.go.jp/all_faq_index/faq7-q3-3-10/",
+      "used_on": [
+        "law-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/all_faq_index/faq7-q3-3-10/",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/all_faq_index/faq7-q3-3-2/",
+      "used_on": [
+        "fee-collection.html",
+        "framework.html",
+        "guide-board.html",
+        "law-map.html",
+        "ppc-points.html",
+        "ppc-school-pta-personal-data.html",
+        "privacy.html",
+        "pta-membership-optin.html"
+      ],
+      "occurrences": 12,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/all_faq_index/faq7-q3-3-2/",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/all_faq_index/faq7-q3-3-3/",
+      "used_on": [
+        "ppc-school-pta-personal-data.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/all_faq_index/faq7-q3-3-3/",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/files/pdf/202403_koutekibumon_qa.pdf",
+      "used_on": [
+        "journal/mext-jri-pta-good-practice-legal-scope.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/files/pdf/202403_koutekibumon_qa.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/files/pdf/202603_school_pta_pd_point.pdf",
+      "used_on": [
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html",
+        "administrative-materials.html",
+        "board-brief.html",
+        "claim-evidence-ledger.html",
+        "compliance.html",
+        "education-board-responsibility.html",
+        "fee-collection.html",
+        "framework.html"
+      ],
+      "occurrences": 37,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/files/pdf/202603_school_pta_pd_point.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/files/pdf/220428_koutekibumon_jimutaiou_guide_shinkyu.pdf",
+      "used_on": [
+        "journal/mext-jri-pta-good-practice-legal-scope.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/files/pdf/220428_koutekibumon_jimutaiou_guide_shinkyu.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/files/pdf/251212_koutekibumon_guidelines.pdf",
+      "used_on": [
+        "journal/why-pta-membership-freedom-fails.html"
+      ],
+      "occurrences": 1,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://www.ppc.go.jp/files/pdf/251212_koutekibumon_guidelines.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/files/pdf/251212_koutekibumon_qa_shinkyu.pdf",
+      "used_on": [
+        "journal/mext-jri-pta-good-practice-legal-scope.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/files/pdf/251212_koutekibumon_qa_shinkyu.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/files/pdf/260325_gijiroku.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/files/pdf/260325_gijiroku.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/files/pdf/260325_shiryou-3.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-unification-20261013.html",
+        "journal/school-pta-fee-public-duty-mic-mext-ppc-20261016.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/files/pdf/260325_shiryou-3.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/files/pdf/260401_koutekibumon_qa.pdf",
+      "used_on": [
+        "journal/shinjuku-2020-pta-nonmember-data.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/files/pdf/260401_koutekibumon_qa.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/files/pdf/koutekibumon_qa.pdf",
+      "used_on": [
+        "journal/mext-jri-pta-good-practice-legal-scope.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/files/pdf/koutekibumon_qa.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/files/pdf/personal_report_2003caa_kajohanno.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/files/pdf/personal_report_2003caa_kajohanno.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/files/pdf/personal_report_2303caa_kajohanno.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/files/pdf/personal_report_2303caa_kajohanno.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/files/pdf/Self_assessment_checklist.pdf",
+      "used_on": [
+        "ppc-school-pta-personal-data.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/files/pdf/Self_assessment_checklist.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/news/publicinfo/",
+      "used_on": [
+        "journal/shinjuku-2020-pta-nonmember-data.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/news/publicinfo/",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/personalinfo/faq/APPI_QA/",
+      "used_on": [
+        "journal/third-party-consent.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/personalinfo/faq/APPI_QA/",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/personalinfo/legal/",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/personalinfo/legal/",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/personalinfo/legal/guidelines_administrative/",
+      "used_on": [
+        "administrative-materials.html",
+        "board-responses.html",
+        "fee-collection.html",
+        "ppc-school-pta-personal-data.html",
+        "pta-application-chain.html",
+        "journal/kawasaki-pta-fee-school-duty.html",
+        "journal/pta-unified-legal-theory.html"
+      ],
+      "occurrences": 7,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/personalinfo/legal/guidelines_administrative/",
+      "redirects": []
+    },
+    {
+      "url": "https://www.ppc.go.jp/personalinfo/legal/koutekibumon_qa/",
+      "used_on": [
+        "administrative-materials.html",
+        "ppc-school-pta-personal-data.html",
+        "school-pta-separation.html",
+        "journal/kawasaki-pta-fee-school-duty.html",
+        "journal/pta-unified-legal-theory.html",
+        "journal/shinjuku-2020-pta-nonmember-data.html"
+      ],
+      "occurrences": 6,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.ppc.go.jp/personalinfo/legal/koutekibumon_qa/",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.aichi.jp/uploaded/attachment/38563.pdf",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.aichi.jp/uploaded/attachment/38563.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.aichi.jp/uploaded/attachment/562448.pdf",
+      "used_on": [
+        "pta-school-processing.html",
+        "research-map.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.aichi.jp/uploaded/attachment/562448.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.gifu.lg.jp/uploaded/attachment/15214.pdf",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.gifu.lg.jp/uploaded/attachment/15214.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.gifu.lg.jp/uploaded/attachment/440861.pdf",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://www.pref.gifu.lg.jp/uploaded/attachment/440861.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.iwate.jp/_res/projects/default_project/_page_/001/026/756/r1_houkokusyo.pdf",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.iwate.jp/_res/projects/default_project/_page_/001/026/756/r1_houkokusyo.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.kanagawa.jp/docs/gt2/ptahandbook.html",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.kanagawa.jp/docs/gt2/ptahandbook.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.kanagawa.jp/documents/16411/r8_ikkatu.pdf",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.kanagawa.jp/documents/16411/r8_ikkatu.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.kyoto.jp/kansa/documents/27hogoshakai.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.kyoto.jp/kansa/documents/27hogoshakai.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.mie.lg.jp/common/content/001181409.pdf",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.mie.lg.jp/common/content/001181409.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.miyazaki.lg.jp/documents/2712/000138332.pdf",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.miyazaki.lg.jp/documents/2712/000138332.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.nagano.lg.jp/koho/kensei/koho/hotline/202302/hot_2302-7.html",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.nagano.lg.jp/koho/kensei/koho/hotline/202302/hot_2302-7.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.nagano.lg.jp/koho/kensei/koho/hotline/202307/hot_2307-1.html",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.nagano.lg.jp/koho/kensei/koho/hotline/202307/hot_2307-1.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.nagano.lg.jp/koho/kensei/koho/hotline/202307/hot_2307-3.html",
+      "used_on": [
+        "journal/shinjuku-2020-pta-nonmember-data.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.nagano.lg.jp/koho/kensei/koho/hotline/202307/hot_2307-3.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.nara.jp/secure/118350/26-13-1.pdf",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "restricted",
+      "status": 403,
+      "final": "https://www.pref.nara.jp/secure/118350/26-13-1.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.osaka.lg.jp/chikikyoiku/michisirube/index.html",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.osaka.lg.jp/o180090/chikikyoiku/michisirube/index.html",
+      "redirects": [
+        {
+          "from": "https://www.pref.osaka.lg.jp/chikikyoiku/michisirube/index.html",
+          "to": "https://www.pref.osaka.lg.jp/o180090/chikikyoiku/michisirube/index.html",
+          "status": 301
+        }
+      ]
+    },
+    {
+      "url": "https://www.pref.osaka.lg.jp/documents/15756/r3houkoku.pdf",
+      "used_on": [
+        "research-map.html",
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.osaka.lg.jp/documents/15756/r3houkoku.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.osaka.lg.jp/documents/28296/76h27kyouiku.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.osaka.lg.jp/documents/28296/76h27kyouiku.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.osaka.lg.jp/documents/33322/01_jutakukeiei_hukumu1.doc",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.osaka.lg.jp/documents/33322/01_jutakukeiei_hukumu1.doc",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.osaka.lg.jp/o070060/johokokai/jigyo1/toshin130.html",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.osaka.lg.jp/o070060/johokokai/jigyo1/toshin130.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.osaka.lg.jp/o070060/johokokai/jigyo1/toshin131.html",
+      "used_on": [
+        "research-map.html",
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.osaka.lg.jp/o070060/johokokai/jigyo1/toshin131.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.saga.lg.jp/kiji00320015/3_20015_391083_up_4rtwrt66.pdf",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.saga.lg.jp/kiji00320015/3_20015_391083_up_4rtwrt66.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.shiga.lg.jp/ba00/10574.html",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.shiga.lg.jp/ba00/10574.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.shiga.lg.jp/documents/8874/5614820.pdf",
+      "used_on": [
+        "journal/shiga-pta-audit-circular-reasoning-20261013.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.shiga.lg.jp/documents/8874/5614820.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.shiga.lg.jp/documents/8874/5627358_1.pdf",
+      "used_on": [
+        "cases.html",
+        "personnel.html",
+        "pta-school-processing.html",
+        "report.html",
+        "research-map.html",
+        "school-pta-separation.html",
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html",
+        "journal/pta-shokumu-sennen-gimu.html"
+      ],
+      "occurrences": 12,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.shiga.lg.jp/documents/8874/5627358_1.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.shiga.lg.jp/kensei/kenseiunei/kansa/302723.html",
+      "used_on": [
+        "pta-school-processing.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.shiga.lg.jp/lc00/8874.html",
+      "redirects": [
+        {
+          "from": "https://www.pref.shiga.lg.jp/kensei/kenseiunei/kansa/302723.html",
+          "to": "https://www.pref.shiga.lg.jp/lc00/8874.html",
+          "status": 301
+        }
+      ]
+    },
+    {
+      "url": "https://www.pref.shimane.lg.jp/education/kyoiku/iinkai/kanri/index.data/080922.rule.pdf",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.shimane.lg.jp/education/kyoiku/iinkai/kanri/index.data/080922.rule.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.shimane.lg.jp/gakkokikaku/kenritsukanri/chosyukintou.data/r060401chosyukintouyoukou.pdf",
+      "used_on": [
+        "pta-school-processing.html",
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.shimane.lg.jp/gakkokikaku/kenritsukanri/chosyukintou.data/r060401chosyukintouyoukou.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.tochigi.lg.jp/m06/documents/ptahandbookkaitei2.pdf",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.tochigi.lg.jp/m06/documents/ptahandbookkaitei2.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.toyama.jp/documents/25/030129r1gaibukansasotikekka.pdf",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.toyama.jp/documents/25/030129r1gaibukansasotikekka.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.wakayama.lg.jp/gijiroku/p041191.html",
+      "used_on": [
+        "research-map.html",
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.wakayama.lg.jp/gijiroku/p041191.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.wakayama.lg.jp/prefg/500100/choshukin/choshukin_d/fil/choshukin.pdf",
+      "used_on": [
+        "administrative-materials.html",
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.wakayama.lg.jp/prefg/500100/choshukin/choshukin_d/fil/choshukin.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.yamagata.jp/sm/kenkoho/pdf/koho2634_20150331.pdf",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.yamagata.jp/sm/kenkoho/pdf/koho2634_20150331.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.pref.yamanashi.jp/kyouikusom/jimushori.html",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.pref.yamanashi.jp/kyouikusom/jimushori.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.reiki.metro.tokyo.lg.jp/reiki/reiki_honbun/g101RG00002049.html",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.reiki.metro.tokyo.lg.jp/reiki/reiki_honbun/g101RG00002049.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.sangiin.go.jp/japanese/joho1/kousei/syuisyo/211/meisai/m211016.htm",
+      "used_on": [
+        "administrative-materials.html",
+        "journal/pta-unified-legal-theory.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.sangiin.go.jp/japanese/joho1/kousei/syuisyo/211/meisai/m211016.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.sangiin.go.jp/japanese/joho1/kousei/syuisyo/211/touh/t211016.htm",
+      "used_on": [
+        "administrative-materials.html",
+        "guide-parent.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.sangiin.go.jp/japanese/joho1/kousei/syuisyo/211/touh/t211016.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.shugiin.go.jp/internet/itdb_housei.nsf/html/houritsu/04319630608099.htm",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.shugiin.go.jp/internet/itdb_housei.nsf/html/houritsu/04319630608099.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.shugiin.go.jp/internet/itdb_housei.nsf/html/housei/17420100602042.htm",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.shugiin.go.jp/internet/itdb_housei.nsf/html/housei/17420100602042.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.shugiin.go.jp/internet/itdb_housei.nsf/html/housei/21120230508019.htm",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.shugiin.go.jp/internet/itdb_housei.nsf/html/housei/21120230508019.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a211137.htm",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a211137.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/b211137.htm",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/b211137.htm",
+      "redirects": []
+    },
+    {
+      "url": "https://www.soumu.go.jp/main_content/000774152.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.soumu.go.jp/main_content/000774152.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.soumu.go.jp/main_content/000870886.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.soumu.go.jp/main_content/000870886.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.soumu.go.jp/main_sosiki/kenkyu/chihouzaimukaikei/02gyosei01_04000379.html",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.soumu.go.jp/main_sosiki/kenkyu/chihouzaimukaikei/02gyosei01_04000379.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.soumu.go.jp/menu_news/s-news/hyouka_230328000164386.html",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.soumu.go.jp/menu_news/s-news/hyouka_230328000164386.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.thomsonreuters.co.jp/ja/westlaw-japan/case_law/2017/20170818.html",
+      "used_on": [
+        "cases.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.thomsonreuters.co.jp/ja/westlaw-japan/case_law/2017/20170818.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.tokai-tv.com/tokainews/feature/article_20230315_25985",
+      "used_on": [
+        "journal/why-pta-membership-freedom-fails.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.tokai-tv.com/tokainews/feature/article_20230315_25985",
+      "redirects": []
+    },
+    {
+      "url": "https://www.tokai-tv.com/tokainews/feature/article_20230517_27576",
+      "used_on": [
+        "journal/why-pta-membership-freedom-fails.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.tokai-tv.com/tokainews/feature/article_20230517_27576",
+      "redirects": []
+    },
+    {
+      "url": "https://www.town.hiji.lg.jp/material/files/group/18/r4-saikeigai.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.town.hiji.lg.jp/material/files/group/18/r4-saikeigai.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.town.kuroshio.lg.jp/reiki_int/reiki_honbun/r256RG00000904.html",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.town.kuroshio.lg.jp/reiki_int/reiki_honbun/r256RG00000904.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.town.okayama-misaki.lg.jp/kakuka/kyoikusomu/gyomu/3/3880.html",
+      "used_on": [
+        "journal/misaki-public-accounting-pta-fee.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.town.okayama-misaki.lg.jp/kakuka/kyoikusomu/gyomu/3/3880.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.town.okayama-misaki.lg.jp/kakuka/somu/gyomu/6/3/4065.html",
+      "used_on": [
+        "journal/misaki-public-accounting-pta-fee.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.town.okayama-misaki.lg.jp/kakuka/somu/gyomu/6/3/4065.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.town.okayama-misaki.lg.jp/material/files/group/5/jutennshienkeikaku.pdf",
+      "used_on": [
+        "journal/misaki-public-accounting-pta-fee.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.town.okayama-misaki.lg.jp/material/files/group/5/jutennshienkeikaku.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.town.okayama-misaki.lg.jp/section/reiki_int/reiki_honbun/r143RG00000428.html",
+      "used_on": [
+        "journal/misaki-public-accounting-pta-fee.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.town.okayama-misaki.lg.jp/section/reiki_int/reiki_honbun/r143RG00000428.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.town.okayama-misaki.lg.jp/section/reiki_int/reiki_honbun/r143RG00000434.html",
+      "used_on": [
+        "journal/misaki-public-accounting-pta-fee.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.town.okayama-misaki.lg.jp/section/reiki_int/reiki_honbun/r143RG00000434.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.town.okayama-misaki.lg.jp/section/reiki_int/reiki_honbun/r143RG00001615.html",
+      "used_on": [
+        "journal/misaki-public-accounting-pta-fee.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.town.okayama-misaki.lg.jp/section/reiki_int/reiki_honbun/r143RG00001615.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.town.okayama-misaki.lg.jp/section/reiki_int/reiki_honbun/r143RG00001641.html",
+      "used_on": [
+        "journal/misaki-public-accounting-pta-fee.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.town.okayama-misaki.lg.jp/section/reiki_int/reiki_honbun/r143RG00001641.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.town.okayama-misaki.lg.jp/section/reiki_int/reiki_honbun/r143RG00001642.html",
+      "used_on": [
+        "fee-collection.html",
+        "journal/misaki-public-accounting-pta-fee.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.town.okayama-misaki.lg.jp/section/reiki_int/reiki_honbun/r143RG00001642.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www.town.seika.kyoto.jp/material/files/group/3/juminkannsa20230518.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.town.seika.kyoto.jp/material/files/group/3/juminkannsa20230518.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.town.shiga-hino.lg.jp/cmsfiles/contents/0000004/4290/kaigiroku300625.pdf",
+      "used_on": [
+        "journal/pta-administrative-minutes.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.town.shiga-hino.lg.jp/cmsfiles/contents/0000004/4290/kaigiroku300625.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.town.ujitawara.kyoto.jp/material/files/group/14/shinsakijun_2026031909165493.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.town.ujitawara.kyoto.jp/material/files/group/14/shinsakijun_2026031909165493.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.tus.ac.jp/ks/wp-content/uploads/2019/01/%E7%B4%80%E8%A6%81_%E7%AC%AC2%E5%8F%B7.pdf",
+      "used_on": [
+        "cases.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.tus.ac.jp/ks/wp-content/uploads/2019/01/%E7%B4%80%E8%A6%81_%E7%AC%AC2%E5%8F%B7.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www.yakage.okayama-c.ed.jp/new2021/pdf/r8-choshu.pdf?query-omitted",
+      "used_on": [
+        "fee-collection.html"
+      ],
+      "occurrences": 1,
+      "kind": "network_unverified",
+      "status": 0,
+      "final": "https://www.yakage.okayama-c.ed.jp/new2021/pdf/r8-choshu.pdf?query-omitted",
+      "redirects": [],
+      "error": "AbortError"
+    },
+    {
+      "url": "https://www.youtube.com/@PTA%E9%81%A9%E6%AD%A3%E5%8C%96%E6%8E%A8%E9%80%B2%E5%A7%94%E5%93%A1%E4%BC%9A",
+      "used_on": [
+        "404.html",
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html",
+        "about.html",
+        "administrative-materials.html",
+        "board-brief.html",
+        "board-pta-chain.html",
+        "board-responses.html",
+        "case-reading.html"
+      ],
+      "occurrences": 108,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www.youtube.com/@PTA%E9%81%A9%E6%AD%A3%E5%8C%96%E6%8E%A8%E9%80%B2%E5%A7%94%E5%93%A1%E4%BC%9A",
+      "redirects": []
+    },
+    {
+      "url": "https://www1.g-reiki.net/city.fuchu.tokyo/reiki_honbun/g130RG00000224.html",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "restricted",
+      "status": 403,
+      "final": "https://www1.g-reiki.net/city.fuchu.tokyo/reiki_honbun/g130RG00000224.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www1.g-reiki.net/city.minato.tokyo/reiki_honbun/g104RG00000533.html",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "restricted",
+      "status": 403,
+      "final": "https://www1.g-reiki.net/city.minato.tokyo/reiki_honbun/g104RG00000533.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www1.g-reiki.net/city.mitaka/reiki_honbun/g128RG00000326.html",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "restricted",
+      "status": 403,
+      "final": "https://www1.g-reiki.net/city.mitaka/reiki_honbun/g128RG00000326.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www1.g-reiki.net/city.yasugi/reiki_honbun/r072RG00001955.html",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "restricted",
+      "status": 403,
+      "final": "https://www1.g-reiki.net/city.yasugi/reiki_honbun/r072RG00001955.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www1.g-reiki.net/fuefuki/reiki_honbun/r092RG00000219.html",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "restricted",
+      "status": 403,
+      "final": "https://www1.g-reiki.net/fuefuki/reiki_honbun/r092RG00000219.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www1.g-reiki.net/inagawa/reiki_honbun/k324RG00000815.html",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "restricted",
+      "status": 403,
+      "final": "https://www1.g-reiki.net/inagawa/reiki_honbun/k324RG00000815.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www1.g-reiki.net/town.mitane/reiki_honbun/r240RG00001014.html",
+      "used_on": [
+        "research-map.html"
+      ],
+      "occurrences": 1,
+      "kind": "restricted",
+      "status": 403,
+      "final": "https://www1.g-reiki.net/town.mitane/reiki_honbun/r240RG00001014.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www1.pref.shimane.lg.jp/education/kyoiku/iinkai/joho/iinkai_gidai/h20kaigiroku/h20_1424/kyougi1.html",
+      "used_on": [
+        "pta-school-processing.html",
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www1.pref.shimane.lg.jp/education/kyoiku/iinkai/joho/iinkai_gidai/h20kaigiroku/h20_1424/kyougi1.html",
+      "redirects": []
+    },
+    {
+      "url": "https://www13.gijiroku.com/kawasaki_council/g07v_search.asp?query-omitted",
+      "used_on": [
+        "administrative-materials.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www13.gijiroku.com/kawasaki_council/g07v_search.asp?query-omitted",
+      "redirects": []
+    },
+    {
+      "url": "https://www16.sapporo-c.ed.jp/makomanaikouen-e/attach/get2/4061/0",
+      "used_on": [
+        "fee-collection.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www16.sapporo-c.ed.jp/makomanaikouen-e/attach/get2/4061/0",
+      "redirects": []
+    },
+    {
+      "url": "https://www2.osaka-c.ed.jp/kitano/R08/R08_141.pdf",
+      "used_on": [
+        "fee-collection.html"
+      ],
+      "occurrences": 1,
+      "kind": "possible_404",
+      "status": 404,
+      "final": "https://www2.osaka-c.ed.jp/kitano/R08/R08_141.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www2.osaka-c.ed.jp/storage-proxy/cms-schools/105/documents/doc_1d26v9f6ayh96.pdf",
+      "used_on": [
+        "fee-collection.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www2.osaka-c.ed.jp/storage-proxy/cms-schools/105/documents/doc_1d26v9f6ayh96.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www2.osaka-c.ed.jp/storage-proxy/cms-schools/32/documents/doc_9yrashaa8hyp.pdf",
+      "used_on": [
+        "fee-collection.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www2.osaka-c.ed.jp/storage-proxy/cms-schools/32/documents/doc_9yrashaa8hyp.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www2.osaka-c.ed.jp/storage-proxy/cms-schools/71/documents/doc_1v5wz8u4qzxx4.pdf",
+      "used_on": [
+        "fee-collection.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www2.osaka-c.ed.jp/storage-proxy/cms-schools/71/documents/doc_1v5wz8u4qzxx4.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www3.e-reikinet.jp/mizumaki/d1w_reiki/420902200003000000MH/420902200003000000MH/420902200003000000MH.html",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://e-reikinet.jp/comparison-service/subscrecommendation/",
+      "redirects": [
+        {
+          "from": "https://www3.e-reikinet.jp/mizumaki/d1w_reiki/420902200003000000MH/420902200003000000MH/420902200003000000MH.html",
+          "to": "https://e-reikinet.jp/comparison-service/subscrecommendation/",
+          "status": 301
+        }
+      ]
+    },
+    {
+      "url": "https://www3.osaka-c.ed.jp/storage-proxy/cms-schools/219/documents/doc_lplpccfkugjl.pdf",
+      "used_on": [
+        "fee-collection.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www3.osaka-c.ed.jp/storage-proxy/cms-schools/219/documents/doc_lplpccfkugjl.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www3.osaka-c.ed.jp/storage-proxy/cms-schools/224/documents/doc_a04w0qi7xmp9.pdf",
+      "used_on": [
+        "fee-collection.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www3.osaka-c.ed.jp/storage-proxy/cms-schools/224/documents/doc_a04w0qi7xmp9.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www8.cao.go.jp/kisei-kaikaku/old/minutes/wg/2005/0622/item050622-04_02.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www8.cao.go.jp/kisei-kaikaku/old/minutes/wg/2005/0622/item050622-04_02.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://www8.cao.go.jp/pfi/hourei/kankei_hourei/pdf/h28seirei_gaiyou.pdf",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html",
+        "journal/matsuyama-pta-fee-unification-20261013.html"
+      ],
+      "occurrences": 2,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://www8.cao.go.jp/pfi/hourei/kankei_hourei/pdf/h28seirei_gaiyou.pdf",
+      "redirects": []
+    },
+    {
+      "url": "https://x.com/jjjqqqxxx0852",
+      "used_on": [
+        "404.html",
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html",
+        "about.html",
+        "administrative-materials.html",
+        "board-brief.html",
+        "board-pta-chain.html",
+        "board-responses.html",
+        "case-reading.html"
+      ],
+      "occurrences": 108,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://x.com/jjjqqqxxx0852",
+      "redirects": []
+    },
+    {
+      "url": "https://yokomusubi.city.yokohama.lg.jp/organizations/detail/f69c7ad2-cf21-4dfa-87bb-9c891874eb6b/",
+      "used_on": [
+        "404.html",
+        "PTA運営適正化ガイドブック_第4版_改訂本文.html",
+        "about.html",
+        "administrative-materials.html",
+        "board-brief.html",
+        "board-pta-chain.html",
+        "board-responses.html",
+        "case-reading.html"
+      ],
+      "occurrences": 108,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://yokomusubi.city.yokohama.lg.jp/organizations/detail/f69c7ad2-cf21-4dfa-87bb-9c891874eb6b/",
+      "redirects": []
+    },
+    {
+      "url": "https://yuyama-j.esnet.ed.jp/file/3156",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://yuyama-j.esnet.ed.jp/file/3156",
+      "redirects": []
+    },
+    {
+      "url": "https://zen-p.net/sus/visit.html",
+      "used_on": [
+        "journal/setagaya-pta-information-separation.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://zen-p.net/sus/visit.html",
+      "redirects": []
+    },
+    {
+      "url": "https://zen-p.net/tp/p301.html",
+      "used_on": [
+        "journal/kawasaki-pta-fee-school-duty.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://zen-p.net/tp/p301.html",
+      "redirects": []
+    },
+    {
+      "url": "https://zen-p.net/tp/p421.html",
+      "used_on": [
+        "cases.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://zen-p.net/tp/p421.html",
+      "redirects": []
+    },
+    {
+      "url": "https://zen-p.net/tp/p434.html",
+      "used_on": [
+        "about.html",
+        "board-brief.html",
+        "ppc-points.html",
+        "journal/kawasaki-pta-fee-school-duty.html"
+      ],
+      "occurrences": 4,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://zen-p.net/tp/p434.html",
+      "redirects": []
+    },
+    {
+      "url": "https://zen-p.net/tp/p5/p541.html",
+      "used_on": [
+        "board-brief.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://zen-p.net/tp/p5/p541.html",
+      "redirects": []
+    },
+    {
+      "url": "https://zen-p.net/ts/s521.html",
+      "used_on": [
+        "journal/matsuyama-pta-fee-sorting-account-report-20261111.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://zen-p.net/ts/s521.html",
+      "redirects": []
+    },
+    {
+      "url": "https://zenjiken.jp/~jimudata/tyousabu/200805soukaisiryou.pdf",
+      "used_on": [
+        "journal/pta-fee-delegation-origin-local-government-law-20261016.html"
+      ],
+      "occurrences": 1,
+      "kind": "ok",
+      "status": 200,
+      "final": "https://zenjiken.jp/~jimudata/tyousabu/200805soukaisiryou.pdf",
+      "redirects": []
+    }
+  ]
+}
