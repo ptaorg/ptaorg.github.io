@@ -99,16 +99,12 @@
       <form class="search-panel search-panel-compact" id="explore-form" role="search">
         <div class="search-panel-body">
           <div class="search-field"><label class="sr-only" for="query">キーワード</label><svg aria-hidden="true"><use href="#i-search"/></svg><input type="search" id="query" placeholder="学校名・自治体名・論点（例：安行小学校、川口市、みなし加入）" autocomplete="off"><button type="submit">検索</button></div>
-          <div class="search-filters">
-            <label>対象地域<select id="prefecture"><option value="">全国</option></select></label>
-            <label>論点<select id="topic" data-topic-select><option value="">すべて</option></select></label>
-            <label>学校種別<select id="school-type"><option value="">すべて</option><option value="小学校">小学校</option><option value="中学校">中学校</option><option value="義務教育学校">義務教育学校</option><option value="特別支援学校">特別支援学校</option><option value="高等学校">高等学校</option></select></label>
-          </div>
+          
         </div>
         <div class="search-panel-side"><button class="link-button" id="clear-filters" type="button">条件を解除</button><button class="link-button" id="copy-url" type="button">検索条件をコピー</button></div>
       </form>
 
-      <div class="tabs" role="tablist" aria-label="資料の種類">
+      <div class="tabs archive-type-tabs" role="tablist" aria-label="資料の種類">
         <button type="button" role="tab" class="tab is-active" data-tab="all" aria-selected="true">すべて<span id="count-all">—</span></button>
         <button type="button" role="tab" class="tab" data-tab="municipality" aria-selected="false">自治体の調査<span id="count-municipality">—</span></button>
         <button type="button" role="tab" class="tab" data-tab="school" aria-selected="false">学校の資料<span id="count-school">—</span></button>
@@ -117,6 +113,11 @@
       </div>
 
       <div class="explore-grid">
+<aside class="archive-filter-rail" aria-label="検索条件の絞り込み"><h2>絞り込み</h2><p>地域・論点・学校種別</p><div class="search-filters">
+            <label>対象地域<select id="prefecture"><option value="">全国</option></select></label>
+            <label>論点<select id="topic" data-topic-select><option value="">すべて</option></select></label>
+            <label>学校種別<select id="school-type"><option value="">すべて</option><option value="小学校">小学校</option><option value="中学校">中学校</option><option value="義務教育学校">義務教育学校</option><option value="特別支援学校">特別支援学校</option><option value="高等学校">高等学校</option></select></label>
+          </div></aside>
       <section class="results-section" aria-labelledby="result-title">
         <div class="results-head"><h2 id="result-title">検索結果</h2><span class="result-count" id="result-count" aria-live="polite">読み込み中</span></div>
         <div id="results" class="result-list" aria-live="polite"></div>

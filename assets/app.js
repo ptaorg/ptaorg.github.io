@@ -292,14 +292,15 @@
         <p class="page-lead">${lead}</p>
       </div>
     </section>
-    <div class="container">
+    <div class="container municipality-overview-header">
+      <div class="stat-tiles">${stat('doc','行政の回答',resp.length,'#responses')}${stat('folder','学校の資料',schools.length,'#schools')}${stat('scale','原資料',primary.length,'#responses')}${stat('book','論考・分析',writings.length,'#analysis')}</div>
       <nav class="page-tabs" aria-label="このページの構成"><a href="#overview" class="is-active">概要</a><a href="#responses">行政回答・原資料</a><a href="#schools">学校別資料</a><a href="#analysis">関連する法的分析</a></nav>
       <div class="detail-layout">
         <div class="detail-main">
           <section class="detail-section" id="overview"><h2>${icon('list')}調査の概要</h2>
             ${(m.summary||[]).map(t=>`<p>${esc(t)}</p>`).join('')||'<p>この地域は学校別資料の索引のみを登録しています。教育委員会の回答や研究ノートが登録された時点で、ここに概要を掲載します。</p>'}
             <div class="municipality-overview"><section><h3>行政回答の登録状況</h3><p>${resp.length?`公開索引に${resp.length}件を登録しています。`:'現在の索引に公開済み回答の登録はありません。未回答を意味するものではありません。'} <a href="#responses">回答・原資料を確認する</a></p></section><section><h3>未確認事項</h3>${(m.unknowns||[]).length?`<ul>${m.unknowns.map(u=>`<li>${esc(u)}</li>`).join('')}</ul>`:'<p>この索引には未確認事項の記載がありません。</p>'}</section></div>
-            <div class="stat-tiles">${stat('doc','行政の回答',resp.length,'#responses')}${stat('folder','学校の資料',schools.length,'#schools')}${stat('scale','原資料',primary.length,'#responses')}${stat('book','論考・分析',writings.length,'#analysis')}</div>
+            
             ${(m.themes||[]).length?`<div class="theme-row"><span>主な論点</span>${m.themes.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div>`:''}
             ${(m.system||[]).length?`<h3>制度の整理</h3>${m.system.map(t=>`<p>${esc(t)}</p>`).join('')}`:''}
             ${(m.timeline||[]).length?`<h3>経過</h3><ol class="timeline">${m.timeline.map(t=>`<li><time>${esc(fmtDate(t.date))}</time><div><strong>${esc(t.title)}</strong><p>${esc(t.text||'')}</p></div></li>`).join('')}</ol>`:''}
