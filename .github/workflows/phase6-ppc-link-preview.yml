@@ -20,3 +20,11 @@ jobs:
           npm test
           node tools/phase6-ppc-link-verify.mjs
           git diff --check
+      - name: Check source hyperlink at desktop and smartphone widths
+        run: node tools/phase6ppc-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase6-ppc-link-screenshots
+          path: phase6ppc-screenshots/*.png
+          if-no-files-found: ignore
