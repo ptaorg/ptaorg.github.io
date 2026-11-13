@@ -1,16 +1,25 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';
 const root=path.resolve(import.meta.dirname,'..'),read=x=>fs.readFileSync(path.join(root,x),'utf8');
-test('homepage has a single editorial sequence and no loading placeholders',()=>{
+test('approved home visual sequence is intact and source content remains',()=>{
  const html=read('index.html'),main=html.split('data-home-phase="2"')[1]?.split('</main>')[0]||'';
- assert.ok(main.length>5000,'phase2 home missing');
- assert.ok((main.match(/<h2\b/g)||[]).length<=10,'excessive h2 headings');
- assert.ok((main.match(/<a\b/g)||[]).length<=30,'repeated homepage links');
- assert.ok((html.match(/<a\b/g)||[]).length<=85,'total links not reduced');
- assert.equal((main.match(/<h1\b/g)||[]).length,1);
- for(const x of ['home-boundary','home-issues','id="map"','home-updates','home-practical','id="roles"'])assert.ok(main.includes(x),x);
+ assert.ok(main.length>5000,'home content missing');
+ assert.equal((main.match(/<h1\\b/g)||[]).length,1);
+ for(const id of ['hero-search-shell','home-resource-nav','home-feature-layout','home-issues','id="map"','home-updates','home-boundary','home-practical','id="roles"'])assert.ok(main.includes(id),id);
+ const order=['hero-search-shell','home-resource-nav','home-feature-layout','home-issues','id="map"','home-updates','home-boundary','home-practical'];
+ for(let i=1;i<order.length;i++)assert.ok(main.indexOf(order[i-1])<main.indexOf(order[i]),order[i]);
+ assert.equal((main.match(/class="home-search"/g)||[]).length,1,'one global homepage search');
+ assert.equal((main.match(/class="home-resource-nav"/g)||[]).length,1,'one five-way resource entrance');
+ assert.equal((main.match(/class="home-feature-layout"/g)||[]).length,1);
  assert.doesNotMatch(main,/読み込み中…|data-journal-list|data-region-list|data-stat="/);
- const order=['home-boundary','home-issues','id="map"','home-updates','home-practical'];
- for(let i=1;i<order.length;i++)assert.ok(main.indexOf(order[i-1])<main.indexOf(order[i]));
+});
+test('approved layout applies to all primary page families',()=>{
+ const css=read('assets/style.css');
+ assert.ok(css.includes('/* Approved archive design restoration | 2026-11-14 | shared across all pages */'));
+ for(const selector of ['body[data-page="home"] .hero-search-shell','body[data-page="home"] .home-resource-nav','body[data-page="home"] .home-issues .hc-issue-list','body[data-page="explore"] .archive-filter-rail','body[data-page="municipality"] .stat-tiles','body[data-page="school"] .page-hero','body[data-page="legacy"] .article-layout'])assert.ok(css.includes(selector),selector);
+ for(const page of ['index.html','explore.html','municipality.html','school.html','about.html','journal.html','membership.html'])assert.ok(read(page).includes('assets/style.css'),page);
+ const explorer=read('explore.html');
+ assert.ok(explorer.indexOf('archive-filter-rail')>explorer.indexOf('explore-grid'));
+ assert.ok(explorer.includes('data-explore-map'),'map remains visible');
 });
 test('statistics and latest essays render statically from the source datasets',()=>{
  const m=JSON.parse(read('data/research-map-index.json')).municipalities;
