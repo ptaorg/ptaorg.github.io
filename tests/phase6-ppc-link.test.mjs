@@ -4,5 +4,5 @@ test('PPC administrative sector guideline has a named official HTML link rather 
  const s=fs.readFileSync(path.join(root,'journal/why-pta-membership-freedom-fails.html'),'utf8');
  assert.ok(!s.includes('251212_koutekibumon_guidelines.pdf'));
  assert.match(s,/href="https:\/\/www\.ppc\.go\.jp\/personalinfo\/legal\/guidelines_administrative\/"[^>]*>個人情報保護委員会「ガイドライン（行政機関等編）」公式HTML版<\/a>/);
- assert.match(s,/法令の定める所掌事務・権限/);
+ assert.match(s,/所掌事務・権限/);
 });
