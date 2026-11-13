@@ -1,0 +1,47 @@
+name: Phase 6B official sources and HTTP link audit (temporary)
+on:
+  push:
+    branches: [research/phase6b-source-and-link-audit-20261113]
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate unambiguous new official source footnotes
+        run: node scripts/phase6b-add-sources.cjs
+      - name: Check original content and source references
+        run: |
+          npm test
+          node scripts/phase6b-add-sources.cjs --check
+          node scripts/phase6-link-sources.cjs --check
+          node tools/phase6b-verify.mjs
+          git diff --check
+      - name: Check desktop and mobile source navigation
+        run: node tools/phase6b-browser.mjs
+      - name: HTTP audit, without automatically rewriting external sources
+        run: node tools/phase6b-audit-external.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase6b-link-audit-and-screenshots
+          path: |
+            reports/phase6b-external-link-status-20261113.*
+            phase6b-screenshots/*.png
+          if-no-files-found: ignore
+      - name: Commit verified articles and link audit reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reality.html guide-parent.html ppc-points.html ppc-school-pta-personal-data.html education-board-responsibility.html journal/school-pta-fee-public-duty-mic-mext-ppc-20261016.html reports/phase6b-external-link-status-20261113.md reports/phase6b-external-link-status-20261113.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Cite confirmed named-law references and record external link status"
+            git push origin HEAD:research/phase6b-source-and-link-audit-20261113
+          fi
