@@ -116,3 +116,70 @@ body.support-donation-body{background:#f5f7fa;}
 
 /* With three expanded payment methods, do not pin a taller-than-viewport sidebar. */
 #main.support-redesign .support-donate-side{position:static;}
+
+/* Payment styling and copy fields: 2026-11-14 adjustment */
+/* Consistent PayPay red; existing PayPay transfer destinations are unchanged. */
+#main.support-redesign .support-payment-card.support-paypay{
+  border-top-color:#dc1935;
+  background:linear-gradient(155deg,#fff1f3,#fff 62%);
+}
+#main.support-redesign .support-payment-card.support-paypay .payment-no{background:#d51934;color:#fff;}
+#main.support-redesign .support-payment-card.support-paypay a.support-paypay-primary{
+  background:#d51934;border:1px solid #b80f2a;color:#fff;
+  box-shadow:0 2px 4px rgba(128,0,24,.12);
+  padding:10px 12px;
+  line-height:1.4;
+}
+#main.support-redesign .support-payment-card.support-paypay a.support-paypay-primary:hover{
+  background:#b8112b;color:#fff;
+}
+#main.support-redesign .support-payment-card.support-paypay a.support-paypay-primary:focus-visible{
+  outline:3px solid #193d5e;outline-offset:3px;
+}
+/* Restore contrast and equal-sized, readable action buttons at the bottom of the article. */
+#main.support-redesign .support-letter-cta{
+  display:flex;align-items:stretch;flex-wrap:wrap;gap:10px;
+}
+#main.support-redesign .support-letter-cta a{
+  display:inline-flex;align-items:center;justify-content:center;
+  flex:1 1 165px;box-sizing:border-box;
+  min-height:48px;padding:10px 12px;
+  border-radius:7px;border:1px solid transparent;
+  font-size:14px;line-height:1.5;font-weight:800;
+  text-align:center;text-decoration:none;
+}
+#main.support-redesign .support-letter-cta a.support-letter-cotra{
+  background:#18845b;border-color:#127048;color:#fff;
+}
+#main.support-redesign .support-letter-cta a.support-letter-cotra:hover{
+  background:#126c49;color:#fff;
+}
+#main.support-redesign .support-letter-cta a.paypay-letter{
+  background:#d51934;border-color:#b80f2a;color:#fff;
+}
+#main.support-redesign .support-letter-cta a.paypay-letter:hover{
+  background:#b8112b;color:#fff;
+}
+#main.support-redesign .support-letter-cta a[href="#bank-transfer"]{
+  color:#185780;background:#f1f7fc;border-color:#a6c3d9;
+}
+#main.support-redesign .support-letter-cta a[href="#bank-transfer"]:hover{
+  color:#123e5a;background:#e3f1fb;border-color:#6e9ab9;
+}
+#main.support-redesign .support-letter-cta a:focus-visible{
+  outline:3px solid #193d5e;outline-offset:3px;
+}
+/* Each field is copied on its own; account name remains visible without a copy action. */
+#main.support-redesign .support-bank-list .support-copy-row dt{
+  font-size:12px;
+}
+#main.support-redesign .support-bank-list .support-copy-row:last-child{
+  background:#f8fafc;
+}
+#main.support-redesign .support-bank-list .support-account-holder{
+  color:#526679;font-size:13px;font-weight:650;
+}
+@media(max-width:760px){
+  #main.support-redesign .support-letter-cta{flex-direction:column;}
+  #main.support-redesign .support-letter-cta a{flex:0 0 auto;width:100%;}
+}
