@@ -21,7 +21,7 @@ test('25 schools and all requested document categories are tracked separately fr
 test('page accurately limits evidence to non-submission, not universal absence',()=>{
  assert.match(page,/開示資料中に確認できない/);
  assert.match(page,/行政が保有不存在を決定/);
- assert.match(page,/現時点で正式な不存在決定は確認できていません/);
+ assert.match(page,/現在、本件資料から正式な不存在決定は確認できていません/);
  assert.match(page,/独立した文書名/);
  assert.match(page,/2026年11月15日/);
  assert.match(page,/古川第二小学校/);
