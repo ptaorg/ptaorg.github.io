@@ -97,6 +97,14 @@ try{
         assert.ok(audit.rows>=12,'missing axis rows: '+rel);
         console.log(JSON.stringify({viewport:width,page:rel,sections:audit.headings,tableRows:audit.rows,horizontalDocumentOverflowPx:audit.overflow,tableHasOwnScroll:audit.tableOverflow}));
       }
+      // Navigation is exercised through real clicks, not only direct page.goto.
+      await page.goto(pathToFileURL(path.join(dir,'index.html')).href,{waitUntil:'load'});
+      await page.locator('a[href="schools/tajiri-jhs.html"]').click();
+      assert.match(page.url(),/schools\/tajiri-jhs\.html$/);
+      assert.match(await page.locator('h1').innerText(),/田尻中学校/);
+      await page.locator('a[href="../index.html"]').click();
+      assert.match(page.url(),/\/index\.html$/);
+      assert.match(await page.locator('h1').innerText(),/大崎市/);
       await page.close();
     }
   }finally{await browser.close();}
