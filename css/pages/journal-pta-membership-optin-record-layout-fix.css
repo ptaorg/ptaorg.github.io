@@ -75,3 +75,53 @@
     padding: 16px !important;
   }
 }
+
+/* 2026-11-14: widen actual article prose and balance the six-step membership diagram. */
+/* Earlier site-wide phase-4 CSS caps paragraphs at 40em (and prose.css at 78ch).
+   Both caps leave half of this 2-column article empty on desktop. */
+#main .article-main .legacy.optin-reason-article .journal-article-body :is(p,li,dd,blockquote) {
+  max-width: 100% !important;
+}
+#main .article-main .legacy.optin-reason-article .journal-article-body article {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0;
+}
+/* The six-step evidence chain was a 560px-wide vertical strip even though the
+   article column is more than twice as wide. Keep the original text and order. */
+#main .article-main .legacy.optin-reason-article .membership-chain {
+  display: grid !important;
+  box-sizing: border-box;
+  width: 100% !important;
+  max-width: none !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  padding: 0 !important;
+  margin: 30px 0 34px !important;
+  border: 0 !important;
+}
+#main .article-main .legacy.optin-reason-article .membership-chain > li {
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 88px;
+  margin: 0 !important;
+  padding: 16px !important;
+  display: grid !important;
+  grid-template-columns: 40px minmax(0, 1fr) !important;
+  gap: 12px !important;
+  align-items: center;
+}
+#main .article-main .legacy.optin-reason-article .membership-chain > li::after {
+  display: none !important;
+  content: none !important;
+}
+@media (max-width: 1100px) {
+  #main .article-main .legacy.optin-reason-article .membership-chain {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 680px) {
+  #main .article-main .legacy.optin-reason-article .membership-chain {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
