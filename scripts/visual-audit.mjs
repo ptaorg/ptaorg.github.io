@@ -136,6 +136,22 @@ for (const viewport of viewports) {
         };
       });
       Object.assign(record, metrics);
+      if (viewport.name === 'mobile' && item.pathname === '/guide-board.html') {
+        record.guideBoardLayout = await page.evaluate(() => {
+          const selectors = ['#board-executive-brief', '.gbv-wrap', '.gbv-head',
+            '.gbv-head > div', '.gbv-principle', '.legacy-main', '.article-main'];
+          return selectors.map((selector) => {
+            const el = document.querySelector(selector);
+            if (!el) return { selector, found: false };
+            const rect = el.getBoundingClientRect();
+            const style = getComputedStyle(el);
+            return { selector, x:rect.x, width:rect.width, right:rect.right,
+              scrollWidth:el.scrollWidth, clientWidth:el.clientWidth,
+              display:style.display, minWidth:style.minWidth, widthStyle:style.width,
+              gridTemplateColumns:style.gridTemplateColumns, overflowX:style.overflowX };
+          });
+        });
+      }
       // The unified contact page must show consultation before the support panel on mobile.
       if (viewport.name === 'mobile' && item.pathname === '/contact.html') {
         const order = await page.evaluate(() => {
