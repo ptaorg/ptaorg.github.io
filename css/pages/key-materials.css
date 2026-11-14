@@ -312,22 +312,22 @@
 /* Important reference documents: keep each source record within the reader's
    mobile content column. The five primary sources and their links stay intact. */
 @media screen and (max-width:760px) {
-  #main .legacy-body.km-page .km-wrap,
-  #main .legacy-body.km-page .km-list,
-  #main .legacy-body.km-page .km-source,
-  #main .legacy-body.km-page .km-source-body {
+  .legacy-body.km-page .km-wrap,
+  .legacy-body.km-page .km-list,
+  .legacy-body.km-page .km-source,
+  .legacy-body.km-page .km-source-body {
     box-sizing:border-box;
     width:100%;
     min-width:0;
     max-width:100%;
   }
-  #main .legacy-body.km-page .km-source {
-    grid-template-columns:minmax(0,1fr);
+  .legacy-body.km-page .km-source {
+    grid-template-columns:minmax(0,1fr)!important;
   }
-  #main .legacy-body.km-page .km-source-body {
+  .legacy-body.km-page .km-source-body {
     overflow-wrap:anywhere;
   }
-  #main .legacy-body.km-page .km-source-body > * {
+  .legacy-body.km-page .km-source-body > * {
     max-width:100%;
     min-width:0;
   }
