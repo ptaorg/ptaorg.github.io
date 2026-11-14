@@ -8,8 +8,8 @@ test('approved home visual sequence is intact and source content remains',()=>{
  const order=['hero-search-shell','home-resource-nav','home-feature-layout','home-issues','id="map"','home-updates','home-boundary','home-practical'];
  for(let i=1;i<order.length;i++)assert.ok(main.indexOf(order[i-1])<main.indexOf(order[i]),order[i]);
  assert.equal((main.match(/class="home-search"/g)||[]).length,1,'one global homepage search');
- assert.equal((main.match(/class="home-resource-nav"/g)||[]).length,1,'one five-way resource entrance');
- assert.equal((main.match(/class="home-feature-layout"/g)||[]).length,1);
+ assert.equal((main.match(/class="[^"]*\bhome-resource-nav\b[^"]*"/g)||[]).length,1,'one five-way resource entrance');
+ assert.equal((main.match(/class="[^"]*\bhome-feature-layout\b[^"]*"/g)||[]).length,1);
  assert.doesNotMatch(main,/読み込み中…|data-journal-list|data-region-list|data-stat="/);
 });
 test('approved layout applies to all primary page families',()=>{

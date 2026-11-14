@@ -18,12 +18,12 @@ test('unified contact layout keeps information provision first and payment along
   assert.match(main,/class="support-letter"/);
   assert.match(main,/<aside class="support-donate-side"/);
   assert.ok(main.indexOf('class="unified-contact-card"')<main.indexOf('class="support-donate-side"'));
-  assert.match(layout,/grid-template-columns:minmax\\(0,1fr\\) minmax\\(330px,380px\\)/);
-  assert.match(layout,/@media\\(max-width:760px\\)/);
-  assert.match(layout,/\\.unified-grid \\{ display:flex; flex-direction:column/);
+  assert.match(layout,/grid-template-columns:minmax\(0,1fr\) minmax\(330px,380px\)/);
+  assert.match(layout,/@media\(max-width:760px\)/);
+  assert.match(layout,/\.unified-grid \{ display:flex; flex-direction:column/);
   assert.ok(page.includes('css/pages/support-donation.css?v=20261114-payments2'));
   assert.ok(page.includes('css/pages/contact-unified.css?v=20261114'));
-  assert.equal((page.match(/<h1\\b/g)||[]).length,1);
+  assert.equal((page.match(/<h1\b/g)||[]).length,1);
 });
 
 test('unified page preserves payment destinations, reference material and free consultation',()=>{
@@ -36,9 +36,9 @@ test('unified page preserves payment destinations, reference material and free c
   }
   assert.ok(main.includes('名義：サトウ ダイ'));
   assert.ok(main.includes('info@ptaorg.com'));
-  assert.match(main,/情報提供やご相談に寄付は必要ありません/);
+  assert.match(main,/相談や資料の提供に寄付は必要ありません/);
   assert.ok((page.match(/data-copy-value="/g)||[]).length>=9);
-  assert.match(legacy,/window\\.location\\.replace/);
+  assert.match(legacy,/window\.location\.replace/);
 });
 
 test('new contact page loads its own layout without incompatible prose styles',()=>{
@@ -50,5 +50,5 @@ test('new contact page loads its own layout without incompatible prose styles',(
     assert.ok(!links.some(x=>x.startsWith(bad)),bad);
   }
   assert.ok(css.includes('.support-donate-side{position:sticky;'));
-  assert.match(layout,/#main\\.unified-page \\.support-donate-side/);
+  assert.match(layout,/#main\.unified-page \.support-donate-side/);
 });

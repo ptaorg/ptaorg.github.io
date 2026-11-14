@@ -1697,7 +1697,7 @@
 
 .legacy.membership-editorial .editorial-main.prose-page > .lead {
   max-width: 100%;
-  margin: 0 0 38px;
+  margin: 0 0 40px;
   color: var(--navy-deep);
   font-size: clamp(var(--fs-body), 1.35vw, var(--fs-h3));
   line-height: 2;
