@@ -1,0 +1,137 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {validateReport} from '../ai-system/report-standards/scripts/validate-dataset.mjs';
+
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const file=p=>fs.readFileSync(path.join(root,p),'utf8');
+const raw=file('ai-system/report-standards/fixtures/fictional-city.json');
+const fresh=()=>JSON.parse(raw);
+const axis=key=>fresh().schools[0].axes[key];
+const codes=result=>new Set(result.errors.map(e=>e.code));
+const getMetric=(result,id)=>result.metrics.axes.find(a=>a.id===id);
+
+test('fixed 12 axes, their order, and the single source of truth are present',()=>{
+  const axes=JSON.parse(file('ai-system/report-standards/evaluation-axes.json'));
+  assert.equal(axes.version,'1.0.0');
+  assert.equal(axes.axes.length,12);
+  assert.equal(new Set(axes.axes.map(a=>a.id)).size,12);
+  assert.equal(axes.axes[0].id,'voluntary_membership_notice');
+  assert.equal(axes.axes[6].id,'school_personal_data_for_pta');
+  assert.equal(axes.axes[11].id,'school_pta_governance_overlap');
+  assert.match(file('ai-system/skills/municipal-school-report.md'),/個人情報保護法第61条/);
+  assert.match(file('.agents/skills/pta-municipal-school-report/SKILL.md'),/ai-system\/skills\/municipal-school-report\.md/);
+});
+
+test('fictional draft is structurally valid, but cannot be published',()=>{
+  assert.equal(validateReport(fresh()).ok,true);
+  const published=validateReport(fresh(),{publish:true});
+  assert.equal(published.ok,false);
+  assert.ok(codes(published).has('PUBLICATION_GATE'));
+  assert.ok(codes(published).has('FICTIONAL_EXAMPLE'));
+});
+
+test('unknown sources never become confirmed no or an invented 0% observed prevalence',()=>{
+  const result=validateReport(fresh());
+  const unknown=getMetric(result,'voluntary_membership_notice');
+  assert.equal(unknown.unknown,2);
+  assert.equal(unknown.confirmedKnownDenominator,0);
+  assert.equal(unknown.confirmedYesOfKnownPct,null);
+  assert.equal(unknown.confirmedCoveragePct,0);
+  const optin=getMetric(result,'explicit_opt_in');
+  assert.equal(optin.confirmed_yes,1);
+  assert.equal(optin.unknown,1);
+  assert.equal(optin.confirmedYesOfTargetPct,50);
+  assert.equal(optin.confirmedYesOfKnownPct,100);
+  assert.equal(optin.confirmedCoveragePct,50);
+});
+
+test('an explicit negative is different from no documents',()=>{
+  const positive=getMetric(validateReport(fresh()),'school_collection_of_pta_fee');
+  assert.equal(positive.confirmed_no,1);
+  assert.equal(positive.unknown,1);
+  assert.equal(positive.confirmedYesOfKnownPct,0);
+  const d=fresh();
+  d.schools[1].axes.school_collection_of_pta_fee.explicitNegative=false;
+  assert.ok(codes(validateReport(d)).has('NEGATIVE_NOT_EXPLICIT'));
+});
+
+test('a claim of confirmed yes requires contemporaneous directly-inspected primary evidence',()=>{
+  const d=fresh();
+  d.sources.find(s=>s.id==='demo-optin').verification='metadata_only';
+  assert.ok(codes(validateReport(d)).has('NO_PRIMARY_CONFIRMATION'));
+  d.sources.find(s=>s.id==='demo-optin').verification='direct_checked';
+  d.sources.find(s=>s.id==='demo-optin').targetYear='2025';
+  assert.ok(codes(validateReport(d)).has('SOURCE_YEAR_MISMATCH'));
+});
+
+test('all target schools and 12 axes must be represented without silent omission',()=>{
+  const d=fresh();
+  delete d.schools[0].axes.withdrawal_procedure;
+  assert.ok(codes(validateReport(d)).has('MISSING_AXIS'));
+  d.schools.pop();
+  assert.ok(codes(validateReport(d)).has('CENSUS_MISSING'));
+});
+
+test('source citations must resolve and contain exact locators',()=>{
+  const d=fresh();
+  d.schools[0].axes.explicit_opt_in.sourceRefs[0].sourceId='nonexistent';
+  assert.ok(codes(validateReport(d)).has('UNKNOWN_SOURCE'));
+  d.schools[0].axes.explicit_opt_in.sourceRefs[0].sourceId='demo-optin';
+  d.schools[0].axes.explicit_opt_in.sourceRefs[0].locator='';
+  assert.ok(codes(validateReport(d)).has('REFERENCE_LOCATOR'));
+});
+
+test('legal assessment cannot exist without a five-stage review record',()=>{
+  const d=fresh();
+  d.narrativeClaims.push({id:'legal-claim-1',kind:'legal_assessment',text:'仮の評価。',schoolId:'demo-school-1',sourceRefs:[]});
+  assert.ok(codes(validateReport(d)).has('LEGAL_REVIEW_MISSING'));
+  d.legalReviews.push({claimId:'legal-claim-1',subjectSeparation:'公的主体と私的団体を分離',taskOwnership:'PTAの会費事務',publicAuthority:'未確認',privacyAnalysis:'所掌検証後に確認',applicationAndConclusion:'断定しない',counterInterpretation:'例外的根拠は未確認',seniorReviewed:false});
+  assert.equal(validateReport(d).ok,true);
+});
+
+test('schema requires the same 12 axes and review gates',()=>{
+  const schema=JSON.parse(file('ai-system/report-standards/report-dataset.schema.json'));
+  const axes=JSON.parse(file('ai-system/report-standards/evaluation-axes.json'));
+  const defs=schema.properties.schools.items.properties.axes;
+  assert.deepEqual(defs.required,axes.axes.map(x=>x.id));
+  assert.equal(defs.additionalProperties,false);
+  assert.equal(schema.properties.publication.additionalProperties,false);
+  assert.ok(schema.properties.schoolData===undefined);
+});
+
+import {buildDraft} from '../ai-system/report-standards/scripts/render-draft.mjs';
+test('standardized report skeletons are deterministic and include 12 metrics and school-level sources',()=>{
+  const first=buildDraft(fresh()),second=buildDraft(fresh());
+  assert.deepEqual(first,second);
+  assert.equal(Object.keys(first).length,6); // city, metrics, sources, map, two schools
+  const md=first['municipality-report.md'];
+  assert.match(md,/自治体全体の特色/);
+  assert.match(md,/学校別評価書/);
+  assert.match(md,/50\.0%/);
+  assert.match(md,/算定不能/);
+  assert.match(md,/判定可能校YES率/);
+  assert.match(first['schools/demo-school-1.md'],/主体の分離/);
+  assert.match(first['schools/demo-school-2.md'],/一次資料で明示的に記載なし/);
+  const map=JSON.parse(first['map-record.json']);
+  assert.equal(map.publicationStatus,'draft');
+  assert.equal(map.coordinates,null);
+  assert.equal(map.reportUrl,null);
+});
+
+
+test('publishing requires named, dated independent review and a sourced legal conclusion',()=>{
+  const d=fresh();
+  d.publication.status='approved';
+  for(const k of ['sourceChecked','linksChecked','citationsChecked','redactionsChecked','legalReviewCompleted','seniorApproved','humanApproved'])d.publication[k]=true;
+  for(const s of d.sources)s.publicationLinkChecked=true;
+  const result=validateReport(d,{publish:true});
+  assert.ok(codes(result).has('REVIEW_SIGNATURE'));
+  assert.ok(codes(result).has('MISSING_REPORT_ASSESSMENT'));
+  d.publication.reviewRecord={seniorReviewer:'reviewer-role',seniorReviewedAt:'2026-11-14',humanApprover:'approver-role',humanApprovedAt:'2026-11-14'};
+  const r2=validateReport(d,{publish:true});
+  assert.equal(codes(r2).has('REVIEW_SIGNATURE'),false);
+  assert.equal(codes(r2).has('MISSING_REPORT_ASSESSMENT'),true);
+});

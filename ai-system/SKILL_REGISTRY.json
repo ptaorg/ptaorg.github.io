@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "defaultSkills": [
     "fact-check"
   ],
@@ -67,6 +67,22 @@
         "学校",
         "市教委",
         "県教委"
+      ]
+    },
+    {
+      "id": "municipal-school-report",
+      "path": "skills/municipal-school-report.md",
+      "keywords": [
+        "自治体別総合報告書",
+        "学校別評価書",
+        "学校別PTA調査",
+        "全国資料の評価",
+        "PTA評価書",
+        "学校別評価",
+        "自治体比較",
+        "評価割合",
+        "地図に掲載",
+        "municipal report"
       ]
     },
     {
