@@ -79,7 +79,7 @@
       "verification": "direct_checked",
       "verifiedAt": "2026-11-15",
       "publicationLinkChecked": false,
-      "containsPersonalData": false,
+      "containsPersonalData": true,
       "redactionChecked": false
     },
     {
