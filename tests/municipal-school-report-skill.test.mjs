@@ -219,7 +219,7 @@ test('the checked-in JSON Schema is enforced at runtime, not only documented',()
 });
 
 
-test('Osaki real-city pilot locks 25 official school IDs but does not invent PTA findings',()=>{
+test('Osaki real-city pilot preserves the verified 25-school evidence matrix and six-state metrics',()=>{
   const d=JSON.parse(file('ai-system/report-standards/pilots/osaki-2026.dataset.json'));
   assert.equal(d.scope.totalPublicSchools,25);
   assert.equal(d.schools.length,25);
@@ -228,44 +228,46 @@ test('Osaki real-city pilot locks 25 official school IDs but does not invent PTA
   assert.equal(d.schools.filter(s=>s.schoolType==='義務教育学校').length,2);
   const checked=validateReport(d);
   assert.equal(checked.ok,true,JSON.stringify(checked.errors));
+  assert.equal(checked.metrics.axes.length,12);
   const fee=checked.metrics.axes.find(a=>a.id==='school_collection_of_pta_fee');
-  assert.equal(fee.confirmed_yes,1);
-  assert.equal(fee.unknown,24);
-  assert.equal(fee.confirmedYesOfTargetPct,4);
+  assert.equal(fee.confirmed_yes,5);
+  assert.equal(fee.unknown,20);
+  assert.equal(fee.confirmedYesOfTargetPct,20);
   assert.equal(fee.confirmedYesOfKnownPct,100);
-  assert.equal(fee.confirmedCoveragePct,4);
   const account=checked.metrics.axes.find(a=>a.id==='school_account_or_payment_system');
-  assert.equal(account.indication,1);
-  assert.equal(account.unknown,24);
-  assert.equal(account.confirmedYesOfKnownPct,null);
+  assert.equal(account.confirmed_yes,1);
+  assert.equal(account.confirmed_no,1);
+  assert.equal(account.indication,4);
+  assert.equal(account.unknown,19);
+  assert.equal(account.confirmedYesOfKnownPct,50);
   const governance=checked.metrics.axes.find(a=>a.id==='school_pta_governance_overlap');
-  assert.equal(governance.confirmed_yes,1);
-  assert.equal(governance.unknown,24);
-  assert.equal(governance.confirmedYesOfTargetPct,4);
-  assert.equal(governance.confirmedYesOfKnownPct,100);
+  assert.equal(governance.confirmed_yes,5);
+  assert.equal(governance.indication,1);
+  assert.equal(governance.unknown,19);
+  assert.equal(governance.confirmedYesOfTargetPct,20);
   const teacher=checked.metrics.axes.find(a=>a.id==='teacher_internal_pta_admin');
-  assert.equal(teacher.indication,1);
-  assert.equal(teacher.unknown,24);
-  assert.equal(teacher.confirmedYesOfKnownPct,null);
-  assert.ok(checked.metrics.axes.filter(a=>![
-    'school_collection_of_pta_fee','school_account_or_payment_system',
-    'school_pta_governance_overlap','teacher_internal_pta_admin'
-  ].includes(a.id)).every(a=>a.unknown===25 && a.confirmedYesOfKnownPct===null));
-  assert.equal(checked.metrics.axes.reduce((n,a)=>n+a.confirmed_yes,0),2);
-  assert.equal(checked.metrics.axes.reduce((n,a)=>n+a.indication,0),2);
-  assert.equal(checked.metrics.axes.reduce((n,a)=>n+a.unknown,0),296);
-  assert.equal(d.municipalDocuments.some(m=>m.sourceId==='city-collection-regulation-r4'),true);
+  assert.equal(teacher.confirmed_yes,2);
+  assert.equal(teacher.indication,2);
+  assert.equal(teacher.unknown,21);
+  assert.equal(checked.metrics.axes.reduce((n,a)=>n+a.confirmed_yes,0),17);
+  assert.equal(checked.metrics.axes.reduce((n,a)=>n+a.confirmed_no,0),3);
+  assert.equal(checked.metrics.axes.reduce((n,a)=>n+a.indication,0),12);
+  assert.equal(checked.metrics.axes.reduce((n,a)=>n+a.unknown,0),268);
+  assert.equal(d.sources.filter(s=>s.verification==='direct_checked').length,38);
+  assert.equal(d.municipalDocuments.length,4);
+  assert.equal(d.municipalDocuments.some(m=>m.sourceId==='city-collection-regulation'),true);
   const tajiri=d.schools.find(s=>s.id==='tajiri-jhs');
   assert.equal(tajiri.axes.school_collection_of_pta_fee.sourceRefs.length,2);
   assert.equal(tajiri.axes.school_account_or_payment_system.status,'indication');
   assert.equal(tajiri.axes.school_pta_governance_overlap.status,'confirmed_yes');
-  assert.equal(tajiri.axes.school_pta_governance_overlap.sourceRefs[0].sourceId,'tajiri-contract-r8');
+  assert.equal(tajiri.axes.school_pta_governance_overlap.sourceRefs[0].sourceId,'tajiri-jhs-contract-r8');
   assert.equal(tajiri.axes.teacher_internal_pta_admin.status,'indication');
+  for(const s of d.schools)for(const [axis,o] of Object.entries(s.axes))
+    if(o.status==='confirmed_no')assert.equal(o.explicitNegative,true,'missing explicitNegative for '+s.id+' '+axis);
   const attempt=validateReport(d,{publish:true});
   assert.equal(attempt.ok,false);
-  assert.ok(codes(attempt).has('PUBLICATION_APPROVAL'));
+  assert.ok(attempt.errors.some(e=>e.code==='HUMAN_APPROVAL'||e.code==='LEGAL_REVIEW'||e.code==='SENIOR_APPROVAL'||e.code==='REVIEW_SIGNATURE'));
 });
-
 
 test('Osaki pipeline renders 25 school drafts plus municipality, metrics, sources and map without publishing',()=>{
   const d=JSON.parse(file('ai-system/report-standards/pilots/osaki-2026.dataset.json'));
