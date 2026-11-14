@@ -1,0 +1,77 @@
+/* 2026-11-14: fix opt-in article reading width and restore the intended two-way comparison.
+   Loaded last on journal/pta-membership-optin-record.html to avoid disturbing source material. */
+#main .article-layout > .article-main,
+#main .article-main > .legacy.optin-reason-article,
+#main .article-main .optin-reason-article .legacy-body,
+#main .article-main .optin-reason-article .legacy-main,
+#main .article-main .optin-reason-article .journal-article-body,
+#main .article-main .optin-reason-article .journal-article-wrap,
+#main .article-main .optin-reason-article .journal-article-wrap > article {
+  box-sizing: border-box;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0;
+}
+#main .article-main .optin-reason-article .journal-article-wrap {
+  margin-inline: 0 !important;
+  padding-inline: 0 !important;
+}
+/* The prose stylesheet flattens classes ending in -grid; this is a genuine comparison. */
+#main .article-main .legacy.optin-reason-article[data-content-mode="prose"] .membership-flow-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+  align-items: stretch;
+  border: 0 !important;
+  margin: 26px 0 32px;
+}
+#main .article-main .optin-reason-article .membership-flow-grid > .membership-flow {
+  display: block !important;
+  box-sizing: border-box;
+  min-width: 0;
+  margin: 0 !important;
+  padding: 22px !important;
+  border: 1px solid #bedbd7 !important;
+  border-radius: 12px !important;
+  background: #f5fcfa !important;
+}
+#main .article-main .optin-reason-article .membership-flow-grid > .membership-flow--optout {
+  border-color: #ead1c5 !important;
+  background: #fff8f5 !important;
+}
+#main .article-main .optin-reason-article .membership-flow ol {
+  display: grid !important;
+  gap: 24px !important;
+  border: 0 !important;
+  list-style: none;
+}
+#main .article-main .optin-reason-article .membership-flow li {
+  width: auto !important;
+  max-width: 100% !important;
+}
+/* This article already has a right-side table of contents: remove the duplicate
+   former "current location" gutter at extra-wide viewports. */
+@media (min-width: 1500px) {
+  #main .article-main .legacy.optin-reason-article.current-location-enabled .legacy-main {
+    padding-left: 0 !important;
+  }
+  #main .article-main .legacy.optin-reason-article .current-location-sidebar {
+    display: none !important;
+  }
+}
+@media (max-width: 1040px) {
+  #main .article-layout > .article-main,
+  #main .article-layout > .article-side {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+}
+@media (max-width: 720px) {
+  #main .article-main .legacy.optin-reason-article[data-content-mode="prose"] .membership-flow-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+  }
+  #main .article-main .optin-reason-article .membership-flow-grid > .membership-flow {
+    padding: 16px !important;
+  }
+}
