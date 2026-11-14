@@ -8,7 +8,7 @@ const read = name => fs.readFileSync(path.join(base,name),'utf8');
 
 test('important source cards fit the mobile article column', () => {
   const css = read('css/pages/key-materials.css');
-  assert.match(css,/#main \.legacy-body\.km-page \.km-source \{/);
+  assert.match(css,/\.legacy-body\.km-page \.km-source \{/);
   assert.match(css,/grid-template-columns:minmax\(0,1fr\)/);
   assert.match(css,/\.km-source-body \{[\s\S]{0,80}overflow-wrap:anywhere/);
 });
