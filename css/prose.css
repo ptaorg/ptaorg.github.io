@@ -98,14 +98,9 @@
   transform: none !important;
 }
 
-/* Repeated card grids read from top to bottom instead of as a portal dashboard. */
-.legacy[data-content-mode="prose"]
-  :where([class$="-grid"], [class*="-grid "], .grid):not(header *, footer *, nav *, form *, .region-map, .map-grid, .hc-hero-grid, .mode-grid) {
-  display: block !important;
-  grid-template-columns: none !important;
-  gap: 0 !important;
-  border-top: 2px solid var(--prose-navy);
-}
+/* Layout ownership: author-defined grids (comparisons, figures and card collections)
+   retain their own grid/flex rules. Prose mode must not flatten every *-grid
+   class, because that turns two-column diagrams into long vertical strips. */
 
 /* Compact facts retain a label/value relationship without floating cards. */
 .legacy[data-content-mode="prose"]
