@@ -154,6 +154,21 @@ for (const viewport of viewports) {
         };
       });
       Object.assign(record, metrics);
+      if (viewport.name === 'mobile' &&
+          ['/administrative-materials.html', '/ppc-school-pta-personal-data.html'].includes(item.pathname)) {
+        const tableChecks = await page.evaluate(() => [...document.querySelectorAll('#main .legacy-body table')]
+          .filter(t => t.scrollWidth > t.clientWidth + 4 && /^(auto|scroll)$/.test(getComputedStyle(t).overflowX))
+          .map(t => ({
+            hint: !!t.previousElementSibling?.matches('.table-scroll-hint'),
+            focusable: t.tabIndex === 0,
+            described: !!t.dataset.scrollHintId &&
+              (t.getAttribute('aria-describedby') || '').split(/\s+/).includes(t.dataset.scrollHintId)
+          })));
+        record.scrollableTables = tableChecks.length;
+        if (!tableChecks.length || tableChecks.some(t => !t.hint || !t.focusable || !t.described)) {
+          record.errors.push('横スクロールできる原資料表の案内・キーボード操作が不足');
+        }
+      }
       // A few archived school pages had a 100vw hero inside a narrow column,
       // making the print control invisible even though document scrolling was zero.
       if (item.pathname.startsWith('/archive/')) {

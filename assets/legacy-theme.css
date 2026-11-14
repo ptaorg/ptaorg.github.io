@@ -374,3 +374,23 @@ body[data-page="legacy"] #main .article-layout > .article-main :is(
     line-height:1.7;
   }
 }
+
+/* Wide source tables: visible swipe cue and keyboard focus, without modifying cells. */
+@media screen and (max-width:760px){
+  #main .legacy-body .table-scroll-hint {
+    display:block!important;
+    margin:16px 0 7px!important;
+    padding:6px 12px!important;
+    border-left:3px solid var(--gold-line)!important;
+    background:var(--tint)!important;
+    color:var(--ink-sub)!important;
+    font-size:.875rem!important;
+    line-height:1.5!important;
+  }
+  #main .legacy-body table[data-scroll-hint-id]{scrollbar-width:thin}
+  #main .legacy-body table[data-scroll-hint-id]:focus-visible{
+    outline:3px solid var(--navy)!important;
+    outline-offset:3px;
+  }
+}
+@media print{#main .legacy-body .table-scroll-hint{display:none!important}}

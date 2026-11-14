@@ -60,11 +60,55 @@
       if (ratio < 3) el.classList.add('fix-contrast');
     });
   }
+  let tableHintCounter = 0;
+  function markWideTables() {
+    const smallScreen = window.matchMedia('(max-width:760px)').matches;
+    document.querySelectorAll('#main .legacy-body table').forEach(table => {
+      const overflow = getComputedStyle(table).overflowX;
+      const scrollable = smallScreen && table.scrollWidth > table.clientWidth + 4 &&
+        (overflow === 'auto' || overflow === 'scroll');
+      const hintId = table.dataset.scrollHintId;
+      const hint = hintId ? document.getElementById(hintId) : null;
+      if (scrollable) {
+        if (!hint) {
+          const el = document.createElement('p');
+          el.className = 'table-scroll-hint';
+          el.id = 'pta-table-scroll-hint-' + (++tableHintCounter);
+          el.textContent = '表は左右にスクロールできます。';
+          table.before(el);
+          table.dataset.scrollHintId = el.id;
+        }
+        const actualId = table.dataset.scrollHintId;
+        if (!table.hasAttribute('tabindex')) {
+          table.setAttribute('tabindex', '0');
+          table.dataset.scrollTabAdded = '1';
+        }
+        const describedBy = (table.getAttribute('aria-describedby') || '').split(/\s+/).filter(Boolean);
+        if (!describedBy.includes(actualId)) {
+          table.setAttribute('aria-describedby', [...describedBy, actualId].join(' '));
+        }
+      } else if (hintId) {
+        hint?.remove();
+        const describedBy = (table.getAttribute('aria-describedby') || '').split(/\s+/)
+          .filter(x => x && x !== hintId);
+        if (describedBy.length) table.setAttribute('aria-describedby', describedBy.join(' '));
+        else table.removeAttribute('aria-describedby');
+        if (table.dataset.scrollTabAdded === '1') {
+          table.removeAttribute('tabindex');
+          delete table.dataset.scrollTabAdded;
+        }
+        delete table.dataset.scrollHintId;
+      }
+    });
+  }
   function init() {
     lightenDarkPanels();
     fixContrast();
     fixAll(document);
     initFAQ(document);
+    markWideTables();
+    window.addEventListener('load', markWideTables, { once: true });
+    window.addEventListener('resize', () => window.requestAnimationFrame(markWideTables));
     new MutationObserver(ms => ms.forEach(m => m.addedNodes.forEach(n => { if (n.nodeType === 1) { if (n.matches && n.matches('a[href]')) fixHref(n); fixAll(n); } })))
       .observe(document.body, { childList: true, subtree: true });
   }
