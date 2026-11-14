@@ -104,14 +104,57 @@ for (const viewport of viewports) {
         const fontSizes = textEls.map((el) => parseFloat(getComputedStyle(el).fontSize)).filter(Number.isFinite).sort((a, b) => a - b);
         const percentile = (arr, p) => arr.length ? arr[Math.min(arr.length - 1, Math.floor(arr.length * p))] : null;
         const viewportWidth = document.documentElement.clientWidth;
-        const overflowElements = all.filter((el) => {
+        const outsideElements = all.filter((el) => {
           const r = el.getBoundingClientRect();
           // The keyboard-only skip link is intentionally positioned off-screen before focus.
           if (el.matches('.skip-link') || el.closest('.skip-link')) return false;
           if (el.tagName === 'SVG' || el.closest('svg')) return false;
           if (getComputedStyle(el).position === 'fixed') return false;
           return r.right > viewportWidth + 2 || r.left < -2;
-        }).slice(0, 30).map((el) => ({ tag: el.tagName.toLowerCase(), className: String(el.className || '').slice(0, 120), id: el.id || '', rect: rectObj(el.getBoundingClientRect()) }));
+        });
+        const overflowElements = outsideElements.slice(0, 30).map((el) => ({
+          tag: el.tagName.toLowerCase(), className: String(el.className || '').slice(0, 120),
+          id: el.id || '', rect: rectObj(el.getBoundingClientRect())
+        }));
+        // Report raw out-of-viewport geometry, but distinguish the legitimate
+        // clipped map tiles and horizontally scrollable original documents.
+        // No content is hidden and no warning is silently removed.
+        const outsideBreakdown = {
+          total: outsideElements.length,
+          mapTiles: 0,
+          containedInScroller: 0,
+          uncontained: 0,
+          uncontainedExamples: []
+        };
+        const offscreenKind = (el) => {
+          if (el.matches('.leaflet-tile') || el.closest('.leaflet-tile-container')) {
+            return 'mapTiles';
+          }
+          for (let ancestor = el.parentElement; ancestor && ancestor !== document.body;
+               ancestor = ancestor.parentElement) {
+            const cs = getComputedStyle(ancestor);
+            if ((cs.overflowX === 'scroll' || cs.overflowX === 'auto') &&
+                ancestor.scrollWidth > ancestor.clientWidth + 2) {
+              const bounds = ancestor.getBoundingClientRect();
+              if (bounds.left >= -2 && bounds.right <= viewportWidth + 2) {
+                return 'containedInScroller';
+              }
+            }
+          }
+          return 'uncontained';
+        };
+        for (const element of outsideElements) {
+          const kind = offscreenKind(element);
+          outsideBreakdown[kind]++;
+          if (kind === 'uncontained' && outsideBreakdown.uncontainedExamples.length < 10) {
+            outsideBreakdown.uncontainedExamples.push({
+              tag:element.tagName.toLowerCase(),
+              cls:String(element.className || '').slice(0,90),
+              parent:String(element.parentElement?.className || '').slice(0,90),
+              rect:rectObj(element.getBoundingClientRect())
+            });
+          }
+        }
         const textOverflow = all.filter((el) => {
           if (!['PRE','TABLE','CODE'].includes(el.tagName) && !el.matches('.edu-table-wrap,.table-wrap,.responsive-table,.gl-tpl-pre')) return false;
           return el.scrollWidth > el.clientWidth + 2;
@@ -142,6 +185,7 @@ for (const viewport of viewports) {
           bodyScrollWidth: document.body.scrollWidth,
           horizontalOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth + 2,
           overflowElements,
+          outsideBreakdown,
           textOverflow,
           mainRect: main ? rectObj(main.getBoundingClientRect()) : null,
           articleRect: article ? rectObj(article.getBoundingClientRect()) : null,
