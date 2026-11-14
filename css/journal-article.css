@@ -264,7 +264,7 @@
   }
 
   .legacy .yokohama-notice-article .journal-document-set-wide {
-    width: min(calc(100vw - 48px), 1180px);
+    width: min(100%, 1180px);
     margin-left: 50%;
     transform: translateX(-50%);
     box-sizing: border-box;

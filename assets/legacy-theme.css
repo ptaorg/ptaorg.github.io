@@ -365,3 +365,12 @@ body[data-page="legacy"] #main .article-layout > .article-main :is(
   font-size:.875rem!important;
   line-height:1.65;
 }
+
+/* Readable mobile citation anchors and evidence checklist text. */
+@media screen and (max-width:760px){
+  #main .legacy-body .article-citations a,
+  #main .legacy-body .case-wrap li {
+    font-size:.875rem!important;
+    line-height:1.7;
+  }
+}
