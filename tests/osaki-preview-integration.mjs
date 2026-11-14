@@ -36,9 +36,26 @@ assert.deepEqual(
 );
 const account=metrics.find(x=>x.id==='school_account_or_payment_system');
 assert.deepEqual([account.indication,account.unknown,account.yesOfKnownPct],[1,24,null]);
-assert.equal(metrics.reduce((n,m)=>n+m.confirmed_yes,0),1);
-assert.equal(metrics.reduce((n,m)=>n+m.indication,0),1);
-assert.equal(metrics.reduce((n,m)=>n+m.unknown,0),298);
+const governance=metrics.find(x=>x.id==='school_pta_governance_overlap');
+assert.deepEqual([governance.confirmed_yes,governance.unknown,governance.yesOfKnownPct],[1,24,100]);
+const teacher=metrics.find(x=>x.id==='teacher_internal_pta_admin');
+assert.deepEqual([teacher.indication,teacher.unknown,teacher.yesOfKnownPct],[1,24,null]);
+assert.equal(metrics.reduce((n,m)=>n+m.confirmed_yes,0),2);
+assert.equal(metrics.reduce((n,m)=>n+m.indication,0),2);
+assert.equal(metrics.reduce((n,m)=>n+m.unknown,0),296);
+const candidatePath=path.resolve(path.dirname(new URL(import.meta.url).pathname),'..','archive','osaki','tajiri-jhs','index.html');
+if(fs.existsSync(candidatePath)){
+  const candidate=fs.readFileSync(candidatePath,'utf8');
+  const tajiriSource=d.schools.find(s=>s.id==='tajiri-jhs');
+  for(const a of axes.axes){
+    const pos=candidate.indexOf('<th scope="row">'+a.label+'</th>');
+    assert.ok(pos>=0,'missing report axis: '+a.id);
+    const row=candidate.slice(pos,candidate.indexOf('</tr>',pos));
+    assert.ok(row.includes('（'+tajiriSource.axes[a.id].status+'）'),'report/source mismatch: '+a.id);
+  }
+  assert.equal((candidate.match(/class="m-no"/g)||[]).length,12);
+  console.log('STATIC_CANDIDATE_SYNC_OK: Tajiri 12 statuses match skill source dataset');
+}
 
 const city=files['index.html'];
 const tajiri=files['schools/tajiri-jhs.html'];
