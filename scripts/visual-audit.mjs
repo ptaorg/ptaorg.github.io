@@ -362,7 +362,19 @@ for (const viewport of viewports) {
               rect:{x:rect.x,y:rect.y,w:rect.width,h:rect.height},
               disabled:button.disabled,parents};
           });
+          record.firstDiagramControl.beforeScrollVisible = await forward.isVisible();
+          await forward.evaluate(button => {
+            const r=button.getBoundingClientRect();
+            window.scrollTo(0, window.scrollY + r.top - 150);
+          });
+          await page.waitForTimeout(180);
           record.firstDiagramControl.isVisible = await forward.isVisible();
+          record.firstDiagramControl.visibilityAfterScroll = await forward.evaluate(button => {
+            const p=button.closest('.diagram-figure'),cs=getComputedStyle(p);
+            return {figureContentVisibility:cs.contentVisibility,
+              figureVisibility:cs.visibility,checkVisibility:button.checkVisibility(),
+              detailsClosed:!!button.closest('details:not([open])')};
+          });
           if (!record.firstDiagramControl.isVisible) {
             record.errors.push('図の移動ボタンはDOM上にあるが、操作可能な状態ではない');
           } else {
