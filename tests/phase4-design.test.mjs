@@ -11,5 +11,5 @@ test('phase 4 core stylesheet has semantic colors and six-step type',()=>{
 });
 test('article typography and image-bearing selectors survive normalization',()=>{
  const css=read('assets/style.css');
- for(const term of ['.hero-photo','.map-layout','.japan-map','.article-visual','.global-nav','text-wrap:balance','max-width:40em','/assets/slides/1.jpg','/assets/img/research-book.webp'])assert.ok(css.includes(term),term);
+ for(const term of ['.hero-photo','.map-layout','.japan-map','.article-visual','.global-nav','text-wrap:balance','--reading-container:1120px','/assets/slides/1.jpg','/assets/img/research-book.webp'])assert.ok(css.includes(term),term);
 });
