@@ -127,6 +127,17 @@ for (const viewport of viewports) {
           bodyFont: parseFloat(getComputedStyle(document.body).fontSize),
           minFont: fontSizes[0] ?? null,
           p10Font: percentile(fontSizes, .10),
+          tinyTextExamples: location.pathname.startsWith('/archive/')
+            ? textEls.filter(el => parseFloat(getComputedStyle(el).fontSize) < 13)
+                .slice(0, 12).map(el => ({
+                  tag:el.tagName.toLowerCase(),
+                  cls:String(el.className || '').slice(0,90),
+                  parent:String(el.parentElement?.className || '').slice(0,90),
+                  font:parseFloat(getComputedStyle(el).fontSize),
+                  text:(el.textContent || '').trim().slice(0,65)
+                }))
+            : [],
+
           medianFont: percentile(fontSizes, .50),
           docClientWidth: document.documentElement.clientWidth,
           docScrollWidth: document.documentElement.scrollWidth,
