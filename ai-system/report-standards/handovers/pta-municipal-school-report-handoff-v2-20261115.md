@@ -296,11 +296,11 @@ PR #181、#182、#183 はmainへ反映済み（HEADは `bc1065bf`、いずれも
 
 **対応済み**：同梱の `頁位置の再照合表.md` に、現行56頁版を直接開いて確認した章・付録の頁対応と、`source.evidencePages` および `research/osaki.html` の差し替え文字列を記載した。田尻中学校の資料目録は現行版では **p.55**。あわせて、頁番号を固定すると改訂のたびにずれるため、章・付録名だけで参照する運用を推奨する（v2台帳はそれを採用している）。リポジトリへの反映は人間の承認を得てから行う。
 
-### 13-4 `explicitNegative` がデータ契約の文面に現れない
+### 13-4 `explicitNegative` が条件付き必須として記載されていない
 
-`validate-dataset.mjs` は `status: confirmed_no` の軸に `explicitNegative: true` を要求する（`NEGATIVE_NOT_EXPLICIT`）が、このフィールドは `report-dataset.schema.json` の `required` にも `properties` の説明にも現れない。スキーマだけを読んで入力を組むと必ず落ちる。
+`validate-dataset.mjs` は `status: confirmed_no` の軸に `explicitNegative: true` を要求する（`NEGATIVE_NOT_EXPLICIT`）が、このフィールドは `report-dataset.schema.json` の各軸の `properties` に `boolean` として存在するが、`required` には含まれず、`status: confirmed_no` のときに `true` を必須とする条件式も定義されていない。スキーマだけを読んだ入力では検証器による拒否条件を見落としやすい。
 
-対応：スキーマ側に `explicitNegative` を明記し、`confirmed_no` のときに required とする条件分岐を入れる。それまでは §4 の注記に従って手で付ける。
+対応：すでに存在する `explicitNegative` の定義は保ち、`confirmed_no` のときに `explicitNegative: true` を要求する条件分岐を追加する。それまでは §4 の注記に従って手で付ける。
 
 ### 13-5 大崎市開示資料の破損・欠落
 
