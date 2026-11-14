@@ -8,12 +8,12 @@ const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const CITY='research/osaki.html',SCHOOL='archive/osaki/tajiri-jhs/index.html';
 const method=read('pta-evaluation-method.html');
 
-test('Osaki publication candidate has site layout, canonical, noindex and no personal details',()=>{
+test('Published Osaki report has indexed canonical, shared site layout and no personal details',()=>{
   const city=read(CITY),school=read(SCHOOL);
   assert.ok(city.includes('<link rel="canonical" href="https://ptaorg.com/research/osaki.html">'));
   assert.ok(school.includes('<link rel="canonical" href="https://ptaorg.com/archive/osaki/tajiri-jhs/">'));
   for(const html of [city,school]){
-    assert.match(html,/<meta name="robots" content="noindex,nofollow,noarchive">/);
+    assert.match(html,/<meta name="robots" content="index,follow">/);
     assert.match(html,/class="site-header"/);
     assert.match(html,/class="site-footer"/);
     assert.match(html,/class="skip-link"/);
@@ -62,6 +62,22 @@ test('School candidate lists exactly 12 fixed axes and published non-claims',()=
   for(const label of ['主体分離','誰の事務か','学校側の公法上の権限','情報保護法61条・69条','法的結論と是正先']){
     assert.ok(s.includes(label),'missing '+label);
   }
+});
+
+test('Osaki and Tajiri public pages are discoverable via homepage, local search and sitemap',()=>{
+  const home=read('index.html'),explore=read('explore.html');
+  const index=read('data/site-search-index.js'),sitemap=read('sitemap.xml');
+  const method=read('pta-evaluation-method.html');
+  for(const file of [home,explore,method]){
+    assert.match(file,/research\/osaki\.html/);
+    assert.match(file,/archive\/osaki\/tajiri-jhs\//);
+  }
+  assert.match(index,/research\/osaki\.html/);
+  assert.match(index,/archive\/osaki\/tajiri-jhs\//);
+  assert.match(sitemap,/<loc>https:\/\/ptaorg\.com\/research\/osaki\.html<\/loc>/);
+  assert.match(sitemap,/<loc>https:\/\/ptaorg\.com\/archive\/osaki\/tajiri-jhs\/<\/loc>/);
+  assert.doesNotMatch(read(CITY),/noindex,nofollow/);
+  assert.doesNotMatch(read(SCHOOL),/noindex,nofollow/);
 });
 
 test('Candidate pages link to one another and public method without relative-path errors',()=>{
