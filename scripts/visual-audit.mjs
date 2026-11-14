@@ -145,6 +145,21 @@ for (const viewport of viewports) {
         };
       });
       Object.assign(record, metrics);
+      // A few archived school pages had a 100vw hero inside a narrow column,
+      // making the print control invisible even though document scrolling was zero.
+      if (item.pathname.startsWith('/archive/')) {
+        const archiveHero = await page.evaluate(() => {
+          const root = document.querySelector('.archive-school-page');
+          const hero = root?.querySelector(':scope > .archive-hero');
+          if (!root || !hero) return null;
+          const r = root.getBoundingClientRect(), h = hero.getBoundingClientRect();
+          return { rootLeft:r.left, rootRight:r.right, heroLeft:h.left, heroRight:h.right };
+        });
+        if (archiveHero && (archiveHero.heroLeft < archiveHero.rootLeft - 2 ||
+            archiveHero.heroRight > archiveHero.rootRight + 2)) {
+          record.errors.push('学校別資料の見出しとPDF保存操作が本文の外へはみ出す');
+        }
+      }
       if (viewport.name === 'mobile' && item.pathname === '/guide-board.html') {
         record.guideBoardLayout = await page.evaluate(() => {
           const selectors = ['#board-executive-brief', '.gbv-wrap', '.gbv-head',
