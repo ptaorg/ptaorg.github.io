@@ -21,12 +21,17 @@ const localUrls = [...new Set(urls.map((raw) => {
 const requestedPaths = new Set((process.env.PTA_VISUAL_AUDIT_PAGES || '')
   .split(',').map((p) => p.trim()).filter(Boolean));
 const pagesToAudit = requestedPaths.size
-  ? localUrls.filter((item) => requestedPaths.has(item.pathname))
+  ? [...requestedPaths].map((pathname) => ({
+      pathname,
+      raw: 'https://ptaorg.com' + pathname,
+      local: 'http://127.0.0.1:4173' + pathname,
+    }))
   : localUrls;
-if (requestedPaths.size && pagesToAudit.length !== requestedPaths.size) {
-  const found = new Set(pagesToAudit.map((item) => item.pathname));
-  throw new Error('Missing sitemap entries in responsive audit: ' +
-    [...requestedPaths].filter((pathname) => !found.has(pathname)).join(', '));
+// Some canonical index/legacy pages intentionally are not listed in the sitemap.
+for (const item of pagesToAudit) {
+  if (!fs.existsSync(path.join(ROOT, item.pathname.replace(/^\\//, '')))) {
+    throw new Error('Responsive audit target not found in checkout: ' + item.pathname);
+  }
 }
 
 const corePatterns = [
