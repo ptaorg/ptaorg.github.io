@@ -29,7 +29,7 @@ const pagesToAudit = requestedPaths.size
   : localUrls;
 // Some canonical index/legacy pages intentionally are not listed in the sitemap.
 for (const item of pagesToAudit) {
-  if (!fs.existsSync(path.join(ROOT, item.pathname.replace(/^\\//, '')))) {
+  if (!fs.existsSync(path.join(ROOT, item.pathname.slice(1)))) {
     throw new Error('Responsive audit target not found in checkout: ' + item.pathname);
   }
 }
