@@ -371,3 +371,22 @@
       margin-top: 42px;
     }
   }
+
+/* Restore side-by-side opt-in vs opt-out diagram after prose-mode normalization. */
+.legacy[data-content-mode="prose"].optin-reason-article .membership-flow-grid{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:20px !important;
+  border-top:0 !important;
+  width:100%;
+  min-width:0;
+}
+.legacy[data-content-mode="prose"].optin-reason-article .membership-flow-grid > .membership-flow{
+  min-width:0;
+}
+@media (max-width:760px){
+  .legacy[data-content-mode="prose"].optin-reason-article .membership-flow-grid{
+    grid-template-columns:minmax(0,1fr) !important;
+    gap:14px !important;
+  }
+}
