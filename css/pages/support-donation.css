@@ -183,3 +183,20 @@ body.support-donation-body{background:#f5f7fa;}
   #main.support-redesign .support-letter-cta{flex-direction:column;}
   #main.support-redesign .support-letter-cta a{flex:0 0 auto;width:100%;}
 }
+
+/* Shared on the unified contact page and the legacy support URL. */
+#main.support-redesign .support-payment-card .support-payment-lead,
+#main.support-redesign .support-payment-card .support-payment-footnote,
+#main.support-redesign .support-payment-card .support-payment-help,
+#main.support-redesign .support-payment-card .support-copy-row dt,
+#main.support-redesign .support-payment-card .support-copy-row dt small,
+#main.support-redesign .support-payment-card .payment-badge,
+#main.support-redesign .support-payment-card .support-copy-all,
+#main.support-redesign .support-payment-card .support-copy-btn {
+  font-size:14px;
+  line-height:1.65;
+}
+#main.support-redesign .support-payment-card .support-copy-btn {
+  min-height:44px;
+  padding:9px 11px;
+}

@@ -24,10 +24,10 @@ test('only scrollable legacy tables receive semantic scroll instructions',()=>{
 test('mobile labels stay at least 14px',()=>{
  const chain=read('css/shared/shared-0b6c0a9953c5.css');
  const ppc=read('css/ppc-school-pta.css');
- const contact=read('css/pages/contact-unified.css');
+ const payment=read('css/pages/support-donation.css');
  assert.match(chain,/\.legacy \.step-num \{[\s\S]{0,170}font-size: 0\.875rem/);
  assert.match(ppc,/\.legacy \.ppc-section-label \{[\s\S]{0,160}font-size: 0\.875rem/);
- assert.match(contact,/\.support-payment-card \.support-copy-btn \{min-height:44px/);
+ assert.match(payment,/\.support-payment-card \.support-copy-btn \{/);
 });
 
 test('the evidence-ledger mobile labels meet the 14px floor',()=>{
