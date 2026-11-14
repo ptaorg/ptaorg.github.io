@@ -306,7 +306,12 @@ for (const viewport of viewports) {
       if (viewport.name === 'mobile' && item.pathname === '/guide-board.html') {
         const diagrams = await page.evaluate(() => [...document.querySelectorAll(
           '#main .legacy-body.guide-board-direct-fixed .diagram-scroll'
-        )].filter(e => e.scrollWidth > e.clientWidth + 4).map(e => ({
+        )].filter(e => {
+          const r=e.getBoundingClientRect(), cs=getComputedStyle(e);
+          return r.width > 0 && r.height > 0 && cs.visibility === 'visible' &&
+            !e.closest('[hidden],[aria-hidden="true"]') &&
+            e.scrollWidth > e.clientWidth + 4;
+        }).map(e => ({
           hint: !!e.previousElementSibling?.matches('.diagram-scroll-hint'),
           buttons: e.previousElementSibling?.querySelectorAll(
             '.table-scroll-actions button'
@@ -323,13 +328,13 @@ for (const viewport of viewports) {
         }
         if (diagrams.length) {
           const target = page.locator(
-            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll[data-diagram-scroll-hint-id]'
+            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll[data-diagram-scroll-hint-id]:visible'
           ).first();
           const forward = page.locator(
-            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll-hint [data-diagram-scroll="forward"]'
+            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll-hint:visible [data-diagram-scroll="forward"]'
           ).first();
           const back = page.locator(
-            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll-hint [data-diagram-scroll="back"]'
+            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll-hint:visible [data-diagram-scroll="back"]'
           ).first();
           await forward.click();
           await page.waitForTimeout(350);
@@ -341,6 +346,24 @@ for (const viewport of viewports) {
           record.diagramMoveBack = right - left;
           if (right <= 3 || left >= right - 3)
             record.errors.push('図の左右ボタンが実際にスクロールしない');
+        }
+      }
+      if (viewport.name === 'mobile' && item.pathname === '/guide-board.html') {
+        const stages = await page.evaluate(() => {
+          const root = document.querySelector('.legacy .roadmap-grid');
+          if (!root) return null;
+          return {
+            columns: getComputedStyle(root).gridTemplateColumns,
+            cards: [...root.children].map(e => {
+              const r=e.getBoundingClientRect();
+              return {left:Math.round(r.left),right:Math.round(r.right)};
+            })
+          };
+        });
+        record.roadmapLayout=stages;
+        if (!stages || stages.cards.length !== 4 ||
+            stages.cards.some(c => c.left < -2 || c.right > viewport.width + 2)) {
+          record.errors.push('4段階工程表のカードがスマートフォンの画面からはみ出す');
         }
       }
       // A few archived school pages had a 100vw hero inside a narrow column,
