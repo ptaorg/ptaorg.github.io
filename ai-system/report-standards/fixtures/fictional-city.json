@@ -13,6 +13,7 @@
   "scope": {
     "totalPublicSchools": 2,
     "populationSourceId": "demo-list",
+    "populationSchoolIds": ["demo-school-1", "demo-school-2"],
     "sampling": "census",
     "scopeNote": "テスト用架空の公立小学校2校。実在の自治体・学校ではない。",
     "schoolTypes": [
