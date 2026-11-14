@@ -29,3 +29,9 @@ test('mobile labels stay at least 14px',()=>{
  assert.match(ppc,/\.legacy \.ppc-section-label \{[\s\S]{0,160}font-size: 0\.875rem/);
  assert.match(contact,/\.support-payment-card \.support-copy-btn \{min-height:44px/);
 });
+
+test('the evidence-ledger mobile labels meet the 14px floor',()=>{
+ const css=read('assets/legacy-theme.css');
+ assert.match(css,/body\[data-page="legacy"\]:has\(\.case-wrap\)[\s\S]{0,150}\.section-label,\.case-wrap a,\.case-wrap \.evidence-boundary,table th/);
+ assert.match(css,/font-size:\.875rem!important;line-height:1\.7/);
+});

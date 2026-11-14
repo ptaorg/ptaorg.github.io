@@ -154,6 +154,21 @@ for (const viewport of viewports) {
         };
       });
       Object.assign(record, metrics);
+      const readableMobilePages = new Set([
+        '/board-brief.html', '/contact.html', '/pta-application-chain.html',
+        '/board-pta-chain.html', '/pta-officer-chain.html',
+        '/ppc-school-pta-personal-data.html', '/compliance.html',
+        '/journal/pta-fee-delegation-origin-local-government-law-20261016.html'
+      ]);
+      if (viewport.name === 'mobile' && readableMobilePages.has(item.pathname) &&
+          (metrics.p10Font === null || metrics.p10Font < 13)) {
+        record.errors.push('重要資料ページの下位文字サイズが13px未満');
+      }
+      if (viewport.name === 'desktop' &&
+          item.pathname === '/journal/yokohama-notice-1965.html' &&
+          metrics.overflowElements.some(el => el.className.includes('journal-document-set-wide'))) {
+        record.errors.push('横浜市原本画像コンテナが画面の外へはみ出す');
+      }
       if (viewport.name === 'mobile' &&
           ['/administrative-materials.html', '/ppc-school-pta-personal-data.html'].includes(item.pathname)) {
         const tableChecks = await page.evaluate(() => [...document.querySelectorAll('#main .legacy-body table')]

@@ -394,3 +394,10 @@ body[data-page="legacy"] #main .article-layout > .article-main :is(
   }
 }
 @media print{#main .legacy-body .table-scroll-hint{display:none!important}}
+
+/* Evidence-ledger navigation and labels on narrow screens. */
+@media screen and (max-width:760px){
+  body[data-page="legacy"]:has(.case-wrap) #main .legacy-body :is(
+    .section-label,.case-wrap a,.case-wrap .evidence-boundary,table th
+  ){font-size:.875rem!important;line-height:1.7}
+}
