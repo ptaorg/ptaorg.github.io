@@ -40,7 +40,7 @@ test('desktop A4 brief is a readable screen layout with untouched print rules',(
  const html=read('board-brief.html');
  assert.match(html,/@media screen and \(min-width:851px\)/);
  assert.match(html,/\.legacy \.page\.compact p,[\s\S]{0,130}font-size:16px/);
- assert.match(html,/\.legacy \.page \{box-shadow:none;margin:0;break-after:page;page-break-after:always\}/);
+ assert.match(html,/\.legacy \.page\{box-shadow:none;margin:0;break-after:page;page-break-after:always\}/);
  assert.match(html,/\.legacy \.qr-strip \{[\s\S]{0,150}position:static/);
 });
 test('wide table controls are actionable and preserve native scrolling',()=>{
