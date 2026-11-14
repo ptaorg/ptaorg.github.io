@@ -1,11 +1,21 @@
 name: Full-site responsive layout audit
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/visual-audit.mjs
+      - .github/workflows/full-responsive-audit.yml
+      - assets/style.css
+      - assets/legacy-theme.css
+      - css/**
+      - '**/*.html'
   pull_request:
     paths:
       - scripts/visual-audit.mjs
       - .github/workflows/full-responsive-audit.yml
       - assets/style.css
+      - assets/legacy-theme.css
       - css/**
       - '**/*.html'
   workflow_dispatch:

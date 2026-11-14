@@ -13,6 +13,7 @@ test('archive school hero and controls stay inside the document column',()=>{
  assert.match(block,/\.archive-school-page \.archive-grid\s*\{[^}]*grid-template-columns:repeat\(2,minmax\(0,1fr\)\)!important/);
  assert.match(block,/\.archive-grid > \.archive-box\s*\{[^}]*flex-direction:column/);
  assert.match(block,/@media\(max-width:760px\)/);
+ assert.match(css,/\.archive-material-item > p\.archive-label,[\s\S]*?font-size:\.875rem!important/);
  const atsugi=read('archive/atsugi/echi-jhs/index.html');
  assert.match(atsugi,/class="archive-hero legacy-hero-rest"/);
  assert.match(atsugi,/class="archive-grid"/);
