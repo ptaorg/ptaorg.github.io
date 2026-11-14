@@ -45,9 +45,9 @@ test('Osaki 2026 cohort excludes closed school, preserving observed vs unobserve
 test('School candidate lists exactly 12 fixed axes and published non-claims',()=>{
   const s=read(SCHOOL);
   assert.equal((s.match(/class="m-no"/g)||[]).length,12);
-  assert.equal((s.match(/（confirmed_yes）/g)||[]).length,1);
-  assert.equal((s.match(/（indication）/g)||[]).length,1);
-  assert.equal((s.match(/（unknown）/g)||[]).length,10);
+  assert.equal((s.match(/（confirmed_yes）/g)||[]).length,2);
+  assert.equal((s.match(/（indication）/g)||[]).length,2);
+  assert.equal((s.match(/（unknown）/g)||[]).length,8);
   assert.match(s,/会費1,500円/);
   assert.match(s,/生徒活動援助費2,500円/);
   assert.match(s,/安全互助会負担金620円/);
@@ -56,6 +56,9 @@ test('School candidate lists exactly 12 fixed axes and published non-claims',()=
   assert.match(s,/校長名/);
   assert.match(s,/公法上の権限/);
   assert.match(s,/原本PDFの公開・匿名化は未承認/);
+  assert.match(s,/委託契約書 PDF p\.1/);
+  assert.match(s,/個々の教職員が勤務時間中に行ったPTA内部事務の実作業記録は未照合/);
+  assert.match(s,/学校・PTAの意思決定／事務の混在/);
   for(const label of ['主体分離','誰の事務か','学校側の公法上の権限','情報保護法61条・69条','法的結論と是正先']){
     assert.ok(s.includes(label),'missing '+label);
   }
