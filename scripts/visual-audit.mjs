@@ -151,6 +151,11 @@ for (const viewport of viewports) {
               gridTemplateColumns:style.gridTemplateColumns, overflowX:style.overflowX };
           });
         });
+        const grid = record.guideBoardLayout.find((part) => part.selector === '.gbv-head');
+        const brief = record.guideBoardLayout.find((part) => part.selector === '.gbv-head > div');
+        if (!grid || !brief || brief.right > grid.right + 2) {
+          record.errors.push('教育委員会ガイド: 概要ブロックが画面外に切れる');
+        }
       }
       // The unified contact page must show consultation before the support panel on mobile.
       if (viewport.name === 'mobile' && item.pathname === '/contact.html') {

@@ -25,7 +25,7 @@ test('guide-board retains both the original detailed TOC and six readable chapte
   assert.match(toc,/全38項目の詳細目次を表示/);
 });
 test('reading column is wide and sidebar is narrow, with tablet and mobile fallbacks',()=>{
-  assert.ok(page.includes('css/pages/guide-board-reading-layout.css?v=20261114b'));
+  assert.ok(page.includes('css/pages/guide-board-reading-layout.css?v=20261114c'));
   assert.ok(page.includes('assets/style.css?v=20261114-readable'));
   assert.match(css,/grid-template-columns:minmax\(0,1fr\) minmax\(238px,270px\)/);
   assert.match(css,/\.legacy\.guide-board-text-first :is\([\s\S]*?\)\s*\{[\s\S]*?width:100% !important;[\s\S]*?max-width:none !important;/);
@@ -54,4 +54,9 @@ test('school-information block is a balanced two-panel layout with full-width ca
   assert.ok(scoped.includes('grid-template-columns:repeat(auto-fit,minmax(min(100%,390px),1fr))'));
   assert.ok(scoped.includes('@media(max-width:760px)'));
   assert.ok(scoped.includes('.principal-liability-caution'));
+});
+
+test('mobile executive brief does not expand to its 781px min-content width',()=>{
+  assert.match(css, /@media\(max-width:1040px\)[\s\S]*?\.gbv-head\s*\{\s*grid-template-columns:minmax\(0,1fr\)/);
+  assert.match(css, /\.gbv-head > \*\s*\{\s*min-width:0;/);
 });
