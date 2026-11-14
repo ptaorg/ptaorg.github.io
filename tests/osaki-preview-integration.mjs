@@ -36,9 +36,13 @@ assert.deepEqual(
 );
 const account=metrics.find(x=>x.id==='school_account_or_payment_system');
 assert.deepEqual([account.indication,account.unknown,account.yesOfKnownPct],[1,24,null]);
-assert.equal(metrics.reduce((n,m)=>n+m.confirmed_yes,0),1);
-assert.equal(metrics.reduce((n,m)=>n+m.indication,0),1);
-assert.equal(metrics.reduce((n,m)=>n+m.unknown,0),298);
+const governance=metrics.find(x=>x.id==='school_pta_governance_overlap');
+assert.deepEqual([governance.confirmed_yes,governance.unknown,governance.yesOfKnownPct],[1,24,100]);
+const teacher=metrics.find(x=>x.id==='teacher_internal_pta_admin');
+assert.deepEqual([teacher.indication,teacher.unknown,teacher.yesOfKnownPct],[1,24,null]);
+assert.equal(metrics.reduce((n,m)=>n+m.confirmed_yes,0),2);
+assert.equal(metrics.reduce((n,m)=>n+m.indication,0),2);
+assert.equal(metrics.reduce((n,m)=>n+m.unknown,0),296);
 
 const city=files['index.html'];
 const tajiri=files['schools/tajiri-jhs.html'];
