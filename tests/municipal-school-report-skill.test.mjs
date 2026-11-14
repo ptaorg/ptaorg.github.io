@@ -205,3 +205,15 @@ test('school population roster must be complete and unique',()=>{
   d.scope.populationSchoolIds=['demo-school-1','demo-school-1'];
   assert.ok(codes(validateReport(d)).has('POPULATION_ROSTER'));
 });
+
+test('the checked-in JSON Schema is enforced at runtime, not only documented',()=>{
+  const d=fresh();
+  d.publication.unreviewedBypass=true;
+  assert.ok(codes(validateReport(d)).has('SCHEMA_EXTRA'));
+  delete d.publication.unreviewedBypass;
+  d.schools[0].axes.explicit_opt_in.observation=42;
+  assert.ok(codes(validateReport(d)).has('SCHEMA_TYPE'));
+  d.schools[0].axes.explicit_opt_in.observation='checked';
+  d.asOf='2026-11-31';
+  assert.ok(codes(validateReport(d)).has('SCHEMA_DATE'));
+});
