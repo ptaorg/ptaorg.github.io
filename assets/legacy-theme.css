@@ -358,3 +358,10 @@ body[data-page="legacy"] #main .article-layout > .article-main :is(
     grid-template-columns:minmax(0,1fr)!important;
   }
 }
+
+/* Material metadata should remain readable on 390px phones. */
+#main .legacy-body .archive-school-page .archive-material-item > p.archive-label,
+#main .legacy-body .archive-school-page .archive-section > p.archive-muted{
+  font-size:.875rem!important;
+  line-height:1.65;
+}
