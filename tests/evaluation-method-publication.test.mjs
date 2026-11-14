@@ -23,9 +23,10 @@ test('published evaluation methodology is a standalone Japanese canonical page',
   assert.match(html,/法令上の根拠と適用範囲を検証/);
   assert.equal((html.match(/<td class="m-no">/g)||[]).length,12);
   assert.equal((html.match(/class="method-section"/g)||[]).length,6);
-  assert.ok(html.indexOf('主体の分離')<html.indexOf('事務の帰属'));
-  assert.ok(html.indexOf('事務の帰属')<html.indexOf('学校側の具体的な所掌事務・権限'));
-  assert.ok(html.indexOf('学校側の具体的な所掌事務・権限')<html.indexOf('個人情報の利用・提供'));
+  const steps=html.slice(html.indexOf('<ol class="method-steps">'),html.indexOf('</ol>',html.indexOf('<ol class="method-steps">')));
+  assert.ok(steps.indexOf('主体の分離')<steps.indexOf('事務の帰属'));
+  assert.ok(steps.indexOf('事務の帰属')<steps.indexOf('学校側の具体的な所掌事務・権限'));
+  assert.ok(steps.indexOf('学校側の具体的な所掌事務・権限')<steps.indexOf('個人情報の利用・提供'));
   assert.match(html,/技術試験で生成した個別評価書は本ページから公開していません/);
   assert.doesNotMatch(html,/noindex,nofollow/);
 });
