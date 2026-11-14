@@ -490,7 +490,7 @@ svg{width:1em;height:1em;flex:none}
 .article-visual-map .page-hero-map::before{display:none}
 .article-notice{display:flex;align-items:center;gap:12px;background:var(--paper-alt);border:1px solid var(--line-strong);border-radius:var(--radius-sm);padding:12px 16px;font-size:var(--fs-body);color:var(--ink-sub);margin:16px 0 0}
 .article-notice svg{width:1.2em;height:1.2em;color:var(--gold);flex:none}
-.article-layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:36px;align-items:start;padding:28px 0 24px}
+.article-layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:36px;align-items:start;padding:28px 0 24px}
 .article-side{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto}
 .region-layout{padding-top:20px}
 .toc-list{list-style:none;margin:0;padding:8px 0}
@@ -594,7 +594,7 @@ svg{width:1em;height:1em;flex:none}
 /* v0.6 — spacious reading layout across migrated article pages */
 @media (min-width:1041px){
   .container:has(> .article-layout){max-width:1600px;padding-left:clamp(20px,2.4vw,40px);padding-right:clamp(20px,2.4vw,40px)}
-  .article-layout{grid-template-columns:260px minmax(0,1fr);column-gap:clamp(28px,3vw,48px)}
+  .article-layout{grid-template-columns:minmax(0,1fr) 260px;column-gap:clamp(28px,3vw,48px)}
 }
 .article-main{min-width:0;width:100%;max-width:none}
 .article-main .legacy,.article-main .legacy-body{width:100%;max-width:none}
@@ -870,7 +870,7 @@ main .search-panel-bar,main .search-panel-local{display:none!important}
 
 /* Phase 4 design system start */
 /* Shared reading surface, phase 4. Never replaces original research content. */
-:where(.article-main,.detail-main,.legacy-main,.journal-article) :where(p,li,dd,blockquote):not(.wide):not(.full-width){max-width:40em;overflow-wrap:break-word}
+:where(.article-main,.detail-main,.legacy-main,.journal-article) :where(p,li,dd,blockquote):not(.wide):not(.full-width){max-width:100%;overflow-wrap:break-word}
 :where(.article-main,.detail-main,.legacy-main,.journal-article) :where(p,li,dd){line-height:1.9}
 :where(.article-main,.detail-main,.legacy-main,.article-hero,.hero) h1{text-wrap:balance;word-break:auto-phrase;overflow-wrap:break-word}
 :where(.article-main,.detail-main,.legacy-main,.article-hero,.hero) :where(h2,h3){font-family:var(--serif);text-wrap:pretty}
@@ -928,7 +928,7 @@ body{background:var(--paper);color:var(--ink);min-width:0}
 .label-response{background:color-mix(in srgb,var(--k-response) 12%,var(--paper));color:var(--k-response)}
 .label-school{background:color-mix(in srgb,var(--k-school) 12%,var(--paper));color:var(--k-school)}
 .label-analysis{background:color-mix(in srgb,var(--k-analysis) 12%,var(--paper));color:var(--k-analysis)}
-.article-layout{grid-template-columns:minmax(210px,250px) minmax(0,1fr);gap:clamp(24px,3vw,48px);align-items:start}
+.article-layout{grid-template-columns:minmax(0,1fr) minmax(210px,250px);gap:clamp(24px,3vw,48px);align-items:start}
 .article-layout>.article-side{min-width:0;position:sticky;top:calc(var(--header-h) + 20px);max-height:calc(100vh - var(--header-h) - 28px);overflow-y:auto}
 .article-layout>.article-main{min-width:0;max-width:none}
 .article-layout>.article-main :is(.legacy,.legacy-body,.legacy-main){max-width:100%;min-width:0}
@@ -1061,7 +1061,7 @@ body[data-page="municipality"] .detail-section>h2,body[data-page="school"] .deta
 /* Shared document surfaces and archive lists preserve original source content. */
 body[data-page="legacy"] .article-hero-grid{min-width:0}
 body[data-page="legacy"] .article-hero-text :is(h1,.page-lead){overflow-wrap:anywhere}
-body[data-page="legacy"] .article-layout{grid-template-columns:minmax(210px,250px) minmax(0,1fr);gap:clamp(22px,3vw,46px)}
+body[data-page="legacy"] .article-layout{grid-template-columns:minmax(0,1fr) minmax(210px,250px);gap:clamp(22px,3vw,46px)}
 body[data-page="legacy"] .article-layout>.article-main{min-width:0;width:100%}
 body[data-page="legacy"] .article-layout>.article-main .legacy{width:100%;min-width:0}
 body[data-page="legacy"] :is(.journal-featured,.legacy .journal-card,.legacy .source-card,.legacy .resource-card){border-radius:var(--radius-md)}

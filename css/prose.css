@@ -18,7 +18,8 @@
 }
 
 .legacy[data-content-mode="prose"] :where(.legacy-main, body > article, section) > p {
-  max-width: 78ch;
+  /* The parent reading column controls line measure; do not create a second column. */
+  max-width: 100%;
 }
 
 /* Information cards become continuous document rows. */
