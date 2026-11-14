@@ -136,7 +136,11 @@
     const smallScreen = window.matchMedia('(max-width:760px)').matches;
     document.querySelectorAll('#main .legacy-body.guide-board-direct-fixed .diagram-scroll').forEach(scroller => {
       const style = getComputedStyle(scroller);
-      const scrollable = smallScreen && scroller.scrollWidth > scroller.clientWidth + 4 &&
+      const rect = scroller.getBoundingClientRect();
+      const visible = rect.width > 0 && rect.height > 0 &&
+        style.visibility === 'visible' && !scroller.closest('[hidden],[aria-hidden="true"]');
+      const scrollable = smallScreen && visible &&
+        scroller.scrollWidth > scroller.clientWidth + 4 &&
         (style.overflowX === 'auto' || style.overflowX === 'scroll');
       const hintId = scroller.dataset.diagramScrollHintId;
       const hint = hintId ? document.getElementById(hintId) : null;

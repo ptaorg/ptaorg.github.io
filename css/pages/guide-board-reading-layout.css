@@ -336,3 +336,22 @@ body[data-page="legacy"] #main .article-layout > .article-side {
     outline-offset:3px;
   }
 }
+
+/* Four stages of the school's reform schedule fit the phone one at a time. */
+@media screen and (max-width:760px) {
+  .legacy .roadmap-grid {
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:18px!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+  }
+  .legacy .roadmap-grid > * {
+    box-sizing:border-box;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    overflow-wrap:anywhere;
+  }
+}

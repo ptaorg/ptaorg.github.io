@@ -25,3 +25,12 @@ test('original diagrams remain scrollable with semantic bidirectional controls',
   assert.match(css,/\.diagram-scroll\[data-diagram-scroll-hint-id\]/);
   assert.match(html,/assets\/legacy\.js\?v=20261114-diagrams/);
 });
+
+test('four stage roadmap is one readable mobile column',()=>{
+ const css=read('css/pages/guide-board-reading-layout.css');
+ const html=read('guide-board.html');
+ assert.match(css,/\.legacy \.roadmap-grid \{/);
+ assert.match(css,/grid-template-columns:minmax\(0,1fr\)!important/);
+ assert.match(css,/\.legacy \.roadmap-grid > \*/);
+ assert.equal((html.match(/<span class="u-989ac421e5">/g)||[]).length,4);
+});
