@@ -131,14 +131,91 @@
       }
     });
   }
+  let diagramHintCounter = 0;
+  function markWideDiagrams() {
+    const smallScreen = window.matchMedia('(max-width:760px)').matches;
+    document.querySelectorAll('#main .legacy-body.guide-board-direct-fixed .diagram-scroll').forEach(scroller => {
+      const style = getComputedStyle(scroller);
+      const scrollable = smallScreen && scroller.scrollWidth > scroller.clientWidth + 4 &&
+        (style.overflowX === 'auto' || style.overflowX === 'scroll');
+      const hintId = scroller.dataset.diagramScrollHintId;
+      const hint = hintId ? document.getElementById(hintId) : null;
+      if (scrollable) {
+        if (!hint) {
+          const el = document.createElement('div');
+          el.className = 'table-scroll-hint diagram-scroll-hint';
+          el.id = 'pta-diagram-scroll-hint-' + (++diagramHintCounter);
+          const caption = document.createElement('span');
+          caption.textContent = '図は左右にスクロールできます。';
+          const actions = document.createElement('span');
+          actions.className = 'table-scroll-actions';
+          for (const [direction, label, sign] of [
+            ['back', '左を見る', -1], ['forward', '右を見る', 1]
+          ]) {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.textContent = label;
+            button.dataset.diagramScroll = direction;
+            button.setAttribute('aria-label', '図を' + (sign < 0 ? '左' : '右') + 'へスクロール');
+            button.addEventListener('click', () => {
+              scroller.scrollBy({
+                left: sign * Math.max(160, Math.floor(scroller.clientWidth * .7)),
+                behavior: 'smooth'
+              });
+            });
+            actions.append(button);
+          }
+          el.append(caption, actions);
+          scroller.before(el);
+          scroller.dataset.diagramScrollHintId = el.id;
+        }
+        const actualId = scroller.dataset.diagramScrollHintId;
+        if (!scroller.hasAttribute('tabindex')) {
+          scroller.setAttribute('tabindex', '0');
+          scroller.dataset.diagramScrollTabAdded = '1';
+        }
+        const described = (scroller.getAttribute('aria-describedby') || '').split(/\s+/).filter(Boolean);
+        if (!described.includes(actualId)) {
+          scroller.setAttribute('aria-describedby', [...described, actualId].join(' '));
+        }
+        const updateButtons = () => {
+          const el = document.getElementById(scroller.dataset.diagramScrollHintId);
+          const back = el?.querySelector('[data-diagram-scroll="back"]');
+          const forward = el?.querySelector('[data-diagram-scroll="forward"]');
+          if (back) back.disabled = scroller.scrollLeft <= 2;
+          if (forward) forward.disabled =
+            scroller.scrollLeft >= scroller.scrollWidth - scroller.clientWidth - 2;
+        };
+        if (!scroller.dataset.diagramScrollListener) {
+          scroller.addEventListener('scroll', updateButtons, { passive: true });
+          scroller.dataset.diagramScrollListener = '1';
+        }
+        updateButtons();
+      } else if (hintId) {
+        hint?.remove();
+        const remaining = (scroller.getAttribute('aria-describedby') || '').split(/\s+/)
+          .filter(x => x && x !== hintId);
+        if (remaining.length) scroller.setAttribute('aria-describedby', remaining.join(' '));
+        else scroller.removeAttribute('aria-describedby');
+        if (scroller.dataset.diagramScrollTabAdded === '1') {
+          scroller.removeAttribute('tabindex');
+          delete scroller.dataset.diagramScrollTabAdded;
+        }
+        delete scroller.dataset.diagramScrollHintId;
+      }
+    });
+  }
   function init() {
     lightenDarkPanels();
     fixContrast();
     fixAll(document);
     initFAQ(document);
     markWideTables();
+    markWideDiagrams();
     window.addEventListener('load', markWideTables, { once: true });
+    window.addEventListener('load', markWideDiagrams, { once: true });
     window.addEventListener('resize', () => window.requestAnimationFrame(markWideTables));
+    window.addEventListener('resize', () => window.requestAnimationFrame(markWideDiagrams));
     new MutationObserver(ms => ms.forEach(m => m.addedNodes.forEach(n => { if (n.nodeType === 1) { if (n.matches && n.matches('a[href]')) fixHref(n); fixAll(n); } })))
       .observe(document.body, { childList: true, subtree: true });
   }

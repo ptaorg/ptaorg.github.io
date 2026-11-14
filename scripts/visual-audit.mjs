@@ -259,6 +259,46 @@ for (const viewport of viewports) {
           if (returned >= after - 3) record.errors.push('表の「左の列を見る」が動作しない');
         }
       }
+      if (viewport.name === 'mobile' && item.pathname === '/guide-board.html') {
+        const diagrams = await page.evaluate(() => [...document.querySelectorAll(
+          '#main .legacy-body.guide-board-direct-fixed .diagram-scroll'
+        )].filter(e => e.scrollWidth > e.clientWidth + 4).map(e => ({
+          hint: !!e.previousElementSibling?.matches('.diagram-scroll-hint'),
+          buttons: e.previousElementSibling?.querySelectorAll(
+            '.table-scroll-actions button'
+          ).length === 2,
+          focusable: e.tabIndex === 0,
+          described: !!e.dataset.diagramScrollHintId &&
+            (e.getAttribute('aria-describedby') || '').split(/\s+/)
+              .includes(e.dataset.diagramScrollHintId)
+        })));
+        record.scrollableDiagrams = diagrams.length;
+        if (!diagrams.length || diagrams.some(d =>
+          !d.hint || !d.buttons || !d.focusable || !d.described)) {
+          record.errors.push('横長の原本図に視覚的案内・左右操作・キーボード案内が不足');
+        }
+        if (diagrams.length) {
+          const target = page.locator(
+            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll[data-diagram-scroll-hint-id]'
+          ).first();
+          const forward = page.locator(
+            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll-hint [data-diagram-scroll="forward"]'
+          ).first();
+          const back = page.locator(
+            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll-hint [data-diagram-scroll="back"]'
+          ).first();
+          await forward.click();
+          await page.waitForTimeout(350);
+          const right = await target.evaluate(e => e.scrollLeft);
+          await back.click();
+          await page.waitForTimeout(350);
+          const left = await target.evaluate(e => e.scrollLeft);
+          record.diagramMoveRight = right;
+          record.diagramMoveBack = right - left;
+          if (right <= 3 || left >= right - 3)
+            record.errors.push('図の左右ボタンが実際にスクロールしない');
+        }
+      }
       // A few archived school pages had a 100vw hero inside a narrow column,
       // making the print control invisible even though document scrolling was zero.
       if (item.pathname.startsWith('/archive/')) {
