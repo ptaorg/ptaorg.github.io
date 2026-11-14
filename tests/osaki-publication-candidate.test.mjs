@@ -80,5 +80,5 @@ test('Published old PDF is not silently copied or cited as final checked legal p
   assert.match(audit,/23校/);
   assert.match(audit,/下伊場野小学校/);
   assert.match(audit,/220行、ページ数計983頁/);
-  assert.match(audit,/公表準備/);
+  assert.match(audit,/公開状態/);
 });
