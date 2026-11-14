@@ -158,7 +158,16 @@ for (const viewport of viewports) {
         const textOverflow = all.filter((el) => {
           if (!['PRE','TABLE','CODE'].includes(el.tagName) && !el.matches('.edu-table-wrap,.table-wrap,.responsive-table,.gl-tpl-pre')) return false;
           return el.scrollWidth > el.clientWidth + 2;
-        }).slice(0, 20).map((el) => ({ tag: el.tagName.toLowerCase(), className: String(el.className || '').slice(0, 120), id: el.id || '', scrollWidth: el.scrollWidth, clientWidth: el.clientWidth }));
+        }).slice(0, 20).map((el) => {
+          let managed = false;
+          for (let a = el; a && a !== document.body; a = a.parentElement) {
+            const cs = getComputedStyle(a);
+            if ((cs.overflowX === 'scroll' || cs.overflowX === 'auto') &&
+                a.scrollWidth > a.clientWidth + 2) { managed = true; break; }
+          }
+          return {tag:el.tagName.toLowerCase(),className:String(el.className || '').slice(0,120),
+            id:el.id || '',scrollWidth:el.scrollWidth,clientWidth:el.clientWidth,managed};
+        });
         const main = document.querySelector('main');
         const article = document.querySelector('main article, article, .gl-wrap, .issue-main, .edu-article, .journal-layout, .support-layout, .wrap-narrow');
         const header = document.querySelector('.site-header');
@@ -478,12 +487,24 @@ for (const viewport of viewports) {
       }
 
       if (metrics.horizontalOverflow) record.errors.push(`横スクロール ${metrics.docScrollWidth}px > ${metrics.docClientWidth}px`);
-      if (metrics.overflowElements.length) record.warnings.push(`画面外要素 ${metrics.overflowElements.length}件`);
+      // A map tile or a column inside an explicitly scrollable document is not a
+      // broken page. Retain every raw element and detailed reason in audit.json.
+      record.expectedOverflow = {
+        mapTiles: metrics.outsideBreakdown.mapTiles,
+        managedScrollElements: metrics.outsideBreakdown.containedInScroller,
+        managedTextElements: metrics.textOverflow.filter(el => el.managed).length
+      };
+      if (metrics.outsideBreakdown.uncontained > 0) {
+        record.errors.push(`資料・要素がスクロール枠外へはみ出す ${metrics.outsideBreakdown.uncontained}件`);
+        record.warnings.push(`スクロール枠外の要素 ${metrics.outsideBreakdown.uncontained}件`);
+      }
       if (metrics.h1Count !== 1) record.warnings.push(`H1 ${metrics.h1Count}件`);
       if (metrics.p10Font !== null && metrics.p10Font < (viewport.name === 'mobile' ? 13 : 12)) record.warnings.push(`小さい文字 p10=${metrics.p10Font}px`);
       if (viewport.name === 'desktop' && metrics.articleRect && metrics.articleRect.width < 720 && metrics.sectionCount > 2) record.warnings.push(`本文領域が狭い ${metrics.articleRect.width}px`);
       if (metrics.headerRect && metrics.firstContentRect && metrics.firstContentRect.top < metrics.headerRect.bottom - 1 && metrics.firstContentRect.bottom > metrics.headerRect.top) record.warnings.push('固定ヘッダーと本文が重なる可能性');
-      if (metrics.textOverflow.length) record.warnings.push(`表・コードの内部横スクロール ${metrics.textOverflow.length}件`);
+      if (metrics.textOverflow.some(el => !el.managed)) {
+        record.warnings.push(`スクロール手段のない表・コード ${metrics.textOverflow.filter(el => !el.managed).length}件`);
+      }
 
       const shouldShot = screenshotsOnlyProblems
         ? record.errors.length || record.warnings.length
@@ -517,6 +538,11 @@ const summary = {
   horizontalOverflow: results.filter((r) => r.horizontalOverflow).length,
   narrowDesktop: results.filter((r) => r.viewport === 'desktop' && r.warnings.some((w) => w.includes('本文領域が狭い'))).length,
   smallText: results.filter((r) => r.warnings.some((w) => w.includes('小さい文字'))).length,
+  rawOutOfViewportScreens: results.filter((r) => r.outsideBreakdown?.total > 0).length,
+  mapTileScreens: results.filter((r) => r.outsideBreakdown?.mapTiles > 0).length,
+  managedScrollScreens: results.filter((r) =>
+    r.outsideBreakdown?.containedInScroller > 0 || r.expectedOverflow?.managedTextElements > 0).length,
+  uncontainedOverflowScreens: results.filter((r) => r.outsideBreakdown?.uncontained > 0).length,
 };
 fs.writeFileSync(path.join(OUT, 'audit.json'), JSON.stringify({ summary, results }, null, 2));
 

@@ -52,3 +52,14 @@ test('diagram controls are activated only after details disclosure opens',()=>{
  assert.match(audit,/diagramDisclosuresOpened/);
  assert.match(audit,/node\.open=true/);
 });
+
+test('all genuine overflow is a test failure while scroll/map notes remain recorded',()=>{
+ const script=read('scripts/visual-audit.mjs');
+ const html=read('key-materials.html');
+ assert.match(script,/outsideBreakdown\.uncontained > 0/);
+ assert.match(script,/uncontainedOverflowScreens/);
+ assert.match(script,/rawOutOfViewportScreens/);
+ assert.match(script,/managedScrollScreens/);
+ assert.match(script,/\.filter\(el => !el\.managed\)/);
+ assert.match(html,/key-materials\.css\?v=20261114-mobile-fit/);
+});
