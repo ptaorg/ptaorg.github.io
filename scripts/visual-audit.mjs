@@ -313,6 +313,13 @@ for (const viewport of viewports) {
             e.scrollWidth > e.clientWidth + 4;
         }).map(e => ({
           hint: !!e.previousElementSibling?.matches('.diagram-scroll-hint'),
+          hintDisplay: e.previousElementSibling ?
+            getComputedStyle(e.previousElementSibling).display : '',
+          hintVisibility: e.previousElementSibling ?
+            getComputedStyle(e.previousElementSibling).visibility : '',
+          hintRect: e.previousElementSibling ?
+            ({width:e.previousElementSibling.getBoundingClientRect().width,
+              height:e.previousElementSibling.getBoundingClientRect().height}) : null,
           buttons: e.previousElementSibling?.querySelectorAll(
             '.table-scroll-actions button'
           ).length === 2,
@@ -326,7 +333,14 @@ for (const viewport of viewports) {
           !d.hint || !d.buttons || !d.focusable || !d.described)) {
           record.errors.push('横長の原本図に視覚的案内・左右操作・キーボード案内が不足');
         }
-        if (diagrams.length) {
+        const hintsVisible = diagrams.filter(d =>
+          d.hint && d.hintDisplay !== 'none' && d.hintVisibility === 'visible' &&
+          d.hintRect?.width > 0 && d.hintRect?.height > 0);
+        record.visibleDiagramHints = hintsVisible.length;
+        if (hintsVisible.length !== diagrams.length) {
+          record.errors.push('図の左右操作案内が描画されていない');
+        }
+        if (hintsVisible.length > 0) {
           const target = page.locator(
             '#main .legacy-body.guide-board-direct-fixed .diagram-scroll[data-diagram-scroll-hint-id]:visible'
           ).first();
