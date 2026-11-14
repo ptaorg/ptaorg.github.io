@@ -315,23 +315,23 @@ body[data-page="legacy"] #main .article-layout > .article-side {
 
 /* Long primary-source diagrams keep native resolution and scroll horizontally. */
 @media screen and (max-width:760px) {
-  #main .legacy-body.guide-board-direct-fixed .diagram-scroll {
+  .legacy-body.guide-board-direct-fixed .diagram-scroll {
     min-width:0;
     max-width:100%;
-    overflow-x:auto;
+    overflow-x:auto!important;
     -webkit-overflow-scrolling:touch;
   }
-  #main .legacy-body.guide-board-direct-fixed .diagram-scroll-hint {
+  .legacy-body.guide-board-direct-fixed .diagram-scroll-hint {
     display:flex!important;
     align-items:center;
     flex-wrap:wrap;
     gap:8px 12px;
     margin:12px 0 8px!important;
   }
-  #main .legacy-body.guide-board-direct-fixed .diagram-scroll[data-diagram-scroll-hint-id] {
+  .legacy-body.guide-board-direct-fixed .diagram-scroll[data-diagram-scroll-hint-id] {
     scrollbar-width:thin;
   }
-  #main .legacy-body.guide-board-direct-fixed .diagram-scroll:focus-visible {
+  .legacy-body.guide-board-direct-fixed .diagram-scroll:focus-visible {
     outline:3px solid var(--navy)!important;
     outline-offset:3px;
   }
