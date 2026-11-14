@@ -870,7 +870,7 @@ main .search-panel-bar,main .search-panel-local{display:none!important}
 
 /* Phase 4 design system start */
 /* Shared reading surface, phase 4. Never replaces original research content. */
-:where(.article-main,.detail-main,.legacy-main,.journal-article) :where(p,li,dd,blockquote):not(.wide):not(.full-width){max-width:40em;overflow-wrap:break-word}
+:where(.article-main,.detail-main,.legacy-main,.journal-article) :where(p,li,dd,blockquote):not(.wide):not(.full-width){max-width:100%;overflow-wrap:break-word}
 :where(.article-main,.detail-main,.legacy-main,.journal-article) :where(p,li,dd){line-height:1.9}
 :where(.article-main,.detail-main,.legacy-main,.article-hero,.hero) h1{text-wrap:balance;word-break:auto-phrase;overflow-wrap:break-word}
 :where(.article-main,.detail-main,.legacy-main,.article-hero,.hero) :where(h2,h3){font-family:var(--serif);text-wrap:pretty}
