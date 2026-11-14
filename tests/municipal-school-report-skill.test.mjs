@@ -228,7 +228,21 @@ test('Osaki real-city pilot locks 25 official school IDs but does not invent PTA
   assert.equal(d.schools.filter(s=>s.schoolType==='義務教育学校').length,2);
   const checked=validateReport(d);
   assert.equal(checked.ok,true,JSON.stringify(checked.errors));
-  assert.ok(checked.metrics.axes.every(a=>a.unknown===25 && a.confirmedYesOfKnownPct===null));
+  const fee=checked.metrics.axes.find(a=>a.id==='school_collection_of_pta_fee');
+  assert.equal(fee.confirmed_yes,1);
+  assert.equal(fee.unknown,24);
+  assert.equal(fee.confirmedYesOfTargetPct,4);
+  assert.equal(fee.confirmedYesOfKnownPct,100);
+  assert.equal(fee.confirmedCoveragePct,4);
+  const account=checked.metrics.axes.find(a=>a.id==='school_account_or_payment_system');
+  assert.equal(account.indication,1);
+  assert.equal(account.unknown,24);
+  assert.equal(account.confirmedYesOfKnownPct,null);
+  assert.ok(checked.metrics.axes.filter(a=>!['school_collection_of_pta_fee','school_account_or_payment_system'].includes(a.id))
+    .every(a=>a.unknown===25 && a.confirmedYesOfKnownPct===null));
+  const tajiri=d.schools.find(s=>s.id==='tajiri-jhs');
+  assert.equal(tajiri.axes.school_collection_of_pta_fee.sourceRefs.length,2);
+  assert.equal(tajiri.axes.school_account_or_payment_system.status,'indication');
   const attempt=validateReport(d,{publish:true});
   assert.equal(attempt.ok,false);
   assert.ok(codes(attempt).has('PUBLICATION_APPROVAL'));
