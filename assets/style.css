@@ -1334,3 +1334,121 @@ body[data-page="home"] #boundary .home-boundary-more{
     padding:16px;
   }
 }
+
+
+/* Site-wide readable page grid | 2026-11-14 */
+/* One shared horizontal rhythm across the archive, articles, regional views,
+   donation page and footer. Content and responsive behavior remain untouched. */
+:root{
+  --container:1200px;
+  --gutter:clamp(20px,3vw,36px);
+  --reading-container:1120px;
+  --reading-rail:248px;
+  --reading-gap:44px;
+}
+#main .container, .site-header .container, .site-footer .container{
+  box-sizing:border-box;
+  margin-inline:auto;
+}
+#main .container:has(> .article-layout){
+  max-width:calc(var(--reading-container) + var(--gutter) * 2);
+}
+#main .container:has(> .article-layout) > .article-layout{
+  min-width:0;
+}
+/* The heading is one name, never "PTA適正化推進委員" followed by "会". */
+.site-header .header-inner{
+  gap:clamp(12px,1.6vw,24px);
+}
+.site-header .header-inner > .brand{
+  flex:0 0 auto;
+  min-width:max-content;
+  margin-right:auto;
+}
+.site-header .brand-type{
+  min-width:0;
+}
+.site-header .brand-type > strong{
+  display:block;
+  white-space:nowrap;
+  word-break:keep-all;
+  font-size:clamp(1.08rem,1.32vw,1.42rem);
+}
+.site-header .brand-type > small{
+  display:block;
+  max-width:32ch;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.site-header .global-nav{
+  min-width:0;
+  flex:0 1 auto;
+}
+/* Editorial width: ~828px of prose + a 248px TOC and a 44px gutter.
+   Tables, primary documents and diagrams still use the full prose column. */
+@media(min-width:1041px){
+  #main .container:has(> .article-layout) > .article-layout{
+    grid-template-columns:minmax(0,1fr) var(--reading-rail);
+    column-gap:var(--reading-gap);
+    align-items:start;
+  }
+  #main .article-layout > .article-main{
+    grid-column:1;
+    grid-row:1;
+    min-width:0;
+  }
+  #main .article-layout > .article-side{
+    grid-column:2;
+    grid-row:1;
+    min-width:0;
+  }
+}
+#main .article-layout > .article-main :is(.legacy,.legacy-body,.legacy-main,.journal-article-wrap,.journal-article-body){
+  min-width:0;
+  max-width:100%;
+}
+#main .article-layout > .article-main :is(p,li,dd,blockquote){
+  line-height:1.9;
+  overflow-wrap:anywhere;
+}
+#main .article-layout > .article-main :is(.legacy-main,.journal-article-body,.editorial-main.prose-page) > p{
+  margin-block:0 1.22em;
+}
+#main .article-layout > .article-main :is(table,figure,pre,.table-scroll,.diagram-figure){
+  max-width:100%;
+  min-width:0;
+}
+#main .article-layout > .article-main :is(table,pre,.table-scroll){
+  overflow-x:auto;
+}
+/* Narrow laptops: keep the brand intact and compact the existing nav.
+   The site's original hamburger breakpoint and interaction are unchanged. */
+@media(min-width:1041px) and (max-width:1280px){
+  .site-header .header-inner{gap:10px;}
+  .site-header .brand-type > strong{font-size:1.05rem;}
+  .site-header .brand-type > small{display:none;}
+  .site-header .nav-trigger{font-size:.82rem;padding-inline:5px;}
+  .site-header .nav-cta{font-size:.82rem;padding:10px 9px;}
+}
+@media(max-width:1040px){
+  #main .container:has(> .article-layout) > .article-layout{
+    grid-template-columns:minmax(0,1fr);
+  }
+  #main .article-layout > .article-main,
+  #main .article-layout > .article-side{
+    grid-column:1;
+    grid-row:auto;
+    max-width:100%;
+  }
+  .site-header .header-inner > .brand{margin-right:auto;}
+}
+@media(max-width:760px){
+  :root{--gutter:clamp(16px,4vw,22px);}
+  .site-header .brand-type > strong{font-size:1rem;}
+}
+@media(max-width:420px){
+  .site-header .brand-type > strong{font-size:.875rem;}
+  .site-header .brand-mark{width:30px;height:28px;}
+  .site-header .brand{gap:7px;}
+}
