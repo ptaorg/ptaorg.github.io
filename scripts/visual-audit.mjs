@@ -97,6 +97,8 @@ for (const viewport of viewports) {
         const viewportWidth = document.documentElement.clientWidth;
         const overflowElements = all.filter((el) => {
           const r = el.getBoundingClientRect();
+          // The keyboard-only skip link is intentionally positioned off-screen before focus.
+          if (el.matches('.skip-link') || el.closest('.skip-link')) return false;
           if (el.tagName === 'SVG' || el.closest('svg')) return false;
           if (getComputedStyle(el).position === 'fixed') return false;
           return r.right > viewportWidth + 2 || r.left < -2;

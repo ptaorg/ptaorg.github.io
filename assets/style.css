@@ -1445,3 +1445,9 @@ body[data-page="home"] #boundary .home-boundary-more{
   .site-header .brand-mark{width:30px;height:28px;}
   .site-header .brand{gap:7px;}
 }
+
+/* Keep the full organization name; hide only the subtitle when header space is constrained.
+   The late shared layer otherwise overrides older responsive display:none rules. */
+@media(max-width:1480px){
+  .site-header .brand-type > small{display:none;}
+}
