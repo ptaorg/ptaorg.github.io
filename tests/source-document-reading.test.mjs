@@ -34,3 +34,12 @@ test('four stage roadmap is one readable mobile column',()=>{
  assert.match(css,/\.legacy \.roadmap-grid > \*/);
  assert.equal((html.match(/<span class="u-989ac421e5">/g)||[]).length,4);
 });
+
+test('officer guide exit links stay within mobile viewport',()=>{
+ const css=read('css/pages/guide-pta.css');
+ const html=read('guide-pta.html');
+ assert.match(css,/\.legacy \.u-55aeffdf70 > a \{/);
+ assert.match(css,/width:100%!important/);
+ assert.match(css,/white-space:normal!important/);
+ assert.match(html,/guide-pta\.css\?v=20261114-readable/);
+});
