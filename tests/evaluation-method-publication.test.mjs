@@ -27,7 +27,7 @@ test('published evaluation methodology is a standalone Japanese canonical page',
   assert.ok(steps.indexOf('主体の分離')<steps.indexOf('事務の帰属'));
   assert.ok(steps.indexOf('事務の帰属')<steps.indexOf('学校側の具体的な所掌事務・権限'));
   assert.ok(steps.indexOf('学校側の具体的な所掌事務・権限')<steps.indexOf('個人情報の利用・提供'));
-  assert.match(html,/技術試験で生成した個別評価書は本ページから公開していません/);
+  assert.match(html,/大崎市の自治体別評価と田尻中学校の学校別評価は確認済み部分を第一次公開しています/);
   assert.doesNotMatch(html,/noindex,nofollow/);
 });
 
