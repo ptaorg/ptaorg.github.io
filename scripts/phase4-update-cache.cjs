@@ -13,6 +13,10 @@ function transform(html){
  return html.replace(/(<link\b[^>]*\bhref=")([^"]+)(")/g,(whole,left,raw,right)=>{
   const pathPart=raw.replace(/^(?:\.\.\/|\.\/|\/)+/,'').split('?')[0];
   if(!all.has(pathPart))return whole;
+  // Preserve newer release-specific cache tags (e.g. the 2026-11-14 readability release).
+  // Phase 4 is a legacy migration pass; it must never downgrade newer assets.
+  const current=raw.match(/[?&]v=(\d{8})(?:[-_a-z0-9]*)/i);
+  if(current && current[1]>'20261113')return whole;
   const version=phase4c.has(pathPart)?'20261113-phase4c':changed.has(pathPart)?'20261113-phase4b':'20261113-phase4';
   return left+raw.split('?')[0]+'?v='+version+right;
  });

@@ -2,7 +2,7 @@ import test from 'node:test';import assert from 'node:assert/strict';import fs f
 const req=createRequire(import.meta.url);
 const {transform,phase4c}=req('../scripts/phase4-update-cache.cjs');
 const root=path.resolve(import.meta.dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8');
-test('maintained CSS uses phase4c version while original phase4b references remain stable',()=>{
+test('maintained CSS uses phase4c version without downgrading newer release asset tags',()=>{
  assert.ok(phase4c.size>=30);
  for(const p of ['index.html','guide-board.html','membership.html','law-map.html','about.html','archive/ota/school-001-es/index.html']){
   assert.equal(transform(read(p)),read(p),p+' has stale stylesheet query');

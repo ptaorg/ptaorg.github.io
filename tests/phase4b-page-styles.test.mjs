@@ -13,7 +13,15 @@ test('shared legacy CSS does not introduce circular or nonsemantic core variable
  assert.match(edit,/--color-accent\s*:\s*var\(--gold\)/);
  for(const file of [...CORE,...TARGETS]){
   const css=read(file);
-  assert.equal(normalizeFile(css,file),css,file+' is not normalized');
+  const normalized=normalizeFile(css,file);
+  if(normalized!==css){
+    let offset=0;
+    while(offset<css.length && offset<normalized.length && css[offset]===normalized[offset])offset++;
+    console.error('CSS_NORMALIZATION_DRIFT',file,'offset',offset,
+      'source',JSON.stringify(css.slice(Math.max(0,offset-100),offset+200)),
+      'normalized',JSON.stringify(normalized.slice(Math.max(0,offset-100),offset+200)));
+  }
+  assert.equal(normalized,css,file+' is not normalized');
  }
 });
 test('major page CSS use shared tokens without accidental self-reference',()=>{
