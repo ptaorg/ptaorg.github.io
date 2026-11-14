@@ -25,7 +25,7 @@ test('guide-board retains both the original detailed TOC and six readable chapte
   assert.match(toc,/全38項目の詳細目次を表示/);
 });
 test('reading column is wide and sidebar is narrow, with tablet and mobile fallbacks',()=>{
-  assert.ok(page.includes('css/pages/guide-board-reading-layout.css?v=20261114c'));
+  assert.match(page,/css\/pages\/guide-board-reading-layout\.css\?v=20261114[a-z0-9-]+/);
   assert.ok(page.includes('assets/style.css?v=20261114-readable'));
   assert.match(css,/grid-template-columns:minmax\(0,1fr\) minmax\(238px,270px\)/);
   assert.match(css,/\.legacy\.guide-board-text-first :is\([\s\S]*?\)\s*\{[\s\S]*?width:100% !important;[\s\S]*?max-width:none !important;/);

@@ -1046,3 +1046,30 @@
       font-size: var(--fs-body);
     }
   }
+
+/* The officer guide's two exit links must wrap inside a 390px mobile column. */
+@media screen and (max-width:760px) {
+  .legacy .u-55aeffdf70 {
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:12px!important;
+    width:100%;
+    max-width:100%;
+    min-width:0;
+  }
+  .legacy .u-55aeffdf70 > a {
+    box-sizing:border-box!important;
+    display:flex!important;
+    align-items:center;
+    justify-content:center;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    min-height:44px;
+    padding:12px 16px!important;
+    white-space:normal!important;
+    overflow-wrap:anywhere;
+    text-align:center;
+  }
+}

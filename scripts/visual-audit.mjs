@@ -104,18 +104,70 @@ for (const viewport of viewports) {
         const fontSizes = textEls.map((el) => parseFloat(getComputedStyle(el).fontSize)).filter(Number.isFinite).sort((a, b) => a - b);
         const percentile = (arr, p) => arr.length ? arr[Math.min(arr.length - 1, Math.floor(arr.length * p))] : null;
         const viewportWidth = document.documentElement.clientWidth;
-        const overflowElements = all.filter((el) => {
+        const outsideElements = all.filter((el) => {
           const r = el.getBoundingClientRect();
           // The keyboard-only skip link is intentionally positioned off-screen before focus.
           if (el.matches('.skip-link') || el.closest('.skip-link')) return false;
           if (el.tagName === 'SVG' || el.closest('svg')) return false;
           if (getComputedStyle(el).position === 'fixed') return false;
           return r.right > viewportWidth + 2 || r.left < -2;
-        }).slice(0, 30).map((el) => ({ tag: el.tagName.toLowerCase(), className: String(el.className || '').slice(0, 120), id: el.id || '', rect: rectObj(el.getBoundingClientRect()) }));
+        });
+        const overflowElements = outsideElements.slice(0, 30).map((el) => ({
+          tag: el.tagName.toLowerCase(), className: String(el.className || '').slice(0, 120),
+          id: el.id || '', rect: rectObj(el.getBoundingClientRect())
+        }));
+        // Report raw out-of-viewport geometry, but distinguish the legitimate
+        // clipped map tiles and horizontally scrollable original documents.
+        // No content is hidden and no warning is silently removed.
+        const outsideBreakdown = {
+          total: outsideElements.length,
+          mapTiles: 0,
+          containedInScroller: 0,
+          uncontained: 0,
+          uncontainedExamples: []
+        };
+        const offscreenKind = (el) => {
+          if (el.matches('.leaflet-tile') || el.closest('.leaflet-tile-container')) {
+            return 'mapTiles';
+          }
+          for (let ancestor = el.parentElement; ancestor && ancestor !== document.body;
+               ancestor = ancestor.parentElement) {
+            const cs = getComputedStyle(ancestor);
+            if ((cs.overflowX === 'scroll' || cs.overflowX === 'auto') &&
+                ancestor.scrollWidth > ancestor.clientWidth + 2) {
+              const bounds = ancestor.getBoundingClientRect();
+              if (bounds.left >= -2 && bounds.right <= viewportWidth + 2) {
+                return 'containedInScroller';
+              }
+            }
+          }
+          return 'uncontained';
+        };
+        for (const element of outsideElements) {
+          const kind = offscreenKind(element);
+          outsideBreakdown[kind]++;
+          if (kind === 'uncontained' && outsideBreakdown.uncontainedExamples.length < 10) {
+            outsideBreakdown.uncontainedExamples.push({
+              tag:element.tagName.toLowerCase(),
+              cls:String(element.className || '').slice(0,90),
+              parent:String(element.parentElement?.className || '').slice(0,90),
+              rect:rectObj(element.getBoundingClientRect())
+            });
+          }
+        }
         const textOverflow = all.filter((el) => {
           if (!['PRE','TABLE','CODE'].includes(el.tagName) && !el.matches('.edu-table-wrap,.table-wrap,.responsive-table,.gl-tpl-pre')) return false;
           return el.scrollWidth > el.clientWidth + 2;
-        }).slice(0, 20).map((el) => ({ tag: el.tagName.toLowerCase(), className: String(el.className || '').slice(0, 120), id: el.id || '', scrollWidth: el.scrollWidth, clientWidth: el.clientWidth }));
+        }).slice(0, 20).map((el) => {
+          let managed = false;
+          for (let a = el; a && a !== document.body; a = a.parentElement) {
+            const cs = getComputedStyle(a);
+            if ((cs.overflowX === 'scroll' || cs.overflowX === 'auto') &&
+                a.scrollWidth > a.clientWidth + 2) { managed = true; break; }
+          }
+          return {tag:el.tagName.toLowerCase(),className:String(el.className || '').slice(0,120),
+            id:el.id || '',scrollWidth:el.scrollWidth,clientWidth:el.clientWidth,managed};
+        });
         const main = document.querySelector('main');
         const article = document.querySelector('main article, article, .gl-wrap, .issue-main, .edu-article, .journal-layout, .support-layout, .wrap-narrow');
         const header = document.querySelector('.site-header');
@@ -142,6 +194,7 @@ for (const viewport of viewports) {
           bodyScrollWidth: document.body.scrollWidth,
           horizontalOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth + 2,
           overflowElements,
+          outsideBreakdown,
           textOverflow,
           mainRect: main ? rectObj(main.getBoundingClientRect()) : null,
           articleRect: article ? rectObj(article.getBoundingClientRect()) : null,
@@ -154,6 +207,28 @@ for (const viewport of viewports) {
         };
       });
       Object.assign(record, metrics);
+      if (viewport.name === 'mobile' &&
+          ['/key-materials.html', '/guide-board.html', '/law-map.html', '/national-archive.html'].includes(item.pathname)) {
+        record.contentScrollDiagnostics = await page.evaluate(() => {
+          const sels = ['.km-wrap','.km-list','.km-source','.km-source-index','.km-source-body',
+            '.km-source-body > p','.km-source-body > ul','.diagram-scroll','.diagram-scroll img',
+            '.law-table-wrap','.law-table','.archive-jump .wrap','.archive-jump a'];
+          return sels.map(selector => {
+            const e = document.querySelector('#main .legacy-body ' + selector);
+            if (!e) return null;
+            const r = e.getBoundingClientRect(), cs = getComputedStyle(e);
+            return {selector,left:Math.round(r.left),right:Math.round(r.right),
+              width:Math.round(r.width),clientWidth:e.clientWidth,scrollWidth:e.scrollWidth,
+              overflowX:cs.overflowX,minWidth:cs.minWidth,
+              gridColumns:cs.gridTemplateColumns,display:cs.display};
+          }).filter(Boolean);
+        });
+        if (item.pathname === '/key-materials.html' &&
+            record.contentScrollDiagnostics.some(x =>
+              x.selector.startsWith('.km-source') && (x.left < -2 || x.right > viewport.width + 2))) {
+          record.errors.push('重要資料の本文ブロックがスマートフォンの画面外に切れる');
+        }
+      }
       if (item.pathname === '/board-brief.html' && viewport.name === 'desktop') {
         const screen = await page.evaluate(() => {
           const p = document.querySelector('.legacy .document > .page p');
@@ -237,6 +312,129 @@ for (const viewport of viewports) {
           if (returned >= after - 3) record.errors.push('表の「左の列を見る」が動作しない');
         }
       }
+      if (viewport.name === 'mobile' && item.pathname === '/guide-board.html') {
+        // A source figure may be within closed <details>. Open its disclosure
+        // exactly as a reader would before checking controls and their motion.
+        record.diagramDisclosuresOpened = await page.evaluate(() => {
+          const first = document.querySelector(
+            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll'
+          );
+          let opened=0;
+          for (let node=first?.parentElement; node; node=node.parentElement) {
+            if (node.tagName === 'DETAILS' && !node.open) {
+              node.open=true;
+              opened++;
+            }
+          }
+          return opened;
+        });
+        await page.waitForTimeout(220);
+        const diagrams = await page.evaluate(() => [...document.querySelectorAll(
+          '#main .legacy-body.guide-board-direct-fixed .diagram-scroll'
+        )].filter(e => {
+          const r=e.getBoundingClientRect(), cs=getComputedStyle(e);
+          return r.width > 0 && r.height > 0 && cs.visibility === 'visible' &&
+            !e.closest('[hidden],[aria-hidden="true"],details:not([open])') &&
+            (!e.checkVisibility || e.checkVisibility()) &&
+            e.scrollWidth > e.clientWidth + 4;
+        }).map(e => ({
+          hint: !!e.previousElementSibling?.matches('.diagram-scroll-hint'),
+          hintDisplay: e.previousElementSibling ?
+            getComputedStyle(e.previousElementSibling).display : '',
+          hintVisibility: e.previousElementSibling ?
+            getComputedStyle(e.previousElementSibling).visibility : '',
+          hintRect: e.previousElementSibling ?
+            ({width:e.previousElementSibling.getBoundingClientRect().width,
+              height:e.previousElementSibling.getBoundingClientRect().height}) : null,
+          buttons: e.previousElementSibling?.querySelectorAll(
+            '.table-scroll-actions button'
+          ).length === 2,
+          focusable: e.tabIndex === 0,
+          described: !!e.dataset.diagramScrollHintId &&
+            (e.getAttribute('aria-describedby') || '').split(/\s+/)
+              .includes(e.dataset.diagramScrollHintId)
+        })));
+        record.scrollableDiagrams = diagrams.length;
+        if (!diagrams.length || diagrams.some(d =>
+          !d.hint || !d.buttons || !d.focusable || !d.described)) {
+          record.errors.push('横長の原本図に視覚的案内・左右操作・キーボード案内が不足');
+        }
+        const hintsVisible = diagrams.filter(d =>
+          d.hint && d.hintDisplay !== 'none' && d.hintVisibility === 'visible' &&
+          d.hintRect?.width > 0 && d.hintRect?.height > 0);
+        record.visibleDiagramHints = hintsVisible.length;
+        if (hintsVisible.length !== diagrams.length) {
+          record.errors.push('図の左右操作案内が描画されていない');
+        }
+        if (hintsVisible.length > 0) {
+          const target = page.locator(
+            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll[data-diagram-scroll-hint-id]'
+          ).first();
+          const forward = page.locator(
+            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll-hint [data-diagram-scroll="forward"]'
+          ).first();
+          const back = page.locator(
+            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll-hint [data-diagram-scroll="back"]'
+          ).first();
+          record.firstDiagramControl = await forward.evaluate(button => {
+            const rect=button.getBoundingClientRect(), cs=getComputedStyle(button);
+            const parents=[];
+            for(let p=button.parentElement;p && parents.length<5;p=p.parentElement){
+              const r=p.getBoundingClientRect(),c=getComputedStyle(p);
+              parents.push({cls:String(p.className).slice(0,90),w:r.width,h:r.height,
+                display:c.display,overflowX:c.overflowX,overflowY:c.overflowY,visibility:c.visibility});
+            }
+            return {display:cs.display,visibility:cs.visibility,opacity:cs.opacity,
+              rect:{x:rect.x,y:rect.y,w:rect.width,h:rect.height},
+              disabled:button.disabled,parents};
+          });
+          record.firstDiagramControl.beforeScrollVisible = await forward.isVisible();
+          await forward.evaluate(button => {
+            const r=button.getBoundingClientRect();
+            window.scrollTo(0, window.scrollY + r.top - 150);
+          });
+          await page.waitForTimeout(180);
+          record.firstDiagramControl.isVisible = await forward.isVisible();
+          record.firstDiagramControl.visibilityAfterScroll = await forward.evaluate(button => {
+            const p=button.closest('.diagram-figure'),cs=getComputedStyle(p);
+            return {figureContentVisibility:cs.contentVisibility,
+              figureVisibility:cs.visibility,checkVisibility:button.checkVisibility(),
+              detailsClosed:!!button.closest('details:not([open])')};
+          });
+          if (!record.firstDiagramControl.isVisible) {
+            record.errors.push('図の移動ボタンはDOM上にあるが、操作可能な状態ではない');
+          } else {
+            await forward.click();
+          await page.waitForTimeout(350);
+          const right = await target.evaluate(e => e.scrollLeft);
+          await back.click();
+          await page.waitForTimeout(350);
+          const left = await target.evaluate(e => e.scrollLeft);
+          record.diagramMoveRight = right;
+          record.diagramMoveBack = right - left;
+          if (right <= 3 || left >= right - 3)
+            record.errors.push('図の左右ボタンが実際にスクロールしない');
+          }
+        }
+      }
+      if (viewport.name === 'mobile' && item.pathname === '/guide-board.html') {
+        const stages = await page.evaluate(() => {
+          const root = document.querySelector('.legacy .roadmap-grid');
+          if (!root) return null;
+          return {
+            columns: getComputedStyle(root).gridTemplateColumns,
+            cards: [...root.children].map(e => {
+              const r=e.getBoundingClientRect();
+              return {left:Math.round(r.left),right:Math.round(r.right)};
+            })
+          };
+        });
+        record.roadmapLayout=stages;
+        if (!stages || stages.cards.length !== 4 ||
+            stages.cards.some(c => c.left < -2 || c.right > viewport.width + 2)) {
+          record.errors.push('4段階工程表のカードがスマートフォンの画面からはみ出す');
+        }
+      }
       // A few archived school pages had a 100vw hero inside a narrow column,
       // making the print control invisible even though document scrolling was zero.
       if (item.pathname.startsWith('/archive/')) {
@@ -289,12 +487,24 @@ for (const viewport of viewports) {
       }
 
       if (metrics.horizontalOverflow) record.errors.push(`横スクロール ${metrics.docScrollWidth}px > ${metrics.docClientWidth}px`);
-      if (metrics.overflowElements.length) record.warnings.push(`画面外要素 ${metrics.overflowElements.length}件`);
+      // A map tile or a column inside an explicitly scrollable document is not a
+      // broken page. Retain every raw element and detailed reason in audit.json.
+      record.expectedOverflow = {
+        mapTiles: metrics.outsideBreakdown.mapTiles,
+        managedScrollElements: metrics.outsideBreakdown.containedInScroller,
+        managedTextElements: metrics.textOverflow.filter(el => el.managed).length
+      };
+      if (metrics.outsideBreakdown.uncontained > 0) {
+        record.errors.push(`資料・要素がスクロール枠外へはみ出す ${metrics.outsideBreakdown.uncontained}件`);
+        record.warnings.push(`スクロール枠外の要素 ${metrics.outsideBreakdown.uncontained}件`);
+      }
       if (metrics.h1Count !== 1) record.warnings.push(`H1 ${metrics.h1Count}件`);
       if (metrics.p10Font !== null && metrics.p10Font < (viewport.name === 'mobile' ? 13 : 12)) record.warnings.push(`小さい文字 p10=${metrics.p10Font}px`);
       if (viewport.name === 'desktop' && metrics.articleRect && metrics.articleRect.width < 720 && metrics.sectionCount > 2) record.warnings.push(`本文領域が狭い ${metrics.articleRect.width}px`);
       if (metrics.headerRect && metrics.firstContentRect && metrics.firstContentRect.top < metrics.headerRect.bottom - 1 && metrics.firstContentRect.bottom > metrics.headerRect.top) record.warnings.push('固定ヘッダーと本文が重なる可能性');
-      if (metrics.textOverflow.length) record.warnings.push(`表・コードの内部横スクロール ${metrics.textOverflow.length}件`);
+      if (metrics.textOverflow.some(el => !el.managed)) {
+        record.warnings.push(`スクロール手段のない表・コード ${metrics.textOverflow.filter(el => !el.managed).length}件`);
+      }
 
       const shouldShot = screenshotsOnlyProblems
         ? record.errors.length || record.warnings.length
@@ -328,6 +538,11 @@ const summary = {
   horizontalOverflow: results.filter((r) => r.horizontalOverflow).length,
   narrowDesktop: results.filter((r) => r.viewport === 'desktop' && r.warnings.some((w) => w.includes('本文領域が狭い'))).length,
   smallText: results.filter((r) => r.warnings.some((w) => w.includes('小さい文字'))).length,
+  rawOutOfViewportScreens: results.filter((r) => r.outsideBreakdown?.total > 0).length,
+  mapTileScreens: results.filter((r) => r.outsideBreakdown?.mapTiles > 0).length,
+  managedScrollScreens: results.filter((r) =>
+    r.outsideBreakdown?.containedInScroller > 0 || r.expectedOverflow?.managedTextElements > 0).length,
+  uncontainedOverflowScreens: results.filter((r) => r.outsideBreakdown?.uncontained > 0).length,
 };
 fs.writeFileSync(path.join(OUT, 'audit.json'), JSON.stringify({ summary, results }, null, 2));
 
