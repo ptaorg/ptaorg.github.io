@@ -217,3 +217,19 @@ test('the checked-in JSON Schema is enforced at runtime, not only documented',()
   d.asOf='2026-11-31';
   assert.ok(codes(validateReport(d)).has('SCHEMA_DATE'));
 });
+
+
+test('Osaki real-city pilot locks 25 official school IDs but does not invent PTA findings',()=>{
+  const d=JSON.parse(file('ai-system/report-standards/pilots/osaki-2026.dataset.json'));
+  assert.equal(d.scope.totalPublicSchools,25);
+  assert.equal(d.schools.length,25);
+  assert.equal(d.schools.filter(s=>s.schoolType==='小学校').length,14);
+  assert.equal(d.schools.filter(s=>s.schoolType==='中学校').length,9);
+  assert.equal(d.schools.filter(s=>s.schoolType==='義務教育学校').length,2);
+  const checked=validateReport(d);
+  assert.equal(checked.ok,true,JSON.stringify(checked.errors));
+  assert.ok(checked.metrics.axes.every(a=>a.unknown===25 && a.confirmedYesOfKnownPct===null));
+  const attempt=validateReport(d,{publish:true});
+  assert.equal(attempt.ok,false);
+  assert.ok(codes(attempt).has('PUBLICATION_APPROVAL'));
+});
