@@ -17,7 +17,7 @@ test('home legal boundary retains original text, figure and anchors', () => {
   }
   assert.ok(section.includes('relationship-svg is-desktop'));
   assert.ok(section.includes('relationship-svg is-mobile'));
-  assert.ok(html.includes('assets/style.css?v=20261114-home-boundary'));
+  assert.ok(html.includes('assets/style.css?v=20261114-readable'));
 });
 
 test('legal boundary is a full-width responsive editorial grid', () => {
