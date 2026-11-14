@@ -1123,3 +1123,23 @@ body[data-page="legacy"] .article-main :is(table,pre){max-width:100%}
  body[data-page="home"] .home-resource-nav{grid-template-columns:1fr}
  body[data-page="municipality"] .stat-tiles,body[data-page="school"] .stat-tiles{grid-template-columns:1fr}
 }
+
+/* Repair: article body left / table of contents right (2026-11-14) */
+@media (min-width:1041px){
+  body[data-page="legacy"] #main .container:has(> .article-layout) > .article-layout{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(220px,260px);
+    column-gap:clamp(24px,2.8vw,40px);
+    align-items:start;
+  }
+  body[data-page="legacy"] #main .article-layout > .article-main{
+    grid-column:1;
+    grid-row:1;
+    min-width:0;
+  }
+  body[data-page="legacy"] #main .article-layout > .article-side{
+    grid-column:2;
+    grid-row:1;
+    min-width:0;
+  }
+}
