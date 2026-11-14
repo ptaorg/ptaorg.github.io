@@ -56,7 +56,7 @@ export function validateReport(d,{publish=false}={}){
   function refCheck(refs,where,{need=false,confirmed=false,targetYear=null,schoolSourceIds=null}={}){
     if(!Array.isArray(refs)){fail('REFERENCE_ARRAY',where,'sourceRefs must be array');return;}
     if(need&&refs.length===0)fail('MISSING_REFERENCE',where,'evidence required');
-    let primary=0;const seen=new Set();
+    let primary=0;const seen=new Set();const verifiedPrimarySources=new Set();
     for(const [i,r] of refs.entries()){
       const at=`${where}[${i}]`;
       if(!obj(r)||!filled(r.sourceId)||!filled(r.locator)){fail('REFERENCE_LOCATOR',at,'source and page/section required');continue;}
@@ -65,10 +65,11 @@ export function validateReport(d,{publish=false}={}){
       const src=sources.get(r.sourceId);
       if(!src){fail('UNKNOWN_SOURCE',at,r.sourceId);continue;}
       if(schoolSourceIds&&!schoolSourceIds.has(r.sourceId))fail('SCHOOL_SOURCE_MISMATCH',at,'source not listed for school');
-      if(src.kind==='primary'&&src.verification==='direct_checked'&&src.targetYear===targetYear)primary++;
+      if(src.kind==='primary'&&src.verification==='direct_checked'&&src.targetYear===targetYear){primary++;verifiedPrimarySources.add(src.id);}
       if(confirmed&&src.targetYear!==targetYear)fail('SOURCE_YEAR_MISMATCH',at,'source year differs from school analysis');
     }
     if(confirmed&&primary===0)fail('NO_PRIMARY_CONFIRMATION',where,'confirmed yes/no requires directly inspected primary evidence');
+    return verifiedPrimarySources.size;
   }
   for(const [i,s] of arr(d.schools).entries()){
     const at=`$.schools[${i}]`;
@@ -87,10 +88,11 @@ export function validateReport(d,{publish=false}={}){
       if(!STATES.includes(v.status))fail('INVALID_STATUS',at2,'invalid state');
       if(v.year!==s.analysisYear||!year(v.year))fail('AXIS_YEAR',at2,'year mismatch');
       if(!filled(v.observation))fail('OBSERVATION',at2,'observation or missing-evidence reason required');
-      refCheck(v.sourceRefs,at2+'.sourceRefs',{need:['confirmed_yes','confirmed_no','conflicting'].includes(v.status),confirmed:['confirmed_yes','confirmed_no'].includes(v.status),targetYear:s.analysisYear,schoolSourceIds:listed});
+      const directPrimaryCount=refCheck(v.sourceRefs,at2+'.sourceRefs',{need:['confirmed_yes','confirmed_no','conflicting','not_applicable'].includes(v.status),confirmed:['confirmed_yes','confirmed_no'].includes(v.status),targetYear:s.analysisYear,schoolSourceIds:listed});
       if(v.status==='confirmed_no'&&v.explicitNegative!==true)fail('NEGATIVE_NOT_EXPLICIT',at2,'must document explicit negative, not mere absence');
       if(v.status==='conflicting'&&new Set(arr(v.sourceRefs).map(r=>r?.sourceId)).size<2)fail('CONFLICT_TOO_FEW_SOURCES',at2,'two distinct source IDs required');
-      if(v.status==='not_applicable'&&!arr(v.sourceRefs).length)fail('NA_UNSUPPORTED',at2,'source proving inapplicability required');
+      if(v.status==='conflicting'&&directPrimaryCount<2)fail('CONFLICT_NOT_VERIFIED',at2,'two distinct directly checked contemporaneous primary sources required');
+      if(v.status==='not_applicable'&&directPrimaryCount<1)fail('NA_NOT_VERIFIED',at2,'directly checked contemporaneous primary source establishing non-applicability required');
     }
     for(const k of Object.keys(s.axes).filter(k=>!AXES.includes(k)))fail('AXIS_NOT_REGISTERED',at+'.axes.'+k,'change axis version before adding');
   }
@@ -173,7 +175,8 @@ if(isCLI){
     try{
       const d=JSON.parse(fs.readFileSync(input,'utf8'));
       const result=validateReport(d,{publish:argv.includes('--publish')});
-      if(ix>=0){const target=path.resolve(argv[ix+1]);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,JSON.stringify(result.metrics,null,2)+'\n');}
+      if(ix>=0&&result.ok){const target=path.resolve(argv[ix+1]);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,JSON.stringify(result.metrics,null,2)+'\n');}
+      if(ix>=0&&!result.ok)console.error('ERROR METRICS_NOT_WRITTEN: dataset validation failed; no trusted metrics were exported');
       for(const e of result.errors)console.error(`ERROR ${e.code} ${e.at}: ${e.detail}`);
       console.log(`report=${d.reportId??'unknown'} schools=${result.metrics.targetSchools} axes=${AXES.length} issues=${result.errors.length} mode=${argv.includes('--publish')?'publish':'draft'}`);
       if(!result.ok)process.exitCode=1;
