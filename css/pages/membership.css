@@ -1666,10 +1666,10 @@
    Loaded before prose.css, so these rules use !important only where the
    site-wide prose rules intentionally style generic h2/grid/card selectors. */
 .legacy.membership-editorial .editorial-main.prose-page {
-  width: min(calc(100% - 48px), 920px);
-  max-width: 920px;
-  margin: 0 auto;
-  padding: 52px 0 88px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 32px 0 76px;
   box-sizing: border-box;
   color: var(--membership-ink, var(--navy-deep));
 }
@@ -1696,8 +1696,8 @@
 }
 
 .legacy.membership-editorial .editorial-main.prose-page > .lead {
-  max-width: 48rem;
-  margin: 0 auto 44px;
+  max-width: 100%;
+  margin: 0 0 38px;
   color: var(--navy-deep);
   font-size: clamp(var(--fs-body), 1.35vw, var(--fs-h3));
   line-height: 2;
@@ -1717,7 +1717,7 @@
 .legacy.membership-editorial .editorial-main.prose-page > section > h2,.legacy.membership-editorial .editorial-main.prose-page > .related-reading h2 {
   display: block !important;
   width: auto !important;
-  max-width: 24em !important;
+  max-width: 100% !important;
   margin: 0 0 24px !important;
   padding: 0 0 0 16px !important;
   border: 0 !important;
@@ -1737,7 +1737,7 @@
 }
 
 .legacy.membership-editorial .editorial-main.prose-page h3 {
-  max-width: 54rem;
+  max-width: 100%;
   margin: 40px 0 16px;
   padding: 0 0 8px;
   border: 0;
@@ -1752,14 +1752,14 @@
 }
 
 .legacy.membership-editorial .editorial-main.prose-page p,.legacy.membership-editorial .editorial-main.prose-page li {
-  max-width: 76ch;
+  max-width: 100%;
   color: var(--membership-ink, var(--navy-deep));
   font-size: var(--fs-body);
   line-height: 2;
 }
 
 .legacy.membership-editorial .editorial-main.prose-page ul,.legacy.membership-editorial .editorial-main.prose-page ol {
-  max-width: 76ch;
+  max-width: 100%;
   padding-left: 1.55rem;
 }
 
@@ -1768,7 +1768,7 @@
 }
 
 .legacy.membership-editorial .editorial-main.prose-page .evidence-box,.legacy.membership-editorial .editorial-main.prose-page .source-note {
-  max-width: 76ch;
+  max-width: 100%;
   margin: 28px 0;
   padding: 20px 20px;
   border: 0;
@@ -1801,7 +1801,7 @@
 }
 
 .legacy.membership-editorial .editorial-main.prose-page details {
-  max-width: 76ch;
+  max-width: 100%;
   margin: 0;
   padding: 20px 0;
   border: 0;
@@ -1823,7 +1823,7 @@
 
 @media (max-width: 700px) {
   .legacy.membership-editorial .editorial-main.prose-page {
-    width: min(calc(100% - 30px), 920px);
+    width: 100%;
     padding: 40px 0 64px;
   }
 
