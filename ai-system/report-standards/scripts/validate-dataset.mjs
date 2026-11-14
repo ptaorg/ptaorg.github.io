@@ -30,6 +30,9 @@ export function validateReport(d,{publish=false}={}){
   if(m.lat!==null&&m.lat!==undefined&&(!filled(m.coordinateSourceId)||Math.abs(m.lat)>90||Math.abs(m.long)>180))fail('COORDINATE_SOURCE','$.municipality','grounded in-bounds coordinates required');
   if(!Number.isInteger(scope.totalPublicSchools)||scope.totalPublicSchools<1||!filled(scope.populationSourceId)||!filled(scope.scopeNote)||!['census','selected'].includes(scope.sampling))fail('SCOPE','$.scope','population count, source, scope note and method required');
   if(!arr(scope.schoolTypes).length||!arr(scope.targetYears).length||arr(scope.targetYears).some(x=>!year(x)))fail('SCOPE_YEARS','$.scope','targeted school types and years required');
+  const populationIds=arr(scope.populationSchoolIds);
+  if(!Array.isArray(scope.populationSchoolIds)||populationIds.length!==scope.totalPublicSchools||populationIds.some(x=>!id(x))||new Set(populationIds).size!==populationIds.length)
+    fail('POPULATION_ROSTER','$.scope.populationSchoolIds','complete unique official school-ID roster required; count alone cannot establish census coverage');
   for(const k of ['sources','municipalDocuments','schools','narrativeClaims','legalReviews'])if(!Array.isArray(d[k]))fail('ARRAY',`$.${k}`,'array required');
   if(!arr(d.schools).length)fail('NO_SCHOOLS','$.schools','at least one target school required');
 
@@ -52,6 +55,9 @@ export function validateReport(d,{publish=false}={}){
   const N=arr(d.schools).length;
   if(Number.isInteger(scope.totalPublicSchools)&&N>scope.totalPublicSchools)fail('TOO_MANY_SCHOOLS','$.schools','more target schools than total');
   if(scope.sampling==='census'&&Number.isInteger(scope.totalPublicSchools)&&N!==scope.totalPublicSchools)fail('CENSUS_MISSING','$.schools','include unknown schools to match population');
+  const roster=new Set(populationIds);
+  for(const [i,s] of arr(d.schools).entries())if(obj(s)&&filled(s.id)&&!roster.has(s.id))fail('SCHOOL_NOT_IN_ROSTER',`$.schools[${i}].id`,'school is not in the fixed population roster');
+  if(scope.sampling==='census')for(const sid of populationIds)if(!arr(d.schools).some(s=>s?.id===sid))fail('ROSTER_SCHOOL_MISSING','$.schools',`missing school ID: ${sid}`);
   const schools=new Map();
   function refCheck(refs,where,{need=false,confirmed=false,targetYear=null,schoolSourceIds=null}={}){
     if(!Array.isArray(refs)){fail('REFERENCE_ARRAY',where,'sourceRefs must be array');return;}
