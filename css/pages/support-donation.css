@@ -80,3 +80,36 @@ body.support-donation-body{background:#f5f7fa;}
  #main.support-redesign .support-letter-cta a{justify-content:center;}
 }
 @media(prefers-reduced-motion:no-preference){#main.support-redesign .support-paypay-primary,#main.support-redesign .support-bank-jump{transition:background-color .2s ease;}}
+
+
+/* New support payment cards */
+#main.support-redesign .support-letter-cta .support-letter-cotra{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border-radius:6px;padding:11px 18px;background:#197b60;color:#fff;text-decoration:none;font-weight:700;}
+#main.support-redesign .support-payment-card{min-width:0;padding:16px;margin-bottom:14px;border:1px solid #dfe6ec;border-radius:12px;box-shadow:0 3px 12px rgba(23,52,79,.035);overflow-wrap:anywhere;background:#fff;}
+#main.support-redesign .support-cotra{border-top:4px solid #20956f;background:linear-gradient(155deg,#f1fbf6,#fff 62%);}
+#main.support-redesign .support-paypay{border-top:4px solid #ebb342;background:linear-gradient(155deg,#fffbec,#fff 62%);}
+#main.support-redesign .support-bank{border-top:4px solid #3974ac;background:linear-gradient(155deg,#f2f8ff,#fff 62%);}
+#main.support-redesign .support-payment-card-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px;}
+#main.support-redesign .support-payment-card-head h3{display:flex;align-items:center;gap:9px;min-width:0;color:#173851;font-size:17px;line-height:1.5;font-weight:800;margin:0;}
+#main.support-redesign .support-payment-card-head .payment-no{display:inline-grid;place-items:center;width:27px;height:27px;border-radius:50%;background:#197b60;color:#fff;font:700 13px var(--sans,"Noto Sans JP",sans-serif);flex-shrink:0;}
+#main.support-redesign .support-paypay .payment-no{background:#a86c0b;}
+#main.support-redesign .support-bank .payment-no{background:#2d6799;}
+#main.support-redesign .payment-badge{white-space:nowrap;background:#e0f3e9;color:#176647;border:1px solid #b8e2d0;border-radius:100px;padding:4px 8px;font-size:11px;font-weight:800;}
+#main.support-redesign .support-payment-card .support-payment-lead{color:#455b70;font-size:13px;line-height:1.8;margin:0 0 13px;}
+#main.support-redesign .support-copy-list{margin:0;padding:0;display:grid;gap:0;border:1px solid #e2eaf0;border-radius:9px;background:#fff;overflow:hidden;}
+#main.support-redesign .support-copy-row{padding:11px 12px;margin:0;min-width:0;}
+#main.support-redesign .support-copy-row+.support-copy-row{border-top:1px solid #e6ecf2;}
+#main.support-redesign .support-copy-row dt{margin:0 0 4px;font-size:11px;font-weight:700;color:#607488;line-height:1.5;}
+#main.support-redesign .support-copy-row dt small{font-size:11px;font-weight:500;margin-left:4px;}
+#main.support-redesign .support-copy-row dd{margin:0;display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0;}
+#main.support-redesign .support-copy-value{min-width:0;font-size:14px;line-height:1.65;font-weight:750;color:#183a58;overflow-wrap:anywhere;word-break:break-word;}
+#main.support-redesign .support-copy-email{font-size:13px;letter-spacing:-.025em;}
+#main.support-redesign .support-account-number{font-size:21px;letter-spacing:.045em;font-variant-numeric:tabular-nums;}
+#main.support-redesign .support-copy-btn{flex:none;cursor:pointer;min-height:34px;padding:6px 10px;color:#205979;background:#f3f8fd;border:1px solid #a9c3d8;border-radius:6px;font-size:12px;font-weight:750;line-height:1.25;}
+#main.support-redesign .support-copy-btn:hover,#main.support-redesign .support-copy-btn:focus-visible{background:#dceefc;border-color:#427a9f;}
+#main.support-redesign .support-copy-all{display:block;cursor:pointer;width:100%;min-height:43px;margin-top:10px;border:1px solid #2d6799;border-radius:8px;background:#276c9f;color:#fff;font-size:13px;font-weight:800;line-height:1.5;padding:10px;}
+#main.support-redesign .support-copy-all:hover,#main.support-redesign .support-copy-all:focus-visible{background:#1c527c;}
+#main.support-redesign .support-payment-card .support-payment-footnote{margin:10px 0 0;color:#5c6c7d;font-size:11.5px;line-height:1.7;}
+#main.support-redesign .support-payment-help{display:inline-flex;font-size:12px;color:#17664e;margin-top:9px;font-weight:700;text-underline-offset:3px;}
+#main.support-redesign .support-copy-status{font-size:12px;color:#17664e;line-height:1.6;min-height:1px;margin:0;}
+#main.support-redesign .support-payment-card a:focus-visible,#main.support-redesign .support-letter-cta a:focus-visible,#main.support-redesign .support-copy-btn:focus-visible,#main.support-redesign .support-copy-all:focus-visible{outline:3px solid #df9c2b;outline-offset:3px;}
+@media(max-width:410px){#main.support-redesign .support-payment-card{padding:13px;}#main.support-redesign .support-copy-row{padding:10px;}#main.support-redesign .support-copy-value{font-size:13px;}#main.support-redesign .support-copy-email{font-size:12.5px;}#main.support-redesign .support-account-number{font-size:20px;}#main.support-redesign .support-copy-btn{padding:6px 8px;}}
