@@ -247,3 +247,19 @@ test('Osaki real-city pilot locks 25 official school IDs but does not invent PTA
   assert.equal(attempt.ok,false);
   assert.ok(codes(attempt).has('PUBLICATION_APPROVAL'));
 });
+
+
+test('Osaki pipeline renders 25 school drafts plus municipality, metrics, sources and map without publishing',()=>{
+  const d=JSON.parse(file('ai-system/report-standards/pilots/osaki-2026.dataset.json'));
+  const artifacts=buildDraft(d);
+  assert.equal(Object.keys(artifacts).length,29);
+  assert.match(artifacts['municipality-report.md'],/田尻中学校/);
+  assert.match(artifacts['municipality-report.md'],/4\\.0%/);
+  assert.match(artifacts['schools/tajiri-jhs.md'],/PTA会費1,500円/);
+  assert.match(artifacts['schools/tajiri-jhs.md'],/事務室まで直接納入/);
+  assert.match(artifacts['schools/naruko-compulsory.md'],/未確認/);
+  const map=JSON.parse(artifacts['map-record.json']);
+  assert.equal(map.reportUrl,null);
+  assert.equal(map.publishedSchoolReports,0);
+  assert.equal(map.publicationStatus,'draft');
+});
