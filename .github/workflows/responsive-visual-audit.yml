@@ -1,0 +1,41 @@
+name: Responsive layout smoke audit
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  responsive-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install visual audit browser
+        run: |
+          npm install --no-save --ignore-scripts playwright
+          npx playwright install --with-deps chromium
+      - name: Start static site
+        run: |
+          python3 -m http.server 4173 > /tmp/ptaorg-visual-http.log 2>&1 &
+          echo $! > /tmp/ptaorg-visual-http.pid
+      - name: Verify desktop and mobile layouts
+        env:
+          PTA_VISUAL_AUDIT_PAGES: /index.html,/contact.html,/membership.html,/guide-board.html,/journal.html,/research-index.html,/explore.html,/municipality.html,/school.html,/about.html,/support.html
+        run: |
+          node scripts/visual-audit.mjs
+          node -e "const a=require('./visual-audit-output/audit.json'); console.log(a.summary); if(a.summary.errorRecords) process.exit(1)"
+      - name: Upload screenshots and findings
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: responsive-audit
+          path: visual-audit-output/
+          if-no-files-found: warn

@@ -17,6 +17,18 @@ const localUrls = [...new Set(urls.map((raw) => {
   return { raw, pathname, local: `http://127.0.0.1:4173${pathname}` };
 }))];
 
+// On CI, sample representative routes; without this variable the full sitemap is audited.
+const requestedPaths = new Set((process.env.PTA_VISUAL_AUDIT_PAGES || '')
+  .split(',').map((p) => p.trim()).filter(Boolean));
+const pagesToAudit = requestedPaths.size
+  ? localUrls.filter((item) => requestedPaths.has(item.pathname))
+  : localUrls;
+if (requestedPaths.size && pagesToAudit.length !== requestedPaths.size) {
+  const found = new Set(pagesToAudit.map((item) => item.pathname));
+  throw new Error('Missing sitemap entries in responsive audit: ' +
+    [...requestedPaths].filter((pathname) => !found.has(pathname)).join(', '));
+}
+
 const corePatterns = [
   /^\/index\.html$/,
   /^\/(administrative-materials|audit\/index|board-responses|cases|claim-evidence-ledger|compliance|contact|documents|edu-board-separation|education-board-responsibility|evidence-checklist|facilities|fee-collection|guide-board|guide-parent|guide-pta|guide-research|guideline|index|journal|key-materials|law-map|membership|national-archive|personnel|privacy|proper-management|reality|report|research-index|submission-kit|support|timeline|timeline-issues)\.html$/,
@@ -46,8 +58,8 @@ for (const viewport of viewports) {
   const page = await context.newPage();
   page.on('console', () => {});
 
-  for (let i = 0; i < localUrls.length; i += 1) {
-    const item = localUrls[i];
+  for (let i = 0; i < pagesToAudit.length; i += 1) {
+    const item = pagesToAudit[i];
     const record = {
       url: item.raw,
       pathname: item.pathname,
@@ -137,7 +149,7 @@ for (const viewport of viewports) {
       record.errors.push(String(error && error.message ? error.message : error));
     }
     results.push(record);
-    if ((i + 1) % 25 === 0) console.log(`${viewport.name}: ${i + 1}/${localUrls.length}`);
+    if ((i + 1) % 25 === 0) console.log(`${viewport.name}: ${i + 1}/${pagesToAudit.length}`);
   }
   await context.close();
 }
@@ -146,7 +158,7 @@ await browser.close();
 
 const summary = {
   generatedAt: new Date().toISOString(),
-  pages: localUrls.length,
+  pages: pagesToAudit.length,
   checks: results.length,
   errorRecords: results.filter((r) => r.errors.length).length,
   warningRecords: results.filter((r) => r.warnings.length).length,
