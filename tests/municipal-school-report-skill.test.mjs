@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import os from 'node:os';
+import {spawnSync} from 'node:child_process';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {validateReport} from '../ai-system/report-standards/scripts/validate-dataset.mjs';
@@ -134,4 +136,46 @@ test('publishing requires named, dated independent review and a sourced legal co
   const r2=validateReport(d,{publish:true});
   assert.equal(codes(r2).has('REVIEW_SIGNATURE'),false);
   assert.equal(codes(r2).has('MISSING_REPORT_ASSESSMENT'),true);
+});
+
+
+test('not-applicable status requires direct contemporaneous primary evidence',()=>{
+  const d=fresh();
+  const v=d.schools[0].axes.withdrawal_procedure;
+  v.status='not_applicable';
+  v.observation='試験データ上の適用対象外という仮定';
+  v.sourceRefs=[{sourceId:'demo-optin',locator:'p.1'}];
+  assert.equal(validateReport(d).ok,true);
+  d.sources.find(s=>s.id==='demo-optin').verification='metadata_only';
+  assert.ok(codes(validateReport(d)).has('NA_NOT_VERIFIED'));
+});
+
+test('conflicting status requires two distinct directly checked primary sources',()=>{
+  const d=fresh();
+  d.schools[0].sourceIds.push('demo-list');
+  const v=d.schools[0].axes.withdrawal_procedure;
+  v.status='conflicting';
+  v.observation='試験データで相反する文書を仮定';
+  v.sourceRefs=[{sourceId:'demo-optin',locator:'p.1'},{sourceId:'demo-list',locator:'p.2'}];
+  assert.equal(validateReport(d).ok,true);
+  d.sources.find(s=>s.id==='demo-list').verification='metadata_only';
+  assert.ok(codes(validateReport(d)).has('CONFLICT_NOT_VERIFIED'));
+  d.sources.find(s=>s.id==='demo-list').verification='direct_checked';
+  d.sources.find(s=>s.id==='demo-list').targetYear='2025';
+  assert.ok(codes(validateReport(d)).has('CONFLICT_NOT_VERIFIED'));
+});
+
+test('invalid dataset cannot produce trusted metrics via CLI',()=>{
+  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'pta-invalid-metrics-'));
+  try{
+    const d=fresh();
+    delete d.schools[0].axes.withdrawal_procedure;
+    const input=path.join(dir,'invalid.json'),out=path.join(dir,'metrics.json');
+    fs.writeFileSync(input,JSON.stringify(d));
+    const script=path.join(root,'ai-system/report-standards/scripts/validate-dataset.mjs');
+    const run=spawnSync(process.execPath,[script,input,'--metrics',out],{encoding:'utf8'});
+    assert.equal(run.status,1);
+    assert.equal(fs.existsSync(out),false);
+    assert.match(run.stderr,/METRICS_NOT_WRITTEN/);
+  }finally{fs.rmSync(dir,{recursive:true,force:true});}
 });
