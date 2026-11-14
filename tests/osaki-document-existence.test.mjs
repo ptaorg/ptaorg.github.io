@@ -28,7 +28,7 @@ test('page accurately limits evidence to non-submission, not universal absence',
  assert.match(page,/田尻中学校/);
  assert.doesNotMatch(page,/25校すべてに入会申込書が存在しない/);
  assert.doesNotMatch(page,/学校にもPTAにも絶対に存在しない/);
- assert.equal((page.match(/<tr><td>\\d+<\\/td><th>/g)||[]).length,25);
+ assert.equal(page.split('<tr><td>').length-1,25);
  assert.match(page,/<meta name="robots" content="index,follow">/);
  assert.match(page,/<link rel="canonical" href="https:\/\/ptaorg.com\/research\/osaki-documents.html">/);
 });
@@ -39,7 +39,7 @@ test('page is reachable via home, explore, city, school, methodology and local s
  assert.ok(read('sitemap.xml').includes('<loc>https://ptaorg.com/research/osaki-documents.html</loc>'));
 });
 test('private document names/paths and personal data are not introduced',()=>{
- assert.doesNotMatch(page,/drive\\.google\\.com\\/file\\/d\\//);
- assert.doesNotMatch(page,/全国資料\\/大崎市/);
+ assert.ok(!page.includes('drive.google.com/file/d/'));
+ assert.ok(!page.includes('全国資料/大崎市'));
  assert.doesNotMatch(page,/1w9VpwKJudWk7tv7iSX5sfQ309a0n5FCp/);
 });
