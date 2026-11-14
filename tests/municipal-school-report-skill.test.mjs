@@ -238,11 +238,29 @@ test('Osaki real-city pilot locks 25 official school IDs but does not invent PTA
   assert.equal(account.indication,1);
   assert.equal(account.unknown,24);
   assert.equal(account.confirmedYesOfKnownPct,null);
-  assert.ok(checked.metrics.axes.filter(a=>!['school_collection_of_pta_fee','school_account_or_payment_system'].includes(a.id))
-    .every(a=>a.unknown===25 && a.confirmedYesOfKnownPct===null));
+  const governance=checked.metrics.axes.find(a=>a.id==='school_pta_governance_overlap');
+  assert.equal(governance.confirmed_yes,1);
+  assert.equal(governance.unknown,24);
+  assert.equal(governance.confirmedYesOfTargetPct,4);
+  assert.equal(governance.confirmedYesOfKnownPct,100);
+  const teacher=checked.metrics.axes.find(a=>a.id==='teacher_internal_pta_admin');
+  assert.equal(teacher.indication,1);
+  assert.equal(teacher.unknown,24);
+  assert.equal(teacher.confirmedYesOfKnownPct,null);
+  assert.ok(checked.metrics.axes.filter(a=>![
+    'school_collection_of_pta_fee','school_account_or_payment_system',
+    'school_pta_governance_overlap','teacher_internal_pta_admin'
+  ].includes(a.id)).every(a=>a.unknown===25 && a.confirmedYesOfKnownPct===null));
+  assert.equal(checked.metrics.axes.reduce((n,a)=>n+a.confirmed_yes,0),2);
+  assert.equal(checked.metrics.axes.reduce((n,a)=>n+a.indication,0),2);
+  assert.equal(checked.metrics.axes.reduce((n,a)=>n+a.unknown,0),296);
+  assert.equal(d.municipalDocuments.some(m=>m.sourceId==='city-collection-regulation-r4'),true);
   const tajiri=d.schools.find(s=>s.id==='tajiri-jhs');
   assert.equal(tajiri.axes.school_collection_of_pta_fee.sourceRefs.length,2);
   assert.equal(tajiri.axes.school_account_or_payment_system.status,'indication');
+  assert.equal(tajiri.axes.school_pta_governance_overlap.status,'confirmed_yes');
+  assert.equal(tajiri.axes.school_pta_governance_overlap.sourceRefs[0].sourceId,'tajiri-contract-r8');
+  assert.equal(tajiri.axes.teacher_internal_pta_admin.status,'indication');
   const attempt=validateReport(d,{publish:true});
   assert.equal(attempt.ok,false);
   assert.ok(codes(attempt).has('PUBLICATION_APPROVAL'));
