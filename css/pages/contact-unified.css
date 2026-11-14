@@ -48,3 +48,17 @@
   #main.unified-page .support-letter-banner { padding:18px 20px; }
   #main.unified-page .support-page-head p { font-size:14px; }
 }
+
+/* Payment copy controls and explanatory notes must not drop below readable text. */
+#main.unified-page .contact-method p,
+#main.unified-page .support-payment-card .support-payment-lead,
+#main.unified-page .support-payment-card .support-payment-footnote,
+#main.unified-page .support-payment-card .support-payment-help,
+#main.unified-page .support-payment-card .support-copy-row dt,
+#main.unified-page .support-payment-card .support-copy-row dt small,
+#main.unified-page .support-payment-card .payment-badge,
+#main.unified-page .support-payment-card .support-copy-all,
+#main.unified-page .support-payment-card .support-copy-btn {
+  font-size:14px;line-height:1.65
+}
+#main.unified-page .support-payment-card .support-copy-btn {min-height:44px;padding:9px 11px}
