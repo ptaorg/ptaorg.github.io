@@ -101,6 +101,8 @@ test('schema requires the same 12 axes and review gates',()=>{
   assert.deepEqual(defs.required,axes.axes.map(x=>x.id));
   assert.equal(defs.additionalProperties,false);
   assert.equal(schema.properties.publication.additionalProperties,false);
+  assert.ok(schema.properties.scope.required.includes('populationSchoolIds'));
+  assert.equal(schema.properties.scope.properties.populationSchoolIds.uniqueItems,true);
   assert.ok(schema.properties.schoolData===undefined);
 });
 
@@ -178,4 +180,28 @@ test('invalid dataset cannot produce trusted metrics via CLI',()=>{
     assert.equal(fs.existsSync(out),false);
     assert.match(run.stderr,/METRICS_NOT_WRITTEN/);
   }finally{fs.rmSync(dir,{recursive:true,force:true});}
+});
+
+
+test('census roster catches a substituted school even when the school count remains unchanged',()=>{
+  const d=fresh();
+  d.schools[1].id='unlisted-school';
+  const result=validateReport(d);
+  assert.ok(codes(result).has('SCHOOL_NOT_IN_ROSTER'));
+  assert.ok(codes(result).has('ROSTER_SCHOOL_MISSING'));
+});
+
+test('a selected school must still be part of the official complete school roster',()=>{
+  const d=fresh();
+  d.scope.sampling='selected';
+  d.schools.pop();
+  assert.equal(validateReport(d).ok,true);
+  d.schools[0].id='unlisted-school';
+  assert.ok(codes(validateReport(d)).has('SCHOOL_NOT_IN_ROSTER'));
+});
+
+test('school population roster must be complete and unique',()=>{
+  const d=fresh();
+  d.scope.populationSchoolIds=['demo-school-1','demo-school-1'];
+  assert.ok(codes(validateReport(d)).has('POPULATION_ROSTER'));
 });
