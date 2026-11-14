@@ -54,6 +54,21 @@
 - リンクの有効性、引用原文、引用箇所の照合、Senior/humanレビューが未了 → 公開停止（構造検証器の成功のみでは解除できない）。
 - 既存の法令解説・引用・サイト資料・URLを無断変更する → 公開停止。
 
+## 文書の提出・保有・不存在決定（固定12軸とは別スキーマ）
+
+12軸の `confirmed_no` は、原本が対象行為の不存在・不採用を明示した場合の観察値である。**入会申込書や同意書等が開示資料に見当たらないことを理由に `confirmed_no` としない**。文書の提出・保有・正式な不存在決定については、`document-existence.schema.json` で定義する**別台帳**に記録する。
+
+各校・各年度の10種類の記録：入会申込書／入会意思・承諾記録／退会届・退会規定／PTA会員名簿／個人情報利用・提供同意／役員選出同意・委任状／免除申請・判断記録／会費収納委任契約／公法上の権限の根拠文書／口座名義・収納契約・資金フロー。
+
+記録するのは、文書種別・対象年度・開示請求の対象・保有主体・提出有無・原本位置・確認日・反証である。状態値は `present_as_standalone_document`、`present_as_provision_only`、`internal_rule_only`、`not_found_in_disclosure`、`not_disclosed`、`formally_determined_nonexistent` の6区分を使う。最後の「正式不存在」は、当該文書・保有機関・対象年度を特定した行政の不存在決定の原本を確認した場合のみ使用する。学校に保有がないことはPTAにないことの証明ではない。
+
+**開示資料に存在しない文書を曖昧な「未確認」に埋もれさせない**一方で、未提出を「学校やPTAに絶対存在しない」と断定しない。校長の内規、PTAからの委任、本人同意の存在と、学校側の具体的な公法上の授権は別に検証する。
+
+- スキーマ：`document-existence.schema.json`（12軸スキーマとは別の契約）。
+- 大崎市2026年度の例：`pilots/osaki-document-existence-2026-v2.json`（25校×10種類＝250行）。
+- 検証器：`node ai-system/report-standards/scripts/validate-document-existence.mjs <ledger.json> --dataset <dataset.json>`。結果は学校数・文書種別数・状態件数であり、法的な不存在判定や人権侵害発生率ではない。
+- 既存公開版 `data/osaki-document-existence-2026.json` は元資料・公表経緯を保全するため上書きしない。新台帳の公開切替えは独立審査と人間承認の対象とする。
+
 ## Web公開の既存資産との接続
 
 - 既存の学校別原本資料: `data/schools/<municipality>/*.json`、`archive/<municipality>/<school>/index.html`
