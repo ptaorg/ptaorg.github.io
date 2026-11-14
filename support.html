@@ -19,7 +19,7 @@
       "name": "PTAの適正化を、 続けていくために",
       "description": "PTA適正化推進委員会の調査、資料取得、資料整理、Web公開、教育委員会・学校への働きかけを継続するための支援ページです。",
       "inLanguage": "ja",
-      "dateModified": "2026-08-09",
+      "dateModified": "2026-11-14",
       "isPartOf": {
         "@type": "WebSite",
         "@id": "https://ptaorg.com/#website",
@@ -60,7 +60,7 @@
   <link rel="stylesheet" href="assets/style.css?v=20261114-donation">
   <link rel="stylesheet" href="css/site.css?v=20261113-phase4b">
   <script defer src="assets/app.js?v=20261113-phase3"></script><script defer src="assets/legacy.js"></script>
-  <link rel="stylesheet" href="css/pages/support-donation.css?v=20261114a">
+  <link rel="stylesheet" href="css/pages/support-donation.css?v=20261114-cotra">
 </head>
 <body class="support-donation-body" data-page="legacy" data-section="about" data-root="">
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -187,6 +187,7 @@
 </section>
           <p class="support-letter-sign">PTA適正化推進委員会<small>調査・資料公開活動</small></p>
           <div class="support-letter-cta">
+            <a class="support-letter-cotra" href="#cotra-transfer">ことら送金で支援する</a>
             <a class="paypay-letter ext-link-mark" data-ga-event="support_cta_click" data-ga-method="paypay" data-ga-position="letter" href="https://qr.paypay.ne.jp/p2p01_fwdAWb93QZWdQp8j" rel="noopener noreferrer" target="_blank">PayPayで支援する</a>
             <a href="#bank-transfer">銀行振込で支援する</a>
           </div>
@@ -195,23 +196,37 @@
       <aside class="support-donate-side" aria-label="寄付方法のご案内">
         <div class="support-donate-box" id="support-payment">
           <h2 id="support-payment-title">ご支援窓口</h2>
-          <p class="support-donate-intro">銀行振込とPayPayのいずれかをお選びいただけます。金額はご自身でお決めいただけます。</p>
-          <section class="support-step" aria-labelledby="support-method-title">
-            <h3 class="support-step-heading" id="support-method-title"><span class="num" aria-hidden="true">1</span>支援方法を選ぶ</h3>
-            <div class="support-methods">
-              <a class="support-paypay-primary ext-link-mark" data-ga-event="support_cta_click" data-ga-method="paypay" data-ga-position="payment_section" href="https://qr.paypay.ne.jp/p2p01_fwdAWb93QZWdQp8j" rel="noopener noreferrer" target="_blank">PayPayアプリで支援する</a>
-              <a class="support-bank-jump" href="#bank-transfer">銀行振込を確認する</a>
-            </div>
+          <p class="support-donate-intro">ご都合のよい方法で、自由な金額をご支援いただけます。</p>
+          <section class="support-payment-card support-cotra" id="cotra-transfer" aria-labelledby="support-cotra-title">
+            <div class="support-payment-card-head"><h3 id="support-cotra-title"><span class="payment-no">1</span>ことら送金</h3><span class="payment-badge">手数料無料</span></div>
+            <p class="support-payment-lead">対応銀行のアプリで「ことら送金」を選び、電話番号またはメールアドレスを指定して送金できます。銀行名・口座番号の入力は不要です。</p>
+            <dl class="support-copy-list">
+              <div class="support-copy-row"><dt>携帯電話番号</dt><dd><span class="support-copy-value">070-9012-7772</span><button type="button" class="support-copy-btn" data-copy-value="07090127772" aria-label="ことら送金の電話番号をコピー">コピー</button></dd></div>
+              <div class="support-copy-row"><dt>メールアドレス</dt><dd><span class="support-copy-value support-copy-email">info@ptaorg.com</span><button type="button" class="support-copy-btn" data-copy-value="info@ptaorg.com" aria-label="ことら送金のメールアドレスをコピー">コピー</button></dd></div>
+            </dl>
+            <p class="support-payment-footnote">1回10万円まで。送金時にアプリに表示される受取人名をご確認ください。</p>
+            <a class="support-payment-help" href="https://www.cotra.ne.jp/p2pservice/" target="_blank" rel="noopener noreferrer">対応する金融機関・使い方を見る <span aria-hidden="true">↗</span></a>
           </section>
-          <section class="support-step" aria-labelledby="support-paypay-guide-title">
-            <h3 class="support-step-heading" id="support-paypay-guide-title"><span class="num" aria-hidden="true">2</span>金額を決めて送る</h3>
-            <p>PayPayの場合はリンク先のアプリで金額を入力し、送金内容をご確認ください。このサイト内では金額入力や決済は行いません。</p>
+          <section class="support-payment-card support-paypay" id="paypay-transfer" aria-labelledby="support-paypay-title">
+            <div class="support-payment-card-head"><h3 id="support-paypay-title"><span class="payment-no">2</span>PayPay</h3></div>
+            <p class="support-payment-lead">ボタンからPayPayを開き、送金金額を入力してください。</p>
+            <a class="support-paypay-primary ext-link-mark" data-ga-event="support_cta_click" data-ga-method="paypay" data-ga-position="payment_section" href="https://qr.paypay.ne.jp/p2p01_fwdAWb93QZWdQp8j" rel="noopener noreferrer" target="_blank">PayPayアプリで支援する</a>
+            <p class="support-payment-footnote">このサイト内で決済や送金は行いません。</p>
           </section>
-          <section class="support-step" id="bank-transfer" aria-labelledby="support-bank-title">
-            <h3 class="support-step-heading" id="support-bank-title"><span class="num" aria-hidden="true">3</span>銀行振込をご希望の場合</h3>
-            <div class="support-bank-details"><strong>振込先</strong><div class="bank-line">ドコモSMTBネット銀行<br/>メロン支店（108）　普通<br/>6978317<small>名義：サトウ ダイ</small></div></div>
-            <div class="support-transfer-example"><strong>振込時の記載例</strong><br/>通信欄に「PTA支援 ○○様分」とご記入いただけますと助かります。</div>
+          <section class="support-payment-card support-bank" id="bank-transfer" aria-labelledby="support-bank-title">
+            <div class="support-payment-card-head"><h3 id="support-bank-title"><span class="payment-no">3</span>通常の銀行振込</h3></div>
+            <p class="support-payment-lead">ご利用の銀行アプリなどから振り込めます。振込先情報の一括コピーにも対応しています。</p>
+            <dl class="support-copy-list support-bank-list">
+              <div class="support-copy-row"><dt>銀行名 <small>銀行コード：0038</small></dt><dd><span class="support-copy-value">ドコモSMTBネット銀行</span><button type="button" class="support-copy-btn" data-copy-value="ドコモSMTBネット銀行" aria-label="銀行名をコピー">コピー</button></dd></div>
+              <div class="support-copy-row"><dt>支店名 <small>支店コード：108</small></dt><dd><span class="support-copy-value">メロン支店</span><button type="button" class="support-copy-btn" data-copy-value="メロン支店" aria-label="支店名をコピー">コピー</button></dd></div>
+              <div class="support-copy-row"><dt>口座種別</dt><dd><span class="support-copy-value">普通</span></dd></div>
+              <div class="support-copy-row"><dt>口座番号</dt><dd><span class="support-copy-value support-account-number">6978317</span><button type="button" class="support-copy-btn" data-copy-value="6978317" aria-label="口座番号をコピー">コピー</button></dd></div>
+              <div class="support-copy-row"><dt>口座名義</dt><dd><span class="support-copy-value">サトウ ダイ</span><button type="button" class="support-copy-btn" data-copy-value="サトウ ダイ" aria-label="口座名義をコピー">コピー</button></dd></div>
+            </dl>
+            <button type="button" class="support-copy-all" data-copy-value="ドコモSMTBネット銀行（0038）&#10;メロン支店（108）&#10;普通　6978317&#10;口座名義：サトウ ダイ">振込先情報をまとめてコピー</button>
+            <p class="support-payment-footnote">通信欄がある場合は「PTA支援」とご記入いただけますと助かります。</p>
           </section>
+          <p class="support-copy-status" data-copy-status role="status" aria-live="polite"></p>
           <section class="support-monthly">
 <h3 id="sec-5">サポーター制度（月額支援）</h3>
 <p>継続して支援してくださる方向けに、月額サポーター制度もご用意しています。詳細は別途ご案内いたしますので、<a href="mailto:info@ptaorg.com">info@ptaorg.com</a>までお気軽にお問い合わせください。</p>
@@ -222,6 +237,27 @@
     </div>
   </div>
 </main>
+
+<script>
+(function(){
+  const root=document.getElementById('support-payment');
+  if(!root)return;
+  const status=root.querySelector('[data-copy-status]');
+  async function copyText(value){
+    if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(value);return;}
+    const field=document.createElement('textarea');field.value=value;field.setAttribute('readonly','');field.style.cssText='position:fixed;left:-9999px;top:0;opacity:0';document.body.appendChild(field);field.select();
+    const ok=document.execCommand('copy');field.remove();if(!ok)throw new Error('Copy unavailable');
+  }
+  root.addEventListener('click',async function(event){
+    const button=event.target.closest('button[data-copy-value]');if(!button||!root.contains(button))return;
+    const original=button.textContent;
+    try{await copyText(button.getAttribute('data-copy-value'));button.textContent='コピーしました';if(status)status.textContent='振込先情報をコピーしました。';}
+    catch(error){if(status)status.textContent='コピーできませんでした。情報を選択してコピーしてください。';return;}
+    window.setTimeout(function(){button.textContent=original;},1800);
+  });
+})();
+</script>
+
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-org">
