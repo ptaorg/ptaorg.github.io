@@ -1,0 +1,2151 @@
+{
+  "schemaVersion": "1.0.0",
+  "reportId": "osaki-2026-pilot",
+  "asOf": "2026-11-15",
+  "municipality": {
+    "id": "osaki",
+    "name": "大崎市",
+    "prefecture": "宮城県",
+    "lat": null,
+    "long": null,
+    "coordinateSourceId": null
+  },
+  "scope": {
+    "totalPublicSchools": 25,
+    "populationSourceId": "city-school-list",
+    "populationSchoolIds": [
+      "furukawa-daiichi-es",
+      "furukawa-daini-es",
+      "furukawa-daisan-es",
+      "furukawa-daiyon-es",
+      "furukawa-daigo-es",
+      "furukawa-kita-es",
+      "shikitama-es",
+      "matsuyama-es",
+      "sanbongi-es",
+      "kashimadai-es",
+      "iwadeyama-es",
+      "tajiri-es",
+      "numabe-es",
+      "onuki-es",
+      "furukawa-jhs",
+      "furukawa-kita-jhs",
+      "furukawa-higashi-jhs",
+      "furukawa-minami-jhs",
+      "matsuyama-jhs",
+      "sanbongi-jhs",
+      "kashimadai-jhs",
+      "iwadeyama-jhs",
+      "tajiri-jhs",
+      "furukawa-nishi-compulsory",
+      "naruko-compulsory"
+    ],
+    "sampling": "census",
+    "scopeNote": "2026年6月23日更新の大崎市公式一覧を基準とする市立小学校14校・中学校9校・義務教育学校2校。全校登録済みだがPTA運用資料は現在直接未照合のため12軸は未確認とする。Google Driveの資料は原本確認前のメタデータに限る。",
+    "schoolTypes": [
+      "小学校",
+      "中学校",
+      "義務教育学校"
+    ],
+    "targetYears": [
+      "2026"
+    ]
+  },
+  "sources": [
+    {
+      "id": "city-school-list",
+      "title": "大崎市立小学校・中学校・義務教育学校一覧",
+      "issuer": "大崎市",
+      "kind": "primary",
+      "documentDate": "2026-06-23",
+      "targetYear": "2026",
+      "url": "https://www.city.osaki.miyagi.jp/shisei/lifescenebetsudesagasu/gakko_kyoiku/7297.html",
+      "filePath": null,
+      "verification": "direct_checked",
+      "verifiedAt": "2026-11-15",
+      "publicationLinkChecked": false,
+      "containsPersonalData": false,
+      "redactionChecked": false
+    },
+    {
+      "id": "tajiri-collection-r8",
+      "title": "田尻中学校 18R8学校集金案内.pdf",
+      "issuer": "田尻中学校",
+      "kind": "primary",
+      "documentDate": null,
+      "targetYear": "2026",
+      "url": null,
+      "filePath": "全国資料/大崎市/23田尻中学校/18R8学校集金案内.pdf",
+      "verification": "metadata_only",
+      "verifiedAt": null,
+      "publicationLinkChecked": false,
+      "containsPersonalData": false,
+      "redactionChecked": false
+    },
+    {
+      "id": "naruko-collection-r8",
+      "title": "鳴子小中学校 12_3-2 令和８年度 学校徴収金のお知らせ（前期）.pdf",
+      "issuer": "鳴子小中学校",
+      "kind": "primary",
+      "documentDate": null,
+      "targetYear": "2026",
+      "url": null,
+      "filePath": "全国資料/大崎市/12鳴子小中学校/12_3-2 令和８年度　学校徴収金のお知らせ（前期）.pdf",
+      "verification": "metadata_only",
+      "verifiedAt": null,
+      "publicationLinkChecked": false,
+      "containsPersonalData": false,
+      "redactionChecked": false
+    }
+  ],
+  "municipalDocuments": [],
+  "schools": [
+    {
+      "id": "furukawa-daiichi-es",
+      "name": "古川第一小学校",
+      "schoolType": "小学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "furukawa-daini-es",
+      "name": "古川第二小学校",
+      "schoolType": "小学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "furukawa-daisan-es",
+      "name": "古川第三小学校",
+      "schoolType": "小学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "furukawa-daiyon-es",
+      "name": "古川第四小学校",
+      "schoolType": "小学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "furukawa-daigo-es",
+      "name": "古川第五小学校",
+      "schoolType": "小学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "furukawa-kita-es",
+      "name": "古川北小学校",
+      "schoolType": "小学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "shikitama-es",
+      "name": "敷玉小学校",
+      "schoolType": "小学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "matsuyama-es",
+      "name": "松山小学校",
+      "schoolType": "小学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "sanbongi-es",
+      "name": "三本木小学校",
+      "schoolType": "小学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "kashimadai-es",
+      "name": "鹿島台小学校",
+      "schoolType": "小学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "iwadeyama-es",
+      "name": "岩出山小学校",
+      "schoolType": "小学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "tajiri-es",
+      "name": "田尻小学校",
+      "schoolType": "小学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "numabe-es",
+      "name": "沼部小学校",
+      "schoolType": "小学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "onuki-es",
+      "name": "大貫小学校",
+      "schoolType": "小学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "furukawa-jhs",
+      "name": "古川中学校",
+      "schoolType": "中学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "furukawa-kita-jhs",
+      "name": "古川北中学校",
+      "schoolType": "中学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "furukawa-higashi-jhs",
+      "name": "古川東中学校",
+      "schoolType": "中学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "furukawa-minami-jhs",
+      "name": "古川南中学校",
+      "schoolType": "中学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "matsuyama-jhs",
+      "name": "松山中学校",
+      "schoolType": "中学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "sanbongi-jhs",
+      "name": "三本木中学校",
+      "schoolType": "中学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "kashimadai-jhs",
+      "name": "鹿島台中学校",
+      "schoolType": "中学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "iwadeyama-jhs",
+      "name": "岩出山中学校",
+      "schoolType": "中学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "tajiri-jhs",
+      "name": "田尻中学校",
+      "schoolType": "中学校",
+      "analysisYear": "2026",
+      "sourceIds": [
+        "tajiri-collection-r8"
+      ],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "furukawa-nishi-compulsory",
+      "name": "古川西小中学校",
+      "schoolType": "義務教育学校",
+      "analysisYear": "2026",
+      "sourceIds": [],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "naruko-compulsory",
+      "name": "鳴子小中学校",
+      "schoolType": "義務教育学校",
+      "analysisYear": "2026",
+      "sourceIds": [
+        "naruko-collection-r8"
+      ],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    }
+  ],
+  "narrativeClaims": [],
+  "legalReviews": [],
+  "publication": {
+    "status": "draft",
+    "sourceChecked": false,
+    "linksChecked": false,
+    "citationsChecked": false,
+    "redactionsChecked": false,
+    "legalReviewCompleted": false,
+    "seniorApproved": false,
+    "humanApproved": false,
+    "reviewRecord": {
+      "seniorReviewer": null,
+      "seniorReviewedAt": null,
+      "humanApprover": null,
+      "humanApprovedAt": null
+    }
+  }
+}
