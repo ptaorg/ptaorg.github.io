@@ -1,0 +1,195 @@
+/* Guide-board reading layout: one wide article column, compact six-chapter navigation.
+ * Loaded AFTER phase6-sources.css to resolve legacy wrapper widths at their source of display.
+ * Only guide-board.html opts into these selectors. */
+body[data-page="legacy"] #main .container:has(> .article-layout) > .article-layout {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(238px,270px);
+  gap:clamp(26px,2.7vw,44px);
+  align-items:start;
+}
+body[data-page="legacy"] #main .article-layout > .article-main {
+  grid-column:1;
+  grid-row:1;
+  width:100%;
+  max-width:none;
+  min-width:0;
+}
+body[data-page="legacy"] #main .article-layout > .article-side {
+  grid-column:2;
+  grid-row:1;
+  position:sticky;
+  top:calc(var(--header-h,80px) + 14px);
+  max-height:none;
+  min-width:0;
+  overflow:visible;
+}
+#main .article-main .legacy.guide-board-text-first,
+#main .article-main .legacy.guide-board-text-first > .legacy-body,
+#main .article-main .legacy.guide-board-text-first .legacy-main {
+  box-sizing:border-box;
+  width:100%;
+  min-width:0;
+  max-width:none;
+}
+#main .article-main .legacy.guide-board-text-first :is(
+  .board-guide-section > .wrap,
+  .board-guide-section .wrap,
+  .gbv-wrap,
+  .board-jp-shell,
+  .principal-liability-wrap,
+  .rc5-wrap,
+  .plain-prose-block,
+  .key-materials-section .wrap
+) {
+  box-sizing:border-box;
+  width:100% !important;
+  max-width:none !important;
+  min-width:0;
+  margin-inline:0 !important;
+}
+#main .article-main .legacy.guide-board-text-first .legacy-main > section:not([class]) {
+  box-sizing:border-box;
+  width:100% !important;
+  max-width:none !important;
+  margin-inline:0 !important;
+}
+#main .article-main .legacy.guide-board-text-first :is(p,li,dd,blockquote) {
+  max-width:100%;
+  overflow-wrap:anywhere;
+}
+#main .article-main .legacy.guide-board-text-first :is(table,figure,pre,.gbv-figure,.gbv-scroll) {
+  max-width:100%;
+  min-width:0;
+}
+#main .article-main .legacy.guide-board-text-first table {
+  box-sizing:border-box;
+  width:100%;
+}
+#main .article-main .legacy.guide-board-text-first .gbv-scroll svg {
+  width:100%;
+  max-width:100%;
+  height:auto;
+}
+#main .article-main .legacy.guide-board-text-first .legacy-main :is(h2,h3) {
+  scroll-margin-top:calc(var(--header-h,80px) + 28px);
+}
+/* Fifty chapter destinations are still available, but no longer occupy the
+   entire sidebar from top to bottom or introduce an always-on inner scrollbar. */
+#main .article-side .guide-sidebar-toc {
+  overflow:visible;
+  border:1px solid var(--line);
+  border-radius:12px;
+  box-shadow:0 4px 20px rgba(17,47,78,.045);
+}
+#main .article-side .guide-sidebar-toc > h2 {
+  margin:0;
+  border-radius:12px 12px 0 0;
+}
+#main .article-side .guide-chapter-links {
+  list-style:none;
+  margin:0;
+  padding:6px 10px 10px;
+  display:grid;
+  gap:3px;
+}
+#main .article-side .guide-chapter-links > li {margin:0;padding:0;}
+#main .article-side .guide-chapter-links a {
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  padding:10px 9px;
+  border-radius:7px;
+  text-decoration:none;
+  font-size:13px;
+  line-height:1.55;
+  color:var(--navy-deep);
+  background:transparent;
+}
+#main .article-side .guide-chapter-links a:hover,
+#main .article-side .guide-chapter-links a:focus-visible {
+  background:var(--tint);
+}
+#main .article-side .guide-chapter-links .chapter-no {
+  flex:none;
+  display:grid;
+  place-items:center;
+  width:26px;
+  height:26px;
+  border-radius:6px;
+  background:#eaf1f6;
+  color:var(--navy);
+  font-size:11px;
+  font-weight:800;
+}
+#main .article-side .guide-chapter-links .chapter-text {
+  min-width:0;
+  flex:1;
+}
+#main .article-side .guide-toc-details {
+  border-top:1px solid var(--line);
+  background:#f9fbfd;
+  border-radius:0 0 12px 12px;
+}
+#main .article-side .guide-toc-details > summary {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:13px 16px;
+  color:var(--navy-deep);
+  font-size:13px;
+  font-weight:800;
+  line-height:1.5;
+  cursor:pointer;
+  list-style:none;
+}
+#main .article-side .guide-toc-details > summary::-webkit-details-marker {display:none;}
+#main .article-side .guide-toc-details > summary::after {
+  content:"＋";
+  margin-left:auto;
+  font-size:18px;
+  line-height:1;
+  color:var(--navy);
+}
+#main .article-side .guide-toc-details[open] > summary::after {content:"－";}
+#main .article-side .guide-toc-details > .toc-list {
+  max-height:min(46vh,440px);
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  scrollbar-width:thin;
+  padding:4px 6px 10px;
+  border-top:1px solid var(--line);
+}
+#main .article-side .guide-toc-details .toc-list a {
+  font-size:12px;
+  line-height:1.5;
+  padding:9px 8px;
+}
+/* Keep the native details control accessible and the ToC below the article at
+   tablet widths, where a side rail would squeeze long legal tables. */
+@media(max-width:1040px) {
+  body[data-page="legacy"] #main .container:has(> .article-layout) > .article-layout {
+    grid-template-columns:minmax(0,1fr);
+    gap:20px;
+  }
+  body[data-page="legacy"] #main .article-layout > .article-main {
+    grid-column:1;
+    grid-row:1;
+  }
+  body[data-page="legacy"] #main .article-layout > .article-side {
+    grid-column:1;
+    grid-row:2;
+    position:static;
+    max-height:none;
+  }
+  #main .article-side .guide-sidebar-toc > .guide-chapter-links {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+@media(max-width:600px) {
+  #main .article-side .guide-sidebar-toc > .guide-chapter-links {
+    grid-template-columns:1fr;
+  }
+  #main .article-main .legacy.guide-board-text-first .legacy-main :is(table,pre) {
+    overflow-x:auto;
+  }
+}
