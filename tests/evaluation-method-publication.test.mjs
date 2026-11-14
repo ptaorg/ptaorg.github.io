@@ -22,7 +22,7 @@ test('published evaluation methodology is a standalone Japanese canonical page',
   assert.match(html,/個人情報保護法61条・69条/);
   assert.match(html,/法令上の根拠と適用範囲を検証/);
   assert.equal((html.match(/<td class="m-no">/g)||[]).length,12);
-  assert.equal((html.match(/class="method-section"/g)||[]).length,6);
+  assert.equal((html.match(/class="method-section"/g)||[]).length,7);
   const steps=html.slice(html.indexOf('<ol class="method-steps">'),html.indexOf('</ol>',html.indexOf('<ol class="method-steps">')));
   assert.ok(steps.indexOf('主体の分離')<steps.indexOf('事務の帰属'));
   assert.ok(steps.indexOf('事務の帰属')<steps.indexOf('学校側の具体的な所掌事務・権限'));
