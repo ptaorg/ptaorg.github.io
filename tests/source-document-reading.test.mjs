@@ -43,3 +43,12 @@ test('officer guide exit links stay within mobile viewport',()=>{
  assert.match(css,/white-space:normal!important/);
  assert.match(html,/guide-pta\.css\?v=20261114-readable/);
 });
+
+test('diagram controls are activated only after details disclosure opens',()=>{
+ const js=read('assets/legacy.js');
+ const audit=read('scripts/visual-audit.mjs');
+ assert.match(js,/details:not\(\[open\]\)/);
+ assert.match(js,/addEventListener\('toggle'/);
+ assert.match(audit,/diagramDisclosuresOpened/);
+ assert.match(audit,/node\.open=true/);
+});

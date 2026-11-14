@@ -304,12 +304,29 @@ for (const viewport of viewports) {
         }
       }
       if (viewport.name === 'mobile' && item.pathname === '/guide-board.html') {
+        // A source figure may be within closed <details>. Open its disclosure
+        // exactly as a reader would before checking controls and their motion.
+        record.diagramDisclosuresOpened = await page.evaluate(() => {
+          const first = document.querySelector(
+            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll'
+          );
+          let opened=0;
+          for (let node=first?.parentElement; node; node=node.parentElement) {
+            if (node.tagName === 'DETAILS' && !node.open) {
+              node.open=true;
+              opened++;
+            }
+          }
+          return opened;
+        });
+        await page.waitForTimeout(220);
         const diagrams = await page.evaluate(() => [...document.querySelectorAll(
           '#main .legacy-body.guide-board-direct-fixed .diagram-scroll'
         )].filter(e => {
           const r=e.getBoundingClientRect(), cs=getComputedStyle(e);
           return r.width > 0 && r.height > 0 && cs.visibility === 'visible' &&
-            !e.closest('[hidden],[aria-hidden="true"]') &&
+            !e.closest('[hidden],[aria-hidden="true"],details:not([open])') &&
+            (!e.checkVisibility || e.checkVisibility()) &&
             e.scrollWidth > e.clientWidth + 4;
         }).map(e => ({
           hint: !!e.previousElementSibling?.matches('.diagram-scroll-hint'),

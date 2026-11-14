@@ -138,7 +138,9 @@
       const style = getComputedStyle(scroller);
       const rect = scroller.getBoundingClientRect();
       const visible = rect.width > 0 && rect.height > 0 &&
-        style.visibility === 'visible' && !scroller.closest('[hidden],[aria-hidden="true"]');
+        style.visibility === 'visible' &&
+        !scroller.closest('[hidden],[aria-hidden="true"],details:not([open])') &&
+        (!scroller.checkVisibility || scroller.checkVisibility());
       const scrollable = smallScreen && visible &&
         scroller.scrollWidth > scroller.clientWidth + 4 &&
         (style.overflowX === 'auto' || style.overflowX === 'scroll');
@@ -216,6 +218,9 @@
     initFAQ(document);
     markWideTables();
     markWideDiagrams();
+    document.addEventListener('toggle', event => {
+      if (event.target.matches?.('details')) markWideDiagrams();
+    }, true);
     window.addEventListener('load', markWideTables, { once: true });
     window.addEventListener('load', markWideDiagrams, { once: true });
     window.addEventListener('resize', () => window.requestAnimationFrame(markWideTables));
