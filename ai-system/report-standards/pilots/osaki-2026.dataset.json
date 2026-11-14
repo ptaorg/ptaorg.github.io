@@ -41,7 +41,7 @@
       "naruko-compulsory"
     ],
     "sampling": "census",
-    "scopeNote": "2026年6月23日更新の大崎市公式一覧を基準とする市立小学校14校・中学校9校・義務教育学校2校。全校登録済みだがPTA運用資料は現在直接未照合のため12軸は未確認とする。Google Driveの資料は原本確認前のメタデータに限る。",
+    "scopeNote": "2026年6月23日更新の大崎市公式一覧を基準とする小学校14校・中学校9校・義務教育学校2校の現存25校を登録。2026年3月31日に廃止された下伊場野小学校はこの母集団に含めない。田尻中学校の学校集金案内・内訳表・PTA会計委託契約および市の徴収金規程の該当部分のみ直接照合し、その他の学校・軸は原本未照合として未確認を維持。",
     "schoolTypes": [
       "小学校",
       "中学校",
@@ -111,9 +111,47 @@
       "publicationLinkChecked": false,
       "containsPersonalData": false,
       "redactionChecked": false
+    },
+    {
+      "id": "city-collection-regulation-r4",
+      "title": "大崎市立小中学校徴収金事務取扱規程（令和4年4月1日施行、2026年度提供原本）",
+      "issuer": "大崎市教育委員会",
+      "kind": "primary",
+      "documentDate": null,
+      "targetYear": "2026",
+      "url": null,
+      "filePath": "全国資料/大崎市/学校教育課/3-1_大崎市立小中学校徴収金事務取扱規程.pdf",
+      "verification": "direct_checked",
+      "verifiedAt": "2026-11-15",
+      "publicationLinkChecked": false,
+      "containsPersonalData": false,
+      "redactionChecked": false
+    },
+    {
+      "id": "tajiri-contract-r8",
+      "title": "田尻中学校PTA・学校 令和8年度会計事務執行委任依頼・委託契約書",
+      "issuer": "田尻中学校PTA／田尻中学校",
+      "kind": "primary",
+      "documentDate": "2026-04-18",
+      "targetYear": "2026",
+      "url": null,
+      "filePath": "全国資料/大崎市/23田尻中学校/24R8委託契約書.pdf",
+      "verification": "direct_checked",
+      "verifiedAt": "2026-11-15",
+      "publicationLinkChecked": false,
+      "containsPersonalData": true,
+      "redactionChecked": false
     }
   ],
-  "municipalDocuments": [],
+  "municipalDocuments": [
+    {
+      "id": "city-collection-articles-19-20",
+      "sourceId": "city-collection-regulation-r4",
+      "category": "regulation",
+      "scopeOfEffect": "大崎市立小中学校に関する学校徴収金事務。団体費・PTA会費への具体的適用と公法上の授権は独立検証が必要。",
+      "statement": "令和4年4月1日施行の規程第19条は、学校運営・教育活動に密接に関係する団体の会計事務を校長が書面等の委任を受けた場合に処理する規定。第20条は学校徴収金の基準第7条・第14条を団体費に準用する。規程の存在は法令上の権限や個別校運用の適法性の確定ではない。"
+    }
+  ],
   "schools": [
     {
       "id": "furukawa-daiichi-es",
@@ -1904,7 +1942,8 @@
       "analysisYear": "2026",
       "sourceIds": [
         "tajiri-collection-r8",
-        "tajiri-breakdown-r8"
+        "tajiri-breakdown-r8",
+        "tajiri-contract-r8"
       ],
       "axes": {
         "voluntary_membership_notice": {
@@ -1980,10 +2019,19 @@
           "sourceRefs": []
         },
         "teacher_internal_pta_admin": {
-          "status": "unknown",
-          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "status": "indication",
+          "observation": "2026年4月18日付の学校へのPTA会計委託と、5月11日付校長名の学校集金案内は学校の事務系統の関与を示す。ただし個々の教職員がどのPTA内部事務を勤務時間中に遂行したかという実作業記録は未照合のため、担当者の実従事を確認YESとはしない。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "tajiri-contract-r8",
+              "locator": "PDF p.1〜2 会計事務受任と契約当事者"
+            },
+            {
+              "sourceId": "tajiri-collection-r8",
+              "locator": "PDF p.1 学校集金、事務室への直接納入案内"
+            }
+          ]
         },
         "pta_spending_on_school_costs": {
           "status": "unknown",
@@ -1992,10 +2040,15 @@
           "sourceRefs": []
         },
         "school_pta_governance_overlap": {
-          "status": "unknown",
-          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "status": "confirmed_yes",
+          "observation": "2026年4月18日付PTA会長から田尻中学校長への会計事務執行委任依頼は、学校側を会費収納事務の代行先・会計執行責任者とする内容を記載。添付の委託契約書はPTAと学校を当事者として無償の会計事務委託を記載し、学校側の受託署名押印が確認できる。これは学校とPTAの会計事務の接点を示すが、実際の資金保管や公務上の権限・適法性までは断定しない。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "tajiri-contract-r8",
+              "locator": "PDF p.1〈会計事務執行委任依頼〉・p.2〈委託契約書〉"
+            }
+          ]
         }
       }
     },
