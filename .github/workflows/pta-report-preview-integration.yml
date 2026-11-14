@@ -1,0 +1,51 @@
+name: PTA report private preview integration
+
+on:
+  pull_request:
+    paths:
+      - scripts/render-evaluation-preview.mjs
+      - tests/osaki-preview-integration.mjs
+      - .github/workflows/pta-report-preview-integration.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  osaki-private-preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Read report skill from separate PR #180 without publishing data
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/pta-skill"
+          git fetch --no-tags --depth=1 origin feat/pta-municipal-school-report-skill-v1
+          git archive FETCH_HEAD ai-system/report-standards | tar -xf - -C "$RUNNER_TEMP/pta-skill"
+          printf "Skill branch commit: "
+          git rev-parse FETCH_HEAD
+          test -s "$RUNNER_TEMP/pta-skill/ai-system/report-standards/pilots/osaki-2026.dataset.json"
+          test -s "$RUNNER_TEMP/pta-skill/ai-system/report-standards/evaluation-axes.json"
+          echo "PTA_REPORT_SKILL_DIR=$RUNNER_TEMP/pta-skill" >> "$GITHUB_ENV"
+
+      - name: Install browser for local-only viewport verification
+        run: |
+          npm install --no-save --ignore-scripts playwright
+          npx playwright install --with-deps chromium
+
+      - name: Verify real-city report without site publication
+        run: node tests/osaki-preview-integration.mjs
+
+      - name: Confirm public site files were not modified
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --exit-code -- .
+          git diff --cached --exit-code -- .
+          echo "Only temporary previews were generated; no screenshots or documents were uploaded."
