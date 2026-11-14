@@ -1,0 +1,79 @@
+{
+  "version": "1.0.0",
+  "measurementUnit": "学校数（1校1カウント）",
+  "caution": "yes/noは観察事実の有無であり、違法性や適正性の評定ではない",
+  "axes": [
+    {
+      "id": "voluntary_membership_notice",
+      "label": "任意加入の明示",
+      "yesMeans": "対象年度の入会案内等に任意加入であることが明示される",
+      "documentsToCheck": "加入案内、会則、入学説明資料"
+    },
+    {
+      "id": "explicit_opt_in",
+      "label": "明示的加入申込",
+      "yesMeans": "希望者からの申込・PTAの承諾が明記される",
+      "documentsToCheck": "加入申込書、申込規約、運用通知"
+    },
+    {
+      "id": "withdrawal_procedure",
+      "label": "退会手続の明示",
+      "yesMeans": "退会手段と効果・期限等が明示される",
+      "documentsToCheck": "会則、退会届、案内"
+    },
+    {
+      "id": "nonmember_equal_treatment",
+      "label": "非会員児童等への公平配慮",
+      "yesMeans": "非会員の児童生徒を区別しない旨を明示する",
+      "documentsToCheck": "行事案内、記念品通知、会則、運用記録"
+    },
+    {
+      "id": "school_collection_of_pta_fee",
+      "label": "学校によるPTA会費徴収",
+      "yesMeans": "PTA会費を学校/教職員/学校事務系統が徴収する記載がある",
+      "documentsToCheck": "学校徴収金案内、口座振替予定、会費通知"
+    },
+    {
+      "id": "school_account_or_payment_system",
+      "label": "学校口座・徴収システムの利用",
+      "yesMeans": "PTA会費が学校口座・学校徴収金システムに載る記載がある",
+      "documentsToCheck": "収納フロー、振替明細、仕様書"
+    },
+    {
+      "id": "school_personal_data_for_pta",
+      "label": "学校保有情報のPTA目的利用・提供",
+      "yesMeans": "学校情報のPTA名簿/役員/会費/配信等への利用・提供が確認される",
+      "documentsToCheck": "個人情報通知、役員選出資料、提供記録、学校アプリの通知"
+    },
+    {
+      "id": "officer_selection_pressure",
+      "label": "役員選出の強制・抽選等",
+      "yesMeans": "非立候補者抽選、強制割当、一人一役等の運用記載がある",
+      "documentsToCheck": "役員選出案内、免除規則、くじ記録"
+    },
+    {
+      "id": "sensitive_exemption_questions",
+      "label": "免除審査での家庭事情照会",
+      "yesMeans": "妊娠、疾病、介護、家庭状況等の申告を求める記載がある",
+      "documentsToCheck": "役員免除申請書、役員選出アンケート"
+    },
+    {
+      "id": "teacher_internal_pta_admin",
+      "label": "教職員のPTA内部事務従事",
+      "yesMeans": "教職員の会員管理、会費事務、役員選考、PTA会計の従事が確認される",
+      "documentsToCheck": "役員名簿、業務分掌、会計担当記録、契約"
+    },
+    {
+      "id": "pta_spending_on_school_costs",
+      "label": "PTA会計から学校運営費への支出",
+      "yesMeans": "学校経費・施設・教育活動費に対するPTA支出が確認される",
+      "documentsToCheck": "決算書、領収書、寄附受付簿、備品台帳"
+    },
+    {
+      "id": "school_pta_governance_overlap",
+      "label": "学校・PTAの意思決定／事務の混在",
+      "yesMeans": "学校長や教職員がPTA内部決定または団体会計を学校事務として扱う記載がある",
+      "documentsToCheck": "校長委任契約、事務局規則、管理会則、会計文書"
+    }
+  ]
+}

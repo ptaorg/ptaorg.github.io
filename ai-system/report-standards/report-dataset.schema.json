@@ -1,0 +1,1199 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ptaorg.com/ai-system/report-standards/report-dataset.schema.json",
+  "title": "PTA municipality and school audit source dataset v1.0.0",
+  "description": "A fact-and-source ledger. Legal conclusions, calculated percentages, and published claims live outside the raw axis observations.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "reportId",
+    "asOf",
+    "municipality",
+    "scope",
+    "sources",
+    "municipalDocuments",
+    "schools",
+    "narrativeClaims",
+    "legalReviews",
+    "publication"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "reportId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]+$"
+    },
+    "asOf": {
+      "type": "string",
+      "format": "date"
+    },
+    "municipality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "prefecture",
+        "lat",
+        "long",
+        "coordinateSourceId"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prefecture": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lat": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": -90,
+          "maximum": 90
+        },
+        "long": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": -180,
+          "maximum": 180
+        },
+        "coordinateSourceId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "totalPublicSchools",
+        "populationSourceId",
+        "populationSchoolIds",
+        "sampling",
+        "scopeNote",
+        "schoolTypes",
+        "targetYears"
+      ],
+      "properties": {
+        "totalPublicSchools": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "populationSourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "populationSchoolIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]+$"
+          },
+          "description": "Official complete school ID roster; census schools must match this set exactly"
+        },
+        "sampling": {
+          "enum": [
+            "census",
+            "selected"
+          ]
+        },
+        "scopeNote": {
+          "type": "string",
+          "minLength": 1
+        },
+        "schoolTypes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "targetYears": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9]{4}$"
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "issuer",
+          "kind",
+          "documentDate",
+          "targetYear",
+          "url",
+          "filePath",
+          "verification",
+          "verifiedAt",
+          "publicationLinkChecked",
+          "containsPersonalData",
+          "redactionChecked"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "issuer": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "primary",
+              "secondary",
+              "internal"
+            ]
+          },
+          "documentDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "targetYear": {
+            "type": "string",
+            "pattern": "^[0-9]{4}$"
+          },
+          "url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "filePath": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "verification": {
+            "enum": [
+              "direct_checked",
+              "metadata_only",
+              "unavailable"
+            ]
+          },
+          "verifiedAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "publicationLinkChecked": {
+            "type": "boolean"
+          },
+          "containsPersonalData": {
+            "type": "boolean"
+          },
+          "redactionChecked": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "municipalDocuments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "sourceId",
+          "category",
+          "scopeOfEffect",
+          "statement"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "sourceId": {
+            "type": "string"
+          },
+          "category": {
+            "enum": [
+              "notice",
+              "reply",
+              "regulation",
+              "guideline",
+              "minutes",
+              "other"
+            ]
+          },
+          "scopeOfEffect": {
+            "type": "string",
+            "minLength": 1
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "schools": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "schoolType",
+          "analysisYear",
+          "sourceIds",
+          "axes"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "schoolType": {
+            "enum": [
+              "小学校",
+              "中学校",
+              "義務教育学校",
+              "高等学校",
+              "特別支援学校",
+              "その他"
+            ]
+          },
+          "analysisYear": {
+            "type": "string",
+            "pattern": "^[0-9]{4}$"
+          },
+          "sourceIds": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "axes": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "voluntary_membership_notice",
+              "explicit_opt_in",
+              "withdrawal_procedure",
+              "nonmember_equal_treatment",
+              "school_collection_of_pta_fee",
+              "school_account_or_payment_system",
+              "school_personal_data_for_pta",
+              "officer_selection_pressure",
+              "sensitive_exemption_questions",
+              "teacher_internal_pta_admin",
+              "pta_spending_on_school_costs",
+              "school_pta_governance_overlap"
+            ],
+            "properties": {
+              "voluntary_membership_notice": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "observation",
+                  "year",
+                  "sourceRefs"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "confirmed_yes",
+                      "confirmed_no",
+                      "indication",
+                      "unknown",
+                      "not_applicable",
+                      "conflicting"
+                    ]
+                  },
+                  "observation": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "string",
+                    "pattern": "^[0-9]{4}$"
+                  },
+                  "sourceRefs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceId",
+                        "locator"
+                      ],
+                      "properties": {
+                        "sourceId": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "locator": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  },
+                  "explicitNegative": {
+                    "type": "boolean"
+                  },
+                  "reviewNotes": {
+                    "type": "string"
+                  }
+                }
+              },
+              "explicit_opt_in": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "observation",
+                  "year",
+                  "sourceRefs"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "confirmed_yes",
+                      "confirmed_no",
+                      "indication",
+                      "unknown",
+                      "not_applicable",
+                      "conflicting"
+                    ]
+                  },
+                  "observation": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "string",
+                    "pattern": "^[0-9]{4}$"
+                  },
+                  "sourceRefs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceId",
+                        "locator"
+                      ],
+                      "properties": {
+                        "sourceId": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "locator": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  },
+                  "explicitNegative": {
+                    "type": "boolean"
+                  },
+                  "reviewNotes": {
+                    "type": "string"
+                  }
+                }
+              },
+              "withdrawal_procedure": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "observation",
+                  "year",
+                  "sourceRefs"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "confirmed_yes",
+                      "confirmed_no",
+                      "indication",
+                      "unknown",
+                      "not_applicable",
+                      "conflicting"
+                    ]
+                  },
+                  "observation": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "string",
+                    "pattern": "^[0-9]{4}$"
+                  },
+                  "sourceRefs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceId",
+                        "locator"
+                      ],
+                      "properties": {
+                        "sourceId": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "locator": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  },
+                  "explicitNegative": {
+                    "type": "boolean"
+                  },
+                  "reviewNotes": {
+                    "type": "string"
+                  }
+                }
+              },
+              "nonmember_equal_treatment": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "observation",
+                  "year",
+                  "sourceRefs"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "confirmed_yes",
+                      "confirmed_no",
+                      "indication",
+                      "unknown",
+                      "not_applicable",
+                      "conflicting"
+                    ]
+                  },
+                  "observation": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "string",
+                    "pattern": "^[0-9]{4}$"
+                  },
+                  "sourceRefs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceId",
+                        "locator"
+                      ],
+                      "properties": {
+                        "sourceId": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "locator": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  },
+                  "explicitNegative": {
+                    "type": "boolean"
+                  },
+                  "reviewNotes": {
+                    "type": "string"
+                  }
+                }
+              },
+              "school_collection_of_pta_fee": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "observation",
+                  "year",
+                  "sourceRefs"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "confirmed_yes",
+                      "confirmed_no",
+                      "indication",
+                      "unknown",
+                      "not_applicable",
+                      "conflicting"
+                    ]
+                  },
+                  "observation": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "string",
+                    "pattern": "^[0-9]{4}$"
+                  },
+                  "sourceRefs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceId",
+                        "locator"
+                      ],
+                      "properties": {
+                        "sourceId": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "locator": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  },
+                  "explicitNegative": {
+                    "type": "boolean"
+                  },
+                  "reviewNotes": {
+                    "type": "string"
+                  }
+                }
+              },
+              "school_account_or_payment_system": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "observation",
+                  "year",
+                  "sourceRefs"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "confirmed_yes",
+                      "confirmed_no",
+                      "indication",
+                      "unknown",
+                      "not_applicable",
+                      "conflicting"
+                    ]
+                  },
+                  "observation": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "string",
+                    "pattern": "^[0-9]{4}$"
+                  },
+                  "sourceRefs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceId",
+                        "locator"
+                      ],
+                      "properties": {
+                        "sourceId": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "locator": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  },
+                  "explicitNegative": {
+                    "type": "boolean"
+                  },
+                  "reviewNotes": {
+                    "type": "string"
+                  }
+                }
+              },
+              "school_personal_data_for_pta": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "observation",
+                  "year",
+                  "sourceRefs"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "confirmed_yes",
+                      "confirmed_no",
+                      "indication",
+                      "unknown",
+                      "not_applicable",
+                      "conflicting"
+                    ]
+                  },
+                  "observation": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "string",
+                    "pattern": "^[0-9]{4}$"
+                  },
+                  "sourceRefs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceId",
+                        "locator"
+                      ],
+                      "properties": {
+                        "sourceId": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "locator": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  },
+                  "explicitNegative": {
+                    "type": "boolean"
+                  },
+                  "reviewNotes": {
+                    "type": "string"
+                  }
+                }
+              },
+              "officer_selection_pressure": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "observation",
+                  "year",
+                  "sourceRefs"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "confirmed_yes",
+                      "confirmed_no",
+                      "indication",
+                      "unknown",
+                      "not_applicable",
+                      "conflicting"
+                    ]
+                  },
+                  "observation": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "string",
+                    "pattern": "^[0-9]{4}$"
+                  },
+                  "sourceRefs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceId",
+                        "locator"
+                      ],
+                      "properties": {
+                        "sourceId": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "locator": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  },
+                  "explicitNegative": {
+                    "type": "boolean"
+                  },
+                  "reviewNotes": {
+                    "type": "string"
+                  }
+                }
+              },
+              "sensitive_exemption_questions": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "observation",
+                  "year",
+                  "sourceRefs"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "confirmed_yes",
+                      "confirmed_no",
+                      "indication",
+                      "unknown",
+                      "not_applicable",
+                      "conflicting"
+                    ]
+                  },
+                  "observation": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "string",
+                    "pattern": "^[0-9]{4}$"
+                  },
+                  "sourceRefs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceId",
+                        "locator"
+                      ],
+                      "properties": {
+                        "sourceId": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "locator": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  },
+                  "explicitNegative": {
+                    "type": "boolean"
+                  },
+                  "reviewNotes": {
+                    "type": "string"
+                  }
+                }
+              },
+              "teacher_internal_pta_admin": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "observation",
+                  "year",
+                  "sourceRefs"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "confirmed_yes",
+                      "confirmed_no",
+                      "indication",
+                      "unknown",
+                      "not_applicable",
+                      "conflicting"
+                    ]
+                  },
+                  "observation": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "string",
+                    "pattern": "^[0-9]{4}$"
+                  },
+                  "sourceRefs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceId",
+                        "locator"
+                      ],
+                      "properties": {
+                        "sourceId": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "locator": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  },
+                  "explicitNegative": {
+                    "type": "boolean"
+                  },
+                  "reviewNotes": {
+                    "type": "string"
+                  }
+                }
+              },
+              "pta_spending_on_school_costs": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "observation",
+                  "year",
+                  "sourceRefs"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "confirmed_yes",
+                      "confirmed_no",
+                      "indication",
+                      "unknown",
+                      "not_applicable",
+                      "conflicting"
+                    ]
+                  },
+                  "observation": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "string",
+                    "pattern": "^[0-9]{4}$"
+                  },
+                  "sourceRefs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceId",
+                        "locator"
+                      ],
+                      "properties": {
+                        "sourceId": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "locator": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  },
+                  "explicitNegative": {
+                    "type": "boolean"
+                  },
+                  "reviewNotes": {
+                    "type": "string"
+                  }
+                }
+              },
+              "school_pta_governance_overlap": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "observation",
+                  "year",
+                  "sourceRefs"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "confirmed_yes",
+                      "confirmed_no",
+                      "indication",
+                      "unknown",
+                      "not_applicable",
+                      "conflicting"
+                    ]
+                  },
+                  "observation": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "string",
+                    "pattern": "^[0-9]{4}$"
+                  },
+                  "sourceRefs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceId",
+                        "locator"
+                      ],
+                      "properties": {
+                        "sourceId": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "locator": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  },
+                  "explicitNegative": {
+                    "type": "boolean"
+                  },
+                  "reviewNotes": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "narrativeClaims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "kind",
+          "text",
+          "sourceRefs"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "fact",
+              "administrative_statement",
+              "interpretation",
+              "legal_assessment"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "schoolId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sourceRefs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "sourceId",
+                "locator"
+              ],
+              "properties": {
+                "sourceId": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "locator": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "legalReviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claimId",
+          "subjectSeparation",
+          "taskOwnership",
+          "publicAuthority",
+          "privacyAnalysis",
+          "applicationAndConclusion",
+          "counterInterpretation",
+          "seniorReviewed"
+        ],
+        "properties": {
+          "claimId": {
+            "type": "string"
+          },
+          "subjectSeparation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "taskOwnership": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publicAuthority": {
+            "type": "string",
+            "minLength": 1
+          },
+          "privacyAnalysis": {
+            "type": "string",
+            "minLength": 1
+          },
+          "applicationAndConclusion": {
+            "type": "string",
+            "minLength": 1
+          },
+          "counterInterpretation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "seniorReviewed": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "publication": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "sourceChecked",
+        "linksChecked",
+        "citationsChecked",
+        "redactionsChecked",
+        "legalReviewCompleted",
+        "seniorApproved",
+        "humanApproved",
+        "reviewRecord"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "draft",
+            "review",
+            "approved"
+          ]
+        },
+        "sourceChecked": {
+          "type": "boolean"
+        },
+        "linksChecked": {
+          "type": "boolean"
+        },
+        "citationsChecked": {
+          "type": "boolean"
+        },
+        "redactionsChecked": {
+          "type": "boolean"
+        },
+        "legalReviewCompleted": {
+          "type": "boolean"
+        },
+        "seniorApproved": {
+          "type": "boolean"
+        },
+        "humanApproved": {
+          "type": "boolean"
+        },
+        "reviewRecord": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "seniorReviewer",
+            "seniorReviewedAt",
+            "humanApprover",
+            "humanApprovedAt"
+          ],
+          "properties": {
+            "seniorReviewer": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "seniorReviewedAt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "humanApprover": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "humanApprovedAt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            }
+          }
+        }
+      }
+    }
+  }
+}

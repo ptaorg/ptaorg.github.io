@@ -1,0 +1,271 @@
+{
+  "schemaVersion": "1.0.0",
+  "reportId": "fictional-city-2026",
+  "asOf": "2026-11-14",
+  "municipality": {
+    "id": "fictional-city",
+    "name": "架空市（テスト専用）",
+    "prefecture": "架空県（テスト専用）",
+    "lat": null,
+    "long": null,
+    "coordinateSourceId": null
+  },
+  "scope": {
+    "totalPublicSchools": 2,
+    "populationSourceId": "demo-list",
+    "populationSchoolIds": ["demo-school-1", "demo-school-2"],
+    "sampling": "census",
+    "scopeNote": "テスト用架空の公立小学校2校。実在の自治体・学校ではない。",
+    "schoolTypes": [
+      "小学校"
+    ],
+    "targetYears": [
+      "2026"
+    ]
+  },
+  "sources": [
+    {
+      "id": "demo-list",
+      "title": "架空市学校一覧（テスト専用）",
+      "issuer": "架空市（テスト専用）",
+      "kind": "primary",
+      "documentDate": "2026-04-01",
+      "targetYear": "2026",
+      "url": "https://example.org/demo/schools",
+      "filePath": null,
+      "verification": "direct_checked",
+      "verifiedAt": "2026-11-14",
+      "publicationLinkChecked": false,
+      "containsPersonalData": false,
+      "redactionChecked": false
+    },
+    {
+      "id": "demo-optin",
+      "title": "架空第一小PTA入会案内（テスト専用）",
+      "issuer": "架空第一小PTA",
+      "kind": "primary",
+      "documentDate": "2026-04-01",
+      "targetYear": "2026",
+      "url": "https://example.org/demo/optin",
+      "filePath": null,
+      "verification": "direct_checked",
+      "verifiedAt": "2026-11-14",
+      "publicationLinkChecked": false,
+      "containsPersonalData": false,
+      "redactionChecked": false
+    },
+    {
+      "id": "demo-fee",
+      "title": "架空第二小 学校徴収案内（テスト専用）",
+      "issuer": "架空第二小学校",
+      "kind": "primary",
+      "documentDate": "2026-04-01",
+      "targetYear": "2026",
+      "url": "https://example.org/demo/fees",
+      "filePath": null,
+      "verification": "direct_checked",
+      "verifiedAt": "2026-11-14",
+      "publicationLinkChecked": false,
+      "containsPersonalData": false,
+      "redactionChecked": false
+    }
+  ],
+  "municipalDocuments": [],
+  "schools": [
+    {
+      "id": "demo-school-1",
+      "name": "架空第一小学校",
+      "schoolType": "小学校",
+      "analysisYear": "2026",
+      "sourceIds": [
+        "demo-optin"
+      ],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "confirmed_yes",
+          "observation": "入会を希望する場合は申込書を提出する、と明記。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "demo-optin",
+              "locator": "p.1 入会手続欄"
+            }
+          ]
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    },
+    {
+      "id": "demo-school-2",
+      "name": "架空第二小学校",
+      "schoolType": "小学校",
+      "analysisYear": "2026",
+      "sourceIds": [
+        "demo-fee"
+      ],
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "confirmed_no",
+          "observation": "通知に『学校ではPTA会費を集金しない』と明示。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "demo-fee",
+              "locator": "p.1 注意書き"
+            }
+          ],
+          "explicitNegative": true
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "該当年度の一次資料未確認。不存在とは判定しない。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      }
+    }
+  ],
+  "narrativeClaims": [],
+  "legalReviews": [],
+  "publication": {
+    "status": "draft",
+    "sourceChecked": false,
+    "linksChecked": false,
+    "citationsChecked": false,
+    "redactionsChecked": false,
+    "legalReviewCompleted": false,
+    "seniorApproved": false,
+    "humanApproved": false,
+    "reviewRecord": {
+      "seniorReviewer": null,
+      "seniorReviewedAt": null,
+      "humanApprover": null,
+      "humanApprovedAt": null
+    }
+  }
+}
