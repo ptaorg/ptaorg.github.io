@@ -230,6 +230,11 @@ for (const viewport of viewports) {
           const after = await target.evaluate(t => t.scrollLeft);
           record.tableControlMoved = after - before;
           if (after <= before + 3) record.errors.push('表の「右の列を見る」が動作しない');
+          await page.locator('#main .legacy-body .table-scroll-hint [data-table-scroll="back"]').first().click();
+          await page.waitForTimeout(300);
+          const returned = await target.evaluate(t => t.scrollLeft);
+          record.tableControlReturned = after - returned;
+          if (returned >= after - 3) record.errors.push('表の「左の列を見る」が動作しない');
         }
       }
       // A few archived school pages had a 100vw hero inside a narrow column,
