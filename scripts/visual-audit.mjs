@@ -154,6 +154,44 @@ for (const viewport of viewports) {
         };
       });
       Object.assign(record, metrics);
+      if (item.pathname === '/board-brief.html' && viewport.name === 'desktop') {
+        const screen = await page.evaluate(() => {
+          const p = document.querySelector('.legacy .document > .page p');
+          const pageEl = document.querySelector('.legacy .document > .page');
+          const qr = pageEl?.querySelector('.qr-strip');
+          return {
+            font: p ? parseFloat(getComputedStyle(p).fontSize) : 0,
+            overflow: pageEl ? getComputedStyle(pageEl).overflow : '',
+            height: pageEl ? Math.round(pageEl.getBoundingClientRect().height) : 0,
+            qrPosition: qr ? getComputedStyle(qr).position : ''
+          };
+        });
+        if (screen.font < 15.5 || screen.overflow === 'hidden' || screen.qrPosition === 'absolute') {
+          record.errors.push('A4提出要旨のPC閲覧文字・内容の見切れを検出');
+        }
+        if (!screenshotsOnlyProblems) {
+          const first = page.locator('.legacy .document > .page').first();
+          await first.screenshot({path:path.join(SHOTS, 'desktop__board-brief__reading-page-1.png')});
+        }
+        await page.emulateMedia({media:'print'});
+        const print = await page.evaluate(() => {
+          const p = document.querySelector('.legacy .document > .page');
+          const qr = p?.querySelector('.qr-strip');
+          const r = p?.getBoundingClientRect();
+          return {
+            width:r?.width ?? 0,height:r?.height ?? 0,
+            pages:document.querySelectorAll('.legacy .document > .page').length,
+            qrPosition:qr ? getComputedStyle(qr).position : ''
+          };
+        });
+        await page.emulateMedia({media:'screen'});
+        record.a4Screen = screen;
+        record.a4Print = print;
+        if (print.pages !== 5 || Math.abs(print.width - 793.7) > 8 ||
+            Math.abs(print.height - 1122.5) > 10 || print.qrPosition !== 'absolute') {
+          record.errors.push('A4印刷の5ページ固定版面が維持されていない');
+        }
+      }
       const readableMobilePages = new Set([
         '/board-brief.html', '/contact.html', '/pta-application-chain.html',
         '/board-pta-chain.html', '/pta-officer-chain.html',
@@ -183,14 +221,15 @@ for (const viewport of viewports) {
         record.scrollableTables = tableChecks.length;
         if (!tableChecks.length || tableChecks.some(t => !t.hint || !t.focusable || !t.described || !t.buttons)) {
           record.errors.push('横スクロールできる原資料表の案内・キーボード操作が不足');
+        }
         if (tableChecks.length) {
           const target = page.locator('#main .legacy-body table[data-scroll-hint-id]').first();
           const before = await target.evaluate(t => t.scrollLeft);
           await page.locator('#main .legacy-body .table-scroll-hint [data-table-scroll="forward"]').first().click();
           await page.waitForTimeout(300);
           const after = await target.evaluate(t => t.scrollLeft);
+          record.tableControlMoved = after - before;
           if (after <= before + 3) record.errors.push('表の「右の列を見る」が動作しない');
-        }
         }
       }
       // A few archived school pages had a 100vw hero inside a narrow column,
