@@ -28,7 +28,7 @@ jobs:
           echo $! > /tmp/ptaorg-visual-http.pid
       - name: Verify desktop and mobile layouts
         env:
-          PTA_VISUAL_AUDIT_PAGES: /index.html,/contact.html,/membership.html,/guide-board.html,/journal.html,/research-index.html,/explore.html,/municipality.html,/school.html,/about.html,/support.html
+          PTA_VISUAL_AUDIT_PAGES: /index.html,/contact.html,/membership.html,/guide-board.html,/journal.html,/research-index.html,/explore.html,/municipality.html,/school.html,/about.html,/support.html,/archive/atsugi/echi-jhs/index.html,/archive/toyohashi/school-009-es/index.html,/archive/koka/school-021-es/index.html
         run: |
           node scripts/visual-audit.mjs
           node -e "const a=require('./visual-audit-output/audit.json'); console.log(a.summary); if(a.summary.errorRecords) process.exit(1)"
