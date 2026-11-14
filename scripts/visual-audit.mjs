@@ -20,16 +20,25 @@ const localUrls = [...new Set(urls.map((raw) => {
 // On CI, sample representative routes; without this variable the full sitemap is audited.
 const requestedPaths = new Set((process.env.PTA_VISUAL_AUDIT_PAGES || '')
   .split(',').map((p) => p.trim()).filter(Boolean));
-const pagesToAudit = requestedPaths.size
+const allRequested = requestedPaths.size
   ? [...requestedPaths].map((pathname) => ({
       pathname,
       raw: 'https://ptaorg.com' + pathname,
       local: 'http://127.0.0.1:4173' + pathname,
     }))
   : localUrls;
+const shardCount = Number(process.env.PTA_VISUAL_AUDIT_SHARD_COUNT || 1);
+const shardIndex = Number(process.env.PTA_VISUAL_AUDIT_SHARD_INDEX || 0);
+if (!Number.isInteger(shardCount) || shardCount < 1 ||
+    !Number.isInteger(shardIndex) || shardIndex < 0 || shardIndex >= shardCount) {
+  throw new Error('Invalid audit shard count/index');
+}
+const pagesToAudit = allRequested.filter((item, i) => i % shardCount === shardIndex);
+const settleMs = Number(process.env.PTA_VISUAL_AUDIT_SETTLE_MS ?? 450);
+const screenshotsOnlyProblems = process.env.PTA_VISUAL_AUDIT_SCREENSHOT_MODE === 'problems';
 // Some canonical index/legacy pages intentionally are not listed in the sitemap.
 for (const item of pagesToAudit) {
-  if (!fs.existsSync(path.join(ROOT, item.pathname.slice(1)))) {
+  if (requestedPaths.size && !fs.existsSync(path.join(ROOT, item.pathname.slice(1)))) {
     throw new Error('Responsive audit target not found in checkout: ' + item.pathname);
   }
 }
@@ -77,7 +86,7 @@ for (const viewport of viewports) {
     };
     try {
       const response = await page.goto(item.local, { waitUntil: 'domcontentloaded', timeout: 30000 });
-      await page.waitForTimeout(450);
+      await page.waitForTimeout(settleMs);
       if (!response || response.status() >= 400) {
         record.ok = false;
         record.errors.push(`HTTP ${response ? response.status() : 'no response'}`);
@@ -180,7 +189,9 @@ for (const viewport of viewports) {
       if (metrics.headerRect && metrics.firstContentRect && metrics.firstContentRect.top < metrics.headerRect.bottom - 1 && metrics.firstContentRect.bottom > metrics.headerRect.top) record.warnings.push('固定ヘッダーと本文が重なる可能性');
       if (metrics.textOverflow.length) record.warnings.push(`表・コードの内部横スクロール ${metrics.textOverflow.length}件`);
 
-      const shouldShot = isCore(item.pathname) || record.errors.length || record.warnings.some((w) => w.includes('本文領域') || w.includes('画面外'));
+      const shouldShot = screenshotsOnlyProblems
+        ? record.errors.length || record.warnings.length
+        : isCore(item.pathname) || record.errors.length || record.warnings.some((w) => w.includes('本文領域') || w.includes('画面外'));
       if (shouldShot) {
         const file = path.join(SHOTS, `${viewport.name}__${slugify(item.pathname)}.png`);
         await page.screenshot({ path: file, fullPage: false });
@@ -201,6 +212,9 @@ await browser.close();
 const summary = {
   generatedAt: new Date().toISOString(),
   pages: pagesToAudit.length,
+  totalListed: allRequested.length,
+  shardIndex,
+  shardCount,
   checks: results.length,
   errorRecords: results.filter((r) => r.errors.length).length,
   warningRecords: results.filter((r) => r.warnings.length).length,
@@ -217,7 +231,7 @@ const md = [
   '# PTAサイト 実ブラウザ全体監査',
   '',
   `- 生成日時: ${summary.generatedAt}`,
-  `- サイトマップ掲載ページ: ${summary.pages}`,
+  `- 監査対象: ${summary.pages}／全${summary.totalListed}ページ（シャード${summary.shardIndex+1}/${summary.shardCount}）`,
   `- デスクトップ・スマートフォン合計チェック: ${summary.checks}`,
   `- エラーのある表示: ${summary.errorRecords}`,
   `- 警告のある表示: ${summary.warningRecords}`,
