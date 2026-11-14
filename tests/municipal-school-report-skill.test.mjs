@@ -254,7 +254,7 @@ test('Osaki pipeline renders 25 school drafts plus municipality, metrics, source
   const artifacts=buildDraft(d);
   assert.equal(Object.keys(artifacts).length,29);
   assert.match(artifacts['municipality-report.md'],/田尻中学校/);
-  assert.match(artifacts['municipality-report.md'],/4\\.0%/);
+  assert.match(artifacts['municipality-report.md'],/4[.]0%/);
   assert.match(artifacts['schools/tajiri-jhs.md'],/PTA会費1,500円/);
   assert.match(artifacts['schools/tajiri-jhs.md'],/事務室まで直接納入/);
   assert.match(artifacts['schools/naruko-compulsory.md'],/未確認/);
