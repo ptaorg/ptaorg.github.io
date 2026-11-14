@@ -69,15 +69,15 @@
     },
     {
       "id": "tajiri-collection-r8",
-      "title": "田尻中学校 18R8学校集金案内.pdf",
+      "title": "田尻中学校 令和8年度学校集金について（2026年5月11日）",
       "issuer": "田尻中学校",
       "kind": "primary",
-      "documentDate": null,
+      "documentDate": "2026-05-11",
       "targetYear": "2026",
       "url": null,
       "filePath": "全国資料/大崎市/23田尻中学校/18R8学校集金案内.pdf",
-      "verification": "metadata_only",
-      "verifiedAt": null,
+      "verification": "direct_checked",
+      "verifiedAt": "2026-11-15",
       "publicationLinkChecked": false,
       "containsPersonalData": false,
       "redactionChecked": false
@@ -93,6 +93,21 @@
       "filePath": "全国資料/大崎市/12鳴子小中学校/12_3-2 令和８年度　学校徴収金のお知らせ（前期）.pdf",
       "verification": "metadata_only",
       "verifiedAt": null,
+      "publicationLinkChecked": false,
+      "containsPersonalData": false,
+      "redactionChecked": false
+    },
+    {
+      "id": "tajiri-breakdown-r8",
+      "title": "田尻中学校 令和8年度学校集金内訳表",
+      "issuer": "田尻中学校",
+      "kind": "primary",
+      "documentDate": null,
+      "targetYear": "2026",
+      "url": null,
+      "filePath": "全国資料/大崎市/23田尻中学校/19R8学校集金内訳通知用.pdf",
+      "verification": "direct_checked",
+      "verifiedAt": "2026-11-15",
       "publicationLinkChecked": false,
       "containsPersonalData": false,
       "redactionChecked": false
@@ -1888,7 +1903,8 @@
       "schoolType": "中学校",
       "analysisYear": "2026",
       "sourceIds": [
-        "tajiri-collection-r8"
+        "tajiri-collection-r8",
+        "tajiri-breakdown-r8"
       ],
       "axes": {
         "voluntary_membership_notice": {
@@ -1916,16 +1932,34 @@
           "sourceRefs": []
         },
         "school_collection_of_pta_fee": {
-          "status": "unknown",
-          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "status": "confirmed_yes",
+          "observation": "校長名の2026年5月11日付学校集金案内はゆうちょ銀行口座振替による学校集金を通知し、別紙の令和8年度学校集金内訳表（No.1）にはPTA会費1,500円を各学年に計上。No.2にPTA生徒活動援助費2,500円、No.3にPTA安全互助会負担金620円を計上。学校集金にPTA会費が含まれることを直接確認。実口座名義・収納契約主体・公法上の権限・個人情報の利用状況は未確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "tajiri-collection-r8",
+              "locator": "p.1『1 納入方法』および『3 口座振替日』"
+            },
+            {
+              "sourceId": "tajiri-breakdown-r8",
+              "locator": "p.1『令和8年度学校集金内訳表』No.1〜3"
+            }
+          ]
         },
         "school_account_or_payment_system": {
-          "status": "unknown",
-          "observation": "2026年度の当該軸に関する一次資料を直接照合していない。不存在・適法性は判定しない。",
+          "status": "indication",
+          "observation": "学校集金案内はゆうちょ銀行口座振替を指定し、内訳表にはPTA会費が含まれる。ただし振替先の口座名義・収納契約主体・学校徴収金システム使用の有無は原資料から未確認。学校名義口座の使用を断定しない。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "tajiri-collection-r8",
+              "locator": "p.1『1 納入方法』"
+            },
+            {
+              "sourceId": "tajiri-breakdown-r8",
+              "locator": "p.1『学校集金内訳表』No.1"
+            }
+          ]
         },
         "school_personal_data_for_pta": {
           "status": "unknown",
