@@ -177,11 +177,20 @@ for (const viewport of viewports) {
             hint: !!t.previousElementSibling?.matches('.table-scroll-hint'),
             focusable: t.tabIndex === 0,
             described: !!t.dataset.scrollHintId &&
-              (t.getAttribute('aria-describedby') || '').split(/\s+/).includes(t.dataset.scrollHintId)
+              (t.getAttribute('aria-describedby') || '').split(/\s+/).includes(t.dataset.scrollHintId),
+            buttons: t.previousElementSibling?.querySelectorAll('.table-scroll-actions button').length === 2
           })));
         record.scrollableTables = tableChecks.length;
-        if (!tableChecks.length || tableChecks.some(t => !t.hint || !t.focusable || !t.described)) {
+        if (!tableChecks.length || tableChecks.some(t => !t.hint || !t.focusable || !t.described || !t.buttons)) {
           record.errors.push('横スクロールできる原資料表の案内・キーボード操作が不足');
+        if (tableChecks.length) {
+          const target = page.locator('#main .legacy-body table[data-scroll-hint-id]').first();
+          const before = await target.evaluate(t => t.scrollLeft);
+          await page.locator('#main .legacy-body .table-scroll-hint [data-table-scroll="forward"]').first().click();
+          await page.waitForTimeout(300);
+          const after = await target.evaluate(t => t.scrollLeft);
+          if (after <= before + 3) record.errors.push('表の「右の列を見る」が動作しない');
+        }
         }
       }
       // A few archived school pages had a 100vw hero inside a narrow column,

@@ -71,14 +71,44 @@
       const hint = hintId ? document.getElementById(hintId) : null;
       if (scrollable) {
         if (!hint) {
-          const el = document.createElement('p');
+          const el = document.createElement('div');
           el.className = 'table-scroll-hint';
           el.id = 'pta-table-scroll-hint-' + (++tableHintCounter);
-          el.textContent = '表は左右にスクロールできます。';
+          const caption = document.createElement('span');
+          caption.textContent = '表は左右にスクロールできます。';
+          const actions = document.createElement('span');
+          actions.className = 'table-scroll-actions';
+          for (const [direction, label, sign] of [
+            ['back', '左の列を見る', -1], ['forward', '右の列を見る', 1]
+          ]) {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.dataset.tableScroll = direction;
+            button.textContent = label;
+            button.setAttribute('aria-label', '表を' + (sign < 0 ? '左' : '右') + 'へスクロール');
+            button.addEventListener('click', () => {
+              table.scrollBy({ left: sign * Math.max(160, Math.floor(table.clientWidth * .7)), behavior: 'smooth' });
+            });
+            actions.append(button);
+          }
+          el.append(caption, actions);
           table.before(el);
           table.dataset.scrollHintId = el.id;
         }
         const actualId = table.dataset.scrollHintId;
+        const updateScrollButtons = () => {
+          const group = document.getElementById(table.dataset.scrollHintId);
+          if (!group) return;
+          const back = group.querySelector('[data-table-scroll="back"]');
+          const forward = group.querySelector('[data-table-scroll="forward"]');
+          if (back) back.disabled = table.scrollLeft <= 2;
+          if (forward) forward.disabled = table.scrollLeft >= table.scrollWidth - table.clientWidth - 2;
+        };
+        if (!table.dataset.scrollControlListener) {
+          table.addEventListener('scroll', updateScrollButtons, { passive: true });
+          table.dataset.scrollControlListener = '1';
+        }
+        updateScrollButtons();
         if (!table.hasAttribute('tabindex')) {
           table.setAttribute('tabindex', '0');
           table.dataset.scrollTabAdded = '1';

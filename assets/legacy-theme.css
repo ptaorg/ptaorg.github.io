@@ -401,3 +401,24 @@ body[data-page="legacy"] #main .article-layout > .article-main :is(
     .section-label,.case-wrap a,.case-wrap .evidence-boundary,table th
   ){font-size:.875rem!important;line-height:1.7}
 }
+
+/* Touch-friendly controls for source tables, preserving native swiping. */
+@media screen and (max-width:760px) {
+  #main .legacy-body .table-scroll-hint {
+    display:flex!important;align-items:center;flex-wrap:wrap;gap:8px 12px;
+  }
+  #main .legacy-body .table-scroll-actions {
+    display:inline-flex;align-items:center;gap:8px;margin-left:auto;flex-wrap:wrap;
+  }
+  #main .legacy-body .table-scroll-actions button {
+    appearance:none;min-height:44px;padding:8px 12px;cursor:pointer;
+    border:1px solid var(--navy);border-radius:6px;
+    background:#fff;color:var(--navy);font:700 14px/1.35 var(--sans);
+  }
+  #main .legacy-body .table-scroll-actions button:focus-visible {
+    outline:3px solid var(--gold-line);outline-offset:2px;
+  }
+  #main .legacy-body .table-scroll-actions button:disabled {
+    opacity:.45;cursor:not-allowed;
+  }
+}

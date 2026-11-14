@@ -140,6 +140,37 @@
   .legacy .page :is(.doc-label,.org,.qr-title,.source-type,.page-no),
   .legacy .page .qr-item :is(b,small,code) {font-size:13px;line-height:1.6}
 }
+
+/* Screen-first reading: the original five-page A4 print stylesheet remains intact.
+   Desktop reading may grow vertically; PDF printing still uses the fixed mm sizes. */
+@media screen and (min-width:851px) {
+  .legacy .document { width:100%; max-width:100%; margin:0 auto; }
+  .legacy .page {
+    width:100%; height:auto; min-height:0; overflow:visible;
+    margin:0 0 22px; padding:30px 34px;
+    border:1px solid #d4dfea; border-radius:10px;
+  }
+  .legacy .page p,.legacy .page.compact p,
+  .legacy .page li,.legacy .checks li,.legacy .numlist li {
+    font-size:16px; line-height:1.85;
+  }
+  .legacy .page :is(.source-note,.rulebox,.flow,.boundary .middle,.note) {
+    font-size:15px; line-height:1.75;
+  }
+  .legacy .page :is(.doc-label,.org,.qr-title,.source-type,.page-no),
+  .legacy .page .qr-item :is(b,small,code) {
+    font-size:14px; line-height:1.55;
+  }
+  .legacy .qr-strip {
+    position:static; left:auto; right:auto; bottom:auto;
+    margin-top:26px; padding-top:16px;
+  }
+  .legacy .page-no { position:static; display:block; text-align:right; margin-top:16px; }
+  .legacy .qr-grid.three { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .legacy .mast { flex-wrap:wrap; gap:8px 18px; }
+  .legacy .boundary { grid-template-columns:minmax(0,1fr) 120px minmax(0,1fr); }
+  .legacy .numlist li:before { font-size:13px; }
+}
 </style>
   <link rel="stylesheet" href="assets/legacy-theme.css">
   <script defer src="assets/app.js?v=20261113-phase3"></script><script defer src="assets/legacy.js"></script>

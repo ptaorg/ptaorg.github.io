@@ -35,3 +35,20 @@ test('the evidence-ledger mobile labels meet the 14px floor',()=>{
  assert.match(css,/body\[data-page="legacy"\]:has\(\.case-wrap\)[\s\S]{0,150}\.section-label,\.case-wrap a,\.case-wrap \.evidence-boundary,table th/);
  assert.match(css,/font-size:\.875rem!important;line-height:1\.7/);
 });
+
+test('desktop A4 brief is a readable screen layout with untouched print rules',()=>{
+ const html=read('board-brief.html');
+ assert.match(html,/@media screen and \(min-width:851px\)/);
+ assert.match(html,/\.legacy \.page\.compact p,[\s\S]{0,130}font-size:16px/);
+ assert.match(html,/\.legacy \.page \{box-shadow:none;margin:0;break-after:page;page-break-after:always\}/);
+ assert.match(html,/\.legacy \.qr-strip \{[\s\S]{0,150}position:static/);
+});
+test('wide table controls are actionable and preserve native scrolling',()=>{
+ const js=read('assets/legacy.js');
+ const css=read('assets/legacy-theme.css');
+ assert.match(js,/\['back', '左の列を見る', -1\]/);
+ assert.match(js,/\['forward', '右の列を見る', 1\]/);
+ assert.match(js,/table\.scrollBy\(\{ left: sign \*/);
+ assert.match(js,/table\.addEventListener\('scroll', updateScrollButtons/);
+ assert.match(css,/\.table-scroll-actions button/);
+});
