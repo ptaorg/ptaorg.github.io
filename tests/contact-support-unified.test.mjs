@@ -7,7 +7,7 @@ const root=path.resolve(import.meta.dirname,'..');
 const read=name=>fs.readFileSync(path.join(root,name),'utf8');
 const unified=read('contact.html');
 const legacy=read('support.html');
-const ids=[...unified.matchAll(/\\bid="([^"]+)"/g)].map(m=>m[1]);
+const ids=[...unified.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
 
 test('the unified page has both contact and donation components',()=>{
   for(const value of ['info@ptaorg.com','メールで送る','XのDMで送る','資料の取扱いについて','ことら送金','PayPay','通常の銀行振込']){
@@ -25,9 +25,9 @@ test('all internal anchors on unified page exist',()=>{
 });
 
 test('legacy support deep links redirect and retain query parameters',()=>{
-  assert.match(legacy,/window\\.location\\.hash/);
-  assert.match(legacy,/window\\.location\\.search/);
-  assert.match(legacy,/window\\.location\\.replace/);
+  assert.match(legacy,/window\.location\.hash/);
+  assert.match(legacy,/window\.location\.search/);
+  assert.match(legacy,/window\.location\.replace/);
   assert.match(legacy,/#support-payment/);
   assert.match(legacy,/#support-needs/);
 });
@@ -44,7 +44,7 @@ test('main paths and shared footer lead to the unified page',()=>{
   for(const file of routes){
     const html=read(file);
     assert.match(html,/id="participation-pathway-title"/,file);
-    assert.match(html,/href="contact\\.html(?:#information)?"/,file);
+    assert.match(html,/href="contact\.html(?:#information)?"/,file);
   }
   assert.match(read('partials/footer.html'),/お問い合わせ・情報提供・活動支援/);
 });
