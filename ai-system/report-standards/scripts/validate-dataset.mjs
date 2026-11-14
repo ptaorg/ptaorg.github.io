@@ -59,7 +59,8 @@ function validateSchema(value,rule,at,fail){
 export function validateReport(d,{publish=false}={}){
   const errors=[];
   const fail=(code,at,detail)=>errors.push({code,at,detail});
-  if(!obj(d))return {ok:false,errors:[{code:'ROOT',at:'
+  if(!obj(d))return {ok:false,errors:[{code:'ROOT',at:'$',detail:'JSON object required'}],metrics:null};
+  validateSchema(d,contract,'$',fail);
   for(const k of ['schemaVersion','reportId','asOf','municipality','scope','sources','municipalDocuments','schools','narrativeClaims','legalReviews','publication'])if(!(k in d))fail('MISSING',`$.${k}`,'required');
   if(d.schemaVersion!==defs.version)fail('VERSION','$.schemaVersion','assessment and axis versions must match');
   if(!id(d.reportId)||!date(d.asOf))fail('METADATA','$','report ID slug and asOf date required');
