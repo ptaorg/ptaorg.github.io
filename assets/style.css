@@ -1061,7 +1061,14 @@ body[data-page="municipality"] .detail-section>h2,body[data-page="school"] .deta
 /* Shared document surfaces and archive lists preserve original source content. */
 body[data-page="legacy"] .article-hero-grid{min-width:0}
 body[data-page="legacy"] .article-hero-text :is(h1,.page-lead){overflow-wrap:anywhere}
-body[data-page="legacy"] .article-layout{grid-template-columns:minmax(210px,250px) minmax(0,1fr);gap:clamp(22px,3vw,46px)}
+/* Keep the article in the flexible column and the TOC in the narrow right rail. */
+body[data-page="legacy"] .article-layout{grid-template-columns:minmax(0,1fr) minmax(210px,250px);gap:clamp(22px,3vw,46px)}
+@media (max-width:1040px){
+ body[data-page="legacy"] .article-layout{grid-template-columns:minmax(0,1fr)}
+ body[data-page="legacy"] .article-layout>.article-main,
+ body[data-page="legacy"] .article-layout>.article-side{grid-column:auto;grid-row:auto}
+ body[data-page="legacy"] .article-layout>.article-side{position:static;max-height:none;overflow:visible}
+}
 body[data-page="legacy"] .article-layout>.article-main{min-width:0;width:100%}
 body[data-page="legacy"] .article-layout>.article-main .legacy{width:100%;min-width:0}
 body[data-page="legacy"] :is(.journal-featured,.legacy .journal-card,.legacy .source-card,.legacy .resource-card){border-radius:var(--radius-md)}
