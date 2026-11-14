@@ -193,3 +193,113 @@ body[data-page="legacy"] #main .article-layout > .article-side {
     overflow-x:auto;
   }
 }
+
+
+/* School-information section: explanation + checklist as one balanced composition. */
+#main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-wrap,
+#main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-explanation {
+  box-sizing:border-box;
+  width:100% !important;
+  max-width:none !important;
+  min-width:0;
+  margin-inline:0 !important;
+}
+#main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-lead {
+  max-width:100%;
+  margin:0 0 22px;
+  line-height:1.88;
+}
+#main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-explanation {
+  margin-top:0;
+}
+#main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,390px),1fr));
+  gap:20px;
+  align-items:stretch;
+  width:100%;
+}
+#main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-text,
+#main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-checks {
+  box-sizing:border-box;
+  width:100%;
+  min-width:0;
+  margin:0;
+  padding:24px 26px;
+  border:1px solid #dbe4eb;
+  border-radius:10px;
+}
+#main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-text {
+  background:#f6f9fc;
+  border-top:3px solid #365f81;
+}
+#main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-checks {
+  background:#fffdf8;
+  border-top:3px solid #b8912a;
+}
+#main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-text > h3 {
+  display:block;
+  width:auto;
+  max-width:100%;
+  margin:0 0 16px;
+  padding:0;
+  color:#153b59;
+  font-size:1.07rem;
+  font-weight:700;
+  line-height:1.65;
+  border:0;
+  background:none;
+  box-shadow:none;
+}
+#main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-text > p {
+  width:auto;
+  max-width:100%;
+  margin:0 0 16px;
+  line-height:1.85;
+}
+#main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-text > p:last-child {
+  margin-bottom:0;
+}
+#main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-checks > h4 {
+  margin:0 0 14px;
+  font-size:1.02rem;
+  font-weight:800;
+  color:#5e4a22;
+  line-height:1.5;
+}
+#main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-checks > ul {
+  border:0;
+  margin:0;
+  padding:0 0 0 1.25rem;
+  list-style:disc;
+}
+#main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-checks > ul > li {
+  margin:0 0 11px;
+  padding:0;
+  line-height:1.7;
+  color:var(--ink);
+}
+#main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-checks > ul > li:last-child {
+  margin-bottom:0;
+}
+#main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-caution {
+  box-sizing:border-box;
+  width:100%;
+  max-width:100%;
+  margin:20px 0 0;
+  padding:18px 22px;
+  border-left:4px solid var(--gold);
+  border-radius:0 8px 8px 0;
+  background:var(--c-caution-bg);
+  line-height:1.85;
+}
+@media(max-width:760px) {
+  #main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-grid {
+    grid-template-columns:minmax(0,1fr);
+    gap:14px;
+  }
+  #main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-text,
+  #main .article-main .legacy.guide-board-text-first #principal-liability .principal-liability-checks {
+    padding:18px;
+  }
+}
