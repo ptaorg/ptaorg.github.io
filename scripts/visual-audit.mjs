@@ -342,15 +342,31 @@ for (const viewport of viewports) {
         }
         if (hintsVisible.length > 0) {
           const target = page.locator(
-            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll[data-diagram-scroll-hint-id]:visible'
+            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll[data-diagram-scroll-hint-id]'
           ).first();
           const forward = page.locator(
-            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll-hint:visible [data-diagram-scroll="forward"]'
+            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll-hint [data-diagram-scroll="forward"]'
           ).first();
           const back = page.locator(
-            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll-hint:visible [data-diagram-scroll="back"]'
+            '#main .legacy-body.guide-board-direct-fixed .diagram-scroll-hint [data-diagram-scroll="back"]'
           ).first();
-          await forward.click();
+          record.firstDiagramControl = await forward.evaluate(button => {
+            const rect=button.getBoundingClientRect(), cs=getComputedStyle(button);
+            const parents=[];
+            for(let p=button.parentElement;p && parents.length<5;p=p.parentElement){
+              const r=p.getBoundingClientRect(),c=getComputedStyle(p);
+              parents.push({cls:String(p.className).slice(0,90),w:r.width,h:r.height,
+                display:c.display,overflowX:c.overflowX,overflowY:c.overflowY,visibility:c.visibility});
+            }
+            return {display:cs.display,visibility:cs.visibility,opacity:cs.opacity,
+              rect:{x:rect.x,y:rect.y,w:rect.width,h:rect.height},
+              disabled:button.disabled,parents};
+          });
+          record.firstDiagramControl.isVisible = await forward.isVisible();
+          if (!record.firstDiagramControl.isVisible) {
+            record.errors.push('図の移動ボタンはDOM上にあるが、操作可能な状態ではない');
+          } else {
+            await forward.click();
           await page.waitForTimeout(350);
           const right = await target.evaluate(e => e.scrollLeft);
           await back.click();
@@ -360,6 +376,7 @@ for (const viewport of viewports) {
           record.diagramMoveBack = right - left;
           if (right <= 3 || left >= right - 3)
             record.errors.push('図の左右ボタンが実際にスクロールしない');
+          }
         }
       }
       if (viewport.name === 'mobile' && item.pathname === '/guide-board.html') {
