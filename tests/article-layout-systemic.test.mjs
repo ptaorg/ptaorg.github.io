@@ -37,7 +37,7 @@ test('membership article does not create a nested 920px / 76ch column', () => {
   assert.ok(html.includes('class="article-side"'));
   assert.ok(html.includes('class="article-main"'));
   assert.ok(html.includes('id="principle"') && html.includes('id="sec-10"'));
-  assert.ok(html.includes('assets/style.css?v=20261114-article-grid'));
+  assert.ok(html.includes('assets/style.css?v=20261114-readable'));
   assert.ok(html.includes('css/pages/membership.css?v=20261114-article-width'));
   assert.ok(html.includes('css/prose.css?v=20261114-preserve-grids'));
 });
