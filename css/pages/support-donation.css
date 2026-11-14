@@ -1,0 +1,82 @@
+/* Support landing page: donor letter and verified payment methods.
+   Distinct from legacy prose templates; do not alter the global header/footer. */
+body.support-donation-body{background:#f5f7fa;}
+#main.support-redesign{min-width:0;padding:32px 0 80px;background:#f5f7fa;color:#1a2433;}
+#main.support-redesign .support-donation-layout{max-width:1260px;margin-inline:auto;box-sizing:border-box;padding-inline:clamp(16px,2.5vw,34px);}
+#main.support-redesign .support-breadcrumb{margin:0 0 22px;font-size:13px;line-height:1.7;color:#53677d;}
+#main.support-redesign .support-breadcrumb a{color:#245b88;text-underline-offset:3px;}
+#main.support-redesign .support-breadcrumb .sep{padding:0 9px;color:#8797a8;}
+#main.support-redesign .support-page-head{margin:0 0 22px;}
+#main.support-redesign .support-page-head .eyebrow{display:inline-block;color:#1c6888;font-size:13px;letter-spacing:.07em;font-weight:800;margin-bottom:8px;}
+#main.support-redesign .support-page-head h1{font-family:var(--serif),"Noto Serif JP",serif;font-size:clamp(26px,2.5vw,37px);font-weight:700;color:#0f2742;line-height:1.45;margin:0 0 10px;}
+#main.support-redesign .support-page-head p{max-width:70ch;margin:0;color:#51647a;font-size:15px;line-height:1.8;}
+#main.support-redesign .support-columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,360px);align-items:start;gap:24px;}
+#main.support-redesign .support-letter{min-width:0;background:#fff;border:1px solid #dce3eb;box-shadow:0 8px 28px rgba(16,46,76,.055);border-radius:9px;overflow:hidden;}
+#main.support-redesign .support-letter-banner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:23px 32px;border-bottom:1px solid #dce3eb;background:linear-gradient(120deg,#f7fbfd,#fff);}
+#main.support-redesign .support-letter-banner h2{font-family:var(--serif),"Noto Serif JP",serif;font-size:clamp(18px,1.8vw,23px);line-height:1.5;color:#133c59;margin:0;}
+#main.support-redesign .support-letter-banner img{max-width:72px;height:60px;object-fit:contain;flex:none;}
+#main.support-redesign .support-letter-content{padding:26px 32px 32px;font-size:15px;line-height:1.92;}
+#main.support-redesign .support-letter-content>p{margin:0 0 18px;}
+#main.support-redesign .support-letter-content :is(p,li,dd){max-width:100%;line-height:1.9;overflow-wrap:anywhere;}
+#main.support-redesign .support-panel{margin:0;padding:22px 0;border:0;border-top:1px solid #e1e7ee;background:transparent;box-shadow:none;}
+#main.support-redesign .support-panel h2{font-family:var(--serif),"Noto Serif JP",serif;color:#153b5d;font-size:20px;line-height:1.55;margin:0 0 14px;}
+#main.support-redesign .support-panel :is(p,li){margin-top:0;margin-bottom:12px;color:#273b4f;}
+#main.support-redesign .support-panel :is(ul,ol){padding-left:1.5em;margin:10px 0 14px;}
+#main.support-redesign .support-panel li+li{margin-top:10px;}
+#main.support-redesign .support-panel .use-table{border-collapse:collapse;width:100%;max-width:100%;font-size:14px;line-height:1.7;margin:14px 0 16px;}
+#main.support-redesign .support-panel .use-table :is(th,td){padding:12px 13px;border:1px solid #d9e3ea;vertical-align:top;text-align:left;overflow-wrap:anywhere;}
+#main.support-redesign .support-panel .use-table th{background:#f2f7fa;color:#153b5d;font-weight:700;}
+#main.support-redesign .support-letter-sign{margin:18px 0 2px;text-align:right;font-weight:700;color:#173b57;line-height:1.7;}
+#main.support-redesign .support-letter-sign small{display:block;color:#53677d;font-weight:500;font-size:12px;}
+#main.support-redesign .support-letter-cta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;border-top:1px solid #e1e7ee;padding-top:22px;margin-top:25px;}
+#main.support-redesign .support-letter-cta .paypay-letter{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border-radius:6px;padding:11px 18px;color:#fff;background:#16836d;text-decoration:none;font-weight:700;}
+#main.support-redesign .support-letter-cta a:not(.paypay-letter){font-weight:700;color:#245b88;}
+#main.support-redesign .support-links{display:flex;flex-wrap:wrap;gap:10px 18px;padding-top:8px;}
+#main.support-redesign .support-links a{color:#245b88;font-size:14px;}
+#main.support-redesign .support-donate-side{position:sticky;top:calc(var(--header-h,80px) + 20px);min-width:0;}
+#main.support-redesign .support-donate-box{background:#fff;border:1px solid #d2dce7;border-radius:9px;box-shadow:0 8px 28px rgba(16,46,76,.07);padding:22px 22px 24px;}
+#main.support-redesign .support-donate-box>h2{margin:0 0 8px;font-family:var(--serif),"Noto Serif JP",serif;color:#0f2742;font-size:22px;}
+#main.support-redesign .support-donate-intro{margin:0 0 18px;color:#596c7f;line-height:1.75;font-size:13px;}
+#main.support-redesign .support-step{border-top:1px solid #e0e7ef;padding:18px 0;}
+#main.support-redesign .support-step-heading{display:flex;align-items:center;gap:10px;margin:0 0 14px;color:#14334e;font-size:17px;font-weight:800;line-height:1.5;}
+#main.support-redesign .support-step-heading .num{display:grid;place-items:center;width:29px;height:29px;flex:none;border-radius:50%;background:#173b5f;color:#fff;font:700 14px var(--sans,"Noto Sans JP",sans-serif);}
+#main.support-redesign .support-methods{display:grid;grid-template-columns:1fr;gap:10px;}
+#main.support-redesign .support-paypay-primary{display:flex;align-items:center;justify-content:center;gap:8px;min-height:54px;border-radius:7px;background:#f3bd42;border:1px solid #ce9c2a;color:#1a2433;text-decoration:none;font-weight:800;font-size:16px;text-align:center;}
+#main.support-redesign .support-paypay-primary:hover{background:#ffce59;color:#0f2742;}
+#main.support-redesign .support-bank-jump{display:flex;justify-content:center;align-items:center;border:1px solid #8b9bac;border-radius:7px;min-height:47px;padding:10px;text-decoration:none;color:#173b5f;font-weight:700;background:#fff;}
+#main.support-redesign .support-bank-jump:hover{background:#f3f7fb;}
+#main.support-redesign .support-step p{margin:10px 0 0;font-size:13px;line-height:1.8;color:#52667b;}
+#main.support-redesign .support-bank-details{padding:13px 15px;border-radius:7px;background:#f6f9fc;border:1px solid #e2e8f0;font-size:15px;line-height:1.85;color:#153b5d;}
+#main.support-redesign .support-bank-details strong{display:block;margin-bottom:5px;}
+#main.support-redesign .support-bank-details small{display:block;font-size:13px;color:#52667b;}
+#main.support-redesign .support-bank-details .bank-line{font-weight:700;}
+#main.support-redesign .support-transfer-example{margin-top:10px;font-size:12px;line-height:1.7;color:#52667b;}
+#main.support-redesign .support-transfer-example strong{color:#264964;}
+#main.support-redesign .support-monthly{padding:18px 16px;margin-top:14px;border:1px solid #dce7e2;border-radius:7px;background:#f4faf7;}
+#main.support-redesign .support-monthly h3{margin:0 0 8px;font-size:16px;color:#216348;}
+#main.support-redesign .support-monthly p{margin:0;font-size:13px;line-height:1.75;color:#365e4e;}
+#main.support-redesign .support-monthly a{color:#216348;font-weight:700;overflow-wrap:anywhere;}
+#main.support-redesign .support-notice{font-size:12px;line-height:1.75;color:#627386;margin:14px 0 0;}
+#main.support-redesign .support-panel a{color:#245b88;text-decoration:underline;text-underline-offset:3px;}
+@media(max-width:980px){
+ #main.support-redesign .support-columns{grid-template-columns:minmax(0,1fr) 315px;gap:16px;}
+ #main.support-redesign .support-letter-content{padding:22px 24px;}
+ #main.support-redesign .support-letter-banner{padding:20px 24px;}
+ #main.support-redesign .support-donate-box{padding:17px;}
+}
+@media(max-width:760px){
+ #main.support-redesign{padding:20px 0 48px;}
+ #main.support-redesign .support-columns{display:flex;flex-direction:column;gap:16px;}
+ #main.support-redesign .support-donate-side{order:-1;position:static;width:100%;}
+ #main.support-redesign .support-letter{width:100%;}
+ #main.support-redesign .support-page-head h1{font-size:26px;}
+ #main.support-redesign .support-donate-box{padding:18px;}
+ #main.support-redesign .support-step{padding:14px 0;}
+ #main.support-redesign .support-letter-content{padding:20px 18px;}
+ #main.support-redesign .support-letter-banner{padding:17px 18px;}
+ #main.support-redesign .support-letter-banner img{width:58px;height:50px;}
+ #main.support-redesign .support-panel .use-table th{width:34%;}
+ #main.support-redesign .support-letter-cta{align-items:stretch;flex-direction:column;}
+ #main.support-redesign .support-letter-cta a{justify-content:center;}
+}
+@media(prefers-reduced-motion:no-preference){#main.support-redesign .support-paypay-primary,#main.support-redesign .support-bank-jump{transition:background-color .2s ease;}}
