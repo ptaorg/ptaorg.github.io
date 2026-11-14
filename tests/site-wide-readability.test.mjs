@@ -49,3 +49,10 @@ test('shared reading margins preserve wide tables, figures and paragraphs',()=>{
     assert.ok(read(file).includes('assets/style.css'),file+' uses the shared stylesheet');
   }
 });
+
+test('responsive header does not let the brand subtitle push the menu beyond the viewport',()=>{
+  const css=read('assets/style.css');
+  const layer=css.slice(css.lastIndexOf('/* Site-wide readable page grid | 2026-11-14 */'));
+  assert.match(layer, /@media\(max-width:1480px\)\s*\{\s*\.site-header \.brand-type > small\s*\{display:none;/);
+  assert.match(layer, /\.site-header \.brand-type > strong\s*\{[^}]*white-space:nowrap/);
+});

@@ -7,5 +7,5 @@ test('newly modified CSS references use the phase4b cache version',()=>{
   const html=read(p);assert.equal(transform(html),html,p+' stale');
  }
  assert.match(read('guide-board.html'),/css\/pages\/guide-board\.css\?v=20261113-phase4b/);
- assert.match(read('index.html'),/assets\/style\.css\?v=20261113-phase4/);
+ assert.match(read('index.html'),/assets\/style\.css\?v=20261114-readable/);
 });

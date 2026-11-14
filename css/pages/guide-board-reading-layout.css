@@ -167,6 +167,15 @@ body[data-page="legacy"] #main .article-layout > .article-side {
 /* Keep the native details control accessible and the ToC below the article at
    tablet widths, where a side rail would squeeze long legal tables. */
 @media(max-width:1040px) {
+  /* A bare 1fr track expands to the 781px min-content width of a nested brief.
+     Zero-based minmax keeps the text and callout inside the 358px reading column. */
+  #main .article-main .legacy.guide-board-text-first .gbv-head {
+    grid-template-columns:minmax(0,1fr);
+  }
+  #main .article-main .legacy.guide-board-text-first .gbv-head > * {
+    min-width:0;
+    max-width:100%;
+  }
   body[data-page="legacy"] #main .container:has(> .article-layout) > .article-layout {
     grid-template-columns:minmax(0,1fr);
     gap:20px;

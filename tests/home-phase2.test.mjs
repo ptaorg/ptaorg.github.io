@@ -3,13 +3,13 @@ const root=path.resolve(import.meta.dirname,'..'),read=x=>fs.readFileSync(path.j
 test('approved home visual sequence is intact and source content remains',()=>{
  const html=read('index.html'),main=html.split('data-home-phase="2"')[1]?.split('</main>')[0]||'';
  assert.ok(main.length>5000,'home content missing');
- assert.equal((main.match(/<h1\\b/g)||[]).length,1);
+ assert.equal((main.match(/<h1\b/g)||[]).length,1);
  for(const id of ['hero-search-shell','home-resource-nav','home-feature-layout','home-issues','id="map"','home-updates','home-boundary','home-practical','id="roles"'])assert.ok(main.includes(id),id);
  const order=['hero-search-shell','home-resource-nav','home-feature-layout','home-issues','id="map"','home-updates','home-boundary','home-practical'];
  for(let i=1;i<order.length;i++)assert.ok(main.indexOf(order[i-1])<main.indexOf(order[i]),order[i]);
  assert.equal((main.match(/class="home-search"/g)||[]).length,1,'one global homepage search');
- assert.equal((main.match(/class="home-resource-nav"/g)||[]).length,1,'one five-way resource entrance');
- assert.equal((main.match(/class="home-feature-layout"/g)||[]).length,1);
+ assert.equal((main.match(/class="[^"]*\bhome-resource-nav\b[^"]*"/g)||[]).length,1,'one five-way resource entrance');
+ assert.equal((main.match(/class="[^"]*\bhome-feature-layout\b[^"]*"/g)||[]).length,1);
  assert.doesNotMatch(main,/読み込み中…|data-journal-list|data-region-list|data-stat="/);
 });
 test('approved layout applies to all primary page families',()=>{

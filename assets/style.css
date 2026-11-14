@@ -627,13 +627,6 @@ html{scroll-padding-top:calc(var(--header-h) + 18px)}
 .page-tabs{top:var(--header-h)}
 
 
-/* v0.9 — compact separation between article TOC and article body. */
-@media (min-width:1041px){
-  .container:has(> .article-layout) > .article-layout{
-    grid-template-columns:260px minmax(0,1fr);
-    column-gap:24px;
-  }
-}
 @media (min-width:761px) and (max-width:1040px){
   /* TOC is moved below content at this breakpoint by the existing layout. */
   .article-layout{column-gap:24px}
@@ -1451,4 +1444,10 @@ body[data-page="home"] #boundary .home-boundary-more{
   .site-header .brand-type > strong{font-size:.875rem;}
   .site-header .brand-mark{width:30px;height:28px;}
   .site-header .brand{gap:7px;}
+}
+
+/* Keep the full organization name; hide only the subtitle when header space is constrained.
+   The late shared layer otherwise overrides older responsive display:none rules. */
+@media(max-width:1480px){
+  .site-header .brand-type > small{display:none;}
 }

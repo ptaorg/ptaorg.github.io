@@ -17,6 +17,23 @@ const localUrls = [...new Set(urls.map((raw) => {
   return { raw, pathname, local: `http://127.0.0.1:4173${pathname}` };
 }))];
 
+// On CI, sample representative routes; without this variable the full sitemap is audited.
+const requestedPaths = new Set((process.env.PTA_VISUAL_AUDIT_PAGES || '')
+  .split(',').map((p) => p.trim()).filter(Boolean));
+const pagesToAudit = requestedPaths.size
+  ? [...requestedPaths].map((pathname) => ({
+      pathname,
+      raw: 'https://ptaorg.com' + pathname,
+      local: 'http://127.0.0.1:4173' + pathname,
+    }))
+  : localUrls;
+// Some canonical index/legacy pages intentionally are not listed in the sitemap.
+for (const item of pagesToAudit) {
+  if (!fs.existsSync(path.join(ROOT, item.pathname.slice(1)))) {
+    throw new Error('Responsive audit target not found in checkout: ' + item.pathname);
+  }
+}
+
 const corePatterns = [
   /^\/index\.html$/,
   /^\/(administrative-materials|audit\/index|board-responses|cases|claim-evidence-ledger|compliance|contact|documents|edu-board-separation|education-board-responsibility|evidence-checklist|facilities|fee-collection|guide-board|guide-parent|guide-pta|guide-research|guideline|index|journal|key-materials|law-map|membership|national-archive|personnel|privacy|proper-management|reality|report|research-index|submission-kit|support|timeline|timeline-issues)\.html$/,
@@ -46,8 +63,8 @@ for (const viewport of viewports) {
   const page = await context.newPage();
   page.on('console', () => {});
 
-  for (let i = 0; i < localUrls.length; i += 1) {
-    const item = localUrls[i];
+  for (let i = 0; i < pagesToAudit.length; i += 1) {
+    const item = pagesToAudit[i];
     const record = {
       url: item.raw,
       pathname: item.pathname,
@@ -80,6 +97,8 @@ for (const viewport of viewports) {
         const viewportWidth = document.documentElement.clientWidth;
         const overflowElements = all.filter((el) => {
           const r = el.getBoundingClientRect();
+          // The keyboard-only skip link is intentionally positioned off-screen before focus.
+          if (el.matches('.skip-link') || el.closest('.skip-link')) return false;
           if (el.tagName === 'SVG' || el.closest('svg')) return false;
           if (getComputedStyle(el).position === 'fixed') return false;
           return r.right > viewportWidth + 2 || r.left < -2;
@@ -117,6 +136,41 @@ for (const viewport of viewports) {
         };
       });
       Object.assign(record, metrics);
+      if (viewport.name === 'mobile' && item.pathname === '/guide-board.html') {
+        record.guideBoardLayout = await page.evaluate(() => {
+          const selectors = ['#board-executive-brief', '.gbv-wrap', '.gbv-head',
+            '.gbv-head > div', '.gbv-principle', '.legacy-main', '.article-main'];
+          return selectors.map((selector) => {
+            const el = document.querySelector(selector);
+            if (!el) return { selector, found: false };
+            const rect = el.getBoundingClientRect();
+            const style = getComputedStyle(el);
+            return { selector, x:rect.x, width:rect.width, right:rect.right,
+              scrollWidth:el.scrollWidth, clientWidth:el.clientWidth,
+              display:style.display, minWidth:style.minWidth, widthStyle:style.width,
+              gridTemplateColumns:style.gridTemplateColumns, overflowX:style.overflowX };
+          });
+        });
+        const grid = record.guideBoardLayout.find((part) => part.selector === '.gbv-head');
+        const brief = record.guideBoardLayout.find((part) => part.selector === '.gbv-head > div');
+        if (!grid || !brief || brief.right > grid.right + 2) {
+          record.errors.push('教育委員会ガイド: 概要ブロックが画面外に切れる');
+        }
+      }
+      // The unified contact page must show consultation before the support panel on mobile.
+      if (viewport.name === 'mobile' && item.pathname === '/contact.html') {
+        const order = await page.evaluate(() => {
+          const contact = document.querySelector('.unified-contact-card');
+          const support = document.querySelector('.support-donate-side');
+          return contact && support ? {
+            contactTop: contact.getBoundingClientRect().top,
+            supportTop: support.getBoundingClientRect().top,
+          } : null;
+        });
+        if (!order || order.supportTop <= order.contactTop) {
+          record.errors.push('統合ページ: モバイルで情報提供より先に寄付案内が表示される');
+        }
+      }
 
       if (metrics.horizontalOverflow) record.errors.push(`横スクロール ${metrics.docScrollWidth}px > ${metrics.docClientWidth}px`);
       if (metrics.overflowElements.length) record.warnings.push(`画面外要素 ${metrics.overflowElements.length}件`);
@@ -137,7 +191,7 @@ for (const viewport of viewports) {
       record.errors.push(String(error && error.message ? error.message : error));
     }
     results.push(record);
-    if ((i + 1) % 25 === 0) console.log(`${viewport.name}: ${i + 1}/${localUrls.length}`);
+    if ((i + 1) % 25 === 0) console.log(`${viewport.name}: ${i + 1}/${pagesToAudit.length}`);
   }
   await context.close();
 }
@@ -146,7 +200,7 @@ await browser.close();
 
 const summary = {
   generatedAt: new Date().toISOString(),
-  pages: localUrls.length,
+  pages: pagesToAudit.length,
   checks: results.length,
   errorRecords: results.filter((r) => r.errors.length).length,
   warningRecords: results.filter((r) => r.warnings.length).length,

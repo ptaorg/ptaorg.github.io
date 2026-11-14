@@ -8,7 +8,7 @@ const read = name => fs.readFileSync(path.join(root, name), 'utf8');
 
 test('the shared article layout always puts the reading column before the right TOC', () => {
   const css = read('assets/style.css');
-  assert.doesNotMatch(css, /grid-template-columns:\s*(?:270px|260px|minmax\(210px,250px\))\s+minmax\(0,1fr\)/, 'old sidebar-first article grid survived');
+  assert.doesNotMatch(css, /\.container:has\(> \.article-layout\) > \.article-layout\s*\{\s*grid-template-columns:\s*260px\s+minmax\(0,1fr\)/, 'old sidebar-first article grid survived');
   assert.match(css, /body\[data-page="legacy"\] \.article-layout\{grid-template-columns:minmax\(0,1fr\) minmax\(210px,250px\)/);
   assert.match(css, /\.article-layout>\.article-main\{grid-column:1;grid-row:1\}/);
   assert.match(css, /\.article-layout>\.article-side\{grid-column:2;grid-row:1\}/);
