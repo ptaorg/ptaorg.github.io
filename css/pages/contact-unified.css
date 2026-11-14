@@ -1,0 +1,49 @@
+/* Unified contact + support: responsive layout and preserved payment components. */
+#main.unified-page { padding-top:30px; }
+#main.unified-page .support-page-head { margin-bottom:24px; }
+#main.unified-page .support-page-head p { max-width:100ch; }
+#main.unified-page .unified-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(330px,380px); align-items:start; column-gap:22px; row-gap:22px; }
+#main.unified-page .unified-contact-card, #main.unified-page .unified-detail-card { min-width:0; padding:26px 30px; border:1px solid #dce3eb; border-radius:10px; background:#fff; box-shadow:0 8px 28px rgba(16,46,76,.055); }
+#main.unified-page .unified-contact-card { grid-column:1; grid-row:1; border-top:5px solid #177f8a; scroll-margin-top:110px; }
+#main.unified-page .unified-detail-card { grid-column:1; grid-row:2; }
+#main.unified-page .support-letter { grid-column:1; grid-row:3; }
+#main.unified-page .support-donate-side { grid-column:2; grid-row:1 / span 3; position:static; top:auto; scroll-margin-top:110px; }
+#main.unified-page .support-payment-card { scroll-margin-top:100px; }
+#main.unified-page .unified-card-heading { padding-bottom:16px; border-bottom:1px solid #e4ebef; }
+#main.unified-page .unified-card-heading h2 { font-family:var(--serif),"Noto Serif JP",serif; margin:0 0 8px; color:#0e4254; font-size:clamp(21px,2vw,27px); }
+#main.unified-page .unified-card-heading p { margin:0; font-size:14px; color:#566879; line-height:1.8; }
+#main.unified-page .contact-lead { font-size:14px; color:#294258; line-height:1.9; margin:18px 0; }
+#main.unified-page .contact-methods { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; margin:22px 0 0; }
+#main.unified-page .contact-method { min-width:0; padding:20px; background:#f4fafb; border:1px solid #cbdfe4; border-radius:9px; }
+#main.unified-page .contact-method:nth-child(2) { background:#f7f8fc; border-color:#d8dce9; }
+#main.unified-page .contact-method h2 { margin:0 0 9px; font-size:18px; line-height:1.55; color:#17475b; }
+#main.unified-page .contact-method p { margin:0 0 14px; font-size:13px; line-height:1.8; color:#314d61; }
+#main.unified-page .contact-button { display:flex; align-items:center; justify-content:center; min-height:44px; padding:9px 12px; font-size:14px; font-weight:750; color:#fff; background:#154a67; border-radius:7px; text-decoration:none; overflow-wrap:anywhere; text-align:center; }
+#main.unified-page .contact-button:hover { background:#20647f; color:#fff; }
+#main.unified-page .contact-button:focus-visible { outline:3px solid #efaa48; outline-offset:3px; }
+#main.unified-page .contact-note { padding:0 0 20px; margin:0 0 22px; border-bottom:1px solid #e3e9ef; }
+#main.unified-page .contact-note h2, #main.unified-page .contact-policy h2 { margin:0 0 14px; font-family:var(--serif),"Noto Serif JP",serif; color:#184462; font-size:20px; }
+#main.unified-page .contact-note ul { padding-left:1.5em; margin:0; }
+#main.unified-page .contact-note li { line-height:1.85; padding-block:2px; color:#283d52; }
+#main.unified-page .contact-policy p { font-size:14px; line-height:1.9; color:#31485d; }
+#main.unified-page .contact-policy p:last-child { margin-bottom:0; }
+#main.unified-page .support-donate-box { border-top:5px solid #db6b42; }
+#main.unified-page .support-paypay { border-top-color:#da3442; }
+#main.unified-page .support-donate-intro { font-size:14px; }
+#main.unified-page .support-letter-cta .paypay-letter { background:#cc203c; }
+#main.unified-page .support-letter-cta .paypay-letter:hover { background:#a9152e; }
+@media(max-width:980px) {
+  #main.unified-page .unified-grid { grid-template-columns:minmax(0,1fr) minmax(290px,330px); gap:16px; }
+  #main.unified-page .unified-contact-card,#main.unified-page .unified-detail-card { padding:22px; }
+  #main.unified-page .contact-methods { grid-template-columns:1fr; }
+}
+@media(max-width:760px) {
+  #main.unified-page .unified-grid { display:flex; flex-direction:column; gap:18px; }
+  #main.unified-page .unified-grid>* { width:100%; box-sizing:border-box; }
+  #main.unified-page .unified-contact-card,#main.unified-page .unified-detail-card { padding:19px 17px; }
+  #main.unified-page .contact-methods { grid-template-columns:1fr; gap:11px; }
+  #main.unified-page .support-donate-side { position:static; }
+  #main.unified-page .support-letter-content { padding:20px; }
+  #main.unified-page .support-letter-banner { padding:18px 20px; }
+  #main.unified-page .support-page-head p { font-size:14px; }
+}

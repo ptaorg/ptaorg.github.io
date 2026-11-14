@@ -1,0 +1,9 @@
+/* Contextual invitation placed after the main reading experience. */
+.participation-entry{box-sizing:border-box;max-width:1220px;margin:42px auto 52px;padding:0 clamp(16px,3vw,32px);}
+.participation-entry-inner{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;border:1px solid #cadde4;border-left:5px solid #197d8d;border-radius:12px;background:linear-gradient(110deg,#f0f9fa 0%,#ffffff 72%);padding:25px clamp(20px,3vw,36px);box-shadow:0 4px 16px rgba(21,61,87,.04);}
+.participation-entry h2{font-family:"Noto Serif JP",serif;color:#123b55;font-size:clamp(19px,2vw,23px);line-height:1.5;margin:0 0 10px;}
+.participation-entry p{font-size:14px;line-height:1.85;color:#344d61;margin:0;}
+.participation-entry a{display:flex;align-items:center;justify-content:center;min-height:48px;box-sizing:border-box;border-radius:8px;padding:12px 22px;text-align:center;background:#154f70;color:#fff!important;font-weight:750;font-size:14px;text-decoration:none!important;white-space:normal;}
+.participation-entry a:hover{background:#226f8c;color:#fff!important;}
+.participation-entry a:focus-visible{outline:3px solid #d7902f;outline-offset:3px;}
+@media(max-width:760px){.participation-entry{margin:28px auto 38px;padding-inline:16px;}.participation-entry-inner{grid-template-columns:1fr;gap:16px;padding:22px 20px;}.participation-entry a{width:100%;}}
