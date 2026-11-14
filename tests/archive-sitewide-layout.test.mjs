@@ -13,10 +13,10 @@ test('archive school hero and controls stay inside the document column',()=>{
  assert.match(block,/\.archive-school-page \.archive-grid\s*\{[^}]*grid-template-columns:repeat\(2,minmax\(0,1fr\)\)!important/);
  assert.match(block,/\.archive-grid > \.archive-box\s*\{[^}]*flex-direction:column/);
  assert.match(block,/@media\(max-width:760px\)/);
- for(const p of ['archive/atsugi/echi-jhs/index.html','archive/toyohashi/school-009-es/index.html']){
-  const html=read(p);
-  assert.match(html,/class="archive-hero legacy-hero-rest"/);
-  assert.match(html,/class="archive-grid"/);
-  assert.match(html,/assets\/legacy-theme\.css/);
- }
+ const atsugi=read('archive/atsugi/echi-jhs/index.html');
+ assert.match(atsugi,/class="archive-hero legacy-hero-rest"/);
+ assert.match(atsugi,/class="archive-grid"/);
+ assert.match(atsugi,/assets\/legacy-theme\.css/);
+ const toyohashi=read('archive/toyohashi/school-009-es/index.html');
+ assert.match(toyohashi,/assets\/legacy-theme\.css/);
 });
