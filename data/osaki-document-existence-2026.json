@@ -1,0 +1,206 @@
+{
+  "title": "大崎市PTA関係書類の存否・提出状況調査",
+  "reviewDate": "2026-11-15",
+  "scope": "2026年度現存25校。現存校のうち23校の文書が調査報告書付録Bで目録化されている。学校別文書の保有不存在を行政が決定したことは確認していない。",
+  "source": {
+    "title": "大崎市立小中学校PTA関係文書 調査報告書",
+    "date": "2026-11-15",
+    "evidencePages": "PDF第5章および付録B、田尻中学校の目録（PDF43〜45頁）",
+    "totalDisclosedDocuments": 220,
+    "totalDisclosedPages": 983
+  },
+  "statusDefinitions": {
+    "not_found_in_disclosure_report": "報告書が『開示資料中に確認できない』と明記",
+    "not_listed_as_standalone_in_24_disclosed_titles": "田尻中の開示24件の題名目録に独立書類として記載なし",
+    "not_assessed": "当該文書の提出・保有の存否を独立確認できていない"
+  },
+  "documentTypes": [
+    "PTA入会申込書",
+    "入会意思・承諾の記録",
+    "退会届・退会規定",
+    "PTA会員名簿",
+    "個人情報利用・提供の同意書",
+    "役員選出の同意書・委任状",
+    "役員免除申請書・判断記録",
+    "PTA会費収納の委任契約書",
+    "学校による会費徴収の公法上の根拠文書",
+    "口座名義・収納契約・資金フロー記録"
+  ],
+  "schools": [
+    {
+      "id": "furukawa-daiichi-es",
+      "name": "古川第一小学校",
+      "applicationForm": "not_assessed",
+      "withdrawalRule": "not_assessed",
+      "documentScope": "文書別存否の独立照合未了"
+    },
+    {
+      "id": "furukawa-daini-es",
+      "name": "古川第二小学校",
+      "applicationForm": "not_found_in_disclosure_report",
+      "withdrawalRule": "not_found_in_disclosure_report",
+      "documentScope": "45頁調査報告書第5章で入会申込書・退会規定を開示資料中に確認できないと明記"
+    },
+    {
+      "id": "furukawa-daisan-es",
+      "name": "古川第三小学校",
+      "applicationForm": "not_found_in_disclosure_report",
+      "withdrawalRule": "not_found_in_disclosure_report",
+      "documentScope": "45頁調査報告書第5章で入会申込書・退会規定を開示資料中に確認できないと明記"
+    },
+    {
+      "id": "furukawa-daiyon-es",
+      "name": "古川第四小学校",
+      "applicationForm": "not_assessed",
+      "withdrawalRule": "not_assessed",
+      "documentScope": "文書別存否の独立照合未了"
+    },
+    {
+      "id": "furukawa-daigo-es",
+      "name": "古川第五小学校",
+      "applicationForm": "not_assessed",
+      "withdrawalRule": "not_assessed",
+      "documentScope": "文書別存否の独立照合未了"
+    },
+    {
+      "id": "furukawa-kita-es",
+      "name": "古川北小学校",
+      "applicationForm": "not_found_in_disclosure_report",
+      "withdrawalRule": "not_found_in_disclosure_report",
+      "documentScope": "45頁調査報告書第5章で入会申込書・退会規定を開示資料中に確認できないと明記"
+    },
+    {
+      "id": "shikitama-es",
+      "name": "敷玉小学校",
+      "applicationForm": "not_assessed",
+      "withdrawalRule": "not_assessed",
+      "documentScope": "文書別存否の独立照合未了"
+    },
+    {
+      "id": "matsuyama-es",
+      "name": "松山小学校",
+      "applicationForm": "not_assessed",
+      "withdrawalRule": "not_assessed",
+      "documentScope": "文書別存否の独立照合未了"
+    },
+    {
+      "id": "sanbongi-es",
+      "name": "三本木小学校",
+      "applicationForm": "not_assessed",
+      "withdrawalRule": "not_assessed",
+      "documentScope": "文書別存否の独立照合未了"
+    },
+    {
+      "id": "kashimadai-es",
+      "name": "鹿島台小学校",
+      "applicationForm": "not_assessed",
+      "withdrawalRule": "not_assessed",
+      "documentScope": "文書別存否の独立照合未了"
+    },
+    {
+      "id": "iwadeyama-es",
+      "name": "岩出山小学校",
+      "applicationForm": "not_assessed",
+      "withdrawalRule": "not_assessed",
+      "documentScope": "文書別存否の独立照合未了"
+    },
+    {
+      "id": "tajiri-es",
+      "name": "田尻小学校",
+      "applicationForm": "not_assessed",
+      "withdrawalRule": "not_assessed",
+      "documentScope": "文書別存否の独立照合未了"
+    },
+    {
+      "id": "numabe-es",
+      "name": "沼部小学校",
+      "applicationForm": "not_assessed",
+      "withdrawalRule": "not_assessed",
+      "documentScope": "文書別存否の独立照合未了"
+    },
+    {
+      "id": "onuki-es",
+      "name": "大貫小学校",
+      "applicationForm": "not_assessed",
+      "withdrawalRule": "not_assessed",
+      "documentScope": "文書別存否の独立照合未了"
+    },
+    {
+      "id": "furukawa-jhs",
+      "name": "古川中学校",
+      "applicationForm": "not_assessed",
+      "withdrawalRule": "not_assessed",
+      "documentScope": "文書別存否の独立照合未了"
+    },
+    {
+      "id": "furukawa-kita-jhs",
+      "name": "古川北中学校",
+      "applicationForm": "not_found_in_disclosure_report",
+      "withdrawalRule": "not_found_in_disclosure_report",
+      "documentScope": "45頁調査報告書第5章で入会申込書・退会規定を開示資料中に確認できないと明記"
+    },
+    {
+      "id": "furukawa-higashi-jhs",
+      "name": "古川東中学校",
+      "applicationForm": "not_found_in_disclosure_report",
+      "withdrawalRule": "not_found_in_disclosure_report",
+      "documentScope": "45頁調査報告書第5章で入会申込書・退会規定を開示資料中に確認できないと明記"
+    },
+    {
+      "id": "furukawa-minami-jhs",
+      "name": "古川南中学校",
+      "applicationForm": "not_assessed",
+      "withdrawalRule": "not_assessed",
+      "documentScope": "文書別存否の独立照合未了"
+    },
+    {
+      "id": "matsuyama-jhs",
+      "name": "松山中学校",
+      "applicationForm": "not_assessed",
+      "withdrawalRule": "not_assessed",
+      "documentScope": "文書別存否の独立照合未了"
+    },
+    {
+      "id": "sanbongi-jhs",
+      "name": "三本木中学校",
+      "applicationForm": "not_assessed",
+      "withdrawalRule": "not_assessed",
+      "documentScope": "文書別存否の独立照合未了"
+    },
+    {
+      "id": "kashimadai-jhs",
+      "name": "鹿島台中学校",
+      "applicationForm": "not_assessed",
+      "withdrawalRule": "not_assessed",
+      "documentScope": "文書別存否の独立照合未了"
+    },
+    {
+      "id": "iwadeyama-jhs",
+      "name": "岩出山中学校",
+      "applicationForm": "not_assessed",
+      "withdrawalRule": "not_assessed",
+      "documentScope": "文書別存否の独立照合未了"
+    },
+    {
+      "id": "tajiri-jhs",
+      "name": "田尻中学校",
+      "applicationForm": "not_listed_as_standalone_in_24_disclosed_titles",
+      "withdrawalRule": "not_listed_as_standalone_in_24_disclosed_titles",
+      "documentScope": "同報告書付録Bの田尻中学校開示24件の文書名一覧で、独立した入会申込書・退会届を確認できない"
+    },
+    {
+      "id": "furukawa-nishi-compulsory",
+      "name": "古川西小中学校",
+      "applicationForm": "not_assessed",
+      "withdrawalRule": "not_assessed",
+      "documentScope": "文書別存否の独立照合未了"
+    },
+    {
+      "id": "naruko-compulsory",
+      "name": "鳴子小中学校",
+      "applicationForm": "not_found_in_disclosure_report",
+      "withdrawalRule": "not_found_in_disclosure_report",
+      "documentScope": "45頁調査報告書第5章で入会申込書・退会規定を開示資料中に確認できないと明記"
+    }
+  ]
+}
