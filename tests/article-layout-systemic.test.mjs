@@ -20,6 +20,7 @@ test('shared prose rules do not apply a second narrow paragraph column', () => {
   const prose = read('css/prose.css');
   assert.doesNotMatch(base, /max-width:40em;overflow-wrap:break-word/);
   assert.doesNotMatch(prose, /max-width:\s*78ch\s*;/);
+  assert.doesNotMatch(prose, /:where\(\[class\$="-grid"\]/, 'prose must not flatten every class ending -grid');
   assert.match(prose, /\.legacy\[data-content-mode="prose"\] :where\(\.legacy-main, body > article, section\) > p\s*\{[^}]*max-width:\s*100%/);
 });
 
@@ -38,5 +39,5 @@ test('membership article does not create a nested 920px / 76ch column', () => {
   assert.ok(html.includes('id="principle"') && html.includes('id="sec-10"'));
   assert.ok(html.includes('assets/style.css?v=20261114-article-grid'));
   assert.ok(html.includes('css/pages/membership.css?v=20261114-article-width'));
-  assert.ok(html.includes('css/prose.css?v=20261114-reading-width'));
+  assert.ok(html.includes('css/prose.css?v=20261114-preserve-grids'));
 });
