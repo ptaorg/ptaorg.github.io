@@ -154,6 +154,28 @@ for (const viewport of viewports) {
         };
       });
       Object.assign(record, metrics);
+      if (viewport.name === 'mobile' &&
+          ['/key-materials.html', '/guide-board.html', '/law-map.html', '/national-archive.html'].includes(item.pathname)) {
+        record.contentScrollDiagnostics = await page.evaluate(() => {
+          const sels = ['.km-wrap','.km-list','.km-source','.km-source-index','.km-source-body',
+            '.km-source-body > p','.km-source-body > ul','.diagram-scroll','.diagram-scroll img',
+            '.law-table-wrap','.law-table','.archive-jump .wrap','.archive-jump a'];
+          return sels.map(selector => {
+            const e = document.querySelector('#main .legacy-body ' + selector);
+            if (!e) return null;
+            const r = e.getBoundingClientRect(), cs = getComputedStyle(e);
+            return {selector,left:Math.round(r.left),right:Math.round(r.right),
+              width:Math.round(r.width),clientWidth:e.clientWidth,scrollWidth:e.scrollWidth,
+              overflowX:cs.overflowX,minWidth:cs.minWidth,
+              gridColumns:cs.gridTemplateColumns,display:cs.display};
+          }).filter(Boolean);
+        });
+        if (item.pathname === '/key-materials.html' &&
+            record.contentScrollDiagnostics.some(x =>
+              x.selector.startsWith('.km-source') && (x.left < -2 || x.right > viewport.width + 2))) {
+          record.errors.push('重要資料の本文ブロックがスマートフォンの画面外に切れる');
+        }
+      }
       if (item.pathname === '/board-brief.html' && viewport.name === 'desktop') {
         const screen = await page.evaluate(() => {
           const p = document.querySelector('.legacy .document > .page p');
