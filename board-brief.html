@@ -171,6 +171,46 @@
   .legacy .boundary { grid-template-columns:minmax(0,1fr) 120px minmax(0,1fr); }
   .legacy .numlist li:before { font-size:13px; }
 }
+
+/* Strongly scoped override: imported article CSS previously overrode A4
+   widths/padding even under @media print. These apply only to this brief. */
+@media screen and (min-width:851px) {
+  #main .article-main .legacy-body .legacy-main.document > section.page {
+    box-sizing:border-box!important;
+    width:100%!important; max-width:100%!important;
+    height:auto!important; min-height:0!important;
+    padding:30px 34px!important; margin:0 0 22px!important;
+    overflow:visible!important;
+    border:1px solid #d4dfea!important; border-radius:10px!important;
+  }
+}
+@media print {
+  .site-header,.article-hero,.article-side,.site-footer,
+  #main .toc-mobile,#main .next-read,
+  #main .legacy .toolbar {display:none!important}
+  #main,#main > .container,#main .article-layout,
+  #main .article-layout > .article-main,
+  #main .article-main > .legacy,
+  #main .legacy-body,#main .legacy-main.document {
+    display:block!important;
+    width:210mm!important;max-width:210mm!important;
+    min-width:210mm!important;
+    padding:0!important;margin:0!important;
+    border:0!important;box-shadow:none!important;
+  }
+  #main .article-main .legacy-body .legacy-main.document > section.page {
+    box-sizing:border-box!important;
+    width:210mm!important;max-width:210mm!important;min-width:210mm!important;
+    height:297mm!important;min-height:297mm!important;
+    padding:14mm 16mm 13mm!important;
+    margin:0!important;overflow:hidden!important;
+    border:0!important;border-radius:0!important;box-shadow:none!important;
+    break-after:page!important;page-break-after:always!important;
+  }
+  #main .article-main .legacy-body .legacy-main.document > section.page:last-child {
+    break-after:auto!important;page-break-after:auto!important;
+  }
+}
 </style>
   <link rel="stylesheet" href="assets/legacy-theme.css">
   <script defer src="assets/app.js?v=20261113-phase3"></script><script defer src="assets/legacy.js"></script>
