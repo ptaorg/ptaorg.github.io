@@ -136,6 +136,20 @@ for (const viewport of viewports) {
         };
       });
       Object.assign(record, metrics);
+      // The unified contact page must show consultation before the support panel on mobile.
+      if (viewport.name === 'mobile' && item.pathname === '/contact.html') {
+        const order = await page.evaluate(() => {
+          const contact = document.querySelector('.unified-contact-card');
+          const support = document.querySelector('.support-donate-side');
+          return contact && support ? {
+            contactTop: contact.getBoundingClientRect().top,
+            supportTop: support.getBoundingClientRect().top,
+          } : null;
+        });
+        if (!order || order.supportTop <= order.contactTop) {
+          record.errors.push('統合ページ: モバイルで情報提供より先に寄付案内が表示される');
+        }
+      }
 
       if (metrics.horizontalOverflow) record.errors.push(`横スクロール ${metrics.docScrollWidth}px > ${metrics.docClientWidth}px`);
       if (metrics.overflowElements.length) record.warnings.push(`画面外要素 ${metrics.overflowElements.length}件`);

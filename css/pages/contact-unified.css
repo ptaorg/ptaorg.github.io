@@ -42,7 +42,8 @@
   #main.unified-page .unified-grid>* { width:100%; box-sizing:border-box; }
   #main.unified-page .unified-contact-card,#main.unified-page .unified-detail-card { padding:19px 17px; }
   #main.unified-page .contact-methods { grid-template-columns:1fr; gap:11px; }
-  #main.unified-page .support-donate-side { position:static; }
+  /* On mobile, contact must appear first; legacy donation styles set order:-1. */
+  #main.unified-page .support-donate-side { position:static; order:0; }
   #main.unified-page .support-letter-content { padding:20px; }
   #main.unified-page .support-letter-banner { padding:18px 20px; }
   #main.unified-page .support-page-head p { font-size:14px; }

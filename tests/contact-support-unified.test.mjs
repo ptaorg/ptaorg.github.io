@@ -48,3 +48,8 @@ test('main paths and shared footer lead to the unified page',()=>{
   }
   assert.match(read('partials/footer.html'),/お問い合わせ・情報提供・活動支援/);
 });
+
+test('mobile layout overrides legacy donation-first order',()=>{
+  const css=read('css/pages/contact-unified.css');
+  assert.match(css, /@media\(max-width:760px\)[\s\S]*?#main\.unified-page \.support-donate-side\s*\{[^}]*order:0;/);
+});
