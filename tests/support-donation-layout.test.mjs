@@ -21,7 +21,8 @@ test('unified contact layout keeps information provision first and payment along
   assert.match(layout,/grid-template-columns:minmax\(0,1fr\) minmax\(330px,380px\)/);
   assert.match(layout,/@media\(max-width:760px\)/);
   assert.match(layout,/\.unified-grid \{ display:flex; flex-direction:column/);
-  assert.ok(page.includes('css/pages/support-donation.css?v=20261114-payments2'));
+  assert.match(page,/css\/pages\/support-donation\.css\?v=20261114-[^"]+/);
+  assert.match(legacy,/css\/pages\/support-donation\.css\?v=20261114-[^"]+/);
   assert.ok(page.includes('css/pages/contact-unified.css?v=20261114'));
   assert.equal((page.match(/<h1\b/g)||[]).length,1);
 });

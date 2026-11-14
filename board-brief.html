@@ -129,6 +129,17 @@
   .legacy .mast{gap:12px}
   .legacy .org{max-width:45%}
 }
+
+/* Screen reader typography; the original fixed A4 print layout is unchanged. */
+@media screen and (max-width:850px) {
+  .legacy .page p,.legacy .page.compact p,.legacy .page li,
+  .legacy .checks li,.legacy .numlist li {font-size:14px;line-height:1.78}
+  .legacy .page :is(.source-note,.rulebox,.flow,.boundary .middle,.note) {
+    font-size:14px;line-height:1.75
+  }
+  .legacy .page :is(.doc-label,.org,.qr-title,.source-type,.page-no),
+  .legacy .page .qr-item :is(b,small,code) {font-size:13px;line-height:1.6}
+}
 </style>
   <link rel="stylesheet" href="assets/legacy-theme.css">
   <script defer src="assets/app.js?v=20261113-phase3"></script><script defer src="assets/legacy.js"></script>

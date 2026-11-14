@@ -48,3 +48,6 @@
   #main.unified-page .support-letter-banner { padding:18px 20px; }
   #main.unified-page .support-page-head p { font-size:14px; }
 }
+
+/* Shared payment readability rules live in support-donation.css. */
+#main.unified-page .contact-method p {font-size:14px;line-height:1.8}

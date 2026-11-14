@@ -144,7 +144,7 @@
   .legacy .ppc-section-label {
     margin: 0 0 10px;
     color: var(--ppc-orange);
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 900;
     letter-spacing: 0.1em;
   }
@@ -293,7 +293,7 @@
   .legacy .ppc-page-list header p {
     margin: 0 0 4px;
     color: var(--ppc-orange);
-    font-size: 0.73rem;
+    font-size: 0.875rem;
     font-weight: 900;
     letter-spacing: 0.08em;
   }
