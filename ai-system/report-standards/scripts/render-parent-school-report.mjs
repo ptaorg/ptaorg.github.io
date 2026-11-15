@@ -8,7 +8,14 @@ const E=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt
 const allowedId=v=>/^[a-z0-9][a-z0-9-]*$/.test(v);
 const lawItem=r=>'<li><strong><a href="'+E(r.lawUrl)+'">'+E(r.law)+'</a></strong><span>'+E(r.issue)+'</span><small>要件検証中</small></li>';
 const ol=a=>'<ol>'+a.map(v=>'<li>'+E(v)+'</li>').join('')+'</ol>';
-export function buildParentReportDraft(input) {
+function summaryBox(s,overview,tone) {
+    if(!overview)return '<section class="os2-overview os2-overview--unknown"><h3>この学校の総評</h3><p>個別総評は原資料に基づく確認・編集が未了です。追加の原資料照合後に記載します。</p></section>';
+    if(overview.schoolId!==s.schoolId||overview.schoolName!==s.schoolName||!Array.isArray(overview.paragraphs)||overview.paragraphs.length<3)throw Error('invalid school overview');
+    return '<section class="os2-overview os2-overview--'+E(tone)+'"><div class="os2-overview-kicker">学校別総評<small>公開資料に基づく暫定評価</small></div><h3>'+E(overview.title)+'</h3>'+
+      overview.paragraphs.map((p,i)=>'<p class="os2-overview-para'+(i===0?' os2-overview-lead':'')+'">'+E(p)+'</p>').join('')+
+      '<p class="os2-overview-note">確認事項と未確認事項を区別した暫定的な法令検討です。違反の成立を確定するものではありません。</p></section>';
+}
+export function buildParentReportDraft(input,overviews=null) {
   if(!input||!Array.isArray(input.schools)||!Array.isArray(input.legalRules)
       ||typeof input.municipality!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(input.asOf||''))
     throw Error('required: municipality, asOf, schools[], legalRules[]');
@@ -18,6 +25,7 @@ export function buildParentReportDraft(input) {
     if(!s||!allowedId(s.schoolId)||unique.has(s.schoolId)||typeof s.schoolName!=='string')throw Error('invalid or duplicate schoolId');
     unique.add(s.schoolId);
     const b=assessParentSchool(s,input.legalRules);
+    const overview=overviews&&Array.isArray(overviews.schools)?overviews.schools.find(x=>x.schoolId===s.schoolId):null;
     const facts=s.observations.filter(o=>o.status==='confirmed_yes'||o.status==='indication'||o.status==='conflicting');
     const evidence=facts.length?facts.map(o=>'<div class="os2-paper-row"><span class="os2-paper-key">'+E(o.label)+'</span><strong class="os2-paper-value">'+E(o.evidenceNote||'資料記載の再確認を要する')+'</strong><span class="os2-pointer">資料記載</span></div>').join(''):
       '<p>この学校で個別の観察事実を確認できていません。問題なしという意味ではありません。</p>';
@@ -40,7 +48,7 @@ export function buildParentReportDraft(input) {
       '<h1>'+E(s.schoolName)+'：学校とPTAの事務の境界を調べる</h1><p>'+E(b.status.description)+'</p></div></header>'+
       '<div class="os2-schoolbody"><div class="os2-shell"><div class="os2-columns"><section class="os2-evidence">'+
       '<h2>確認された資料の記載（文字による再構成）</h2><div class="os2-paper"><div class="os2-paper-table">'+evidence+'</div>'+
-      '<p class="os2-paper-foot">原資料の画像ではありません。公開用の画像は別途匿名化・出典の検証後に差し込んでください。</p></div></section>'+
+      '<p class="os2-paper-foot">原資料の画像ではありません。公開用の画像は別途匿名化・出典の検証後に差し込んでください。</p></div>'+summaryBox(s,overview,b.tone)+'</section>'+
       '<aside class="os2-aside">'+cards+'</aside></div><div class="os2-research"><h2>詳細な法令・資料一覧</h2>'+details+'</div></div></div></main></body></html>';
     files['schools/'+s.schoolId+'.html']=html;
     manifest.push({schoolId:s.schoolId,schoolName:s.schoolName,tone:b.tone,legalTopics:b.legal.map(x=>x.id),legalViolationEstablished:false,sourceReview:'not independently validated by this renderer'});
@@ -50,10 +58,11 @@ export function buildParentReportDraft(input) {
 }
 const direct=process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url);
 if(direct){
-  const src=process.argv[2],out=process.argv[3];
-  if(!src||!out){console.error('Usage: node render-parent-school-report.mjs <legal-screening.json> <output-dir>');process.exitCode=2}
+  const src=process.argv[2],out=process.argv[3],overviewPath=process.argv[4];
+  if(!src||!out){console.error('Usage: node render-parent-school-report.mjs <legal-screening.json> <output-dir> [overview.json]');process.exitCode=2}
   else try{
-    const files=buildParentReportDraft(JSON.parse(fs.readFileSync(src,'utf8')));
+    const overviews=overviewPath?JSON.parse(fs.readFileSync(overviewPath,'utf8')):null;
+    const files=buildParentReportDraft(JSON.parse(fs.readFileSync(src,'utf8')),overviews);
     fs.mkdirSync(out,{recursive:true});
     for(const [name,content] of Object.entries(files)){
       const target=path.join(out,name);fs.mkdirSync(path.dirname(target),{recursive:true});

@@ -196,7 +196,19 @@ import {assessParentSchool} from './pta-parent-report-policy.mjs';
       '<details id="os2-full-data" class="os2-minidetail os2-full"><summary>12評価軸・学校別の全調査データ</summary><div class="os2-acc-body" id="os2-original-content"></div></details>'+
       '</section>';
   }
-  function render(s,legalRules){
+  function renderSchoolOverview(s,overview,tone){
+    if(!overview||overview.schoolId!==s.schoolId||!Array.isArray(overview.paragraphs)||overview.paragraphs.length<3){
+      return '<section class="os2-overview os2-overview--unknown" aria-label="この学校の総評"><h3>この学校の総評</h3>'+
+        '<p>学校別の原資料に即した総評を掲載するための確認が完了していません。資料未確認を「問題なし」とは判断しません。</p></section>';
+    }
+    return '<section class="os2-overview os2-overview--'+esc(tone)+'" aria-labelledby="os2-overview-title">'+
+      '<div class="os2-overview-kicker"><span aria-hidden="true">◉</span> 学校別総評 <small>調査資料に基づく暫定評価</small></div>'+
+      '<h3 id="os2-overview-title">'+esc(overview.title)+'</h3>'+
+      overview.paragraphs.map((paragraph,i)=>'<p class="os2-overview-para'+(i===0?' os2-overview-lead':'')+'">'+esc(paragraph)+'</p>').join('')+
+      '<p class="os2-overview-note">本総評は開示された文書と公開済みの学校別検討をもとに作成しています。未確認事項は判断を留保し、個別の法令違反の成立を確定したものではありません。</p>'+
+      '</section>';
+  }
+  function render(s,legalRules,overview){
     const main=document.querySelector('main.method');
     const oldHero=main?.querySelector('.method-hero');
     const article=main?.querySelector('article.method-wrap');
@@ -231,7 +243,7 @@ import {assessParentSchool} from './pta-parent-report-policy.mjs';
     first.className='os2-schoolbody';
     first.innerHTML='<div class="os2-shell"><div class="os2-columns"><section class="os2-evidence" aria-labelledby="os2-evidence-h">'+
       '<h2 id="os2-evidence-h">確認された証拠資料 <small>'+(evidenceImages[s.schoolId]?'実際の開示資料（抜粋・匿名化）':'原資料の記載から再構成')+'</small></h2>'+
-      evidenceHTML(s,c)+'<p class="os2-evidence-source">出典：'+esc(c.source)+'</p></section>'+
+      evidenceHTML(s,c)+'<p class="os2-evidence-source">出典：'+esc(c.source)+'</p>'+renderSchoolOverview(s,overview,level)+'</section>'+
       '<aside class="os2-aside" aria-label="問題と改善要求">'+rightCards+'</aside></div>'+
       '<section class="os2-topic-row" aria-label="本件の主な論点"><strong>本件に関わる<br>主な論点</strong>'+
       c.tags.slice(0,3).map((tag,i)=>'<div class="os2-topic"><span aria-hidden="true">'+(['▣','◎','▤'][i])+'</span><b>'+esc(tag)+'</b></div>').join('')+'</section>'+
@@ -261,7 +273,15 @@ import {assessParentSchool} from './pta-parent-report-policy.mjs';
       const j=await response.json();
       const s=j.schools.find(x=>x.schoolId===match[1]);
       if(!s)return;
-      render(s,j.legalRules||[]);
+      let overview=null;
+      try{
+        const response=await fetch('/data/osaki-school-overviews-2026.json',{cache:'no-cache'});
+        if(response.ok){
+          const all=await response.json();
+          overview=Array.isArray(all.schools)?all.schools.find(x=>x.schoolId===s.schoolId):null;
+        }
+      }catch(error){console.warn('School overview unavailable',error)}
+      render(s,j.legalRules||[],overview);
     }catch(error){console.error('PTA school reader: retaining original report',error)}
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();

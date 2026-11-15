@@ -85,3 +85,40 @@ test('nationwide draft generator produces deterministic, escaped, unpublished sc
   corrupt.schools=[{...corrupt.schools[0],schoolName:'<script>alert(1)</script>'}];
   assert.ok(buildParentReportDraft(corrupt)['schools/furukawa-daiichi-es.html'].includes('&lt;script&gt;'));
 });
+
+test('all 25 Osaki overview narratives align with the same school and evidence axes',()=>{
+  const d=JSON.parse(fs.readFileSync('data/osaki-school-overviews-2026.json','utf8'));
+  assert.equal(d.schools.length,25);
+  assert.equal(new Set(d.schools.map(x=>x.schoolId)).size,25);
+  for(const s of audit.schools){
+    const overview=d.schools.find(x=>x.schoolId===s.schoolId);
+    assert.ok(overview,s.schoolId);
+    assert.equal(overview.schoolName,s.schoolName);
+    assert.ok(overview.title.length>=15,s.schoolId);
+    assert.ok(overview.paragraphs.length>=3,s.schoolId);
+    assert.ok(overview.paragraphs.every(p=>typeof p==='string'&&p.length>=95),s.schoolId);
+    assert.deepEqual(overview.linkedObservationAxes,s.observations.map(x=>x.axis));
+    if(s.documentDisclosure==='学校別資料未開示')assert.match(overview.paragraphs.join(''),/未開示|開示資料が|開示資料がない/);
+    if(!s.observations.length && !['furukawa-kita-es','numabe-es'].includes(s.schoolId))
+      assert.match(overview.paragraphs[0],/未登録|未開示|確定でき|確認でき|登録されていません|そろっておらず/);
+  }
+});
+test('the school report paints the school-specific overview underneath evidence and before the topic row',()=>{
+  const js=fs.readFileSync('assets/osaki-evidence-report.js','utf8');
+  assert.match(js,/osaki-school-overviews-2026\.json/);
+  assert.match(js,/renderSchoolOverview/);
+  assert.ok(js.indexOf("evidenceHTML(s,c)")<js.indexOf("renderSchoolOverview(s,overview,level)"));
+  assert.ok(js.indexOf("renderSchoolOverview(s,overview,level)")<js.indexOf("os2-topic-row"));
+  const css=fs.readFileSync('assets/osaki-evidence-report.css','utf8');
+  for(const tone of ['urgent','review','unknown','verified'])assert.match(css,new RegExp('os2-overview--'+tone));
+});
+
+test('nationwide HTML draft inserts optional school-specific summary without inventing evidence',()=>{
+  const overviews=JSON.parse(fs.readFileSync('data/osaki-school-overviews-2026.json','utf8'));
+  const drafts=buildParentReportDraft(audit,overviews);
+  const report=drafts['schools/naruko-compulsory.html'];
+  assert.match(report,/PTAの会計処理に、学校の決裁ルートが組み込まれている/);
+  assert.match(report,/学校別総評/);
+  assert.ok(report.indexOf('学校別総評')<report.indexOf('os2-side-card'));
+  assert.match(buildParentReportDraft(audit)['schools/naruko-compulsory.html'],/確認・編集が未了/);
+});
