@@ -86,12 +86,13 @@
   function selectedSchools(m) { return selection(m).schools; }
   function match(m) {
     if (value("mode") === "自治体研究" && !m.url) return false;
-    if (value("mode") === "学校別資料" && !m.schools.length) return false;
+    if (value("mode") === "学校別資料" && !m.schools.length && !m.schoolReportCount) return false;
     if (value("prefecture") && m.prefecture !== value("prefecture"))
       return false;
     if (value("city") && m.name !== value("city")) return false;
     if (value("theme") && !m.themes.includes(value("theme"))) return false;
-    if ((value("school") || value("publication") || value("mode") === "学校別資料" || selection(m).schoolQuery) && !selectedSchools(m).length)
+    const schoolFilter = value("school") || value("publication") || selection(m).schoolQuery;
+    if ((schoolFilter || value("mode") === "学校別資料") && !selectedSchools(m).length && !(value("mode") === "学校別資料" && !schoolFilter && m.schoolReportCount))
       return false;
     for (const [field, key] of Object.entries(flags)) {
       if (!value(field)) continue;
@@ -103,6 +104,8 @@
     }
     return selection(m).matched;
   }
+  const moreRegions=document.getElementById("research-more-regions");
+  const advancedControls=document.getElementById("research-advanced");
   function popup(m) {
     const box = document.createElement("div"),
       title = document.createElement("strong");
@@ -122,12 +125,13 @@
         : (window.__ROOT||"")+"research-map.html?city=" + encodeURIComponent(m.name));
     a.textContent =
       m.url && value("mode") !== "学校別資料"
-        ? (m.schoolReportCount ? "市の総合評価・25校の評価を見る" : "自治体研究ノートを読む")
+        ? (m.schoolReportCount ? "市の総合評価・" + m.schoolReportCount + "校の評価を見る" : "自治体の評価を読む")
         : m.catalogUrl ? "既存資料館を開く" : "学校別一覧を開く";
     a.addEventListener("click", () => {
-      const details = document.querySelector(
-        '[data-region="' + m.id + '"] details',
-      );
+      const region = document.querySelector('[data-region="' + m.id + '"]');
+      const wrapper = region?.closest("#research-more-regions");
+      if (wrapper) wrapper.open = true;
+      const details = region?.querySelector("details");
       if (details) details.open = true;
     });
     box.append(a);
@@ -135,6 +139,8 @@
   }
   function render() {
     const found = data.municipalities.filter(match);
+    const activeFilters=Object.keys(fields).some(k=>!!value(k));
+    if (moreRegions && activeFilters && found.some(m=>moreRegions.querySelector('[data-region="' + m.id + '"]'))) moreRegions.open=true;
     for (const m of data.municipalities) {
       const el = document.querySelector('[data-region="' + m.id + '"]');
       if (!el) continue;
@@ -150,18 +156,12 @@
       for (const li of el.querySelectorAll("[data-school-url]"))
         li.hidden = !visible.has(li.dataset.schoolUrl);
     }
-    if (status)
-      status.textContent =
-        found.length +
-        "地域 ／ " +
-        found.reduce((n, m) => n + selectedSchools(m).length, 0) +
-        "校（表示対象。原本公開済みの件数ではありません）";
+    if (status) status.textContent = found.length + "自治体・地域を表示中";
     const empty = document.getElementById("research-empty");
     if (empty) empty.hidden = found.length > 0;
     const scope = document.getElementById("research-query-scope");
     if (scope) scope.textContent = found.some(m => selection(m).schoolQuery)
-      ? "学校名・文書名に一致する学校を表示しています。自治体の登録全校は各一覧のリンクで確認できます。"
-      : "自治体・研究の一致に基づく登録校を表示しています。学校名・文書名で検索すると該当学校へ絞り込みます。";
+      ? "学校名・資料名に一致する自治体を表示しています。" : "";
     for (const { map, layer } of maps) {
       layer.clearLayers();
       const positions = new Map();
@@ -210,6 +210,7 @@
       const el = document.getElementById(fields[k]);
       if (params.has(k) && el) el.value = params.get(k);
     }
+    if (advancedControls && Object.keys(fields).some(k=>!["query","prefecture"].includes(k) && params.has(k))) advancedControls.open=true;
     form.addEventListener("input", render);
     // Search input already renders on every input event. Re-rendering on blur
     // would remove a marker between pointerdown/up and swallow its first click.
@@ -217,7 +218,11 @@
       if (event.target.id !== fields.query) render();
     });
     form.addEventListener("submit", (e) => e.preventDefault());
-    form.addEventListener("reset", () => setTimeout(render, 0));
+    form.addEventListener("reset", () => setTimeout(() => {
+      if (advancedControls) advancedControls.open = false;
+      if (moreRegions) moreRegions.open = false;
+      render();
+    }, 0));
   }
   render();
 })();

@@ -6,6 +6,7 @@ const {
   escapeHtml: e,
   writeFileIfChanged: write,
 } = require("./archive-utils");
+const {renderPrimaryMap} = require("./research-map-layout");
 const load = () =>
   JSON.parse(
     fs.readFileSync(
@@ -130,6 +131,7 @@ function chrome() {
 }
 function renderPathways(url) {
   const isMap = url === "/research-map.html";
+  if (isMap) return "";
   if (!isMap) return `<nav class="research-note-links" aria-label="自治体研究の関連資料"><a href="#schools">この自治体の学校別資料へ</a> ／ <a href="/research-map.html">全国マップへ戻る</a> ／ <a href="/national-archive.html">全国資料館へ</a></nav>`;
   const mapHref = isMap ? "#research-filters" : "/research-map.html";
   const mapLabel = isMap ? "このページ：全国PTA研究マップ" : "関連ページ：全国PTA研究マップ";
@@ -192,22 +194,12 @@ function renderNationalSurvey(index) {
     return `<article class="research-region survey-record" data-survey-evidence="${e(r.evidence)}"><h3>${heading}</h3><p>${e(r.schoolType)} ／ ${e(r.evidence)} ／ 最終確認 ${e(r.reviewed)}</p>${detail}</article>`;
   }).join("");
   const statuses = ["原本確認", "公式本文確認・原本保存未了", "検索本文のみ", "候補資料"];
-  return `<section id="national-primary-survey" class="research-survey"><h2>PTA内部事務の公務化・全国横断一次調査</h2><p>2026年10月26日確認版。48主体を登録し、39主体で一次資料の該当箇所を確認。47都道府県・20指定都市の固定対象67主体では33主体の原本確認にとどまり、全国全件の検証は未完了です。</p><p class="research-notice">「原本確認」は制度説明の該当箇所を確認した意味であり、全校実態や違法性・適法性の確定ではありません。非公表の受領回答本文・メールURL・添付資料は掲載していません。</p><div class="research-survey-filters"><label>48主体内を検索<input type="search" aria-label="全国一次調査の検索" placeholder="自治体・規則・制度類型・資料名"></label><label>資料確認状況<select aria-label="全国一次調査の資料確認状況"><option value="">すべて</option>${statuses.map((name) => `<option>${e(name)}</option>`).join("")}</select></label></div><p class="research-survey-result" role="status">48主体を表示 ／ 全48主体・一次資料該当部分確認39主体</p><div class="research-survey-list">${cards}</div></section>`;
+  return `<section id="national-primary-survey" class="research-survey"><h2>PTA内部事務の公務化・全国横断一次調査</h2><p>2026年10月26日確認版。48主体を登録し、39主体で一次資料の該当箇所を確認。47都道府県・20指定都市の固定対象67主体では33主体の原本確認にとどまり、全国全件の検証は未完了です。</p><p class="research-notice">「原本確認」は制度説明の該当箇所を確認した意味であり、全校実態や違法性・適法性の確定ではありません。非公表の受領回答本文・メールURL・添付資料は掲載していません。</p><details class="research-survey-disclosure"><summary>48主体の資料一覧と検索を開く</summary><div class="research-survey-filters"><label>48主体内を検索<input type="search" aria-label="全国一次調査の検索" placeholder="自治体・規則・制度類型・資料名"></label><label>資料確認状況<select aria-label="全国一次調査の資料確認状況"><option value="">すべて</option>${statuses.map((name) => `<option>${e(name)}</option>`).join("")}</select></label></div><p class="research-survey-result" role="status">48主体を表示 ／ 全48主体・一次資料該当部分確認39主体</p><div class="research-survey-list">${cards}</div></details></section>`;
 }
 function renderMap(index) {
-  const opts = (id, label, values) =>
-    `<label>${label}<select id="${id}"><option value="">すべて</option>${values.map((v) => `<option>${e(v)}</option>`).join("")}</select></label>`;
-  return page(
-    "全国PTA制度・運用研究マップ",
-    "/research-map.html",
-    `<p class="research-intro">どの自治体で、何が行われ、どの資料で確認でき、行政がどう説明しているのか。自治体研究から既存の学校別資料、行政回答、全国横断研究へ進む入口です。</p><p class="research-notice">ピンは研究・資料の所在を示す概略位置です。問題件数・違法性・重大度を示しません。研究テーマは検討対象であり、その制度の採用確認を意味しません。青緑は研究ノートあり、灰青は学校別資料目録のみを示します。都道府県の研究は県立学校等を対象とし、市立学校と統合しません。地図が表示されなくても下の一覧を利用できます。</p><form id="research-filters" role="search"><label>自治体・学校・文書・論点を検索<input id="research-query" type="search" placeholder="川口市、入会申込書、委任…"></label>${opts("research-mode", "表示", ["自治体研究", "学校別資料"])}${opts("research-prefecture", "都道府県", [...new Set(index.municipalities.map((m) => m.prefecture))])}${opts(
-      "research-city",
-      "自治体",
-      index.municipalities.map((m) => m.name),
-    )}${opts("research-theme", "研究テーマ", index.themes)}${opts("research-school", "学校種別", [...new Set(index.municipalities.flatMap((m) => m.schools.map((s) => s.type)))])}${opts("research-publication", "資料公開状況", [...new Set(index.municipalities.flatMap((m) => m.schools.flatMap((s) => s.documents.map((d) => d.status))))])}${opts("research-response", "行政回答", ["掲載確認", "未確認"])}${opts("research-audit", "監査・審査請求", ["掲載確認", "未確認"])}${opts("research-improvement", "改善措置", ["掲載確認", "未確認"])}<button type="reset">条件を解除</button></form><p id="research-result-status" role="status">${index.municipalities.length}地域。すべての地域を下に掲載しています。</p><div data-research-map class="research-map" aria-label="全国PTA研究地図"></div><p id="research-map-message">地図は補助機能です。表示できない場合は自治体一覧をご利用ください。</p><p><a href="#research-results">検索結果・学校別資料へ進む</a> ／ <a href="#national-primary-survey">別の調査：全国横断一次調査48主体へ</a></p><p id="research-query-scope"></p><section id="research-results"><h2>自治体一覧・学校別資料</h2><p id="research-empty" hidden>一致する資料はありません。学校名の一部で検索するか、条件を解除してください。</p>${index.municipalities.map((m) => `<article class="research-region" data-region="${e(m.id)}"><h3>${m.url ? `<a href="${e(m.url)}">${e(m.prefecture)} ${e(m.name)}</a>` : e(m.prefecture + " " + m.name)}</h3><p>${m.url ? "自治体研究ノートあり" : m.catalogUrl ? "既存資料館に所在掲載" : "学校別資料目録"} ／ ${m.schoolReportCount ? "個別評価" + m.schoolReportCount + "校" : m.schools.length + "校"} ／ ${e(m.updated || index.updated)}</p>${paras(m.summary?.slice(0, 1))}${m.schoolReportCount && m.url ? `<p><a href="${e(m.url)}#schools">市の総合評価から学校別${m.schoolReportCount}校の評価へ</a></p>` : ""}${m.catalogUrl ? `<p><a href="${e(m.catalogUrl)}">既存全国資料館の資料所在一覧へ</a></p>` : ""}<p>${m.themes.map(e).join(" ／ ")}</p><details><summary>学校別一次資料（${m.schools.length}校）</summary>${schoolList(m)}</details></article>`).join("")}</section>${renderNationalSurvey(index)}`,
-    true,
-  );
+  return page("全国のPTAを、地域から調べる","/research-map.html",renderPrimaryMap(index,renderNationalSurvey(index)),true);
 }
+
 function main() {
   const data = load(),
     index = buildIndex(data, listSchoolData(), JSON.parse(fs.readFileSync(path.join(ROOT, 'data/research-catalog-regions.json'), 'utf8')));
