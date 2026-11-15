@@ -69,7 +69,7 @@ test("Japan-first map uses visible pins, zoom and right-panel contrast", () => {
   assert.match(css, /height: 690px !important/);
   assert.match(css, /research-feature-desc,\s*body\.research-map-page/);
   assert.match(html, /地図のピンを押すと/);
-  assert.match(html, /20261116-japan-v2/);
+  assert.match(html, /20261116-neutral-v3/);
 });
 
 test("national summary not single-city feature, aligned heading and larger municipality names",()=>{
