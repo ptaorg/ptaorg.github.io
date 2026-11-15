@@ -407,3 +407,35 @@ body.research-map-page #main .legacy .legacy-body .research-main .research-map-p
 body.research-map-page #main .legacy .legacy-body .research-main .research-map-pane > .research-map {
   margin-top: 0 !important;
 }
+
+/* Dark map panel: legacy theme has high-specificity !important link/inline colors.
+   Keep city names, school counts and the scope note readable in every state. */
+body.research-map-page #main .legacy .legacy-body .research-main
+.research-map-feature .research-feature-quicklinks a,
+body.research-map-page #main .legacy .legacy-body .research-main
+.research-map-feature .research-feature-quicklinks a:link,
+body.research-map-page #main .legacy .legacy-body .research-main
+.research-map-feature .research-feature-quicklinks a:visited {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-decoration: none !important;
+}
+body.research-map-page #main .legacy .legacy-body .research-main
+.research-map-feature .research-feature-quicklinks a span {
+  color: #ffe8b8 !important;
+  -webkit-text-fill-color: #ffe8b8 !important;
+}
+body.research-map-page #main .legacy .legacy-body .research-main
+.research-map-feature .research-feature-quicklinks small {
+  color: #e7f1f5 !important;
+  -webkit-text-fill-color: #e7f1f5 !important;
+}
+body.research-map-page #main .legacy .legacy-body .research-main
+.research-map-feature .research-feature-quicklinks a:hover,
+body.research-map-page #main .legacy .legacy-body .research-main
+.research-map-feature .research-feature-quicklinks a:focus-visible {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background-color: #ffffff30 !important;
+  outline-offset: 3px;
+}
