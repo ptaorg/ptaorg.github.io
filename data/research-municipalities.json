@@ -280,7 +280,14 @@
       "comparisons": [
         "yokohama",
         "hiroshima"
-      ]
+      ],
+      "institutionalReview": {
+        "frameworkVersion": "2.0.0",
+        "status": "not_yet_assessed",
+        "source": null,
+        "summary": "自治体・教育委員会の規程・要綱・会計基準等を、本新基準の制定・適用・授権・実施・是正の全段階でまだ審査していない。制度がないという意味ではない。",
+        "rightsReview": "保護者・児童の権利への影響は公的主体の具体的関与と実害等を確認後に審査する。権利侵害の認定ではない。"
+      }
     },
     {
       "id": "kawasaki",
@@ -422,7 +429,14 @@
         "osaka",
         "shiga",
         "nishinomiya"
-      ]
+      ],
+      "institutionalReview": {
+        "frameworkVersion": "2.0.0",
+        "status": "not_yet_assessed",
+        "source": null,
+        "summary": "自治体・教育委員会の規程・要綱・会計基準等を、本新基準の制定・適用・授権・実施・是正の全段階でまだ審査していない。制度がないという意味ではない。",
+        "rightsReview": "保護者・児童の権利への影響は公的主体の具体的関与と実害等を確認後に審査する。権利侵害の認定ではない。"
+      }
     },
     {
       "id": "yokohama",
@@ -547,7 +561,14 @@
         "kawaguchi",
         "atsugi",
         "kawasaki"
-      ]
+      ],
+      "institutionalReview": {
+        "frameworkVersion": "2.0.0",
+        "status": "not_yet_assessed",
+        "source": null,
+        "summary": "自治体・教育委員会の規程・要綱・会計基準等を、本新基準の制定・適用・授権・実施・是正の全段階でまだ審査していない。制度がないという意味ではない。",
+        "rightsReview": "保護者・児童の権利への影響は公的主体の具体的関与と実害等を確認後に審査する。権利侵害の認定ではない。"
+      }
     },
     {
       "id": "matsuyama",
@@ -695,7 +716,14 @@
         "kawasaki",
         "osaka",
         "atsugi"
-      ]
+      ],
+      "institutionalReview": {
+        "frameworkVersion": "2.0.0",
+        "status": "not_yet_assessed",
+        "source": null,
+        "summary": "自治体・教育委員会の規程・要綱・会計基準等を、本新基準の制定・適用・授権・実施・是正の全段階でまだ審査していない。制度がないという意味ではない。",
+        "rightsReview": "保護者・児童の権利への影響は公的主体の具体的関与と実害等を確認後に審査する。権利侵害の認定ではない。"
+      }
     },
     {
       "id": "shiga",
@@ -808,7 +836,14 @@
       "comparisons": [
         "kawasaki",
         "hyogo"
-      ]
+      ],
+      "institutionalReview": {
+        "frameworkVersion": "2.0.0",
+        "status": "not_yet_assessed",
+        "source": null,
+        "summary": "自治体・教育委員会の規程・要綱・会計基準等を、本新基準の制定・適用・授権・実施・是正の全段階でまだ審査していない。制度がないという意味ではない。",
+        "rightsReview": "保護者・児童の権利への影響は公的主体の具体的関与と実害等を確認後に審査する。権利侵害の認定ではない。"
+      }
     },
     {
       "id": "shizuoka",
@@ -912,7 +947,14 @@
       "comparisons": [
         "hyogo",
         "kawasaki"
-      ]
+      ],
+      "institutionalReview": {
+        "frameworkVersion": "2.0.0",
+        "status": "not_yet_assessed",
+        "source": null,
+        "summary": "自治体・教育委員会の規程・要綱・会計基準等を、本新基準の制定・適用・授権・実施・是正の全段階でまだ審査していない。制度がないという意味ではない。",
+        "rightsReview": "保護者・児童の権利への影響は公的主体の具体的関与と実害等を確認後に審査する。権利侵害の認定ではない。"
+      }
     },
     {
       "id": "hiroshima",
@@ -1025,7 +1067,14 @@
       "comparisons": [
         "kawaguchi",
         "hyogo"
-      ]
+      ],
+      "institutionalReview": {
+        "frameworkVersion": "2.0.0",
+        "status": "not_yet_assessed",
+        "source": null,
+        "summary": "自治体・教育委員会の規程・要綱・会計基準等を、本新基準の制定・適用・授権・実施・是正の全段階でまだ審査していない。制度がないという意味ではない。",
+        "rightsReview": "保護者・児童の権利への影響は公的主体の具体的関与と実害等を確認後に審査する。権利侵害の認定ではない。"
+      }
     },
     {
       "id": "atsugi",
@@ -1150,7 +1199,14 @@
       "comparisons": [
         "yokohama",
         "matsuyama"
-      ]
+      ],
+      "institutionalReview": {
+        "frameworkVersion": "2.0.0",
+        "status": "not_yet_assessed",
+        "source": null,
+        "summary": "自治体・教育委員会の規程・要綱・会計基準等を、本新基準の制定・適用・授権・実施・是正の全段階でまだ審査していない。制度がないという意味ではない。",
+        "rightsReview": "保護者・児童の権利への影響は公的主体の具体的関与と実害等を確認後に審査する。権利侵害の認定ではない。"
+      }
     },
     {
       "id": "hyogo",
@@ -1251,7 +1307,14 @@
         "nishinomiya",
         "shiga",
         "shizuoka"
-      ]
+      ],
+      "institutionalReview": {
+        "frameworkVersion": "2.0.0",
+        "status": "not_yet_assessed",
+        "source": null,
+        "summary": "自治体・教育委員会の規程・要綱・会計基準等を、本新基準の制定・適用・授権・実施・是正の全段階でまだ審査していない。制度がないという意味ではない。",
+        "rightsReview": "保護者・児童の権利への影響は公的主体の具体的関与と実害等を確認後に審査する。権利侵害の認定ではない。"
+      }
     },
     {
       "id": "nishinomiya",
@@ -1363,7 +1426,14 @@
         "hyogo",
         "kawasaki",
         "osaka"
-      ]
+      ],
+      "institutionalReview": {
+        "frameworkVersion": "2.0.0",
+        "status": "not_yet_assessed",
+        "source": null,
+        "summary": "自治体・教育委員会の規程・要綱・会計基準等を、本新基準の制定・適用・授権・実施・是正の全段階でまだ審査していない。制度がないという意味ではない。",
+        "rightsReview": "保護者・児童の権利への影響は公的主体の具体的関与と実害等を確認後に審査する。権利侵害の認定ではない。"
+      }
     },
     {
       "id": "osaki",
