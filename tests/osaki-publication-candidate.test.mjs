@@ -46,9 +46,10 @@ test('Osaki 2026 cohort excludes closed school, preserving observed vs unobserve
 test('School candidate lists exactly 12 fixed axes and published non-claims',()=>{
   const s=read(SCHOOL);
   assert.equal((s.match(/class="m-no"/g)||[]).length,22);
-  assert.equal((s.match(/（confirmed_yes）/g)||[]).length,2);
-  assert.equal((s.match(/（indication）/g)||[]).length,2);
-  assert.equal((s.match(/（unknown）/g)||[]).length,8);
+  const axis=s.split('id="axes"')[1]?.split('</section>')[0]||'';
+  assert.equal((axis.match(/<strong>記載あり<\/strong>/g)||[]).length,2);
+  assert.equal((axis.match(/<strong>示唆（未確定）<\/strong>/g)||[]).length,2);
+  assert.equal((axis.match(/<strong>未確認<\/strong>/g)||[]).length,8);
   assert.match(s,/会費1,500円/);
   assert.match(s,/生徒活動援助費2,500円/);
   assert.match(s,/安全互助会負担金620円/);
