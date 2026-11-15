@@ -227,3 +227,15 @@ body.osaki-overview-open #main.method .osr-technical {
     margin-bottom: 36px !important;
   }
 }
+
+/* 2026-11-16: 総評本文の不自然な右余白を解消 */
+body.osaki-overview-open #main.method .osr-municipal-prose {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
+body.osaki-overview-open #main.method .osr-municipal-prose p {
+  width: 100%;
+  max-width: none;
+  overflow-wrap: anywhere;
+}
