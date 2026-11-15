@@ -47,3 +47,14 @@ test("municipal standards and public method cross-link and keep permission cavea
  assert.match(read("ai-system/skills/municipal-school-report.md"),/v2\.0\.0 追加固定ゲート/);
  assert.match(read("ai-system/report-standards/templates/municipality-report.md"),/2A\. 自治体/);
 });
+
+test("every municipality carries a separate institutional assessment status without presuming compliance",()=>{
+ assert.ok(all.length>=30);
+ for(const m of all){
+  assert.ok(m.institutionalReview,m.id);
+  assert.equal(m.institutionalReview.frameworkVersion,"2.0.0");
+  assert.ok(framework.assessmentStatuses.includes(m.institutionalReview.status),m.id);
+  assert.ok(m.institutionalReview.summary);
+  if(m.institutionalReview.status==="not_yet_assessed")assert.match(m.institutionalReview.summary,/審査|未立証/);
+ }
+});
