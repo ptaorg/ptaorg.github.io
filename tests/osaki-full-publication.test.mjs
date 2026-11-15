@@ -7,7 +7,7 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const data=JSON.parse(read('data/osaki-public-2026.json'));
 const labels={confirmed_yes:'記載あり',confirmed_no:'明示的な反対記載',
-  indication:'示唆・要追加確認',unknown:'未確認',not_applicable:'非該当',conflicting:'資料間矛盾'};
+  indication:'示唆（未確定）',unknown:'未確認',not_applicable:'非該当',conflicting:'資料間矛盾'};
 const stateList=['confirmed_yes','confirmed_no','indication','unknown','not_applicable','conflicting'];
 const schoolPath=s=>'archive/osaki/'+s.id+'/index.html';
 const canonical=s=>'https://ptaorg.com/archive/osaki/'+s.id+'/';
