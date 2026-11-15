@@ -33,7 +33,7 @@ test('all school pages carry a legal section with grounded case-specific source 
    assert.ok(h.includes('href="/research/osaki-legal-review.html"'),s.schoolId);
    assert.match(h,/非会員名簿.*不要/,s.schoolId);
    assert.match(h,/公法上の権限/,s.schoolId);
-   assert.match(h,/個情法61条→69条/,s.schoolId);
+   assert.match(h,/(?:個情法|個人情報保護法)61条→69条/,s.schoolId);
    for(const x of s.observations){
      assert.ok(h.includes(x.label),s.schoolId+':'+x.axis);
    }
