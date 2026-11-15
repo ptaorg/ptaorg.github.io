@@ -247,10 +247,10 @@ import {assessParentSchool} from './pta-parent-report-policy.mjs';
     hero.innerHTML='<div class="os2-shell">'+
       '<nav class="os2-breadcrumb" aria-label="パンくず"><a href="/">トップ</a><span aria-hidden="true">›</span><a href="/research-map.html">全国調査マップ</a><span aria-hidden="true">›</span><a href="'+schoolHref+'">大崎市の総合評価</a><span aria-hidden="true">›</span>'+esc(s.schoolName)+'</nav>'+
       '<div class="os2-hero-main"><div class="os2-hero-copy">'+
-      '<div class="os2-hero-ribbon"><span class="os2-school-chip">'+esc(s.schoolName)+'<small>PTA調査レポート</small></span>'+
+      '<div class="os2-hero-ribbon">'+
       '<span class="os2-alert"><b aria-hidden="true">!</b>'+esc(status)+'</span></div>'+
       '<p class="os2-hero-principle"><span>最初に確かめる</span> 01 入会・非加入・退会の自由</p>'+
-      '<h1>'+titleHtml+'</h1><p class="os2-hero-lead">'+esc(c.lead)+'</p>'+
+      '<h1>'+esc(s.schoolName)+'</h1><h2 class="os2-case-title">'+titleHtml+'</h2><p class="os2-hero-lead">'+esc(c.lead)+'</p>'+
       '<p class="os2-hero-sub">最優先は保護者の加入・非加入・退会の自由。そのうえで<strong>誰の事務なのか、学校はなぜ処理できるのか。</strong>学校の原資料から検証します。</p>'+
       '</div><div class="os2-hero-art">'+schoolGraphic()+'<span>校舎のイメージ図</span></div></div></div>';
     const lawItems=brief.legal.slice(0,5).map(rule=>'<li><a href="'+esc(rule.lawUrl)+'" target="_blank" rel="noopener">'+esc(rule.law)+'</a><span>'+esc(rule.issue)+'</span><small>'+esc(rule.reviewStatus)+'</small></li>').join('');

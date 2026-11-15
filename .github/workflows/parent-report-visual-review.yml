@@ -1,0 +1,47 @@
+name: PTA parent-report responsive visual review
+on:
+  pull_request:
+    paths:
+      - research/ichinomiya.html
+      - archive/ichinomiya/**
+      - assets/ichinomiya-parent-report.css
+      - assets/osaki-evidence-report.css
+      - assets/osaki-evidence-report.js
+      - sitemap.xml
+      - .github/workflows/parent-report-visual-review.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  key-pages-desktop-and-mobile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Chromium for actual layout screenshots
+        run: |
+          npm install --no-save --ignore-scripts playwright
+          npx playwright install --with-deps chromium
+      - name: Start local static site
+        run: |
+          python3 -m http.server 4173 >/tmp/pta-visual-http.log 2>&1 &
+      - name: Check desktop and mobile, save real screenshots
+        env:
+          PTA_VISUAL_AUDIT_PAGES: '/research-map.html,/research/osaki.html,/archive/osaki/tajiri-es/index.html,/research/ichinomiya.html,/archive/ichinomiya/miyanishi-es/index.html,/archive/ichinomiya/hagiwara-es/index.html'
+          PTA_VISUAL_AUDIT_SCREENSHOT_MODE: 'all'
+          PTA_VISUAL_AUDIT_SETTLE_MS: '200'
+        run: |
+          node scripts/visual-audit.mjs
+          node -e "const a=require('./visual-audit-output/audit.json'); console.log(a.summary); if(a.summary.errorRecords) process.exit(1)"
+      - name: Upload desktop and mobile screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: parent-report-visual-review
+          path: visual-audit-output/
+          if-no-files-found: warn
