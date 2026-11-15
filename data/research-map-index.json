@@ -13635,282 +13635,31 @@
       "comparisons": [
         "osaki"
       ],
-      "schools": [
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "萩原小学校",
-          "type": "小学校",
-          "url": "/archive/ichinomiya/hagiwara-es/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "北方小学校",
-          "type": "小学校",
-          "url": "/archive/ichinomiya/kitagata-es/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "南部中学校",
-          "type": "中学校",
-          "url": "/archive/ichinomiya/nanbu-jhs/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "北部中学校",
-          "type": "中学校",
-          "url": "/archive/ichinomiya/hokubu-jhs/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "奥小学校",
-          "type": "小学校",
-          "url": "/archive/ichinomiya/oku-es/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "今伊勢小学校",
-          "type": "小学校",
-          "url": "/archive/ichinomiya/imaise-es/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "貴船小学校",
-          "type": "小学校",
-          "url": "/archive/ichinomiya/kifune-es/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "宮西小学校",
-          "type": "小学校",
-          "url": "/archive/ichinomiya/miyanishi-es/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "丹陽西小学校",
-          "type": "小学校",
-          "url": "/archive/ichinomiya/tanyo-nishi-es/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "丹陽南小学校",
-          "type": "小学校",
-          "url": "/archive/ichinomiya/tanyo-minami-es/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "浅井南小学校",
-          "type": "小学校",
-          "url": "/archive/ichinomiya/azai-minami-es/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "大和西小学校",
-          "type": "小学校",
-          "url": "/archive/ichinomiya/yamato-nishi-es/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "浅野小学校",
-          "type": "小学校",
-          "url": "/archive/ichinomiya/asano-es/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "富士小学校",
-          "type": "小学校",
-          "url": "/archive/ichinomiya/fuji-es/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "浅井中小学校",
-          "type": "小学校",
-          "url": "/archive/ichinomiya/azai-naka-es/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "小信中島小学校",
-          "type": "小学校",
-          "url": "/archive/ichinomiya/konobu-nakajima-es/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "開明小学校",
-          "type": "小学校",
-          "url": "/archive/ichinomiya/kaimei-es/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "木曽川西小学校",
-          "type": "小学校",
-          "url": "/archive/ichinomiya/kisogawa-nishi-es/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "葉栗中学校",
-          "type": "中学校",
-          "url": "/archive/ichinomiya/haguri-jhs/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "大和中学校",
-          "type": "中学校",
-          "url": "/archive/ichinomiya/yamato-jhs/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        },
-        {
-          "prefecture": "愛知県",
-          "municipality": "一宮市",
-          "name": "中島小学校",
-          "type": "小学校",
-          "url": "/archive/ichinomiya/nakajima-es/",
-          "documents": [
-            {
-              "title": "PTA決算資料・原本への参照",
-              "status": "既存学校ページで確認"
-            }
-          ]
-        }
-      ],
-      "boardResponses": []
+      "schools": [],
+      "boardResponses": [],
+      "schoolReportNames": [
+        "萩原小学校",
+        "北方小学校",
+        "南部中学校",
+        "北部中学校",
+        "奥小学校",
+        "今伊勢小学校",
+        "貴船小学校",
+        "宮西小学校",
+        "丹陽西小学校",
+        "丹陽南小学校",
+        "浅井南小学校",
+        "大和西小学校",
+        "浅野小学校",
+        "富士小学校",
+        "浅井中小学校",
+        "小信中島小学校",
+        "開明小学校",
+        "木曽川西小学校",
+        "葉栗中学校",
+        "大和中学校",
+        "中島小学校"
+      ]
     }
   ]
 }

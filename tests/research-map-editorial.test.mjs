@@ -30,9 +30,9 @@ test("every indexed region remains accessible with six prominent municipalities"
    assert.ok(all.includes(m.id),m.id);
    if(m.url)assert.ok(html.includes('href="'+m.url+'"')||html.includes('href="'+m.url.slice(1)+'"'),m.id);
  }
- assert.equal((html.match(/class="research-region" data-region="/g)||[]).length,30);
- assert.match(html,/id="research-feature-title">宮城県 大崎市/);
- assert.match(html,/href="\/research\/osaki\.html"/);
+ assert.equal((html.match(/class="research-region" data-region="/g)||[]).length,index.municipalities.length);
+ assert.match(html,/id="research-feature-title">愛知県 一宮市/);
+ assert.match(html,/href="\/research\/ichinomiya\.html"/);
  assert.match(html,/class="research-region-grid research-region-featured"/);
  assert.match(html,/class="research-region-grid research-region-remaining"/);
 });

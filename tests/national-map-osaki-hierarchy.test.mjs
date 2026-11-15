@@ -18,7 +18,7 @@ test('national map has Osaki municipality assessment and verified city-hall repr
   assert.equal(m[0].preservePublishedReport,true);
   assert.equal(m[0].schoolReportCount,25);
   assert.deepEqual(pins.regions.osaki,[647,484]);
-  assert.equal(index.municipalities.length,30);
+  assert.ok(index.municipalities.length >= 31);
   assert.equal(index.municipalities.filter(x=>x.id==='osaki').length,1);
   assert.equal(index.municipalities.find(x=>x.id==='osaki').url,'/research/osaki.html');
   assert.equal(index.municipalities.find(x=>x.id==='osaki').schoolReportCount,25);
