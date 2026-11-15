@@ -14,7 +14,7 @@ test('opt-in membership needs only joining records, not a nonmember roster',()=>
  assert.match(d.coreQuestion,/加入した人だけ/);
  assert.ok(d.prohibitedInferences.some(x=>x.includes('非会員の名簿')));
  assert.ok(!d.operationalChecks.some(x=>x.key==='nonmemberRoster'));
- assert.match(page,/非会員名簿.*作成.*不要/);
+ assert.match(page,/非会員名簿.*作成は必要ありません/);
  assert.match(page,/学校の全保護者名簿を取得して全保護者を登録/);
  assert.match(page,/本人の加入意思/);
 });
