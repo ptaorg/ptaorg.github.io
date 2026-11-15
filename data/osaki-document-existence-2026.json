@@ -5,7 +5,7 @@
   "source": {
     "title": "大崎市立小中学校PTA関係文書 調査報告書",
     "date": "2026-11-15",
-    "evidencePages": "PDF第5章および付録B、田尻中学校の目録（PDF43〜45頁）",
+    "evidencePages": "旧45頁版の第5章・付録Bに対応。現行56頁版では第5章11〜33頁、付録B48〜56頁、田尻中学校の資料目録55頁。引用時は報告書の版を特定する。",
     "totalDisclosedDocuments": 220,
     "totalDisclosedPages": 983
   },
@@ -202,5 +202,8 @@
       "withdrawalRule": "not_found_in_disclosure_report",
       "documentScope": "45頁調査報告書第5章で入会申込書・退会規定を開示資料中に確認できないと明記"
     }
-  ]
+  ],
+  "archivedVersion": "2026-11-15-initial",
+  "supersededBy": "data/osaki-public-2026.json",
+  "statusNotice": "初版であり、学校別に入会申込書・退会規定を概括した記録。現行の25校×10種類の文書存否は supersededBy に示す最新版を参照。初版の6校・1校・18校の区分を現時点の最終的な存否と混同しない。"
 }

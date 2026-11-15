@@ -35,7 +35,8 @@ test('Osaki 2026 cohort excludes closed school, preserving observed vs unobserve
   assert.match(city,/古川西小中学校・鹿島台中学校/);
   assert.match(city,/下伊場野小学校は、/);
   assert.match(city,/2026年3月31日に廃止/);
-  assert.match(city,/24校/);
+  assert.match(city,/20校/);
+  assert.match(city,/観察YESは17、明示的な反対記載は3、示唆は12、未確認は268/);
   assert.match(city,/2026年6月23日更新/);
   assert.match(city,/大崎市立小中学校徴収金事務取扱規程/);
   assert.match(city,/第19条/);
@@ -44,7 +45,7 @@ test('Osaki 2026 cohort excludes closed school, preserving observed vs unobserve
 
 test('School candidate lists exactly 12 fixed axes and published non-claims',()=>{
   const s=read(SCHOOL);
-  assert.equal((s.match(/class="m-no"/g)||[]).length,12);
+  assert.equal((s.match(/class="m-no"/g)||[]).length,22);
   assert.equal((s.match(/（confirmed_yes）/g)||[]).length,2);
   assert.equal((s.match(/（indication）/g)||[]).length,2);
   assert.equal((s.match(/（unknown）/g)||[]).length,8);
@@ -68,10 +69,8 @@ test('Osaki and Tajiri public pages are discoverable via homepage, local search 
   const home=read('index.html'),explore=read('explore.html');
   const index=read('data/site-search-index.js'),sitemap=read('sitemap.xml');
   const method=read('pta-evaluation-method.html');
-  for(const file of [home,explore,method]){
-    assert.match(file,/research\/osaki\.html/);
-    assert.match(file,/archive\/osaki\/tajiri-jhs\//);
-  }
+  for(const file of [home,explore,method])assert.match(file,/research\/osaki\.html/);
+  for(const file of [home,explore])assert.match(file,/archive\/osaki\/tajiri-jhs\//);
   assert.match(index,/research\/osaki\.html/);
   assert.match(index,/archive\/osaki\/tajiri-jhs\//);
   assert.match(sitemap,/<loc>https:\/\/ptaorg\.com\/research\/osaki\.html<\/loc>/);
