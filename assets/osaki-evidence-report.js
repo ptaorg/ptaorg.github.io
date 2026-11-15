@@ -223,7 +223,7 @@
     const first=document.createElement('div');
     first.className='os2-schoolbody';
     first.innerHTML='<div class="os2-shell"><div class="os2-columns"><section class="os2-evidence" aria-labelledby="os2-evidence-h">'+
-      '<h2 id="os2-evidence-h">確認された証拠資料 <small>実資料の記載から再構成</small></h2>'+
+      '<h2 id="os2-evidence-h">確認された証拠資料 <small>'+(evidenceImages[s.schoolId]?'実際の開示資料（抜粋・匿名化）':'原資料の記載から再構成')+'</small></h2>'+
       evidenceHTML(s,c)+'<p class="os2-evidence-source">出典：'+esc(c.source)+'</p></section>'+
       '<aside class="os2-aside" aria-label="問題と改善要求">'+rightCards+'</aside></div>'+
       '<section class="os2-topic-row" aria-label="本件の主な論点"><strong>本件に関わる<br>主な論点</strong>'+
