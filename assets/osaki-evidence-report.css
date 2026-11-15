@@ -155,3 +155,7 @@ body.osaki-case-v2 .method article.method-wrap{max-width:none!important;width:10
 .os2-member-action a{color:#175677!important;text-decoration:underline!important}
 .os2-member-city-link{display:inline-block;margin-top:13px;color:#1d5776!important;text-decoration:underline!important;font-size:.87rem;font-weight:800}
 @media(max-width:740px){.os2-member-priority{padding:17px;border-left-width:5px}.os2-member-facts{grid-template-columns:1fr}.os2-member-facts>div{padding:10px 13px}.os2-member-head{gap:10px}.os2-schoolbody--membership{padding-top:16px}}
+
+/* 学校固有の事件見出しより前にも、最優先の自由を明示 */
+.os2-hero-principle{display:inline-flex;align-items:center;flex-wrap:wrap;gap:8px;color:#8d5717!important;background:#fff4dd;border-left:4px solid #b57c24;padding:7px 12px;border-radius:5px;font-weight:900;font-size:.87rem;line-height:1.6;margin:2px 0 13px!important}
+.os2-hero-principle span{color:#a15816;font-size:.75rem}
