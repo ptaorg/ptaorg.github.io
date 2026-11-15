@@ -397,3 +397,6 @@ body.research-map-page .leaflet-popup-content a{color:#af2734;font-weight:850;te
 @media(prefers-reduced-motion:reduce){
  body.research-map-page .legacy .research-region{transition:none}
 }
+
+/* The search field must not inherit the old three-column span rule. */
+body.research-map-page .legacy #research-filters .research-search-simple>label:first-child{grid-column:auto}

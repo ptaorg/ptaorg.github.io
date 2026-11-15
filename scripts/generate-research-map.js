@@ -6,7 +6,7 @@ const {
   escapeHtml: e,
   writeFileIfChanged: write,
 } = require("./archive-utils");
-const {renderPrimaryMap} = require("./research-map-layout");
+const {renderPrimaryMap} = require("./research-map-layout.cjs");
 const load = () =>
   JSON.parse(
     fs.readFileSync(
