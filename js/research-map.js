@@ -198,6 +198,9 @@
         positions.get(key).push(m);
       }
       for (const group of positions.values()) {
+        // Leaflet handles the tile viewport; keep offscreen pins out of the DOM.
+        // This also avoids stray focus targets and markers beyond the map edge.
+        if (!map.getBounds().pad(-0.08).contains(group[0].coordinates)) continue;
         const box = document.createElement("div");
         for (const m of group) box.append(popup(m));
         const published = group.some((m) => m.url);
@@ -258,6 +261,7 @@
       render();
     }, 0));
   }
+  for (const { map } of maps) map.on("moveend", render);
   render();
 })();
 

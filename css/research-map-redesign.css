@@ -357,3 +357,26 @@ body.research-map-page .pta-map-reset button:focus-visible {
   body.research-map-page .legacy .research-map { height: 470px !important; min-height: 470px; }
   body.research-map-page .research-map-pane { padding: 12px; }
 }
+
+/* Override the late-loaded legacy theme (#main .legacy-body p) using the same ID scope. */
+body.research-map-page #main .legacy .legacy-body .research-main .research-map-feature {
+  color: #fff !important;
+}
+body.research-map-page #main .legacy .legacy-body .research-main .research-map-feature #research-feature-title {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+body.research-map-page #main .legacy .legacy-body .research-main .research-map-feature p.research-feature-overline {
+  color: #f7dfbd !important;
+}
+body.research-map-page #main .legacy .legacy-body .research-main .research-map-feature p.research-feature-label {
+  color: #fff3df !important;
+}
+body.research-map-page #main .legacy .legacy-body .research-main .research-map-feature p.research-feature-desc,
+body.research-map-page #main .legacy .legacy-body .research-main .research-map-feature p.research-feature-foot {
+  color: #f2f8fa !important;
+  -webkit-text-fill-color: #f2f8fa !important;
+}
+body.research-map-page #main .legacy .legacy-body .research-main .research-map-feature .research-feature-bottom {
+  color: #dfebf1 !important;
+}
