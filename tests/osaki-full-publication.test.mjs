@@ -13,7 +13,7 @@ const schoolPath=s=>'archive/osaki/'+s.id+'/index.html';
 const canonical=s=>'https://ptaorg.com/archive/osaki/'+s.id+'/';
 
 test('25 schools are in the public release and every one has 12 axes plus 10 documents',()=>{
-  assert.equal(data.version,'2026-11-15-public-v2');
+  assert.equal(data.version,'2026-11-15-public-v3-legal-review');
   assert.equal(data.schools.length,25);
   assert.equal(data.axes.length,12);
   assert.equal(data.documentTypes.length,10);
@@ -43,8 +43,8 @@ test('the exact 300 observation cells preserve denominators and 6 categories',()
     assert.ok(stateList.includes(x.status),x.status);
     tally[x.status]++;
   }
-  assert.deepEqual(tally,{confirmed_yes:17,confirmed_no:3,indication:12,
-    unknown:268,not_applicable:0,conflicting:0});
+  assert.deepEqual(tally,{confirmed_yes:15,confirmed_no:1,indication:14,
+    unknown:270,not_applicable:0,conflicting:0});
   for(const a of data.axisMetrics){
     assert.equal(a.confirmed_yes, data.schools.filter(s=>s.axes[a.id].status==='confirmed_yes').length);
     assert.equal(a.confirmed_no, data.schools.filter(s=>s.axes[a.id].status==='confirmed_no').length);
@@ -79,7 +79,7 @@ test('all 25 school URLs are discoverable through city index, search and sitemap
   const city=read('research/osaki.html'),sitemap=read('sitemap.xml'),
   search=read('data/site-search-index.js');
   assert.ok(city.includes('全25校'), 'city list must show 25');
-  assert.ok(city.includes('観察YESは17、明示的な反対記載は3、示唆は12、未確認は268'));
+  assert.ok(city.includes('観察YESは15、明示的な反対記載は1、示唆は14、未確認は270'));
   for(const s of data.schools){
     const local='/archive/osaki/'+s.id+'/';
     assert.ok(city.includes('href="'+local+'"'),s.id+' missing city URL');
