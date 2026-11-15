@@ -1,0 +1,85 @@
+/* 2026-11-15 | 大崎市学校別・証拠中心レポート v2. 見本画像を静的サイトとして実装 */
+body.osaki-case-v2 main.method{font-family:"Noto Sans JP","Hiragino Sans","Meiryo",sans-serif;color:#25292e;line-height:1.65;background:#fff}
+body.osaki-case-v2 main.method .method-hero{display:none}
+.os2-shell{width:min(1180px,calc(100% - 32px));margin-inline:auto}
+.os2-hero{border-top:4px solid #b20d1c;background:linear-gradient(100deg,#fff 60%,#f9f9f6 100%);overflow:hidden;padding:18px 0 28px}
+.os2-breadcrumb{display:flex;flex-wrap:wrap;gap:8px;color:#5a6065;font-size:.83rem;margin:0 0 22px}
+.os2-breadcrumb a{color:#314e67!important;text-underline-offset:3px}
+.os2-hero-main{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:6px;align-items:center}
+.os2-hero-copy{position:relative;z-index:2;min-width:0}
+.os2-hero-ribbon{display:flex;align-items:stretch;gap:12px;margin:0 0 14px}
+.os2-school-chip{display:flex;justify-content:center;flex-direction:column;min-width:140px;padding:10px 15px;background:#f1e7e7;border-radius:9px;color:#452226;font-weight:900;font-size:1rem;line-height:1.45}
+.os2-school-chip small{display:block;font-size:.78rem;font-weight:700}
+.os2-alert{background:linear-gradient(90deg,#bb1022,#e23b36);color:#fff;padding:10px 18px;border-radius:9px 16px 16px 9px;font-size:clamp(1.02rem,2vw,1.6rem);font-weight:900;letter-spacing:.012em;display:flex;gap:12px;align-items:center;flex:1;box-shadow:0 4px 12px #b81b2330}
+.os2-alert b{display:grid;place-items:center;background:#fff;color:#c41422;width:34px;height:34px;border-radius:50%;font-size:1.6rem;line-height:1;flex:none}
+.os2--review .os2-alert{background:linear-gradient(90deg,#a56b08,#d39732)}
+.os2--unknown .os2-alert{background:linear-gradient(90deg,#586b7a,#84939d)}
+.os2-hero h1{font-size:clamp(2rem,4.5vw,3.25rem);line-height:1.36;font-weight:900;letter-spacing:-.035em;color:#222;margin:8px 0 10px!important;max-width:850px}
+.os2-hero h1 em{color:#b31523;font-style:normal}
+.os2-hero-lead{font-size:1.08rem;line-height:1.8;max-width:850px;margin:.25rem 0 .3rem;font-weight:600}
+.os2-hero-sub{font-size:.94rem;line-height:1.8;max-width:850px;color:#4c3b3b;margin:3px 0 0}
+.os2-hero-art{position:relative;z-index:1;align-self:stretch;display:grid;place-items:end center;min-height:240px;opacity:.9}
+.os2-scene{width:min(100%,390px);filter:drop-shadow(0 9px 9px #2e43501e);border-radius:12px}
+.os2-hero-art>span{position:absolute;right:5px;bottom:3px;font-size:.7rem;background:#ffffffe6;color:#5c6b71;padding:1px 6px;border-radius:4px}
+.os2-schoolbody{padding:14px 0 0}
+.os2-columns{display:grid;grid-template-columns:minmax(0,1.62fr) minmax(295px,1fr);gap:16px;align-items:stretch}
+.os2-evidence{min-width:0;border:1px solid #cbd1d9;border-radius:10px;background:#fbfbfb;overflow:hidden;box-shadow:0 2px 5px #11243508}
+.os2-evidence>h2{display:flex;align-items:center;flex-wrap:wrap;gap:9px;background:linear-gradient(90deg,#4d5968,#293c4c);color:white!important;font-size:1.1rem!important;line-height:1.5;padding:13px 20px;margin:0!important;font-weight:900}
+.os2-evidence>h2:before{content:"▤";font-size:1.6rem;font-weight:400}
+.os2-evidence>h2 small{font-size:.76rem;font-weight:500;opacity:.82}
+.os2-paper{padding:18px 18px 12px;margin:15px;background:#fff;border:1px solid #ccd0d6;box-shadow:0 3px 12px #30394219;min-height:410px}
+.os2-paper-date{text-align:right;color:#55636d;font-size:.86rem;margin:3px 0 4px!important}
+.os2-paper h3{text-align:center;font-family:"Noto Serif JP","Yu Mincho",serif;font-weight:900;font-size:1.4rem!important;color:#212932;letter-spacing:.07em;margin:4px 0 21px!important;line-height:1.5}
+.os2-paper-table{border:1px solid #abb3b9}
+.os2-paper-row{display:grid;grid-template-columns:minmax(75px,17%) minmax(0,1fr) minmax(125px,33%);border-bottom:1px solid #b9c1c6;align-items:stretch;min-height:67px}
+.os2-paper-row:last-child{border-bottom:0}
+.os2-paper-key{font-weight:800;background:#f5f6f7;display:grid;place-items:center;padding:8px 5px;font-size:.83rem;color:#333;border-right:1px solid #b9c1c6}
+.os2-paper-value{font-size:clamp(.87rem,1.45vw,1rem);padding:14px 10px;line-height:1.65;align-content:center;color:#292d34;overflow-wrap:anywhere;position:relative}
+.os2-paper-value:after{content:"";position:absolute;inset:6px 5px;border:2px solid #d20d24;pointer-events:none}
+.os2-pointer{font-size:.81rem;line-height:1.48;background:#bd1725;color:#fff;align-content:center;padding:9px 9px;box-shadow:-2px 0 #fff;font-weight:800}
+.os2-pointer i{display:inline-grid;place-items:center;border:1.5px solid #fff;border-radius:50%;font-style:normal;width:22px;height:22px;margin-right:5px}
+.os2-paper-foot{margin:15px 0 0!important;font-size:.78rem;color:#606772;line-height:1.65}
+.os2-evidence-source{font-size:.8rem!important;color:#525c67;line-height:1.6;margin:10px 17px 17px!important}
+.os2-empty{padding:45px 24px;text-align:center;background:#f4f5f5;color:#596d7d;min-height:300px;border-radius:8px;line-height:1.8}
+.os2-empty strong{display:block;font-size:1.13rem;color:#495765}
+.os2-aside{display:flex;flex-direction:column;gap:12px}
+.os2-side-card{border-radius:11px;padding:14px 17px 15px;border:1px solid #e2d4c6;background:#fffdf9}
+.os2-side-card h2{display:flex;gap:10px;align-items:center;line-height:1.4;font-size:1.17rem!important;font-weight:900;margin:0 0 10px!important;color:#532521!important;background:#fff4e3;padding:8px 11px;border-radius:8px}
+.os2-side-card h2:before{content:"◉";color:#c31625;font-size:1.3rem}
+.os2-side--issue{border-color:#edc4ca;background:#fff9f8}
+.os2-side--issue h2{background:#ffe7e8;color:#96141e!important}
+.os2-side--issue h2:before{content:"⚠"}
+.os2-side--action h2:before{content:"✓";color:#925512}
+.os2-side-card p{font-size:.94rem;line-height:1.82;margin:0!important;color:#28313c}
+.os2-action-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.os2-action-list li{display:flex;align-items:flex-start;gap:10px;line-height:1.7;font-size:.94rem}
+.os2-action-list b{display:inline-grid;place-items:center;border-radius:50%;background:#bc1525;color:#fff;min-width:25px;height:25px;font-size:.86rem;flex:none;margin-top:1px}
+.os2-topic-row{display:grid;grid-template-columns:minmax(130px,1.2fr) repeat(3,minmax(0,1fr));border:1px solid #d2d9e0;border-radius:10px;margin:18px 0 0;overflow:hidden;background:#f9fafb;box-shadow:0 2px 5px #15293b0a}
+.os2-topic-row>strong{background:linear-gradient(90deg,#ba1624,#ce3d3b);color:white;padding:18px 16px;line-height:1.55;font-size:1.05rem;align-content:center}
+.os2-topic{display:flex;align-items:center;gap:10px;border-left:1px solid #d3d9df;padding:15px;color:#a21b25}
+.os2-topic>span{font-size:1.7rem;line-height:1;color:#c12a31}
+.os2-topic b{font-size:.98rem;line-height:1.6}
+.os2-evaluation-note{color:#657180;font-size:.81rem;line-height:1.75;margin:11px 0 16px}
+body.osaki-case-v2 .method article.method-wrap{max-width:none!important;width:100%;padding:0 0 50px!important}
+.os2-research{margin:12px 0 0;border:1px solid #d3d9e2;border-radius:10px;background:#f9fafc;padding:0 0 12px;overflow:hidden}
+.os2-research h2{display:flex;align-items:center;gap:12px;margin:0!important;padding:15px 22px;font-size:1.32rem!important;line-height:1.45;color:#252b32!important;background:#ecf0f3;border-bottom:1px solid #d8dfe5;font-weight:900}
+.os2-research h2 span{font-size:1.3rem}
+.os2-research>p{margin:10px 20px!important;color:#566472;font-size:.84rem}
+.os2-minidetail{margin:6px 15px;border:1px solid #cfd6df;border-radius:5px;background:#fff}
+.os2-minidetail summary{display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;list-style:none;padding:12px 17px;font-weight:900;color:#30363d;font-size:1rem;line-height:1.6}
+.os2-minidetail summary::-webkit-details-marker{display:none}
+.os2-minidetail summary:after{content:"⌄";color:#243d54;font-size:1.35rem;line-height:1;transform:translateY(-3px);font-weight:700}
+.os2-minidetail[open] summary:after{transform:rotate(180deg)}
+.os2-minidetail[open]>summary{background:#edf3f7;border-bottom:1px solid #d4dde4}
+.os2-acc-body{padding:15px 19px;line-height:1.8}
+.os2-law-links a{display:block;margin:3px 0 6px;text-decoration:underline!important;color:#145f7c!important}
+.os2-acc-body p{font-size:.91rem;line-height:1.75}
+.os2-full .os2-acc-body{padding:18px;min-width:0}
+.os2-full .method-table-wrap{max-width:100%;overflow:auto}
+.os2-full .method-section{margin:0 0 34px!important;background:#fff}
+.os2-full .method-section h2{display:block;margin:0 0 16px!important;background:transparent!important;border:none;padding:0;font-size:1.35rem!important}
+.os2-full .case-data{max-width:100%}
+.os2-full table{min-width:680px}
+@media(max-width:960px){.os2-hero-main{grid-template-columns:1fr 190px}.os2-columns{grid-template-columns:1fr}.os2-aside{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.os2-side-card{padding:12px}.os2-side-card p,.os2-action-list li{font-size:.89rem}}
+@media(max-width:740px){.os2-shell{width:min(100% - 28px,720px)}.os2-hero{padding:10px 0 18px}.os2-hero-main{display:block}.os2-hero-art{display:none}.os2-hero-ribbon{flex-direction:column;gap:8px}.os2-school-chip{align-self:flex-start;min-width:0}.os2-alert{font-size:1.16rem;padding:11px 14px}.os2-hero h1{font-size:clamp(1.75rem,6vw,2.4rem)}.os2-hero-lead{font-size:1rem}.os2-columns,.os2-aside{display:block}.os2-side-card{margin:12px 0}.os2-paper{margin:10px;padding:13px}.os2-paper-row{grid-template-columns:minmax(67px,19%) minmax(0,1fr);min-height:64px}.os2-pointer{grid-column:1/-1;padding:5px 9px;font-size:.76rem}.os2-paper-value{padding:9px 7px;font-size:.85rem}.os2-paper h3{font-size:1.12rem!important}.os2-topic-row{grid-template-columns:1fr 1fr}.os2-topic-row>strong{grid-column:1/-1;padding:10px}.os2-topic{padding:13px;border-bottom:1px solid #d4dce3}.os2-topic b{font-size:.89rem}.os2-research h2{font-size:1.13rem!important}.os2-minidetail{margin:5px 9px}.os2-acc-body{padding:11px}}
+@media(prefers-reduced-motion:reduce){.os2-hero,.os2-minidetail{scroll-behavior:auto}}
