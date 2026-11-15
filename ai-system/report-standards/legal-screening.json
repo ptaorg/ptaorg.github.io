@@ -1,0 +1,201 @@
+{
+  "version": "1.1.0",
+  "evaluationAxesVersion": "1.0.0",
+  "reviewOrder": [
+    "主体の分離",
+    "事務の帰属",
+    "学校側の所掌事務・公法上の権限",
+    "個人情報保護法61条の保有必要性・利用目的",
+    "個人情報保護法69条の利用・提供制限と臨時性",
+    "教職員・会計保管・会費債権・独立救済要件",
+    "適用条文・反証・未確認・暫定結論の分離"
+  ],
+  "feeRouteStatuses": [
+    "school_collection_documented",
+    "pta_direct_collection_documented",
+    "no_fee_documented",
+    "route_unestablished"
+  ],
+  "feeRouteCaution": "複数経路の併存を認め、未確認≠不存在。学校徴収案内がないことは徴収の不存在を意味しない。資料未開示は別タグ。",
+  "membershipCaution": "オプトインは加入した者の記録を起点とする。非会員名簿や全保護者照合を要求しない。紙の入会申込書がないことは契約不存在の証明ではない。",
+  "rules": [
+    {
+      "id": "membership_contract",
+      "title": "本人の加入意思・会員資格",
+      "triggerAxes": [
+        "voluntary_membership_notice",
+        "explicit_opt_in"
+      ],
+      "law": "民法521・522条",
+      "legalTest": "保護者本人による申込み・PTA承諾・会員資格の開始・対象年度が結び付く記録は何か",
+      "noAutomaticConclusion": "申込書の不提出≠契約不成立。非会員名簿は要求しない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+    },
+    {
+      "id": "fee_claim",
+      "title": "会費債権・請求対象者",
+      "triggerAxes": [
+        "explicit_opt_in",
+        "school_collection_of_pta_fee"
+      ],
+      "law": "民法521・522・703・709条",
+      "legalTest": "会則・会費額・請求主体・請求対象者・会員履歴・納付実績",
+      "noAutomaticConclusion": "債権の根拠不提示≠債権不存在。703条・709条は独立要件",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+    },
+    {
+      "id": "consumer_contract",
+      "title": "自動加入条項・加入勧誘",
+      "triggerAxes": [
+        "explicit_opt_in",
+        "voluntary_membership_notice"
+      ],
+      "law": "消費者契約法4・10条",
+      "legalTest": "PTAと保護者間の消費者契約該当性、勧誘、無作為みなし条項、不当性の要件",
+      "noAutomaticConclusion": "消費者契約該当性未確認で同法違反としない。10条は条項と信義則違反の確認が必要",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/412AC0000000061"
+    },
+    {
+      "id": "task_authority",
+      "title": "学校が私的団体の事務を実施する権限",
+      "triggerAxes": [
+        "school_collection_of_pta_fee",
+        "teacher_internal_pta_admin",
+        "school_pta_governance_overlap"
+      ],
+      "law": "学校教育法・地方教育行政法及び当該自治体の法令上の所掌",
+      "legalTest": "誰の内部事務か。学校の所掌・公務としての権限・個別例外根拠",
+      "noAutomaticConclusion": "委任、同意、校務分掌、学校徴収金内規、校長裁量、慣行は公法上の権限創設の代替ではない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/322AC0000000026"
+    },
+    {
+      "id": "public_personal_data_purpose",
+      "title": "学校保有情報の目的・必要性",
+      "triggerAxes": [
+        "school_personal_data_for_pta",
+        "school_collection_of_pta_fee"
+      ],
+      "law": "個人情報保護法61条",
+      "legalTest": "対象情報・原保有目的・当該学校所掌事務・利用必要性",
+      "noAutomaticConclusion": "まず権限を確認してから61条へ。本人同意を所掌権限と混同しない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+    },
+    {
+      "id": "public_personal_data_use",
+      "title": "目的外利用・PTA提供",
+      "triggerAxes": [
+        "school_personal_data_for_pta",
+        "school_collection_of_pta_fee"
+      ],
+      "law": "個人情報保護法69条1・2項、70条",
+      "legalTest": "学校内部利用と外部提供を分離、利用目的内外、69条2項各号の根拠・臨時性・不当侵害のおそれ、提供先措置",
+      "noAutomaticConclusion": "69条2項を恒常的な学校会員管理の包括権限にしない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+    },
+    {
+      "id": "pta_personal_data",
+      "title": "PTA自身の取得と管理",
+      "triggerAxes": [
+        "school_personal_data_for_pta",
+        "explicit_opt_in"
+      ],
+      "law": "個人情報保護法17・18・20・21・23・27条",
+      "legalTest": "PTAの個人情報取扱事業者該当性、本人からの取得・通知・目的・安全管理・第三者提供",
+      "noAutomaticConclusion": "学校の全保護者情報の取得を必要条件にしない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+    },
+    {
+      "id": "teachers_service",
+      "title": "教職員によるPTA事務",
+      "triggerAxes": [
+        "teacher_internal_pta_admin",
+        "school_pta_governance_overlap"
+      ],
+      "law": "地方公務員法35条、34条、60条2号",
+      "legalTest": "実従事者・勤務時間・職務命令・職務専念義務免除・秘密情報の有無",
+      "noAutomaticConclusion": "委託契約の存在≠公務の権限・刑事犯罪の成立",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/325AC0000000261"
+    },
+    {
+      "id": "public_cash_custody",
+      "title": "PTA資金の受領・保管",
+      "triggerAxes": [
+        "school_account_or_payment_system",
+        "school_collection_of_pta_fee"
+      ],
+      "law": "地方自治法235条の4第2項・施行令168条の7",
+      "legalTest": "受領者・口座名義・預金契約・処分権限・自治体による保管該当性・法律政令上の例外",
+      "noAutomaticConclusion": "PTA名義口座≠学校事務の適法性。校長名義口座や学校集金案内だけで違反を確定しない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+    },
+    {
+      "id": "pta_school_spending",
+      "title": "PTAから学校への資金移動",
+      "triggerAxes": [
+        "pta_spending_on_school_costs"
+      ],
+      "law": "地方財政法4条の5、寄附受納・財務会計関係法令",
+      "legalTest": "資金移動の実在、寄附受納、公費で負担すべき経費、割当的寄附の該当性",
+      "noAutomaticConclusion": "地方自治法232条の2は自治体による寄附・補助でありPTA→学校の直接根拠ではない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/323AC0000000109"
+    },
+    {
+      "id": "social_education",
+      "title": "社会教育関係団体の独立性",
+      "triggerAxes": [
+        "school_pta_governance_overlap"
+      ],
+      "law": "社会教育法10・12条",
+      "legalTest": "PTAの社会教育関係団体該当性、学校・自治体による不当な統制的支配・干渉の具体的実態",
+      "noAutomaticConclusion": "学校との協力だけで12条違反とはしない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/324AC0000000207"
+    },
+    {
+      "id": "officers",
+      "title": "役員選出・無回答委任",
+      "triggerAxes": [
+        "officer_selection_pressure",
+        "sensitive_exemption_questions"
+      ],
+      "law": "民法521・522条、委任・意思表示に関する民法規定",
+      "legalTest": "本人の就任・委任意思・選考資料の学校関与・免除事情の取得目的",
+      "noAutomaticConclusion": "無回答のみを就任意思の証拠としない。委任と役員就任は別",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+    },
+    {
+      "id": "child_treatment",
+      "title": "児童の公平な取扱い",
+      "triggerAxes": [
+        "nonmember_equal_treatment"
+      ],
+      "law": "学校教育関係法令、憲法14・26条の公的学校との関係",
+      "legalTest": "学校が担う教育活動か、経費の性質、実際の差異と合理的理由",
+      "noAutomaticConclusion": "PTAによる私的な事業へ憲法を直ちに直接適用しない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/321CONSTITUTION"
+    },
+    {
+      "id": "civil_remedies",
+      "title": "民事上の返還・賠償",
+      "triggerAxes": [
+        "school_collection_of_pta_fee",
+        "explicit_opt_in"
+      ],
+      "law": "民法703・709条、国家賠償法1条",
+      "legalTest": "法律上の原因・受益損失、損害・故意過失・因果関係、公務性等",
+      "noAutomaticConclusion": "徴収案内のみで返還・国家賠償の成立と断定しない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+    },
+    {
+      "id": "public_audit",
+      "title": "住民監査請求",
+      "triggerAxes": [
+        "school_pta_governance_overlap",
+        "pta_spending_on_school_costs"
+      ],
+      "law": "地方自治法242条",
+      "legalTest": "特定の財務会計上の行為・違法不当性・監査請求期間・住民該当性",
+      "noAutomaticConclusion": "制度への一般的不満のみで242条の対象としない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+    }
+  ]
+}
