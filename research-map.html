@@ -59,7 +59,7 @@
   <link rel="stylesheet" href="css/site.css?v=20261113-phase4b">
   <link rel="stylesheet" href="css/editorial.css?v=20261113-phase4b">
   <link rel="stylesheet" href="css/pages/research-map.css?v=20261113-phase4c">
-  <link rel="stylesheet" href="css/research-map-redesign.css?v=20261116-japan-v2">
+  <link rel="stylesheet" href="css/research-map-redesign.css?v=20261116-neutral-v3">
   <link rel="stylesheet" href="css/research-pathways.css?v=20261113-phase4c">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="css/prose.css?v=20261113-phase4">
@@ -169,19 +169,25 @@
  </div>
  <details class="research-search-advanced" id="research-advanced"><summary>詳しい条件で探す</summary><div class="research-search-extra"><label>資料の種類<select id="research-mode"><option value="">すべて</option><option>自治体研究</option><option>学校別資料</option></select></label><label>自治体名<select id="research-city"><option value="">すべて</option><option>大阪市</option><option>川口市</option><option>川崎市</option><option>横浜市</option><option>松山市</option><option>滋賀県</option><option>静岡県</option><option>広島市</option><option>厚木市</option><option>兵庫県</option><option>西宮市</option><option>大崎市</option><option>大東市</option><option>彦根市</option><option>枚方市</option><option>射水市</option><option>いわき市</option><option>亀岡市</option><option>甲賀市</option><option>久喜市</option><option>大田区</option><option>相模原市</option><option>豊橋市</option><option>長久手市</option><option>茨木市</option><option>仙台市</option><option>扶桑町</option><option>鹿児島市</option><option>神奈川県</option><option>埼玉県</option><option>一宮市</option></select></label><label>調査内容<select id="research-theme"><option value="">すべて</option><option>PTA任意加入</option><option>入会申込書・加入意思確認</option><option>PTA会費の学校徴収</option><option>学校保有個人情報の利用・提供</option><option>委任契約による公務化</option><option>学校管理規則・要綱による校務化</option><option>教職員のPTA事務従事</option><option>職務専念義務免除・兼職承認</option><option>地方自治法235条の4</option><option>住民監査請求</option><option>情報公開・審査請求</option><option>PTA自己徴収化</option><option>制度是正・改善事例</option></select></label><label>学校種別<select id="research-school"><option value="">すべて</option><option>小学校</option><option>中学校</option><option>その他</option></select></label><label>資料公開状況<select id="research-publication"><option value="">すべて</option><option>公開前確認中</option><option>既存学校ページで確認</option></select></label><label>教育委員会の回答<select id="research-response"><option value="">すべて</option><option>掲載確認</option><option>未確認</option></select></label><label>監査・審査請求<select id="research-audit"><option value="">すべて</option><option>掲載確認</option><option>未確認</option></select></label><label>改善措置<select id="research-improvement"><option value="">すべて</option><option>掲載確認</option><option>未確認</option></select></label></div></details>
 </form>
+<div class="research-map-heading"><h2>日本地図から探す</h2><p>地図のピンを押すと、自治体の評価や資料を開けます。</p></div>
 <div class="research-map-layout">
  <section class="research-map-pane" aria-label="日本地図から自治体を選ぶ">
-  <div class="research-map-heading"><h2>日本地図から探す</h2><p>地図のピンを押すと、自治体の評価や資料を開けます。</p></div>
   <div data-research-map class="research-map" aria-label="全国PTA研究地図"></div>
   <p id="research-map-message" class="research-map-help">地図が表示されない場合も、下の自治体一覧から調べられます。</p>
  </section>
- <aside class="research-map-feature" aria-labelledby="research-feature-title">
-  <p class="research-feature-overline">公開中の自治体評価から</p>
-  <h2 id="research-feature-title">愛知県 一宮市</h2>
-  <p class="research-feature-label">最初に確認するのは、保護者の入会・退会の自由。</p>
-  <p class="research-feature-desc">市立61校（小42校・中19校）のうち、公開済みのPTA決算資料21校42件を手がかりに、学校施設の修繕費、学校活動費、協力費、学校とPTAの会計処理を検証する。残る40校の適法・不適法を判定するものではない。</p>
-  <a class="research-feature-go" href="/research/ichinomiya.html">この自治体の評価を読む <span aria-hidden="true">→</span></a>
-  <p class="research-feature-foot">学校別の調査 21校。詳しい評価と証拠資料を確認できます。</p>
+ <aside class="research-map-feature" aria-labelledby="research-feature-title" data-feature-mode="national">
+  <p class="research-feature-overline" id="research-feature-overline">全国の調査状況</p>
+  <h2 id="research-feature-title">地域を選んで、PTAの実態を調べる。</h2>
+  <p class="research-feature-label" id="research-feature-label">31自治体・地域の資料を掲載</p>
+  <p class="research-feature-desc" id="research-feature-desc">地図のピンを押すと、その自治体の概要と資料への入口がここに表示されます。赤いピンは自治体の調査ページ、青灰色は資料の索引を示します。</p>
+  <div class="research-feature-quicklinks" id="research-feature-quicklinks">
+   <p>学校別の評価を公開している自治体</p>
+   <a href="/research/osaki.html">大崎市<span>25校</span></a><a href="/research/ichinomiya.html">一宮市<span>21校</span></a>
+   <small>学校別の資料は確認できた範囲から掲載。全校の適法性を判定したものではありません。</small>
+  </div>
+  <a class="research-feature-go" id="research-feature-go" href="#research-results">自治体一覧を見る <span aria-hidden="true">→</span></a>
+  <p class="research-feature-foot" id="research-feature-foot">自治体の総合評価から、学校ごとの調査と根拠資料へ進めます。</p>
+  <button class="research-feature-reset" id="research-feature-reset" type="button" hidden>全国の案内に戻す</button>
   <div class="research-feature-bottom">調査で確認できた範囲と、まだ確認できていないことを区別しています。資料不足を「問題なし」とは扱いません。</div>
  </aside>
 </div>
@@ -220,6 +226,6 @@
   <div class="container footer-bottom"><span>© PTA適正化推進委員会</span><span>地図：<a href="https://github.com/geolonia/japanese-prefectures">Geolonia</a>（GFDL）</span></div>
 </footer>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="js/research-map.js?v=20261116-japan-v2"></script>
+<script src="js/research-map.js?v=20261116-neutral-v3"></script>
 </body>
 </html>

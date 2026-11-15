@@ -61,6 +61,45 @@
     audit: "audit",
     improvement: "improvement",
   };
+  const feature = {
+    panel:document.querySelector(".research-map-feature"),
+    overline:document.getElementById("research-feature-overline"),
+    title:document.getElementById("research-feature-title"),
+    label:document.getElementById("research-feature-label"),
+    desc:document.getElementById("research-feature-desc"),
+    links:document.getElementById("research-feature-quicklinks"),
+    go:document.getElementById("research-feature-go"),
+    foot:document.getElementById("research-feature-foot"),
+    reset:document.getElementById("research-feature-reset")
+  };
+  function selectFeature(m) {
+    if (!feature.panel || !m) return;
+    feature.panel.dataset.featureMode="selected";
+    feature.overline.textContent="選択した自治体";
+    feature.title.textContent=m.prefecture+" "+m.name;
+    feature.label.textContent=m.schoolReportCount ? "学校別の調査 "+m.schoolReportCount+"校" :
+      m.url ? "自治体の調査ページを公開中" : "資料の所在を確認できます";
+    feature.desc.textContent=m.summary?.[0] || "この自治体で確認できた資料の内容をご覧ください。";
+    feature.links.hidden=true;
+    feature.go.href=m.url || m.catalogUrl || "#region-"+m.id;
+    feature.go.firstChild.textContent=m.url ? "この自治体の評価を読む " : "この自治体の資料を見る ";
+    feature.foot.textContent="確認事実と未確認事項を区別して掲載しています。";
+    feature.reset.hidden=false;
+  }
+  function resetFeature() {
+    if(!feature.panel) return;
+    feature.panel.dataset.featureMode="national";
+    feature.overline.textContent="全国の調査状況";
+    feature.title.textContent="地域を選んで、PTAの実態を調べる。";
+    feature.label.textContent=data.municipalities.length+"自治体・地域の資料を掲載";
+    feature.desc.textContent="地図のピンを押すと、その自治体の概要と資料への入口がここに表示されます。赤いピンは自治体の調査ページ、青灰色は資料の索引を示します。";
+    feature.links.hidden=false;
+    feature.go.href="#research-results";
+    feature.go.firstChild.textContent="自治体一覧を見る ";
+    feature.foot.textContent="自治体の総合評価から、学校ごとの調査と根拠資料へ進めます。";
+    feature.reset.hidden=true;
+  }
+  feature.reset?.addEventListener("click",resetFeature);
   const maps = [];
   if (window.L)
     for (const el of containers) {
@@ -216,6 +255,7 @@
           keyboard: true,
           title: group.map(m => m.prefecture + " " + m.name).join("、"),
         }).addTo(layer).bindPopup(box);
+        marker.on("click", () => selectFeature(group[0]));
         const element = marker.getElement();
         if (element) {
           element.setAttribute("tabindex", "0");

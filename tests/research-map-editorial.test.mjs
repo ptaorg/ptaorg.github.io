@@ -31,7 +31,7 @@ test("every indexed region remains accessible with six prominent municipalities"
    if(m.url)assert.ok(html.includes('href="'+m.url+'"')||html.includes('href="'+m.url.slice(1)+'"'),m.id);
  }
  assert.equal((html.match(/class="research-region" data-region="/g)||[]).length,index.municipalities.length);
- assert.match(html,/id="research-feature-title">愛知県 一宮市/);
+ assert.match(html,/id="research-feature-title">地域を選んで、PTAの実態を調べる。/);
  assert.match(html,/href="\/research\/ichinomiya\.html"/);
  assert.match(html,/class="research-region-grid research-region-featured"/);
  assert.match(html,/class="research-region-grid research-region-remaining"/);
@@ -69,5 +69,16 @@ test("Japan-first map uses visible pins, zoom and right-panel contrast", () => {
   assert.match(css, /height: 690px !important/);
   assert.match(css, /research-feature-desc,\s*body\.research-map-page/);
   assert.match(html, /地図のピンを押すと/);
-  assert.match(html, /20261116-japan-v2/);
+  assert.match(html, /20261116-neutral-v3/);
+});
+
+test("national summary not single-city feature, aligned heading and larger municipality names",()=>{
+ const html=text("research-map.html"),js=text("js/research-map.js"),css=text("css/research-map-redesign.css");
+ assert.ok(html.indexOf('class="research-map-heading"')<html.indexOf('class="research-map-layout"'));
+ assert.match(html,/31自治体・地域の資料を掲載/);
+ assert.match(html,/一宮市<span>21校/);
+ assert.match(html,/大崎市<span>25校/);
+ assert.match(html,/id="research-feature-reset"/);
+ assert.match(js,/marker\.on\("click", \(\) => selectFeature\(group\[0\]\)\)/);
+ assert.match(css,/font-size:clamp\(1\.8rem,2\.55vw,2\.28rem\)/);
 });
