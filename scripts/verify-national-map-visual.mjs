@@ -43,6 +43,18 @@ try {
       else assert.ok(result.card.y >= result.map.bottom,"On mobile the summary must follow, not cover, the map: "+JSON.stringify(result));
       assert.match(await page.locator("#research-feature-title").textContent(),/地域を選んで/);
       assert.equal(await page.locator("#research-feature-quicklinks a").count(),2);
+      const quickColors = await page.evaluate(() => {
+        const root = document.querySelector("#research-feature-quicklinks");
+        const a = root.querySelector("a");
+        const count = a.querySelector("span");
+        const note = root.querySelector("small");
+        const details = el => ({color:getComputedStyle(el).color,fill:getComputedStyle(el).webkitTextFillColor});
+        return {city:details(a),schoolCount:details(count),note:details(note)};
+      });
+      assert.deepEqual(quickColors.city,{color:"rgb(255, 255, 255)",fill:"rgb(255, 255, 255)"});
+      assert.deepEqual(quickColors.schoolCount,{color:"rgb(255, 232, 184)",fill:"rgb(255, 232, 184)"});
+      assert.deepEqual(quickColors.note,{color:"rgb(231, 241, 245)",fill:"rgb(231, 241, 245)"});
+      console.log("Quicklink color contrast:",JSON.stringify(quickColors));
       await page.locator(".pta-map-marker").first().click({force:true});
       await page.waitForFunction(() => document.querySelector(".research-map-feature")?.dataset.featureMode === "selected");
       assert.match(await page.locator("#research-feature-title").textContent(),/県|府|都|道/);
