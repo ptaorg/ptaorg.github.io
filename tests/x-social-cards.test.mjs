@@ -5,12 +5,12 @@ import path from 'node:path';
 const root=process.cwd();
 const enumerator=(dir)=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(d=>d.isFile()&&d.name.endsWith('.html')?[path.join(dir,d.name)]:d.isDirectory()?enumerator(path.join(dir,d.name)):[]);
 const routes=['index.html','research-map.html','pta-evaluation-method.html','contact.html','explore.html','national-archive.html',...enumerator('research'),...enumerator('journal'),...enumerator('archive/osaki'),...enumerator('archive/ichinomiya')].filter(p=>p.endsWith('.html'));
-const meta=(head,k)=>{const tags=[...head.matchAll(/<meta\\b[^>]*>/gi)].map(x=>x[0]);return tags.filter(tag=>tag.includes('name="'+k+'"')||tag.includes('property="'+k+'"'));};
+const meta=(head,k)=>{const tags=[...head.matchAll(/<meta\b[^>]*>/gi)].map(x=>x[0]);return tags.filter(tag=>tag.includes('name="'+k+'"')||tag.includes('property="'+k+'"'));};
 test('Shareable PTA pages carry one full X large-image card and Open Graph image',()=>{
   assert.ok(routes.length>=105,'unexpected sharing coverage');
   for(const route of routes){
     const html=fs.readFileSync(route,'utf8');
-    const head=html.match(/<head\\b[^>]*>([\\s\\S]*?)<\\/head>/i)?.[1];
+    const head=html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1];
     assert.ok(head,route+': head');
     for(const k of ['og:title','og:description','og:url','og:image','twitter:card','twitter:title','twitter:description','twitter:image']){
       assert.equal(meta(head,k).length,1,route+' '+k);
