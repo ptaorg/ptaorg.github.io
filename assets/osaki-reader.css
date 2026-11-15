@@ -66,7 +66,7 @@
 .osr-municipal-stats strong small{font-size:.75rem;color:#677784}
 .osr-municipal-stats span{font-size:.84rem;color:#4b5a68;line-height:1.65}
 .osr-municipal-prose{background:#fff;border:1px solid #e3e6e8;border-radius:12px;padding:22px clamp(17px,3vw,30px)}
-.osr-municipal-prose p{font-size:1rem;line-height:2;max-width:88ch;color:#2d3e4c;margin:0 0 18px}
+ .osr-municipal-prose p{font-size:1rem;line-height:2;max-width:none;width:100%;color:#2d3e4c;margin:0 0 18px}
 .osr-municipal-prose p:last-child{margin-bottom:0}
 .osr-municipal-prose-first{font-weight:650}
 .osr-municipal-subhead{color:#263c4d!important;font-size:1.3rem!important;margin:30px 0 18px!important}
@@ -182,14 +182,16 @@ body.osaki-overview-open #main.method .osr-municipal-opening {
   max-width: 1040px;
 }
 body.osaki-overview-open #main.method .osr-municipal-prose {
-  max-width: 1160px;
+  max-width: none;
+  width: 100%;
   padding: 0 !important;
   border: 0 !important;
   border-radius: 0 !important;
   background: transparent !important;
 }
 body.osaki-overview-open #main.method .osr-municipal-prose p {
-  max-width: 92ch;
+  max-width: none;
+  width: 100%;
 }
 body.osaki-overview-open #main.method .osr-municipal-stats {
   max-width: 1160px;
