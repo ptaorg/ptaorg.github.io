@@ -1,0 +1,1629 @@
+{
+  "version": "1.0.0",
+  "asOf": "2026-11-15",
+  "skillVersion": "1.1.0",
+  "municipality": "大崎市",
+  "scope": {
+    "totalSchools": 25,
+    "availableSchoolDocuments": 23,
+    "unreleasedSchoolDocuments": 2,
+    "documentCount": 220,
+    "documentPages": 983,
+    "schoolFeeDocumented": 5,
+    "feeRouteUnestablished": 20
+  },
+  "method": "固定12軸の資料記載を本人加入記録・徴収経路・法令要件に接続する二層審査。20校は徴収経路未立証（うち2校は学校別資料未開示）。手元にない原本を直接再監査したとは表明しない。",
+  "sourceStatus": "提供データの観察記録を掲載。原本983頁の公開前独立再監査と法的認定の完了を意味しない。 法令要件の横断審査で5セルを再分類した。各原本983頁の独立再照合は完了していない。",
+  "legalReviewOrder": [
+    "主体の分離",
+    "事務の帰属",
+    "学校側の所掌事務・公法上の権限",
+    "個人情報保護法61条の保有必要性・利用目的",
+    "個人情報保護法69条の利用・提供制限と臨時性",
+    "教職員・会計保管・会費債権・独立救済要件",
+    "適用条文・反証・未確認・暫定結論の分離"
+  ],
+  "legalRules": [
+    {
+      "id": "membership_contract",
+      "title": "本人の加入意思・会員資格",
+      "law": "民法521・522条",
+      "legalTest": "保護者本人による申込み・PTA承諾・会員資格の開始・対象年度が結び付く記録は何か",
+      "noAutomaticConclusion": "申込書の不提出≠契約不成立。非会員名簿は要求しない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089",
+      "triggerAxes": [
+        "voluntary_membership_notice",
+        "explicit_opt_in"
+      ]
+    },
+    {
+      "id": "fee_claim",
+      "title": "会費債権・請求対象者",
+      "law": "民法521・522・703・709条",
+      "legalTest": "会則・会費額・請求主体・請求対象者・会員履歴・納付実績",
+      "noAutomaticConclusion": "債権の根拠不提示≠債権不存在。703条・709条は独立要件",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089",
+      "triggerAxes": [
+        "explicit_opt_in",
+        "school_collection_of_pta_fee"
+      ]
+    },
+    {
+      "id": "consumer_contract",
+      "title": "自動加入条項・加入勧誘",
+      "law": "消費者契約法4・10条",
+      "legalTest": "PTAと保護者間の消費者契約該当性、勧誘、無作為みなし条項、不当性の要件",
+      "noAutomaticConclusion": "消費者契約該当性未確認で同法違反としない。10条は条項と信義則違反の確認が必要",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/412AC0000000061",
+      "triggerAxes": [
+        "explicit_opt_in",
+        "voluntary_membership_notice"
+      ]
+    },
+    {
+      "id": "task_authority",
+      "title": "学校が私的団体の事務を実施する権限",
+      "law": "学校教育法・地方教育行政法及び当該自治体の法令上の所掌",
+      "legalTest": "誰の内部事務か。学校の所掌・公務としての権限・個別例外根拠",
+      "noAutomaticConclusion": "委任、同意、校務分掌、学校徴収金内規、校長裁量、慣行は公法上の権限創設の代替ではない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/322AC0000000026",
+      "triggerAxes": [
+        "school_collection_of_pta_fee",
+        "teacher_internal_pta_admin",
+        "school_pta_governance_overlap"
+      ]
+    },
+    {
+      "id": "public_personal_data_purpose",
+      "title": "学校保有情報の目的・必要性",
+      "law": "個人情報保護法61条",
+      "legalTest": "対象情報・原保有目的・当該学校所掌事務・利用必要性",
+      "noAutomaticConclusion": "まず権限を確認してから61条へ。本人同意を所掌権限と混同しない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057",
+      "triggerAxes": [
+        "school_personal_data_for_pta",
+        "school_collection_of_pta_fee"
+      ]
+    },
+    {
+      "id": "public_personal_data_use",
+      "title": "目的外利用・PTA提供",
+      "law": "個人情報保護法69条1・2項、70条",
+      "legalTest": "学校内部利用と外部提供を分離、利用目的内外、69条2項各号の根拠・臨時性・不当侵害のおそれ、提供先措置",
+      "noAutomaticConclusion": "69条2項を恒常的な学校会員管理の包括権限にしない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057",
+      "triggerAxes": [
+        "school_personal_data_for_pta",
+        "school_collection_of_pta_fee"
+      ]
+    },
+    {
+      "id": "pta_personal_data",
+      "title": "PTA自身の取得と管理",
+      "law": "個人情報保護法17・18・20・21・23・27条",
+      "legalTest": "PTAの個人情報取扱事業者該当性、本人からの取得・通知・目的・安全管理・第三者提供",
+      "noAutomaticConclusion": "学校の全保護者情報の取得を必要条件にしない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057",
+      "triggerAxes": [
+        "school_personal_data_for_pta",
+        "explicit_opt_in"
+      ]
+    },
+    {
+      "id": "teachers_service",
+      "title": "教職員によるPTA事務",
+      "law": "地方公務員法35条、34条、60条2号",
+      "legalTest": "実従事者・勤務時間・職務命令・職務専念義務免除・秘密情報の有無",
+      "noAutomaticConclusion": "委託契約の存在≠公務の権限・刑事犯罪の成立",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/325AC0000000261",
+      "triggerAxes": [
+        "teacher_internal_pta_admin",
+        "school_pta_governance_overlap"
+      ]
+    },
+    {
+      "id": "public_cash_custody",
+      "title": "PTA資金の受領・保管",
+      "law": "地方自治法235条の4第2項・施行令168条の7",
+      "legalTest": "受領者・口座名義・預金契約・処分権限・自治体による保管該当性・法律政令上の例外",
+      "noAutomaticConclusion": "PTA名義口座≠学校事務の適法性。校長名義口座や学校集金案内だけで違反を確定しない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067",
+      "triggerAxes": [
+        "school_account_or_payment_system",
+        "school_collection_of_pta_fee"
+      ]
+    },
+    {
+      "id": "pta_school_spending",
+      "title": "PTAから学校への資金移動",
+      "law": "地方財政法4条の5、寄附受納・財務会計関係法令",
+      "legalTest": "資金移動の実在、寄附受納、公費で負担すべき経費、割当的寄附の該当性",
+      "noAutomaticConclusion": "地方自治法232条の2は自治体による寄附・補助でありPTA→学校の直接根拠ではない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/323AC0000000109",
+      "triggerAxes": [
+        "pta_spending_on_school_costs"
+      ]
+    },
+    {
+      "id": "social_education",
+      "title": "社会教育関係団体の独立性",
+      "law": "社会教育法10・12条",
+      "legalTest": "PTAの社会教育関係団体該当性、学校・自治体による不当な統制的支配・干渉の具体的実態",
+      "noAutomaticConclusion": "学校との協力だけで12条違反とはしない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/324AC0000000207",
+      "triggerAxes": [
+        "school_pta_governance_overlap"
+      ]
+    },
+    {
+      "id": "officers",
+      "title": "役員選出・無回答委任",
+      "law": "民法521・522条、委任・意思表示に関する民法規定",
+      "legalTest": "本人の就任・委任意思・選考資料の学校関与・免除事情の取得目的",
+      "noAutomaticConclusion": "無回答のみを就任意思の証拠としない。委任と役員就任は別",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089",
+      "triggerAxes": [
+        "officer_selection_pressure",
+        "sensitive_exemption_questions"
+      ]
+    },
+    {
+      "id": "child_treatment",
+      "title": "児童の公平な取扱い",
+      "law": "学校教育関係法令、憲法14・26条の公的学校との関係",
+      "legalTest": "学校が担う教育活動か、経費の性質、実際の差異と合理的理由",
+      "noAutomaticConclusion": "PTAによる私的な事業へ憲法を直ちに直接適用しない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/321CONSTITUTION",
+      "triggerAxes": [
+        "nonmember_equal_treatment"
+      ]
+    },
+    {
+      "id": "civil_remedies",
+      "title": "民事上の返還・賠償",
+      "law": "民法703・709条、国家賠償法1条",
+      "legalTest": "法律上の原因・受益損失、損害・故意過失・因果関係、公務性等",
+      "noAutomaticConclusion": "徴収案内のみで返還・国家賠償の成立と断定しない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089",
+      "triggerAxes": [
+        "school_collection_of_pta_fee",
+        "explicit_opt_in"
+      ]
+    },
+    {
+      "id": "public_audit",
+      "title": "住民監査請求",
+      "law": "地方自治法242条",
+      "legalTest": "特定の財務会計上の行為・違法不当性・監査請求期間・住民該当性",
+      "noAutomaticConclusion": "制度への一般的不満のみで242条の対象としない",
+      "primaryLawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067",
+      "triggerAxes": [
+        "school_pta_governance_overlap",
+        "pta_spending_on_school_costs"
+      ]
+    }
+  ],
+  "schools": [
+    {
+      "schoolId": "furukawa-daiichi-es",
+      "schoolName": "古川第一小学校",
+      "schoolType": "小学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [],
+      "legalTopics": [],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/furukawa-daiichi-es/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認"
+      ],
+      "priorityReview": false,
+      "sourceRefsCount": 0,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "furukawa-daini-es",
+      "schoolName": "古川第二小学校",
+      "schoolType": "小学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [
+        {
+          "axis": "officer_selection_pressure",
+          "label": "役員選出の強制・抽選等",
+          "status": "confirmed_yes",
+          "evidenceNote": "学年委員選出アンケートに「期限内に回答がない場合は、『選出を委任（お任せ）いただいたもの』として調整を進めさせていただきます」と記載。別の案内では「欠席（無回答）の場合には、委任状とさせていただきます」と記載。無回答を選出への委任とみなす運用を直接確認した。個々の保護者が実際に役員に割り当てられたかまでは判定しない。",
+          "sourceRefs": [
+            {
+              "sourceId": "daini-officer-survey",
+              "title": "古二小 公文書開示資料1-6（本部役員立候補届・推薦書、学年委員選出アンケート）",
+              "locator": "PDF p.11『4 回答期限』下の注記",
+              "url": null
+            },
+            {
+              "sourceId": "daini-disclosure-1",
+              "title": "古二小 公文書開示資料1-1,1-4,3-2,4-4（総会案内・会則・集金関係）",
+              "locator": "PDF p.41・p.72・p.73 総会出欠確認の注記",
+              "url": null
+            }
+          ]
+        }
+      ],
+      "legalTopics": [
+        {
+          "id": "officers",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        }
+      ],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/furukawa-daini-es/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認",
+        "無回答・欠席の委任みなしと本人の役員就任意思の有無"
+      ],
+      "priorityReview": true,
+      "sourceRefsCount": 2,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "furukawa-daisan-es",
+      "schoolName": "古川第三小学校",
+      "schoolType": "小学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [],
+      "legalTopics": [],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/furukawa-daisan-es/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認"
+      ],
+      "priorityReview": false,
+      "sourceRefsCount": 0,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "furukawa-daiyon-es",
+      "schoolName": "古川第四小学校",
+      "schoolType": "小学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [],
+      "legalTopics": [],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/furukawa-daiyon-es/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認"
+      ],
+      "priorityReview": false,
+      "sourceRefsCount": 0,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "furukawa-daigo-es",
+      "schoolName": "古川第五小学校",
+      "schoolType": "小学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [],
+      "legalTopics": [],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/furukawa-daigo-es/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認"
+      ],
+      "priorityReview": false,
+      "sourceRefsCount": 0,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "furukawa-kita-es",
+      "schoolName": "古川北小学校",
+      "schoolType": "小学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [],
+      "legalTopics": [],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/furukawa-kita-es/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認"
+      ],
+      "priorityReview": false,
+      "sourceRefsCount": 0,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "shikitama-es",
+      "schoolName": "敷玉小学校",
+      "schoolType": "小学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [
+        {
+          "axis": "voluntary_membership_notice",
+          "label": "任意加入の明示",
+          "status": "confirmed_yes",
+          "evidenceNote": "役員選出方法改訂文書の＜確認＞欄「Ⅱ ＰＴＡ加入について ・任意ではありますが、是非加入をお願いします。」と、加入が任意である旨を文書で明示している。明示の有無の確認であり、実際の入会手続の適否は別に判断する。",
+          "sourceRefs": [
+            {
+              "sourceId": "shikitama-officer-rule",
+              "title": "敷玉小学校 PTA本部役員並びに各専門委員選出方法改訂について（R8〜）",
+              "locator": "PDF p.2 ＜確認＞Ⅱ ＰＴＡ加入について",
+              "url": null
+            }
+          ]
+        },
+        {
+          "axis": "nonmember_equal_treatment",
+          "label": "非会員児童等への公平配慮",
+          "status": "confirmed_no",
+          "evidenceNote": "同じ＜確認＞欄に「未加入の場合は、個々に係るＰＴＡからの卒業記念品や学年ＰＴＡ行事の補助金等については未加入のご家庭に確認しながらその都度徴収させていただきます」と記載。非会員の児童生徒を区別しない旨の明示ではなく、未加入家庭に別の取扱いをすることを明示している。実際に徴収・区別が行われた件数までは判定しない。",
+          "sourceRefs": [
+            {
+              "sourceId": "shikitama-officer-rule",
+              "title": "敷玉小学校 PTA本部役員並びに各専門委員選出方法改訂について（R8〜）",
+              "locator": "PDF p.2 ＜確認＞Ⅱ ＰＴＡ加入について 2点目",
+              "url": null
+            }
+          ]
+        },
+        {
+          "axis": "teacher_internal_pta_admin",
+          "label": "教職員のPTA内部事務従事",
+          "status": "indication",
+          "evidenceNote": "役員選出方法改訂文書は各専門委員会を「委員と教員若干名で構成する」と定め、委託契約書は父母教師会の会計事務を委託対象とする。教職員がPTA内部事務に関与する構成は示されるが、個々の教職員の実作業記録は未照合のため確認済みとしない。",
+          "sourceRefs": [
+            {
+              "sourceId": "shikitama-officer-rule",
+              "title": "敷玉小学校 PTA本部役員並びに各専門委員選出方法改訂について（R8〜）",
+              "locator": "PDF p.2 第3条2〜4項",
+              "url": null
+            },
+            {
+              "sourceId": "shikitama-contract",
+              "title": "敷玉小学校 委託契約書（父母教師会の会計事務、委託金額無償）",
+              "locator": "PDF p.1 頭書",
+              "url": null
+            }
+          ]
+        },
+        {
+          "axis": "school_pta_governance_overlap",
+          "label": "学校・PTAの意思決定／事務の混在",
+          "status": "indication",
+          "evidenceNote": "会計事務の無償委託契約書は提出されているが、相手方が未記入の様式であり、実際の契約締結・受託・執行は確認できない。PTAと学校の事務混在を示唆する資料として扱う。",
+          "sourceRefs": [
+            {
+              "sourceId": "shikitama-contract",
+              "title": "敷玉小学校 委託契約書（父母教師会の会計事務、委託金額無償）",
+              "locator": "PDF p.1 頭書および第1条",
+              "url": null
+            }
+          ]
+        }
+      ],
+      "legalTopics": [
+        {
+          "id": "membership_contract",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "consumer_contract",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "task_authority",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "teachers_service",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "social_education",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_audit",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        }
+      ],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/shikitama-es/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認",
+        "受託契約の成立、教職員の実従事、職務命令と職専免、学校の所掌・勤務時間、資金処理"
+      ],
+      "priorityReview": false,
+      "sourceRefsCount": 5,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "matsuyama-es",
+      "schoolName": "松山小学校",
+      "schoolType": "小学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [
+        {
+          "axis": "school_account_or_payment_system",
+          "label": "学校口座・徴収システムの利用",
+          "status": "indication",
+          "evidenceNote": "校長名の一日入学資料「学校徴収金の口座振替について」でゆうちょ銀行の自動払込利用申込書の提出を求めている。PTA会費が同じ口座振替に含まれるかは当該資料から確認できないため、示唆にとどめる。",
+          "sourceRefs": [
+            {
+              "sourceId": "matsuyama-es-kouza",
+              "title": "松山小学校 一日入学学校徴収金説明資料（校長名「学校徴収金の口座振替について」）",
+              "locator": "PDF p.1〜2",
+              "url": null
+            }
+          ]
+        }
+      ],
+      "legalTopics": [
+        {
+          "id": "public_cash_custody",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        }
+      ],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/matsuyama-es/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認"
+      ],
+      "priorityReview": false,
+      "sourceRefsCount": 1,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "sanbongi-es",
+      "schoolName": "三本木小学校",
+      "schoolType": "小学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [
+        {
+          "axis": "voluntary_membership_notice",
+          "label": "任意加入の明示",
+          "status": "indication",
+          "evidenceNote": "「令和8年度 ＰＴＡ所属について（新入学児童用）」に「地区ＰＴＡの活動について ※所属は任意」と記載。任意である旨の明示だが、対象は地区ＰＴＡへの所属であり、単位ＰＴＡへの入会の任意性を明示したものかは原本から確定できない。",
+          "sourceRefs": [
+            {
+              "sourceId": "sanbongi-es-chiku",
+              "title": "令和8年度 三本木小学校 PTA所属について（新入学児童用）",
+              "locator": "PDF p.1",
+              "url": null
+            }
+          ]
+        }
+      ],
+      "legalTopics": [
+        {
+          "id": "membership_contract",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "consumer_contract",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        }
+      ],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/sanbongi-es/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認"
+      ],
+      "priorityReview": false,
+      "sourceRefsCount": 1,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "kashimadai-es",
+      "schoolName": "鹿島台小学校",
+      "schoolType": "小学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [
+        {
+          "axis": "school_personal_data_for_pta",
+          "label": "学校保有情報のPTA目的利用・提供",
+          "status": "indication",
+          "evidenceNote": "開示された地区子ども会行事の同意書は、担当地区会長への氏名・住所・電話番号の提供を予定する記載である。地区子ども会とPTAの組織同一性は根拠資料に示されておらず、PTA目的利用・提供を確認済みとすることはできない。実際の提供も未確認。",
+          "sourceRefs": [
+            {
+              "sourceId": "kashimadai-consent",
+              "title": "鹿島台小学校 R8年度子ども会個人情報同意書",
+              "locator": "PDF p.1 全面",
+              "url": null
+            }
+          ]
+        }
+      ],
+      "legalTopics": [
+        {
+          "id": "public_personal_data_purpose",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_personal_data_use",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "pta_personal_data",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        }
+      ],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/kashimadai-es/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認",
+        "学校保有情報の収集目的・情報の利用及びPTAへの提供の有無。学校の権限→個情法61→69条の順"
+      ],
+      "priorityReview": false,
+      "sourceRefsCount": 1,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "iwadeyama-es",
+      "schoolName": "岩出山小学校",
+      "schoolType": "小学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [],
+      "legalTopics": [],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/iwadeyama-es/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認"
+      ],
+      "priorityReview": false,
+      "sourceRefsCount": 0,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "tajiri-es",
+      "schoolName": "田尻小学校",
+      "schoolType": "小学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "school_collection_documented",
+      "feeRouteDescription": "学校徴収を示す資料確認済み。実際の個別収納・支払は別途確認。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [
+        {
+          "axis": "school_collection_of_pta_fee",
+          "label": "学校によるPTA会費徴収",
+          "status": "confirmed_yes",
+          "evidenceNote": "「【田尻小学校】学校徴収金、ＰＴＡ会費等の納入について」に「本校では学校徴収金・ＰＴＡ関連費の集金を口座振替にて行います」と記載し、口座振替の対象に「③ＰＴＡ会費」「④ＰＴＡ安全互助会事業負担金」を掲げている。学校の集金にPTA会費が含まれることを直接確認した。個々の保護者の支払状況は判定しない。",
+          "sourceRefs": [
+            {
+              "sourceId": "tajiri-es-shiori",
+              "title": "田尻小学校 入学のしおり R7（学校徴収金・PTA会費等の納入について）",
+              "locator": "PDF p.18『1 集金方法について』『2 口座振替の対象となる集金について』",
+              "url": null
+            }
+          ]
+        },
+        {
+          "axis": "school_account_or_payment_system",
+          "label": "学校口座・徴収システムの利用",
+          "status": "confirmed_yes",
+          "evidenceNote": "同資料は口座振替の対象にPTA会費を含め、校務分掌「Ⅶ 事務部」も「学校徴収金の集金は、口座振替とする」と定める。振替先の口座名義・収納契約主体は未確認であり、学校名義口座の使用は断定しない。",
+          "sourceRefs": [
+            {
+              "sourceId": "tajiri-es-shiori",
+              "title": "田尻小学校 入学のしおり R7（学校徴収金・PTA会費等の納入について）",
+              "locator": "PDF p.18〜20",
+              "url": null
+            },
+            {
+              "sourceId": "tajiri-es-jimu",
+              "title": "田尻小学校 校務分掌「Ⅶ 事務部」（学校徴収金の取扱い）",
+              "locator": "PDF p.1・p.8",
+              "url": null
+            }
+          ]
+        }
+      ],
+      "legalTopics": [
+        {
+          "id": "fee_claim",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "task_authority",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_personal_data_use",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_cash_custody",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "civil_remedies",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        }
+      ],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/tajiri-es/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校の具体的な公法上の所掌・権限、口座振替・現金収納・校長決裁の担当者、目的外利用の有無"
+      ],
+      "priorityReview": true,
+      "sourceRefsCount": 3,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "numabe-es",
+      "schoolName": "沼部小学校",
+      "schoolType": "小学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [],
+      "legalTopics": [],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/numabe-es/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認"
+      ],
+      "priorityReview": false,
+      "sourceRefsCount": 0,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "onuki-es",
+      "schoolName": "大貫小学校",
+      "schoolType": "小学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [
+        {
+          "axis": "school_account_or_payment_system",
+          "label": "学校口座・徴収システムの利用",
+          "status": "indication",
+          "evidenceNote": "校長名の一日入学資料「学校徴収金の口座振替について」が自動払込利用申込書の提出を求めている。PTA会費が同じ振替に含まれるかは当該資料から確認できない。",
+          "sourceRefs": [
+            {
+              "sourceId": "onuki-kouza",
+              "title": "大貫小学校 一日入学学校徴収金説明資料（校長名「学校徴収金の口座振替について」）",
+              "locator": "PDF p.1〜2",
+              "url": null
+            }
+          ]
+        },
+        {
+          "axis": "teacher_internal_pta_admin",
+          "label": "教職員のPTA内部事務従事",
+          "status": "confirmed_yes",
+          "evidenceNote": "同契約書第1条は「乙は、委託された業務を行うため、必要な人員を学校教職員から選出しなければならない」と定める。PTAの庶務・会計事務に学校教職員を充てることが契約上義務づけられていることを直接確認した。個々の教職員の実作業時間・内容は未照合。",
+          "sourceRefs": [
+            {
+              "sourceId": "onuki-contract",
+              "title": "大貫小学校 委託契約書（PTAの事務局業務（庶務・会計）、無償、校長受諾）",
+              "locator": "PDF p.1 第1条",
+              "url": null
+            }
+          ]
+        },
+        {
+          "axis": "school_pta_governance_overlap",
+          "label": "学校・PTAの意思決定／事務の混在",
+          "status": "confirmed_yes",
+          "evidenceNote": "令和8年4月25日付委託契約書は、委託業務の名称を「大崎市立大貫小学校ＰＴＡの事務局業務（庶務・会計）」、委託金額を無償とし、甲をPTA会長、乙を「大崎市立大貫小学校長 （氏名省略）」として校長職印の押印がある。第2条は甲が乙に報告を求め必要な指示をすることができると定める。PTAの事務局業務を学校長が受託する関係を直接確認した。公法上の権限・適法性は別に判断する。",
+          "sourceRefs": [
+            {
+              "sourceId": "onuki-contract",
+              "title": "大貫小学校 委託契約書（PTAの事務局業務（庶務・会計）、無償、校長受諾）",
+              "locator": "PDF p.1 頭書・第2条・末尾署名押印",
+              "url": null
+            }
+          ]
+        }
+      ],
+      "legalTopics": [
+        {
+          "id": "task_authority",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "teachers_service",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_cash_custody",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "social_education",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_audit",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        }
+      ],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/onuki-es/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認",
+        "受託契約の成立、教職員の実従事、職務命令と職専免、学校の所掌・勤務時間、資金処理"
+      ],
+      "priorityReview": true,
+      "sourceRefsCount": 3,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "furukawa-jhs",
+      "schoolName": "古川中学校",
+      "schoolType": "中学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [],
+      "legalTopics": [],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/furukawa-jhs/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認"
+      ],
+      "priorityReview": false,
+      "sourceRefsCount": 0,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "furukawa-kita-jhs",
+      "schoolName": "古川北中学校",
+      "schoolType": "中学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "school_collection_documented",
+      "feeRouteDescription": "学校徴収を示す資料確認済み。実際の個別収納・支払は別途確認。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [
+        {
+          "axis": "school_collection_of_pta_fee",
+          "label": "学校によるPTA会費徴収",
+          "status": "confirmed_yes",
+          "evidenceNote": "新入生保護者説明会資料に「『学校集金』として徴収します。本校では、『学校集金』を指定農協口座から口座振替で行っております」と記載し、関係書類を一日入学の受付に提出するよう求めている。別資料には残高不足時に「学校まで現金で納付願います」と記載。PTA会費を含む学校集金を学校の系統で収納する取扱いを直接確認した。",
+          "sourceRefs": [
+            {
+              "sourceId": "kitachu-oral",
+              "title": "古川北中学校 PTA関係開示「新入生保護者説明会資料（口頭でＰＴＡ加入について説明）」",
+              "locator": "PDF p.1",
+              "url": null
+            },
+            {
+              "sourceId": "kitachu-disclosure",
+              "title": "古川北中学校 PTA関係開示（新入生保護者説明会資料、規約、決算・監査報告ほか）",
+              "locator": "PDF p.1『2 集金時期・金額について』",
+              "url": null
+            }
+          ]
+        },
+        {
+          "axis": "school_pta_governance_overlap",
+          "label": "学校・PTAの意思決定／事務の混在",
+          "status": "confirmed_yes",
+          "evidenceNote": "「令和7年度体育文化振興費会計 会計及び監査報告書」は校長名と学校の会計担当者名で作成され、監査報告は「大崎市立小中学校徴収金事務取扱規程第17条により監査を行った」と記載する。団体費会計を学校の徴収金事務の系統で処理していることを直接確認した。資金の保管主体・公法上の権限は別に判断する。",
+          "sourceRefs": [
+            {
+              "sourceId": "kitachu-disclosure",
+              "title": "古川北中学校 PTA関係開示（新入生保護者説明会資料、規約、決算・監査報告ほか）",
+              "locator": "PDF p.6・p.8・p.10 決算および監査報告",
+              "url": null
+            }
+          ]
+        }
+      ],
+      "legalTopics": [
+        {
+          "id": "fee_claim",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "task_authority",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_personal_data_use",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "teachers_service",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_cash_custody",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "social_education",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "civil_remedies",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_audit",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        }
+      ],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/furukawa-kita-jhs/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校の具体的な公法上の所掌・権限、口座振替・現金収納・校長決裁の担当者、目的外利用の有無",
+        "受託契約の成立、教職員の実従事、職務命令と職専免、学校の所掌・勤務時間、資金処理"
+      ],
+      "priorityReview": true,
+      "sourceRefsCount": 3,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "furukawa-higashi-jhs",
+      "schoolName": "古川東中学校",
+      "schoolType": "中学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "school_collection_documented",
+      "feeRouteDescription": "学校徴収を示す資料確認済み。実際の個別収納・支払は別途確認。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [
+        {
+          "axis": "voluntary_membership_notice",
+          "label": "任意加入の明示",
+          "status": "indication",
+          "evidenceNote": "同じ集金計画に「任意団体ではありますが」との記載がある。団体の性格への言及であり、加入が任意である旨や加入しない選択肢を示したものかは原本から確定できない。",
+          "sourceRefs": [
+            {
+              "sourceId": "higashichu-plan-r8",
+              "title": "古川東中学校 R8集金計画",
+              "locator": "PDF p.1〜2『③ＰＴＡ関係』",
+              "url": null
+            }
+          ]
+        },
+        {
+          "axis": "school_collection_of_pta_fee",
+          "label": "学校によるPTA会費徴収",
+          "status": "confirmed_yes",
+          "evidenceNote": "R8集金計画に「③ＰＴＡ関係 ・世帯加入になります。『諸費③ＰＴＡ』のとおり納入をお願いいたします。・任意団体ではありますが、学校集金との納入にご協力をお願いいたします」と記載。学校の集金計画にPTA費目を組み込み、世帯単位で納入を求める取扱いを直接確認した。",
+          "sourceRefs": [
+            {
+              "sourceId": "higashichu-plan-r8",
+              "title": "古川東中学校 R8集金計画",
+              "locator": "PDF p.1〜2『③ＰＴＡ関係』",
+              "url": null
+            }
+          ]
+        },
+        {
+          "axis": "officer_selection_pressure",
+          "label": "役員選出の強制・抽選等",
+          "status": "indication",
+          "evidenceNote": "R7立候補推薦案内文書は届出様式を「立候補届・推薦届」とし、届出先を学校の主幹教諭としている。選出手続に学校職員が関与する構成は示されるが、非立候補者への抽選・強制割当の記載は確認できない。",
+          "sourceRefs": [
+            {
+              "sourceId": "higashichu-candidacy",
+              "title": "古川東中学校 R7 立候補推薦案内文書（届出先：主幹教諭）",
+              "locator": "PDF p.1『4 届出様式』『6 届出先』",
+              "url": null
+            }
+          ]
+        }
+      ],
+      "legalTopics": [
+        {
+          "id": "membership_contract",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "fee_claim",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "consumer_contract",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "task_authority",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_personal_data_use",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_cash_custody",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "officers",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "civil_remedies",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        }
+      ],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/furukawa-higashi-jhs/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校の具体的な公法上の所掌・権限、口座振替・現金収納・校長決裁の担当者、目的外利用の有無",
+        "無回答・欠席の委任みなしと本人の役員就任意思の有無"
+      ],
+      "priorityReview": true,
+      "sourceRefsCount": 3,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "furukawa-minami-jhs",
+      "schoolName": "古川南中学校",
+      "schoolType": "中学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [
+        {
+          "axis": "school_personal_data_for_pta",
+          "label": "学校保有情報のPTA目的利用・提供",
+          "status": "indication",
+          "evidenceNote": "R8 PTA総会資料に個人情報取扱規程が置かれ、第12条が第三者提供の制限を定める。PTA側の内部規程であり、学校が保有する情報をPTA目的で利用・提供した事実の直接確認ではない。",
+          "sourceRefs": [
+            {
+              "sourceId": "minamichu-soukai-r8",
+              "title": "古川南中学校 R8 PTA総会資料（会則・個人情報取扱規程を含む）",
+              "locator": "PDF p.25 第10条〜第12条",
+              "url": null
+            }
+          ]
+        }
+      ],
+      "legalTopics": [
+        {
+          "id": "public_personal_data_purpose",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_personal_data_use",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "pta_personal_data",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        }
+      ],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/furukawa-minami-jhs/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認",
+        "学校保有情報の収集目的・情報の利用及びPTAへの提供の有無。学校の権限→個情法61→69条の順"
+      ],
+      "priorityReview": false,
+      "sourceRefsCount": 1,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "matsuyama-jhs",
+      "schoolName": "松山中学校",
+      "schoolType": "中学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [
+        {
+          "axis": "school_account_or_payment_system",
+          "label": "学校口座・徴収システムの利用",
+          "status": "indication",
+          "evidenceNote": "「学校徴収金口座払込みのための郵便貯金自動払込み利用申込の手続について」で自動払込利用申込書の提出を求めている。PTA会費が同じ振替に含まれるかは当該資料から確認できない。",
+          "sourceRefs": [
+            {
+              "sourceId": "matsuyama-jhs-harai",
+              "title": "松山中学校 R8用 学校徴収金口座払込みのための郵便貯金自動払込み利用申込の手続について",
+              "locator": "PDF p.1〜2",
+              "url": null
+            }
+          ]
+        },
+        {
+          "axis": "school_pta_governance_overlap",
+          "label": "学校・PTAの意思決定／事務の混在",
+          "status": "indication",
+          "evidenceNote": "令和8年8月20日現在の「公費・学校徴収金・各種団体費等の会計に係る状況調査票（別紙2）」が学校名で作成され、各種団体費の会計・口座名義・保管場所の記入欄を備える。市教育委員会が団体費会計を学校を通じて把握する構成が示されるが、個々の団体費の処理主体までは当該様式から確定できない。",
+          "sourceRefs": [
+            {
+              "sourceId": "matsuyama-jhs-survey",
+              "title": "令和8年度 公費・学校徴収金・各種団体費等の会計に係る状況調査票（別紙2、松山中学校）",
+              "locator": "PDF p.1 別紙2 調査票本体",
+              "url": null
+            }
+          ]
+        }
+      ],
+      "legalTopics": [
+        {
+          "id": "task_authority",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "teachers_service",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_cash_custody",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "social_education",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_audit",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        }
+      ],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/matsuyama-jhs/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認",
+        "受託契約の成立、教職員の実従事、職務命令と職専免、学校の所掌・勤務時間、資金処理"
+      ],
+      "priorityReview": false,
+      "sourceRefsCount": 2,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "sanbongi-jhs",
+      "schoolName": "三本木中学校",
+      "schoolType": "中学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [],
+      "legalTopics": [],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/sanbongi-jhs/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認"
+      ],
+      "priorityReview": false,
+      "sourceRefsCount": 0,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "kashimadai-jhs",
+      "schoolName": "鹿島台中学校",
+      "schoolType": "中学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_disclosed",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料未開示",
+      "observations": [],
+      "legalTopics": [],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/kashimadai-jhs/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認"
+      ],
+      "priorityReview": false,
+      "sourceRefsCount": 0,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "iwadeyama-jhs",
+      "schoolName": "岩出山中学校",
+      "schoolType": "中学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [],
+      "legalTopics": [],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/iwadeyama-jhs/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認"
+      ],
+      "priorityReview": false,
+      "sourceRefsCount": 0,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "tajiri-jhs",
+      "schoolName": "田尻中学校",
+      "schoolType": "中学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "school_collection_documented",
+      "feeRouteDescription": "学校徴収を示す資料確認済み。実際の個別収納・支払は別途確認。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [
+        {
+          "axis": "school_collection_of_pta_fee",
+          "label": "学校によるPTA会費徴収",
+          "status": "confirmed_yes",
+          "evidenceNote": "校長名の2026年5月11日付「令和8年度学校集金について」はゆうちょ銀行口座振替による学校集金を通知し、再振替不能時は「事務室まで直接納入」と記載。別紙「令和8年度学校集金内訳表」No.1にPTA会費1,500円、No.2にPTA生徒活動援助費2,500円、No.3にPTA安全互助会負担金620円を各学年に計上している。PTA会費を含む学校集金の収納案内を学校が担当していることを直接確認した。PTA会費のみを現金で個別に受領した実績は断定しない。",
+          "sourceRefs": [
+            {
+              "sourceId": "tajiri-jhs-collection-r8",
+              "title": "田尻中学校 令和8年度学校集金について（校長名）",
+              "locator": "PDF p.1『1 納入方法』『3 口座振替日』",
+              "url": null
+            },
+            {
+              "sourceId": "tajiri-jhs-breakdown-r8",
+              "title": "田尻中学校 令和8年度学校集金内訳表",
+              "locator": "PDF p.1 令和8年度学校集金内訳表 No.1〜3",
+              "url": null
+            }
+          ]
+        },
+        {
+          "axis": "school_account_or_payment_system",
+          "label": "学校口座・徴収システムの利用",
+          "status": "indication",
+          "evidenceNote": "学校集金案内はゆうちょ銀行口座振替を指定し、内訳表にPTA会費が含まれる。振替先の口座名義・収納契約主体・学校徴収金システム使用の有無は原資料から未確認であり、学校名義口座の使用は断定しない。",
+          "sourceRefs": [
+            {
+              "sourceId": "tajiri-jhs-collection-r8",
+              "title": "田尻中学校 令和8年度学校集金について（校長名）",
+              "locator": "PDF p.1『1 納入方法』",
+              "url": null
+            },
+            {
+              "sourceId": "tajiri-jhs-breakdown-r8",
+              "title": "田尻中学校 令和8年度学校集金内訳表",
+              "locator": "PDF p.1 No.1",
+              "url": null
+            }
+          ]
+        },
+        {
+          "axis": "teacher_internal_pta_admin",
+          "label": "教職員のPTA内部事務従事",
+          "status": "indication",
+          "evidenceNote": "2026年4月18日付の会計事務委託と、5月11日付校長名の学校集金案内は学校の事務系統の関与を示す。個々の教職員が勤務時間中に遂行したPTA内部事務の実作業記録は未照合のため、確認済みとしない。",
+          "sourceRefs": [
+            {
+              "sourceId": "tajiri-jhs-contract-r8",
+              "title": "田尻中学校 R8 会計事務執行委任依頼・委託契約書",
+              "locator": "PDF p.1〜2",
+              "url": null
+            },
+            {
+              "sourceId": "tajiri-jhs-collection-r8",
+              "title": "田尻中学校 令和8年度学校集金について（校長名）",
+              "locator": "PDF p.1",
+              "url": null
+            }
+          ]
+        },
+        {
+          "axis": "school_pta_governance_overlap",
+          "label": "学校・PTAの意思決定／事務の混在",
+          "status": "confirmed_yes",
+          "evidenceNote": "2026年4月18日付「大崎市立田尻中学校関係諸団体における会計事務の執行委任について（依頼）」は「貴職を団体会計事務取扱者とし、本会の会費の収納に係る事務の代行をお願いいたします」と記載し、添付の委託契約書は委託金額無償、契約保証金免除で学校側の受託署名押印がある。令和7年4月12日付の同種契約書も開示されており、少なくとも2年度にわたる同じ構成を確認した。実際の資金保管や公法上の権限・適法性は別に検証する。",
+          "sourceRefs": [
+            {
+              "sourceId": "tajiri-jhs-contract-r8",
+              "title": "田尻中学校 R8 会計事務執行委任依頼・委託契約書",
+              "locator": "PDF p.1 委任事務1 会費収納事務、p.2 委託契約書",
+              "url": null
+            },
+            {
+              "sourceId": "tajiri-jhs-contract-r7",
+              "title": "田尻中学校 令和7年度PTA委託契約書",
+              "locator": "PDF p.1〜2",
+              "url": null
+            }
+          ]
+        }
+      ],
+      "legalTopics": [
+        {
+          "id": "fee_claim",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "task_authority",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_personal_data_use",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "teachers_service",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_cash_custody",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "social_education",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "civil_remedies",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_audit",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        }
+      ],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/tajiri-jhs/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校の具体的な公法上の所掌・権限、口座振替・現金収納・校長決裁の担当者、目的外利用の有無",
+        "受託契約の成立、教職員の実従事、職務命令と職専免、学校の所掌・勤務時間、資金処理"
+      ],
+      "priorityReview": true,
+      "sourceRefsCount": 8,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "furukawa-nishi-compulsory",
+      "schoolName": "古川西小中学校",
+      "schoolType": "義務教育学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_disclosed",
+      "feeRoute": "route_unestablished",
+      "feeRouteDescription": "学校徴収の資料は今回の提供範囲では未確認。学校徴収不存在、PTA独自徴収、無会費のいずれも未認定。",
+      "documentDisclosure": "学校別資料未開示",
+      "observations": [],
+      "legalTopics": [],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/furukawa-nishi-compulsory/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校徴収の案内が開示されなかった理由。PTA自己徴収・無会費・未提出資料などの可能性の確認"
+      ],
+      "priorityReview": false,
+      "sourceRefsCount": 0,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    },
+    {
+      "schoolId": "naruko-compulsory",
+      "schoolName": "鳴子小中学校",
+      "schoolType": "義務教育学校",
+      "evidencePeriod": "2026年度（個別出典には前年度資料を含む）",
+      "membershipEvidence": "not_found_in_disclosure",
+      "feeRoute": "school_collection_documented",
+      "feeRouteDescription": "学校徴収を示す資料確認済み。実際の個別収納・支払は別途確認。",
+      "documentDisclosure": "学校別資料あり",
+      "observations": [
+        {
+          "axis": "school_collection_of_pta_fee",
+          "label": "学校によるPTA会費徴収",
+          "status": "confirmed_yes",
+          "evidenceNote": "学校の様式第1号「収入伺書」の摘要欄に「第1回ＰＴＡ会費、安全互助会費保護者分」と記載され、職・氏名欄は校長名、「入金完了後に入金が確認できる通帳の写しを添付し、校長の確認を受ける」との注記がある。様式第2-1号「支出伺書」にも同じ摘要と校長・副校長・教頭・事務の決裁欄がある。PTA会費が学校の徴収金事務の様式と決裁系統で処理されていることを直接確認した。",
+          "sourceRefs": [
+            {
+              "sourceId": "naruko-income",
+              "title": "鳴子小中学校 父母教師会収入伺書（様式第1号、校長確認欄）",
+              "locator": "PDF p.1 様式第1号 収入伺書",
+              "url": null
+            },
+            {
+              "sourceId": "naruko-expense",
+              "title": "鳴子小中学校 徴収金支出伺書（様式第2-1号、校長・副校長・教頭・事務決裁欄）",
+              "locator": "PDF p.1 様式第2-1号 支出伺書",
+              "url": null
+            }
+          ]
+        },
+        {
+          "axis": "school_account_or_payment_system",
+          "label": "学校口座・徴収システムの利用",
+          "status": "indication",
+          "evidenceNote": "PTA名義通帳が資料上確認され、校長名義の学校口座を示す資料ではない。一方でPTA会費の収支は学校の決裁様式に記載されるため、学校徴収金システムの使用有無は不明。『学校口座・徴収システムを使っていない』という軸全体の確定NOは付けない。",
+          "sourceRefs": [
+            {
+              "sourceId": "naruko-passbook",
+              "title": "鳴子小中学校 父母教師会通帳（名義：鳴子小中学校父母教師会）",
+              "locator": "PDF p.1 口座名義欄",
+              "url": null
+            },
+            {
+              "sourceId": "city-collection-regulation",
+              "title": "大崎市立小中学校徴収金事務取扱規程（令和4年4月1日施行、全9頁）",
+              "locator": "PDF p.3 第12条第3号",
+              "url": null
+            }
+          ]
+        },
+        {
+          "axis": "school_personal_data_for_pta",
+          "label": "学校保有情報のPTA目的利用・提供",
+          "status": "confirmed_yes",
+          "evidenceNote": "校長名「学校における個人情報の取扱い並びに使用の同意について（お願い）」の利用目的欄に「(9) ＰＴＡ活動のため。(役員選出、広報誌)等への情報提供のため。」と明記され、保護者にフォームでの同意送信を求めている。学校が保有する個人情報をPTA目的に利用・提供する取扱いを直接確認した。同意しなかった場合の取扱い、提供範囲、個人情報保護法上の整理は未確認。",
+          "sourceRefs": [
+            {
+              "sourceId": "naruko-consent-req",
+              "title": "鳴子小中学校 校長名「学校における個人情報の取扱い並びに使用の同意について（お願い）」",
+              "locator": "PDF p.1『1 個人情報利用目的』(9)",
+              "url": null
+            },
+            {
+              "sourceId": "naruko-consent-form",
+              "title": "鳴子小中学校 個人情報の取扱いに関する同意について（フォーム）",
+              "locator": "PDF p.1 同意フォームの設問",
+              "url": null
+            }
+          ]
+        },
+        {
+          "axis": "teacher_internal_pta_admin",
+          "label": "教職員のPTA内部事務従事",
+          "status": "confirmed_yes",
+          "evidenceNote": "父母教師会の収入伺書・支出伺書に校長、副校長、教頭、事務職員の決裁欄が設けられ、記入・確認がなされている。教職員がPTAの会費事務・会計に従事していることを直接確認した。従事時間・職務専念義務との関係は未確認。",
+          "sourceRefs": [
+            {
+              "sourceId": "naruko-expense",
+              "title": "鳴子小中学校 徴収金支出伺書（様式第2-1号、校長・副校長・教頭・事務決裁欄）",
+              "locator": "PDF p.1 決裁欄",
+              "url": null
+            },
+            {
+              "sourceId": "naruko-income",
+              "title": "鳴子小中学校 父母教師会収入伺書（様式第1号、校長確認欄）",
+              "locator": "PDF p.1 職・氏名欄",
+              "url": null
+            }
+          ]
+        },
+        {
+          "axis": "school_pta_governance_overlap",
+          "label": "学校・PTAの意思決定／事務の混在",
+          "status": "confirmed_yes",
+          "evidenceNote": "同じ収入伺書・支出伺書は、父母教師会の会費の収受と支出を学校の決裁様式で処理し、校長が入金・支払完了を確認する構成をとる。PTAの団体会計を学校事務として扱う記載を直接確認した。公法上の権限と適法性は別に判断する。",
+          "sourceRefs": [
+            {
+              "sourceId": "naruko-income",
+              "title": "鳴子小中学校 父母教師会収入伺書（様式第1号、校長確認欄）",
+              "locator": "PDF p.1 校長確認欄",
+              "url": null
+            },
+            {
+              "sourceId": "naruko-expense",
+              "title": "鳴子小中学校 徴収金支出伺書（様式第2-1号、校長・副校長・教頭・事務決裁欄）",
+              "locator": "PDF p.1 決裁欄",
+              "url": null
+            }
+          ]
+        }
+      ],
+      "legalTopics": [
+        {
+          "id": "fee_claim",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "task_authority",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_personal_data_use",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "pta_personal_data",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "teachers_service",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_cash_custody",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "social_education",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "civil_remedies",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        },
+        {
+          "id": "public_audit",
+          "reason": "観察事実又は示唆に関連。違反の成立を認定しない",
+          "status": "要件検証中"
+        }
+      ],
+      "publicSchoolPage": "https://ptaorg.com/archive/osaki/naruko-compulsory/",
+      "followUpQuestions": [
+        "PTAによる加入申込み・承諾を裏付ける本人別記録と会費債権との対応",
+        "PTA会費の有無、徴収主体、収納方法、実際の金銭の受領者・保管者、会計報告",
+        "学校の具体的な公法上の所掌・権限、口座振替・現金収納・校長決裁の担当者、目的外利用の有無",
+        "学校保有情報の収集目的・情報の利用及びPTAへの提供の有無。学校の権限→個情法61→69条の順",
+        "受託契約の成立、教職員の実従事、職務命令と職専免、学校の所掌・勤務時間、資金処理"
+      ],
+      "priorityReview": true,
+      "sourceRefsCount": 10,
+      "caution": "確認されたのは記載・様式・委託条件等の存在であり、公務としての権限や違法性・刑事責任の認定ではない。PTAの独自保有資料は未照合。"
+    }
+  ],
+  "corrections": [
+    "鹿島台小：地区子ども会資料をPTA利用確定として扱わない",
+    "敷玉小：署名のない契約様式を締結済み契約としない",
+    "古川中：安全互助負担金の免除なしを非会員児童差別とみなさない",
+    "古川北中：口頭での加入説明をオプトインの証拠とみなさない",
+    "鳴子小中：PTA名義通帳から学校システム不存在を認定しない"
+  ],
+  "prohibitedInference": [
+    "書類不提示を加入契約不存在と断定しない",
+    "非会員名簿をPTAに要求しない",
+    "学校徴収案内不提示を学校徴収なしとしない",
+    "学校内部規程・契約・本人同意を公法上の権限の代用にしない",
+    "個人情報保護法69条2項を無条件の恒常例外としない",
+    "法令の存在から違反を断定しない",
+    "地方自治法235条の4第2項は地方公共団体による現金保管を立証してから適用する"
+  ]
+}
