@@ -58,7 +58,7 @@ test('school pages embed shared parent report module with a single immutable pol
   const browser=fs.readFileSync('assets/osaki-evidence-report.js','utf8');
   assert.match(browser,/pta-parent-report-policy\.mjs/);
   assert.match(browser,/assessParentSchool/);
-  assert.match(browser,/抵触の有無を検討する法律/);
+  assert.match(fs.readFileSync('assets/pta-parent-report-policy.mjs','utf8'),/抵触の有無を検討する法律/);
   assert.match(browser,/最低限必要なこと/);
   for(const s of audit.schools){
     const html=fs.readFileSync('archive/osaki/'+s.schoolId+'/index.html','utf8');
