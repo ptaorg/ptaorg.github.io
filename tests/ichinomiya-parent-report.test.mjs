@@ -45,5 +45,5 @@ test('mobile styling and source limitations are visible',()=>{
  assert.match(css,/\.hero h1\{font-size:clamp\(3\.1rem/);
  assert.match(cityHtml,/違法認定済みとするものではありません/);
  const osaki=root('assets/osaki-evidence-report.js');
- assert.ok(osaki.includes("\'<h1>\'+esc(s.schoolName)+\'</h1>\'"));
+ assert.ok(osaki.includes("\'<h1>\'+esc(s.schoolName)+\'</h1>"));
 });
