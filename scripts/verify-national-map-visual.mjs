@@ -55,6 +55,10 @@ try {
       assert.deepEqual(quickColors.schoolCount,{color:"rgb(255, 232, 184)",fill:"rgb(255, 232, 184)"});
       assert.deepEqual(quickColors.note,{color:"rgb(231, 241, 245)",fill:"rgb(231, 241, 245)"});
       console.log("Quicklink color contrast:",JSON.stringify(quickColors));
+      const unwantedClasses=await page.locator(".research-map-feature .fix-contrast, .research-map-feature.is-dark-panel, .research-map-feature .is-dark-panel").count();
+      assert.equal(unwantedClasses,0,"Generic contrast script must not recolor the dark map feature");
+      assert.ok(!(await page.locator("#research-feature-quicklinks a").first().getAttribute("class"))?.includes("fix-contrast"));
+
       await page.locator(".pta-map-marker").first().click({force:true});
       await page.waitForFunction(() => document.querySelector(".research-map-feature")?.dataset.featureMode === "selected");
       assert.match(await page.locator("#research-feature-title").textContent(),/県|府|都|道/);

@@ -42,6 +42,8 @@
     const lum = c => { const m = c.match(/rgba?\(([^)]+)\)/); if (!m) return 1; const v = m[1].split(',').map(Number); if (v.length > 3 && v[3] < 0.5) return 1;
       const f = x => { x /= 255; return x <= 0.03928 ? x / 12.92 : Math.pow((x + 0.055) / 1.055, 2.4); }; return 0.2126 * f(v[0]) + 0.7152 * f(v[1]) + 0.0722 * f(v[2]); };
     document.querySelectorAll('.legacy-body *').forEach(el => {
+      // Preserve intentional gradient panels and their light-on-dark palette.
+      if (el.closest('.research-map-feature')) return;
       if (/^(A|BUTTON|SPAN|STRONG|EM|B|SMALL|CODE|MARK|SVG|PATH|IMG|INPUT|SELECT|LABEL|TD|TH|TR)$/i.test(el.tagName)) return;
       const cs = getComputedStyle(el); if (lum(cs.backgroundColor) > 0.12) return;
       if (el.getBoundingClientRect().height < 60) return;
@@ -54,6 +56,9 @@
     const L = v => { const f = x => { x /= 255; return x <= 0.03928 ? x / 12.92 : Math.pow((x + 0.055) / 1.055, 2.4); }; return 0.2126 * f(v[0]) + 0.7152 * f(v[1]) + 0.0722 * f(v[2]); };
     const bgOf = el => { for (let e = el; e && e !== document.documentElement; e = e.parentElement) { const v = parse(getComputedStyle(e).backgroundColor); if (v && (v.length < 4 || v[3] > 0.5)) return v; } return [255, 255, 255]; };
     document.querySelectorAll('.legacy-body *').forEach(el => {
+      // The dark panel has a gradient background: computed backgroundColor can
+      // appear transparent, causing a mistaken dark-ink fix-contrast class.
+      if (el.closest('.research-map-feature')) return;
       if (!el.childNodes.length || ![...el.childNodes].some(n => n.nodeType === 3 && n.textContent.trim())) return;
       const fg = parse(getComputedStyle(el).color); if (!fg) return;
       const a = L(fg), b = L(bgOf(el)); const ratio = (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
