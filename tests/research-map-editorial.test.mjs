@@ -47,7 +47,7 @@ test("reusable renderer is deterministic and protects survey content",()=>{
 });
 test("national map interactions support nested results and clear count",()=>{
  const js=text("js/research-map.js");
- const css=text("css/pages/research-map.css");
+ const css=text("css/research-map-redesign.css");
  assert.match(js,/moreRegions\.open=true/);
  assert.match(js,/wrapper\.open = true/);
  assert.match(js,/schoolReportCount/);
