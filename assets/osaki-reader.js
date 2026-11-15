@@ -118,10 +118,10 @@
       action:'加入意思、役員選出、徴収の根拠、学校の権限、個人情報の利用を分けて確認し、必要な是正を求めます。',
       source:'大崎市25校・15法令検討項目の公開評価'
     } : {
-      title:'PTAの会費を、なぜ学校が集めているのか。',
-      fact:'大崎市の25校を調べ、5校でPTA会費を学校の徴収事務で扱うことを示す資料を確認しました。本人の加入意思や、学校がPTAの事務を行える権限は、別に確認する必要があります。',
-      action:'保護者の加入・役員就任の自由を守り、学校とPTAの事務を分けるため、教育委員会に調査と具体的な改善を求めます。',
-      source:'2026年11月15日・大崎市立25校の調査（学校別資料23校・220件983頁）'
+      title:'PTAへの入会も退会も、保護者が自由に決められるか。',
+      fact:'大崎市25校の公開評価では、明示的な加入申込と退会手続の明示を確認できた学校はいずれも0校でした。23校の開示資料では加入意思記録・退会関係文書を確認できず、2校は学校別資料が未開示です。これは強制加入や契約不存在の確定ではなく、自由が実際に保障されているかを検証できていないことを示します。',
+      action:'最初に入会・非加入・退会の自由と会員資格の確認方法を全校で調査する。そのうえで会費徴収・役員選出・学校の公務権限・個人情報の利用を順次点検し、是正方針を示す。',
+      source:'大崎市25校・12評価軸・10文書種の公表済み台帳（2026年11月15日）'
     };
     const tag = tone==='critical'?'早急な調査・改善を要する':tone==='caution'?'重要事項の確認が必要':'資料不足・引き続き調査';
     const mark = '<div class="osr-hero osr--'+tone+'"><span class="osr-status"><span aria-hidden="true">!</span> '+e(tag)+'</span>'+
@@ -147,12 +147,34 @@
       '<div class="osr-schools">'+schools.map(schoolCard).join('')+'</div>'+
       '<p class="osr-caveat">赤・黄・灰色は「対応・追加確認の優先度」を示し、法令違反や人権侵害の確定認定ではありません。資料不足の学校は、問題なしと判断していません。</p></section>';
   }
+  function cityAssessment(m){
+    if(!m||!Array.isArray(m.assessmentParagraphs)||!Array.isArray(m.priorities)||m.priorities.length!==5)return '';
+    const priorities=m.priorities.map(p=>'<section class="osr-municipal-issue"><div class="osr-municipal-issue-head"><span class="osr-rank">'+e(p.number)+'</span><div><h3>'+e(p.title)+'</h3><span class="osr-issue-status">'+e(p.status)+'</span></div></div><p>'+e(p.description)+'</p><div class="osr-issue-action"><strong>最低限必要なこと</strong><p>'+e(p.action)+'</p></div></section>').join('');
+    const sources=(m.legalBasis||[]).map(l=>'<a href="'+e(l.url)+'" target="_blank" rel="noopener">'+e(l.title)+'</a> <span>'+e(l.question)+'</span>').join('<br>');
+    return '<section class="osr-municipal" id="municipal-review" aria-labelledby="osr-municipal-heading">'+
+      '<p class="osr-municipal-kicker">宮城県大崎市｜2026年度PTA制度・運用の総合評価</p><h2 id="osr-municipal-heading">大崎市の総評</h2>'+
+      '<h3 class="osr-municipal-lead">'+e(m.title)+'</h3>'+
+      '<p class="osr-municipal-opening">'+e(m.standfirst)+'</p>'+
+      '<div class="osr-municipal-stats" aria-label="入会・退会に関する確認状況">'+
+      '<div><strong>'+e(m.membership.explicitJoiningConfirmed)+'<small>／25校</small></strong><span>明示的な加入申込を確認</span></div>'+
+      '<div><strong>'+e(m.membership.withdrawalProcedureConfirmed)+'<small>／25校</small></strong><span>退会手続の明示を確認</span></div>'+
+      '<div><strong>'+e(m.membership.disclosureDocumentsWithoutApplicationOrIntentOrWithdrawal)+'<small>校</small></strong><span>学校別の開示資料で該当3文書種を確認できず</span></div>'+
+      '<div><strong>'+e(m.membership.schoolRecordsUndisclosed)+'<small>校</small></strong><span>学校別資料が未開示</span></div></div>'+
+      '<div class="osr-municipal-prose">'+m.assessmentParagraphs.map((p,i)=>'<p'+(i===0?' class="osr-municipal-prose-first"':'')+'>'+e(p)+'</p>').join('')+'</div>'+
+      '<h3 class="osr-municipal-subhead">大崎市が優先して確認・改善すべき5項目</h3>'+
+      '<div class="osr-municipal-issues">'+priorities+'</div>'+
+      '<div class="osr-municipal-law"><strong>法的検討の入口</strong><p>'+sources+'</p>'+
+      '<p class="osr-caveat">市と学校は公的主体、PTAは独立した私的団体です。学校がPTAの内部事務を扱う場合は、本人同意より先に学校の具体的な所掌事務・公法上の権限を検証し、その後で個人情報保護法61条・69条を検討します。</p></div>'+
+      '<p class="osr-caveat">'+e(m.evidenceStatus)+'</p>'+
+      '<div class="osr-municipal-links"><a href="#schools">学校別25校の評価を見る</a><a href="/research/osaki-legal-review.html">法令別の詳しい評価を見る</a><a href="/research/osaki-documents.html">文書の提出状況を見る</a></div>'+
+      '</section>';
+  }
   function communityContext() {
     return '<section class="osr-community osr-community--context" aria-labelledby="osr-freedom-heading">'+
       '<div class="osr-section-kicker">保護者の権利から考える</div>'+
-      '<h2 id="osr-freedom-heading">「入会する」「役員を引き受ける」は、本人が決めること。</h2>'+
+      '<h2 id="osr-freedom-heading">加入しないことも、退会することも、保護者自身が決める。</h2>'+
       '<div class="osr-focus-grid">'+
-      '<div class="osr-focus"><strong>加入の意思は確認されているか</strong><p>入学しただけでPTAの会員にすることはできません。明示の申込書がなくても契約が成立する場合はありますが、誰の、いつの加入意思に基づくのかを明らかにする必要があります。</p></div>'+
+      '<div class="osr-focus"><strong>第一順位｜加入・退会の自由</strong><p>加入を希望した本人の意思がいつ確認され、非加入と退会の申出がどのように反映されるか。紙の申込書の有無ではなく、会員資格を説明できるかを最初に検証します。</p></div>'+
       '<div class="osr-focus"><strong>役員選出に辞退の自由はあるか</strong><p>古川第二小学校では、無回答を役員選出の委任とみなす記載が確認されています。本人の意思を確認せずに役割を割り当てることは、自由と尊厳に関わる問題です。</p></div>'+
       '<div class="osr-focus"><strong>学校は私的団体の仕事を引き受けられるか</strong><p>PTAの会費徴収や会計は、原則としてPTA固有の事務です。委任や内部規程の存在だけでは、学校が公務として行う権限は生まれません。</p></div>'+
       '</div>'+
@@ -182,12 +204,18 @@
     const article=main && main.querySelector('article.method-wrap');
     const h1=main && main.querySelector('.method-hero h1');
     if(!main || !article || !h1) return;
-    let schools=[];
+    let schools=[],municipal=null;
     try {
       const response=await fetch('/data/osaki-legal-screening-2026.json',{cache:'no-cache'});
       if(!response.ok) throw new Error('School summary unavailable');
       const data=await response.json();
       schools=Array.isArray(data.schools)?data.schools:[];
+      if(isOverview){
+        try{
+          const municipalResponse=await fetch('/data/osaki-municipal-assessment-2026.json',{cache:'no-cache'});
+          if(municipalResponse.ok)municipal=await municipalResponse.json();
+        }catch(err){console.warn('[osaki reader] municipal assessment unavailable',err)}
+      }
     } catch(err) {
       console.warn('[osaki reader] data unavailable, leaving original reports visible',err);
       return;
@@ -198,7 +226,7 @@
     h1.insertAdjacentHTML('afterend',hero(kind,s));
     if(isOverview) {
       const node=document.createElement('div');
-      node.innerHTML=communityContext()+overviewSchools(schools);
+      node.innerHTML=cityAssessment(municipal)+communityContext()+overviewSchools(schools);
       const old = article.querySelector('#schools');
       if(old) old.id='schools-technical-original';
       wrapResearch(article,kind);

@@ -122,3 +122,32 @@ test('nationwide HTML draft inserts optional school-specific summary without inv
   assert.ok(report.indexOf('学校別総評')<report.indexOf('os2-side-card'));
   assert.match(buildParentReportDraft(audit)['schools/naruko-compulsory.html'],/確認・編集が未了/);
 });
+
+test('city-specific evaluation is substantive and prioritizes joining/withdrawal above school cards',()=>{
+  const city=JSON.parse(fs.readFileSync('data/osaki-municipal-assessment-2026.json','utf8'));
+  assert.equal(city.targetSchools,audit.schools.length);
+  const pubs=JSON.parse(fs.readFileSync('data/osaki-public-2026.json','utf8'));
+  for(const [axis, count] of [['explicit_opt_in','explicitJoiningConfirmed'],['withdrawal_procedure','withdrawalProcedureConfirmed'],['voluntary_membership_notice','voluntaryNoticeConfirmed']]){
+    const metric=pubs.axisMetrics.find(x=>x.id===axis);
+    assert.equal(city.membership[count],metric.confirmed_yes);
+  }
+  assert.equal(pubs.schools.filter(x=>x.documents.applicationForm.status==='not_found_in_disclosure'&&x.documents.intentRecord.status==='not_found_in_disclosure'&&x.documents.withdrawalRule.status==='not_found_in_disclosure').length,city.membership.disclosureDocumentsWithoutApplicationOrIntentOrWithdrawal);
+  assert.equal(pubs.schools.filter(x=>x.documents.applicationForm.status==='not_disclosed').length,city.membership.schoolRecordsUndisclosed);
+  assert.equal(city.priorities[0].number,1);
+  assert.match(city.priorities[0].title,/入会・退会の自由/);
+  assert.ok(city.assessmentParagraphs.length>=4);
+  const js=fs.readFileSync('assets/osaki-reader.js','utf8');
+  assert.match(js,/osaki-municipal-assessment-2026\.json/);
+  assert.ok(js.indexOf('cityAssessment(municipal)+communityContext()+overviewSchools(schools)')>=0);
+  const page=fs.readFileSync('research/osaki.html','utf8');
+  assert.match(page,/PTAの入会・退会の自由と学校の関与/);
+});
+test('each school elevates membership and leaving freedom before evidence and overview',()=>{
+  const js=fs.readFileSync('assets/osaki-evidence-report.js','utf8');
+  assert.match(js,/function joiningFirst\(/);
+  assert.match(js,/osaki-public-2026\.json/);
+  assert.ok(js.indexOf('main.insertBefore(membership,article)')<js.indexOf('main.insertBefore(first,article)'));
+  assert.match(js,/最優先の評価項目/);
+  assert.match(js,/退会手続の明示/);
+  assert.match(js,/大崎市の総合評価/);
+});

@@ -53,3 +53,40 @@
 @media(max-width:920px){.osr-schools,.osr-focus-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.osr-hero{padding:18px;border-left-width:5px}.osr-schools,.osr-focus-grid,.osr-summary-bar{grid-template-columns:1fr}.osr-school{min-height:0}.osr-technical>summary{padding:17px}.osr-technical>summary small{margin-left:0}.osr-summary-bar>div{align-items:flex-start}.osr-community{padding-top:22px}.osr-technical>.method-section,.osr-technical>section{padding:15px}}
 @media(prefers-reduced-motion:reduce){.osr-school{transition:none}}
+
+/* 大崎市：25校のリンク集より先に市全体の評価と入退会の自由を示す */
+.osr-municipal{padding:32px clamp(18px,3.5vw,38px);margin:8px 0 36px;border-radius:16px;border:1px solid #e3d4d3;border-top:8px solid #a91f2e;background:linear-gradient(180deg,#fff9f6 0%,#fff 260px);box-shadow:0 9px 28px rgba(70,49,56,.07);color:#283744}
+.osr-municipal-kicker{font-size:.84rem;font-weight:800;color:#a41f2d;letter-spacing:.035em}
+.osr-municipal h2{margin:6px 0 12px!important;font-size:clamp(1.5rem,2.4vw,1.95rem)!important;color:#273e4e}
+.osr-municipal-lead{font-size:clamp(1.25rem,2.4vw,1.85rem)!important;line-height:1.55!important;color:#a41e2b!important;font-weight:900;margin:8px 0 13px!important}
+.osr-municipal-opening{font-weight:700;font-size:1.05rem;line-height:1.85;color:#273d4c;margin:10px 0 20px}
+.osr-municipal-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:20px 0 25px}
+.osr-municipal-stats>div{background:#fff;border:1px solid #ead9d8;border-radius:9px;padding:16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.osr-municipal-stats strong{font-size:1.9rem;color:#af1e2c;line-height:1.2}
+.osr-municipal-stats strong small{font-size:.75rem;color:#677784}
+.osr-municipal-stats span{font-size:.84rem;color:#4b5a68;line-height:1.65}
+.osr-municipal-prose{background:#fff;border:1px solid #e3e6e8;border-radius:12px;padding:22px clamp(17px,3vw,30px)}
+.osr-municipal-prose p{font-size:1rem;line-height:2;max-width:88ch;color:#2d3e4c;margin:0 0 18px}
+.osr-municipal-prose p:last-child{margin-bottom:0}
+.osr-municipal-prose-first{font-weight:650}
+.osr-municipal-subhead{color:#263c4d!important;font-size:1.3rem!important;margin:30px 0 18px!important}
+.osr-municipal-issues{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.osr-municipal-issue{border:1px solid #dbe2e7;border-left:5px solid #b7873b;background:#fff;border-radius:9px;padding:18px 18px 16px}
+.osr-municipal-issue:first-child{border-left-color:#b91f30;grid-column:1/-1;background:linear-gradient(90deg,#fff1ef,#fff)}
+.osr-municipal-issue-head{display:flex;gap:13px;align-items:flex-start}
+.osr-rank{display:grid;place-items:center;flex:none;width:33px;height:33px;background:#b52830;color:#fff;border-radius:50%;font-weight:900}
+.osr-municipal-issue h3{font-size:1.09rem!important;line-height:1.55!important;margin:0 0 3px!important;color:#2e3e4c!important}
+.osr-issue-status{font-size:.76rem;font-weight:800;color:#9a4c1d}
+.osr-municipal-issue p{font-size:.91rem;color:#3a4d5c;line-height:1.84;margin:12px 0 0}
+.osr-issue-action{padding:12px 14px;background:#f6f8fa;border-radius:8px;margin-top:12px}
+.osr-issue-action strong{color:#195a71;font-size:.83rem}
+.osr-issue-action p{margin:3px 0 0}
+.osr-municipal-law{margin:23px 0 10px;padding:17px;background:#f4f8fb;border:1px solid #dbe6ed;border-radius:10px}
+.osr-municipal-law strong{color:#18516e}
+.osr-municipal-law a{display:inline-block;margin-top:8px;text-decoration:underline!important;font-weight:750;color:#1d5c80!important}
+.osr-municipal-law span{font-size:.87rem;color:#405665}
+.osr-municipal-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.osr-municipal-links a{display:inline-block;border:1px solid #bdcbd3;border-radius:7px;background:#fff;color:#1e5676!important;padding:10px 15px;text-decoration:none!important;font-weight:800;font-size:.91rem}
+.osr-municipal-links a:first-child{background:#ae2735;color:#fff!important;border-color:#ae2735}
+@media(max-width:900px){.osr-municipal-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.osr-municipal{padding:19px 15px;margin:8px 0 24px}.osr-municipal-issues{grid-template-columns:1fr}.osr-municipal-issue:first-child{grid-column:1}.osr-municipal-stats{gap:8px}.osr-municipal-stats>div{padding:12px}.osr-municipal-stats strong{font-size:1.55rem}.osr-municipal-prose{padding:15px}.osr-municipal-prose p{font-size:.94rem;line-height:1.95}}
