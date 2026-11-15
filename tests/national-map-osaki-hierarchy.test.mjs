@@ -11,7 +11,7 @@ test('national map has Osaki municipality assessment and verified city-hall repr
   assert.equal(m[0].name,'大崎市');
   assert.equal(m[0].prefecture,'宮城県');
   assert.deepEqual(m[0].coordinates,[38.577222,140.955556]);
-  assert.match(m[0].coordinateNote,/学校所在地ではありません/);
+  assert.match(m[0].coordinateNote,/学校所在地を示すものではありません/);
   assert.match(m[0].sources.find(x=>x.id==='official-location').url,/city\.osaki\.miyagi\.jp/);
   assert.equal(m[0].url,'/research/osaki.html');
   assert.equal(m[0].status,'published-research');
