@@ -7,6 +7,7 @@
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const safe=(s,n=240)=>String(s??'').slice(0,n).replace(/\s+/g,' ').trim();
   const sourceReport='大崎市立小中学校PTA関係文書 調査報告書（2026年11月15日）';
+  const evidenceImages={"naruko-compulsory":{"src":"/assets/osaki-evidence/naruko-shishutsu-2026-redacted.jpg","caption":"鳴子小中学校：令和8年7月1日付支出伺書。氏名と印影を不可逆に伏せ、PTA会費222,200円の箇所を赤枠で表示。"},"furukawa-daini-es":{"src":"/assets/osaki-evidence/furukawa-daini-officer-selection.jpg","caption":"古川第二小学校：役員選出アンケートの「無回答を委任として扱う」記載。開示資料の画像抜粋。"},"tajiri-jhs":{"src":"/assets/osaki-evidence/tajiri-jhs-delegation.jpg","caption":"田尻中学校：PTA会費の収納・会計事務委任に関する記載。開示資料の画像抜粋。"},"shikitama-es":{"src":"/assets/osaki-evidence/shikitama-work-organization.jpg","caption":"敷玉小学校：学校運営組織表に記載されたPTAの担当。開示資料の画像抜粋。"},"furukawa-kita-es":{"src":"/assets/osaki-evidence/furukawa-kita-collection-regulation.jpg","caption":"古川北小学校：学校徴収金基本計画に掲げられたPTA会費と徴収方法。開示資料の画像抜粋。"}};
   // 直接照合した報告書の記載と公開済み法令別評価に限定。元画像そのものとは呼ばない。
   const featured={
     'naruko-compulsory':{
@@ -167,6 +168,13 @@
         '<span class="os2-pointer"><i>'+(i+1)+'</i>'+esc(comment)+'</span></div>').join('')+
       '</div><p class="os2-paper-foot">※原資料の記載に基づく<strong>文字起こし・再構成図</strong>です。原本そのものの画像ではありません。氏名・印影などは転載していません。</p></div>';
   }
+  function evidenceHTML(s,c){
+    const item=evidenceImages[s.schoolId];
+    if(!item)return docFields(c);
+    return '<figure class="os2-real-doc"><a href="'+esc(item.src)+'" target="_blank" rel="noopener"><img src="'+esc(item.src)+'" alt="'+esc(s.schoolName)+'の開示資料の抜粋。本文と脚注で確認事項を説明" loading="eager" decoding="async"></a>'+
+      '<figcaption>'+esc(item.caption)+'<br><a href="'+esc(item.src)+'" target="_blank" rel="noopener">資料の抜粋画像を拡大する</a></figcaption></figure>'+
+      '<details class="os2-transcript"><summary>原資料の記載を文字で確認する</summary>'+docFields(c)+'</details>';
+  }
   function lawLinks(){
     return '<a href="https://laws.e-gov.go.jp/law/129AC0000000089">民法（加入意思・契約）</a>'+
       '<a href="https://laws.e-gov.go.jp/law/322AC0000000026">学校教育法（校長の校務）</a>'+
@@ -215,8 +223,8 @@
     const first=document.createElement('div');
     first.className='os2-schoolbody';
     first.innerHTML='<div class="os2-shell"><div class="os2-columns"><section class="os2-evidence" aria-labelledby="os2-evidence-h">'+
-      '<h2 id="os2-evidence-h">確認された証拠資料 <small>実資料の記載から再構成</small></h2>'+
-      docFields(c)+'<p class="os2-evidence-source">出典：'+esc(c.source)+'</p></section>'+
+      '<h2 id="os2-evidence-h">確認された証拠資料 <small>'+(evidenceImages[s.schoolId]?'実際の開示資料（抜粋・匿名化）':'原資料の記載から再構成')+'</small></h2>'+
+      evidenceHTML(s,c)+'<p class="os2-evidence-source">出典：'+esc(c.source)+'</p></section>'+
       '<aside class="os2-aside" aria-label="問題と改善要求">'+rightCards+'</aside></div>'+
       '<section class="os2-topic-row" aria-label="本件の主な論点"><strong>本件に関わる<br>主な論点</strong>'+
       c.tags.slice(0,3).map((tag,i)=>'<div class="os2-topic"><span aria-hidden="true">'+(['▣','◎','▤'][i])+'</span><b>'+esc(tag)+'</b></div>').join('')+'</section>'+
