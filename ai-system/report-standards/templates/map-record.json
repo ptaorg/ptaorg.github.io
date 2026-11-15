@@ -1,0 +1,15 @@
+{
+  "municipalityId": "<existing-or-new-verified-id>",
+  "municipalityName": "<自治体名>",
+  "prefecture": "<都道府県名>",
+  "coordinates": null,
+  "coordinateSourceId": null,
+  "coordinateType": "municipality-centroid-or-official-representative-not-school-location",
+  "reportUrl": "<verified-permalink>",
+  "publishedSchoolReports": 0,
+  "targetSchools": 0,
+  "coverageRatePct": null,
+  "publicationStatus": "draft",
+  "asOf": "YYYY-MM-DD",
+  "mapLabelPolicy": "調査状況のみ。問題校の有無を未確認校へ推定しない"
+}
