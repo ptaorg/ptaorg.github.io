@@ -90,3 +90,140 @@
 .osr-municipal-links a:first-child{background:#ae2735;color:#fff!important;border-color:#ae2735}
 @media(max-width:900px){.osr-municipal-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.osr-municipal{padding:19px 15px;margin:8px 0 24px}.osr-municipal-issues{grid-template-columns:1fr}.osr-municipal-issue:first-child{grid-column:1}.osr-municipal-stats{gap:8px}.osr-municipal-stats>div{padding:12px}.osr-municipal-stats strong{font-size:1.55rem}.osr-municipal-prose{padding:15px}.osr-municipal-prose p{font-size:.94rem;line-height:1.95}}
+
+/* 2026-11-16 大崎市の総合評価は、細い「カード」ではなく幅のある報告書として読む。 */
+/* 限定対象は /research/osaki.html。学校別25校の画面には波及させない。 */
+body.osaki-overview-open #main.method {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible;
+  background: #fff;
+}
+body.osaki-overview-open #main.method .method-wrap {
+  display: block;
+  width: min(1340px, calc(100% - 72px)) !important;
+  max-width: 1340px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+body.osaki-overview-open #main.method > .method-hero {
+  width: 100% !important;
+  max-width: none !important;
+  background: linear-gradient(110deg, #faf9f6 0%, #f1f7fb 100%);
+  padding: 39px 0 38px !important;
+}
+body.osaki-overview-open #main.method .method-hero h1 {
+  max-width: 1200px !important;
+  font-size: clamp(2rem, 3.25vw, 3.15rem) !important;
+  line-height: 1.38;
+  margin-bottom: 16px !important;
+  color: #16374d;
+}
+body.osaki-overview-open #main.method .osr-hero {
+  max-width: 1180px;
+  margin: 25px 0 0 !important;
+  padding: 0 0 0 25px !important;
+  border: 0 !important;
+  border-left: 6px solid #b32729 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+body.osaki-overview-open #main.method .osr-hero h2 {
+  max-width: 1110px;
+  font-size: clamp(1.75rem, 2.55vw, 2.45rem) !important;
+  margin: 18px 0 15px !important;
+}
+body.osaki-overview-open #main.method .osr-hero__fact,
+body.osaki-overview-open #main.method .osr-source,
+body.osaki-overview-open #main.method .osr-caveat {
+  max-width: 1000px;
+}
+body.osaki-overview-open #main.method .osr-hero .osr-action {
+  max-width: 1050px;
+  margin: 18px 0 12px !important;
+  padding: 12px 0 12px 17px !important;
+  border: 0 !important;
+  border-left: 3px solid #b32729 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+body.osaki-overview-open #main.method > article.method-wrap {
+  padding-top: 46px !important;
+  padding-bottom: 90px !important;
+}
+body.osaki-overview-open #main.method .osr-municipal {
+  margin: 0 0 58px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+body.osaki-overview-open #main.method .osr-municipal-kicker {
+  padding-top: 17px;
+  border-top: 5px solid #b32729;
+}
+body.osaki-overview-open #main.method .osr-municipal h2 {
+  font-size: clamp(1.7rem, 2.8vw, 2.4rem) !important;
+  margin-top: 12px !important;
+}
+body.osaki-overview-open #main.method .osr-municipal-lead {
+  max-width: 1100px;
+  font-size: clamp(1.35rem, 2.3vw, 2rem) !important;
+}
+body.osaki-overview-open #main.method .osr-municipal-opening {
+  max-width: 1040px;
+}
+body.osaki-overview-open #main.method .osr-municipal-prose {
+  max-width: 1160px;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+body.osaki-overview-open #main.method .osr-municipal-prose p {
+  max-width: 92ch;
+}
+body.osaki-overview-open #main.method .osr-municipal-stats {
+  max-width: 1160px;
+}
+body.osaki-overview-open #main.method .osr-community {
+  margin-top: 46px !important;
+  border-top: 1px solid #dbe5e9;
+}
+body.osaki-overview-open #main.method .osr-technical {
+  max-width: none;
+}
+@media (max-width: 900px) {
+  body.osaki-overview-open #main.method .method-wrap {
+    width: calc(100% - 38px) !important;
+  }
+  body.osaki-overview-open #main.method > .method-hero {
+    padding: 27px 0 28px !important;
+  }
+  body.osaki-overview-open #main.method .osr-hero {
+    padding-left: 18px !important;
+    border-left-width: 4px !important;
+  }
+}
+@media (max-width: 650px) {
+  body.osaki-overview-open #main.method .method-wrap {
+    width: calc(100% - 30px) !important;
+  }
+  body.osaki-overview-open #main.method .osr-hero {
+    padding-left: 14px !important;
+  }
+  body.osaki-overview-open #main.method > article.method-wrap {
+    padding-top: 30px !important;
+  }
+  body.osaki-overview-open #main.method .osr-municipal {
+    margin-bottom: 36px !important;
+  }
+}

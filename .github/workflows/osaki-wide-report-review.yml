@@ -1,0 +1,35 @@
+name: Osaki wide-report visual review
+on:
+  pull_request:
+    paths:
+      - research/osaki.html
+      - assets/osaki-reader.css
+      - scripts/verify-osaki-open-layout.mjs
+      - .github/workflows/osaki-wide-report-review.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  responsive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install browser
+        run: |
+          npm install --no-save --ignore-scripts playwright
+          npx playwright install --with-deps chromium
+      - name: Run local site
+        run: python3 -m http.server 4173 >/tmp/osaki-site.log 2>&1 &
+      - name: Check layout and capture screen
+        run: node scripts/verify-osaki-open-layout.mjs
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: osaki-wide-layout-evidence
+          path: osaki-layout-review/
+          if-no-files-found: warn
