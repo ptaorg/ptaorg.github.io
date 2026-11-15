@@ -136,3 +136,26 @@ body.osaki-case-v2 .method article.method-wrap{max-width:none!important;width:10
 @media(max-width:740px){.os2-overview{margin:12px 10px 16px;padding:18px 17px;min-height:0}.os2-overview h3{font-size:1.2rem!important}.os2-overview .os2-overview-para{font-size:.93rem;line-height:1.9}}
 
 .os2-overview--urgent{--overview-accent:#bd2630}
+
+/* v1.3.0: 学校別の最優先評価はPTAへの加入・非加入・退会の自由 */
+.os2-schoolbody--membership{padding-top:24px}
+.os2-member-priority{border:1px solid #eed9b3;border-left:7px solid #bb7c25;background:linear-gradient(100deg,#fffaf0,#fff);border-radius:12px;padding:20px clamp(18px,3vw,30px);box-shadow:0 5px 18px rgba(55,52,29,.06);margin:0 0 17px}
+.os2-member-head{display:flex;gap:15px;align-items:center;flex-wrap:wrap}
+.os2-member-rank{padding:5px 11px;border-radius:5px;background:#ac7527;color:#fff;font-weight:900;font-size:.83rem;flex:none}
+.os2-member-priority h2{font-size:clamp(1.2rem,2.2vw,1.6rem)!important;line-height:1.48!important;color:#253c4e!important;margin:0!important}
+.os2-member-intro{margin:15px 0!important;color:#384957;font-size:1rem;line-height:1.9}
+.os2-member-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:15px 0}
+.os2-member-facts>div{padding:12px 14px;background:#fff;border:1px solid #e9dfcc;border-radius:8px;min-width:0}
+.os2-member-facts small{display:block;color:#6d5a3c;font-weight:800;font-size:.78rem}
+.os2-member-facts strong{display:block;margin-top:5px;color:#354653;font-size:.88rem;line-height:1.6}
+.os2-member-notice{font-size:.86rem;line-height:1.8;color:#555d63;margin:12px 0!important}
+.os2-member-action{background:#fff;border-left:4px solid #2f6e8b;border-radius:7px;padding:13px 17px;margin-top:14px}
+.os2-member-action>strong{color:#215e7b;font-size:.9rem}
+.os2-member-action p{line-height:1.85;font-size:.91rem;margin:5px 0 0!important}
+.os2-member-action a{color:#175677!important;text-decoration:underline!important}
+.os2-member-city-link{display:inline-block;margin-top:13px;color:#1d5776!important;text-decoration:underline!important;font-size:.87rem;font-weight:800}
+@media(max-width:740px){.os2-member-priority{padding:17px;border-left-width:5px}.os2-member-facts{grid-template-columns:1fr}.os2-member-facts>div{padding:10px 13px}.os2-member-head{gap:10px}.os2-schoolbody--membership{padding-top:16px}}
+
+/* 学校固有の事件見出しより前にも、最優先の自由を明示 */
+.os2-hero-principle{display:inline-flex;align-items:center;flex-wrap:wrap;gap:8px;color:#8d5717!important;background:#fff4dd;border-left:4px solid #b57c24;padding:7px 12px;border-radius:5px;font-weight:900;font-size:.87rem;line-height:1.6;margin:2px 0 13px!important}
+.os2-hero-principle span{color:#a15816;font-size:.75rem}

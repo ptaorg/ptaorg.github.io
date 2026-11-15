@@ -208,7 +208,31 @@ import {assessParentSchool} from './pta-parent-report-policy.mjs';
       '<p class="os2-overview-note">本総評は開示された文書と公開済みの学校別検討をもとに作成しています。未確認事項は判断を留保し、個別の法令違反の成立を確定したものではありません。</p>'+
       '</section>';
   }
-  function render(s,legalRules,overview){
+  function joiningFirst(s,schoolPublic){
+    const axes=schoolPublic?.axes||{};
+    const documents=schoolPublic?.documents||{};
+    const status=(id)=>axes[id]?.status||'unknown';
+    const explanatory=status('voluntary_membership_notice')==='confirmed_yes'
+      ? '任意加入の説明資料あり（意思確認の成立とは別）'
+      : status('voluntary_membership_notice')==='indication'
+      ? '任意性の一部記載あり（対象と説明内容は再確認）'
+      : '開示資料から任意加入の明示を確認できず';
+    const joining=status('explicit_opt_in')==='confirmed_yes'?'本人の明示的な加入意思を確認':'加入意思の確認記録は未確認';
+    const leaving=status('withdrawal_procedure')==='confirmed_yes'?'退会手続の明示を確認':'退会手続の明示は未確認';
+    const docStatus=documents.applicationForm?.status==='not_disclosed'
+      ? '学校別資料が未開示'
+      : '学校別開示資料に入会申込書などを確認できず';
+    return '<section class="os2-member-priority" id="membership-freedom" aria-labelledby="os2-membership-title">'+
+      '<div class="os2-member-head"><span class="os2-member-rank">最優先の評価項目</span><h2 id="os2-membership-title">PTAへの入会も退会も、本人が自由に決められるか。</h2></div>'+
+      '<p class="os2-member-intro">学校別の問題を見る前に、まず会員資格の前提を確認します。<strong>加入しない自由・退会する自由</strong>が実際の手続で守られているかは、会費・役員選出を検証するうえで最重要です。</p>'+
+      '<div class="os2-member-facts"><div><small>任意加入の説明</small><strong>'+esc(explanatory)+'</strong></div>'+
+      '<div><small>入会意思の確認</small><strong>'+esc(joining)+'</strong></div>'+
+      '<div><small>退会の自由の手続</small><strong>'+esc(leaving)+'</strong></div></div>'+
+      '<p class="os2-member-notice">'+esc(docStatus)+'。書面が学校の開示資料で確認できなくても、PTAが保有する記録や書面によらない申込みが不存在とは断定できません。<strong>「未確認」は「強制加入と認定した」という意味ではありません。</strong></p>'+
+      '<div class="os2-member-action"><strong>最低限必要なこと</strong><p>PTA自身が会員の加入意思・会員資格・退会申出の受領と反映を説明できる記録を整え、学校は在籍者全員を当然にPTA会員と扱うことを前提にした処理がないか点検すること。<a href="https://laws.e-gov.go.jp/law/129AC0000000089" target="_blank" rel="noopener">民法521・522条</a>の契約成立要件も個別に検証します。</p></div>'+
+      '<a class="os2-member-city-link" href="/research/osaki.html#municipal-review">大崎市全体の入退会の自由についての評価を見る</a></section>';
+  }
+  function render(s,legalRules,overview,publicSchool){
     const main=document.querySelector('main.method');
     const oldHero=main?.querySelector('.method-hero');
     const article=main?.querySelector('article.method-wrap');
@@ -216,17 +240,18 @@ import {assessParentSchool} from './pta-parent-report-policy.mjs';
     const c=derive(s);
     const brief=assessParentSchool(s,legalRules,c);
     const level=brief.tone,status=brief.status.label;
-    const schoolHref='/research/osaki.html#schools';
+    const schoolHref='/research/osaki.html#municipal-review';
     const titleHtml=c.title.replace(/PTA/g,'<em>PTA</em>');
     const hero=document.createElement('section');
     hero.className='os2-hero os2--'+level;
     hero.innerHTML='<div class="os2-shell">'+
-      '<nav class="os2-breadcrumb" aria-label="パンくず"><a href="/">トップ</a><span aria-hidden="true">›</span><a href="'+schoolHref+'">大崎市25校</a><span aria-hidden="true">›</span>'+esc(s.schoolName)+'</nav>'+
+      '<nav class="os2-breadcrumb" aria-label="パンくず"><a href="/">トップ</a><span aria-hidden="true">›</span><a href="'+schoolHref+'">大崎市の総合評価</a><span aria-hidden="true">›</span>'+esc(s.schoolName)+'</nav>'+
       '<div class="os2-hero-main"><div class="os2-hero-copy">'+
       '<div class="os2-hero-ribbon"><span class="os2-school-chip">'+esc(s.schoolName)+'<small>PTA調査レポート</small></span>'+
       '<span class="os2-alert"><b aria-hidden="true">!</b>'+esc(status)+'</span></div>'+
+      '<p class="os2-hero-principle"><span>最初に確かめる</span> 01 入会・非加入・退会の自由</p>'+
       '<h1>'+titleHtml+'</h1><p class="os2-hero-lead">'+esc(c.lead)+'</p>'+
-      '<p class="os2-hero-sub">PTAは学校とは別の任意団体。<strong>誰の事務なのか、学校はなぜ処理できるのか。</strong>確認された資料から考えます。</p>'+
+      '<p class="os2-hero-sub">最優先は保護者の加入・非加入・退会の自由。そのうえで<strong>誰の事務なのか、学校はなぜ処理できるのか。</strong>学校の原資料から検証します。</p>'+
       '</div><div class="os2-hero-art">'+schoolGraphic()+'<span>校舎のイメージ図</span></div></div></div>';
     const lawItems=brief.legal.slice(0,5).map(rule=>'<li><a href="'+esc(rule.lawUrl)+'" target="_blank" rel="noopener">'+esc(rule.law)+'</a><span>'+esc(rule.issue)+'</span><small>'+esc(rule.reviewStatus)+'</small></li>').join('');
     const lawHtml=lawItems?'<ul class="os2-law-summary">'+lawItems+'</ul><p class="os2-law-caution">'+esc(brief.legalCaution)+'</p>'
@@ -255,6 +280,10 @@ import {assessParentSchool} from './pta-parent-report-policy.mjs';
     archive.forEach(n=>wrapper.querySelector('#os2-original-content').appendChild(n));
     article.replaceChildren(wrapper);
     main.insertBefore(hero,oldHero);
+    const membership=document.createElement('div');
+    membership.className='os2-schoolbody os2-schoolbody--membership';
+    membership.innerHTML='<div class="os2-shell">'+joiningFirst(s,publicSchool)+'</div>';
+    main.insertBefore(membership,article);
     main.insertBefore(first,article);
     document.body.classList.add('osaki-case-v2');
     const hash=decodeURIComponent(location.hash.slice(1));
@@ -281,7 +310,15 @@ import {assessParentSchool} from './pta-parent-report-policy.mjs';
           overview=Array.isArray(all.schools)?all.schools.find(x=>x.schoolId===s.schoolId):null;
         }
       }catch(error){console.warn('School overview unavailable',error)}
-      render(s,j.legalRules||[],overview);
+      let publicSchool=null;
+      try{
+        const response=await fetch('/data/osaki-public-2026.json',{cache:'no-cache'});
+        if(response.ok){
+          const publicData=await response.json();
+          publicSchool=Array.isArray(publicData.schools)?publicData.schools.find(x=>x.id===s.schoolId):null;
+        }
+      }catch(error){console.warn('Membership evaluation data unavailable',error)}
+      render(s,j.legalRules||[],overview,publicSchool);
     }catch(error){console.error('PTA school reader: retaining original report',error)}
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
