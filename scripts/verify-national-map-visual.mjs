@@ -39,7 +39,8 @@ try {
       assert.equal(result.descColor,"rgb(242, 248, 250)");
       assert.ok(result.overflow <= 2,"Horizontal overflow: "+result.overflow);
       assert.equal(await page.locator(".research-map-feature").getAttribute("data-feature-mode"),"national");
-      assert.ok(Math.abs(result.map.y - result.card.y) < 3,"Map and right panel must align: "+JSON.stringify(result));
+      if (viewport.name === "desktop") assert.ok(Math.abs(result.map.y - result.card.y) < 3,"Map and right panel must align: "+JSON.stringify(result));
+      else assert.ok(result.card.y >= result.map.bottom,"On mobile the summary must follow, not cover, the map: "+JSON.stringify(result));
       assert.match(await page.locator("#research-feature-title").textContent(),/地域を選んで/);
       assert.equal(await page.locator("#research-feature-quicklinks a").count(),2);
       await page.locator(".pta-map-marker").first().click({force:true});
