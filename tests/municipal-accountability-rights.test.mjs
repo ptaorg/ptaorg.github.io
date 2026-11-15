@@ -58,3 +58,14 @@ test("every municipality carries a separate institutional assessment status with
   if(m.institutionalReview.status==="not_yet_assessed")assert.match(m.institutionalReview.summary,/審査|未立証/);
  }
 });
+
+test("all researched municipality articles expose institutional responsibility and rights without automatic violations",()=>{
+ for(const m of all){
+  const html=read("research/"+m.id+".html");
+  assert.match(html,/id="municipal-accountability-rights"/,m.id);
+  assert.match(html,/13条|個人の尊重/,m.id);
+  assert.match(html,/21条|結社の自由/,m.id);
+  assert.match(html,/29条|財産権/,m.id);
+  assert.match(html,/授権|権限/,m.id);
+ }
+});
