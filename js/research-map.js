@@ -31,7 +31,7 @@
     status = document.getElementById("research-result-status");
   let data;
   try {
-    const response = await fetch((window.__ROOT||"")+"data/research-map-index.json?v=20261115-osaki-v1");
+    const response = await fetch((window.__ROOT||"")+"data/research-map-index.json?v=20261116-japan-focus-v2");
     if (!response.ok) throw Error("index");
     data = await response.json();
   } catch (_) {
@@ -64,11 +64,38 @@
   const maps = [];
   if (window.L)
     for (const el of containers) {
-      const map = L.map(el, { scrollWheelZoom: false }).setView(
-        [36.2, 137.8],
-        5,
-      );
-      map.fitBounds([[24, 122], [46, 146]], { padding: [15, 15], maxZoom: 5 });
+      // Main-island first view: visitors should see Japan, not a continent-sized area.
+      // The "日本全体" control remains available for Okinawa and the outer islands.
+      const mapWidth = el.getBoundingClientRect().width;
+      const initialZoom = mapWidth >= 650 ? 6 : mapWidth >= 440 ? 5.75 : 5.25;
+      const map = L.map(el, {
+        scrollWheelZoom: false,
+        zoomSnap: 0.25,
+        zoomDelta: 0.5,
+        maxBounds: [[22, 120], [47.5, 149]],
+        maxBoundsViscosity: 0.8,
+      }).setView([37.6, 138.2], initialZoom);
+      const allJapan = L.latLngBounds([[24, 123], [46.5, 146.5]]);
+      const AllJapanButton = L.Control.extend({
+        options: { position: "topright" },
+        onAdd() {
+          const wrap = L.DomUtil.create("div", "leaflet-bar pta-map-reset");
+          const button = L.DomUtil.create("button", "", wrap);
+          button.type = "button";
+          button.textContent = "日本全体";
+          button.setAttribute("aria-label", "沖縄を含む日本全体を表示");
+          L.DomEvent.disableClickPropagation(wrap);
+          L.DomEvent.disableScrollPropagation(wrap);
+          L.DomEvent.on(button, "click", (event) => {
+            L.DomEvent.stop(event);
+            map.fitBounds(allJapan, { padding: [24, 24] });
+          });
+          return wrap;
+        },
+      });
+      map.addControl(new AllJapanButton());
+      // Responsive parent layouts sometimes size after Leaflet initialization.
+      requestAnimationFrame(() => map.invalidateSize({ pan: false }));
       const layer = L.layerGroup().addTo(map);
       const tiles = L.tileLayer(
         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -171,13 +198,23 @@
         positions.get(key).push(m);
       }
       for (const group of positions.values()) {
+        // Leaflet handles the tile viewport; keep offscreen pins out of the DOM.
+        // This also avoids stray focus targets and markers beyond the map edge.
+        if (!map.getBounds().pad(-0.08).contains(group[0].coordinates)) continue;
         const box = document.createElement("div");
         for (const m of group) box.append(popup(m));
-        const marker = L.circleMarker(group[0].coordinates, {
-          radius: group.length > 1 ? 11 : 8,
-          color: group.some((m) => m.url) ? "#145f77" : "#65758b",
-          fillOpacity: 0.8,
-          weight: 2,
+        const published = group.some((m) => m.url);
+        const pinIcon = L.divIcon({
+          className: "pta-map-marker " + (published ? "is-published" : "is-indexed"),
+          html: '<span class="pta-map-pin" aria-hidden="true"></span>',
+          iconSize: [30, 40],
+          iconAnchor: [15, 38],
+          popupAnchor: [0, -34],
+        });
+        const marker = L.marker(group[0].coordinates, {
+          icon: pinIcon,
+          keyboard: true,
+          title: group.map(m => m.prefecture + " " + m.name).join("、"),
         }).addTo(layer).bindPopup(box);
         const element = marker.getElement();
         if (element) {
@@ -224,6 +261,7 @@
       render();
     }, 0));
   }
+  for (const { map } of maps) map.on("moveend", render);
   render();
 })();
 
