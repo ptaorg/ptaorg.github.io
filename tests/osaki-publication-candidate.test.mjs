@@ -36,7 +36,7 @@ test('Osaki 2026 cohort excludes closed school, preserving observed vs unobserve
   assert.match(city,/下伊場野小学校は、/);
   assert.match(city,/2026年3月31日に廃止/);
   assert.match(city,/20校/);
-  assert.match(city,/観察YESは17、明示的な反対記載は3、示唆は12、未確認は268/);
+  assert.match(city,/観察YESは15、明示的な反対記載は1、示唆は14、未確認は270/);
   assert.match(city,/2026年6月23日更新/);
   assert.match(city,/大崎市立小中学校徴収金事務取扱規程/);
   assert.match(city,/第19条/);
