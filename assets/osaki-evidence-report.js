@@ -245,7 +245,7 @@ import {assessParentSchool} from './pta-parent-report-policy.mjs';
     const hero=document.createElement('section');
     hero.className='os2-hero os2--'+level;
     hero.innerHTML='<div class="os2-shell">'+
-      '<nav class="os2-breadcrumb" aria-label="パンくず"><a href="/">トップ</a><span aria-hidden="true">›</span><a href="'+schoolHref+'">大崎市の総合評価</a><span aria-hidden="true">›</span>'+esc(s.schoolName)+'</nav>'+
+      '<nav class="os2-breadcrumb" aria-label="パンくず"><a href="/">トップ</a><span aria-hidden="true">›</span><a href="/research-map.html">全国調査マップ</a><span aria-hidden="true">›</span><a href="'+schoolHref+'">大崎市の総合評価</a><span aria-hidden="true">›</span>'+esc(s.schoolName)+'</nav>'+
       '<div class="os2-hero-main"><div class="os2-hero-copy">'+
       '<div class="os2-hero-ribbon"><span class="os2-school-chip">'+esc(s.schoolName)+'<small>PTA調査レポート</small></span>'+
       '<span class="os2-alert"><b aria-hidden="true">!</b>'+esc(status)+'</span></div>'+

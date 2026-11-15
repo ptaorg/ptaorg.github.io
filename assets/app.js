@@ -19,7 +19,7 @@
   // same-site paths stay inside this site (relative to the page)
   const localLink = p => {if(typeof p!=='string')return ROOT+'index.html';const q=p.replace(/^https?:\/\/(?:www\.)?ptaorg\.(?:com|github\.io)/,'');return /^\/(?:archive|research|journal|board-responses|assets\/docs|assets\/documents)\/[\w./%-]+(?:\.html|\.pdf|\/)$/.test(q)?ROOT+q.slice(1):ROOT+'index.html';};
   const schoolLink = p => `school.html?url=${encodeURIComponent(p)}`;
-  const regionLink = id => `municipality.html?id=${encodeURIComponent(id)}`;
+  const regionLink = id => {const m=data.map.municipalities.find(region=>region.id===id);return m?.status==='published-research'&&m.url?localLink(m.url):`municipality.html?id=${encodeURIComponent(id)}`;};
   function safeSourceLink(url){try{const x=new URL(url,SITE);return x.origin===SITE?ROOT+(x.pathname.slice(1)||'index.html')+x.hash:ROOT+'board-responses.html';}catch{return ROOT+'board-responses.html';}}
   const fmtDate = d => {const s=String(d||'').trim();const m=s.match(/^(\d{4})[\/.-](\d{1,2})(?:[\/.-](\d{1,2}))?$/);if(m)return [m[1],m[2].padStart(2,'0'),m[3]&&m[3].padStart(2,'0')].filter(Boolean).join('-');return s.replace(/\s+/g,'');};
   let data = {map:{municipalities:[]},responses:{responses:[]},journal:{articles:[]},demo:true};

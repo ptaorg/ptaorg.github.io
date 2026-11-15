@@ -204,7 +204,7 @@ function renderMap(index) {
       "research-city",
       "自治体",
       index.municipalities.map((m) => m.name),
-    )}${opts("research-theme", "研究テーマ", index.themes)}${opts("research-school", "学校種別", [...new Set(index.municipalities.flatMap((m) => m.schools.map((s) => s.type)))])}${opts("research-publication", "資料公開状況", [...new Set(index.municipalities.flatMap((m) => m.schools.flatMap((s) => s.documents.map((d) => d.status))))])}${opts("research-response", "行政回答", ["掲載確認", "未確認"])}${opts("research-audit", "監査・審査請求", ["掲載確認", "未確認"])}${opts("research-improvement", "改善措置", ["掲載確認", "未確認"])}<button type="reset">条件を解除</button></form><p id="research-result-status" role="status">${index.municipalities.length}地域。すべての地域を下に掲載しています。</p><div data-research-map class="research-map" aria-label="全国PTA研究地図"></div><p id="research-map-message">地図は補助機能です。表示できない場合は自治体一覧をご利用ください。</p><p><a href="#research-results">検索結果・学校別資料へ進む</a> ／ <a href="#national-primary-survey">別の調査：全国横断一次調査48主体へ</a></p><p id="research-query-scope"></p><section id="research-results"><h2>自治体一覧・学校別資料</h2><p id="research-empty" hidden>一致する資料はありません。学校名の一部で検索するか、条件を解除してください。</p>${index.municipalities.map((m) => `<article class="research-region" data-region="${e(m.id)}"><h3>${m.url ? `<a href="${e(m.url)}">${e(m.prefecture)} ${e(m.name)}</a>` : e(m.prefecture + " " + m.name)}</h3><p>${m.url ? "自治体研究ノートあり" : m.catalogUrl ? "既存資料館に所在掲載" : "学校別資料目録"} ／ ${m.schools.length}校 ／ ${e(m.updated || index.updated)}</p>${paras(m.summary?.slice(0, 1))}${m.catalogUrl ? `<p><a href="${e(m.catalogUrl)}">既存全国資料館の資料所在一覧へ</a></p>` : ""}<p>${m.themes.map(e).join(" ／ ")}</p><details><summary>学校別一次資料（${m.schools.length}校）</summary>${schoolList(m)}</details></article>`).join("")}</section>${renderNationalSurvey(index)}`,
+    )}${opts("research-theme", "研究テーマ", index.themes)}${opts("research-school", "学校種別", [...new Set(index.municipalities.flatMap((m) => m.schools.map((s) => s.type)))])}${opts("research-publication", "資料公開状況", [...new Set(index.municipalities.flatMap((m) => m.schools.flatMap((s) => s.documents.map((d) => d.status))))])}${opts("research-response", "行政回答", ["掲載確認", "未確認"])}${opts("research-audit", "監査・審査請求", ["掲載確認", "未確認"])}${opts("research-improvement", "改善措置", ["掲載確認", "未確認"])}<button type="reset">条件を解除</button></form><p id="research-result-status" role="status">${index.municipalities.length}地域。すべての地域を下に掲載しています。</p><div data-research-map class="research-map" aria-label="全国PTA研究地図"></div><p id="research-map-message">地図は補助機能です。表示できない場合は自治体一覧をご利用ください。</p><p><a href="#research-results">検索結果・学校別資料へ進む</a> ／ <a href="#national-primary-survey">別の調査：全国横断一次調査48主体へ</a></p><p id="research-query-scope"></p><section id="research-results"><h2>自治体一覧・学校別資料</h2><p id="research-empty" hidden>一致する資料はありません。学校名の一部で検索するか、条件を解除してください。</p>${index.municipalities.map((m) => `<article class="research-region" data-region="${e(m.id)}"><h3>${m.url ? `<a href="${e(m.url)}">${e(m.prefecture)} ${e(m.name)}</a>` : e(m.prefecture + " " + m.name)}</h3><p>${m.url ? "自治体研究ノートあり" : m.catalogUrl ? "既存資料館に所在掲載" : "学校別資料目録"} ／ ${m.schoolReportCount ? "個別評価" + m.schoolReportCount + "校" : m.schools.length + "校"} ／ ${e(m.updated || index.updated)}</p>${paras(m.summary?.slice(0, 1))}${m.schoolReportCount && m.url ? `<p><a href="${e(m.url)}#schools">市の総合評価から学校別${m.schoolReportCount}校の評価へ</a></p>` : ""}${m.catalogUrl ? `<p><a href="${e(m.catalogUrl)}">既存全国資料館の資料所在一覧へ</a></p>` : ""}<p>${m.themes.map(e).join(" ／ ")}</p><details><summary>学校別一次資料（${m.schools.length}校）</summary>${schoolList(m)}</details></article>`).join("")}</section>${renderNationalSurvey(index)}`,
     true,
   );
 }
@@ -216,8 +216,15 @@ function main() {
     JSON.stringify(index, null, 2),
   );
   write(path.join(ROOT, "research-map.html"), renderMap(index));
-  for (const m of index.municipalities.filter((m) => m.url))
-    write(path.join(ROOT, m.url.slice(1)), renderRegion(m, index));
+  for (const m of index.municipalities.filter((m) => m.url)) {
+    const target = path.join(ROOT, m.url.slice(1));
+    if (m.preservePublishedReport) {
+      if (!fs.existsSync(target)) throw new Error("Protected municipal report missing: " + m.url);
+      // Preserve human-reviewed municipal reports and their school links.
+      continue;
+    }
+    write(target, renderRegion(m, index));
+  }
   console.log(
     `Research map: ${index.municipalities.length} regions / ${index.municipalities.reduce((n, m) => n + m.schools.length, 0)} schools`,
   );
