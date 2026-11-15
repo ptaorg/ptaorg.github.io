@@ -31,7 +31,7 @@
     status = document.getElementById("research-result-status");
   let data;
   try {
-    const response = await fetch((window.__ROOT||"")+"data/research-map-index.json");
+    const response = await fetch((window.__ROOT||"")+"data/research-map-index.json?v=20261115-osaki-v1");
     if (!response.ok) throw Error("index");
     data = await response.json();
   } catch (_) {
@@ -110,10 +110,9 @@
     box.append(title);
     const p = document.createElement("p");
     p.textContent =
-      (m.url ? "研究ノートあり" : m.catalogUrl ? "既存資料館に所在掲載" : "学校別資料目録") +
+      (m.url ? (m.schoolReportCount ? "自治体の総合評価を公開" : "研究ノートあり") : m.catalogUrl ? "既存資料館に所在掲載" : "学校別資料目録") +
       " ／ " +
-      selectedSchools(m).length +
-      "校（登録全" + m.schools.length + "校）";
+      (m.schoolReportCount ? "学校別評価 " + m.schoolReportCount + "校（市の総合評価から閲覧）" : selectedSchools(m).length + "校（登録全" + m.schools.length + "校）");
     box.append(p);
     const a = document.createElement("a");
     a.href =
@@ -123,7 +122,7 @@
         : (window.__ROOT||"")+"research-map.html?city=" + encodeURIComponent(m.name));
     a.textContent =
       m.url && value("mode") !== "学校別資料"
-        ? "自治体研究ノートを読む"
+        ? (m.schoolReportCount ? "市の総合評価・25校の評価を見る" : "自治体研究ノートを読む")
         : m.catalogUrl ? "既存資料館を開く" : "学校別一覧を開く";
     a.addEventListener("click", () => {
       const details = document.querySelector(
@@ -145,7 +144,7 @@
       if (details) {
         details.open = value("mode") === "学校別資料" || selection(m).schoolQuery;
         const summary = details.querySelector("summary");
-        if (summary) summary.textContent = "学校別一次資料（表示 " + selectedSchools(m).length + "校 ／ 登録全 " + m.schools.length + "校）";
+        if (summary) summary.textContent = m.schoolReportCount && !m.schools.length ? "学校別評価 " + m.schoolReportCount + "校は市の総合評価へ" : "学校別一次資料（表示 " + selectedSchools(m).length + "校 ／ 登録全 " + m.schools.length + "校）";
       }
       const visible = new Set(selectedSchools(m).map((s) => s.url));
       for (const li of el.querySelectorAll("[data-school-url]"))
