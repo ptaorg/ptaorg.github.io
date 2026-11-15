@@ -44,7 +44,7 @@ test('blue requires 8 independent positive findings with primary-source locators
   const s=clone(byId('furukawa-daiichi-es'));
   s.feeRoute='pta_direct_collection_documented';
   s.complianceReview={outcome:'verified_compliant',schoolId:s.schoolId,targetYear:'2026',reviewer:'独立検証者',reviewedAt:'2026-11-15',checks:{}};
-  for(const k of POSITIVE_CHECKS)s.complianceReview.checks[k]={finding:'verified_compliant',sourceRefs:[{sourceId:'verified-document-'+k,locator:'p.1'}]};
+  for(const k of POSITIVE_CHECKS)s.complianceReview.checks[k]={finding:'verified_compliant',verification:'direct_checked',sourceRefs:[{sourceId:'verified-document-'+k,locator:'p.1'}]};
   assert.equal(isVerifiedCompliant(s),true);
   assert.equal(assessParentSchool(s,audit.legalRules).tone,'verified');
   s.complianceReview.checks.personalData.sourceRefs=[];

@@ -81,7 +81,7 @@ export function isVerifiedCompliant(school) {
   return POSITIVE_CHECKS.every(k=>{
     const c=review.checks[k];
     return isObject(c)&&c.finding==='verified_compliant'
-      &&Array.isArray(c.sourceRefs)&&c.sourceRefs.length>0
+      &&c.verification==='direct_checked'&&Array.isArray(c.sourceRefs)&&c.sourceRefs.length>0
       &&c.sourceRefs.every(ref=>isObject(ref)&&nonempty(ref.sourceId)&&nonempty(ref.locator));
   });
 }
@@ -90,7 +90,7 @@ export function assessParentSchool(school,legalRules=[],editorial=null){
     throw new TypeError('school with schoolId and observations required');
   const hasConfirmed=school.observations.some(o=>o.status==='confirmed_yes'&&CONCERN_AXES.has(o.axis));
   const hasIndication=school.observations.some(o=>TRIGGERED.has(o.status));
-  const editorialWithSource=editorial&&nonempty(editorial.doc)&&nonempty(editorial.source)&&nonempty(editorial.title);
+  const editorialWithSource=editorial&&['urgent','review'].includes(editorial.level)&&nonempty(editorial.doc)&&nonempty(editorial.source)&&nonempty(editorial.title);
   // 公開前に原資料ポインタのある手動選定論点は「要確認」に限り格上げできる。違法認定は禁止。
   const tone=isVerifiedCompliant(school)?'verified':
     (hasConfirmed||school.feeRoute==='school_collection_documented')?'urgent':

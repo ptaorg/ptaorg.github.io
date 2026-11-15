@@ -1,3 +1,4 @@
+import {assessParentSchool} from './pta-parent-report-policy.mjs';
 /* 大崎市・学校別PTA調査レポート v2: 原資料の記載を根拠にした保護者向け表示。
    原資料の複製・偽造はしない。転記の紙面は「再構成図」と明示する。詳細原文はHTMLに残す。 */
 (() => {
@@ -195,13 +196,14 @@
       '<details id="os2-full-data" class="os2-minidetail os2-full"><summary>12評価軸・学校別の全調査データ</summary><div class="os2-acc-body" id="os2-original-content"></div></details>'+
       '</section>';
   }
-  function render(s){
+  function render(s,legalRules){
     const main=document.querySelector('main.method');
     const oldHero=main?.querySelector('.method-hero');
     const article=main?.querySelector('article.method-wrap');
     if(!main||!oldHero||!article)return;
     const c=derive(s);
-    const level=c.level, status=level==='urgent'?'早急な適法性確認と改善が必要':level==='review'?'重要な事実確認と改善が必要':'資料不足・引き続き調査が必要';
+    const brief=assessParentSchool(s,legalRules,c);
+    const level=brief.tone,status=brief.status.label;
     const schoolHref='/research/osaki.html#schools';
     const titleHtml=c.title.replace(/PTA/g,'<em>PTA</em>');
     const hero=document.createElement('section');
@@ -214,12 +216,17 @@
       '<h1>'+titleHtml+'</h1><p class="os2-hero-lead">'+esc(c.lead)+'</p>'+
       '<p class="os2-hero-sub">PTAは学校とは別の任意団体。<strong>誰の事務なのか、学校はなぜ処理できるのか。</strong>確認された資料から考えます。</p>'+
       '</div><div class="os2-hero-art">'+schoolGraphic()+'<span>校舎のイメージ図</span></div></div></div>';
+    const lawItems=brief.legal.slice(0,5).map(rule=>'<li><a href="'+esc(rule.lawUrl)+'" target="_blank" rel="noopener">'+esc(rule.law)+'</a><span>'+esc(rule.issue)+'</span><small>'+esc(rule.reviewStatus)+'</small></li>').join('');
+    const lawHtml=lawItems?'<ul class="os2-law-summary">'+lawItems+'</ul><p class="os2-law-caution">'+esc(brief.legalCaution)+'</p>'
+       :'<p>違反がないとの判定ではありません。適用する法令を特定するための具体的資料が不足しています。</p>';
+    const minimumHtml='<ol class="os2-minimum-list">'+brief.minimum.slice(0,4).map((value,i)=>'<li><b>'+(i+1)+'</b>'+esc(value)+'</li>').join('')+'</ol>';
     const rightCards=[
-      ['確認されたこと',c.what,'fact'],
-      ['何が問題か',c.why,'issue'],
-      ['求める改善',c.actions.map((x,i)=>'<li><b>'+(i+1)+'</b>'+esc(x)+'</li>').join(''),'action']
-    ].map(([heading,text,cls])=>'<div class="os2-side-card os2-side--'+cls+'"><h2>'+esc(heading)+'</h2>'+
-      (cls==='action'?'<ol class="os2-action-list">'+text+'</ol>':'<p>'+esc(text)+'</p>')+'</div>').join('');
+      ['確認されたこと',esc(c.what),'fact'],
+      ['何が問題か',esc(c.why),'issue'],
+      [brief.lawReviewTitle,lawHtml,'law'],
+      ['適正化に最低限必要なこと',minimumHtml,'minimum'],
+      ['求める改善','<ol class="os2-action-list">'+c.actions.map((x,i)=>'<li><b>'+(i+1)+'</b>'+esc(x)+'</li>').join('')+'</ol>','action']
+    ].map(([heading,html,cls])=>'<div class="os2-side-card os2-side--'+cls+'"><h2>'+esc(heading)+'</h2>'+((cls==='fact'||cls==='issue')?'<p>'+html+'</p>':html)+'</div>').join('');
     const first=document.createElement('div');
     first.className='os2-schoolbody';
     first.innerHTML='<div class="os2-shell"><div class="os2-columns"><section class="os2-evidence" aria-labelledby="os2-evidence-h">'+
@@ -228,7 +235,7 @@
       '<aside class="os2-aside" aria-label="問題と改善要求">'+rightCards+'</aside></div>'+
       '<section class="os2-topic-row" aria-label="本件の主な論点"><strong>本件に関わる<br>主な論点</strong>'+
       c.tags.slice(0,3).map((tag,i)=>'<div class="os2-topic"><span aria-hidden="true">'+(['▣','◎','▤'][i])+'</span><b>'+esc(tag)+'</b></div>').join('')+'</section>'+
-      '<p class="os2-evaluation-note">赤色は対応の必要性を表し、個別の法令違反や人権侵害の成立を認定する表示ではありません。未開示資料は不存在と扱いません。</p></div>';
+      '<p class="os2-evaluation-note">色は確認事実に応じた対応の優先度と主要項目の確認状況です。赤＝早急な確認・改善、黄＝要調査、灰＝資料不足、青＝主要項目の積極的な適正確認。個別の違法性を確定する判定ではありません。</p></div>';
     const archive=Array.from(article.childNodes);
     const wrapper=document.createElement('div');
     wrapper.className='os2-shell';
@@ -254,7 +261,7 @@
       const j=await response.json();
       const s=j.schools.find(x=>x.schoolId===match[1]);
       if(!s)return;
-      render(s);
+      render(s,j.legalRules||[]);
     }catch(error){console.error('PTA school reader: retaining original report',error)}
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
