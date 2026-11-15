@@ -146,7 +146,14 @@
       "comparisons": [
         "kawasaki",
         "nishinomiya"
-      ]
+      ],
+      "institutionalReview": {
+        "frameworkVersion": "2.0.0",
+        "status": "reviewed_source",
+        "source": "https://www.city.osaka.lg.jp/kyoiku/cmsfiles/contents/0000669/669109/kaikeikizyun.pdf",
+        "summary": "学校徴収金会計基準に、PTA等からの委任により会費徴収を併徴する場合の取扱いを明記。",
+        "rightsReview": "権利への影響を審査する段階。個々の権利侵害・責任は未認定。"
+      }
     },
     {
       "id": "kawaguchi",
@@ -1521,7 +1528,14 @@
       "comparisons": [
         "atsugi",
         "matsuyama"
-      ]
+      ],
+      "institutionalReview": {
+        "frameworkVersion": "2.0.0",
+        "status": "reviewed_source",
+        "source": "/research/osaki.html#board",
+        "summary": "市教委関係の規程に、団体会計事務を校長が受任する場合の手続があることを既存の開示資料で確認。",
+        "rightsReview": "権利への影響を審査する段階。個々の権利侵害・責任は未認定。"
+      }
     },
     {
       "id": "ichinomiya",
@@ -1682,7 +1696,14 @@
         "葉栗中学校",
         "大和中学校",
         "中島小学校"
-      ]
+      ],
+      "institutionalReview": {
+        "frameworkVersion": "2.0.0",
+        "status": "not_yet_assessed",
+        "source": "/research/ichinomiya.html",
+        "summary": "自治体がPTA会費徴収・会計を制度化した事実は、この公開資料から未立証。",
+        "rightsReview": "権利への影響を審査する段階。個々の権利侵害・責任は未認定。"
+      }
     }
   ]
 }
