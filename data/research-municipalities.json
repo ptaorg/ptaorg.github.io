@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "municipalities": [
     {
       "id": "osaka",
@@ -1521,6 +1521,144 @@
       "comparisons": [
         "atsugi",
         "matsuyama"
+      ]
+    },
+    {
+      "id": "ichinomiya",
+      "name": "一宮市",
+      "prefecture": "愛知県",
+      "prefectureCode": "23",
+      "type": "市",
+      "aliases": [
+        "愛知県一宮市",
+        "一宮市教育委員会"
+      ],
+      "coordinates": [
+        35.304,
+        136.802
+      ],
+      "coordinateNote": "一宮市公式による市役所所在地（一宮市本町2丁目5番6号）に対応する概略代表位置。学校の所在地点を示さない。",
+      "url": "/research/ichinomiya.html",
+      "schoolMunicipality": "一宮市",
+      "themes": [
+        "PTA任意加入",
+        "PTA会費の学校徴収",
+        "教職員のPTA事務従事",
+        "学校保有個人情報の利用・提供"
+      ],
+      "status": "published-research",
+      "updated": "2026-11-16",
+      "preservePublishedReport": true,
+      "schoolReportCount": 21,
+      "summary": [
+        "市立61校（小42校・中19校）のうち、公開済みのPTA決算資料21校42件を手がかりに、学校施設の修繕費、学校活動費、協力費、学校とPTAの会計処理を検証する。残る40校の適法・不適法を判定するものではない。",
+        "入会・非加入・退会の自由と会費請求原因を第一に、学校がPTA固有の事務に関与する所掌・権限、個人情報61条・69条、資金保管や教職員従事を個別に審査する。過去の決算資料だけから現行の違法性を断定しない。"
+      ],
+      "system": [
+        "2026年11月8日公開の既存記事が21校42件のPTA決算書と50件の指摘を扱う。50件は個別と横断を含む指摘件数であり学校数ではない。",
+        "今回の保護者向け学校別ページでは既存公開済み抜粋画像と原本リンクを再利用。学校会費収納や入退会管理について未確認の点を区別する。"
+      ],
+      "sources": [
+        {
+          "id": "city-assessment",
+          "title": "一宮市のPTA調査と学校別21校",
+          "url": "/research/ichinomiya.html",
+          "date": "2026-11-16",
+          "publisher": "PTA適正化推進委員会",
+          "kind": "article",
+          "verification": "公開済み既存記事の資料と対応付けて学校別に再構成。独立した全資料の現年度法的監査ではない。"
+        },
+        {
+          "id": "source-article",
+          "title": "一宮市立小中学校のPTA決算書を読む（21校42件）",
+          "url": "/journal/ichinomiya-pta-settlements-20261108.html",
+          "date": "2026-11-08",
+          "publisher": "PTA適正化推進委員会",
+          "kind": "article",
+          "verification": "原本42件のリンクと公開済み抜粋画像を参照。"
+        },
+        {
+          "id": "school-count-es",
+          "title": "一宮市立小学校の概況",
+          "url": "https://www.city.ichinomiya.aichi.jp/kyouiku/kyouikusoumu/1044102/1001604.html",
+          "date": "2026-07-15",
+          "publisher": "一宮市",
+          "kind": "primary",
+          "verification": "2026年度小学校42校と明示。"
+        },
+        {
+          "id": "school-count-jhs",
+          "title": "一宮市立中学校の概況",
+          "url": "https://www.city.ichinomiya.aichi.jp/kyouiku/kyouikusoumu/1044102/1001605.html",
+          "date": "2026-07-15",
+          "publisher": "一宮市",
+          "kind": "primary",
+          "verification": "2026年度中学校19校と明示。"
+        },
+        {
+          "id": "city-center",
+          "title": "一宮市役所本庁舎",
+          "url": "https://www.city.ichinomiya.aichi.jp/shisetsu/shiyakusho/honchosha.html",
+          "date": "2026-04-01",
+          "publisher": "一宮市",
+          "kind": "primary",
+          "verification": "一宮市本町2丁目5番6号、市役所の住所。代表点は学校位置ではない。"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-11-08",
+          "title": "21校42件のPTA決算資料の調査公開",
+          "text": "個別・横断計50件の指摘を掲載。",
+          "sourceId": "source-article"
+        },
+        {
+          "date": "2026-11-16",
+          "title": "市の総合評価と21校の学校別資料を制作",
+          "text": "学校名を最大見出しとし、証拠画像・法的論点・改善要求・原本へ接続。",
+          "sourceId": "city-assessment"
+        }
+      ],
+      "legal": [
+        {
+          "title": "本人の入退会",
+          "text": "PTAが会員資格と入退会意思を客観的に把握しているか、会費の請求原因があるかを学校在籍とは独立に確認する。"
+        },
+        {
+          "title": "学校の所掌事務",
+          "text": "会費・会計は原則PTAの内部事務。委任や校務分掌で当然に学校の公的権限は生じない。"
+        },
+        {
+          "title": "学校経費と寄附",
+          "text": "修繕費等の学校設置者の負担範囲、寄附受入の手続、割当的寄附の有無を具体的な支出と照合する。"
+        },
+        {
+          "title": "個人情報",
+          "text": "学校の所掌事務・権限を検証した後、個人情報保護法61条・69条の要件を確認する。"
+        }
+      ],
+      "unknowns": [
+        "全61校の入会・退会記録の実際の保有者と管理方法",
+        "学校によるPTA会費徴収、校長等の会計関与の具体的権限・実績",
+        "学校側が管理した金銭の種類・保管者・寄附受納手続と個人情報利用の実態"
+      ],
+      "articles": [
+        {
+          "title": "一宮市の学校別21校・総合評価",
+          "url": "/research/ichinomiya.html"
+        },
+        {
+          "title": "PTA決算書の原論考",
+          "url": "/journal/ichinomiya-pta-settlements-20261108.html"
+        }
+      ],
+      "flags": {
+        "administrativeResponse": "unconfirmed",
+        "audit": "unconfirmed",
+        "improvement": "unconfirmed"
+      },
+      "comparisons": [
+        "osaki"
       ]
     }
   ]
