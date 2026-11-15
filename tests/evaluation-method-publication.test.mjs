@@ -22,9 +22,12 @@ test('published evaluation methodology is a standalone Japanese canonical page',
   assert.match(html,/個人情報保護法61条・69条/);
   assert.match(html,/法令上の根拠と適用範囲を検証/);
   assert.equal((html.match(/<td class="m-no">/g)||[]).length,12);
-  assert.equal((html.match(/class="method-section"/g)||[]).length,9);
+  assert.equal((html.match(/class="method-section"/g)||[]).length,10);
+  assert.match(html,/id="three-layers"/);
   assert.match(html,/非会員名簿の作成や、全保護者を会員・非会員に分類する作業は要件ではありません/);
-  const steps=html.slice(html.indexOf('<ol class="method-steps">'),html.indexOf('</ol>',html.indexOf('<ol class="method-steps">')));
+  const legalSection=html.indexOf('<section class="method-section" id="legal">');
+  const legalStepsStart=html.indexOf('<ol class="method-steps">',legalSection);
+  const steps=html.slice(legalStepsStart,html.indexOf('</ol>',legalStepsStart));
   assert.ok(steps.indexOf('主体の分離')<steps.indexOf('事務の帰属'));
   assert.ok(steps.indexOf('事務の帰属')<steps.indexOf('学校側の具体的な所掌事務・権限'));
   assert.ok(steps.indexOf('学校側の具体的な所掌事務・権限')<steps.indexOf('個人情報の利用・提供'));
