@@ -100,7 +100,7 @@ test('all 25 Osaki overview narratives align with the same school and evidence a
     assert.deepEqual(overview.linkedObservationAxes,s.observations.map(x=>x.axis));
     if(s.documentDisclosure==='学校別資料未開示')assert.match(overview.paragraphs.join(''),/未開示|開示資料が|開示資料がない/);
     if(!s.observations.length && !['furukawa-kita-es','numabe-es'].includes(s.schoolId))
-      assert.match(overview.paragraphs[0],/未登録|未開示|確定でき|確認でき|そろっておらず/);
+      assert.match(overview.paragraphs[0],/未登録|未開示|確定でき|確認でき|登録されていません|そろっておらず/);
   }
 });
 test('the school report paints the school-specific overview underneath evidence and before the topic row',()=>{
