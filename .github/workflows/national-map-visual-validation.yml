@@ -1,0 +1,37 @@
+name: National PTA map visual validation
+on:
+  pull_request:
+    paths:
+      - js/research-map.js
+      - css/research-map-redesign.css
+      - research-map.html
+      - scripts/verify-national-map-visual.mjs
+      - .github/workflows/national-map-visual-validation.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  visual-map:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install browser
+        run: |
+          npm install --no-save --ignore-scripts playwright
+          npx playwright install --with-deps chromium
+      - name: Start local static site
+        run: |
+          python3 -m http.server 4173 > /tmp/pta-national-map-http.log 2>&1 &
+      - name: Verify actual desktop and mobile map and capture screenshots
+        run: node scripts/verify-national-map-visual.mjs
+      - name: Save verification screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: national-map-visual-evidence
+          path: visual-map-output/
+          if-no-files-found: warn
