@@ -83,3 +83,16 @@ body.osaki-case-v2 .method article.method-wrap{max-width:none!important;width:10
 @media(max-width:960px){.os2-hero-main{grid-template-columns:1fr 190px}.os2-columns{grid-template-columns:1fr}.os2-aside{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.os2-side-card{padding:12px}.os2-side-card p,.os2-action-list li{font-size:.89rem}}
 @media(max-width:740px){.os2-shell{width:min(100% - 28px,720px)}.os2-hero{padding:10px 0 18px}.os2-hero-main{display:block}.os2-hero-art{display:none}.os2-hero-ribbon{flex-direction:column;gap:8px}.os2-school-chip{align-self:flex-start;min-width:0}.os2-alert{font-size:1.16rem;padding:11px 14px}.os2-hero h1{font-size:clamp(1.75rem,6vw,2.4rem)}.os2-hero-lead{font-size:1rem}.os2-columns,.os2-aside{display:block}.os2-side-card{margin:12px 0}.os2-paper{margin:10px;padding:13px}.os2-paper-row{grid-template-columns:minmax(67px,19%) minmax(0,1fr);min-height:64px}.os2-pointer{grid-column:1/-1;padding:5px 9px;font-size:.76rem}.os2-paper-value{padding:9px 7px;font-size:.85rem}.os2-paper h3{font-size:1.12rem!important}.os2-topic-row{grid-template-columns:1fr 1fr}.os2-topic-row>strong{grid-column:1/-1;padding:10px}.os2-topic{padding:13px;border-bottom:1px solid #d4dce3}.os2-topic b{font-size:.89rem}.os2-research h2{font-size:1.13rem!important}.os2-minidetail{margin:5px 9px}.os2-acc-body{padding:11px}}
 @media(prefers-reduced-motion:reduce){.os2-hero,.os2-minidetail{scroll-behavior:auto}}
+
+/* 開示資料そのものの抜粋画像を前面に。文字転記は二次資料として折りたたむ。 */
+.os2-real-doc{margin:13px 13px 10px;background:#fff;border:1px solid #d5dce2;border-radius:8px;overflow:hidden}
+.os2-real-doc img{display:block;width:100%;height:auto;max-height:640px;object-fit:contain;background:#fff}
+.os2-real-doc figcaption{padding:11px 15px;border-top:1px solid #e1e6ec;color:#4e5d68;font-size:.83rem;line-height:1.65}
+.os2-real-doc figcaption a{color:#a01c2b;text-decoration:underline;font-weight:800}
+.os2-transcript{margin:8px 13px;border:1px solid #d4dae1;border-radius:7px;background:#fff}
+.os2-transcript>summary{cursor:pointer;list-style:none;padding:12px 16px;font-size:.9rem;font-weight:800;color:#34556c}
+.os2-transcript>summary::-webkit-details-marker{display:none}
+.os2-transcript>summary:after{content:" ▾";float:right}
+.os2-transcript[open]>summary:after{content:" ▴"}
+.os2-transcript>.os2-paper{margin:0;border:0;border-top:1px solid #d4dae1;box-shadow:none}
+@media(max-width:650px){.os2-real-doc{margin:10px}.os2-real-doc img{max-height:460px}.os2-real-doc figcaption{padding:10px;font-size:.79rem}}
