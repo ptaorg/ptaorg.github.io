@@ -1,4 +1,4 @@
-# 自治体・学校PTA評価書：固定制作規格 v1.1.0
+# 自治体・学校PTA評価書：固定制作規格 v1.2.0
 
 このディレクトリは `ai-system/skills/municipal-school-report.md` から呼び出す**品質固定規格**です。共通原則を二重定義せず、`ai-system/CORE_INSTRUCTIONS.md` などを上位正本とします。
 
@@ -98,3 +98,11 @@ node ai-system/report-standards/scripts/render-draft.mjs path/to/municipality.js
 ## v1.1.0 拡張――法令別評価と徴収経路
 
 `legal-screening.json` は行為から条文を割り当てる固定表。12軸・10文書台帳には推定を追加しない。学校徴収案内不見当と実際の徴収不存在を区別し、PTAによる自己徴収と会費なしの可能性は未検証の代替説明とする。加入記録の有無はオプトインの記録起点で調べ、非会員名簿を求めない。各法令について主体・事務帰属・根拠権限・適用条文の要件・反証・確認済みの行為・未確認・暫定結論を別欄に記載する。
+
+## v1.2.0 拡張――保護者向け証拠中心レポートと四状態色
+
+- 共通手順・表示規格・法令の出し分け・8領域の青判定ゲートは `PARENT_FACING_SKILL.md` を正本とする。基礎となる12評価軸・10文書台帳・15法令審査の定義は変更しない。
+- 表示優先：学校固有の事実→何が問題か→抵触の有無を検討する法令→適正化に最低限必要な措置→改善要求→証拠画像・全文の展開欄。
+- 判定コードは `assets/pta-parent-report-policy.mjs` に集約。四状態 `urgent / review / unknown / verified` と法律の適用検討、最低限の手順をすべて共通化。青は客観的に8領域を検証した場合のみで、調査資料がないから青とはしない。
+- 入力契約：`municipality`、`asOf`、`legalRules[]`、`schools[]`（各校 `schoolId, schoolName, observations, legalTopics, feeRoute`）。この形式の公開用審査台帳から `scripts/render-parent-school-report.mjs` で未公開HTML草稿と色・法令マニフェストを生成する。原資料、法的結論、公開状態を自動確定しない。
+- 大崎市の学校別ページは、本共通政策モジュールをインポートして表示する（先行ケース）。共通のブラウザコードと元の調査本文を保持する。公開前は `npm test` とサイトのPC・スマホ検査が必須。

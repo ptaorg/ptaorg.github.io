@@ -16,6 +16,8 @@
 - `ai-system/report-standards/templates/school-report.md`
 - `ai-system/report-standards/templates/map-record.json`
 - `ai-system/report-standards/scripts/validate-dataset.mjs`
+- `ai-system/report-standards/PARENT_FACING_SKILL.md`（保護者向けデザイン・配色・法令・最低限必要事項）
+- `assets/pta-parent-report-policy.mjs`（全国共通の表示判定）
 
 ## 発動条件
 
@@ -63,3 +65,15 @@
 納品: `dataset.json`（全校・全評価軸・資料台帳）、`metrics.json`（検証器が算出）、自治体報告書、学校別評価書、地図用レコード、証拠URL一覧、検証ログ、レビュー記録。資料未取得校も `unknown` で登録する。途中段階は「暫定」と明記し「完成版」としない。
 
 実行: `node ai-system/report-standards/scripts/validate-dataset.mjs path/to/dataset.json --metrics path/to/metrics.json`。公開候補には `--publish` を追加。**必須ゲートに失敗したら成果物を公開しない。** 合格は内容の真正性を自動保証しないため、実資料のSenior/human検証を別途必須とする。
+
+## v1.2.0 追加固定：保護者が読む学校別レポート
+
+学校別評価書の冒頭は専門家向けの集計ではなく、**校名・対応優先度→原資料の抜粋→確認されたこと→保護者の権利・学校の権限に関する問題→法律の適用可能性と要件→適正化に最低限必要なこと→改善要求**を先に見せる。12軸・15法令・10書類の詳細全文は消さず下部のアコーディオンに保存する。
+
+色は赤 `urgent`（具体的資料のある早急な調査・改善）、黄 `review`（示唆・要検証）、灰 `unknown`（資料不足）、青 `verified`（8領域を同年度の一次資料で積極的に適正確認）とする。単に問題が観察されない・資料がない・`confirmed_no`という理由で青にしない。青の8領域・出典・レビュー承認の必要条件は `PARENT_FACING_SKILL.md` に固定する。
+
+学校別の `legalTopics` と固定15法令表から、関係する法律を読者に表示する。ただし学校ごとに法律が存在するだけで違反と断定しない。「違反が成立した法律」と「抵触の有無を検証する法律」を区別し、学校の権限→個情法61→69→服務・会計の順を維持する。法律名ごとに「最低限必要な行為・資料」を短く掲示する。未審査の学校に法令違反ラベルを付けない。
+
+実物の原資料画像はページ・文書ID・発行日を照合して、児童・保護者・教職員の個人情報、印影、口座等を非可逆にマスキングした公開承認済み画像だけを使用する。架空画像を開示文書と呼ばない。画像の掲載を伴わない場合は再構成図と明記する。
+
+**共通の機械作業**：`node ai-system/report-standards/scripts/render-parent-school-report.mjs path/to/any-legal-screening.json path/to/unpublished-output`。これは全国の自治体に同じ色・法令・最低限要件を適用した未公開草稿の生成であり、公開前の原資料審査・人間承認は別。既存ページへの追加は元本文・出典・アンカーを保全し、変更差分とPC／スマホ表示を検査する。

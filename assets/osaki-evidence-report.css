@@ -96,3 +96,27 @@ body.osaki-case-v2 .method article.method-wrap{max-width:none!important;width:10
 .os2-transcript[open]>summary:after{content:" ▴"}
 .os2-transcript>.os2-paper{margin:0;border:0;border-top:1px solid #d4dae1;box-shadow:none}
 @media(max-width:650px){.os2-real-doc{margin:10px}.os2-real-doc img{max-height:460px}.os2-real-doc figcaption{padding:10px;font-size:.79rem}}
+
+/* 保護者向け固定色・法令適用・最低限の要件 v1.2.0 */
+.os2--verified .os2-alert{background:linear-gradient(90deg,#135c95,#2184c1);box-shadow:0 4px 12px #135c9530}
+.os2--verified .os2-alert b{color:#176b9f}
+.os2--verified .os2-hero-copy h1 em{color:#156da5}
+.os2--verified.os2-hero{border-top-color:#1769a4;background:linear-gradient(100deg,#fff 55%,#ecf6ff 100%)}
+.os2--review.os2-hero{border-top-color:#ba8618}
+.os2--unknown.os2-hero{border-top-color:#667b88}
+.os2-side--law{border:1px solid #dbc5c8;background:#fffafa}
+.os2-side--law h2{background:#ffeff0!important;color:#852a36!important}
+.os2-side--law h2:before{content:"§";font-weight:900}
+.os2-side--minimum{border:1px solid #d8e1ea;background:#f9fcff}
+.os2-side--minimum h2{background:#e9f2fa!important;color:#174e74!important}
+.os2-side--minimum h2:before{content:"✓";font-weight:900;color:#196a9b}
+.os2-law-summary,.os2-minimum-list{padding:0;margin:0;list-style:none;display:grid;gap:10px}
+.os2-law-summary li{padding:0 0 8px;border-bottom:1px solid #ecdfe1;display:grid;grid-template-columns:1fr auto;gap:2px 8px}
+.os2-law-summary li:last-child{border-bottom:0}
+.os2-law-summary a{font-weight:900;color:#9b1d2b!important;text-decoration:underline;text-underline-offset:3px;font-size:.92rem}
+.os2-law-summary li span{display:block;grid-column:1/-1;color:#4b515c;font-size:.84rem;line-height:1.6}
+.os2-law-summary small{grid-column:2;grid-row:1;align-self:center;background:#fff3e9;color:#89520f;border-radius:4px;font-size:.7rem;font-weight:700;padding:2px 7px;white-space:nowrap}
+.os2-law-caution{font-size:.78rem!important;color:#5e6268!important;margin-top:10px!important;line-height:1.65!important}
+.os2-minimum-list li{display:flex;align-items:start;gap:8px;font-size:.87rem;line-height:1.65;border-bottom:1px solid #e2e9ef;padding-bottom:7px}
+.os2-minimum-list li:last-child{border:0;padding-bottom:0}
+.os2-minimum-list b{display:grid;place-items:center;background:#276887;color:#fff;border-radius:50%;width:21px;height:21px;flex:none;font-size:.76rem}
