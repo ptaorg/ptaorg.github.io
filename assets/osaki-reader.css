@@ -1,0 +1,55 @@
+/* 大崎市・保護者向けファーストビュー（詳細・原資料はdetailsに完全保存） */
+.osaki-readable .method-hero{background:linear-gradient(135deg,#fff9f3 0%,#f0f6fb 100%);border-bottom:1px solid #d4dce2}
+.osaki-readable .method-hero .method-wrap{max-width:1110px}
+.osaki-readable .method-hero .method-lead,.osaki-readable .method-hero .method-date,.osaki-readable .method-hero .case-banner{display:none}
+.osaki-readable .method-hero h1{max-width:940px;margin-bottom:24px;color:#173552}
+.osr-hero,.osr-community,.osr-technical{font-family:"Noto Sans JP","Hiragino Sans",sans-serif;color:#1b2d3c}
+.osr-hero{position:relative;border:1px solid #d8e0e8;border-left:7px solid #b32729;border-radius:14px;background:#fff;padding:clamp(20px,3vw,34px);box-shadow:0 12px 30px rgba(26,48,70,.08);margin:16px 0 20px}
+.osr--caution{--osr-color:#9b6416;--osr-pale:#fff7e8}
+.osr--unknown{--osr-color:#5f6e7e;--osr-pale:#f1f4f6}
+.osr--critical{--osr-color:#b32729;--osr-pale:#fff2f0}
+.osr-hero.osr--caution,.osr-hero.osr--unknown{border-left-color:var(--osr-color)}
+.osr-status,.osr-school__status{display:inline-block;font-size:.81rem;font-weight:800;letter-spacing:.025em;color:var(--osr-color);background:var(--osr-pale);border:1px solid currentColor;border-radius:999px;padding:5px 13px}
+.osr-status>span{display:inline-grid;place-items:center;border-radius:50%;background:var(--osr-color);color:#fff;font-weight:900;width:1.25em;height:1.25em;line-height:1}
+.osr-hero h2{font-size:clamp(1.45rem,3vw,2rem)!important;line-height:1.48;margin:17px 0 14px!important;color:#1b2e40}
+.osr-hero__fact{font-size:clamp(1.02rem,1.35vw,1.14rem);line-height:1.95;color:#263c4a;margin:0 0 18px!important}
+.osr-action{border:1px solid #e7ccd0;background:linear-gradient(90deg,#fff5f3,#fff);padding:16px 20px;border-radius:9px;margin:15px 0 13px}
+.osr-action strong{display:block;color:#9d272b;font-size:.95rem;margin-bottom:4px}
+.osr-action p{font-size:1rem;line-height:1.8;margin:0!important}
+.osr-source{color:#516677;font-size:.88rem;line-height:1.7;margin:12px 0 5px!important}
+.osr-caveat{font-size:.83rem;line-height:1.7;color:#606e7c;margin:10px 0!important}
+.osr-inline{display:inline-block;margin-top:10px;font-weight:800;color:#13506f!important}
+.osr-community{padding:28px 0 30px;margin:0 0 12px;border-bottom:1px solid #dfe6e8}
+.osr-section-kicker{color:#a33330;font-weight:800;letter-spacing:.08em;font-size:.8rem;margin-bottom:9px}
+.osr-community>h2{color:#1c3650!important;font-size:clamp(1.4rem,2.5vw,1.85rem)!important;margin:0 0 12px!important;line-height:1.55}
+.osr-deck{max-width:790px;color:#4b5d68;font-size:1rem;line-height:1.85}
+.osr-focus-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:20px}
+.osr-focus{border:1px solid #dee6ed;border-top:4px solid #bd4b3e;border-radius:9px;background:#fff;padding:20px 18px;box-shadow:0 3px 12px rgba(17,40,56,.03)}
+.osr-focus strong{display:block;color:#253d50;font-size:1.02rem;line-height:1.6}
+.osr-focus p{font-size:.94rem;line-height:1.85;color:#465c68;margin:10px 0 0}
+.osr-summary-bar{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:23px 0}
+.osr-summary-bar>div{display:flex;align-items:center;gap:14px;background:#f4f8fa;border:1px solid #e1e8ed;border-radius:9px;padding:15px 19px}
+.osr-summary-bar strong{color:#193952;font-size:1.65rem;white-space:nowrap}
+.osr-summary-bar span{font-size:.9rem;line-height:1.55;color:#4c606c}
+.osr-schools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:23px 0}
+.osr-school{display:flex;flex-direction:column;align-items:flex-start;gap:7px;border:1px solid #dfe5eb;border-top:5px solid var(--osr-color);border-radius:10px;background:#fff;padding:18px;text-decoration:none!important;min-height:174px;box-shadow:0 3px 14px rgba(27,54,74,.05);transition:transform .15s,box-shadow .15s}
+.osr-school:hover,.osr-school:focus-visible{transform:translateY(-2px);box-shadow:0 8px 20px rgba(27,54,74,.15);outline-offset:3px}
+.osr-school__status{font-size:.72rem;padding:3px 9px;line-height:1.5}
+.osr-school__name{color:#213c51;font-size:1.15rem;line-height:1.6}
+.osr-school__focus{color:#405768;line-height:1.7;font-size:.88rem}
+.osr-school__link{color:#135373;font-weight:800;font-size:.86rem;margin-top:auto}
+.osr-technical{border:2px solid #cbd7e0;border-radius:12px;background:#f8fafc;margin:22px 0 40px;overflow:hidden}
+.osr-technical>summary{list-style:none;display:flex;align-items:center;flex-wrap:wrap;gap:8px 13px;cursor:pointer;background:#e9f1f5;padding:20px 22px;font-size:1.08rem;color:#1b4962}
+.osr-technical>summary::-webkit-details-marker{display:none}
+.osr-technical>summary strong{font-size:1.08rem}
+.osr-technical>summary small{flex-basis:100%;font-size:.84rem;color:#506774;margin-left:35px}
+.osr-technical__icon{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#195b77;color:#fff;font-weight:900}
+.osr-technical[open]>summary{border-bottom:1px solid #cbd7e0}
+.osr-technical>.method-section,.osr-technical>section{background:#fff;padding:22px;margin:0!important;border-bottom:1px solid #d8e0e5}
+.osr-technical>p,.osr-technical>div:not(.method-section){margin:16px 22px}
+.osr-technical .method-table-wrap{max-width:100%}
+.osr-quick{font-weight:800;margin:18px 0 14px}
+.osaki-readable .method .method-section:target{scroll-margin-top:110px}
+@media(max-width:920px){.osr-schools,.osr-focus-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.osr-hero{padding:18px;border-left-width:5px}.osr-schools,.osr-focus-grid,.osr-summary-bar{grid-template-columns:1fr}.osr-school{min-height:0}.osr-technical>summary{padding:17px}.osr-technical>summary small{margin-left:0}.osr-summary-bar>div{align-items:flex-start}.osr-community{padding-top:22px}.osr-technical>.method-section,.osr-technical>section{padding:15px}}
+@media(prefers-reduced-motion:reduce){.osr-school{transition:none}}
