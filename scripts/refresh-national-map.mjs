@@ -27,7 +27,7 @@ if(sectionStart<start||sectionEnd<sectionId)throw new Error("Survey section inco
 const survey=html.slice(sectionStart,sectionEnd);
 if(!survey.includes("research-survey-disclosure")||!survey.includes("research-survey-list"))
   throw new Error("The research survey must remain preserved and expandable");
-const updated=html.slice(0,start)+"\n"+renderPrimaryMap(index,survey)+"\n"+html.slice(sectionEnd);
+const updated=html.slice(0,start)+"\n"+renderPrimaryMap(index,survey).trimEnd()+html.slice(sectionEnd);
 if(process.argv.includes("--check")){
   if(updated!==html){console.error("Research map body is stale: node scripts/refresh-national-map.mjs");process.exitCode=1;}
   else console.log("Research map matches source index: "+index.municipalities.length+" regions");
