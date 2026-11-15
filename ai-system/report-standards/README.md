@@ -106,3 +106,9 @@ node ai-system/report-standards/scripts/render-draft.mjs path/to/municipality.js
 - 判定コードは `assets/pta-parent-report-policy.mjs` に集約。四状態 `urgent / review / unknown / verified` と法律の適用検討、最低限の手順をすべて共通化。青は客観的に8領域を検証した場合のみで、調査資料がないから青とはしない。
 - 入力契約：`municipality`、`asOf`、`legalRules[]`、`schools[]`（各校 `schoolId, schoolName, observations, legalTopics, feeRoute`）。この形式の公開用審査台帳から `scripts/render-parent-school-report.mjs` で未公開HTML草稿と色・法令マニフェストを生成する。原資料、法的結論、公開状態を自動確定しない。
 - 大崎市の学校別ページは、本共通政策モジュールをインポートして表示する（先行ケース）。共通のブラウザコードと元の調査本文を保持する。公開前は `npm test` とサイトのPC・スマホ検査が必須。
+
+## v1.3.0：自治体の総評と入退会の自由を最優先に固定
+
+最初の検討は「PTAの入会しない自由・退会する自由とその確認記録」。市全体の総評を学校一覧より前に掲載し、自治体制度の特徴と教育委員会に必要な改善を明示してから学校別評価へ進む。入会記録や退会規定が学校別開示資料にないことと、契約・運用の不存在は区別する。学校別ページも権利の状況を最初に表示する。自治体の総評は学校リンクの羅列に代えられない。法的検討の順序は公私分離→事務帰属→学校の権限→個情法61→69等を維持する。
+
+全国共通の規格は `PARENT_FACING_SKILL.md`。大崎市では `data/osaki-municipal-assessment-2026.json` を自治体総評の正本に、学校別公開データと整合を検査する。
