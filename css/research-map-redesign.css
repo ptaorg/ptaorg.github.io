@@ -398,3 +398,12 @@ body.research-map-page .research-feature-quicklinks small{color:#e4eff2;line-hei
 body.research-map-page .research-feature-reset:not([hidden]){align-self:flex-start;background:none;border:0;border-bottom:1px solid #ffffff90;padding:4px 0;margin:12px 0 17px;color:white;cursor:pointer;font:inherit;font-weight:800}
 body.research-map-page .research-map-feature[data-feature-mode="selected"] #research-feature-title{font-size:clamp(2.1rem,3.1vw,2.8rem)!important}
 @media(max-width:700px){body.research-map-page .research-map-heading{margin-bottom:10px}}
+
+/* Last word against generic legacy padding: marker-map top must match the right panel. */
+body.research-map-page #main .legacy .legacy-body .research-main .research-map-pane {
+  padding-top: 0 !important;
+  border-top-width: 0 !important;
+}
+body.research-map-page #main .legacy .legacy-body .research-main .research-map-pane > .research-map {
+  margin-top: 0 !important;
+}
