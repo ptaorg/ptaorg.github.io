@@ -36,7 +36,7 @@ test('Osaki 2026 cohort excludes closed school, preserving observed vs unobserve
   assert.match(city,/下伊場野小学校は、/);
   assert.match(city,/2026年3月31日に廃止/);
   assert.match(city,/20校/);
-  assert.match(city,/観察YESは17、明示的な反対記載は3、示唆は12、未確認は268/);
+  assert.match(city,/観察YESは15、明示的な反対記載は1、示唆は14、未確認は270/);
   assert.match(city,/2026年6月23日更新/);
   assert.match(city,/大崎市立小中学校徴収金事務取扱規程/);
   assert.match(city,/第19条/);
@@ -46,9 +46,10 @@ test('Osaki 2026 cohort excludes closed school, preserving observed vs unobserve
 test('School candidate lists exactly 12 fixed axes and published non-claims',()=>{
   const s=read(SCHOOL);
   assert.equal((s.match(/class="m-no"/g)||[]).length,22);
-  assert.equal((s.match(/（confirmed_yes）/g)||[]).length,2);
-  assert.equal((s.match(/（indication）/g)||[]).length,2);
-  assert.equal((s.match(/（unknown）/g)||[]).length,8);
+  const axis=s.split('id="axes"')[1]?.split('</section>')[0]||'';
+  assert.equal((axis.match(/<strong>記載あり<\/strong>/g)||[]).length,2);
+  assert.equal((axis.match(/<strong>示唆（未確定）<\/strong>/g)||[]).length,2);
+  assert.equal((axis.match(/<strong>未確認<\/strong>/g)||[]).length,8);
   assert.match(s,/会費1,500円/);
   assert.match(s,/生徒活動援助費2,500円/);
   assert.match(s,/安全互助会負担金620円/);
@@ -57,8 +58,8 @@ test('School candidate lists exactly 12 fixed axes and published non-claims',()=
   assert.match(s,/校長名/);
   assert.match(s,/公法上の権限/);
   assert.match(s,/原本PDFの公開・匿名化は未承認/);
-  assert.match(s,/委託契約書 PDF p\.1/);
-  assert.match(s,/個々の教職員が勤務時間中に行ったPTA内部事務の実作業記録は未照合/);
+  assert.match(s,/委託契約書.{0,20}PDF p\.1/);
+  assert.match(s,/個々の教職員が勤務時間中に遂行したPTA内部事務の実作業記録は未照合/);
   assert.match(s,/学校・PTAの意思決定／事務の混在/);
   for(const label of ['主体分離','誰の事務か','学校側の公法上の権限','情報保護法61条・69条','法的結論と是正先']){
     assert.ok(s.includes(label),'missing '+label);

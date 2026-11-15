@@ -1,11 +1,11 @@
 {
-  "version": "2026-11-15-public-v2",
+  "version": "2026-11-15-public-v3-legal-review",
   "updated": "2026-11-15",
   "municipality": "大崎市",
   "prefecture": "宮城県",
   "sourceProject": "ptaorg/ptaorg.github.io PR #180",
   "sourceCommit": "781ed6b9867c832bca9f7bf7cf7c9595e9e39186",
-  "sourceReviewStatus": "提供データの観察記録を掲載。原本983頁の公開前独立再監査と法的認定の完了を意味しない。",
+  "sourceReviewStatus": "提供データの観察記録を掲載。原本983頁の公開前独立再監査と法的認定の完了を意味しない。 法令要件の横断審査で5セルを再分類した。各原本983頁の独立再照合は完了していない。",
   "scope": {
     "totalSchools": 25,
     "elementary": 14,
@@ -105,8 +105,8 @@
       "label": "明示的加入申込",
       "confirmed_yes": 0,
       "confirmed_no": 0,
-      "indication": 1,
-      "unknown": 24,
+      "indication": 0,
+      "unknown": 25,
       "not_applicable": 0,
       "conflicting": 0,
       "confirmedKnown": 0,
@@ -132,15 +132,15 @@
       "id": "nonmember_equal_treatment",
       "label": "非会員児童等への公平配慮",
       "confirmed_yes": 0,
-      "confirmed_no": 2,
+      "confirmed_no": 1,
       "indication": 0,
-      "unknown": 23,
+      "unknown": 24,
       "not_applicable": 0,
       "conflicting": 0,
-      "confirmedKnown": 2,
+      "confirmedKnown": 1,
       "yesOfTargetPct": 0,
       "yesOfKnownPct": 0,
-      "knownPct": 8
+      "knownPct": 4
     },
     {
       "id": "school_collection_of_pta_fee",
@@ -160,29 +160,29 @@
       "id": "school_account_or_payment_system",
       "label": "学校口座・徴収システムの利用",
       "confirmed_yes": 1,
-      "confirmed_no": 1,
-      "indication": 4,
+      "confirmed_no": 0,
+      "indication": 5,
       "unknown": 19,
       "not_applicable": 0,
       "conflicting": 0,
-      "confirmedKnown": 2,
+      "confirmedKnown": 1,
       "yesOfTargetPct": 4,
-      "yesOfKnownPct": 50,
-      "knownPct": 8
+      "yesOfKnownPct": 100,
+      "knownPct": 4
     },
     {
       "id": "school_personal_data_for_pta",
       "label": "学校保有情報のPTA目的利用・提供",
-      "confirmed_yes": 2,
+      "confirmed_yes": 1,
       "confirmed_no": 0,
-      "indication": 1,
+      "indication": 2,
       "unknown": 22,
       "not_applicable": 0,
       "conflicting": 0,
-      "confirmedKnown": 2,
-      "yesOfTargetPct": 8,
+      "confirmedKnown": 1,
+      "yesOfTargetPct": 4,
       "yesOfKnownPct": 100,
-      "knownPct": 8
+      "knownPct": 4
     },
     {
       "id": "officer_selection_pressure",
@@ -243,16 +243,16 @@
     {
       "id": "school_pta_governance_overlap",
       "label": "学校・PTAの意思決定／事務の混在",
-      "confirmed_yes": 5,
+      "confirmed_yes": 4,
       "confirmed_no": 0,
-      "indication": 1,
+      "indication": 2,
       "unknown": 19,
       "not_applicable": 0,
       "conflicting": 0,
-      "confirmedKnown": 5,
-      "yesOfTargetPct": 20,
+      "confirmedKnown": 4,
+      "yesOfTargetPct": 16,
       "yesOfKnownPct": 100,
-      "knownPct": 20
+      "knownPct": 16
     }
   ],
   "documentTypes": [
@@ -1534,8 +1534,8 @@
           "sourceRefs": []
         },
         "school_pta_governance_overlap": {
-          "status": "confirmed_yes",
-          "note": "委託契約書に「委託業務の名称 大崎市立敷玉小学校父母教師会の会計事務」「委託金額 無償」と記載。ただし相手方の表記が「ＯＯ〇市立Ｏ〇学校」の空欄のままであり、締結済みの契約書か様式かは原本上判然としない。学校側の公法上の権限・実際の資金保管は判定しない。",
+          "status": "indication",
+          "note": "会計事務の無償委託契約書は提出されているが、相手方が未記入の様式であり、実際の契約締結・受託・執行は確認できない。PTAと学校の事務混在を示唆する資料として扱う。",
           "sourceRefs": [
             {
               "sourceId": "shikitama-contract",
@@ -1974,8 +1974,8 @@
           "sourceRefs": []
         },
         "school_personal_data_for_pta": {
-          "status": "confirmed_yes",
-          "note": "学校が配付する「同意書」に「地区子ども会の歓送迎会等の行事を実施するにあたり、お子さんの名前と住所、電話番号の個人情報を担当地区会長に提供することについて」と記載し、保護者の記名押印欄を置いている。学校保有情報を地区組織へ提供する取扱いを直接確認した。提供の実施件数、法令上の根拠、同意を得られなかった場合の取扱いは未確認。",
+          "status": "indication",
+          "note": "開示された地区子ども会行事の同意書は、担当地区会長への氏名・住所・電話番号の提供を予定する記載である。地区子ども会とPTAの組織同一性は根拠資料に示されておらず、PTA目的利用・提供を確認済みとすることはできない。実際の提供も未確認。",
           "sourceRefs": [
             {
               "sourceId": "kashimadai-consent",
@@ -2743,14 +2743,9 @@
           "sourceRefs": []
         },
         "nonmember_equal_treatment": {
-          "status": "confirmed_no",
-          "note": "R8総会資料のPTA安全互助事業の説明に「全員加入方式のため要保護・準要保護学童の負担金免除はありません」と記載。就学援助対象世帯にも負担金の免除を置かない取扱いを明示しており、非会員・困窮世帯を区別しない旨の明示ではない。実際の徴収・減免の運用実績は未確認。",
-          "sourceRefs": [
-            {
-              "sourceId": "furukawa-jhs-soukai-r8",
-              "locator": "PDF p.24 PTA安全互助事業の説明"
-            }
-          ]
+          "status": "unknown",
+          "note": "PTA安全互助事業の『全員加入方式』と要保護・準要保護世帯への負担金免除なしという資料は存在するが、非会員児童を会員児童と異なって扱ったことや公平配慮の規定の不存在を直接証明しない。制度の性質と実態を再確認する。",
+          "sourceRefs": []
         },
         "school_collection_of_pta_fee": {
           "status": "unknown",
@@ -2888,14 +2883,9 @@
           "sourceRefs": []
         },
         "explicit_opt_in": {
-          "status": "indication",
-          "note": "開示文書の題名自体が「新入生保護者説明会資料（口頭でＰＴＡ加入について説明）」であり、加入の説明が口頭で行われたことが示される。入会の申込・承諾を記録した書面は開示資料中に確認できないが、不存在は判定しない。",
-          "sourceRefs": [
-            {
-              "sourceId": "kitachu-oral",
-              "locator": "文書の題名および PDF p.1"
-            }
-          ]
+          "status": "unknown",
+          "note": "『口頭でPTA加入について説明』という資料名のみでは、希望者の申込みとPTAの承諾のあるオプトイン運営を示唆するとはいえない。加入意思確認の記録は開示資料中にない。",
+          "sourceRefs": []
         },
         "withdrawal_procedure": {
           "status": "unknown",
@@ -4352,8 +4342,8 @@
           ]
         },
         "school_account_or_payment_system": {
-          "status": "confirmed_no",
-          "note": "開示された父母教師会通帳の名義は「ナルコショウチュウガッコウフボキョウシカイ」であり、学校長名義ではない。大崎市立小中学校徴収金事務取扱規程第12条第3号も「学校徴収金（学校会計団体の会費を除く）の預金名義人は校長とし」と団体費を明示的に除外している。当該年度の原本により、PTA会費が学校名義口座に載る取扱いではないことを確認した。学校の徴収金システム・様式で処理されている事実（軸05・軸12）とは別の論点である。",
+          "status": "indication",
+          "note": "PTA名義通帳が資料上確認され、校長名義の学校口座を示す資料ではない。一方でPTA会費の収支は学校の決裁様式に記載されるため、学校徴収金システムの使用有無は不明。『学校口座・徴収システムを使っていない』という軸全体の確定NOは付けない。",
           "sourceRefs": [
             {
               "sourceId": "naruko-passbook",

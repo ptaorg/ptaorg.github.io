@@ -10,7 +10,7 @@ const raw=JSON.parse(read('data/osaki-public-2026.json'));
 const url='https://ptaorg.com/research/osaki-membership-causation.html';
 const page=read('research/osaki-membership-causation.html');
 test('opt-in membership needs only joining records, not a nonmember roster',()=>{
- assert.match(d.optInPrinciple,/非会員一覧/);
+ assert.match(d.optInPrinciple,/非会員名簿/);
  assert.match(d.coreQuestion,/加入した人だけ/);
  assert.ok(d.prohibitedInferences.some(x=>x.includes('非会員の名簿')));
  assert.ok(!d.operationalChecks.some(x=>x.key==='nonmemberRoster'));
@@ -21,7 +21,7 @@ test('opt-in membership needs only joining records, not a nonmember roster',()=>
 test('automatic membership remains a review inference, not a legal nonexistence finding',()=>{
  assert.equal(d.schools.length,25);
  assert.equal(d.schools.length,raw.schools.length);
- assert.deepEqual(d.counts,{presumed_automatic_membership_record_not_supplied:18,
+ assert.deepEqual(d.counts,{membership_record_not_found_fee_route_unestablished:18,
    presumed_automatic_membership_with_fee_notice:5,not_assessed_disclosure_missing:2});
  assert.equal(d.schools.filter(s=>s.feeCollectionEvidenceStatus==='confirmed_yes').length,5);
  for(const s of d.schools){
@@ -29,7 +29,7 @@ test('automatic membership remains a review inference, not a legal nonexistence 
    assert.ok(['not_found_in_disclosure','not_disclosed'].includes(s.applicationFormStatus));
  }
  assert.match(page,/個別契約の不存在/);
- assert.match(page,/自動加入方式を推定/);
+ assert.match(page,/徴収経路未立証/);
  assert.match(page,/法的に自動加入と確定/);
  assert.match(page,/PTAが別途保有する記録/);
 });

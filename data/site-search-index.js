@@ -1,5 +1,12 @@
 window.PTA_SITE_SEARCH_INDEX = [
   [
+    "大崎市25校｜PTAの法令別統合評価（15法令審査）",
+    (window.__ROOT||"")+"research/osaki-legal-review.html",
+    "加入意思、会費徴収経路、学校の公法上の権限、個人情報保護法61条・69条、教職員の職務、私金保管、学校徴収資料確認5校、経路未立証20校、法令15項目、個別評価25校",
+    "published-research"
+  ],
+
+  [
     "大崎市25校｜PTAオプトイン加入意思の記録と会費請求原因",
     (window.__ROOT||"")+"research/osaki-membership-causation.html",
     "加入した本人の記録に基づくPTA会員管理、非会員名簿不要、加入意思記録不提示23校、うち学校徴収にPTA会費が含まれる5校、学校の公法上の権限と個人情報保護法61条69条",
