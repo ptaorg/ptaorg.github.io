@@ -120,3 +120,19 @@ body.osaki-case-v2 .method article.method-wrap{max-width:none!important;width:10
 .os2-minimum-list li{display:flex;align-items:start;gap:8px;font-size:.87rem;line-height:1.65;border-bottom:1px solid #e2e9ef;padding-bottom:7px}
 .os2-minimum-list li:last-child{border:0;padding-bottom:0}
 .os2-minimum-list b{display:grid;place-items:center;background:#276887;color:#fff;border-radius:50%;width:21px;height:21px;flex:none;font-size:.76rem}
+
+
+/* v1.2.1 学校固有の総評：証拠の直下、解説欄の左下に現れる文章エリア */
+.os2-overview{--overview-accent:#bd2630;margin:15px 14px 20px;padding:22px 24px 19px;border:1px solid #e7dcd9;border-top:5px solid var(--overview-accent);border-radius:9px;background:linear-gradient(180deg,#fffaf8 0%,#fff 130px);box-shadow:0 3px 13px #1731440a;min-height:350px}
+.os2-overview--review{--overview-accent:#ad7523;border-color:#eadfcd;background:linear-gradient(180deg,#fffaf1,#fff 130px)}
+.os2-overview--unknown{--overview-accent:#758794;border-color:#d9e1e7;background:linear-gradient(180deg,#f8fafc,#fff 130px)}
+.os2-overview--verified{--overview-accent:#176fa3;border-color:#c9dce9;background:linear-gradient(180deg,#f3faff,#fff 130px)}
+.os2-overview-kicker{color:var(--overview-accent);font-size:.93rem;font-weight:900;letter-spacing:.02em;display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:9px}
+.os2-overview-kicker small{font-size:.78rem;font-weight:600;color:#697683;letter-spacing:0}
+.os2-overview h3{font-size:clamp(1.2rem,2vw,1.47rem)!important;color:#243849!important;line-height:1.55!important;font-weight:900!important;letter-spacing:-.02em;margin:0 0 18px!important}
+.os2-overview .os2-overview-para{color:#2f3b48;font-size:clamp(.91rem,1.12vw,.98rem);line-height:1.95;letter-spacing:.005em;margin:0 0 17px!important;overflow-wrap:anywhere}
+.os2-overview .os2-overview-lead{font-weight:650;color:#25313c}
+.os2-overview .os2-overview-note{border-top:1px solid #e4e5e7;padding-top:12px;margin:18px 0 0!important;font-size:.76rem;color:#65717d;line-height:1.8}
+@media(max-width:740px){.os2-overview{margin:12px 10px 16px;padding:18px 17px;min-height:0}.os2-overview h3{font-size:1.2rem!important}.os2-overview .os2-overview-para{font-size:.93rem;line-height:1.9}}
+
+.os2-overview--urgent{--overview-accent:#bd2630}
