@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {STATUS,POSITIVE_CHECKS,REVIEW_ORDER,assessParentSchool,isVerifiedCompliant,PARENT_REPORT_POLICY_VERSION} from '../assets/pta-parent-report-policy.mjs';
+import {buildParentReportDraft} from '../ai-system/report-standards/scripts/render-parent-school-report.mjs';
 const audit=JSON.parse(fs.readFileSync('data/osaki-legal-screening-2026.json','utf8'));
 const byId=id=>audit.schools.find(x=>x.schoolId===id);
 const clone=x=>JSON.parse(JSON.stringify(x));
@@ -63,4 +64,24 @@ test('school pages embed shared parent report module with a single immutable pol
     const html=fs.readFileSync('archive/osaki/'+s.schoolId+'/index.html','utf8');
     assert.match(html,/type="module" src="\/assets\/osaki-evidence-report\.js/);
   }
+});
+
+test('nationwide draft generator produces deterministic, escaped, unpublished school HTML and manifest',()=>{
+  const one=buildParentReportDraft(audit);
+  const two=buildParentReportDraft(audit);
+  assert.deepEqual(one,two);
+  assert.equal(Object.keys(one).length,26);
+  const manifest=JSON.parse(one['index.json']);
+  assert.equal(manifest.publicationStatus,'draft');
+  assert.equal(manifest.totalSchools,25);
+  assert.equal(manifest.schools.filter(x=>x.tone==='verified').length,0);
+  const naruko=one['schools/naruko-compulsory.html'];
+  assert.match(naruko,/個人情報保護法61条/);
+  assert.match(naruko,/適正化に最低限必要なこと/);
+  assert.match(naruko,/詳細な法令・資料一覧/);
+  assert.match(naruko,/原資料の画像ではありません/);
+  assert.throws(()=>buildParentReportDraft({...audit,schools:[audit.schools[0],audit.schools[0]]}),/duplicate schoolId/);
+  const corrupt=structuredClone(audit);
+  corrupt.schools=[{...corrupt.schools[0],schoolName:'<script>alert(1)</script>'}];
+  assert.ok(buildParentReportDraft(corrupt)['schools/furukawa-daiichi-es.html'].includes('&lt;script&gt;'));
 });
