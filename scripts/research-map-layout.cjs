@@ -43,7 +43,7 @@ return `<section class="research-introduction" aria-labelledby="research-introdu
 </form>
 <div class="research-map-layout">
  <section class="research-map-pane" aria-label="日本地図から自治体を選ぶ">
-  <div class="research-map-heading"><h2>日本地図から探す</h2><p>地図の丸印を選ぶと、自治体の評価や資料を開けます。</p></div>
+  <div class="research-map-heading"><h2>日本地図から探す</h2><p>地図のピンを押すと、自治体の評価や資料を開けます。</p></div>
   <div data-research-map class="research-map" aria-label="全国PTA研究地図"></div>
   <p id="research-map-message" class="research-map-help">地図が表示されない場合も、下の自治体一覧から調べられます。</p>
  </section>

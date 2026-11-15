@@ -245,3 +245,115 @@ body.research-map-page .leaflet-popup-content a{color:#af2734;font-weight:850;te
 
 /* The search field must not inherit the old three-column span rule. */
 body.research-map-page .legacy #research-filters .research-search-simple>label:first-child{grid-column:auto}
+
+/* 2026-11-16: large Japan-first map and accessible high-contrast feature. */
+body.research-map-page .legacy .research-main {
+  max-width: 1420px !important;
+  width: min(calc(100% - 44px), 1420px) !important;
+}
+body.research-map-page .research-map-layout {
+  grid-template-columns: minmax(0, 1.95fr) minmax(325px, 0.82fr);
+  gap: 20px;
+  align-items: start;
+}
+body.research-map-page .legacy .research-map {
+  height: 690px !important;
+  min-height: 690px;
+}
+body.research-map-page .research-map-pane {
+  padding: 18px 18px 13px;
+}
+body.research-map-page .legacy .research-main .research-map-feature {
+  min-height: 690px;
+  background: linear-gradient(145deg, #23485d 0%, #14364c 55%, #102c40 100%) !important;
+  color: #fff !important;
+}
+body.research-map-page .legacy .research-main .research-map-feature .research-feature-overline {
+  color: #f7dfbd !important;
+}
+body.research-map-page .legacy .research-main .research-map-feature #research-feature-title {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff;
+  text-shadow: none;
+}
+body.research-map-page .legacy .research-main .research-map-feature .research-feature-label {
+  color: #fff3df !important;
+  -webkit-text-fill-color: #fff3df;
+}
+body.research-map-page .legacy .research-main .research-map-feature .research-feature-desc,
+body.research-map-page .legacy .research-main .research-map-feature .research-feature-foot {
+  color: #f2f8fa !important;
+  -webkit-text-fill-color: #f2f8fa;
+}
+body.research-map-page .legacy .research-main .research-map-feature .research-feature-bottom {
+  color: #dfebf1 !important;
+  -webkit-text-fill-color: #dfebf1;
+}
+body.research-map-page .legacy .research-main .research-map-feature a.research-feature-go {
+  color: #15384d !important;
+  -webkit-text-fill-color: #15384d;
+  background: #fff !important;
+}
+body.research-map-page .legacy .research-main .research-map-feature a.research-feature-go:hover,
+body.research-map-page .legacy .research-main .research-map-feature a.research-feature-go:focus-visible {
+  background: #eaf4f8 !important;
+}
+body.research-map-page .pta-map-marker {
+  border: none;
+  background: transparent;
+}
+body.research-map-page .pta-map-pin {
+  display: block;
+  position: relative;
+  width: 27px;
+  height: 27px;
+  border: 3px solid #fff;
+  border-radius: 50% 50% 50% 4px;
+  transform: rotate(-45deg);
+  background: #b52c36;
+  box-shadow: 0 2px 8px rgba(4,34,45,.35);
+}
+body.research-map-page .pta-map-pin::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  left: 7px;
+  top: 7px;
+}
+body.research-map-page .pta-map-marker.is-indexed .pta-map-pin {
+  background: #416a7d;
+}
+body.research-map-page .pta-map-marker:focus-visible .pta-map-pin {
+  outline: 3px solid #f8b441;
+  outline-offset: 4px;
+}
+body.research-map-page .pta-map-reset button {
+  display: block;
+  border: 0;
+  background: white;
+  color: #173c4d;
+  padding: 8px 12px;
+  font-weight: 900;
+  line-height: 1.3;
+  cursor: pointer;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: .83rem;
+}
+body.research-map-page .pta-map-reset button:hover,
+body.research-map-page .pta-map-reset button:focus-visible {
+  background: #edf7f9;
+}
+@media (max-width: 980px) {
+  body.research-map-page .research-map-layout { grid-template-columns: 1fr; }
+  body.research-map-page .legacy .research-map { height: 590px !important; min-height: 590px; }
+  body.research-map-page .legacy .research-main .research-map-feature { min-height: 0; }
+}
+@media (max-width: 700px) {
+  body.research-map-page .legacy .research-main { width: calc(100% - 28px) !important; }
+  body.research-map-page .legacy .research-map { height: 470px !important; min-height: 470px; }
+  body.research-map-page .research-map-pane { padding: 12px; }
+}

@@ -57,3 +57,17 @@ test("national map interactions support nested results and clear count",()=>{
  assert.match(css,/research-search-simple/);
  assert.match(text("scripts/generate-research-map.js"),/renderPrimaryMap\(index,renderNationalSurvey\(index\)\)/);
 });
+
+test("Japan-first map uses visible pins, zoom and right-panel contrast", () => {
+  const js=text("js/research-map.js");
+  const css=text("css/research-map-redesign.css");
+  const html=text("research-map.html");
+  assert.match(js, /initialZoom = mapWidth >= 650 \? 6/);
+  assert.match(js, /L\.marker\(group\[0\]\.coordinates/);
+  assert.doesNotMatch(js, /L\.circleMarker\(group\[0\]\.coordinates/);
+  assert.match(js, /button\.textContent = "日本全体"/);
+  assert.match(css, /height: 690px !important/);
+  assert.match(css, /research-feature-desc,\s*body\.research-map-page/);
+  assert.match(html, /地図のピンを押すと/);
+  assert.match(html, /20261116-japan-v2/);
+});
