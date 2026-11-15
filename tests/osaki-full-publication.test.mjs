@@ -69,8 +69,9 @@ test('generated school reports retain each axis status and source facts',()=>{
     for(const t of data.documentTypes){
       assert.ok(docSection.includes('<th scope="row">'+t.label+'</th>'),'missing document type '+s.id+':'+t.id);
     }
-    assert.ok(html.indexOf('主体と事務の分離')<html.indexOf('教育委員会・学校側の権限'));
-    assert.ok(html.indexOf('教育委員会・学校側の権限')<html.indexOf('個人情報の利用・提供'));
+    const legal=html.split('id="responsibility"')[1]?.split('</section>')[0]||'';
+    assert.ok(legal.indexOf('主体と事務の分離')<legal.indexOf('教育委員会・学校側の権限'));
+    assert.ok(legal.indexOf('教育委員会・学校側の権限')<legal.indexOf('個人情報の利用・提供'));
   }
 });
 
