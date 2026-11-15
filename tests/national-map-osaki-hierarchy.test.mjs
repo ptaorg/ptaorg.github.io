@@ -32,8 +32,8 @@ test('existing nationwide interactive map indexes Osaki with direct municipal re
   const home=read('index.html');
   assert.match(html,/id="research-city"[^]*?<option>大崎市<\/option>/);
   assert.match(html,/data-region="osaki"/);
-  assert.match(html,/href="research\/osaki\.html"/);
-  assert.match(html,/学校別評価25校/);
+  assert.match(html,/href="\/?research\/osaki\.html"/);
+  assert.match(html,/学校別の調査 25校/);
   assert.match(html,/全国PTA研究地図/);
   assert.match(js,/schoolReportCount/);
   assert.match(app,/status==='published-research'&&m.url\?localLink\(m.url\)/);
