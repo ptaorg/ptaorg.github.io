@@ -32,17 +32,18 @@ assert.equal(metrics.length,12);
 const fee=metrics.find(x=>x.id==='school_collection_of_pta_fee');
 assert.deepEqual(
   [fee.confirmed_yes,fee.confirmed_no,fee.indication,fee.unknown,fee.yesOfTargetPct,fee.yesOfKnownPct,fee.knownCoveragePct],
-  [1,0,0,24,4,100,4]
+  [5,0,0,20,20,100,20]
 );
 const account=metrics.find(x=>x.id==='school_account_or_payment_system');
-assert.deepEqual([account.indication,account.unknown,account.yesOfKnownPct],[1,24,null]);
+assert.deepEqual([account.confirmed_yes,account.confirmed_no,account.indication,account.unknown,account.yesOfKnownPct],[1,1,4,19,50]);
 const governance=metrics.find(x=>x.id==='school_pta_governance_overlap');
-assert.deepEqual([governance.confirmed_yes,governance.unknown,governance.yesOfKnownPct],[1,24,100]);
+assert.deepEqual([governance.confirmed_yes,governance.indication,governance.unknown,governance.yesOfKnownPct],[5,1,19,100]);
 const teacher=metrics.find(x=>x.id==='teacher_internal_pta_admin');
-assert.deepEqual([teacher.indication,teacher.unknown,teacher.yesOfKnownPct],[1,24,null]);
-assert.equal(metrics.reduce((n,m)=>n+m.confirmed_yes,0),2);
-assert.equal(metrics.reduce((n,m)=>n+m.indication,0),2);
-assert.equal(metrics.reduce((n,m)=>n+m.unknown,0),296);
+assert.deepEqual([teacher.confirmed_yes,teacher.indication,teacher.unknown,teacher.yesOfKnownPct],[2,2,21,100]);
+assert.equal(metrics.reduce((n,m)=>n+m.confirmed_yes,0),17);
+assert.equal(metrics.reduce((n,m)=>n+m.confirmed_no,0),3);
+assert.equal(metrics.reduce((n,m)=>n+m.indication,0),12);
+assert.equal(metrics.reduce((n,m)=>n+m.unknown,0),268);
 const candidatePath=path.resolve(path.dirname(new URL(import.meta.url).pathname),'..','archive','osaki','tajiri-jhs','index.html');
 if(fs.existsSync(candidatePath)){
   const candidate=fs.readFileSync(candidatePath,'utf8');
@@ -53,7 +54,7 @@ if(fs.existsSync(candidatePath)){
     const row=candidate.slice(pos,candidate.indexOf('</tr>',pos));
     assert.ok(row.includes('（'+tajiriSource.axes[a.id].status+'）'),'report/source mismatch: '+a.id);
   }
-  assert.equal((candidate.match(/class="m-no"/g)||[]).length,12);
+  assert.equal((candidate.match(/class="m-no"/g)||[]).length,22,'12 axes and 10 document statuses displayed');
   console.log('STATIC_CANDIDATE_SYNC_OK: Tajiri 12 statuses match skill source dataset');
 }
 
