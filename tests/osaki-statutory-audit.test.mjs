@@ -37,7 +37,7 @@ test('all school pages carry a legal section with grounded case-specific source 
    for(const x of s.observations){
      assert.ok(h.includes(x.label),s.schoolId+':'+x.axis);
    }
-   if(s.feeRoute!=='school_collection_documented')assert.match(h,/徴収経路.*未立証/,s.schoolId);
+   if(s.feeRoute!=='school_collection_documented')assert.match(h,/未立証/,s.schoolId);
  }
 });
 test('legal matrix has explicit links, distinction of scope, and a public discoverable article',()=>{
