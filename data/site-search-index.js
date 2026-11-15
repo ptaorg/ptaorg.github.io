@@ -1,5 +1,11 @@
 window.PTA_SITE_SEARCH_INDEX = [
   [
+    "大崎市25校｜PTAオプトイン加入意思の記録と会費請求原因",
+    (window.__ROOT||"")+"research/osaki-membership-causation.html",
+    "加入した本人の記録に基づくPTA会員管理、非会員名簿不要、加入意思記録不提示23校、うち学校徴収にPTA会費が含まれる5校、学校の公法上の権限と個人情報保護法61条69条",
+    "published-research"
+  ],
+  [
     "古川第一小学校｜大崎市PTA学校別評価 2026年度",
     (window.__ROOT||"")+"archive/osaki/furukawa-daiichi-es/",
     "宮城県大崎市 古川第一小学校 令和8年度PTA学校別調査、固定12評価軸（確認あり0・否定0・示唆0・未確認12）、PTA入会申込書・退会届・会費収納等10種類の文書存否。",
