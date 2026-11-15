@@ -15,7 +15,7 @@ test('opt-in membership needs only joining records, not a nonmember roster',()=>
  assert.ok(d.prohibitedInferences.some(x=>x.includes('非会員の名簿')));
  assert.ok(!d.operationalChecks.some(x=>x.key==='nonmemberRoster'));
  assert.match(page,/非会員名簿.*作成は必要ありません/);
- assert.match(page,/学校の全保護者名簿を取得して全保護者を登録/);
+ assert.match(page,/学校の児童・保護者名簿を取得して全保護者を登録/);
  assert.match(page,/本人の加入意思/);
 });
 test('automatic membership remains a review inference, not a legal nonexistence finding',()=>{
@@ -28,7 +28,7 @@ test('automatic membership remains a review inference, not a legal nonexistence 
    assert.ok(raw.schools.find(x=>x.id===s.schoolId&&x.name===s.schoolName),s.schoolId);
    assert.ok(['not_found_in_disclosure','not_disclosed'].includes(s.applicationFormStatus));
  }
- assert.match(page,/個々の契約不存在/);
+ assert.match(page,/個別契約の不存在/);
  assert.match(page,/自動加入方式を推定/);
  assert.match(page,/法的に自動加入と確定/);
  assert.match(page,/PTAが別途保有する記録/);
