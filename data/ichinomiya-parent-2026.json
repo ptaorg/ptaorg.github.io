@@ -1,0 +1,313 @@
+{
+  "updated": "2026-11-16",
+  "municipality": "一宮市",
+  "scope": {
+    "allSchools": 61,
+    "reportSchools": 21,
+    "sourcePdfs": 42,
+    "findings": 50
+  },
+  "source": "/journal/ichinomiya-pta-settlements-20261108.html",
+  "schools": [
+    {
+      "id": "hagiwara-es",
+      "name": "萩原小学校",
+      "url": "/archive/ichinomiya/hagiwara-es/",
+      "findings": [
+        1,
+        2,
+        3
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/hagi6_2.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/1QZ6atPTTz8gvspBIMUm8OTCoSTuBCTuM/view",
+        "https://drive.google.com/file/d/12apE6kZr7Avlw9M8e5AjRaTx_a4TvakL/view"
+      ]
+    },
+    {
+      "id": "kitagata-es",
+      "name": "北方小学校",
+      "url": "/archive/ichinomiya/kitagata-es/",
+      "findings": [
+        4,
+        5
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/kita7_3.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/19epvyTPxw30eN-zKLXWxOGq4Vt-7-2CH/view",
+        "https://drive.google.com/file/d/1iRlNQk_NbwDKF6C-gF1SlE-Q3btBow_1/view"
+      ]
+    },
+    {
+      "id": "nanbu-jhs",
+      "name": "南部中学校",
+      "url": "/archive/ichinomiya/nanbu-jhs/",
+      "findings": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/nan6_2.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/1pp1lpai5igf21UAd0wJVIZSwbWl6g_GX/view",
+        "https://drive.google.com/file/d/1CIe-uTUtp9a0kpA45wC1CQ8BpcqsmdTI/view"
+      ]
+    },
+    {
+      "id": "hokubu-jhs",
+      "name": "北部中学校",
+      "url": "/archive/ichinomiya/hokubu-jhs/",
+      "findings": [
+        10,
+        11
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/hokN7_1.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/1OLuE5TbpcFAqPTh9QkhlXuAg815DR-bm/view",
+        "https://drive.google.com/file/d/1AyEZQnwBS8HiwLR17DSyO5NlBkPKHZgZ/view"
+      ]
+    },
+    {
+      "id": "oku-es",
+      "name": "奥小学校",
+      "url": "/archive/ichinomiya/oku-es/",
+      "findings": [
+        12,
+        13,
+        14
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/oku6_8.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/1n0DMvalWl2yKhQpHUoxM48HEEd_BHW7V/view",
+        "https://drive.google.com/file/d/1y4b6pBVPgpIvBM1VDwWKUOzZ-OQHZiBk/view"
+      ]
+    },
+    {
+      "id": "imaise-es",
+      "name": "今伊勢小学校",
+      "url": "/archive/ichinomiya/imaise-es/",
+      "findings": [
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/ima7_3.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/1m7PMnKzl1mwRZLrrMPdj8Kq4MeLWjgje/view",
+        "https://drive.google.com/file/d/1N2UAO4p9vtY8pQrBcu-tj6AtZhuAeDOU/view"
+      ]
+    },
+    {
+      "id": "kifune-es",
+      "name": "貴船小学校",
+      "url": "/archive/ichinomiya/kifune-es/",
+      "findings": [
+        20
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/kif7_2.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/1BNc_UfyOJ-MwgHUV-Tk71JjB7D2W_A9p/view",
+        "https://drive.google.com/file/d/1vlXLNzJuk43151jiYIfPoO5y2x4XJTxC/view"
+      ]
+    },
+    {
+      "id": "miyanishi-es",
+      "name": "宮西小学校",
+      "url": "/archive/ichinomiya/miyanishi-es/",
+      "findings": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/miya7_2.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/1XXriX5lfJsYA6-x9hpdRCOmlCPLHtgYh/view",
+        "https://drive.google.com/file/d/13Hwfr4bO9QHSXhugYtgK-ly-p_deNoD3/view"
+      ]
+    },
+    {
+      "id": "tanyo-nishi-es",
+      "name": "丹陽西小学校",
+      "url": "/archive/ichinomiya/tanyo-nishi-es/",
+      "findings": [
+        25,
+        26
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/tnw7_2.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/1w4ljJtSc5l4-vvHQcBc2yNA9Rq1wJz6z/view",
+        "https://drive.google.com/file/d/18WmScmBf9wbDz6M2tS8eB_80E-efk3MA/view"
+      ]
+    },
+    {
+      "id": "tanyo-minami-es",
+      "name": "丹陽南小学校",
+      "url": "/archive/ichinomiya/tanyo-minami-es/",
+      "findings": [
+        27
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/tns6_4.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/1f_Cb5pZEhNAQrnTscFaN4flsm3BoiAwe/view",
+        "https://drive.google.com/file/d/1sLQ9E3h0H4kLnPns5-BY_VOzyrtpd7GZ/view"
+      ]
+    },
+    {
+      "id": "azai-minami-es",
+      "name": "浅井南小学校",
+      "url": "/archive/ichinomiya/azai-minami-es/",
+      "findings": [
+        28,
+        29,
+        30
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/asm6_2.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/16Ms_h1x44pP7t_s9byqCoInYZ88INe5q/view",
+        "https://drive.google.com/file/d/12BSwOoXr2vWA_tjF_kKnCvv6ujKhMl6E/view"
+      ]
+    },
+    {
+      "id": "yamato-nishi-es",
+      "name": "大和西小学校",
+      "url": "/archive/ichinomiya/yamato-nishi-es/",
+      "findings": [
+        31,
+        32,
+        33
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/ywn7_1.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/1UUq9w6s3yPn-mibTBC7gZkzh6LapGQzg/view",
+        "https://drive.google.com/file/d/1NawTE-ZW9Ec1JfkMBru1IKYkwtmfThzl/view"
+      ]
+    },
+    {
+      "id": "asano-es",
+      "name": "浅野小学校",
+      "url": "/archive/ichinomiya/asano-es/",
+      "findings": [
+        34,
+        35
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/asa6_3.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/1vdHG6I-z5T5Bn5axpcPDZY7I4HQr0j5c/view",
+        "https://drive.google.com/file/d/12Ky2Gn8NgB6EQ-fYnTqUBjWjLD0f40ab/view"
+      ]
+    },
+    {
+      "id": "fuji-es",
+      "name": "富士小学校",
+      "url": "/archive/ichinomiya/fuji-es/",
+      "findings": [
+        36,
+        37
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/fuji7_4.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/1guCFr3uBjpkalOw3wBf_Ujfgh_4Jg2cv/view",
+        "https://drive.google.com/file/d/19MSD024oVGw2r_5Rhe7MmWb3Ba1lv0ll/view"
+      ]
+    },
+    {
+      "id": "azai-naka-es",
+      "name": "浅井中小学校",
+      "url": "/archive/ichinomiya/azai-naka-es/",
+      "findings": [
+        38
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/asn6_4.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/1I1rqUgKmJnVxassrndrDDrspdMZi8ANh/view",
+        "https://drive.google.com/file/d/1F0Na0uEAXaI20VjQ0BvS7PoxFphs55E8/view"
+      ]
+    },
+    {
+      "id": "konobu-nakajima-es",
+      "name": "小信中島小学校",
+      "url": "/archive/ichinomiya/konobu-nakajima-es/",
+      "findings": [
+        39
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/obu6_16.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/19jtun33mSRMk61pZU_911OM_Tn1Qsrzp/view",
+        "https://drive.google.com/file/d/17rVd-wyzAVHcYdkRsx6PrKcw9KveN-uG/view"
+      ]
+    },
+    {
+      "id": "kaimei-es",
+      "name": "開明小学校",
+      "url": "/archive/ichinomiya/kaimei-es/",
+      "findings": [
+        40,
+        41
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/kai6_4.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/16fc7z8h7-C5sg2kSh7ngHq2lIkPer6b3/view",
+        "https://drive.google.com/file/d/15V938jEbtvNF1rZdYKARJuORx8ywNaqn/view"
+      ]
+    },
+    {
+      "id": "kisogawa-nishi-es",
+      "name": "木曽川西小学校",
+      "url": "/archive/ichinomiya/kisogawa-nishi-es/",
+      "findings": [
+        42
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/kis6_7.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/1d6gCZcJsznReHoc0RIRI3WPV8gq5ES_A/view",
+        "https://drive.google.com/file/d/1GLiumLNnnRzCN77L4z3vvM7a29Q_NJiQ/view"
+      ]
+    },
+    {
+      "id": "haguri-jhs",
+      "name": "葉栗中学校",
+      "url": "/archive/ichinomiya/haguri-jhs/",
+      "findings": [
+        43,
+        44
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/hgr6_2.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/1ld3ohjpG4xkBOPAawquydkezkXMJTCeu/view",
+        "https://drive.google.com/file/d/1DBjAE9GijR2VFATg9MLR3WMs1lj5Abol/view"
+      ]
+    },
+    {
+      "id": "yamato-jhs",
+      "name": "大和中学校",
+      "url": "/archive/ichinomiya/yamato-jhs/",
+      "findings": [
+        45,
+        46
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/ytc6_3.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/1x9ympDrdniTZ2TOtI1Vauu_4Gs94nM-t/view",
+        "https://drive.google.com/file/d/1kPyG1nOoDVorF2MZtIGU1LWcM1u3fb3N/view"
+      ]
+    },
+    {
+      "id": "nakajima-es",
+      "name": "中島小学校",
+      "url": "/archive/ichinomiya/nakajima-es/",
+      "findings": [
+        47,
+        48
+      ],
+      "firstEvidenceImage": "/assets/research/ichinomiya-20261108/nakN7_1.jpg",
+      "pdfs": [
+        "https://drive.google.com/file/d/1dZ2Z3bZ3OegNkgBdQGPu7xebWYU9lCuK/view",
+        "https://drive.google.com/file/d/1TmRfeQ2sERQL5SvYC4X_MizO1_Em9-gb/view"
+      ]
+    }
+  ]
+}
