@@ -380,3 +380,21 @@ body.research-map-page #main .legacy .legacy-body .research-main .research-map-f
 body.research-map-page #main .legacy .legacy-body .research-main .research-map-feature .research-feature-bottom {
   color: #dfebf1 !important;
 }
+
+/* Map heading spans both columns; the right panel and actual map begin on the same line. */
+body.research-map-page .research-map-heading{margin:0 0 15px;padding:0 3px}
+body.research-map-page .research-map-layout{align-items:start}
+body.research-map-page .research-map-pane{padding-top:0}
+body.research-map-page .research-map-feature{margin-top:0!important;align-self:start}
+body.research-map-page .legacy .research-region h3{font-size:clamp(1.8rem,2.55vw,2.28rem)!important;line-height:1.35!important;font-weight:900;letter-spacing:-.025em;margin:4px 0 13px!important}
+body.research-map-page .legacy .research-region h3 a{font-size:inherit!important}
+body.research-map-page .research-feature-quicklinks{display:grid;gap:11px;margin:0 0 24px}
+body.research-map-page .research-feature-quicklinks[hidden],body.research-map-page .research-feature-reset[hidden]{display:none!important}
+body.research-map-page #main .legacy .legacy-body .research-main .research-feature-quicklinks>p{color:#fff3df!important;font-size:.95rem;font-weight:850;margin:0 0 4px!important}
+body.research-map-page .research-feature-quicklinks a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border:1px solid #ffffff65;border-radius:8px;color:#fff!important;background:#ffffff16;text-decoration:none!important;font-weight:850;font-size:1.08rem}
+body.research-map-page .research-feature-quicklinks a:hover,body.research-map-page .research-feature-quicklinks a:focus-visible{background:#ffffff30;border-color:#fff}
+body.research-map-page .research-feature-quicklinks a span{font-size:.94rem;color:#ffe7c3}
+body.research-map-page .research-feature-quicklinks small{color:#e4eff2;line-height:1.65;font-size:.82rem}
+body.research-map-page .research-feature-reset:not([hidden]){align-self:flex-start;background:none;border:0;border-bottom:1px solid #ffffff90;padding:4px 0;margin:12px 0 17px;color:white;cursor:pointer;font:inherit;font-weight:800}
+body.research-map-page .research-map-feature[data-feature-mode="selected"] #research-feature-title{font-size:clamp(2.1rem,3.1vw,2.8rem)!important}
+@media(max-width:700px){body.research-map-page .research-map-heading{margin-bottom:10px}}

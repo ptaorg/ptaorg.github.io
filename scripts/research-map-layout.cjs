@@ -22,7 +22,7 @@ const regions=[...index.municipalities];
 const featured=regions.filter(m=>m.url).sort((a,b)=>String(b.updated||"").localeCompare(String(a.updated||""))||(b.schoolReportCount||0)-(a.schoolReportCount||0)).slice(0,6);
 const selected=new Set(featured.map(m=>m.id));
 const remaining=regions.filter(m=>!selected.has(m.id));
-const lead=featured[0]||regions.find(m=>m.url)||regions[0];
+
 const advanced=option("research-mode","資料の種類",["自治体研究","学校別資料"])+option("research-city","自治体名",regions.map(m=>m.name))+
  option("research-theme","調査内容",index.themes)+option("research-school","学校種別",[...new Set(regions.flatMap(m=>m.schools.map(s=>s.type)))])+
  option("research-publication","資料公開状況",[...new Set(regions.flatMap(m=>m.schools.flatMap(s=>s.documents.map(d=>d.status))))])+
@@ -41,19 +41,25 @@ return `<section class="research-introduction" aria-labelledby="research-introdu
  </div>
  <details class="research-search-advanced" id="research-advanced"><summary>詳しい条件で探す</summary><div class="research-search-extra">${advanced}</div></details>
 </form>
+<div class="research-map-heading"><h2>日本地図から探す</h2><p>地図のピンを押すと、自治体の評価や資料を開けます。</p></div>
 <div class="research-map-layout">
  <section class="research-map-pane" aria-label="日本地図から自治体を選ぶ">
-  <div class="research-map-heading"><h2>日本地図から探す</h2><p>地図のピンを押すと、自治体の評価や資料を開けます。</p></div>
   <div data-research-map class="research-map" aria-label="全国PTA研究地図"></div>
   <p id="research-map-message" class="research-map-help">地図が表示されない場合も、下の自治体一覧から調べられます。</p>
  </section>
- <aside class="research-map-feature" aria-labelledby="research-feature-title">
-  <p class="research-feature-overline">公開中の自治体評価から</p>
-  <h2 id="research-feature-title">${lead?escape(lead.prefecture+" "+lead.name):"自治体の調査"}</h2>
-  <p class="research-feature-label">最初に確認するのは、保護者の入会・退会の自由。</p>
-  <p class="research-feature-desc">${lead?excerpt(lead):"各自治体の調査資料を順次掲載しています。"}</p>
-  ${lead?.url?`<a class="research-feature-go" href="${escape(lead.url)}">この自治体の評価を読む <span aria-hidden="true">→</span></a>`:""}
-  ${lead?.schoolReportCount?`<p class="research-feature-foot">学校別の調査 ${lead.schoolReportCount}校。詳しい評価と証拠資料を確認できます。</p>`:""}
+ <aside class="research-map-feature" aria-labelledby="research-feature-title" data-feature-mode="national">
+  <p class="research-feature-overline" id="research-feature-overline">全国の調査状況</p>
+  <h2 id="research-feature-title">地域を選んで、PTAの実態を調べる。</h2>
+  <p class="research-feature-label" id="research-feature-label">${regions.length}自治体・地域の資料を掲載</p>
+  <p class="research-feature-desc" id="research-feature-desc">地図のピンを押すと、その自治体の概要と資料への入口がここに表示されます。赤いピンは自治体の調査ページ、青灰色は資料の索引を示します。</p>
+  <div class="research-feature-quicklinks" id="research-feature-quicklinks">
+   <p>学校別の評価を公開している自治体</p>
+   ${regions.filter(m=>m.url&&m.schoolReportCount).map(m=>`<a href="${escape(m.url)}">${escape(m.name)}<span>${m.schoolReportCount}校</span></a>`).join("")}
+   <small>学校別の資料は確認できた範囲から掲載。全校の適法性を判定したものではありません。</small>
+  </div>
+  <a class="research-feature-go" id="research-feature-go" href="#research-results">自治体一覧を見る <span aria-hidden="true">→</span></a>
+  <p class="research-feature-foot" id="research-feature-foot">自治体の総合評価から、学校ごとの調査と根拠資料へ進めます。</p>
+  <button class="research-feature-reset" id="research-feature-reset" type="button" hidden>全国の案内に戻す</button>
   <div class="research-feature-bottom">調査で確認できた範囲と、まだ確認できていないことを区別しています。資料不足を「問題なし」とは扱いません。</div>
  </aside>
 </div>
