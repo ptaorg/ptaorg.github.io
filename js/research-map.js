@@ -31,7 +31,7 @@
     status = document.getElementById("research-result-status");
   let data;
   try {
-    const response = await fetch((window.__ROOT||"")+"data/research-map-index.json");
+    const response = await fetch((window.__ROOT||"")+"data/research-map-index.json?v=20261115-osaki-v1");
     if (!response.ok) throw Error("index");
     data = await response.json();
   } catch (_) {

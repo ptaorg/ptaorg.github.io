@@ -27,7 +27,7 @@
   /* ---------- data ---------- */
   async function loadJSON(path){const r=await fetch(ROOT+path,{cache:'no-cache'});if(!r.ok)throw Error(`Data unavailable: ${path}`);return r.json();}
   async function loadData(){
-    const [fm,fr,fj]=await Promise.allSettled([loadJSON('data/research-map-index.json'),loadJSON('data/board-responses.json'),loadJSON('data/journal-index.json')]);
+    const [fm,fr,fj]=await Promise.allSettled([loadJSON('data/research-map-index.json?v=20261115-osaki-v1'),loadJSON('data/board-responses.json'),loadJSON('data/journal-index.json')]);
     const needDemo=!(fm.status==='fulfilled'&&Array.isArray(fm.value.municipalities))||!(fr.status==='fulfilled'&&Array.isArray(fr.value.responses));
     const demo=needDemo?await loadJSON('data/demo.json'):null;
     const map=fm.status==='fulfilled'&&Array.isArray(fm.value.municipalities)?fm.value:demo.map;
@@ -102,7 +102,7 @@
   const NS='http://www.w3.org/2000/svg';
   let svgText=null,pinsData=null;
   const getSvg=async()=>svgText||(svgText=(await (await fetch(ROOT+'assets/map/japan-prefectures.svg')).text()).replace(/^<\?xml[^>]*>\s*/,''));
-  const getPins=async()=>pinsData||(pinsData=await (await fetch(ROOT+'data/map-pins.json')).json().catch(()=>({prefs:{},regions:{},responses:{}})));
+  const getPins=async()=>pinsData||(pinsData=await (await fetch(ROOT+'data/map-pins.json?v=20261115-osaki-v1')).json().catch(()=>({prefs:{},regions:{},responses:{}})));
   function addPin(svg,x,y,r,cls,title,href,label){
     const g=document.createElementNS(NS,href?'a':'g');if(href)g.setAttribute('href',href);
     const c=document.createElementNS(NS,'path');
