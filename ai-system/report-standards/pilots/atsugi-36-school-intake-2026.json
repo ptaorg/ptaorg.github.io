@@ -451,10 +451,16 @@
           "sourceRefs": []
         },
         "school_pta_governance_overlap": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "新入生向け案内に加入・非加入を問わず全家庭に回答を求め、未回答者へ入学式で確認する旨が記載。実施主体は未確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "additional-atsugi-daini-es-05",
+              "locator": "p.1 末尾 回答依頼"
+            }
+          ],
+          "reviewNotes": "加入意思取得はPTA固有事務。入学式での確認が学校の行為かを分離して審査。"
         }
       },
       "documentExistence": "対象PDFの原本存在を確認。固定10文書の存否判定は未完了。",
@@ -468,7 +474,18 @@
         "method": "Google Drive原本PDF取得＋文字抽出とページ画像（該当頁）を照合",
         "verifiedAt": "2026-11-16",
         "privateDriveIdNotPublished": true
-      }
+      },
+      "additionalOriginals": [
+        {
+          "sourceId": "additional-atsugi-daini-es-05",
+          "fileName": "厚木第二小学校_05.pdf",
+          "sha256": "2fd1409634772e1f5bcbe06952b0a71cd3d1d61545827fbf24954351222bd8a3",
+          "pages": 1,
+          "dated": "2026-01-26",
+          "verifiedBy": "PDF text and rendered page inspected",
+          "sourceLocation": "全国資料／厚木市"
+        }
+      ]
     },
     {
       "schoolId": "atsugi-es",
@@ -3834,6 +3851,16 @@
       "sourceAvailability": "Drive『全国資料／厚木市』の原本PDF本文・ページ画像を照合。保存名は学校名の誤記。",
       "publicSiteOriginalUrl": null,
       "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "additional-atsugi-daini-es-05",
+      "schoolId": "atsugi-daini-es",
+      "fileName": "厚木第二小学校_05.pdf",
+      "sha256": "2fd1409634772e1f5bcbe06952b0a71cd3d1d61545827fbf24954351222bd8a3",
+      "pages": 1,
+      "sourceAvailability": "Google Drive全国資料／厚木市 原本PDFを直接確認。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
     }
   ],
   "corrections": [
@@ -3911,6 +3938,7 @@
       "tomei-jhs"
     ],
     "unverifiedCount": 21,
-    "remainingVerification": "各校に該当する旧資料・原本PDF・画像の有無、保存元フォルダ、年度を照合。元資料が得られなければ未評価継続。"
+    "remainingVerification": "各校に該当する旧資料・原本PDF・画像の有無、保存元フォルダ、年度を照合。元資料が得られなければ未評価継続。",
+    "additionalFindings": "全国資料／厚木市39件と小鮎小学校01.zip内21画像を調査。既存15校の補助証拠を発見したが、新たな学校の原本はなし。"
   }
 }
