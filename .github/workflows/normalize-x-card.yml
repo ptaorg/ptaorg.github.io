@@ -1,0 +1,35 @@
+name: Normalize X card metadata
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - scripts/unify-x-cards.cjs
+      - .github/workflows/normalize-x-card.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply and validate all static card tags
+        run: |
+          node scripts/unify-x-cards.cjs
+          node scripts/unify-x-cards.cjs
+          git diff --check
+      - name: Commit changed public pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.html'
+          if ! git diff --cached --quiet; then
+            git commit -m "Standardize all public X cards to legacy blue image"
+            git push
+          fi
