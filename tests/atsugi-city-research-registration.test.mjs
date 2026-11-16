@@ -7,6 +7,9 @@ test('city research note explains 2024 registries without treating registration 
  assert.ok(page.includes('id="atsugi-public-pta-registry"'));
  assert.ok(page.includes(registry.sourceUrl));
  assert.match(page,/根拠法令/);
+ assert.match(page,/8校の登録/);
+ assert.match(page,/PTA役員名簿/);
+ assert.ok(page.includes('https://www.city.atsugi.kanagawa.jp/material/files/group/9/780023zimu2.pdf'));
  assert.match(page,/所掌を先に検証/);
  assert.match(page,/個人情報保護法61条・69条/);
  assert.match(page,/2024年8月31日現在/);
