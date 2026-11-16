@@ -76,10 +76,10 @@
       "currentAxisStatus": "mixed_verified_document_indications_without_legality_finding",
       "originalPdfVerified": true,
       "pageCount": 9,
-      "sha256": null,
+      "sha256": "7a4497474a69a4f129a88074e51a07dd348fee128060b1a4c10478cdbdd4769f",
       "originalEvidenceSummary": "p.1 2025年5月7日本部会：tetoru、引落6月2日、未加入1家庭。p.2 学校からの連絡アプリ配信・PTA会費集金作業3,600円・職員PTA活動。p.9 2026年1月14日：新入生説明会で3年間の役員をくじ引き選出。",
       "requiredCorrection": "くじ引きの具体的原文を新規確認。学校が金銭を保管したとまでは断定しない。",
-      "hashVerification": "pending_independent_recalculation"
+      "hashVerification": "verified_from_local_download"
     },
     {
       "id": "atsugi-es",
