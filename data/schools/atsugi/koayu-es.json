@@ -7,15 +7,15 @@
   "basePath": "/archive/atsugi/koayu-es/",
   "canonical": "https://ptaorg.com/archive/atsugi/koayu-es/",
   "ogImage": "/assets/ogp/atsugi/koayu-es.png",
-  "status": "評価準備中",
-  "statusClass": "eval-pending",
+  "status": "要確認",
+  "statusClass": "eval-warning",
   "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
   "description": "小鮎小学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
-  "ogDescription": "小鮎小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
+  "ogDescription": "任意団体、途中退会・休会、無理な役員負担を求めないと明示した点は評価できる。会費の使途の一部が学校活動・物資に関係するため、学校経費への充当や寄附手続が必要な行為を個別に検証する。",
   "materials": {
-    "documentName": "未確認",
+    "documentName": "小鮎小学校_08.pdf",
     "confirmedDocuments": [
-      "未確認"
+      "小鮎小学校_08.pdf"
     ],
     "hasMembershipNotice": "未確認",
     "hasApplicationForm": "未確認",
@@ -35,19 +35,23 @@
     "pdf": null
   },
   "confirmedFacts": [
-    "資料確認後に記載します。"
+    "PTA加入案内は任意団体であると明記している。",
+    "中途退会・加入・休会が可能と記載し、役員は無理に引き受ける必要がないと明示している。",
+    "会費の使途として進級・卒業祝い品や学校で使う児童向け物資等の購入が挙げられている。"
   ],
   "unconfirmedPoints": [
-    "PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を確認後に記載します。"
+    "申込みと承諾の記録及び自己徴収の実施。",
+    "学校運営に係る物資購入の会計・寄附受領手続等の対象資料。"
   ],
   "riskFlags": [
-    "未評価"
+    "原本資料により要検証",
+    "学校側の権限・運用の独立照合待ち"
   ],
   "evaluation": [
-    "評価準備中"
+    "任意団体、途中退会・休会、無理な役員負担を求めないと明示した点は評価できる。会費の使途の一部が学校活動・物資に関係するため、学校経費への充当や寄附手続が必要な行為を個別に検証する。"
   ],
   "humanReviewRequired": true,
-  "lastReviewed": "2026-06-02",
+  "lastReviewed": "2026-11-16",
   "nationalArchive": {
     "order": 7,
     "group": "小学校"
