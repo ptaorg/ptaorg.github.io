@@ -10,7 +10,8 @@ description: 自治体別PTA総合報告書・学校別評価書・母集団付�
 1. `AGENTS.md`
 2. `ai-system/CORE_INSTRUCTIONS.md`、`ai-system/ORCHESTRATION.md`、`ai-system/QUALITY_STANDARD.md`
 3. `ai-system/skills/municipal-school-report.md`
-4. `ai-system/report-standards/README.md` と同ディレクトリの評価軸・スキーマ・テンプレート
+4. `ai-system/skills/municipal-investigation-pipeline.md`（全履歴・自治体規程・時系列の是正評価・公開工程）
+5. `ai-system/report-standards/README.md` と同ディレクトリの評価軸・スキーマ・テンプレート
 
 **自治体総評の事前必須ゲート：** 最初にGmail・Google Driveの当該自治体との送受信・添付・開示資料を横断確認し、続いてウェブ・例規・教育委員会通知・会計手引等から、PTA会費の学校徴収を「委任」「同意」「団体費」等で制度化する規定を探索する。実施方法・未確認時の停止条件は `ai-system/skills/municipal-school-report.md` v2.1.0に従う。
 
