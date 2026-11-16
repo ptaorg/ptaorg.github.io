@@ -10,7 +10,7 @@ test('city research note explains 2024 registries without treating registration 
  assert.match(page,/登録簿に該当するのは25校/);
  assert.match(page,/PTA役員名簿/);
  assert.ok(page.includes('https://www.city.atsugi.kanagawa.jp/material/files/group/9/780023zimu2.pdf'));
- assert.match(page,/所掌を先に検証/);
+ assert.match(page,/公法上の具体的権限を確認/);
  assert.match(page,/個人情報保護法61条・69条/);
  assert.match(page,/2024年8月31日現在/);
  assert.match(page,/学校別原本PDF15校/);
