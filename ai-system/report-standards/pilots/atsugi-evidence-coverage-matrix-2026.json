@@ -9,11 +9,11 @@
     "totalSchools": 36,
     "both": 4,
     "school_original_only": 11,
-    "official_registration_only": 20,
-    "no_individual_source_yet": 1,
-    "schoolsWithAtLeastOneIndividualSource": 35
+    "official_registration_only": 21,
+    "no_individual_source_yet": 0,
+    "schoolsWithAtLeastOneIndividualSource": 36
   },
-  "warning": "登録簿だけの学校は個別学校PDFを確認したわけではなく、登録が2026年現在の実施・法令上の授権・違法性を証明するものではない。登録簿も学校PDFも未発見の学校について、資料が不存在・違法性なし等とは断定しない。",
+  "warning": "全36校で少なくとも学校原本PDFか2023/2024行政登録簿のいずれか一種類の資料がある。ただし学校原本PDFの照合は15校のみ。市の個人情報取扱事務登録簿は個々のPTA業務の適法性や実際の実施及び現在の運用を証明しない。",
   "schools": [
     {
       "id": "aikawa-es",
@@ -175,10 +175,10 @@
       "schoolType": "小学校",
       "schoolOriginalPdf": false,
       "schoolOriginalFile": null,
-      "officialRegistry": false,
-      "registryId": null,
-      "registryLegalBasis": null,
-      "status": "no_individual_source_yet"
+      "officialRegistry": true,
+      "registryId": "7800(3)-000029",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only"
     },
     {
       "id": "koayu-es",
