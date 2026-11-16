@@ -27,10 +27,7 @@ test('PDFs inspected but field implementation and lawful authority remain unveri
  assert.equal(review.publication.state,'draft');
  for(const c of review.cases){
   assert.equal(c.currentAxisStatus,'mixed_verified_document_indications_without_legality_finding');
-  if(c.id==='aikawa-jhs') {
-   assert.equal(c.sha256,null);
-   assert.equal(c.hashVerification,'pending_independent_recalculation');
-  } else assert.match(c.sha256,/^[a-f0-9]{64}$/);
+  assert.match(c.sha256,/^[a-f0-9]{64}$/);
   assert.equal(c.originalPdfVerified,true);
   assert.ok(c.neededEvidence.length>=3,c.id);
   assert.ok(c.epistemicLimit.length>15,c.id);
