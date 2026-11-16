@@ -356,32 +356,56 @@
       "priorFinding": null,
       "claimedOriginal": null,
       "reviewPriorities": [],
-      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "sourceReview": "Google Driveの原本PDFを直接取得し該当頁を確認した。文書上の規定・説明と学校の実際の運用、公法上の権限・個情法適合性を区別する。",
       "analysisYear": "2026",
       "axes": {
         "voluntary_membership_notice": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "confirmed_yes",
+          "observation": "転入生用の案内にPTA加入は任意と明記し、入会・非入会の選択欄がある。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-atsugi-daini-es",
+              "locator": "p.1 転入生PTA入会回答"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "explicit_opt_in": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "転入生向けに入会・非入会の選択欄がある一方、既存会員向け2026年度継続確認案内では退会希望者が届出を提出する方式を記載。対象の異なる2方式を同じ評価に混ぜず確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-atsugi-daini-es",
+              "locator": "p.1 転入生向け欄／p.3-4 継続意思と退会"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "withdrawal_procedure": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "confirmed_yes",
+          "observation": "2026年度継続確認案内に退会届の提出方法と年度末退会を記載。実際の提出・受理状況は未確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-atsugi-daini-es",
+              "locator": "p.3-4 退会届"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "nonmember_equal_treatment": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "転入生案内には児童全員への記念品配布等の説明があるが非会員の権利と支払関係の現行運用は別途確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-atsugi-daini-es",
+              "locator": "p.1 PTA活動の説明"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "school_collection_of_pta_fee": {
           "status": "unknown",
@@ -432,9 +456,18 @@
           "sourceRefs": []
         }
       },
-      "documentExistence": "10文書区分の原本確認待ち",
-      "legalScreening": "15法令の独立審査待ち",
-      "publiclyVerified": false
+      "documentExistence": "対象PDFの原本存在を確認。固定10文書の存否判定は未完了。",
+      "legalScreening": "出典記載を照合。15法令の個別適用と反証・是正の確認は未了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "厚木第二小学校_10.pdf",
+        "sha256": "11d4376fc6f230de0e7d6a15b90e4de877b0300162a41cb1f67b4f4883fbf933",
+        "pages": 4,
+        "method": "Google Drive原本PDF取得＋文字抽出とページ画像（該当頁）を照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
     },
     {
       "schoolId": "atsugi-es",
@@ -1220,14 +1253,20 @@
       "priorFinding": null,
       "claimedOriginal": null,
       "reviewPriorities": [],
-      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "sourceReview": "Google Driveの原本PDFを直接取得し該当頁を確認した。文書上の規定・説明と学校の実際の運用、公法上の権限・個情法適合性を区別する。",
       "analysisYear": "2026",
       "axes": {
         "voluntary_membership_notice": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "新入生向け案内にはPTA加入の任意性を示す文言があるが、スキャン抽出不鮮明のため表現を再照合する。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-kamiechi-es",
+              "locator": "p.1 加入と会費のお知らせ"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "explicit_opt_in": {
           "status": "unknown",
@@ -1266,10 +1305,16 @@
           "sourceRefs": []
         },
         "officer_selection_pressure": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "confirmed_yes",
+          "observation": "令和7年1月27日付役員希望調査票に、入学式当日に委員選出し、児童一人につき卒業までに1回役員をお願いする記載を確認。就任強制の実施は別確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-kamiechi-es",
+              "locator": "p.2 PTA役員希望調査票"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "sensitive_exemption_questions": {
           "status": "unknown",
@@ -1296,9 +1341,18 @@
           "sourceRefs": []
         }
       },
-      "documentExistence": "10文書区分の原本確認待ち",
-      "legalScreening": "15法令の独立審査待ち",
-      "publiclyVerified": false
+      "documentExistence": "対象PDFの原本存在を確認。固定10文書の存否判定は未完了。",
+      "legalScreening": "出典記載を照合。15法令の個別適用と反証・是正の確認は未了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "上依知小学校_01.pdf",
+        "sha256": "bdd8245c41c4cc93e50f571f9a81c4246c5518a752d350a3533dcbd1f6d07515",
+        "pages": 2,
+        "method": "Google Drive原本PDF取得＋文字抽出とページ画像（該当頁）を照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
     },
     {
       "schoolId": "kamiogino-es",
@@ -1527,14 +1581,20 @@
       "priorFinding": null,
       "claimedOriginal": null,
       "reviewPriorities": [],
-      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "sourceReview": "Google Driveの原本PDFを直接取得し該当頁を確認した。文書上の規定・説明と学校の実際の運用、公法上の権限・個情法適合性を区別する。",
       "analysisYear": "2026",
       "axes": {
         "voluntary_membership_notice": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "confirmed_yes",
+          "observation": "PTAを任意団体と明記し、加入をお願いする表現がある。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-koayu-es",
+              "locator": "p.1 PTA加入について"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "explicit_opt_in": {
           "status": "unknown",
@@ -1543,10 +1603,16 @@
           "sourceRefs": []
         },
         "withdrawal_procedure": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "confirmed_yes",
+          "observation": "途中退会・加入・休会も可能と明記。手続の詳細と実効性は未確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-koayu-es",
+              "locator": "p.1 末尾"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "nonmember_equal_treatment": {
           "status": "unknown",
@@ -1573,10 +1639,16 @@
           "sourceRefs": []
         },
         "officer_selection_pressure": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "卒業までに1回の役員引受を検討してほしいとするが、無理に引き受ける必要はないとも明記。強制割当の根拠とはしない。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-koayu-es",
+              "locator": "p.1 役員選出の記載"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "sensitive_exemption_questions": {
           "status": "unknown",
@@ -1591,10 +1663,16 @@
           "sourceRefs": []
         },
         "pta_spending_on_school_costs": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "PTA会費の支出先として児童向け物資・学校利用物資の購入を説明。具体的な会計・寄附採納は未確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-koayu-es",
+              "locator": "p.1 会費使途"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "school_pta_governance_overlap": {
           "status": "unknown",
@@ -1603,9 +1681,18 @@
           "sourceRefs": []
         }
       },
-      "documentExistence": "10文書区分の原本確認待ち",
-      "legalScreening": "15法令の独立審査待ち",
-      "publiclyVerified": false
+      "documentExistence": "対象PDFの原本存在を確認。固定10文書の存否判定は未完了。",
+      "legalScreening": "出典記載を照合。15法令の個別適用と反証・是正の確認は未了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "小鮎小学校_08.pdf",
+        "sha256": "a286c767753aa49ce6b92ddffa64ee30beceb434844955e9decee58e62a73929",
+        "pages": 2,
+        "method": "Google Drive原本PDF取得＋文字抽出とページ画像（該当頁）を照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
     },
     {
       "schoolId": "koayu-jhs",
@@ -2157,7 +2244,7 @@
       "priorFinding": null,
       "claimedOriginal": null,
       "reviewPriorities": [],
-      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "sourceReview": "Google Driveの原本PDFを直接取得し該当頁を確認した。文書上の規定・説明と学校の実際の運用、公法上の権限・個情法適合性を区別する。",
       "analysisYear": "2026",
       "axes": {
         "voluntary_membership_notice": {
@@ -2197,10 +2284,16 @@
           "sourceRefs": []
         },
         "school_personal_data_for_pta": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "2025年4月7日付校長名義の『学校教育活動における個人情報の取扱いについて』に、PTA活動でも連絡先等を利用すると説明し保護者に承諾・非承諾・条件付き承諾の選択を求める。実際のデータ提供は未確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-mutsuai-jhs",
+              "locator": "p.2 校長名義通知／承諾書"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "officer_selection_pressure": {
           "status": "unknown",
@@ -2227,15 +2320,30 @@
           "sourceRefs": []
         },
         "school_pta_governance_overlap": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "学校教育活動とPTA活動を同一の個人情報利用承諾書の対象として校長名義で案内。学校側の所掌・権限を審査する必要。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-mutsuai-jhs",
+              "locator": "p.2 校長名義通知"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         }
       },
-      "documentExistence": "10文書区分の原本確認待ち",
-      "legalScreening": "15法令の独立審査待ち",
-      "publiclyVerified": false
+      "documentExistence": "対象PDFの原本存在を確認。固定10文書の存否判定は未完了。",
+      "legalScreening": "出典記載を照合。15法令の個別適用と反証・是正の確認は未了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "睦合中学校_01.pdf",
+        "sha256": "271d23e5b4fc80898056f84abc7a03bc439bae8b27ad3c9fb919d0cea040a7b5",
+        "pages": 2,
+        "method": "Google Drive原本PDF取得＋文字抽出とページ画像（該当頁）を照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
     },
     {
       "schoolId": "nanmori-es",
@@ -2247,7 +2355,7 @@
       "priorFinding": null,
       "claimedOriginal": null,
       "reviewPriorities": [],
-      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "sourceReview": "Google Driveの原本PDFを直接取得し該当頁を確認した。文書上の規定・説明と学校の実際の運用、公法上の権限・個情法適合性を区別する。",
       "analysisYear": "2026",
       "axes": {
         "voluntary_membership_notice": {
@@ -2275,10 +2383,16 @@
           "sourceRefs": []
         },
         "school_collection_of_pta_fee": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "2025年5月8日付学校・PTA名義のPTA会費集金依頼がある。書面の名義と実際の収納主体・送金経路は別途確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-nanmori-es",
+              "locator": "p.1 PTA会費集金のお願い"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "school_account_or_payment_system": {
           "status": "unknown",
@@ -2323,9 +2437,18 @@
           "sourceRefs": []
         }
       },
-      "documentExistence": "10文書区分の原本確認待ち",
-      "legalScreening": "15法令の独立審査待ち",
-      "publiclyVerified": false
+      "documentExistence": "対象PDFの原本存在を確認。固定10文書の存否判定は未完了。",
+      "legalScreening": "出典記載を照合。15法令の個別適用と反証・是正の確認は未了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "南毛利小学校_09.pdf",
+        "sha256": "2a27c2cf949a8b940189da662cdee85eddf0ed00314636bce01bbb538b3a9de4",
+        "pages": 1,
+        "method": "Google Drive原本PDF取得＋文字抽出とページ画像（該当頁）を照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
     },
     {
       "schoolId": "nanmori-jhs",
@@ -2697,38 +2820,68 @@
       "priorFinding": null,
       "claimedOriginal": null,
       "reviewPriorities": [],
-      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "sourceReview": "Google Driveの原本PDFを直接取得し該当頁を確認した。文書上の規定・説明と学校の実際の運用、公法上の権限・個情法適合性を区別する。",
       "analysisYear": "2026",
       "axes": {
         "voluntary_membership_notice": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "confirmed_yes",
+          "observation": "2026年度から加入・非加入の意思を明確にすると説明し、加入希望者が会員登録カードを提出する方式を示す。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-shimizu-es",
+              "locator": "p.1 入退会のお知らせ"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "explicit_opt_in": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "confirmed_yes",
+          "observation": "入会申込書に『PTAに入会します』と明記され、会員登録カードを提出しない者は会員にならない旨の改訂事項がある。運用の実際は別確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-shimizu-es",
+              "locator": "p.1 改訂事項／p.2 入会申込書"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "withdrawal_procedure": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "confirmed_yes",
+          "observation": "退会届の提出による退会を案内。年度途中の意思変更の届出にも言及。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-shimizu-es",
+              "locator": "p.1 入退会案内・改訂事項"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "nonmember_equal_treatment": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "confirmed_yes",
+          "observation": "会員・非会員を問わず児童・保護者が差別・不利益を受けない旨の規程を明記。実際の運用は未確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-shimizu-es",
+              "locator": "p.1 改訂事項4"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "school_collection_of_pta_fee": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "入会申込書に『PTA会費の集金を学校に委託することに同意』と明記。契約上の同意が公法上の学校徴収権限を生じさせるものではない。実際の引落・徴収主体は未確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-shimizu-es",
+              "locator": "p.2 入会申込書・会費集金委託同意書"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "school_account_or_payment_system": {
           "status": "unknown",
@@ -2773,9 +2926,18 @@
           "sourceRefs": []
         }
       },
-      "documentExistence": "10文書区分の原本確認待ち",
-      "legalScreening": "15法令の独立審査待ち",
-      "publiclyVerified": false
+      "documentExistence": "対象PDFの原本存在を確認。固定10文書の存否判定は未完了。",
+      "legalScreening": "出典記載を照合。15法令の個別適用と反証・是正の確認は未了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "清水小学校_07.pdf",
+        "sha256": "ddaa2642b4283e84e237172588ce8d3718b52bd55629b573608a443dfd80f88b",
+        "pages": 2,
+        "method": "Google Drive原本PDF取得＋文字抽出とページ画像（該当頁）を照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
     },
     {
       "schoolId": "tamagawa-es",
@@ -2967,7 +3129,7 @@
       "priorFinding": null,
       "claimedOriginal": null,
       "reviewPriorities": [],
-      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "sourceReview": "Google Driveの原本PDFを直接取得し該当頁を確認した。文書上の規定・説明と学校の実際の運用、公法上の権限・個情法適合性を区別する。",
       "analysisYear": "2026",
       "axes": {
         "voluntary_membership_notice": {
@@ -2995,10 +3157,16 @@
           "sourceRefs": []
         },
         "school_collection_of_pta_fee": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "市教育総務課との2026年2月メールの印刷記録に『集金袋の使用』による児童への不利益を指摘する照会が掲載。発生事実は未確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-tobio-es",
+              "locator": "p.2 市教育総務課とのやり取り"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "school_account_or_payment_system": {
           "status": "unknown",
@@ -3043,9 +3211,18 @@
           "sourceRefs": []
         }
       },
-      "documentExistence": "10文書区分の原本確認待ち",
-      "legalScreening": "15法令の独立審査待ち",
-      "publiclyVerified": false
+      "documentExistence": "対象PDFの原本存在を確認。固定10文書の存否判定は未完了。",
+      "legalScreening": "出典記載を照合。15法令の個別適用と反証・是正の確認は未了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "鳶尾小学校　相談受付記録_01.pdf",
+        "sha256": "de96e3ce6a2f156538323b3e40c8e0d7c3383783a7816597f964616f6f69ed70",
+        "pages": 2,
+        "method": "Google Drive原本PDF取得＋文字抽出とページ画像（該当頁）を照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
     },
     {
       "schoolId": "toda-es",
@@ -3057,20 +3234,32 @@
       "priorFinding": null,
       "claimedOriginal": null,
       "reviewPriorities": [],
-      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "sourceReview": "Google Driveの原本PDFを直接取得し該当頁を確認した。文書上の規定・説明と学校の実際の運用、公法上の権限・個情法適合性を区別する。",
       "analysisYear": "2026",
       "axes": {
         "voluntary_membership_notice": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "confirmed_yes",
+          "observation": "2026年1月30日付入会案内にPTAの加入は保護者・教職員の任意と明記。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-toda-es",
+              "locator": "p.1 冒頭"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "explicit_opt_in": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "confirmed_yes",
+          "observation": "入会する・しないのチェック欄と個人情報の取扱い同意事項がある。実際の申込み・受理状況は未確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-toda-es",
+              "locator": "p.1 入会届"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "withdrawal_procedure": {
           "status": "unknown",
@@ -3079,16 +3268,28 @@
           "sourceRefs": []
         },
         "nonmember_equal_treatment": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "退会届では非会員児童を差別しない一方、PTA会費支出の記念品等の実費を請求する可能性が示される。具体的請求と児童への影響は未確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-toda-es",
+              "locator": "p.2 退会届"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "school_collection_of_pta_fee": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "入会届に『PTAが学校に依頼し、振替を行います』と記載。学校が実際にどの口座・システムで処理したか未確認。委任・同意だけでは権限創設にならない。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-toda-es",
+              "locator": "p.1 入会届②"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "school_account_or_payment_system": {
           "status": "unknown",
@@ -3133,9 +3334,18 @@
           "sourceRefs": []
         }
       },
-      "documentExistence": "10文書区分の原本確認待ち",
-      "legalScreening": "15法令の独立審査待ち",
-      "publiclyVerified": false
+      "documentExistence": "対象PDFの原本存在を確認。固定10文書の存否判定は未完了。",
+      "legalScreening": "出典記載を照合。15法令の個別適用と反証・是正の確認は未了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "戸田小学校_01.pdf",
+        "sha256": "9e52b9bb6b389b0c0a646d204df96dae1c14e58fb8459a87d9b368743c0dacf1",
+        "pages": 2,
+        "method": "Google Drive原本PDF取得＋文字抽出とページ画像（該当頁）を照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
     },
     {
       "schoolId": "tomei-jhs",
@@ -3237,7 +3447,7 @@
       "priorFinding": null,
       "claimedOriginal": null,
       "reviewPriorities": [],
-      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "sourceReview": "Google Driveの原本PDFを直接取得し該当頁を確認した。文書上の規定・説明と学校の実際の運用、公法上の権限・個情法適合性を区別する。",
       "analysisYear": "2026",
       "axes": {
         "voluntary_membership_notice": {
@@ -3247,10 +3457,16 @@
           "sourceRefs": []
         },
         "explicit_opt_in": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "confirmed_yes",
+          "observation": "PTA・保護者カードに加入・非加入を選択する欄を設ける。会員資格のPTA承諾と実際の提出は未確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-tomuro-es",
+              "locator": "p.1 PTA・保護者カード"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "withdrawal_procedure": {
           "status": "unknown",
@@ -3277,10 +3493,16 @@
           "sourceRefs": []
         },
         "school_personal_data_for_pta": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "児童・保護者情報、登校班カラー等をPTAカードに記録し登校班編成・役員選出に使用すると記載。学校が保有する情報の転用か、PTA自身が直接取得する情報かは未確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-tomuro-es",
+              "locator": "p.1 PTA・保護者カード"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
         },
         "officer_selection_pressure": {
           "status": "unknown",
@@ -3313,9 +3535,18 @@
           "sourceRefs": []
         }
       },
-      "documentExistence": "10文書区分の原本確認待ち",
-      "legalScreening": "15法令の独立審査待ち",
-      "publiclyVerified": false
+      "documentExistence": "対象PDFの原本存在を確認。固定10文書の存否判定は未完了。",
+      "legalScreening": "出典記載を照合。15法令の個別適用と反証・是正の確認は未了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "戸室小学校_11.pdf",
+        "sha256": "2c2f62618d7963c4965b90ebaf0158cd2da00c370153a40db7889e4dbcbacd00",
+        "pages": 2,
+        "method": "Google Drive原本PDF取得＋文字抽出とページ画像（該当頁）を照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
     },
     {
       "schoolId": "tsumada-es",
@@ -3410,11 +3641,11 @@
   ],
   "legacySummary": {
     "withSubstantivePriorFinding": 5,
-    "originalPDFsIndependentlyReviewed": 5,
-    "pendingOriginalReview": 31,
+    "originalPDFsIndependentlyReviewed": 14,
+    "pendingOriginalReview": 22,
     "individualSchoolsReadyForPublication": 0
   },
-  "sourceStatus": "優先5校の原本PDFを直接照合済み。資料本文の文言だけに限定した軸の確認・兆候を入力。残る31校は原本未照合。",
+  "sourceStatus": "14校の原本PDFを直接取得して該当内容を確認。原本内容によって12軸を『記載確認』と『示唆』に分けて保留付き登録。残22校の原本は未確認。",
   "originalSources": [
     {
       "id": "original-aikawa-es",
@@ -3460,6 +3691,96 @@
       "pages": 1,
       "sourceAvailability": "Google Drive原本確認。公開サイトの保存PDFとの同一性はSHA照合未実施。",
       "publicSiteOriginalUrl": "/source-pdfs/atsugi/kamiogino-es/%E4%B8%8A%E8%8D%BB%E9%87%8E%E5%B0%8F%E5%AD%A6%E6%A0%A1_13.pdf"
+    },
+    {
+      "id": "original-atsugi-daini-es",
+      "schoolId": "atsugi-daini-es",
+      "fileName": "厚木第二小学校_10.pdf",
+      "sha256": "11d4376fc6f230de0e7d6a15b90e4de877b0300162a41cb1f67b4f4883fbf933",
+      "pages": 4,
+      "sourceAvailability": "Google Drive原本を取得し、書面記載を確認。サイト保存PDFとのSHA一致は未検証。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "original-kamiechi-es",
+      "schoolId": "kamiechi-es",
+      "fileName": "上依知小学校_01.pdf",
+      "sha256": "bdd8245c41c4cc93e50f571f9a81c4246c5518a752d350a3533dcbd1f6d07515",
+      "pages": 2,
+      "sourceAvailability": "Google Drive原本を取得し、書面記載を確認。サイト保存PDFとのSHA一致は未検証。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "original-koayu-es",
+      "schoolId": "koayu-es",
+      "fileName": "小鮎小学校_08.pdf",
+      "sha256": "a286c767753aa49ce6b92ddffa64ee30beceb434844955e9decee58e62a73929",
+      "pages": 2,
+      "sourceAvailability": "Google Drive原本を取得し、書面記載を確認。サイト保存PDFとのSHA一致は未検証。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "original-mutsuai-jhs",
+      "schoolId": "mutsuai-jhs",
+      "fileName": "睦合中学校_01.pdf",
+      "sha256": "271d23e5b4fc80898056f84abc7a03bc439bae8b27ad3c9fb919d0cea040a7b5",
+      "pages": 2,
+      "sourceAvailability": "Google Drive原本を取得し、書面記載を確認。サイト保存PDFとのSHA一致は未検証。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "original-nanmori-es",
+      "schoolId": "nanmori-es",
+      "fileName": "南毛利小学校_09.pdf",
+      "sha256": "2a27c2cf949a8b940189da662cdee85eddf0ed00314636bce01bbb538b3a9de4",
+      "pages": 1,
+      "sourceAvailability": "Google Drive原本を取得し、書面記載を確認。サイト保存PDFとのSHA一致は未検証。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "original-shimizu-es",
+      "schoolId": "shimizu-es",
+      "fileName": "清水小学校_07.pdf",
+      "sha256": "ddaa2642b4283e84e237172588ce8d3718b52bd55629b573608a443dfd80f88b",
+      "pages": 2,
+      "sourceAvailability": "Google Drive原本を取得し、書面記載を確認。サイト保存PDFとのSHA一致は未検証。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "original-tobio-es",
+      "schoolId": "tobio-es",
+      "fileName": "鳶尾小学校　相談受付記録_01.pdf",
+      "sha256": "de96e3ce6a2f156538323b3e40c8e0d7c3383783a7816597f964616f6f69ed70",
+      "pages": 2,
+      "sourceAvailability": "Google Drive原本を取得し、書面記載を確認。サイト保存PDFとのSHA一致は未検証。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "original-toda-es",
+      "schoolId": "toda-es",
+      "fileName": "戸田小学校_01.pdf",
+      "sha256": "9e52b9bb6b389b0c0a646d204df96dae1c14e58fb8459a87d9b368743c0dacf1",
+      "pages": 2,
+      "sourceAvailability": "Google Drive原本を取得し、書面記載を確認。サイト保存PDFとのSHA一致は未検証。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "original-tomuro-es",
+      "schoolId": "tomuro-es",
+      "fileName": "戸室小学校_11.pdf",
+      "sha256": "2c2f62618d7963c4965b90ebaf0158cd2da00c370153a40db7889e4dbcbacd00",
+      "pages": 2,
+      "sourceAvailability": "Google Drive原本を取得し、書面記載を確認。サイト保存PDFとのSHA一致は未検証。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
     }
   ],
   "corrections": [
@@ -3476,6 +3797,24 @@
       "finding": "ファイル名『相川小学校』と2026年1月16日の相談本文の対象『相川中学校』に不一致。相川小学校の旧評価へ相談内容を帰属させた点は不適切。",
       "action": "相川小学校の名簿使用・役員選出を当該資料で確認済みとしない。相川中学校について第三者申告として記録し、別の2026年1月14日本部会資料にあるくじ引きと照合。",
       "publicSiteCorrectionPending": true
+    }
+  ],
+  "institutionalCrossChecks": [
+    {
+      "schoolId": "shimizu-es",
+      "concern": "2026年度のPTA入会申込書が学校への会費集金委託同意を含む。市の3月30日通知の『同意・委託』との関係、同書式の制定日と改正時点、公法上の授権を別途確認。"
+    },
+    {
+      "schoolId": "toda-es",
+      "concern": "2026年度入会書式が学校への会費振替依頼を含む。市の制度・学校の資金処理・公法上の根拠を追跡。"
+    },
+    {
+      "schoolId": "mutsuai-jhs",
+      "concern": "2025年度校長名義の承諾書がPTA目的での情報利用を学校教育活動と並べる。学校の所掌・情報利用目的を先に審査。"
+    },
+    {
+      "schoolId": "atsugi-daini-es",
+      "concern": "転入生の入会・非加入選択と、継続会員の退会届方式が併存。対象者の違いを説明し継続意思の実効性を確認。"
     }
   ]
 }
