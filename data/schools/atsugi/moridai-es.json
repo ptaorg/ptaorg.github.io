@@ -7,40 +7,81 @@
   "basePath": "/archive/atsugi/moridai-es/",
   "canonical": "https://ptaorg.com/archive/atsugi/moridai-es/",
   "ogImage": "/assets/ogp/atsugi/moridai-es.png",
-  "status": "評価準備中",
+  "status": "原本確認・追加調査あり",
   "statusClass": "eval-pending",
-  "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
+  "summary": "2026年2月発行の学校だよりは、全学年の新しい名札をPTA会費から進級祝い品の一部として一括購入すると案内しています。",
   "description": "毛利台小学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
-  "ogDescription": "毛利台小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
+  "ogDescription": "2026年2月発行の学校だよりは、全学年の新しい名札をPTA会費から進級祝い品の一部として一括購入すると案内しています。",
   "materials": {
     "documentName": "未確認",
     "confirmedDocuments": [
-      "未確認"
+      "毛利台小学校 学校だより 3月号"
     ],
     "hasMembershipNotice": "未確認",
     "hasApplicationForm": "未確認",
     "applicationFormStatus": "未確認",
     "hasSchoolCollectionNotice": "未確認",
     "sourceImages": [],
-    "pdfStatus": "準備中",
+    "pdfStatus": "学校公式ページから原本PDFを確認",
     "pdf": null
   },
   "confirmedFacts": [
-    "資料確認後に記載します。"
+    "2026年2月発行の学校だよりは、全学年の新しい名札をPTA会費から進級祝い品の一部として一括購入すると案内しています。"
   ],
   "unconfirmedPoints": [
-    "PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を確認後に記載します。"
+    "名札の発注書・購入決裁・PTA決議・寄附採納と配付記録",
+    "非会員児童の取り扱い、名札用情報の出所",
+    "入会書式・会費集金案内・役員選出資料"
   ],
   "riskFlags": [
-    "未評価"
+    "要追加調査"
   ],
   "evaluation": [
-    "評価準備中"
+    "PTA会計と支出決議はPTAの内部事務です。名札が学校指定品か、購入・所有・配布の主体、学校が行う場合の事務権限、非会員家庭の扱い、寄附採納の有無は未確認です。発注・配布に名簿を使った場合の法61条上の利用目的と法69条の内部利用・外部提供は区別して確認します。教職員の業務と守秘、支払主体・立替・保管の有無を確認後に地公法35条・34条、該当する財務規定を適用します。",
+    "学用品としての必要性、非会員児童への配付、発注・支払主体、寄附採納の記録を照合し、学校経費とPTA任意支出の線引きを説明してください。"
   ],
   "humanReviewRequired": true,
-  "lastReviewed": "2026-06-02",
+  "lastReviewed": "2026-11-16",
   "nationalArchive": {
     "order": 17,
     "group": "小学校"
+  },
+  "officialPdfReview": {
+    "finding": "2026年2月発行の学校だよりは、全学年の新しい名札をPTA会費から進級祝い品の一部として一括購入すると案内しています。",
+    "assessment": "PTA会計と支出決議はPTAの内部事務です。名札が学校指定品か、購入・所有・配布の主体、学校が行う場合の事務権限、非会員家庭の扱い、寄附採納の有無は未確認です。発注・配布に名簿を使った場合の法61条上の利用目的と法69条の内部利用・外部提供は区別して確認します。教職員の業務と守秘、支払主体・立替・保管の有無を確認後に地公法35条・34条、該当する財務規定を適用します。",
+    "action": "学用品としての必要性、非会員児童への配付、発注・支払主体、寄附採納の記録を照合し、学校経費とPTA任意支出の線引きを説明してください。",
+    "missing": [
+      "名札の発注書・購入決裁・PTA決議・寄附採納と配付記録",
+      "非会員児童の取り扱い、名札用情報の出所",
+      "入会書式・会費集金案内・役員選出資料"
+    ],
+    "documents": [
+      {
+        "title": "毛利台小学校 学校だより 3月号",
+        "date": "2026-02-27",
+        "url": "https://drive.google.com/file/d/13GQixj3mx-VnmTrG8RS0D-XJppLmt8pM/view",
+        "officialPage": "https://www.mouridai-es.atsugi.ed.jp/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/%E5%AD%A6%E6%A0%A1%E3%81%A0%E3%82%88%E3%82%8A",
+        "sha256": "9ff8e46134e94cfc42d08d0055903d7397664235a8ececa7319a64f474778218",
+        "pdfPages": 3,
+        "finding": "学用品の案内に進級祝い品として一括購入する記載。発注・購入実績は未確認。",
+        "crops": [
+          {
+            "image": "/assets/archive/atsugi/review-20261116/moridai-es-1-1.webp",
+            "sha256": "d149a3f7d697d0f44089ac9c59632537f220f165a9ab7719f5670d23faf9f0db",
+            "page": 3,
+            "cropRectPdfPts": [
+              145,
+              677,
+              975,
+              696
+            ],
+            "caption": "PTA会費で進級祝い品の名札を購入する案内",
+            "width": 2490,
+            "height": 57,
+            "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+          }
+        ]
+      }
+    ]
   }
 }

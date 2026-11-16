@@ -1,0 +1,3944 @@
+{
+  "title": "厚木市36校 PTA資料継承・再評価の暫定台帳",
+  "schemaVersion": "intake-1.0.0",
+  "asOf": "2026-11-16",
+  "municipality": "厚木市",
+  "source": "既存公開 school JSON 36本とresearch-map.htmlの学校一覧",
+  "scope": {
+    "schools": 36,
+    "schoolTypes": {
+      "elementary": 23,
+      "juniorHigh": 13
+    },
+    "allSchoolOriginalsReviewed": false,
+    "allSchoolsReassessed": false
+  },
+  "safety": "本台帳は既存サイト記録の再評価入口であり、一次資料を独立再照合した判定ではない。既存の『重大リスク』等は旧分類の引用であり、12軸の確認済み判定へ自動移行しない。",
+  "schoolRecords": [
+    {
+      "schoolId": "aikawa-es",
+      "schoolName": "相川小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/aikawa-es/",
+      "existingSiteRecord": "data/schools/atsugi/aikawa-es.json",
+      "priorStatus": "重大リスク",
+      "priorFinding": "旧公開JSONに相川小学校の名簿・役員選出疑義が記載されているが、原本の2026年1月16日の具体的相談は相川中学校についてのもの。学校への誤帰属が判明したため相川小の論点としては保留。2025年5月16日欄も『相川小PTA役員』との相談で事実確認は未実施。",
+      "claimedOriginal": "相川小学校 相談受付記録_01.pdf",
+      "reviewPriorities": [
+        "原本の相談相手と学校の対応関係",
+        "相川小に関する独立資料の有無"
+      ],
+      "sourceReview": "PDF原本の該当ページとページ画像を確認。各条項の存在は確認済み。ただし現行の運用、例外授権・現場実施と法的帰結は別審査。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "相談受付記録の2026年1月16日欄は『相川中学校の新入生保護者説明会』についての申告。相川小学校の当該行為の証拠にはならない。",
+          "year": "2026",
+          "sourceRefs": [],
+          "reviewNotes": "資料ファイル名と本文の対象学校が不一致。相川小の旧評価について根拠学校の誤帰属を訂正する必要がある。"
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "相談受付記録の2026年1月16日欄は『相川中学校の新入生保護者説明会』についての申告。相川小学校の当該行為の証拠にはならない。",
+          "year": "2026",
+          "sourceRefs": [],
+          "reviewNotes": "資料ファイル名と本文の対象学校が不一致。相川小の旧評価について根拠学校の誤帰属を訂正する必要がある。"
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "原本記載の一次確認済み。15法令の個別レビュー・行政の現行運用との整合は未完了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "相川小学校 相談受付記録_01.pdf",
+        "sha256": "a0128ff96c8c329ee7d8f31048dd93fc7dd87e1045890eb50d5c9b2ed5334375",
+        "pages": 3,
+        "method": "Google Drive原ファイル取得＋PDFテキスト＋ページ画像照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
+    },
+    {
+      "schoolId": "aikawa-jhs",
+      "schoolName": "相川中学校",
+      "schoolType": "中学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/aikawa-jhs/",
+      "existingSiteRecord": "data/schools/atsugi/aikawa-jhs.json",
+      "priorStatus": "重大リスク",
+      "priorFinding": "PTA会費集金案内のtetoru配信、口座振替、職員会議でのPTA担当・出席依頼が既存評価に記録。",
+      "claimedOriginal": "相川中学校 会議録_04.pdf",
+      "reviewPriorities": [
+        "学校徴収・口座振替",
+        "教職員関与",
+        "学校連絡手段"
+      ],
+      "sourceReview": "PDF原本の該当ページとページ画像を確認。各条項の存在は確認済み。ただし現行の運用、例外授権・現場実施と法的帰結は別審査。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "confirmed_yes",
+          "observation": "2025年度のPTA活動確認事項に『PTA会費集金の確認と集金作業』『集金額3,600円』とあり、学校連絡アプリで家庭に配信すると記載。実際の収納主体・資金保管者までは不明。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-aikawa-jhs",
+              "locator": "p.2 PTA活動確認事項3項"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "indication",
+          "observation": "相川中学校の新入生説明会で『学校が持っている新入生の名簿を役員選出時に使用』したと保護者が市教委へ申告。学校による提供・閲覧の事実はまだ未立証。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-aikawa-es",
+              "locator": "p.2 2026年1月16日の『相川中学校』に関する電話相談"
+            }
+          ],
+          "reviewNotes": "別名のPDF『相川小学校 相談受付記録_01』に記録。会議録とは別の申告証拠。"
+        },
+        "officer_selection_pressure": {
+          "status": "confirmed_yes",
+          "observation": "2026年1月14日付本部会報告に新入生保護者説明会で3年間の役員を『くじ引き』で選出したと明記。参加者の加入意思や抽選への同意、実際の就任は未確認。 また別資料『相川小学校 相談受付記録_01』p.2は相川中学校の説明会で任意加入の説明直後に役員選出へ移ったとする申告を記録。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-aikawa-jhs",
+              "locator": "p.9 第5回本部会報告(4)"
+            },
+            {
+              "sourceId": "original-aikawa-es",
+              "locator": "p.2 相川中学校の説明会についての相談"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "indication",
+          "observation": "職員会議資料にPTA委員会担当、会費集金確認と作業、運営委員会への担当教職員出席を記載。法令上の職務か、PTA内部事務として従事したかは個別確認が必要。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-aikawa-jhs",
+              "locator": "p.2 PTA活動確認事項1・3・4項"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "indication",
+          "observation": "2026年1月14日付報告は校長・教職員のPTA運営委員会出席や新入生説明会での役員くじ引きを記録。学校の意思決定への関与範囲は未確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-aikawa-jhs",
+              "locator": "p.9 第5回本部会報告(2)(4)"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "原本記載の一次確認済み。15法令の個別レビュー・行政の現行運用との整合は未完了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "相川中学校 会議録_04.pdf",
+        "sha256": "7a4497474a69a4f129a88074e51a07dd348fee128060b1a4c10478cdbdd4769f",
+        "pages": 9,
+        "method": "Google Drive原ファイル取得＋PDFテキスト＋ページ画像照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true,
+        "hashVerification": "verified_from_local_download"
+      }
+    },
+    {
+      "schoolId": "aiko-es",
+      "schoolName": "愛甲小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/aiko-es/",
+      "existingSiteRecord": "data/schools/atsugi/aiko-es.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "atsugi-daini-es",
+      "schoolName": "厚木第二小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/atsugi-daini-es/",
+      "existingSiteRecord": "data/schools/atsugi/atsugi-daini-es.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "Google Driveの原本PDFを直接取得し該当頁を確認した。文書上の規定・説明と学校の実際の運用、公法上の権限・個情法適合性を区別する。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "confirmed_yes",
+          "observation": "転入生用の案内にPTA加入は任意と明記し、入会・非入会の選択欄がある。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-atsugi-daini-es",
+              "locator": "p.1 転入生PTA入会回答"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "explicit_opt_in": {
+          "status": "indication",
+          "observation": "転入生向けに入会・非入会の選択欄がある一方、既存会員向け2026年度継続確認案内では退会希望者が届出を提出する方式を記載。対象の異なる2方式を同じ評価に混ぜず確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-atsugi-daini-es",
+              "locator": "p.1 転入生向け欄／p.3-4 継続意思と退会"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "withdrawal_procedure": {
+          "status": "confirmed_yes",
+          "observation": "2026年度継続確認案内に退会届の提出方法と年度末退会を記載。実際の提出・受理状況は未確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-atsugi-daini-es",
+              "locator": "p.3-4 退会届"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "nonmember_equal_treatment": {
+          "status": "indication",
+          "observation": "転入生案内には児童全員への記念品配布等の説明があるが非会員の権利と支払関係の現行運用は別途確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-atsugi-daini-es",
+              "locator": "p.1 PTA活動の説明"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "indication",
+          "observation": "新入生向け案内に加入・非加入を問わず全家庭に回答を求め、未回答者へ入学式で確認する旨が記載。実施主体は未確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "additional-atsugi-daini-es-05",
+              "locator": "p.1 末尾 回答依頼"
+            }
+          ],
+          "reviewNotes": "加入意思取得はPTA固有事務。入学式での確認が学校の行為かを分離して審査。"
+        }
+      },
+      "documentExistence": "対象PDFの原本存在を確認。固定10文書の存否判定は未完了。",
+      "legalScreening": "出典記載を照合。15法令の個別適用と反証・是正の確認は未了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "厚木第二小学校_10.pdf",
+        "sha256": "11d4376fc6f230de0e7d6a15b90e4de877b0300162a41cb1f67b4f4883fbf933",
+        "pages": 4,
+        "method": "Google Drive原本PDF取得＋文字抽出とページ画像（該当頁）を照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      },
+      "additionalOriginals": [
+        {
+          "sourceId": "additional-atsugi-daini-es-05",
+          "fileName": "厚木第二小学校_05.pdf",
+          "sha256": "2fd1409634772e1f5bcbe06952b0a71cd3d1d61545827fbf24954351222bd8a3",
+          "pages": 1,
+          "dated": "2026-01-26",
+          "verifiedBy": "PDF text and rendered page inspected",
+          "sourceLocation": "全国資料／厚木市"
+        }
+      ]
+    },
+    {
+      "schoolId": "atsugi-es",
+      "schoolName": "厚木小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/atsugi-es/",
+      "existingSiteRecord": "data/schools/atsugi/atsugi-es.json",
+      "priorStatus": "要確認",
+      "priorFinding": "『PTA会員確認カード』の記載。入会の申込・承諾が確認できないとの既存評価。契約不存在を意味しない。",
+      "claimedOriginal": "厚木小学校_06.pdf",
+      "reviewPriorities": [
+        "会員資格の根拠"
+      ],
+      "sourceReview": "PDF原本の該当ページとページ画像を確認。各条項の存在は確認済み。ただし現行の運用、例外授権・現場実施と法的帰結は別審査。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "カード自体に任意加入の明示は確認できない。学校全体で通知が無いとは断定できない。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-atsugi-es",
+              "locator": "p.1 会員名簿本文"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
+        },
+        "explicit_opt_in": {
+          "status": "indication",
+          "observation": "2025年度『PTA会員名簿』は『入会届・退会届を兼ねています』と明記。紙の申込手段が存在するため『入会届がない』との旧評価は不正確。ただし、全家庭配布・提出を要請するため、加入希望者だけが申込む制度か、退会届との兼用でオプトアウト化していないか要確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-atsugi-es",
+              "locator": "p.1 下部の注記"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "原本記載の一次確認済み。15法令の個別レビュー・行政の現行運用との整合は未完了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "厚木小学校_06.pdf",
+        "sha256": "73eefa86903159b5056f5549564173a3391b0d4ac414e3fcd2c4f46409a48102",
+        "pages": 1,
+        "method": "Google Drive原ファイル取得＋PDFテキスト＋ページ画像照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
+    },
+    {
+      "schoolId": "atsugi-jhs",
+      "schoolName": "厚木中学校",
+      "schoolType": "中学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/atsugi-jhs/",
+      "existingSiteRecord": "data/schools/atsugi/atsugi-jhs.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "echi-es",
+      "schoolName": "依知小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/echi-es/",
+      "existingSiteRecord": "data/schools/atsugi/echi-es.json",
+      "priorStatus": "重大リスク",
+      "priorFinding": "PTAカードの提出が入会扱いとされ、入学式に学校書類と併せて提出する案内、役員一回負担の記載があるとの既存評価。",
+      "claimedOriginal": "PTAカード（役員希望調査）",
+      "reviewPriorities": [
+        "申込意思と会員資格",
+        "学校書類との混在",
+        "役員負担"
+      ],
+      "sourceReview": "PDF原本の該当ページとページ画像を確認。各条項の存在は確認済み。ただし現行の運用、例外授権・現場実施と法的帰結は別審査。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "confirmed_yes",
+          "observation": "2025年度新入生向けPTA案内に『PTAは任意団体であり、加入については保護者・教職員の自由意思です』と明記。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-echi-es",
+              "locator": "p.1 冒頭説明"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
+        },
+        "explicit_opt_in": {
+          "status": "indication",
+          "observation": "p.1に『PTAカードの提出をもって、PTA加入となります』と記載する一方、入学式で学校書類と一緒の持参を案内。申し込みの自由・非加入者の扱い・承諾方法は未確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-echi-es",
+              "locator": "p.1 PTAカードについて"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "confirmed_yes",
+          "observation": "児童在学中に役員・委員を1回引き受けるよう求め、希望しない理由の記入欄を設けた制度文面を確認。強制的に就任させた事実自体は不明。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-echi-es",
+              "locator": "p.2 PTAカード下部"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "原本記載の一次確認済み。15法令の個別レビュー・行政の現行運用との整合は未完了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "依知小学校_0002.pdf",
+        "sha256": "72ac32d6d01b86a9981fc2a2d72070bcbd2f2689aea9356bc4761603c78cb3c0",
+        "pages": 2,
+        "method": "Google Drive原ファイル取得＋PDFテキスト＋ページ画像照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
+    },
+    {
+      "schoolId": "echi-jhs",
+      "schoolName": "依知中学校",
+      "schoolType": "中学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/echi-jhs/",
+      "existingSiteRecord": "data/schools/atsugi/echi-jhs.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "echi-minami-es",
+      "schoolName": "依知南小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/echi-minami-es/",
+      "existingSiteRecord": "data/schools/atsugi/echi-minami-es.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "fujizuka-jhs",
+      "schoolName": "藤塚中学校",
+      "schoolType": "中学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/fujizuka-jhs/",
+      "existingSiteRecord": "data/schools/atsugi/fujizuka-jhs.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "hayashi-jhs",
+      "schoolName": "林中学校",
+      "schoolType": "中学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/hayashi-jhs/",
+      "existingSiteRecord": "data/schools/atsugi/hayashi-jhs.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "iiyama-es",
+      "schoolName": "飯山小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/iiyama-es/",
+      "existingSiteRecord": "data/schools/atsugi/iiyama-es.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "kamiechi-es",
+      "schoolName": "上依知小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/kamiechi-es/",
+      "existingSiteRecord": "data/schools/atsugi/kamiechi-es.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "Google Driveの原本PDFを直接取得し該当頁を確認した。文書上の規定・説明と学校の実際の運用、公法上の権限・個情法適合性を区別する。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "indication",
+          "observation": "新入生向け案内にはPTA加入の任意性を示す文言があるが、スキャン抽出不鮮明のため表現を再照合する。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-kamiechi-es",
+              "locator": "p.1 加入と会費のお知らせ"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "confirmed_yes",
+          "observation": "令和7年1月27日付役員希望調査票に、入学式当日に委員選出し、児童一人につき卒業までに1回役員をお願いする記載を確認。就任強制の実施は別確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-kamiechi-es",
+              "locator": "p.2 PTA役員希望調査票"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "対象PDFの原本存在を確認。固定10文書の存否判定は未完了。",
+      "legalScreening": "出典記載を照合。15法令の個別適用と反証・是正の確認は未了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "上依知小学校_01.pdf",
+        "sha256": "bdd8245c41c4cc93e50f571f9a81c4246c5518a752d350a3533dcbd1f6d07515",
+        "pages": 2,
+        "method": "Google Drive原本PDF取得＋文字抽出とページ画像（該当頁）を照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
+    },
+    {
+      "schoolId": "kamiogino-es",
+      "schoolName": "上荻野小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/kamiogino-es/",
+      "existingSiteRecord": "data/schools/atsugi/kamiogino-es.json",
+      "priorStatus": "問題あり",
+      "priorFinding": "PTA会員カードの提出による加入・継続扱いと、会費集金・委員選出への利用の記載があるとの既存評価。",
+      "claimedOriginal": "上荻野小学校_13.pdf",
+      "reviewPriorities": [
+        "みなし加入",
+        "会費収納",
+        "役員選出"
+      ],
+      "sourceReview": "PDF原本の該当ページとページ画像を確認。各条項の存在は確認済み。ただし現行の運用、例外授権・現場実施と法的帰結は別審査。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "indication",
+          "observation": "『PTAカードの提出をもってPTA入会、継続とさせていただきます』と記載。自発的申込みと承諾、非加入選択肢が示されたかは別途確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-kamiogino-es",
+              "locator": "p.1 上部"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "indication",
+          "observation": "PTAカードを会費集金に活用すると明記。ただし学校徴収・PTA自己徴収のどちらかは記載のみでは判定できない。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-kamiogino-es",
+              "locator": "p.1 末尾"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "confirmed_yes",
+          "observation": "児童1名につき在学中1回の委員を経験する旨と、5年生の未経験保護者を優先選出する旨を記載。実際の強制就任を示すものではない。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-kamiogino-es",
+              "locator": "p.1 PTA委員の記録"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "indication",
+          "observation": "PTAカードは学校の金庫で保管すると明記。金庫の管理者、学校の関与と保存権限、学校情報との照合は確認が必要。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-kamiogino-es",
+              "locator": "p.1 末尾"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "原本記載の一次確認済み。15法令の個別レビュー・行政の現行運用との整合は未完了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "上荻野小学校_13.pdf",
+        "sha256": "3706cbfcf0a9f3178ba5644e0c1ebb54616919466be13668079c83332d5292af",
+        "pages": 1,
+        "method": "Google Drive原ファイル取得＋PDFテキスト＋ページ画像照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
+    },
+    {
+      "schoolId": "kita-es",
+      "schoolName": "北小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/kita-es/",
+      "existingSiteRecord": "data/schools/atsugi/kita-es.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "koayu-es",
+      "schoolName": "小鮎小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/koayu-es/",
+      "existingSiteRecord": "data/schools/atsugi/koayu-es.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "Google Driveの原本PDFを直接取得し該当頁を確認した。文書上の規定・説明と学校の実際の運用、公法上の権限・個情法適合性を区別する。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "confirmed_yes",
+          "observation": "PTAを任意団体と明記し、加入をお願いする表現がある。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-koayu-es",
+              "locator": "p.1 PTA加入について"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "confirmed_yes",
+          "observation": "途中退会・加入・休会も可能と明記。手続の詳細と実効性は未確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-koayu-es",
+              "locator": "p.1 末尾"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "indication",
+          "observation": "卒業までに1回の役員引受を検討してほしいとするが、無理に引き受ける必要はないとも明記。強制割当の根拠とはしない。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-koayu-es",
+              "locator": "p.1 役員選出の記載"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "indication",
+          "observation": "PTA会費の支出先として児童向け物資・学校利用物資の購入を説明。具体的な会計・寄附採納は未確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-koayu-es",
+              "locator": "p.1 会費使途"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "対象PDFの原本存在を確認。固定10文書の存否判定は未完了。",
+      "legalScreening": "出典記載を照合。15法令の個別適用と反証・是正の確認は未了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "小鮎小学校_08.pdf",
+        "sha256": "a286c767753aa49ce6b92ddffa64ee30beceb434844955e9decee58e62a73929",
+        "pages": 2,
+        "method": "Google Drive原本PDF取得＋文字抽出とページ画像（該当頁）を照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
+    },
+    {
+      "schoolId": "koayu-jhs",
+      "schoolName": "小鮎中学校",
+      "schoolType": "中学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/koayu-jhs/",
+      "existingSiteRecord": "data/schools/atsugi/koayu-jhs.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "midorigaoka-es",
+      "schoolName": "緑ケ丘小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/midorigaoka-es/",
+      "existingSiteRecord": "data/schools/atsugi/midorigaoka-es.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "moridai-es",
+      "schoolName": "毛利台小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/moridai-es/",
+      "existingSiteRecord": "data/schools/atsugi/moridai-es.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "morinosato-es",
+      "schoolName": "森の里小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/morinosato-es/",
+      "existingSiteRecord": "data/schools/atsugi/morinosato-es.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "morinosato-jhs",
+      "schoolName": "森の里中学校",
+      "schoolType": "中学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/morinosato-jhs/",
+      "existingSiteRecord": "data/schools/atsugi/morinosato-jhs.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "mutsuai-higashi-jhs",
+      "schoolName": "睦合東中学校",
+      "schoolType": "中学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/mutsuai-higashi-jhs/",
+      "existingSiteRecord": "data/schools/atsugi/mutsuai-higashi-jhs.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "mutsuai-jhs",
+      "schoolName": "睦合中学校",
+      "schoolType": "中学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/mutsuai-jhs/",
+      "existingSiteRecord": "data/schools/atsugi/mutsuai-jhs.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "Google Driveの原本PDFを直接取得し該当頁を確認した。文書上の規定・説明と学校の実際の運用、公法上の権限・個情法適合性を区別する。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "indication",
+          "observation": "2025年4月7日付校長名義の『学校教育活動における個人情報の取扱いについて』に、PTA活動でも連絡先等を利用すると説明し保護者に承諾・非承諾・条件付き承諾の選択を求める。実際のデータ提供は未確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-mutsuai-jhs",
+              "locator": "p.2 校長名義通知／承諾書"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "indication",
+          "observation": "学校教育活動とPTA活動を同一の個人情報利用承諾書の対象として校長名義で案内。学校側の所掌・権限を審査する必要。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-mutsuai-jhs",
+              "locator": "p.2 校長名義通知"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        }
+      },
+      "documentExistence": "対象PDFの原本存在を確認。固定10文書の存否判定は未完了。",
+      "legalScreening": "出典記載を照合。15法令の個別適用と反証・是正の確認は未了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "睦合中学校_01.pdf",
+        "sha256": "271d23e5b4fc80898056f84abc7a03bc439bae8b27ad3c9fb919d0cea040a7b5",
+        "pages": 2,
+        "method": "Google Drive原本PDF取得＋文字抽出とページ画像（該当頁）を照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
+    },
+    {
+      "schoolId": "nanmori-es",
+      "schoolName": "南毛利小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/nanmori-es/",
+      "existingSiteRecord": "data/schools/atsugi/nanmori-es.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "Google Driveの原本PDFを直接取得し該当頁を確認した。文書上の規定・説明と学校の実際の運用、公法上の権限・個情法適合性を区別する。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "indication",
+          "observation": "2025年5月8日付学校・PTA名義のPTA会費集金依頼がある。書面の名義と実際の収納主体・送金経路は別途確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-nanmori-es",
+              "locator": "p.1 PTA会費集金のお願い"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "対象PDFの原本存在を確認。固定10文書の存否判定は未完了。",
+      "legalScreening": "出典記載を照合。15法令の個別適用と反証・是正の確認は未了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "南毛利小学校_09.pdf",
+        "sha256": "2a27c2cf949a8b940189da662cdee85eddf0ed00314636bce01bbb538b3a9de4",
+        "pages": 1,
+        "method": "Google Drive原本PDF取得＋文字抽出とページ画像（該当頁）を照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
+    },
+    {
+      "schoolId": "nanmori-jhs",
+      "schoolName": "南毛利中学校",
+      "schoolType": "中学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/nanmori-jhs/",
+      "existingSiteRecord": "data/schools/atsugi/nanmori-jhs.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "ogino-es",
+      "schoolName": "荻野小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/ogino-es/",
+      "existingSiteRecord": "data/schools/atsugi/ogino-es.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "ogino-jhs",
+      "schoolName": "荻野中学校",
+      "schoolType": "中学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/ogino-jhs/",
+      "existingSiteRecord": "data/schools/atsugi/ogino-jhs.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "sanda-es",
+      "schoolName": "三田小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/sanda-es/",
+      "existingSiteRecord": "data/schools/atsugi/sanda-es.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "shimizu-es",
+      "schoolName": "清水小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/shimizu-es/",
+      "existingSiteRecord": "data/schools/atsugi/shimizu-es.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "Google Driveの原本PDFを直接取得し該当頁を確認した。文書上の規定・説明と学校の実際の運用、公法上の権限・個情法適合性を区別する。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "confirmed_yes",
+          "observation": "2026年度から加入・非加入の意思を明確にすると説明し、加入希望者が会員登録カードを提出する方式を示す。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-shimizu-es",
+              "locator": "p.1 入退会のお知らせ"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "explicit_opt_in": {
+          "status": "confirmed_yes",
+          "observation": "入会申込書に『PTAに入会します』と明記され、会員登録カードを提出しない者は会員にならない旨の改訂事項がある。運用の実際は別確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-shimizu-es",
+              "locator": "p.1 改訂事項／p.2 入会申込書"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "withdrawal_procedure": {
+          "status": "confirmed_yes",
+          "observation": "退会届の提出による退会を案内。年度途中の意思変更の届出にも言及。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-shimizu-es",
+              "locator": "p.1 入退会案内・改訂事項"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "nonmember_equal_treatment": {
+          "status": "confirmed_yes",
+          "observation": "会員・非会員を問わず児童・保護者が差別・不利益を受けない旨の規程を明記。実際の運用は未確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-shimizu-es",
+              "locator": "p.1 改訂事項4"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "school_collection_of_pta_fee": {
+          "status": "indication",
+          "observation": "入会申込書に『PTA会費の集金を学校に委託することに同意』と明記。契約上の同意が公法上の学校徴収権限を生じさせるものではない。実際の引落・徴収主体は未確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-shimizu-es",
+              "locator": "p.2 入会申込書・会費集金委託同意書"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "対象PDFの原本存在を確認。固定10文書の存否判定は未完了。",
+      "legalScreening": "出典記載を照合。15法令の個別適用と反証・是正の確認は未了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "清水小学校_07.pdf",
+        "sha256": "ddaa2642b4283e84e237172588ce8d3718b52bd55629b573608a443dfd80f88b",
+        "pages": 2,
+        "method": "Google Drive原本PDF取得＋文字抽出とページ画像（該当頁）を照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
+    },
+    {
+      "schoolId": "tamagawa-es",
+      "schoolName": "玉川小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/tamagawa-es/",
+      "existingSiteRecord": "data/schools/atsugi/tamagawa-es.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "tamagawa-jhs",
+      "schoolName": "玉川中学校",
+      "schoolType": "中学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/tamagawa-jhs/",
+      "existingSiteRecord": "data/schools/atsugi/tamagawa-jhs.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "tobio-es",
+      "schoolName": "鳶尾小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/tobio-es/",
+      "existingSiteRecord": "data/schools/atsugi/tobio-es.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "Google Driveの原本PDFを直接取得し該当頁を確認した。文書上の規定・説明と学校の実際の運用、公法上の権限・個情法適合性を区別する。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "indication",
+          "observation": "市教育総務課との2026年2月メールの印刷記録に『集金袋の使用』による児童への不利益を指摘する照会が掲載。発生事実は未確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-tobio-es",
+              "locator": "p.2 市教育総務課とのやり取り"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "対象PDFの原本存在を確認。固定10文書の存否判定は未完了。",
+      "legalScreening": "出典記載を照合。15法令の個別適用と反証・是正の確認は未了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "鳶尾小学校　相談受付記録_01.pdf",
+        "sha256": "de96e3ce6a2f156538323b3e40c8e0d7c3383783a7816597f964616f6f69ed70",
+        "pages": 2,
+        "method": "Google Drive原本PDF取得＋文字抽出とページ画像（該当頁）を照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
+    },
+    {
+      "schoolId": "toda-es",
+      "schoolName": "戸田小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/toda-es/",
+      "existingSiteRecord": "data/schools/atsugi/toda-es.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "Google Driveの原本PDFを直接取得し該当頁を確認した。文書上の規定・説明と学校の実際の運用、公法上の権限・個情法適合性を区別する。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "confirmed_yes",
+          "observation": "2026年1月30日付入会案内にPTAの加入は保護者・教職員の任意と明記。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-toda-es",
+              "locator": "p.1 冒頭"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "explicit_opt_in": {
+          "status": "confirmed_yes",
+          "observation": "入会する・しないのチェック欄と個人情報の取扱い同意事項がある。実際の申込み・受理状況は未確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-toda-es",
+              "locator": "p.1 入会届"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "indication",
+          "observation": "退会届では非会員児童を差別しない一方、PTA会費支出の記念品等の実費を請求する可能性が示される。具体的請求と児童への影響は未確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-toda-es",
+              "locator": "p.2 退会届"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "school_collection_of_pta_fee": {
+          "status": "indication",
+          "observation": "入会届に『PTAが学校に依頼し、振替を行います』と記載。学校が実際にどの口座・システムで処理したか未確認。委任・同意だけでは権限創設にならない。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-toda-es",
+              "locator": "p.1 入会届②"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "対象PDFの原本存在を確認。固定10文書の存否判定は未完了。",
+      "legalScreening": "出典記載を照合。15法令の個別適用と反証・是正の確認は未了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "戸田小学校_01.pdf",
+        "sha256": "9e52b9bb6b389b0c0a646d204df96dae1c14e58fb8459a87d9b368743c0dacf1",
+        "pages": 2,
+        "method": "Google Drive原本PDF取得＋文字抽出とページ画像（該当頁）を照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
+    },
+    {
+      "schoolId": "tomei-jhs",
+      "schoolName": "東名中学校",
+      "schoolType": "中学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/tomei-jhs/",
+      "existingSiteRecord": "data/schools/atsugi/tomei-jhs.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令の独立審査待ち",
+      "publiclyVerified": false
+    },
+    {
+      "schoolId": "tomuro-es",
+      "schoolName": "戸室小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/tomuro-es/",
+      "existingSiteRecord": "data/schools/atsugi/tomuro-es.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "Google Driveの原本PDFを直接取得し該当頁を確認した。文書上の規定・説明と学校の実際の運用、公法上の権限・個情法適合性を区別する。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "explicit_opt_in": {
+          "status": "confirmed_yes",
+          "observation": "PTA・保護者カードに加入・非加入を選択する欄を設ける。会員資格のPTA承諾と実際の提出は未確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-tomuro-es",
+              "locator": "p.1 PTA・保護者カード"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "withdrawal_procedure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "indication",
+          "observation": "児童・保護者情報、登校班カラー等をPTAカードに記録し登校班編成・役員選出に使用すると記載。学校が保有する情報の転用か、PTA自身が直接取得する情報かは未確認。",
+          "year": "2026",
+          "sourceRefs": [
+            {
+              "sourceId": "original-tomuro-es",
+              "locator": "p.1 PTA・保護者カード"
+            }
+          ],
+          "reviewNotes": "原本の記載についての確認。実施と適法性の確定ではない。"
+        },
+        "officer_selection_pressure": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "対象PDFの原本存在を確認。固定10文書の存否判定は未完了。",
+      "legalScreening": "出典記載を照合。15法令の個別適用と反証・是正の確認は未了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "戸室小学校_11.pdf",
+        "sha256": "2c2f62618d7963c4965b90ebaf0158cd2da00c370153a40db7889e4dbcbacd00",
+        "pages": 2,
+        "method": "Google Drive原本PDF取得＋文字抽出とページ画像（該当頁）を照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
+    },
+    {
+      "schoolId": "tsumada-es",
+      "schoolName": "妻田小学校",
+      "schoolType": "小学校",
+      "archiveUrl": "https://ptaorg.com/archive/atsugi/tsumada-es/",
+      "existingSiteRecord": "data/schools/atsugi/tsumada-es.json",
+      "priorStatus": "評価準備中",
+      "priorFinding": null,
+      "claimedOriginal": null,
+      "reviewPriorities": [],
+      "sourceReview": "保存名『麦田小学校_12.pdf』はPDF本文で厚木市立妻田小学校PTAと確認。原本2ページ・画像照合済み。実施状況・法令評価は別途検証。",
+      "analysisYear": "2026",
+      "axes": {
+        "voluntary_membership_notice": {
+          "status": "indication",
+          "observation": "登録票と会費納入をもって加入扱いとし、明示的な加入・非加入選択欄の有無はこの2ページからは確認できない。",
+          "year": "2025",
+          "sourceRefs": [
+            {
+              "sourceId": "original-tsumada-es",
+              "locator": "p.1『PTA加入について』"
+            }
+          ],
+          "reviewNotes": "原本上の記載の存在のみ確認。公法上の授権・実務の確定とは区別。"
+        },
+        "explicit_opt_in": {
+          "status": "indication",
+          "observation": "登録票の提出と会費納入を加入扱いとする書式。申込意思が自由であるかとPTA承諾の記録は要確認。",
+          "year": "2025",
+          "sourceRefs": [
+            {
+              "sourceId": "original-tsumada-es",
+              "locator": "p.1 第3項"
+            }
+          ],
+          "reviewNotes": "原本上の記載の存在のみ確認。公法上の授権・実務の確定とは区別。"
+        },
+        "withdrawal_procedure": {
+          "status": "confirmed_yes",
+          "observation": "退会届の書式があり、退会理由の記入欄が設けられている。理由を記載しない退会の可否は未確認。",
+          "year": "2025",
+          "sourceRefs": [
+            {
+              "sourceId": "original-tsumada-es",
+              "locator": "p.2 退会届"
+            }
+          ],
+          "reviewNotes": "原本上の記載の存在のみ確認。公法上の授権・実務の確定とは区別。"
+        },
+        "nonmember_equal_treatment": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_collection_of_pta_fee": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_account_or_payment_system": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_personal_data_for_pta": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "officer_selection_pressure": {
+          "status": "confirmed_yes",
+          "observation": "児童1人につき原則1回の委員引受を依頼し、入学式直後にクラスで委員選出する予定を記載。強制的な就任は未確認。",
+          "year": "2025",
+          "sourceRefs": [
+            {
+              "sourceId": "original-tsumada-es",
+              "locator": "p.1 本文・第4項"
+            }
+          ],
+          "reviewNotes": "原本上の記載の存在のみ確認。公法上の授権・実務の確定とは区別。"
+        },
+        "sensitive_exemption_questions": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "teacher_internal_pta_admin": {
+          "status": "indication",
+          "observation": "未提出の場合は『学校事務局までご連絡ください』と記載。実際に学校職員がPTA内部事務を行ったかは不明。",
+          "year": "2025",
+          "sourceRefs": [
+            {
+              "sourceId": "original-tsumada-es",
+              "locator": "p.1 第3項"
+            }
+          ],
+          "reviewNotes": "原本上の記載の存在のみ確認。公法上の授権・実務の確定とは区別。"
+        },
+        "pta_spending_on_school_costs": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        },
+        "school_pta_governance_overlap": {
+          "status": "unknown",
+          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "year": "2026",
+          "sourceRefs": []
+        }
+      },
+      "documentExistence": "10文書区分の原本確認待ち",
+      "legalScreening": "15法令への適用、役員選出・会員管理実務は未完了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "麦田小学校_12.pdf",
+        "verifiedSchoolFromContent": "妻田小学校",
+        "sha256": "3a0585b5c790842aa9b56c06b2b4da4b4c9e852938ab4efcc7c58403dfb61772",
+        "pages": 2,
+        "method": "Drive保存原本のPDF本文と両ページ画像の直接照合、ローカルSHA-256算出",
+        "verifiedAt": "2026-11-16",
+        "filenameSchoolMismatch": true
+      }
+    }
+  ],
+  "legacySummary": {
+    "withSubstantivePriorFinding": 5,
+    "originalPDFsIndependentlyReviewed": 15,
+    "pendingOriginalReview": 21,
+    "individualSchoolsReadyForPublication": 0
+  },
+  "sourceStatus": "15校の原本PDFを直接照合、残21校は未確認。妻田小学校の原本は『麦田小学校_12.pdf』として保存されていた。",
+  "originalSources": [
+    {
+      "id": "original-aikawa-es",
+      "schoolId": "aikawa-es",
+      "fileName": "相川小学校 相談受付記録_01.pdf",
+      "sha256": "a0128ff96c8c329ee7d8f31048dd93fc7dd87e1045890eb50d5c9b2ed5334375",
+      "pages": 3,
+      "sourceAvailability": "Google Drive原本確認。公開サイトの保存PDFとの同一性はSHA照合未実施。",
+      "publicSiteOriginalUrl": "/source-pdfs/atsugi/aikawa-es/aikawa-es-soudan-01.pdf"
+    },
+    {
+      "id": "original-aikawa-jhs",
+      "schoolId": "aikawa-jhs",
+      "fileName": "相川中学校 会議録_04.pdf",
+      "sha256": "7a4497474a69a4f129a88074e51a07dd348fee128060b1a4c10478cdbdd4769f",
+      "pages": 9,
+      "sourceAvailability": "Google Drive原本確認。公開サイトの保存PDFとの同一性はSHA照合未実施。",
+      "publicSiteOriginalUrl": "/source-pdfs/atsugi/aikawa-jhs/aikawa-jhs-kaigiroku-04.pdf",
+      "hashVerification": "verified_from_local_download"
+    },
+    {
+      "id": "original-atsugi-es",
+      "schoolId": "atsugi-es",
+      "fileName": "厚木小学校_06.pdf",
+      "sha256": "73eefa86903159b5056f5549564173a3391b0d4ac414e3fcd2c4f46409a48102",
+      "pages": 1,
+      "sourceAvailability": "Google Drive原本確認。公開サイトの保存PDFとの同一性はSHA照合未実施。",
+      "publicSiteOriginalUrl": "/source-pdfs/atsugi/atsugi-es/%E5%8E%9A%E6%9C%A8%E5%B0%8F%E5%AD%A6%E6%A0%A1_06.pdf"
+    },
+    {
+      "id": "original-echi-es",
+      "schoolId": "echi-es",
+      "fileName": "依知小学校_0002.pdf",
+      "sha256": "72ac32d6d01b86a9981fc2a2d72070bcbd2f2689aea9356bc4761603c78cb3c0",
+      "pages": 2,
+      "sourceAvailability": "Google Drive原本確認。公開サイトの保存PDFとの同一性はSHA照合未実施。",
+      "publicSiteOriginalUrl": "/source-pdfs/atsugi/echi-es/%E4%BE%9D%E7%9F%A5%E5%B0%8F%E5%AD%A6%E6%A0%A1_0002.pdf"
+    },
+    {
+      "id": "original-kamiogino-es",
+      "schoolId": "kamiogino-es",
+      "fileName": "上荻野小学校_13.pdf",
+      "sha256": "3706cbfcf0a9f3178ba5644e0c1ebb54616919466be13668079c83332d5292af",
+      "pages": 1,
+      "sourceAvailability": "Google Drive原本確認。公開サイトの保存PDFとの同一性はSHA照合未実施。",
+      "publicSiteOriginalUrl": "/source-pdfs/atsugi/kamiogino-es/%E4%B8%8A%E8%8D%BB%E9%87%8E%E5%B0%8F%E5%AD%A6%E6%A0%A1_13.pdf"
+    },
+    {
+      "id": "original-atsugi-daini-es",
+      "schoolId": "atsugi-daini-es",
+      "fileName": "厚木第二小学校_10.pdf",
+      "sha256": "11d4376fc6f230de0e7d6a15b90e4de877b0300162a41cb1f67b4f4883fbf933",
+      "pages": 4,
+      "sourceAvailability": "Google Drive原本を取得し、書面記載を確認。サイト保存PDFとのSHA一致は未検証。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "original-kamiechi-es",
+      "schoolId": "kamiechi-es",
+      "fileName": "上依知小学校_01.pdf",
+      "sha256": "bdd8245c41c4cc93e50f571f9a81c4246c5518a752d350a3533dcbd1f6d07515",
+      "pages": 2,
+      "sourceAvailability": "Google Drive原本を取得し、書面記載を確認。サイト保存PDFとのSHA一致は未検証。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "original-koayu-es",
+      "schoolId": "koayu-es",
+      "fileName": "小鮎小学校_08.pdf",
+      "sha256": "a286c767753aa49ce6b92ddffa64ee30beceb434844955e9decee58e62a73929",
+      "pages": 2,
+      "sourceAvailability": "Google Drive原本を取得し、書面記載を確認。サイト保存PDFとのSHA一致は未検証。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "original-mutsuai-jhs",
+      "schoolId": "mutsuai-jhs",
+      "fileName": "睦合中学校_01.pdf",
+      "sha256": "271d23e5b4fc80898056f84abc7a03bc439bae8b27ad3c9fb919d0cea040a7b5",
+      "pages": 2,
+      "sourceAvailability": "Google Drive原本を取得し、書面記載を確認。サイト保存PDFとのSHA一致は未検証。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "original-nanmori-es",
+      "schoolId": "nanmori-es",
+      "fileName": "南毛利小学校_09.pdf",
+      "sha256": "2a27c2cf949a8b940189da662cdee85eddf0ed00314636bce01bbb538b3a9de4",
+      "pages": 1,
+      "sourceAvailability": "Google Drive原本を取得し、書面記載を確認。サイト保存PDFとのSHA一致は未検証。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "original-shimizu-es",
+      "schoolId": "shimizu-es",
+      "fileName": "清水小学校_07.pdf",
+      "sha256": "ddaa2642b4283e84e237172588ce8d3718b52bd55629b573608a443dfd80f88b",
+      "pages": 2,
+      "sourceAvailability": "Google Drive原本を取得し、書面記載を確認。サイト保存PDFとのSHA一致は未検証。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "original-tobio-es",
+      "schoolId": "tobio-es",
+      "fileName": "鳶尾小学校　相談受付記録_01.pdf",
+      "sha256": "de96e3ce6a2f156538323b3e40c8e0d7c3383783a7816597f964616f6f69ed70",
+      "pages": 2,
+      "sourceAvailability": "Google Drive原本を取得し、書面記載を確認。サイト保存PDFとのSHA一致は未検証。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "original-toda-es",
+      "schoolId": "toda-es",
+      "fileName": "戸田小学校_01.pdf",
+      "sha256": "9e52b9bb6b389b0c0a646d204df96dae1c14e58fb8459a87d9b368743c0dacf1",
+      "pages": 2,
+      "sourceAvailability": "Google Drive原本を取得し、書面記載を確認。サイト保存PDFとのSHA一致は未検証。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "original-tomuro-es",
+      "schoolId": "tomuro-es",
+      "fileName": "戸室小学校_11.pdf",
+      "sha256": "2c2f62618d7963c4965b90ebaf0158cd2da00c370153a40db7889e4dbcbacd00",
+      "pages": 2,
+      "sourceAvailability": "Google Drive原本を取得し、書面記載を確認。サイト保存PDFとのSHA一致は未検証。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "original-tsumada-es",
+      "schoolId": "tsumada-es",
+      "fileName": "麦田小学校_12.pdf",
+      "actualSchool": "妻田小学校",
+      "sha256": "3a0585b5c790842aa9b56c06b2b4da4b4c9e852938ab4efcc7c58403dfb61772",
+      "pages": 2,
+      "sourceAvailability": "Drive『全国資料／厚木市』の原本PDF本文・ページ画像を照合。保存名は学校名の誤記。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "additional-atsugi-daini-es-05",
+      "schoolId": "atsugi-daini-es",
+      "fileName": "厚木第二小学校_05.pdf",
+      "sha256": "2fd1409634772e1f5bcbe06952b0a71cd3d1d61545827fbf24954351222bd8a3",
+      "pages": 1,
+      "sourceAvailability": "Google Drive全国資料／厚木市 原本PDFを直接確認。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
+    }
+  ],
+  "corrections": [
+    {
+      "id": "CORR-ATSUGI-001",
+      "severity": "high",
+      "type": "school_attribution",
+      "source": "相川小学校 相談受付記録_01.pdf",
+      "sourcePages": [
+        1,
+        2,
+        3
+      ],
+      "finding": "ファイル名『相川小学校』と2026年1月16日の相談本文の対象『相川中学校』に不一致。相川小学校の旧評価へ相談内容を帰属させた点は不適切。",
+      "action": "相川小学校の名簿使用・役員選出を当該資料で確認済みとしない。相川中学校について第三者申告として記録し、別の2026年1月14日本部会資料にあるくじ引きと照合。",
+      "publicSiteCorrectionPending": true
+    },
+    {
+      "id": "CORR-ATSUGI-002",
+      "severity": "medium",
+      "type": "filename_school_mismatch",
+      "source": "麦田小学校_12.pdf",
+      "finding": "書類本文は妻田小学校PTAであり、麦田小学校とのファイル名は誤記。",
+      "action": "妻田小学校として根拠台帳に登録。学校名による検索時に別名資料も探索する。",
+      "publicSiteCorrectionPending": true
+    }
+  ],
+  "institutionalCrossChecks": [
+    {
+      "schoolId": "shimizu-es",
+      "concern": "2026年度のPTA入会申込書が学校への会費集金委託同意を含む。市の3月30日通知の『同意・委託』との関係、同書式の制定日と改正時点、公法上の授権を別途確認。"
+    },
+    {
+      "schoolId": "toda-es",
+      "concern": "2026年度入会書式が学校への会費振替依頼を含む。市の制度・学校の資金処理・公法上の根拠を追跡。"
+    },
+    {
+      "schoolId": "mutsuai-jhs",
+      "concern": "2025年度校長名義の承諾書がPTA目的での情報利用を学校教育活動と並べる。学校の所掌・情報利用目的を先に審査。"
+    },
+    {
+      "schoolId": "atsugi-daini-es",
+      "concern": "転入生の入会・非加入選択と、継続会員の退会届方式が併存。対象者の違いを説明し継続意思の実効性を確認。"
+    }
+  ],
+  "searchCoverage": {
+    "checkedAt": "2026-11-16",
+    "sources": [
+      "Google Drive（学校名＋PDF拡張子、自治体名）",
+      "学校別公開JSONと既存アーカイブHTML",
+      "ユーザーの既存研究マップ"
+    ],
+    "importantLimitation": "資料の原本検索で未ヒット＝不存在ではない。Drive検索は一部のクエリで先頭100件の上限があり、表記揺れ・一括ZIP・非公開保存フォルダ・別名での再検索が必要。",
+    "unverifiedSchoolIds": [
+      "aiko-es",
+      "atsugi-jhs",
+      "echi-jhs",
+      "echi-minami-es",
+      "fujizuka-jhs",
+      "hayashi-jhs",
+      "iiyama-es",
+      "kita-es",
+      "koayu-jhs",
+      "midorigaoka-es",
+      "moridai-es",
+      "morinosato-es",
+      "morinosato-jhs",
+      "mutsuai-higashi-jhs",
+      "nanmori-jhs",
+      "ogino-es",
+      "ogino-jhs",
+      "sanda-es",
+      "tamagawa-es",
+      "tamagawa-jhs",
+      "tomei-jhs"
+    ],
+    "unverifiedCount": 21,
+    "remainingVerification": "各校に該当する旧資料・原本PDF・画像の有無、保存元フォルダ、年度を照合。元資料が得られなければ未評価継続。",
+    "additionalFindings": "全国資料／厚木市39件と小鮎小学校01.zip内21画像を調査。既存15校の補助証拠を発見したが、新たな学校の原本はなし。"
+  }
+}

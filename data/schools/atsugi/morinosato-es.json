@@ -7,40 +7,106 @@
   "basePath": "/archive/atsugi/morinosato-es/",
   "canonical": "https://ptaorg.com/archive/atsugi/morinosato-es/",
   "ogImage": "/assets/ogp/atsugi/morinosato-es.png",
-  "status": "評価準備中",
+  "status": "原本確認・追加調査あり",
   "statusClass": "eval-pending",
-  "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
+  "summary": "2025年度計画はPTA本部による会費集金の予定を掲載し、運営委員会だよりはtetoruでのPTA総会案内と活動の効率化を伝えています。",
   "description": "森の里小学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
-  "ogDescription": "森の里小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
+  "ogDescription": "2025年度計画はPTA本部による会費集金の予定を掲載し、運営委員会だよりはtetoruでのPTA総会案内と活動の効率化を伝えています。",
   "materials": {
     "documentName": "未確認",
     "confirmedDocuments": [
-      "未確認"
+      "2025年度森の里小学校PTA年間活動計画.pdf",
+      "運営委員会だより（３月号）.pdf"
     ],
     "hasMembershipNotice": "未確認",
     "hasApplicationForm": "未確認",
     "applicationFormStatus": "未確認",
     "hasSchoolCollectionNotice": "未確認",
     "sourceImages": [],
-    "pdfStatus": "準備中",
+    "pdfStatus": "学校公式ページから原本PDFを確認",
     "pdf": null
   },
   "confirmedFacts": [
-    "資料確認後に記載します。"
+    "2025年度計画はPTA本部による会費集金の予定を掲載し、運営委員会だよりはtetoruでのPTA総会案内と活動の効率化を伝えています。"
   ],
   "unconfirmedPoints": [
-    "PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を確認後に記載します。"
+    "現行の加入・退会書式、徴収・口座・会計記録",
+    "役員選出、情報の取得元と学校内利用・提供の記録"
   ],
   "riskFlags": [
-    "未評価"
+    "要追加調査"
   ],
   "evaluation": [
-    "評価準備中"
+    "会費の受付、役員登録名簿、総会の配信はPTA内部事務です。年計画だけから学校の徴収は確定できません。学校の配信を行う根拠と法61条の利用目的を確認し、法69条の校内利用とPTAへの提供、地公法35条・34条の業務・守秘、地自法235条の4第2項の収納と保管を検証します。",
+    "活動負担の軽減を進め、総会配信・会費受付・役員登録の担当と権限を明確にしてください。"
   ],
   "humanReviewRequired": true,
-  "lastReviewed": "2026-06-02",
+  "lastReviewed": "2026-11-16",
   "nationalArchive": {
     "order": 20,
     "group": "小学校"
+  },
+  "officialPdfReview": {
+    "finding": "2025年度計画はPTA本部による会費集金の予定を掲載し、運営委員会だよりはtetoruでのPTA総会案内と活動の効率化を伝えています。",
+    "assessment": "会費の受付、役員登録名簿、総会の配信はPTA内部事務です。年計画だけから学校の徴収は確定できません。学校の配信を行う根拠と法61条の利用目的を確認し、法69条の校内利用とPTAへの提供、地公法35条・34条の業務・守秘、地自法235条の4第2項の収納と保管を検証します。",
+    "action": "活動負担の軽減を進め、総会配信・会費受付・役員登録の担当と権限を明確にしてください。",
+    "missing": [
+      "現行の加入・退会書式、徴収・口座・会計記録",
+      "役員選出、情報の取得元と学校内利用・提供の記録"
+    ],
+    "documents": [
+      {
+        "title": "2025年度森の里小学校PTA年間活動計画.pdf",
+        "date": "2025年度",
+        "url": "https://drive.google.com/file/d/1HSS4-2fJhkcXzRmfTYS5YkOVKwzLQysT/view",
+        "sha256": "b9d5a7f279e69614546f262272d09e2ca5e96dc862a1221721ae967d1a74a19a",
+        "pdfPages": 1,
+        "finding": "PTA本部の会費集金・集計と役員登録名簿チェックの計画。次年度委員・新入生役員選出の計画。",
+        "sourceSha256Rechecked": true,
+        "crops": [
+          {
+            "image": "/assets/archive/atsugi/review-20261116/prior-ms-01.webp",
+            "sha256": "452e6f1bb622034726b1dd3186779633b3ee9f961db780bc51696878b5243e0f",
+            "page": 1,
+            "cropRectNormalized": [
+              0.037,
+              0.085,
+              0.445,
+              0.323
+            ],
+            "caption": "2025年度本部計画：会費集金集計・役員登録名簿確認",
+            "width": 1215,
+            "height": 501,
+            "privacy": "none"
+          }
+        ]
+      },
+      {
+        "title": "運営委員会だより（３月号）.pdf",
+        "date": "2025-03-17",
+        "url": "https://drive.google.com/file/d/1BMrczNqsUywFSBtY28MVCPjffhQTpoXQ/view",
+        "sha256": "81a560f86be657d7c81792393fe43663fc71e0b2c85922ab56a5dc7903fa79ea",
+        "pdfPages": 2,
+        "finding": "tetoruによるPTA総会案内。教員へのPTA活動問い合わせ案内。",
+        "sourceSha256Rechecked": true,
+        "crops": [
+          {
+            "image": "/assets/archive/atsugi/review-20261116/prior-ms-03.webp",
+            "sha256": "de7e9ef374e42c1e85bfb4c70985555c9ad36caaec9ac72758d4b55ea3f9850f",
+            "page": 2,
+            "cropRectNormalized": [
+              0.075,
+              0.47,
+              0.95,
+              0.738
+            ],
+            "caption": "2025年3月PTA総会通知のtetoru配信",
+            "width": 1303,
+            "height": 564,
+            "privacy": "none"
+          }
+        ]
+      }
+    ]
   }
 }

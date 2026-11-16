@@ -16,3 +16,4 @@ jobs:
           node-version: '20'
       - name: Validate all generated pages, navigation and migration
         run: npm test
+

@@ -7,40 +7,81 @@
   "basePath": "/archive/atsugi/hayashi-jhs/",
   "canonical": "https://ptaorg.com/archive/atsugi/hayashi-jhs/",
   "ogImage": "/assets/ogp/atsugi/hayashi-jhs.png",
-  "status": "評価準備中",
+  "status": "原本確認・追加調査あり",
   "statusClass": "eval-pending",
-  "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
+  "summary": "林中学校通信の2026年5月号は、5月1日の学校諸会費とPTA会費の引き落としを同じ日程欄に掲載しています。",
   "description": "林中学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
-  "ogDescription": "林中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
+  "ogDescription": "林中学校通信の2026年5月号は、5月1日の学校諸会費とPTA会費の引き落としを同じ日程欄に掲載しています。",
   "materials": {
     "documentName": "未確認",
     "confirmedDocuments": [
-      "未確認"
+      "厚木市立林中学校通信 第403号"
     ],
     "hasMembershipNotice": "未確認",
     "hasApplicationForm": "未確認",
     "applicationFormStatus": "未確認",
     "hasSchoolCollectionNotice": "未確認",
     "sourceImages": [],
-    "pdfStatus": "準備中",
+    "pdfStatus": "学校公式ページから原本PDFを確認",
     "pdf": null
   },
   "confirmedFacts": [
-    "資料確認後に記載します。"
+    "林中学校通信の2026年5月号は、5月1日の学校諸会費とPTA会費の引き落としを同じ日程欄に掲載しています。"
   ],
   "unconfirmedPoints": [
-    "PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を確認後に記載します。"
+    "令和8年度の諸会費案内とPTA会費振替書式",
+    "引落口座名義と送金簿",
+    "加入届・会員照合・未納管理の手順"
   ],
   "riskFlags": [
-    "未評価"
+    "要追加調査"
   ],
   "evaluation": [
-    "評価準備中"
+    "PTA会費はPTAの内部事務です。同じ日程欄の記載から学校の収納口座や合算処理は確定できず、学校が関与する場合の具体的権限も未確認です。口座・会員照合に使う学校保有情報の必要性と利用目的を法61条で確認し、校内利用・PTAへの提供を法69条で個別に検証します。従事と守秘、資金保管の判断は担当・決済・口座記録を基に地公法35条・34条、地自法235条の4第2項を検討します。",
+    "徴収予定の表示を区分し、振替主体、資金の移動、教職員の作業を確認できる記録を提示してください。"
   ],
   "humanReviewRequired": true,
-  "lastReviewed": "2026-06-02",
+  "lastReviewed": "2026-11-16",
   "nationalArchive": {
     "order": 32,
     "group": "中学校"
+  },
+  "officialPdfReview": {
+    "finding": "林中学校通信の2026年5月号は、5月1日の学校諸会費とPTA会費の引き落としを同じ日程欄に掲載しています。",
+    "assessment": "PTA会費はPTAの内部事務です。同じ日程欄の記載から学校の収納口座や合算処理は確定できず、学校が関与する場合の具体的権限も未確認です。口座・会員照合に使う学校保有情報の必要性と利用目的を法61条で確認し、校内利用・PTAへの提供を法69条で個別に検証します。従事と守秘、資金保管の判断は担当・決済・口座記録を基に地公法35条・34条、地自法235条の4第2項を検討します。",
+    "action": "徴収予定の表示を区分し、振替主体、資金の移動、教職員の作業を確認できる記録を提示してください。",
+    "missing": [
+      "令和8年度の諸会費案内とPTA会費振替書式",
+      "引落口座名義と送金簿",
+      "加入届・会員照合・未納管理の手順"
+    ],
+    "documents": [
+      {
+        "title": "厚木市立林中学校通信 第403号",
+        "date": "2026-05-01",
+        "url": "https://drive.google.com/file/d/1nqoXi7qKt5I2827QNCRokSTHox0RYJoR/view",
+        "officialPage": "https://www.hayashi-js.atsugi.ed.jp/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/%E5%AD%A6%E6%A0%A1%E3%81%A0%E3%82%88%E3%82%8A",
+        "sha256": "34ee90b208ba33f7e9b5b98b4431b79381c972d73d358a20fe864581c534639a",
+        "pdfPages": 2,
+        "finding": "5月の主な予定。",
+        "crops": [
+          {
+            "image": "/assets/archive/atsugi/review-20261116/hayashi-jhs-1-1.webp",
+            "sha256": "0c53503bee8f827332050cf5fa94e27b58064497110ef803fbb4216a8c58db98",
+            "page": 2,
+            "cropRectPdfPts": [
+              291,
+              243,
+              552,
+              285
+            ],
+            "caption": "諸会費とPTA会費の引落予定",
+            "width": 783,
+            "height": 126,
+            "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+          }
+        ]
+      }
+    ]
   }
 }

@@ -7,40 +7,81 @@
   "basePath": "/archive/atsugi/iiyama-es/",
   "canonical": "https://ptaorg.com/archive/atsugi/iiyama-es/",
   "ogImage": "/assets/ogp/atsugi/iiyama-es.png",
-  "status": "評価準備中",
+  "status": "原本確認・追加調査あり",
   "statusClass": "eval-pending",
-  "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
+  "summary": "2023年5月の学校だよりは、PTA会費集金袋の配付と回収を学校の予定欄に掲載しています。",
   "description": "飯山小学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
-  "ogDescription": "飯山小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
+  "ogDescription": "2023年5月の学校だよりは、PTA会費集金袋の配付と回収を学校の予定欄に掲載しています。",
   "materials": {
     "documentName": "未確認",
     "confirmedDocuments": [
-      "未確認"
+      "飯山小学校だより 2023年5月17日号"
     ],
     "hasMembershipNotice": "未確認",
     "hasApplicationForm": "未確認",
     "applicationFormStatus": "未確認",
     "hasSchoolCollectionNotice": "未確認",
     "sourceImages": [],
-    "pdfStatus": "準備中",
+    "pdfStatus": "学校公式ページから原本PDFを確認",
     "pdf": null
   },
   "confirmedFacts": [
-    "資料確認後に記載します。"
+    "2023年5月の学校だよりは、PTA会費集金袋の配付と回収を学校の予定欄に掲載しています。"
   ],
   "unconfirmedPoints": [
-    "PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を確認後に記載します。"
+    "2026年度の集金・加入案内と総会資料",
+    "2023年度・2026年度の袋配付・回収担当と現金受渡し記録",
+    "役員選出書類、名簿管理者・保有目的"
   ],
   "riskFlags": [
-    "未評価"
+    "要追加調査"
   ],
   "evaluation": [
-    "評価準備中"
+    "PTA会費の集金はPTA内部事務です。学校媒体の案内から個々の配付・回収の担当や現金管理主体は確定できず、学校の具体的な関与根拠も未確認です。現行書式と会員管理の情報源を特定した上で法61条の保有必要性、69条の内部利用・提供を順に確認します。教職員の勤務・守秘と公的主体による現金保管の有無は地公法35条・34条、地自法235条の4第2項の検討に必要です。",
+    "2023年度の袋の経路と受渡し記録、2026年度の徴収方法、その間の変更日を明らかにしてください。"
   ],
   "humanReviewRequired": true,
-  "lastReviewed": "2026-06-02",
+  "lastReviewed": "2026-11-16",
   "nationalArchive": {
     "order": 19,
     "group": "小学校"
+  },
+  "officialPdfReview": {
+    "finding": "2023年5月の学校だよりは、PTA会費集金袋の配付と回収を学校の予定欄に掲載しています。",
+    "assessment": "PTA会費の集金はPTA内部事務です。学校媒体の案内から個々の配付・回収の担当や現金管理主体は確定できず、学校の具体的な関与根拠も未確認です。現行書式と会員管理の情報源を特定した上で法61条の保有必要性、69条の内部利用・提供を順に確認します。教職員の勤務・守秘と公的主体による現金保管の有無は地公法35条・34条、地自法235条の4第2項の検討に必要です。",
+    "action": "2023年度の袋の経路と受渡し記録、2026年度の徴収方法、その間の変更日を明らかにしてください。",
+    "missing": [
+      "2026年度の集金・加入案内と総会資料",
+      "2023年度・2026年度の袋配付・回収担当と現金受渡し記録",
+      "役員選出書類、名簿管理者・保有目的"
+    ],
+    "documents": [
+      {
+        "title": "飯山小学校だより 2023年5月17日号",
+        "date": "2023-05-17",
+        "url": "https://drive.google.com/file/d/1n4kbyq70W3SXbezU6wKqBfbqAQQDahRt/view",
+        "officialPage": "https://www.iiyama-es.atsugi.ed.jp/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/%E4%BB%A4%E5%92%8C5%E5%B9%B4%E5%BA%A6%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B",
+        "sha256": "d63abc8e571ae01ba63b6dc4dbc99aef09cf0032e2d324cb3dfdadc136cfd249",
+        "pdfPages": 2,
+        "finding": "5月17日配付、19日回収の予定を記載。",
+        "crops": [
+          {
+            "image": "/assets/archive/atsugi/review-20261116/iiyama-es-1-1.webp",
+            "sha256": "70ba65c9cbab304f1d9667de7d6aa81c7b9cc133827d5e600ffa2226ed0cefdf",
+            "page": 2,
+            "cropRectPdfPts": [
+              36,
+              294,
+              278,
+              393
+            ],
+            "caption": "集金袋の配付・回収予定",
+            "width": 726,
+            "height": 297,
+            "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+          }
+        ]
+      }
+    ]
   }
 }

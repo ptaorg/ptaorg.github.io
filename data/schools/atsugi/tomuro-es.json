@@ -7,15 +7,15 @@
   "basePath": "/archive/atsugi/tomuro-es/",
   "canonical": "https://ptaorg.com/archive/atsugi/tomuro-es/",
   "ogImage": "/assets/ogp/atsugi/tomuro-es.png",
-  "status": "評価準備中",
-  "statusClass": "eval-pending",
+  "status": "要確認",
+  "statusClass": "eval-warning",
   "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
   "description": "戸室小学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
-  "ogDescription": "戸室小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
+  "ogDescription": "加入・非加入を選ぶ書式は確認できるが、カードには登校班編成とPTA委員選出の用途が併記されている。学校の本来業務とPTAの内部事務を分け、個人情報の保有・利用主体を特定する必要がある。",
   "materials": {
-    "documentName": "未確認",
+    "documentName": "戸室小学校_11.pdf",
     "confirmedDocuments": [
-      "未確認"
+      "戸室小学校_11.pdf"
     ],
     "hasMembershipNotice": "未確認",
     "hasApplicationForm": "未確認",
@@ -35,19 +35,22 @@
     "pdf": null
   },
   "confirmedFacts": [
-    "資料確認後に記載します。"
+    "PTA・保護者カードに加入・非加入の選択欄がある。",
+    "児童・保護者の情報、登校班カラー、PTA役員・委員履歴等を記載するカードが確認できる。"
   ],
   "unconfirmedPoints": [
-    "PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を確認後に記載します。"
+    "PTAが直接情報を取得・保有する方式か、学校学籍情報と照合しているか。",
+    "会員の承諾・退会・学校とPTAの登校班事務の分担。"
   ],
   "riskFlags": [
-    "未評価"
+    "原本資料により要検証",
+    "学校側の権限・運用の独立照合待ち"
   ],
   "evaluation": [
-    "評価準備中"
+    "加入・非加入を選ぶ書式は確認できるが、カードには登校班編成とPTA委員選出の用途が併記されている。学校の本来業務とPTAの内部事務を分け、個人情報の保有・利用主体を特定する必要がある。"
   ],
   "humanReviewRequired": true,
-  "lastReviewed": "2026-06-02",
+  "lastReviewed": "2026-11-16",
   "nationalArchive": {
     "order": 13,
     "group": "小学校"

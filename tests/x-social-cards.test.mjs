@@ -18,7 +18,7 @@ test('Shareable PTA pages carry one full X large-image card and Open Graph image
     assert.match(meta(head,'twitter:card')[0],/summary_large_image/,route);
     const src=meta(head,'twitter:image')[0].match(/content="([^"]+)"/)?.[1];
     assert.ok(src?.startsWith('https://'),route+': image absolute URL');
-    if(src.startsWith('https://ptaorg.com/'))assert.ok(fs.existsSync(src.replace('https://ptaorg.com/','')),route+': local social image exists');
+    if(src.startsWith('https://ptaorg.com/'))assert.ok(fs.existsSync(new URL(src).pathname.replace(/^\//,'')),route+': local social image exists');
   }
 });
 test('Default social image is a valid sufficiently large PNG under 5MB',()=>{

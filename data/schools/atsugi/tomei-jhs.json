@@ -7,40 +7,92 @@
   "basePath": "/archive/atsugi/tomei-jhs/",
   "canonical": "https://ptaorg.com/archive/atsugi/tomei-jhs/",
   "ogImage": "/assets/ogp/atsugi/tomei-jhs.png",
-  "status": "評価準備中",
+  "status": "原本確認・追加調査あり",
   "statusClass": "eval-pending",
-  "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
+  "summary": "東名中の2026年度年間予定表にPTA会費引落しがあり、2025年5月号も6月2日のPTA会費引落しを案内しています。",
   "description": "東名中学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
-  "ogDescription": "東名中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
+  "ogDescription": "東名中の2026年度年間予定表にPTA会費引落しがあり、2025年5月号も6月2日のPTA会費引落しを案内しています。",
   "materials": {
     "documentName": "未確認",
     "confirmedDocuments": [
-      "未確認"
+      "令和8年度 東名中学校 年間予定表",
+      "学校だより とうめい 5月号"
     ],
     "hasMembershipNotice": "未確認",
     "hasApplicationForm": "未確認",
     "applicationFormStatus": "未確認",
     "hasSchoolCollectionNotice": "未確認",
     "sourceImages": [],
-    "pdfStatus": "準備中",
+    "pdfStatus": "学校公式ページから原本PDFを確認",
     "pdf": null
   },
   "confirmedFacts": [
-    "資料確認後に記載します。"
+    "東名中の2026年度年間予定表にPTA会費引落しがあり、2025年5月号も6月2日のPTA会費引落しを案内しています。"
   ],
   "unconfirmedPoints": [
-    "PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を確認後に記載します。"
+    "2025・2026年度の会費集金案内・振替依頼書",
+    "口座名義・収納送金記録・未納対応",
+    "加入・退会届と名簿利用手順"
   ],
   "riskFlags": [
-    "未評価"
+    "要追加調査"
   ],
   "evaluation": [
-    "評価準備中"
+    "PTA会費はPTA内部事務です。学校による引落予定の周知が2年度確認できる一方、徴収、送金、未納管理の担当・口座と学校の具体的権限は未確認です。法61条の情報保有目的と必要性を確認し、学校での名簿照合とPTAへの提供を法69条で区別します。地公法35条・34条上の従事・守秘及び地自法235条の4第2項の資金保管は実務記録を要します。",
+    "2年度の振替依頼書、収納口座管理者、送金・返金主体と2026年度以降の自己徴収への移行日を確認してください。"
   ],
   "humanReviewRequired": true,
-  "lastReviewed": "2026-06-02",
+  "lastReviewed": "2026-11-16",
   "nationalArchive": {
     "order": 31,
     "group": "中学校"
+  },
+  "officialPdfReview": {
+    "finding": "東名中の2026年度年間予定表にPTA会費引落しがあり、2025年5月号も6月2日のPTA会費引落しを案内しています。",
+    "assessment": "PTA会費はPTA内部事務です。学校による引落予定の周知が2年度確認できる一方、徴収、送金、未納管理の担当・口座と学校の具体的権限は未確認です。法61条の情報保有目的と必要性を確認し、学校での名簿照合とPTAへの提供を法69条で区別します。地公法35条・34条上の従事・守秘及び地自法235条の4第2項の資金保管は実務記録を要します。",
+    "action": "2年度の振替依頼書、収納口座管理者、送金・返金主体と2026年度以降の自己徴収への移行日を確認してください。",
+    "missing": [
+      "2025・2026年度の会費集金案内・振替依頼書",
+      "口座名義・収納送金記録・未納対応",
+      "加入・退会届と名簿利用手順"
+    ],
+    "documents": [
+      {
+        "title": "令和8年度 東名中学校 年間予定表",
+        "date": "2026-04-01",
+        "url": "https://drive.google.com/file/d/1xREDh6XmxndoZn3BQmigff5fnZQQSXgr/view",
+        "officialPage": "https://www.toumei-js.atsugi.ed.jp/%E3%81%9D%E3%81%AE%E4%BB%96/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B",
+        "sha256": "c09bce32763b2feca0358ba0bc8dc0f9e79d5d83fc8fd9177d09a19e0dc2c954",
+        "pdfPages": 1,
+        "finding": "6月1日のPTA会費引落し予定を掲載。",
+        "crops": [
+          {
+            "image": "/assets/archive/atsugi/review-20261116/tomei-jhs-1-1.webp",
+            "sha256": "9a1e29123cb3b109ab6979d95a0cc6808b42939ff3e31587098ba48464876a9c",
+            "page": 1,
+            "cropRectPdfPts": [
+              688,
+              97,
+              769,
+              162
+            ],
+            "caption": "令和8年度のPTA会費引落予定",
+            "width": 243,
+            "height": 195,
+            "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+          }
+        ]
+      },
+      {
+        "title": "学校だより とうめい 5月号",
+        "date": "2025-05-21",
+        "url": "https://drive.google.com/file/d/1J4yMKqzXPftYYU22xjWA3LlihswSbfOA/view",
+        "officialPage": "https://www.toumei-js.atsugi.ed.jp/%E3%81%9D%E3%81%AE%E4%BB%96/%E5%AD%A6%E6%A0%A1%E3%81%A0%E3%82%88%E3%82%8A",
+        "sha256": "da7dfcf0ddcac70ecfcae852a0c1728049f44fdeb8ed75a582c48637879f7e19",
+        "pdfPages": 1,
+        "finding": "6月2日PTA会費引落日。",
+        "crops": []
+      }
+    ]
   }
 }

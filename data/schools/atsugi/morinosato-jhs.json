@@ -7,40 +7,92 @@
   "basePath": "/archive/atsugi/morinosato-jhs/",
   "canonical": "https://ptaorg.com/archive/atsugi/morinosato-jhs/",
   "ogImage": "/assets/ogp/atsugi/morinosato-jhs.png",
-  "status": "評価準備中",
+  "status": "原本確認・追加調査あり",
   "statusClass": "eval-pending",
-  "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
+  "summary": "森の里中の学校だよりは、2021年度から従来の各委員会を置かず、役員と参加できるときに協力する人で構成するPTAサポート隊に移行したと説明しています。",
   "description": "森の里中学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
-  "ogDescription": "森の里中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
+  "ogDescription": "森の里中の学校だよりは、2021年度から従来の各委員会を置かず、役員と参加できるときに協力する人で構成するPTAサポート隊に移行したと説明しています。",
   "materials": {
     "documentName": "未確認",
     "confirmedDocuments": [
-      "未確認"
+      "森の里中学校 学校だより 5月号",
+      "第1回学校運営協議会 会議録"
     ],
     "hasMembershipNotice": "未確認",
     "hasApplicationForm": "未確認",
     "applicationFormStatus": "未確認",
     "hasSchoolCollectionNotice": "未確認",
     "sourceImages": [],
-    "pdfStatus": "準備中",
+    "pdfStatus": "学校公式ページから原本PDFを確認",
     "pdf": null
   },
   "confirmedFacts": [
-    "資料確認後に記載します。"
+    "森の里中の学校だよりは、2021年度から従来の各委員会を置かず、役員と参加できるときに協力する人で構成するPTAサポート隊に移行したと説明しています。"
   ],
   "unconfirmedPoints": [
-    "PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を確認後に記載します。"
+    "現行規約・サポート隊募集書式と加入・退会の案内",
+    "総会資料・会費の有無、役員選出方法",
+    "名簿管理者・学校とPTAの事務分担"
   ],
   "riskFlags": [
-    "未評価"
+    "要追加調査"
   ],
   "evaluation": [
-    "評価準備中"
+    "組織編成と参加受付はPTAの内部事務です。役員負担を軽減し本人が活動を選ぶ形は改善です。学校運営協議会記録の地域行事との連携は、学校が会員・会費・役員等を管理することと区別して扱います。規約、参加手続、会費の有無、学校に割り当てられた内部事務や権限は未確認です。名簿や配信があれば法61条の目的と69条の校内利用・提供を個別確認します。教職員の参加の性質・守秘と財務の扱いは地公法35条・34条及び地自法235条の4第2項の事実に即して審査します。",
+    "参加する活動と時期を本人が選べる仕組みを維持し、現行の加入・会費・役員・個人情報の手続を公開できる形で示してください。"
   ],
   "humanReviewRequired": true,
-  "lastReviewed": "2026-06-02",
+  "lastReviewed": "2026-11-16",
   "nationalArchive": {
     "order": 34,
     "group": "中学校"
+  },
+  "officialPdfReview": {
+    "finding": "森の里中の学校だよりは、2021年度から従来の各委員会を置かず、役員と参加できるときに協力する人で構成するPTAサポート隊に移行したと説明しています。",
+    "assessment": "組織編成と参加受付はPTAの内部事務です。役員負担を軽減し本人が活動を選ぶ形は改善です。学校運営協議会記録の地域行事との連携は、学校が会員・会費・役員等を管理することと区別して扱います。規約、参加手続、会費の有無、学校に割り当てられた内部事務や権限は未確認です。名簿や配信があれば法61条の目的と69条の校内利用・提供を個別確認します。教職員の参加の性質・守秘と財務の扱いは地公法35条・34条及び地自法235条の4第2項の事実に即して審査します。",
+    "action": "参加する活動と時期を本人が選べる仕組みを維持し、現行の加入・会費・役員・個人情報の手続を公開できる形で示してください。",
+    "missing": [
+      "現行規約・サポート隊募集書式と加入・退会の案内",
+      "総会資料・会費の有無、役員選出方法",
+      "名簿管理者・学校とPTAの事務分担"
+    ],
+    "documents": [
+      {
+        "title": "森の里中学校 学校だより 5月号",
+        "date": "2026年5月",
+        "url": "https://drive.google.com/file/d/1r4QRLi5Vs1FTZOi2vMsrEYxHqMM8IvUW/view",
+        "officialPage": "https://www.morinosato-js.atsugi.ed.jp/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/%E5%AD%A6%E6%A0%A1%E3%81%A0%E3%82%88%E3%82%8A",
+        "sha256": "4e89ac2a177ee79fa4f3082021e4ffb0ea0d6dd7ec92e2f38cee2414f5311840",
+        "pdfPages": 2,
+        "finding": "PTAサポート隊の活動・役員負担軽減の経過。",
+        "crops": [
+          {
+            "image": "/assets/archive/atsugi/review-20261116/morinosato-jhs-1-1.webp",
+            "sha256": "430097ec1dc98b11cf0ac3e67a4271a3c65f74fdcbfec2f1e8b70d5e3dec0a7c",
+            "page": 2,
+            "cropRectPdfPts": [
+              31,
+              38,
+              291,
+              567
+            ],
+            "caption": "委員会を置かず、自ら活動を選べるPTAサポート隊",
+            "width": 780,
+            "height": 1587,
+            "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+          }
+        ]
+      },
+      {
+        "title": "第1回学校運営協議会 会議録",
+        "date": "2026-06-24",
+        "url": "https://drive.google.com/file/d/1qDhiW0mVgfyp_V1qgYZHH4UYqu4JiecZ/view",
+        "officialPage": "https://www.morinosato-js.atsugi.ed.jp/%E5%AD%A6%E6%A0%A1%E9%81%8B%E5%96%B6%E5%8D%94%E8%AD%B0%E4%BC%9A",
+        "sha256": "c000624667e1789d3b0ae2873ba946cf265b09f32c9a13b2bac0309a834ae184",
+        "pdfPages": 3,
+        "finding": "地域行事への生徒ボランティア参加に関するPTA本部の連携機能。",
+        "crops": []
+      }
+    ]
   }
 }

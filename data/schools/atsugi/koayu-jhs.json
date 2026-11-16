@@ -7,15 +7,15 @@
   "basePath": "/archive/atsugi/koayu-jhs/",
   "canonical": "https://ptaorg.com/archive/atsugi/koayu-jhs/",
   "ogImage": "/assets/ogp/atsugi/koayu-jhs.png",
-  "status": "評価準備中",
+  "status": "PTA実務の原本未取得・登録簿確認",
   "statusClass": "eval-pending",
   "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
   "description": "小鮎中学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
-  "ogDescription": "小鮎中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
+  "ogDescription": "旧PTAページはCPTAと生徒有志による除草を報告しています。市の登録簿には、PTA役員保護者の氏名と役職を記録する名簿が載っています。",
   "materials": {
     "documentName": "未確認",
     "confirmedDocuments": [
-      "未確認"
+      "小鮎中学校 個人情報取扱事務登録簿"
     ],
     "hasMembershipNotice": "未確認",
     "hasApplicationForm": "未確認",
@@ -26,19 +26,21 @@
     "pdf": null
   },
   "confirmedFacts": [
-    "資料確認後に記載します。"
+    "旧PTAページはCPTAと生徒有志による除草を報告しています。市の登録簿には、PTA役員保護者の氏名と役職を記録する名簿が載っています。"
   ],
   "unconfirmedPoints": [
-    "PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を確認後に記載します。"
+    "学校にある役員名簿の様式、取得元・更新者・受領者の記録、現行規約、加入届、総会冊子、会費の徴収・送金記録。"
   ],
   "riskFlags": [
-    "未評価"
+    "登録の記載を確認",
+    "現行の業務は追加確認が必要"
   ],
   "evaluation": [
-    "評価準備中"
+    "保護者役員の把握は本来PTAの会員・役員管理です。学校の日常連携のために保持する連絡先なら、学校の具体的な連携事務と必要な項目を特定する必要があります。",
+    "登録簿に記載された根拠法令欄は「無し」。だれが名簿を作り、どこから情報を取得し、校内利用やPTA提供を行ったかは未立証です。"
   ],
   "humanReviewRequired": true,
-  "lastReviewed": "2026-06-02",
+  "lastReviewed": "2026-11-16",
   "nationalArchive": {
     "order": 28,
     "group": "中学校"

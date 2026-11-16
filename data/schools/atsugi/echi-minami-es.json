@@ -7,40 +7,92 @@
   "basePath": "/archive/atsugi/echi-minami-es/",
   "canonical": "https://ptaorg.com/archive/atsugi/echi-minami-es/",
   "ogImage": "/assets/ogp/atsugi/echi-minami-es.png",
-  "status": "評価準備中",
+  "status": "原本確認・追加調査あり",
   "statusClass": "eval-pending",
-  "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
+  "summary": "2026年度の学校だよりに、PTA会費の集金袋配付と集金日が掲載されています。",
   "description": "依知南小学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
-  "ogDescription": "依知南小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
+  "ogDescription": "2026年度の学校だよりに、PTA会費の集金袋配付と集金日が掲載されています。",
   "materials": {
     "documentName": "未確認",
     "confirmedDocuments": [
-      "未確認"
+      "依知南小学校だより 8・9月号",
+      "依知南小学校だより 4月号"
     ],
     "hasMembershipNotice": "未確認",
     "hasApplicationForm": "未確認",
     "applicationFormStatus": "未確認",
     "hasSchoolCollectionNotice": "未確認",
     "sourceImages": [],
-    "pdfStatus": "準備中",
+    "pdfStatus": "学校公式ページから原本PDFを確認",
     "pdf": null
   },
   "confirmedFacts": [
-    "資料確認後に記載します。"
+    "2026年度の学校だよりに、PTA会費の集金袋配付と集金日が掲載されています。"
   ],
   "unconfirmedPoints": [
-    "PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を確認後に記載します。"
+    "実際の集金袋・集金案内・受領記録",
+    "学校・PTAの担当分担及び現金の保管・移送記録",
+    "加入届と会員への配付対象を決める手順"
   ],
   "riskFlags": [
-    "未評価"
+    "要追加調査"
   ],
   "evaluation": [
-    "評価準備中"
+    "集金はPTA内部事務です。学校媒体が集金日程を案内した事実を確認できます。袋の配付・回収、現金の収納を誰が行うか、公務に位置付ける具体的権限、加入の意思確認は未確認です。集金袋・納入記録の情報源と法61条上の利用目的を特定し、法69条の学校内部利用・PTAへの提供を別々に確認します。回収担当の勤務実態・守秘と現金の保管・引渡し主体を、地公法35条・34条と地自法235条の4第2項の観点から調べる必要があります。",
+    "集金袋の配付・回収・保管の分担表、会員への案内、未納対応を確認し、PTAが集金を直接管理する運用を明示してください。"
   ],
   "humanReviewRequired": true,
-  "lastReviewed": "2026-06-02",
+  "lastReviewed": "2026-11-16",
   "nationalArchive": {
     "order": 2,
     "group": "小学校"
+  },
+  "officialPdfReview": {
+    "finding": "2026年度の学校だよりに、PTA会費の集金袋配付と集金日が掲載されています。",
+    "assessment": "集金はPTA内部事務です。学校媒体が集金日程を案内した事実を確認できます。袋の配付・回収、現金の収納を誰が行うか、公務に位置付ける具体的権限、加入の意思確認は未確認です。集金袋・納入記録の情報源と法61条上の利用目的を特定し、法69条の学校内部利用・PTAへの提供を別々に確認します。回収担当の勤務実態・守秘と現金の保管・引渡し主体を、地公法35条・34条と地自法235条の4第2項の観点から調べる必要があります。",
+    "action": "集金袋の配付・回収・保管の分担表、会員への案内、未納対応を確認し、PTAが集金を直接管理する運用を明示してください。",
+    "missing": [
+      "実際の集金袋・集金案内・受領記録",
+      "学校・PTAの担当分担及び現金の保管・移送記録",
+      "加入届と会員への配付対象を決める手順"
+    ],
+    "documents": [
+      {
+        "title": "依知南小学校だより 8・9月号",
+        "date": "2026-08-27",
+        "url": "https://drive.google.com/file/d/1JlM6dqz-dNnfWRaVIayFwWZVR6mPKwzI/view",
+        "officialPage": "https://www.echiminami-es.atsugi.ed.jp/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B",
+        "sha256": "74e782e0927f8476f88fb5b27172d686e9840c1902e3fb7fd2738d1ceca34d96",
+        "pdfPages": 2,
+        "finding": "行事予定欄に集金袋配付と集金日を明記。",
+        "crops": [
+          {
+            "image": "/assets/archive/atsugi/review-20261116/echi-minami-es-1-1.webp",
+            "sha256": "d6e2b0a9e1f5cf30c6b8d3ea28798df7f9895501c99e8a887f029308a04caaec",
+            "page": 1,
+            "cropRectPdfPts": [
+              715,
+              646,
+              897,
+              728
+            ],
+            "caption": "PTA会費の集金袋配付・集金予定",
+            "width": 546,
+            "height": 246,
+            "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+          }
+        ]
+      },
+      {
+        "title": "依知南小学校だより 4月号",
+        "date": "2026年度",
+        "url": "https://drive.google.com/file/d/1muJ51Qs4WenTN93zGPBOLy5qmLhuDDaO/view",
+        "officialPage": "https://www.echiminami-es.atsugi.ed.jp/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B",
+        "sha256": "cc9e9463adc5509fa666bcd66630d231b3f2630ecf1bd6b954478ebf2803652a",
+        "pdfPages": 1,
+        "finding": "PTA総会資料の配信と結果報告の配付日程。",
+        "crops": []
+      }
+    ]
   }
 }

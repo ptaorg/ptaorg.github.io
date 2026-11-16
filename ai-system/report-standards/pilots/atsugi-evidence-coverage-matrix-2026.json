@@ -1,0 +1,708 @@
+{
+  "title": "厚木市36校・学校別原本と市公式PTA事務登録簿の確認状況",
+  "date": "2026-11-16",
+  "versions": {
+    "schoolPdfOriginals": "2023～2026年の公開・開示資料（確認対象は資料ごとに異なる）",
+    "cityPtaRegistrations": "2023年33校、2024年34校の公式PDF登録欄を再確認"
+  },
+  "statistics": {
+    "totalSchools": 36,
+    "both": 13,
+    "school_original_only": 2,
+    "official_registration_only": 21,
+    "no_individual_source_yet": 0,
+    "schoolsWithAtLeastOneIndividualSource": 36,
+    "ptaPdfReviewedAnyTypeSchools": 28,
+    "schoolPtaPdfNotYetLocatedSchools": 8,
+    "schoolDetailedOriginalAuditedSchools": 15,
+    "schoolPtaAdditionalPdfScopingOnlySchools": 4,
+    "newlyReviewedPdfSchools": 9,
+    "newSchoolPdfOriginals": 16,
+    "newCrops": 13,
+    "previousCropsLocated": 34,
+    "previousCropsAddedToDraft": 6,
+    "schoolTargetedWrittenAssessments": 13
+  },
+  "warning": "従来の個別監査15校、追加4校、今回の新規9校を区別。行政登録簿は適法性や実際の実施及び現在の運用を証明しない。学校原本の部分確認は全12軸の審査完了を意味しない。",
+  "schools": [
+    {
+      "id": "aikawa-es",
+      "name": "相川小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": true,
+      "schoolOriginalFile": "相川小学校 相談受付記録_01.pdf",
+      "officialRegistry": true,
+      "registryId": "7800(10)-000028",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
+    },
+    {
+      "id": "aikawa-jhs",
+      "name": "相川中学校",
+      "schoolType": "中学校",
+      "schoolOriginalPdf": true,
+      "schoolOriginalFile": "相川中学校 会議録_04.pdf",
+      "officialRegistry": true,
+      "registryId": "7800(36)-000029",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
+    },
+    {
+      "id": "aiko-es",
+      "name": "愛甲小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(14)-000022",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "additionalPtaOriginals": [
+        {
+          "file": "通学安全確保について.pdf",
+          "url": "https://drive.google.com/file/d/1SxoJHyVyl7VVU7hKgiaEu8a4UQk8Xp26/view",
+          "pages": 1,
+          "date": "2025年度",
+          "classification": "PTA通学安全活動の通知",
+          "findings": [
+            "PTA委員と学校教職員が問い合わせ先として記載"
+          ]
+        }
+      ],
+      "additionalPtaOriginalsVerified20261116": true,
+      "schoolOriginalPdfStatusNote": "従来の15校（特定の学校別資料群）とは別系統のPTA原本を新たに直接確認。学校実務の実施・適法性は未認定。",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "prior_supplement_reconciled",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1SxoJHyVyl7VVU7hKgiaEu8a4UQk8Xp26/view"
+      ]
+    },
+    {
+      "id": "atsugi-daini-es",
+      "name": "厚木第二小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": true,
+      "schoolOriginalFile": "厚木第二小学校_10.pdf",
+      "officialRegistry": true,
+      "registryId": "7800(11)-000028",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
+    },
+    {
+      "id": "atsugi-es",
+      "name": "厚木小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": true,
+      "schoolOriginalFile": "厚木小学校_06.pdf",
+      "officialRegistry": true,
+      "registryId": "7800(1)-000028",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
+    },
+    {
+      "id": "atsugi-jhs",
+      "name": "厚木中学校",
+      "schoolType": "中学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(24)-000019",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": true,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "new_targeted_review",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1mrKGSVT7bgp2YLyoWgSJQm_eFC66xES7/view",
+        "https://drive.google.com/file/d/15m-MzxDNMha2ut8CaCyxDDbtWd2D5XqR/view",
+        "https://drive.google.com/file/d/16Jp4qY8PGJlMcgNEwVCMXbYoJBxU2J00/view"
+      ]
+    },
+    {
+      "id": "echi-es",
+      "name": "依知小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": true,
+      "schoolOriginalFile": "依知小学校_0002.pdf",
+      "officialRegistry": true,
+      "registryId": "7800(21)-000026",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
+    },
+    {
+      "id": "echi-jhs",
+      "name": "依知中学校",
+      "schoolType": "中学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(25)-000019",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": true,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "new_targeted_review",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/13gl5dMugoI2a_iiY60-h3oQuP8ripix0/view",
+        "https://drive.google.com/file/d/116CrUe65o7bUV2HH1DM9fpQs_eLuHzRa/view"
+      ]
+    },
+    {
+      "id": "echi-minami-es",
+      "name": "依知南小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(2)-000028",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": true,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "new_targeted_review",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1JlM6dqz-dNnfWRaVIayFwWZVR6mPKwzI/view",
+        "https://drive.google.com/file/d/1muJ51Qs4WenTN93zGPBOLy5qmLhuDDaO/view"
+      ]
+    },
+    {
+      "id": "fujizuka-jhs",
+      "name": "藤塚中学校",
+      "schoolType": "中学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(33)-000029",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": true,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "new_targeted_review",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1V6CutQw6VXYj07JoOCpe6ePmIq9t9oX7/view",
+        "https://drive.google.com/file/d/10cY3XmsXLGq1twF7SDmnKTiTAZhqjjU6/view"
+      ]
+    },
+    {
+      "id": "hayashi-jhs",
+      "name": "林中学校",
+      "schoolType": "中学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(32)-000019",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": true,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "new_targeted_review",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1nqoXi7qKt5I2827QNCRokSTHox0RYJoR/view"
+      ]
+    },
+    {
+      "id": "iiyama-es",
+      "name": "飯山小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(19)-000029",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": true,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "new_targeted_review",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1n4kbyq70W3SXbezU6wKqBfbqAQQDahRt/view"
+      ]
+    },
+    {
+      "id": "kamiechi-es",
+      "name": "上依知小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": true,
+      "schoolOriginalFile": "上依知小学校_01.pdf",
+      "officialRegistry": true,
+      "registryId": "7800(23)-000029",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
+    },
+    {
+      "id": "kamiogino-es",
+      "name": "上荻野小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": true,
+      "schoolOriginalFile": "上荻野小学校_13.pdf",
+      "officialRegistry": true,
+      "registryId": "7800(18)-000025",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
+    },
+    {
+      "id": "kita-es",
+      "name": "北小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(3)-000029",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "additionalPtaOriginals": [
+        {
+          "file": "PTA基本方針.pdf",
+          "url": "https://drive.google.com/file/d/1nIHqBSrGfDE4Ds32vlpWvqj-SnKRW_Rt/view",
+          "pages": 1,
+          "date": "2025年度",
+          "classification": "PTA活動基本方針",
+          "findings": [
+            "保護者・学校・地域三者間の新しい関係と可視化を掲げる"
+          ]
+        }
+      ],
+      "additionalPtaOriginalsVerified20261116": true,
+      "schoolOriginalPdfStatusNote": "従来の15校（特定の学校別資料群）とは別系統のPTA原本を新たに直接確認。学校実務の実施・適法性は未認定。",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "prior_supplement_reconciled",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1nIHqBSrGfDE4Ds32vlpWvqj-SnKRW_Rt/view"
+      ]
+    },
+    {
+      "id": "koayu-es",
+      "name": "小鮎小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": true,
+      "schoolOriginalFile": "小鮎小学校_08.pdf",
+      "officialRegistry": true,
+      "registryId": "7800(7)-000028",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
+    },
+    {
+      "id": "koayu-jhs",
+      "name": "小鮎中学校",
+      "schoolType": "中学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(28)-000019",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": false,
+      "followupEvidence": {
+        "auxiliaryPdfCount": 0,
+        "registryDetailVerified": true,
+        "internalPracticeOriginalStatus": "未取得",
+        "htmlUpdated": true
+      }
+    },
+    {
+      "id": "midorigaoka-es",
+      "name": "緑ケ丘小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(12)-000028",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "additionalPtaOriginals": [
+        {
+          "file": "R7PTA規約.pdf",
+          "url": "https://drive.google.com/file/d/1AHwfpt1xDNMvOUSWcY6EBk9hf49cGkMv/view",
+          "pages": 7,
+          "date": "2025-04-21",
+          "classification": "PTA規約（学校PTAの原本）",
+          "findings": [
+            "第8条: 教頭を副会長、教職員を書記・会計とする役職配置",
+            "第19条: 校長を運営委員会の構成員とする",
+            "第21条: 教職員はいずれかの委員会に所属する",
+            "会費年額2,000円の参考資料"
+          ]
+        }
+      ],
+      "additionalPtaOriginalsVerified20261116": true,
+      "schoolOriginalPdfStatusNote": "従来の15校（特定の学校別資料群）とは別系統のPTA原本を新たに直接確認。学校実務の実施・適法性は未認定。",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "prior_supplement_reconciled",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1AHwfpt1xDNMvOUSWcY6EBk9hf49cGkMv/view"
+      ]
+    },
+    {
+      "id": "moridai-es",
+      "name": "毛利台小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(17)-000029",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": true,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "new_targeted_review",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/13GQixj3mx-VnmTrG8RS0D-XJppLmt8pM/view"
+      ]
+    },
+    {
+      "id": "morinosato-es",
+      "name": "森の里小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(20)-000028",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "additionalPtaOriginals": [
+        {
+          "file": "2025年度森の里小学校PTA年間活動計画.pdf",
+          "url": "https://drive.google.com/file/d/1HSS4-2fJhkcXzRmfTYS5YkOVKwzLQysT/view",
+          "pages": 1,
+          "date": "2025年度",
+          "classification": "PTA年間活動計画",
+          "findings": [
+            "PTA本部の会費集金・集計と役員登録名簿チェックの計画",
+            "次年度委員・新入生役員選出の計画"
+          ]
+        },
+        {
+          "file": "運営委員会だより（３月号）.pdf",
+          "url": "https://drive.google.com/file/d/1BMrczNqsUywFSBtY28MVCPjffhQTpoXQ/view",
+          "pages": 2,
+          "date": "2025-03-17",
+          "classification": "PTA広報",
+          "findings": [
+            "tetoruによるPTA総会案内",
+            "教員へのPTA活動問い合わせ案内"
+          ]
+        },
+        {
+          "file": "運営委員会だより５月号.pdf",
+          "url": "https://drive.google.com/file/d/1lg1vTHmnI3iRv3G_4Vjplbt83AtqTdLN/view",
+          "pages": 2,
+          "date": "2025-05",
+          "classification": "PTA広報",
+          "findings": [
+            "PTA活動の効率化・コンパクト化の改善方針"
+          ]
+        }
+      ],
+      "additionalPtaOriginalsVerified20261116": true,
+      "schoolOriginalPdfStatusNote": "従来の15校（特定の学校別資料群）とは別系統のPTA原本を新たに直接確認。学校実務の実施・適法性は未認定。",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "prior_supplement_reconciled",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1HSS4-2fJhkcXzRmfTYS5YkOVKwzLQysT/view",
+        "https://drive.google.com/file/d/1BMrczNqsUywFSBtY28MVCPjffhQTpoXQ/view"
+      ]
+    },
+    {
+      "id": "morinosato-jhs",
+      "name": "森の里中学校",
+      "schoolType": "中学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(34)-000019",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": true,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "new_targeted_review",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1r4QRLi5Vs1FTZOi2vMsrEYxHqMM8IvUW/view",
+        "https://drive.google.com/file/d/1qDhiW0mVgfyp_V1qgYZHH4UYqu4JiecZ/view"
+      ]
+    },
+    {
+      "id": "mutsuai-higashi-jhs",
+      "name": "睦合東中学校",
+      "schoolType": "中学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(35)-000018",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": false,
+      "followupEvidence": {
+        "auxiliaryPdfCount": 1,
+        "registryDetailVerified": true,
+        "internalPracticeOriginalStatus": "未取得",
+        "htmlUpdated": true
+      }
+    },
+    {
+      "id": "mutsuai-jhs",
+      "name": "睦合中学校",
+      "schoolType": "中学校",
+      "schoolOriginalPdf": true,
+      "schoolOriginalFile": "睦合中学校_01.pdf",
+      "officialRegistry": true,
+      "registryId": "7800(27)-000029",
+      "registryLegalBasis": "学校教育法施行規則",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
+    },
+    {
+      "id": "nanmori-es",
+      "name": "南毛利小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": true,
+      "schoolOriginalFile": "南毛利小学校_09.pdf",
+      "officialRegistry": true,
+      "registryId": "7800(9)-000029",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
+    },
+    {
+      "id": "nanmori-jhs",
+      "name": "南毛利中学校",
+      "schoolType": "中学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(30)-000028",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": false,
+      "followupEvidence": {
+        "auxiliaryPdfCount": 2,
+        "registryDetailVerified": true,
+        "internalPracticeOriginalStatus": "未取得",
+        "htmlUpdated": true
+      }
+    },
+    {
+      "id": "ogino-es",
+      "name": "荻野小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(4)-000028",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": false,
+      "followupEvidence": {
+        "auxiliaryPdfCount": 1,
+        "registryDetailVerified": true,
+        "internalPracticeOriginalStatus": "未取得",
+        "htmlUpdated": true
+      }
+    },
+    {
+      "id": "ogino-jhs",
+      "name": "荻野中学校",
+      "schoolType": "中学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(26)-000024",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": false,
+      "followupEvidence": {
+        "auxiliaryPdfCount": 1,
+        "registryDetailVerified": true,
+        "internalPracticeOriginalStatus": "未取得",
+        "htmlUpdated": true
+      }
+    },
+    {
+      "id": "sanda-es",
+      "name": "三田小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(5)-000028",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": false,
+      "followupEvidence": {
+        "auxiliaryPdfCount": 1,
+        "registryDetailVerified": true,
+        "internalPracticeOriginalStatus": "未取得",
+        "htmlUpdated": true
+      }
+    },
+    {
+      "id": "shimizu-es",
+      "name": "清水小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": true,
+      "schoolOriginalFile": "清水小学校_07.pdf",
+      "officialRegistry": true,
+      "registryId": "7800(6)-000026",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
+    },
+    {
+      "id": "tamagawa-es",
+      "name": "玉川小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(8)-000027",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": false,
+      "followupEvidence": {
+        "auxiliaryPdfCount": 1,
+        "registryDetailVerified": true,
+        "internalPracticeOriginalStatus": "未取得",
+        "htmlUpdated": true
+      }
+    },
+    {
+      "id": "tamagawa-jhs",
+      "name": "玉川中学校",
+      "schoolType": "中学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(29)-0000019",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": false,
+      "followupEvidence": {
+        "auxiliaryPdfCount": 1,
+        "registryDetailVerified": true,
+        "internalPracticeOriginalStatus": "未取得",
+        "htmlUpdated": true
+      }
+    },
+    {
+      "id": "tobio-es",
+      "name": "鳶尾小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": true,
+      "schoolOriginalFile": "鳶尾小学校　相談受付記録_01.pdf",
+      "officialRegistry": false,
+      "registryId": null,
+      "registryLegalBasis": null,
+      "status": "school_original_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
+    },
+    {
+      "id": "toda-es",
+      "name": "戸田小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": true,
+      "schoolOriginalFile": "戸田小学校_01.pdf",
+      "officialRegistry": false,
+      "registryId": null,
+      "registryLegalBasis": null,
+      "status": "school_original_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
+    },
+    {
+      "id": "tomei-jhs",
+      "name": "東名中学校",
+      "schoolType": "中学校",
+      "schoolOriginalPdf": false,
+      "schoolOriginalFile": null,
+      "officialRegistry": true,
+      "registryId": "7800(31)-000019",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": true,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "new_targeted_review",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1xREDh6XmxndoZn3BQmigff5fnZQQSXgr/view",
+        "https://drive.google.com/file/d/1J4yMKqzXPftYYU22xjWA3LlihswSbfOA/view"
+      ]
+    },
+    {
+      "id": "tomuro-es",
+      "name": "戸室小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": true,
+      "schoolOriginalFile": "戸室小学校_11.pdf",
+      "officialRegistry": true,
+      "registryId": "7800(13)-000028",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
+    },
+    {
+      "id": "tsumada-es",
+      "name": "妻田小学校",
+      "schoolType": "小学校",
+      "schoolOriginalPdf": true,
+      "schoolOriginalFile": "麦田小学校_12.pdf",
+      "officialRegistry": true,
+      "registryId": "7800(15)-000029",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
+    }
+  ],
+  "additionalOriginals20261116": {
+    "sourceType": "学校PTA公開PDF／Drive取得の原本",
+    "schoolsNewlyVerified": 4,
+    "filesVerified": 6,
+    "schools": [
+      "緑ケ丘小学校",
+      "森の里小学校",
+      "愛甲小学校",
+      "北小学校"
+    ],
+    "limitedFinding": "従来の15校とは異なる資料類型。学校実務の全面照合を完了したという意味ではない。",
+    "evidenceCropsCreated": 11,
+    "evidenceCropsPublicationStatus": "ローカル作成・公開前レビュー、GitHubには画像自体を未アップロード",
+    "remainingWithoutNewPtaOriginal": 17
+  },
+  "finalFollowup": {
+    "schoolInternalOriginalReviewed": 28,
+    "internalOriginalStillNeeded": 8,
+    "schoolOrCountyAuxiliaryPdfReviewedAmongRemaining": 7,
+    "municipalRegistrationDetailsRechecked": 8,
+    "schoolsWithFinalWebAssessment": 36
+  }
+}

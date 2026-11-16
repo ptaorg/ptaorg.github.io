@@ -7,15 +7,16 @@
   "basePath": "/archive/atsugi/mutsuai-higashi-jhs/",
   "canonical": "https://ptaorg.com/archive/atsugi/mutsuai-higashi-jhs/",
   "ogImage": "/assets/ogp/atsugi/mutsuai-higashi-jhs.png",
-  "status": "評価準備中",
+  "status": "PTA実務の原本未取得・登録簿確認",
   "statusClass": "eval-pending",
   "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
   "description": "睦合東中学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
-  "ogDescription": "睦合東中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
+  "ogDescription": "学校だよりは、PTAの委員会が花壇の管理や家庭教育学級、生徒の防災訓練等への参加調整を担ったと記録しています。",
   "materials": {
     "documentName": "未確認",
     "confirmedDocuments": [
-      "未確認"
+      "睦合東中学校 個人情報取扱事務登録簿",
+      "睦合東中学校 学校だより 3月号"
     ],
     "hasMembershipNotice": "未確認",
     "hasApplicationForm": "未確認",
@@ -26,19 +27,22 @@
     "pdf": null
   },
   "confirmedFacts": [
-    "資料確認後に記載します。"
+    "学校だよりは、PTAの委員会が花壇の管理や家庭教育学級、生徒の防災訓練等への参加調整を担ったと記録しています。",
+    "学校だよりは、PTAのコミュニティ委員会が花壇を管理し、防災訓練等で生徒の参加調整や見守りをしたと報告。"
   ],
   "unconfirmedPoints": [
-    "PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を確認後に記載します。"
+    "防災訓練等の募集・参加票と受渡し記録、役員名簿の取得経路、総会議案、現行規約、会費・加入の書式。"
   ],
   "riskFlags": [
-    "未評価"
+    "登録の記載を確認",
+    "現行の業務は追加確認が必要"
   ],
   "evaluation": [
-    "評価準備中"
+    "地域活動への参加調整と、PTA会員・役員名簿の管理は別の事務です。学校から生徒を紹介した場合は、学校の具体的な教育・地域連携目的と提供項目を確認します。",
+    "活動の実績は確認できました。市の登録簿には役員保護者の氏名と役職が挙がります。生徒の参加調整に学校の名簿が使われたか、どの主体が処理したかは未立証です。"
   ],
   "humanReviewRequired": true,
-  "lastReviewed": "2026-06-02",
+  "lastReviewed": "2026-11-16",
   "nationalArchive": {
     "order": 35,
     "group": "中学校"

@@ -1,0 +1,628 @@
+{
+  "title": "厚木市個人情報取扱事務登録簿：PTA事務の学校別根拠法令欄（公表2024年度資料から確認）",
+  "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/siryo2.pdf",
+  "sourceTitle": "資料2 個人情報取扱事務及び個人情報ファイルの登録について",
+  "sourceSnapshot": "R6.8.31現在",
+  "checkedDate": "2026-11-16",
+  "sourceStatus": "学校別の登録欄を全ページで再確認。2023年資料4は33校、2024年資料2は34校。2024年版34校のうち33校が根拠法令欄「無し」、睦合中学校のみ「学校教育法施行規則」。登録と2026年の実務は資料上別の事実。",
+  "caution": "これは個人情報取扱『事務』の行政登録簿であり、PTAによる活動が現に実施されたこと、同項目に掲げる法令が特定の会費徴収・名簿利用・役員選出を授権することの証明ではない。『根拠法令 無し』もあくまで登録欄の記載であり、他の法令上の授権が一切存在しないと確定したものではない。最新登録簿の改訂も未確認。",
+  "entries": [
+    {
+      "schoolId": "aikawa-es",
+      "schoolName": "相川小学校",
+      "registryId": "7800(10)-000028",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 146頁",
+      "documentText": "名称 ＰＴＡ事務",
+      "sourcePages": {
+        "2023": 32,
+        "2024": 146
+      }
+    },
+    {
+      "schoolId": "aikawa-jhs",
+      "schoolName": "相川中学校",
+      "registryId": "7800(36)-000029",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 215頁",
+      "documentText": "名称 ＰＴＡ事務",
+      "sourcePages": {
+        "2023": 100,
+        "2024": 215
+      }
+    },
+    {
+      "schoolId": "aiko-es",
+      "schoolName": "愛甲小学校",
+      "registryId": "7800(14)-000022",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 158頁",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、児童の健全な発達に努める。",
+      "sourcePages": {
+        "2023": 44,
+        "2024": 158
+      }
+    },
+    {
+      "schoolId": "atsugi-daini-es",
+      "schoolName": "厚木第二小学校",
+      "registryId": "7800(11)-000028",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 149頁",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、児童の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/780011zimu2.pdf",
+        "registrationDate": "2023-04-01",
+        "recordedPersonalInformationFile": "ＰＴＡ役員名簿",
+        "personalInformationFileRegisterExists": "無",
+        "filePurpose": "ＰＴＡ役員の把握",
+        "recordedFields": [
+          "児童氏名",
+          "保護者氏名",
+          "地区名 等"
+        ]
+      },
+      "sourcePages": {
+        "2023": 35,
+        "2024": 149
+      }
+    },
+    {
+      "schoolId": "atsugi-es",
+      "schoolName": "厚木小学校",
+      "registryId": "7800(1)-000028",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 119頁",
+      "documentText": "名称 ＰＴＡ事務",
+      "sourcePages": {
+        "2023": 5,
+        "2024": 119
+      }
+    },
+    {
+      "schoolId": "atsugi-jhs",
+      "schoolName": "厚木中学校",
+      "registryId": "7800(24)-000019",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 186頁",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、生徒の健全な発達に努める。",
+      "sourcePages": {
+        "2023": 72,
+        "2024": 186
+      }
+    },
+    {
+      "schoolId": "echi-es",
+      "schoolName": "依知小学校",
+      "registryId": "7800(21)-000026",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 179頁",
+      "documentText": "名称 ＰＴＡ事務",
+      "sourcePages": {
+        "2023": 64,
+        "2024": 179
+      }
+    },
+    {
+      "schoolId": "echi-jhs",
+      "schoolName": "依知中学校",
+      "registryId": "7800(25)-000019",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 188頁",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、生徒の健全な発達に努める。",
+      "sourcePages": {
+        "2023": 74,
+        "2024": 188
+      }
+    },
+    {
+      "schoolId": "echi-minami-es",
+      "schoolName": "依知南小学校",
+      "registryId": "7800(2)-000028",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 122頁",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、児童の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/78002zimu2.pdf",
+        "recordedPersonalInformationFile": "ＰＴＡ役員名簿",
+        "personalInformationFileRegisterExists": "無",
+        "filePurpose": "ＰＴＡ役員の把握",
+        "recordedFields": [
+          "児童氏名",
+          "保護者氏名",
+          "地区名 等"
+        ],
+        "registrationDate": "2023-04-01"
+      },
+      "sourcePages": {
+        "2023": 8,
+        "2024": 122
+      }
+    },
+    {
+      "schoolId": "fujizuka-jhs",
+      "schoolName": "藤塚中学校",
+      "registryId": "7800(33)-000029",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 208頁",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/780033zimu2.pdf",
+        "registrationDate": "2023-04-01",
+        "recordedFields": null,
+        "filePurpose": null
+      },
+      "sourcePages": {
+        "2023": 94,
+        "2024": 208
+      }
+    },
+    {
+      "schoolId": "hayashi-jhs",
+      "schoolName": "林中学校",
+      "registryId": "7800(32)-000019",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 205頁",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/r050703s4.pdf",
+        "registrationDate": "2023-04-01"
+      },
+      "sourcePages": {
+        "2023": 91,
+        "2024": 205
+      }
+    },
+    {
+      "schoolId": "iiyama-es",
+      "schoolName": "飯山小学校",
+      "registryId": "7800(19)-000029",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 173頁",
+      "documentText": "名称：ＰＴＡ事務。教職員と保護者との連携を図り、児童・生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/780019zimu2.pdf",
+        "registrationDate": "2023-04-01",
+        "recordedPersonalInformationFile": "ＰＴＡ役員名簿",
+        "recordedFields": [
+          "児童氏名",
+          "保護者氏名",
+          "地区名 等"
+        ],
+        "sourceCaution": "当該登録は2023年又は2024年時点。現行保有・実施・具体的授権は未確定。"
+      },
+      "sourcePages": {
+        "2023": 58,
+        "2024": 173
+      }
+    },
+    {
+      "schoolId": "kamiechi-es",
+      "schoolName": "上依知小学校",
+      "registryId": "7800(23)-000029",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 184頁",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、児童の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/780023zimu2.pdf",
+        "recordedPersonalInformationFile": "ＰＴＡ役員名簿",
+        "personalInformationFileRegisterExists": "無",
+        "filePurpose": "役員の把握",
+        "recordedFields": [
+          "氏名",
+          "住所",
+          "電話番号"
+        ],
+        "registrationDate": "2023-04-01",
+        "registeredLegalBasis": "無し",
+        "sourceTextLocations": [
+          "第1面 行849-865",
+          "ファイル欄 行867-873"
+        ],
+        "caution": "市登録簿は2023年の記載。2026年の実際の保有・利用・更新の有無、提供先、学校職員の関与は未確認。『ファイル簿の有無 無』は名簿そのものの不存在を意味しない。"
+      },
+      "sourcePages": {
+        "2023": 69,
+        "2024": 184
+      }
+    },
+    {
+      "schoolId": "kamiogino-es",
+      "schoolName": "上荻野小学校",
+      "registryId": "7800(18)-000025",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 170頁",
+      "documentText": "名称 ＰＴＡ事務",
+      "sourcePages": {
+        "2023": 55,
+        "2024": 170
+      }
+    },
+    {
+      "schoolId": "kita-es",
+      "schoolName": "北小学校",
+      "registryId": "7800(3)-000029",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 125頁",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、児童の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/siryo2.pdf",
+        "schoolSpecificFileUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/78003zimu2.pdf",
+        "registrationDate": "2023-04-01",
+        "lastModifiedOnIndex": "2024-04-01",
+        "recordedFields": null
+      },
+      "pageImageChecked": false,
+      "limitation": "市全体の登録簿PDFテキストで確認。北小個別のPDFリンクは市公表ページで確認したが取得に失敗。",
+      "sourcePages": {
+        "2023": 11,
+        "2024": 125
+      }
+    },
+    {
+      "schoolId": "koayu-es",
+      "schoolName": "小鮎小学校",
+      "registryId": "7800(7)-000028",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 137頁",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、児童の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/78007zimu2.pdf",
+        "registrationDate": "2023-04-01",
+        "recordedPersonalInformationFile": "ＰＴＡ役員名簿",
+        "personalInformationFileRegisterExists": "無",
+        "filePurpose": "ＰＴＡ役員の把握",
+        "recordedFields": [
+          "児童氏名",
+          "保護者氏名",
+          "地区名 等"
+        ]
+      },
+      "sourcePages": {
+        "2023": 23,
+        "2024": 137
+      }
+    },
+    {
+      "schoolId": "koayu-jhs",
+      "schoolName": "小鮎中学校",
+      "registryId": "7800(28)-000019",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 196頁",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、生徒の健全な発達に努める。",
+      "sourcePages": {
+        "2023": 82,
+        "2024": 196
+      }
+    },
+    {
+      "schoolId": "midorigaoka-es",
+      "schoolName": "緑ケ丘小学校",
+      "registryId": "7800(12)-000028",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 152頁",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、児童の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/r050703s4.pdf",
+        "registrationDate": "2023-04-01",
+        "recordedFields": null,
+        "filePurpose": null
+      },
+      "sourcePages": {
+        "2023": 38,
+        "2024": 152
+      }
+    },
+    {
+      "schoolId": "moridai-es",
+      "schoolName": "毛利台小学校",
+      "registryId": "7800(17)-000029",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 167頁",
+      "documentText": "名称：ＰＴＡ事務。教職員と保護者との連携を図り、児童・生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/780017zimu2.pdf",
+        "registrationDate": "2023-04-01",
+        "recordedPersonalInformationFile": "ＰＴＡ役員名簿",
+        "recordedFields": [
+          "児童氏名",
+          "保護者氏名",
+          "地区名 等"
+        ],
+        "sourceCaution": "当該登録は2023年又は2024年時点。現行保有・実施・具体的授権は未確定。"
+      },
+      "sourcePages": {
+        "2023": 52,
+        "2024": 167
+      }
+    },
+    {
+      "schoolId": "morinosato-es",
+      "schoolName": "森の里小学校",
+      "registryId": "7800(20)-000028",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 176頁",
+      "documentText": "名称：ＰＴＡ事務。教職員と保護者との連携を図り、児童・生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/siryo2.pdf",
+        "registrationDate": "2023-04-01",
+        "sourceCaution": "当該登録は2023年又は2024年時点。現行保有・実施・具体的授権は未確定。"
+      },
+      "sourcePages": {
+        "2023": 61,
+        "2024": 176
+      }
+    },
+    {
+      "schoolId": "morinosato-jhs",
+      "schoolName": "森の里中学校",
+      "registryId": "7800(34)-000019",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 210頁",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/r050703s4.pdf",
+        "registrationDate": "2023-04-01"
+      },
+      "sourcePages": {
+        "2023": 96,
+        "2024": 210
+      }
+    },
+    {
+      "schoolId": "mutsuai-higashi-jhs",
+      "schoolName": "睦合東中学校",
+      "registryId": "7800(35)-000018",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 212頁",
+      "documentText": "名称：ＰＴＡ事務。教職員と保護者との連携を図り、児童・生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/a780035zimu1.pdf",
+        "registrationDate": "2023-04-01",
+        "recordedPersonalInformationFile": "ＰＴＡ役員名簿",
+        "recordedFields": [
+          "氏名",
+          "役職"
+        ],
+        "sourceCaution": "当該登録は2023年又は2024年時点。現行保有・実施・具体的授権は未確定。"
+      },
+      "sourcePages": {
+        "2024": 212
+      }
+    },
+    {
+      "schoolId": "mutsuai-jhs",
+      "schoolName": "睦合中学校",
+      "registryId": "7800(27)-000029",
+      "registryLegalBasis": "学校教育法施行規則",
+      "documentTextLocation": "2024年資料2 PDF 194頁",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、生徒の健全な発達に努める。",
+      "sourcePages": {
+        "2023": 80,
+        "2024": 194
+      }
+    },
+    {
+      "schoolId": "nanmori-es",
+      "schoolName": "南毛利小学校",
+      "registryId": "7800(9)-000029",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 143頁",
+      "documentText": "名称 ＰＴＡ事務",
+      "sourcePages": {
+        "2023": 29,
+        "2024": 143
+      }
+    },
+    {
+      "schoolId": "nanmori-jhs",
+      "schoolName": "南毛利中学校",
+      "registryId": "7800(30)-000028",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 201頁",
+      "documentText": "名称：ＰＴＡ事務。教職員と保護者との連携を図り、児童・生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/r050703s4.pdf",
+        "registrationDate": "2023-04-01",
+        "sourceCaution": "当該登録は2023年又は2024年時点。現行保有・実施・具体的授権は未確定。"
+      },
+      "sourcePages": {
+        "2023": 87,
+        "2024": 201
+      }
+    },
+    {
+      "schoolId": "ogino-es",
+      "schoolName": "荻野小学校",
+      "registryId": "7800(4)-000028",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 128頁",
+      "documentText": "名称：ＰＴＡ事務。教職員と保護者との連携を図り、児童・生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/siryo2.pdf",
+        "registrationDate": "2023-04-01",
+        "sourceCaution": "当該登録は2023年又は2024年時点。現行保有・実施・具体的授権は未確定。"
+      },
+      "sourcePages": {
+        "2023": 14,
+        "2024": 128
+      }
+    },
+    {
+      "schoolId": "ogino-jhs",
+      "schoolName": "荻野中学校",
+      "registryId": "7800(26)-000024",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 191頁",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、生徒の健全な発達に努める。",
+      "sourcePages": {
+        "2023": 77,
+        "2024": 191
+      }
+    },
+    {
+      "schoolId": "sanda-es",
+      "schoolName": "三田小学校",
+      "registryId": "7800(5)-000028",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 131頁",
+      "documentText": "名称：ＰＴＡ事務。教職員と保護者との連携を図り、児童・生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/78005zimu2.pdf",
+        "registrationDate": "2023-04-01",
+        "recordedPersonalInformationFile": "ＰＴＡ役員名簿",
+        "recordedFields": [
+          "児童氏名",
+          "保護者氏名",
+          "地区名 等"
+        ],
+        "sourceCaution": "当該登録は2023年又は2024年時点。現行保有・実施・具体的授権は未確定。"
+      },
+      "sourcePages": {
+        "2023": 17,
+        "2024": 131
+      }
+    },
+    {
+      "schoolId": "shimizu-es",
+      "schoolName": "清水小学校",
+      "registryId": "7800(6)-000026",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 134頁",
+      "documentText": "名称 ＰＴＡ事務",
+      "sourcePages": {
+        "2023": 20,
+        "2024": 134
+      }
+    },
+    {
+      "schoolId": "tamagawa-es",
+      "schoolName": "玉川小学校",
+      "registryId": "7800(8)-000027",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 140頁",
+      "documentText": "名称：ＰＴＡ事務。教職員と保護者との連携を図り、児童・生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/siryo2.pdf",
+        "registrationDate": "2023-04-01",
+        "sourceCaution": "当該登録は2023年又は2024年時点。現行保有・実施・具体的授権は未確定。"
+      },
+      "sourcePages": {
+        "2023": 26,
+        "2024": 140
+      }
+    },
+    {
+      "schoolId": "tamagawa-jhs",
+      "schoolName": "玉川中学校",
+      "registryId": "7800(29)-0000019",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 198頁",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、生徒の健全な発達に努める。",
+      "sourcePages": {
+        "2023": 84,
+        "2024": 198
+      }
+    },
+    {
+      "schoolId": "tomei-jhs",
+      "schoolName": "東名中学校",
+      "registryId": "7800(31)-000019",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 203頁",
+      "documentText": "名称：ＰＴＡ事務。教職員と保護者との連携を図り、児童・生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/780031zimu.pdf",
+        "registrationDate": "2023-04-01",
+        "recordedPersonalInformationFile": "ＰＴＡ役員名簿",
+        "recordedFields": [
+          "氏名",
+          "役職"
+        ],
+        "sourceCaution": "当該登録は2023年又は2024年時点。現行保有・実施・具体的授権は未確定。"
+      },
+      "sourcePages": {
+        "2023": 89,
+        "2024": 203
+      }
+    },
+    {
+      "schoolId": "tomuro-es",
+      "schoolName": "戸室小学校",
+      "registryId": "7800(13)-000028",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 155頁",
+      "documentText": "名称 ＰＴＡ事務",
+      "sourcePages": {
+        "2023": 41,
+        "2024": 155
+      }
+    },
+    {
+      "schoolId": "tsumada-es",
+      "schoolName": "妻田小学校",
+      "registryId": "7800(15)-000029",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年資料2 PDF 161頁",
+      "documentText": "名称 ＰＴＡ事務",
+      "sourcePages": {
+        "2023": 47,
+        "2024": 161
+      }
+    }
+  ],
+  "crossCheck": [
+    "市教育委員会へ、登録内容の現行性、根拠法令欄に記載した法令の具体的条項、登録した『PTA事務』の内訳（会員管理・会費・役員選出・教育活動の連絡等）を確認。",
+    "登録簿の記載を学校が実際に事務を実施したことと混同しない。文書管理簿・保有個人情報ファイル簿・具体的な職員の事務分掌と照合する。",
+    "学校による事務を特定した後、個人情報保護法61条で保有必要性・利用目的を確認し、69条で利用目的外の内部利用とPTA提供を区別し検討。",
+    "睦合中の『学校教育法施行規則』という一般的な法令名の記載を、PTA事務全般への授権と扱わない。具体的条項と所掌への適用を求める。",
+    "2026年10月26日の『PTA自己徴収移行』方針の後、行政登録内容が変更されたか確認。",
+    "上依知小は2023年個別登録簿に『ＰＴＡ役員名簿』を登録（氏名・住所・電話番号、利用目的『役員の把握』、ファイル簿の有無『無』）。2026年現在の学校での保有・実施内容、情報の出所、根拠条文、本人への利用目的とPTAの個別事務を厳密に切り分ける。",
+    "市公式の2023/2024登録簿は過年度の事務登録であり、2026年11月現在の実施状況と区別。ページ画像のキャッシュエラーを記録し、テキスト上の登録欄を一次確認として管理する。"
+  ],
+  "stat": {
+    "rowsSeen": 34,
+    "unreviewedSchoolIdsInThese": [
+      "aiko-es",
+      "atsugi-jhs",
+      "echi-jhs",
+      "ogino-jhs",
+      "koayu-jhs",
+      "tamagawa-jhs",
+      "echi-minami-es",
+      "fujizuka-jhs",
+      "midorigaoka-es",
+      "hayashi-jhs",
+      "morinosato-jhs",
+      "iiyama-es",
+      "moridai-es",
+      "morinosato-es",
+      "mutsuai-higashi-jhs",
+      "nanmori-jhs",
+      "ogino-es",
+      "sanda-es",
+      "tamagawa-es",
+      "tomei-jhs",
+      "kita-es"
+    ],
+    "separateFrom15OriginalSchoolPdfs": true,
+    "detailedPersonalDataFilesConfirmed": 9,
+    "officialIndexLink": "https://www.city.atsugi.kanagawa.jp/soshiki/gyoseisomuka/6/zimutourokubo/38061.html"
+  },
+  "entrantCountsBySource": {
+    "2023": 33,
+    "2024": 34
+  },
+  "sourcePdfs": {
+    "2023": {
+      "url": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/r050703s4.pdf",
+      "sha256": "a8ea3fb8728aa5cba019456bf78ab1fa75570e22d61ab12f115092d2f16bc28b",
+      "totalPdfPages": 100
+    },
+    "2024": {
+      "url": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/siryo2.pdf",
+      "sha256": "ba669d9dad7ecc0f8d75b76e06f03c077e9c93d0328a5eba15711e6999de39ce",
+      "totalPdfPages": 396
+    }
+  }
+}
