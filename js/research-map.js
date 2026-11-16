@@ -83,7 +83,7 @@
     feature.links.hidden=true;
     feature.go.href=m.url || m.catalogUrl || "#region-"+m.id;
     feature.go.firstChild.textContent=m.url ? "この自治体の評価を読む " : "この自治体の資料を見る ";
-    feature.foot.textContent="確認事実と未確認事項を区別して掲載しています。";
+    feature.foot.textContent=m.driveFolderUrl ? "原本はこちら：地図ピンまたは自治体一覧からGoogle Driveの全国資料を開けます（閲覧権限が必要な場合があります）。" : "確認事実と未確認事項を区別して掲載しています。";
     feature.reset.hidden=false;
   }
   function resetFeature() {
@@ -201,6 +201,18 @@
       if (details) details.open = true;
     });
     box.append(a);
+    if (m.driveFolderUrl) {
+      const original = document.createElement("p");
+      original.className = "research-region-original";
+      const link = document.createElement("a");
+      link.href = m.driveFolderUrl;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = "原本はこちら";
+      link.title = "Google Driveの全国資料内の自治体フォルダ（閲覧権限が必要な場合があります）";
+      original.append(link);
+      box.append(original);
+    }
     return box;
   }
   function render() {
