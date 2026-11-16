@@ -1,0 +1,77 @@
+{
+  "title": "厚木市個人情報取扱事務登録簿：PTA事務の学校別根拠法令欄（公表2024年度資料から確認）",
+  "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/siryo2.pdf",
+  "sourceTitle": "資料2 個人情報取扱事務及び個人情報ファイルの登録について",
+  "sourceSnapshot": "R6.8.31現在",
+  "checkedDate": "2026-11-16",
+  "sourceStatus": "厚木市公開PDFのテキスト表で該当行を確認。PDFページ画像は取得エラーのため原本ページへの目視照合は保留。正確なページ番号も未確定。",
+  "caution": "これは個人情報取扱『事務』の行政登録簿であり、PTAによる活動が現に実施されたこと、同項目に掲げる法令が特定の会費徴収・名簿利用・役員選出を授権することの証明ではない。『根拠法令 無し』もあくまで登録欄の記載であり、他の法令上の授権が一切存在しないと確定したものではない。最新登録簿の改訂も未確認。",
+  "entries": [
+    {
+      "schoolId": "atsugi-jhs",
+      "schoolName": "厚木中学校",
+      "registryId": "7800(24)-000019",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "PDF抽出テキスト行1089",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、生徒の健全な発達に努める。"
+    },
+    {
+      "schoolId": "echi-jhs",
+      "schoolName": "依知中学校",
+      "registryId": "7800(25)-000019",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "PDF抽出テキスト行1106",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、生徒の健全な発達に努める。"
+    },
+    {
+      "schoolId": "ogino-jhs",
+      "schoolName": "荻野中学校",
+      "registryId": "7800(26)-000024",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "PDF抽出テキスト行1125",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、生徒の健全な発達に努める。"
+    },
+    {
+      "schoolId": "mutsuai-jhs",
+      "schoolName": "睦合中学校",
+      "registryId": "7800(27)-000029",
+      "registryLegalBasis": "学校教育法施行規則",
+      "documentTextLocation": "PDF抽出テキスト行1144",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、生徒の健全な発達に努める。"
+    },
+    {
+      "schoolId": "koayu-jhs",
+      "schoolName": "小鮎中学校",
+      "registryId": "7800(28)-000019",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "PDF抽出テキスト行1161",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、生徒の健全な発達に努める。"
+    },
+    {
+      "schoolId": "tamagawa-jhs",
+      "schoolName": "玉川中学校",
+      "registryId": "7800(29)-0000019",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "PDF抽出テキスト行1178",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、生徒の健全な発達に努める。"
+    }
+  ],
+  "crossCheck": [
+    "市教育委員会へ、登録内容の現行性、根拠法令欄に記載した法令の具体的条項、登録した『PTA事務』の内訳（会員管理・会費・役員選出・教育活動の連絡等）を確認。",
+    "登録簿の記載を学校が実際に事務を実施したことと混同しない。文書管理簿・保有個人情報ファイル簿・具体的な職員の事務分掌と照合する。",
+    "学校による事務を特定した後、個人情報保護法61条で保有必要性・利用目的を確認し、69条で利用目的外の内部利用とPTA提供を区別し検討。",
+    "睦合中の『学校教育法施行規則』という一般的な法令名の記載を、PTA事務全般への授権と扱わない。具体的条項と所掌への適用を求める。",
+    "2026年10月26日の『PTA自己徴収移行』方針の後、行政登録内容が変更されたか確認。"
+  ],
+  "stat": {
+    "rowsSeen": 6,
+    "unreviewedSchoolIdsInThese": [
+      "atsugi-jhs",
+      "echi-jhs",
+      "ogino-jhs",
+      "koayu-jhs",
+      "tamagawa-jhs"
+    ],
+    "separateFrom15OriginalSchoolPdfs": true
+  }
+}
