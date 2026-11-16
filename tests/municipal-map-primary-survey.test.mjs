@@ -26,7 +26,7 @@ test('Atsugi improvement chronology is consistent across map, city page and muni
  assert.match(city,/委託契約/);
  assert.match(city,/旧通知の改廃/);
  assert.match(region,/10月26日回答/);
- assert.match(region,/36校での実施/);
+ assert.match(atsugi.summary.join(' '),/36校での実施/);
  assert.ok(atsugi.unknowns.some(x=>x.includes('ガイドライン')));
 });
 test('existing school archive and map links are preserved',()=>{
