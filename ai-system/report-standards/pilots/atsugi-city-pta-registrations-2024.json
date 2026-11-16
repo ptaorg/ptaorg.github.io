@@ -4,7 +4,7 @@
   "sourceTitle": "資料2 個人情報取扱事務及び個人情報ファイルの登録について",
   "sourceSnapshot": "R6.8.31現在",
   "checkedDate": "2026-11-16",
-  "sourceStatus": "公式の学校別登録簿のテキストから24校の『PTA事務』登録を特定。根拠法令欄は23校『無し』、睦合中学校は『学校教育法施行規則』。学校別PDFの原本確認15校とは独立。2026年の制度と実務及びPDF全頁画像の目視は未検証。",
+  "sourceStatus": "厚木市の2023・2024年の公式個人情報取扱事務登録簿で『PTA事務』25校を記載確認。根拠法令欄24校『無し』、睦合中学校『学校教育法施行規則』。2026年現在の運用とは区別し、学校個別PDFの原文照合15校と二系統で集計。PDF画像照合には一部未了あり。",
   "caution": "これは個人情報取扱『事務』の行政登録簿であり、PTAによる活動が現に実施されたこと、同項目に掲げる法令が特定の会費徴収・名簿利用・役員選出を授権することの証明ではない。『根拠法令 無し』もあくまで登録欄の記載であり、他の法令上の授権が一切存在しないと確定したものではない。最新登録簿の改訂も未確認。",
   "entries": [
     {
@@ -345,6 +345,23 @@
         ],
         "sourceCaution": "当該登録は2023年又は2024年時点。現行保有・実施・具体的授権は未確定。"
       }
+    },
+    {
+      "schoolId": "kita-es",
+      "schoolName": "北小学校",
+      "registryId": "7800(3)-000029",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2024年8月31日現在の厚木市資料2・北小学校登録簿一覧②のPTA事務行（PDFテキスト確認）",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、児童の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/siryo2.pdf",
+        "schoolSpecificFileUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/78003zimu2.pdf",
+        "registrationDate": "2023-04-01",
+        "lastModifiedOnIndex": "2024-04-01",
+        "recordedFields": null
+      },
+      "pageImageChecked": false,
+      "limitation": "市全体の登録簿PDFテキストで確認。北小個別のPDFリンクは市公表ページで確認したが取得に失敗。"
     }
   ],
   "crossCheck": [
@@ -357,7 +374,7 @@
     "市公式の2023/2024登録簿は過年度の事務登録であり、2026年11月現在の実施状況と区別。ページ画像のキャッシュエラーを記録し、テキスト上の登録欄を一次確認として管理する。"
   ],
   "stat": {
-    "rowsSeen": 24,
+    "rowsSeen": 25,
     "unreviewedSchoolIdsInThese": [
       "aiko-es",
       "atsugi-jhs",
@@ -378,7 +395,8 @@
       "ogino-es",
       "sanda-es",
       "tamagawa-es",
-      "tomei-jhs"
+      "tomei-jhs",
+      "kita-es"
     ],
     "separateFrom15OriginalSchoolPdfs": true,
     "detailedPersonalDataFilesConfirmed": 9,
