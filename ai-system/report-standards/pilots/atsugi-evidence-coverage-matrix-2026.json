@@ -11,9 +11,13 @@
     "school_original_only": 11,
     "official_registration_only": 21,
     "no_individual_source_yet": 0,
-    "schoolsWithAtLeastOneIndividualSource": 36
+    "schoolsWithAtLeastOneIndividualSource": 36,
+    "ptaPdfReviewedAnyTypeSchools": 19,
+    "schoolPtaPdfNotYetLocatedSchools": 17,
+    "schoolDetailedOriginalAuditedSchools": 15,
+    "schoolPtaAdditionalPdfScopingOnlySchools": 4
   },
-  "warning": "全36校で少なくとも学校原本PDFか2023/2024行政登録簿のいずれか一種類の資料がある。ただし学校原本PDFの照合は15校のみ。市の個人情報取扱事務登録簿は個々のPTA業務の適法性や実際の実施及び現在の運用を証明しない。",
+  "warning": "カバレッジには資料種類による2系統がある。2025/26学校別書式群を個別審査済み15校＋登録簿のみ21校という旧分類は維持。追加調査で学校公式PTA文書を4校（愛甲、緑ケ丘、森の里、北小）から新規直接確認したため、何らかの学校PTA PDFに到達した数は19校、学校PTA PDFが未確認なのは17校。ただし新4校は学校の会費徴収・会員管理・役員就任・名簿利用等を全面審査済みではない。行政登録簿は具体的実施の証拠ではない。",
   "schools": [
     {
       "id": "aikawa-es",
