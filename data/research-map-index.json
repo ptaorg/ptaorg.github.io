@@ -817,7 +817,8 @@
           ]
         }
       ],
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1Ojb3PfGfLCrf7bywBK-AW0RhPh8AFr2g"
     },
     {
       "id": "kawasaki",
@@ -1359,7 +1360,8 @@
           "url": "https://ptaorg.com/board-responses/48-shiga.html",
           "date": "日付未登録"
         }
-      ]
+      ],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1Ibw3AaEznzR80jrL1-ZRuX5JIslPLfSS"
     },
     {
       "id": "shizuoka",
@@ -2118,7 +2120,8 @@
           ]
         }
       ],
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1jW5aLHv0jsf0Hw2B1VTGHIlQk-jxbaNo"
     },
     {
       "id": "atsugi",
@@ -2714,7 +2717,8 @@
           ]
         }
       ],
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1y8QMiDJ4EZWwCnW1aOxNUKUVcKzQE9Zw"
     },
     {
       "id": "hyogo",
@@ -3104,7 +3108,8 @@
         "matsuyama"
       ],
       "schools": [],
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1lSULusScSCBJ_H03B2OLr8ZPgWq7PyAW"
     },
     {
       "id": "archive-daito",
@@ -3176,7 +3181,8 @@
       "prefectureCode": "27",
       "type": "市",
       "updated": "2026-11-15",
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/18YfXZvzwcSml2kywfocV2UqpSR6IuMr5"
     },
     {
       "id": "archive-hikone",
@@ -3605,7 +3611,8 @@
       "prefectureCode": "25",
       "type": "市",
       "updated": "2026-11-15",
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/16dXpBO-G0DZP5RK50VHG1GWa1K-Dq54x"
     },
     {
       "id": "archive-hirakata",
@@ -4531,7 +4538,8 @@
       "prefectureCode": "27",
       "type": "市",
       "updated": "2026-11-15",
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1lmcrzyrx01hJaOY2w2DNT3YjjcIdOGEs"
     },
     {
       "id": "archive-imizu",
@@ -4827,7 +4835,8 @@
       "prefectureCode": "16",
       "type": "市",
       "updated": "2026-11-15",
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1fHEUtHpFN3CCYUxoyLmQkS3dwqnj-Sfr"
     },
     {
       "id": "archive-iwaki",
@@ -5043,7 +5052,8 @@
       "prefectureCode": "07",
       "type": "市",
       "updated": "2026-11-15",
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1GPyGYbn7a3soSWdJo6AkzGw0_LrtxgDx"
     },
     {
       "id": "archive-kameoka",
@@ -5285,7 +5295,8 @@
       "prefectureCode": "26",
       "type": "市",
       "updated": "2026-11-15",
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1_2WNbIpxJXAfEXaeT3Er5T3-kgJfppM9"
     },
     {
       "id": "archive-koka",
@@ -5989,7 +6000,8 @@
       "prefectureCode": "25",
       "type": "市",
       "updated": "2026-11-15",
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/12qu6QBshchvWY7z-_8PgadhkGuSxbY4P"
     },
     {
       "id": "archive-kuki",
@@ -6424,7 +6436,8 @@
       "prefectureCode": "11",
       "type": "市",
       "updated": "2026-11-15",
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1m3dZLjDFWoJvnCBPWfKsKp8yEZCKZSOI"
     },
     {
       "id": "archive-ota",
@@ -7514,7 +7527,8 @@
       "prefectureCode": "13",
       "type": "特別区",
       "updated": "2026-11-15",
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1IsXa6xIxYbyrujdlwWT2JM5-egJnx3md"
     },
     {
       "id": "archive-sagamihara",
@@ -8865,7 +8879,8 @@
       "prefectureCode": "14",
       "type": "市",
       "updated": "2026-11-15",
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1WaNRvRzqD-A8Kr7cVjYQiNeY5m-lelyQ"
     },
     {
       "id": "archive-toyohashi",
@@ -13334,7 +13349,8 @@
       "prefectureCode": "23",
       "type": "市",
       "updated": "2026-11-15",
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1pxe9Jv93209TssLVdBdW_0h7JGkQ0X2T"
     },
     {
       "id": "catalog-nagakute",
@@ -13358,7 +13374,8 @@
       "schools": [],
       "type": "市",
       "updated": "2026-11-15",
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1suHEk5fMq5odTPYVWiW2idOaudojlAam"
     },
     {
       "id": "catalog-ibaraki",
@@ -13382,7 +13399,8 @@
       "schools": [],
       "type": "市",
       "updated": "2026-11-15",
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1p2GnPXr72ezP_oCaNKlMsi4-GvhWVLLe"
     },
     {
       "id": "catalog-sendai",
@@ -13406,7 +13424,8 @@
       "schools": [],
       "type": "市",
       "updated": "2026-11-15",
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1oB41Lf8CcN5Q8-aRIjjastjE6XN_bdyP"
     },
     {
       "id": "catalog-fuso",
@@ -13430,7 +13449,8 @@
       "schools": [],
       "type": "町",
       "updated": "2026-11-15",
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/16XjJ8aq3dt4MV9yhTiGKZ6rKNe3efTPL"
     },
     {
       "id": "catalog-kagoshima",
@@ -13454,7 +13474,8 @@
       "schools": [],
       "type": "市",
       "updated": "2026-11-15",
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1e_hGtMycHhm-VnPQfynoSiVGxtDuwXk7"
     },
     {
       "id": "catalog-kanagawa",
@@ -13475,7 +13496,8 @@
       "schools": [],
       "type": "都道府県",
       "updated": "2026-11-15",
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1HunDy2MJBReAJbals5K6U0ZANbRwOV1s"
     },
     {
       "id": "catalog-saitama",
@@ -13496,7 +13518,8 @@
       "schools": [],
       "type": "都道府県",
       "updated": "2026-11-15",
-      "boardResponses": []
+      "boardResponses": [],
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1hTWx_pAzMHi25dgu54w05AEsM3dh46W_"
     },
     {
       "id": "ichinomiya",

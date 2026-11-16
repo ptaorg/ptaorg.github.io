@@ -439,3 +439,10 @@ body.research-map-page #main .legacy .legacy-body .research-main
   background-color: #ffffff30 !important;
   outline-offset: 3px;
 }
+
+/* Verified municipality original folders under Google Drive 全国資料 */
+body.research-map-page .research-region-original { margin: .8rem 0 .2rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .55rem; }
+body.research-map-page .research-region-original > a { display: inline-block; padding: .36rem .7rem; border: 1px solid #0d6d83; border-radius: .5rem; color: #085a71; background: #e8f4f6; font-weight: 700; text-decoration: underline; text-underline-offset: .15em; }
+body.research-map-page .research-region-original > a:hover,
+body.research-map-page .research-region-original > a:focus-visible { color: #fff; background: #0b5871; outline-offset: 3px; }
+body.research-map-page .research-region-original > small { font-size: .72rem; color: #53636a; line-height: 1.6; }

@@ -106,6 +106,10 @@ function buildIndex(data = load(), schools = listSchoolData(), legacy = []) {
     if (!regions.some(r => r.prefecture === m.prefecture && r.name === m.name)) regions.push(m);
   }
   const codes = {"宮城県":"04","福島県":"07","埼玉県":"11","東京都":"13","神奈川県":"14","富山県":"16","静岡県":"22","愛知県":"23","滋賀県":"25","京都府":"26","大阪府":"27","兵庫県":"28","広島県":"34","愛媛県":"38","鹿児島県":"46"};
+  const sourceDriveFolders = JSON.parse(fs.readFileSync(path.join(ROOT, "data/research-drive-folders.json"), "utf8")).folders;
+  for (const m of regions) {
+    if (Object.prototype.hasOwnProperty.call(sourceDriveFolders, m.name)) m.driveFolderUrl = sourceDriveFolders[m.name];
+  }
   for (const m of regions) {
     m.prefectureCode ||= codes[m.prefecture] || null;
     m.type ||= m.name === m.prefecture ? "都道府県" : m.name.endsWith("区") ? "特別区" : m.name.endsWith("町") ? "町" : "市";
