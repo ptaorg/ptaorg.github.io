@@ -33,6 +33,13 @@ for(const record of verified){
  const ogRe=/(<meta property="og:description" content=")[^"]*(")/;
  if(!descRe.test(html)||!ogRe.test(html))throw Error('Missing metadata '+slug);
  html=html.replace(descRe,(_m,a,b)=>a+desc+b).replace(ogRe,(_m,a,b)=>a+desc+b);
+ if(!html.includes('name="twitter:card"'))html=html.replace('</head>','  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="'+esc(data.schoolName+' PTA関連資料・評価')+'">\n  <meta name="twitter:description" content="'+desc+'">\n</head>');
+ html=html.replace(/"dateModified": "2026-07-19"/g,'"dateModified": "'+esc(data.lastReviewed)+'"');
+ const originalLd=old.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
+ if(originalLd){
+  const oldDescription=originalLd.match(/"description": "([^"]*)"/)?.[1];
+  if(oldDescription){const begin=html.indexOf('<script type="application/ld+json">'),end=html.indexOf('</script>',begin);if(begin>=0&&end>begin){let segment=html.slice(begin,end);segment=segment.replaceAll('"description": "'+oldDescription+'"','"description": '+JSON.stringify(data.ogDescription||data.description||''));html=html.slice(0,begin)+segment+html.slice(end);}}
+ }
  html=html.replace(/data-reviewed="[^"]*"/,'data-reviewed="'+esc(data.lastReviewed)+'"');
  html=html.replace(/改訂 2026-07-19/,'改訂 '+esc(data.lastReviewed));
  const docs=[...new Set((data.materials?.confirmedDocuments||[]).filter(Boolean))].join('、')||'未確認';
