@@ -10,7 +10,7 @@ test('fifteen distinct school identities, including differently named original',
  const verified=schools.filter(x=>x.originalPdfVerification?.status==='direct_checked');
  assert.equal(verified.length,15);
  assert.equal(new Set(verified.map(x=>x.schoolId)).size,15);
- assert.equal(new Set(originals.map(x=>x.id)).size,15);
+ assert.equal(new Set(originals.map(x=>x.id)).size,16);\n assert.equal(originals.filter(x=>x.schoolId==='atsugi-daini-es').length,2);
  const tsumada=verified.find(x=>x.schoolId==='tsumada-es');
  assert.equal(tsumada.originalPdfVerification.fileName,'麦田小学校_12.pdf');
  assert.equal(tsumada.originalPdfVerification.verifiedSchoolFromContent,'妻田小学校');
