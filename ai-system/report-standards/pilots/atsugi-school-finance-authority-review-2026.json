@@ -70,5 +70,28 @@
       "question": "物品寄附全校調査で、寄附申出書・教育長への届出・維持経費協議・採納及び備品台帳への登録を学校別に確認すること。"
     }
   ],
-  "publication": "draft. No automatic finding of illegality or lawful delegation."
+  "publication": "draft. No automatic finding of illegality or lawful delegation.",
+  "relatedAuthorityInstrument": {
+    "title": "厚木市長の権限に属する事務の補助執行に関する規程",
+    "promulgation": "昭和53年厚木市訓令第2号",
+    "specificProvision": "第2条第3項第1号",
+    "crossReferences": [
+      "学校財務事務取扱要綱第9条（支出負担行為）",
+      "同第11条（契約の範囲）",
+      "同第19条（専決権限を超える契約）"
+    ],
+    "verificationStatus": "title_promulgation_and_cross_references_verified_current_article_text_unretrieved",
+    "officialTextStatus": "2026年11月16日時点、学校財務事務取扱要綱から名称・制定番号・参照条項は確認。第2条第3項第1号の全文・改正履歴は取得できず、校長専決の金額・対象は未確定。",
+    "notSameInstrument": "厚木市教育委員会の権限に属する事務の補助執行に関する規則は委員会側から市長部局への補助執行を定める別法令であり、本件の校長専決根拠として代用しない。",
+    "legalFramework": "地方自治法第180条の2は長の権限に属する事務の一部を委員会等職員に補助執行させる制度。市長の公的予算執行に関する補助執行が、PTAの独立した会費徴収を自動的に含むわけではない。",
+    "requiredChecks": [
+      "市が公表する現行規程全文と最終改正・施行日",
+      "第2条第3項第1号の支出負担行為・契約等の権限・金額・支出対象",
+      "学校配当予算と学校徴収金・PTA会費の資金帰属の区別",
+      "別に存在し得る私費会計・学校徴収金・収納委託・歳入歳出外現金に関する法令上の根拠",
+      "校長・事務職員が実際に行った行為と決裁・保管口座の突合"
+    ],
+    "claimLimit": "第2条第3項第1号の条文が未取得である以上、専決限度額を記載したり、PTA会費の代理徴収を認めている・認めていないと条文から確定したりしない。"
+  },
+  "legalPriority": "公的権限の発生、原事務の帰属、補助執行の対象と市長の権限、校長の専決、具体的行為を分離して検証する"
 }
