@@ -249,7 +249,7 @@
       "originalPdfVerification": {
         "status": "direct_checked",
         "fileName": "相川中学校 会議録_04.pdf",
-        "sha256": "7a4497474a69a4f129a88074e51a07dd348fee128060b1a4c10478cdbdd4769",
+        "sha256": "7a4497474a69a4f129a88074e51a07dd348fee128060b1a4c10478cdbdd4769f",
         "pages": 9,
         "method": "Google Drive原ファイル取得＋PDFテキスト＋ページ画像照合",
         "verifiedAt": "2026-11-16",
@@ -3660,7 +3660,7 @@
       "id": "original-aikawa-jhs",
       "schoolId": "aikawa-jhs",
       "fileName": "相川中学校 会議録_04.pdf",
-      "sha256": "7a4497474a69a4f129a88074e51a07dd348fee128060b1a4c10478cdbdd4769",
+      "sha256": "7a4497474a69a4f129a88074e51a07dd348fee128060b1a4c10478cdbdd4769f",
       "pages": 9,
       "sourceAvailability": "Google Drive原本確認。公開サイトの保存PDFとの同一性はSHA照合未実施。",
       "publicSiteOriginalUrl": "/source-pdfs/atsugi/aikawa-jhs/aikawa-jhs-kaigiroku-04.pdf"
