@@ -13,5 +13,5 @@ test('city research note explains 2024 registries without treating registration 
  assert.match(page,/公法上の具体的権限を確認/);
  assert.match(page,/個人情報保護法61条・69条/);
  assert.match(page,/2024年8月31日現在/);
- assert.match(page,/学校別原本PDF15校/);
+ assert.match(page,/学校別PDFの原本を直接照合したのは15校/);
 });
