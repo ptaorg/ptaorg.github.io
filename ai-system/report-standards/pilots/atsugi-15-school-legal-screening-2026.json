@@ -1,0 +1,3495 @@
+{
+  "title": "厚木市原本確認15校・主体分離型法令審査（中間台帳）",
+  "version": "1.0.0",
+  "date": "2026-11-16",
+  "purpose": "一次資料に記載の内容を学校別に所掌・事務帰属から審査する。違法性の決定、学校全体の運用確認、改訂通知の適用確認は未完了。",
+  "schoolCount": 15,
+  "unreviewedSchoolCount": 21,
+  "reviewOrder": [
+    "主体の分離",
+    "事務の帰属",
+    "学校側の所掌事務・公法上の権限",
+    "個人情報保護法61条の保有必要性・利用目的",
+    "個人情報保護法69条の利用・提供制限と臨時性",
+    "教職員・会計保管・会費債権・独立救済要件",
+    "適用条文・反証・未確認・暫定結論の分離"
+  ],
+  "administrativeChronology": [
+    {
+      "date": "2026-03-30",
+      "action": "市通知：本人同意と委託契約を学校代理徴収の条件として記載",
+      "assessment": "公法上の権限を創設するかは未提示。通知原本と当該校への適用を別審査"
+    },
+    {
+      "date": "2026-04-09",
+      "action": "市回答：学校徴収の法的位置付けなし・慣行との説明",
+      "assessment": "3月30日の条件付き徴収と根拠説明の整合性に課題"
+    },
+    {
+      "date": "2026-10-26",
+      "action": "市回答：PTA自己徴収への移行を含むガイドライン策定中",
+      "assessment": "制度見直し方針として評価。ただし制定・配布・実施は未確認"
+    },
+    {
+      "date": "2026-11-30",
+      "action": "寄附・物品提供についての市回答予定日",
+      "assessment": "未来の回答予定であり結果は未確定"
+    }
+  ],
+  "priors": "本台帳は該当条項の存在と適用・法令遵守を分ける。学校内部利用とPTAへの提供、校務とPTA固有事務、任意加入書式と実際の承諾、保管場所と資金管理主体を混同しない。",
+  "lawRulesVersion": "1.1.0",
+  "schools": [
+    {
+      "id": "aikawa-es",
+      "name": "相川小学校",
+      "schoolType": "小学校",
+      "verifiedOriginal": "相川小学校 相談受付記録_01.pdf",
+      "documentsAtLeastOne": true,
+      "reviews": [
+        {
+          "category": "fee_authority",
+          "subject": "PTA（会費債権・徴収の原則的主体）／学校（関与が立証された場合に限り公的主体として別審査）",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "personal_information",
+          "subject": "学校又は教育委員会（公的保有情報）／PTA（本人から取得した情報）を分ける",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "school_administration",
+          "subject": "PTA（会員・会計・役員選出等）／学校（教育活動・地域連携等の法令上の所掌）の分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "membership",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "officers",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "children",
+          "subject": "学校の教育活動・PTAの私的事業それぞれの実施者を特定",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "spending",
+          "subject": "PTAの支出と学校・自治体の寄附受領を分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        }
+      ],
+      "lawReview": [
+        {
+          "id": "membership_contract",
+          "law": "民法521・522条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "fee_claim",
+          "law": "民法521・522・703・709条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "consumer_contract",
+          "law": "消費者契約法4・10条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/412AC0000000061"
+        },
+        {
+          "id": "task_authority",
+          "law": "学校教育法・地方教育行政法及び当該自治体の法令上の所掌",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000026"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "law": "個人情報保護法61条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "public_personal_data_use",
+          "law": "個人情報保護法69条1・2項、70条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "pta_personal_data",
+          "law": "個人情報保護法17・18・20・21・23・27条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "teachers_service",
+          "law": "地方公務員法35条、34条、60条2号",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/325AC0000000261"
+        },
+        {
+          "id": "public_cash_custody",
+          "law": "地方自治法235条の4第2項・施行令168条の7",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        },
+        {
+          "id": "pta_school_spending",
+          "law": "地方財政法4条の5、寄附受納・財務会計関係法令",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/323AC0000000109"
+        },
+        {
+          "id": "social_education",
+          "law": "社会教育法10・12条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/324AC0000000207"
+        },
+        {
+          "id": "officers",
+          "law": "民法521・522条、委任・意思表示に関する民法規定",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "child_treatment",
+          "law": "学校教育関係法令、憲法14・26条の公的学校との関係",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/321CONSTITUTION"
+        },
+        {
+          "id": "civil_remedies",
+          "law": "民法703・709条、国家賠償法1条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "public_audit",
+          "law": "地方自治法242条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        }
+      ],
+      "administrationResponsibility": "学校別の具体的事務が、市教委の2026-03-30通知に基づく運用か、各PTA独自運用かを特定。市の同意・委任による設計と10月改善方針の実施を区別。",
+      "disclosureStatus": "draft_do_not_publish_as_legal_violation"
+    },
+    {
+      "id": "aikawa-jhs",
+      "name": "相川中学校",
+      "schoolType": "中学校",
+      "verifiedOriginal": "相川中学校 会議録_04.pdf",
+      "documentsAtLeastOne": true,
+      "reviews": [
+        {
+          "category": "fee_authority",
+          "subject": "PTA（会費債権・徴収の原則的主体）／学校（関与が立証された場合に限り公的主体として別審査）",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "school_collection_of_pta_fee",
+              "documentStatus": "confirmed_yes",
+              "observation": "2025年度のPTA活動確認事項に『PTA会費集金の確認と集金作業』『集金額3,600円』とあり、学校連絡アプリで家庭に配信すると記載。実際の収納主体・資金保管者までは不明。",
+              "locators": [
+                {
+                  "sourceId": "original-aikawa-jhs",
+                  "locator": "p.2 PTA活動確認事項3項"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "会費請求・集金はPTA固有の内部事務。学校が引き受ける場合は自治体の具体的な所掌と実施権限を提示する必要があり、3月30日通知の同意・委託だけでは足りない。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "personal_information",
+          "subject": "学校又は教育委員会（公的保有情報）／PTA（本人から取得した情報）を分ける",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "school_personal_data_for_pta",
+              "documentStatus": "indication",
+              "observation": "相川中学校の新入生説明会で『学校が持っている新入生の名簿を役員選出時に使用』したと保護者が市教委へ申告。学校による提供・閲覧の事実はまだ未立証。",
+              "locators": [
+                {
+                  "sourceId": "original-aikawa-es",
+                  "locator": "p.2 2026年1月16日の『相川中学校』に関する電話相談"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "学校が保有した学籍・連絡先等の情報と、PTAが本人から直接取得した情報を区別。学校の所掌を先に検証し、その後61条・69条各要件と学校内部利用・団体提供を区別する。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "school_administration",
+          "subject": "PTA（会員・会計・役員選出等）／学校（教育活動・地域連携等の法令上の所掌）の分離",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "teacher_internal_pta_admin",
+              "documentStatus": "indication",
+              "observation": "職員会議資料にPTA委員会担当、会費集金確認と作業、運営委員会への担当教職員出席を記載。法令上の職務か、PTA内部事務として従事したかは個別確認が必要。",
+              "locators": [
+                {
+                  "sourceId": "original-aikawa-jhs",
+                  "locator": "p.2 PTA活動確認事項1・3・4項"
+                }
+              ]
+            },
+            {
+              "axis": "school_pta_governance_overlap",
+              "documentStatus": "indication",
+              "observation": "2026年1月14日付報告は校長・教職員のPTA運営委員会出席や新入生説明会での役員くじ引きを記録。学校の意思決定への関与範囲は未確認。",
+              "locators": [
+                {
+                  "sourceId": "original-aikawa-jhs",
+                  "locator": "p.9 第5回本部会報告(2)(4)"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "職員の業務時間、校務分掌や職命、職専免と具体的事務内容を確認。慣行・民間委任は職務権限を創設しない。",
+            "説明会、学校施設利用、学校事務局、学校保管の内容を切り分け、学校施設の適法利用と会員管理の権限を混同しない。学校教育法137条も会費・名簿事務の授権条項ではない。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "membership",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "officers",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "officer_selection_pressure",
+              "documentStatus": "confirmed_yes",
+              "observation": "2026年1月14日付本部会報告に新入生保護者説明会で3年間の役員を『くじ引き』で選出したと明記。参加者の加入意思や抽選への同意、実際の就任は未確認。 また別資料『相川小学校 相談受付記録_01』p.2は相川中学校の説明会で任意加入の説明直後に役員選出へ移ったとする申告を記録。",
+              "locators": [
+                {
+                  "sourceId": "original-aikawa-jhs",
+                  "locator": "p.9 第5回本部会報告(4)"
+                },
+                {
+                  "sourceId": "original-aikawa-es",
+                  "locator": "p.2 相川中学校の説明会についての相談"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "抽選・一人一役と任意の就任承諾を区別。児童ごとの履歴・非加入者の選出有無を確認する。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "children",
+          "subject": "学校の教育活動・PTAの私的事業それぞれの実施者を特定",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "spending",
+          "subject": "PTAの支出と学校・自治体の寄附受領を分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        }
+      ],
+      "lawReview": [
+        {
+          "id": "membership_contract",
+          "law": "民法521・522条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "fee_claim",
+          "law": "民法521・522・703・709条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "consumer_contract",
+          "law": "消費者契約法4・10条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/412AC0000000061"
+        },
+        {
+          "id": "task_authority",
+          "law": "学校教育法・地方教育行政法及び当該自治体の法令上の所掌",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000026"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "law": "個人情報保護法61条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "public_personal_data_use",
+          "law": "個人情報保護法69条1・2項、70条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "pta_personal_data",
+          "law": "個人情報保護法17・18・20・21・23・27条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "teachers_service",
+          "law": "地方公務員法35条、34条、60条2号",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/325AC0000000261"
+        },
+        {
+          "id": "public_cash_custody",
+          "law": "地方自治法235条の4第2項・施行令168条の7",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        },
+        {
+          "id": "pta_school_spending",
+          "law": "地方財政法4条の5、寄附受納・財務会計関係法令",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/323AC0000000109"
+        },
+        {
+          "id": "social_education",
+          "law": "社会教育法10・12条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/324AC0000000207"
+        },
+        {
+          "id": "officers",
+          "law": "民法521・522条、委任・意思表示に関する民法規定",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "child_treatment",
+          "law": "学校教育関係法令、憲法14・26条の公的学校との関係",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/321CONSTITUTION"
+        },
+        {
+          "id": "civil_remedies",
+          "law": "民法703・709条、国家賠償法1条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "public_audit",
+          "law": "地方自治法242条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        }
+      ],
+      "administrationResponsibility": "学校別の具体的事務が、市教委の2026-03-30通知に基づく運用か、各PTA独自運用かを特定。市の同意・委任による設計と10月改善方針の実施を区別。",
+      "disclosureStatus": "draft_do_not_publish_as_legal_violation"
+    },
+    {
+      "id": "atsugi-daini-es",
+      "name": "厚木第二小学校",
+      "schoolType": "小学校",
+      "verifiedOriginal": "厚木第二小学校_10.pdf",
+      "documentsAtLeastOne": true,
+      "reviews": [
+        {
+          "category": "fee_authority",
+          "subject": "PTA（会費債権・徴収の原則的主体）／学校（関与が立証された場合に限り公的主体として別審査）",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "personal_information",
+          "subject": "学校又は教育委員会（公的保有情報）／PTA（本人から取得した情報）を分ける",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "school_administration",
+          "subject": "PTA（会員・会計・役員選出等）／学校（教育活動・地域連携等の法令上の所掌）の分離",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "school_pta_governance_overlap",
+              "documentStatus": "indication",
+              "observation": "新入生向け案内に加入・非加入を問わず全家庭に回答を求め、未回答者へ入学式で確認する旨が記載。実施主体は未確認。",
+              "locators": [
+                {
+                  "sourceId": "additional-atsugi-daini-es-05",
+                  "locator": "p.1 末尾 回答依頼"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "説明会、学校施設利用、学校事務局、学校保管の内容を切り分け、学校施設の適法利用と会員管理の権限を混同しない。学校教育法137条も会費・名簿事務の授権条項ではない。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "membership",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "voluntary_membership_notice",
+              "documentStatus": "confirmed_yes",
+              "observation": "転入生用の案内にPTA加入は任意と明記し、入会・非入会の選択欄がある。",
+              "locators": [
+                {
+                  "sourceId": "original-atsugi-daini-es",
+                  "locator": "p.1 転入生PTA入会回答"
+                }
+              ]
+            },
+            {
+              "axis": "explicit_opt_in",
+              "documentStatus": "indication",
+              "observation": "転入生向けに入会・非入会の選択欄がある一方、既存会員向け2026年度継続確認案内では退会希望者が届出を提出する方式を記載。対象の異なる2方式を同じ評価に混ぜず確認。",
+              "locators": [
+                {
+                  "sourceId": "original-atsugi-daini-es",
+                  "locator": "p.1 転入生向け欄／p.3-4 継続意思と退会"
+                }
+              ]
+            },
+            {
+              "axis": "withdrawal_procedure",
+              "documentStatus": "confirmed_yes",
+              "observation": "2026年度継続確認案内に退会届の提出方法と年度末退会を記載。実際の提出・受理状況は未確認。",
+              "locators": [
+                {
+                  "sourceId": "original-atsugi-daini-es",
+                  "locator": "p.3-4 退会届"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "任意加入の表記を肯定的に評価。ただしすべての保護者の本人意思を確認した証拠にはならない。",
+            "加入希望者の申込みとPTA承諾・資格発生日を確認する。紙の有無ではなく自由な意思形成の実態。退会届と加入届の兼用は自動的にオプトインとはならない。",
+            "退会届の有無と実際の提出・受理・時期制限・理由記載要求を区別する。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "officers",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "children",
+          "subject": "学校の教育活動・PTAの私的事業それぞれの実施者を特定",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "nonmember_equal_treatment",
+              "documentStatus": "indication",
+              "observation": "転入生案内には児童全員への記念品配布等の説明があるが非会員の権利と支払関係の現行運用は別途確認。",
+              "locators": [
+                {
+                  "sourceId": "original-atsugi-daini-es",
+                  "locator": "p.1 PTA活動の説明"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "学校教育活動での子どもの扱いと、PTAの純粋な私的事業を区別。記念品・実費請求の具体的根拠を確認。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "spending",
+          "subject": "PTAの支出と学校・自治体の寄附受領を分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        }
+      ],
+      "lawReview": [
+        {
+          "id": "membership_contract",
+          "law": "民法521・522条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "fee_claim",
+          "law": "民法521・522・703・709条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "consumer_contract",
+          "law": "消費者契約法4・10条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/412AC0000000061"
+        },
+        {
+          "id": "task_authority",
+          "law": "学校教育法・地方教育行政法及び当該自治体の法令上の所掌",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000026"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "law": "個人情報保護法61条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "public_personal_data_use",
+          "law": "個人情報保護法69条1・2項、70条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "pta_personal_data",
+          "law": "個人情報保護法17・18・20・21・23・27条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "teachers_service",
+          "law": "地方公務員法35条、34条、60条2号",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/325AC0000000261"
+        },
+        {
+          "id": "public_cash_custody",
+          "law": "地方自治法235条の4第2項・施行令168条の7",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        },
+        {
+          "id": "pta_school_spending",
+          "law": "地方財政法4条の5、寄附受納・財務会計関係法令",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/323AC0000000109"
+        },
+        {
+          "id": "social_education",
+          "law": "社会教育法10・12条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/324AC0000000207"
+        },
+        {
+          "id": "officers",
+          "law": "民法521・522条、委任・意思表示に関する民法規定",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "child_treatment",
+          "law": "学校教育関係法令、憲法14・26条の公的学校との関係",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/321CONSTITUTION"
+        },
+        {
+          "id": "civil_remedies",
+          "law": "民法703・709条、国家賠償法1条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "public_audit",
+          "law": "地方自治法242条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        }
+      ],
+      "administrationResponsibility": "学校別の具体的事務が、市教委の2026-03-30通知に基づく運用か、各PTA独自運用かを特定。市の同意・委任による設計と10月改善方針の実施を区別。",
+      "disclosureStatus": "draft_do_not_publish_as_legal_violation"
+    },
+    {
+      "id": "atsugi-es",
+      "name": "厚木小学校",
+      "schoolType": "小学校",
+      "verifiedOriginal": "厚木小学校_06.pdf",
+      "documentsAtLeastOne": true,
+      "reviews": [
+        {
+          "category": "fee_authority",
+          "subject": "PTA（会費債権・徴収の原則的主体）／学校（関与が立証された場合に限り公的主体として別審査）",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "personal_information",
+          "subject": "学校又は教育委員会（公的保有情報）／PTA（本人から取得した情報）を分ける",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "school_administration",
+          "subject": "PTA（会員・会計・役員選出等）／学校（教育活動・地域連携等の法令上の所掌）の分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "membership",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "explicit_opt_in",
+              "documentStatus": "indication",
+              "observation": "2025年度『PTA会員名簿』は『入会届・退会届を兼ねています』と明記。紙の申込手段が存在するため『入会届がない』との旧評価は不正確。ただし、全家庭配布・提出を要請するため、加入希望者だけが申込む制度か、退会届との兼用でオプトアウト化していないか要確認。",
+              "locators": [
+                {
+                  "sourceId": "original-atsugi-es",
+                  "locator": "p.1 下部の注記"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "加入希望者の申込みとPTA承諾・資格発生日を確認する。紙の有無ではなく自由な意思形成の実態。退会届と加入届の兼用は自動的にオプトインとはならない。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "officers",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "children",
+          "subject": "学校の教育活動・PTAの私的事業それぞれの実施者を特定",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "spending",
+          "subject": "PTAの支出と学校・自治体の寄附受領を分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        }
+      ],
+      "lawReview": [
+        {
+          "id": "membership_contract",
+          "law": "民法521・522条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "fee_claim",
+          "law": "民法521・522・703・709条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "consumer_contract",
+          "law": "消費者契約法4・10条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/412AC0000000061"
+        },
+        {
+          "id": "task_authority",
+          "law": "学校教育法・地方教育行政法及び当該自治体の法令上の所掌",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000026"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "law": "個人情報保護法61条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "public_personal_data_use",
+          "law": "個人情報保護法69条1・2項、70条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "pta_personal_data",
+          "law": "個人情報保護法17・18・20・21・23・27条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "teachers_service",
+          "law": "地方公務員法35条、34条、60条2号",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/325AC0000000261"
+        },
+        {
+          "id": "public_cash_custody",
+          "law": "地方自治法235条の4第2項・施行令168条の7",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        },
+        {
+          "id": "pta_school_spending",
+          "law": "地方財政法4条の5、寄附受納・財務会計関係法令",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/323AC0000000109"
+        },
+        {
+          "id": "social_education",
+          "law": "社会教育法10・12条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/324AC0000000207"
+        },
+        {
+          "id": "officers",
+          "law": "民法521・522条、委任・意思表示に関する民法規定",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "child_treatment",
+          "law": "学校教育関係法令、憲法14・26条の公的学校との関係",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/321CONSTITUTION"
+        },
+        {
+          "id": "civil_remedies",
+          "law": "民法703・709条、国家賠償法1条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "public_audit",
+          "law": "地方自治法242条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        }
+      ],
+      "administrationResponsibility": "学校別の具体的事務が、市教委の2026-03-30通知に基づく運用か、各PTA独自運用かを特定。市の同意・委任による設計と10月改善方針の実施を区別。",
+      "disclosureStatus": "draft_do_not_publish_as_legal_violation"
+    },
+    {
+      "id": "echi-es",
+      "name": "依知小学校",
+      "schoolType": "小学校",
+      "verifiedOriginal": "依知小学校_0002.pdf",
+      "documentsAtLeastOne": true,
+      "reviews": [
+        {
+          "category": "fee_authority",
+          "subject": "PTA（会費債権・徴収の原則的主体）／学校（関与が立証された場合に限り公的主体として別審査）",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "personal_information",
+          "subject": "学校又は教育委員会（公的保有情報）／PTA（本人から取得した情報）を分ける",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "school_administration",
+          "subject": "PTA（会員・会計・役員選出等）／学校（教育活動・地域連携等の法令上の所掌）の分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "membership",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "voluntary_membership_notice",
+              "documentStatus": "confirmed_yes",
+              "observation": "2025年度新入生向けPTA案内に『PTAは任意団体であり、加入については保護者・教職員の自由意思です』と明記。",
+              "locators": [
+                {
+                  "sourceId": "original-echi-es",
+                  "locator": "p.1 冒頭説明"
+                }
+              ]
+            },
+            {
+              "axis": "explicit_opt_in",
+              "documentStatus": "indication",
+              "observation": "p.1に『PTAカードの提出をもって、PTA加入となります』と記載する一方、入学式で学校書類と一緒の持参を案内。申し込みの自由・非加入者の扱い・承諾方法は未確認。",
+              "locators": [
+                {
+                  "sourceId": "original-echi-es",
+                  "locator": "p.1 PTAカードについて"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "任意加入の表記を肯定的に評価。ただしすべての保護者の本人意思を確認した証拠にはならない。",
+            "加入希望者の申込みとPTA承諾・資格発生日を確認する。紙の有無ではなく自由な意思形成の実態。退会届と加入届の兼用は自動的にオプトインとはならない。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "officers",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "officer_selection_pressure",
+              "documentStatus": "confirmed_yes",
+              "observation": "児童在学中に役員・委員を1回引き受けるよう求め、希望しない理由の記入欄を設けた制度文面を確認。強制的に就任させた事実自体は不明。",
+              "locators": [
+                {
+                  "sourceId": "original-echi-es",
+                  "locator": "p.2 PTAカード下部"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "抽選・一人一役と任意の就任承諾を区別。児童ごとの履歴・非加入者の選出有無を確認する。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "children",
+          "subject": "学校の教育活動・PTAの私的事業それぞれの実施者を特定",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "spending",
+          "subject": "PTAの支出と学校・自治体の寄附受領を分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        }
+      ],
+      "lawReview": [
+        {
+          "id": "membership_contract",
+          "law": "民法521・522条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "fee_claim",
+          "law": "民法521・522・703・709条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "consumer_contract",
+          "law": "消費者契約法4・10条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/412AC0000000061"
+        },
+        {
+          "id": "task_authority",
+          "law": "学校教育法・地方教育行政法及び当該自治体の法令上の所掌",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000026"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "law": "個人情報保護法61条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "public_personal_data_use",
+          "law": "個人情報保護法69条1・2項、70条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "pta_personal_data",
+          "law": "個人情報保護法17・18・20・21・23・27条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "teachers_service",
+          "law": "地方公務員法35条、34条、60条2号",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/325AC0000000261"
+        },
+        {
+          "id": "public_cash_custody",
+          "law": "地方自治法235条の4第2項・施行令168条の7",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        },
+        {
+          "id": "pta_school_spending",
+          "law": "地方財政法4条の5、寄附受納・財務会計関係法令",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/323AC0000000109"
+        },
+        {
+          "id": "social_education",
+          "law": "社会教育法10・12条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/324AC0000000207"
+        },
+        {
+          "id": "officers",
+          "law": "民法521・522条、委任・意思表示に関する民法規定",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "child_treatment",
+          "law": "学校教育関係法令、憲法14・26条の公的学校との関係",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/321CONSTITUTION"
+        },
+        {
+          "id": "civil_remedies",
+          "law": "民法703・709条、国家賠償法1条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "public_audit",
+          "law": "地方自治法242条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        }
+      ],
+      "administrationResponsibility": "学校別の具体的事務が、市教委の2026-03-30通知に基づく運用か、各PTA独自運用かを特定。市の同意・委任による設計と10月改善方針の実施を区別。",
+      "disclosureStatus": "draft_do_not_publish_as_legal_violation"
+    },
+    {
+      "id": "kamiechi-es",
+      "name": "上依知小学校",
+      "schoolType": "小学校",
+      "verifiedOriginal": "上依知小学校_01.pdf",
+      "documentsAtLeastOne": true,
+      "reviews": [
+        {
+          "category": "fee_authority",
+          "subject": "PTA（会費債権・徴収の原則的主体）／学校（関与が立証された場合に限り公的主体として別審査）",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "personal_information",
+          "subject": "学校又は教育委員会（公的保有情報）／PTA（本人から取得した情報）を分ける",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "school_administration",
+          "subject": "PTA（会員・会計・役員選出等）／学校（教育活動・地域連携等の法令上の所掌）の分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "membership",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "voluntary_membership_notice",
+              "documentStatus": "indication",
+              "observation": "新入生向け案内にはPTA加入の任意性を示す文言があるが、スキャン抽出不鮮明のため表現を再照合する。",
+              "locators": [
+                {
+                  "sourceId": "original-kamiechi-es",
+                  "locator": "p.1 加入と会費のお知らせ"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "任意加入の表記を肯定的に評価。ただしすべての保護者の本人意思を確認した証拠にはならない。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "officers",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "officer_selection_pressure",
+              "documentStatus": "confirmed_yes",
+              "observation": "令和7年1月27日付役員希望調査票に、入学式当日に委員選出し、児童一人につき卒業までに1回役員をお願いする記載を確認。就任強制の実施は別確認。",
+              "locators": [
+                {
+                  "sourceId": "original-kamiechi-es",
+                  "locator": "p.2 PTA役員希望調査票"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "抽選・一人一役と任意の就任承諾を区別。児童ごとの履歴・非加入者の選出有無を確認する。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "children",
+          "subject": "学校の教育活動・PTAの私的事業それぞれの実施者を特定",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "spending",
+          "subject": "PTAの支出と学校・自治体の寄附受領を分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        }
+      ],
+      "lawReview": [
+        {
+          "id": "membership_contract",
+          "law": "民法521・522条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "fee_claim",
+          "law": "民法521・522・703・709条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "consumer_contract",
+          "law": "消費者契約法4・10条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/412AC0000000061"
+        },
+        {
+          "id": "task_authority",
+          "law": "学校教育法・地方教育行政法及び当該自治体の法令上の所掌",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000026"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "law": "個人情報保護法61条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "public_personal_data_use",
+          "law": "個人情報保護法69条1・2項、70条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "pta_personal_data",
+          "law": "個人情報保護法17・18・20・21・23・27条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "teachers_service",
+          "law": "地方公務員法35条、34条、60条2号",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/325AC0000000261"
+        },
+        {
+          "id": "public_cash_custody",
+          "law": "地方自治法235条の4第2項・施行令168条の7",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        },
+        {
+          "id": "pta_school_spending",
+          "law": "地方財政法4条の5、寄附受納・財務会計関係法令",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/323AC0000000109"
+        },
+        {
+          "id": "social_education",
+          "law": "社会教育法10・12条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/324AC0000000207"
+        },
+        {
+          "id": "officers",
+          "law": "民法521・522条、委任・意思表示に関する民法規定",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "child_treatment",
+          "law": "学校教育関係法令、憲法14・26条の公的学校との関係",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/321CONSTITUTION"
+        },
+        {
+          "id": "civil_remedies",
+          "law": "民法703・709条、国家賠償法1条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "public_audit",
+          "law": "地方自治法242条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        }
+      ],
+      "administrationResponsibility": "学校別の具体的事務が、市教委の2026-03-30通知に基づく運用か、各PTA独自運用かを特定。市の同意・委任による設計と10月改善方針の実施を区別。",
+      "disclosureStatus": "draft_do_not_publish_as_legal_violation"
+    },
+    {
+      "id": "kamiogino-es",
+      "name": "上荻野小学校",
+      "schoolType": "小学校",
+      "verifiedOriginal": "上荻野小学校_13.pdf",
+      "documentsAtLeastOne": true,
+      "reviews": [
+        {
+          "category": "fee_authority",
+          "subject": "PTA（会費債権・徴収の原則的主体）／学校（関与が立証された場合に限り公的主体として別審査）",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "school_collection_of_pta_fee",
+              "documentStatus": "indication",
+              "observation": "PTAカードを会費集金に活用すると明記。ただし学校徴収・PTA自己徴収のどちらかは記載のみでは判定できない。",
+              "locators": [
+                {
+                  "sourceId": "original-kamiogino-es",
+                  "locator": "p.1 末尾"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "会費請求・集金はPTA固有の内部事務。学校が引き受ける場合は自治体の具体的な所掌と実施権限を提示する必要があり、3月30日通知の同意・委託だけでは足りない。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "personal_information",
+          "subject": "学校又は教育委員会（公的保有情報）／PTA（本人から取得した情報）を分ける",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "school_administration",
+          "subject": "PTA（会員・会計・役員選出等）／学校（教育活動・地域連携等の法令上の所掌）の分離",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "school_pta_governance_overlap",
+              "documentStatus": "indication",
+              "observation": "PTAカードは学校の金庫で保管すると明記。金庫の管理者、学校の関与と保存権限、学校情報との照合は確認が必要。",
+              "locators": [
+                {
+                  "sourceId": "original-kamiogino-es",
+                  "locator": "p.1 末尾"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "説明会、学校施設利用、学校事務局、学校保管の内容を切り分け、学校施設の適法利用と会員管理の権限を混同しない。学校教育法137条も会費・名簿事務の授権条項ではない。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "membership",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "explicit_opt_in",
+              "documentStatus": "indication",
+              "observation": "『PTAカードの提出をもってPTA入会、継続とさせていただきます』と記載。自発的申込みと承諾、非加入選択肢が示されたかは別途確認。",
+              "locators": [
+                {
+                  "sourceId": "original-kamiogino-es",
+                  "locator": "p.1 上部"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "加入希望者の申込みとPTA承諾・資格発生日を確認する。紙の有無ではなく自由な意思形成の実態。退会届と加入届の兼用は自動的にオプトインとはならない。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "officers",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "officer_selection_pressure",
+              "documentStatus": "confirmed_yes",
+              "observation": "児童1名につき在学中1回の委員を経験する旨と、5年生の未経験保護者を優先選出する旨を記載。実際の強制就任を示すものではない。",
+              "locators": [
+                {
+                  "sourceId": "original-kamiogino-es",
+                  "locator": "p.1 PTA委員の記録"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "抽選・一人一役と任意の就任承諾を区別。児童ごとの履歴・非加入者の選出有無を確認する。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "children",
+          "subject": "学校の教育活動・PTAの私的事業それぞれの実施者を特定",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "spending",
+          "subject": "PTAの支出と学校・自治体の寄附受領を分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        }
+      ],
+      "lawReview": [
+        {
+          "id": "membership_contract",
+          "law": "民法521・522条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "fee_claim",
+          "law": "民法521・522・703・709条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "consumer_contract",
+          "law": "消費者契約法4・10条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/412AC0000000061"
+        },
+        {
+          "id": "task_authority",
+          "law": "学校教育法・地方教育行政法及び当該自治体の法令上の所掌",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000026"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "law": "個人情報保護法61条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "public_personal_data_use",
+          "law": "個人情報保護法69条1・2項、70条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "pta_personal_data",
+          "law": "個人情報保護法17・18・20・21・23・27条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "teachers_service",
+          "law": "地方公務員法35条、34条、60条2号",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/325AC0000000261"
+        },
+        {
+          "id": "public_cash_custody",
+          "law": "地方自治法235条の4第2項・施行令168条の7",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        },
+        {
+          "id": "pta_school_spending",
+          "law": "地方財政法4条の5、寄附受納・財務会計関係法令",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/323AC0000000109"
+        },
+        {
+          "id": "social_education",
+          "law": "社会教育法10・12条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/324AC0000000207"
+        },
+        {
+          "id": "officers",
+          "law": "民法521・522条、委任・意思表示に関する民法規定",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "child_treatment",
+          "law": "学校教育関係法令、憲法14・26条の公的学校との関係",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/321CONSTITUTION"
+        },
+        {
+          "id": "civil_remedies",
+          "law": "民法703・709条、国家賠償法1条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "public_audit",
+          "law": "地方自治法242条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        }
+      ],
+      "administrationResponsibility": "学校別の具体的事務が、市教委の2026-03-30通知に基づく運用か、各PTA独自運用かを特定。市の同意・委任による設計と10月改善方針の実施を区別。",
+      "disclosureStatus": "draft_do_not_publish_as_legal_violation"
+    },
+    {
+      "id": "koayu-es",
+      "name": "小鮎小学校",
+      "schoolType": "小学校",
+      "verifiedOriginal": "小鮎小学校_08.pdf",
+      "documentsAtLeastOne": true,
+      "reviews": [
+        {
+          "category": "fee_authority",
+          "subject": "PTA（会費債権・徴収の原則的主体）／学校（関与が立証された場合に限り公的主体として別審査）",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "personal_information",
+          "subject": "学校又は教育委員会（公的保有情報）／PTA（本人から取得した情報）を分ける",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "school_administration",
+          "subject": "PTA（会員・会計・役員選出等）／学校（教育活動・地域連携等の法令上の所掌）の分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "membership",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "voluntary_membership_notice",
+              "documentStatus": "confirmed_yes",
+              "observation": "PTAを任意団体と明記し、加入をお願いする表現がある。",
+              "locators": [
+                {
+                  "sourceId": "original-koayu-es",
+                  "locator": "p.1 PTA加入について"
+                }
+              ]
+            },
+            {
+              "axis": "withdrawal_procedure",
+              "documentStatus": "confirmed_yes",
+              "observation": "途中退会・加入・休会も可能と明記。手続の詳細と実効性は未確認。",
+              "locators": [
+                {
+                  "sourceId": "original-koayu-es",
+                  "locator": "p.1 末尾"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "任意加入の表記を肯定的に評価。ただしすべての保護者の本人意思を確認した証拠にはならない。",
+            "退会届の有無と実際の提出・受理・時期制限・理由記載要求を区別する。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "officers",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "officer_selection_pressure",
+              "documentStatus": "indication",
+              "observation": "卒業までに1回の役員引受を検討してほしいとするが、無理に引き受ける必要はないとも明記。強制割当の根拠とはしない。",
+              "locators": [
+                {
+                  "sourceId": "original-koayu-es",
+                  "locator": "p.1 役員選出の記載"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "抽選・一人一役と任意の就任承諾を区別。児童ごとの履歴・非加入者の選出有無を確認する。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "children",
+          "subject": "学校の教育活動・PTAの私的事業それぞれの実施者を特定",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "spending",
+          "subject": "PTAの支出と学校・自治体の寄附受領を分離",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "pta_spending_on_school_costs",
+              "documentStatus": "indication",
+              "observation": "PTA会費の支出先として児童向け物資・学校利用物資の購入を説明。具体的な会計・寄附採納は未確認。",
+              "locators": [
+                {
+                  "sourceId": "original-koayu-es",
+                  "locator": "p.1 会費使途"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "購入物の受領主体、学校経費か、寄附申出・採納決裁・予算負担の整理を確認。市の11月30日回答予定とは独立審査。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        }
+      ],
+      "lawReview": [
+        {
+          "id": "membership_contract",
+          "law": "民法521・522条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "fee_claim",
+          "law": "民法521・522・703・709条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "consumer_contract",
+          "law": "消費者契約法4・10条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/412AC0000000061"
+        },
+        {
+          "id": "task_authority",
+          "law": "学校教育法・地方教育行政法及び当該自治体の法令上の所掌",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000026"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "law": "個人情報保護法61条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "public_personal_data_use",
+          "law": "個人情報保護法69条1・2項、70条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "pta_personal_data",
+          "law": "個人情報保護法17・18・20・21・23・27条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "teachers_service",
+          "law": "地方公務員法35条、34条、60条2号",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/325AC0000000261"
+        },
+        {
+          "id": "public_cash_custody",
+          "law": "地方自治法235条の4第2項・施行令168条の7",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        },
+        {
+          "id": "pta_school_spending",
+          "law": "地方財政法4条の5、寄附受納・財務会計関係法令",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/323AC0000000109"
+        },
+        {
+          "id": "social_education",
+          "law": "社会教育法10・12条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/324AC0000000207"
+        },
+        {
+          "id": "officers",
+          "law": "民法521・522条、委任・意思表示に関する民法規定",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "child_treatment",
+          "law": "学校教育関係法令、憲法14・26条の公的学校との関係",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/321CONSTITUTION"
+        },
+        {
+          "id": "civil_remedies",
+          "law": "民法703・709条、国家賠償法1条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "public_audit",
+          "law": "地方自治法242条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        }
+      ],
+      "administrationResponsibility": "学校別の具体的事務が、市教委の2026-03-30通知に基づく運用か、各PTA独自運用かを特定。市の同意・委任による設計と10月改善方針の実施を区別。",
+      "disclosureStatus": "draft_do_not_publish_as_legal_violation"
+    },
+    {
+      "id": "mutsuai-jhs",
+      "name": "睦合中学校",
+      "schoolType": "中学校",
+      "verifiedOriginal": "睦合中学校_01.pdf",
+      "documentsAtLeastOne": true,
+      "reviews": [
+        {
+          "category": "fee_authority",
+          "subject": "PTA（会費債権・徴収の原則的主体）／学校（関与が立証された場合に限り公的主体として別審査）",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "personal_information",
+          "subject": "学校又は教育委員会（公的保有情報）／PTA（本人から取得した情報）を分ける",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "school_personal_data_for_pta",
+              "documentStatus": "indication",
+              "observation": "2025年4月7日付校長名義の『学校教育活動における個人情報の取扱いについて』に、PTA活動でも連絡先等を利用すると説明し保護者に承諾・非承諾・条件付き承諾の選択を求める。実際のデータ提供は未確認。",
+              "locators": [
+                {
+                  "sourceId": "original-mutsuai-jhs",
+                  "locator": "p.2 校長名義通知／承諾書"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "学校が保有した学籍・連絡先等の情報と、PTAが本人から直接取得した情報を区別。学校の所掌を先に検証し、その後61条・69条各要件と学校内部利用・団体提供を区別する。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "school_administration",
+          "subject": "PTA（会員・会計・役員選出等）／学校（教育活動・地域連携等の法令上の所掌）の分離",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "school_pta_governance_overlap",
+              "documentStatus": "indication",
+              "observation": "学校教育活動とPTA活動を同一の個人情報利用承諾書の対象として校長名義で案内。学校側の所掌・権限を審査する必要。",
+              "locators": [
+                {
+                  "sourceId": "original-mutsuai-jhs",
+                  "locator": "p.2 校長名義通知"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "説明会、学校施設利用、学校事務局、学校保管の内容を切り分け、学校施設の適法利用と会員管理の権限を混同しない。学校教育法137条も会費・名簿事務の授権条項ではない。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "membership",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "officers",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "children",
+          "subject": "学校の教育活動・PTAの私的事業それぞれの実施者を特定",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "spending",
+          "subject": "PTAの支出と学校・自治体の寄附受領を分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        }
+      ],
+      "lawReview": [
+        {
+          "id": "membership_contract",
+          "law": "民法521・522条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "fee_claim",
+          "law": "民法521・522・703・709条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "consumer_contract",
+          "law": "消費者契約法4・10条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/412AC0000000061"
+        },
+        {
+          "id": "task_authority",
+          "law": "学校教育法・地方教育行政法及び当該自治体の法令上の所掌",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000026"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "law": "個人情報保護法61条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "public_personal_data_use",
+          "law": "個人情報保護法69条1・2項、70条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "pta_personal_data",
+          "law": "個人情報保護法17・18・20・21・23・27条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "teachers_service",
+          "law": "地方公務員法35条、34条、60条2号",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/325AC0000000261"
+        },
+        {
+          "id": "public_cash_custody",
+          "law": "地方自治法235条の4第2項・施行令168条の7",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        },
+        {
+          "id": "pta_school_spending",
+          "law": "地方財政法4条の5、寄附受納・財務会計関係法令",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/323AC0000000109"
+        },
+        {
+          "id": "social_education",
+          "law": "社会教育法10・12条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/324AC0000000207"
+        },
+        {
+          "id": "officers",
+          "law": "民法521・522条、委任・意思表示に関する民法規定",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "child_treatment",
+          "law": "学校教育関係法令、憲法14・26条の公的学校との関係",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/321CONSTITUTION"
+        },
+        {
+          "id": "civil_remedies",
+          "law": "民法703・709条、国家賠償法1条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "public_audit",
+          "law": "地方自治法242条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        }
+      ],
+      "administrationResponsibility": "学校別の具体的事務が、市教委の2026-03-30通知に基づく運用か、各PTA独自運用かを特定。市の同意・委任による設計と10月改善方針の実施を区別。",
+      "disclosureStatus": "draft_do_not_publish_as_legal_violation"
+    },
+    {
+      "id": "nanmori-es",
+      "name": "南毛利小学校",
+      "schoolType": "小学校",
+      "verifiedOriginal": "南毛利小学校_09.pdf",
+      "documentsAtLeastOne": true,
+      "reviews": [
+        {
+          "category": "fee_authority",
+          "subject": "PTA（会費債権・徴収の原則的主体）／学校（関与が立証された場合に限り公的主体として別審査）",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "school_collection_of_pta_fee",
+              "documentStatus": "indication",
+              "observation": "2025年5月8日付学校・PTA名義のPTA会費集金依頼がある。書面の名義と実際の収納主体・送金経路は別途確認。",
+              "locators": [
+                {
+                  "sourceId": "original-nanmori-es",
+                  "locator": "p.1 PTA会費集金のお願い"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "会費請求・集金はPTA固有の内部事務。学校が引き受ける場合は自治体の具体的な所掌と実施権限を提示する必要があり、3月30日通知の同意・委託だけでは足りない。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "personal_information",
+          "subject": "学校又は教育委員会（公的保有情報）／PTA（本人から取得した情報）を分ける",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "school_administration",
+          "subject": "PTA（会員・会計・役員選出等）／学校（教育活動・地域連携等の法令上の所掌）の分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "membership",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "officers",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "children",
+          "subject": "学校の教育活動・PTAの私的事業それぞれの実施者を特定",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "spending",
+          "subject": "PTAの支出と学校・自治体の寄附受領を分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        }
+      ],
+      "lawReview": [
+        {
+          "id": "membership_contract",
+          "law": "民法521・522条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "fee_claim",
+          "law": "民法521・522・703・709条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "consumer_contract",
+          "law": "消費者契約法4・10条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/412AC0000000061"
+        },
+        {
+          "id": "task_authority",
+          "law": "学校教育法・地方教育行政法及び当該自治体の法令上の所掌",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000026"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "law": "個人情報保護法61条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "public_personal_data_use",
+          "law": "個人情報保護法69条1・2項、70条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "pta_personal_data",
+          "law": "個人情報保護法17・18・20・21・23・27条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "teachers_service",
+          "law": "地方公務員法35条、34条、60条2号",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/325AC0000000261"
+        },
+        {
+          "id": "public_cash_custody",
+          "law": "地方自治法235条の4第2項・施行令168条の7",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        },
+        {
+          "id": "pta_school_spending",
+          "law": "地方財政法4条の5、寄附受納・財務会計関係法令",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/323AC0000000109"
+        },
+        {
+          "id": "social_education",
+          "law": "社会教育法10・12条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/324AC0000000207"
+        },
+        {
+          "id": "officers",
+          "law": "民法521・522条、委任・意思表示に関する民法規定",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "child_treatment",
+          "law": "学校教育関係法令、憲法14・26条の公的学校との関係",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/321CONSTITUTION"
+        },
+        {
+          "id": "civil_remedies",
+          "law": "民法703・709条、国家賠償法1条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "public_audit",
+          "law": "地方自治法242条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        }
+      ],
+      "administrationResponsibility": "学校別の具体的事務が、市教委の2026-03-30通知に基づく運用か、各PTA独自運用かを特定。市の同意・委任による設計と10月改善方針の実施を区別。",
+      "disclosureStatus": "draft_do_not_publish_as_legal_violation"
+    },
+    {
+      "id": "shimizu-es",
+      "name": "清水小学校",
+      "schoolType": "小学校",
+      "verifiedOriginal": "清水小学校_07.pdf",
+      "documentsAtLeastOne": true,
+      "reviews": [
+        {
+          "category": "fee_authority",
+          "subject": "PTA（会費債権・徴収の原則的主体）／学校（関与が立証された場合に限り公的主体として別審査）",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "school_collection_of_pta_fee",
+              "documentStatus": "indication",
+              "observation": "入会申込書に『PTA会費の集金を学校に委託することに同意』と明記。契約上の同意が公法上の学校徴収権限を生じさせるものではない。実際の引落・徴収主体は未確認。",
+              "locators": [
+                {
+                  "sourceId": "original-shimizu-es",
+                  "locator": "p.2 入会申込書・会費集金委託同意書"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "会費請求・集金はPTA固有の内部事務。学校が引き受ける場合は自治体の具体的な所掌と実施権限を提示する必要があり、3月30日通知の同意・委託だけでは足りない。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "personal_information",
+          "subject": "学校又は教育委員会（公的保有情報）／PTA（本人から取得した情報）を分ける",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "school_administration",
+          "subject": "PTA（会員・会計・役員選出等）／学校（教育活動・地域連携等の法令上の所掌）の分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "membership",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "voluntary_membership_notice",
+              "documentStatus": "confirmed_yes",
+              "observation": "2026年度から加入・非加入の意思を明確にすると説明し、加入希望者が会員登録カードを提出する方式を示す。",
+              "locators": [
+                {
+                  "sourceId": "original-shimizu-es",
+                  "locator": "p.1 入退会のお知らせ"
+                }
+              ]
+            },
+            {
+              "axis": "explicit_opt_in",
+              "documentStatus": "confirmed_yes",
+              "observation": "入会申込書に『PTAに入会します』と明記され、会員登録カードを提出しない者は会員にならない旨の改訂事項がある。運用の実際は別確認。",
+              "locators": [
+                {
+                  "sourceId": "original-shimizu-es",
+                  "locator": "p.1 改訂事項／p.2 入会申込書"
+                }
+              ]
+            },
+            {
+              "axis": "withdrawal_procedure",
+              "documentStatus": "confirmed_yes",
+              "observation": "退会届の提出による退会を案内。年度途中の意思変更の届出にも言及。",
+              "locators": [
+                {
+                  "sourceId": "original-shimizu-es",
+                  "locator": "p.1 入退会案内・改訂事項"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "任意加入の表記を肯定的に評価。ただしすべての保護者の本人意思を確認した証拠にはならない。",
+            "加入希望者の申込みとPTA承諾・資格発生日を確認する。紙の有無ではなく自由な意思形成の実態。退会届と加入届の兼用は自動的にオプトインとはならない。",
+            "退会届の有無と実際の提出・受理・時期制限・理由記載要求を区別する。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "officers",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "children",
+          "subject": "学校の教育活動・PTAの私的事業それぞれの実施者を特定",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "nonmember_equal_treatment",
+              "documentStatus": "confirmed_yes",
+              "observation": "会員・非会員を問わず児童・保護者が差別・不利益を受けない旨の規程を明記。実際の運用は未確認。",
+              "locators": [
+                {
+                  "sourceId": "original-shimizu-es",
+                  "locator": "p.1 改訂事項4"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "学校教育活動での子どもの扱いと、PTAの純粋な私的事業を区別。記念品・実費請求の具体的根拠を確認。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "spending",
+          "subject": "PTAの支出と学校・自治体の寄附受領を分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        }
+      ],
+      "lawReview": [
+        {
+          "id": "membership_contract",
+          "law": "民法521・522条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "fee_claim",
+          "law": "民法521・522・703・709条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "consumer_contract",
+          "law": "消費者契約法4・10条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/412AC0000000061"
+        },
+        {
+          "id": "task_authority",
+          "law": "学校教育法・地方教育行政法及び当該自治体の法令上の所掌",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000026"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "law": "個人情報保護法61条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "public_personal_data_use",
+          "law": "個人情報保護法69条1・2項、70条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "pta_personal_data",
+          "law": "個人情報保護法17・18・20・21・23・27条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "teachers_service",
+          "law": "地方公務員法35条、34条、60条2号",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/325AC0000000261"
+        },
+        {
+          "id": "public_cash_custody",
+          "law": "地方自治法235条の4第2項・施行令168条の7",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        },
+        {
+          "id": "pta_school_spending",
+          "law": "地方財政法4条の5、寄附受納・財務会計関係法令",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/323AC0000000109"
+        },
+        {
+          "id": "social_education",
+          "law": "社会教育法10・12条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/324AC0000000207"
+        },
+        {
+          "id": "officers",
+          "law": "民法521・522条、委任・意思表示に関する民法規定",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "child_treatment",
+          "law": "学校教育関係法令、憲法14・26条の公的学校との関係",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/321CONSTITUTION"
+        },
+        {
+          "id": "civil_remedies",
+          "law": "民法703・709条、国家賠償法1条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "public_audit",
+          "law": "地方自治法242条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        }
+      ],
+      "administrationResponsibility": "学校別の具体的事務が、市教委の2026-03-30通知に基づく運用か、各PTA独自運用かを特定。市の同意・委任による設計と10月改善方針の実施を区別。",
+      "disclosureStatus": "draft_do_not_publish_as_legal_violation"
+    },
+    {
+      "id": "tobio-es",
+      "name": "鳶尾小学校",
+      "schoolType": "小学校",
+      "verifiedOriginal": "鳶尾小学校　相談受付記録_01.pdf",
+      "documentsAtLeastOne": true,
+      "reviews": [
+        {
+          "category": "fee_authority",
+          "subject": "PTA（会費債権・徴収の原則的主体）／学校（関与が立証された場合に限り公的主体として別審査）",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "school_collection_of_pta_fee",
+              "documentStatus": "indication",
+              "observation": "市教育総務課との2026年2月メールの印刷記録に『集金袋の使用』による児童への不利益を指摘する照会が掲載。発生事実は未確認。",
+              "locators": [
+                {
+                  "sourceId": "original-tobio-es",
+                  "locator": "p.2 市教育総務課とのやり取り"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "会費請求・集金はPTA固有の内部事務。学校が引き受ける場合は自治体の具体的な所掌と実施権限を提示する必要があり、3月30日通知の同意・委託だけでは足りない。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "personal_information",
+          "subject": "学校又は教育委員会（公的保有情報）／PTA（本人から取得した情報）を分ける",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "school_administration",
+          "subject": "PTA（会員・会計・役員選出等）／学校（教育活動・地域連携等の法令上の所掌）の分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "membership",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "officers",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "children",
+          "subject": "学校の教育活動・PTAの私的事業それぞれの実施者を特定",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "spending",
+          "subject": "PTAの支出と学校・自治体の寄附受領を分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        }
+      ],
+      "lawReview": [
+        {
+          "id": "membership_contract",
+          "law": "民法521・522条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "fee_claim",
+          "law": "民法521・522・703・709条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "consumer_contract",
+          "law": "消費者契約法4・10条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/412AC0000000061"
+        },
+        {
+          "id": "task_authority",
+          "law": "学校教育法・地方教育行政法及び当該自治体の法令上の所掌",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000026"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "law": "個人情報保護法61条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "public_personal_data_use",
+          "law": "個人情報保護法69条1・2項、70条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "pta_personal_data",
+          "law": "個人情報保護法17・18・20・21・23・27条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "teachers_service",
+          "law": "地方公務員法35条、34条、60条2号",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/325AC0000000261"
+        },
+        {
+          "id": "public_cash_custody",
+          "law": "地方自治法235条の4第2項・施行令168条の7",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        },
+        {
+          "id": "pta_school_spending",
+          "law": "地方財政法4条の5、寄附受納・財務会計関係法令",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/323AC0000000109"
+        },
+        {
+          "id": "social_education",
+          "law": "社会教育法10・12条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/324AC0000000207"
+        },
+        {
+          "id": "officers",
+          "law": "民法521・522条、委任・意思表示に関する民法規定",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "child_treatment",
+          "law": "学校教育関係法令、憲法14・26条の公的学校との関係",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/321CONSTITUTION"
+        },
+        {
+          "id": "civil_remedies",
+          "law": "民法703・709条、国家賠償法1条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "public_audit",
+          "law": "地方自治法242条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        }
+      ],
+      "administrationResponsibility": "学校別の具体的事務が、市教委の2026-03-30通知に基づく運用か、各PTA独自運用かを特定。市の同意・委任による設計と10月改善方針の実施を区別。",
+      "disclosureStatus": "draft_do_not_publish_as_legal_violation"
+    },
+    {
+      "id": "toda-es",
+      "name": "戸田小学校",
+      "schoolType": "小学校",
+      "verifiedOriginal": "戸田小学校_01.pdf",
+      "documentsAtLeastOne": true,
+      "reviews": [
+        {
+          "category": "fee_authority",
+          "subject": "PTA（会費債権・徴収の原則的主体）／学校（関与が立証された場合に限り公的主体として別審査）",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "school_collection_of_pta_fee",
+              "documentStatus": "indication",
+              "observation": "入会届に『PTAが学校に依頼し、振替を行います』と記載。学校が実際にどの口座・システムで処理したか未確認。委任・同意だけでは権限創設にならない。",
+              "locators": [
+                {
+                  "sourceId": "original-toda-es",
+                  "locator": "p.1 入会届②"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "会費請求・集金はPTA固有の内部事務。学校が引き受ける場合は自治体の具体的な所掌と実施権限を提示する必要があり、3月30日通知の同意・委託だけでは足りない。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "personal_information",
+          "subject": "学校又は教育委員会（公的保有情報）／PTA（本人から取得した情報）を分ける",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "school_administration",
+          "subject": "PTA（会員・会計・役員選出等）／学校（教育活動・地域連携等の法令上の所掌）の分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "membership",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "voluntary_membership_notice",
+              "documentStatus": "confirmed_yes",
+              "observation": "2026年1月30日付入会案内にPTAの加入は保護者・教職員の任意と明記。",
+              "locators": [
+                {
+                  "sourceId": "original-toda-es",
+                  "locator": "p.1 冒頭"
+                }
+              ]
+            },
+            {
+              "axis": "explicit_opt_in",
+              "documentStatus": "confirmed_yes",
+              "observation": "入会する・しないのチェック欄と個人情報の取扱い同意事項がある。実際の申込み・受理状況は未確認。",
+              "locators": [
+                {
+                  "sourceId": "original-toda-es",
+                  "locator": "p.1 入会届"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "任意加入の表記を肯定的に評価。ただしすべての保護者の本人意思を確認した証拠にはならない。",
+            "加入希望者の申込みとPTA承諾・資格発生日を確認する。紙の有無ではなく自由な意思形成の実態。退会届と加入届の兼用は自動的にオプトインとはならない。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "officers",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "children",
+          "subject": "学校の教育活動・PTAの私的事業それぞれの実施者を特定",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "nonmember_equal_treatment",
+              "documentStatus": "indication",
+              "observation": "退会届では非会員児童を差別しない一方、PTA会費支出の記念品等の実費を請求する可能性が示される。具体的請求と児童への影響は未確認。",
+              "locators": [
+                {
+                  "sourceId": "original-toda-es",
+                  "locator": "p.2 退会届"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "学校教育活動での子どもの扱いと、PTAの純粋な私的事業を区別。記念品・実費請求の具体的根拠を確認。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "spending",
+          "subject": "PTAの支出と学校・自治体の寄附受領を分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        }
+      ],
+      "lawReview": [
+        {
+          "id": "membership_contract",
+          "law": "民法521・522条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "fee_claim",
+          "law": "民法521・522・703・709条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "consumer_contract",
+          "law": "消費者契約法4・10条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/412AC0000000061"
+        },
+        {
+          "id": "task_authority",
+          "law": "学校教育法・地方教育行政法及び当該自治体の法令上の所掌",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000026"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "law": "個人情報保護法61条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "public_personal_data_use",
+          "law": "個人情報保護法69条1・2項、70条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "pta_personal_data",
+          "law": "個人情報保護法17・18・20・21・23・27条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "teachers_service",
+          "law": "地方公務員法35条、34条、60条2号",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/325AC0000000261"
+        },
+        {
+          "id": "public_cash_custody",
+          "law": "地方自治法235条の4第2項・施行令168条の7",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        },
+        {
+          "id": "pta_school_spending",
+          "law": "地方財政法4条の5、寄附受納・財務会計関係法令",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/323AC0000000109"
+        },
+        {
+          "id": "social_education",
+          "law": "社会教育法10・12条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/324AC0000000207"
+        },
+        {
+          "id": "officers",
+          "law": "民法521・522条、委任・意思表示に関する民法規定",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "child_treatment",
+          "law": "学校教育関係法令、憲法14・26条の公的学校との関係",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/321CONSTITUTION"
+        },
+        {
+          "id": "civil_remedies",
+          "law": "民法703・709条、国家賠償法1条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "public_audit",
+          "law": "地方自治法242条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        }
+      ],
+      "administrationResponsibility": "学校別の具体的事務が、市教委の2026-03-30通知に基づく運用か、各PTA独自運用かを特定。市の同意・委任による設計と10月改善方針の実施を区別。",
+      "disclosureStatus": "draft_do_not_publish_as_legal_violation"
+    },
+    {
+      "id": "tomuro-es",
+      "name": "戸室小学校",
+      "schoolType": "小学校",
+      "verifiedOriginal": "戸室小学校_11.pdf",
+      "documentsAtLeastOne": true,
+      "reviews": [
+        {
+          "category": "fee_authority",
+          "subject": "PTA（会費債権・徴収の原則的主体）／学校（関与が立証された場合に限り公的主体として別審査）",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "personal_information",
+          "subject": "学校又は教育委員会（公的保有情報）／PTA（本人から取得した情報）を分ける",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "school_personal_data_for_pta",
+              "documentStatus": "indication",
+              "observation": "児童・保護者情報、登校班カラー等をPTAカードに記録し登校班編成・役員選出に使用すると記載。学校が保有する情報の転用か、PTA自身が直接取得する情報かは未確認。",
+              "locators": [
+                {
+                  "sourceId": "original-tomuro-es",
+                  "locator": "p.1 PTA・保護者カード"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "学校が保有した学籍・連絡先等の情報と、PTAが本人から直接取得した情報を区別。学校の所掌を先に検証し、その後61条・69条各要件と学校内部利用・団体提供を区別する。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "school_administration",
+          "subject": "PTA（会員・会計・役員選出等）／学校（教育活動・地域連携等の法令上の所掌）の分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "membership",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "explicit_opt_in",
+              "documentStatus": "confirmed_yes",
+              "observation": "PTA・保護者カードに加入・非加入を選択する欄を設ける。会員資格のPTA承諾と実際の提出は未確認。",
+              "locators": [
+                {
+                  "sourceId": "original-tomuro-es",
+                  "locator": "p.1 PTA・保護者カード"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "加入希望者の申込みとPTA承諾・資格発生日を確認する。紙の有無ではなく自由な意思形成の実態。退会届と加入届の兼用は自動的にオプトインとはならない。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "officers",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "children",
+          "subject": "学校の教育活動・PTAの私的事業それぞれの実施者を特定",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "spending",
+          "subject": "PTAの支出と学校・自治体の寄附受領を分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        }
+      ],
+      "lawReview": [
+        {
+          "id": "membership_contract",
+          "law": "民法521・522条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "fee_claim",
+          "law": "民法521・522・703・709条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "consumer_contract",
+          "law": "消費者契約法4・10条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/412AC0000000061"
+        },
+        {
+          "id": "task_authority",
+          "law": "学校教育法・地方教育行政法及び当該自治体の法令上の所掌",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000026"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "law": "個人情報保護法61条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "public_personal_data_use",
+          "law": "個人情報保護法69条1・2項、70条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "pta_personal_data",
+          "law": "個人情報保護法17・18・20・21・23・27条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "teachers_service",
+          "law": "地方公務員法35条、34条、60条2号",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/325AC0000000261"
+        },
+        {
+          "id": "public_cash_custody",
+          "law": "地方自治法235条の4第2項・施行令168条の7",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        },
+        {
+          "id": "pta_school_spending",
+          "law": "地方財政法4条の5、寄附受納・財務会計関係法令",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/323AC0000000109"
+        },
+        {
+          "id": "social_education",
+          "law": "社会教育法10・12条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/324AC0000000207"
+        },
+        {
+          "id": "officers",
+          "law": "民法521・522条、委任・意思表示に関する民法規定",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "child_treatment",
+          "law": "学校教育関係法令、憲法14・26条の公的学校との関係",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/321CONSTITUTION"
+        },
+        {
+          "id": "civil_remedies",
+          "law": "民法703・709条、国家賠償法1条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "public_audit",
+          "law": "地方自治法242条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        }
+      ],
+      "administrationResponsibility": "学校別の具体的事務が、市教委の2026-03-30通知に基づく運用か、各PTA独自運用かを特定。市の同意・委任による設計と10月改善方針の実施を区別。",
+      "disclosureStatus": "draft_do_not_publish_as_legal_violation"
+    },
+    {
+      "id": "tsumada-es",
+      "name": "妻田小学校",
+      "schoolType": "小学校",
+      "verifiedOriginal": "麦田小学校_12.pdf",
+      "documentsAtLeastOne": true,
+      "reviews": [
+        {
+          "category": "fee_authority",
+          "subject": "PTA（会費債権・徴収の原則的主体）／学校（関与が立証された場合に限り公的主体として別審査）",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "personal_information",
+          "subject": "学校又は教育委員会（公的保有情報）／PTA（本人から取得した情報）を分ける",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "school_administration",
+          "subject": "PTA（会員・会計・役員選出等）／学校（教育活動・地域連携等の法令上の所掌）の分離",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "teacher_internal_pta_admin",
+              "documentStatus": "indication",
+              "observation": "未提出の場合は『学校事務局までご連絡ください』と記載。実際に学校職員がPTA内部事務を行ったかは不明。",
+              "locators": [
+                {
+                  "sourceId": "original-tsumada-es",
+                  "locator": "p.1 第3項"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "職員の業務時間、校務分掌や職命、職専免と具体的事務内容を確認。慣行・民間委任は職務権限を創設しない。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "membership",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "voluntary_membership_notice",
+              "documentStatus": "indication",
+              "observation": "登録票と会費納入をもって加入扱いとし、明示的な加入・非加入選択欄の有無はこの2ページからは確認できない。",
+              "locators": [
+                {
+                  "sourceId": "original-tsumada-es",
+                  "locator": "p.1『PTA加入について』"
+                }
+              ]
+            },
+            {
+              "axis": "explicit_opt_in",
+              "documentStatus": "indication",
+              "observation": "登録票の提出と会費納入を加入扱いとする書式。申込意思が自由であるかとPTA承諾の記録は要確認。",
+              "locators": [
+                {
+                  "sourceId": "original-tsumada-es",
+                  "locator": "p.1 第3項"
+                }
+              ]
+            },
+            {
+              "axis": "withdrawal_procedure",
+              "documentStatus": "confirmed_yes",
+              "observation": "退会届の書式があり、退会理由の記入欄が設けられている。理由を記載しない退会の可否は未確認。",
+              "locators": [
+                {
+                  "sourceId": "original-tsumada-es",
+                  "locator": "p.2 退会届"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "任意加入の表記を肯定的に評価。ただしすべての保護者の本人意思を確認した証拠にはならない。",
+            "加入希望者の申込みとPTA承諾・資格発生日を確認する。紙の有無ではなく自由な意思形成の実態。退会届と加入届の兼用は自動的にオプトインとはならない。",
+            "退会届の有無と実際の提出・受理・時期制限・理由記載要求を区別する。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "officers",
+          "subject": "PTAが原則的内部事務の主体",
+          "state": "document_evidence_reviewed_implementation_open",
+          "evidence": [
+            {
+              "axis": "officer_selection_pressure",
+              "documentStatus": "confirmed_yes",
+              "observation": "児童1人につき原則1回の委員引受を依頼し、入学式直後にクラスで委員選出する予定を記載。強制的な就任は未確認。",
+              "locators": [
+                {
+                  "sourceId": "original-tsumada-es",
+                  "locator": "p.1 本文・第4項"
+                }
+              ]
+            }
+          ],
+          "legalQuestion": [
+            "抽選・一人一役と任意の就任承諾を区別。児童ごとの履歴・非加入者の選出有無を確認する。"
+          ],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "children",
+          "subject": "学校の教育活動・PTAの私的事業それぞれの実施者を特定",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        },
+        {
+          "category": "spending",
+          "subject": "PTAの支出と学校・自治体の寄附受領を分離",
+          "state": "no_specific_evidence_in_reviewed_pdf",
+          "evidence": [],
+          "legalQuestion": [],
+          "authorityFound": "not_demonstrated_in_reviewed_materials",
+          "authorityCaution": "この表の『権限根拠未提示』は不存在の確定ではない。学校・教育委員会の法令・規則・制度文書、実際の行為を独立に確認。",
+          "finding": "資料の記載を確認した段階。公法上の権限及び違法性・損害・刑事責任等は未確定。"
+        }
+      ],
+      "lawReview": [
+        {
+          "id": "membership_contract",
+          "law": "民法521・522条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "fee_claim",
+          "law": "民法521・522・703・709条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "consumer_contract",
+          "law": "消費者契約法4・10条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/412AC0000000061"
+        },
+        {
+          "id": "task_authority",
+          "law": "学校教育法・地方教育行政法及び当該自治体の法令上の所掌",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000026"
+        },
+        {
+          "id": "public_personal_data_purpose",
+          "law": "個人情報保護法61条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "public_personal_data_use",
+          "law": "個人情報保護法69条1・2項、70条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "pta_personal_data",
+          "law": "個人情報保護法17・18・20・21・23・27条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/415AC0000000057"
+        },
+        {
+          "id": "teachers_service",
+          "law": "地方公務員法35条、34条、60条2号",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/325AC0000000261"
+        },
+        {
+          "id": "public_cash_custody",
+          "law": "地方自治法235条の4第2項・施行令168条の7",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        },
+        {
+          "id": "pta_school_spending",
+          "law": "地方財政法4条の5、寄附受納・財務会計関係法令",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/323AC0000000109"
+        },
+        {
+          "id": "social_education",
+          "law": "社会教育法10・12条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/324AC0000000207"
+        },
+        {
+          "id": "officers",
+          "law": "民法521・522条、委任・意思表示に関する民法規定",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "child_treatment",
+          "law": "学校教育関係法令、憲法14・26条の公的学校との関係",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/321CONSTITUTION"
+        },
+        {
+          "id": "civil_remedies",
+          "law": "民法703・709条、国家賠償法1条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        },
+        {
+          "id": "public_audit",
+          "law": "地方自治法242条",
+          "status": "legal_applicability_pending",
+          "reason": "原本記載との接続・個別事実・反証を確認してから適用する。",
+          "lawUrl": "https://laws.e-gov.go.jp/law/322AC0000000067"
+        }
+      ],
+      "administrationResponsibility": "学校別の具体的事務が、市教委の2026-03-30通知に基づく運用か、各PTA独自運用かを特定。市の同意・委任による設計と10月改善方針の実施を区別。",
+      "disclosureStatus": "draft_do_not_publish_as_legal_violation"
+    }
+  ],
+  "actionMatrix": [
+    {
+      "priority": 1,
+      "authority": "市教育委員会",
+      "request": "2026年3月30日通知の条項の存廃・2026年10月26日策定中ガイドラインの制定、校長への適用と周知日",
+      "verification": "通知の改訂版・新ガイドライン・全校通知"
+    },
+    {
+      "priority": 2,
+      "authority": "市教育委員会／対象校",
+      "request": "清水小・戸田小等のPTA会費を学校が扱う根拠と、会費債権者、口座、保護者情報の流れ",
+      "verification": "口座名義・入出金記録・契約書・学校徴収金規則・授権条項"
+    },
+    {
+      "priority": 3,
+      "authority": "市教育委員会／睦合中",
+      "request": "校長名義書面によるPTA目的情報利用の所掌・法61条と69条の整理、内部利用・第三者提供の区別",
+      "verification": "元の保有目的、所掌根拠、配信記録、提供記録"
+    },
+    {
+      "priority": 4,
+      "authority": "相川中、依知小、上依知小、妻田小のPTA・学校",
+      "request": "抽選・役員選考が任意加入者を対象としたか、本人就任承諾・免除理由の管理をどうしたか",
+      "verification": "会員資格記録、選出手順、就任承諾の記録"
+    },
+    {
+      "priority": 5,
+      "authority": "市教育委員会",
+      "request": "寄附受納・物品提供の学校別調査結果（11月30日回答予定）の実施と資金・物品の整理",
+      "verification": "寄附申出書、受領決裁、備品台帳、対象校一覧"
+    }
+  ]
+}
