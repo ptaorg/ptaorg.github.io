@@ -45,7 +45,7 @@ ${docs.map((doc) => {
   const chrome = commonChrome();
   const title = `${record.schoolName} PTA関連資料 | PTA適正化推進委員会`;
   const description = record.description || `${record.schoolName}のPTA関連一次資料を年度・資料種別ごとに整理した学校別アーカイブです。`;
-  const ogImage = record.ogImage || "/assets/og-image-popc-en.png";
+  const ogImage = "/assets/og-image.png";
   const docs = Array.isArray(record.documents) ? record.documents : [];
 
   return `<!DOCTYPE html>
@@ -61,7 +61,7 @@ ${docs.map((doc) => {
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${escapeHtml(record.canonical)}">
   <meta property="og:image" content="${escapeHtml(absoluteUrl(ogImage))}">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:image" content="${escapeHtml(absoluteUrl(ogImage))}">
   <link rel="canonical" href="${escapeHtml(record.canonical)}">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="stylesheet" href="/css/site.css?v=20260814-3">
