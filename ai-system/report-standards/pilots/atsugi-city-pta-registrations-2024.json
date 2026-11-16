@@ -4,7 +4,7 @@
   "sourceTitle": "資料2 個人情報取扱事務及び個人情報ファイルの登録について",
   "sourceSnapshot": "R6.8.31現在",
   "checkedDate": "2026-11-16",
-  "sourceStatus": "2023・2024年の市公式登録簿PDFテキストから15校の『PTA事務』を確認。うち11校の学校別原本PDFは未照合。PDFページ画像はウェブのキャッシュエラーで独立目視未了。事務登録と公法上の授権・2026年現在の取扱実施は別。",
+  "sourceStatus": "公式の学校別登録簿のテキストから24校の『PTA事務』登録を特定。根拠法令欄は23校『無し』、睦合中学校は『学校教育法施行規則』。学校別PDFの原本確認15校とは独立。2026年の制度と実務及びPDF全頁画像の目視は未検証。",
   "caution": "これは個人情報取扱『事務』の行政登録簿であり、PTAによる活動が現に実施されたこと、同項目に掲げる法令が特定の会費徴収・名簿利用・役員選出を授権することの証明ではない。『根拠法令 無し』もあくまで登録欄の記載であり、他の法令上の授権が一切存在しないと確定したものではない。最新登録簿の改訂も未確認。",
   "entries": [
     {
@@ -200,6 +200,151 @@
         "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/r050703s4.pdf",
         "registrationDate": "2023-04-01"
       }
+    },
+    {
+      "schoolId": "iiyama-es",
+      "schoolName": "飯山小学校",
+      "registryId": "7800(19)-000029",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "市公式PDFのPTA事務登録該当行（テキスト確認、ページ画像の再取得は未了）",
+      "documentText": "名称：ＰＴＡ事務。教職員と保護者との連携を図り、児童・生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/780019zimu2.pdf",
+        "registrationDate": "2023-04-01",
+        "recordedPersonalInformationFile": "ＰＴＡ役員名簿",
+        "recordedFields": [
+          "児童氏名",
+          "保護者氏名",
+          "地区名 等"
+        ],
+        "sourceCaution": "当該登録は2023年又は2024年時点。現行保有・実施・具体的授権は未確定。"
+      }
+    },
+    {
+      "schoolId": "moridai-es",
+      "schoolName": "毛利台小学校",
+      "registryId": "7800(17)-000029",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "市公式PDFのPTA事務登録該当行（テキスト確認、ページ画像の再取得は未了）",
+      "documentText": "名称：ＰＴＡ事務。教職員と保護者との連携を図り、児童・生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/780017zimu2.pdf",
+        "registrationDate": "2023-04-01",
+        "recordedPersonalInformationFile": "ＰＴＡ役員名簿",
+        "recordedFields": [
+          "児童氏名",
+          "保護者氏名",
+          "地区名 等"
+        ],
+        "sourceCaution": "当該登録は2023年又は2024年時点。現行保有・実施・具体的授権は未確定。"
+      }
+    },
+    {
+      "schoolId": "morinosato-es",
+      "schoolName": "森の里小学校",
+      "registryId": "7800(20)-000028",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "市公式PDFのPTA事務登録該当行（テキスト確認、ページ画像の再取得は未了）",
+      "documentText": "名称：ＰＴＡ事務。教職員と保護者との連携を図り、児童・生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/siryo2.pdf",
+        "registrationDate": "2023-04-01",
+        "sourceCaution": "当該登録は2023年又は2024年時点。現行保有・実施・具体的授権は未確定。"
+      }
+    },
+    {
+      "schoolId": "mutsuai-higashi-jhs",
+      "schoolName": "睦合東中学校",
+      "registryId": "7800(35)-000018",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "市公式PDFのPTA事務登録該当行（テキスト確認、ページ画像の再取得は未了）",
+      "documentText": "名称：ＰＴＡ事務。教職員と保護者との連携を図り、児童・生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/a780035zimu1.pdf",
+        "registrationDate": "2023-04-01",
+        "recordedPersonalInformationFile": "ＰＴＡ役員名簿",
+        "recordedFields": [
+          "氏名",
+          "役職"
+        ],
+        "sourceCaution": "当該登録は2023年又は2024年時点。現行保有・実施・具体的授権は未確定。"
+      }
+    },
+    {
+      "schoolId": "nanmori-jhs",
+      "schoolName": "南毛利中学校",
+      "registryId": "7800(30)-000028",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "市公式PDFのPTA事務登録該当行（テキスト確認、ページ画像の再取得は未了）",
+      "documentText": "名称：ＰＴＡ事務。教職員と保護者との連携を図り、児童・生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/r050703s4.pdf",
+        "registrationDate": "2023-04-01",
+        "sourceCaution": "当該登録は2023年又は2024年時点。現行保有・実施・具体的授権は未確定。"
+      }
+    },
+    {
+      "schoolId": "ogino-es",
+      "schoolName": "荻野小学校",
+      "registryId": "7800(4)-000028",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "市公式PDFのPTA事務登録該当行（テキスト確認、ページ画像の再取得は未了）",
+      "documentText": "名称：ＰＴＡ事務。教職員と保護者との連携を図り、児童・生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/siryo2.pdf",
+        "registrationDate": "2023-04-01",
+        "sourceCaution": "当該登録は2023年又は2024年時点。現行保有・実施・具体的授権は未確定。"
+      }
+    },
+    {
+      "schoolId": "sanda-es",
+      "schoolName": "三田小学校",
+      "registryId": "7800(5)-000028",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "市公式PDFのPTA事務登録該当行（テキスト確認、ページ画像の再取得は未了）",
+      "documentText": "名称：ＰＴＡ事務。教職員と保護者との連携を図り、児童・生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/78005zimu2.pdf",
+        "registrationDate": "2023-04-01",
+        "recordedPersonalInformationFile": "ＰＴＡ役員名簿",
+        "recordedFields": [
+          "児童氏名",
+          "保護者氏名",
+          "地区名 等"
+        ],
+        "sourceCaution": "当該登録は2023年又は2024年時点。現行保有・実施・具体的授権は未確定。"
+      }
+    },
+    {
+      "schoolId": "tamagawa-es",
+      "schoolName": "玉川小学校",
+      "registryId": "7800(8)-000027",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "市公式PDFのPTA事務登録該当行（テキスト確認、ページ画像の再取得は未了）",
+      "documentText": "名称：ＰＴＡ事務。教職員と保護者との連携を図り、児童・生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/siryo2.pdf",
+        "registrationDate": "2023-04-01",
+        "sourceCaution": "当該登録は2023年又は2024年時点。現行保有・実施・具体的授権は未確定。"
+      }
+    },
+    {
+      "schoolId": "tomei-jhs",
+      "schoolName": "東名中学校",
+      "registryId": "7800(31)-000019",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "市公式PDFのPTA事務登録該当行（テキスト確認、ページ画像の再取得は未了）",
+      "documentText": "名称：ＰＴＡ事務。教職員と保護者との連携を図り、児童・生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/780031zimu.pdf",
+        "registrationDate": "2023-04-01",
+        "recordedPersonalInformationFile": "ＰＴＡ役員名簿",
+        "recordedFields": [
+          "氏名",
+          "役職"
+        ],
+        "sourceCaution": "当該登録は2023年又は2024年時点。現行保有・実施・具体的授権は未確定。"
+      }
     }
   ],
   "crossCheck": [
@@ -212,7 +357,7 @@
     "市公式の2023/2024登録簿は過年度の事務登録であり、2026年11月現在の実施状況と区別。ページ画像のキャッシュエラーを記録し、テキスト上の登録欄を一次確認として管理する。"
   ],
   "stat": {
-    "rowsSeen": 15,
+    "rowsSeen": 24,
     "unreviewedSchoolIdsInThese": [
       "aiko-es",
       "atsugi-jhs",
@@ -224,9 +369,19 @@
       "fujizuka-jhs",
       "midorigaoka-es",
       "hayashi-jhs",
-      "morinosato-jhs"
+      "morinosato-jhs",
+      "iiyama-es",
+      "moridai-es",
+      "morinosato-es",
+      "mutsuai-higashi-jhs",
+      "nanmori-jhs",
+      "ogino-es",
+      "sanda-es",
+      "tamagawa-es",
+      "tomei-jhs"
     ],
     "separateFrom15OriginalSchoolPdfs": true,
-    "detailedPersonalDataFilesConfirmed": 4
+    "detailedPersonalDataFilesConfirmed": 9,
+    "officialIndexLink": "https://www.city.atsugi.kanagawa.jp/soshiki/gyoseisomuka/6/zimutourokubo/38061.html"
   }
 }
