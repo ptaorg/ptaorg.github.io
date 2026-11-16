@@ -22,11 +22,11 @@
       "archiveUrl": "https://ptaorg.com/archive/atsugi/aikawa-es/",
       "existingSiteRecord": "data/schools/atsugi/aikawa-es.json",
       "priorStatus": "重大リスク",
-      "priorFinding": "学校説明会後のPTA説明・役員選出、新入生名簿の利用について相談受付記録の記載がある。相談内容と実施事実は区別。",
+      "priorFinding": "旧公開JSONに相川小学校の名簿・役員選出疑義が記載されているが、原本の2026年1月16日の具体的相談は相川中学校についてのもの。学校への誤帰属が判明したため相川小の論点としては保留。2025年5月16日欄も『相川小PTA役員』との相談で事実確認は未実施。",
       "claimedOriginal": "相川小学校 相談受付記録_01.pdf",
       "reviewPriorities": [
-        "学校名簿・PTA役員選出",
-        "学校行事との接続"
+        "原本の相談相手と学校の対応関係",
+        "相川小に関する独立資料の有無"
       ],
       "sourceReview": "PDF原本の該当ページとページ画像を確認。各条項の存在は確認済み。ただし現行の運用、例外授権・現場実施と法的帰結は別審査。",
       "analysisYear": "2026",
@@ -68,28 +68,18 @@
           "sourceRefs": []
         },
         "school_personal_data_for_pta": {
-          "status": "indication",
-          "observation": "2026年1月16日の保護者の申告を市が記録。新入生名簿を役員選出に使用したと申告されるが、学校側の名簿提供・使用の実施事実は未確認。",
+          "status": "unknown",
+          "observation": "相談受付記録の2026年1月16日欄は『相川中学校の新入生保護者説明会』についての申告。相川小学校の当該行為の証拠にはならない。",
           "year": "2026",
-          "sourceRefs": [
-            {
-              "sourceId": "original-aikawa-es",
-              "locator": "p.2 保護者からの電話相談"
-            }
-          ],
-          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
+          "sourceRefs": [],
+          "reviewNotes": "資料ファイル名と本文の対象学校が不一致。相川小の旧評価について根拠学校の誤帰属を訂正する必要がある。"
         },
         "officer_selection_pressure": {
-          "status": "indication",
-          "observation": "保護者の申告として、任意加入の説明後に役員選出へ移ったとの記載。実際の役員選出状況は未確認。",
+          "status": "unknown",
+          "observation": "相談受付記録の2026年1月16日欄は『相川中学校の新入生保護者説明会』についての申告。相川小学校の当該行為の証拠にはならない。",
           "year": "2026",
-          "sourceRefs": [
-            {
-              "sourceId": "original-aikawa-es",
-              "locator": "p.2 2026年1月16日相談"
-            }
-          ],
-          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
+          "sourceRefs": [],
+          "reviewNotes": "資料ファイル名と本文の対象学校が不一致。相川小の旧評価について根拠学校の誤帰属を訂正する必要がある。"
         },
         "sensitive_exemption_questions": {
           "status": "unknown",
@@ -190,24 +180,28 @@
         },
         "school_personal_data_for_pta": {
           "status": "indication",
-          "observation": "PTA家庭数の確認・学年主任への報告、tetoru会費通知の学校一斉配信の記載。具体的な個人データの抽出・目的外利用・第三者提供の実施は未確認。",
+          "observation": "相川中学校の新入生説明会で『学校が持っている新入生の名簿を役員選出時に使用』したと保護者が市教委へ申告。学校による提供・閲覧の事実はまだ未立証。",
           "year": "2026",
           "sourceRefs": [
             {
-              "sourceId": "original-aikawa-jhs",
-              "locator": "p.1-2 PTA本部会報告／職員会議資料"
+              "sourceId": "original-aikawa-es",
+              "locator": "p.2 2026年1月16日の『相川中学校』に関する電話相談"
             }
           ],
-          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
+          "reviewNotes": "別名のPDF『相川小学校 相談受付記録_01』に記録。会議録とは別の申告証拠。"
         },
         "officer_selection_pressure": {
           "status": "confirmed_yes",
-          "observation": "2026年1月14日付本部会報告に新入生保護者説明会で3年間の役員を『くじ引き』で選出したと明記。参加者の加入意思や抽選への同意、実際の就任は未確認。",
+          "observation": "2026年1月14日付本部会報告に新入生保護者説明会で3年間の役員を『くじ引き』で選出したと明記。参加者の加入意思や抽選への同意、実際の就任は未確認。 また別資料『相川小学校 相談受付記録_01』p.2は相川中学校の説明会で任意加入の説明直後に役員選出へ移ったとする申告を記録。",
           "year": "2026",
           "sourceRefs": [
             {
               "sourceId": "original-aikawa-jhs",
               "locator": "p.9 第5回本部会報告(4)"
+            },
+            {
+              "sourceId": "original-aikawa-es",
+              "locator": "p.2 相川中学校の説明会についての相談"
             }
           ],
           "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
@@ -3466,6 +3460,22 @@
       "pages": 1,
       "sourceAvailability": "Google Drive原本確認。公開サイトの保存PDFとの同一性はSHA照合未実施。",
       "publicSiteOriginalUrl": "/source-pdfs/atsugi/kamiogino-es/%E4%B8%8A%E8%8D%BB%E9%87%8E%E5%B0%8F%E5%AD%A6%E6%A0%A1_13.pdf"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "CORR-ATSUGI-001",
+      "severity": "high",
+      "type": "school_attribution",
+      "source": "相川小学校 相談受付記録_01.pdf",
+      "sourcePages": [
+        1,
+        2,
+        3
+      ],
+      "finding": "ファイル名『相川小学校』と2026年1月16日の相談本文の対象『相川中学校』に不一致。相川小学校の旧評価へ相談内容を帰属させた点は不適切。",
+      "action": "相川小学校の名簿使用・役員選出を当該資料で確認済みとしない。相川中学校について第三者申告として記録し、別の2026年1月14日本部会資料にあるくじ引きと照合。",
+      "publicSiteCorrectionPending": true
     }
   ]
 }
