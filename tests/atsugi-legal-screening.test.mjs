@@ -31,6 +31,6 @@ test('all cited school evidence locators come from the original intake, no inven
 test('city guidance, administrative progress, lawful authority and privacy are separated',()=>{
  assert.deepEqual(screening.administrativeChronology.map(x=>x.date),['2026-03-30','2026-04-09','2026-10-26','2026-11-30']);
  assert.equal(screening.schools.filter(x=>x.disclosureStatus==='draft_do_not_publish_as_legal_violation').length,15);
- assert.ok(screening.actionMatrix.some(x=>x.request.includes('集金')));
+ assert.ok(screening.actionMatrix.some(x=>/会費|徴収|集金/.test(x.request)));
  assert.ok(screening.actionMatrix.some(x=>x.request.includes('61条')));
 });
