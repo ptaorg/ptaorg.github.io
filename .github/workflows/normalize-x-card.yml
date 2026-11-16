@@ -2,7 +2,7 @@ name: Normalize X card metadata
 on:
   push:
     branches:
-      - fix/x-card-unify-20261116
+      - main
     paths:
       - scripts/unify-x-cards.cjs
       - .github/workflows/normalize-x-card.yml
