@@ -7,40 +7,108 @@
   "basePath": "/archive/atsugi/fujizuka-jhs/",
   "canonical": "https://ptaorg.com/archive/atsugi/fujizuka-jhs/",
   "ogImage": "/assets/ogp/atsugi/fujizuka-jhs.png",
-  "status": "評価準備中",
+  "status": "原本確認・追加調査あり",
   "statusClass": "eval-pending",
-  "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
+  "summary": "学校公式の2026年度予定表はPTA会費引き落としを掲載。PTAの案内はtetoruを通じた参加申込とクラス内での児童生徒の出席アンケートを案内しています。",
   "description": "藤塚中学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
-  "ogDescription": "藤塚中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
+  "ogDescription": "学校公式の2026年度予定表はPTA会費引き落としを掲載。PTAの案内はtetoruを通じた参加申込とクラス内での児童生徒の出席アンケートを案内しています。",
   "materials": {
     "documentName": "未確認",
     "confirmedDocuments": [
-      "未確認"
+      "PTA除草作業及びPTAバザーのご案内",
+      "厚木市立藤塚中学校 5月分月別予定表"
     ],
     "hasMembershipNotice": "未確認",
     "hasApplicationForm": "未確認",
     "applicationFormStatus": "未確認",
     "hasSchoolCollectionNotice": "未確認",
     "sourceImages": [],
-    "pdfStatus": "準備中",
+    "pdfStatus": "学校公式ページから原本PDFを確認",
     "pdf": null
   },
   "confirmedFacts": [
-    "資料確認後に記載します。"
+    "学校公式の2026年度予定表はPTA会費引き落としを掲載。PTAの案内はtetoruを通じた参加申込とクラス内での児童生徒の出席アンケートを案内しています。"
   ],
   "unconfirmedPoints": [
-    "PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を確認後に記載します。"
+    "現行規約・総会冊子・表決集計",
+    "会費振替依頼書・口座名義・送金記録",
+    "tetoru操作者・フォーム閲覧権限、対象者と利用目的、クラス調査の回収記録"
   ],
   "riskFlags": [
-    "未評価"
+    "要追加調査"
   ],
   "evaluation": [
-    "評価準備中"
+    "会費、PTA主催行事の申込、総会表決はPTA側の内部事務です。学校サイトは総会への不同意意見を学校に提出する方式も案内しています。除草の地域連携部分とバザー・申込管理を事務単位で区分し、後者に学校が関与する具体的な所掌根拠を確認する必要があります。募集の配信先・フォームの管理者・クラスアンケートを取得した主体と法61条上の目的を確認し、学校内部での利用とPTAへの提供をそれぞれ法69条で評価します。勤務中の従事・守秘と口座管理は地公法35条・34条、地自法235条の4第2項の事実確認が必要です。",
+    "学校とPTAで、会費の引落し、表決受領、行事募集、アンケート集計の担当者と権限を確定し、PTA内部手続はPTAの会員向け経路で扱ってください。"
   ],
   "humanReviewRequired": true,
-  "lastReviewed": "2026-06-02",
+  "lastReviewed": "2026-11-16",
   "nationalArchive": {
     "order": 33,
     "group": "中学校"
+  },
+  "officialPdfReview": {
+    "finding": "学校公式の2026年度予定表はPTA会費引き落としを掲載。PTAの案内はtetoruを通じた参加申込とクラス内での児童生徒の出席アンケートを案内しています。",
+    "assessment": "会費、PTA主催行事の申込、総会表決はPTA側の内部事務です。学校サイトは総会への不同意意見を学校に提出する方式も案内しています。除草の地域連携部分とバザー・申込管理を事務単位で区分し、後者に学校が関与する具体的な所掌根拠を確認する必要があります。募集の配信先・フォームの管理者・クラスアンケートを取得した主体と法61条上の目的を確認し、学校内部での利用とPTAへの提供をそれぞれ法69条で評価します。勤務中の従事・守秘と口座管理は地公法35条・34条、地自法235条の4第2項の事実確認が必要です。",
+    "action": "学校とPTAで、会費の引落し、表決受領、行事募集、アンケート集計の担当者と権限を確定し、PTA内部手続はPTAの会員向け経路で扱ってください。",
+    "missing": [
+      "現行規約・総会冊子・表決集計",
+      "会費振替依頼書・口座名義・送金記録",
+      "tetoru操作者・フォーム閲覧権限、対象者と利用目的、クラス調査の回収記録"
+    ],
+    "documents": [
+      {
+        "title": "PTA除草作業及びPTAバザーのご案内",
+        "date": "2026-05-08",
+        "url": "https://drive.google.com/file/d/1V6CutQw6VXYj07JoOCpe6ePmIq9t9oX7/view",
+        "officialPage": "https://www.fujizuka-js.atsugi.ed.jp/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/pta%E9%96%A2%E4%BF%82/2026pta",
+        "sha256": "89e3e36cf4276f23fbd1610967b37da1fb485e0d286b54a8716d374eee7969ca",
+        "pdfPages": 1,
+        "finding": "その他（3）・（4）のtetoru経由の回答とクラスアンケート。",
+        "crops": [
+          {
+            "image": "/assets/archive/atsugi/review-20261116/fujizuka-jhs-1-1.webp",
+            "sha256": "88fb8b230a3f883b2d897140305fba53c2201c40f283e9e878bd9bb1d501de9b",
+            "page": 1,
+            "cropRectPdfPts": [
+              90,
+              671,
+              566,
+              730
+            ],
+            "caption": "tetoru案内とクラスアンケート",
+            "width": 1428,
+            "height": 177,
+            "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+          }
+        ]
+      },
+      {
+        "title": "厚木市立藤塚中学校 5月分月別予定表",
+        "date": "2026年度",
+        "url": "https://drive.google.com/file/d/10cY3XmsXLGq1twF7SDmnKTiTAZhqjjU6/view",
+        "officialPage": "https://www.fujizuka-js.atsugi.ed.jp/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/%E6%9C%88%E5%88%A5%E4%BA%88%E5%AE%9A%E8%A1%A8",
+        "sha256": "e4ce3d9a6ad69c46fd2dedc83b86f30baa890de94dacf33ccca30106eceda537",
+        "pdfPages": 1,
+        "finding": "PTA会費引き落としの記載。",
+        "crops": [
+          {
+            "image": "/assets/archive/atsugi/review-20261116/fujizuka-jhs-2-1.webp",
+            "sha256": "0239d173ddd96101aa4ce1ea54b7891e506c2b822586a59c1e6f2d85cc7335fd",
+            "page": 1,
+            "cropRectPdfPts": [
+              698,
+              171,
+              798,
+              207
+            ],
+            "caption": "月別予定表にPTA会費引き落とし",
+            "width": 300,
+            "height": 108,
+            "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+          }
+        ]
+      }
+    ]
   }
 }

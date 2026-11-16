@@ -7,40 +7,79 @@
   "basePath": "/archive/atsugi/kita-es/",
   "canonical": "https://ptaorg.com/archive/atsugi/kita-es/",
   "ogImage": "/assets/ogp/atsugi/kita-es.png",
-  "status": "評価準備中",
+  "status": "原本確認・追加調査あり",
   "statusClass": "eval-pending",
-  "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
+  "summary": "2025年度の基本方針では、学校・家庭・地域の関係を見直し、活動を見えるようにする方針を掲げています。",
   "description": "北小学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
-  "ogDescription": "北小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
+  "ogDescription": "2025年度の基本方針では、学校・家庭・地域の関係を見直し、活動を見えるようにする方針を掲げています。",
   "materials": {
     "documentName": "未確認",
     "confirmedDocuments": [
-      "未確認"
+      "PTA基本方針.pdf"
     ],
     "hasMembershipNotice": "未確認",
     "hasApplicationForm": "未確認",
     "applicationFormStatus": "未確認",
     "hasSchoolCollectionNotice": "未確認",
     "sourceImages": [],
-    "pdfStatus": "準備中",
+    "pdfStatus": "学校公式ページから原本PDFを確認",
     "pdf": null
   },
   "confirmedFacts": [
-    "資料確認後に記載します。"
+    "2025年度の基本方針では、学校・家庭・地域の関係を見直し、活動を見えるようにする方針を掲げています。"
   ],
   "unconfirmedPoints": [
-    "PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を確認後に記載します。"
+    "現行の加入・退会書式、徴収・口座・会計記録",
+    "役員選出、情報の取得元と学校内利用・提供の記録"
   ],
   "riskFlags": [
-    "未評価"
+    "要追加調査"
   ],
   "evaluation": [
-    "評価準備中"
+    "基本方針はPTAの組織運営文書です。学校との協力方針は確認できます。参加の任意性、学校がPTA固有事務を扱う事実と根拠、情報と会計の処理は、各手続の資料が必要です。",
+    "会員と非会員双方に、参加を選べる手続と学校・PTAの担当範囲を明示してください。"
   ],
   "humanReviewRequired": true,
-  "lastReviewed": "2026-06-02",
+  "lastReviewed": "2026-11-16",
   "nationalArchive": {
     "order": 3,
     "group": "小学校"
+  },
+  "officialPdfReview": {
+    "finding": "2025年度の基本方針では、学校・家庭・地域の関係を見直し、活動を見えるようにする方針を掲げています。",
+    "assessment": "基本方針はPTAの組織運営文書です。学校との協力方針は確認できます。参加の任意性、学校がPTA固有事務を扱う事実と根拠、情報と会計の処理は、各手続の資料が必要です。",
+    "action": "会員と非会員双方に、参加を選べる手続と学校・PTAの担当範囲を明示してください。",
+    "missing": [
+      "現行の加入・退会書式、徴収・口座・会計記録",
+      "役員選出、情報の取得元と学校内利用・提供の記録"
+    ],
+    "documents": [
+      {
+        "title": "PTA基本方針.pdf",
+        "date": "2025年度",
+        "url": "https://drive.google.com/file/d/1nIHqBSrGfDE4Ds32vlpWvqj-SnKRW_Rt/view",
+        "sha256": "b89c4d8f89d74d57f7716e256e2a33d8fa7d092f502c0316d2bd8a7b5695857a",
+        "pdfPages": 1,
+        "finding": "保護者・学校・地域三者間の新しい関係と可視化を掲げる。",
+        "sourceSha256Rechecked": true,
+        "crops": [
+          {
+            "image": "/assets/archive/atsugi/review-20261116/prior-kt-01.webp",
+            "sha256": "34267b8c07217179e98b92b83a93839a538da4ef7760e9f572eb3a3cd37ff86c",
+            "page": 1,
+            "cropRectNormalized": [
+              0.06,
+              0.09,
+              0.95,
+              0.71
+            ],
+            "caption": "北小PTA基本方針：三者連携と見える化",
+            "width": 1326,
+            "height": 1305,
+            "privacy": "none"
+          }
+        ]
+      }
+    ]
   }
 }

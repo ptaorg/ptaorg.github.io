@@ -7,40 +7,79 @@
   "basePath": "/archive/atsugi/aiko-es/",
   "canonical": "https://ptaorg.com/archive/atsugi/aiko-es/",
   "ogImage": "/assets/ogp/atsugi/aiko-es.png",
-  "status": "評価準備中",
+  "status": "原本確認・追加調査あり",
   "statusClass": "eval-pending",
-  "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
+  "summary": "通学路の安全確保について、PTA校外生活指導委員会が協力を呼び掛け、学校の担当者も問い合わせ先に掲げています。",
   "description": "愛甲小学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
-  "ogDescription": "愛甲小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
+  "ogDescription": "通学路の安全確保について、PTA校外生活指導委員会が協力を呼び掛け、学校の担当者も問い合わせ先に掲げています。",
   "materials": {
     "documentName": "未確認",
     "confirmedDocuments": [
-      "未確認"
+      "通学安全確保について.pdf"
     ],
     "hasMembershipNotice": "未確認",
     "hasApplicationForm": "未確認",
     "applicationFormStatus": "未確認",
     "hasSchoolCollectionNotice": "未確認",
     "sourceImages": [],
-    "pdfStatus": "準備中",
+    "pdfStatus": "学校公式ページから原本PDFを確認",
     "pdf": null
   },
   "confirmedFacts": [
-    "資料確認後に記載します。"
+    "通学路の安全確保について、PTA校外生活指導委員会が協力を呼び掛け、学校の担当者も問い合わせ先に掲げています。"
   ],
   "unconfirmedPoints": [
-    "PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を確認後に記載します。"
+    "現行の加入・退会書式、徴収・口座・会計記録",
+    "役員選出、情報の取得元と学校内利用・提供の記録"
   ],
   "riskFlags": [
-    "未評価"
+    "要追加調査"
   ],
   "evaluation": [
-    "評価準備中"
+    "通学安全の調整は学校の教育上の安全対策と接点があります。問い合わせ対応の記載から、学校がPTAの入会・徴収・選出を処理した事実は確認できません。",
+    "安全上の相談窓口とPTA内部事務の連絡先を明確にしてください。"
   ],
   "humanReviewRequired": true,
-  "lastReviewed": "2026-06-02",
+  "lastReviewed": "2026-11-16",
   "nationalArchive": {
     "order": 14,
     "group": "小学校"
+  },
+  "officialPdfReview": {
+    "finding": "通学路の安全確保について、PTA校外生活指導委員会が協力を呼び掛け、学校の担当者も問い合わせ先に掲げています。",
+    "assessment": "通学安全の調整は学校の教育上の安全対策と接点があります。問い合わせ対応の記載から、学校がPTAの入会・徴収・選出を処理した事実は確認できません。",
+    "action": "安全上の相談窓口とPTA内部事務の連絡先を明確にしてください。",
+    "missing": [
+      "現行の加入・退会書式、徴収・口座・会計記録",
+      "役員選出、情報の取得元と学校内利用・提供の記録"
+    ],
+    "documents": [
+      {
+        "title": "通学安全確保について.pdf",
+        "date": "2025年度",
+        "url": "https://drive.google.com/file/d/1SxoJHyVyl7VVU7hKgiaEu8a4UQk8Xp26/view",
+        "sha256": "4276411064c37e4de03a925e66ce612a5c71731e3af76a9d5ddb37a9cdb414df",
+        "pdfPages": 1,
+        "finding": "PTA委員と学校教職員が問い合わせ先として記載。",
+        "sourceSha256Rechecked": true,
+        "crops": [
+          {
+            "image": "/assets/archive/atsugi/review-20261116/prior-ak-01.webp",
+            "sha256": "3fe7ea357e8a1343eac85390a3a450ec64a8316bc37370eca493d70a3f3197e7",
+            "page": 1,
+            "cropRectNormalized": [
+              0.06,
+              0.19,
+              0.94,
+              0.75
+            ],
+            "caption": "PTA校外生活指導委員会と学校を問い合わせ先として記載",
+            "width": 1311,
+            "height": 1179,
+            "privacy": "AK-01: incidental teacher name masked"
+          }
+        ]
+      }
+    ]
   }
 }

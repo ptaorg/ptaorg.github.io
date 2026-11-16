@@ -1,23 +1,29 @@
 {
-  "title": "厚木市36校・学校原本PDFと市公式PTA事務登録簿の二系統証拠カバレッジ",
+  "title": "厚木市36校・学校別原本と市公式PTA事務登録簿の確認状況",
   "date": "2026-11-16",
   "versions": {
-    "schoolPdfOriginals": "2025/2026（文書により差）",
-    "cityPtaRegistrations": "2023/2024登録簿を調査（原文PDFの一部はページ画像未照合）"
+    "schoolPdfOriginals": "2023～2026年の公開・開示資料（確認対象は資料ごとに異なる）",
+    "cityPtaRegistrations": "2023年33校、2024年34校の公式PDF登録欄を再確認"
   },
   "statistics": {
     "totalSchools": 36,
-    "both": 4,
-    "school_original_only": 11,
+    "both": 13,
+    "school_original_only": 2,
     "official_registration_only": 21,
     "no_individual_source_yet": 0,
     "schoolsWithAtLeastOneIndividualSource": 36,
-    "ptaPdfReviewedAnyTypeSchools": 19,
-    "schoolPtaPdfNotYetLocatedSchools": 17,
+    "ptaPdfReviewedAnyTypeSchools": 28,
+    "schoolPtaPdfNotYetLocatedSchools": 8,
     "schoolDetailedOriginalAuditedSchools": 15,
-    "schoolPtaAdditionalPdfScopingOnlySchools": 4
+    "schoolPtaAdditionalPdfScopingOnlySchools": 4,
+    "newlyReviewedPdfSchools": 9,
+    "newSchoolPdfOriginals": 16,
+    "newCrops": 13,
+    "previousCropsLocated": 34,
+    "previousCropsAddedToDraft": 6,
+    "schoolTargetedWrittenAssessments": 13
   },
-  "warning": "カバレッジには資料種類による2系統がある。2025/26学校別書式群を個別審査済み15校＋登録簿のみ21校という旧分類は維持。追加調査で学校公式PTA文書を4校（愛甲、緑ケ丘、森の里、北小）から新規直接確認したため、何らかの学校PTA PDFに到達した数は19校、学校PTA PDFが未確認なのは17校。ただし新4校は学校の会費徴収・会員管理・役員就任・名簿利用等を全面審査済みではない。行政登録簿は具体的実施の証拠ではない。",
+  "warning": "従来の個別監査15校、追加4校、今回の新規9校を区別。行政登録簿は適法性や実際の実施及び現在の運用を証明しない。学校原本の部分確認は全12軸の審査完了を意味しない。",
   "schools": [
     {
       "id": "aikawa-es",
@@ -25,10 +31,12 @@
       "schoolType": "小学校",
       "schoolOriginalPdf": true,
       "schoolOriginalFile": "相川小学校 相談受付記録_01.pdf",
-      "officialRegistry": false,
-      "registryId": null,
-      "registryLegalBasis": null,
-      "status": "school_original_only"
+      "officialRegistry": true,
+      "registryId": "7800(10)-000028",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
     },
     {
       "id": "aikawa-jhs",
@@ -36,10 +44,12 @@
       "schoolType": "中学校",
       "schoolOriginalPdf": true,
       "schoolOriginalFile": "相川中学校 会議録_04.pdf",
-      "officialRegistry": false,
-      "registryId": null,
-      "registryLegalBasis": null,
-      "status": "school_original_only"
+      "officialRegistry": true,
+      "registryId": "7800(36)-000029",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
     },
     {
       "id": "aiko-es",
@@ -64,7 +74,13 @@
         }
       ],
       "additionalPtaOriginalsVerified20261116": true,
-      "schoolOriginalPdfStatusNote": "従来の15校（特定の学校別資料群）とは別系統のPTA原本を新たに直接確認。学校実務の実施・適法性は未認定。"
+      "schoolOriginalPdfStatusNote": "従来の15校（特定の学校別資料群）とは別系統のPTA原本を新たに直接確認。学校実務の実施・適法性は未認定。",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "prior_supplement_reconciled",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1SxoJHyVyl7VVU7hKgiaEu8a4UQk8Xp26/view"
+      ]
     },
     {
       "id": "atsugi-daini-es",
@@ -75,7 +91,9 @@
       "officialRegistry": true,
       "registryId": "7800(11)-000028",
       "registryLegalBasis": "無し",
-      "status": "both"
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
     },
     {
       "id": "atsugi-es",
@@ -83,10 +101,12 @@
       "schoolType": "小学校",
       "schoolOriginalPdf": true,
       "schoolOriginalFile": "厚木小学校_06.pdf",
-      "officialRegistry": false,
-      "registryId": null,
-      "registryLegalBasis": null,
-      "status": "school_original_only"
+      "officialRegistry": true,
+      "registryId": "7800(1)-000028",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
     },
     {
       "id": "atsugi-jhs",
@@ -97,7 +117,15 @@
       "officialRegistry": true,
       "registryId": "7800(24)-000019",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": true,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "new_targeted_review",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1mrKGSVT7bgp2YLyoWgSJQm_eFC66xES7/view",
+        "https://drive.google.com/file/d/15m-MzxDNMha2ut8CaCyxDDbtWd2D5XqR/view",
+        "https://drive.google.com/file/d/16Jp4qY8PGJlMcgNEwVCMXbYoJBxU2J00/view"
+      ]
     },
     {
       "id": "echi-es",
@@ -105,10 +133,12 @@
       "schoolType": "小学校",
       "schoolOriginalPdf": true,
       "schoolOriginalFile": "依知小学校_0002.pdf",
-      "officialRegistry": false,
-      "registryId": null,
-      "registryLegalBasis": null,
-      "status": "school_original_only"
+      "officialRegistry": true,
+      "registryId": "7800(21)-000026",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
     },
     {
       "id": "echi-jhs",
@@ -119,7 +149,14 @@
       "officialRegistry": true,
       "registryId": "7800(25)-000019",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": true,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "new_targeted_review",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/13gl5dMugoI2a_iiY60-h3oQuP8ripix0/view",
+        "https://drive.google.com/file/d/116CrUe65o7bUV2HH1DM9fpQs_eLuHzRa/view"
+      ]
     },
     {
       "id": "echi-minami-es",
@@ -128,9 +165,16 @@
       "schoolOriginalPdf": false,
       "schoolOriginalFile": null,
       "officialRegistry": true,
-      "registryId": "7800（2）-000028",
+      "registryId": "7800(2)-000028",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": true,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "new_targeted_review",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1JlM6dqz-dNnfWRaVIayFwWZVR6mPKwzI/view",
+        "https://drive.google.com/file/d/1muJ51Qs4WenTN93zGPBOLy5qmLhuDDaO/view"
+      ]
     },
     {
       "id": "fujizuka-jhs",
@@ -139,9 +183,16 @@
       "schoolOriginalPdf": false,
       "schoolOriginalFile": null,
       "officialRegistry": true,
-      "registryId": "7800 (33)－000029",
+      "registryId": "7800(33)-000029",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": true,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "new_targeted_review",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1V6CutQw6VXYj07JoOCpe6ePmIq9t9oX7/view",
+        "https://drive.google.com/file/d/10cY3XmsXLGq1twF7SDmnKTiTAZhqjjU6/view"
+      ]
     },
     {
       "id": "hayashi-jhs",
@@ -152,7 +203,13 @@
       "officialRegistry": true,
       "registryId": "7800(32)-000019",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": true,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "new_targeted_review",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1nqoXi7qKt5I2827QNCRokSTHox0RYJoR/view"
+      ]
     },
     {
       "id": "iiyama-es",
@@ -163,7 +220,13 @@
       "officialRegistry": true,
       "registryId": "7800(19)-000029",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": true,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "new_targeted_review",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1n4kbyq70W3SXbezU6wKqBfbqAQQDahRt/view"
+      ]
     },
     {
       "id": "kamiechi-es",
@@ -174,7 +237,9 @@
       "officialRegistry": true,
       "registryId": "7800(23)-000029",
       "registryLegalBasis": "無し",
-      "status": "both"
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
     },
     {
       "id": "kamiogino-es",
@@ -182,10 +247,12 @@
       "schoolType": "小学校",
       "schoolOriginalPdf": true,
       "schoolOriginalFile": "上荻野小学校_13.pdf",
-      "officialRegistry": false,
-      "registryId": null,
-      "registryLegalBasis": null,
-      "status": "school_original_only"
+      "officialRegistry": true,
+      "registryId": "7800(18)-000025",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
     },
     {
       "id": "kita-es",
@@ -210,7 +277,13 @@
         }
       ],
       "additionalPtaOriginalsVerified20261116": true,
-      "schoolOriginalPdfStatusNote": "従来の15校（特定の学校別資料群）とは別系統のPTA原本を新たに直接確認。学校実務の実施・適法性は未認定。"
+      "schoolOriginalPdfStatusNote": "従来の15校（特定の学校別資料群）とは別系統のPTA原本を新たに直接確認。学校実務の実施・適法性は未認定。",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "prior_supplement_reconciled",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1nIHqBSrGfDE4Ds32vlpWvqj-SnKRW_Rt/view"
+      ]
     },
     {
       "id": "koayu-es",
@@ -221,7 +294,9 @@
       "officialRegistry": true,
       "registryId": "7800(7)-000028",
       "registryLegalBasis": "無し",
-      "status": "both"
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
     },
     {
       "id": "koayu-jhs",
@@ -232,7 +307,9 @@
       "officialRegistry": true,
       "registryId": "7800(28)-000019",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": false
     },
     {
       "id": "midorigaoka-es",
@@ -260,7 +337,13 @@
         }
       ],
       "additionalPtaOriginalsVerified20261116": true,
-      "schoolOriginalPdfStatusNote": "従来の15校（特定の学校別資料群）とは別系統のPTA原本を新たに直接確認。学校実務の実施・適法性は未認定。"
+      "schoolOriginalPdfStatusNote": "従来の15校（特定の学校別資料群）とは別系統のPTA原本を新たに直接確認。学校実務の実施・適法性は未認定。",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "prior_supplement_reconciled",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1AHwfpt1xDNMvOUSWcY6EBk9hf49cGkMv/view"
+      ]
     },
     {
       "id": "moridai-es",
@@ -271,7 +354,13 @@
       "officialRegistry": true,
       "registryId": "7800(17)-000029",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": true,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "new_targeted_review",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/13GQixj3mx-VnmTrG8RS0D-XJppLmt8pM/view"
+      ]
     },
     {
       "id": "morinosato-es",
@@ -318,7 +407,14 @@
         }
       ],
       "additionalPtaOriginalsVerified20261116": true,
-      "schoolOriginalPdfStatusNote": "従来の15校（特定の学校別資料群）とは別系統のPTA原本を新たに直接確認。学校実務の実施・適法性は未認定。"
+      "schoolOriginalPdfStatusNote": "従来の15校（特定の学校別資料群）とは別系統のPTA原本を新たに直接確認。学校実務の実施・適法性は未認定。",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "prior_supplement_reconciled",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1HSS4-2fJhkcXzRmfTYS5YkOVKwzLQysT/view",
+        "https://drive.google.com/file/d/1BMrczNqsUywFSBtY28MVCPjffhQTpoXQ/view"
+      ]
     },
     {
       "id": "morinosato-jhs",
@@ -329,7 +425,14 @@
       "officialRegistry": true,
       "registryId": "7800(34)-000019",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": true,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "new_targeted_review",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1r4QRLi5Vs1FTZOi2vMsrEYxHqMM8IvUW/view",
+        "https://drive.google.com/file/d/1qDhiW0mVgfyp_V1qgYZHH4UYqu4JiecZ/view"
+      ]
     },
     {
       "id": "mutsuai-higashi-jhs",
@@ -340,7 +443,9 @@
       "officialRegistry": true,
       "registryId": "7800(35)-000018",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": false
     },
     {
       "id": "mutsuai-jhs",
@@ -351,7 +456,9 @@
       "officialRegistry": true,
       "registryId": "7800(27)-000029",
       "registryLegalBasis": "学校教育法施行規則",
-      "status": "both"
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
     },
     {
       "id": "nanmori-es",
@@ -359,10 +466,12 @@
       "schoolType": "小学校",
       "schoolOriginalPdf": true,
       "schoolOriginalFile": "南毛利小学校_09.pdf",
-      "officialRegistry": false,
-      "registryId": null,
-      "registryLegalBasis": null,
-      "status": "school_original_only"
+      "officialRegistry": true,
+      "registryId": "7800(9)-000029",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
     },
     {
       "id": "nanmori-jhs",
@@ -373,7 +482,9 @@
       "officialRegistry": true,
       "registryId": "7800(30)-000028",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": false
     },
     {
       "id": "ogino-es",
@@ -384,7 +495,9 @@
       "officialRegistry": true,
       "registryId": "7800(4)-000028",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": false
     },
     {
       "id": "ogino-jhs",
@@ -395,7 +508,9 @@
       "officialRegistry": true,
       "registryId": "7800(26)-000024",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": false
     },
     {
       "id": "sanda-es",
@@ -406,7 +521,9 @@
       "officialRegistry": true,
       "registryId": "7800(5)-000028",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": false
     },
     {
       "id": "shimizu-es",
@@ -414,10 +531,12 @@
       "schoolType": "小学校",
       "schoolOriginalPdf": true,
       "schoolOriginalFile": "清水小学校_07.pdf",
-      "officialRegistry": false,
-      "registryId": null,
-      "registryLegalBasis": null,
-      "status": "school_original_only"
+      "officialRegistry": true,
+      "registryId": "7800(6)-000026",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
     },
     {
       "id": "tamagawa-es",
@@ -428,7 +547,9 @@
       "officialRegistry": true,
       "registryId": "7800(8)-000027",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": false
     },
     {
       "id": "tamagawa-jhs",
@@ -439,7 +560,9 @@
       "officialRegistry": true,
       "registryId": "7800(29)-0000019",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": false
     },
     {
       "id": "tobio-es",
@@ -450,7 +573,9 @@
       "officialRegistry": false,
       "registryId": null,
       "registryLegalBasis": null,
-      "status": "school_original_only"
+      "status": "school_original_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
     },
     {
       "id": "toda-es",
@@ -461,7 +586,9 @@
       "officialRegistry": false,
       "registryId": null,
       "registryLegalBasis": null,
-      "status": "school_original_only"
+      "status": "school_original_only",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
     },
     {
       "id": "tomei-jhs",
@@ -472,7 +599,14 @@
       "officialRegistry": true,
       "registryId": "7800(31)-000019",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "newOfficialSchoolPdfReview": true,
+      "schoolPdfReviewedAnyType": true,
+      "currentSchoolPdfReview": "new_targeted_review",
+      "verifiedDocuments": [
+        "https://drive.google.com/file/d/1xREDh6XmxndoZn3BQmigff5fnZQQSXgr/view",
+        "https://drive.google.com/file/d/1J4yMKqzXPftYYU22xjWA3LlihswSbfOA/view"
+      ]
     },
     {
       "id": "tomuro-es",
@@ -480,10 +614,12 @@
       "schoolType": "小学校",
       "schoolOriginalPdf": true,
       "schoolOriginalFile": "戸室小学校_11.pdf",
-      "officialRegistry": false,
-      "registryId": null,
-      "registryLegalBasis": null,
-      "status": "school_original_only"
+      "officialRegistry": true,
+      "registryId": "7800(13)-000028",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
     },
     {
       "id": "tsumada-es",
@@ -491,10 +627,12 @@
       "schoolType": "小学校",
       "schoolOriginalPdf": true,
       "schoolOriginalFile": "麦田小学校_12.pdf",
-      "officialRegistry": false,
-      "registryId": null,
-      "registryLegalBasis": null,
-      "status": "school_original_only"
+      "officialRegistry": true,
+      "registryId": "7800(15)-000029",
+      "registryLegalBasis": "無し",
+      "status": "both",
+      "newOfficialSchoolPdfReview": false,
+      "schoolPdfReviewedAnyType": true
     }
   ],
   "additionalOriginals20261116": {

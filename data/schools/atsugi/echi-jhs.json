@@ -7,40 +7,108 @@
   "basePath": "/archive/atsugi/echi-jhs/",
   "canonical": "https://ptaorg.com/archive/atsugi/echi-jhs/",
   "ogImage": "/assets/ogp/atsugi/echi-jhs.png",
-  "status": "評価準備中",
+  "status": "原本確認・追加調査あり",
   "statusClass": "eval-pending",
-  "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
+  "summary": "2023年度の規約では校長を顧問とし、本部役員の選出に本人同意を求めています。2026年度の学校だよりは5月29日をPTA会費引落日と案内しています。",
   "description": "依知中学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
-  "ogDescription": "依知中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
+  "ogDescription": "2023年度の規約では校長を顧問とし、本部役員の選出に本人同意を求めています。2026年度の学校だよりは5月29日をPTA会費引落日と案内しています。",
   "materials": {
     "documentName": "未確認",
     "confirmedDocuments": [
-      "未確認"
+      "2023年度PTA定期総会議案書",
+      "依知中だより2026 第1号"
     ],
     "hasMembershipNotice": "未確認",
     "hasApplicationForm": "未確認",
     "applicationFormStatus": "未確認",
     "hasSchoolCollectionNotice": "未確認",
     "sourceImages": [],
-    "pdfStatus": "準備中",
+    "pdfStatus": "学校公式ページから原本PDFを確認",
     "pdf": null
   },
   "confirmedFacts": [
-    "資料確認後に記載します。"
+    "2023年度の規約では校長を顧問とし、本部役員の選出に本人同意を求めています。2026年度の学校だよりは5月29日をPTA会費引落日と案内しています。"
   ],
   "unconfirmedPoints": [
-    "PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を確認後に記載します。"
+    "現行規約（減額改定後）と加入届・退会届",
+    "令和8年度の総会冊子、表決書と運用記録",
+    "スクリレ配信対象・操作者、振替依頼書・口座・送金記録"
   ],
   "riskFlags": [
-    "未評価"
+    "要追加調査"
   ],
   "evaluation": [
-    "評価準備中"
+    "役員選出・総会・徴収はPTA内部事務です。旧規約の就任同意は本人意思を尊重する手続として評価できます。学校サイトには総会資料のスクリレ配信・紙の配付・学校への表決提出の告知と、後年の会費減額告知があります。選出・表決・会費を学校が公務で処理する具体的権限は資料から確認できません。学校で保有する配信先の法61条上の利用目的を確認し、法69条上の校内利用とPTAへの提供を別個に調査する必要があります。顧問・回収担当の勤務実態と情報取扱いを地公法35条・34条の観点から確認し、引落口座・徴収・保管主体の記録を地自法235条の4第2項の審査に用います。",
+    "現行規約、総会表決の受付先、スクリレ配信権限、会費の収納と送金の実務を確認し、PTA内部手続の受付をPTA自身に移してください。"
   ],
   "humanReviewRequired": true,
-  "lastReviewed": "2026-06-02",
+  "lastReviewed": "2026-11-16",
   "nationalArchive": {
     "order": 25,
     "group": "中学校"
+  },
+  "officialPdfReview": {
+    "finding": "2023年度の規約では校長を顧問とし、本部役員の選出に本人同意を求めています。2026年度の学校だよりは5月29日をPTA会費引落日と案内しています。",
+    "assessment": "役員選出・総会・徴収はPTA内部事務です。旧規約の就任同意は本人意思を尊重する手続として評価できます。学校サイトには総会資料のスクリレ配信・紙の配付・学校への表決提出の告知と、後年の会費減額告知があります。選出・表決・会費を学校が公務で処理する具体的権限は資料から確認できません。学校で保有する配信先の法61条上の利用目的を確認し、法69条上の校内利用とPTAへの提供を別個に調査する必要があります。顧問・回収担当の勤務実態と情報取扱いを地公法35条・34条の観点から確認し、引落口座・徴収・保管主体の記録を地自法235条の4第2項の審査に用います。",
+    "action": "現行規約、総会表決の受付先、スクリレ配信権限、会費の収納と送金の実務を確認し、PTA内部手続の受付をPTA自身に移してください。",
+    "missing": [
+      "現行規約（減額改定後）と加入届・退会届",
+      "令和8年度の総会冊子、表決書と運用記録",
+      "スクリレ配信対象・操作者、振替依頼書・口座・送金記録"
+    ],
+    "documents": [
+      {
+        "title": "2023年度PTA定期総会議案書",
+        "date": "2023年度",
+        "url": "https://drive.google.com/file/d/13gl5dMugoI2a_iiY60-h3oQuP8ripix0/view",
+        "officialPage": "https://www.echi-js.atsugi.ed.jp/%E3%83%9B%E3%83%BC%E3%83%A0/%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B",
+        "sha256": "fd8e9f1beb92319b348b24a2994f38dda95b3f63217022133797f84cd7258680",
+        "pdfPages": 20,
+        "finding": "2022年度役員選出事業報告（PDF 7頁）と当時の規約2・5・8・15条。同意条項と旧会費額を現行制度から区別。",
+        "crops": [
+          {
+            "image": "/assets/archive/atsugi/review-20261116/echi-jhs-1-1.webp",
+            "sha256": "382febf083177377d73b87ff2ff4520aa7e8e5bea708348fa9f762ac1158b736",
+            "page": 18,
+            "cropRectPdfPts": [
+              42,
+              663,
+              557,
+              699
+            ],
+            "caption": "本部役員選出時の本人同意",
+            "width": 1545,
+            "height": 108,
+            "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+          }
+        ]
+      },
+      {
+        "title": "依知中だより2026 第1号",
+        "date": "2026-04-24",
+        "url": "https://drive.google.com/file/d/116CrUe65o7bUV2HH1DM9fpQs_eLuHzRa/view",
+        "officialPage": "https://www.echi-js.atsugi.ed.jp/%E3%83%9B%E3%83%BC%E3%83%A0/%E5%AD%A6%E6%A0%A1%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B",
+        "sha256": "97bee1cd6b1e8254cf6ad3cdbadfb99f1d6841ca581e6d1ba57519825218617c",
+        "pdfPages": 1,
+        "finding": "5月29日をPTA会費引落日と記載。引落主体・口座は未確認。",
+        "crops": [
+          {
+            "image": "/assets/archive/atsugi/review-20261116/echi-jhs-2-1.webp",
+            "sha256": "fae788ebc93e6009c2aec5d790c5d00fe54aaeb457fb7c3decbd462015d33ecd",
+            "page": 1,
+            "cropRectPdfPts": [
+              325,
+              651,
+              504,
+              697
+            ],
+            "caption": "5月29日のPTA会費引落予定",
+            "width": 537,
+            "height": 138,
+            "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+          }
+        ]
+      }
+    ]
   }
 }

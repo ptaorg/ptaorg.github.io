@@ -7,6 +7,8 @@ const { ROOT, writeFileIfChanged, escapeHtml }=require('./archive-utils');
 const intake=JSON.parse(fs.readFileSync(path.join(ROOT,'ai-system/report-standards/pilots/atsugi-36-school-intake-2026.json'),'utf8'));
 const verified=intake.schoolRecords.filter(r=>r.originalPdfVerification?.status==='direct_checked');
 if(verified.length!==15||new Set(verified.map(x=>x.schoolId)).size!==15)throw Error('Expected exactly 15 distinct reviewed schools');
+const coverage=JSON.parse(fs.readFileSync(path.join(ROOT,'ai-system/report-standards/pilots/atsugi-evidence-coverage-matrix-2026.json'),'utf8'));
+const supplemental=coverage.schools.filter(s=>s.currentSchoolPdfReview).map(s=>({schoolId:s.id}));
 const esc=escapeHtml;
 function section(html,id,markup){
  const re=new RegExp('(<section class="archive-section(?: [^"]*)?">\\s*<h2 id="'+id+'">[^<]*<\\/h2>)[\\s\\S]*?(<\\/section>)');
@@ -17,9 +19,18 @@ function section(html,id,markup){
 const tags=items=>'<p>'+[...new Set(items||[])].map(s=>'<span class="archive-tag">'+esc(s)+'</span>').join(' ')+'</p>';
 const listing=items=>'<ul class="archive-check-list">'+(items||[]).map(s=>'<li>'+esc(s)+'</li>').join('\n')+'</ul>';
 const prose=items=>(items||[]).map(s=>'<p>'+esc(s)+'</p>').join('\n');
+function pdfSources(documents){
+ return '<ul class="archive-check-list">'+documents.map(doc=>'<li><a href="'+esc(doc.url)+'">'+esc(doc.title)+'</a> <span>（'+esc(doc.date)+'）</span><p>'+esc(doc.finding)+'</p></li>').join('\n')+'</ul>';
+}
+function croppedImages(documents){
+ return documents.flatMap(doc=>doc.crops.map(crop=>
+  '<figure><a href="'+esc('../../..'+crop.image)+'"><img src="'+esc('../../..'+crop.image)+'" alt="'+esc(crop.caption)+'" width="'+crop.width+'" height="'+crop.height+'" loading="lazy" style="max-width:100%;height:auto"></a>'+
+  '<figcaption>'+esc(crop.caption)+'。'+esc(doc.title)+'、PDF '+crop.page+'頁。<a href="'+esc(doc.url)+'">原本</a></figcaption></figure>'
+ )).join('\n');
+}
 const check=process.argv.includes('--check');
 let changed=0;
-for(const record of verified){
+for(const record of [...verified,...supplemental]){
  const slug=record.schoolId;
  const data=JSON.parse(fs.readFileSync(path.join(ROOT,'data','schools','atsugi',slug+'.json'),'utf8'));
  if(data.slug!==slug||data.municipality!=='厚木市'||data.humanReviewRequired!==true)throw Error('Unreviewed/invalid record '+slug);
@@ -34,6 +45,7 @@ for(const record of verified){
  if(!descRe.test(html)||!ogRe.test(html))throw Error('Missing metadata '+slug);
  html=html.replace(descRe,(_m,a,b)=>a+desc+b).replace(ogRe,(_m,a,b)=>a+desc+b);
  if(!html.includes('name="twitter:card"'))html=html.replace('</head>','  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="'+esc(data.schoolName+' PTA関連資料・評価')+'">\n  <meta name="twitter:description" content="'+desc+'">\n</head>');
+ if(data.officialPdfReview)html=html.replace(/(<meta name="twitter:description" content=")[^"]*(")/,(_m,a,b)=>a+desc+b);
  html=html.replace(/"dateModified": "2026-07-19"/g,'"dateModified": "'+esc(data.lastReviewed)+'"');
  const originalLd=old.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
  if(originalLd){
@@ -51,7 +63,7 @@ for(const record of verified){
  '<div class="archive-box archive-status-card '+esc(data.statusClass)+'"><div class="archive-label">評価状況</div><div class="archive-value">'+esc(data.status)+'</div></div>'+
  '<div class="archive-box"><div class="archive-label">確認資料</div><div class="archive-value">'+esc(docs)+'</div></div>'+
  '<div class="archive-box"><div class="archive-label">入会申込書</div><div class="archive-value">'+form+'</div></div>'+
- '<div class="archive-box"><div class="archive-label">PDF</div><div class="archive-value">元PDF '+countSources+'件</div></div></div>';
+ '<div class="archive-box"><div class="archive-label">PDF</div><div class="archive-value">元PDF '+(data.officialPdfReview?.documents.length??countSources)+'件</div></div></div>';
  html=section(html,'sec-1',grid);
  html=section(html,'sec-3','<div class="archive-evidence-grid"><div class="archive-evidence-card"><div class="archive-label">確認対象</div><div class="archive-value">神奈川県厚木市 '+esc(data.schoolName)+'</div></div><div class="archive-evidence-card"><div class="archive-label">最終確認日</div><div class="archive-value">'+esc(data.lastReviewed)+'</div></div><div class="archive-evidence-card"><div class="archive-label">人による確認</div><div class="archive-value">追加確認が必要</div></div></div><p>原本の文言は照合済みですが、学校での実施・制度の適法性・是正状況を確定したものではありません。</p>');
  html=section(html,'sec-4','<div class="archive-assessment-note"><p>学校がPTA固有事務を担うには、公法上の具体的な事務権限を独立に検討する必要があります。PTAからの委任や保護者の同意は、それだけで学校の権限を創設しません。</p><p>資料に記載された制度、実際に行われた行為、まだ確認できない点、改善を評価すべき点を分けています。個人情報保護法61条・69条の審査は学校の事務権限を確認した後に行います。</p></div>');
@@ -59,13 +71,23 @@ for(const record of verified){
  html=section(html,'sec-7',listing(data.unconfirmedPoints));
  html=section(html,'sec-8',tags(data.riskFlags));
  html=section(html,'sec-9',prose(data.evaluation));
+ if(data.officialPdfReview){
+  const {finding,documents}=data.officialPdfReview;
+  html=html.replace(/(<div class="archive-print-actions archive-print-top">[\s\S]*?<\/div>\s*)<p>[^<]*<\/p>/,
+   (_match,lead)=>lead+'<p>'+esc(finding)+'</p>');
+  html=section(html,'sec-2',pdfSources(documents));
+  html=section(html,'sec-5',croppedImages(documents));
+  html=html.replace(/(<dt>評価状況<\/dt><dd>)[^<]*(<\/dd><dt>確認資料<\/dt><dd>)[^<]*(<\/dd><dt>入会申込書<\/dt><dd>[^<]*<\/dd><dt>PDF<\/dt><dd>)[^<]*(<\/dd>)/,
+   (_match,a,b,c,d)=>a+esc(data.status)+b+esc(docs)+c+'公式原本 '+documents.length+'件'+d);
+ }
  // Preserve all original section anchors, source-image links, PDF links, map, nav and footer.
  const links=x=>[...x.matchAll(/(?:href|src)="([^"]+)"/g)].map(m=>m[1]).filter(v=>v.includes('/source-pdfs/atsugi/')||v.includes('/assets/archive/atsugi/'));
  const originalLinks=links(old),newLinks=links(html);
- if(originalLinks.join('\n')!==newLinks.join('\n'))throw Error('Original evidence links modified '+slug);
+ const originalEvidence=link=>!data.officialPdfReview||!link.includes('/assets/archive/atsugi/review-20261116/');
+ if(originalLinks.filter(originalEvidence).join('\n')!==newLinks.filter(originalEvidence).join('\n'))throw Error('Original evidence links modified '+slug);
  for(let i=1;i<=10;i++)if(!html.includes('id="sec-'+i+'"'))throw Error('Section anchor lost '+slug+':'+i);
  if(!html.includes('twitter:card')||!html.includes('og:image')||!html.includes('追加確認が必要'))throw Error('Metadata or reviewer status lost '+slug);
  if(html!==old){changed++;if(!check)writeFileIfChanged(target,html);}
 }
-console.log(JSON.stringify({municipality:'厚木市',reviewed:15,changed,unreviewed:21,mode:check?'check':'draft-write'}));
+console.log(JSON.stringify({municipality:'厚木市',reviewed:verified.length,supplemental:supplemental.length,changed,unreviewed:coverage.schools.length-verified.length-supplemental.length,mode:check?'check':'draft-write'}));
 if(check&&changed)process.exitCode=2;

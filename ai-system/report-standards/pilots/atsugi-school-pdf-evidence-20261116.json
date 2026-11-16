@@ -1,0 +1,1710 @@
+{
+  "date": "2026-11-16",
+  "newSchoolDocuments": {
+    "atsugi-jhs": {
+      "finding": "2026年度の総会資料に、教職員をPTAの副会長・書記・会計に置く規約と、月額200円の会費規定が掲載されています。",
+      "assessment": "会員資格、役員・指名委員の選任、会計はPTAの内部事務です。規約は学校を事務局とし、教職員を副会長・書記・会計、校長を実行委員会の構成員とします。教職員会計の職務には収支記録、決算報告、予算原案が含まれます。これらを学校の公務として行う具体的な権限は資料から確認できません。第8条の会員記載には加入の意思確認手続が示されておらず、加入届と会員名簿で運用を確認する必要があります。PTAの情報取扱規定への参照を確認しましたが、学校が法61条の目的で保有した情報の内部利用とPTAへの提供は、各々のログと情報源を確認して法69条を評価します。会計職員の従事時間と職務命令等、学校側の秘密の取扱い、収納口座と出納権限を確認した上で地公法35条・34条、地自法235条の4第2項を検討します。",
+      "action": "加入受付をPTAの意思確認に基づく手続に明示し、会計・指名等はPTAが担うよう整理してください。市教委には役員の参加資格・勤務実態、会員管理、徴収口座と送金記録の提示が必要です。",
+      "missing": [
+        "現行の加入・退会書式と会員確認手順",
+        "2026年度の集金案内・口座名義・収納送金記録",
+        "学校側の役員担当・勤務記録・許可、名簿の出所、PTAの情報取扱規定"
+      ],
+      "documents": [
+        {
+          "title": "令和8年度 厚木中学校PTA総会資料",
+          "date": "2026-04-24",
+          "url": "https://drive.google.com/file/d/1mrKGSVT7bgp2YLyoWgSJQm_eFC66xES7/view",
+          "officialPage": "https://www.atsugi-js.atsugi.ed.jp/pta",
+          "sha256": "f7480fca38ec623c35609b57648573ef5d3f079c49435c60809ed3f9750b3b9a",
+          "pdfPages": 17,
+          "finding": "規約第8条・第13～14条・第21条・第25条・第28条、予算案。",
+          "crops": [
+            {
+              "image": "/assets/archive/atsugi/review-20261116/atsugi-jhs-1-1.webp",
+              "sha256": "9d9a71766ab6ccf020db01d1cbb74297031857d4b5dfb29c5b40dd1c9d8e6004",
+              "page": 12,
+              "cropRectPdfPts": [
+                67,
+                508,
+                531,
+                580
+              ],
+              "caption": "会員資格の規定",
+              "width": 1392,
+              "height": 216,
+              "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+            },
+            {
+              "image": "/assets/archive/atsugi/review-20261116/atsugi-jhs-1-2.webp",
+              "sha256": "0aba483889551c0ffb7902fa77fbf02afb2c112b683ee2d491462cd9aa96dd11",
+              "page": 13,
+              "cropRectPdfPts": [
+                66,
+                54,
+                528,
+                317
+              ],
+              "caption": "教職員の役員配置と会計の任務",
+              "width": 1386,
+              "height": 789,
+              "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+            },
+            {
+              "image": "/assets/archive/atsugi/review-20261116/atsugi-jhs-1-3.webp",
+              "sha256": "803f1444633247a4903d62861a6282fcf4b69328b89938f6fe25c6b6e56f8f8a",
+              "page": 14,
+              "cropRectPdfPts": [
+                65,
+                395,
+                490,
+                445
+              ],
+              "caption": "PTA会費の規定",
+              "width": 1275,
+              "height": 150,
+              "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+            }
+          ]
+        },
+        {
+          "title": "令和7年度 厚木中学校PTA総会資料",
+          "date": "2025-04-25",
+          "url": "https://drive.google.com/file/d/15m-MzxDNMha2ut8CaCyxDDbtWd2D5XqR/view",
+          "officialPage": "https://www.atsugi-js.atsugi.ed.jp/pta",
+          "sha256": "d1d2a31d5ce84706062aba80345feb391ac0d3478b10618b83d7e09feebe2995",
+          "pdfPages": 15,
+          "finding": "年度比較。第8条・第14条・第21条・第28条の継続を確認。",
+          "crops": []
+        },
+        {
+          "title": "令和6年度PTA総会について（報告）",
+          "date": "2024年度",
+          "url": "https://drive.google.com/file/d/16Jp4qY8PGJlMcgNEwVCMXbYoJBxU2J00/view",
+          "officialPage": "https://www.atsugi-js.atsugi.ed.jp/pta",
+          "sha256": "c82e50a3678f8245f245acc3b37a16a2d305272d9a92a7116d94d6da7f93dafc",
+          "pdfPages": 1,
+          "finding": "業務効率化のため書面決議、前年度から各委員会等のスローガンを廃止。規約所定の定足数の算定は別途確認。",
+          "crops": []
+        }
+      ]
+    },
+    "echi-jhs": {
+      "finding": "2023年度の規約では校長を顧問とし、本部役員の選出に本人同意を求めています。2026年度の学校だよりは5月29日をPTA会費引落日と案内しています。",
+      "assessment": "役員選出・総会・徴収はPTA内部事務です。旧規約の就任同意は本人意思を尊重する手続として評価できます。学校サイトには総会資料のスクリレ配信・紙の配付・学校への表決提出の告知と、後年の会費減額告知があります。選出・表決・会費を学校が公務で処理する具体的権限は資料から確認できません。学校で保有する配信先の法61条上の利用目的を確認し、法69条上の校内利用とPTAへの提供を別個に調査する必要があります。顧問・回収担当の勤務実態と情報取扱いを地公法35条・34条の観点から確認し、引落口座・徴収・保管主体の記録を地自法235条の4第2項の審査に用います。",
+      "action": "現行規約、総会表決の受付先、スクリレ配信権限、会費の収納と送金の実務を確認し、PTA内部手続の受付をPTA自身に移してください。",
+      "missing": [
+        "現行規約（減額改定後）と加入届・退会届",
+        "令和8年度の総会冊子、表決書と運用記録",
+        "スクリレ配信対象・操作者、振替依頼書・口座・送金記録"
+      ],
+      "documents": [
+        {
+          "title": "2023年度PTA定期総会議案書",
+          "date": "2023年度",
+          "url": "https://drive.google.com/file/d/13gl5dMugoI2a_iiY60-h3oQuP8ripix0/view",
+          "officialPage": "https://www.echi-js.atsugi.ed.jp/%E3%83%9B%E3%83%BC%E3%83%A0/%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B",
+          "sha256": "fd8e9f1beb92319b348b24a2994f38dda95b3f63217022133797f84cd7258680",
+          "pdfPages": 20,
+          "finding": "2022年度役員選出事業報告（PDF 7頁）と当時の規約2・5・8・15条。同意条項と旧会費額を現行制度から区別。",
+          "crops": [
+            {
+              "image": "/assets/archive/atsugi/review-20261116/echi-jhs-1-1.webp",
+              "sha256": "382febf083177377d73b87ff2ff4520aa7e8e5bea708348fa9f762ac1158b736",
+              "page": 18,
+              "cropRectPdfPts": [
+                42,
+                663,
+                557,
+                699
+              ],
+              "caption": "本部役員選出時の本人同意",
+              "width": 1545,
+              "height": 108,
+              "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+            }
+          ]
+        },
+        {
+          "title": "依知中だより2026 第1号",
+          "date": "2026-04-24",
+          "url": "https://drive.google.com/file/d/116CrUe65o7bUV2HH1DM9fpQs_eLuHzRa/view",
+          "officialPage": "https://www.echi-js.atsugi.ed.jp/%E3%83%9B%E3%83%BC%E3%83%A0/%E5%AD%A6%E6%A0%A1%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B",
+          "sha256": "97bee1cd6b1e8254cf6ad3cdbadfb99f1d6841ca581e6d1ba57519825218617c",
+          "pdfPages": 1,
+          "finding": "5月29日をPTA会費引落日と記載。引落主体・口座は未確認。",
+          "crops": [
+            {
+              "image": "/assets/archive/atsugi/review-20261116/echi-jhs-2-1.webp",
+              "sha256": "fae788ebc93e6009c2aec5d790c5d00fe54aaeb457fb7c3decbd462015d33ecd",
+              "page": 1,
+              "cropRectPdfPts": [
+                325,
+                651,
+                504,
+                697
+              ],
+              "caption": "5月29日のPTA会費引落予定",
+              "width": 537,
+              "height": 138,
+              "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+            }
+          ]
+        }
+      ]
+    },
+    "echi-minami-es": {
+      "finding": "2026年度の学校だよりに、PTA会費の集金袋配付と集金日が掲載されています。",
+      "assessment": "集金はPTA内部事務です。学校媒体が集金日程を案内した事実を確認できます。袋の配付・回収、現金の収納を誰が行うか、公務に位置付ける具体的権限、加入の意思確認は未確認です。集金袋・納入記録の情報源と法61条上の利用目的を特定し、法69条の学校内部利用・PTAへの提供を別々に確認します。回収担当の勤務実態・守秘と現金の保管・引渡し主体を、地公法35条・34条と地自法235条の4第2項の観点から調べる必要があります。",
+      "action": "集金袋の配付・回収・保管の分担表、会員への案内、未納対応を確認し、PTAが集金を直接管理する運用を明示してください。",
+      "missing": [
+        "実際の集金袋・集金案内・受領記録",
+        "学校・PTAの担当分担及び現金の保管・移送記録",
+        "加入届と会員への配付対象を決める手順"
+      ],
+      "documents": [
+        {
+          "title": "依知南小学校だより 8・9月号",
+          "date": "2026-08-27",
+          "url": "https://drive.google.com/file/d/1JlM6dqz-dNnfWRaVIayFwWZVR6mPKwzI/view",
+          "officialPage": "https://www.echiminami-es.atsugi.ed.jp/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B",
+          "sha256": "74e782e0927f8476f88fb5b27172d686e9840c1902e3fb7fd2738d1ceca34d96",
+          "pdfPages": 2,
+          "finding": "行事予定欄に集金袋配付と集金日を明記。",
+          "crops": [
+            {
+              "image": "/assets/archive/atsugi/review-20261116/echi-minami-es-1-1.webp",
+              "sha256": "d6e2b0a9e1f5cf30c6b8d3ea28798df7f9895501c99e8a887f029308a04caaec",
+              "page": 1,
+              "cropRectPdfPts": [
+                715,
+                646,
+                897,
+                728
+              ],
+              "caption": "PTA会費の集金袋配付・集金予定",
+              "width": 546,
+              "height": 246,
+              "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+            }
+          ]
+        },
+        {
+          "title": "依知南小学校だより 4月号",
+          "date": "2026年度",
+          "url": "https://drive.google.com/file/d/1muJ51Qs4WenTN93zGPBOLy5qmLhuDDaO/view",
+          "officialPage": "https://www.echiminami-es.atsugi.ed.jp/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B",
+          "sha256": "cc9e9463adc5509fa666bcd66630d231b3f2630ecf1bd6b954478ebf2803652a",
+          "pdfPages": 1,
+          "finding": "PTA総会資料の配信と結果報告の配付日程。",
+          "crops": []
+        }
+      ]
+    },
+    "fujizuka-jhs": {
+      "finding": "学校公式の2026年度予定表はPTA会費引き落としを掲載。PTAの案内はtetoruを通じた参加申込とクラス内での児童生徒の出席アンケートを案内しています。",
+      "assessment": "会費、PTA主催行事の申込、総会表決はPTA側の内部事務です。学校サイトは総会への不同意意見を学校に提出する方式も案内しています。除草の地域連携部分とバザー・申込管理を事務単位で区分し、後者に学校が関与する具体的な所掌根拠を確認する必要があります。募集の配信先・フォームの管理者・クラスアンケートを取得した主体と法61条上の目的を確認し、学校内部での利用とPTAへの提供をそれぞれ法69条で評価します。勤務中の従事・守秘と口座管理は地公法35条・34条、地自法235条の4第2項の事実確認が必要です。",
+      "action": "学校とPTAで、会費の引落し、表決受領、行事募集、アンケート集計の担当者と権限を確定し、PTA内部手続はPTAの会員向け経路で扱ってください。",
+      "missing": [
+        "現行規約・総会冊子・表決集計",
+        "会費振替依頼書・口座名義・送金記録",
+        "tetoru操作者・フォーム閲覧権限、対象者と利用目的、クラス調査の回収記録"
+      ],
+      "documents": [
+        {
+          "title": "PTA除草作業及びPTAバザーのご案内",
+          "date": "2026-05-08",
+          "url": "https://drive.google.com/file/d/1V6CutQw6VXYj07JoOCpe6ePmIq9t9oX7/view",
+          "officialPage": "https://www.fujizuka-js.atsugi.ed.jp/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/pta%E9%96%A2%E4%BF%82/2026pta",
+          "sha256": "89e3e36cf4276f23fbd1610967b37da1fb485e0d286b54a8716d374eee7969ca",
+          "pdfPages": 1,
+          "finding": "その他（3）・（4）のtetoru経由の回答とクラスアンケート。",
+          "crops": [
+            {
+              "image": "/assets/archive/atsugi/review-20261116/fujizuka-jhs-1-1.webp",
+              "sha256": "88fb8b230a3f883b2d897140305fba53c2201c40f283e9e878bd9bb1d501de9b",
+              "page": 1,
+              "cropRectPdfPts": [
+                90,
+                671,
+                566,
+                730
+              ],
+              "caption": "tetoru案内とクラスアンケート",
+              "width": 1428,
+              "height": 177,
+              "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+            }
+          ]
+        },
+        {
+          "title": "厚木市立藤塚中学校 5月分月別予定表",
+          "date": "2026年度",
+          "url": "https://drive.google.com/file/d/10cY3XmsXLGq1twF7SDmnKTiTAZhqjjU6/view",
+          "officialPage": "https://www.fujizuka-js.atsugi.ed.jp/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/%E6%9C%88%E5%88%A5%E4%BA%88%E5%AE%9A%E8%A1%A8",
+          "sha256": "e4ce3d9a6ad69c46fd2dedc83b86f30baa890de94dacf33ccca30106eceda537",
+          "pdfPages": 1,
+          "finding": "PTA会費引き落としの記載。",
+          "crops": [
+            {
+              "image": "/assets/archive/atsugi/review-20261116/fujizuka-jhs-2-1.webp",
+              "sha256": "0239d173ddd96101aa4ce1ea54b7891e506c2b822586a59c1e6f2d85cc7335fd",
+              "page": 1,
+              "cropRectPdfPts": [
+                698,
+                171,
+                798,
+                207
+              ],
+              "caption": "月別予定表にPTA会費引き落とし",
+              "width": 300,
+              "height": 108,
+              "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+            }
+          ]
+        }
+      ]
+    },
+    "hayashi-jhs": {
+      "finding": "林中学校通信の2026年5月号は、5月1日の学校諸会費とPTA会費の引き落としを同じ日程欄に掲載しています。",
+      "assessment": "PTA会費はPTAの内部事務です。同じ日程欄の記載から学校の収納口座や合算処理は確定できず、学校が関与する場合の具体的権限も未確認です。口座・会員照合に使う学校保有情報の必要性と利用目的を法61条で確認し、校内利用・PTAへの提供を法69条で個別に検証します。従事と守秘、資金保管の判断は担当・決済・口座記録を基に地公法35条・34条、地自法235条の4第2項を検討します。",
+      "action": "徴収予定の表示を区分し、振替主体、資金の移動、教職員の作業を確認できる記録を提示してください。",
+      "missing": [
+        "令和8年度の諸会費案内とPTA会費振替書式",
+        "引落口座名義と送金簿",
+        "加入届・会員照合・未納管理の手順"
+      ],
+      "documents": [
+        {
+          "title": "厚木市立林中学校通信 第403号",
+          "date": "2026-05-01",
+          "url": "https://drive.google.com/file/d/1nqoXi7qKt5I2827QNCRokSTHox0RYJoR/view",
+          "officialPage": "https://www.hayashi-js.atsugi.ed.jp/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/%E5%AD%A6%E6%A0%A1%E3%81%A0%E3%82%88%E3%82%8A",
+          "sha256": "34ee90b208ba33f7e9b5b98b4431b79381c972d73d358a20fe864581c534639a",
+          "pdfPages": 2,
+          "finding": "5月の主な予定。",
+          "crops": [
+            {
+              "image": "/assets/archive/atsugi/review-20261116/hayashi-jhs-1-1.webp",
+              "sha256": "0c53503bee8f827332050cf5fa94e27b58064497110ef803fbb4216a8c58db98",
+              "page": 2,
+              "cropRectPdfPts": [
+                291,
+                243,
+                552,
+                285
+              ],
+              "caption": "諸会費とPTA会費の引落予定",
+              "width": 783,
+              "height": 126,
+              "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+            }
+          ]
+        }
+      ]
+    },
+    "iiyama-es": {
+      "finding": "2023年5月の学校だよりは、PTA会費集金袋の配付と回収を学校の予定欄に掲載しています。",
+      "assessment": "PTA会費の集金はPTA内部事務です。学校媒体の案内から個々の配付・回収の担当や現金管理主体は確定できず、学校の具体的な関与根拠も未確認です。現行書式と会員管理の情報源を特定した上で法61条の保有必要性、69条の内部利用・提供を順に確認します。教職員の勤務・守秘と公的主体による現金保管の有無は地公法35条・34条、地自法235条の4第2項の検討に必要です。",
+      "action": "2023年度の袋の経路と受渡し記録、2026年度の徴収方法、その間の変更日を明らかにしてください。",
+      "missing": [
+        "2026年度の集金・加入案内と総会資料",
+        "2023年度・2026年度の袋配付・回収担当と現金受渡し記録",
+        "役員選出書類、名簿管理者・保有目的"
+      ],
+      "documents": [
+        {
+          "title": "飯山小学校だより 2023年5月17日号",
+          "date": "2023-05-17",
+          "url": "https://drive.google.com/file/d/1n4kbyq70W3SXbezU6wKqBfbqAQQDahRt/view",
+          "officialPage": "https://www.iiyama-es.atsugi.ed.jp/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/%E4%BB%A4%E5%92%8C5%E5%B9%B4%E5%BA%A6%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B",
+          "sha256": "d63abc8e571ae01ba63b6dc4dbc99aef09cf0032e2d324cb3dfdadc136cfd249",
+          "pdfPages": 2,
+          "finding": "5月17日配付、19日回収の予定を記載。",
+          "crops": [
+            {
+              "image": "/assets/archive/atsugi/review-20261116/iiyama-es-1-1.webp",
+              "sha256": "70ba65c9cbab304f1d9667de7d6aa81c7b9cc133827d5e600ffa2226ed0cefdf",
+              "page": 2,
+              "cropRectPdfPts": [
+                36,
+                294,
+                278,
+                393
+              ],
+              "caption": "集金袋の配付・回収予定",
+              "width": 726,
+              "height": 297,
+              "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+            }
+          ]
+        }
+      ]
+    },
+    "moridai-es": {
+      "finding": "2026年2月発行の学校だよりは、全学年の新しい名札をPTA会費から進級祝い品の一部として一括購入すると案内しています。",
+      "assessment": "PTA会計と支出決議はPTAの内部事務です。名札が学校指定品か、購入・所有・配布の主体、学校が行う場合の事務権限、非会員家庭の扱い、寄附採納の有無は未確認です。発注・配布に名簿を使った場合の法61条上の利用目的と法69条の内部利用・外部提供は区別して確認します。教職員の業務と守秘、支払主体・立替・保管の有無を確認後に地公法35条・34条、該当する財務規定を適用します。",
+      "action": "学用品としての必要性、非会員児童への配付、発注・支払主体、寄附採納の記録を照合し、学校経費とPTA任意支出の線引きを説明してください。",
+      "missing": [
+        "名札の発注書・購入決裁・PTA決議・寄附採納と配付記録",
+        "非会員児童の取り扱い、名札用情報の出所",
+        "入会書式・会費集金案内・役員選出資料"
+      ],
+      "documents": [
+        {
+          "title": "毛利台小学校 学校だより 3月号",
+          "date": "2026-02-27",
+          "url": "https://drive.google.com/file/d/13GQixj3mx-VnmTrG8RS0D-XJppLmt8pM/view",
+          "officialPage": "https://www.mouridai-es.atsugi.ed.jp/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/%E5%AD%A6%E6%A0%A1%E3%81%A0%E3%82%88%E3%82%8A",
+          "sha256": "9ff8e46134e94cfc42d08d0055903d7397664235a8ececa7319a64f474778218",
+          "pdfPages": 3,
+          "finding": "学用品の案内に進級祝い品として一括購入する記載。発注・購入実績は未確認。",
+          "crops": [
+            {
+              "image": "/assets/archive/atsugi/review-20261116/moridai-es-1-1.webp",
+              "sha256": "d149a3f7d697d0f44089ac9c59632537f220f165a9ab7719f5670d23faf9f0db",
+              "page": 3,
+              "cropRectPdfPts": [
+                145,
+                677,
+                975,
+                696
+              ],
+              "caption": "PTA会費で進級祝い品の名札を購入する案内",
+              "width": 2490,
+              "height": 57,
+              "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+            }
+          ]
+        }
+      ]
+    },
+    "morinosato-jhs": {
+      "finding": "森の里中の学校だよりは、2021年度から従来の各委員会を置かず、役員と参加できるときに協力する人で構成するPTAサポート隊に移行したと説明しています。",
+      "assessment": "組織編成と参加受付はPTAの内部事務です。役員負担を軽減し本人が活動を選ぶ形は改善です。学校運営協議会記録の地域行事との連携は、学校が会員・会費・役員等を管理することと区別して扱います。規約、参加手続、会費の有無、学校に割り当てられた内部事務や権限は未確認です。名簿や配信があれば法61条の目的と69条の校内利用・提供を個別確認します。教職員の参加の性質・守秘と財務の扱いは地公法35条・34条及び地自法235条の4第2項の事実に即して審査します。",
+      "action": "参加する活動と時期を本人が選べる仕組みを維持し、現行の加入・会費・役員・個人情報の手続を公開できる形で示してください。",
+      "missing": [
+        "現行規約・サポート隊募集書式と加入・退会の案内",
+        "総会資料・会費の有無、役員選出方法",
+        "名簿管理者・学校とPTAの事務分担"
+      ],
+      "documents": [
+        {
+          "title": "森の里中学校 学校だより 5月号",
+          "date": "2026年5月",
+          "url": "https://drive.google.com/file/d/1r4QRLi5Vs1FTZOi2vMsrEYxHqMM8IvUW/view",
+          "officialPage": "https://www.morinosato-js.atsugi.ed.jp/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/%E5%AD%A6%E6%A0%A1%E3%81%A0%E3%82%88%E3%82%8A",
+          "sha256": "4e89ac2a177ee79fa4f3082021e4ffb0ea0d6dd7ec92e2f38cee2414f5311840",
+          "pdfPages": 2,
+          "finding": "PTAサポート隊の活動・役員負担軽減の経過。",
+          "crops": [
+            {
+              "image": "/assets/archive/atsugi/review-20261116/morinosato-jhs-1-1.webp",
+              "sha256": "430097ec1dc98b11cf0ac3e67a4271a3c65f74fdcbfec2f1e8b70d5e3dec0a7c",
+              "page": 2,
+              "cropRectPdfPts": [
+                31,
+                38,
+                291,
+                567
+              ],
+              "caption": "委員会を置かず、自ら活動を選べるPTAサポート隊",
+              "width": 780,
+              "height": 1587,
+              "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+            }
+          ]
+        },
+        {
+          "title": "第1回学校運営協議会 会議録",
+          "date": "2026-06-24",
+          "url": "https://drive.google.com/file/d/1qDhiW0mVgfyp_V1qgYZHH4UYqu4JiecZ/view",
+          "officialPage": "https://www.morinosato-js.atsugi.ed.jp/%E5%AD%A6%E6%A0%A1%E9%81%8B%E5%96%B6%E5%8D%94%E8%AD%B0%E4%BC%9A",
+          "sha256": "c000624667e1789d3b0ae2873ba946cf265b09f32c9a13b2bac0309a834ae184",
+          "pdfPages": 3,
+          "finding": "地域行事への生徒ボランティア参加に関するPTA本部の連携機能。",
+          "crops": []
+        }
+      ]
+    },
+    "tomei-jhs": {
+      "finding": "東名中の2026年度年間予定表にPTA会費引落しがあり、2025年5月号も6月2日のPTA会費引落しを案内しています。",
+      "assessment": "PTA会費はPTA内部事務です。学校による引落予定の周知が2年度確認できる一方、徴収、送金、未納管理の担当・口座と学校の具体的権限は未確認です。法61条の情報保有目的と必要性を確認し、学校での名簿照合とPTAへの提供を法69条で区別します。地公法35条・34条上の従事・守秘及び地自法235条の4第2項の資金保管は実務記録を要します。",
+      "action": "2年度の振替依頼書、収納口座管理者、送金・返金主体と2026年度以降の自己徴収への移行日を確認してください。",
+      "missing": [
+        "2025・2026年度の会費集金案内・振替依頼書",
+        "口座名義・収納送金記録・未納対応",
+        "加入・退会届と名簿利用手順"
+      ],
+      "documents": [
+        {
+          "title": "令和8年度 東名中学校 年間予定表",
+          "date": "2026-04-01",
+          "url": "https://drive.google.com/file/d/1xREDh6XmxndoZn3BQmigff5fnZQQSXgr/view",
+          "officialPage": "https://www.toumei-js.atsugi.ed.jp/%E3%81%9D%E3%81%AE%E4%BB%96/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B",
+          "sha256": "c09bce32763b2feca0358ba0bc8dc0f9e79d5d83fc8fd9177d09a19e0dc2c954",
+          "pdfPages": 1,
+          "finding": "6月1日のPTA会費引落し予定を掲載。",
+          "crops": [
+            {
+              "image": "/assets/archive/atsugi/review-20261116/tomei-jhs-1-1.webp",
+              "sha256": "9a1e29123cb3b109ab6979d95a0cc6808b42939ff3e31587098ba48464876a9c",
+              "page": 1,
+              "cropRectPdfPts": [
+                688,
+                97,
+                769,
+                162
+              ],
+              "caption": "令和8年度のPTA会費引落予定",
+              "width": 243,
+              "height": 195,
+              "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+            }
+          ]
+        },
+        {
+          "title": "学校だより とうめい 5月号",
+          "date": "2025-05-21",
+          "url": "https://drive.google.com/file/d/1J4yMKqzXPftYYU22xjWA3LlihswSbfOA/view",
+          "officialPage": "https://www.toumei-js.atsugi.ed.jp/%E3%81%9D%E3%81%AE%E4%BB%96/%E5%AD%A6%E6%A0%A1%E3%81%A0%E3%82%88%E3%82%8A",
+          "sha256": "da7dfcf0ddcac70ecfcae852a0c1728049f44fdeb8ed75a582c48637879f7e19",
+          "pdfPages": 1,
+          "finding": "6月2日PTA会費引落日。",
+          "crops": []
+        }
+      ]
+    },
+    "aiko-es": {
+      "finding": "通学路の安全確保について、PTA校外生活指導委員会が協力を呼び掛け、学校の担当者も問い合わせ先に掲げています。",
+      "assessment": "通学安全の調整は学校の教育上の安全対策と接点があります。問い合わせ対応の記載から、学校がPTAの入会・徴収・選出を処理した事実は確認できません。",
+      "action": "安全上の相談窓口とPTA内部事務の連絡先を明確にしてください。",
+      "missing": [
+        "現行の加入・退会書式、徴収・口座・会計記録",
+        "役員選出、情報の取得元と学校内利用・提供の記録"
+      ],
+      "documents": [
+        {
+          "title": "通学安全確保について.pdf",
+          "date": "2025年度",
+          "url": "https://drive.google.com/file/d/1SxoJHyVyl7VVU7hKgiaEu8a4UQk8Xp26/view",
+          "sha256": "4276411064c37e4de03a925e66ce612a5c71731e3af76a9d5ddb37a9cdb414df",
+          "pdfPages": 1,
+          "finding": "PTA委員と学校教職員が問い合わせ先として記載。",
+          "sourceSha256Rechecked": true,
+          "crops": [
+            {
+              "image": "/assets/archive/atsugi/review-20261116/prior-ak-01.webp",
+              "sha256": "3fe7ea357e8a1343eac85390a3a450ec64a8316bc37370eca493d70a3f3197e7",
+              "page": 1,
+              "cropRectNormalized": [
+                0.06,
+                0.19,
+                0.94,
+                0.75
+              ],
+              "caption": "PTA校外生活指導委員会と学校を問い合わせ先として記載",
+              "width": 1311,
+              "height": 1179,
+              "privacy": "AK-01: incidental teacher name masked"
+            }
+          ]
+        }
+      ]
+    },
+    "kita-es": {
+      "finding": "2025年度の基本方針では、学校・家庭・地域の関係を見直し、活動を見えるようにする方針を掲げています。",
+      "assessment": "基本方針はPTAの組織運営文書です。学校との協力方針は確認できます。参加の任意性、学校がPTA固有事務を扱う事実と根拠、情報と会計の処理は、各手続の資料が必要です。",
+      "action": "会員と非会員双方に、参加を選べる手続と学校・PTAの担当範囲を明示してください。",
+      "missing": [
+        "現行の加入・退会書式、徴収・口座・会計記録",
+        "役員選出、情報の取得元と学校内利用・提供の記録"
+      ],
+      "documents": [
+        {
+          "title": "PTA基本方針.pdf",
+          "date": "2025年度",
+          "url": "https://drive.google.com/file/d/1nIHqBSrGfDE4Ds32vlpWvqj-SnKRW_Rt/view",
+          "sha256": "b89c4d8f89d74d57f7716e256e2a33d8fa7d092f502c0316d2bd8a7b5695857a",
+          "pdfPages": 1,
+          "finding": "保護者・学校・地域三者間の新しい関係と可視化を掲げる。",
+          "sourceSha256Rechecked": true,
+          "crops": [
+            {
+              "image": "/assets/archive/atsugi/review-20261116/prior-kt-01.webp",
+              "sha256": "34267b8c07217179e98b92b83a93839a538da4ef7760e9f572eb3a3cd37ff86c",
+              "page": 1,
+              "cropRectNormalized": [
+                0.06,
+                0.09,
+                0.95,
+                0.71
+              ],
+              "caption": "北小PTA基本方針：三者連携と見える化",
+              "width": 1326,
+              "height": 1305,
+              "privacy": "none"
+            }
+          ]
+        }
+      ]
+    },
+    "midorigaoka-es": {
+      "finding": "2025年改定のPTA規約は、教頭を副会長、教職員を書記・会計に置き、校長を運営委員会の構成員としています。",
+      "assessment": "役員・委員の選任と会費の管理はPTA内部事務です。規約第8・19・21条は学校側の公法上の所掌や権限を示しません。学校が扱う名簿の法61条の目的と法69条の内部利用・提供を別個に確認し、地公法35条・34条の勤務・守秘と、地自法235条の4第2項の現金管理は実態で検証します。",
+      "action": "教職員の就任・各委員会所属の経緯、勤務時間、集金・返金主体、口座名義と情報の出所を確認し、PTA内部事務を分離してください。",
+      "missing": [
+        "現行の加入・退会書式、徴収・口座・会計記録",
+        "役員選出、情報の取得元と学校内利用・提供の記録"
+      ],
+      "documents": [
+        {
+          "title": "R7PTA規約.pdf",
+          "date": "2025-04-21",
+          "url": "https://drive.google.com/file/d/1AHwfpt1xDNMvOUSWcY6EBk9hf49cGkMv/view",
+          "sha256": "5939217deb0c707dfb13cd43a06e5d35f4feaac417be93502e051cd00062107b",
+          "pdfPages": 7,
+          "finding": "第8条: 教頭を副会長、教職員を書記・会計とする役職配置。第19条: 校長を運営委員会の構成員とする。第21条: 教職員はいずれかの委員会に所属する。会費年額2,000円の参考資料。",
+          "sourceSha256Rechecked": true,
+          "crops": [
+            {
+              "image": "/assets/archive/atsugi/review-20261116/prior-mk-01.webp",
+              "sha256": "28df2e1294fd1eb811e8113f581bf8b855a741ca62551e8dea6f70c1da1dbb12",
+              "page": 2,
+              "cropRectNormalized": [
+                0.075,
+                0.06,
+                0.7,
+                0.28
+              ],
+              "caption": "規約第8条：教頭副会長・教職員書記会計",
+              "width": 930,
+              "height": 464,
+              "privacy": "none"
+            },
+            {
+              "image": "/assets/archive/atsugi/review-20261116/prior-mk-02.webp",
+              "sha256": "fb0b234fec5eabc7c54382697e7e9796efca2a7c4ca350312c5a15b7051cfcc3",
+              "page": 4,
+              "cropRectNormalized": [
+                0.085,
+                0.135,
+                0.85,
+                0.32
+              ],
+              "caption": "規約第19条：運営委員会に学校長を含める",
+              "width": 1139,
+              "height": 390,
+              "privacy": "none"
+            }
+          ]
+        }
+      ]
+    },
+    "morinosato-es": {
+      "finding": "2025年度計画はPTA本部による会費集金の予定を掲載し、運営委員会だよりはtetoruでのPTA総会案内と活動の効率化を伝えています。",
+      "assessment": "会費の受付、役員登録名簿、総会の配信はPTA内部事務です。年計画だけから学校の徴収は確定できません。学校の配信を行う根拠と法61条の利用目的を確認し、法69条の校内利用とPTAへの提供、地公法35条・34条の業務・守秘、地自法235条の4第2項の収納と保管を検証します。",
+      "action": "活動負担の軽減を進め、総会配信・会費受付・役員登録の担当と権限を明確にしてください。",
+      "missing": [
+        "現行の加入・退会書式、徴収・口座・会計記録",
+        "役員選出、情報の取得元と学校内利用・提供の記録"
+      ],
+      "documents": [
+        {
+          "title": "2025年度森の里小学校PTA年間活動計画.pdf",
+          "date": "2025年度",
+          "url": "https://drive.google.com/file/d/1HSS4-2fJhkcXzRmfTYS5YkOVKwzLQysT/view",
+          "sha256": "b9d5a7f279e69614546f262272d09e2ca5e96dc862a1221721ae967d1a74a19a",
+          "pdfPages": 1,
+          "finding": "PTA本部の会費集金・集計と役員登録名簿チェックの計画。次年度委員・新入生役員選出の計画。",
+          "sourceSha256Rechecked": true,
+          "crops": [
+            {
+              "image": "/assets/archive/atsugi/review-20261116/prior-ms-01.webp",
+              "sha256": "452e6f1bb622034726b1dd3186779633b3ee9f961db780bc51696878b5243e0f",
+              "page": 1,
+              "cropRectNormalized": [
+                0.037,
+                0.085,
+                0.445,
+                0.323
+              ],
+              "caption": "2025年度本部計画：会費集金集計・役員登録名簿確認",
+              "width": 1215,
+              "height": 501,
+              "privacy": "none"
+            }
+          ]
+        },
+        {
+          "title": "運営委員会だより（３月号）.pdf",
+          "date": "2025-03-17",
+          "url": "https://drive.google.com/file/d/1BMrczNqsUywFSBtY28MVCPjffhQTpoXQ/view",
+          "sha256": "81a560f86be657d7c81792393fe43663fc71e0b2c85922ab56a5dc7903fa79ea",
+          "pdfPages": 2,
+          "finding": "tetoruによるPTA総会案内。教員へのPTA活動問い合わせ案内。",
+          "sourceSha256Rechecked": true,
+          "crops": [
+            {
+              "image": "/assets/archive/atsugi/review-20261116/prior-ms-03.webp",
+              "sha256": "de7e9ef374e42c1e85bfb4c70985555c9ad36caaec9ac72758d4b55ea3f9850f",
+              "page": 2,
+              "cropRectNormalized": [
+                0.075,
+                0.47,
+                0.95,
+                0.738
+              ],
+              "caption": "2025年3月PTA総会通知のtetoru配信",
+              "width": 1303,
+              "height": 564,
+              "privacy": "none"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "priorCrops": [
+    {
+      "id": "AT-CLIP-001",
+      "school_id": "aikawa-es",
+      "original_filename": "相川小学校　相談受付記録_01.pdf",
+      "source_page": 1,
+      "crop_rect_pdf_pts": [
+        30.0,
+        113.0,
+        567.0,
+        308.0
+      ],
+      "region_fraction": [
+        0.05034,
+        0.13452,
+        0.95134,
+        0.36667
+      ],
+      "caption": "任意加入・徴収に関する相談と市の確認",
+      "category": "相談・行政記録",
+      "evidentiary_limit": "2025年5月16日。相談者の見解と学校の行為を混同しない",
+      "image": "images/01_aikawa-es_01.webp",
+      "image_bytes": 85546,
+      "sha256_original": "a0128ff96c8c329ee7d8f31048dd93fc7dd87e1045890eb50d5c9b2ed5334375",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/01_aikawa-es_01.webp",
+      "image_sha256_verified": "77aec6ec32e1068df80f8901b9ea8a852482b0d1a35236c6bc824a89a3b4e34b",
+      "repo_source_match": "source-pdfs/atsugi/aikawa-es/aikawa-es-soudan-01.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/aikawa-es/aikawa-es-soudan-01.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-002",
+      "school_id": "aikawa-jhs",
+      "original_filename": "相川小学校　相談受付記録_01.pdf",
+      "source_page": 2,
+      "crop_rect_pdf_pts": [
+        30.0,
+        218.0,
+        568.0,
+        344.0
+      ],
+      "region_fraction": [
+        0.05025,
+        0.26077,
+        0.95142,
+        0.41148
+      ],
+      "caption": "新入生名簿を使用したとの保護者申告",
+      "category": "未立証の申告",
+      "evidentiary_limit": "ファイル名は相川小だが本文の対象校は相川中。事実認定ではない",
+      "image": "images/02_aikawa-jhs_02.webp",
+      "image_bytes": 55362,
+      "sha256_original": "a0128ff96c8c329ee7d8f31048dd93fc7dd87e1045890eb50d5c9b2ed5334375",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/02_aikawa-jhs_02.webp",
+      "image_sha256_verified": "bf6dfd06cd12e63d33d6bd0a73ee688c732a6ecbfc8ec430a43d6f7f82cee5d0",
+      "repo_source_match": "source-pdfs/atsugi/aikawa-es/aikawa-es-soudan-01.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/aikawa-es/aikawa-es-soudan-01.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-003",
+      "school_id": "aikawa-jhs",
+      "original_filename": "相川中学校　会議録_04.pdf",
+      "source_page": 1,
+      "crop_rect_pdf_pts": [
+        30.0,
+        94.0,
+        564.0,
+        162.0
+      ],
+      "region_fraction": [
+        0.05059,
+        0.11217,
+        0.9511,
+        0.19332
+      ],
+      "caption": "PTA会費案内をtetoruで配信・引落予定",
+      "category": "学校資料への記載",
+      "evidentiary_limit": "実際の送信者・収納主体は未確認",
+      "image": "images/03_aikawa-jhs_01.webp",
+      "image_bytes": 7388,
+      "sha256_original": "7a4497474a69a4f129a88074e51a07dd348fee128060b1a4c10478cdbdd4769f",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/03_aikawa-jhs_01.webp",
+      "image_sha256_verified": "ea574e63237a7ede93560a8a2574d6ec086478ec7aeac1482bd643d681692956",
+      "repo_source_match": "source-pdfs/atsugi/aikawa-jhs/相川中学校　会議録_04.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/aikawa-jhs/%E7%9B%B8%E5%B7%9D%E4%B8%AD%E5%AD%A6%E6%A0%A1%E3%80%80%E4%BC%9A%E8%AD%B0%E9%8C%B2_04.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-004",
+      "school_id": "aikawa-jhs",
+      "original_filename": "相川中学校　会議録_04.pdf",
+      "source_page": 2,
+      "crop_rect_pdf_pts": [
+        30.0,
+        285.0,
+        564.0,
+        570.0
+      ],
+      "region_fraction": [
+        0.05059,
+        0.34132,
+        0.9511,
+        0.68263
+      ],
+      "caption": "学校連絡アプリとPTA会費集金事務",
+      "category": "学校資料への記載",
+      "evidentiary_limit": "教職員とPTAの事務分担を別途確認",
+      "image": "images/04_aikawa-jhs_02.webp",
+      "image_bytes": 132082,
+      "sha256_original": "7a4497474a69a4f129a88074e51a07dd348fee128060b1a4c10478cdbdd4769f",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/04_aikawa-jhs_02.webp",
+      "image_sha256_verified": "ae09d445b9c87ed2450c07a77ad27eb82a7a178790637b72e383191c2f5e2efb",
+      "repo_source_match": "source-pdfs/atsugi/aikawa-jhs/相川中学校　会議録_04.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/aikawa-jhs/%E7%9B%B8%E5%B7%9D%E4%B8%AD%E5%AD%A6%E6%A0%A1%E3%80%80%E4%BC%9A%E8%AD%B0%E9%8C%B2_04.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-005",
+      "school_id": "aikawa-jhs",
+      "original_filename": "相川中学校　会議録_04.pdf",
+      "source_page": 9,
+      "crop_rect_pdf_pts": [
+        30.0,
+        427.0,
+        563.0,
+        488.0
+      ],
+      "region_fraction": [
+        0.05068,
+        0.51261,
+        0.95101,
+        0.58583
+      ],
+      "caption": "新入生説明会での役員くじ引き",
+      "category": "会議録への記載",
+      "evidentiary_limit": "就任承諾や強制就任の実際は未確認",
+      "image": "images/05_aikawa-jhs_09.webp",
+      "image_bytes": 19778,
+      "sha256_original": "7a4497474a69a4f129a88074e51a07dd348fee128060b1a4c10478cdbdd4769f",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/05_aikawa-jhs_09.webp",
+      "image_sha256_verified": "1f67aa16f8c37a808bfc7aeb3798edd9bb2828ccb3bfdb884c293d6288159564",
+      "repo_source_match": "source-pdfs/atsugi/aikawa-jhs/相川中学校　会議録_04.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/aikawa-jhs/%E7%9B%B8%E5%B7%9D%E4%B8%AD%E5%AD%A6%E6%A0%A1%E3%80%80%E4%BC%9A%E8%AD%B0%E9%8C%B2_04.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-006",
+      "school_id": "atsugi-daini-es",
+      "original_filename": "厚木第二小学校_05.pdf",
+      "source_page": 1,
+      "crop_rect_pdf_pts": [
+        30.0,
+        521.0,
+        561.0,
+        696.0
+      ],
+      "region_fraction": [
+        0.05085,
+        0.62172,
+        0.95085,
+        0.83055
+      ],
+      "caption": "任意加入の明記と全家庭回答・入学式確認",
+      "category": "改善・残る課題",
+      "evidentiary_limit": "入学式で誰が確認するか未確認",
+      "image": "images/06_atsugi-daini-es_01.webp",
+      "image_bytes": 48088,
+      "sha256_original": "2fd1409634772e1f5bcbe06952b0a71cd3d1d61545827fbf24954351222bd8a3",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/06_atsugi-daini-es_01.webp",
+      "image_sha256_verified": "d2378e509661c12e27263923d0e625a78563c0d7ff36a63a120e5caed4eaeff3",
+      "repo_source_match": "source-pdfs/atsugi/atsugi-daini-es/atsugi-daini-es-05.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/atsugi-daini-es/atsugi-daini-es-05.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-007",
+      "school_id": "atsugi-daini-es",
+      "original_filename": "厚木第二小学校_10.pdf",
+      "source_page": 3,
+      "crop_rect_pdf_pts": [
+        30.0,
+        616.0,
+        570.0,
+        716.0
+      ],
+      "region_fraction": [
+        0.05008,
+        0.7395,
+        0.95159,
+        0.85954
+      ],
+      "caption": "継続会員の退会届提出方式",
+      "category": "運用設計上の検討",
+      "evidentiary_limit": "転入生向け選択制との対象の違いを区別",
+      "image": "images/07_atsugi-daini-es_03.webp",
+      "image_bytes": 64264,
+      "sha256_original": "11d4376fc6f230de0e7d6a15b90e4de877b0300162a41cb1f67b4f4883fbf933",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/07_atsugi-daini-es_03.webp",
+      "image_sha256_verified": "9fb9cad0ed54eb6287402463b968f8f9a3240d890d351516029dd2da7d99b093",
+      "repo_source_match": "source-pdfs/atsugi/atsugi-daini-es/厚木第二小学校_10.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/atsugi-daini-es/%E5%8E%9A%E6%9C%A8%E7%AC%AC%E4%BA%8C%E5%B0%8F%E5%AD%A6%E6%A0%A1_10.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-008",
+      "school_id": "atsugi-es",
+      "original_filename": "厚木小学校_06.pdf",
+      "source_page": 1,
+      "crop_rect_pdf_pts": [
+        30.0,
+        760.0,
+        571.0,
+        832.0
+      ],
+      "region_fraction": [
+        0.05,
+        0.90692,
+        0.95167,
+        0.99284
+      ],
+      "caption": "PTA会員名簿の入退会届兼用の注記",
+      "category": "書式内容の訂正",
+      "evidentiary_limit": "用紙の存在と自由な申込・承諾を区別",
+      "image": "images/08_atsugi-es_01.webp",
+      "image_bytes": 32162,
+      "sha256_original": "73eefa86903159b5056f5549564173a3391b0d4ac414e3fcd2c4f46409a48102",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/08_atsugi-es_01.webp",
+      "image_sha256_verified": "bd385b5fa437a5d444e48d1ed19bb9268c0cd4253150279f11a8371778224332",
+      "repo_source_match": "source-pdfs/atsugi/atsugi-es/厚木小学校_06.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/atsugi-es/%E5%8E%9A%E6%9C%A8%E5%B0%8F%E5%AD%A6%E6%A0%A1_06.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-009",
+      "school_id": "echi-es",
+      "original_filename": "依知小学校_0002.pdf",
+      "source_page": 1,
+      "crop_rect_pdf_pts": [
+        30.0,
+        209.0,
+        570.0,
+        251.0
+      ],
+      "region_fraction": [
+        0.05008,
+        0.24881,
+        0.95159,
+        0.29881
+      ],
+      "caption": "PTAは任意加入と明記",
+      "category": "改善を評価",
+      "evidentiary_limit": "任意加入の表示自体を確認",
+      "image": "images/09_echi-es_01.webp",
+      "image_bytes": 40036,
+      "sha256_original": "72ac32d6d01b86a9981fc2a2d72070bcbd2f2689aea9356bc4761603c78cb3c0",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/09_echi-es_01.webp",
+      "image_sha256_verified": "5edae3331c36bca0e3c85a838c06ee643d6a818fbdb5e20e2a146b37ccdd5970",
+      "repo_source_match": "source-pdfs/atsugi/echi-es/echi-es-0002.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/echi-es/echi-es-0002.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-010",
+      "school_id": "echi-es",
+      "original_filename": "依知小学校_0002.pdf",
+      "source_page": 1,
+      "crop_rect_pdf_pts": [
+        30.0,
+        467.0,
+        570.0,
+        733.0
+      ],
+      "region_fraction": [
+        0.05008,
+        0.55595,
+        0.95159,
+        0.87262
+      ],
+      "caption": "PTAカード提出による加入扱い・入学式提出",
+      "category": "運用設計上の検討",
+      "evidentiary_limit": "PTAへの加入意思と学校行事を切り分ける",
+      "image": "images/10_echi-es_01.webp",
+      "image_bytes": 80548,
+      "sha256_original": "72ac32d6d01b86a9981fc2a2d72070bcbd2f2689aea9356bc4761603c78cb3c0",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/10_echi-es_01.webp",
+      "image_sha256_verified": "fd37d36ead608706baf6d0643d29a19314efe0448128c4621d8cb6363d7d78dd",
+      "repo_source_match": "source-pdfs/atsugi/echi-es/echi-es-0002.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/echi-es/echi-es-0002.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-011",
+      "school_id": "kamiechi-es",
+      "original_filename": "上依知小学校_01.pdf",
+      "source_page": 2,
+      "crop_rect_pdf_pts": [
+        30.0,
+        67.0,
+        564.0,
+        253.0
+      ],
+      "region_fraction": [
+        0.05059,
+        0.08024,
+        0.9511,
+        0.30299
+      ],
+      "caption": "入学式当日の委員選出と一人一回の依頼",
+      "category": "役員選出制度",
+      "evidentiary_limit": "実際の強制就任は未立証",
+      "image": "images/11_kamiechi-es_02.webp",
+      "image_bytes": 69820,
+      "sha256_original": "bdd8245c41c4cc93e50f571f9a81c4246c5518a752d350a3533dcbd1f6d07515",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/11_kamiechi-es_02.webp",
+      "image_sha256_verified": "3139f74d2817ca8074db48ec015440ed3fc6d969d57f88ecbd46360fa67b5d61",
+      "repo_source_match": "source-pdfs/atsugi/kamiechi-es/上依知小学校_01.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/kamiechi-es/%E4%B8%8A%E4%BE%9D%E7%9F%A5%E5%B0%8F%E5%AD%A6%E6%A0%A1_01.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-012",
+      "school_id": "kamiogino-es",
+      "original_filename": "上荻野小学校_13.pdf",
+      "source_page": 1,
+      "crop_rect_pdf_pts": [
+        30.0,
+        91.0,
+        570.0,
+        160.0
+      ],
+      "region_fraction": [
+        0.05008,
+        0.10846,
+        0.95159,
+        0.1907
+      ],
+      "caption": "カード提出による入会・継続扱い",
+      "category": "会員資格制度",
+      "evidentiary_limit": "自発的な申込み・承諾の有無は別に確認",
+      "image": "images/12_kamiogino-es_01.webp",
+      "image_bytes": 37042,
+      "sha256_original": "3706cbfcf0a9f3178ba5644e0c1ebb54616919466be13668079c83332d5292af",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/12_kamiogino-es_01.webp",
+      "image_sha256_verified": "9b230656ddd8ee6448481dcced53b8eb9f2f3696ba39dbc438bddd62b488906e",
+      "repo_source_match": "source-pdfs/atsugi/kamiogino-es/上荻野小学校_13.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/kamiogino-es/%E4%B8%8A%E8%8D%BB%E9%87%8E%E5%B0%8F%E5%AD%A6%E6%A0%A1_13.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-013",
+      "school_id": "kamiogino-es",
+      "original_filename": "上荻野小学校_13.pdf",
+      "source_page": 1,
+      "crop_rect_pdf_pts": [
+        30.0,
+        650.0,
+        570.0,
+        799.0
+      ],
+      "region_fraction": [
+        0.05008,
+        0.77473,
+        0.95159,
+        0.95232
+      ],
+      "caption": "委員選出・会費集金への利用と学校金庫保管",
+      "category": "情報・事務管理制度",
+      "evidentiary_limit": "金庫の場所と学校職員による実際の利用を区別",
+      "image": "images/13_kamiogino-es_01.webp",
+      "image_bytes": 111982,
+      "sha256_original": "3706cbfcf0a9f3178ba5644e0c1ebb54616919466be13668079c83332d5292af",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/13_kamiogino-es_01.webp",
+      "image_sha256_verified": "8b976daef61cfa86e1cb6ff4053226d8ff0546acf67525efcdd665f4aef62f01",
+      "repo_source_match": "source-pdfs/atsugi/kamiogino-es/上荻野小学校_13.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/kamiogino-es/%E4%B8%8A%E8%8D%BB%E9%87%8E%E5%B0%8F%E5%AD%A6%E6%A0%A1_13.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-014",
+      "school_id": "koayu-es",
+      "original_filename": "小鮎小学校_08.pdf",
+      "source_page": 1,
+      "crop_rect_pdf_pts": [
+        30.0,
+        444.0,
+        573.0,
+        638.0
+      ],
+      "region_fraction": [
+        0.04983,
+        0.52983,
+        0.95183,
+        0.76134
+      ],
+      "caption": "無理な役員負担を求めず中途退会・休会を認める",
+      "category": "改善を評価",
+      "evidentiary_limit": "学校・PTAの実際の運用は未確認",
+      "image": "images/14_koayu-es_01.webp",
+      "image_bytes": 136054,
+      "sha256_original": "a286c767753aa49ce6b92ddffa64ee30beceb434844955e9decee58e62a73929",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/14_koayu-es_01.webp",
+      "image_sha256_verified": "cd848f9ed791239f5ede74748abb361d487d038f529cc328d3b3ce3691e3b05c",
+      "repo_source_match": "source-pdfs/atsugi/koayu-es/小鮎小学校_08.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/koayu-es/%E5%B0%8F%E9%AE%8E%E5%B0%8F%E5%AD%A6%E6%A0%A1_08.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-015",
+      "school_id": "mutsuai-jhs",
+      "original_filename": "睦合中学校_01.pdf",
+      "source_page": 2,
+      "crop_rect_pdf_pts": [
+        30.0,
+        294.0,
+        565.0,
+        455.0
+      ],
+      "region_fraction": [
+        0.05051,
+        0.3521,
+        0.95118,
+        0.54491
+      ],
+      "caption": "校長名義の学校教育活動とPTA目的の情報利用",
+      "category": "学校の権限・個情法61/69条",
+      "evidentiary_limit": "本人同意の前に学校の所掌を審査",
+      "image": "images/15_mutsuai-jhs_02.webp",
+      "image_bytes": 81822,
+      "sha256_original": "271d23e5b4fc80898056f84abc7a03bc439bae8b27ad3c9fb919d0cea040a7b5",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/15_mutsuai-jhs_02.webp",
+      "image_sha256_verified": "31aa22cfaef721029716197f541fa954c3e1427049b4a266c097191dae943512",
+      "repo_source_match": "source-pdfs/atsugi/mutsuai-jhs/睦合中学校_01.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/mutsuai-jhs/%E7%9D%A6%E5%90%88%E4%B8%AD%E5%AD%A6%E6%A0%A1_01.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-016",
+      "school_id": "shimizu-es",
+      "original_filename": "清水小学校_07.pdf",
+      "source_page": 1,
+      "crop_rect_pdf_pts": [
+        30.0,
+        535.0,
+        563.0,
+        720.0
+      ],
+      "region_fraction": [
+        0.05068,
+        0.63842,
+        0.95101,
+        0.85919
+      ],
+      "caption": "加入申込方式と非会員差別禁止の明示",
+      "category": "改善を評価",
+      "evidentiary_limit": "公表制度の運用実施は別に検証",
+      "image": "images/16_shimizu-es_01.webp",
+      "image_bytes": 70648,
+      "sha256_original": "ddaa2642b4283e84e237172588ce8d3718b52bd55629b573608a443dfd80f88b",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/16_shimizu-es_01.webp",
+      "image_sha256_verified": "c1e85c9e198b64355adfab8031593692adb7458950720299303d673f7ee51605",
+      "repo_source_match": "source-pdfs/atsugi/shimizu-es/清水小学校_07.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/shimizu-es/%E6%B8%85%E6%B0%B4%E5%B0%8F%E5%AD%A6%E6%A0%A1_07.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-017",
+      "school_id": "shimizu-es",
+      "original_filename": "清水小学校_07.pdf",
+      "source_page": 2,
+      "crop_rect_pdf_pts": [
+        30.0,
+        57.0,
+        563.0,
+        157.0
+      ],
+      "region_fraction": [
+        0.05068,
+        0.06843,
+        0.95101,
+        0.18848
+      ],
+      "caption": "入会申込書内の学校への会費集金委託同意",
+      "category": "学校徴収権限の問題",
+      "evidentiary_limit": "私法上の同意は公法上の授権を創設しない",
+      "image": "images/17_shimizu-es_02.webp",
+      "image_bytes": 49408,
+      "sha256_original": "ddaa2642b4283e84e237172588ce8d3718b52bd55629b573608a443dfd80f88b",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/17_shimizu-es_02.webp",
+      "image_sha256_verified": "f89f617df95afafe87639a129abe46d0f7469a435f4398a36935f582e4bcd5eb",
+      "repo_source_match": "source-pdfs/atsugi/shimizu-es/清水小学校_07.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/shimizu-es/%E6%B8%85%E6%B0%B4%E5%B0%8F%E5%AD%A6%E6%A0%A1_07.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-018",
+      "school_id": "toda-es",
+      "original_filename": "戸田小学校_01.pdf",
+      "source_page": 1,
+      "crop_rect_pdf_pts": [
+        30.0,
+        455.0,
+        570.0,
+        589.0
+      ],
+      "region_fraction": [
+        0.05008,
+        0.54296,
+        0.95159,
+        0.70286
+      ],
+      "caption": "PTAから学校への会費振替依頼条項",
+      "category": "学校徴収権限の問題",
+      "evidentiary_limit": "振替の実施と収納主体・権限を別途検証",
+      "image": "images/18_toda-es_01.webp",
+      "image_bytes": 59246,
+      "sha256_original": "9e52b9bb6b389b0c0a646d204df96dae1c14e58fb8459a87d9b368743c0dacf1",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/18_toda-es_01.webp",
+      "image_sha256_verified": "4c889e4c1aaa2267019ad65d2daf888d91be8a525e6a00adec895970cf13315a",
+      "repo_source_match": "source-pdfs/atsugi/toda-es/戸田小学校_01.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/toda-es/%E6%88%B8%E7%94%B0%E5%B0%8F%E5%AD%A6%E6%A0%A1_01.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-019",
+      "school_id": "toda-es",
+      "original_filename": "戸田小学校_01.pdf",
+      "source_page": 2,
+      "crop_rect_pdf_pts": [
+        30.0,
+        309.0,
+        570.0,
+        362.0
+      ],
+      "region_fraction": [
+        0.05008,
+        0.37095,
+        0.95159,
+        0.43457
+      ],
+      "caption": "非会員児童への記念品等実費負担の可能性",
+      "category": "児童の公平性",
+      "evidentiary_limit": "実際の徴収・区別の有無は未確認",
+      "image": "images/19_toda-es_02.webp",
+      "image_bytes": 39460,
+      "sha256_original": "9e52b9bb6b389b0c0a646d204df96dae1c14e58fb8459a87d9b368743c0dacf1",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/19_toda-es_02.webp",
+      "image_sha256_verified": "55dc000bb85ff9a3a1e9a45d94c0cdd097c4c7944f3fd5d5d1082a156ab40def",
+      "repo_source_match": "source-pdfs/atsugi/toda-es/戸田小学校_01.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/toda-es/%E6%88%B8%E7%94%B0%E5%B0%8F%E5%AD%A6%E6%A0%A1_01.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-020",
+      "school_id": "tomuro-es",
+      "original_filename": "戸室小学校_11.pdf",
+      "source_page": 1,
+      "crop_rect_pdf_pts": [
+        30.0,
+        52.0,
+        573.0,
+        110.0
+      ],
+      "region_fraction": [
+        0.04983,
+        0.06205,
+        0.95183,
+        0.13126
+      ],
+      "caption": "加入・非加入の選択欄",
+      "category": "改善を評価",
+      "evidentiary_limit": "意思確認が実際に機能したかを別に確認",
+      "image": "images/20_tomuro-es_01.webp",
+      "image_bytes": 31480,
+      "sha256_original": "2c2f62618d7963c4965b90ebaf0158cd2da00c370153a40db7889e4dbcbacd00",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/20_tomuro-es_01.webp",
+      "image_sha256_verified": "d64fabd45b553ae252ae0664c64649d84fd122749cfa55a1add6557a18a943d8",
+      "repo_source_match": "source-pdfs/atsugi/tomuro-es/tomuro-es-11.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/tomuro-es/tomuro-es-11.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-021",
+      "school_id": "tomuro-es",
+      "original_filename": "戸室小学校_11.pdf",
+      "source_page": 1,
+      "crop_rect_pdf_pts": [
+        30.0,
+        342.0,
+        573.0,
+        409.0
+      ],
+      "region_fraction": [
+        0.04983,
+        0.40811,
+        0.95183,
+        0.48807
+      ],
+      "caption": "登校班編成と役員選出を兼ねた会員情報",
+      "category": "情報利用の主体分離",
+      "evidentiary_limit": "学校保有情報の転用かPTA直接取得か未確認",
+      "image": "images/21_tomuro-es_01.webp",
+      "image_bytes": 31820,
+      "sha256_original": "2c2f62618d7963c4965b90ebaf0158cd2da00c370153a40db7889e4dbcbacd00",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/21_tomuro-es_01.webp",
+      "image_sha256_verified": "e56c2c90cac72cad02e03066bee3f2d378cdb0ad98697aab7a507465ab163a5d",
+      "repo_source_match": "source-pdfs/atsugi/tomuro-es/tomuro-es-11.pdf",
+      "source_url": "https://ptaorg.com/source-pdfs/atsugi/tomuro-es/tomuro-es-11.pdf",
+      "source_url_status": "保存版URL",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-022",
+      "school_id": "tsumada-es",
+      "original_filename": "麦田小学校_12.pdf",
+      "source_page": 1,
+      "crop_rect_pdf_pts": [
+        30.0,
+        444.0,
+        571.0,
+        598.0
+      ],
+      "region_fraction": [
+        0.05,
+        0.5343,
+        0.95167,
+        0.71961
+      ],
+      "caption": "委員登録票・会費納入による加入と学校事務局",
+      "category": "加入と学校事務の境界",
+      "evidentiary_limit": "原本本文は妻田小。保存名「麦田」は誤記",
+      "image": "images/22_tsumada-es_01.webp",
+      "image_bytes": 65114,
+      "sha256_original": "3a0585b5c790842aa9b56c06b2b4da4b4c9e852938ab4efcc7c58403dfb61772",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/22_tsumada-es_01.webp",
+      "image_sha256_verified": "96781727aa01a50f2ab771b853001e0020f007c7964b7fe87302823f48790cbd",
+      "repo_source_match": null,
+      "source_url_status": "受領元URLは公開用に記録なし",
+      "public_repo_image": null
+    },
+    {
+      "id": "AT-CLIP-023",
+      "school_id": "tsumada-es",
+      "original_filename": "麦田小学校_12.pdf",
+      "source_page": 2,
+      "crop_rect_pdf_pts": [
+        30.0,
+        276.0,
+        571.0,
+        350.0
+      ],
+      "region_fraction": [
+        0.05,
+        0.33014,
+        0.95167,
+        0.41866
+      ],
+      "caption": "PTA退会届の理由記入欄",
+      "category": "退会の実効性",
+      "evidentiary_limit": "記入必須か、理由の取扱いは未確認",
+      "image": "images/23_tsumada-es_02.webp",
+      "image_bytes": 10298,
+      "sha256_original": "3a0585b5c790842aa9b56c06b2b4da4b4c9e852938ab4efcc7c58403dfb61772",
+      "privacy_status": "cropped to omit filled-in personal data fields; final human visual inspection required before publication",
+      "publication": "draft_only",
+      "archived_image": "previous_15_school_crops/images/23_tsumada-es_02.webp",
+      "image_sha256_verified": "c69d93bcea5cd5a6ab624bee5a76cc17231e4996d8de12eba78deb49c638db9b",
+      "repo_source_match": null,
+      "source_url_status": "受領元URLは公開用に記録なし",
+      "public_repo_image": null
+    },
+    {
+      "id": "MK-01",
+      "school": "緑ケ丘小学校",
+      "source_file": "R7PTA規約.pdf",
+      "source_pdf_sha256": "5939217deb0c707dfb13cd43a06e5d35f4feaac417be93502e051cd00062107b",
+      "source_page": 2,
+      "source_url": "https://drive.google.com/file/d/1AHwfpt1xDNMvOUSWcY6EBk9hf49cGkMv/view",
+      "crop_normalized": [
+        0.075,
+        0.06,
+        0.7,
+        0.28
+      ],
+      "crop_image": "MK-01_midorigaoka_p02.png",
+      "crop_sha256": "069d6bad667350d3394a709822c90f569af85801c0ff22851ec640b2ea7bbd15",
+      "caption": "規約第8条：教頭副会長・教職員書記会計",
+      "evidence_limit": "教職員のPTA役員配置。公務としての根拠や兼職等の取扱いは未確認",
+      "status": "draft_review_required",
+      "redaction": "none",
+      "archived_image": "new_4_school_crops/MK-01_midorigaoka_p02.png",
+      "image_sha256_verified": "069d6bad667350d3394a709822c90f569af85801c0ff22851ec640b2ea7bbd15",
+      "repo_source_match": null,
+      "source_sha256_rechecked": true,
+      "public_repo_image": "/assets/archive/atsugi/review-20261116/prior-mk-01.webp",
+      "imageDimensions": [
+        930,
+        464
+      ],
+      "publicRepoImageSha256": "28df2e1294fd1eb811e8113f581bf8b855a741ca62551e8dea6f70c1da1dbb12"
+    },
+    {
+      "id": "MK-02",
+      "school": "緑ケ丘小学校",
+      "source_file": "R7PTA規約.pdf",
+      "source_pdf_sha256": "5939217deb0c707dfb13cd43a06e5d35f4feaac417be93502e051cd00062107b",
+      "source_page": 4,
+      "source_url": "https://drive.google.com/file/d/1AHwfpt1xDNMvOUSWcY6EBk9hf49cGkMv/view",
+      "crop_normalized": [
+        0.085,
+        0.135,
+        0.85,
+        0.32
+      ],
+      "crop_image": "MK-02_midorigaoka_p04.png",
+      "crop_sha256": "4a131844fd8f2fe0ac10ef3ce2c09acbc1bdee11940ae67d4e12a64b3f0a9de6",
+      "caption": "規約第19条：運営委員会に学校長を含める",
+      "evidence_limit": "学校長の団体意思決定への参加と職務権限を区別する",
+      "status": "draft_review_required",
+      "redaction": "none",
+      "archived_image": "new_4_school_crops/MK-02_midorigaoka_p04.png",
+      "image_sha256_verified": "4a131844fd8f2fe0ac10ef3ce2c09acbc1bdee11940ae67d4e12a64b3f0a9de6",
+      "repo_source_match": null,
+      "source_sha256_rechecked": true,
+      "public_repo_image": "/assets/archive/atsugi/review-20261116/prior-mk-02.webp",
+      "imageDimensions": [
+        1139,
+        390
+      ],
+      "publicRepoImageSha256": "fb0b234fec5eabc7c54382697e7e9796efca2a7c4ca350312c5a15b7051cfcc3"
+    },
+    {
+      "id": "MK-03",
+      "school": "緑ケ丘小学校",
+      "source_file": "R7PTA規約.pdf",
+      "source_pdf_sha256": "5939217deb0c707dfb13cd43a06e5d35f4feaac417be93502e051cd00062107b",
+      "source_page": 4,
+      "source_url": "https://drive.google.com/file/d/1AHwfpt1xDNMvOUSWcY6EBk9hf49cGkMv/view",
+      "crop_normalized": [
+        0.07,
+        0.42,
+        0.78,
+        0.615
+      ],
+      "crop_image": "MK-03_midorigaoka_p04.png",
+      "crop_sha256": "a1a912251e74d9c6fa5b6e7f7f031ec88b2ddf65c87b95cce3dd4320a2b7438e",
+      "caption": "規約第21条：教職員はいずれかの委員会に所属",
+      "evidence_limit": "教職員の義務的所属を規約が規定。公務上の義務を創設するものではない",
+      "status": "draft_review_required",
+      "redaction": "none",
+      "archived_image": "new_4_school_crops/MK-03_midorigaoka_p04.png",
+      "image_sha256_verified": "a1a912251e74d9c6fa5b6e7f7f031ec88b2ddf65c87b95cce3dd4320a2b7438e",
+      "repo_source_match": null,
+      "source_sha256_rechecked": true,
+      "public_repo_image": null
+    },
+    {
+      "id": "MK-04",
+      "school": "緑ケ丘小学校",
+      "source_file": "R7PTA規約.pdf",
+      "source_pdf_sha256": "5939217deb0c707dfb13cd43a06e5d35f4feaac417be93502e051cd00062107b",
+      "source_page": 6,
+      "source_url": "https://drive.google.com/file/d/1AHwfpt1xDNMvOUSWcY6EBk9hf49cGkMv/view",
+      "crop_normalized": [
+        0.14,
+        0.065,
+        0.83,
+        0.75
+      ],
+      "crop_image": "MK-04_midorigaoka_p06.png",
+      "crop_sha256": "ebab9003c2687add352cf20a382a57139a81a4433668f932af1f66006d673a89",
+      "caption": "規約参考資料：2025年度会費年2000円と徴収返金表",
+      "evidence_limit": "表は会費額・徴収時期のみ。学校による実際の徴収は未確認",
+      "status": "draft_review_required",
+      "redaction": "none",
+      "archived_image": "new_4_school_crops/MK-04_midorigaoka_p06.png",
+      "image_sha256_verified": "ebab9003c2687add352cf20a382a57139a81a4433668f932af1f66006d673a89",
+      "repo_source_match": null,
+      "source_sha256_rechecked": true,
+      "public_repo_image": null
+    },
+    {
+      "id": "MK-05",
+      "school": "緑ケ丘小学校",
+      "source_file": "R7PTA規約.pdf",
+      "source_pdf_sha256": "5939217deb0c707dfb13cd43a06e5d35f4feaac417be93502e051cd00062107b",
+      "source_page": 3,
+      "source_url": "https://drive.google.com/file/d/1AHwfpt1xDNMvOUSWcY6EBk9hf49cGkMv/view",
+      "crop_normalized": [
+        0.12,
+        0.06,
+        0.85,
+        0.137
+      ],
+      "crop_image": "MK-05_midorigaoka_p03.png",
+      "crop_sha256": "21ca1bc9e739aed6d2f6c993afe0717cc0b4f3e39feef7cc694456514546e2d6",
+      "caption": "規約第11条：委員の選任",
+      "evidence_limit": "役員・委員の選任条項。本人承諾の実務は別途確認",
+      "status": "draft_review_required",
+      "redaction": "none",
+      "archived_image": "new_4_school_crops/MK-05_midorigaoka_p03.png",
+      "image_sha256_verified": "21ca1bc9e739aed6d2f6c993afe0717cc0b4f3e39feef7cc694456514546e2d6",
+      "repo_source_match": null,
+      "source_sha256_rechecked": true,
+      "public_repo_image": null
+    },
+    {
+      "id": "MS-01",
+      "school": "森の里小学校",
+      "source_file": "2025年度森の里小学校PTA年間活動計画.pdf",
+      "source_pdf_sha256": "b9d5a7f279e69614546f262272d09e2ca5e96dc862a1221721ae967d1a74a19a",
+      "source_page": 1,
+      "source_url": "https://drive.google.com/file/d/1HSS4-2fJhkcXzRmfTYS5YkOVKwzLQysT/view",
+      "crop_normalized": [
+        0.037,
+        0.085,
+        0.445,
+        0.323
+      ],
+      "crop_image": "MS-01_morinosato-plan_p01.png",
+      "crop_sha256": "f2557106b3cd639dafc0b4e3aa3b09281f27398f5fe4dbf22634735b1e0309de",
+      "caption": "2025年度本部計画：会費集金集計・役員登録名簿確認",
+      "evidence_limit": "PTA本部の予定表。学校実施と断定しない",
+      "status": "draft_review_required",
+      "redaction": "none",
+      "archived_image": "new_4_school_crops/MS-01_morinosato-plan_p01.png",
+      "image_sha256_verified": "f2557106b3cd639dafc0b4e3aa3b09281f27398f5fe4dbf22634735b1e0309de",
+      "repo_source_match": null,
+      "source_sha256_rechecked": true,
+      "public_repo_image": "/assets/archive/atsugi/review-20261116/prior-ms-01.webp",
+      "imageDimensions": [
+        1215,
+        501
+      ],
+      "publicRepoImageSha256": "452e6f1bb622034726b1dd3186779633b3ee9f961db780bc51696878b5243e0f"
+    },
+    {
+      "id": "MS-02",
+      "school": "森の里小学校",
+      "source_file": "2025年度森の里小学校PTA年間活動計画.pdf",
+      "source_pdf_sha256": "b9d5a7f279e69614546f262272d09e2ca5e96dc862a1221721ae967d1a74a19a",
+      "source_page": 1,
+      "source_url": "https://drive.google.com/file/d/1HSS4-2fJhkcXzRmfTYS5YkOVKwzLQysT/view",
+      "crop_normalized": [
+        0.68,
+        0.165,
+        0.97,
+        0.41
+      ],
+      "crop_image": "MS-02_morinosato-plan_p01.png",
+      "crop_sha256": "d12e58c233a1c673351aee8ccbdef7e5e6a56357849b95ea750b262f4d0631dc",
+      "caption": "2025年度計画：次年度委員選出と新入生役員選出",
+      "evidence_limit": "予定表の記載から強制就任と断定しない",
+      "status": "draft_review_required",
+      "redaction": "none",
+      "archived_image": "new_4_school_crops/MS-02_morinosato-plan_p01.png",
+      "image_sha256_verified": "d12e58c233a1c673351aee8ccbdef7e5e6a56357849b95ea750b262f4d0631dc",
+      "repo_source_match": null,
+      "source_sha256_rechecked": true,
+      "public_repo_image": null
+    },
+    {
+      "id": "MS-03",
+      "school": "森の里小学校",
+      "source_file": "運営委員会だより（３月号）.pdf",
+      "source_pdf_sha256": "81a560f86be657d7c81792393fe43663fc71e0b2c85922ab56a5dc7903fa79ea",
+      "source_page": 2,
+      "source_url": "https://drive.google.com/file/d/1BMrczNqsUywFSBtY28MVCPjffhQTpoXQ/view",
+      "crop_normalized": [
+        0.075,
+        0.47,
+        0.95,
+        0.738
+      ],
+      "crop_image": "MS-03_morinosato-march_p02.png",
+      "crop_sha256": "c3d25d13bf85b2b28d7252fb8d5ad473db692bc5cd87e416db05899299bb3963",
+      "caption": "2025年3月PTA総会通知のtetoru配信",
+      "evidence_limit": "送信主体・承認権限・情報利用を別途確認",
+      "status": "draft_review_required",
+      "redaction": "none",
+      "archived_image": "new_4_school_crops/MS-03_morinosato-march_p02.png",
+      "image_sha256_verified": "c3d25d13bf85b2b28d7252fb8d5ad473db692bc5cd87e416db05899299bb3963",
+      "repo_source_match": null,
+      "source_sha256_rechecked": true,
+      "public_repo_image": "/assets/archive/atsugi/review-20261116/prior-ms-03.webp",
+      "imageDimensions": [
+        1303,
+        564
+      ],
+      "publicRepoImageSha256": "de7e9ef374e42c1e85bfb4c70985555c9ad36caaec9ac72758d4b55ea3f9850f"
+    },
+    {
+      "id": "MS-04",
+      "school": "森の里小学校",
+      "source_file": "運営委員会だより（３月号）.pdf",
+      "source_pdf_sha256": "81a560f86be657d7c81792393fe43663fc71e0b2c85922ab56a5dc7903fa79ea",
+      "source_page": 2,
+      "source_url": "https://drive.google.com/file/d/1BMrczNqsUywFSBtY28MVCPjffhQTpoXQ/view",
+      "crop_normalized": [
+        0.07,
+        0.735,
+        0.69,
+        0.829
+      ],
+      "crop_image": "MS-04_morinosato-march_p02.png",
+      "crop_sha256": "5b982c91f29d65f03130f863446c585dfa4f0d1d3698b2cff7b1e5b0222cb64a",
+      "caption": "PTA委員会活動に関する問い合わせ先に教員を案内",
+      "evidence_limit": "教員の関与の実態と公務上の根拠を確認",
+      "status": "draft_review_required",
+      "redaction": "none",
+      "archived_image": "new_4_school_crops/MS-04_morinosato-march_p02.png",
+      "image_sha256_verified": "5b982c91f29d65f03130f863446c585dfa4f0d1d3698b2cff7b1e5b0222cb64a",
+      "repo_source_match": null,
+      "source_sha256_rechecked": true,
+      "public_repo_image": null
+    },
+    {
+      "id": "AK-01",
+      "school": "愛甲小学校",
+      "source_file": "通学安全確保について.pdf",
+      "source_pdf_sha256": "4276411064c37e4de03a925e66ce612a5c71731e3af76a9d5ddb37a9cdb414df",
+      "source_page": 1,
+      "source_url": "https://drive.google.com/file/d/1SxoJHyVyl7VVU7hKgiaEu8a4UQk8Xp26/view",
+      "crop_normalized": [
+        0.06,
+        0.19,
+        0.94,
+        0.75
+      ],
+      "crop_image": "AK-01_aikou_p01.png",
+      "crop_sha256": "6f56af8eb19609195d75c7d6d492337b4df020d32f2fd0bea3519d3321c5f153",
+      "caption": "PTA校外生活指導委員会と学校を問い合わせ先として記載",
+      "evidence_limit": "通学安全という学校活動との連携とPTA内部事務を区別",
+      "status": "draft_review_required",
+      "redaction": "AK-01: incidental teacher name masked",
+      "archived_image": "new_4_school_crops/AK-01_aikou_p01.png",
+      "image_sha256_verified": "6f56af8eb19609195d75c7d6d492337b4df020d32f2fd0bea3519d3321c5f153",
+      "repo_source_match": null,
+      "source_sha256_rechecked": true,
+      "public_repo_image": "/assets/archive/atsugi/review-20261116/prior-ak-01.webp",
+      "imageDimensions": [
+        1311,
+        1179
+      ],
+      "publicRepoImageSha256": "3fe7ea357e8a1343eac85390a3a450ec64a8316bc37370eca493d70a3f3197e7"
+    },
+    {
+      "id": "KT-01",
+      "school": "北小学校",
+      "source_file": "PTA基本方針.pdf",
+      "source_pdf_sha256": "b89c4d8f89d74d57f7716e256e2a33d8fa7d092f502c0316d2bd8a7b5695857a",
+      "source_page": 1,
+      "source_url": "https://drive.google.com/file/d/1nIHqBSrGfDE4Ds32vlpWvqj-SnKRW_Rt/view",
+      "crop_normalized": [
+        0.06,
+        0.09,
+        0.95,
+        0.71
+      ],
+      "crop_image": "KT-01_kita_p01.png",
+      "crop_sha256": "42784fcbae485af994851557693b9a6226b59066b7904d750c2363832281fe12",
+      "caption": "北小PTA基本方針：三者連携と見える化",
+      "evidence_limit": "学校・PTAの望ましい関係を示す理念。実際の権限・運用を証明しない",
+      "status": "draft_review_required",
+      "redaction": "none",
+      "archived_image": "new_4_school_crops/KT-01_kita_p01.png",
+      "image_sha256_verified": "42784fcbae485af994851557693b9a6226b59066b7904d750c2363832281fe12",
+      "repo_source_match": null,
+      "source_sha256_rechecked": true,
+      "public_repo_image": "/assets/archive/atsugi/review-20261116/prior-kt-01.webp",
+      "imageDimensions": [
+        1326,
+        1305
+      ],
+      "publicRepoImageSha256": "34267b8c07217179e98b92b83a93839a538da4ef7760e9f572eb3a3cd37ff86c"
+    }
+  ],
+  "existingCropMatchNote": "旧23点の台帳には画像SHA-256欄がなく、現存アーカイブから計算した。原本SHA-256は保存版との一致のあるものを別記。妻田小2画像に対応する原本PDFは未再取得。旧11点は画像ハッシュ一致。"
+}

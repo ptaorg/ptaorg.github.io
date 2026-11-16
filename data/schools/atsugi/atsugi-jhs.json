@@ -7,40 +7,133 @@
   "basePath": "/archive/atsugi/atsugi-jhs/",
   "canonical": "https://ptaorg.com/archive/atsugi/atsugi-jhs/",
   "ogImage": "/assets/ogp/atsugi/atsugi-jhs.png",
-  "status": "評価準備中",
+  "status": "原本確認・追加調査あり",
   "statusClass": "eval-pending",
-  "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
+  "summary": "2026年度の総会資料に、教職員をPTAの副会長・書記・会計に置く規約と、月額200円の会費規定が掲載されています。",
   "description": "厚木中学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
-  "ogDescription": "厚木中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
+  "ogDescription": "2026年度の総会資料に、教職員をPTAの副会長・書記・会計に置く規約と、月額200円の会費規定が掲載されています。",
   "materials": {
     "documentName": "未確認",
     "confirmedDocuments": [
-      "未確認"
+      "令和8年度 厚木中学校PTA総会資料",
+      "令和7年度 厚木中学校PTA総会資料",
+      "令和6年度PTA総会について（報告）"
     ],
     "hasMembershipNotice": "未確認",
     "hasApplicationForm": "未確認",
     "applicationFormStatus": "未確認",
     "hasSchoolCollectionNotice": "未確認",
     "sourceImages": [],
-    "pdfStatus": "準備中",
+    "pdfStatus": "学校公式ページから原本PDFを確認",
     "pdf": null
   },
   "confirmedFacts": [
-    "資料確認後に記載します。"
+    "2026年度の総会資料に、教職員をPTAの副会長・書記・会計に置く規約と、月額200円の会費規定が掲載されています。"
   ],
   "unconfirmedPoints": [
-    "PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を確認後に記載します。"
+    "現行の加入・退会書式と会員確認手順",
+    "2026年度の集金案内・口座名義・収納送金記録",
+    "学校側の役員担当・勤務記録・許可、名簿の出所、PTAの情報取扱規定"
   ],
   "riskFlags": [
-    "未評価"
+    "要追加調査"
   ],
   "evaluation": [
-    "評価準備中"
+    "会員資格、役員・指名委員の選任、会計はPTAの内部事務です。規約は学校を事務局とし、教職員を副会長・書記・会計、校長を実行委員会の構成員とします。教職員会計の職務には収支記録、決算報告、予算原案が含まれます。これらを学校の公務として行う具体的な権限は資料から確認できません。第8条の会員記載には加入の意思確認手続が示されておらず、加入届と会員名簿で運用を確認する必要があります。PTAの情報取扱規定への参照を確認しましたが、学校が法61条の目的で保有した情報の内部利用とPTAへの提供は、各々のログと情報源を確認して法69条を評価します。会計職員の従事時間と職務命令等、学校側の秘密の取扱い、収納口座と出納権限を確認した上で地公法35条・34条、地自法235条の4第2項を検討します。",
+    "加入受付をPTAの意思確認に基づく手続に明示し、会計・指名等はPTAが担うよう整理してください。市教委には役員の参加資格・勤務実態、会員管理、徴収口座と送金記録の提示が必要です。"
   ],
   "humanReviewRequired": true,
-  "lastReviewed": "2026-06-02",
+  "lastReviewed": "2026-11-16",
   "nationalArchive": {
     "order": 24,
     "group": "中学校"
+  },
+  "officialPdfReview": {
+    "finding": "2026年度の総会資料に、教職員をPTAの副会長・書記・会計に置く規約と、月額200円の会費規定が掲載されています。",
+    "assessment": "会員資格、役員・指名委員の選任、会計はPTAの内部事務です。規約は学校を事務局とし、教職員を副会長・書記・会計、校長を実行委員会の構成員とします。教職員会計の職務には収支記録、決算報告、予算原案が含まれます。これらを学校の公務として行う具体的な権限は資料から確認できません。第8条の会員記載には加入の意思確認手続が示されておらず、加入届と会員名簿で運用を確認する必要があります。PTAの情報取扱規定への参照を確認しましたが、学校が法61条の目的で保有した情報の内部利用とPTAへの提供は、各々のログと情報源を確認して法69条を評価します。会計職員の従事時間と職務命令等、学校側の秘密の取扱い、収納口座と出納権限を確認した上で地公法35条・34条、地自法235条の4第2項を検討します。",
+    "action": "加入受付をPTAの意思確認に基づく手続に明示し、会計・指名等はPTAが担うよう整理してください。市教委には役員の参加資格・勤務実態、会員管理、徴収口座と送金記録の提示が必要です。",
+    "missing": [
+      "現行の加入・退会書式と会員確認手順",
+      "2026年度の集金案内・口座名義・収納送金記録",
+      "学校側の役員担当・勤務記録・許可、名簿の出所、PTAの情報取扱規定"
+    ],
+    "documents": [
+      {
+        "title": "令和8年度 厚木中学校PTA総会資料",
+        "date": "2026-04-24",
+        "url": "https://drive.google.com/file/d/1mrKGSVT7bgp2YLyoWgSJQm_eFC66xES7/view",
+        "officialPage": "https://www.atsugi-js.atsugi.ed.jp/pta",
+        "sha256": "f7480fca38ec623c35609b57648573ef5d3f079c49435c60809ed3f9750b3b9a",
+        "pdfPages": 17,
+        "finding": "規約第8条・第13～14条・第21条・第25条・第28条、予算案。",
+        "crops": [
+          {
+            "image": "/assets/archive/atsugi/review-20261116/atsugi-jhs-1-1.webp",
+            "sha256": "9d9a71766ab6ccf020db01d1cbb74297031857d4b5dfb29c5b40dd1c9d8e6004",
+            "page": 12,
+            "cropRectPdfPts": [
+              67,
+              508,
+              531,
+              580
+            ],
+            "caption": "会員資格の規定",
+            "width": 1392,
+            "height": 216,
+            "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+          },
+          {
+            "image": "/assets/archive/atsugi/review-20261116/atsugi-jhs-1-2.webp",
+            "sha256": "0aba483889551c0ffb7902fa77fbf02afb2c112b683ee2d491462cd9aa96dd11",
+            "page": 13,
+            "cropRectPdfPts": [
+              66,
+              54,
+              528,
+              317
+            ],
+            "caption": "教職員の役員配置と会計の任務",
+            "width": 1386,
+            "height": 789,
+            "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+          },
+          {
+            "image": "/assets/archive/atsugi/review-20261116/atsugi-jhs-1-3.webp",
+            "sha256": "803f1444633247a4903d62861a6282fcf4b69328b89938f6fe25c6b6e56f8f8a",
+            "page": 14,
+            "cropRectPdfPts": [
+              65,
+              395,
+              490,
+              445
+            ],
+            "caption": "PTA会費の規定",
+            "width": 1275,
+            "height": 150,
+            "privacy": "公開用。不要な氏名・連絡先・URLやQRコードを含まない範囲。"
+          }
+        ]
+      },
+      {
+        "title": "令和7年度 厚木中学校PTA総会資料",
+        "date": "2025-04-25",
+        "url": "https://drive.google.com/file/d/15m-MzxDNMha2ut8CaCyxDDbtWd2D5XqR/view",
+        "officialPage": "https://www.atsugi-js.atsugi.ed.jp/pta",
+        "sha256": "d1d2a31d5ce84706062aba80345feb391ac0d3478b10618b83d7e09feebe2995",
+        "pdfPages": 15,
+        "finding": "年度比較。第8条・第14条・第21条・第28条の継続を確認。",
+        "crops": []
+      },
+      {
+        "title": "令和6年度PTA総会について（報告）",
+        "date": "2024年度",
+        "url": "https://drive.google.com/file/d/16Jp4qY8PGJlMcgNEwVCMXbYoJBxU2J00/view",
+        "officialPage": "https://www.atsugi-js.atsugi.ed.jp/pta",
+        "sha256": "c82e50a3678f8245f245acc3b37a16a2d305272d9a92a7116d94d6da7f93dafc",
+        "pdfPages": 1,
+        "finding": "業務効率化のため書面決議、前年度から各委員会等のスローガンを廃止。規約所定の定足数の算定は別途確認。",
+        "crops": []
+      }
+    ]
   }
 }
