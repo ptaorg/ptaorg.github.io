@@ -7,15 +7,16 @@
   "basePath": "/archive/atsugi/sanda-es/",
   "canonical": "https://ptaorg.com/archive/atsugi/sanda-es/",
   "ogImage": "/assets/ogp/atsugi/sanda-es.png",
-  "status": "評価準備中",
+  "status": "PTA実務の原本未取得・登録簿確認",
   "statusClass": "eval-pending",
   "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
   "description": "三田小学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
-  "ogDescription": "三田小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
+  "ogDescription": "学校だよりにPTAの指名委員会の予定があり、市の登録簿には役員名簿に児童氏名・保護者氏名・地区名等を記録する旨があります。",
   "materials": {
     "documentName": "未確認",
     "confirmedDocuments": [
-      "未確認"
+      "三田小学校 個人情報取扱事務登録簿",
+      "三田小学校 学校だより 5月号"
     ],
     "hasMembershipNotice": "未確認",
     "hasApplicationForm": "未確認",
@@ -26,19 +27,22 @@
     "pdf": null
   },
   "confirmedFacts": [
-    "資料確認後に記載します。"
+    "学校だよりにPTAの指名委員会の予定があり、市の登録簿には役員名簿に児童氏名・保護者氏名・地区名等を記録する旨があります。",
+    "予定欄にPTA運営委員会・指名委員会とPTA本部会・指名委員会を掲載。開催・選考手続は確認できない。"
   ],
   "unconfirmedPoints": [
-    "PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を確認後に記載します。"
+    "指名委員会の規程、立候補・推薦・辞退の様式、候補者抽出に用いた名簿と配付・返却記録、総会資料と会費案内。"
   ],
   "riskFlags": [
-    "未評価"
+    "登録の記載を確認",
+    "現行の業務は追加確認が必要"
   ],
   "evaluation": [
-    "評価準備中"
+    "PTAの指名委員会は役員候補者の選出に関わる内部の会議です。学校が日程を載せたことから、候補者の抽出や選考を学校が実行したことまでは確かめられません。",
+    "名簿の登録と会議の日程は確認しました。名簿と指名委員会の結び付き、役員候補者の本人同意、非会員の除外は未立証です。"
   ],
   "humanReviewRequired": true,
-  "lastReviewed": "2026-06-02",
+  "lastReviewed": "2026-11-16",
   "nationalArchive": {
     "order": 5,
     "group": "小学校"

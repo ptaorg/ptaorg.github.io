@@ -7,15 +7,16 @@
   "basePath": "/archive/atsugi/ogino-es/",
   "canonical": "https://ptaorg.com/archive/atsugi/ogino-es/",
   "ogImage": "/assets/ogp/atsugi/ogino-es.png",
-  "status": "評価準備中",
+  "status": "PTA実務の原本未取得・登録簿確認",
   "statusClass": "eval-pending",
   "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
   "description": "荻野小学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
-  "ogDescription": "荻野小学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
+  "ogDescription": "学校日記にはPTAの美化清掃や親子活動が記録され、市の登録簿には児童氏名・保護者氏名・地区名等を含む役員名簿が載っています。",
   "materials": {
     "documentName": "未確認",
     "confirmedDocuments": [
-      "未確認"
+      "荻野小学校 個人情報取扱事務登録簿",
+      "荻野小学校便り おぎの 6月号"
     ],
     "hasMembershipNotice": "未確認",
     "hasApplicationForm": "未確認",
@@ -26,19 +27,22 @@
     "pdf": null
   },
   "confirmedFacts": [
-    "資料確認後に記載します。"
+    "学校日記にはPTAの美化清掃や親子活動が記録され、市の登録簿には児童氏名・保護者氏名・地区名等を含む役員名簿が載っています。",
+    "PTA美化清掃を掲載。学校日記は活動を報告。役員選出・集金・名簿の運用は記載なし。"
   ],
   "unconfirmedPoints": [
-    "PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を確認後に記載します。"
+    "役員候補者の募集・選出書式、地区情報の取得元・使用記録、保有期間、総会・加入・徴収書式。"
   ],
   "riskFlags": [
-    "未評価"
+    "登録の記載を確認",
+    "現行の業務は追加確認が必要"
   ],
   "evaluation": [
-    "評価準備中"
+    "清掃・親子活動への地域協力と、PTA役員候補者の抽出・名簿管理は別の事務です。地区情報を学校が管理する場合、対象と具体的な学校事務を示す必要があります。",
+    "学校日記と便りは清掃活動を記録・掲載しています。役員名簿の地区情報を学校で使ったか、PTAへ渡したかは未立証です。"
   ],
   "humanReviewRequired": true,
-  "lastReviewed": "2026-06-02",
+  "lastReviewed": "2026-11-16",
   "nationalArchive": {
     "order": 4,
     "group": "小学校"

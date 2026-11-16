@@ -7,15 +7,16 @@
   "basePath": "/archive/atsugi/ogino-jhs/",
   "canonical": "https://ptaorg.com/archive/atsugi/ogino-jhs/",
   "ogImage": "/assets/ogp/atsugi/ogino-jhs.png",
-  "status": "評価準備中",
+  "status": "PTA実務の原本未取得・登録簿確認",
   "statusClass": "eval-pending",
   "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
   "description": "荻野中学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
-  "ogDescription": "荻野中学校のPTA関連資料について、資料確認状況と評価を整理しています。確認済み資料に基づき順次更新します。",
+  "ogDescription": "学校のいじめ防止方針は保護者の相談のためPTA会議等を活用する方針を示しています。市は役員保護者の氏名と役職を登録項目に記載しています。",
   "materials": {
     "documentName": "未確認",
     "confirmedDocuments": [
-      "未確認"
+      "荻野中学校 個人情報取扱事務登録簿",
+      "令和8年度 荻野中学校いじめ防止基本方針"
     ],
     "hasMembershipNotice": "未確認",
     "hasApplicationForm": "未確認",
@@ -26,19 +27,22 @@
     "pdf": null
   },
   "confirmedFacts": [
-    "資料確認後に記載します。"
+    "学校のいじめ防止方針は保護者の相談のためPTA会議等を活用する方針を示しています。市は役員保護者の氏名と役職を登録項目に記載しています。",
+    "保護者・地域の方が相談しやすいよう、懇談会やPTA会議等を通じて情報共有に努めると記載。"
   ],
   "unconfirmedPoints": [
-    "PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等を確認後に記載します。"
+    "相談窓口の分担、PTA会議で共有した情報の項目と匿名化手順、役員名簿の管理者、規約・加入・会費関係の資料。"
   ],
   "riskFlags": [
-    "未評価"
+    "登録の記載を確認",
+    "現行の業務は追加確認が必要"
   ],
   "evaluation": [
-    "評価準備中"
+    "いじめ防止・保護者相談は学校の所掌に関わります。PTAに共有する情報の内容や提供根拠は、協力方針とは別に確認します。",
+    "方針と、PTA環境委員会による花壇管理について学校日記の記録を確認しました。個別の相談情報、児童生徒情報の提供、現行の加入・会費運用は未立証です。"
   ],
   "humanReviewRequired": true,
-  "lastReviewed": "2026-06-02",
+  "lastReviewed": "2026-11-16",
   "nationalArchive": {
     "order": 26,
     "group": "中学校"

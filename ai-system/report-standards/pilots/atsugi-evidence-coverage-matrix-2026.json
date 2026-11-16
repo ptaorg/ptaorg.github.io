@@ -309,7 +309,13 @@
       "registryLegalBasis": "無し",
       "status": "official_registration_only",
       "newOfficialSchoolPdfReview": false,
-      "schoolPdfReviewedAnyType": false
+      "schoolPdfReviewedAnyType": false,
+      "followupEvidence": {
+        "auxiliaryPdfCount": 0,
+        "registryDetailVerified": true,
+        "internalPracticeOriginalStatus": "未取得",
+        "htmlUpdated": true
+      }
     },
     {
       "id": "midorigaoka-es",
@@ -445,7 +451,13 @@
       "registryLegalBasis": "無し",
       "status": "official_registration_only",
       "newOfficialSchoolPdfReview": false,
-      "schoolPdfReviewedAnyType": false
+      "schoolPdfReviewedAnyType": false,
+      "followupEvidence": {
+        "auxiliaryPdfCount": 1,
+        "registryDetailVerified": true,
+        "internalPracticeOriginalStatus": "未取得",
+        "htmlUpdated": true
+      }
     },
     {
       "id": "mutsuai-jhs",
@@ -484,7 +496,13 @@
       "registryLegalBasis": "無し",
       "status": "official_registration_only",
       "newOfficialSchoolPdfReview": false,
-      "schoolPdfReviewedAnyType": false
+      "schoolPdfReviewedAnyType": false,
+      "followupEvidence": {
+        "auxiliaryPdfCount": 2,
+        "registryDetailVerified": true,
+        "internalPracticeOriginalStatus": "未取得",
+        "htmlUpdated": true
+      }
     },
     {
       "id": "ogino-es",
@@ -497,7 +515,13 @@
       "registryLegalBasis": "無し",
       "status": "official_registration_only",
       "newOfficialSchoolPdfReview": false,
-      "schoolPdfReviewedAnyType": false
+      "schoolPdfReviewedAnyType": false,
+      "followupEvidence": {
+        "auxiliaryPdfCount": 1,
+        "registryDetailVerified": true,
+        "internalPracticeOriginalStatus": "未取得",
+        "htmlUpdated": true
+      }
     },
     {
       "id": "ogino-jhs",
@@ -510,7 +534,13 @@
       "registryLegalBasis": "無し",
       "status": "official_registration_only",
       "newOfficialSchoolPdfReview": false,
-      "schoolPdfReviewedAnyType": false
+      "schoolPdfReviewedAnyType": false,
+      "followupEvidence": {
+        "auxiliaryPdfCount": 1,
+        "registryDetailVerified": true,
+        "internalPracticeOriginalStatus": "未取得",
+        "htmlUpdated": true
+      }
     },
     {
       "id": "sanda-es",
@@ -523,7 +553,13 @@
       "registryLegalBasis": "無し",
       "status": "official_registration_only",
       "newOfficialSchoolPdfReview": false,
-      "schoolPdfReviewedAnyType": false
+      "schoolPdfReviewedAnyType": false,
+      "followupEvidence": {
+        "auxiliaryPdfCount": 1,
+        "registryDetailVerified": true,
+        "internalPracticeOriginalStatus": "未取得",
+        "htmlUpdated": true
+      }
     },
     {
       "id": "shimizu-es",
@@ -549,7 +585,13 @@
       "registryLegalBasis": "無し",
       "status": "official_registration_only",
       "newOfficialSchoolPdfReview": false,
-      "schoolPdfReviewedAnyType": false
+      "schoolPdfReviewedAnyType": false,
+      "followupEvidence": {
+        "auxiliaryPdfCount": 1,
+        "registryDetailVerified": true,
+        "internalPracticeOriginalStatus": "未取得",
+        "htmlUpdated": true
+      }
     },
     {
       "id": "tamagawa-jhs",
@@ -562,7 +604,13 @@
       "registryLegalBasis": "無し",
       "status": "official_registration_only",
       "newOfficialSchoolPdfReview": false,
-      "schoolPdfReviewedAnyType": false
+      "schoolPdfReviewedAnyType": false,
+      "followupEvidence": {
+        "auxiliaryPdfCount": 1,
+        "registryDetailVerified": true,
+        "internalPracticeOriginalStatus": "未取得",
+        "htmlUpdated": true
+      }
     },
     {
       "id": "tobio-es",
@@ -649,5 +697,12 @@
     "evidenceCropsCreated": 11,
     "evidenceCropsPublicationStatus": "ローカル作成・公開前レビュー、GitHubには画像自体を未アップロード",
     "remainingWithoutNewPtaOriginal": 17
+  },
+  "finalFollowup": {
+    "schoolInternalOriginalReviewed": 28,
+    "internalOriginalStillNeeded": 8,
+    "schoolOrCountyAuxiliaryPdfReviewedAmongRemaining": 7,
+    "municipalRegistrationDetailsRechecked": 8,
+    "schoolsWithFinalWebAssessment": 36
   }
 }
