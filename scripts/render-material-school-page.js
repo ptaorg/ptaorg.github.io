@@ -61,7 +61,8 @@ ${docs.map((doc) => {
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${escapeHtml(record.canonical)}">
   <meta property="og:image" content="${escapeHtml(absoluteUrl(ogImage))}">
-  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:image" content="${escapeHtml(absoluteUrl(ogImage))}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="${escapeHtml(absoluteUrl(ogImage))}">
   <link rel="canonical" href="${escapeHtml(record.canonical)}">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="stylesheet" href="/css/site.css?v=20260814-3">
