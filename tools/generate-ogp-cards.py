@@ -14,7 +14,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 ARCHIVE_DIR = ROOT / "archive" / "atsugi"
 OGP_DIR = ROOT / "assets" / "ogp" / "atsugi"
-SITE = "https://ptaorg.github.io"
+SITE = "https://ptaorg.com"
 
 WIDTH = 1200
 HEIGHT = 630
@@ -322,7 +322,7 @@ def update_meta(file_path: Path, data: dict[str, str], image_path: Path) -> None
         "",
         page,
     )
-    image_url = f"{SITE}/assets/ogp/atsugi/{image_path.name}" if image_path.exists() else f"{SITE}/assets/ogp/atsugi/default.png"
+    image_url = f"{SITE}/assets/og-image.png"  # Unified site-wide X/Open Graph card
     block = meta_block(data, image_url)
     if re.search(r'  <meta name="description" content="[^"]*">\n', page):
         page = re.sub(r'(  <meta name="description" content="[^"]*">\n)', r"\1" + block + "\n", page, count=1)
