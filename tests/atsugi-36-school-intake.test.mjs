@@ -20,18 +20,25 @@ test('all school archives and JSON records exist and match names',()=>{
   assert.equal(d.slug,r.schoolId);
  }
 });
-test('prior high risk labels never become final 12-axis findings without original evidence',()=>{
+test('only original-verified five schools gain grounded limited axes, remaining schools stay unknown',()=>{
  for(const r of records){
   assert.deepEqual(Object.keys(r.axes),axes);
   for(const ax of axes){
-   assert.equal(r.axes[ax].status,'unknown');
-   assert.deepEqual(r.axes[ax].sourceRefs,[]);
+   if(!r.originalPdfVerification) {
+    assert.equal(r.axes[ax].status,'unknown');
+    assert.deepEqual(r.axes[ax].sourceRefs,[]);
+   } else if (r.axes[ax].status!=='unknown') {
+    assert.ok(['indication','confirmed_yes'].includes(r.axes[ax].status),r.schoolId+':'+ax);
+    assert.ok(r.axes[ax].sourceRefs.length>0,r.schoolId+':'+ax);
+   }
   }
   assert.equal(r.publiclyVerified,false);
-  assert.match(r.sourceReview,/未照合/);
+  if(!r.originalPdfVerification) assert.match(r.sourceReview,/未照合/);
  }
  assert.equal(records.filter(r=>r.priorFinding!==null).length,5);
  assert.equal(ledger.legacySummary.individualSchoolsReadyForPublication,0);
+ assert.equal(records.filter(r=>r.originalPdfVerification).length,5);
+ assert.equal(records.filter(r=>!r.originalPdfVerification).length,31);
 });
 test('municipality incident numbers cannot be automatically attributed to these schools',()=>{
  assert.equal(records.some(r=>r.confirmedWithoutConsent===true),false);
