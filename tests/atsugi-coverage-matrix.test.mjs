@@ -15,5 +15,5 @@ test('source streams are independently counted and overlap only at four schools'
 });
 test('registration alone cannot promote a school to original-PDF verified',()=>{
  assert.ok(coverage.schools.filter(s=>s.status==='official_registration_only').every(s=>!s.schoolOriginalPdf&&s.officialRegistry));
- assert.match(coverage.warning,/違法性の証明ではない/);
+ assert.match(coverage.warning,/適法性や実際の実施及び現在の運用を証明しない/);
 });
