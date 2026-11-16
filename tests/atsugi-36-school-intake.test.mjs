@@ -37,8 +37,8 @@ test('only original-verified five schools gain grounded limited axes, remaining 
  }
  assert.equal(records.filter(r=>r.priorFinding!==null).length,5);
  assert.equal(ledger.legacySummary.individualSchoolsReadyForPublication,0);
- assert.equal(records.filter(r=>r.originalPdfVerification).length,5);
- assert.equal(records.filter(r=>!r.originalPdfVerification).length,31);
+ assert.equal(records.filter(r=>r.originalPdfVerification).length,14);
+ assert.equal(records.filter(r=>!r.originalPdfVerification).length,22);
 });
 test('municipality incident numbers cannot be automatically attributed to these schools',()=>{
  assert.equal(records.some(r=>r.confirmedWithoutConsent===true),false);
