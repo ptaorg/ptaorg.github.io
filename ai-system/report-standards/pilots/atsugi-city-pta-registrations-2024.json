@@ -4,7 +4,7 @@
   "sourceTitle": "資料2 個人情報取扱事務及び個人情報ファイルの登録について",
   "sourceSnapshot": "R6.8.31現在",
   "checkedDate": "2026-11-16",
-  "sourceStatus": "市公式PDFテキストから計13校の『PTA事務』登録を確認（2023/2024時点）。うち9校は学校別原本未照合。個人情報ファイルの具体的名称・記録項目を確認した校は4校。PDFページ画像はウェブのキャッシュエラーで未照合。",
+  "sourceStatus": "2023・2024年の市公式登録簿PDFテキストから15校の『PTA事務』を確認。うち11校の学校別原本PDFは未照合。PDFページ画像はウェブのキャッシュエラーで独立目視未了。事務登録と公法上の授権・2026年現在の取扱実施は別。",
   "caution": "これは個人情報取扱『事務』の行政登録簿であり、PTAによる活動が現に実施されたこと、同項目に掲げる法令が特定の会費徴収・名簿利用・役員選出を授権することの証明ではない。『根拠法令 無し』もあくまで登録欄の記載であり、他の法令上の授権が一切存在しないと確定したものではない。最新登録簿の改訂も未確認。",
   "entries": [
     {
@@ -176,6 +176,30 @@
           "地区名 等"
         ]
       }
+    },
+    {
+      "schoolId": "hayashi-jhs",
+      "schoolName": "林中学校",
+      "registryId": "7800(32)-000019",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2023年学校別個人情報取扱事務登録簿一覧の林中学校行・PDFテキストL638",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/r050703s4.pdf",
+        "registrationDate": "2023-04-01"
+      }
+    },
+    {
+      "schoolId": "morinosato-jhs",
+      "schoolName": "森の里中学校",
+      "registryId": "7800(34)-000019",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "2023年学校別個人情報取扱事務登録簿一覧の森の里中学校行・PDFテキストL674",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、生徒の健全な発達に努める。",
+      "details": {
+        "sourceUrl": "https://www.city.atsugi.kanagawa.jp/material/files/group/9/r050703s4.pdf",
+        "registrationDate": "2023-04-01"
+      }
     }
   ],
   "crossCheck": [
@@ -188,7 +212,7 @@
     "市公式の2023/2024登録簿は過年度の事務登録であり、2026年11月現在の実施状況と区別。ページ画像のキャッシュエラーを記録し、テキスト上の登録欄を一次確認として管理する。"
   ],
   "stat": {
-    "rowsSeen": 13,
+    "rowsSeen": 15,
     "unreviewedSchoolIdsInThese": [
       "aiko-es",
       "atsugi-jhs",
@@ -198,7 +222,9 @@
       "tamagawa-jhs",
       "echi-minami-es",
       "fujizuka-jhs",
-      "midorigaoka-es"
+      "midorigaoka-es",
+      "hayashi-jhs",
+      "morinosato-jhs"
     ],
     "separateFrom15OriginalSchoolPdfs": true,
     "detailedPersonalDataFilesConfirmed": 4
