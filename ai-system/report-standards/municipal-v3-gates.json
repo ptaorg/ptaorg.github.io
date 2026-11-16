@@ -1,0 +1,83 @@
+{
+  "version": "3.0.0",
+  "asOf": "2026-11-16",
+  "description": "PTA自治体総合評価の調査完了・法的審査・公開品質を別々に審査する。falseや未登録は充足とみなさない。機械ゲートは真正性・適法性の証明ではない。",
+  "evidenceRequired": [
+    "gmailSearchComplete",
+    "driveSearchComplete",
+    "officialWebSearchComplete",
+    "allPagesExhausted",
+    "threadBodiesReviewed",
+    "attachmentsTriaged",
+    "sourceVersionsTracked",
+    "schoolPopulationFixed",
+    "schoolRecordsAudited"
+  ],
+  "legalRequired": [
+    "subjectSeparated",
+    "ptaTaskOwnershipReviewed",
+    "municipalityRuleAuthorityReviewed",
+    "publicAuthorityIdentifiedOrExplicitlyUnverified",
+    "article61Reviewed",
+    "article69Reviewed",
+    "civilServiceReviewed",
+    "moneyCustodyReviewed",
+    "membershipContractReviewed",
+    "rightsReviewed",
+    "counterEvidenceReviewed"
+  ],
+  "delegationRequired": [
+    "searched",
+    "contractDirectionClassified",
+    "partiesAndSigningAuthorityReviewed",
+    "civilLawNatureReviewed",
+    "privateLawEffectsReviewed",
+    "publicAuthorityIndependentlyReviewed",
+    "staffDutiesIndependentlyReviewed",
+    "personalDataIndependentlyReviewed",
+    "moneyCustodyIndependentlyReviewed",
+    "membershipNotInferred",
+    "exceptionalAuthorityChecked"
+  ],
+  "progressRequired": [
+    "chronologyChecked",
+    "historicalAndCurrentPolicySeparated",
+    "correctionStageEvidenceChecked",
+    "positiveProgressAssessed",
+    "oldRuleSupersessionChecked",
+    "schoolImplementationCheckedOrMarkedUnknown",
+    "causationNotInferred"
+  ],
+  "publicationRequired": [
+    "sourcesVerified",
+    "reviewedBySenior",
+    "humanApproval",
+    "personalInformationMasked",
+    "imagesVerified",
+    "linksVerified",
+    "desktopVerified",
+    "mobileVerified",
+    "mapVerified",
+    "ogImageReachable",
+    "xCardActuallyChecked"
+  ],
+  "delegationStatus": [
+    "none_found_after_search",
+    "identified",
+    "not_searched"
+  ],
+  "stages": [
+    "legacy_practice",
+    "problem_recognized",
+    "policy_changed",
+    "formal_rule_updated",
+    "implemented_at_schools",
+    "outcome_verified"
+  ],
+  "notes": [
+    "委任・準委任・委託契約は私法上の効果を規律し、公法上の権限の創設を当然にはもたらさない。",
+    "受任の方向（PTA→学校と学校→PTA）を分ける。後者の委託も適法な業務権限と個人情報の要件を別途審査する。",
+    "行政の改善は正当に評価するが、方針表明と現場での実施完了を混同しない。",
+    "事前調査完了、法的審査完了、公開検証完了は独立の判定。"
+  ]
+}
