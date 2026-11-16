@@ -249,11 +249,12 @@
       "originalPdfVerification": {
         "status": "direct_checked",
         "fileName": "相川中学校 会議録_04.pdf",
-        "sha256": "7a4497474a69a4f129a88074e51a07dd348fee128060b1a4c10478cdbdd4769f",
+        "sha256": null,
         "pages": 9,
         "method": "Google Drive原ファイル取得＋PDFテキスト＋ページ画像照合",
         "verifiedAt": "2026-11-16",
-        "privateDriveIdNotPublished": true
+        "privateDriveIdNotPublished": true,
+        "hashVerification": "pending_independent_recalculation"
       }
     },
     {
@@ -3645,7 +3646,7 @@
     "pendingOriginalReview": 22,
     "individualSchoolsReadyForPublication": 0
   },
-  "sourceStatus": "14校の原本PDFを直接取得して該当内容を確認。原本内容によって12軸を『記載確認』と『示唆』に分けて保留付き登録。残22校の原本は未確認。",
+  "sourceStatus": "14校の原本PDFを直接取得して該当内容を確認。原本内容によって12軸を『記載確認』と『示唆』に分けて保留付き登録。残22校の原本は未確認。 相川中学校PDFのハッシュは転記値に不備があり再計算待ち。",
   "originalSources": [
     {
       "id": "original-aikawa-es",
@@ -3660,10 +3661,11 @@
       "id": "original-aikawa-jhs",
       "schoolId": "aikawa-jhs",
       "fileName": "相川中学校 会議録_04.pdf",
-      "sha256": "7a4497474a69a4f129a88074e51a07dd348fee128060b1a4c10478cdbdd4769f",
+      "sha256": null,
       "pages": 9,
       "sourceAvailability": "Google Drive原本確認。公開サイトの保存PDFとの同一性はSHA照合未実施。",
-      "publicSiteOriginalUrl": "/source-pdfs/atsugi/aikawa-jhs/aikawa-jhs-kaigiroku-04.pdf"
+      "publicSiteOriginalUrl": "/source-pdfs/atsugi/aikawa-jhs/aikawa-jhs-kaigiroku-04.pdf",
+      "hashVerification": "pending_independent_recalculation"
     },
     {
       "id": "original-atsugi-es",
