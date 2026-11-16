@@ -1,9 +1,9 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "asOf": "2026-11-16",
   "municipality": "厚木市",
-  "phase": "evidence-link-intake",
-  "sourceVerification": "公開ページのHTML・学校別JSON・資料URLを確認。PDF本文・画像原本の直接内容照合は未完了。すべて暫定の既存記述として扱う。",
+  "phase": "five-original-pdfs-verified",
+  "sourceVerification": "Google Driveの原本PDF5件（総16ページ）を2026年11月16日に取得し、テキスト・ページ画像を照合。相川小の名称で保存された相談記録の2026年1月16日の内容は相川中についてであることを確認。公表済みの別保存PDFとの同一SHAは未照合。",
   "reviewedSchoolSlugs": [
     "aikawa-es",
     "aikawa-jhs",
@@ -22,8 +22,8 @@
         "/assets/archive/atsugi/aikawa-es/02.png",
         "/assets/archive/atsugi/aikawa-es/03.png"
       ],
-      "previousSummary": "相談記録によれば、学校説明会からPTA説明・役員決めに進み、学校保有の新入生名簿が使用されたとの申告がある。",
-      "epistemicLimit": "相談者の申告内容が記録されていることと、その事実が実際に発生したことを区別する。",
+      "previousSummary": "2025年5月16日に相川小PTA役員から相談があった記録と、2026年1月16日に相川中学校の保護者から学校名簿・役員選出の申告があった記録を収録。後者は相川小に帰属できない。",
+      "epistemicLimit": "相談受付の内容は保護者の主張であり、2026年の申告対象は相川中学校。相川小の不適切な名簿利用を示す事実とはしない。",
       "axesToReview": [
         "school_personal_data_for_pta",
         "officer_selection_pressure",
@@ -36,7 +36,12 @@
         "役員選出資料・PTA会員の確認方法",
         "学校とPTAの説明会担当区分"
       ],
-      "currentAxisStatus": "unknown"
+      "currentAxisStatus": "mixed_verified_document_indications_without_legality_finding",
+      "originalPdfVerified": true,
+      "pageCount": 3,
+      "sha256": "a0128ff96c8c329ee7d8f31048dd93fc7dd87e1045890eb50d5c9b2ed5334375",
+      "originalEvidenceSummary": "資料名は相川小学校だが、2026年1月16日の相談は相川中学校の新入生保護者説明会に関するもの。2025年5月16日欄の相川小PTA役員の相談と区別する。",
+      "requiredCorrection": "学校名誤帰属。相川小の名簿使用・役員選出事実はこの資料から確認できない。"
     },
     {
       "id": "aikawa-jhs",
@@ -68,7 +73,12 @@
         "口座名義・収納主体・資金フロー",
         "教職員の実際の従事内容・公務上の権限と服務資料"
       ],
-      "currentAxisStatus": "unknown"
+      "currentAxisStatus": "mixed_verified_document_indications_without_legality_finding",
+      "originalPdfVerified": true,
+      "pageCount": 9,
+      "sha256": "7a4497474a69a4f129a88074e51a07dd348fee128060b1a4c10478cdbdd4769",
+      "originalEvidenceSummary": "p.1 2025年5月7日本部会：tetoru、引落6月2日、未加入1家庭。p.2 学校からの連絡アプリ配信・PTA会費集金作業3,600円・職員PTA活動。p.9 2026年1月14日：新入生説明会で3年間の役員をくじ引き選出。",
+      "requiredCorrection": "くじ引きの具体的原文を新規確認。学校が金銭を保管したとまでは断定しない。"
     },
     {
       "id": "atsugi-es",
@@ -78,7 +88,7 @@
       "imagePaths": [
         "/assets/archive/atsugi/atsugi-es/01.png"
       ],
-      "previousSummary": "『PTA会員確認カード』があるが、既存の開示資料には加入申込・PTA承諾記録が確認されていないとの記述。",
+      "previousSummary": "令和7年度PTA会員名簿の原本下部に入会届・退会届を兼ねると記載。加入の自由意思、退会の選択方法は別途検証する。",
       "epistemicLimit": "申込書が確認できないことから会員契約不存在を推定しない。",
       "axesToReview": [
         "explicit_opt_in",
@@ -90,7 +100,12 @@
         "本人の申込・PTAの承諾・会員履歴の資料",
         "学校がカードの配布・回収・保管に関与したか"
       ],
-      "currentAxisStatus": "unknown"
+      "currentAxisStatus": "mixed_verified_document_indications_without_legality_finding",
+      "originalPdfVerified": true,
+      "pageCount": 1,
+      "sha256": "73eefa86903159b5056f5549564173a3391b0d4ac414e3fcd2c4f46409a48102",
+      "originalEvidenceSummary": "令和7年度『PTA会員名簿』p.1末尾に『この用紙はPTA会員入会届・退会届を兼ねています』と明記。",
+      "requiredCorrection": "旧評価にある申込書未確認という記述は、入退会届兼用の資料を無視してはならない。ただし加入意思が自由かは別。"
     },
     {
       "id": "echi-es",
@@ -115,7 +130,12 @@
         "役員負担の同意・拒否・免除ルール",
         "入学式受付の学校とPTAの分担"
       ],
-      "currentAxisStatus": "unknown"
+      "currentAxisStatus": "mixed_verified_document_indications_without_legality_finding",
+      "originalPdfVerified": true,
+      "pageCount": 2,
+      "sha256": "72ac32d6d01b86a9981fc2a2d72070bcbd2f2689aea9356bc4761603c78cb3c0",
+      "originalEvidenceSummary": "p.1 任意加入と説明しつつカード提出でPTA加入とする。入学式に学校書類と一緒に持参。p.2 児童在学中役員・委員1回の協力と、引受不可理由の記入欄。",
+      "requiredCorrection": "制度文書の内容は確認したが実際の強制就任や学校の名簿利用は未確認。"
     },
     {
       "id": "kamiogino-es",
@@ -139,7 +159,12 @@
         "会費集金・委員選出データの管理主体",
         "学校側が行った行為と根拠"
       ],
-      "currentAxisStatus": "unknown"
+      "currentAxisStatus": "mixed_verified_document_indications_without_legality_finding",
+      "originalPdfVerified": true,
+      "pageCount": 1,
+      "sha256": "3706cbfcf0a9f3178ba5644e0c1ebb54616919466be13668079c83332d5292af",
+      "originalEvidenceSummary": "p.1 提出で加入・継続扱い、児童1名につき委員1回、5年生未経験者優先選出、PTAカードを会費集金に使用、学校金庫保管。",
+      "requiredCorrection": "学校金庫保管は明示されるが学校自身の金銭徴収・保管や職員の情報利用を同一視しない。"
     }
   ],
   "cityLevelLinkage": {
@@ -151,8 +176,9 @@
   "publication": {
     "state": "draft",
     "humanReviewRequired": true,
-    "originalPDFRead": false,
-    "originalImagesRead": false,
+    "originalPDFRead": true,
+    "originalImagesRead": true,
     "schoolStatusChangesAuthorized": false
-  }
+  },
+  "schoolAttributionCorrectionPending": true
 }
