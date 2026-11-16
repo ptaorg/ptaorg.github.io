@@ -1,0 +1,158 @@
+{
+  "version": "1.0.0",
+  "asOf": "2026-11-16",
+  "municipality": "厚木市",
+  "phase": "evidence-link-intake",
+  "sourceVerification": "公開ページのHTML・学校別JSON・資料URLを確認。PDF本文・画像原本の直接内容照合は未完了。すべて暫定の既存記述として扱う。",
+  "reviewedSchoolSlugs": [
+    "aikawa-es",
+    "aikawa-jhs",
+    "atsugi-es",
+    "echi-es",
+    "kamiogino-es"
+  ],
+  "cases": [
+    {
+      "id": "aikawa-es",
+      "name": "相川小学校",
+      "kind": "相談受付記録",
+      "sourceUrl": "/source-pdfs/atsugi/aikawa-es/aikawa-es-soudan-01.pdf",
+      "imagePaths": [
+        "/assets/archive/atsugi/aikawa-es/01.png",
+        "/assets/archive/atsugi/aikawa-es/02.png",
+        "/assets/archive/atsugi/aikawa-es/03.png"
+      ],
+      "previousSummary": "相談記録によれば、学校説明会からPTA説明・役員決めに進み、学校保有の新入生名簿が使用されたとの申告がある。",
+      "epistemicLimit": "相談者の申告内容が記録されていることと、その事実が実際に発生したことを区別する。",
+      "axesToReview": [
+        "school_personal_data_for_pta",
+        "officer_selection_pressure",
+        "school_pta_governance_overlap",
+        "explicit_opt_in"
+      ],
+      "neededEvidence": [
+        "相談原本の正確な記載・作成年月・対象年度",
+        "名簿の準備・閲覧・使用者と根拠",
+        "役員選出資料・PTA会員の確認方法",
+        "学校とPTAの説明会担当区分"
+      ],
+      "currentAxisStatus": "unknown"
+    },
+    {
+      "id": "aikawa-jhs",
+      "name": "相川中学校",
+      "kind": "PTA本部会報告・職員会議",
+      "sourceUrl": "/source-pdfs/atsugi/aikawa-jhs/aikawa-jhs-kaigiroku-04.pdf",
+      "imagePaths": [
+        "/assets/archive/atsugi/aikawa-jhs/01.png",
+        "/assets/archive/atsugi/aikawa-jhs/02.png",
+        "/assets/archive/atsugi/aikawa-jhs/03.png",
+        "/assets/archive/atsugi/aikawa-jhs/04.png",
+        "/assets/archive/atsugi/aikawa-jhs/05.png",
+        "/assets/archive/atsugi/aikawa-jhs/06.png",
+        "/assets/archive/atsugi/aikawa-jhs/07.png",
+        "/assets/archive/atsugi/aikawa-jhs/08.png",
+        "/assets/archive/atsugi/aikawa-jhs/09.png"
+      ],
+      "previousSummary": "既存評価にはtetoruによるPTA会費集金案内、口座振替、PTA担当教職員の確認、PTA運営委員会への出席依頼が記載されている。",
+      "epistemicLimit": "tetoru配信や振替の記載だけで学校が直接資金を保管・徴収したとは確定できない。",
+      "axesToReview": [
+        "school_collection_of_pta_fee",
+        "school_account_or_payment_system",
+        "teacher_internal_pta_admin",
+        "school_personal_data_for_pta"
+      ],
+      "neededEvidence": [
+        "会議録・報告の原文頁と対象年度",
+        "tetoruの送信主体・利用権限・配信対象",
+        "口座名義・収納主体・資金フロー",
+        "教職員の実際の従事内容・公務上の権限と服務資料"
+      ],
+      "currentAxisStatus": "unknown"
+    },
+    {
+      "id": "atsugi-es",
+      "name": "厚木小学校",
+      "kind": "PTA会員確認カード",
+      "sourceUrl": "/source-pdfs/atsugi/atsugi-es/%E5%8E%9A%E6%9C%A8%E5%B0%8F%E5%AD%A6%E6%A0%A1_06.pdf",
+      "imagePaths": [
+        "/assets/archive/atsugi/atsugi-es/01.png"
+      ],
+      "previousSummary": "『PTA会員確認カード』があるが、既存の開示資料には加入申込・PTA承諾記録が確認されていないとの記述。",
+      "epistemicLimit": "申込書が確認できないことから会員契約不存在を推定しない。",
+      "axesToReview": [
+        "explicit_opt_in",
+        "voluntary_membership_notice",
+        "school_personal_data_for_pta"
+      ],
+      "neededEvidence": [
+        "カード本文・配布時期と記入義務",
+        "本人の申込・PTAの承諾・会員履歴の資料",
+        "学校がカードの配布・回収・保管に関与したか"
+      ],
+      "currentAxisStatus": "unknown"
+    },
+    {
+      "id": "echi-es",
+      "name": "依知小学校",
+      "kind": "PTAカード・役員希望調査",
+      "sourceUrl": "/source-pdfs/atsugi/echi-es/%E4%BE%9D%E7%9F%A5%E5%B0%8F%E5%AD%A6%E6%A0%A1_0002.pdf",
+      "imagePaths": [
+        "/assets/archive/atsugi/echi-es/01.png",
+        "/assets/archive/atsugi/echi-es/02.png"
+      ],
+      "previousSummary": "既存評価にはPTAカード提出を入会扱いとする記載、入学式に学校書類と併せた持参、役員・委員一回の前提があるとされる。",
+      "epistemicLimit": "カードの提出自体が加入意思表示となる余地と、事前説明・拒否可能性・PTAの承諾を分けて評価する。",
+      "axesToReview": [
+        "explicit_opt_in",
+        "voluntary_membership_notice",
+        "officer_selection_pressure",
+        "school_pta_governance_overlap"
+      ],
+      "neededEvidence": [
+        "加入・非加入選択の具体的書式",
+        "カード文言・提出先と任意性説明",
+        "役員負担の同意・拒否・免除ルール",
+        "入学式受付の学校とPTAの分担"
+      ],
+      "currentAxisStatus": "unknown"
+    },
+    {
+      "id": "kamiogino-es",
+      "name": "上荻野小学校",
+      "kind": "PTA会員カード",
+      "sourceUrl": "/source-pdfs/atsugi/kamiogino-es/%E4%B8%8A%E8%8D%BB%E9%87%8E%E5%B0%8F%E5%AD%A6%E6%A0%A1_13.pdf",
+      "imagePaths": [
+        "/assets/archive/atsugi/kamiogino-es/01.png"
+      ],
+      "previousSummary": "既存評価には会員カード提出を加入・継続と扱い、会費集金・委員選出にも利用すると記載されている。",
+      "epistemicLimit": "会員カードの利用目的と学校側の保有・利用を混同しない。",
+      "axesToReview": [
+        "explicit_opt_in",
+        "school_collection_of_pta_fee",
+        "officer_selection_pressure",
+        "school_personal_data_for_pta"
+      ],
+      "neededEvidence": [
+        "カードの正確な文言と対象年度",
+        "加入・継続の申込および承諾の記録",
+        "会費集金・委員選出データの管理主体",
+        "学校側が行った行為と根拠"
+      ],
+      "currentAxisStatus": "unknown"
+    }
+  ],
+  "cityLevelLinkage": {
+    "civilDelegation": "PTAから校長・学校への委任・準委任は公法上の権限を当然には創設しない。市の3月30日通知の条件付き代理徴収を学校運用と結びつけるには、適用校・契約・実際の行為の原資料が必要。",
+    "personalInformation": "学校の具体的権限を確認した後、個人情報保護法61条、69条を別々に審査。",
+    "reform": "10月26日の自己徴収移行方針は前進として評価。各校で実行された事実を証明するものではない。",
+    "incident": "市が公表した13校の事案と、この5校の既存公開資料を自動的に同一視しない。"
+  },
+  "publication": {
+    "state": "draft",
+    "humanReviewRequired": true,
+    "originalPDFRead": false,
+    "originalImagesRead": false,
+    "schoolStatusChangesAuthorized": false
+  }
+}
