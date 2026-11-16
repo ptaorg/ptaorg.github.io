@@ -46,7 +46,21 @@
       "officialRegistry": true,
       "registryId": "7800(14)-000022",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "additionalPtaOriginals": [
+        {
+          "file": "通学安全確保について.pdf",
+          "url": "https://drive.google.com/file/d/1SxoJHyVyl7VVU7hKgiaEu8a4UQk8Xp26/view",
+          "pages": 1,
+          "date": "2025年度",
+          "classification": "PTA通学安全活動の通知",
+          "findings": [
+            "PTA委員と学校教職員が問い合わせ先として記載"
+          ]
+        }
+      ],
+      "additionalPtaOriginalsVerified20261116": true,
+      "schoolOriginalPdfStatusNote": "従来の15校（特定の学校別資料群）とは別系統のPTA原本を新たに直接確認。学校実務の実施・適法性は未認定。"
     },
     {
       "id": "atsugi-daini-es",
@@ -178,7 +192,21 @@
       "officialRegistry": true,
       "registryId": "7800(3)-000029",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "additionalPtaOriginals": [
+        {
+          "file": "PTA基本方針.pdf",
+          "url": "https://drive.google.com/file/d/1nIHqBSrGfDE4Ds32vlpWvqj-SnKRW_Rt/view",
+          "pages": 1,
+          "date": "2025年度",
+          "classification": "PTA活動基本方針",
+          "findings": [
+            "保護者・学校・地域三者間の新しい関係と可視化を掲げる"
+          ]
+        }
+      ],
+      "additionalPtaOriginalsVerified20261116": true,
+      "schoolOriginalPdfStatusNote": "従来の15校（特定の学校別資料群）とは別系統のPTA原本を新たに直接確認。学校実務の実施・適法性は未認定。"
     },
     {
       "id": "koayu-es",
@@ -211,7 +239,24 @@
       "officialRegistry": true,
       "registryId": "7800(12)-000028",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "additionalPtaOriginals": [
+        {
+          "file": "R7PTA規約.pdf",
+          "url": "https://drive.google.com/file/d/1AHwfpt1xDNMvOUSWcY6EBk9hf49cGkMv/view",
+          "pages": 7,
+          "date": "2025-04-21",
+          "classification": "PTA規約（学校PTAの原本）",
+          "findings": [
+            "第8条: 教頭を副会長、教職員を書記・会計とする役職配置",
+            "第19条: 校長を運営委員会の構成員とする",
+            "第21条: 教職員はいずれかの委員会に所属する",
+            "会費年額2,000円の参考資料"
+          ]
+        }
+      ],
+      "additionalPtaOriginalsVerified20261116": true,
+      "schoolOriginalPdfStatusNote": "従来の15校（特定の学校別資料群）とは別系統のPTA原本を新たに直接確認。学校実務の実施・適法性は未認定。"
     },
     {
       "id": "moridai-es",
@@ -233,7 +278,43 @@
       "officialRegistry": true,
       "registryId": "7800(20)-000028",
       "registryLegalBasis": "無し",
-      "status": "official_registration_only"
+      "status": "official_registration_only",
+      "additionalPtaOriginals": [
+        {
+          "file": "2025年度森の里小学校PTA年間活動計画.pdf",
+          "url": "https://drive.google.com/file/d/1HSS4-2fJhkcXzRmfTYS5YkOVKwzLQysT/view",
+          "pages": 1,
+          "date": "2025年度",
+          "classification": "PTA年間活動計画",
+          "findings": [
+            "PTA本部の会費集金・集計と役員登録名簿チェックの計画",
+            "次年度委員・新入生役員選出の計画"
+          ]
+        },
+        {
+          "file": "運営委員会だより（３月号）.pdf",
+          "url": "https://drive.google.com/file/d/1BMrczNqsUywFSBtY28MVCPjffhQTpoXQ/view",
+          "pages": 2,
+          "date": "2025-03-17",
+          "classification": "PTA広報",
+          "findings": [
+            "tetoruによるPTA総会案内",
+            "教員へのPTA活動問い合わせ案内"
+          ]
+        },
+        {
+          "file": "運営委員会だより５月号.pdf",
+          "url": "https://drive.google.com/file/d/1lg1vTHmnI3iRv3G_4Vjplbt83AtqTdLN/view",
+          "pages": 2,
+          "date": "2025-05",
+          "classification": "PTA広報",
+          "findings": [
+            "PTA活動の効率化・コンパクト化の改善方針"
+          ]
+        }
+      ],
+      "additionalPtaOriginalsVerified20261116": true,
+      "schoolOriginalPdfStatusNote": "従来の15校（特定の学校別資料群）とは別系統のPTA原本を新たに直接確認。学校実務の実施・適法性は未認定。"
     },
     {
       "id": "morinosato-jhs",
@@ -411,5 +492,20 @@
       "registryLegalBasis": null,
       "status": "school_original_only"
     }
-  ]
+  ],
+  "additionalOriginals20261116": {
+    "sourceType": "学校PTA公開PDF／Drive取得の原本",
+    "schoolsNewlyVerified": 4,
+    "filesVerified": 6,
+    "schools": [
+      "緑ケ丘小学校",
+      "森の里小学校",
+      "愛甲小学校",
+      "北小学校"
+    ],
+    "limitedFinding": "従来の15校とは異なる資料類型。学校実務の全面照合を完了したという意味ではない。",
+    "evidenceCropsCreated": 11,
+    "evidenceCropsPublicationStatus": "ローカル作成・公開前レビュー、GitHubには画像自体を未アップロード",
+    "remainingWithoutNewPtaOriginal": 17
+  }
 }
