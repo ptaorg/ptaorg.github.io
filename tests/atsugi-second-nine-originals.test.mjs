@@ -5,14 +5,11 @@ const read = path => JSON.parse(fs.readFileSync(path,'utf8'));
 const ledger=read('ai-system/report-standards/pilots/atsugi-36-school-intake-2026.json');
 const ids=['atsugi-daini-es','kamiechi-es','koayu-es','mutsuai-jhs','nanmori-es','shimizu-es','tobio-es','toda-es','tomuro-es'];
 const school=id=>read('data/schools/atsugi/'+id+'.json');
-test('fifteen source PDFs checked, one hash pending; twenty one remain unverified',()=>{
+test('fifteen source PDFs checked with digests; twenty one remain unverified',()=>{
  const verified=ledger.schoolRecords.filter(s=>s.originalPdfVerification);
  assert.equal(verified.length,15);assert.equal(ledger.schoolRecords.length-verified.length,21);
  assert.equal(new Set(verified.map(s=>s.schoolId)).size,15);
- for(const s of verified){assert.equal(s.originalPdfVerification.status,'direct_checked');if(s.schoolId==='aikawa-jhs') {
-  assert.equal(s.originalPdfVerification.sha256,null);
-  assert.equal(s.originalPdfVerification.hashVerification,'pending_independent_recalculation');
- } else assert.match(s.originalPdfVerification.sha256,/^[a-f0-9]{64}$/);assert.equal(s.publiclyVerified,false);}
+ for(const s of verified){assert.equal(s.originalPdfVerification.status,'direct_checked');assert.match(s.originalPdfVerification.sha256,/^[a-f0-9]{64}$/);assert.equal(s.publiclyVerified,false);}
  assert.equal(ledger.legacySummary.individualSchoolsReadyForPublication,0);
 });
 test('nine newly located school originals are listed with document-based limited axes',()=>{
