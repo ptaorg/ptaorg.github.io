@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "municipality": "記入してください",
+  "page": "research/municipality.html",
+  "status": "draft",
+  "scope": {
+    "asOf": null,
+    "schoolCount": null,
+    "sourceDataset": null,
+    "baselineCommit": null,
+    "publishedCommit": null
+  },
+  "checks": {
+    "v3LegalReview": false,
+    "originalContentPreserved": false,
+    "sourceReview": false,
+    "mapAndSchoolLinks": false,
+    "staticChecks": false,
+    "desktopBrowser": false,
+    "mobileBrowser": false,
+    "liveUrl": false,
+    "ogImageHttp": false,
+    "xPreview": false,
+    "humanApproval": false
+  },
+  "evidence": {
+    "desktopBrowser": null,
+    "mobileBrowser": null,
+    "liveUrl": null,
+    "ogImageHttp": null,
+    "xPreview": null
+  },
+  "viewports": [
+    320,
+    375,
+    768,
+    1280,
+    1440
+  ],
+  "visualInspection": {
+    "mainTextWidth": null,
+    "rightWhitespace": null,
+    "overflows": [],
+    "schoolNameClips": [],
+    "mapVisibility": null,
+    "cardContrast": null,
+    "imagesVerified": null,
+    "rootCauseForRegressions": null
+  },
+  "urls": {
+    "canonical": null,
+    "ogImage": null,
+    "livePage": null,
+    "nationalMap": null
+  },
+  "review": {
+    "reviewer": null,
+    "date": null,
+    "changeFiles": [],
+    "unchangedScope": [],
+    "unverified": []
+  }
+}
