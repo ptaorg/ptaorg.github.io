@@ -3559,26 +3559,44 @@
       "priorFinding": null,
       "claimedOriginal": null,
       "reviewPriorities": [],
-      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "sourceReview": "保存名『麦田小学校_12.pdf』はPDF本文で厚木市立妻田小学校PTAと確認。原本2ページ・画像照合済み。実施状況・法令評価は別途検証。",
       "analysisYear": "2026",
       "axes": {
         "voluntary_membership_notice": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
-          "year": "2026",
-          "sourceRefs": []
+          "status": "indication",
+          "observation": "登録票と会費納入をもって加入扱いとし、明示的な加入・非加入選択欄の有無はこの2ページからは確認できない。",
+          "year": "2025",
+          "sourceRefs": [
+            {
+              "sourceId": "original-tsumada-es",
+              "locator": "p.1『PTA加入について』"
+            }
+          ],
+          "reviewNotes": "原本上の記載の存在のみ確認。公法上の授権・実務の確定とは区別。"
         },
         "explicit_opt_in": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
-          "year": "2026",
-          "sourceRefs": []
+          "status": "indication",
+          "observation": "登録票の提出と会費納入を加入扱いとする書式。申込意思が自由であるかとPTA承諾の記録は要確認。",
+          "year": "2025",
+          "sourceRefs": [
+            {
+              "sourceId": "original-tsumada-es",
+              "locator": "p.1 第3項"
+            }
+          ],
+          "reviewNotes": "原本上の記載の存在のみ確認。公法上の授権・実務の確定とは区別。"
         },
         "withdrawal_procedure": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
-          "year": "2026",
-          "sourceRefs": []
+          "status": "confirmed_yes",
+          "observation": "退会届の書式があり、退会理由の記入欄が設けられている。理由を記載しない退会の可否は未確認。",
+          "year": "2025",
+          "sourceRefs": [
+            {
+              "sourceId": "original-tsumada-es",
+              "locator": "p.2 退会届"
+            }
+          ],
+          "reviewNotes": "原本上の記載の存在のみ確認。公法上の授権・実務の確定とは区別。"
         },
         "nonmember_equal_treatment": {
           "status": "unknown",
@@ -3605,10 +3623,16 @@
           "sourceRefs": []
         },
         "officer_selection_pressure": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
-          "year": "2026",
-          "sourceRefs": []
+          "status": "confirmed_yes",
+          "observation": "児童1人につき原則1回の委員引受を依頼し、入学式直後にクラスで委員選出する予定を記載。強制的な就任は未確認。",
+          "year": "2025",
+          "sourceRefs": [
+            {
+              "sourceId": "original-tsumada-es",
+              "locator": "p.1 本文・第4項"
+            }
+          ],
+          "reviewNotes": "原本上の記載の存在のみ確認。公法上の授権・実務の確定とは区別。"
         },
         "sensitive_exemption_questions": {
           "status": "unknown",
@@ -3617,10 +3641,16 @@
           "sourceRefs": []
         },
         "teacher_internal_pta_admin": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
-          "year": "2026",
-          "sourceRefs": []
+          "status": "indication",
+          "observation": "未提出の場合は『学校事務局までご連絡ください』と記載。実際に学校職員がPTA内部事務を行ったかは不明。",
+          "year": "2025",
+          "sourceRefs": [
+            {
+              "sourceId": "original-tsumada-es",
+              "locator": "p.1 第3項"
+            }
+          ],
+          "reviewNotes": "原本上の記載の存在のみ確認。公法上の授権・実務の確定とは区別。"
         },
         "pta_spending_on_school_costs": {
           "status": "unknown",
@@ -3636,17 +3666,27 @@
         }
       },
       "documentExistence": "10文書区分の原本確認待ち",
-      "legalScreening": "15法令の独立審査待ち",
-      "publiclyVerified": false
+      "legalScreening": "15法令への適用、役員選出・会員管理実務は未完了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "麦田小学校_12.pdf",
+        "verifiedSchoolFromContent": "妻田小学校",
+        "sha256": "3a0585b5c790842aa9b56c06b2b4da4b4c9e852938ab4efcc7c58403dfb61772",
+        "pages": 2,
+        "method": "Drive保存原本のPDF本文と両ページ画像の直接照合、ローカルSHA-256算出",
+        "verifiedAt": "2026-11-16",
+        "filenameSchoolMismatch": true
+      }
     }
   ],
   "legacySummary": {
     "withSubstantivePriorFinding": 5,
-    "originalPDFsIndependentlyReviewed": 14,
-    "pendingOriginalReview": 22,
+    "originalPDFsIndependentlyReviewed": 15,
+    "pendingOriginalReview": 21,
     "individualSchoolsReadyForPublication": 0
   },
-  "sourceStatus": "14校の原本PDFを直接取得して該当内容を確認。原本内容によって12軸を『記載確認』と『示唆』に分けて保留付き登録。残22校の原本は未確認。 相川中学校PDFのハッシュは転記値に不備があり再計算待ち。",
+  "sourceStatus": "15校の原本PDFを直接照合、残21校は未確認。妻田小学校の原本は『麦田小学校_12.pdf』として保存されていた。",
   "originalSources": [
     {
       "id": "original-aikawa-es",
@@ -3783,6 +3823,17 @@
       "sourceAvailability": "Google Drive原本を取得し、書面記載を確認。サイト保存PDFとのSHA一致は未検証。",
       "publicSiteOriginalUrl": null,
       "privateDriveIdNotPublished": true
+    },
+    {
+      "id": "original-tsumada-es",
+      "schoolId": "tsumada-es",
+      "fileName": "麦田小学校_12.pdf",
+      "actualSchool": "妻田小学校",
+      "sha256": "3a0585b5c790842aa9b56c06b2b4da4b4c9e852938ab4efcc7c58403dfb61772",
+      "pages": 2,
+      "sourceAvailability": "Drive『全国資料／厚木市』の原本PDF本文・ページ画像を照合。保存名は学校名の誤記。",
+      "publicSiteOriginalUrl": null,
+      "privateDriveIdNotPublished": true
     }
   ],
   "corrections": [
@@ -3798,6 +3849,15 @@
       ],
       "finding": "ファイル名『相川小学校』と2026年1月16日の相談本文の対象『相川中学校』に不一致。相川小学校の旧評価へ相談内容を帰属させた点は不適切。",
       "action": "相川小学校の名簿使用・役員選出を当該資料で確認済みとしない。相川中学校について第三者申告として記録し、別の2026年1月14日本部会資料にあるくじ引きと照合。",
+      "publicSiteCorrectionPending": true
+    },
+    {
+      "id": "CORR-ATSUGI-002",
+      "severity": "medium",
+      "type": "filename_school_mismatch",
+      "source": "麦田小学校_12.pdf",
+      "finding": "書類本文は妻田小学校PTAであり、麦田小学校とのファイル名は誤記。",
+      "action": "妻田小学校として根拠台帳に登録。学校名による検索時に別名資料も探索する。",
       "publicSiteCorrectionPending": true
     }
   ],
@@ -3848,10 +3908,9 @@
       "sanda-es",
       "tamagawa-es",
       "tamagawa-jhs",
-      "tomei-jhs",
-      "tsumada-es"
+      "tomei-jhs"
     ],
-    "unverifiedCount": 22,
+    "unverifiedCount": 21,
     "remainingVerification": "各校に該当する旧資料・原本PDF・画像の有無、保存元フォルダ、年度を照合。元資料が得られなければ未評価継続。"
   }
 }
