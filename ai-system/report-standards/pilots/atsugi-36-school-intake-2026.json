@@ -28,7 +28,7 @@
         "学校名簿・PTA役員選出",
         "学校行事との接続"
       ],
-      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "sourceReview": "PDF原本の該当ページとページ画像を確認。各条項の存在は確認済み。ただし現行の運用、例外授権・現場実施と法的帰結は別審査。",
       "analysisYear": "2026",
       "axes": {
         "voluntary_membership_notice": {
@@ -68,16 +68,28 @@
           "sourceRefs": []
         },
         "school_personal_data_for_pta": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "2026年1月16日の保護者の申告を市が記録。新入生名簿を役員選出に使用したと申告されるが、学校側の名簿提供・使用の実施事実は未確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-aikawa-es",
+              "locator": "p.2 保護者からの電話相談"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
         },
         "officer_selection_pressure": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "保護者の申告として、任意加入の説明後に役員選出へ移ったとの記載。実際の役員選出状況は未確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-aikawa-es",
+              "locator": "p.2 2026年1月16日相談"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
         },
         "sensitive_exemption_questions": {
           "status": "unknown",
@@ -105,8 +117,17 @@
         }
       },
       "documentExistence": "10文書区分の原本確認待ち",
-      "legalScreening": "15法令の独立審査待ち",
-      "publiclyVerified": false
+      "legalScreening": "原本記載の一次確認済み。15法令の個別レビュー・行政の現行運用との整合は未完了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "相川小学校 相談受付記録_01.pdf",
+        "sha256": "a0128ff96c8c329ee7d8f31048dd93fc7dd87e1045890eb50d5c9b2ed5334375",
+        "pages": 3,
+        "method": "Google Drive原ファイル取得＋PDFテキスト＋ページ画像照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
     },
     {
       "schoolId": "aikawa-jhs",
@@ -122,7 +143,7 @@
         "教職員関与",
         "学校連絡手段"
       ],
-      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "sourceReview": "PDF原本の該当ページとページ画像を確認。各条項の存在は確認済み。ただし現行の運用、例外授権・現場実施と法的帰結は別審査。",
       "analysisYear": "2026",
       "axes": {
         "voluntary_membership_notice": {
@@ -150,10 +171,16 @@
           "sourceRefs": []
         },
         "school_collection_of_pta_fee": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "confirmed_yes",
+          "observation": "2025年度のPTA活動確認事項に『PTA会費集金の確認と集金作業』『集金額3,600円』とあり、学校連絡アプリで家庭に配信すると記載。実際の収納主体・資金保管者までは不明。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-aikawa-jhs",
+              "locator": "p.2 PTA活動確認事項3項"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
         },
         "school_account_or_payment_system": {
           "status": "unknown",
@@ -162,16 +189,28 @@
           "sourceRefs": []
         },
         "school_personal_data_for_pta": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "PTA家庭数の確認・学年主任への報告、tetoru会費通知の学校一斉配信の記載。具体的な個人データの抽出・目的外利用・第三者提供の実施は未確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-aikawa-jhs",
+              "locator": "p.1-2 PTA本部会報告／職員会議資料"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
         },
         "officer_selection_pressure": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "confirmed_yes",
+          "observation": "2026年1月14日付本部会報告に新入生保護者説明会で3年間の役員を『くじ引き』で選出したと明記。参加者の加入意思や抽選への同意、実際の就任は未確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-aikawa-jhs",
+              "locator": "p.9 第5回本部会報告(4)"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
         },
         "sensitive_exemption_questions": {
           "status": "unknown",
@@ -180,10 +219,16 @@
           "sourceRefs": []
         },
         "teacher_internal_pta_admin": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "職員会議資料にPTA委員会担当、会費集金確認と作業、運営委員会への担当教職員出席を記載。法令上の職務か、PTA内部事務として従事したかは個別確認が必要。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-aikawa-jhs",
+              "locator": "p.2 PTA活動確認事項1・3・4項"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
         },
         "pta_spending_on_school_costs": {
           "status": "unknown",
@@ -192,15 +237,30 @@
           "sourceRefs": []
         },
         "school_pta_governance_overlap": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "2026年1月14日付報告は校長・教職員のPTA運営委員会出席や新入生説明会での役員くじ引きを記録。学校の意思決定への関与範囲は未確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-aikawa-jhs",
+              "locator": "p.9 第5回本部会報告(2)(4)"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
         }
       },
       "documentExistence": "10文書区分の原本確認待ち",
-      "legalScreening": "15法令の独立審査待ち",
-      "publiclyVerified": false
+      "legalScreening": "原本記載の一次確認済み。15法令の個別レビュー・行政の現行運用との整合は未完了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "相川中学校 会議録_04.pdf",
+        "sha256": "7a4497474a69a4f129a88074e51a07dd348fee128060b1a4c10478cdbdd4769",
+        "pages": 9,
+        "method": "Google Drive原ファイル取得＋PDFテキスト＋ページ画像照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
     },
     {
       "schoolId": "aiko-es",
@@ -394,20 +454,32 @@
       "reviewPriorities": [
         "会員資格の根拠"
       ],
-      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "sourceReview": "PDF原本の該当ページとページ画像を確認。各条項の存在は確認済み。ただし現行の運用、例外授権・現場実施と法的帰結は別審査。",
       "analysisYear": "2026",
       "axes": {
         "voluntary_membership_notice": {
           "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "observation": "カード自体に任意加入の明示は確認できない。学校全体で通知が無いとは断定できない。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-atsugi-es",
+              "locator": "p.1 会員名簿本文"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
         },
         "explicit_opt_in": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "2025年度『PTA会員名簿』は『入会届・退会届を兼ねています』と明記。紙の申込手段が存在するため『入会届がない』との旧評価は不正確。ただし、全家庭配布・提出を要請するため、加入希望者だけが申込む制度か、退会届との兼用でオプトアウト化していないか要確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-atsugi-es",
+              "locator": "p.1 下部の注記"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
         },
         "withdrawal_procedure": {
           "status": "unknown",
@@ -471,8 +543,17 @@
         }
       },
       "documentExistence": "10文書区分の原本確認待ち",
-      "legalScreening": "15法令の独立審査待ち",
-      "publiclyVerified": false
+      "legalScreening": "原本記載の一次確認済み。15法令の個別レビュー・行政の現行運用との整合は未完了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "厚木小学校_06.pdf",
+        "sha256": "73eefa86903159b5056f5549564173a3391b0d4ac414e3fcd2c4f46409a48102",
+        "pages": 1,
+        "method": "Google Drive原ファイル取得＋PDFテキスト＋ページ画像照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
     },
     {
       "schoolId": "atsugi-jhs",
@@ -578,20 +659,32 @@
         "学校書類との混在",
         "役員負担"
       ],
-      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "sourceReview": "PDF原本の該当ページとページ画像を確認。各条項の存在は確認済み。ただし現行の運用、例外授権・現場実施と法的帰結は別審査。",
       "analysisYear": "2026",
       "axes": {
         "voluntary_membership_notice": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "confirmed_yes",
+          "observation": "2025年度新入生向けPTA案内に『PTAは任意団体であり、加入については保護者・教職員の自由意思です』と明記。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-echi-es",
+              "locator": "p.1 冒頭説明"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
         },
         "explicit_opt_in": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "p.1に『PTAカードの提出をもって、PTA加入となります』と記載する一方、入学式で学校書類と一緒の持参を案内。申し込みの自由・非加入者の扱い・承諾方法は未確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-echi-es",
+              "locator": "p.1 PTAカードについて"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
         },
         "withdrawal_procedure": {
           "status": "unknown",
@@ -624,10 +717,16 @@
           "sourceRefs": []
         },
         "officer_selection_pressure": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "confirmed_yes",
+          "observation": "児童在学中に役員・委員を1回引き受けるよう求め、希望しない理由の記入欄を設けた制度文面を確認。強制的に就任させた事実自体は不明。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-echi-es",
+              "locator": "p.2 PTAカード下部"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
         },
         "sensitive_exemption_questions": {
           "status": "unknown",
@@ -655,8 +754,17 @@
         }
       },
       "documentExistence": "10文書区分の原本確認待ち",
-      "legalScreening": "15法令の独立審査待ち",
-      "publiclyVerified": false
+      "legalScreening": "原本記載の一次確認済み。15法令の個別レビュー・行政の現行運用との整合は未完了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "依知小学校_0002.pdf",
+        "sha256": "72ac32d6d01b86a9981fc2a2d72070bcbd2f2689aea9356bc4761603c78cb3c0",
+        "pages": 2,
+        "method": "Google Drive原ファイル取得＋PDFテキスト＋ページ画像照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
     },
     {
       "schoolId": "echi-jhs",
@@ -1212,7 +1320,7 @@
         "会費収納",
         "役員選出"
       ],
-      "sourceReview": "既存サイトの学校別JSONを確認。元のPDF・画像そのものは本台帳作成時に未照合。",
+      "sourceReview": "PDF原本の該当ページとページ画像を確認。各条項の存在は確認済み。ただし現行の運用、例外授権・現場実施と法的帰結は別審査。",
       "analysisYear": "2026",
       "axes": {
         "voluntary_membership_notice": {
@@ -1222,10 +1330,16 @@
           "sourceRefs": []
         },
         "explicit_opt_in": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "『PTAカードの提出をもってPTA入会、継続とさせていただきます』と記載。自発的申込みと承諾、非加入選択肢が示されたかは別途確認。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-kamiogino-es",
+              "locator": "p.1 上部"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
         },
         "withdrawal_procedure": {
           "status": "unknown",
@@ -1240,10 +1354,16 @@
           "sourceRefs": []
         },
         "school_collection_of_pta_fee": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "PTAカードを会費集金に活用すると明記。ただし学校徴収・PTA自己徴収のどちらかは記載のみでは判定できない。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-kamiogino-es",
+              "locator": "p.1 末尾"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
         },
         "school_account_or_payment_system": {
           "status": "unknown",
@@ -1258,10 +1378,16 @@
           "sourceRefs": []
         },
         "officer_selection_pressure": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "confirmed_yes",
+          "observation": "児童1名につき在学中1回の委員を経験する旨と、5年生の未経験保護者を優先選出する旨を記載。実際の強制就任を示すものではない。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-kamiogino-es",
+              "locator": "p.1 PTA委員の記録"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
         },
         "sensitive_exemption_questions": {
           "status": "unknown",
@@ -1282,15 +1408,30 @@
           "sourceRefs": []
         },
         "school_pta_governance_overlap": {
-          "status": "unknown",
-          "observation": "既存JSONは一次資料の代わりにならない。原本と対象年度の照合待ち。",
+          "status": "indication",
+          "observation": "PTAカードは学校の金庫で保管すると明記。金庫の管理者、学校の関与と保存権限、学校情報との照合は確認が必要。",
           "year": "2026",
-          "sourceRefs": []
+          "sourceRefs": [
+            {
+              "sourceId": "original-kamiogino-es",
+              "locator": "p.1 末尾"
+            }
+          ],
+          "reviewNotes": "原本の当該記載を照合。制度の実装・公法上の適法性はこの軸だけで認定しない。"
         }
       },
       "documentExistence": "10文書区分の原本確認待ち",
-      "legalScreening": "15法令の独立審査待ち",
-      "publiclyVerified": false
+      "legalScreening": "原本記載の一次確認済み。15法令の個別レビュー・行政の現行運用との整合は未完了。",
+      "publiclyVerified": false,
+      "originalPdfVerification": {
+        "status": "direct_checked",
+        "fileName": "上荻野小学校_13.pdf",
+        "sha256": "3706cbfcf0a9f3178ba5644e0c1ebb54616919466be13668079c83332d5292af",
+        "pages": 1,
+        "method": "Google Drive原ファイル取得＋PDFテキスト＋ページ画像照合",
+        "verifiedAt": "2026-11-16",
+        "privateDriveIdNotPublished": true
+      }
     },
     {
       "schoolId": "kita-es",
@@ -3275,8 +3416,56 @@
   ],
   "legacySummary": {
     "withSubstantivePriorFinding": 5,
-    "pendingOriginalReview": 36,
-    "individualSchoolsReadyForPublication": 0,
-    "reviewPendingWithoutSubstantiveDescription": 31
-  }
+    "originalPDFsIndependentlyReviewed": 5,
+    "pendingOriginalReview": 31,
+    "individualSchoolsReadyForPublication": 0
+  },
+  "sourceStatus": "優先5校の原本PDFを直接照合済み。資料本文の文言だけに限定した軸の確認・兆候を入力。残る31校は原本未照合。",
+  "originalSources": [
+    {
+      "id": "original-aikawa-es",
+      "schoolId": "aikawa-es",
+      "fileName": "相川小学校 相談受付記録_01.pdf",
+      "sha256": "a0128ff96c8c329ee7d8f31048dd93fc7dd87e1045890eb50d5c9b2ed5334375",
+      "pages": 3,
+      "sourceAvailability": "Google Drive原本確認。公開サイトの保存PDFとの同一性はSHA照合未実施。",
+      "publicSiteOriginalUrl": "/source-pdfs/atsugi/aikawa-es/aikawa-es-soudan-01.pdf"
+    },
+    {
+      "id": "original-aikawa-jhs",
+      "schoolId": "aikawa-jhs",
+      "fileName": "相川中学校 会議録_04.pdf",
+      "sha256": "7a4497474a69a4f129a88074e51a07dd348fee128060b1a4c10478cdbdd4769",
+      "pages": 9,
+      "sourceAvailability": "Google Drive原本確認。公開サイトの保存PDFとの同一性はSHA照合未実施。",
+      "publicSiteOriginalUrl": "/source-pdfs/atsugi/aikawa-jhs/aikawa-jhs-kaigiroku-04.pdf"
+    },
+    {
+      "id": "original-atsugi-es",
+      "schoolId": "atsugi-es",
+      "fileName": "厚木小学校_06.pdf",
+      "sha256": "73eefa86903159b5056f5549564173a3391b0d4ac414e3fcd2c4f46409a48102",
+      "pages": 1,
+      "sourceAvailability": "Google Drive原本確認。公開サイトの保存PDFとの同一性はSHA照合未実施。",
+      "publicSiteOriginalUrl": "/source-pdfs/atsugi/atsugi-es/%E5%8E%9A%E6%9C%A8%E5%B0%8F%E5%AD%A6%E6%A0%A1_06.pdf"
+    },
+    {
+      "id": "original-echi-es",
+      "schoolId": "echi-es",
+      "fileName": "依知小学校_0002.pdf",
+      "sha256": "72ac32d6d01b86a9981fc2a2d72070bcbd2f2689aea9356bc4761603c78cb3c0",
+      "pages": 2,
+      "sourceAvailability": "Google Drive原本確認。公開サイトの保存PDFとの同一性はSHA照合未実施。",
+      "publicSiteOriginalUrl": "/source-pdfs/atsugi/echi-es/%E4%BE%9D%E7%9F%A5%E5%B0%8F%E5%AD%A6%E6%A0%A1_0002.pdf"
+    },
+    {
+      "id": "original-kamiogino-es",
+      "schoolId": "kamiogino-es",
+      "fileName": "上荻野小学校_13.pdf",
+      "sha256": "3706cbfcf0a9f3178ba5644e0c1ebb54616919466be13668079c83332d5292af",
+      "pages": 1,
+      "sourceAvailability": "Google Drive原本確認。公開サイトの保存PDFとの同一性はSHA照合未実施。",
+      "publicSiteOriginalUrl": "/source-pdfs/atsugi/kamiogino-es/%E4%B8%8A%E8%8D%BB%E9%87%8E%E5%B0%8F%E5%AD%A6%E6%A0%A1_13.pdf"
+    }
+  ]
 }
