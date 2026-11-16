@@ -75,3 +75,7 @@ description: PTA自治体総評の正本ワークフロー。全Gmail・Drive・
 - 公開後ブラウザとXカードを確認していない場合は **公開検証未完了**。一部が未確認でも調査事実に基づく暫定ページはその状態を表示して公開可能だが、完成認定は禁止。
 - 機械検査は真正性や法的結論の承認を代行しない。最終公表・公開変更は `AGENTS.md` の人間承認条件を優先。
 - 機械ゲートの契約は `ai-system/report-standards/municipal-v3-gates.json`、判定器は `ai-system/report-standards/scripts/validate-municipal-v3.mjs`。実験用の入力やGmail原文はGitHubに置かない。
+
+## 9．Web公開は独立の実測工程
+
+公開制作・地図接続・CSS/DOM/Computed Styleの表示修復・OGP/Xカード・GitHub変更・公開後実測は `ai-system/skills/municipal-web-publishing.md` v1.0.0を必ず適用する。法的評価が完了しただけで「Web公開完了」としない。`scripts/validate-municipal-web.mjs` で静的検査し、`ai-system/report-standards/templates/municipal-web-publication-manifest.json` の検証項目を実測結果・スクリーンショット・URLで埋める。公開承認と公開後の検証は別であり、Xカードはタグ存在だけで成功認定しない。実ブラウザ未検証なら `published_unverified`、すべての要件が実証済みの場合のみ `verified` と表示する。
