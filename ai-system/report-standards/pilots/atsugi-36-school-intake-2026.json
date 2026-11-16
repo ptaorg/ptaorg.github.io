@@ -3816,5 +3816,40 @@
       "schoolId": "atsugi-daini-es",
       "concern": "転入生の入会・非加入選択と、継続会員の退会届方式が併存。対象者の違いを説明し継続意思の実効性を確認。"
     }
-  ]
+  ],
+  "searchCoverage": {
+    "checkedAt": "2026-11-16",
+    "sources": [
+      "Google Drive（学校名＋PDF拡張子、自治体名）",
+      "学校別公開JSONと既存アーカイブHTML",
+      "ユーザーの既存研究マップ"
+    ],
+    "importantLimitation": "資料の原本検索で未ヒット＝不存在ではない。Drive検索は一部のクエリで先頭100件の上限があり、表記揺れ・一括ZIP・非公開保存フォルダ・別名での再検索が必要。",
+    "unverifiedSchoolIds": [
+      "aiko-es",
+      "atsugi-jhs",
+      "echi-jhs",
+      "echi-minami-es",
+      "fujizuka-jhs",
+      "hayashi-jhs",
+      "iiyama-es",
+      "kita-es",
+      "koayu-jhs",
+      "midorigaoka-es",
+      "moridai-es",
+      "morinosato-es",
+      "morinosato-jhs",
+      "mutsuai-higashi-jhs",
+      "nanmori-jhs",
+      "ogino-es",
+      "ogino-jhs",
+      "sanda-es",
+      "tamagawa-es",
+      "tamagawa-jhs",
+      "tomei-jhs",
+      "tsumada-es"
+    ],
+    "unverifiedCount": 22,
+    "remainingVerification": "各校に該当する旧資料・原本PDF・画像の有無、保存元フォルダ、年度を照合。元資料が得られなければ未評価継続。"
+  }
 }
