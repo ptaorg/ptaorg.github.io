@@ -4,9 +4,17 @@
   "sourceTitle": "資料2 個人情報取扱事務及び個人情報ファイルの登録について",
   "sourceSnapshot": "R6.8.31現在",
   "checkedDate": "2026-11-16",
-  "sourceStatus": "厚木市公開PDFのテキスト表で該当行を確認。PDFページ画像は取得エラーのため原本ページへの目視照合は保留。正確なページ番号も未確定。",
+  "sourceStatus": "市公式PDFのテキストで7校の『PTA事務』登録を確認（うち原本未照合6校）。PDFページ画像の直接取得はWebのキャッシュエラー。原本ページ画像での独立照合待ち。",
   "caution": "これは個人情報取扱『事務』の行政登録簿であり、PTAによる活動が現に実施されたこと、同項目に掲げる法令が特定の会費徴収・名簿利用・役員選出を授権することの証明ではない。『根拠法令 無し』もあくまで登録欄の記載であり、他の法令上の授権が一切存在しないと確定したものではない。最新登録簿の改訂も未確認。",
   "entries": [
+    {
+      "schoolId": "aiko-es",
+      "schoolName": "愛甲小学校",
+      "registryId": "7800(14)-000022",
+      "registryLegalBasis": "無し",
+      "documentTextLocation": "PDF抽出テキスト行903",
+      "documentText": "名称 ＰＴＡ事務／目的 教職員と保護者との連携を図り、児童の健全な発達に努める。"
+    },
     {
       "schoolId": "atsugi-jhs",
       "schoolName": "厚木中学校",
@@ -64,8 +72,9 @@
     "2026年10月26日の『PTA自己徴収移行』方針の後、行政登録内容が変更されたか確認。"
   ],
   "stat": {
-    "rowsSeen": 6,
+    "rowsSeen": 7,
     "unreviewedSchoolIdsInThese": [
+      "aiko-es",
       "atsugi-jhs",
       "echi-jhs",
       "ogino-jhs",
