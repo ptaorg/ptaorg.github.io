@@ -21,15 +21,30 @@ test('PDF URLs are local archive links, all existing HTML records link to eviden
   assert.ok(c.imagePaths.every(x=>x.startsWith('/assets/archive/atsugi/'+c.id+'/')),c.id);
  }
 });
-test('prior summaries remain unconfirmed until PDF and image originals are independently inspected',()=>{
- assert.equal(review.publication.originalPDFRead,false);
- assert.equal(review.publication.originalImagesRead,false);
+test('PDFs inspected but field implementation and lawful authority remain unverified',()=>{
+ assert.equal(review.publication.originalPDFRead,true);
+ assert.equal(review.publication.originalImagesRead,true);
  assert.equal(review.publication.state,'draft');
  for(const c of review.cases){
-  assert.equal(c.currentAxisStatus,'unknown');
+  assert.equal(c.currentAxisStatus,'mixed_verified_document_indications_without_legality_finding');
+  assert.match(c.sha256,/^[a-f0-9]{64}$/);
+  assert.equal(c.originalPdfVerified,true);
   assert.ok(c.neededEvidence.length>=3,c.id);
   assert.ok(c.epistemicLimit.length>15,c.id);
  }
+});
+test('mislabeled Aikawa elementary complaint is not attributed as school action',()=>{
+ const correction=inventory.corrections.find(x=>x.id==='CORR-ATSUGI-001');
+ assert.ok(correction);
+ const es=inventory.schoolRecords.find(x=>x.schoolId==='aikawa-es');
+ assert.equal(es.axes.school_personal_data_for_pta.status,'unknown');
+ const jhs=inventory.schoolRecords.find(x=>x.schoolId==='aikawa-jhs');
+ assert.equal(jhs.axes.school_personal_data_for_pta.status,'indication');
+});
+test('Atsugi elementary original form contains an admission-and-withdrawal clause',()=>{
+ const school=inventory.schoolRecords.find(x=>x.schoolId==='atsugi-es');
+ assert.equal(school.axes.explicit_opt_in.status,'indication');
+ assert.match(school.axes.explicit_opt_in.observation,/入会届・退会届/);
 });
 test('school-specific incidents are not inferred from city-wide report',()=>{
  assert.match(review.cityLevelLinkage.incident,/自動的に同一視しない/);
