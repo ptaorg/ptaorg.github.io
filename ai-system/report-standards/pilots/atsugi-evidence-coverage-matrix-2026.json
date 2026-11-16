@@ -3,17 +3,17 @@
   "date": "2026-11-16",
   "versions": {
     "schoolPdfOriginals": "2025/2026（文書により差）",
-    "cityPtaRegistrations": "2023/2024（登録簿により差）"
+    "cityPtaRegistrations": "2023/2024登録簿を調査（原文PDFの一部はページ画像未照合）"
   },
   "statistics": {
     "totalSchools": 36,
     "both": 4,
     "school_original_only": 11,
-    "official_registration_only": 11,
-    "no_individual_source_yet": 10,
-    "schoolsWithAtLeastOneIndividualSource": 26
+    "official_registration_only": 20,
+    "no_individual_source_yet": 1,
+    "schoolsWithAtLeastOneIndividualSource": 35
   },
-  "warning": "登録簿だけの11校は個別学校PDFを読んだわけではない。登録欄に『PTA事務』があることは現在の実施・法令上の権限・違法性の証明ではない。原本PDF確認済み学校とは区別。残る10校は調査対象資料が未発見であり、資料不存在ではない。",
+  "warning": "登録簿だけの学校は個別学校PDFを確認したわけではなく、登録が2026年現在の実施・法令上の授権・違法性を証明するものではない。登録簿も学校PDFも未発見の学校について、資料が不存在・違法性なし等とは断定しない。",
   "schools": [
     {
       "id": "aikawa-es",
@@ -142,10 +142,10 @@
       "schoolType": "小学校",
       "schoolOriginalPdf": false,
       "schoolOriginalFile": null,
-      "officialRegistry": false,
-      "registryId": null,
-      "registryLegalBasis": null,
-      "status": "no_individual_source_yet"
+      "officialRegistry": true,
+      "registryId": "7800(19)-000029",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only"
     },
     {
       "id": "kamiechi-es",
@@ -219,10 +219,10 @@
       "schoolType": "小学校",
       "schoolOriginalPdf": false,
       "schoolOriginalFile": null,
-      "officialRegistry": false,
-      "registryId": null,
-      "registryLegalBasis": null,
-      "status": "no_individual_source_yet"
+      "officialRegistry": true,
+      "registryId": "7800(17)-000029",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only"
     },
     {
       "id": "morinosato-es",
@@ -230,10 +230,10 @@
       "schoolType": "小学校",
       "schoolOriginalPdf": false,
       "schoolOriginalFile": null,
-      "officialRegistry": false,
-      "registryId": null,
-      "registryLegalBasis": null,
-      "status": "no_individual_source_yet"
+      "officialRegistry": true,
+      "registryId": "7800(20)-000028",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only"
     },
     {
       "id": "morinosato-jhs",
@@ -252,10 +252,10 @@
       "schoolType": "中学校",
       "schoolOriginalPdf": false,
       "schoolOriginalFile": null,
-      "officialRegistry": false,
-      "registryId": null,
-      "registryLegalBasis": null,
-      "status": "no_individual_source_yet"
+      "officialRegistry": true,
+      "registryId": "7800(35)-000018",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only"
     },
     {
       "id": "mutsuai-jhs",
@@ -285,10 +285,10 @@
       "schoolType": "中学校",
       "schoolOriginalPdf": false,
       "schoolOriginalFile": null,
-      "officialRegistry": false,
-      "registryId": null,
-      "registryLegalBasis": null,
-      "status": "no_individual_source_yet"
+      "officialRegistry": true,
+      "registryId": "7800(30)-000028",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only"
     },
     {
       "id": "ogino-es",
@@ -296,10 +296,10 @@
       "schoolType": "小学校",
       "schoolOriginalPdf": false,
       "schoolOriginalFile": null,
-      "officialRegistry": false,
-      "registryId": null,
-      "registryLegalBasis": null,
-      "status": "no_individual_source_yet"
+      "officialRegistry": true,
+      "registryId": "7800(4)-000028",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only"
     },
     {
       "id": "ogino-jhs",
@@ -318,10 +318,10 @@
       "schoolType": "小学校",
       "schoolOriginalPdf": false,
       "schoolOriginalFile": null,
-      "officialRegistry": false,
-      "registryId": null,
-      "registryLegalBasis": null,
-      "status": "no_individual_source_yet"
+      "officialRegistry": true,
+      "registryId": "7800(5)-000028",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only"
     },
     {
       "id": "shimizu-es",
@@ -340,10 +340,10 @@
       "schoolType": "小学校",
       "schoolOriginalPdf": false,
       "schoolOriginalFile": null,
-      "officialRegistry": false,
-      "registryId": null,
-      "registryLegalBasis": null,
-      "status": "no_individual_source_yet"
+      "officialRegistry": true,
+      "registryId": "7800(8)-000027",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only"
     },
     {
       "id": "tamagawa-jhs",
@@ -384,10 +384,10 @@
       "schoolType": "中学校",
       "schoolOriginalPdf": false,
       "schoolOriginalFile": null,
-      "officialRegistry": false,
-      "registryId": null,
-      "registryLegalBasis": null,
-      "status": "no_individual_source_yet"
+      "officialRegistry": true,
+      "registryId": "7800(31)-000019",
+      "registryLegalBasis": "無し",
+      "status": "official_registration_only"
     },
     {
       "id": "tomuro-es",
