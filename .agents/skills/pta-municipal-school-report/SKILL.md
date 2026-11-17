@@ -13,7 +13,8 @@ description: 自治体別PTA総合報告書・学校別評価書・母集団付�
 4. `ai-system/skills/municipal-school-report.md`
 5. `ai-system/skills/municipal-investigation-pipeline.md`（全履歴・自治体規程・時系列の是正評価・公開工程）
 6. `ai-system/skills/municipal-web-publishing.md`（サイト制作・公開・表示・Xカードの実検証）
-7. `ai-system/report-standards/README.md` と同ディレクトリの評価軸・スキーマ・テンプレート
+7. `ai-system/skills/municipal-investigation-v4.md`（取得経路・ZIP展開・原本／画像SHA・再開・ゲートの統合手順）
+8. `ai-system/report-standards/README.md` と同ディレクトリの評価軸・スキーマ・テンプレート
 
 **自治体総評の事前必須ゲート：** 最初にGmail・Google Driveの当該自治体との送受信・添付・開示資料を横断確認し、続いてウェブ・例規・教育委員会通知・会計手引等から、PTA会費の学校徴収を「委任」「同意」「団体費」等で制度化する規定を探索する。実施方法・未確認時の停止条件は `ai-system/skills/municipal-school-report.md` v2.1.0に従う。
 
@@ -22,3 +23,6 @@ description: 自治体別PTA総合報告書・学校別評価書・母集団付�
 **v3.0公開ゲート：** `ai-system/report-standards/municipal-v3-gates.json` に従い `node ai-system/report-standards/scripts/validate-municipal-v3.mjs <非公開入力JSON>` を実行する。委任契約は民法上の私法関係であり公法上の所掌・権限を当然には創設しない。通知や回答が是正へ向かう変化は積極的に評価するが、改訂・実装・効果検証まで区別する。
 
 **Web公開は独立ゲート：** `node scripts/validate-municipal-web.mjs research/<slug>.html --manifest <非公開チェック記録>` を実行し、画像取得・実ブラウザ・地図導線・Xカードの実表示を個別確認する。GitHubへのコミットは公開確認を意味しない。表示崩れはCSSの末尾に上書きを重ねず根本のcomputed styleから直す。
+
+
+**v4.0原本実行ゲート：** 原本探索の進捗と取れなかった資料は `ai-system/report-standards/scripts/municipal-v4.mjs` の非公開JSON台帳で管理する。各ファイルの取得経路・失敗・本文確認・証拠画像の切り抜き座標とSHA-256を記録し、学校別の内部事務原本と市の登録簿・補足資料を区別する。ZIP取得不可を理由に他校調査を停止しない。v4の検証成功は既存v3・12軸・10文書・Webゲートの代替にはならない。
