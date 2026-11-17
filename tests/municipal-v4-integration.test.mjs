@@ -80,3 +80,20 @@ test('v4 blocks an inspected document without proof of obtaining its bytes',()=>
  const d=fixture();d.retrievalAttempts=d.retrievalAttempts.filter(a=>a.id!=='try-4');
  assert.ok(validate(d).errors.some(e=>e.code==='ARTIFACT_RETRIEVAL_UNPROVEN'));
 });
+
+test('v4 cannot pass with no targets even when phases are manually checked',()=>{
+ const d=fixture();d.targets=[];d.retrievalAttempts=[];
+ assert.ok(validate(d).errors.some(e=>e.code==='TARGETS_REQUIRED'));
+});
+test('v4 requires every school to have a search target or verified original',()=>{
+ const d=fixture();d.targets=d.targets.filter(t=>t.schoolId!=='school-b');
+ d.retrievalAttempts=d.retrievalAttempts.filter(a=>a.targetId!=='school-b'&&a.targetId!=='registry-b');
+ d.targets=d.targets.filter(t=>t.id!=='registry-b');
+ d.artifacts=d.artifacts.filter(a=>a.schoolId!=='school-b');
+ d.schoolAssessments=d.schoolAssessments.filter(a=>a.schoolId!=='school-b');
+ assert.ok(validate(d).errors.some(e=>e.code==='SCHOOL_SEARCH_MISSING'));
+});
+test('v4 does not call a downloaded ZIP complete until every expected entry is inspected',()=>{
+ const d=fixture();d.targets[0].expectedEntries=15;
+ assert.ok(validate(d).errors.some(e=>e.code==='ARCHIVE_NOT_FULLY_VERIFIED'));
+});
