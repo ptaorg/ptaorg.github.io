@@ -72,6 +72,7 @@ function validate(d,{baseDir='.',checkBytes=false}={}){
   if(a.schoolId!==null&&a.schoolId!==undefined&&!schoolSet.has(a.schoolId))fail('ARTIFACT_SCHOOL',at,'not in roster');
   if(!['school_internal','official_registry','supplement','municipal_rule','other'].includes(a.evidenceClass))fail('ARTIFACT_CLASS',at,'evidence category required');
   if(!['metadata_only','bytes_verified','text_verified','image_verified'].includes(a.verification))fail('ARTIFACT_VERIFICATION',at,'unsupported verification state');
+  if(['bytes_verified','text_verified','image_verified'].includes(a.verification)&&!attempts.some(t=>t.targetId===a.targetId&&t.outcome==='retrieved'))fail('ARTIFACT_RETRIEVAL_UNPROVEN',at,'verified bytes require successful authorized retrieval attempt');
   if(!clean(a.title)||!clean(a.sourceUrl)&&!clean(a.providerId))fail('ARTIFACT_SOURCE',at,'title and source ID/URL required');
   if(['bytes_verified','text_verified','image_verified'].includes(a.verification)&&!SHA.test(a.sha256||''))fail('ARTIFACT_HASH',at,'verified bytes require SHA-256');
   if(['text_verified','image_verified'].includes(a.verification)&&(!clean(a.locator)||!clean(a.excerpt)))fail('ARTIFACT_TEXT',at,'page/section locator and observed excerpt required');
