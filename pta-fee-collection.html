@@ -20,7 +20,7 @@
 .pfc-page .pfc-facts>div{border:1px solid #acc2d0;background:rgba(255,255,255,.12);border-radius:7px;padding:14px 20px;min-width:154px}
 .pfc-page .pfc-facts strong{font-size:clamp(1.7rem,2.5vw,2.2rem);line-height:1.3;color:#fff;display:block}
 .pfc-page .pfc-facts small{font-size:.85rem;color:#fff}
-.pfc-page>section{padding:clamp(32px,5vw,54px) 0}
+.pfc-page>section{padding-top:clamp(32px,5vw,54px);padding-bottom:clamp(32px,5vw,54px)}
 .pfc-page .pfc-lead{max-width:900px;font-size:1.075rem;line-height:2}
 .pfc-page .pfc-note{border-left:5px solid #bc7c22;background:#fff8e9;color:#273d4e;padding:17px 22px;margin:24px 0;font-size:.96rem}
 .pfc-page .pfc-section-title{font-family:"Noto Serif JP",serif;font-size:clamp(1.45rem,2.6vw,2rem);color:#193a55;line-height:1.5;margin:0 0 22px}
@@ -232,4 +232,8 @@
     <nav class="footer-col" aria-label="サイト案内"><h2>サイト案内</h2><a href="about.html">団体概要</a><a href="contact.html">お問い合わせ・情報提供・活動支援</a></nav>
   </div>
   <div class="container footer-bottom"><span>© PTA適正化推進委員会</span><span>地図：<a href="https://github.com/geolonia/japanese-prefectures">Geolonia</a>（GFDL）</span></div>
-</footer>\n<!-- /chrome:footer -->\n<script>(function(){const q=document.getElementById("search"),li=[...document.querySelectorAll(".entry")],c=document.getElementById("count");q.addEventListener("input",function(){const v=q.value.trim().toLocaleLowerCase("ja");let n=0;for(const el of li){const show=el.dataset.n.toLocaleLowerCase("ja").includes(v);el.hidden=!show;if(show)n++}c.textContent=n+"件を表示"})})();</script>\n<script defer src="assets/app.js?v=20261115-osaki-v1"></script>\n</body></html>
+</footer>
+<!-- /chrome:footer -->
+<script>(function(){const q=document.getElementById("search"),li=[...document.querySelectorAll(".pfc-entry")],c=document.getElementById("count");q.addEventListener("input",function(){const v=q.value.trim().toLocaleLowerCase("ja");let n=0;for(const el of li){const show=el.dataset.n.toLocaleLowerCase("ja").includes(v);el.hidden=!show;if(show)n++}c.textContent=n+"件を表示"})})();</script>
+<script defer src="assets/app.js?v=20261115-osaki-v1"></script>
+</body></html>
