@@ -31,6 +31,20 @@ Google Driveフォルダに「原本はこちら」とリンクがあること�
 
 証拠画像は**該当箇所のみ**切り抜く。原本ID、原本ハッシュ、PDFページ、切り抜きの `[x0,y0,x1,y1]`、画像ハッシュ、示す事実、採用・保留・却下と理由を記録。原本の前後文脈を読んで意味を損なわない。紙面全体の機械的な画像化や数合わせは禁止。公開用画像の個人情報の必要性・権利処理は原本保全とは別に検討する。
 
+### 実行コマンド：ZIPと証拠画像
+
+Work等の承認済み作業環境で、取得した**ローカルの実バイト列**に対して実行する。
+
+```bash
+python3 ai-system/report-standards/scripts/evidence-tools.py ingest original.zip private/evidence/unpacked
+python3 ai-system/report-standards/scripts/evidence-tools.py crop original.pdf private/evidence/clip-p2.png --page 2 --rect 42 96 470 255
+node ai-system/report-standards/scripts/municipal-v4.mjs validate private/municipal-v4.json --check-bytes --strict-review
+```
+
+`--rect` はレビュー担当者がPDF原文で選定した数値（PDFポイント、左上起点）。この数値は**コマンド例**であり、そのまま実資料に当てはめない。画像入力ではピクセル単位。切り抜きが自動的に事実や違法性を証明するわけではなく、文脈照合後に `clips[].decision` を採用へ変更する。元ZIP・元PDF・生成した画像のハッシュと原資料との一致を保存する。ZIP展開は空の保存先に限定し、パス逸脱・暗号化・重複名・過大容量を拒否する。
+
+2件のZIPがそれぞれ10枚・5枚と確認できた場合、`targets[].expectedEntries` に各々の内部ファイル数を記録できる。ZIPのダウンロードに成功しても、該当数の画像本文を確認するまで `ARCHIVE_NOT_FULLY_VERIFIED` により完了を拒否する。ファイル数は実際のZIP目録と突き合わせ、推定値を記入しない。
+
 ## 3．法令審査と市の責任
 
 法的評価は**①学校／教委とPTAの主体分離 → ②事務帰属 → ③学校側の具体的な公法上の所掌・権限と例外 → ④個情法61条 → ⑤同69条 → ⑥地公法服務・資金保管 → ⑦民事契約・人権・公平・救済**を固定する。私人間委任・同意・校長裁量を公法授権の代用にしない。学校とPTAが別団体であることだけから違法と断じない。制定規程の存在、学校適用、行為実施、要件充足、適法性を区分する。
