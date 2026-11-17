@@ -7,16 +7,18 @@ function fixture(){
  d.phases=Object.fromEntries(Object.keys(d.phases).map(x=>[x,'complete']));
  d.targets=[
   {id:'zip-a',description:'Gmail attachment archive',sourceChannel:'gmail',schoolId:null,state:'retrieved'},
-  {id:'school-b',description:'school B collection material',sourceChannel:'official',schoolId:'school-b',state:'exhausted',exhaustionReason:'school and city archives checked; school-side internal record not obtained'}
+  {id:'school-b',description:'school B collection material',sourceChannel:'official',schoolId:'school-b',state:'exhausted',exhaustionReason:'school and city archives checked; school-side internal record not obtained'},
+  {id:'registry-b',description:'school B city registry',sourceChannel:'official',schoolId:'school-b',state:'retrieved'}
  ];
  d.retrievalAttempts=[
   {id:'try-1',targetId:'zip-a',channel:'gmail',at:date,method:'authorized download',evidenceLocation:'message:A',outcome:'unsupported',reason:'connector returned unsupported archive'},
   {id:'try-2',targetId:'zip-a',channel:'drive',at:date,method:'authorized alternate-account retrieval',evidenceLocation:'drive:A',outcome:'retrieved'},
-  {id:'try-3',targetId:'school-b',channel:'official',at:date,method:'official-site PDF search',evidenceLocation:'https://example.org/search',outcome:'not_found',reason:'No internal practice original located'}
+  {id:'try-3',targetId:'school-b',channel:'official',at:date,method:'official-site PDF search',evidenceLocation:'https://example.org/search',outcome:'not_found',reason:'No internal practice original located'},
+  {id:'try-4',targetId:'registry-b',channel:'official',at:date,method:'official city registry PDF download',evidenceLocation:'https://example.org/registry.pdf',outcome:'retrieved'}
  ];
  d.artifacts=[
   {id:'school-a-pdf',targetId:'zip-a',schoolId:'school-a',evidenceClass:'school_internal',verification:'text_verified',title:'PTA collection notice',sourceUrl:'https://example.org/a.pdf',sha256:'a'.repeat(64),locator:'p.2',excerpt:'PTA会費について'},
-  {id:'school-b-registry',targetId:'school-b',schoolId:'school-b',evidenceClass:'official_registry',verification:'text_verified',title:'個人情報事務登録簿',providerId:'city-register:22',sha256:'b'.repeat(64),locator:'p.4',excerpt:'PTA役員名簿'}
+  {id:'school-b-registry',targetId:'registry-b',schoolId:'school-b',evidenceClass:'official_registry',verification:'text_verified',title:'個人情報事務登録簿',providerId:'city-register:22',sha256:'b'.repeat(64),locator:'p.4',excerpt:'PTA役員名簿'}
  ];
  d.clips=[{artifactId:'school-a-pdf',path:'clips/a.webp',sha256:'c'.repeat(64),page:2,crop:[15,20,90,100],decision:'adopted',claim:'会費案内の存在',reason:'該当段落のみ'}];
  const legalSequence={subjectSeparation:'公私分離',taskOwnership:'PTA内部事務',publicAuthority:'学校側の授権は未確認',privacy61:'保有目的は未確認',privacy69:'利用提供は未確認',serviceAndFinance:'実態未確認',contractAndRights:'契約成立未確認'};
@@ -72,4 +74,9 @@ test('v4 insists on a real failed-retrieval reason and an exhaustion explanation
 });
 test('v4 SHA256 is reproducible for byte-level evidence checks',()=>{
  assert.equal(sha256(Buffer.from('abc')),'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad');
+});
+
+test('v4 blocks an inspected document without proof of obtaining its bytes',()=>{
+ const d=fixture();d.retrievalAttempts=d.retrievalAttempts.filter(a=>a.id!=='try-4');
+ assert.ok(validate(d).errors.some(e=>e.code==='ARTIFACT_RETRIEVAL_UNPROVEN'));
 });
