@@ -49,6 +49,23 @@
 .pfc-page .pfc-intro-anchor{display:inline-block;padding:8px 16px;background:#fff;border-radius:5px;text-decoration:none;font-weight:700;color:#17496d}
 @media(max-width:760px){.pfc-page .pfc-pillgrid,.pfc-page .pfc-casegrid{grid-template-columns:1fr}.pfc-page .pfc-entries{grid-template-columns:repeat(2,minmax(0,1fr))}.pfc-page .pfc-hero{padding:36px 0 40px}.pfc-page .pfc-facts>div{min-width:125px;flex:1}.pfc-page .pfc-hero h1{font-size:clamp(1.75rem,6vw,2.5rem)}}
 @media(max-width:480px){.pfc-page .pfc-entries{grid-template-columns:1fr}.pfc-page .pfc-facts strong{font-size:1.5rem}.pfc-page .pfc-facts>div{padding:12px;min-width:110px}}
+
+.pfc-page .pfc-mapbox{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(240px,.8fr);gap:20px;align-items:start}
+.pfc-page .pfc-mapview{background:#f1f6f8;border:1px solid #c6d6e0;border-radius:9px;padding:10px}
+.pfc-page .pfc-mapview object{width:100%;height:600px;max-height:74vw;min-height:360px;display:block}
+.pfc-page .pfc-maptools{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:18px 0}
+.pfc-page .pfc-maptools select{font:inherit;border:1px solid #98aeba;background:#fff;border-radius:5px;padding:10px 13px}
+.pfc-page .pfc-maptools button{font:inherit;border:0;border-radius:5px;background:#215371;color:#fff;padding:10px 16px;cursor:pointer}
+.pfc-page .pfc-mapdetail{padding:20px;border:1px solid #cadbe4;border-radius:9px;background:#fff}
+.pfc-page .pfc-mapdetail h3{font-size:1.3rem;color:#173c57;margin-bottom:5px}
+.pfc-page .pfc-mapdetail ul{list-style:none;margin:12px 0 18px;padding:0;max-height:300px;overflow:auto}
+.pfc-page .pfc-mapdetail li{border-bottom:1px solid #e1e9ef;padding:5px 0}
+.pfc-page .pfc-mapdetail a{font-weight:700}
+.pfc-page .pfc-maplegend{display:flex;gap:15px;flex-wrap:wrap;font-size:.88rem;margin:12px 0}
+.pfc-page .pfc-maplegend span::before{content:"";display:inline-block;background:var(--tone);width:16px;height:12px;margin-right:7px;border:1px solid #829aa8}
+@media(max-width:800px){.pfc-page .pfc-mapbox{grid-template-columns:1fr}.pfc-page .pfc-mapview object{height:480px;max-height:none;min-height:0}}
+@media(max-width:480px){.pfc-page .pfc-mapview object{height:360px}.pfc-page .pfc-mapview{padding:4px}}
+
 </style></head><body data-page="pta-fee-national" data-section="research">
 <a class="skip-link" href="#main">本文へ移動</a>\n<!-- chrome:header -->\n<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
   <symbol id="i-logo" viewBox="0 0 40 36"><path d="M20 1 2 9.5V12h36V9.5Z" fill="currentColor"/><rect x="5" y="14" width="4" height="15" fill="currentColor"/><rect x="13" y="14" width="4" height="15" fill="currentColor"/><rect x="23" y="14" width="4" height="15" fill="currentColor"/><rect x="31" y="14" width="4" height="15" fill="currentColor"/><rect x="2" y="31" width="36" height="4" fill="currentColor"/></symbol>
@@ -126,6 +143,14 @@
 <div class="pfc-facts"><div><strong>79</strong><small>抽出された団体等</small></div><div><strong>2</strong><small>独立調査を統合</small></div><div><strong>2026.11.17</strong><small>統合資料基準日</small></div></div></div></div>
 <section class="pfc-wrap"><p class="pfc-lead"><strong>この79は「違法な自治体数」ではありません。</strong>過去の全国照会回答と既存調査から、学校によるPTA会費徴収を説明・容認する記述が見つかった自治体・都道府県等の重複を除いた数です。</p>
 <div class="pfc-note"><strong>第一次調査の公開版です。</strong> 現行制度の有無、原本、法的評価については再照合中です。ここに掲載されたことは、当該自治体の現在の違法な運用を意味しません。詳細な評価・非公開の回答書・証拠画像は、原本確認と公開審査を経たものから順次掲載します。</div></section>
+<section class="pfc-muted" id="japan-map" aria-labelledby="pfc-map-heading"><div class="pfc-wrap">
+<h2 class="pfc-section-title" id="pfc-map-heading">日本地図から探す</h2>
+<p>地図で都道府県を選ぶと、該当する調査対象が表示されます。<strong>色は抽出件数を示すもので、違法性の評価ではありません。</strong></p>
+<div class="pfc-maptools"><label for="pfc-pref"><strong>都道府県</strong></label><select id="pfc-pref"><option value="">全国79団体</option></select><button id="pfc-map-clear" type="button">全国表示に戻す</button></div>
+<div class="pfc-mapbox"><div><div class="pfc-mapview"><object id="pfc-map-object" type="image/svg+xml" data="assets/map/japan-prefectures.svg" aria-label="47都道府県の地図">地図を表示できない場合は、都道府県メニューからお選びください。</object></div>
+<div class="pfc-maplegend"><span style="--tone:#e8eff4">対象なし</span><span style="--tone:#a8d8db">1～2件</span><span style="--tone:#408a9d">3～5件</span><span style="--tone:#184e76">6件以上</span></div>
+<p>都道府県単位の集計です。現行徴収の実施率や違法性の順位を示すものではありません。</p></div>
+<aside class="pfc-mapdetail"><h3 id="pfc-region-title">全国 79団体</h3><p id="pfc-map-help">地図を押すか、都道府県を選択してください。下の一覧にも反映します。</p><ul id="pfc-region-list"></ul><p><a href="#list">自治体一覧へ移動 →</a></p></aside></div></div></section>
 <section class="pfc-muted"><div class="pfc-wrap"><h2 class="pfc-section-title">行政の説明には、どんな理由があるか</h2><div class="pfc-pillgrid">
 <article><strong>01　PTAから委任された</strong><p>私法上の委任契約と、学校が公務として事務を行える権限は同じでしょうか。</p></article>
 <article><strong>02　保護者の同意がある</strong><p>引落しや情報利用への同意で、学校側の所掌事務・権限の問題まで解決できるでしょうか。</p></article>
@@ -234,6 +259,41 @@
   <div class="container footer-bottom"><span>© PTA適正化推進委員会</span><span>地図：<a href="https://github.com/geolonia/japanese-prefectures">Geolonia</a>（GFDL）</span></div>
 </footer>
 <!-- /chrome:footer -->
-<script>(function(){const q=document.getElementById("search"),li=[...document.querySelectorAll(".pfc-entry")],c=document.getElementById("count");q.addEventListener("input",function(){const v=q.value.trim().toLocaleLowerCase("ja");let n=0;for(const el of li){const show=el.dataset.n.toLocaleLowerCase("ja").includes(v);el.hidden=!show;if(show)n++}c.textContent=n+"件を表示"})})();</script>
+<script type="application/json" id="pfc-geo-data">{"places":{"札幌市":"北海道","仙台市":"宮城県","大崎市":"宮城県","白石市":"宮城県","蔵王町":"宮城県","大潟村":"秋田県","秋田市":"秋田県","只見町":"福島県","国見町":"福島県","利根町":"茨城県","さくら市":"栃木県","日光市":"栃木県","三郷市":"埼玉県","東秩父村":"埼玉県","白岡市":"埼玉県","越谷市":"埼玉県","鴨川市":"千葉県","千葉市":"千葉県","三鷹市":"東京都","中央区":"東京都","千代田区":"東京都","多摩市":"東京都","東京都":"東京都","厚木市":"神奈川県","川崎市":"神奈川県","横浜市":"神奈川県","相模原市":"神奈川県","藤沢市":"神奈川県","寒川町":"神奈川県","小田原市":"神奈川県","平塚市":"神奈川県","座間市":"神奈川県","海老名市":"神奈川県","逗子市":"神奈川県","小海町":"長野県","茅野市":"長野県","長野県":"長野県","射水市":"富山県","東白川村":"岐阜県","静岡市":"静岡県","磐田市":"静岡県","名古屋市":"愛知県","愛西市":"愛知県","蒲郡市":"愛知県","豊橋市":"愛知県","幸田町":"愛知県","愛知県":"愛知県","江南市":"愛知県","犬山市":"愛知県","豊田市":"愛知県","長久手市":"愛知県","三重県":"三重県","滋賀県":"滋賀県","亀岡市":"京都府","大阪市":"大阪府","大阪府":"大阪府","門真市":"大阪府","東大阪市":"大阪府","茨木市":"大阪府","高槻市":"大阪府","兵庫県":"兵庫県","神戸市":"兵庫県","西宮市":"兵庫県","姫路市":"兵庫県","宝塚市":"兵庫県","西脇市":"兵庫県","橋本市":"和歌山県","島根県":"島根県","岡山市":"岡山県","徳島市":"徳島県","松山市":"愛媛県","北九州市":"福岡県","小竹町":"福岡県","広川町":"福岡県","福岡市":"福岡県","雲仙市":"長崎県","小値賀町":"長崎県","苓北町":"熊本県","鹿児島市":"鹿児島県"},"prefs":[{"name":"北海道","code":"1","count":1},{"name":"青森県","code":"2","count":0},{"name":"岩手県","code":"3","count":0},{"name":"宮城県","code":"4","count":4},{"name":"秋田県","code":"5","count":2},{"name":"山形県","code":"6","count":0},{"name":"福島県","code":"7","count":2},{"name":"茨城県","code":"8","count":1},{"name":"栃木県","code":"9","count":2},{"name":"群馬県","code":"10","count":0},{"name":"埼玉県","code":"11","count":4},{"name":"千葉県","code":"12","count":2},{"name":"東京都","code":"13","count":5},{"name":"神奈川県","code":"14","count":11},{"name":"新潟県","code":"15","count":0},{"name":"富山県","code":"16","count":1},{"name":"石川県","code":"17","count":0},{"name":"福井県","code":"18","count":0},{"name":"山梨県","code":"19","count":0},{"name":"長野県","code":"20","count":3},{"name":"岐阜県","code":"21","count":1},{"name":"静岡県","code":"22","count":2},{"name":"愛知県","code":"23","count":10},{"name":"三重県","code":"24","count":1},{"name":"滋賀県","code":"25","count":1},{"name":"京都府","code":"26","count":1},{"name":"大阪府","code":"27","count":6},{"name":"兵庫県","code":"28","count":6},{"name":"奈良県","code":"29","count":0},{"name":"和歌山県","code":"30","count":1},{"name":"鳥取県","code":"31","count":0},{"name":"島根県","code":"32","count":1},{"name":"岡山県","code":"33","count":1},{"name":"広島県","code":"34","count":0},{"name":"山口県","code":"35","count":0},{"name":"徳島県","code":"36","count":1},{"name":"香川県","code":"37","count":0},{"name":"愛媛県","code":"38","count":1},{"name":"高知県","code":"39","count":0},{"name":"福岡県","code":"40","count":4},{"name":"佐賀県","code":"41","count":0},{"name":"長崎県","code":"42","count":2},{"name":"熊本県","code":"43","count":1},{"name":"大分県","code":"44","count":0},{"name":"宮崎県","code":"45","count":0},{"name":"鹿児島県","code":"46","count":1},{"name":"沖縄県","code":"47","count":0}]}</script>
+<script>
+(()=>{'use strict';
+const data=JSON.parse(document.getElementById('pfc-geo-data').textContent);
+const byCode=Object.fromEntries(data.prefs.map(p=>[p.code,p]));
+const choice=document.getElementById('pfc-pref'),clear=document.getElementById('pfc-map-clear');
+const obj=document.getElementById('pfc-map-object'),region=document.getElementById('pfc-region-title'),details=document.getElementById('pfc-region-list');
+const input=document.getElementById('search'),items=[...document.querySelectorAll('.pfc-entry')],total=document.getElementById('count');
+let selected='',areas=[];
+const color=n=>n>=6?'#184e76':n>=3?'#408a9d':n?'#a8d8db':'#e8eff4';
+for(const p of data.prefs){const o=document.createElement('option');o.value=p.name;o.textContent=p.name+'（'+p.count+'）';choice.append(o)}
+function apply(){
+choice.value=selected;
+const term=input.value.trim().toLocaleLowerCase('ja');let shown=0;
+for(const el of items){el.hidden=!!((selected&&data.places[el.dataset.n]!==selected)||(term&&!el.dataset.n.toLocaleLowerCase('ja').includes(term)));if(!el.hidden)shown++}
+total.textContent=shown+'件を表示';
+const names=selected?items.filter(el=>data.places[el.dataset.n]===selected).map(el=>el.dataset.n):[];
+region.textContent=selected?selected+' '+names.length+'団体':'全国 79団体';
+details.replaceChildren();
+for(const name of names){const li=document.createElement('li'),a=document.createElement('a');a.href='#list';a.textContent=name;a.addEventListener('click',()=>{input.value=name;apply()});li.append(a);details.append(li)}
+for(const [g,p] of areas){g.style.fill=p.name===selected?'#d49c32':color(p.count);g.style.stroke=p.name===selected?'#926414':'#4c6675';g.style.strokeWidth=p.name===selected?'2.8':'1.1'}
+}
+function choose(p){selected=p;input.value='';apply();}
+choice.addEventListener('change',()=>choose(choice.value));clear.addEventListener('click',()=>choose(''));
+input.addEventListener('input',apply);
+obj.addEventListener('load',()=>{const doc=obj.contentDocument;if(!doc)return;
+for(const g of doc.querySelectorAll('.prefecture[data-code]')){
+const p=byCode[String(Number(g.getAttribute('data-code')))];if(!p)continue;
+g.style.cursor='pointer';g.setAttribute('role','button');g.setAttribute('tabindex','0');g.setAttribute('aria-label',p.name+' '+p.count+'団体');
+let title=g.querySelector('title');if(!title){title=doc.createElementNS('http://www.w3.org/2000/svg','title');g.prepend(title)}title.textContent=p.name+'　'+p.count+'団体';
+g.addEventListener('click',()=>choose(p.name));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose(p.name)}});
+areas.push([g,p]);}apply();
+});
+apply();
+})();
+</script>
 <script defer src="assets/app.js?v=20261115-osaki-v1"></script>
 </body></html>
