@@ -1,0 +1,40 @@
+name: PTA fee national map visual QA
+on:
+  pull_request:
+    paths:
+      - pta-fee-collection.html
+      - scripts/verify-pta-fee-map-visual.mjs
+      - .github/workflows/pta-fee-map-visual.yml
+  push:
+    branches: [main]
+    paths:
+      - pta-fee-collection.html
+      - scripts/verify-pta-fee-map-visual.mjs
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  responsive-visual:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Playwright and Chromium
+        run: |
+          npm install --no-save --ignore-scripts playwright
+          npx playwright install --with-deps chromium
+      - name: Run local static server
+        run: |
+          python3 -m http.server 4173 >/tmp/pta-fee-web.log 2>&1 &
+      - name: Test live browser layout and map interactions
+        run: node scripts/verify-pta-fee-map-visual.mjs
+      - name: Upload desktop and mobile screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pta-fee-map-visual-evidence
+          path: visual-pta-fee-output/
+          if-no-files-found: warn
