@@ -1,0 +1,35 @@
+name: Municipal investigation v4 evidence tools
+on:
+  pull_request:
+    paths:
+      - 'ai-system/report-standards/scripts/municipal-v4.mjs'
+      - 'ai-system/report-standards/scripts/evidence-tools.py'
+      - 'tests/municipal-v4-integration.test.mjs'
+      - 'tests/test_evidence_tools.py'
+      - '.github/workflows/municipal-v4-evidence.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'ai-system/report-standards/scripts/municipal-v4.mjs'
+      - 'ai-system/report-standards/scripts/evidence-tools.py'
+      - 'tests/municipal-v4-integration.test.mjs'
+      - 'tests/test_evidence_tools.py'
+jobs:
+  evidence-tests:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Node v4 evidence pipeline tests
+        run: node --test tests/municipal-v4-integration.test.mjs
+      - name: Python ZIP safety / crop evidence tests
+        run: python -m unittest discover -s tests -p test_evidence_tools.py -v
+      - name: Verify existing site tests still pass
+        run: npm test
