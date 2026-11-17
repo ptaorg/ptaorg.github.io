@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "defaultSkills": [
     "fact-check"
   ],
@@ -137,6 +137,25 @@
         "次の自治体",
         "学校徴収の根拠",
         "委任と同意"
+      ]
+    },
+    {
+      "id": "municipal-investigation-v4",
+      "path": "skills/municipal-investigation-v4.md",
+      "keywords": [
+        "PTA原本監査",
+        "学校別原本",
+        "Gmail ZIP",
+        "ZIP添付",
+        "証拠画像",
+        "スクリーンショット切り抜き",
+        "原本SHA-256",
+        "全校調査",
+        "自治体PTA原本",
+        "再開可能な調査",
+        "原本取得",
+        "証拠台帳",
+        "municipal audit"
       ]
     },
     {
