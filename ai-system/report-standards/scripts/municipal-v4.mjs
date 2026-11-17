@@ -39,6 +39,7 @@ function validate(d,{baseDir='.',checkBytes=false}={}){
  const targets=Array.isArray(d.targets)?d.targets:[];
  for(const key of ['retrievalAttempts','artifacts','clips','schoolAssessments','targets'])if(!Array.isArray(d[key]))fail('ARRAY','$. '+key,'array required');
  const aIds=new Set(),artIds=new Set(),targetIds=new Set();
+ if(targets.length===0)fail('TARGETS_REQUIRED','$.targets','each school needs a genuine search target or inspected original');
  for(const [i,t] of targets.entries()){
   const at='$.targets['+i+']';
   if(!clean(t.id)||targetIds.has(t.id))fail('TARGET_ID',at,'unique target id required');
@@ -62,6 +63,10 @@ function validate(d,{baseDir='.',checkBytes=false}={}){
   if(t.state==='retrieved'&&!got)fail('TARGET_UNPROVEN','$.targets['+i+']','successful attempt required');
   if(t.state==='exhausted'&&(!own.length||!clean(t.exhaustionReason)))fail('EXHAUSTION_UNPROVEN','$.targets['+i+']','attempt and documented exhaustion required');
   if(t.state==='blocked'&&!own.length)fail('BLOCK_UNPROVEN','$.targets['+i+']','attempt required');
+  if(Number.isInteger(t.expectedEntries)&&t.expectedEntries>0){
+    const checked=artifacts.filter(a=>a.targetId===t.id&&['text_verified','image_verified'].includes(a.verification)).length;
+    if(t.state==='retrieved'&&checked<t.expectedEntries)fail('ARCHIVE_NOT_FULLY_VERIFIED','$.targets['+i+']','expected '+t.expectedEntries+' individually verified entries; got '+checked);
+  }
   if(['pending','attempted','blocked'].includes(t.state))missing.push('target:'+t.id);
  }
  for(const [i,a] of artifacts.entries()){
@@ -99,6 +104,9 @@ function validate(d,{baseDir='.',checkBytes=false}={}){
     else if(SHA.test(c.sha256||'')&&sha256(fs.readFileSync(file))!==c.sha256.toLowerCase())fail('CLIP_HASH_MISMATCH',at,'clip bytes changed');
   }
  }
+ for(const sid of schoolSet){
+  if(!targets.some(t=>t.schoolId===sid)&&!artifacts.some(a=>a.schoolId===sid&&['text_verified','image_verified'].includes(a.verification)))fail('SCHOOL_SEARCH_MISSING','$.schoolIds',sid+' has neither registered search target nor verified original');
+ }
  const seenSchools=new Set();
  const ordered=['subjectSeparation','taskOwnership','publicAuthority','privacy61','privacy69','serviceAndFinance','contractAndRights'];
  for(const [i,s] of evaluations.entries()){
@@ -126,7 +134,7 @@ function validate(d,{baseDir='.',checkBytes=false}={}){
  return {schemaVersion:'4.0.0',ok:errors.length===0,readyForReview:reviewComplete,readyForPublication:publicationComplete,metrics,errors,warnings,missing:[...new Set(missing)]};
 }
 function init(name,schoolIds,asOf){
- return {schemaVersion:'4.0.0',municipality:name,asOf,schoolIds,phases:Object.fromEntries(PHASES.map(p=>[p,'not_started'])),targets:[],retrievalAttempts:[],artifacts:[],clips:[],schoolAssessments:[],progress:Object.fromEntries(['municipalRulesReviewed','sourceDocumentLedgerChecked','twelveAxesValidated','tenDocumentsValidated','v3LegalValidated','imageProvenanceChecked','siteSourceSynchronized','seniorReviewed','humanApproved','browserVerified','publishedUrlVerified'].map(k=>[k,false]))};
+ return {schemaVersion:'4.0.0',municipality:name,asOf,schoolIds,phases:Object.fromEntries(PHASES.map(p=>[p,'not_started'])),targets:schoolIds.map(sid=>({id:'school-'+sid,description:'PTA internal records: joining, fees, officer selection, personal information and accounting',sourceChannel:'official',schoolId:sid,state:'pending'})),retrievalAttempts:[],artifacts:[],clips:[],schoolAssessments:[],progress:Object.fromEntries(['municipalRulesReviewed','sourceDocumentLedgerChecked','twelveAxesValidated','tenDocumentsValidated','v3LegalValidated','imageProvenanceChecked','siteSourceSynchronized','seniorReviewed','humanApproved','browserVerified','publishedUrlVerified'].map(k=>[k,false]))};
 }
 function main(argv){
  const action=argv[0];
