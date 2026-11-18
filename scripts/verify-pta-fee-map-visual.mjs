@@ -19,13 +19,12 @@ try {
       const response=await page.goto(base+"/pta-fee-collection.html",{waitUntil:"domcontentloaded",timeout:30000});
       assert.equal(response?.status(),200, "Page failed to load");
       await page.waitForFunction(()=>{
-        const o=document.querySelector("#pfc-map-object");
-        return !!(o && o.contentDocument?.querySelectorAll(".prefecture[data-code]").length===47);
+        return document.querySelectorAll("#pfc-map-svg .prefecture[data-code][role='button']").length===47;
       },null,{timeout:20000});
       const before=await page.evaluate(()=>{
         const hero=document.querySelector(".pfc-hero h1"),header=document.querySelector(".site-header"),footer=document.querySelector(".site-footer");
         const style=[...document.styleSheets].some(s=>s.href?.includes("/assets/style.css"));
-        const map=document.querySelector("#pfc-map-object").getBoundingClientRect();
+        const map=document.querySelector("#pfc-map-svg").getBoundingClientRect();
         return {
           cssLoaded:style,
           headerHeight:header.getBoundingClientRect().height,
@@ -36,7 +35,7 @@ try {
           mapWidth:map.width,
           mapHeight:map.height,
           count:document.querySelectorAll(".pfc-entry").length,
-          mapRegions:document.querySelector("#pfc-map-object").contentDocument.querySelectorAll(".prefecture[data-code]").length,
+          mapRegions:document.querySelector("#pfc-map-svg").querySelectorAll(".prefecture[data-code]").length,
           horizontalOverflow:document.documentElement.scrollWidth-window.innerWidth,
           strayNewline:document.body.textContent.includes(String.raw`\n`)
         };
@@ -59,19 +58,21 @@ try {
       await page.waitForFunction(()=>document.querySelector("#pfc-region-title").textContent.includes("11団体"));
       assert.equal(await page.locator(".pfc-entry:visible").count(),11);
       const mapSelection=await page.evaluate(()=>{
-        const doc=document.querySelector("#pfc-map-object").contentDocument;
-        const selected=doc.querySelector(".prefecture[data-code='14']");
+        const selected=document.querySelector("#pfc-map-svg").querySelector(".prefecture[data-code='14']");
         return {color:selected.style.fill,role:selected.getAttribute("role"),choice:document.querySelector("#pfc-pref").value};
       });
       assert.equal(mapSelection.color,"rgb(212, 156, 50)");
       assert.equal(mapSelection.role,"button");
       assert.equal(mapSelection.choice,"神奈川県");
 
+      await page.locator("#pfc-region-list").getByRole("link",{name:"川崎市",exact:true}).click();
+      assert.equal(await page.locator(".pfc-entry:visible").count(),1);
+      assert.equal(await page.locator(".pfc-entry:visible details[open]").count(),1);
       await page.locator("#pfc-map-clear").click();
       assert.equal(await page.locator(".pfc-entry:visible").count(),79);
       // Interaction: region SVG click
       await page.evaluate(()=>{
-        const node=document.querySelector("#pfc-map-object").contentDocument.querySelector(".prefecture[data-code='27']");
+        const node=document.querySelector("#pfc-map-svg").querySelector(".prefecture[data-code='27']");
         node.dispatchEvent(new MouseEvent("click",{bubbles:true}));
       });
       await page.waitForFunction(()=>document.querySelector("#pfc-pref").value==="大阪府");
