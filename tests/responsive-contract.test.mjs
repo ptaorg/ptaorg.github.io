@@ -1,0 +1,32 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+
+const read = path => fs.readFileSync(path,'utf8');
+
+test('responsive audit covers two municipal reports across five practical widths',()=>{
+  const script=read('scripts/visual-audit.mjs');
+  const smoke=read('.github/workflows/responsive-visual-audit.yml');
+  const full=read('.github/workflows/full-responsive-audit.yml');
+  for(const width of [1440,1024,768,390,360]) assert.ok(script.includes('width: '+width), 'missing width '+width);
+  for(const path of ['yokohama-pta-fee-20261102.html','shimosuwa-pta-20261118.html','research-map.html'])
+    assert.ok(smoke.includes('/'+path),path);
+  assert.match(smoke,/PTA_VISUAL_AUDIT_VIEWPORTS: desktop,laptop,tablet,mobile,small/);
+  assert.match(full,/PTA_VISUAL_AUDIT_VIEWPORTS: desktop,mobile,small/);
+  for(const feature of ['brokenImages','escapedMedia','textClipping','smallTargets','leftMargin','rightMargin'])
+    assert.ok(script.includes(feature),'missing visual check '+feature);
+});
+
+test('published card descriptions remain readable instead of being line-clamped',()=>{
+  for(const [file,selector] of [
+    ['assets/journal-unified.css','.journal-card__excerpt'],
+    ['css/research-map-redesign.css','.research-region-description'],
+    ['assets/style.css','.row-body p']
+  ]){
+    const css=read(file);
+    const start=css.indexOf(selector);
+    assert.ok(start>=0,file+': missing '+selector);
+    const segment=css.slice(start,start+550);
+    assert.match(segment,/overflow:visible/);
+  }
+});
