@@ -202,6 +202,47 @@ body[data-page="home"] .hero-search-shell .home-search .search-panel :is(a,butto
   outline-offset: 3px;
 }
 </style>
+<style id="footer-gold-orange-links">
+/* A clear gold divider marks the transition into the navy footer. */
+.site-footer {
+  border-top: 4px solid #d5ad45 !important;
+  position: relative;
+}
+.site-footer::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #f3d98e;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  right: 0;
+}
+/* Emphasize contact and participation links in the site-guide column. */
+.site-footer .footer-col a {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  min-height: 40px;
+  padding: 7px 10px;
+  color: #ff8a24 !important;
+  border: 1px solid rgba(255,138,36,.72);
+  border-radius: 3px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+}
+.site-footer .footer-col a:hover,
+.site-footer .footer-col a:focus-visible {
+  color: #fff !important;
+  background: #e96b0c;
+  border-color: #ff8a24;
+  text-decoration: none;
+}
+.site-footer .footer-col h2 {
+  color: #fff !important;
+}
+</style>
 </head>
 <body data-page="home" data-section="">
   <a class="skip-link" href="#main">本文へ移動</a>
