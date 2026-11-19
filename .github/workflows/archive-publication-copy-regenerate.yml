@@ -1,12 +1,11 @@
-name: Regenerate published school archives without editorial notes
+name: Clean editorial notes from published school archive HTML
 on:
   push:
     branches: [main]
     paths:
+      - '.github/workflows/archive-publication-copy-regenerate.yml'
       - 'scripts/generate-school-pages.js'
       - 'scripts/render-material-school-page.js'
-      - 'scripts/archive-utils.js'
-      - '.github/workflows/archive-publication-copy-regenerate.yml'
   workflow_dispatch:
 permissions:
   contents: write
@@ -14,7 +13,7 @@ concurrency:
   group: archive-publication-copy-regenerate
   cancel-in-progress: false
 jobs:
-  regenerate:
+  clean:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -22,30 +21,66 @@ jobs:
         with:
           persist-credentials: true
           fetch-depth: 1
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Regenerate archive HTML from source records
-        run: node scripts/generate-school-pages.js
-      - name: Ensure no editorial production notices remain in generated archive pages
+      - name: Replace exact editorial notices in published school pages
         shell: bash
         run: |
-          set -euo pipefail
-          if grep -REn '資料画像を掲載する場合は|個別評価は未実施です。現時点では|掲載準備中です。|公開可否を確認したものから順次掲載します。|資料を確認後に掲載します' archive --include='*.html'; then
-            echo 'Found editorial production notices in published archives' >&2
-            exit 1
-          fi
+          python3 - <<'PY'
+          from pathlib import Path
+          pages = sorted(Path("archive").rglob("*.html"))
+          replacements = {
+            "資料画像は未掲載です。資料画像を掲載する場合は、個人情報・印影・口座情報・QRコード等を確認し、必要な伏せ処理を行います。": "この学校の資料画像は掲載されていません。",
+            "学校別の個別評価は未実施です。現時点では、掲載資料の有無と確認すべき項目だけを示します。": "学校別の個別評価は掲載していません。",
+            "掲載資料は未確認です。資料の有無と次に確認すべき項目を整理しており、個別評価はまだ行っていません。": "この学校について、根拠となる資料と個別評価は掲載していません。",
+            "個別評価は未実施です。掲載資料が確認できる場合は、資料名と確認事実を分けて評価します。": "この学校の個別評価は掲載していません。",
+            "資料画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了したものだけを掲載します。": "掲載した資料画像とPDFは本文から閲覧できます。",
+            "確認済み資料に基づき順次更新します。": "",
+            "資料画像は、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。": "資料画像は掲載していません。",
+            "画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。": "資料画像とPDFは掲載していません。",
+            "未掲載資料、口頭説明、後日是正済みの運用までは反映できていない場合があります。": "掲載資料にない運用や、その後の是正措置の有無は、当該資料のみからは判断できません。",
+            "掲載準備中です。": "資料一覧は掲載していません。",
+            "公開前確認中": "資料へのリンクは掲載していません。",
+            "PDF・画像は、個人情報、印影、口座情報、QRコード等の公開可否を確認したものから順次掲載します。": "",
+          }
+          updated = 0
+          affected = {}
+          for file in pages:
+              src = file.read_text(encoding="utf-8")
+              out = src
+              for before, after in replacements.items():
+                  count = out.count(before)
+                  if count:
+                      out = out.replace(before, after)
+                      affected[before] = affected.get(before, 0) + count
+              if out != src:
+                  file.write_text(out, encoding="utf-8")
+                  updated += 1
+          print(f"Scanned {len(pages)} HTML pages; updated {updated}; replacements {sum(affected.values())}")
+          for term, count in affected.items():
+              print(f"{term[:40]}: {count}")
+          assert len(pages) >= 500, "School archive inventory unexpectedly small"
+          for file in pages:
+              html = file.read_text(encoding="utf-8")
+              for banned in [
+                  "資料画像を掲載する場合は",
+                  "個別評価は未実施です。現時点では",
+                  "確認済み資料に基づき順次更新します。",
+                  "公開可否を確認したものから順次掲載します。",
+                  "掲載準備中です。",
+              ]:
+                  if banned in html:
+                      raise SystemExit(f"Editorial note remains: {file}: {banned}")
+          PY
           git diff --check
-      - name: Commit generated HTML only when changed
+      - name: Commit changed archive HTML
         shell: bash
         run: |
           set -euo pipefail
           if [ -z "$(git status --porcelain -- archive/)" ]; then
-            echo 'Archive HTML is already synchronized.'
+            echo "No archive changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add archive/
-          git commit -m "Regenerate published school archives without editorial production notes"
+          git commit -m "Remove editorial production messages from school archive pages"
           git push origin HEAD:main
