@@ -6,6 +6,7 @@ on:
       - '.github/workflows/archive-publication-copy-regenerate.yml'
       - 'scripts/generate-school-pages.js'
       - 'scripts/render-material-school-page.js'
+      - 'tests/publication-copy.test.mjs'
   workflow_dispatch:
 permissions:
   contents: write
@@ -71,6 +72,8 @@ jobs:
                       raise SystemExit(f"Editorial note remains: {file}: {banned}")
           PY
           git diff --check
+      - name: Check published copy quality
+        run: node --test tests/publication-copy.test.mjs
       - name: Commit changed archive HTML
         shell: bash
         run: |
