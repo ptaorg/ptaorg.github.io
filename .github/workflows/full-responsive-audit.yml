@@ -20,6 +20,10 @@ on:
       - '**/*.html'
   workflow_dispatch:
 
+concurrency:
+  group: responsive-full-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
