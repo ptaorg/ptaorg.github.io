@@ -433,7 +433,7 @@
 
   // Public-facing school archive copy: never expose editorial production steps.
   function normalizeArchivePublicationCopy(){
-    if (!/^\\/archive\\//.test(window.location.pathname || '')) return;
+    if ((window.location.pathname || '').indexOf('/archive/') !== 0) return;
     var rules = [
       ['資料画像は未掲載です。資料画像を掲載する場合は、個人情報・印影・口座情報・QRコード等を確認し、必要な伏せ処理を行います。','この学校の資料画像は掲載されていません。'],
       ['学校別の個別評価は未実施です。現時点では、掲載資料の有無と確認すべき項目だけを示します。','学校別の個別評価は掲載していません。'],
