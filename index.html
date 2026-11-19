@@ -42,6 +42,74 @@ gtag('config', 'G-0D18ZSSLMH');
 @media(max-width:1040px){.muni-alerts-inner{grid-template-columns:1fr}.muni-alert-card{flex-wrap:wrap;gap:7px 11px}.muni-alert-copy{flex-basis:calc(100% - 140px)}.muni-alert-link{margin-left:auto}}
 @media(max-width:700px){.muni-alerts-inner{grid-template-columns:1fr;gap:9px}.muni-alert-card{display:grid;grid-template-columns:auto 1fr;gap:5px 11px;padding:12px 14px}.muni-alert-place{grid-row:1 / 3;font-size:1.4rem}.muni-alert-link{grid-column:2;justify-self:start;margin-left:0;font-size:.74rem;padding:6px 10px}.muni-alert-head{font-size:.87rem}.muni-alert-desc{font-size:.74rem}}
 </style>
+
+  <style id="municipality-cards-layout-fix">
+    /* Three municipality case cards: keep every text column readable. */
+    .muni-alerts { padding: 24px 0; }
+    .muni-alerts-inner {
+      width: min(calc(100% - 40px), 1120px);
+      margin-inline: auto;
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: 16px !important;
+      align-items: stretch;
+    }
+    .muni-alert-card {
+      box-sizing: border-box;
+      min-width: 0;
+      width: auto !important;
+      min-height: 250px;
+      padding: 22px 20px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      justify-content: flex-start !important;
+      gap: 0 !important;
+      overflow-wrap: anywhere;
+    }
+    .muni-alert-place {
+      display: block !important;
+      width: auto !important;
+      margin: 0 0 14px !important;
+      font-size: clamp(1.2rem, 1.7vw, 1.55rem) !important;
+      line-height: 1.35 !important;
+      white-space: normal !important;
+      writing-mode: horizontal-tb !important;
+    }
+    .muni-alert-copy {
+      display: block !important;
+      width: auto !important;
+      min-width: 0 !important;
+      flex: 1 1 auto !important;
+      columns: auto !important;
+      writing-mode: horizontal-tb !important;
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+    .muni-alert-copy p {
+      margin: 0 0 9px !important;
+      font-size: 0.94rem;
+      line-height: 1.75 !important;
+      white-space: normal !important;
+      writing-mode: horizontal-tb !important;
+    }
+    .muni-alert-link {
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start !important;
+      width: auto !important;
+      max-width: 100%;
+      margin: 16px 0 0 !important;
+      padding: 10px 14px !important;
+      white-space: normal !important;
+      line-height: 1.5 !important;
+    }
+    @media (max-width: 720px) {
+      .muni-alerts-inner { grid-template-columns: 1fr !important; }
+      .muni-alert-card { min-height: 0; }
+    }
+  </style>
 </head>
 <body data-page="home" data-section="">
   <a class="skip-link" href="#main">本文へ移動</a>
