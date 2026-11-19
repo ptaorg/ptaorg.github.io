@@ -1,0 +1,51 @@
+name: Regenerate published school archives without editorial notes
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/generate-school-pages.js'
+      - 'scripts/render-material-school-page.js'
+      - 'scripts/archive-utils.js'
+      - '.github/workflows/archive-publication-copy-regenerate.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: archive-publication-copy-regenerate
+  cancel-in-progress: false
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Regenerate archive HTML from source records
+        run: node scripts/generate-school-pages.js
+      - name: Ensure no editorial production notices remain in generated archive pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -REn '資料画像を掲載する場合は|個別評価は未実施です。現時点では|掲載準備中です。|公開可否を確認したものから順次掲載します。|資料を確認後に掲載します' archive --include='*.html'; then
+            echo 'Found editorial production notices in published archives' >&2
+            exit 1
+          fi
+          git diff --check
+      - name: Commit generated HTML only when changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain -- archive/)" ]; then
+            echo 'Archive HTML is already synchronized.'
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add archive/
+          git commit -m "Regenerate published school archives without editorial production notes"
+          git push origin HEAD:main
