@@ -44,3 +44,12 @@ test('municipal research articles expose accessible touch-sized navigation',()=>
     assert.ok(html.includes(scope),file+': page scope');
   }
 });
+
+test('global and legacy navigation links have minimum 44px touch areas',()=>{
+  const modern=read('assets/style.css');
+  const legacy=read('assets/legacy-theme.css');
+  for(const selector of ['.brand{min-height:44px}','.nav-trigger,.nav-search,.nav-cta{min-height:44px}','.nav-panel a{min-height:44px;display:flex;align-items:center}','.site-footer a{min-height:44px}'])
+    assert.ok(modern.includes(selector),'modern nav: '+selector);
+  for(const selector of ['.legacy .logo{min-height:44px}','.legacy .nav-link{display:inline-flex;align-items:center;min-height:44px}','.legacy .breadcrumb a'])
+    assert.ok(legacy.includes(selector),'legacy nav: '+selector);
+});
