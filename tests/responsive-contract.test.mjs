@@ -64,3 +64,11 @@ test('archive breadcrumb links provide 44px touch targets',()=>{
   const archive=read('archive/atsugi/aikawa-jhs/index.html');
   assert.match(archive,/<nav class="breadcrumb" aria-label="パンくず">/);
 });
+
+test('Ichi-no-miya school archive navigation has 44px touch targets',()=>{
+  const css=read('assets/ichinomiya-parent-report.css');
+  assert.match(css,/\.bar nav a\{display:inline-flex;align-items:center;min-height:44px/);
+  const archive=read('archive/ichinomiya/hagiwara-es/index.html');
+  for(const href of ['/research-map.html','/research/ichinomiya.html','/contact.html'])
+    assert.ok(archive.includes(href),'missing archive navigation destination '+href);
+});
