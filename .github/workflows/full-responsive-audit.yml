@@ -26,7 +26,7 @@ permissions:
 jobs:
   full-responsive-audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     strategy:
       fail-fast: false
       matrix:
@@ -35,7 +35,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
       - name: Install browser
         run: |
           npm install --no-save --ignore-scripts playwright
@@ -47,6 +47,7 @@ jobs:
       - name: Audit sitemap pages in desktop and mobile
         env:
           PTA_VISUAL_AUDIT_SHARD_COUNT: '10'
+          PTA_VISUAL_AUDIT_VIEWPORTS: desktop,mobile,small
           PTA_VISUAL_AUDIT_SHARD_INDEX: ${{ matrix.shard }}
           PTA_VISUAL_AUDIT_SETTLE_MS: '120'
           PTA_VISUAL_AUDIT_SCREENSHOT_MODE: problems
