@@ -231,7 +231,7 @@ for (const viewport of viewports) {
             }).filter(Boolean);
             const media = [...document.querySelectorAll('main img,main video,main iframe,main svg')].filter(visible);
             const brokenImages = [...document.querySelectorAll('main img')].filter(el =>
-              !el.complete || (el.complete && el.naturalWidth === 0))
+              el.complete && el.naturalWidth === 0)
               .slice(0,12).map(el=>({src:el.getAttribute('src'),alt:el.alt||''}));
             const escapedMedia = media.filter(el => {
               if (el.closest('.leaflet-container')) return false;
