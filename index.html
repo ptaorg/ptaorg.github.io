@@ -142,65 +142,62 @@ gtag('config', 'G-0D18ZSSLMH');
 }
 </style>
 <style id="home-search-blue-theme">
-/* Home search panel: solid blue surface with white typography and controls. */
-.home-search .search-panel {
+/* Override the more-specific homepage search rules in assets/style.css. */
+body[data-page="home"] .hero-search-shell .home-search .search-panel {
   box-sizing: border-box;
   background: #123b67 !important;
   color: #fff !important;
   border: 2px solid #123b67 !important;
   border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(10, 35, 65, .18);
+  box-shadow: 0 8px 24px rgba(10,35,65,.18) !important;
 }
-.home-search .search-panel :is(h1,h2,h3,h4,p,label,span,a,strong,small,svg) {
+body[data-page="home"] .hero-search-shell .home-search .search-panel :is(h1,h2,h3,h4,p,label,span,a,strong,small) {
   color: #fff !important;
 }
-.home-search .search-panel svg {
+body[data-page="home"] .hero-search-shell .home-search .search-panel :is(svg) {
+  color: #fff !important;
   stroke: #fff !important;
-  fill: none;
 }
-.home-search .search-panel .search-panel-title h3 {
+body[data-page="home"] .hero-search-shell .home-search .search-panel .search-panel-title h3,
+body[data-page="home"] .hero-search-shell .home-search .search-panel .search-panel-title p {
   color: #fff !important;
 }
-.home-search .search-panel .search-panel-title p {
-  color: rgba(255,255,255,.9) !important;
-}
-.home-search .search-panel .search-field {
+body[data-page="home"] .hero-search-shell .home-search .search-panel .search-field {
   background: rgba(255,255,255,.10) !important;
-  border: 1px solid rgba(255,255,255,.8) !important;
+  border: 1px solid rgba(255,255,255,.85) !important;
   border-radius: 5px;
 }
-.home-search .search-panel .search-field input {
+body[data-page="home"] .hero-search-shell .home-search .search-panel .search-field input {
   background: transparent !important;
   color: #fff !important;
   caret-color: #fff;
 }
-.home-search .search-panel .search-field input::placeholder {
-  color: rgba(255,255,255,.78) !important;
+body[data-page="home"] .hero-search-shell .home-search .search-panel .search-field input::placeholder {
+  color: rgba(255,255,255,.82) !important;
   opacity: 1;
 }
-.home-search .search-panel .search-field button {
+body[data-page="home"] .hero-search-shell .home-search .search-panel .search-field button {
   background: #fff !important;
   color: #123b67 !important;
   border: 1px solid #fff !important;
   font-weight: 800;
 }
-.home-search .search-panel .search-filters label {
+body[data-page="home"] .hero-search-shell .home-search .search-panel .search-filters label {
   color: #fff !important;
 }
-.home-search .search-panel .search-filters select {
+body[data-page="home"] .hero-search-shell .home-search .search-panel .search-filters select {
   color: #fff !important;
-  background-color: #123b67 !important;
-  border-color: rgba(255,255,255,.72) !important;
+  background: #123b67 !important;
+  border: 1px solid rgba(255,255,255,.72) !important;
 }
-.home-search .search-panel .search-filters select option {
+body[data-page="home"] .hero-search-shell .home-search .search-panel .search-filters select option {
   color: #fff;
   background: #123b67;
 }
-.home-search .search-panel .search-panel-side a {
+body[data-page="home"] .hero-search-shell .home-search .search-panel .search-panel-side a {
   color: #fff !important;
-  text-decoration-color: rgba(255,255,255,.75);
 }
-.home-search .search-panel :is(a,button,select,input):focus-visible {
+body[data-page="home"] .hero-search-shell .home-search .search-panel :is(a,button,select,input):focus-visible {
   outline: 3px solid #fff !important;
   outline-offset: 3px;
 }
