@@ -76,8 +76,8 @@
   font-size:1.26rem!important;
 }
 #main .article-main .legacy-body.journal-page .journal-card__excerpt{
-  display:-webkit-box!important;-webkit-box-orient:vertical!important;
-  -webkit-line-clamp:3!important;overflow:hidden!important;
+  display:block!important;overflow:visible!important;
+  -webkit-line-clamp:unset!important;
   margin:0 0 16px!important;padding:0!important;
   max-width:none!important;line-height:1.85!important;
   font-size:.89rem!important;font-weight:400!important;color:var(--ink-sub)!important;
