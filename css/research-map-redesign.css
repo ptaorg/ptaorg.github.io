@@ -158,7 +158,7 @@ body.research-map-page .research-region h3 a{color:#20394b!important;text-decora
 body.research-map-page .research-region h3 a:hover{text-decoration:underline!important}
 body.research-map-page .research-region-description{
   color:#455969;font-size:.91rem;line-height:1.85;margin:0 0 16px!important;
-  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;
+  display:block;-webkit-line-clamp:unset;overflow:visible;
 }
 body.research-map-page .research-region-go{margin:auto 0 0!important;padding-top:8px}
 body.research-map-page .research-region-go a{
