@@ -29,87 +29,109 @@ gtag('config', 'G-0D18ZSSLMH');
 <meta name="twitter:description" content="PTAは学校とは別の任意加入団体です。会費、個人情報、教職員の関与について、全国の行政回答と公文書から制度と実務を検証します。">
 <meta name="twitter:image" content="https://ptaorg.com/assets/og-image.png">
 <style id="municipality-feature-style">
-.muni-alerts{padding:13px 0 14px;background:#fff7ee;border-bottom:1px solid #f2d1b0}
-.muni-alerts-inner{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.muni-alert-card{display:flex;align-items:center;gap:17px;min-width:0;padding:15px 18px;border-radius:8px;background:#fff;border:1px solid #edbc8d;border-left:5px solid #e77824;box-shadow:0 2px 6px rgba(109,65,20,.06)}
-.muni-alert-place{flex:0 0 auto;margin:0;font-size:clamp(1.5rem,2.4vw,2.05rem);line-height:1.2;font-weight:850;color:#a7470c;white-space:nowrap;letter-spacing:.01em}
-.muni-alert-copy{flex:1;min-width:0}
-.muni-alert-kicker{font-weight:750;font-size:.69rem;letter-spacing:.015em;color:#9a531c;line-height:1.45;margin:0 0 4px}
-.muni-alert-head{font-size:.92rem;font-weight:800;line-height:1.5;color:#19314b;margin:0 0 4px}
-.muni-alert-desc{font-size:.77rem;line-height:1.55;color:#4b5664;margin:0}
-.muni-alert-link{font-weight:800;font-size:.79rem;line-height:1.45;white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;padding:8px 11px;border-radius:5px;background:#e97828;color:#fff;text-decoration:none;flex:0 0 auto}
-.muni-alert-link:hover,.muni-alert-link:focus-visible{background:#b34c0e;color:#fff}
-@media(max-width:1040px){.muni-alerts-inner{grid-template-columns:1fr}.muni-alert-card{flex-wrap:wrap;gap:7px 11px}.muni-alert-copy{flex-basis:calc(100% - 140px)}.muni-alert-link{margin-left:auto}}
-@media(max-width:700px){.muni-alerts-inner{grid-template-columns:1fr;gap:9px}.muni-alert-card{display:grid;grid-template-columns:auto 1fr;gap:5px 11px;padding:12px 14px}.muni-alert-place{grid-row:1 / 3;font-size:1.4rem}.muni-alert-link{grid-column:2;justify-self:start;margin-left:0;font-size:.74rem;padding:6px 10px}.muni-alert-head{font-size:.87rem}.muni-alert-desc{font-size:.74rem}}
+/* Municipality case cards: moved below the hero, presented as wide horizontal panels. */
+.muni-alerts {
+  padding: 22px 0;
+  background: #fff5eb;
+  border-top: 1px solid #ffd0a8;
+  border-bottom: 1px solid #ffd0a8;
+}
+.muni-alerts-inner {
+  width: min(calc(100% - 40px), 1120px);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  align-items: stretch;
+}
+.muni-alert-card {
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 154px;
+  padding: 18px 18px 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: start;
+  gap: 9px;
+  background: #fff;
+  border: 1px solid #f26a00;
+  border-top: 6px solid #f26a00;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(75, 45, 20, .07);
+}
+.muni-alert-place {
+  margin: 0;
+  color: #222;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  font-weight: 850;
+  letter-spacing: .02em;
+  writing-mode: horizontal-tb;
+}
+.muni-alert-copy { min-width: 0; }
+.muni-alert-kicker {
+  margin: 0 0 5px;
+  color: #444;
+  font-size: .72rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+.muni-alert-head {
+  margin: 0 0 4px;
+  color: #171717;
+  font-size: .9rem;
+  line-height: 1.55;
+  font-weight: 800;
+}
+.muni-alert-desc {
+  margin: 0;
+  color: #444;
+  font-size: .78rem;
+  line-height: 1.65;
+}
+.muni-alert-link {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 3px;
+  padding: 8px 13px;
+  border-radius: 3px;
+  background: #f26a00;
+  color: #fff;
+  font-size: .78rem;
+  line-height: 1.4;
+  font-weight: 800;
+  text-decoration: none;
+}
+.muni-alert-link:hover,
+.muni-alert-link:focus-visible {
+  background: #d95700;
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .muni-alerts-inner { grid-template-columns: 1fr; }
+  .muni-alert-card {
+    min-height: 0;
+    grid-template-columns: minmax(110px, 150px) minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 14px;
+  }
+  .muni-alert-link { justify-self: end; }
+}
+@media (max-width: 620px) {
+  .muni-alerts { padding: 14px 0; }
+  .muni-alerts-inner { width: min(calc(100% - 28px), 1120px); gap: 10px; }
+  .muni-alert-card {
+    grid-template-columns: 1fr;
+    gap: 7px;
+    padding: 14px;
+  }
+  .muni-alert-place { font-size: 1.2rem; }
+  .muni-alert-link { justify-self: start; }
+}
 </style>
-
-  <style id="municipality-cards-layout-fix">
-    /* Three municipality case cards: keep every text column readable. */
-    .muni-alerts { padding: 24px 0; }
-    .muni-alerts-inner {
-      width: min(calc(100% - 40px), 1120px);
-      margin-inline: auto;
-      display: grid !important;
-      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-      gap: 16px !important;
-      align-items: stretch;
-    }
-    .muni-alert-card {
-      box-sizing: border-box;
-      min-width: 0;
-      width: auto !important;
-      min-height: 250px;
-      padding: 22px 20px !important;
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: stretch !important;
-      justify-content: flex-start !important;
-      gap: 0 !important;
-      overflow-wrap: anywhere;
-    }
-    .muni-alert-place {
-      display: block !important;
-      width: auto !important;
-      margin: 0 0 14px !important;
-      font-size: clamp(1.2rem, 1.7vw, 1.55rem) !important;
-      line-height: 1.35 !important;
-      white-space: normal !important;
-      writing-mode: horizontal-tb !important;
-    }
-    .muni-alert-copy {
-      display: block !important;
-      width: auto !important;
-      min-width: 0 !important;
-      flex: 1 1 auto !important;
-      columns: auto !important;
-      writing-mode: horizontal-tb !important;
-      overflow-wrap: anywhere;
-      word-break: normal;
-    }
-    .muni-alert-copy p {
-      margin: 0 0 9px !important;
-      font-size: 0.94rem;
-      line-height: 1.75 !important;
-      white-space: normal !important;
-      writing-mode: horizontal-tb !important;
-    }
-    .muni-alert-link {
-      display: inline-flex !important;
-      align-items: center;
-      justify-content: center;
-      align-self: flex-start !important;
-      width: auto !important;
-      max-width: 100%;
-      margin: 16px 0 0 !important;
-      padding: 10px 14px !important;
-      white-space: normal !important;
-      line-height: 1.5 !important;
-    }
-    @media (max-width: 720px) {
-      .muni-alerts-inner { grid-template-columns: 1fr !important; }
-      .muni-alert-card { min-height: 0; }
-    }
-  </style>
 </head>
 <body data-page="home" data-section="">
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -191,6 +213,20 @@ gtag('config', 'G-0D18ZSSLMH');
 </header>
 <!-- /chrome:header -->
   <main id="main" data-home-phase="2">
+
+
+<section class="hero">
+      <div class="hero-photo" aria-hidden="true"><img src="assets/img/hero-building.webp" alt="" width="666" height="382" loading="eager" fetchpriority="high" onerror="this.onerror=null;this.src='assets/slides/1.jpg'"></div>
+      <div class="container hero-inner">
+        <span class="hero-rule" aria-hidden="true"></span>
+        <h1>PTAは、学校とは別の<br>任意加入団体です。</h1>
+        <p class="hero-lead">学校と外部団体の境界、会費、個人情報、教職員の関与。<br>全国の行政回答と公文書から、制度と実務を検証します。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="guide-parent.html">保護者向けガイドを見る</a>
+          <a class="button button-secondary" href="board-responses.html">教育委員会回答を見る<svg aria-hidden="true"><use href="#i-chevron"/></svg></a>
+        </div>
+      </div>
+    </section>
 <section class="muni-alerts" aria-label="重要な自治体行政回答">
 <div class="container muni-alerts-inner">
 <article class="muni-alert-card" aria-labelledby="muni-yokohama-title">
@@ -210,18 +246,6 @@ gtag('config', 'G-0D18ZSSLMH');
 </article>
 </div></section>
 
-<section class="hero">
-      <div class="hero-photo" aria-hidden="true"><img src="assets/img/hero-building.webp" alt="" width="666" height="382" loading="eager" fetchpriority="high" onerror="this.onerror=null;this.src='assets/slides/1.jpg'"></div>
-      <div class="container hero-inner">
-        <span class="hero-rule" aria-hidden="true"></span>
-        <h1>PTAは、学校とは別の<br>任意加入団体です。</h1>
-        <p class="hero-lead">学校と外部団体の境界、会費、個人情報、教職員の関与。<br>全国の行政回答と公文書から、制度と実務を検証します。</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="guide-parent.html">保護者向けガイドを見る</a>
-          <a class="button button-secondary" href="board-responses.html">教育委員会回答を見る<svg aria-hidden="true"><use href="#i-chevron"/></svg></a>
-        </div>
-      </div>
-    </section>
 <div class="container hero-search-shell"><div class="home-search"><form class="search-panel" action="explore.html" method="get" role="search" data-search-panel>
         <div class="search-panel-title"><svg aria-hidden="true"><use href="#i-search"/></svg><div><h3>資料・記録を検索する</h3><p>全国の調査・通知・回答・<br class="pc-only">学校資料を横断検索できます。</p></div></div>
         <div class="search-panel-body">
