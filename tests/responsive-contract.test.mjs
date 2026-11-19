@@ -15,6 +15,8 @@ test('responsive audit covers two municipal reports across five practical widths
   assert.match(full,/PTA_VISUAL_AUDIT_VIEWPORTS: desktop,laptop,tablet,mobile,small/);
   for(const feature of ['brokenImages','escapedMedia','textClipping','smallTargets','leftMargin','rightMargin'])
     assert.ok(script.includes(feature),'missing visual check '+feature);
+  assert.match(script,/parentClass:String\(el\.parentElement\?\.className/);
+  assert.match(script,/smallTargetExamples:/);
 });
 
 test('published card descriptions remain readable instead of being line-clamped',()=>{
