@@ -15,7 +15,7 @@ const many=m.schoolReportCount?`学校別の調査 ${m.schoolReportCount}校`:(s
 const action=m.url?"自治体の評価を読む":"資料の所在を見る";
 const original=m.driveFolderUrl?`<p class="research-region-original"><a href="${escape(m.driveFolderUrl)}" target="_blank" rel="noopener noreferrer" title="Google Driveの全国資料内の自治体フォルダ（閲覧権限が必要な場合があります）">原本はこちら</a><small>（Google Drive・閲覧権限が必要な場合があります）</small></p>`:"";
 const detail=schools.length?`<details class="research-card-documents"><summary>学校資料を見る（${schools.length}校）</summary>${schoolLinks(m)}</details>`:m.schoolReportCount&&m.url?'<p class="research-card-documents-note">学校別の調査は自治体の評価ページから確認できます。</p>':"";
-return `<article class="research-region" data-region="${escape(m.id)}"><p class="research-region-place">${escape(m.prefecture)}${many?` <span>／ ${escape(many)}</span>`:""}</p><h3>${href?`<a href="${escape(href)}">${escape(m.name)}</a>`:escape(m.name)}</h3><p class="research-region-description">${excerpt(m)}</p>${href?`<p class="research-region-go"><a href="${escape(href)}">${action}</a></p>`:'<p class="research-region-unpublished">自治体の評価は現在準備中です。</p>'}${original}${detail}</article>`;
+return `<article class="research-region" data-region="${escape(m.id)}"><p class="research-region-place">${escape(m.prefecture)}${many?` <span>／ ${escape(many)}</span>`:""}</p><h3>${href?`<a href="${escape(href)}">${escape(m.name)}</a>`:escape(m.name)}</h3><p class="research-region-description">${excerpt(m)}</p>${href?`<p class="research-region-go"><a href="${escape(href)}">${action}</a></p>`:'<p class="research-region-unpublished">自治体単位の評価は掲載していません。学校別の資料をご覧ください。</p>'}${original}${detail}</article>`;
 }
 
 function renderPrimaryMap(index,surveyHTML=""){
