@@ -80,7 +80,17 @@ gtag('config', 'G-0D18ZSSLMH');
 .sf-page details{border:1px solid #cfdae6;border-radius:8px;padding:18px 23px;margin:25px 0}.sf-page summary{cursor:pointer;font-weight:800;color:#1d4366}
 .sf-refs li{margin:11px 0}.sf-note{font-size:.9rem;color:#4e657c}
 @media(max-width:700px){.sf-page{padding:23px 16px 70px}.sf-figure-grid{grid-template-columns:1fr}.sf-page th,.sf-page td{padding:9px}.sf-key{padding:19px}.sf-source-text{padding:12px}}
-</style></head>
+</style><style>
+/* Article navigation and touch accessibility */
+.sf-page .sf-meta[aria-label="パンくず"]{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem;line-height:1.7}
+.sf-page .sf-meta[aria-label="パンくず"] a{display:inline-flex;align-items:center;min-height:44px;padding:.25rem .35rem;margin:-.25rem 0;text-decoration-thickness:.08em;text-underline-offset:.2em}
+.sf-page nav[aria-label="記事の目次"]{margin-block:1.5rem;padding:1rem 1.1rem;border:1px solid #d8e1ea;border-radius:12px;background:#f7f9fc}
+.sf-page nav[aria-label="記事の目次"] a{display:inline-flex;align-items:center;min-height:44px;padding:.35rem .25rem;line-height:1.65;text-underline-offset:.2em}
+.sf-page nav[aria-label="記事の目次"] li{padding-inline-start:.15rem;margin-block:.1rem}
+.sf-page a:focus-visible{outline:3px solid #1769aa;outline-offset:3px;border-radius:4px}
+@media(max-width:600px){.sf-page nav[aria-label="記事の目次"]{padding:.85rem}.sf-page nav[aria-label="記事の目次"] ol{padding-inline-start:1.35rem}}
+</style>
+</head>
 <body data-page="home" data-section="">
   <a class="skip-link" href="#main">本文へ移動</a>
 <!-- chrome:header -->
