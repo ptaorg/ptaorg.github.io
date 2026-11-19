@@ -21,11 +21,11 @@ function commonChrome() {
 
 function renderDocuments(record) {
   const docs = Array.isArray(record.documents) ? record.documents : [];
-  if (!docs.length) return '<p class="archive-muted">掲載準備中です。</p>';
+  if (!docs.length) return '<p class="archive-muted">この学校の資料一覧は掲載していません。</p>';
   return `<div class="archive-material-list">
 ${docs.map((doc) => {
     const meta = [doc.year, doc.category].filter(Boolean).map(escapeHtml).join(" ／ ");
-    const status = doc.publicationStatus || "公開前確認中";
+    const status = "資料へのリンクは掲載していません。";
     const link = doc.href
       ? `<a class="archive-download" href="${escapeHtml(doc.href)}">${escapeHtml(doc.linkLabel || "資料を開く")}</a>`
       : `<span class="archive-muted">${escapeHtml(status)}</span>`;
@@ -91,7 +91,7 @@ ${renderResearchNoteLink(record) ? `    ${renderResearchNoteLink(record)}\n` : "
   <section class="archive-section">
     <h2>出典・整理元</h2>
     <p>${escapeHtml(record.sourceSummary || "公開情報・開示資料・保存資料を学校別に整理しています。")}</p>
-    <p class="archive-muted">PDF・画像は、個人情報、印影、口座情報、QRコード等の公開可否を確認したものから順次掲載します。</p>
+
   </section>
 </main>
 ${chrome.footer}
