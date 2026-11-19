@@ -53,3 +53,12 @@ test('global and legacy navigation links have minimum 44px touch areas',()=>{
   for(const selector of ['.legacy .logo{min-height:44px}','.legacy .nav-link{display:inline-flex;align-items:center;min-height:44px}','.legacy .breadcrumb a'])
     assert.ok(legacy.includes(selector),'legacy nav: '+selector);
 });
+
+test('archive breadcrumb links provide 44px touch targets',()=>{
+  const css=read('assets/style.css');
+  assert.match(css,/\.breadcrumb ol\{align-items:center\}/);
+  assert.match(css,/\.breadcrumb li\{display:flex;align-items:center\}/);
+  assert.match(css,/\.breadcrumb a\{display:inline-flex;align-items:center;min-height:44px/);
+  const archive=read('archive/atsugi/aikawa-jhs/index.html');
+  assert.match(archive,/<nav class="breadcrumb" aria-label="パンくず">/);
+});
