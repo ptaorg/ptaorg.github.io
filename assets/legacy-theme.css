@@ -3,6 +3,13 @@
    this file restyles the legacy body so it reads as part of the new design. Body text is untouched. */
 
 /* ---- base ---- */
+/* Shared legacy navigation: minimum comfortable pointer target. */
+.legacy .logo{min-height:44px}
+.legacy .nav-link{display:inline-flex;align-items:center;min-height:44px}
+.legacy .mega-menu a,.legacy .mobile-menu a,.legacy .mobile-nav a{display:flex;align-items:center;min-height:44px}
+.legacy .site-footer a,.legacy footer a{display:inline-flex;align-items:center;min-height:44px}
+.legacy .breadcrumb a,.legacy nav[aria-label*="パンくず"] a{display:inline-flex;align-items:center;min-height:44px;padding-inline:4px}
+
 #main .legacy,#main .legacy-body{font-family:var(--sans)!important;color:var(--ink)!important;background:transparent!important;font-size:1rem;line-height:1.95;min-height:0!important;margin:0!important;padding:0!important;display:block;letter-spacing:normal}
 #main .legacy-body .legacy-main{background:transparent!important;padding-top:0!important;margin-top:0!important;min-height:0!important}
 #main .legacy-body :is(.wrap,.wrap-narrow,.container,.inner,.page-body,.journal-article-wrap,.essay-shell,.research-main){max-width:none!important;width:auto!important;padding-left:0!important;padding-right:0!important;margin-left:0!important;margin-right:0!important}
