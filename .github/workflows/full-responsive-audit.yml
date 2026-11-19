@@ -6,8 +6,7 @@ on:
     paths:
       - scripts/visual-audit.mjs
       - .github/workflows/full-responsive-audit.yml
-      - assets/style.css
-      - assets/legacy-theme.css
+      - 'assets/**/*.css'
       - css/**
       - '**/*.html'
   pull_request:
