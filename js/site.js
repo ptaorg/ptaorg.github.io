@@ -431,7 +431,25 @@
     });
   }
 
+  // Public-facing school archive copy: never expose editorial production steps.
+  function normalizeArchivePublicationCopy(){
+    if (!/^\\/archive\\//.test(window.location.pathname || '')) return;
+    var rules = [
+      ['資料画像は未掲載です。資料画像を掲載する場合は、個人情報・印影・口座情報・QRコード等を確認し、必要な伏せ処理を行います。','この学校の資料画像は掲載されていません。'],
+      ['学校別の個別評価は未実施です。現時点では、掲載資料の有無と確認すべき項目だけを示します。','学校別の個別評価は掲載していません。'],
+      ['個別評価は未実施です。掲載資料が確認できる場合は、資料名と確認事実を分けて評価します。','この学校の個別評価は掲載していません。'],
+      ['掲載資料は未確認です。資料の有無と次に確認すべき項目を整理しており、個別評価はまだ行っていません。','この学校について、根拠となる資料と個別評価は掲載していません。']
+    ];
+    document.querySelectorAll('.archive-section p, .archive-section .archive-muted').forEach(function(node){
+      var original = node.textContent.trim();
+      for (var i = 0; i < rules.length; i++){
+        if (original === rules[i][0]) { node.textContent = rules[i][1]; break; }
+      }
+    });
+  }
+
   function installCoreEssayEntrances(){
+    normalizeArchivePublicationCopy();
     addCoreEssayStyles();
     addGlobalNav();
     var path = (window.location.pathname || '').replace(/\/+$/,'');
