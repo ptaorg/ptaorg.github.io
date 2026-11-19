@@ -167,7 +167,7 @@ function renderSourceEvidence(record) {
 
 function renderImages(record) {
   const images = sourceImages(record);
-  if (!images.length) return `      <p class="archive-muted">資料画像は未掲載です。資料画像を掲載する場合は、個人情報・印影・口座情報・QRコード等を確認し、必要な伏せ処理を行います。</p>`;
+  if (!images.length) return `      <p class="archive-muted">この学校の資料画像は掲載されていません。</p>`;
   return images.map((image, index) => {
     const dimensions = imageDimensions(image.src);
     const size = dimensions ? ` width="${dimensions.width}" height="${dimensions.height}"` : "";
@@ -209,7 +209,7 @@ ${checkItems.map(([label, value]) => `        <li><strong>${escapeHtml(label)}</
 
 function renderAssessmentPremise(record) {
   const pendingNote = displayStatus(record.status) === "未評価"
-    ? "学校別の個別評価は未実施です。現時点では、掲載資料の有無と確認すべき項目だけを示します。"
+    ? "学校別の個別評価は掲載していません。"
     : "評価状況は、掲載資料から確認できる運用上の疑義の強さを示すものです。特定の学校・PTAについて法令違反を断定するものではありません。";
   return `<p>${escapeHtml(pendingNote)}</p>
       <p>表示内容は、資料に書かれている事実、資料だけでは確認できない点、当委員会の評価を分けています。未掲載資料、口頭説明、後日是正済みの運用までは反映できていない場合があります。</p>`;
@@ -218,11 +218,11 @@ function renderAssessmentPremise(record) {
 function renderSummary(record) {
   const summary = record.summary || "PTA関連資料の確認状況を整理しています。";
   if (!sourceImages(record).length && !pdfLinks(record).length && !meaningfulDocuments(record).length) {
-    return "掲載資料は未確認です。資料の有無と次に確認すべき項目を整理しており、個別評価はまだ行っていません。";
+    return "この学校について、根拠となる資料と個別評価は掲載していません。";
   }
   return summary.replace(/^このページでは、/, "").replace(
     "画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
-    "資料画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了したものだけを掲載します。"
+    "公開可能な資料画像とPDFを掲載しています。"
   );
 }
 
@@ -332,7 +332,7 @@ ${renderImages(record)}
 
     <section class="archive-section">
       <h2>確認できる事実</h2>
-      ${renderList(record.confirmedFacts, "現時点で掲載資料から断定できる個別事実はありません。")}
+      ${renderList(record.confirmedFacts, "この学校について確認できる個別事実は掲載していません。")}
     </section>
 
     <section class="archive-section">
@@ -347,7 +347,7 @@ ${renderImages(record)}
 
     <section class="archive-section">
       <h2>当委員会の評価</h2>
-${renderParagraphs(record.evaluation, "個別評価は未実施です。掲載資料が確認できる場合は、資料名と確認事実を分けて評価します。")}
+${renderParagraphs(record.evaluation, "この学校の個別評価は掲載していません。")}
     </section>
 
     <section class="archive-section archive-print-save-section">
