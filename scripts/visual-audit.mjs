@@ -45,6 +45,7 @@ for (const item of pagesToAudit) {
 
 const corePatterns = [
   /^\/index\.html$/,
+  /^\/(yokohama-pta-fee-20261102|shimosuwa-pta-20261118|research-map)\.html$/,
   /^\/(administrative-materials|audit\/index|board-responses|cases|claim-evidence-ledger|compliance|contact|documents|edu-board-separation|education-board-responsibility|evidence-checklist|facilities|fee-collection|guide-board|guide-parent|guide-pta|guide-research|guideline|index|journal|key-materials|law-map|membership|national-archive|personnel|privacy|proper-management|reality|report|research-index|submission-kit|support|timeline|timeline-issues)\.html$/,
   /^\/journal\/.+\.html$/,
 ];
@@ -178,7 +179,7 @@ for (const viewport of viewports) {
             id:el.id || '',scrollWidth:el.scrollWidth,clientWidth:el.clientWidth,managed};
         });
         const main = document.querySelector('main');
-        const article = document.querySelector('main article, article, .gl-wrap, .issue-main, .edu-article, .journal-layout, .support-layout, .wrap-narrow');
+        const article = document.querySelector('main .yf-article,main .sf-content,main .journal-layout,main .article-layout,main .gl-wrap,main .issue-main,main .edu-article,main .support-layout,main .wrap-narrow,main > article');
         const header = document.querySelector('.site-header');
         const firstContent = document.querySelector('main h1, main h2, main section, main article, main > div');
         const h1s = [...document.querySelectorAll('h1')].filter(visible);
@@ -215,7 +216,7 @@ for (const viewport of viewports) {
           articleBackground: article ? getComputedStyle(article).backgroundColor : null,
           layoutDetails: (() => {
             const selectors = [
-              ['main','main'],['article','main article,main .yf-article,main .sf-content,main .article-layout'],
+              ['main','main'],['article','main .yf-article,main .sf-content,main .journal-layout,main .article-layout,main > article'],
               ['content','.container,.wrap,.content-wrap,.article-content,.research-map-layout'],
               ['map','#map,.research-map-layout,.leaflet-container'],
               ['sidebar','.sidebar,.toc,.table-of-contents,.research-map-side'],
