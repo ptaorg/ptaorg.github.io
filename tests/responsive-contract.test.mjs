@@ -30,3 +30,17 @@ test('published card descriptions remain readable instead of being line-clamped'
     assert.match(segment,/overflow:visible/);
   }
 });
+
+test('municipal research articles expose accessible touch-sized navigation',()=>{
+  for(const [file,scope] of [
+    ['yokohama-pta-fee-20261102.html','.yf-page'],
+    ['shimosuwa-pta-20261118.html','.sf-page']
+  ]){
+    const html=read(file);
+    assert.match(html,/aria-label="パンくず"/,file+': breadcrumb');
+    assert.match(html,/aria-label="記事の目次"/,file+': table of contents');
+    assert.match(html,/min-height:44px/,file+': touch target');
+    assert.match(html,/a:focus-visible/,file+': keyboard focus');
+    assert.ok(html.includes(scope),file+': page scope');
+  }
+});
