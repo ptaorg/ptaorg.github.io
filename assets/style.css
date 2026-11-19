@@ -64,6 +64,10 @@ svg{width:1em;height:1em;flex:none}
 .menu-button{display:none;align-items:center;gap:8px;background:none;border:1px solid var(--line-strong);border-radius:var(--radius-sm);padding:8px 12px;font:inherit;font-size:var(--fs-body);font-weight:700;color:var(--navy);cursor:pointer;white-space:nowrap;flex:0 0 auto;min-width:max-content}
 .menu-button svg{width:1.2em;height:1.2em}
 
+/* Breadcrumbs are navigation controls too; make each linked crumb a full-size touch target. */
+.breadcrumb ol{align-items:center}
+.breadcrumb li{display:flex;align-items:center}
+.breadcrumb a{display:inline-flex;align-items:center;min-height:44px;padding:0 .25rem;margin:0 -.25rem}
 /* Accessible hit areas: keep every global navigation and footer link comfortably tappable. */
 .brand{min-height:44px}
 .nav-trigger,.nav-search,.nav-cta{min-height:44px}
