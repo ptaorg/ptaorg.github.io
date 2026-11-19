@@ -245,7 +245,7 @@ for (const viewport of viewports) {
               }
               return false;
             }).slice(0,12).map(el=>({tag:el.tagName.toLowerCase(),src:el.getAttribute('src'),width:Math.round(el.getBoundingClientRect().width)}));
-            const links=[...document.querySelectorAll('main a, main button, nav a, nav button')].filter(visible);
+            const links=[...document.querySelectorAll('main button,main .button,main [role="button"],nav a,nav button,.site-header a,.site-header button')].filter(visible);
             const smallTargets=links.filter(el=>{
               const r=el.getBoundingClientRect(), st=getComputedStyle(el);
               return (r.width<32 || r.height<32) && st.position!=='absolute' && !el.closest('.leaflet-control-container');
