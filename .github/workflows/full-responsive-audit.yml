@@ -51,7 +51,7 @@ jobs:
       - name: Audit sitemap pages in desktop and mobile
         env:
           PTA_VISUAL_AUDIT_SHARD_COUNT: '10'
-          PTA_VISUAL_AUDIT_VIEWPORTS: desktop,mobile,small
+          PTA_VISUAL_AUDIT_VIEWPORTS: desktop,laptop,tablet,mobile,small
           PTA_VISUAL_AUDIT_SHARD_INDEX: ${{ matrix.shard }}
           PTA_VISUAL_AUDIT_SETTLE_MS: '120'
           PTA_VISUAL_AUDIT_SCREENSHOT_MODE: problems
