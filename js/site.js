@@ -459,6 +459,9 @@
     if (path === '/pta-school-processing.html') injectSchoolProcessingCaseVisuals();
   }
 
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', normalizeArchivePublicationCopy, { once: true });
+  else normalizeArchivePublicationCopy();
+
   load('/js/seo-analytics-v104.js?v=20260919-1', 'seo-analytics-v104');
   load('/js/site-core-v90.js?v=100', 'site-core-v90', function(){
     installDesktopSearchPanel();
