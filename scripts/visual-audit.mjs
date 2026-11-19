@@ -250,8 +250,17 @@ for (const viewport of viewports) {
             const smallTargets=links.filter(el=>{
               const r=el.getBoundingClientRect(), st=getComputedStyle(el);
               return (r.width<32 || r.height<32) && st.position!=='absolute' && !el.closest('.leaflet-control-container');
-            }).slice(0,12).map(el=>({tag:el.tagName.toLowerCase(),text:(el.textContent||'').trim().slice(0,35),
-              width:Math.round(el.getBoundingClientRect().width),height:Math.round(el.getBoundingClientRect().height)}));
+            }).slice(0,12).map(el=>({
+              tag:el.tagName.toLowerCase(),
+              id:el.id || '',
+              className:String(el.className || '').slice(0,100),
+              parentClass:String(el.parentElement?.className || '').slice(0,100),
+              text:(el.textContent||'').trim().slice(0,35),
+              href:el.getAttribute('href') || '',
+              ariaLabel:el.getAttribute('aria-label') || '',
+              width:Math.round(el.getBoundingClientRect().width),
+              height:Math.round(el.getBoundingClientRect().height)
+            }));
             const textClipping = [...document.querySelectorAll('main h1,main h2,main h3,main p,main li')].filter(visible)
               .filter(el => {
                 const st=getComputedStyle(el);
@@ -620,6 +629,9 @@ const summary = {
   escapedMediaScreens: results.filter((r) => r.layoutDetails?.escapedMedia?.length > 0).length,
   clippedTextScreens: results.filter((r) => r.layoutDetails?.textClipping?.length > 0).length,
   smallTouchScreens: results.filter((r) => r.layoutDetails?.smallTargets?.length > 0).length,
+  smallTargetExamples: results.flatMap(r => (r.layoutDetails?.smallTargets || []).map(target => ({
+    pathname:r.pathname, viewport:r.viewport, ...target
+  }))).slice(0, 40),
   inspectedViewports: viewports.map(v => `${v.name}:${v.width}x${v.height}`),
   rawOutOfViewportScreens: results.filter((r) => r.outsideBreakdown?.total > 0).length,
   mapTileScreens: results.filter((r) => r.outsideBreakdown?.mapTiles > 0).length,
