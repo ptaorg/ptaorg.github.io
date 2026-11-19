@@ -50,10 +50,19 @@ const corePatterns = [
 ];
 const isCore = (pathname) => corePatterns.some((r) => r.test(pathname));
 
-const viewports = [
-  { name: 'desktop', width: 1440, height: 1000 },
-  { name: 'mobile', width: 390, height: 844 },
-];
+const viewportCatalog = {
+  desktop: { name: 'desktop', width: 1440, height: 1000 },
+  laptop: { name: 'laptop', width: 1024, height: 768 },
+  tablet: { name: 'tablet', width: 768, height: 1024 },
+  mobile: { name: 'mobile', width: 390, height: 844 },
+  small: { name: 'small', width: 360, height: 780 },
+};
+const selectedViewports = (process.env.PTA_VISUAL_AUDIT_VIEWPORTS || 'desktop,mobile')
+  .split(',').map(value => value.trim()).filter(Boolean);
+if (selectedViewports.some(name => !viewportCatalog[name])) {
+  throw new Error('Unknown responsive viewport: ' + selectedViewports.join(','));
+}
+const viewports = [...new Set(selectedViewports)].map(name => viewportCatalog[name]);
 
 const browser = await chromium.launch({ headless: true });
 const results = [];
@@ -204,6 +213,55 @@ for (const viewport of viewports) {
           sectionCount: sections.length,
           bodyBackground: getComputedStyle(document.body).backgroundColor,
           articleBackground: article ? getComputedStyle(article).backgroundColor : null,
+          layoutDetails: (() => {
+            const selectors = [
+              ['main','main'],['article','main article,main .yf-article,main .sf-content,main .article-layout'],
+              ['content','.container,.wrap,.content-wrap,.article-content,.research-map-layout'],
+              ['map','#map,.research-map-layout,.leaflet-container'],
+              ['sidebar','.sidebar,.toc,.table-of-contents,.research-map-side'],
+            ];
+            const blocks = selectors.map(([name,selector]) => {
+              const el = [...document.querySelectorAll(selector)].find(visible);
+              if (!el) return null;
+              const r = el.getBoundingClientRect();
+              return { name, width: Math.round(r.width), left: Math.round(r.left),
+                right: Math.round(r.right), leftMargin: Math.round(r.left),
+                rightMargin: Math.round(viewportWidth-r.right),
+                scrollWidth: el.scrollWidth, clientWidth: el.clientWidth };
+            }).filter(Boolean);
+            const media = [...document.querySelectorAll('main img,main video,main iframe,main svg')].filter(visible);
+            const brokenImages = [...document.querySelectorAll('main img')].filter(el =>
+              !el.complete || (el.complete && el.naturalWidth === 0))
+              .slice(0,12).map(el=>({src:el.getAttribute('src'),alt:el.alt||''}));
+            const escapedMedia = media.filter(el => {
+              if (el.closest('.leaflet-container')) return false;
+              const r=el.getBoundingClientRect();
+              if (r.left < -2 || r.right > viewportWidth+2) {
+                for (let a=el.parentElement;a;a=a.parentElement) {
+                  const st=getComputedStyle(a);
+                  if ((st.overflowX==='auto'||st.overflowX==='scroll') && a.scrollWidth>a.clientWidth+2) return false;
+                }
+                return true;
+              }
+              return false;
+            }).slice(0,12).map(el=>({tag:el.tagName.toLowerCase(),src:el.getAttribute('src'),width:Math.round(el.getBoundingClientRect().width)}));
+            const links=[...document.querySelectorAll('main a, main button, nav a, nav button')].filter(visible);
+            const smallTargets=links.filter(el=>{
+              const r=el.getBoundingClientRect(), st=getComputedStyle(el);
+              return (r.width<32 || r.height<32) && st.position!=='absolute' && !el.closest('.leaflet-control-container');
+            }).slice(0,12).map(el=>({tag:el.tagName.toLowerCase(),text:(el.textContent||'').trim().slice(0,35),
+              width:Math.round(el.getBoundingClientRect().width),height:Math.round(el.getBoundingClientRect().height)}));
+            const textClipping = [...document.querySelectorAll('main h1,main h2,main h3,main p,main li')].filter(visible)
+              .filter(el => {
+                const st=getComputedStyle(el);
+                return (st.overflowY==='hidden'||st.overflowY==='clip') &&
+                  el.scrollHeight>el.clientHeight+3;
+              }).slice(0,12).map(el=>({tag:el.tagName.toLowerCase(),
+                text:(el.textContent||'').trim().slice(0,45),clientHeight:el.clientHeight,scrollHeight:el.scrollHeight}));
+            return { blocks, brokenImages, escapedMedia, smallTargets, textClipping,
+              images:media.filter(el=>el.tagName==='IMG').length,
+              maps:document.querySelectorAll('.leaflet-container').length };
+          })(),
         };
       });
       Object.assign(record, metrics);
@@ -498,6 +556,25 @@ for (const viewport of viewports) {
         record.errors.push(`資料・要素がスクロール枠外へはみ出す ${metrics.outsideBreakdown.uncontained}件`);
         record.warnings.push(`スクロール枠外の要素 ${metrics.outsideBreakdown.uncontained}件`);
       }
+      // Layout diagnostics are recorded for every viewport; severity remains
+      // separate so legitimate small inline links and image placeholders do not
+      // automatically fail the entire sitemap.
+      const layout = metrics.layoutDetails;
+      if (layout.brokenImages.length) record.warnings.push(`画像読み込み失敗 ${layout.brokenImages.length}件`);
+      if (layout.escapedMedia.length) record.errors.push(`画像・動画が横幅を超過 ${layout.escapedMedia.length}件`);
+      if (layout.textClipping.length) record.errors.push(`本文の縦方向の文字切れ ${layout.textClipping.length}件`);
+      if (layout.smallTargets.length && viewport.width <= 390) record.warnings.push(`小さいタップ対象 ${layout.smallTargets.length}件（代表例）`);
+      const contentBlock = layout.blocks.find(block => block.name === 'article' || block.name === 'main');
+      if (contentBlock && contentBlock.width > viewport.width + 2) {
+        record.errors.push(`本文幅が表示領域を超過 ${contentBlock.width}px / ${viewport.width}px`);
+      }
+      if (contentBlock && viewport.width >= 1024 && contentBlock.width < viewport.width * 0.43) {
+        record.warnings.push(`本文幅が画面に比べて狭い ${contentBlock.width}px / ${viewport.width}px`);
+      }
+      if (contentBlock && viewport.width <= 390 &&
+          (contentBlock.leftMargin < -2 || contentBlock.rightMargin < -2)) {
+        record.errors.push('本文コンテナがモバイル表示幅からはみ出す');
+      }
       if (metrics.h1Count !== 1) record.warnings.push(`H1 ${metrics.h1Count}件`);
       if (metrics.p10Font !== null && metrics.p10Font < (viewport.name === 'mobile' ? 13 : 12)) record.warnings.push(`小さい文字 p10=${metrics.p10Font}px`);
       if (viewport.name === 'desktop' && metrics.articleRect && metrics.articleRect.width < 720 && metrics.sectionCount > 2) record.warnings.push(`本文領域が狭い ${metrics.articleRect.width}px`);
@@ -538,6 +615,11 @@ const summary = {
   horizontalOverflow: results.filter((r) => r.horizontalOverflow).length,
   narrowDesktop: results.filter((r) => r.viewport === 'desktop' && r.warnings.some((w) => w.includes('本文領域が狭い'))).length,
   smallText: results.filter((r) => r.warnings.some((w) => w.includes('小さい文字'))).length,
+  brokenImageScreens: results.filter((r) => r.layoutDetails?.brokenImages?.length > 0).length,
+  escapedMediaScreens: results.filter((r) => r.layoutDetails?.escapedMedia?.length > 0).length,
+  clippedTextScreens: results.filter((r) => r.layoutDetails?.textClipping?.length > 0).length,
+  smallTouchScreens: results.filter((r) => r.layoutDetails?.smallTargets?.length > 0).length,
+  inspectedViewports: viewports.map(v => `${v.name}:${v.width}x${v.height}`),
   rawOutOfViewportScreens: results.filter((r) => r.outsideBreakdown?.total > 0).length,
   mapTileScreens: results.filter((r) => r.outsideBreakdown?.mapTiles > 0).length,
   managedScrollScreens: results.filter((r) =>
