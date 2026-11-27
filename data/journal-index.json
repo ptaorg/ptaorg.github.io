@@ -3,18 +3,47 @@
   "note": "公開済み論考のタイトル・日付・説明文のみ。本文は ptaorg.com を正本とする。",
   "articles": [
     {
+      "title": "西宮市教育委員会のPTA運営指針と学校からの個人情報提供",
+      "url": "https://ptaorg.com/nishinomiya-pta-privacy-20261119.html",
+      "published": "2026-11-19",
+      "modified": "2026-11-19",
+      "description": "西宮市のPTA運営ハンドブック、公式ページ、個人情報保護委員会の令和8年3月資料を検証。入会届による意思確認、PTA自身による会員情報の取得、学校からPTAへの臨時的な個人情報提供の法的整理を解説。",
+      "prefecture": "兵庫県",
+      "municipality": "西宮市",
+      "topics": [
+        "membership",
+        "privacy"
+      ]
+    },
+    {
       "title": "「PTAには自由に入れる」。ならば、なぜ学校が会費を集めていたのか――横浜市教育委員会の二つの転換",
       "url": "https://ptaorg.com/yokohama-pta-fee-20261102.html",
       "published": "2026-11-19",
       "modified": "2026-11-19",
-      "description": "2025年12月のオプトイン・意思確認通知、2026年10月会費徴収見直し通知、11月2日行政回答を原本画像5点と全文で検証。PTAの入退会の自由、準公金取扱要領、会費・名簿の学校からの分離を論じる。"
+      "description": "2025年12月のオプトイン・意思確認通知、2026年10月会費徴収見直し通知、11月2日行政回答を原本画像5点と全文で検証。PTAの入退会の自由、準公金取扱要領、会費・名簿の学校からの分離を論じる。",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "topics": [
+        "membership",
+        "fee",
+        "privacy"
+      ]
     },
     {
       "title": "「同意しているから違法ではない」――下諏訪町教育委員会の判断が変わるまで",
       "url": "https://ptaorg.com/shimosuwa-pta-20261118.html",
       "published": "2026-11-19",
       "modified": "2026-11-19",
-      "description": "保護者の嘆願から学校名簿の役員選出目的での利用・提供を制限する行政回答まで。原本の抜粋画像8点、暫定回答・最終回答全文とPDFで、入退会自由、家庭のプライバシー、教職員の分離、子どもの権利を詳しく検証。"
+      "description": "保護者の嘆願から学校名簿の役員選出目的での利用・提供を制限する行政回答まで。原本の抜粋画像8点、暫定回答・最終回答全文とPDFで、入退会自由、家庭のプライバシー、教職員の分離、子どもの権利を詳しく検証。",
+      "prefecture": "長野県",
+      "municipality": "下諏訪町",
+      "topics": [
+        "membership",
+        "privacy",
+        "staff",
+        "facilities",
+        "correction"
+      ]
     },
     {
       "title": "松山市のPTA会費公的徴収と「仕分口座」説明変更に関する調査報告",
