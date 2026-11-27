@@ -36,7 +36,7 @@
     return {map,responses,journal,demo:needDemo};
   }
   const allSchools = () => data.map.municipalities.flatMap(m=>(m.schools||[]).map(s=>({...s,regionId:m.id,regionName:m.name,regionPrefecture:m.prefecture})));
-  const prefsWithData = () => [...new Set(data.map.municipalities.map(m=>m.prefecture))];
+  const prefsWithData = () => [...new Set([...data.map.municipalities.map(m=>m.prefecture),...sitePages().map(p=>p.prefecture).filter(Boolean)])];
   const status = doc => String(doc?.status||'確認状況未記載');
   const schoolStatus = s => {const st=(s.documents||[]).map(status);return st.includes('公開前確認中')?'公開前確認中':st[0]||'未確認';};
   const topicById = id => TOPICS.find(t=>t.id===id);
@@ -48,7 +48,20 @@
   };
 
   /* ---------- search ---------- */
-  const sitePages = () => (typeof window!=='undefined'&&Array.isArray(window.PTA_SITE_SEARCH_INDEX)?window.PTA_SITE_SEARCH_INDEX:[]).map(([title,url,desc])=>({title:String(title||'').replace(/\s*[｜|]\s*PTA適正化推進委員会.*$/,''),url:String(url||''),desc:String(desc||'')})).filter(p=>p.title&&p.url);
+  const sitePages = () => {
+    const records = new Map();
+    const key = url => url.replace(/^\//,'');
+    const put = p => { if(p.title && p.url) records.set(key(p.url),p); };
+    const index = typeof window !== 'undefined' && Array.isArray(window.PTA_SITE_SEARCH_INDEX) ? window.PTA_SITE_SEARCH_INDEX : [];
+    index.forEach(([title,url,desc])=>put({title:String(title||'').replace(/\s*[｜|]\s*PTA適正化推進委員会.*$/,''),url:String(url||''),desc:String(desc||'')}));
+    (data.journal.articles||[]).forEach(a=>{
+      if(typeof a.url!=='string'||!a.url.startsWith(SITE+'/'))return;
+      const url=a.url.slice(SITE.length);
+      const old=records.get(key(url))||{};
+      put({...old,title:a.title||old.title,url,desc:a.description||old.desc||'',prefecture:a.prefecture||'',municipality:a.municipality||'',topics:a.topics||[]});
+    });
+    return [...records.values()];
+  };
   const has = (parts,q) => parts.some(x=>normalize(x).includes(q));
   function matchedRecords({query='',prefecture='',schoolType='',topic=''}){
     const q=normalize(query);const t=topicById(topic);
@@ -68,7 +81,7 @@
       // Metadata only; the full answer text is read on the canonical page.
       return !q||has([r.municipality,r.prefecture,...(r.topics||[]),r.date],q);
     });
-    const pages=(!q||schoolType||prefecture||t)?[]:sitePages().filter(p=>has([p.title,p.desc],q));
+    const pages=schoolType||(!q&&!prefecture&&!t)?[]:sitePages().filter(p=>(!prefecture||p.prefecture===prefecture)&&(!t||(p.topics||[]).includes(t.id))&&(!q||has([p.title,p.desc,p.prefecture,p.municipality],q)));
     return {municipalities,schools,responses,pages};
   }
 
@@ -388,6 +401,6 @@
       if(p==='home')renderHome();if(p==='explore')renderExplorer();if(p==='municipality')renderMunicipality();if(p==='school')renderSchool();
     }catch(e){console.error('Failed to load public site data:',e);const t=document.getElementById('data-note')||document.getElementById('municipality-root')||document.getElementById('school-root');if(t)t.textContent='データを読み込めませんでした。HTTPサーバー経由で開いてください。';}
   }
-  if(typeof module!=='undefined'&&module.exports)module.exports={normalize,TOPICS,PREFS,safeSourceLink,localLink,fmtDate,matchedRecordsFactory:(map,responses,query)=>{data={map,responses,journal:{articles:[]}};return matchedRecords(query);}};
+  if(typeof module!=='undefined'&&module.exports)module.exports={normalize,TOPICS,PREFS,safeSourceLink,localLink,fmtDate,matchedRecordsFactory:(map,responses,query,journal={articles:[]})=>{data={map,responses,journal};return matchedRecords(query);}};
   if(typeof document!=='undefined')document.addEventListener('DOMContentLoaded',init);
 })();
