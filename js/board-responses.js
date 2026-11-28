@@ -108,6 +108,7 @@
 
   function renderBodies() {
     const el = document.getElementById('responseBodiesContent'); if (!el) return;
+    if (el.dataset.staticResponses && el.querySelectorAll('.response-item').length === Number(el.dataset.staticResponses)) return;
     const details = DATA.details || [], typeMap = DATA.typeMap || {}, munis = DATA.municipalities || [];
     const muniByName = {}; for (const m of munis) muniByName[m.municipality] = m;
     const byType = {}; for (const d of details) { if (!byType[d.type]) byType[d.type] = []; byType[d.type].push(d); }
@@ -203,6 +204,15 @@
     renderIndex();
     relocateRegionMaps();
     renderBodies();
+    function revealResponse() {
+      const id = location.hash.slice(1);
+      if (!/^ans-\d+$/.test(id)) return;
+      const item = document.getElementById(id);
+      const details = item && item.querySelector('details');
+      if (details) details.open = true;
+    }
+    revealResponse();
+    window.addEventListener('hashchange', revealResponse);
     renderExcluded();
     initMainMap();
     initRegionMaps();
