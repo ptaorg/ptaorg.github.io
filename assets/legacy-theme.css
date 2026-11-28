@@ -86,7 +86,11 @@
 #main .legacy .scroll-top-button,#main .legacy :is(.support-strip,.loc-trail,.current-location-breadcrumb){display:none!important}
 @media (max-width:760px){
   #main .legacy-body h2{margin-top:30px!important}
+  /* Row-labelled two-column tables fit the reading column; wider matrices retain horizontal scrolling. */
   #main .legacy-body table{display:block;overflow-x:auto}
+  #main .legacy-body table:has(> tbody > tr > th:first-child + td:last-child):not(:has(> thead, > tbody > tr > :nth-child(3), > tbody > tr > :is(th,td)[colspan])){display:table;width:100%;table-layout:fixed}
+  #main .legacy-body table:has(> tbody > tr > th:first-child + td:last-child):not(:has(> thead, > tbody > tr > :nth-child(3), > tbody > tr > :is(th,td)[colspan])) > tbody > tr > th{width:30%;overflow-wrap:anywhere}
+  #main .legacy-body table:has(> tbody > tr > th:first-child + td:last-child):not(:has(> thead, > tbody > tr > :nth-child(3), > tbody > tr > :is(th,td)[colspan])) > tbody > tr > td{overflow-wrap:anywhere;word-break:normal}
 }
 @media print{.search-panel,.article-side,.detail-side,.pager,.readmore,.article-notice{display:none!important}.article-layout{grid-template-columns:1fr}}
 #main .legacy-body .meta-card{display:block!important}
