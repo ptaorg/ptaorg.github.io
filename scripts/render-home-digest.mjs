@@ -9,12 +9,12 @@ const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>
 const statNames=['自治体・地域別の調査索引','学校別資料の登録目録','教育委員会の公開回答','論考・分析の登録'];
 const units=['地域','校','件','本'];
 const statHTML='<dl class="home-source-stats">\n'+statNames.map((label,i)=>'<div><dt>'+label+'</dt><dd><strong>'+counts[i]+'</strong><span>'+units[i]+'</span></dd></div>').join('\n')+'\n</dl><p class="home-source-note">公開索引に登録された件数です。学校別目録には原本画像やPDFを掲載していないページも含まれます。</p>';
-const newest=[...journal.articles].sort((a,b)=>(b.modified||b.published||'').localeCompare(a.modified||a.published||'')).slice(0,3);
+const newest=[...journal.articles].sort((a,b)=>(b.modified||b.published||'').localeCompare(a.modified||a.published||'')).slice(0,4);
 const newsHTML=newest.map(a=>{
  const date=a.modified||a.published,href=String(a.url||'').replace(/^https:\/\/ptaorg\.com\//,'');
  if(!/^(?:journal\/)?[\w./-]+\.html$/.test(href))throw Error('Unexpected journal URL: '+href);
  const kind=(a.published&&a.modified&&a.modified>a.published)?'更新':'新規公開';
- return '<li><div class="update-meta"><span class="label label-analysis">当委員会の論考</span><span class="update-kind">'+kind+'</span><time datetime="'+date+'">'+date+'</time></div><h3><a href="'+esc(href)+'">'+esc(a.title)+'</a></h3>'+(a.description?'<p>'+esc(a.description)+'</p>':'')+'</li>';
+ return '<li><div class="update-meta"><span class="update-kind">'+kind+'</span><time datetime="'+date+'">'+date+'</time></div><h3><a href="'+esc(href)+'">'+esc(a.title)+'</a></h3>'+(a.description?'<p>'+esc(a.description)+'</p>':'')+'</li>';
 }).join('\n');
 const file=path.join(root,'index.html'),original=fs.readFileSync(file,'utf8');
 let html=original;

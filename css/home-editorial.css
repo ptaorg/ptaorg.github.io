@@ -1,0 +1,103 @@
+/* The front page pairs the lead report with its source, then opens the archive. */
+body[data-page="home"] {
+  --front-paper: #faf9f5;
+  --front-ink: #192d45;
+  --front-link: #1f4772;
+  --front-muted: #586474;
+  --front-rule: #c9c5bd;
+}
+body[data-page="home"] #main { background: var(--front-paper); color: #222d37; }
+#main .dispatch a, #main .dispatch-surveys a { color: var(--front-link); text-underline-offset: .22em; }
+#main .dispatch h1 a, #main .dispatch h2 a, #main .dispatch-surveys h3 a {
+  color: var(--front-ink); text-decoration: none;
+}
+#main .dispatch a:hover, #main .dispatch-surveys a:hover { text-decoration: underline; }
+#main .dispatch { padding-block: clamp(1.5rem, 3.5vw, 3.5rem) 0; }
+.dispatch-opening {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  align-items: center; gap: clamp(2rem, 6vw, 6rem);
+}
+#main .dispatch-byline {
+  display: flex; flex-wrap: wrap; gap: .25em .8em;
+  color: var(--front-muted); font-size: .9rem; line-height: 1.5; margin: 0 0 .8rem;
+}
+.dispatch-byline span { color: #873b20; font-weight: 700; }
+#main .dispatch h1, #main .dispatch h2, #main .dispatch-surveys h3 {
+  font-family: var(--serif), serif; letter-spacing: .012em;
+  margin: 0; color: var(--front-ink); text-wrap: balance;
+}
+#main .dispatch h1 { font-size: clamp(2rem, 3.8vw, 3.05rem); line-height: 1.45; }
+#main .dispatch h2 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.55; }
+#main .dispatch-lead > p:not(.dispatch-byline), #main .dispatch-surveys article p {
+  margin: .8rem 0; font-size: 1.06rem; line-height: 1.85; max-width: 40em;
+}
+.dispatch-links { display: flex; flex-wrap: wrap; gap: .1rem 1.1rem; align-items: baseline; }
+.dispatch-links a, .dispatch-source { font-size: .92rem; font-weight: 600; line-height: 1.7; }
+#main .dispatch-document { margin: 0; padding: 0; min-width: 0; }
+.dispatch-document > a {
+  display: block; padding: clamp(.8rem, 2vw, 1.8rem) clamp(.8rem, 2vw, 1.8rem) 0;
+  background-color: #eae8df; border-bottom: 2px solid #a2421d;
+}
+.dispatch-document img { display: block; width: 100%; height: auto; border: 1px solid #d8d6ce; border-bottom: none; }
+#main .dispatch-document figcaption { font-size: .875rem; margin-top: .45rem; color: var(--front-muted); }
+.dispatch-related {
+  display: grid; grid-template-columns: repeat(2,minmax(0,1fr));
+  margin-top: clamp(1.4rem, 3vw, 2.6rem); border-block: 1px solid var(--front-rule);
+}
+.dispatch-related article { padding: 1.1rem 1.6rem 1.1rem 0; }
+.dispatch-related article + article { border-left: 1px solid var(--front-rule); padding-inline: 1.6rem 0; }
+#main .dispatch-related .dispatch-byline { margin-bottom: .35rem; }
+#main .dispatch-related article > p:not(.dispatch-byline) { margin: .45rem 0; }
+body[data-page="home"] .hero-search-shell { margin: 1.6rem auto 0; z-index: auto; scroll-margin-top: 7rem; }
+body[data-page="home"] .hero-search-shell .search-panel {
+  display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: 1.15rem;
+  align-items: center; background: var(--front-ink); color: white; padding: 1rem 1.4rem;
+  border: 0; border-radius: 0; box-shadow: none;
+}
+#home-search .search-panel label { font: 700 1.25rem/1.4 var(--serif), serif; color: white; }
+#home-search .search-panel a { color: white; font-size: .95rem; text-decoration: underline; text-underline-offset: .25em; }
+.dispatch-field { display: flex; align-items: stretch; min-width: 0; background: #fff; }
+.dispatch-field input { min-width: 0; width: 100%; min-height: 46px; padding: .6rem .85rem; border: 0; color: #222d37; font: inherit; background: white; }
+.dispatch-field button { border: 2px solid white; padding: .5rem 1.2rem; background: #274b70; color: white; font: inherit; font-weight: 700; cursor: pointer; }
+#home-search :focus-visible { outline: 3px solid #d4af66; outline-offset: 3px; position: relative; z-index: 1; }
+body[data-page="home"] .home-resource-nav {
+  display: flex; flex-wrap: wrap; column-gap: 1.5rem; margin-block: .5rem 2.25rem;
+}
+body[data-page="home"] .home-resource-nav > a:nth-child(n) {
+  background: transparent; border: 0; box-shadow: none; border-radius: 0; min-height: 44px;
+  color: var(--front-link); padding: .4rem 0; text-decoration: underline; text-underline-offset: .22em;
+}
+#main .dispatch-surveys h3 { font-size: clamp(1.12rem, 1.8vw, 1.4rem); line-height: 1.6; }
+.dispatch-surveys article { padding-block: 1rem; border-bottom: 1px solid var(--front-rule); }
+.dispatch-surveys > p { margin: 1rem 0; }
+body[data-page="home"] #roles a, body[data-page="home"] .home-issues .hc-issue-list a:nth-child(n),
+body[data-page="home"] .home-updates .news-list li:nth-child(n) {
+  background: transparent; border: 0; border-bottom: 1px solid var(--front-rule);
+  border-radius: 0; box-shadow: none; min-height: 0; padding: .9rem 0;
+}
+body[data-page="home"] .home-issues .hc-issue-list {
+  display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,12rem),1fr)); gap: 1.2rem;
+}
+#main .home-issues .hc-issue-list a > svg, #main .home-issues .hc-issue-list a > strong { display: none; }
+body[data-page="home"] .home-updates .news-list { display: block; }
+body[data-page="home"] .home-updates .news-list li { max-width: 60rem; }
+@media (max-width: 700px) {
+  .dispatch-opening { display: block; }
+  /* The PDF remains directly linked below the heading on small screens. */
+  .dispatch-document > a { display: none; }
+  #main .dispatch-document figcaption { margin-top: .6rem; }
+  #main .dispatch h1 { font-size: clamp(1.65rem, 6.5vw, 2rem); }
+  #main .dispatch-byline { font-size: .875rem; }
+  #main .dispatch-lead > p:not(.dispatch-byline) { font-size: 1rem; line-height: 1.75; }
+  .dispatch-related { display: block; margin-top: 1.1rem; }
+  .dispatch-related article, .dispatch-related article + article { border-left: 0; padding: .8rem 0; }
+  .dispatch-related article + article { border-top: 1px solid var(--front-rule); }
+  #main .dispatch-related h2 { font-size: 1.17rem; }
+  #main .dispatch-related article > p:not(.dispatch-byline) { font-size: .94rem; }
+  body[data-page="home"] .hero-search-shell { margin-top: 1.1rem; }
+  body[data-page="home"] .hero-search-shell .search-panel { grid-template-columns: 1fr auto; gap: .5rem; padding: .9rem 1rem; }
+  #home-search .dispatch-field { grid-column: 1/-1; grid-row: 2; }
+  #home-search .search-panel label { font-size: 1.1rem; }
+  body[data-page="home"] .home-resource-nav { column-gap: 1.1rem; margin-bottom: 1.5rem; }
+}
