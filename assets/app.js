@@ -17,10 +17,10 @@
   const SITE = 'https://ptaorg.com';
   const ROOT = (typeof document!=='undefined'&&document.body&&document.body.dataset.root)||'';
   // same-site paths stay inside this site (relative to the page)
-  const localLink = p => {if(typeof p!=='string'||!p.trim())return ROOT+'index.html';const q=p.trim().replace(/^https?:\/\/(?:www\.)?ptaorg\.(?:com|github\.io)(?=\/|$)/i,'');const m=q.match(/^\/?((?:[\w.%~-]+\/)*(?:[\w.%~-]+\.(?:html|pdf)|)?)(\?[^#\s]*)?(#[^\s]*)?$/i);if(!m||q.startsWith('//')||/%(?:2f|5c|00|2e)/i.test(m[1])||m[1].split('/').some(v=>v==='.'||v==='..'))return ROOT+'index.html';return ROOT+(m[1]||'index.html')+(m[2]||'')+(m[3]||'');};
+  const localLink = p => {if(typeof p!=='string'||!p.trim())return '/';const q=p.trim().replace(/^https?:\/\/(?:www\.)?ptaorg\.(?:com|github\.io)(?=\/|$)/i,'');const m=q.match(/^\/?((?:[\w.%~-]+\/)*(?:[\w.%~-]+\.(?:html|pdf)|)?)(\?[^#\s]*)?(#[^\s]*)?$/i);if(!m||q.startsWith('//')||/%(?:2f|5c|00|2e)/i.test(m[1])||m[1].split('/').some(v=>v==='.'||v==='..'))return '/';return (!m[1]||m[1]==='index.html'?'/':ROOT+m[1])+(m[2]||'')+(m[3]||'');};
   const schoolLink = p => `school.html?url=${encodeURIComponent(p)}`;
   const regionLink = id => {const m=data.map.municipalities.find(region=>region.id===id);return m?.status==='published-research'&&m.url?localLink(m.url):`municipality.html?id=${encodeURIComponent(id)}`;};
-  function safeSourceLink(url){try{const x=new URL(url,SITE);return x.origin===SITE?ROOT+(x.pathname.slice(1)||'index.html')+x.hash:ROOT+'board-responses.html';}catch{return ROOT+'board-responses.html';}}
+  function safeSourceLink(url){try{const x=new URL(url,SITE);return x.origin===SITE?(x.pathname==='/'||x.pathname==='/index.html'?'/':ROOT+x.pathname.slice(1))+x.search+x.hash:ROOT+'board-responses.html';}catch{return ROOT+'board-responses.html';}}
   const fmtDate = d => {const s=String(d||'').trim();const m=s.match(/^(\d{4})[\/.-](\d{1,2})(?:[\/.-](\d{1,2}))?$/);if(m)return [m[1],m[2].padStart(2,'0'),m[3]&&m[3].padStart(2,'0')].filter(Boolean).join('-');return s.replace(/\s+/g,'');};
   let data = {map:{municipalities:[]},responses:{responses:[]},journal:{articles:[]},demo:true};
 
@@ -299,7 +299,7 @@
     <section class="page-hero">
       <div class="page-hero-map" aria-hidden="true" data-map data-map-pref="${esc(m.prefecture)}" data-map-label="${esc(m.name)}"></div>
       <div class="container">
-        <nav class="breadcrumb" aria-label="パンくず"><ol><li><a href="index.html">トップ</a></li><li><a href="explore.html?tab=municipality">全国調査</a></li>${isPref?'':`<li><a href="explore.html?pref=${encodeURIComponent(m.prefecture)}">${esc(m.prefecture)}</a></li>`}<li aria-current="page">${esc(m.name)}</li></ol></nav>
+        <nav class="breadcrumb" aria-label="パンくず"><ol><li><a href="/">トップ</a></li><li><a href="explore.html?tab=municipality">全国調査</a></li>${isPref?'':`<li><a href="explore.html?pref=${encodeURIComponent(m.prefecture)}">${esc(m.prefecture)}</a></li>`}<li aria-current="page">${esc(m.name)}</li></ol></nav>
         <span class="label">自治体別調査</span>
         <h1>${esc(m.name)}</h1>
         <p class="page-lead">${lead}</p>
@@ -365,7 +365,7 @@
     const docs=s.documents||[];const peers=allSchools().filter(x=>x.regionId===s.regionId&&x.url!==s.url).slice(0,6);
     root.innerHTML=`
     <section class="page-hero"><div class="page-hero-map" aria-hidden="true" data-map data-map-pref="${esc(s.regionPrefecture)}" data-map-label="${esc(s.regionName)}"></div><div class="container">
-      <nav class="breadcrumb" aria-label="パンくず"><ol><li><a href="index.html">トップ</a></li><li><a href="explore.html?tab=school">学校の資料</a></li><li><a href="${regionLink(s.regionId)}">${esc(s.regionName)}</a></li><li aria-current="page">${esc(s.name)}</li></ol></nav>
+      <nav class="breadcrumb" aria-label="パンくず"><ol><li><a href="/">トップ</a></li><li><a href="explore.html?tab=school">学校の資料</a></li><li><a href="${regionLink(s.regionId)}">${esc(s.regionName)}</a></li><li aria-current="page">${esc(s.name)}</li></ol></nav>
       <span class="label">学校別資料</span><h1>${esc(s.name)}</h1>
       <p class="page-lead">${esc(s.regionPrefecture)}${esc(s.regionName===s.regionPrefecture?'':s.regionName)}の${esc(s.type||'学校')}。PTA関係文書の登録状況を示します。</p>
     </div></section>
