@@ -9,12 +9,30 @@
     const old = (window.PTA_BOARD_RESPONSE_INDEX || {}).details || [];
     const municipalities = (window.PTA_BOARD_RESPONSE_INDEX || {}).municipalities || [];
     const supplement = [...document.querySelectorAll('[data-board-update]')];
+    const full = [...document.querySelectorAll('[data-full-response]')];
     const oldItems = [...document.querySelectorAll('#responseBodiesContent .response-item')];
     const oldSearch = document.getElementById('muniSearch');
     function update() {
       const q = norm(query.value), t = topic.value, s = status.value;
       const active = !!(q || t || s);
-      let newer = 0, legacy = 0;
+      let newer = 0, legacy = 0, fullCount = 0;
+      const fullMatches = [];
+      for (const article of full) {
+        const tags = JSON.parse(article.dataset.topics || '[]');
+        article.hidden = !!((q && !norm(article.textContent).includes(q)) || (t && !tags.includes(t)) || (s && s !== '追加公開本文'));
+        if (!article.hidden) { fullCount++; fullMatches.push(article); }
+      }
+      const resultLinks = document.getElementById('board-full-response-results');
+      if (resultLinks) {
+        resultLinks.replaceChildren();
+        resultLinks.hidden = !active || !fullCount;
+        for (const article of fullMatches) {
+          const link = document.createElement('a');
+          link.href = '#' + article.id;
+          link.textContent = article.querySelector('h3').textContent + '：回答全文';
+          resultLinks.appendChild(link); resultLinks.appendChild(document.createElement('br'));
+        }
+      }
       for (const article of supplement) {
         const topics = JSON.parse(article.dataset.topics);
         article.hidden = !!((q && !norm(article.textContent).includes(q)) || (t && !topics.includes(t)) || (s && article.dataset.status !== s));
@@ -31,8 +49,8 @@
       for (const section of document.querySelectorAll('.prefecture-group,.region-block')) section.hidden = ![...section.querySelectorAll('.muni-link')].some(a => !a.parentElement.hidden);
       for (const section of document.querySelectorAll('.type-section')) section.hidden = ![...section.querySelectorAll('.response-item')].some(a => !a.hidden);
       for (const section of document.querySelectorAll('.response-trends-section,.dataset-scope-section,.map-section')) section.hidden = active;
-      document.getElementById('board-query-status').textContent = '追補 ' + newer + '件 ／ 従来公開本文 ' + legacy + '件（回答未了等は実質回答件数に含めません）';
-      document.getElementById('board-query-empty').hidden = newer + legacy > 0;
+      document.getElementById('board-query-status').textContent = '追補 ' + newer + '件 ／ 従来公開本文 ' + legacy + '件 ／ 追加公開本文 ' + fullCount + '件（資料区分別の表示件数）';
+      document.getElementById('board-query-empty').hidden = newer + legacy + fullCount > 0;
       const params = new URLSearchParams(location.search);
       for (const [key,value] of [['boardQuery',query.value],['boardTopic',t],['boardStatus',s]]) value ? params.set(key,value) : params.delete(key);
       history.replaceState(null,'',location.pathname + (params.size ? '?' + params : '') + location.hash);
