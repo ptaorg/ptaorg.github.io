@@ -4,12 +4,14 @@ import fs from 'node:fs';import path from 'node:path';
 const root=path.resolve(import.meta.dirname,'..');
 const get=name=>JSON.parse(fs.readFileSync(path.join(root,'data',name),'utf8'));
 const map=get('research-map-index.json'),responses=get('board-responses.json'),journal=get('journal-index.json');
-const counts=[map.municipalities.length,new Set(map.municipalities.flatMap(m=>(m.schools||[]).map(s=>s.url)).filter(Boolean)).size,responses.responses.length,journal.articles.length];
+const archive=fs.readFileSync(path.join(root,'board-responses.html'),'utf8');
+const additionalResponses=[...archive.matchAll(/<article\b[^>]*\sdata-full-response(?=[\s=>])/g)].length;
+const counts=[map.municipalities.length,new Set(map.municipalities.flatMap(m=>(m.schools||[]).map(s=>s.url)).filter(Boolean)).size,responses.responses.length+additionalResponses,journal.articles.length];
 const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const statNames=['自治体・地域別の調査索引','学校別資料の登録目録','教育委員会の公開回答','論考・分析の登録'];
 const units=['地域','校','件','本'];
 const statHTML='<dl class="home-source-stats">\n'+statNames.map((label,i)=>'<div><dt>'+label+'</dt><dd><strong>'+counts[i]+'</strong><span>'+units[i]+'</span></dd></div>').join('\n')+'\n</dl><p class="home-source-note">公開索引に登録された件数です。学校別目録には原本画像やPDFを掲載していないページも含まれます。</p>';
-const newest=[...journal.articles].sort((a,b)=>(b.modified||b.published||'').localeCompare(a.modified||a.published||'')).slice(0,3);
+const newest=[...journal.articles].sort((a,b)=>(b.modified||b.published||'').localeCompare(a.modified||a.published||'')).slice(0,4);
 const newsHTML=newest.map(a=>{
  const date=a.modified||a.published,href=String(a.url||'').replace(/^https:\/\/ptaorg\.com\//,'');
  if(!/^(?:journal\/)?[\w./-]+\.html$/.test(href))throw Error('Unexpected journal URL: '+href);

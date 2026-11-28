@@ -57,8 +57,8 @@ test('topic filter narrows responses by public topic labels',()=>{
 test('same-site links stay inside this site, others fall back to the top page',()=>{
   const {localLink}=appModule.exports;
   assert.equal(localLink('/research/yokohama.html'),'research/yokohama.html');
-  assert.equal(localLink('javascript:alert(1)'),'index.html');
-  assert.equal(localLink('//evil.example/x.html'),'index.html');
+  assert.equal(localLink('javascript:alert(1)'),'/');
+  assert.equal(localLink('//evil.example/x.html'),'/');
 });
 test('dates are normalized to YYYY-MM-DD where the source is numeric',()=>{
   const {fmtDate}=appModule.exports;

@@ -25,9 +25,9 @@ test('statistics and latest essays render statically from the source datasets',(
  const m=JSON.parse(read('data/research-map-index.json')).municipalities;
  const r=JSON.parse(read('data/board-responses.json')).responses;
  const j=JSON.parse(read('data/journal-index.json')).articles;
- const expected=[m.length,new Set(m.flatMap(x=>(x.schools||[]).map(s=>s.url)).filter(Boolean)).size,r.length,j.length];
+ const expected=[m.length,new Set(m.flatMap(x=>(x.schools||[]).map(s=>s.url)).filter(Boolean)).size,r.length+(read('board-responses.html').match(/<article\b[^>]*\sdata-full-response(?=[\s=>])/g)||[]).length,j.length];
  assert.deepEqual([...read('index.html').matchAll(/<dd><strong>(\d+)<\/strong>/g)].map(x=>Number(x[1])),expected);
- const titles=[...j].sort((a,b)=>(b.modified||b.published||'').localeCompare(a.modified||a.published||'')).slice(0,3);
+ const titles=[...j].sort((a,b)=>(b.modified||b.published||'').localeCompare(a.modified||a.published||'')).slice(0,4);
  for(const item of titles)assert.ok(read('index.html').includes(item.title.replaceAll('&','&amp;')),item.title);
 });
 test('migrated explanations and past entries remain in existing research/about/journal pages',()=>{
