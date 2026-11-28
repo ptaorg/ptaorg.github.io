@@ -92,12 +92,13 @@
     // Normalize only links resolving to the site's root index, never nested archive indexes.
     document.querySelectorAll('a[href]').forEach(a=>{try{const u=new URL(a.getAttribute('href'),location.href);if(u.origin===location.origin&&u.pathname==='/index.html')a.setAttribute('href','/'+u.search+u.hash);}catch{}});
     const btn=document.querySelector('[data-menu-button]');const nav=document.getElementById('global-nav');
-    if(btn&&nav)btn.addEventListener('click',()=>{const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',String(open));});
+    const closeMobile=()=>{if(!btn||!nav||!nav.classList.contains('open'))return false;nav.classList.remove('open');btn.setAttribute('aria-expanded','false');return true;};
+    if(btn&&nav){btn.addEventListener('click',()=>{const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',String(open));});nav.addEventListener('click',e=>{if(e.target.closest('a[href]'))closeMobile();});document.addEventListener('click',e=>{if(!nav.contains(e.target)&&!btn.contains(e.target))closeMobile();});}
     const triggers=[...document.querySelectorAll('.nav-trigger')];
     const closeAll=except=>triggers.forEach(t=>{if(t!==except){t.setAttribute('aria-expanded','false');t.parentElement.classList.remove('is-open');}});
     triggers.forEach(t=>t.addEventListener('click',e=>{e.stopPropagation();const open=t.getAttribute('aria-expanded')!=='true';closeAll(t);t.setAttribute('aria-expanded',String(open));t.parentElement.classList.toggle('is-open',open);}));
     document.addEventListener('click',e=>{if(!e.target.closest('.nav-item'))closeAll();});
-    document.addEventListener('keydown',e=>{if(e.key==='Escape'){const o=triggers.find(t=>t.getAttribute('aria-expanded')==='true');closeAll();if(o)o.focus();}});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'){const o=triggers.find(t=>t.getAttribute('aria-expanded')==='true');closeAll();if(o){o.focus();}else if(closeMobile()&&btn){btn.focus();}}});
     const section=document.body.dataset.section;const cur=section&&document.querySelector(`.nav-trigger[data-nav="${section}"]`);if(cur)cur.classList.add('is-current');
   }
   function fillSelects(){
