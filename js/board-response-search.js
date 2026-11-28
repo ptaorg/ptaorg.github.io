@@ -21,14 +21,15 @@
         const tags = JSON.parse(article.dataset.topics || '[]');
         article.hidden = !!((q && !norm(article.textContent).includes(q)) || (t && !tags.includes(t)) || (s && s !== '追加公開本文'));
         if (!article.hidden) { fullCount++; fullMatches.push(article); }
+        if (article.dataset.resultUrl) article.hidden = true;
       }
       const resultLinks = document.getElementById('board-full-response-results');
       if (resultLinks) {
         resultLinks.replaceChildren();
-        resultLinks.hidden = !active || !fullCount;
+        resultLinks.hidden = !active;
         for (const article of fullMatches) {
           const link = document.createElement('a');
-          link.href = '#' + article.id;
+          link.href = article.dataset.resultUrl || ('#' + article.id);
           link.textContent = article.querySelector('h3').textContent + '：回答全文';
           resultLinks.appendChild(link); resultLinks.appendChild(document.createElement('br'));
         }
@@ -36,14 +37,28 @@
       for (const article of supplement) {
         const topics = JSON.parse(article.dataset.topics);
         article.hidden = !!((q && !norm(article.textContent).includes(q)) || (t && !topics.includes(t)) || (s && article.dataset.status !== s));
-        if (!article.hidden) newer++;
+        if (!article.hidden) {
+          newer++;
+          if (active && resultLinks) {
+            const link = document.createElement('a'); link.href = '#' + article.id;
+            link.textContent = article.querySelector('h3').textContent + '：追加記録';
+            resultLinks.appendChild(link); resultLinks.appendChild(document.createElement('br'));
+          }
+        }
       }
       const shownNames = new Set();
       oldItems.forEach((article, i) => {
         const d = old.find(d => String(d.no) === article.id.replace('ans-', '')) || old[i] || {}, m = municipalities.find(m => m.municipality === d.municipality) || {};
         const tags = (m.usefulTags || []).map(t => t.label);
         article.hidden = !!((q && !norm([d.municipality,d.prefecture,d.body,...tags].join(' ')).includes(q)) || (t && !tags.includes(t)) || (s && s !== '従来公開本文'));
-        if (!article.hidden) { legacy++; shownNames.add(d.municipality); }
+        if (!article.hidden) {
+          legacy++; shownNames.add(d.municipality);
+          if (active && resultLinks) {
+            const link = document.createElement('a'); link.href = '#' + article.id;
+            link.textContent = d.municipality + '：回答全文';
+            resultLinks.appendChild(link); resultLinks.appendChild(document.createElement('br'));
+          }
+        }
       });
       for (const a of document.querySelectorAll('.muni-link')) a.parentElement.hidden = !shownNames.has(a.textContent.replace(/\d+件$/, ''));
       for (const section of document.querySelectorAll('.prefecture-group,.region-block')) section.hidden = ![...section.querySelectorAll('.muni-link')].some(a => !a.parentElement.hidden);
@@ -51,6 +66,8 @@
       for (const section of document.querySelectorAll('.response-trends-section,.dataset-scope-section,.map-section')) section.hidden = active;
       document.getElementById('board-query-status').textContent = '追補 ' + newer + '件 ／ 従来公開本文 ' + legacy + '件 ／ 追加公開本文 ' + fullCount + '件（資料区分別の表示件数）';
       document.getElementById('board-query-empty').hidden = newer + legacy + fullCount > 0;
+      if (resultLinks) resultLinks.hidden = !active || newer + legacy + fullCount === 0;
+      const latest = document.querySelector('.response-latest'); if (latest) latest.hidden = active;
       const params = new URLSearchParams(location.search);
       for (const [key,value] of [['boardQuery',query.value],['boardTopic',t],['boardStatus',s]]) value ? params.set(key,value) : params.delete(key);
       history.replaceState(null,'',location.pathname + (params.size ? '?' + params : '') + location.hash);
