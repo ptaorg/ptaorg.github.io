@@ -289,7 +289,7 @@
     const isPref=m.name===m.prefecture;document.title=`${m.name}｜自治体別調査｜PTA適正化推進委員会`;
     const resp=responsesFor(m);const schools=m.schools||[];const sources=m.sources||[];const articles=m.articles||[];const legal=m.legal||[];
     const primary=sources.filter(s=>s.kind==='primary');const writings=[...new Map([...articles,...sources.filter(s=>s.kind==='article')].map(a=>[a.url,a])).values()];
-    const lead=m.summary?'任意加入、会費徴収、個人情報の取扱いについて、教育委員会の通知・回答と学校の資料を整理し、関連する分析とともに掲載しています。':'学校別資料の索引を登録しています。この地域の研究ノートはまだ作成していません。';
+    const lead=m.summary?'任意加入、会費徴収、個人情報の取扱いについて、教育委員会の通知・回答と学校の資料を整理し、関連する分析とともに掲載しています。':'学校別の資料索引を掲載しています。';
     const stat=(ic,lab,n,href)=>`<a class="stat-tile" href="${href}">${icon(ic)}<span><small>${lab}</small><strong>${n}<em>件</em></strong></span></a>`;
     const srcRow=(s,kind)=>{const href=esc(s.url&&s.url.startsWith('http')?safeSourceLink(s.url):localLink(s.url));const pdf=/\.pdf$/i.test(s.url||'');
       return `<li class="doc-row"><span class="doc-kind">${label(kind==='response'?'回答':pdf?'PDF':kind==='primary'?'原資料':'論考',kind==='response'?'response':kind==='primary'?'primary':'analysis')}</span><div class="doc-main"><a href="${href}">${esc(s.title)}</a><div class="meta">${s.date?`<span>${icon('calendar')}${esc(fmtDate(s.date))}</span>`:''}${s.publisher?`<span>${esc(s.publisher)}</span>`:''}${s.topics?s.topics.slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join(''):''}</div></div><a class="doc-open" href="${href}">${pdf?'PDFを開く':'原文を見る'}${icon('out')}</a></li>`;};
@@ -314,7 +314,7 @@
         <div class="detail-main">
           <section class="detail-section" id="overview"><h2>${icon('list')}調査の概要</h2>
             ${(m.summary||[]).map(t=>`<p>${esc(t)}</p>`).join('')||'<p>この地域は学校別資料の索引のみを登録しています。教育委員会の回答や研究ノートが登録された時点で、ここに概要を掲載します。</p>'}
-            <div class="municipality-overview"><section><h3>行政回答の登録状況</h3><p>${resp.length?`公開索引に${resp.length}件を登録しています。`:'現在の索引に公開済み回答の登録はありません。未回答を意味するものではありません。'} <a href="#responses">回答・原資料を確認する</a></p></section><section><h3>未確認事項</h3>${(m.unknowns||[]).length?`<ul>${m.unknowns.map(u=>`<li>${esc(u)}</li>`).join('')}</ul>`:'<p>この索引には未確認事項の記載がありません。</p>'}</section></div>
+            <div class="municipality-overview"><section><h3>行政回答の登録状況</h3><p>${resp.length?`公開索引に${resp.length}件を登録しています。`:'公開済み回答の登録は0件です。'} <a href="#responses">回答・原資料を確認する</a></p></section><section><h3>未確認事項</h3>${(m.unknowns||[]).length?`<ul>${m.unknowns.map(u=>`<li>${esc(u)}</li>`).join('')}</ul>`:'<p>未確認事項の記録は未登録です。</p>'}</section></div>
             
             ${(m.themes||[]).length?`<div class="theme-row"><span>主な論点</span>${m.themes.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div>`:''}
             ${(m.system||[]).length?`<h3>制度の整理</h3>${m.system.map(t=>`<p>${esc(t)}</p>`).join('')}`:''}
@@ -322,11 +322,11 @@
           </section>
           <section class="detail-section" id="responses"><div class="section-head"><h2>${icon('list')}行政回答・原資料</h2>${resp.length?`<a class="more-link" href="explore.html?tab=response&q=${encodeURIComponent(m.name)}">一覧を見る${icon('chevron')}</a>`:''}</div>
             <p class="section-lead">${esc(m.name)}教育委員会の回答・通知と、PTAの取扱いに関する原資料です。</p>
-            ${respRows||primRows?`<ul class="doc-list">${respRows}${primRows}</ul>`:'<p class="empty-line">現在の索引には、この地域の公開済み回答・原資料が登録されていません。存在しないことを意味するものではありません。</p>'}
+            ${respRows||primRows?`<ul class="doc-list">${respRows}${primRows}</ul>`:'<p class="empty-line">公開済み回答・原資料は索引に未登録です。</p>'}
           </section>
           <section class="detail-section" id="schools"><div class="section-head"><h2>${icon('folder')}学校別資料</h2>${schools.length?`<a class="more-link" href="explore.html?tab=school&q=${encodeURIComponent(m.name)}">一覧を見る${icon('chevron')}</a>`:''}</div>
             <p class="section-lead">${esc(m.name)}内の学校におけるPTAの規約・案内・会費等の資料の登録状況です。</p>
-            ${schools.length?`<div class="table-wrap"><table class="index-table"><thead><tr><th scope="col">学校名</th><th scope="col">種別</th><th scope="col">文書</th><th scope="col">状況</th></tr></thead><tbody>${schoolRows}</tbody></table></div>${schools.length>SHOW?`<button class="button button-secondary" type="button" data-show-all>すべて表示（${schools.length}校）</button>`:''}`:`<a class="row-link" href="explore.html?tab=school&pref=${encodeURIComponent(m.prefecture)}">${icon('folder')}<strong>学校資料の掲載一覧（0件）</strong><span>${esc(m.prefecture)}の学校資料を探す</span>${icon('chevron')}</a>`}
+            ${schools.length?`<div class="table-wrap"><table class="index-table"><thead><tr><th scope="col">学校名</th><th scope="col">種別</th><th scope="col">登録文書</th><th scope="col">資料の確認状況</th></tr></thead><tbody>${schoolRows}</tbody></table></div>${schools.length>SHOW?`<button class="button button-secondary" type="button" data-show-all>すべて表示（${schools.length}校）</button>`:''}`:`<a class="row-link" href="explore.html?tab=school&pref=${encodeURIComponent(m.prefecture)}">${icon('folder')}<strong>学校資料の索引：0校</strong><span>${esc(m.prefecture)}の学校資料を探す</span>${icon('chevron')}</a>`}
           </section>
           <section class="detail-section" id="analysis"><h2>${icon('scale')}関連する法的分析</h2>
             ${legal.length?`<ol class="analysis-list">${legal.map(l=>`<li><strong>${esc(l.title)}</strong><p>${esc(l.text)}</p></li>`).join('')}</ol>`:''}
@@ -375,7 +375,7 @@
       <div class="detail-main">
         <section class="detail-section"><h2>${icon('folder')}登録文書（${docs.length}件）</h2>
           <ul class="doc-list">${docs.map(d=>{const st=status(d);return `<li class="doc-row"><span class="doc-kind">${label(/\.pdf$/i.test(d.title||'')?'PDF':/\.(m4a|mp3|wav)$/i.test(d.title||'')?'音声':'文書','primary')}</span><div class="doc-main"><strong>${esc(d.title||'資料名未確認')}</strong></div>${label(st,st==='公開前確認中'?'caution':'')}</li>`;}).join('')||'<li class="empty-line">登録文書はありません。</li>'}</ul>
-          <div class="notice notice-caution"><strong>状況表示の意味</strong><p>文書の登録、原本の公開、内容の確認、法的評価は別の段階です。「公開前確認中」の原本は、このサイトではリンクを作成しません。この画面は登録情報を示すもので、適法・違法を判断するものではありません。</p></div>
+          <div class="notice notice-caution"><strong>状況表示の意味</strong><p>この一覧は文書の登録状況を示します。原本・内容の確認結果と当委員会の法的評価は学校別資料ページに掲載します。「公開前確認中」の原本へのリンクは掲載していません。</p></div>
         </section>
       </div>
       <aside class="detail-side">
