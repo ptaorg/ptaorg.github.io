@@ -10,7 +10,7 @@ const legacy=read('support.html');
 const css=read('css/pages/support-donation.css');
 const layout=read('css/pages/contact-unified.css');
 const main=page.slice(page.indexOf('<main id="main"'),page.indexOf('</main>')+7);
-const paypay='https://qr.paypay.ne.jp/p2p01_fwdAWb93QZWdQp8j';
+const paypay='https://qr.paypay.ne.jp/p2p01_CaF9SXzYMUBn5Dt3';
 
 test('unified contact layout keeps information provision first and payment alongside it',()=>{
   assert.match(main,/class="unified-grid"/);
