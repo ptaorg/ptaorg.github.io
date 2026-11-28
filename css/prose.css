@@ -5,11 +5,11 @@
  */
 
 .legacy[data-content-mode="prose"] {
-  --prose-ink: var(--c-caution);
-  --prose-muted: var(--c-caution);
-  --prose-line: var(--c-caution-bg);
-  --prose-navy: var(--c-caution);
-  background-color: var(--c-caution-bg);
+  --prose-ink: var(--ink);
+  --prose-muted: var(--ink-sub);
+  --prose-line: var(--line);
+  --prose-navy: var(--navy-deep);
+  background-color: var(--paper);
   color: var(--prose-ink);
 }
 
@@ -364,7 +364,7 @@
   border: 1px solid var(--c-caution);
   border-left: 3px solid var(--prose-highlight-gold, var(--c-caution));
   border-radius: var(--radius-sm);
-  background: var(--prose-navy, var(--c-caution));
+  background: var(--prose-navy, var(--navy-deep));
   color: var(--c-caution-bg) !important;
   box-shadow: var(--shadow);
   font-size: clamp(var(--fs-body), 1.35vw, var(--fs-h3));
