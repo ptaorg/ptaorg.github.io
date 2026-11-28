@@ -1472,3 +1472,15 @@ body[data-page="home"] #boundary .home-boundary-more{
 .site-footer .footer-col a:focus-visible{outline-color:var(--paper)}
 .site-header .nav-panel a:focus-visible{outline-offset:-3px}
 @media (prefers-reduced-motion:reduce){.site-header *, .site-footer *{scroll-behavior:auto!important;animation:none!important}}
+
+/* Compact header and accessible navigation at narrow viewport widths. */
+@media(max-width:420px){
+ .site-header .header-inner{gap:6px;min-width:0}
+ .site-header .header-inner>.brand{flex:1 1 auto;min-width:0;gap:5px}
+ .site-header .brand-type>strong{font-size:clamp(.72rem,3.5vw,.875rem);white-space:nowrap}
+ .site-header .brand-mark{flex:0 0 26px;width:26px;height:25px}
+ .site-header .menu-button{padding:7px 8px;gap:4px;font-size:.76rem;min-height:40px}
+ .site-header .global-nav{max-width:100%;box-sizing:border-box}
+ .site-header .nav-panel{max-width:100%;overflow-wrap:anywhere}
+}
+.site-header :is(button,a):focus-visible{outline:2px solid #9a783b;outline-offset:3px}
