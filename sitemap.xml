@@ -3709,7 +3709,7 @@
   </url>
   <url>
     <loc>https://ptaorg.com/board-responses.html</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -4789,7 +4789,19 @@
 <url><loc>https://ptaorg.com/yokohama-pta-fee-20261102.html</loc><lastmod>2026-11-19</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url>
     <loc>https://ptaorg.com/nishinomiya-pta-privacy-20261119.html</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/board-responses/nishinomiya-20261019.html</loc>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ptaorg.com/board-responses/nishinomiya-20261020-materials.html</loc>
+    <lastmod>2026-11-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
