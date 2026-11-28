@@ -17,7 +17,7 @@
   const SITE = 'https://ptaorg.com';
   const ROOT = (typeof document!=='undefined'&&document.body&&document.body.dataset.root)||'';
   // same-site paths stay inside this site (relative to the page)
-  const localLink = p => {if(typeof p!=='string')return ROOT+'index.html';const q=p.replace(/^https?:\/\/(?:www\.)?ptaorg\.(?:com|github\.io)/,'');return /^\/(?:archive|research|journal|board-responses|assets\/docs|assets\/documents)\/[\w./%-]+(?:\.html|\.pdf|\/)$/.test(q)?ROOT+q.slice(1):ROOT+'index.html';};
+  const localLink = p => {if(typeof p!=='string'||!p.trim())return ROOT+'index.html';const q=p.trim().replace(/^https?:\/\/(?:www\.)?ptaorg\.(?:com|github\.io)(?=\/|$)/i,'');const m=q.match(/^\/?((?:[\w.%~-]+\/)*(?:[\w.%~-]+\.(?:html|pdf)|)?)(\?[^#\s]*)?(#[^\s]*)?$/i);if(!m||q.startsWith('//')||/%(?:2f|5c|00|2e)/i.test(m[1])||m[1].split('/').some(v=>v==='.'||v==='..'))return ROOT+'index.html';return ROOT+(m[1]||'index.html')+(m[2]||'')+(m[3]||'');};
   const schoolLink = p => `school.html?url=${encodeURIComponent(p)}`;
   const regionLink = id => {const m=data.map.municipalities.find(region=>region.id===id);return m?.status==='published-research'&&m.url?localLink(m.url):`municipality.html?id=${encodeURIComponent(id)}`;};
   function safeSourceLink(url){try{const x=new URL(url,SITE);return x.origin===SITE?ROOT+(x.pathname.slice(1)||'index.html')+x.hash:ROOT+'board-responses.html';}catch{return ROOT+'board-responses.html';}}
@@ -36,7 +36,7 @@
     return {map,responses,journal,demo:needDemo};
   }
   const allSchools = () => data.map.municipalities.flatMap(m=>(m.schools||[]).map(s=>({...s,regionId:m.id,regionName:m.name,regionPrefecture:m.prefecture})));
-  const prefsWithData = () => [...new Set([...data.map.municipalities.map(m=>m.prefecture),...sitePages().map(p=>p.prefecture).filter(Boolean)])];
+  const prefsWithData = () => [...new Set([...data.map.municipalities.map(m=>m.prefecture),...(data.responses.responses||[]).map(r=>r.prefecture),...sitePages().map(p=>p.prefecture).filter(Boolean)])];
   const status = doc => String(doc?.status||'確認状況未記載');
   const schoolStatus = s => {const st=(s.documents||[]).map(status);return st.includes('公開前確認中')?'公開前確認中':st[0]||'未確認';};
   const topicById = id => TOPICS.find(t=>t.id===id);
@@ -63,7 +63,7 @@
     return [...records.values()];
   };
   const has = (parts,q) => parts.some(x=>normalize(x).includes(q));
-  function matchedRecords({query='',prefecture='',schoolType='',topic=''}){
+  function matchedRecords({query='',prefecture='',schoolType='',topic='',includePages=false}){
     const q=normalize(query);const t=topicById(topic);
     const themeHit=m=>!t||(m.themes||[]).some(x=>t.themes.includes(x));
     const municipalities=data.map.municipalities.filter(m=>(!prefecture||m.prefecture===prefecture)&&!schoolType&&themeHit(m)&&(!q||has([m.name,m.prefecture,`${m.prefecture}${m.name}`,...(m.aliases||[]),...(m.themes||[])],q)));
@@ -81,7 +81,7 @@
       // Metadata only; the full answer text is read on the canonical page.
       return !q||has([r.municipality,r.prefecture,...(r.topics||[]),r.date],q);
     });
-    const pages=schoolType||(!q&&!prefecture&&!t)?[]:sitePages().filter(p=>(!prefecture||p.prefecture===prefecture)&&(!t||(p.topics||[]).includes(t.id))&&(!q||has([p.title,p.desc,p.prefecture,p.municipality],q)));
+    const pages=schoolType||(!includePages&&!q&&!prefecture&&!t)?[]:sitePages().filter(p=>(!prefecture||p.prefecture===prefecture)&&(!t||(p.topics||[]).includes(t.id))&&(!q||has([p.title,p.desc,p.prefecture,p.municipality],q)));
     return {municipalities,schools,responses,pages};
   }
 
@@ -234,7 +234,7 @@
     return `<article class="result-row"><span class="row-icon">${icon('doc')}</span><div class="row-body">${label('教育委員会の回答','response')}<h3><a href="${href}">${esc(respTitle(r))}</a></h3><div class="meta"><span>${icon('calendar')}${esc(fmtDate(r.date)||'日付記載なし')}</span>${r.typeLabel?`<span>${esc(r.typeLabel.replace(/^[A-Z]:/,''))}</span>`:''}</div><div class="tag-row">${(r.topics||[]).slice(0,4).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div></div><a class="row-go" href="${href}" aria-label="${esc(r.municipality)}の回答原文">${icon('out')}</a></article>`;
   }
   function rowPage(p){
-    const href=esc(p.url.replace(/^\//,''));
+    const href=esc(localLink(p.url));
     return `<article class="result-row"><span class="row-icon">${icon('book')}</span><div class="row-body">${label('ページ','analysis')}<h3><a href="${href}">${esc(p.title)}</a></h3><p>${esc(p.desc)}</p></div><a class="row-go" href="${href}" aria-label="${esc(p.title)}">${icon('chevron')}</a></article>`;
   }
   function renderExplorer(){
@@ -246,7 +246,7 @@
     let active=u.searchParams.get('tab')||'all';if(!['all','municipality','school','response','page'].includes(active))active='all';let max=30;
     const sync=()=>{const p=new URLSearchParams();if(q.value.trim())p.set('q',q.value.trim());if(pref.value)p.set('pref',pref.value);if(topic.value)p.set('topic',topic.value);if(type.value)p.set('type',type.value);if(active!=='all')p.set('tab',active);history.replaceState(null,'',`explore.html${p.toString()?'?'+p:''}`);};
     function draw(){
-      sync();const r=matchedRecords({query:q.value,prefecture:pref.value,schoolType:type.value,topic:topic.value});
+      sync();const r=matchedRecords({query:q.value,prefecture:pref.value,schoolType:type.value,topic:topic.value,includePages:true});
       const c={municipality:r.municipalities.length,school:r.schools.length,response:r.responses.length,page:r.pages.length};c.all=c.municipality+c.school+c.response+c.page;
       Object.entries(c).forEach(([k,n])=>{document.getElementById('count-'+k).textContent=n.toLocaleString('ja-JP');});
       tabs.forEach(t=>{const on=t.dataset.tab===active;t.setAttribute('aria-selected',String(on));t.classList.toggle('is-active',on);});
