@@ -128,7 +128,7 @@ def map_block(map_info):
 
 
 def hero_html(*, prefix, crumbs, label, tb, map_info, date='', image=True):
-    crumb = f'<li><a href="{prefix}index.html">トップ</a></li>'
+    crumb = '<li><a href="/">トップ</a></li>'
     for lab, href in crumbs[:-1]:
         crumb += f'<li><a href="{prefix}{href}">{E(lab)}</a></li>' if href else f'<li>{E(lab)}</li>'
     crumb += f'<li aria-current="page">{E(crumbs[-1][0])}</li>'
