@@ -206,13 +206,22 @@
     renderBodies();
     function revealResponse() {
       const id = location.hash.slice(1);
-      if (!/^ans-\d+$/.test(id)) return;
+      if (!id) return;
       const item = document.getElementById(id);
+      if (!item || !item.matches('.response-item')) return;
       const details = item && item.querySelector('details');
       if (details) details.open = true;
     }
     revealResponse();
     window.addEventListener('hashchange', revealResponse);
+    document.addEventListener('click', function (event) {
+      const link = event.target.closest('a[href^="#"]');
+      if (!link) return;
+      const item = document.getElementById(link.hash.slice(1));
+      if (!item || !item.matches('.response-item')) return;
+      const details = item.querySelector('details');
+      if (details) details.open = true;
+    });
     renderExcluded();
     initMainMap();
     initRegionMaps();
