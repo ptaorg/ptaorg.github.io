@@ -20,7 +20,7 @@
 <meta name="twitter:title" content="全国の資料を探す｜PTA適正化推進委員会">
 <meta name="twitter:description" content="学校名、自治体名、論点から、全国のPTA関連資料・自治体研究・教育委員会回答を横断検索。">
 <meta name="twitter:image" content="https://ptaorg.com/assets/og-image.png">
-</head>
+<style>.explore-related{margin:36px 0;padding:20px 0;border-top:1px solid #d8e0e7}.explore-related h2{font-size:1.25rem;color:#17324f}.explore-filter-details summary{cursor:pointer;font-weight:700;color:#17324f;line-height:1.5;margin-bottom:12px}.explore-filter-details summary:focus-visible{outline:2px solid #9a783b;outline-offset:4px}.explore-filter-details:not([open]) .search-filters{display:none!important}@media(max-width:760px){body[data-page] #main .page-head{padding-block:12px!important;margin-bottom:12px!important}#main .page-head h1{font-size:clamp(1.6rem,6vw,2rem);line-height:1.4;margin-block:8px}#main .page-head .page-lead{font-size:.92rem;line-height:1.65;margin-bottom:8px}#main .page-head .data-note{font-size:.78rem;line-height:1.5;margin:8px 0}#main .search-panel-compact{margin-block:12px!important}#main .archive-type-tabs{display:flex;flex-wrap:nowrap;overflow-x:auto;max-width:100%;gap:6px;margin:12px 0!important;scrollbar-width:thin}#main .archive-type-tabs .tab{flex:0 0 auto;white-space:nowrap;font-size:.82rem;padding:9px 10px}#main .explore-grid{display:flex!important;flex-direction:column!important;gap:12px!important}#main .archive-filter-rail{position:static!important;width:100%;padding:10px 12px!important;min-height:0!important;order:0}#main .results-section{order:1;min-width:0;width:100%}#main .explore-map{order:2;min-width:0;width:100%}#main .explore-filter-details summary{margin:0;font-size:.9rem}#main .explore-filter-details[open] .search-filters{margin-top:12px}#main .results-head{margin-block:0 8px!important}#main .search-panel-side{display:flex;flex-wrap:wrap;gap:10px}#main .search-field input{min-width:0;font-size:16px}#main .search-field button{flex-shrink:0}#main .result-row{min-width:0;overflow-wrap:anywhere}}</style><script defer src="js/explore-compact.js?v=20261128"></script></head>
 <body data-page="explore" data-section="regions">
   <a class="skip-link" href="#main">本文へ移動</a>
 <!-- chrome:header -->
@@ -108,13 +108,11 @@
         <p class="data-note" id="data-note" role="status">データを読み込んでいます…</p>
       </header>
 
-      <p class="data-note"><strong>大崎市・全25校の評価書を公開：</strong><a href="research/osaki.html#schools">市内25校の学校別評価書一覧</a> ／ <a href="research/osaki-documents.html">入会・退会・同意書等250記録</a> ／ <a href="research/osaki-membership-causation.html">加入意思・会費請求の検証</a> ／ <a href="archive/osaki/tajiri-jhs/">田尻中学校</a>。学校徴収金、任意加入、役員選出、学校とPTAの事務分離を固定12軸で確認できます。</p>
-
-      <p class="data-note">調査資料の読み方：<a href="pta-evaluation-method.html">全国PTA実態調査の固定12評価軸・権利と尊厳・責任主体の評価基準</a>を公開しています。</p>
+      
 
       <form class="search-panel search-panel-compact" id="explore-form" role="search">
         <div class="search-panel-body">
-          <div class="search-field"><label class="sr-only" for="query">キーワード</label><svg aria-hidden="true"><use href="#i-search"/></svg><input type="search" id="query" placeholder="学校名・自治体名・論点（例：安行小学校、川口市、みなし加入）" autocomplete="off"><button type="submit">検索</button></div>
+          <div class="search-field"><label class="sr-only" for="query">キーワード</label><svg aria-hidden="true"><use href="#i-search"/></svg><input type="search" id="query" placeholder="自治体名・学校名・回答本文・論点" autocomplete="off"><button type="submit">検索</button></div>
           
         </div>
         <div class="search-panel-side"><button class="link-button" id="clear-filters" type="button">条件を解除</button><button class="link-button" id="copy-url" type="button">検索条件をコピー</button></div>
@@ -129,11 +127,11 @@
       </div>
 
       <div class="explore-grid">
-<aside class="archive-filter-rail" aria-label="検索条件の絞り込み"><h2>絞り込み</h2><p>地域・論点・学校種別</p><div class="search-filters">
+<aside class="archive-filter-rail" aria-label="検索条件の絞り込み"><details class="explore-filter-details" open><summary>地域・論点・学校種別で絞り込む</summary><div class="search-filters">
             <label>対象地域<select id="prefecture"><option value="">全国</option></select></label>
             <label>論点<select id="topic" data-topic-select><option value="">すべて</option></select></label>
             <label>学校種別<select id="school-type"><option value="">すべて</option><option value="小学校">小学校</option><option value="中学校">中学校</option><option value="義務教育学校">義務教育学校</option><option value="特別支援学校">特別支援学校</option><option value="高等学校">高等学校</option></select></label>
-          </div></aside>
+          </div></details></aside>
       <section class="results-section" aria-labelledby="result-title">
         <div class="results-head"><h2 id="result-title">検索結果</h2><span class="result-count" id="result-count" aria-live="polite">読み込み中</span></div>
         <div id="results" class="result-list" aria-live="polite"></div>
@@ -146,7 +144,9 @@
           <p class="map-note">ピンは自治体の概略位置です。押すとその資料へ移動します。</p>
         </section>
       </aside>
-      </div>
+      </div><aside class="explore-related" aria-label="関連調査"><h2>関連調査・資料</h2><p class="data-note"><strong>大崎市・全25校の評価書を公開：</strong><a href="research/osaki.html#schools">市内25校の学校別評価書一覧</a> ／ <a href="research/osaki-documents.html">入会・退会・同意書等250記録</a> ／ <a href="research/osaki-membership-causation.html">加入意思・会費請求の検証</a> ／ <a href="archive/osaki/tajiri-jhs/">田尻中学校</a>。学校徴収金、任意加入、役員選出、学校とPTAの事務分離を固定12軸で確認できます。</p>
+
+      <p class="data-note">調査資料の読み方：<a href="pta-evaluation-method.html">全国PTA実態調査の固定12評価軸・権利と尊厳・責任主体の評価基準</a>を公開しています。</p></aside>
     </div>
   </main>
 <!-- chrome:footer -->
