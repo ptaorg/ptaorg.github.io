@@ -147,6 +147,7 @@ body[data-page="home"] .hero-search-shell .home-search .search-panel :is(a,butto
   color: #fff !important;
 }
 </style>
+<style id="home-heading-rhythm">.home-search-heading{font-size:1.125rem;line-height:1.5;margin:0 0 4px}.muni-alerts .muni-alert-place{font-size:1.35rem}</style>
 </head>
 <body data-page="home" data-section="">
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -245,11 +246,11 @@ body[data-page="home"] .hero-search-shell .home-search .search-panel :is(a,butto
 
 
 <div class="container hero-search-shell"><div class="home-search"><form class="search-panel" action="explore.html" method="get" role="search" data-search-panel>
-        <div class="search-panel-title"><svg aria-hidden="true"><use href="#i-search"/></svg><div><h3>資料・記録を検索する</h3><p>全国の調査・通知・回答・<br class="pc-only">学校資料を横断検索できます。</p></div></div>
+        <div class="search-panel-title"><svg aria-hidden="true"><use href="#i-search"/></svg><div><h2 class="home-search-heading">資料・記録を検索する</h2><p>全国の調査・通知・回答・<br class="pc-only">学校資料を横断検索できます。</p></div></div>
         <div class="search-panel-body">
           <div class="search-field"><label class="sr-only" for="home-q">キーワード</label><svg aria-hidden="true"><use href="#i-search"/></svg><input type="search" id="home-q" name="q" placeholder="例：横浜市、学校徴収、個人情報、教育委員会回答" autocomplete="off"><button type="submit">検索</button></div>
           <div class="search-filters">
-            <label>資料種別<select name="tab"><option value="">すべての資料</option><option value="municipality">自治体の調査</option><option value="school">学校の資料</option><option value="response">教育委員会の回答</option></select></label>
+            <label>資料種別<select name="tab"><option value="">すべての資料</option><option value="municipality">自治体の調査</option><option value="school">学校の資料</option><option value="response">教育委員会の回答</option><option value="page">解説・論考ページ</option></select></label>
             <label>対象地域<select name="pref" data-pref-select><option value="">全国</option></select></label>
             <label>論点<select name="topic" data-topic-select><option value="">すべて</option></select></label>
           </div>
@@ -260,17 +261,17 @@ body[data-page="home"] .hero-search-shell .home-search .search-panel :is(a,butto
 <div class="container muni-alerts-inner">
 <h2 class="muni-alerts-heading">行政の判断と制度の転換</h2>
 <article class="muni-alert-card" aria-labelledby="muni-yokohama-title">
-<h2 class="muni-alert-place" id="muni-yokohama-title">横浜市</h2>
+<h3 class="muni-alert-place" id="muni-yokohama-title">横浜市</h3>
 <div class="muni-alert-copy"><p class="muni-alert-kicker">教育委員会｜2026年11月2日回答</p><p class="muni-alert-head">準公金規程は学校の徴収権限を創設しない</p><p class="muni-alert-desc">PTA自身による会費徴収への移行を通知</p></div>
 <a class="muni-alert-link" href="yokohama-pta-fee-20261102.html" aria-label="横浜市教育委員会の回答全文と解説を読む">回答全文を見る <span aria-hidden="true">→</span></a>
 </article>
 <article class="muni-alert-card" aria-labelledby="muni-shimosuwa-title">
-<h2 class="muni-alert-place" id="muni-shimosuwa-title">下諏訪町</h2>
+<h3 class="muni-alert-place" id="muni-shimosuwa-title">下諏訪町</h3>
 <div class="muni-alert-copy"><p class="muni-alert-kicker">教育委員会｜2026年11月18日最終回答</p><p class="muni-alert-head">本人同意と学校の事務権限は別問題</p><p class="muni-alert-head"><strong>学校からPTAへの個人情報提供は「臨時的」に限定</strong></p><p class="muni-alert-desc">学校保有の個人情報をPTAの役員選出に利用・提供しない方針を明示。</p></div>
 <a class="muni-alert-link" href="shimosuwa-pta-20261118.html" aria-label="下諏訪町PTA問題の記録と教育委員会の最終回答を読む">経緯と回答を見る <span aria-hidden="true">→</span></a>
 </article>
 <article class="muni-alert-card" aria-labelledby="muni-nishinomiya-title">
-<h2 class="muni-alert-place" id="muni-nishinomiya-title">西宮市</h2>
+<h3 class="muni-alert-place" id="muni-nishinomiya-title">西宮市</h3>
 <div class="muni-alert-copy"><p class="muni-alert-kicker">教育委員会｜PTA運営指針・個人情報保護</p><p class="muni-alert-head">入会届による意思確認とPTA自身による情報取得</p><p class="muni-alert-desc">学校からPTAへの個人情報の目的外提供は、臨時的でない場合には認めない。</p></div>
 <a class="muni-alert-link" href="nishinomiya-pta-privacy-20261119.html" aria-label="西宮市教育委員会のPTA運営指針と個人情報提供の分析を読む">指針と分析を見る <span aria-hidden="true">→</span></a>
 </article>
