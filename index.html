@@ -148,7 +148,7 @@ body[data-page="home"] .hero-search-shell .home-search .search-panel :is(a,butto
 }
 </style>
 <style id="home-heading-rhythm">.home-search-heading{font-size:1.125rem;line-height:1.5;margin:0 0 4px}.muni-alerts .muni-alert-place{font-size:1.35rem}</style>
-</head>
+<style id="home-editorial-priority">body[data-page="home"] .muni-alerts{margin:0 0 clamp(22px,3vw,40px);padding:clamp(20px,3vw,34px) 0}.muni-alert-card .muni-alert-link+.muni-alert-link{min-height:28px}.muni-alert-card .muni-alert-link:focus-visible{outline:2px solid #9a783b;outline-offset:3px}body[data-page="home"] .hero-search-shell .home-search .search-panel{box-shadow:none!important;border-radius:5px}body[data-page="home"] .hero .hero-actions .button-primary{background:#17324f;color:#fff;border-color:#17324f}body[data-page="home"] .hero .hero-actions .button-primary:hover,body[data-page="home"] .hero .hero-actions .button-primary:focus-visible{background:#0e263d;color:#fff}body[data-page="home"] .hero .hero-actions .button-secondary{color:#17324f;background:#fff;border:1px solid #17324f}body[data-page="home"] .hero .hero-actions .button-secondary:hover,body[data-page="home"] .hero .hero-actions .button-secondary:focus-visible{background:#e9eff5;color:#17324f}@media(max-width:760px){body[data-page="home"] .hero{min-height:0!important;padding:20px 0!important}body[data-page="home"] .hero-inner{padding-block:8px!important}body[data-page="home"] .hero-photo{display:none!important}body[data-page="home"] .hero h1{font-size:clamp(1.7rem,7vw,2.15rem)!important;line-height:1.42}body[data-page="home"] .hero-lead{font-size:.91rem;line-height:1.65}body[data-page="home"] .hero-actions{gap:8px;margin-top:14px}body[data-page="home"] .hero-actions .button{min-height:40px;padding:8px 12px;font-size:.84rem}.muni-alerts .muni-alert-card{padding:14px 0;gap:5px}.muni-alerts-heading{font-size:1.28rem;margin-bottom:8px}.muni-alert-kicker{margin-bottom:5px}.muni-alert-head{margin-bottom:4px}.muni-alert-link{min-height:36px}.hero-search-shell .home-search .search-panel .search-panel-title p{display:none}.hero-search-shell .home-search .search-panel .search-filters{display:none!important}.hero-search-shell .home-search .search-panel .search-field input{font-size:16px;min-width:0}.hero-search-shell .home-search .search-panel .search-field button{flex-shrink:0}}</style></head>
 <body data-page="home" data-section="">
   <a class="skip-link" href="#main">本文へ移動</a>
 <!-- chrome:header -->
@@ -245,18 +245,6 @@ body[data-page="home"] .hero-search-shell .home-search .search-panel :is(a,butto
     </section>
 
 
-<div class="container hero-search-shell"><div class="home-search"><form class="search-panel" action="explore.html" method="get" role="search" data-search-panel>
-        <div class="search-panel-title"><svg aria-hidden="true"><use href="#i-search"/></svg><div><h2 class="home-search-heading">資料・記録を検索する</h2><p>全国の調査・通知・回答・<br class="pc-only">学校資料を横断検索できます。</p></div></div>
-        <div class="search-panel-body">
-          <div class="search-field"><label class="sr-only" for="home-q">キーワード</label><svg aria-hidden="true"><use href="#i-search"/></svg><input type="search" id="home-q" name="q" placeholder="例：横浜市、学校徴収、個人情報、教育委員会回答" autocomplete="off"><button type="submit">検索</button></div>
-          <div class="search-filters">
-            <label>資料種別<select name="tab"><option value="">すべての資料</option><option value="municipality">自治体の調査</option><option value="school">学校の資料</option><option value="response">教育委員会の回答</option><option value="page">解説・論考ページ</option></select></label>
-            <label>対象地域<select name="pref" data-pref-select><option value="">全国</option></select></label>
-            <label>論点<select name="topic" data-topic-select><option value="">すべて</option></select></label>
-          </div>
-        </div>
-        <div class="search-panel-side"><a href="explore.html">詳細検索<svg aria-hidden="true"><use href="#i-chevron"/></svg></a><a href="#map">日本地図から探す<svg aria-hidden="true"><use href="#i-chevron"/></svg></a></div>
-      </form></div></div>
 <section class="muni-alerts" aria-label="重要な自治体行政回答">
 <div class="container muni-alerts-inner">
 <h2 class="muni-alerts-heading">行政の判断と制度の転換</h2>
@@ -267,19 +255,32 @@ body[data-page="home"] .hero-search-shell .home-search .search-panel :is(a,butto
 </article>
 <article class="muni-alert-card" aria-labelledby="muni-shimosuwa-title">
 <h3 class="muni-alert-place" id="muni-shimosuwa-title">下諏訪町</h3>
-<div class="muni-alert-copy"><p class="muni-alert-kicker">教育委員会｜2026年11月18日最終回答</p><p class="muni-alert-head">本人同意と学校の事務権限は別問題</p><p class="muni-alert-head"><strong>学校からPTAへの個人情報提供は「臨時的」に限定</strong></p><p class="muni-alert-desc">学校保有の個人情報をPTAの役員選出に利用・提供しない方針を明示。</p></div>
+<div class="muni-alert-copy"><p class="muni-alert-kicker">教育委員会｜2026年11月18日最終回答</p><p class="muni-alert-head">本人同意と学校の事務権限は別問題</p><p class="muni-alert-desc">学校保有の個人情報をPTAの会員管理、候補者抽出、抽選、辞退審査に利用・提供しない方針を明示。</p></div>
 <a class="muni-alert-link" href="shimosuwa-pta-20261118.html" aria-label="下諏訪町PTA問題の記録と教育委員会の最終回答を読む">経緯と回答を見る <span aria-hidden="true">→</span></a>
 </article>
 <article class="muni-alert-card" aria-labelledby="muni-nishinomiya-title">
 <h3 class="muni-alert-place" id="muni-nishinomiya-title">西宮市</h3>
 <div class="muni-alert-copy"><p class="muni-alert-kicker">教育委員会｜PTA運営指針・個人情報保護</p><p class="muni-alert-head">入会届による意思確認とPTA自身による情報取得</p><p class="muni-alert-desc">学校からPTAへの個人情報の目的外提供は、臨時的でない場合には認めない。</p></div>
-<a class="muni-alert-link" href="nishinomiya-pta-privacy-20261119.html" aria-label="西宮市教育委員会のPTA運営指針と個人情報提供の分析を読む">指針と分析を見る <span aria-hidden="true">→</span></a>
+<a class="muni-alert-link" href="nishinomiya-pta-privacy-20261119.html" aria-label="西宮市教育委員会のPTA運営指針と個人情報提供の分析を読む">指針と分析を見る <span aria-hidden="true">→</span></a><a class="muni-alert-link" href="board-responses/nishinomiya-20261019.html">正式回答32ページ</a><a class="muni-alert-link" href="board-responses/nishinomiya-20261020-materials.html">関連資料5点・12ページ</a>
 </article>
 </div></section>
+<div class="container hero-search-shell"><div class="home-search"><form class="search-panel" action="explore.html" method="get" role="search" data-search-panel>
+        <div class="search-panel-title"><svg aria-hidden="true"><use href="#i-search"/></svg><div><h2 class="home-search-heading">資料・記録を検索する</h2><p>行政回答の本文、自治体・学校資料を横断検索。</p></div></div>
+        <div class="search-panel-body">
+          <div class="search-field"><label class="sr-only" for="home-q">キーワード</label><svg aria-hidden="true"><use href="#i-search"/></svg><input type="search" id="home-q" name="q" placeholder="例：横浜市、学校徴収、個人情報、教育委員会回答" autocomplete="off"><button type="submit">検索</button></div>
+          <div class="search-filters">
+            <label>資料種別<select name="tab"><option value="">すべての資料</option><option value="municipality">自治体の調査</option><option value="school">学校の資料</option><option value="response">教育委員会の回答</option><option value="page">解説・論考ページ</option></select></label>
+            <label>対象地域<select name="pref" data-pref-select><option value="">全国</option></select></label>
+            <label>論点<select name="topic" data-topic-select><option value="">すべて</option></select></label>
+          </div>
+        </div>
+        <div class="search-panel-side"><a href="explore.html">詳細検索<svg aria-hidden="true"><use href="#i-chevron"/></svg></a><a href="#map">日本地図から探す<svg aria-hidden="true"><use href="#i-chevron"/></svg></a></div>
+      </form></div></div>
+
 
 <section class="container" aria-labelledby="national-fee-research-title" style="margin:28px auto 34px">
 <div style="border-left:6px solid #087f78;background:#edf6f8;padding:24px 28px;border-radius:4px">
-<p style="font-size:.78rem;letter-spacing:.08em;font-weight:800;color:#1c6672;margin:0 0 8px">新しい全国制度調査・公開前レビュー中</p>
+<p style="font-size:.78rem;letter-spacing:.08em;font-weight:800;color:#1c6672;margin:0 0 8px">全国制度調査</p>
 <h2 id="national-fee-research-title" style="font-size:clamp(1.3rem,2.4vw,1.85rem);line-height:1.5;margin:0 0 10px">PTA会費は、なぜ学校が集めるのか。</h2>
 <p style="margin:0 0 12px;line-height:1.9">全国79団体の行政回答・資料から、「委任」「同意」「学校徴収金規則」など、学校によるPTA会費徴収を説明する根拠を検証。</p>
 <p style="margin:0"><a href="pta-fee-collection.html" style="font-weight:800;color:#0a536b">全国調査の説明と対象一覧を見る →</a></p>
@@ -303,7 +304,7 @@ body[data-page="home"] .hero-search-shell .home-search .search-panel :is(a,butto
 <dl class="home-source-stats">
 <div><dt>自治体・地域別の調査索引</dt><dd><strong>31</strong><span>地域</span></dd></div>
 <div><dt>学校別資料の登録目録</dt><dd><strong>569</strong><span>校</span></dd></div>
-<div><dt>教育委員会の公開回答</dt><dd><strong>72</strong><span>件</span></dd></div>
+<div><dt>教育委員会の公開回答</dt><dd><strong>79</strong><span>件</span></dd></div>
 <div><dt>論考・分析の登録</dt><dd><strong>33</strong><span>本</span></dd></div>
 </dl><p class="home-source-note">公開索引に登録された件数です。学校別目録には原本画像やPDFを掲載していないページも含まれます。</p>
 <!-- phase2:stats:end --></aside></section>
@@ -325,7 +326,7 @@ body[data-page="home"] .hero-search-shell .home-search .search-panel :is(a,butto
         <div class="block-head"><h2 id="map-title">全国の調査</h2><a class="more-link" href="research-map.html">全国調査マップを開く<svg aria-hidden="true"><use href="#i-chevron"/></svg></a></div>
         
 
-<p class="home-map-path">地図から自治体を選び、市の総合評価・制度の特徴を読んでから、学校別評価へ進めます。 <a href="research-map.html">全国PTA調査マップから探す</a></p><div class="map-layout">
+<p class="home-map-path">自治体の総合評価、制度の特徴、学校別評価を地図から探せます。</p><div class="map-layout">
           <figure class="map-figure">
             <div class="japan-map" data-japan-map role="img" aria-label="公開索引のある都道府県を示した日本地図"></div>
             <figcaption><span class="legend-swatch" aria-hidden="true"></span>公開索引のある都道府県　<span class="legend-pin" aria-hidden="true"></span>自治体の調査　<span class="legend-pin resp" aria-hidden="true"></span>教育委員会の回答　<span class="map-hint">地図または都道府県の一覧から都道府県を選択</span></figcaption>
