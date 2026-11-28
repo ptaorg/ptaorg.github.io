@@ -30,116 +30,19 @@ gtag('config', 'G-0D18ZSSLMH');
 <meta name="twitter:image" content="https://ptaorg.com/assets/og-image.png">
 
 <style id="municipality-feature-style">
-/* Place the municipality feature after the search panel: never overlap the hero/search UI. */
-.muni-alerts {
-  position: relative;
-  z-index: 1;
-  clear: both;
-  margin: 22px 0 30px;
-  padding: 24px 0;
-  background: #fff3e8;
-  border-top: 2px solid #ff6a00;
-  border-bottom: 2px solid #ff6a00;
-}
-.muni-alerts-inner {
-  width: min(calc(100% - 40px), 1120px);
-  margin-inline: auto;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  align-items: stretch;
-}
-.muni-alert-card {
-  box-sizing: border-box;
-  min-width: 0;
-  min-height: 190px;
-  padding: 18px 18px 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 9px;
-  background: #fff;
-  border: 2px solid #ff6a00;
-  border-top-width: 7px;
-  border-radius: 5px;
-  box-shadow: 0 3px 10px rgba(80, 40, 0, .08);
-}
-.muni-alert-place {
-  margin: 0;
-  color: #171717;
-  font-size: 1.35rem;
-  line-height: 1.3;
-  font-weight: 900;
-  letter-spacing: .02em;
-  writing-mode: horizontal-tb;
-}
-.muni-alert-copy {
-  display: block;
-  width: 100%;
-  min-width: 0;
-  flex: 1 1 auto;
-  writing-mode: horizontal-tb;
-  overflow-wrap: anywhere;
-}
-.muni-alert-kicker {
-  margin: 0 0 6px;
-  color: #444;
-  font-size: .75rem;
-  line-height: 1.5;
-  font-weight: 700;
-}
-.muni-alert-head {
-  margin: 0 0 5px;
-  color: #171717;
-  font-size: .94rem;
-  line-height: 1.65;
-  font-weight: 850;
-}
-.muni-alert-desc {
-  margin: 0;
-  color: #444;
-  font-size: .82rem;
-  line-height: 1.7;
-}
-.muni-alert-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  align-self: flex-start;
-  gap: 7px;
-  margin-top: 5px;
-  padding: 9px 14px;
-  border-radius: 3px;
-  background: #ff6a00;
-  color: #fff !important;
-  font-size: .8rem;
-  line-height: 1.4;
-  font-weight: 850;
-  text-decoration: none;
-}
-.muni-alert-link:hover,
-.muni-alert-link:focus-visible {
-  background: #e85d00;
-  color: #fff !important;
-}
-@media (max-width: 900px) {
-  .muni-alerts-inner { grid-template-columns: 1fr; }
-  .muni-alert-card {
-    min-height: 0;
-    display: grid;
-    grid-template-columns: minmax(120px, 180px) minmax(0, 1fr) auto;
-    align-items: center;
-    gap: 14px;
-  }
-  .muni-alert-link { justify-self: end; }
-}
-@media (max-width: 620px) {
-  .muni-alerts { margin: 16px 0 24px; padding: 16px 0; }
-  .muni-alerts-inner { width: min(calc(100% - 28px), 1120px); gap: 12px; }
-  .muni-alert-card { display: flex; min-height: 0; padding: 15px; gap: 8px; }
-  .muni-alert-place { font-size: 1.2rem; }
-  .muni-alert-link { align-self: flex-start; }
-}
+.muni-alerts{position:relative;clear:both;margin:clamp(30px,5vw,66px) 0;padding:clamp(24px,4vw,44px) 0;background:#faf9f6;border-block:1px solid #d8d3c9}
+.muni-alerts-inner{width:min(calc(100% - 40px),1120px);margin-inline:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.muni-alerts-heading{grid-column:1/-1;font-family:"Noto Serif JP",serif;font-size:clamp(1.45rem,2.4vw,1.95rem);color:#17324f;margin:0 0 24px;letter-spacing:.035em}
+.muni-alert-card{box-sizing:border-box;min-width:0;padding:0 24px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;background:transparent;border:0;border-inline-start:1px solid #d8d3c9;border-radius:0;box-shadow:none}
+.muni-alert-card:first-of-type{border-inline-start:0;padding-inline-start:0}
+.muni-alert-place{margin:0;color:#17324f;font:700 1.35rem/1.5 "Noto Serif JP",serif;writing-mode:horizontal-tb}
+.muni-alert-copy{width:100%;min-width:0;flex:1;overflow-wrap:anywhere;writing-mode:horizontal-tb}
+.muni-alert-kicker{margin:0 0 10px;color:#5b626a;font-size:.78rem;line-height:1.6}
+.muni-alert-head{margin:0 0 8px;color:#202e3b;font-size:1rem;line-height:1.7;font-weight:700}
+.muni-alert-desc{margin:0;color:#45515b;font-size:.91rem;line-height:1.85}
+.muni-alert-link{display:inline-flex;align-items:center;min-height:44px;gap:8px;color:#964600!important;font-weight:700;font-size:.88rem;text-decoration:underline;text-underline-offset:.22em;background:transparent;padding:0}
+.muni-alert-link:hover,.muni-alert-link:focus-visible{color:#17324f!important;background:transparent}
+@media(max-width:760px){.muni-alerts-inner{grid-template-columns:1fr;width:min(calc(100% - 32px),1120px)}.muni-alert-card,.muni-alert-card:first-of-type{border:0;border-top:1px solid #d8d3c9;padding:20px 0}.muni-alerts-heading{margin-bottom:8px}}
 </style>
 <style id="home-search-blue-theme">
 /* Override the more-specific homepage search rules in assets/style.css. */
@@ -354,6 +257,7 @@ body[data-page="home"] .hero-search-shell .home-search .search-panel :is(a,butto
       </form></div></div>
 <section class="muni-alerts" aria-label="重要な自治体行政回答">
 <div class="container muni-alerts-inner">
+<h2 class="muni-alerts-heading">行政の判断と制度の転換</h2>
 <article class="muni-alert-card" aria-labelledby="muni-yokohama-title">
 <h2 class="muni-alert-place" id="muni-yokohama-title">横浜市</h2>
 <div class="muni-alert-copy"><p class="muni-alert-kicker">教育委員会｜2026年11月2日回答</p><p class="muni-alert-head">準公金規程は学校の徴収権限を創設しない</p><p class="muni-alert-desc">PTA自身による会費徴収への移行を通知</p></div>
