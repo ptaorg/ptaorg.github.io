@@ -27,13 +27,15 @@
   /* ---------- data ---------- */
   async function loadJSON(path){const r=await fetch(ROOT+path,{cache:'no-cache'});if(!r.ok)throw Error(`Data unavailable: ${path}`);return r.json();}
   async function loadData(){
-    const [fm,fr,fj]=await Promise.allSettled([loadJSON('data/research-map-index.json?v=20261115-osaki-v1'),loadJSON('data/board-responses.json'),loadJSON('data/journal-index.json')]);
+    const [fm,fr,fj,fa]=await Promise.allSettled([loadJSON('data/research-map-index.json?v=20261115-osaki-v1'),loadJSON('data/board-responses.json'),loadJSON('data/journal-index.json'),loadJSON('data/board-responses-additions.json')]);
     const needDemo=!(fm.status==='fulfilled'&&Array.isArray(fm.value.municipalities))||!(fr.status==='fulfilled'&&Array.isArray(fr.value.responses));
     const demo=needDemo?await loadJSON('data/demo.json'):null;
     const map=fm.status==='fulfilled'&&Array.isArray(fm.value.municipalities)?fm.value:demo.map;
-    const responses=fr.status==='fulfilled'&&Array.isArray(fr.value.responses)?fr.value:demo.responses;
+    const baseResponses=fr.status==='fulfilled'&&Array.isArray(fr.value.responses)?fr.value:demo.responses;
+    const additions=fa.status==='fulfilled'&&Array.isArray(fa.value.responses)?fa.value:{responses:[],pages:[]};
+    const responses={...baseResponses,responses:[...baseResponses.responses,...additions.responses]};
     const journal=fj.status==='fulfilled'&&Array.isArray(fj.value.articles)?fj.value:{articles:[]};
-    return {map,responses,journal,demo:needDemo};
+    return {map,responses,journal,additions,demo:needDemo};
   }
   const allSchools = () => data.map.municipalities.flatMap(m=>(m.schools||[]).map(s=>({...s,regionId:m.id,regionName:m.name,regionPrefecture:m.prefecture})));
   const prefsWithData = () => [...new Set([...data.map.municipalities.map(m=>m.prefecture),...(data.responses.responses||[]).map(r=>r.prefecture),...sitePages().map(p=>p.prefecture).filter(Boolean)])];
@@ -41,7 +43,7 @@
   const schoolStatus = s => {const st=(s.documents||[]).map(status);return st.includes('公開前確認中')?'公開前確認中':st[0]||'未確認';};
   const topicById = id => TOPICS.find(t=>t.id===id);
   const respBase = r => String(r.municipality||'').replace(/（[^）]*）$/,'').replace(/(教育委員会|教育庁)$/,'');
-  const respTitle = r => /教育庁$/.test(r.municipality||'')?`${r.municipality}の回答`:`${respBase(r)}教育委員会の回答`;
+  const respTitle = r => String(r.no||'').startsWith('new-')?`${respBase(r)}教育委員会・${r.typeLabel}（${r.date}）`:/教育庁$/.test(r.municipality||'')?`${r.municipality}の回答`:`${respBase(r)}教育委員会の回答`;
   const responsesFor = m => {
     const linked=(m.boardResponses||[]).map(b=>b.url);
     return (data.responses.responses||[]).filter(r=>linked.includes(r.url)||(normalize(respBase(r)).endsWith(normalize(m.name))&&(!r.prefecture||r.prefecture===m.prefecture)));
@@ -60,6 +62,7 @@
       const old=records.get(key(url))||{};
       put({...old,title:a.title||old.title,url,desc:a.description||old.desc||'',prefecture:a.prefecture||'',municipality:a.municipality||'',topics:a.topics||[]});
     });
+    (data.additions?.pages||[]).forEach(put);
     return [...records.values()];
   };
   const has = (parts,q) => parts.some(x=>normalize(x).includes(q));
@@ -78,10 +81,9 @@
       if(schoolType)return false;
       if(prefecture&&r.prefecture!==prefecture)return false;
       if(t&&!(r.topics||[]).some(x=>t.topics.includes(x)))return false;
-      // Metadata only; the full answer text is read on the canonical page.
-      return !q||has([r.municipality,r.prefecture,...(r.topics||[]),r.date],q);
+      return !q||has([r.municipality,r.prefecture,r.prefecture+r.municipality,...(r.topics||[]),r.date,r.typeLabel,r.body],q);
     });
-    const pages=schoolType||(!includePages&&!q&&!prefecture&&!t)?[]:sitePages().filter(p=>(!prefecture||p.prefecture===prefecture)&&(!t||(p.topics||[]).includes(t.id))&&(!q||has([p.title,p.desc,p.prefecture,p.municipality],q)));
+    const pages=schoolType||(!includePages&&!q&&!prefecture&&!t)?[]:sitePages().filter(p=>(!prefecture||p.prefecture===prefecture)&&(!t||(p.topics||[]).includes(t.id))&&(!q||has([p.title,p.desc,p.prefecture,p.municipality,p.body],q)));
     return {municipalities,schools,responses,pages};
   }
 
