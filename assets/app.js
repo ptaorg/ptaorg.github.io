@@ -391,6 +391,50 @@
     getPins().then(p=>{const el=root.querySelector('[data-map]');const xy=p.regions[s.regionId]||p.prefs[s.regionPrefecture];if(xy)el.dataset.mapPin=xy.join(',');renderMapEl(el);});
   }
 
+  function initPtaMeasurement(){
+    // Send only controlled event names and categories. Never send form values,
+    // search terms, clipboard content, email addresses or external URLs.
+    if(typeof window.gtag!=='function')return;
+    const emit=(name,category)=>window.gtag('event',name,{content_category:category});
+    const classify=p=>{
+      if(/^\/board-responses(?:\/|\.html)/.test(p))return 'administrative_response';
+      if(/^\/archive\//.test(p))return 'school_archive';
+      if(/^\/journal\//.test(p))return 'research_article';
+      if(/(?:yokohama-pta-fee-20261102|shimosuwa-pta-20261118|nishinomiya-pta-privacy-20261119)\.html$/.test(p))return 'municipal_research';
+      if(/(?:contact|submit-to-board)\.html$/.test(p))return 'contact';
+      if(/(?:support|donate)\.html$/.test(p)||/^\/(?:support|donate)\/?$/.test(p))return 'support';
+      return '';
+    };
+    const category=classify(location.pathname);
+    if(['administrative_response','school_archive','municipal_research'].includes(category))emit('pta_source_view',category);
+    else if(category==='research_article')emit('pta_research_view',category);
+    document.addEventListener('click',e=>{
+      const a=e.target.closest&&e.target.closest('a[href]');
+      if(!a)return;
+      const href=a.getAttribute('href')||'';
+      if(/^mailto:/i.test(href)){emit('pta_contact_click','email');return;}
+      if(/^tel:/i.test(href)){emit('pta_contact_click','telephone');return;}
+      let u;try{u=new URL(href,location.href)}catch{return;}
+      if(!/^https?:$/.test(u.protocol))return;
+      if(/(?:^|\.)paypay\.ne\.jp$/.test(u.hostname)){emit('pta_support_click','payment_link');return;}
+      if(u.origin!==location.origin)return;
+      if(/\.pdf$/i.test(u.pathname)){emit('pta_document_click','pdf');return;}
+      if(/\.(?:docx?|xlsx?|zip)$/i.test(u.pathname)){emit('pta_document_click','attachment');return;}
+      const dest=classify(u.pathname);
+      if(dest==='contact')emit('pta_contact_click','contact_page');
+      else if(dest==='support')emit('pta_support_click','support_page');
+      else if(['administrative_response','school_archive','municipal_research'].includes(dest)&&u.pathname!==location.pathname)emit('pta_source_click',dest);
+    });
+    document.addEventListener('submit',e=>{
+      const f=e.target;
+      if(f.matches&&f.matches('form[role="search"],form[data-search-panel],#board-response-search'))emit('pta_search_use','site_search');
+    });
+    document.addEventListener('click',e=>{
+      const a=e.target.closest&&e.target.closest('[data-citation-copy]');
+      if(a)emit('pta_citation_copy_click','citation_control');
+    });
+  }
+
   function tocSpy(){
     const links=[...document.querySelectorAll('.side-toc a[href^="#"]')];if(!links.length||!('IntersectionObserver' in window))return;
     const map=new Map(links.map(a=>[decodeURIComponent(a.getAttribute('href').slice(1)),a]));
@@ -399,6 +443,7 @@
   }
   async function init(){
     chrome();
+    initPtaMeasurement();
     if(document.body.dataset.page==='legacy'){document.querySelectorAll('[data-map]').forEach(renderMapEl);tocSpy();
       if(document.querySelector('[data-list-map]')){try{data=await loadData();await renderListMaps();}catch(e){console.error(e);}}
       return;}
