@@ -30,7 +30,7 @@ svg{width:1em;height:1em;flex:none}
 .sprite{position:absolute;width:0;height:0;overflow:hidden}
 .container{width:100%;max-width:calc(var(--container) + var(--gutter)*2);margin:0 auto;padding:0 var(--gutter)}
 .sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.skip-link{position:absolute;left:-999px;top:8px;z-index:100;background:var(--navy);color:var(--paper);padding:8px 16px}
+.skip-link{position:fixed;left:-999px;top:8px;z-index:1100;background:var(--navy);color:var(--paper);padding:8px 16px}
 .skip-link:focus{left:8px}
 .loading-text{color:var(--ink-faint);padding:48px 0}
 .pc-only{display:inline}
@@ -82,8 +82,8 @@ svg{width:1em;height:1em;flex:none}
 /* ---------- buttons, labels ---------- */
 .button{display:inline-flex;align-items:center;gap:12px;padding:12px 24px;border-radius:var(--radius-sm);font-weight:700;font-size:var(--fs-body);text-decoration:none;border:1px solid var(--navy-deep);cursor:pointer;font-family:inherit;line-height:1.4}
 .button svg{width:.95em;height:.95em}
-.button-primary{background:var(--navy-deep);color:var(--navy)}
-.button-primary:hover{background:var(--navy);color:var(--navy)}
+.button-primary{background:var(--navy-deep);color:var(--paper)}
+.button-primary:hover{background:var(--navy);color:var(--paper)}
 .button-secondary{background:var(--paper);color:var(--navy-deep)}
 .button-secondary:hover{background:var(--tint);color:var(--navy-deep)}
 .label{display:inline-block;font-size:var(--fs-small);font-weight:700;line-height:1.4;padding:4px 12px;border-radius:var(--radius-sm);background:var(--tint);color:var(--navy)}
@@ -1466,3 +1466,9 @@ body[data-page="home"] #boundary .home-boundary-more{
 @media(max-width:1480px){
   .site-header .brand-type > small{display:none;}
 }
+
+/* Shared editorial chrome: clear hierarchy without competing with source material. */
+.site-footer{border-top:3px solid var(--gold-line)}
+.site-footer .footer-col a:focus-visible{outline-color:var(--paper)}
+.site-header .nav-panel a:focus-visible{outline-offset:-3px}
+@media (prefers-reduced-motion:reduce){.site-header *, .site-footer *{scroll-behavior:auto!important;animation:none!important}}
