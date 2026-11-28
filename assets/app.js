@@ -87,6 +87,8 @@
 
   /* ---------- shared UI ---------- */
   function chrome(){
+    // Normalize only links resolving to the site's root index, never nested archive indexes.
+    document.querySelectorAll('a[href]').forEach(a=>{try{const u=new URL(a.getAttribute('href'),location.href);if(u.origin===location.origin&&u.pathname==='/index.html')a.setAttribute('href','/'+u.search+u.hash);}catch{}});
     const btn=document.querySelector('[data-menu-button]');const nav=document.getElementById('global-nav');
     if(btn&&nav)btn.addEventListener('click',()=>{const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',String(open));});
     const triggers=[...document.querySelectorAll('.nav-trigger')];
